@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature>
+	<AttackSkill>18</AttackSkill>
+	<DefenceSkill>26</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>18</MinDamage>
+	<MaxDamage>26</MaxDamage>
+	<Speed>8</Speed>
+	<Initiative>10</Initiative>
+	<Flying>true</Flying>
+	<Health>125</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>3</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>500</Exp>
+	<Power>2750</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>6</CreatureTier>
+	<Upgrade>true</Upgrade>
+	<PairCreature>CREATURE_THANE</PairCreature>
+	<CreatureTown>TOWN_FORTRESS</CreatureTown>
+	<MagicElement>
+		<First>ELEMENT_AIR</First>
+		<Second>ELEMENT_NONE</Second>
+	</MagicElement>
+	<WeeklyGrowth>3</WeeklyGrowth>
+	<Cost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>1</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>1100</Gold>
+	</Cost>
+	<PresetPrice>0</PresetPrice>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Dwarf/Warlord.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>2</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Dwarf/Warlord.xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_THANE</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_HOLD_GROUND</Item>
+		<Item>ABILITY_IMMUNITY_TO_FIRE</Item>
+		<Item>ABILITY_FLAMEWAVE</Item>
+		<Item>ABILITY_FLAMESTRIKE</Item>
+	</Abilities>
+</Creature>

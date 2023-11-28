@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="1000004">
+	<NameFileRef href="/Text/Game/TownBuildings/Preserve/Dwelling_1/Upgraded_Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Preserve/Dwelling_1/Upgraded_Description.txt"/>
+	<Type>TB_DWELLING_1</Type>
+	<Upgrade>BLD_UPG_2</Upgrade>
+	<Cost>
+		<Wood>1</Wood>
+		<Ore>3</Ore>
+		<Mercury>1</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>3</Sulfur>
+		<Gem>0</Gem>
+		<Gold>500</Gold>
+	</Cost>
+	<ModObjectName>WoodGuard</ModObjectName>
+	<dependencies>
+		<Item href="WoodGuardQuarters.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_WAR_DANCER</Creature>
+	<Creature2>CREATURE_BLADE_SINGER</Creature2>
+	<DevLevelNeeded>0</DevLevelNeeded>
+	<UIObjectName>Dwelling_1</UIObjectName>
+	<UIStackPosition>1</UIStackPosition>
+	<Icon href="/UI/TownHall/preserve/128/d2u.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

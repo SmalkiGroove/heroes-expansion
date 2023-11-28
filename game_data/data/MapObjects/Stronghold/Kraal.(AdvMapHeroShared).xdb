@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvMapHeroShared>
+	<Model href="/Characters/Heroes/H5A2/OrcWarrior_Hero.xdb#xpointer(/Model)"/>
+	<AnimSet href="/Characters/Heroes/H5A2/OrcWarrior_Hero-arena.xdb#xpointer(/AnimSet)"/>
+	<blockedTiles/>
+	<holeTiles/>
+	<activeTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+	</activeTiles>
+	<passableTiles/>
+	<PossessionMarkerTile>
+		<x>0</x>
+		<y>0</y>
+	</PossessionMarkerTile>
+	<Effect/>
+	<EffectWhenOwned/>
+	<messagesFileRef>
+		<Item href=""/>
+	</messagesFileRef>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect/>
+	<flybyMessageFileRef href=""/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Units.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>true</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128/>
+	<InternalName>Kraal</InternalName>
+	<Class>HERO_CLASS_BARBARIAN</Class>
+	<Specialization>HERO_SPEC_WAR_MACHINES</Specialization>
+	<PrimarySkill>
+		<Mastery>MASTERY_BASIC</Mastery>
+		<SkillID>HERO_SKILL_DEMONIC_RAGE</SkillID>
+	</PrimarySkill>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Stronghold/Artilleryman/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Stronghold/Artilleryman/Description.txt"/>
+	<SpecializationIcon href="/Textures/HeroScreen/Specializations/Haven/Artilleryman.xdb#xpointer(/Texture)"/>
+	<FaceTexture href="/Textures/Icons/Heroes/Stronghold/Stronghold_Kraal_128x128.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTextureSmall/>
+	<HeroCharacterArena href="/Characters/Heroes/Stronghold/Kraal/HeroCharacterArena.xdb#xpointer(/Character)" />
+	<HeroCharacterArenaMelee />
+	<HeroCharacterAdventure href="/Characters/Heroes/Stronghold/Kraal/HeroCharacterAdventure.xdb#xpointer(/Character)" />
+	<HeroIndividualCamera href="/Characters/Heroes/Stronghold/Kraal/HeroIndividualCamera.xdb#xpointer(/Camera)" />
+	<CombatVisual href="/Characters/Heroes/Stronghold/Kraal/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<TownType>TOWN_STRONGHOLD</TownType>
+	<Editable>
+		<NameFileRef href="/Text/Game/Heroes/Persons/Stronghold/Kraal/Name.txt"/>
+		<BiographyFileRef href="/Text/Game/Heroes/Persons/Stronghold/Kraal/Bio.txt"/>
+		<Offence>3</Offence>
+		<Defence>0</Defence>
+		<Spellpower>1</Spellpower>
+		<Knowledge>1</Knowledge>
+		<skills>			
+			<Item>
+				<Mastery>MASTERY_BASIC</Mastery>
+				<SkillID>HERO_SKILL_WAR_MACHINES</SkillID>
+			</Item>		
+		</skills>
+		<perkIDs>
+			<Item>HERO_SKILL_BALLISTA</Item>
+		</perkIDs>
+		<spellIDs/>
+		<Ballista>true</Ballista>
+		<FirstAidTent>false</FirstAidTent>
+		<AmmoCart>false</AmmoCart>
+		<FavoriteEnemies/>
+		<TalismanLevel>0</TalismanLevel>
+	</Editable>
+	<ArrowButtonState>0</ArrowButtonState>
+	<Decal/>
+	<Selection href="/_(Model)/Heroes/Orc_Warrior_Path/Symbol.xdb#xpointer(/Model)"/>
+	<Trace href="/MapObjects/_(AdvMapHeroTraceSet)/Barbarian.xdb#xpointer(/AdvMapHeroTraceSet)"/>
+	<RaceTraitIcon/>
+	<RaceTraitDescFileRef href=""/>
+	<ScenarioHero>false</ScenarioHero>
+	<AdventureMusic href="/Sounds/_(Music)/AdvMap-Campaign/a2-stronghold.(Music).xdb#xpointer(/Music)"/>
+	<HideInEditor>false</HideInEditor>
+</AdvMapHeroShared>

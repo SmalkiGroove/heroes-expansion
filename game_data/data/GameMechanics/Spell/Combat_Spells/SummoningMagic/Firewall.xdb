@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Spell ObjectRecordID="1000100">
+	<NameFileRef href="/Text/Game/Spells/Combat/Firewall/Name.txt"/>
+	<LongDescriptionFileRef href="/Text/Game/Spells/Combat/Firewall/Long_Description.txt"/>
+	<Texture href="/Textures/SpellBook______2618/Spells/Spell_Firewall.xdb#xpointer(/Texture)"/>
+	<EffectTexture href="/UI/Common/Icons/Spell_Buff_Icons/Firewall.(Texture).xdb#xpointer(/Texture)"/>
+	<SpellBookPredictions>
+		<Item href="/Text/Game/Spells/Combat/Firewall/SpellBookPrediction.txt"/>
+		<Item href="/Text/Game/Spells/Combat/Firewall/SpellBookPrediction_MasterOfFire.txt"/>
+	</SpellBookPredictions>
+	<CombatLogTexts>
+		<Item href="/Text/CombatLog/Spells/Firewall.txt"/>
+	</CombatLogTexts>
+	<Level>4</Level>
+	<MagicSchool>MAGIC_SCHOOL_SUMMONING</MagicSchool>
+	<RequiredHeroLevel>0</RequiredHeroLevel>
+	<TrainedCost>16</TrainedCost>
+	<damage>
+		<Item>
+			<Base>20</Base>
+			<PerPower>10</PerPower>
+		</Item>
+		<Item>
+			<Base>30</Base>
+			<PerPower>15</PerPower>
+		</Item>
+		<Item>
+			<Base>45</Base>
+			<PerPower>22</PerPower>
+		</Item>
+		<Item>
+			<Base>67</Base>
+			<PerPower>34</PerPower>
+		</Item>
+	</damage>
+	<duration>
+		<Item>
+			<Base>3</Base>
+			<PerPower>0</PerPower>
+		</Item>
+		<Item>
+			<Base>3</Base>
+			<PerPower>0</PerPower>
+		</Item>
+		<Item>
+			<Base>3</Base>
+			<PerPower>0</PerPower>
+		</Item>
+		<Item>
+			<Base>3</Base>
+			<PerPower>0</PerPower>
+		</Item>
+	</duration>
+	<sSpellCost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>0</Gold>
+	</sSpellCost>
+	<IsAimed>true</IsAimed>
+	<IsAreaAttack>true</IsAreaAttack>
+	<CanSelectDead>false</CanSelectDead>
+	<Target>TARGET_HOSTILE</Target>
+	<Element>ELEMENT_FIRE</Element>
+	<DamageIsElemental>true</DamageIsElemental>
+	<visuals>
+		<Item href="Firewall.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+		<Item href="Firewall_End.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+	</visuals>
+	<PresetPrice>0</PresetPrice>
+	<AvailableForPresets>true</AvailableForPresets>
+</Spell>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature>
+	<AttackSkill>10</AttackSkill>
+	<DefenceSkill>8</DefenceSkill>
+	<Shots>5</Shots>
+	<MinDamage>12</MinDamage>
+	<MaxDamage>16</MaxDamage>
+	<Speed>3</Speed>
+	<Initiative>9</Initiative>
+	<Flying>false</Flying>
+	<Health>70</Health>
+	<KnownSpells>
+		<Item>
+			<Spell>SPELL_MASS_DEFLECT_ARROWS</Spell>
+			<Mastery>MASTERY_ADVANCED</Mastery>
+		</Item>
+		<Item>
+			<Spell>SPELL_LAND_MINE</Spell>
+			<Mastery>MASTERY_ADVANCED</Mastery>
+		</Item>
+		<Item>
+			<Spell>SPELL_FIREWALL</Spell>
+			<Mastery>MASTERY_ADVANCED</Mastery>
+		</Item>
+	</KnownSpells>
+	<SpellPoints>36</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>250</Exp>
+	<Power>1308</Power>
+	<TimeToCommand>15</TimeToCommand>
+	<CreatureTier>5</CreatureTier>
+	<Upgrade>true</Upgrade>
+	<PairCreature>CREATURE_RUNE_MAGE</PairCreature>
+	<CreatureTown>TOWN_FORTRESS</CreatureTown>
+	<MagicElement>
+		<First>ELEMENT_FIRE</First>
+		<Second>ELEMENT_NONE</Second>
+	</MagicElement>
+	<WeeklyGrowth>6</WeeklyGrowth>
+	<Cost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>500</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Dwarf/Flame_Mage.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>1</CombatSize>
+	<PatternAttack href="/GameMechanics/Creature/Creatures/Fortress/CrossAttack.xdb#xpointer(/PatternAttack)"/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Dwarf/Flame_Mage.xdb#xpointer(/CreatureVisual)"/>
+	<Range>-2</Range>
+	<BaseCreature>CREATURE_RUNE_MAGE</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_FIRE_PROOF_50</Item>
+		<Item>ABILITY_MARK_OF_FIRE</Item>
+		<Item>ABILITY_CROSS_ATTACK</Item>
+	</Abilities>
+</Creature>

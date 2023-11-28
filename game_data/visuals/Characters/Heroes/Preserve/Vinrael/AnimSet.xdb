@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimSet ObjectRecordID="1000039">
+	<animations>
+		<Item>
+			<Kind>idle00</Kind>
+			<Anim href="/Characters/Heroes/Ranger_LOD-adv-idle00.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>move</Kind>
+			<Anim href="/Characters/Heroes/Ranger_LOD-adv-move.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+	</animations>
+	<ExpSrcScene href="/models/Heroes/Ranger/Ranger.mb"/>
+	<ExpSrcClipFolder href="/Animations/Heroes/Ranger/Clip_adventure/"/>
+	<ExpRootTransform>Global</ExpRootTransform>
+</AnimSet>

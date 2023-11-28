@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature>
+	<AttackSkill>3</AttackSkill>
+	<DefenceSkill>2</DefenceSkill>
+	<Shots>7</Shots>
+	<MinDamage>1</MinDamage>
+	<MaxDamage>3</MaxDamage>
+	<Speed>4</Speed>
+	<Initiative>10</Initiative>
+	<Flying>false</Flying>
+	<Health>7</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>17</Exp>
+	<Power>105</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>1</CreatureTier>
+	<Upgrade>false</Upgrade>
+	<PairCreature>CREATURE_UNKNOWN</PairCreature>
+	<CreatureTown>TOWN_ACADEMY</CreatureTown>
+	<MagicElement>
+		<First>ELEMENT_AIR</First>
+		<Second>ELEMENT_WATER</Second>
+	</MagicElement>
+	<WeeklyGrowth>64</WeeklyGrowth>
+	<Cost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>20</Gold>
+	</Cost>
+	<PresetPrice>0</PresetPrice>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Academy/Gremlin_Saboteur.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>1</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Academy/3rd/GremlinSaboteur.(CreatureVisual).xdb#xpointer(/CreatureVisual)"/>
+	<Range>-2</Range>
+	<BaseCreature>CREATURE_GREMLIN</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_MAGIC_PROOF_25</Item>
+		<Item>ABILITY_SABOTAGE</Item>
+	</Abilities>
+</Creature>

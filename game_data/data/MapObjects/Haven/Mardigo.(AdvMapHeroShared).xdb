@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvMapHeroShared ObjectRecordID="13">
+	<Model href="/Characters/Heroes/Lazlo_LOD.xdb#xpointer(/Model)"/>
+	<AnimSet href="/Characters/Heroes/Lazlo_LOD-adv.xdb#xpointer(/AnimSet)"/>
+	<blockedTiles/>
+	<holeTiles/>
+	<activeTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+	</activeTiles>
+	<passableTiles/>
+	<PossessionMarkerTile>
+		<x>0</x>
+		<y>0</y>
+	</PossessionMarkerTile>
+	<Effect/>
+	<EffectWhenOwned/>
+	<messagesFileRef/>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect/>
+	<flybyMessageFileRef href=""/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Units.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>true</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128/>
+	<InternalName>Mardigo</InternalName>
+	<Class>HERO_CLASS_KNIGHT</Class>
+	<Specialization>HERO_SPEC_FOOTMEN</Specialization>
+	<PrimarySkill>
+		<Mastery>MASTERY_BASIC</Mastery>
+		<SkillID>HERO_SKILL_TRAINING</SkillID>
+	</PrimarySkill>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Haven/Infantry_Commander/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Haven/Infantry_Commander/Description.txt"/>
+	<SpecializationIcon href="/Textures/HeroScreen/Specializations/Haven/Infantry_Commander.xdb#xpointer(/Texture)"/>
+	<FaceTexture href="/UI/H5A1/Icons/Heroes/Portrets128x128/Lazlo.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTextureSmall/>
+	<HeroCharacterArena href="/Characters/Heroes/Haven/Mardigo/HeroCharacterArena.xdb#xpointer(/Character)" />
+	<HeroCharacterArenaMelee href="/Characters/Heroes/Haven/Mardigo/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
+	<HeroCharacterAdventure href="/Characters/Heroes/Haven/Mardigo/HeroCharacterAdventure.xdb#xpointer(/Character)" />
+	<HeroIndividualCamera href="/Characters/Heroes/Haven/Mardigo/HeroIndividualCamera.xdb#xpointer(/Camera)" />
+	<CombatVisual href="/Characters/Heroes/Haven/Mardigo/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<TownType>TOWN_HEAVEN</TownType>
+	<Editable>
+		<NameFileRef href="/Text/Game/Heroes/Persons/Haven/Mardigo/Name.txt"/>
+		<BiographyFileRef href="/Text/Game/Heroes/Persons/Haven/Mardigo/Bio.txt"/>
+		<Offence>3</Offence>
+		<Defence>0</Defence>
+		<Spellpower>1</Spellpower>
+		<Knowledge>1</Knowledge>
+		<skills>
+			<Item>
+				<Mastery>MASTERY_ADVANCED</Mastery>
+				<SkillID>HERO_SKILL_OFFENCE</SkillID>
+			</Item>
+			<Item>
+				<Mastery>MASTERY_ADVANCED</Mastery>
+				<SkillID>HERO_SKILL_LEADERSHIP</SkillID>
+			</Item>
+		</skills>
+		<perkIDs>
+			<Item>HERO_SKILL_TACTICS</Item>
+			<Item>HERO_SKILL_CHILLING_STEEL</Item>
+			<Item>HERO_SKILL_RECRUITMENT</Item>
+			<Item>HERO_SKILL_ENCOURAGE</Item>
+		</perkIDs>
+		<spellIDs/>
+		<Ballista>false</Ballista>
+		<FirstAidTent>false</FirstAidTent>
+		<AmmoCart>true</AmmoCart>
+		<FavoriteEnemies/>
+	</Editable>
+	<ArrowButtonState>0</ArrowButtonState>
+	<Decal/>
+	<Selection href="/_(Model)/Heroes/Knight_Path/Symbol.(Model).xdb#xpointer(/Model)"/>
+	<Trace href="/MapObjects/_(AdvMapHeroTraceSet)/Haven.xdb#xpointer(/AdvMapHeroTraceSet)"/>
+	<RaceTraitIcon/>
+	<RaceTraitDescFileRef href=""/>
+	<ScenarioHero>false</ScenarioHero>
+	<AdventureMusic/>
+	<HideInEditor>false</HideInEditor>
+</AdvMapHeroShared>

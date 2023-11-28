@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="15">
+	<NameFileRef href="/Text/Game/TownBuildings/Haven/Marketplace/Resource_Silo_Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Haven/Marketplace/Resource_Silo_Description.txt"/>
+	<Type>TB_MARKETPLACE</Type>
+	<Upgrade>BLD_UPG_2</Upgrade>
+	<Cost>
+		<Wood>4</Wood>
+		<Ore>4</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>2500</Gold>
+	</Cost>
+	<ModObjectName>MarketPlace</ModObjectName>
+	<dependencies>
+		<Item href="Marketplace.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_UNKNOWN</Creature>
+	<DevLevelNeeded>0</DevLevelNeeded>
+	<UIObjectName>Marketplace</UIObjectName>
+	<UIStackPosition>1</UIStackPosition>
+	<Icon href="/UI/TownHall/haven/128/resourcesilo.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

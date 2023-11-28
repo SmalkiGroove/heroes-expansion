@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Spell ObjectRecordID="124">
+	<NameFileRef href="/Text/Game/Spells/Combat/Forgetfulness/Name.txt"/>
+	<LongDescriptionFileRef href="/Text/Game/Spells/Combat/Forgetfulness/Long_Description.txt"/>
+	<Texture href="/Textures/SpellBook______2618/Spells/Spell_Forgetfulness.xdb#xpointer(/Texture)"/>
+	<EffectTexture href="/UI/Common/Icons/Spell_Buff_Icons/Forgetfulness.(Texture).xdb#xpointer(/Texture)"/>
+	<SpellBookPredictions>
+		<Item href="/Text/Game/Spells/Combat/Forgetfulness/SpellBookPrediction.txt"/>
+	</SpellBookPredictions>
+	<CombatLogTexts/>
+	<Level>3</Level>
+	<MagicSchool>MAGIC_SCHOOL_DARK</MagicSchool>
+	<RequiredHeroLevel>0</RequiredHeroLevel>
+	<IsAimed>true</IsAimed>
+	<TrainedCost>9</TrainedCost>
+	<damage>
+		<Item>
+			<Base>0.4</Base>
+			<PerPower>0</PerPower>
+		</Item>
+		<Item>
+			<Base>0.6</Base>
+			<PerPower>0</PerPower>
+		</Item>
+		<Item>
+			<Base>0.8</Base>
+			<PerPower>0</PerPower>
+		</Item>
+		<Item>
+			<Base>1</Base>
+			<PerPower>0</PerPower>
+		</Item>
+	</damage>
+	<duration>
+		<Item>
+			<Base>1</Base>
+			<PerPower>0.5</PerPower>
+		</Item>
+		<Item>
+			<Base>2</Base>
+			<PerPower>0.5</PerPower>
+		</Item>
+		<Item>
+			<Base>2</Base>
+			<PerPower>0.5</PerPower>
+		</Item>
+		<Item>
+			<Base>2</Base>
+			<PerPower>0.5</PerPower>
+		</Item>
+	</duration>
+	<sSpellCost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>0</Gold>
+	</sSpellCost>
+	<IsAreaAttack>false</IsAreaAttack>
+	<CanSelectDead>false</CanSelectDead>
+	<Target>TARGET_HOSTILE</Target>
+	<Element>ELEMENT_NONE</Element>
+	<visuals>
+		<Item href="Forgetfullness.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+	</visuals>
+</Spell>

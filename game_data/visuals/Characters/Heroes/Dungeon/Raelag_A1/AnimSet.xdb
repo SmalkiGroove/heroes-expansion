@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimSet ObjectRecordID="1000154">
+	<animations>
+		<Item>
+			<Kind>buff</Kind>
+			<Anim href="/Characters/Heroes/Raelag_LOD-adv-buff.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>idle00</Kind>
+			<Anim href="/Characters/Heroes/Raelag_LOD-adv-idle00.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>move</Kind>
+			<Anim href="/Characters/Heroes/Raelag_LOD-adv-move.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+	</animations>
+	<ExpSrcScene href="/models/Heroes/Raelag/Raelag_LOD.mb"/>
+	<ExpSrcClipFolder href="/Animations/Heroes/Raelag/Clip_adventure/"/>
+	<ExpRootTransform>Global</ExpRootTransform>
+</AnimSet>

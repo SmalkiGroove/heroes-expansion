@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvMapHeroShared ObjectRecordID="63">
+	<Model href="/Characters/Heroes/Ranger_LOD.xdb#xpointer(/Model)"/>
+	<AnimSet href="/Characters/Heroes/Ranger_LOD-adv.xdb#xpointer(/AnimSet)"/>
+	<blockedTiles/>
+	<holeTiles/>
+	<activeTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+	</activeTiles>
+	<passableTiles/>
+	<PossessionMarkerTile>
+		<x>0</x>
+		<y>0</y>
+	</PossessionMarkerTile>
+	<Effect/>
+	<EffectWhenOwned/>
+	<messagesFileRef/>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect/>
+	<flybyMessageFileRef href=""/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Units.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>true</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128/>
+	<InternalName>Gem</InternalName>
+	<Class>HERO_CLASS_DRUID</Class>
+	<Specialization>HERO_SPEC_INEXHAUSTIBLE</Specialization>
+	<PrimarySkill>
+		<Mastery>MASTERY_BASIC</Mastery>
+		<SkillID>HERO_SKILL_AVENGER</SkillID>
+	</PrimarySkill>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Preserve/Inexhaustible/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Preserve/Inexhaustible/Description.txt"/>
+	<SpecializationIcon href="/Textures/HeroScreen/Specializations/Academy/Inexhaustible.xdb#xpointer(/Texture)"/>
+	<FaceTexture href="/Textures/Icons/Heroes/Preserve/Preserve_Gem_128x128.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTextureSmall/>
+	<HeroCharacterArena href="/Characters/Heroes/Preserve/Gem/HeroCharacterArena.xdb#xpointer(/Character)" />
+	<HeroCharacterArenaMelee href="/Characters/Heroes/Preserve/Gem/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
+	<HeroCharacterAdventure href="/Characters/Heroes/Preserve/Gem/HeroCharacterAdventure.xdb#xpointer(/Character)" />
+	<HeroIndividualCamera href="/Characters/Heroes/Preserve/Gem/HeroIndividualCamera.xdb#xpointer(/Camera)" />
+	<CombatVisual href="/Characters/Heroes/Preserve/Gem/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<TownType>TOWN_PRESERVE</TownType>
+	<Editable>
+		<NameFileRef href="/Text/Game/Heroes/Persons/Preserve/Gem/Name.txt"/>
+		<BiographyFileRef href="/Text/Game/Heroes/Persons/Preserve/Gem/Bio.txt"/>
+		<Offence>0</Offence>
+		<Defence>1</Defence>
+		<Spellpower>2</Spellpower>
+		<Knowledge>2</Knowledge>
+		<skills>
+			<Item>
+				<Mastery>MASTERY_ADVANCED</Mastery>
+				<SkillID>HERO_SKILL_SORCERY</SkillID>
+			</Item>
+		</skills>
+		<perkIDs>
+			<Item>HERO_SKILL_MYSTICISM</Item>
+		</perkIDs>
+		<spellIDs>
+			<Item>SPELL_WASP_SWARM</Item>
+		</spellIDs>
+		<Ballista>false</Ballista>
+		<FirstAidTent>false</FirstAidTent>
+		<AmmoCart>false</AmmoCart>
+		<FavoriteEnemies/>
+	</Editable>
+	<ArrowButtonState>0</ArrowButtonState>
+	<Decal/>
+	<Selection href="/_(Model)/Heroes/Ranger_Path/Symbol.xdb#xpointer(/Model)"/>
+	<Trace href="/MapObjects/_(AdvMapHeroTraceSet)/Rampart.xdb#xpointer(/AdvMapHeroTraceSet)"/>
+	<RaceTraitIcon/>
+	<RaceTraitDescFileRef href=""/>
+	<ScenarioHero>false</ScenarioHero>
+	<AdventureMusic/>
+	<HideInEditor>false</HideInEditor>
+</AdvMapHeroShared>

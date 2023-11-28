@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvMapHeroShared>
+	<Model href="/Characters/Heroes/H5A2/OrcWarrior_Hero.xdb#xpointer(/Model)"/>
+	<AnimSet href="/Characters/Heroes/H5A2/OrcWarrior_Hero-arena.xdb#xpointer(/AnimSet)"/>
+	<blockedTiles/>
+	<holeTiles/>
+	<activeTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+	</activeTiles>
+	<passableTiles/>
+	<PossessionMarkerTile>
+		<x>0</x>
+		<y>0</y>
+	</PossessionMarkerTile>
+	<Effect/>
+	<EffectWhenOwned/>
+	<messagesFileRef>
+		<Item href=""/>
+	</messagesFileRef>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect/>
+	<flybyMessageFileRef href=""/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Units.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>true</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128 href="/UI/H5A2/Icons/Heroes/Portrets128x128/Stronghold_Haggash.(Texture).xdb#xpointer(/Texture)"/>
+	<InternalName>Hero7</InternalName>
+	<Class>HERO_CLASS_SHAMAN</Class>
+	<Specialization>HERO_SPEC_IMPREGNABLE</Specialization>
+	<PrimarySkill>
+		<Mastery>MASTERY_EXPERT</Mastery>
+		<SkillID>HERO_SKILL_NAVIGATION</SkillID>
+	</PrimarySkill>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Stronghold/Impregnable/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Stronghold/Impregnable/Description.txt"/>
+	<SpecializationIcon href="/Textures/HeroScreen/Skills/SummoningMagic_3.xdb#xpointer(/Texture)"/>
+	<FaceTexture href="/UI/H5A2/Icons/Heroes/Portrets128x128/Stronghold_Haggash.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTextureSmall/>
+	<HeroCharacterArena href="/Characters/Heroes/Stronghold/Hero7/HeroCharacterArena.xdb#xpointer(/Character)" />
+	<HeroCharacterArenaMelee href="/Characters/Heroes/Stronghold/Hero7/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
+	<HeroCharacterAdventure href="/Characters/Heroes/Stronghold/Hero7/HeroCharacterAdventure.xdb#xpointer(/Character)" />
+	<HeroIndividualCamera href="/Characters/Heroes/Stronghold/Hero7/HeroIndividualCamera.xdb#xpointer(/Camera)" />
+	<CombatVisual href="/Characters/Heroes/Stronghold/Hero7/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<TownType>TOWN_STRONGHOLD</TownType>
+	<Editable>
+		<NameFileRef href="/Text/Game/Heroes/Persons/Stronghold/Hero7/Name.txt"/>
+		<BiographyFileRef href="/Text/Game/Heroes/Persons/Stronghold/Hero7/Bio.txt"/>
+		<Offence>0</Offence>
+		<Defence>1</Defence>
+		<Spellpower>2</Spellpower>
+		<Knowledge>2</Knowledge>
+		<skills>
+			<Item>
+				<Mastery>MASTERY_ADVANCED</Mastery>
+				<SkillID>HERO_SKILL_SHATTER_DARK_MAGIC</SkillID>
+			</Item>
+			<Item>
+				<Mastery>MASTERY_ADVANCED</Mastery>
+				<SkillID>HERO_SKILL_SHATTER_DESTRUCTIVE_MAGIC</SkillID>
+			</Item>
+			<Item>
+				<Mastery>MASTERY_ADVANCED</Mastery>
+				<SkillID>HERO_SKILL_SHATTER_LIGHT_MAGIC</SkillID>
+			</Item>
+			<Item>
+				<Mastery>MASTERY_ADVANCED</Mastery>
+				<SkillID>HERO_SKILL_SHATTER_SUMMONING_MAGIC</SkillID>
+			</Item>
+		</skills>
+		<perkIDs/>
+		<spellIDs>
+			<Item>SPELL_DISPEL</Item>
+		</spellIDs>
+		<Ballista>false</Ballista>
+		<FirstAidTent>false</FirstAidTent>
+		<AmmoCart>false</AmmoCart>
+		<FavoriteEnemies/>
+		<TalismanLevel>0</TalismanLevel>
+	</Editable>
+	<ArrowButtonState>0</ArrowButtonState>
+	<Decal/>
+	<Selection href="/_(Model)/Heroes/Orc_Warrior_Path/Symbol.xdb#xpointer(/Model)"/>
+	<Trace href="/MapObjects/_(AdvMapHeroTraceSet)/Barbarian.xdb#xpointer(/AdvMapHeroTraceSet)"/>
+	<RaceTraitIcon/>
+	<RaceTraitDescFileRef href=""/>
+	<ScenarioHero>false</ScenarioHero>
+	<AdventureMusic/>
+	<HideInEditor>false</HideInEditor>
+	<PresetMinimalAttributes>
+		<Offence>2</Offence>
+		<Defence>2</Defence>
+		<Spellpower>2</Spellpower>
+		<Knowledge>2</Knowledge>
+	</PresetMinimalAttributes>
+</AdvMapHeroShared>

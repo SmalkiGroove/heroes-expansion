@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvMapHeroShared ObjectRecordID="28">
+	<Model href="/Characters/Heroes/Zehir_LOD.xdb#xpointer(/Model)"/>
+	<AnimSet href="/Characters/Heroes/Zehir_LOD-adv.xdb#xpointer(/AnimSet)"/>
+	<blockedTiles/>
+	<holeTiles/>
+	<activeTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+	</activeTiles>
+	<passableTiles/>
+	<PossessionMarkerTile>
+		<x>0</x>
+		<y>0</y>
+	</PossessionMarkerTile>
+	<Effect/>
+	<EffectWhenOwned/>
+	<messagesFileRef/>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect/>
+	<flybyMessageFileRef href=""/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Units.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>true</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128 href="/Textures/Icons/Heroes/Academy/Academy_Zehir_128x128.(Texture).xdb#xpointer(/Texture)"/>
+	<InternalName>Zehir</InternalName>
+	<Class>HERO_CLASS_ELEMENTALIST</Class>
+	<Specialization>HERO_SPEC_MASTER_OF_ELEMENTS</Specialization>
+	<PrimarySkill>
+		<Mastery>MASTERY_BASIC</Mastery>
+		<SkillID>HERO_SKILL_ARTIFICIER</SkillID>
+	</PrimarySkill>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Academy/Master_of_Elements/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Academy/Master_of_Elements/Description.txt"/>
+	<SpecializationIcon href="/Textures/HeroScreen/Specializations/Academy/Master_of_Elements.xdb#xpointer(/Texture)"/>
+	<FaceTexture href="/Textures/Icons/Heroes/Academy/Academy_Zehir_128x128.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTextureSmall/>
+	<HeroCharacterArena href="/Characters/Heroes/Academy/Zehir/HeroCharacterArena.xdb#xpointer(/Character)" />
+	<HeroCharacterArenaMelee href="/Characters/Heroes/Academy/Zehir/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
+	<HeroCharacterAdventure href="/Characters/Heroes/Academy/Zehir/HeroCharacterAdventure.xdb#xpointer(/Character)" />
+	<HeroIndividualCamera href="/Characters/Heroes/Academy/Zehir/HeroIndividualCamera.xdb#xpointer(/Camera)" />
+	<CombatVisual href="/Characters/Heroes/Academy/Zehir/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<TownType>TOWN_ACADEMY</TownType>
+	<Editable>
+		<NameFileRef href="/Text/Game/Heroes/Persons/Academy/Zehir/Name.txt"/>
+		<BiographyFileRef href="/Text/Game/Heroes/Persons/Academy/Zehir/Bio.txt"/>
+		<Offence>0</Offence>
+		<Defence>0</Defence>
+		<Spellpower>3</Spellpower>
+		<Knowledge>2</Knowledge>
+		<skills>
+			<Item>
+				<Mastery>MASTERY_BASIC</Mastery>
+				<SkillID>HERO_SKILL_SUMMONING_MAGIC</SkillID>
+			</Item>	
+		</skills>
+		<perkIDs>
+			<Item>HERO_SKILL_MASTER_OF_CREATURES</Item>
+		</perkIDs>
+		<spellIDs>
+			<Item>SPELL_SUMMON_ELEMENTALS</Item>
+		</spellIDs>
+		<Ballista>false</Ballista>
+		<FirstAidTent>false</FirstAidTent>
+		<AmmoCart>false</AmmoCart>
+		<FavoriteEnemies/>
+		<TalismanLevel>0</TalismanLevel>
+	</Editable>
+	<ArrowButtonState>0</ArrowButtonState>
+	<Decal/>
+	<Selection href="/_(Model)/Heroes/Wizard_Path/Symbol.xdb#xpointer(/Model)"/>
+	<Trace href="/MapObjects/_(AdvMapHeroTraceSet)/Academy.xdb#xpointer(/AdvMapHeroTraceSet)"/>
+	<RaceTraitIcon/>
+	<RaceTraitDescFileRef href=""/>
+	<ScenarioHero>false</ScenarioHero>
+	<AdventureMusic href="/Sounds/_(Music)/AdvMap-Heroes/a2-Zehir.xdb#xpointer(/Music)"/>
+	<HideInEditor>false</HideInEditor>
+	<PresetMinimalAttributes>
+		<Offence>2</Offence>
+		<Defence>2</Defence>
+		<Spellpower>2</Spellpower>
+		<Knowledge>2</Knowledge>
+	</PresetMinimalAttributes>
+</AdvMapHeroShared>

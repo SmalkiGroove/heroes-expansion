@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature ObjectRecordID="1000012">
+	<AttackSkill>18</AttackSkill>
+	<DefenceSkill>18</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>10</MinDamage>
+	<MaxDamage>20</MaxDamage>
+	<Speed>7</Speed>
+	<Initiative>12</Initiative>
+	<Flying>false</Flying>
+	<Health>77</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>250</Exp>
+	<Power>1441</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>5</CreatureTier>
+	<Upgrade>true</Upgrade>
+	<PairCreature>CREATURE_UNICORN</PairCreature>
+	<CreatureTown>TOWN_PRESERVE</CreatureTown>
+	<MagicElement>
+		<First>ELEMENT_FIRE</First>
+		<Second>ELEMENT_EARTH</Second>
+	</MagicElement>
+	<WeeklyGrowth>6</WeeklyGrowth>
+	<Cost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>500</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Preserve/War_Unicorn.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>2</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Preserve/War_Unicorn.xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_UNICORN</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_BLINDING_ATTACK</Item>
+		<Item>ABILITY_AURA_OF_MAGIC_RESISTANCE</Item>
+		<Item>ABILITY_RIDER_CHARGE</Item>
+	</Abilities>
+</Creature>

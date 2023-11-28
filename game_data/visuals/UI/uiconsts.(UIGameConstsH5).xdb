@@ -1,0 +1,2466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UIGameConstsH5 ObjectRecordID="1000000">
+	<Contexts>
+		<Item href="Tooltips/Main.(TooltipContext).xdb#xpointer(/TooltipContext)"/>
+	</Contexts>
+	<Console href="Console.(WindowConsole).xdb#xpointer(/WindowConsole)"/>
+	<DebugInfo/>
+	<StatsWindow/>
+	<ButtonClickSound>
+		<Commands>
+			<Item href="Sounds/ButtonClick.(UISPlaySound).xdb#xpointer(/UISPlaySound)"/>
+		</Commands>
+		<Reversable>false</Reversable>
+	</ButtonClickSound>
+	<DisableButtonClickSound>
+		<Commands>
+			<Item href="Sounds/DisableButtonClick.(UISPlaySound).xdb#xpointer(/UISPlaySound)"/>
+		</Commands>
+		<Reversable>false</Reversable>
+	</DisableButtonClickSound>
+	<TooltipSound>
+		<Commands>
+			<Item href="Sounds/Tooltip.(UISPlaySound).xdb#xpointer(/UISPlaySound)"/>
+		</Commands>
+		<Reversable>false</Reversable>
+	</TooltipSound>
+	<ScrollBarSound>
+		<Commands>
+			<Item href="Sounds/ScrollBar.(UISPlaySound).xdb#xpointer(/UISPlaySound)"/>
+		</Commands>
+		<Reversable>false</Reversable>
+	</ScrollBarSound>
+	<mlTags>
+		<Item>
+			<Name>body_bright</Name>
+			<TextFileRef href="Consts/mlTags/body_bright.txt"/>
+		</Item>
+		<Item>
+			<Name>creatures_count</Name>
+			<TextFileRef href="Consts/mlTags/creatures_count.txt"/>
+		</Item>
+		<Item>
+			<Name>creatures_count_large</Name>
+			<TextFileRef href="Consts/mlTags/creatures_count_large.txt"/>
+		</Item>
+		<Item>
+			<Name>creatures_count_small</Name>
+			<TextFileRef href="Consts/mlTags/creatures_count_small.txt"/>
+		</Item>
+		<Item>
+			<Name>credits_body</Name>
+			<TextFileRef href="Consts/mlTags/credits_body.txt"/>
+		</Item>
+		<Item>
+			<Name>credits_h1</Name>
+			<TextFileRef href="Consts/mlTags/credits_h1.txt"/>
+		</Item>
+		<Item>
+			<Name>credits_h2</Name>
+			<TextFileRef href="Consts/mlTags/credits_h2.txt"/>
+		</Item>
+		<Item>
+			<Name>dialog_body</Name>
+			<TextFileRef href="Consts/mlTags/dialog_body.txt"/>
+		</Item>
+		<Item>
+			<Name>dialog_name</Name>
+			<TextFileRef href="Consts/mlTags/dialog_name.txt"/>
+		</Item>
+		<Item>
+			<Name>edit</Name>
+			<TextFileRef href="Consts/mlTags/edit.txt"/>
+		</Item>
+		<Item>
+			<Name>flying_signs</Name>
+			<TextFileRef href="Consts/mlTags/flying_signs.txt"/>
+		</Item>
+		<Item>
+			<Name>combat_flying_signs</Name>
+			<TextFileRef href="Consts/mlTags/combat_flying_signs.txt"/>
+		</Item>
+		<Item>
+			<Name>flying_signs_blood_rage</Name>
+			<TextFileRef href="Consts/mlTags/flying_signs_blood_rage.txt"/>
+		</Item>
+		<Item>
+			<Name>h3_block</Name>
+			<TextFileRef href="Consts/mlTags/h3_block.txt"/>
+		</Item>
+		<Item>
+			<Name>h3_bright</Name>
+			<TextFileRef href="Consts/mlTags/h3_bright.txt"/>
+		</Item>
+		<Item>
+			<Name>h3_header</Name>
+			<TextFileRef href="Consts/mlTags/h3_header.txt"/>
+		</Item>
+		<Item>
+			<Name>h3_text</Name>
+			<TextFileRef href="Consts/mlTags/h3_text.txt"/>
+		</Item>
+		<Item>
+			<Name>hotkey_postfix</Name>
+			<TextFileRef href="Consts/mlTags/hotkey_postfix.txt"/>
+		</Item>
+		<Item>
+			<Name>hotkey_prefix</Name>
+			<TextFileRef href="Consts/mlTags/hotkey_prefix.txt"/>
+		</Item>
+		<Item>
+			<Name>hotkeys_delimiter</Name>
+			<TextFileRef href="Consts/mlTags/hotkeys_delimiter.txt"/>
+		</Item>
+		<Item>
+			<Name>hotkeys_postfix</Name>
+			<TextFileRef href="Consts/mlTags/hotkeys_postfix.txt"/>
+		</Item>
+		<Item>
+			<Name>hotkeys_prefix</Name>
+			<TextFileRef href="Consts/mlTags/hotkeys_prefix.txt"/>
+		</Item>
+		<Item>
+			<Name>key_value_name</Name>
+			<TextFileRef href="Consts/mlTags/key_value_name.txt"/>
+		</Item>
+		<Item>
+			<Name>key_value_value</Name>
+			<TextFileRef href="Consts/mlTags/key_value_value.txt"/>
+		</Item>
+		<Item>
+			<Name>menu</Name>
+			<TextFileRef href="Consts/mlTags/menu.txt"/>
+		</Item>
+		<Item>
+			<Name>menu_disabled</Name>
+			<TextFileRef href="Consts/mlTags/menu_disabled.txt"/>
+		</Item>
+		<Item>
+			<Name>menu_over</Name>
+			<TextFileRef href="Consts/mlTags/menu_over.txt"/>
+		</Item>
+		<Item>
+			<Name>menu_small</Name>
+			<TextFileRef href="Consts/mlTags/menu_small.txt"/>
+		</Item>
+		<Item>
+			<Name>menu_small_disabled</Name>
+			<TextFileRef href="Consts/mlTags/menu_small_disabled.txt"/>
+		</Item>
+		<Item>
+			<Name>menu_small_over</Name>
+			<TextFileRef href="Consts/mlTags/menu_small_over.txt"/>
+		</Item>
+		<Item>
+			<Name>object_active</Name>
+			<TextFileRef href="Consts/mlTags/object_active.txt"/>
+		</Item>
+		<Item>
+			<Name>object_inactive</Name>
+			<TextFileRef href="Consts/mlTags/object_inactive.txt"/>
+		</Item>
+		<Item>
+			<Name>price</Name>
+			<TextFileRef href="Consts/mlTags/price.txt"/>
+		</Item>
+		<Item>
+			<Name>progress_bar</Name>
+			<TextFileRef href="Consts/mlTags/progress_bar.txt"/>
+		</Item>
+		<Item>
+			<Name>pwl_h0</Name>
+			<TextFileRef href="Consts/mlTags/pwl_h0.txt"/>
+		</Item>
+		<Item>
+			<Name>pwl_h1</Name>
+			<TextFileRef href="Consts/mlTags/pwl_h1.txt"/>
+		</Item>
+		<Item>
+			<Name>pwl_h3</Name>
+			<TextFileRef href="Consts/mlTags/pwl_h3.txt"/>
+		</Item>
+		<Item>
+			<Name>pwl_h4</Name>
+			<TextFileRef href="Consts/mlTags/pwl_h4.txt"/>
+		</Item>
+		<Item>
+			<Name>resource_bar</Name>
+			<TextFileRef href="Consts/mlTags/resource_bar.txt"/>
+		</Item>
+		<Item>
+			<Name>resource_info</Name>
+			<TextFileRef href="Consts/mlTags/resource_info.txt"/>
+		</Item>
+		<Item>
+			<Name>tooltip_bright</Name>
+			<TextFileRef href="Consts/mlTags/tooltip_bright.txt"/>
+		</Item>
+		<Item>
+			<Name>tooltip_default</Name>
+			<TextFileRef href="Consts/mlTags/tooltip_default.txt"/>
+		</Item>
+		<Item>
+			<Name>tooltip_header</Name>
+			<TextFileRef href="Consts/mlTags/tooltip_header.txt"/>
+		</Item>
+		<Item>
+			<Name>tooltip_title</Name>
+			<TextFileRef href="Consts/mlTags/tooltip_title.txt"/>
+		</Item>
+		<Item>
+			<Name>tooltip_special_title</Name>
+			<TextFileRef href="Consts/mlTags/tooltip_special_title.txt"/>
+		</Item>
+		<Item>
+			<Name>tooltip_special_comment</Name>
+			<TextFileRef href="Consts/mlTags/tooltip_special_comment.txt"/>
+		</Item>
+		<Item>
+			<Name>tooltip_special_text</Name>
+			<TextFileRef href="Consts/mlTags/tooltip_special_text.txt"/>
+		</Item>
+		<Item>
+			<Name>tooltip_special_item_present</Name>
+			<TextFileRef href="Consts/mlTags/tooltip_special_item_present.txt"/>
+		</Item>
+		<Item>
+			<Name>tooltip_special_item_absent</Name>
+			<TextFileRef href="Consts/mlTags/tooltip_special_item_absent.txt"/>
+		</Item>
+		<Item>
+			<Name>value_name</Name>
+			<TextFileRef href="Consts/mlTags/value_name.txt"/>
+		</Item>
+		<Item>
+			<Name>value_value</Name>
+			<TextFileRef href="Consts/mlTags/value_value.txt"/>
+		</Item>
+		<Item>
+			<Name>smallvalue_name</Name>
+			<TextFileRef href="Consts/mlTags/smallvalue_name.txt"/>
+		</Item>
+		<Item>
+			<Name>smallvalue_value</Name>
+			<TextFileRef href="Consts/mlTags/smallvalue_value.txt"/>
+		</Item>
+		<Item>
+			<Name>color_bright</Name>
+			<TextFileRef href="Consts/mlTags/Colors/color_bright.txt"/>
+		</Item>
+		<Item>
+			<Name>color_default</Name>
+			<TextFileRef href="Consts/mlTags/Colors/color_default.txt"/>
+		</Item>
+		<Item>
+			<Name>color_dialog</Name>
+			<TextFileRef href="Consts/mlTags/Colors/color_dialog.txt"/>
+		</Item>
+		<Item>
+			<Name>color_disabled</Name>
+			<TextFileRef href="Consts/mlTags/Colors/color_disabled.txt"/>
+		</Item>
+		<Item>
+			<Name>color_header</Name>
+			<TextFileRef href="Consts/mlTags/Colors/color_header.txt"/>
+		</Item>
+		<Item>
+			<Name>color_hotkey</Name>
+			<TextFileRef href="Consts/mlTags/Colors/color_hotkey.txt"/>
+		</Item>
+		<Item>
+			<Name>color_menu</Name>
+			<TextFileRef href="Consts/mlTags/Colors/color_menu.txt"/>
+		</Item>
+		<Item>
+			<Name>color_menu_disabled</Name>
+			<TextFileRef href="Consts/mlTags/Colors/color_menu_disabled.txt"/>
+		</Item>
+		<Item>
+			<Name>color_menu_over</Name>
+			<TextFileRef href="Consts/mlTags/Colors/color_menu_over.txt"/>
+		</Item>
+		<Item>
+			<Name>color_negative</Name>
+			<TextFileRef href="Consts/mlTags/Colors/color_negative.txt"/>
+		</Item>
+		<Item>
+			<Name>color_neutral</Name>
+			<TextFileRef href="Consts/mlTags/Colors/color_neutral.txt"/>
+		</Item>
+		<Item>
+			<Name>color_positive</Name>
+			<TextFileRef href="Consts/mlTags/Colors/color_positive.txt"/>
+		</Item>
+		<Item>
+			<Name>color_title</Name>
+			<TextFileRef href="Consts/mlTags/Colors/color_title.txt"/>
+		</Item>
+		<Item>
+			<Name>color_tooltip</Name>
+			<TextFileRef href="Consts/mlTags/Colors/color_tooltip.txt"/>
+		</Item>
+		<Item>
+			<Name>color_special</Name>
+			<TextFileRef href="Consts/mlTags/Colors/color_special.txt"/>
+		</Item>
+		<Item>
+			<Name>color_special_off</Name>
+			<TextFileRef href="Consts/mlTags/Colors/color_special_off.txt"/>
+		</Item>
+		<Item>
+			<Name>color_white</Name>
+			<TextFileRef href="Consts/mlTags/Colors/color_white.txt"/>
+		</Item>
+		<Item>
+			<Name>body</Name>
+			<TextFileRef href="Consts/mlTags/Fonts/body.txt"/>
+		</Item>
+		<Item>
+			<Name>smallbody</Name>
+			<TextFileRef href="Consts/mlTags/Fonts/smallbody.txt"/>
+		</Item>
+		<Item>
+			<Name>button</Name>
+			<TextFileRef href="Consts/mlTags/Fonts/button.txt"/>
+		</Item>
+		<Item>
+			<Name>h0</Name>
+			<TextFileRef href="Consts/mlTags/Fonts/h0.txt"/>
+		</Item>
+		<Item>
+			<Name>h1</Name>
+			<TextFileRef href="Consts/mlTags/Fonts/h1.txt"/>
+		</Item>
+		<Item>
+			<Name>h2</Name>
+			<TextFileRef href="Consts/mlTags/Fonts/h2.txt"/>
+		</Item>
+		<Item>
+			<Name>h3</Name>
+			<TextFileRef href="Consts/mlTags/Fonts/h3.txt"/>
+		</Item>
+		<Item>
+			<Name>h4</Name>
+			<TextFileRef href="Consts/mlTags/Fonts/h4.txt"/>
+		</Item>
+		<Item>
+			<Name>large</Name>
+			<TextFileRef href="Consts/mlTags/Fonts/large.txt"/>
+		</Item>
+		<Item>
+			<Name>small</Name>
+			<TextFileRef href="Consts/mlTags/Fonts/small.txt"/>
+		</Item>
+		<Item>
+			<Name>system</Name>
+			<TextFileRef href="Consts/mlTags/Fonts/system.txt"/>
+		</Item>
+		<Item>
+			<Name>sysinfo</Name>
+			<TextFileRef href="Consts/mlTags/Fonts/sysinfo.txt"/>
+		</Item>
+		<Item>
+			<Name>outline</Name>
+			<TextFileRef href="Consts/mlTags/Styles/outline.txt"/>
+		</Item>
+		<Item>
+			<Name>dots</Name>
+			<TextFileRef href="Consts/mlTags/Special/dots.txt"/>
+		</Item>
+		<Item>
+			<Name>color_blood_rage</Name>
+			<TextFileRef href="Consts/mlTags/Colors/color_blood_rage.txt"/>
+		</Item>
+	</mlTags>
+	<DefaultPlayerProfileNameFileRef href="Consts/Profiles/DefaultPlayerName.txt"/>
+	<GameOptions>
+		<Categories>
+			<Item>
+				<ID>game</ID>
+				<MenuButtonNameFileRef href="Consts/GameOptions/CategoryButtonGame.txt"/>
+				<NameFileRef href="Consts/GameOptions/CategoryGame.txt"/>
+				<TooltipFileRef href="Consts/GameOptions/CategoryGameTooltip.txt"/>
+				<Pages>
+					<Item>
+						<ID>adventure</ID>
+						<NameFileRef href="Consts/GameOptions/PageGameAdventure.txt"/>
+						<TooltipFileRef href="Consts/GameOptions/PageGameAdventureTooltip.txt"/>
+						<Options>
+							<Item>
+								<ID>quick_combat</ID>
+								<Type>OPTION_CHECK_BOX</Type>
+								<NameFileRef href="Consts/GameOptions/GameAdventureQuickCombat/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/GameAdventureQuickCombat/Tooltip.txt"/>
+								<Items/>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>adventure_quick_combat</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>0</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar>disable_options_by_multiplayer</DisableByCodeGlobalVar>
+								<LabelsFileRef/>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID>movement_reminder</ID>
+								<Type>OPTION_CHECK_BOX</Type>
+								<NameFileRef href="Consts/GameOptions/GameAdventureMovementReminder/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/GameAdventureMovementReminder/Tooltip.txt"/>
+								<Items/>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>movement_reminder</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>1</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar/>
+								<LabelsFileRef/>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID>map_scroll_speed</ID>
+								<Type>OPTION_SCROLLER</Type>
+								<NameFileRef href="Consts/GameOptions/GameAdventureMapScrollSpeed/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/GameAdventureMapScrollSpeed/Tooltip.txt"/>
+								<Items>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameAdventureMapScrollSpeed/Item00.txt"/>
+										<Value>0.5</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameAdventureMapScrollSpeed/Item01.txt"/>
+										<Value>1</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameAdventureMapScrollSpeed/Item02.txt"/>
+										<Value>2</Value>
+									</Item>
+								</Items>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>game_scrollsensitivity</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>1</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar/>
+								<LabelsFileRef>
+									<Item href="Consts/GameOptions/GameAdventureMapScrollSpeed/Label00.txt"/>
+									<Item href="Consts/GameOptions/GameAdventureMapScrollSpeed/Label01.txt"/>
+								</LabelsFileRef>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID>show_movement_path</ID>
+								<Type>OPTION_CHECK_BOX</Type>
+								<NameFileRef href="Consts/GameOptions/GameAdventureShowMovementPath/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/GameAdventureShowMovementPath/Tooltip.txt"/>
+								<Items/>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>show_movement_path</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>1</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar/>
+								<LabelsFileRef/>
+								<Hide>true</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID>invert_camera</ID>
+								<Type>OPTION_CHECK_BOX</Type>
+								<NameFileRef href="Consts/GameOptions/GameAdventureInvertCamera/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/GameAdventureInvertCamera/Tooltip.txt"/>
+								<Items/>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>invert_camera</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>1</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar/>
+								<LabelsFileRef/>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID>tutorial_show</ID>
+								<Type>OPTION_CHECK_BOX</Type>
+								<NameFileRef href="Consts/GameOptions/GameAdventureTutorialShow/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/GameAdventureTutorialShow/Tooltip.txt"/>
+								<Items/>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>tutorial_show</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>1</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar/>
+								<LabelsFileRef/>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID>tooltip_delay</ID>
+								<Type>OPTION_SCROLLER</Type>
+								<NameFileRef href="Consts/GameOptions/GameAdventureTooltipDelay/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/GameAdventureTooltipDelay/Tooltip.txt"/>
+								<Items>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameAdventureTooltipDelay/Item00.txt"/>
+										<Value>0</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameAdventureTooltipDelay/Item01.txt"/>
+										<Value>0.5</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameAdventureTooltipDelay/Item02.txt"/>
+										<Value>1</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameAdventureTooltipDelay/Item03.txt"/>
+										<Value>1.5</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameAdventureTooltipDelay/Item04.txt"/>
+										<Value>2</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameAdventureTooltipDelay/Item05.txt"/>
+										<Value>1e+006</Value>
+									</Item>
+								</Items>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>Options.Tooltips.HoverTimeout</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>2</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar/>
+								<LabelsFileRef>
+									<Item href="Consts/GameOptions/GameAdventureTooltipDelay/Label00.txt"/>
+									<Item href="Consts/GameOptions/GameAdventureTooltipDelay/Label01.txt"/>
+								</LabelsFileRef>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID>autosave_periods</ID>
+								<Type>OPTION_CHECK_BOX</Type>
+								<NameFileRef href="Consts/GameOptions/GameAdventureAutosave/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/GameAdventureAutosave/Tooltip.txt"/>
+								<Items/>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>autosave</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>1</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar>disable_options_by_multiplayer</DisableByCodeGlobalVar>
+								<LabelsFileRef/>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID>spellbook_animation</ID>
+								<Type>OPTION_CHECK_BOX</Type>
+								<NameFileRef href="Consts/GameOptions/GameAdventureSpellbookAnimation/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/GameAdventureSpellbookAnimation/Tooltip.txt"/>
+								<Items/>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>spellbook_animation</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>0</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar/>
+								<LabelsFileRef/>
+								<Hide>true</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID>movement_speed_player</ID>
+								<Type>OPTION_SCROLLER</Type>
+								<NameFileRef href="Consts/GameOptions/GameAdventureMovementSpeedPlayer/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/GameAdventureMovementSpeedPlayer/Tooltip.txt"/>
+								<Items>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameAdventureMovementSpeedPlayer/Item00.txt"/>
+										<Value>1</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameAdventureMovementSpeedPlayer/Item01.txt"/>
+										<Value>1.5</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameAdventureMovementSpeedPlayer/Item02.txt"/>
+										<Value>2</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameAdventureMovementSpeedPlayer/Item03.txt"/>
+										<Value>3</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameAdventureMovementSpeedPlayer/Item04.txt"/>
+										<Value>6</Value>
+									</Item>
+								</Items>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>adventure_speed_human</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>0</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar>disable_options_by_multiplayer</DisableByCodeGlobalVar>
+								<LabelsFileRef>
+									<Item href="Consts/GameOptions/GameAdventureMovementSpeedPlayer/Label00.txt"/>
+									<Item href="Consts/GameOptions/GameAdventureMovementSpeedPlayer/Label01.txt"/>
+								</LabelsFileRef>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID>movement_speed_opponents</ID>
+								<Type>OPTION_SCROLLER</Type>
+								<NameFileRef href="Consts/GameOptions/GameAdventureMovementSpeedOpponents/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/GameAdventureMovementSpeedOpponents/Tooltip.txt"/>
+								<Items>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameAdventureMovementSpeedOpponents/Item00.txt"/>
+										<Value>1</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameAdventureMovementSpeedOpponents/Item01.txt"/>
+										<Value>1.5</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameAdventureMovementSpeedOpponents/Item02.txt"/>
+										<Value>2</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameAdventureMovementSpeedOpponents/Item03.txt"/>
+										<Value>3</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameAdventureMovementSpeedOpponents/Item04.txt"/>
+										<Value>6</Value>
+									</Item>
+								</Items>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>adventure_speed_ai</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>2</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar>disable_options_by_multiplayer</DisableByCodeGlobalVar>
+								<LabelsFileRef>
+									<Item href="Consts/GameOptions/GameAdventureMovementSpeedOpponents/Label00.txt"/>
+									<Item href="Consts/GameOptions/GameAdventureMovementSpeedOpponents/Label01.txt"/>
+								</LabelsFileRef>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID>special_hero_trail</ID>
+								<Type>OPTION_CHECK_BOX</Type>
+								<NameFileRef href="Consts/GameOptions/GameAdventureSpecialHeroTrail/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/GameAdventureSpecialHeroTrail/Tooltip.txt"/>
+								<Items/>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>prefer_special_hero_trail</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>0</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar>disable_by_non_collector_edition</DisableByCodeGlobalVar>
+								<LabelsFileRef/>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>false</Preview>
+							</Item>
+						</Options>
+					</Item>
+					<Item>
+						<ID>combat</ID>
+						<NameFileRef href="Consts/GameOptions/PageGameCombat.txt"/>
+						<TooltipFileRef href="Consts/GameOptions/PageGameCombatTooltip.txt"/>
+						<Options>
+							<Item>
+								<ID>combat_show_grid</ID>
+								<Type>OPTION_CHECK_BOX</Type>
+								<NameFileRef href="Consts/GameOptions/GameCombatShowGrid/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/GameCombatShowGrid/Tooltip.txt"/>
+								<Items/>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>combat_show_grid</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>0</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar/>
+								<LabelsFileRef/>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID>combat_show_movement_shade</ID>
+								<Type>OPTION_CHECK_BOX</Type>
+								<NameFileRef href="Consts/GameOptions/GameCombatShowSelection/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/GameCombatShowSelection/Tooltip.txt"/>
+								<Items/>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>combat_show_movement_shade</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>1</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar/>
+								<LabelsFileRef/>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID>combat_show_target_shade</ID>
+								<Type>OPTION_CHECK_BOX</Type>
+								<NameFileRef href="Consts/GameOptions/GameCombatCursorShade/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/GameCombatCursorShade/Tooltip.txt"/>
+								<Items/>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>combat_show_target_shade</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>1</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar/>
+								<LabelsFileRef/>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID/>
+								<Type>OPTION_CHECK_BOX</Type>
+								<NameFileRef href="Consts/GameOptions/GameCombatCinematicCamera/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/GameCombatCinematicCamera/Tooltip.txt"/>
+								<Items/>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>camera_cinematic</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>1</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar/>
+								<LabelsFileRef/>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID/>
+								<Type>OPTION_CHECK_BOX</Type>
+								<NameFileRef href="Consts/GameOptions/GameCombatAutocombatMagic/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/GameCombatAutocombatMagic/Tooltip.txt"/>
+								<Items/>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>combat_ai_use_magic_for_human</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>0</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar/>
+								<LabelsFileRef/>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID>combat_style</ID>
+								<Type>OPTION_CHECK_BOX</Type>
+								<NameFileRef href="Consts/GameOptions/GameCombatStyle/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/GameCombatStyle/Tooltip.txt"/>
+								<Items>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameCombatStyle/Item00.txt"/>
+										<Value>0</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameCombatStyle/Item01.txt"/>
+										<Value>1</Value>
+									</Item>
+								</Items>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>combat_dynamic_mode</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>0</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar>disable_combat_style</DisableByCodeGlobalVar>
+								<LabelsFileRef/>
+								<Hide>true</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID>combat_turn_speed</ID>
+								<Type>OPTION_COMBO_BOX</Type>
+								<NameFileRef href="Consts/GameOptions/GameCombatTurnSpeed/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/GameCombatTurnSpeed/Tooltip.txt"/>
+								<Items>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameCombatTurnSpeed/Item00.txt"/>
+										<Value>0</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameCombatTurnSpeed/Item01.txt"/>
+										<Value>1</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameCombatTurnSpeed/Item02.txt"/>
+										<Value>2</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameCombatTurnSpeed/Item03.txt"/>
+										<Value>3</Value>
+									</Item>
+								</Items>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>combat_turn_speed</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>0</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar>disable_combat_style</DisableByCodeGlobalVar>
+								<LabelsFileRef/>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID>combat_animation_time_factor</ID>
+								<Type>OPTION_SCROLLER</Type>
+								<NameFileRef href="Consts/GameOptions/GameCombatTimeFactor/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/GameCombatTimeFactor/Tooltip.txt"/>
+								<Items>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameCombatTimeFactor/Item00.txt"/>
+										<Value>1.1</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameCombatTimeFactor/Item01.txt"/>
+										<Value>1.5</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameCombatTimeFactor/Item02.txt"/>
+										<Value>2</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameCombatTimeFactor/Item03.txt"/>
+										<Value>3</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/GameCombatTimeFactor/Item04.txt"/>
+										<Value>5</Value>
+									</Item>
+								</Items>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>combat_time_factor</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>0</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar/>
+								<LabelsFileRef>
+									<Item href="Consts/GameOptions/GameCombatTimeFactor/Label00.txt"/>
+									<Item href="Consts/GameOptions/GameCombatTimeFactor/Label01.txt"/>
+								</LabelsFileRef>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>false</Preview>
+							</Item>
+						</Options>
+					</Item>
+				</Pages>
+				<Enabled>true</Enabled>
+			</Item>
+			<Item>
+				<ID>video_audio</ID>
+				<MenuButtonNameFileRef href="Consts/GameOptions/CategoryButtonVideoAudio.txt"/>
+				<NameFileRef href="Consts/GameOptions/CategoryVideoAudio.txt"/>
+				<TooltipFileRef href="Consts/GameOptions/CategoryVideoAudioTooltip.txt"/>
+				<Pages>
+					<Item>
+						<ID>page_video</ID>
+						<NameFileRef href=""/>
+						<TooltipFileRef href=""/>
+						<Options>
+							<Item>
+								<ID/>
+								<Type>OPTION_BLOCK_HEADER</Type>
+								<NameFileRef href="Consts/GameOptions/PageVideo.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/PageVideoTooltip.txt"/>
+								<Items/>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1/>
+								<GlobalVar2/>
+								<DefaultValue1>0</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar/>
+								<LabelsFileRef/>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID>ScreenResolution</ID>
+								<Type>OPTION_COMBO_BOX</Type>
+								<NameFileRef href="Consts/GameOptions/VideoScreenResolution/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/VideoScreenResolution/Tooltip.txt"/>
+								<Items/>
+								<ItemsGlobalVar>gfx_availible_resolutions</ItemsGlobalVar>
+								<UseItemNameAsValue>true</UseItemNameAsValue>
+								<GlobalVar1>gfx_resolution</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>0</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar/>
+								<LabelsFileRef/>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group>video</Group>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID>GfxQuality</ID>
+								<Type>OPTION_COMBO_BOX</Type>
+								<NameFileRef href="Consts/GameOptions/ImageQuality/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/ImageQuality/Tooltip.txt"/>
+								<Items>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/ImageQuality/VeryLow.txt"/>
+										<Value>0</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/ImageQuality/Low.txt"/>
+										<Value>0.25</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/ImageQuality/Normal.txt"/>
+										<Value>0.5</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/ImageQuality/High.txt"/>
+										<Value>0.75</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/ImageQuality/VeryHigh.txt"/>
+										<Value>1</Value>
+									</Item>
+								</Items>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>gfx_quality</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>0</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar/>
+								<LabelsFileRef/>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group>video</Group>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID>full_screen</ID>
+								<Type>OPTION_CHECK_BOX</Type>
+								<NameFileRef href="Consts/GameOptions/VideoFullScreen/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/VideoFullScreen/Tooltip.txt"/>
+								<Items/>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>gfx_fullscreen</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>1</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID>app_always_active</OptionToDisableID>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar/>
+								<LabelsFileRef/>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group>video</Group>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID>app_always_active</ID>
+								<Type>OPTION_CHECK_BOX</Type>
+								<NameFileRef href="Consts/GameOptions/VideoAlwaysActive/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/VideoAlwaysActive/Tooltip.txt"/>
+								<Items/>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>app_always_active</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>0</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar/>
+								<LabelsFileRef/>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group>video</Group>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID>gamma_correction</ID>
+								<Type>OPTION_SCROLLER</Type>
+								<NameFileRef href="Consts/GameOptions/VideoGammaCorrection/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/VideoGammaCorrection/Tooltip.txt"/>
+								<Items>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/VideoGammaCorrection/Item00.txt"/>
+										<Value>0.5</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/VideoGammaCorrection/Item01.txt"/>
+										<Value>0.7</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/VideoGammaCorrection/Item02.txt"/>
+										<Value>0.8</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/VideoGammaCorrection/Item03.txt"/>
+										<Value>0.9</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/VideoGammaCorrection/Item04.txt"/>
+										<Value>1</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/VideoGammaCorrection/Item05.txt"/>
+										<Value>1.1</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/VideoGammaCorrection/Item06.txt"/>
+										<Value>1.2</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/VideoGammaCorrection/Item07.txt"/>
+										<Value>1.5</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/VideoGammaCorrection/Item08.txt"/>
+										<Value>2</Value>
+									</Item>
+								</Items>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>gfx_gamma</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>4</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar>~gfx_fullscreen</DisableByCodeGlobalVar>
+								<LabelsFileRef>
+									<Item href="Consts/GameOptions/VideoGammaCorrection/Label00.txt"/>
+									<Item href="Consts/GameOptions/VideoGammaCorrection/Label01.txt"/>
+								</LabelsFileRef>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>true</Preview>
+							</Item>
+							<Item>
+								<ID>antialiasing</ID>
+								<Type>OPTION_SCROLLER</Type>
+								<NameFileRef href="Consts/GameOptions/VideoAntialiasing/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/VideoAntialiasing/Tooltip.txt"/>
+								<Items>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/VideoAntialiasing/Item00.txt"/>
+										<Value>0</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/VideoAntialiasing/Item01.txt"/>
+										<Value>2</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/VideoAntialiasing/Item02.txt"/>
+										<Value>4</Value>
+									</Item>
+								</Items>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>gfx_fsaa</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>0</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar>gfx_tnl_mode</DisableByCodeGlobalVar>
+								<LabelsFileRef>
+									<Item href="Consts/GameOptions/VideoAntialiasing/Label00.txt"/>
+									<Item href="Consts/GameOptions/VideoAntialiasing/Label01.txt"/>
+								</LabelsFileRef>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group>video</Group>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID>anisotropic_filtering</ID>
+								<Type>OPTION_SCROLLER</Type>
+								<NameFileRef href="Consts/GameOptions/VideoAnisotropicFiltering/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/VideoAnisotropicFiltering/Tooltip.txt"/>
+								<Items>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/VideoAnisotropicFiltering/Item00.txt"/>
+										<Value>0</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/VideoAnisotropicFiltering/Item01.txt"/>
+										<Value>2</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/VideoAnisotropicFiltering/Item02.txt"/>
+										<Value>4</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/VideoAnisotropicFiltering/Item03.txt"/>
+										<Value>8</Value>
+									</Item>
+								</Items>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>gfx_anisotropic_filter</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>0</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar>gfx_tnl_mode</DisableByCodeGlobalVar>
+								<LabelsFileRef>
+									<Item href="Consts/GameOptions/VideoAnisotropicFiltering/Label00.txt"/>
+									<Item href="Consts/GameOptions/VideoAnisotropicFiltering/Label01.txt"/>
+								</LabelsFileRef>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group>video</Group>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID>water_reflection</ID>
+								<Type>OPTION_CHECK_BOX</Type>
+								<NameFileRef href="Consts/GameOptions/VideoWaterReflection/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/VideoWaterReflection/Tooltip.txt"/>
+								<Items/>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>gfx_water_reflection</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>1</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar/>
+								<LabelsFileRef/>
+								<Hide>true</Hide>
+								<Global>false</Global>
+								<Group>video</Group>
+								<Preview>false</Preview>
+							</Item>
+						</Options>
+					</Item>
+					<Item>
+						<ID>page_audio</ID>
+						<NameFileRef href=""/>
+						<TooltipFileRef href=""/>
+						<Options>
+							<Item>
+								<ID>use_hardware_cursor</ID>
+								<Type>OPTION_CHECK_BOX</Type>
+								<NameFileRef href="Consts/GameOptions/VideoHardwareCursor/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/VideoHardwareCursor/Tooltip.txt"/>
+								<Items/>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>ui_use_hwcursor</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>0</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar/>
+								<LabelsFileRef/>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID>h5_simple_render</ID>
+								<Type>OPTION_CHECK_BOX</Type>
+								<NameFileRef href="Consts/GameOptions/VideoH5SimpleRender/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/VideoH5SimpleRender/Tooltip.txt"/>
+								<Items/>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>h5_simple_render</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>0</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar/>
+								<LabelsFileRef/>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID>adv_camera_mode</ID>
+								<Type>OPTION_COMBO_BOX</Type>
+								<NameFileRef href="Consts/GameOptions/VideoCameraMode/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/VideoCameraMode/Tooltip.txt"/>
+								<Items>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/VideoCameraMode/Item00.txt"/>
+										<Value>0</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/VideoCameraMode/Item01.txt"/>
+										<Value>1</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/VideoCameraMode/Item02.txt"/>
+										<Value>2</Value>
+									</Item>
+								</Items>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>adv_camera_mode</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>0</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar/>
+								<LabelsFileRef/>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID/>
+								<Type>OPTION_CHECK_BOX</Type>
+								<NameFileRef href="Consts/GameOptions/VideoTownFlyby/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/VideoTownFlyby/Tooltip.txt"/>
+								<Items/>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>town_enable_flyby</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>0</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar/>
+								<LabelsFileRef/>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID/>
+								<Type>OPTION_BLOCK_HEADER</Type>
+								<NameFileRef href="Consts/GameOptions/PageAudio.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/PageAudioTooltip.txt"/>
+								<Items/>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1/>
+								<GlobalVar2/>
+								<DefaultValue1>0</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar/>
+								<LabelsFileRef/>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID>play_sounds</ID>
+								<Type>OPTION_CHECK_BOX</Type>
+								<NameFileRef href="Consts/GameOptions/AudioPlaySounds/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/AudioPlaySounds/Tooltip.txt"/>
+								<Items/>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>play_sounds</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>0</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar/>
+								<LabelsFileRef/>
+								<Hide>true</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>false</Preview>
+							</Item>
+							<Item>
+								<ID>music_volume</ID>
+								<Type>OPTION_SCROLLER</Type>
+								<NameFileRef href="Consts/GameOptions/AudioMusicVolume/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/AudioMusicVolume/Tooltip.txt"/>
+								<Items>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/AudioMusicVolume/Item00.txt"/>
+										<Value>0</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/AudioMusicVolume/Item01.txt"/>
+										<Value>0.1</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/AudioMusicVolume/Item02.txt"/>
+										<Value>0.2</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/AudioMusicVolume/Item03.txt"/>
+										<Value>0.3</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/AudioMusicVolume/Item04.txt"/>
+										<Value>0.4</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/AudioMusicVolume/Item05.txt"/>
+										<Value>0.5</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/AudioMusicVolume/Item06.txt"/>
+										<Value>0.6</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/AudioMusicVolume/Item07.txt"/>
+										<Value>0.7</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/AudioMusicVolume/Item08.txt"/>
+										<Value>0.8</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/AudioMusicVolume/Item09.txt"/>
+										<Value>0.9</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/AudioMusicVolume/Item10.txt"/>
+										<Value>1</Value>
+									</Item>
+								</Items>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>sound_musicvolume</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>10</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar/>
+								<LabelsFileRef>
+									<Item href="Consts/GameOptions/AudioMusicVolume/Label00.txt"/>
+									<Item href="Consts/GameOptions/AudioMusicVolume/Label01.txt"/>
+								</LabelsFileRef>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>true</Preview>
+							</Item>
+							<Item>
+								<ID>sound_volume</ID>
+								<Type>OPTION_SCROLLER</Type>
+								<NameFileRef href="Consts/GameOptions/AudioSoundVolume/Name.txt"/>
+								<TooltipFileRef href="Consts/GameOptions/AudioSoundVolume/Tooltip.txt"/>
+								<Items>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/AudioSoundVolume/Item00.txt"/>
+										<Value>0</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/AudioSoundVolume/Item01.txt"/>
+										<Value>0.1</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/AudioSoundVolume/Item02.txt"/>
+										<Value>0.2</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/AudioSoundVolume/Item03.txt"/>
+										<Value>0.3</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/AudioSoundVolume/Item04.txt"/>
+										<Value>0.4</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/AudioSoundVolume/Item05.txt"/>
+										<Value>0.5</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/AudioSoundVolume/Item06.txt"/>
+										<Value>0.6</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/AudioSoundVolume/Item07.txt"/>
+										<Value>0.7</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/AudioSoundVolume/Item08.txt"/>
+										<Value>0.8</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/AudioSoundVolume/Item09.txt"/>
+										<Value>0.9</Value>
+									</Item>
+									<Item>
+										<NameFileRef href="Consts/GameOptions/AudioSoundVolume/Item10.txt"/>
+										<Value>1</Value>
+									</Item>
+								</Items>
+								<ItemsGlobalVar/>
+								<UseItemNameAsValue>false</UseItemNameAsValue>
+								<GlobalVar1>sound_sfxvolume</GlobalVar1>
+								<GlobalVar2/>
+								<DefaultValue1>10</DefaultValue1>
+								<DefaultValue2>0</DefaultValue2>
+								<OptionToDisableID/>
+								<OptionDisableByValue1>0</OptionDisableByValue1>
+								<OptionToDisableValue1>0</OptionToDisableValue1>
+								<DisableByCodeGlobalVar/>
+								<LabelsFileRef>
+									<Item href="Consts/GameOptions/AudioSoundVolume/Label00.txt"/>
+									<Item href="Consts/GameOptions/AudioSoundVolume/Label01.txt"/>
+								</LabelsFileRef>
+								<Hide>false</Hide>
+								<Global>false</Global>
+								<Group/>
+								<Preview>true</Preview>
+							</Item>
+						</Options>
+					</Item>
+				</Pages>
+				<Enabled>true</Enabled>
+			</Item>
+		</Categories>
+	</GameOptions>
+	<TutorialOptions>
+		<HintWnd href="Tutorial/Hint/Hint.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Hints/>
+		<Blinks/>
+		<Messages>
+			<Item>
+				<ScriptID>MsgBox_UseCyclops</ScriptID>
+				<TextFileRef href="Tutorial_MsgBox_UseCyclops.txt"/>
+				<ShowDuration>20</ShowDuration>
+				<PosX>0</PosX>
+				<PosY>0</PosY>
+			</Item>
+			<Item>
+				<ScriptID>MsgBox_HeroHasBattleElation</ScriptID>
+				<TextFileRef href="Tutorial_MsgBox_HeroHasSkill_BattleElation.txt"/>
+				<ShowDuration>10</ShowDuration>
+				<PosX>0</PosX>
+				<PosY>0</PosY>
+			</Item>
+			<Item>
+				<ScriptID>MsgBox_HeroHasMemoryOfOurBlood</ScriptID>
+				<TextFileRef href="Tutorial_MsgBox_HeroHasSkill_MemoryOfOurBlood.txt"/>
+				<ShowDuration>40</ShowDuration>
+				<PosX>0</PosX>
+				<PosY>0</PosY>
+			</Item>
+			<Item>
+				<ScriptID>Is_FirstRageBonusGained</ScriptID>
+				<TextFileRef href="IsFirstRageBonusGained.txt"/>
+				<ShowDuration>60</ShowDuration>
+				<PosX>0</PosX>
+				<PosY>0</PosY>
+			</Item>
+			<Item>
+				<ScriptID>Is_CreatureAttacks</ScriptID>
+				<TextFileRef href="Is_CreatureAttacks.txt"/>
+				<ShowDuration>15</ShowDuration>
+				<PosX>0</PosX>
+				<PosY>0</PosY>
+			</Item>
+			<Item>
+				<ScriptID>Is_CreatureDefends</ScriptID>
+				<TextFileRef href="Is_creatureDefends.txt"/>
+				<ShowDuration>20</ShowDuration>
+				<PosX>0</PosX>
+				<PosY>0</PosY>
+			</Item>
+			<Item>
+				<ScriptID>Is_CentaursAttacks</ScriptID>
+				<TextFileRef href="Is_CentaursAttacks.txt"/>
+				<ShowDuration>15</ShowDuration>
+				<PosX>0</PosX>
+				<PosY>0</PosY>
+			</Item>
+			<Item>
+				<ScriptID>MsgBox_RagePointsBeforeCombat</ScriptID>
+				<TextFileRef href="MsgBox_RagePointsBeforeCombat.txt"/>
+				<ShowDuration>60</ShowDuration>
+				<PosX>0</PosX>
+				<PosY>0</PosY>
+			</Item>
+			<Item>
+				<ScriptID>MsgBox_RagePointsAfterCombat</ScriptID>
+				<TextFileRef href="MsgBox_RagePointsAfterCombat.txt"/>
+				<ShowDuration>60</ShowDuration>
+				<PosX>0</PosX>
+				<PosY>0</PosY>
+			</Item>
+			<Item>
+				<ScriptID>a2c1m1_1</ScriptID>
+				<TextFileRef href="a2c1m1_1.txt"/>
+				<ShowDuration>0</ShowDuration>
+				<PosX>0</PosX>
+				<PosY>0</PosY>
+			</Item>
+			<Item>
+				<ScriptID>a2c1m1_2</ScriptID>
+				<TextFileRef href="a2c1m1_2.txt"/>
+				<ShowDuration>0</ShowDuration>
+				<PosX>0</PosX>
+				<PosY>0</PosY>
+			</Item>
+			<Item>
+				<ScriptID>a2c1m1_3</ScriptID>
+				<TextFileRef href="a2c1m1_3.txt"/>
+				<ShowDuration>0</ShowDuration>
+				<PosX>0</PosX>
+				<PosY>0</PosY>
+			</Item>
+			<Item>
+				<ScriptID>a2c1m1_4</ScriptID>
+				<TextFileRef href="a2c1m1_4.txt"/>
+				<ShowDuration>0</ShowDuration>
+				<PosX>0</PosX>
+				<PosY>0</PosY>
+			</Item>
+			<Item>
+				<ScriptID>a2c1m1_5</ScriptID>
+				<TextFileRef href="a2c1m1_5.txt"/>
+				<ShowDuration>0</ShowDuration>
+				<PosX>0</PosX>
+				<PosY>0</PosY>
+			</Item>
+			<Item>
+				<ScriptID>a2c1m1_6</ScriptID>
+				<TextFileRef href="a2c1m1_6.txt"/>
+				<ShowDuration>0</ShowDuration>
+				<PosX>0</PosX>
+				<PosY>0</PosY>
+			</Item>
+		</Messages>
+	</TutorialOptions>
+	<TurnTimeLimitMsgs>
+		<Item>
+			<Time>0</Time>
+			<MsgFileRef href="Consts/TurnTimeLimit/sec_00.txt"/>
+			<FadeParams href="Consts/TurnTimeLimit/Short_00.(FadeParams).xdb#xpointer(/FadeParams)"/>
+		</Item>
+		<Item>
+			<Time>1</Time>
+			<MsgFileRef href="Consts/TurnTimeLimit/sec_01.txt"/>
+			<FadeParams href="Consts/TurnTimeLimit/Short_01.(FadeParams).xdb#xpointer(/FadeParams)"/>
+		</Item>
+		<Item>
+			<Time>2</Time>
+			<MsgFileRef href="Consts/TurnTimeLimit/sec_02.txt"/>
+			<FadeParams href="Consts/TurnTimeLimit/Short.(FadeParams).xdb#xpointer(/FadeParams)"/>
+		</Item>
+		<Item>
+			<Time>3</Time>
+			<MsgFileRef href="Consts/TurnTimeLimit/sec_03.txt"/>
+			<FadeParams href="Consts/TurnTimeLimit/Short.(FadeParams).xdb#xpointer(/FadeParams)"/>
+		</Item>
+		<Item>
+			<Time>4</Time>
+			<MsgFileRef href="Consts/TurnTimeLimit/sec_04.txt"/>
+			<FadeParams href="Consts/TurnTimeLimit/Short.(FadeParams).xdb#xpointer(/FadeParams)"/>
+		</Item>
+		<Item>
+			<Time>5</Time>
+			<MsgFileRef href="Consts/TurnTimeLimit/sec_05.txt"/>
+			<FadeParams href="Consts/TurnTimeLimit/Short.(FadeParams).xdb#xpointer(/FadeParams)"/>
+		</Item>
+		<Item>
+			<Time>6</Time>
+			<MsgFileRef href="Consts/TurnTimeLimit/sec_06.txt"/>
+			<FadeParams href="Consts/TurnTimeLimit/Short.(FadeParams).xdb#xpointer(/FadeParams)"/>
+		</Item>
+		<Item>
+			<Time>7</Time>
+			<MsgFileRef href="Consts/TurnTimeLimit/sec_07.txt"/>
+			<FadeParams href="Consts/TurnTimeLimit/Short.(FadeParams).xdb#xpointer(/FadeParams)"/>
+		</Item>
+		<Item>
+			<Time>8</Time>
+			<MsgFileRef href="Consts/TurnTimeLimit/sec_08.txt"/>
+			<FadeParams href="Consts/TurnTimeLimit/Short.(FadeParams).xdb#xpointer(/FadeParams)"/>
+		</Item>
+		<Item>
+			<Time>9</Time>
+			<MsgFileRef href="Consts/TurnTimeLimit/sec_09.txt"/>
+			<FadeParams href="Consts/TurnTimeLimit/Short.(FadeParams).xdb#xpointer(/FadeParams)"/>
+		</Item>
+		<Item>
+			<Time>10</Time>
+			<MsgFileRef href="Consts/TurnTimeLimit/sec_10.txt"/>
+			<FadeParams href="Consts/TurnTimeLimit/Short.(FadeParams).xdb#xpointer(/FadeParams)"/>
+		</Item>
+		<Item>
+			<Time>30</Time>
+			<MsgFileRef href="Consts/TurnTimeLimit/sec_30.txt"/>
+			<FadeParams href="Consts/TurnTimeLimit/Long.(FadeParams).xdb#xpointer(/FadeParams)"/>
+		</Item>
+		<Item>
+			<Time>60</Time>
+			<MsgFileRef href="Consts/TurnTimeLimit/min_01.txt"/>
+			<FadeParams href="Consts/TurnTimeLimit/Long.(FadeParams).xdb#xpointer(/FadeParams)"/>
+		</Item>
+		<Item>
+			<Time>300</Time>
+			<MsgFileRef href="Consts/TurnTimeLimit/min_05.txt"/>
+			<FadeParams href="Consts/TurnTimeLimit/Long.(FadeParams).xdb#xpointer(/FadeParams)"/>
+		</Item>
+		<Item>
+			<Time>600</Time>
+			<MsgFileRef href="Consts/TurnTimeLimit/min_10.txt"/>
+			<FadeParams href="Consts/TurnTimeLimit/Long.(FadeParams).xdb#xpointer(/FadeParams)"/>
+		</Item>
+	</TurnTimeLimitMsgs>
+	<PerformanceSettings>
+		<Item>
+			<GlobalVarName>gfx_noshadows</GlobalVarName>
+			<Values>
+				<Item>1</Item>
+				<Item>1</Item>
+				<Item>0</Item>
+				<Item>0</Item>
+				<Item>0</Item>
+			</Values>
+		</Item>
+		<Item>
+			<GlobalVarName>gfx_depth_tex_resolution</GlobalVarName>
+			<Values>
+				<Item>512</Item>
+				<Item>512</Item>
+				<Item>512</Item>
+				<Item>1024</Item>
+				<Item>1024</Item>
+			</Values>
+		</Item>
+		<Item>
+			<GlobalVarName>gfx_water_reflection</GlobalVarName>
+			<Values>
+				<Item>1</Item>
+				<Item>1</Item>
+				<Item>1</Item>
+				<Item>1</Item>
+				<Item>1</Item>
+			</Values>
+		</Item>
+		<Item>
+			<GlobalVarName>gfx_dynamic_lights</GlobalVarName>
+			<Values>
+				<Item>0</Item>
+				<Item>1</Item>
+				<Item>1</Item>
+				<Item>1</Item>
+				<Item>1</Item>
+			</Values>
+		</Item>
+		<Item>
+			<GlobalVarName>gfx_texture_mip</GlobalVarName>
+			<Values>
+				<Item>2</Item>
+				<Item>1</Item>
+				<Item>1</Item>
+				<Item>0</Item>
+				<Item>0</Item>
+			</Values>
+		</Item>
+		<Item>
+			<GlobalVarName>gfx_true_water_reflection</GlobalVarName>
+			<Values>
+				<Item>0</Item>
+				<Item>0</Item>
+				<Item>0</Item>
+				<Item>0</Item>
+				<Item>1</Item>
+			</Values>
+		</Item>
+	</PerformanceSettings>
+	<TurnTimeNotifyForbiddenScreens>
+		<Item href="ExitGameQuestion.(WindowScreen).xdb#xpointer(/WindowScreen)"/>
+		<Item href="PWLScreen.(WindowScreen).xdb#xpointer(/WindowScreen)"/>
+		<Item href="DialogueScreen.(WindowScreen).xdb#xpointer(/WindowScreen)"/>
+	</TurnTimeNotifyForbiddenScreens>
+	<InputKeys>
+		<Item>
+			<InputKey>ESC</InputKey>
+			<NameFileRef href="Consts/InputKeys/ESCAPE.txt"/>
+		</Item>
+		<Item>
+			<InputKey>1</InputKey>
+			<NameFileRef href="Consts/InputKeys/1.txt"/>
+		</Item>
+		<Item>
+			<InputKey>2</InputKey>
+			<NameFileRef href="Consts/InputKeys/2.txt"/>
+		</Item>
+		<Item>
+			<InputKey>3</InputKey>
+			<NameFileRef href="Consts/InputKeys/3.txt"/>
+		</Item>
+		<Item>
+			<InputKey>4</InputKey>
+			<NameFileRef href="Consts/InputKeys/4.txt"/>
+		</Item>
+		<Item>
+			<InputKey>5</InputKey>
+			<NameFileRef href="Consts/InputKeys/5.txt"/>
+		</Item>
+		<Item>
+			<InputKey>6</InputKey>
+			<NameFileRef href="Consts/InputKeys/6.txt"/>
+		</Item>
+		<Item>
+			<InputKey>7</InputKey>
+			<NameFileRef href="Consts/InputKeys/7.txt"/>
+		</Item>
+		<Item>
+			<InputKey>8</InputKey>
+			<NameFileRef href="Consts/InputKeys/8.txt"/>
+		</Item>
+		<Item>
+			<InputKey>9</InputKey>
+			<NameFileRef href="Consts/InputKeys/9.txt"/>
+		</Item>
+		<Item>
+			<InputKey>0</InputKey>
+			<NameFileRef href="Consts/InputKeys/0.txt"/>
+		</Item>
+		<Item>
+			<InputKey>-</InputKey>
+			<NameFileRef href="Consts/InputKeys/MINUS.txt"/>
+		</Item>
+		<Item>
+			<InputKey>=</InputKey>
+			<NameFileRef href="Consts/InputKeys/EQUALS.txt"/>
+		</Item>
+		<Item>
+			<InputKey>BACKSPACE</InputKey>
+			<NameFileRef href="Consts/InputKeys/BACK.txt"/>
+		</Item>
+		<Item>
+			<InputKey>TAB</InputKey>
+			<NameFileRef href="Consts/InputKeys/TAB.txt"/>
+		</Item>
+		<Item>
+			<InputKey>Q</InputKey>
+			<NameFileRef href="Consts/InputKeys/Q.txt"/>
+		</Item>
+		<Item>
+			<InputKey>W</InputKey>
+			<NameFileRef href="Consts/InputKeys/W.txt"/>
+		</Item>
+		<Item>
+			<InputKey>E</InputKey>
+			<NameFileRef href="Consts/InputKeys/E.txt"/>
+		</Item>
+		<Item>
+			<InputKey>R</InputKey>
+			<NameFileRef href="Consts/InputKeys/R.txt"/>
+		</Item>
+		<Item>
+			<InputKey>T</InputKey>
+			<NameFileRef href="Consts/InputKeys/T.txt"/>
+		</Item>
+		<Item>
+			<InputKey>Y</InputKey>
+			<NameFileRef href="Consts/InputKeys/Y.txt"/>
+		</Item>
+		<Item>
+			<InputKey>U</InputKey>
+			<NameFileRef href="Consts/InputKeys/U.txt"/>
+		</Item>
+		<Item>
+			<InputKey>I</InputKey>
+			<NameFileRef href="Consts/InputKeys/I.txt"/>
+		</Item>
+		<Item>
+			<InputKey>O</InputKey>
+			<NameFileRef href="Consts/InputKeys/O.txt"/>
+		</Item>
+		<Item>
+			<InputKey>P</InputKey>
+			<NameFileRef href="Consts/InputKeys/P.txt"/>
+		</Item>
+		<Item>
+			<InputKey>[</InputKey>
+			<NameFileRef href="Consts/InputKeys/LBRACKET.txt"/>
+		</Item>
+		<Item>
+			<InputKey>]</InputKey>
+			<NameFileRef href="Consts/InputKeys/RBRACKET.txt"/>
+		</Item>
+		<Item>
+			<InputKey>ENTER</InputKey>
+			<NameFileRef href="Consts/InputKeys/RETURN.txt"/>
+		</Item>
+		<Item>
+			<InputKey>LCTRL</InputKey>
+			<NameFileRef href="Consts/InputKeys/LCONTROL.txt"/>
+		</Item>
+		<Item>
+			<InputKey>A</InputKey>
+			<NameFileRef href="Consts/InputKeys/A.txt"/>
+		</Item>
+		<Item>
+			<InputKey>S</InputKey>
+			<NameFileRef href="Consts/InputKeys/S.txt"/>
+		</Item>
+		<Item>
+			<InputKey>D</InputKey>
+			<NameFileRef href="Consts/InputKeys/D.txt"/>
+		</Item>
+		<Item>
+			<InputKey>F</InputKey>
+			<NameFileRef href="Consts/InputKeys/F.txt"/>
+		</Item>
+		<Item>
+			<InputKey>G</InputKey>
+			<NameFileRef href="Consts/InputKeys/G.txt"/>
+		</Item>
+		<Item>
+			<InputKey>H</InputKey>
+			<NameFileRef href="Consts/InputKeys/H.txt"/>
+		</Item>
+		<Item>
+			<InputKey>J</InputKey>
+			<NameFileRef href="Consts/InputKeys/J.txt"/>
+		</Item>
+		<Item>
+			<InputKey>K</InputKey>
+			<NameFileRef href="Consts/InputKeys/K.txt"/>
+		</Item>
+		<Item>
+			<InputKey>L</InputKey>
+			<NameFileRef href="Consts/InputKeys/L.txt"/>
+		</Item>
+		<Item>
+			<InputKey>;</InputKey>
+			<NameFileRef href="Consts/InputKeys/SEMICOLON.txt"/>
+		</Item>
+		<Item>
+			<InputKey>&apos;</InputKey>
+			<NameFileRef href="Consts/InputKeys/APOSTROPHE.txt"/>
+		</Item>
+		<Item>
+			<InputKey>`</InputKey>
+			<NameFileRef href="Consts/InputKeys/GRAVE.txt"/>
+		</Item>
+		<Item>
+			<InputKey>LSHIFT</InputKey>
+			<NameFileRef href="Consts/InputKeys/LSHIFT.txt"/>
+		</Item>
+		<Item>
+			<InputKey>\</InputKey>
+			<NameFileRef href="Consts/InputKeys/BACKSLASH.txt"/>
+		</Item>
+		<Item>
+			<InputKey>Z</InputKey>
+			<NameFileRef href="Consts/InputKeys/Z.txt"/>
+		</Item>
+		<Item>
+			<InputKey>X</InputKey>
+			<NameFileRef href="Consts/InputKeys/X.txt"/>
+		</Item>
+		<Item>
+			<InputKey>C</InputKey>
+			<NameFileRef href="Consts/InputKeys/C.txt"/>
+		</Item>
+		<Item>
+			<InputKey>V</InputKey>
+			<NameFileRef href="Consts/InputKeys/V.txt"/>
+		</Item>
+		<Item>
+			<InputKey>B</InputKey>
+			<NameFileRef href="Consts/InputKeys/B.txt"/>
+		</Item>
+		<Item>
+			<InputKey>N</InputKey>
+			<NameFileRef href="Consts/InputKeys/N.txt"/>
+		</Item>
+		<Item>
+			<InputKey>M</InputKey>
+			<NameFileRef href="Consts/InputKeys/M.txt"/>
+		</Item>
+		<Item>
+			<InputKey>,</InputKey>
+			<NameFileRef href="Consts/InputKeys/COMMA.txt"/>
+		</Item>
+		<Item>
+			<InputKey>.</InputKey>
+			<NameFileRef href="Consts/InputKeys/PERIOD.txt"/>
+		</Item>
+		<Item>
+			<InputKey>/</InputKey>
+			<NameFileRef href="Consts/InputKeys/SLASH.txt"/>
+		</Item>
+		<Item>
+			<InputKey>RSHIFT</InputKey>
+			<NameFileRef href="Consts/InputKeys/RSHIFT.txt"/>
+		</Item>
+		<Item>
+			<InputKey>NUM_MULTIPLY</InputKey>
+			<NameFileRef href="Consts/InputKeys/MULTIPLY.txt"/>
+		</Item>
+		<Item>
+			<InputKey>LALT</InputKey>
+			<NameFileRef href="Consts/InputKeys/LMENU.txt"/>
+		</Item>
+		<Item>
+			<InputKey>SPACE</InputKey>
+			<NameFileRef href="Consts/InputKeys/SPACE.txt"/>
+		</Item>
+		<Item>
+			<InputKey>CAPITAL</InputKey>
+			<NameFileRef href="Consts/InputKeys/CAPITAL.txt"/>
+		</Item>
+		<Item>
+			<InputKey>F1</InputKey>
+			<NameFileRef href="Consts/InputKeys/F1.txt"/>
+		</Item>
+		<Item>
+			<InputKey>F2</InputKey>
+			<NameFileRef href="Consts/InputKeys/F2.txt"/>
+		</Item>
+		<Item>
+			<InputKey>F3</InputKey>
+			<NameFileRef href="Consts/InputKeys/F3.txt"/>
+		</Item>
+		<Item>
+			<InputKey>F4</InputKey>
+			<NameFileRef href="Consts/InputKeys/F4.txt"/>
+		</Item>
+		<Item>
+			<InputKey>F5</InputKey>
+			<NameFileRef href="Consts/InputKeys/F5.txt"/>
+		</Item>
+		<Item>
+			<InputKey>F6</InputKey>
+			<NameFileRef href="Consts/InputKeys/F6.txt"/>
+		</Item>
+		<Item>
+			<InputKey>F7</InputKey>
+			<NameFileRef href="Consts/InputKeys/F7.txt"/>
+		</Item>
+		<Item>
+			<InputKey>F8</InputKey>
+			<NameFileRef href="Consts/InputKeys/F8.txt"/>
+		</Item>
+		<Item>
+			<InputKey>F9</InputKey>
+			<NameFileRef href="Consts/InputKeys/F9.txt"/>
+		</Item>
+		<Item>
+			<InputKey>F10</InputKey>
+			<NameFileRef href="Consts/InputKeys/F10.txt"/>
+		</Item>
+		<Item>
+			<InputKey>NUM</InputKey>
+			<NameFileRef href="Consts/InputKeys/NUMLOCK.txt"/>
+		</Item>
+		<Item>
+			<InputKey>SCROLL</InputKey>
+			<NameFileRef href="Consts/InputKeys/SCROLL.txt"/>
+		</Item>
+		<Item>
+			<InputKey>NUM_7</InputKey>
+			<NameFileRef href="Consts/InputKeys/NUMPAD7.txt"/>
+		</Item>
+		<Item>
+			<InputKey>NUM_8</InputKey>
+			<NameFileRef href="Consts/InputKeys/NUMPAD8.txt"/>
+		</Item>
+		<Item>
+			<InputKey>NUM_9</InputKey>
+			<NameFileRef href="Consts/InputKeys/NUMPAD9.txt"/>
+		</Item>
+		<Item>
+			<InputKey>NUM_MINUS</InputKey>
+			<NameFileRef href="Consts/InputKeys/SUBTRACT.txt"/>
+		</Item>
+		<Item>
+			<InputKey>NUM_4</InputKey>
+			<NameFileRef href="Consts/InputKeys/NUMPAD4.txt"/>
+		</Item>
+		<Item>
+			<InputKey>NUM_5</InputKey>
+			<NameFileRef href="Consts/InputKeys/NUMPAD5.txt"/>
+		</Item>
+		<Item>
+			<InputKey>NUM_6</InputKey>
+			<NameFileRef href="Consts/InputKeys/NUMPAD6.txt"/>
+		</Item>
+		<Item>
+			<InputKey>NUM_PLUS</InputKey>
+			<NameFileRef href="Consts/InputKeys/ADD.txt"/>
+		</Item>
+		<Item>
+			<InputKey>NUM_1</InputKey>
+			<NameFileRef href="Consts/InputKeys/NUMPAD1.txt"/>
+		</Item>
+		<Item>
+			<InputKey>NUM_2</InputKey>
+			<NameFileRef href="Consts/InputKeys/NUMPAD2.txt"/>
+		</Item>
+		<Item>
+			<InputKey>NUM_3</InputKey>
+			<NameFileRef href="Consts/InputKeys/NUMPAD3.txt"/>
+		</Item>
+		<Item>
+			<InputKey>NUM_0</InputKey>
+			<NameFileRef href="Consts/InputKeys/NUMPAD0.txt"/>
+		</Item>
+		<Item>
+			<InputKey>NUM_PERIOD</InputKey>
+			<NameFileRef href="Consts/InputKeys/DECIMAL.txt"/>
+		</Item>
+		<Item>
+			<InputKey>OEM_102</InputKey>
+			<NameFileRef href="Consts/InputKeys/OEM_102.txt"/>
+		</Item>
+		<Item>
+			<InputKey>F11</InputKey>
+			<NameFileRef href="Consts/InputKeys/F11.txt"/>
+		</Item>
+		<Item>
+			<InputKey>F12</InputKey>
+			<NameFileRef href="Consts/InputKeys/F12.txt"/>
+		</Item>
+		<Item>
+			<InputKey>F13</InputKey>
+			<NameFileRef href="Consts/InputKeys/F13.txt"/>
+		</Item>
+		<Item>
+			<InputKey>F14</InputKey>
+			<NameFileRef href="Consts/InputKeys/F14.txt"/>
+		</Item>
+		<Item>
+			<InputKey>F15</InputKey>
+			<NameFileRef href="Consts/InputKeys/F15.txt"/>
+		</Item>
+		<Item>
+			<InputKey>KANA</InputKey>
+			<NameFileRef href="Consts/InputKeys/KANA.txt"/>
+		</Item>
+		<Item>
+			<InputKey>ABNT_C1</InputKey>
+			<NameFileRef href="Consts/InputKeys/ABNT_C1.txt"/>
+		</Item>
+		<Item>
+			<InputKey>CONVERT</InputKey>
+			<NameFileRef href="Consts/InputKeys/CONVERT.txt"/>
+		</Item>
+		<Item>
+			<InputKey>NOCONVERT</InputKey>
+			<NameFileRef href="Consts/InputKeys/NOCONVERT.txt"/>
+		</Item>
+		<Item>
+			<InputKey>YEN</InputKey>
+			<NameFileRef href="Consts/InputKeys/YEN.txt"/>
+		</Item>
+		<Item>
+			<InputKey>ABNT_C2</InputKey>
+			<NameFileRef href="Consts/InputKeys/ABNT_C2.txt"/>
+		</Item>
+		<Item>
+			<InputKey>NUM_EQUALS</InputKey>
+			<NameFileRef href="Consts/InputKeys/NUMPADEQUALS.txt"/>
+		</Item>
+		<Item>
+			<InputKey>PREV_TRACK</InputKey>
+			<NameFileRef href="Consts/InputKeys/PREVTRACK.txt"/>
+		</Item>
+		<Item>
+			<InputKey>AT</InputKey>
+			<NameFileRef href="Consts/InputKeys/AT.txt"/>
+		</Item>
+		<Item>
+			<InputKey>COLON</InputKey>
+			<NameFileRef href="Consts/InputKeys/COLON.txt"/>
+		</Item>
+		<Item>
+			<InputKey>UNDERLINE</InputKey>
+			<NameFileRef href="Consts/InputKeys/UNDERLINE.txt"/>
+		</Item>
+		<Item>
+			<InputKey>KANJI</InputKey>
+			<NameFileRef href="Consts/InputKeys/KANJI.txt"/>
+		</Item>
+		<Item>
+			<InputKey>STOP</InputKey>
+			<NameFileRef href="Consts/InputKeys/STOP.txt"/>
+		</Item>
+		<Item>
+			<InputKey>AX</InputKey>
+			<NameFileRef href="Consts/InputKeys/AX.txt"/>
+		</Item>
+		<Item>
+			<InputKey>UNLABELED</InputKey>
+			<NameFileRef href="Consts/InputKeys/UNLABELED.txt"/>
+		</Item>
+		<Item>
+			<InputKey>NEXT_TRACK</InputKey>
+			<NameFileRef href="Consts/InputKeys/NEXTTRACK.txt"/>
+		</Item>
+		<Item>
+			<InputKey>NUM_ENTER</InputKey>
+			<NameFileRef href="Consts/InputKeys/NUMPADENTER.txt"/>
+		</Item>
+		<Item>
+			<InputKey>RCTRL</InputKey>
+			<NameFileRef href="Consts/InputKeys/RCONTROL.txt"/>
+		</Item>
+		<Item>
+			<InputKey>MUTE</InputKey>
+			<NameFileRef href="Consts/InputKeys/MUTE.txt"/>
+		</Item>
+		<Item>
+			<InputKey>CALCULATOR</InputKey>
+			<NameFileRef href="Consts/InputKeys/CALCULATOR.txt"/>
+		</Item>
+		<Item>
+			<InputKey>PLAY</InputKey>
+			<NameFileRef href="Consts/InputKeys/PLAYPAUSE.txt"/>
+		</Item>
+		<Item>
+			<InputKey>MEDIA_STOP</InputKey>
+			<NameFileRef href="Consts/InputKeys/MEDIASTOP.txt"/>
+		</Item>
+		<Item>
+			<InputKey>VOL_DOWN</InputKey>
+			<NameFileRef href="Consts/InputKeys/VOLUMEDOWN.txt"/>
+		</Item>
+		<Item>
+			<InputKey>VOL_UP</InputKey>
+			<NameFileRef href="Consts/InputKeys/VOLUMEUP.txt"/>
+		</Item>
+		<Item>
+			<InputKey>WEB_HOME</InputKey>
+			<NameFileRef href="Consts/InputKeys/WEBHOME.txt"/>
+		</Item>
+		<Item>
+			<InputKey>NUM_COMMA</InputKey>
+			<NameFileRef href="Consts/InputKeys/NUMPADCOMMA.txt"/>
+		</Item>
+		<Item>
+			<InputKey>NUM_DIVIDE</InputKey>
+			<NameFileRef href="Consts/InputKeys/DIVIDE.txt"/>
+		</Item>
+		<Item>
+			<InputKey>SYSRQ</InputKey>
+			<NameFileRef href="Consts/InputKeys/SYSRQ.txt"/>
+		</Item>
+		<Item>
+			<InputKey>RALT</InputKey>
+			<NameFileRef href="Consts/InputKeys/RMENU.txt"/>
+		</Item>
+		<Item>
+			<InputKey>PAUSE</InputKey>
+			<NameFileRef href="Consts/InputKeys/PAUSE.txt"/>
+		</Item>
+		<Item>
+			<InputKey>HOME</InputKey>
+			<NameFileRef href="Consts/InputKeys/HOME.txt"/>
+		</Item>
+		<Item>
+			<InputKey>UP</InputKey>
+			<NameFileRef href="Consts/InputKeys/UP.txt"/>
+		</Item>
+		<Item>
+			<InputKey>PG_UP</InputKey>
+			<NameFileRef href="Consts/InputKeys/PRIOR.txt"/>
+		</Item>
+		<Item>
+			<InputKey>LEFT</InputKey>
+			<NameFileRef href="Consts/InputKeys/LEFT.txt"/>
+		</Item>
+		<Item>
+			<InputKey>RIGHT</InputKey>
+			<NameFileRef href="Consts/InputKeys/RIGHT.txt"/>
+		</Item>
+		<Item>
+			<InputKey>END</InputKey>
+			<NameFileRef href="Consts/InputKeys/END.txt"/>
+		</Item>
+		<Item>
+			<InputKey>DOWN</InputKey>
+			<NameFileRef href="Consts/InputKeys/DOWN.txt"/>
+		</Item>
+		<Item>
+			<InputKey>PG_DOWN</InputKey>
+			<NameFileRef href="Consts/InputKeys/NEXT.txt"/>
+		</Item>
+		<Item>
+			<InputKey>INSERT</InputKey>
+			<NameFileRef href="Consts/InputKeys/INSERT.txt"/>
+		</Item>
+		<Item>
+			<InputKey>DELETE</InputKey>
+			<NameFileRef href="Consts/InputKeys/DELETE.txt"/>
+		</Item>
+		<Item>
+			<InputKey>LWIN</InputKey>
+			<NameFileRef href="Consts/InputKeys/LWIN.txt"/>
+		</Item>
+		<Item>
+			<InputKey>RWIN</InputKey>
+			<NameFileRef href="Consts/InputKeys/RWIN.txt"/>
+		</Item>
+		<Item>
+			<InputKey>APP_MENU</InputKey>
+			<NameFileRef href="Consts/InputKeys/APPS.txt"/>
+		</Item>
+		<Item>
+			<InputKey>POWER</InputKey>
+			<NameFileRef href="Consts/InputKeys/POWER.txt"/>
+		</Item>
+		<Item>
+			<InputKey>SLEEP</InputKey>
+			<NameFileRef href="Consts/InputKeys/SLEEP.txt"/>
+		</Item>
+		<Item>
+			<InputKey>WAKE</InputKey>
+			<NameFileRef href="Consts/InputKeys/WAKE.txt"/>
+		</Item>
+		<Item>
+			<InputKey>WEB_SEARCH</InputKey>
+			<NameFileRef href="Consts/InputKeys/WEBSEARCH.txt"/>
+		</Item>
+		<Item>
+			<InputKey>WEB_FAVOR</InputKey>
+			<NameFileRef href="Consts/InputKeys/WEBFAVORITES.txt"/>
+		</Item>
+		<Item>
+			<InputKey>WEB_REFRESH</InputKey>
+			<NameFileRef href="Consts/InputKeys/WEBREFRESH.txt"/>
+		</Item>
+		<Item>
+			<InputKey>WEB_STOP</InputKey>
+			<NameFileRef href="Consts/InputKeys/WEBSTOP.txt"/>
+		</Item>
+		<Item>
+			<InputKey>WEB_FORWARD</InputKey>
+			<NameFileRef href="Consts/InputKeys/WEBFORWARD.txt"/>
+		</Item>
+		<Item>
+			<InputKey>WEB_BACK</InputKey>
+			<NameFileRef href="Consts/InputKeys/WEBBACK.txt"/>
+		</Item>
+		<Item>
+			<InputKey>MYCOMPUTER</InputKey>
+			<NameFileRef href="Consts/InputKeys/MYCOMPUTER.txt"/>
+		</Item>
+		<Item>
+			<InputKey>MAIL</InputKey>
+			<NameFileRef href="Consts/InputKeys/MAIL.txt"/>
+		</Item>
+		<Item>
+			<InputKey>MEDIA_SELECT</InputKey>
+			<NameFileRef href="Consts/InputKeys/MEDIASELECT.txt"/>
+		</Item>
+		<Item>
+			<InputKey>MOUSE_AXIS_X</InputKey>
+			<NameFileRef href="Consts/InputKeys/MOUSE_X.txt"/>
+		</Item>
+		<Item>
+			<InputKey>MOUSE_AXIS_Y</InputKey>
+			<NameFileRef href="Consts/InputKeys/MOUSE_Y.txt"/>
+		</Item>
+		<Item>
+			<InputKey>MOUSE_AXIS_Z</InputKey>
+			<NameFileRef href="Consts/InputKeys/MOUSE_Z.txt"/>
+		</Item>
+		<Item>
+			<InputKey>MOUSE_BUTTON0</InputKey>
+			<NameFileRef href="Consts/InputKeys/MOUSE_BUTTON0.txt"/>
+		</Item>
+		<Item>
+			<InputKey>MOUSE_BUTTON1</InputKey>
+			<NameFileRef href="Consts/InputKeys/MOUSE_BUTTON1.txt"/>
+		</Item>
+		<Item>
+			<InputKey>MOUSE_BUTTON2</InputKey>
+			<NameFileRef href="Consts/InputKeys/MOUSE_BUTTON2.txt"/>
+		</Item>
+		<Item>
+			<InputKey>MOUSE_BUTTON3</InputKey>
+			<NameFileRef href="Consts/InputKeys/MOUSE_BUTTON3.txt"/>
+		</Item>
+		<Item>
+			<InputKey>MOUSE_BUTTON4</InputKey>
+			<NameFileRef href="Consts/InputKeys/MOUSE_BUTTON4.txt"/>
+		</Item>
+		<Item>
+			<InputKey>MOUSE_BUTTON5</InputKey>
+			<NameFileRef href="Consts/InputKeys/MOUSE_BUTTON5.txt"/>
+		</Item>
+		<Item>
+			<InputKey>MOUSE_BUTTON6</InputKey>
+			<NameFileRef href="Consts/InputKeys/MOUSE_BUTTON6.txt"/>
+		</Item>
+		<Item>
+			<InputKey>MOUSE_BUTTON7</InputKey>
+			<NameFileRef href="Consts/InputKeys/MOUSE_BUTTON7.txt"/>
+		</Item>
+	</InputKeys>
+</UIGameConstsH5>

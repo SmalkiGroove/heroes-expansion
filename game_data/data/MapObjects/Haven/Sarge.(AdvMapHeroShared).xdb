@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvMapHeroShared ObjectRecordID="10">
+	<Model href="/_(Model)/Heroes/Knight_LOD.(Model).xdb#xpointer(/Model)"/>
+	<AnimSet href="/_(AnimSet)/Heroes/Knight_LOD-adv.(AnimSet).xdb#xpointer(/AnimSet)"/>
+	<blockedTiles/>
+	<holeTiles/>
+	<activeTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+	</activeTiles>
+	<passableTiles/>
+	<PossessionMarkerTile>
+		<x>0</x>
+		<y>0</y>
+	</PossessionMarkerTile>
+	<Effect/>
+	<EffectWhenOwned/>
+	<messagesFileRef/>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect/>
+	<flybyMessageFileRef href=""/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Units.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>true</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128/>
+	<InternalName>Sarge</InternalName>
+	<Class>HERO_CLASS_KNIGHT</Class>
+	<Specialization>HERO_SPEC_JOUSTING</Specialization>
+	<PrimarySkill>
+		<Mastery>MASTERY_BASIC</Mastery>
+		<SkillID>HERO_SKILL_TRAINING</SkillID>
+	</PrimarySkill>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Haven/Jouster/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Haven/Jouster/Description.txt"/>
+	<SpecializationIcon href="/Textures/HeroScreen/Specializations/Haven/Jouster.xdb#xpointer(/Texture)"/>
+	<FaceTexture href="/Textures/Icons/Heroes/Heaven/Heaven_Klaus_128x128.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTextureSmall/>
+	<HeroCharacterArena href="/Characters/Heroes/Haven/Sarge/HeroCharacterArena.xdb#xpointer(/Character)" />
+	<HeroCharacterArenaMelee href="/Characters/Heroes/Haven/Sarge/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
+	<HeroCharacterAdventure href="/Characters/Heroes/Haven/Sarge/HeroCharacterAdventure.xdb#xpointer(/Character)" />
+	<HeroIndividualCamera href="/Characters/Heroes/Haven/Sarge/HeroIndividualCamera.xdb#xpointer(/Camera)" />
+	<CombatVisual href="/Characters/Heroes/Haven/Sarge/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<TownType>TOWN_HEAVEN</TownType>
+	<Editable>
+		<NameFileRef href="/Text/Game/Heroes/Persons/Haven/Sarge/Name.txt"/>
+		<BiographyFileRef href="/Text/Game/Heroes/Persons/Haven/Sarge/Bio.txt"/>
+		<Offence>1</Offence>
+		<Defence>2</Defence>
+		<Spellpower>1</Spellpower>
+		<Knowledge>1</Knowledge>
+		<skills>
+			<Item>
+				<Mastery>MASTERY_BASIC</Mastery>
+				<SkillID>HERO_SKILL_OFFENCE</SkillID>
+			</Item>
+		</skills>
+		<perkIDs>
+			<Item>HERO_SKILL_HOLY_CHARGE</Item>
+		</perkIDs>
+		<spellIDs/>
+		<Ballista>false</Ballista>
+		<FirstAidTent>false</FirstAidTent>
+		<AmmoCart>true</AmmoCart>
+		<FavoriteEnemies/>
+	</Editable>
+	<ArrowButtonState>0</ArrowButtonState>
+	<Decal/>
+	<Selection href="/_(Model)/Heroes/Knight_Path/Symbol.(Model).xdb#xpointer(/Model)"/>
+	<Trace href="/MapObjects/_(AdvMapHeroTraceSet)/Haven.xdb#xpointer(/AdvMapHeroTraceSet)"/>
+	<RaceTraitIcon/>
+	<RaceTraitDescFileRef href=""/>
+	<ScenarioHero>false</ScenarioHero>
+	<AdventureMusic/>
+	<HideInEditor>false</HideInEditor>
+</AdvMapHeroShared>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvMapHeroShared ObjectRecordID="68">
+	<Model href="/Characters/Heroes/Ranger_LOD.xdb#xpointer(/Model)"/>
+	<AnimSet href="/Characters/Heroes/Ranger_LOD-adv.xdb#xpointer(/AnimSet)"/>
+	<blockedTiles/>
+	<holeTiles/>
+	<activeTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+	</activeTiles>
+	<passableTiles/>
+	<PossessionMarkerTile>
+		<x>0</x>
+		<y>0</y>
+	</PossessionMarkerTile>
+	<Effect/>
+	<EffectWhenOwned/>
+	<messagesFileRef/>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect/>
+	<flybyMessageFileRef href=""/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Units.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>true</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128 href="/UI/H5A2/Icons/Heroes/Portrets128x128/Sylvan_Tieru.(Texture).xdb#xpointer(/Texture)"/>
+	<InternalName>Arniel</InternalName>
+	<Class>HERO_CLASS_WARDEN</Class>
+	<Specialization/>
+	<PrimarySkill>
+		<Mastery>MASTERY_BASIC</Mastery>
+		<SkillID>HERO_SKILL_AVENGER</SkillID>
+	</PrimarySkill>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Preserve/Wolves/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Preserve/Wolves/Description.txt"/>
+	<SpecializationIcon href="/UI/H5A1/Icons/Creatures/Neutral/128x128/Wolf.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTexture href="/Textures/Icons/Heroes/Preserve/Preserve_Arniel_128x128.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTextureSmall href=""/>
+	<HeroCharacterArena href="/Characters/Heroes/Preserve/Arniel/HeroCharacterArena.xdb#xpointer(/Character)" />
+	<HeroCharacterArenaMelee href="/Characters/Heroes/Preserve/Arniel/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
+	<HeroCharacterAdventure href="/Characters/Heroes/Preserve/Arniel/HeroCharacterAdventure.xdb#xpointer(/Character)" />
+	<HeroIndividualCamera href="/Characters/Heroes/Preserve/Arniel/HeroIndividualCamera.xdb#xpointer(/Camera)" />
+	<CombatVisual href="/Characters/Heroes/Preserve/Arniel/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<TownType>TOWN_PRESERVE</TownType>
+	<Editable>
+		<NameFileRef href="/Text/Game/Heroes/Persons/Preserve/Arniel/Name.txt"/>
+		<BiographyFileRef href="/Text/Game/Heroes/Persons/Preserve/Arniel/Bio.txt"/>
+		<Offence>0</Offence>
+		<Defence>2</Defence>
+		<Spellpower>2</Spellpower>
+		<Knowledge>1</Knowledge>
+		<skills>
+			<Item>
+				<Mastery>MASTERY_BASIC</Mastery>
+				<SkillID>HERO_SKILL_LEADERSHIP</SkillID>
+			</Item>
+		</skills>
+		<perkIDs>
+			<Item>HERO_SKILL_RECRUITMENT</Item>
+		</perkIDs>		
+		<spellIDs>
+			<Item>SPELL_HASTE</Item>
+		</spellIDs>
+		<Ballista>false</Ballista>
+		<FirstAidTent>false</FirstAidTent>
+		<AmmoCart>false</AmmoCart>
+		<FavoriteEnemies/>
+	</Editable>
+	<ArrowButtonState>0</ArrowButtonState>
+	<Decal/>
+	<Selection href="/_(Model)/Heroes/Ranger_Path/Symbol.xdb#xpointer(/Model)"/>
+	<Trace href="/MapObjects/_(AdvMapHeroTraceSet)/Rampart.xdb#xpointer(/AdvMapHeroTraceSet)"/>
+	<RaceTraitIcon/>
+	<RaceTraitDescFileRef href=""/>
+	<ScenarioHero>false</ScenarioHero>
+	<AdventureMusic href="/Sounds/_(Music)/AdvMap-Heroes/Findan.xdb#xpointer(/Music)"/>
+	<HideInEditor>false</HideInEditor>
+</AdvMapHeroShared>

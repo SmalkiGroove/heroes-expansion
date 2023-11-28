@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Model ObjectRecordID="1002087">
+	<Materials>
+		<Item href="/Characters/Heroes/Biara-t_Biara_mapping_succubus_body.(Material).xdb#xpointer(/Material)"/>
+		<Item href="/Characters/Heroes/Biara-Biara_mapping_succubus_body.(Material).xdb#xpointer(/Material)"/>
+		<Item href="/Characters/Heroes/Biara-Biara_mapping_succubus_wing1.(Material).xdb#xpointer(/Material)"/>
+	</Materials>
+	<Skeleton href="/Characters/Heroes/#n:inline(Skeleton)" id="item_59126a64-013e-4b6e-97b6-da1382c41f0b">
+		<Skeleton ObjectRecordID="1000549">
+			<SrcName href="/models/Heroes/Biara/Biara_LOD.mb"/>
+			<RootJoint>Global</RootJoint>
+			<MSRFormat>true</MSRFormat>
+			<Animations/>
+			<uid>FE0A8CEF-0DFE-415F-A5D4-D717052B2E5F</uid>
+		</Skeleton>
+	</Skeleton>
+	<Geometry href="/Characters/Heroes/#n:inline(Geometry)" id="item_a9ab3286-c3f1-4fbd-8c50-60432e4e8f6f">
+		<Geometry ObjectRecordID="1001858">
+			<SrcName href="/models/Heroes/Biara/Biara_LOD.mb"/>
+			<uid>E47F945E-2618-4C42-8718-422F392E750B</uid>
+			<RootMesh/>
+			<RootJoint>Global</RootJoint>
+			<Size>
+				<x>2.26194</x>
+				<y>2.5593</y>
+				<z>2.48656</z>
+			</Size>
+			<Center>
+				<x>0</x>
+				<y>0.979724</y>
+				<z>1.24328</z>
+			</Center>
+			<BestFitPoint>
+				<x>0.00103136</x>
+				<y>0.221304</y>
+				<z>2.37914</z>
+			</BestFitPoint>
+			<Dir>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0</w>
+			</Dir>
+			<AIGeometry href="/Characters/Heroes/#n:inline(AIGeometry)" id="item_f3db2f40-c4d6-41f9-bd58-f06403f680f3">
+				<AIGeometry ObjectRecordID="1000826">
+					<SrcName href="/models/Heroes/Biara/Biara_LOD.mb"/>
+					<RootMesh>AI</RootMesh>
+					<RootJoint/>
+					<Volume>0</Volume>
+					<SolidPart>0</SolidPart>
+					<AABBCenter>
+						<x>0</x>
+						<y>-0.0190953</y>
+						<z>1.15</z>
+					</AABBCenter>
+					<AABBHalfSize>
+						<x>0.303847</x>
+						<y>0.387864</y>
+						<z>1.15</z>
+					</AABBHalfSize>
+					<uid>ACAE9D90-4043-4052-A19C-CC4A5E08BB49</uid>
+				</AIGeometry>
+			</AIGeometry>
+			<NumMeshes>2</NumMeshes>
+			<MaterialQuantities>
+				<Item>1</Item>
+				<Item>2</Item>
+			</MaterialQuantities>
+			<MeshNames>
+				<Item>BodyGlowShape</Item>
+				<Item>BodyShape</Item>
+			</MeshNames>
+			<MeshAnimated/>
+			<MeshWindAffected/>
+		</Geometry>
+	</Geometry>
+	<Animations/>
+	<WindPower>1</WindPower>
+</Model>

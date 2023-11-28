@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdventureFlybyScene>
+	<Scenery href="/Maps/CombatArenas/Orkish_Medium2/map.xdb#xpointer(/AdvMapDesc)"/>
+	<cameraFlyupRole>
+		<Model/>
+		<AnimSet/>
+		<Player>PLAYER_NONE</Player>
+	</cameraFlyupRole>
+	<skyRole>
+		<Model/>
+		<AnimSet/>
+		<Player>PLAYER_NONE</Player>
+	</skyRole>
+	<MountPoint>
+		<Pos>
+			<x>42</x>
+			<y>54</y>
+		</Pos>
+		<Rot>0</Rot>
+	</MountPoint>
+	<AdditionalHeight>0</AdditionalHeight>
+	<Music/>
+	<AmbientSoundSet href="/Sounds/_(Ambient)/TerrainAmbients/Taiga.xdb#xpointer(/AmbientSoundSet)"/>
+	<TextFormatFileRef href=""/>
+	<ObstaclesGroup href="/ArenaObjects/_(ArenaObstaclesGroup)/TaigaArena/Taiga.(ArenaObstaclesGroup).xdb#xpointer(/ArenaObstaclesGroup)"/>
+	<CamerasSet href="/_(CamerasSet)/Default.(CamerasSet).xdb#xpointer(/CamerasSet)"/>
+	<MeleeAttackPoints>
+		<Use>false</Use>
+		<AttackerPoint>
+			<x>0</x>
+			<y>0</y>
+		</AttackerPoint>
+		<DefenderPoint>
+			<x>0</x>
+			<y>0</y>
+		</DefenderPoint>
+	</MeleeAttackPoints>
+</AdventureFlybyScene>

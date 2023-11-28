@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Model ObjectRecordID="1002089">
+	<Materials>
+		<Item href="/Characters/Heroes/NikolayVampire_LOD-NikolayVampire_LOD.(Material).xdb#xpointer(/Material)"/>
+		<Item href="/Characters/Heroes/NikolayVampire_LOD-NikolaiVampire_LOD_add.(Material).xdb#xpointer(/Material)"/>
+		<Item href="/Characters/Heroes/NikolayVampire_LOD-NikolaiVampire_LOD_add.(Material).xdb#xpointer(/Material)"/>
+	</Materials>
+	<Skeleton href="/Characters/Heroes/#n:inline(Skeleton)" id="item_7f62bb2d-07f7-427d-adae-9fff81089b47">
+		<Skeleton ObjectRecordID="1000551">
+			<SrcName href="/models/Heroes/NikolayVampire/NicolayVampire_LOD.mb"/>
+			<RootJoint>Global</RootJoint>
+			<MSRFormat>true</MSRFormat>
+			<Animations/>
+			<uid>9B4651C8-C7DC-4F3F-9CE2-B3613AB2DEA8</uid>
+		</Skeleton>
+	</Skeleton>
+	<Geometry href="/Characters/Heroes/#n:inline(Geometry)" id="item_1ae34595-e88e-4780-8179-a07fa84b7df4">
+		<Geometry ObjectRecordID="1001860">
+			<SrcName href="/models/Heroes/NikolayVampire/NicolayVampire_LOD.mb"/>
+			<uid>D8C7188F-32D8-4927-A204-5527FDD91BC9</uid>
+			<RootMesh/>
+			<RootJoint>Global</RootJoint>
+			<Size>
+				<x>2.33727</x>
+				<y>1.8945</y>
+				<z>1.75081</z>
+			</Size>
+			<Center>
+				<x>-0.20115</x>
+				<y>-0.47029</y>
+				<z>0.878121</z>
+			</Center>
+			<BestFitPoint>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</BestFitPoint>
+			<Dir>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0</w>
+			</Dir>
+			<AIGeometry href="/Characters/Heroes/#n:inline(AIGeometry)" id="item_d62e1391-e937-4ad4-ae87-928fd8319ec8">
+				<AIGeometry ObjectRecordID="1000828">
+					<SrcName href="/models/Heroes/NikolayVampire/NicolayVampire_LOD.mb"/>
+					<RootMesh>AI</RootMesh>
+					<RootJoint/>
+					<Volume>0</Volume>
+					<SolidPart>0</SolidPart>
+					<AABBCenter>
+						<x>0</x>
+						<y>-0.0574775</y>
+						<z>0.877156</z>
+					</AABBCenter>
+					<AABBHalfSize>
+						<x>0.38834</x>
+						<y>0.219478</y>
+						<z>0.862358</z>
+					</AABBHalfSize>
+					<uid>8768CCAB-E7FA-49D5-A94E-E0B5BD647CD6</uid>
+				</AIGeometry>
+			</AIGeometry>
+			<NumMeshes>2</NumMeshes>
+			<MaterialQuantities>
+				<Item>2</Item>
+				<Item>1</Item>
+			</MaterialQuantities>
+			<MeshNames>
+				<Item>VampireShape</Item>
+				<Item>SwordShape</Item>
+			</MeshNames>
+			<MeshAnimated/>
+			<MeshWindAffected/>
+		</Geometry>
+	</Geometry>
+	<Animations/>
+	<WindPower>1</WindPower>
+</Model>

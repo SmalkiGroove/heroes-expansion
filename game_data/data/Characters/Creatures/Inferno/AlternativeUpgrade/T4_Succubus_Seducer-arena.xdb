@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimSet>
+	<animations>
+		<Item>
+			<Kind>attack00</Kind>
+			<Anim href="T4_Succubus_Seducer-arena-attack00.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>attack01</Kind>
+			<Anim href="T4_Succubus_Seducer-arena-attack01.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>specability2</Kind>
+			<Anim href="T4_Succubus_Seducer-arena-hit.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>death</Kind>
+			<Anim href="T4_Succubus_Seducer-arena-death.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>happy</Kind>
+			<Anim href="T4_Succubus_Seducer-arena-happy.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>hit</Kind>
+			<Anim href="T4_Succubus_Seducer-arena-hit.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>idle00</Kind>
+			<Anim href="T4_Succubus_Seducer-arena-idle00.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>move</Kind>
+			<Anim href="T4_Succubus_Seducer-arena-move.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>rangeattack</Kind>
+			<Anim href="T4_Succubus_Seducer-arena-rangeattack.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>stir00</Kind>
+			<Anim href="T4_Succubus_Seducer-arena-stir00.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>specability</Kind>
+			<Anim href="T4_Sucubus_Seducer-arena-Specability.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+	</animations>
+	<ExpSrcScene href="/H5A2/Creatures/AlternativeUpgrades/Inferno/T4_Succubus_Seducer/Models/Succubus.mb"/>
+	<ExpSrcClipFolder href="/H5A2/Creatures/AlternativeUpgrades/Inferno/T4_Succubus_Seducer/Animations/Clip/"/>
+	<ExpRootTransform>Global</ExpRootTransform>
+</AnimSet>

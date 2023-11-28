@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvMapHeroShared ObjectRecordID="13">
+	<Model href="/Characters/Heroes/RuneMage.xdb#xpointer(/Model)"/>
+	<AnimSet href="/Characters/Heroes/RuneMage_LOD-adv.xdb#xpointer(/AnimSet)"/>
+	<blockedTiles/>
+	<holeTiles/>
+	<activeTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+	</activeTiles>
+	<passableTiles/>
+	<PossessionMarkerTile>
+		<x>0</x>
+		<y>0</y>
+	</PossessionMarkerTile>
+	<Effect/>
+	<EffectWhenOwned/>
+	<messagesFileRef/>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect/>
+	<flybyMessageFileRef href=""/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Units.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>true</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128/>
+	<InternalName>Vegeyr</InternalName>
+	<Class>HERO_CLASS_FLAMEKEEPER</Class>
+	<Specialization>HERO_SPEC_WEILDER_OF_FIRE</Specialization>
+	<PrimarySkill>
+		<Mastery>MASTERY_BASIC</Mastery>
+		<SkillID>HERO_SKILL_RUNELORE</SkillID>
+	</PrimarySkill>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Fortress/xxx/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Fortress/xxx/Description.txt"/>
+	<SpecializationIcon href="/Textures/HeroScreen/Specializations/Academy/Weilder_of_Fire.xdb#xpointer(/Texture)"/>
+	<FaceTexture href="/UI/H5A1/Icons/Heroes/Portrets128x128/Vegeyr.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTextureSmall/>
+	<HeroCharacterArena href="/Characters/Heroes/Dwarves/Vegeyr/HeroCharacterArena.xdb#xpointer(/Character)" />
+	<HeroCharacterArenaMelee href="/Characters/Heroes/Dwarves/Vegeyr/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
+	<HeroCharacterAdventure href="/Characters/Heroes/Dwarves/Vegeyr/HeroCharacterAdventure.xdb#xpointer(/Character)" />
+	<HeroIndividualCamera href="/Characters/Heroes/Dwarves/Vegeyr/HeroIndividualCamera.xdb#xpointer(/Camera)" />
+	<CombatVisual href="/Characters/Heroes/Dwarves/Vegeyr/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<TownType>TOWN_FORTRESS</TownType>
+	<Editable>
+		<NameFileRef href="/Text/Game/Heroes/Persons/Dwarves/Vegeyr/Name.txt"/>
+		<BiographyFileRef href="/Text/Game/Heroes/Persons/Dwarves/Vegeyr/Bio.txt"/>
+		<Offence>0</Offence>
+		<Defence>0</Defence>
+		<Spellpower>3</Spellpower>
+		<Knowledge>2</Knowledge>
+		<skills>
+			<Item>
+				<Mastery>MASTERY_BASIC</Mastery>
+				<SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID>
+			</Item>
+		</skills>
+		<perkIDs>
+			<Item>HERO_SKILL_MASTER_OF_FIRE</Item>
+		</perkIDs>
+		<spellIDs>
+			<Item>SPELL_FIREBALL</Item>
+			<Item>SPELL_FIREWALL</Item>
+		</spellIDs>
+		<Ballista>false</Ballista>
+		<FirstAidTent>false</FirstAidTent>
+		<AmmoCart>false</AmmoCart>
+		<FavoriteEnemies/>
+	</Editable>
+	<ArrowButtonState>0</ArrowButtonState>
+	<Decal/>
+	<Selection href="/_(Model)/Heroes/RuneMage_Path/Symbol.xdb#xpointer(/Model)"/>
+	<Trace href="/MapObjects/_(AdvMapHeroTraceSet)/Fortress.(AdvMapHeroTraceSet).xdb#xpointer(/AdvMapHeroTraceSet)"/>
+	<RaceTraitIcon/>
+	<RaceTraitDescFileRef href=""/>
+	<ScenarioHero>false</ScenarioHero>
+	<AdventureMusic/>
+	<HideInEditor>false</HideInEditor>
+</AdvMapHeroShared>

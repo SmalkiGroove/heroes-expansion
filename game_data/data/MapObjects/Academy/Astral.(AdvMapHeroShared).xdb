@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvMapHeroShared ObjectRecordID="30">
+	<Model href="/Characters/Heroes/Wizard_LOD.xdb#xpointer(/Model)"/>
+	<AnimSet href="/Characters/Heroes/Wizard_LOD-adv.xdb#xpointer(/AnimSet)"/>
+	<blockedTiles/>
+	<holeTiles/>
+	<activeTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+	</activeTiles>
+	<passableTiles/>
+	<PossessionMarkerTile>
+		<x>0</x>
+		<y>0</y>
+	</PossessionMarkerTile>
+	<Effect/>
+	<EffectWhenOwned/>
+	<messagesFileRef/>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect/>
+	<flybyMessageFileRef href=""/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Units.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>true</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128/>
+	<InternalName>Astral</InternalName>
+	<Class>HERO_CLASS_ELEMENTALIST</Class>
+	<Specialization>HERO_SPEC_INEXHAUSTIBLE</Specialization>
+	<PrimarySkill>
+		<Mastery>MASTERY_BASIC</Mastery>
+		<SkillID>HERO_SKILL_ARTIFICIER</SkillID>
+	</PrimarySkill>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Academy/Inexhaustible/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Academy/Inexhaustible/Description.txt"/>
+	<SpecializationIcon href="/Textures/HeroScreen/Specializations/Academy/Inexhaustible.xdb#xpointer(/Texture)"/>
+	<FaceTexture href="/Textures/Icons/Heroes/Academy/Academy_Nur_128x128.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTextureSmall/>
+	<HeroCharacterArena href="/Characters/Heroes/Academy/Astral/HeroCharacterArena.xdb#xpointer(/Character)" />
+	<HeroCharacterArenaMelee href="/Characters/Heroes/Academy/Astral/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
+	<HeroCharacterAdventure href="/Characters/Heroes/Academy/Astral/HeroCharacterAdventure.xdb#xpointer(/Character)" />
+	<HeroIndividualCamera href="/Characters/Heroes/Academy/Astral/HeroIndividualCamera.xdb#xpointer(/Camera)" />
+	<CombatVisual href="/Characters/Heroes/Academy/Astral/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<TownType>TOWN_ACADEMY</TownType>
+	<Editable>
+		<NameFileRef href="/Text/Game/Heroes/Persons/Academy/Astral/Name.txt"/>
+		<BiographyFileRef href="/Text/Game/Heroes/Persons/Academy/Astral/Bio.txt"/>
+		<Offence>0</Offence>
+		<Defence>0</Defence>
+		<Spellpower>3</Spellpower>
+		<Knowledge>2</Knowledge>
+		<skills>
+			<Item>
+				<Mastery>MASTERY_BASIC</Mastery>
+				<SkillID>HERO_SKILL_SORCERY</SkillID>
+			</Item>	
+		</skills>
+		<perkIDs>
+			<Item>HERO_SKILL_ARCANE_TRAINING</Item>
+		</perkIDs>
+		<spellIDs>
+			<Item>SPELL_MAGIC_ARROW</Item>
+		</spellIDs>
+		<Ballista>false</Ballista>
+		<FirstAidTent>false</FirstAidTent>
+		<AmmoCart>false</AmmoCart>
+		<FavoriteEnemies/>
+	</Editable>
+	<ArrowButtonState>0</ArrowButtonState>
+	<Decal/>
+	<Selection href="/_(Model)/Heroes/Wizard_Path/Symbol.xdb#xpointer(/Model)"/>
+	<Trace href="/MapObjects/_(AdvMapHeroTraceSet)/Academy.xdb#xpointer(/AdvMapHeroTraceSet)"/>
+	<RaceTraitIcon/>
+	<RaceTraitDescFileRef href=""/>
+	<ScenarioHero>false</ScenarioHero>
+	<AdventureMusic/>
+	<HideInEditor>false</HideInEditor>
+</AdvMapHeroShared>

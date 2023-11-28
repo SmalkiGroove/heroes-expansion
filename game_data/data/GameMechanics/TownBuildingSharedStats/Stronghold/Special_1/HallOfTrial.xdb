@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats>
+	<NameFileRef href="/Text/Game/TownBuildings/StrongHold/Special_1/Hall_of_Trial_1_Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/StrongHold/Special_1/Hall_of_Trial_1_Description.txt"/>
+	<Type>TB_SPECIAL_1</Type>
+	<Upgrade>BLD_UPG_1</Upgrade>
+	<Cost>
+		<Wood>3</Wood>
+		<Ore>3</Ore>
+		<Mercury>1</Mercury>
+		<Crystal>1</Crystal>
+		<Sulfur>1</Sulfur>
+		<Gem>1</Gem>
+		<Gold>1000</Gold>
+	</Cost>
+	<ModObjectName>Special_1</ModObjectName>
+	<dependencies/>
+	<Creature>CREATURE_UNKNOWN</Creature>
+	<DevLevelNeeded>3</DevLevelNeeded>
+	<UIObjectName>Special_1</UIObjectName>
+	<UIStackPosition>0</UIStackPosition>
+	<Icon href="/UI/H5A2/Icons/City_Buildings/Hall_of_Trial.(Texture).xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

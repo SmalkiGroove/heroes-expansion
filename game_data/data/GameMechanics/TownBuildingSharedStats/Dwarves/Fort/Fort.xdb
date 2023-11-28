@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="1000117">
+	<NameFileRef href="/Text/Game/TownBuildings/Dwarves/Fort/Fort_Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Dwarves/Fort/Fort_Description.txt"/>
+	<Type>TB_FORT</Type>
+	<Upgrade>BLD_UPG_1</Upgrade>
+	<Cost>
+		<Wood>0</Wood>
+		<Ore>8</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>500</Gold>
+	</Cost>
+	<ModObjectName>Fort</ModObjectName>
+	<dependencies>
+		<Item href="/GameMechanics/TownBuildingSharedStats/Dwarves/Dwelling_2/Woodworks.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_UNKNOWN</Creature>
+	<Creature2>CREATURE_UNKNOWN</Creature2>
+	<DevLevelNeeded>6</DevLevelNeeded>
+	<UIObjectName>Fort</UIObjectName>
+	<UIStackPosition>0</UIStackPosition>
+	<Icon href="/UI/H5A1/Icons/Buildings/Towns/Fortress/Building_Mode_Icon/128x128/Fort.(Texture).xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

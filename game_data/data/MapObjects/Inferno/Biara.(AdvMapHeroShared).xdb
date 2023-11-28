@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvMapHeroShared ObjectRecordID="74">
+	<Model href="/Characters/Heroes/Biara_LOD.xdb#xpointer(/Model)"/>
+	<AnimSet href="/Characters/Heroes/Biara_LOD-adv.xdb#xpointer(/AnimSet)"/>
+	<blockedTiles/>
+	<holeTiles/>
+	<activeTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+	</activeTiles>
+	<passableTiles/>
+	<PossessionMarkerTile>
+		<x>0</x>
+		<y>0</y>
+	</PossessionMarkerTile>
+	<Effect/>
+	<EffectWhenOwned/>
+	<messagesFileRef>
+		<Item href=""/>
+	</messagesFileRef>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect/>
+	<flybyMessageFileRef href=""/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Units.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>true</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128 href="/Textures/Icons/Heroes/Inferno/Inferno_Biara_128x128.(Texture).xdb#xpointer(/Texture)"/>
+	<InternalName>Biara</InternalName>
+	<Class>HERO_CLASS_ENCHANTER</Class>
+	<Specialization>HERO_SPEC_SUCCUBUSES</Specialization>
+	<PrimarySkill>
+		<Mastery>MASTERY_BASIC</Mastery>
+		<SkillID>HERO_SKILL_GATING</SkillID>
+	</PrimarySkill>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Inferno/Temptress/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Inferno/Temptress/Description.txt"/>
+	<SpecializationIcon href="/Textures/HeroScreen/Specializations/Inferno/Temptress.xdb#xpointer(/Texture)"/>
+	<FaceTexture href="/Textures/Icons/Heroes/Inferno/Inferno_Biara_128x128.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTextureSmall/>
+	<HeroCharacterArena href="/Characters/Heroes/Inferno/Biara/HeroCharacterArena.xdb#xpointer(/Character)" />
+	<HeroCharacterArenaMelee href="/Characters/Heroes/Inferno/Biara/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
+	<HeroCharacterAdventure href="/Characters/Heroes/Inferno/Biara/HeroCharacterAdventure.xdb#xpointer(/Character)" />
+	<HeroIndividualCamera href="/Characters/Heroes/Inferno/Biara/HeroIndividualCamera.xdb#xpointer(/Camera)" />
+	<CombatVisual href="/Characters/Heroes/Inferno/Biara/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<TownType>TOWN_INFERNO</TownType>
+	<Editable>
+		<NameFileRef href="/Text/Game/Heroes/Persons/Inferno/Biara/Name.txt"/>
+		<BiographyFileRef href="/Text/Game/Heroes/Persons/Inferno/Biara/Description.txt"/>
+		<Offence>0</Offence>
+		<Defence>0</Defence>
+		<Spellpower>3</Spellpower>
+		<Knowledge>2</Knowledge>
+		<skills>
+			<Item>
+				<Mastery>MASTERY_BASIC</Mastery>
+				<SkillID>HERO_SKILL_LUCK</SkillID>
+			</Item>
+		</skills>
+		<perkIDs>
+			<Item>HERO_SKILL_DEAD_LUCK</Item>
+		</perkIDs>
+		<spellIDs>
+			<Item>SPELL_STONE_SPIKES</Item>
+		</spellIDs>
+		<Ballista>false</Ballista>
+		<FirstAidTent>false</FirstAidTent>
+		<AmmoCart>false</AmmoCart>
+		<FavoriteEnemies/>
+	</Editable>
+	<ArrowButtonState>0</ArrowButtonState>
+	<Decal/>
+	<Selection href="/_(Model)/Heroes/DemonLord_Path/Symbol.(Model).xdb#xpointer(/Model)"/>
+	<Trace href="/MapObjects/_(AdvMapHeroTraceSet)/Inferno.xdb#xpointer(/AdvMapHeroTraceSet)"/>
+	<RaceTraitIcon/>
+	<RaceTraitDescFileRef href=""/>
+	<ScenarioHero>false</ScenarioHero>
+	<AdventureMusic href="/Sounds/_(Music)/AdvMap-Heroes/Biara.xdb#xpointer(/Music)"/>
+	<HideInEditor>false</HideInEditor>
+</AdvMapHeroShared>

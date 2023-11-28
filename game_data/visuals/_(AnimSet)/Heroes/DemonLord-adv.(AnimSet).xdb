@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimSet ObjectRecordID="170">
+	<animations>
+		<Item>
+			<Kind>idle00</Kind>
+			<Anim href="/_(BasicSkelAnim)/Heroes/DemonLord/idle00.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>move</Kind>
+			<Anim href="/_(BasicSkelAnim)/Heroes/DemonLord/move.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+	</animations>
+	<ExpSrcScene href="/models/Heroes/DemonLord/DemonLord.mb"/>
+	<ExpSrcClipFolder href="/Animations/Heroes/DemonLord/Clip_adventure/"/>
+	<ExpRootTransform>Global</ExpRootTransform>
+</AnimSet>

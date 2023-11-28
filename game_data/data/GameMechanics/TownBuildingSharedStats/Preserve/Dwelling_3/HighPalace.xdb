@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="1000006">
+	<NameFileRef href="/Text/Game/TownBuildings/Preserve/Dwelling_3/Upgraded_Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Preserve/Dwelling_3/Upgraded_Description.txt"/>
+	<Type>TB_DWELLING_3</Type>
+	<Upgrade>BLD_UPG_2</Upgrade>
+	<Cost>
+		<Wood>4</Wood>
+		<Ore>4</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>4</Sulfur>
+		<Gem>4</Gem>
+		<Gold>1000</Gold>
+	</Cost>
+	<ModObjectName>HighCabins</ModObjectName>
+	<dependencies>
+		<Item href="HighCabins.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_GRAND_ELF</Creature>
+	<Creature2>CREATURE_SHARP_SHOOTER</Creature2>
+	<DevLevelNeeded>6</DevLevelNeeded>
+	<UIObjectName>Dwelling_3</UIObjectName>
+	<UIStackPosition>1</UIStackPosition>
+	<Icon href="/UI/TownHall/preserve/128/d3u.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

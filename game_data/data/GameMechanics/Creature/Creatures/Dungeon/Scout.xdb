@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature ObjectRecordID="1000054">
+	<AttackSkill>3</AttackSkill>
+	<DefenceSkill>2</DefenceSkill>
+	<Shots>5</Shots>
+	<MinDamage>2</MinDamage>
+	<MaxDamage>4</MaxDamage>
+	<Speed>5</Speed>
+	<Initiative>12</Initiative>
+	<Flying>false</Flying>
+	<Health>11</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>11</Exp>
+	<Power>180</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>1</CreatureTier>
+	<Upgrade>false</Upgrade>
+	<PairCreature>CREATURE_ASSASSIN</PairCreature>
+	<CreatureTown>TOWN_DUNGEON</CreatureTown>
+	<MagicElement>
+		<First>ELEMENT_WATER</First>
+		<Second>ELEMENT_NONE</Second>
+	</MagicElement>
+	<WeeklyGrowth>56</WeeklyGrowth>
+	<Cost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>15</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Dungeon/Scout.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>1</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Dungeon/Scout.xdb#xpointer(/CreatureVisual)"/>
+	<Range>-2</Range>
+	<BaseCreature>CREATURE_UNKNOWN</BaseCreature>
+	<Upgrades>
+		<Item>CREATURE_ASSASSIN</Item>
+		<Item>CREATURE_STALKER</Item>
+	</Upgrades>
+	<Abilities>
+		<Item>ABILITY_NO_MELEE_PENALTY</Item>
+		<Item>ABILITY_RANGE_PENALTY</Item>
+	</Abilities>
+</Creature>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Spell ObjectRecordID="120">
+	<NameFileRef href="/Text/Game/Spells/Combat/Implosion/Name.txt"/>
+	<LongDescriptionFileRef href="/Text/Game/Spells/Combat/Implosion/Long_Description.txt"/>
+	<Texture href="/Textures/SpellBook______2618/Spells/Spell_Implosion.xdb#xpointer(/Texture)"/>
+	<EffectTexture href="/UI/Common/Icons/Spell_Buff_Icons/Implosion.(Texture).xdb#xpointer(/Texture)"/>
+	<SpellBookPredictions>
+		<Item href="/Text/Game/Spells/SpellBookPredictions/DirectDamage.txt"/>
+	</SpellBookPredictions>
+	<CombatLogTexts/>
+	<Level>5</Level>
+	<MagicSchool>MAGIC_SCHOOL_DESTRUCTIVE</MagicSchool>
+	<RequiredHeroLevel>0</RequiredHeroLevel>
+	<TrainedCost>28</TrainedCost>
+	<damage>
+		<Item>
+			<Base>100</Base>
+			<PerPower>10</PerPower>
+		</Item>
+		<Item>
+			<Base>100</Base>
+			<PerPower>25</PerPower>
+		</Item>
+		<Item>
+			<Base>100</Base>
+			<PerPower>50</PerPower>
+		</Item>
+		<Item>
+			<Base>100</Base>
+			<PerPower>75</PerPower>
+		</Item>
+	</damage>
+	<duration/>
+	<sSpellCost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>0</Gold>
+	</sSpellCost>
+	<IsAimed>true</IsAimed>
+	<IsAreaAttack>false</IsAreaAttack>
+	<CanSelectDead>false</CanSelectDead>
+	<Target>TARGET_HOSTILE</Target>
+	<Element>ELEMENT_EARTH</Element>
+	<DamageIsElemental>true</DamageIsElemental>
+	<visuals>
+		<Item href="Implosion.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+	</visuals>
+</Spell>

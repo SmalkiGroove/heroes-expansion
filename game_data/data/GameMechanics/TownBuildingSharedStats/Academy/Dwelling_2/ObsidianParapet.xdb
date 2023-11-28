@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="1000138">
+	<NameFileRef href="/Text/Game/TownBuildings/Academy/Dwelling_2/Upgraded_Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Academy/Dwelling_2/Upgraded_Description.txt"/>
+	<Type>TB_DWELLING_2</Type>
+	<Upgrade>BLD_UPG_2</Upgrade>
+	<Cost>
+		<Wood>0</Wood>
+		<Ore>6</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>3</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>3</Gem>
+		<Gold>750</Gold>
+	</Cost>
+	<ModObjectName>Stoneparapet</ModObjectName>
+	<dependencies>
+		<Item href="StoneParapet.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_OBSIDIAN_GARGOYLE</Creature>
+	<Creature2>CREATURE_MARBLE_GARGOYLE</Creature2>
+	<DevLevelNeeded>3</DevLevelNeeded>
+	<UIObjectName>Dwelling_2</UIObjectName>
+	<UIStackPosition>0</UIStackPosition>
+	<Icon href="/UI/TownHall/academy/128/d2u.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

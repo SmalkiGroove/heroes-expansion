@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="1000146">
+	<NameFileRef href="/Text/Game/TownBuildings/Dwarves/Special_3/Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Dwarves/Special_3/Desc.txt"/>
+	<Type>TB_SPECIAL_3</Type>
+	<Upgrade>BLD_UPG_1</Upgrade>
+	<Cost>
+		<Wood>3</Wood>
+		<Ore>6</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>300</Gold>
+	</Cost>
+	<ModObjectName>Special_3</ModObjectName>
+	<dependencies/>
+	<Creature>CREATURE_UNKNOWN</Creature>
+	<DevLevelNeeded>0</DevLevelNeeded>
+	<UIObjectName>Special_3</UIObjectName>
+	<UIStackPosition>0</UIStackPosition>
+	<Icon href="/UI/H5A1/Icons/Buildings/Towns/Fortress/Building_Mode_Icon/128x128/GuardPost.(Texture).xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

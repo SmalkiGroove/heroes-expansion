@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="67">
+	<NameFileRef href="/Text/Game/TownBuildings/Inferno/Dwelling_5/Upgraded_Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Inferno/Dwelling_5/Upgraded_Description.txt"/>
+	<Type>TB_DWELLING_5</Type>
+	<Upgrade>BLD_UPG_2</Upgrade>
+	<Cost>
+		<Wood>8</Wood>
+		<Ore>8</Ore>
+		<Mercury>6</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>10</Gem>
+		<Gold>2500</Gold>
+	</Cost>
+	<ModObjectName>hellhole</ModObjectName>
+	<dependencies>
+		<Item href="Hell_Hole.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_FRIGHTFUL_NIGHTMARE</Creature>
+	<Creature2>CREATURE_HELLMARE</Creature2>
+	<DevLevelNeeded>9</DevLevelNeeded>
+	<UIObjectName>Dwelling_5</UIObjectName>
+	<UIStackPosition>1</UIStackPosition>
+	<Icon href="/UI/TownHall/inferno/128/d5u.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

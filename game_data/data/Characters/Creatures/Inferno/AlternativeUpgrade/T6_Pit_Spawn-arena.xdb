@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimSet>
+	<animations>
+		<Item>
+			<Kind>attack00</Kind>
+			<Anim href="T6_Pit_Spawn-arena-attack00.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>attack01</Kind>
+			<Anim href="T6_Pit_Spawn-arena-attack01.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>specability2</Kind>
+			<Anim href="T6_Pit_Spawn-arena-hit.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>cast</Kind>
+			<Anim href="T6_Pit_Spawn-arena-cast.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>death</Kind>
+			<Anim href="T6_Pit_Spawn-arena-death.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>happy</Kind>
+			<Anim href="T6_Pit_Spawn-arena-happy.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>hit</Kind>
+			<Anim href="T6_Pit_Spawn-arena-hit.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>idle00</Kind>
+			<Anim href="T6_Pit_Spawn-arena-idle00.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>move</Kind>
+			<Anim href="T6_Pit_Spawn-arena-move.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>stir00</Kind>
+			<Anim href="T6_Pit_Spawn-arena-stir00.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+	</animations>
+	<ExpSrcScene href="/H5A2/Creatures/AlternativeUpgrades/Inferno/T6_Pit_Spawn/Models/PitSpawn.mb"/>
+	<ExpSrcClipFolder href="/H5A2/Creatures/AlternativeUpgrades/Inferno/T6_Pit_Spawn/Animations/Clip/"/>
+	<ExpRootTransform>Global</ExpRootTransform>
+</AnimSet>

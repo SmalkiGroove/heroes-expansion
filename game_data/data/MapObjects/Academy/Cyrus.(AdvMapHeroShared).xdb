@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvMapHeroShared ObjectRecordID="76">
+	<Model href="/Characters/Heroes/Wizard_LOD.xdb#xpointer(/Model)"/>
+	<AnimSet href="/Characters/Heroes/Wizard_LOD-adv.xdb#xpointer(/AnimSet)"/>
+	<blockedTiles/>
+	<holeTiles/>
+	<activeTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+	</activeTiles>
+	<passableTiles/>
+	<PossessionMarkerTile>
+		<x>0</x>
+		<y>0</y>
+	</PossessionMarkerTile>
+	<Effect/>
+	<EffectWhenOwned/>
+	<messagesFileRef/>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect/>
+	<flybyMessageFileRef href=""/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Units.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>true</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128 href="/Textures/Icons/Heroes/Academy/Academy_Cyrus_128x128.(Texture).xdb#xpointer(/Texture)"/>
+	<InternalName>Cyrus</InternalName>
+	<Class>HERO_CLASS_WIZARD</Class>
+	<Specialization>HERO_SPEC_MAGES</Specialization>
+	<PrimarySkill>
+		<Mastery>MASTERY_BASIC</Mastery>
+		<SkillID>HERO_SKILL_ARTIFICIER</SkillID>
+	</PrimarySkill>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Academy/Mentor/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Academy/Mentor/Description.txt"/>
+	<SpecializationIcon href="/Textures/HeroScreen/Specializations/Academy/Mentor.xdb#xpointer(/Texture)"/>
+	<FaceTexture href="/Textures/Icons/Heroes/Academy/Academy_Cyrus_128x128.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTextureSmall/>
+	<HeroCharacterArena href="/Characters/Heroes/Academy/Cyrus/HeroCharacterArena.xdb#xpointer(/Character)" />
+	<HeroCharacterArenaMelee href="/Characters/Heroes/Academy/Cyrus/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
+	<HeroCharacterAdventure href="/Characters/Heroes/Academy/Cyrus/HeroCharacterAdventure.xdb#xpointer(/Character)" />
+	<HeroIndividualCamera href="/Characters/Heroes/Academy/Cyrus/HeroIndividualCamera.xdb#xpointer(/Camera)" />
+	<CombatVisual href="/Characters/Heroes/Academy/Cyrus/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<TownType>TOWN_ACADEMY</TownType>
+	<Editable>
+		<NameFileRef href="/Text/Game/Heroes/Persons/Academy/Cyrus/Name.txt"/>
+		<BiographyFileRef href="/Text/Game/Heroes/Persons/Academy/Cyrus/Bio.txt"/>
+		<Offence>0</Offence>
+		<Defence>0</Defence>
+		<Spellpower>2</Spellpower>
+		<Knowledge>3</Knowledge>
+		<skills>
+			<Item>
+				<Mastery>MASTERY_BASIC</Mastery>
+				<SkillID>HERO_SKILL_SUMMONING_MAGIC</SkillID>
+			</Item>
+		</skills>
+		<perkIDs>
+			<Item>HERO_SKILL_MAGIC_BOND</Item>
+		</perkIDs>
+		<spellIDs>
+			<Item>SPELL_MAGIC_FIST</Item>
+		</spellIDs>
+		<Ballista>false</Ballista>
+		<FirstAidTent>false</FirstAidTent>
+		<AmmoCart>false</AmmoCart>
+		<FavoriteEnemies/>
+	</Editable>
+	<ArrowButtonState>0</ArrowButtonState>
+	<Decal/>
+	<Selection href="/_(Model)/Heroes/Wizard_Path/Symbol.xdb#xpointer(/Model)"/>
+	<Trace href="/MapObjects/_(AdvMapHeroTraceSet)/Academy.xdb#xpointer(/AdvMapHeroTraceSet)"/>
+	<RaceTraitIcon/>
+	<RaceTraitDescFileRef href=""/>
+	<ScenarioHero>false</ScenarioHero>
+	<AdventureMusic href="/Sounds/_(Music)/AdvMap-Heroes/Zehir.xdb#xpointer(/Music)"/>
+	<HideInEditor>false</HideInEditor>
+</AdvMapHeroShared>

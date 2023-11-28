@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvMapHeroShared ObjectRecordID="48">
+	<Model href="/_(Model)/Heroes/DemonLord_LOD.(Model).xdb#xpointer(/Model)"/>
+	<AnimSet href="/_(AnimSet)/Heroes/DemonLord-adv.(AnimSet).xdb#xpointer(/AnimSet)"/>
+	<blockedTiles/>
+	<holeTiles/>
+	<activeTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+	</activeTiles>
+	<passableTiles/>
+	<PossessionMarkerTile>
+		<x>0</x>
+		<y>0</y>
+	</PossessionMarkerTile>
+	<Effect/>
+	<EffectWhenOwned/>
+	<messagesFileRef/>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect/>
+	<flybyMessageFileRef href=""/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Units.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>true</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128/>
+	<InternalName>Deleb</InternalName>
+	<Class>HERO_CLASS_ENCHANTER</Class>
+	<Specialization/>
+	<PrimarySkill>
+		<Mastery>MASTERY_BASIC</Mastery>
+		<SkillID>HERO_SKILL_GATING</SkillID>
+	</PrimarySkill>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Inferno/Master_Of_Earth/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Inferno/Master_Of_Earth/Description.txt"/>
+	<SpecializationIcon href="/Textures/SpellBook______2618/Spells/Spell_StoneSpikes.xdb#xpointer(/Texture)"/>
+	<FaceTexture href="/Textures/Icons/Heroes/Inferno/Inferno_Deleb_128x128.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTextureSmall/>
+	<HeroCharacterArena href="/Characters/Heroes/Inferno/Deleb/HeroCharacterArena.xdb#xpointer(/Character)" />
+	<HeroCharacterArenaMelee href="/Characters/Heroes/Inferno/Deleb/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
+	<HeroCharacterAdventure href="/Characters/Heroes/Inferno/Deleb/HeroCharacterAdventure.xdb#xpointer(/Character)" />
+	<HeroIndividualCamera href="/Characters/Heroes/Inferno/Deleb/HeroIndividualCamera.xdb#xpointer(/Camera)" />
+	<CombatVisual href="/Characters/Heroes/Inferno/Deleb/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<TownType>TOWN_INFERNO</TownType>
+	<Editable>
+		<NameFileRef href="/Text/Game/Heroes/Persons/Inferno/Deleb/Name.txt"/>
+		<BiographyFileRef href="/Text/Game/Heroes/Persons/Inferno/Deleb/Bio.txt"/>
+		<Offence>0</Offence>
+		<Defence>0</Defence>
+		<Spellpower>3</Spellpower>
+		<Knowledge>2</Knowledge>
+		<skills>
+			<Item>
+				<Mastery>MASTERY_BASIC</Mastery>
+				<SkillID>HERO_SKILL_SUMMONING_MAGIC</SkillID>
+			</Item>		
+		</skills>
+		<perkIDs>
+			<Item>HERO_SKILL_MASTER_OF_QUAKES</Item>
+		</perkIDs>
+		<spellIDs>
+			<Item>SPELL_STONE_SPIKES</Item>
+			<Item>SPELL_LAND_MINE</Item>
+		</spellIDs>
+		<Ballista>false</Ballista>
+		<FirstAidTent>false</FirstAidTent>
+		<AmmoCart>false</AmmoCart>
+		<FavoriteEnemies/>
+	</Editable>
+	<ArrowButtonState>0</ArrowButtonState>
+	<Decal/>
+	<Selection href="/_(Model)/Heroes/DemonLord_Path/Symbol.(Model).xdb#xpointer(/Model)"/>
+	<Trace href="/MapObjects/_(AdvMapHeroTraceSet)/Inferno.xdb#xpointer(/AdvMapHeroTraceSet)"/>
+	<RaceTraitIcon/>
+	<RaceTraitDescFileRef href=""/>
+	<ScenarioHero>false</ScenarioHero>
+	<AdventureMusic/>
+	<HideInEditor>false</HideInEditor>
+</AdvMapHeroShared>

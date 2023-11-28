@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Table_MicroArtifactEffect_MicroArtifactEffectType ObjectRecordID="-1">
+	<objects>
+		<Item>
+			<ID>MAE_NONE</ID>
+			<Obj href="#n:inline(MicroArtifactEffect)" id="item_d1919c56-2c8c-4ce4-b3a6-dc101d413a75">
+				<MicroArtifactEffect ObjectRecordID="1000005">
+					<Name href="/Text/Game/MicroArtifacts/None_Name.txt"/>
+					<OfName href="/Text/Game/MicroArtifacts/None_OfName.txt"/>
+					<Description href="/Text/Game/MicroArtifacts/None_Desc.txt"/>
+					<Icon href="/Textures/Test/NoPicture.xdb#xpointer(/Texture)"/>
+					<Cost>
+						<Wood>0</Wood>
+						<Ore>0</Ore>
+						<Mercury>0</Mercury>
+						<Crystal>0</Crystal>
+						<Sulfur>0</Sulfur>
+						<Gem>0</Gem>
+						<Gold>0</Gold>
+					</Cost>
+				</MicroArtifactEffect>
+			</Obj>
+		</Item>
+		<Item>
+			<ID>MAE_WOUNDING</ID>
+			<Obj href="#n:inline(MicroArtifactEffect)" id="item_1a19d2d1-8375-4018-917d-a44c8ad7b325">
+				<MicroArtifactEffect ObjectRecordID="1000000">
+					<Name href="/Text/Game/MicroArtifacts/Wounding_Name.txt"/>
+					<OfName href="/Text/Game/MicroArtifacts/Wounding_OfName.txt"/>
+					<Description href="/Text/Game/MicroArtifacts/Wounding_Desc.txt"/>
+					<Icon href="/UI/AcademyCreatureArtifacts/MiniArtifactEffects/Wounding.(Texture).xdb#xpointer(/Texture)"/>
+					<Cost>
+						<Wood>0</Wood>
+						<Ore>0</Ore>
+						<Mercury>1</Mercury>
+						<Crystal>0</Crystal>
+						<Sulfur>0</Sulfur>
+						<Gem>0</Gem>
+						<Gold>500</Gold>
+					</Cost>
+				</MicroArtifactEffect>
+			</Obj>
+		</Item>
+		<Item>
+			<ID>MAE_PIERCING</ID>
+			<Obj href="#n:inline(MicroArtifactEffect)" id="item_a6f1b85d-63a2-480a-b157-a022432a941d">
+				<MicroArtifactEffect ObjectRecordID="1000001">
+					<Name href="/Text/Game/MicroArtifacts/Piercing_Name.txt"/>
+					<OfName href="/Text/Game/MicroArtifacts/Piercing_OfName.txt"/>
+					<Description href="/Text/Game/MicroArtifacts/Piercing_Desc.txt"/>
+					<Icon href="/UI/AcademyCreatureArtifacts/MiniArtifactEffects/Piercing.(Texture).xdb#xpointer(/Texture)"/>
+					<Cost>
+						<Wood>0</Wood>
+						<Ore>0</Ore>
+						<Mercury>0</Mercury>
+						<Crystal>1</Crystal>
+						<Sulfur>0</Sulfur>
+						<Gem>0</Gem>
+						<Gold>500</Gold>
+					</Cost>
+				</MicroArtifactEffect>
+			</Obj>
+		</Item>
+		<Item>
+			<ID>MAE_ARMOR_CRUSHING</ID>
+			<Obj href="#n:inline(MicroArtifactEffect)" id="item_1843aedc-820e-4359-9ecb-f8aed1231f76">
+				<MicroArtifactEffect ObjectRecordID="1000002">
+					<Name href="/Text/Game/MicroArtifacts/ArmorCrushing_Name.txt"/>
+					<OfName href="/Text/Game/MicroArtifacts/ArmorCrushing_OfName.txt"/>
+					<Description href="/Text/Game/MicroArtifacts/ArmorCrushing_Desc.txt"/>
+					<Icon href="/UI/AcademyCreatureArtifacts/MiniArtifactEffects/ArmorCrushing.(Texture).xdb#xpointer(/Texture)"/>
+					<Cost>
+						<Wood>0</Wood>
+						<Ore>0</Ore>
+						<Mercury>0</Mercury>
+						<Crystal>0</Crystal>
+						<Sulfur>1</Sulfur>
+						<Gem>0</Gem>
+						<Gold>500</Gold>
+					</Cost>
+				</MicroArtifactEffect>
+			</Obj>
+		</Item>
+		<Item>
+			<ID>MAE_HEALTH</ID>
+			<Obj href="#n:inline(MicroArtifactEffect)" id="item_425a0127-9e8c-4301-9544-55fc591e9dc1">
+				<MicroArtifactEffect ObjectRecordID="1000003">
+					<Name href="/Text/Game/MicroArtifacts/Health_Name.txt"/>
+					<OfName href="/Text/Game/MicroArtifacts/Health_OfName.txt"/>
+					<Description href="/Text/Game/MicroArtifacts/Health_Desc.txt"/>
+					<Icon href="/UI/AcademyCreatureArtifacts/MiniArtifactEffects/Health.(Texture).xdb#xpointer(/Texture)"/>
+					<Cost>
+						<Wood>0</Wood>
+						<Ore>0</Ore>
+						<Mercury>0</Mercury>
+						<Crystal>1</Crystal>
+						<Sulfur>0</Sulfur>
+						<Gem>0</Gem>
+						<Gold>500</Gold>
+					</Cost>
+				</MicroArtifactEffect>
+			</Obj>
+		</Item>
+		<Item>
+			<ID>MAE_DEFENCE</ID>
+			<Obj href="#n:inline(MicroArtifactEffect)" id="item_15035b11-fadf-4515-80b0-3a5777e19afd">
+				<MicroArtifactEffect ObjectRecordID="1000004">
+					<Name href="/Text/Game/MicroArtifacts/Defence_Name.txt"/>
+					<OfName href="/Text/Game/MicroArtifacts/Defence_OfName.txt"/>
+					<Description href="/Text/Game/MicroArtifacts/Defence_Desc.txt"/>
+					<Icon href="/UI/AcademyCreatureArtifacts/MiniArtifactEffects/Defence.(Texture).xdb#xpointer(/Texture)"/>
+					<Cost>
+						<Wood>0</Wood>
+						<Ore>1</Ore>
+						<Mercury>0</Mercury>
+						<Crystal>0</Crystal>
+						<Sulfur>0</Sulfur>
+						<Gem>0</Gem>
+						<Gold>500</Gold>
+					</Cost>
+				</MicroArtifactEffect>
+			</Obj>
+		</Item>
+		<Item>
+			<ID>MAE_MAGIC_PROTECTION</ID>
+			<Obj href="#n:inline(MicroArtifactEffect)" id="item_d6e17ccd-a82b-4515-938a-150f2c12e3ee">
+				<MicroArtifactEffect ObjectRecordID="1000006">
+					<Name href="/Text/Game/MicroArtifacts/MagicProtection_Name.txt"/>
+					<OfName href="/Text/Game/MicroArtifacts/MagicProtection_OfName.txt"/>
+					<Description href="/Text/Game/MicroArtifacts/MagicProtection_Desc.txt"/>
+					<Icon href="/UI/AcademyCreatureArtifacts/MiniArtifactEffects/MagicProtection.(Texture).xdb#xpointer(/Texture)"/>
+					<Cost>
+						<Wood>0</Wood>
+						<Ore>0</Ore>
+						<Mercury>1</Mercury>
+						<Crystal>0</Crystal>
+						<Sulfur>0</Sulfur>
+						<Gem>0</Gem>
+						<Gold>500</Gold>
+					</Cost>
+				</MicroArtifactEffect>
+			</Obj>
+		</Item>
+		<Item>
+			<ID>MAE_LUCK</ID>
+			<Obj href="#n:inline(MicroArtifactEffect)" id="item_720bff15-8057-450c-9782-5fd6461a0f5c">
+				<MicroArtifactEffect ObjectRecordID="1000007">
+					<Name href="/Text/Game/MicroArtifacts/Luck_Name.txt"/>
+					<OfName href="/Text/Game/MicroArtifacts/Luck_OfName.txt"/>
+					<Description href="/Text/Game/MicroArtifacts/Luck_Desc.txt"/>
+					<Icon href="/UI/AcademyCreatureArtifacts/MiniArtifactEffects/Luck.(Texture).xdb#xpointer(/Texture)"/>
+					<Cost>
+						<Wood>0</Wood>
+						<Ore>0</Ore>
+						<Mercury>0</Mercury>
+						<Crystal>0</Crystal>
+						<Sulfur>0</Sulfur>
+						<Gem>1</Gem>
+						<Gold>500</Gold>
+					</Cost>
+				</MicroArtifactEffect>
+			</Obj>
+		</Item>
+		<Item>
+			<ID>MAE_MORALE</ID>
+			<Obj href="#n:inline(MicroArtifactEffect)" id="item_8624940c-1213-4ec3-8ff0-7ba215ffd4ba">
+				<MicroArtifactEffect ObjectRecordID="1000008">
+					<Name href="/Text/Game/MicroArtifacts/Morale_Name.txt"/>
+					<OfName href="/Text/Game/MicroArtifacts/Morale_OfName.txt"/>
+					<Description href="/Text/Game/MicroArtifacts/Morale_Desc.txt"/>
+					<Icon href="/UI/AcademyCreatureArtifacts/MiniArtifactEffects/Morale.(Texture).xdb#xpointer(/Texture)"/>
+					<Cost>
+						<Wood>1</Wood>
+						<Ore>0</Ore>
+						<Mercury>0</Mercury>
+						<Crystal>0</Crystal>
+						<Sulfur>0</Sulfur>
+						<Gem>0</Gem>
+						<Gold>500</Gold>
+					</Cost>
+				</MicroArtifactEffect>
+			</Obj>
+		</Item>
+		<Item>
+			<ID>MAE_SPEED</ID>
+			<Obj href="#n:inline(MicroArtifactEffect)" id="item_2fff2069-3127-4a07-8527-9ed2a3d34432">
+				<MicroArtifactEffect ObjectRecordID="1000009">
+					<Name href="/Text/Game/MicroArtifacts/Speed_Name.txt"/>
+					<OfName href="/Text/Game/MicroArtifacts/Speed_OfName.txt"/>
+					<Description href="/Text/Game/MicroArtifacts/Speed_Desc.txt"/>
+					<Icon href="/UI/AcademyCreatureArtifacts/MiniArtifactEffects/Speed.(Texture).xdb#xpointer(/Texture)"/>
+					<Cost>
+						<Wood>0</Wood>
+						<Ore>0</Ore>
+						<Mercury>0</Mercury>
+						<Crystal>0</Crystal>
+						<Sulfur>1</Sulfur>
+						<Gem>0</Gem>
+						<Gold>500</Gold>
+					</Cost>
+				</MicroArtifactEffect>
+			</Obj>
+		</Item>
+		<Item>
+			<ID>MAE_HASTE</ID>
+			<Obj href="#n:inline(MicroArtifactEffect)" id="item_385947aa-783e-42c1-8493-edb04b3bb72b">
+				<MicroArtifactEffect ObjectRecordID="1000010">
+					<Name href="/Text/Game/MicroArtifacts/Haste_Name.txt"/>
+					<OfName href="/Text/Game/MicroArtifacts/Haste_OfName.txt"/>
+					<Description href="/Text/Game/MicroArtifacts/Haste_Desc.txt"/>
+					<Icon href="/UI/AcademyCreatureArtifacts/MiniArtifactEffects/Haste.(Texture).xdb#xpointer(/Texture)"/>
+					<Cost>
+						<Wood>0</Wood>
+						<Ore>0</Ore>
+						<Mercury>0</Mercury>
+						<Crystal>0</Crystal>
+						<Sulfur>0</Sulfur>
+						<Gem>1</Gem>
+						<Gold>500</Gold>
+					</Cost>
+				</MicroArtifactEffect>
+			</Obj>
+		</Item>
+	</objects>
+</Table_MicroArtifactEffect_MicroArtifactEffectType>

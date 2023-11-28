@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Spell ObjectRecordID="113">
+	<NameFileRef href="/Text/Game/Spells/Combat/Magic_Fist/Name.txt"/>
+	<LongDescriptionFileRef href="/Text/Game/Spells/Combat/Magic_Fist/Long_Description.txt"/>
+	<Texture href="/Textures/SpellBook______2618/Spells/Spell_MagicFist.xdb#xpointer(/Texture)"/>
+	<EffectTexture href="/UI/Common/Icons/Spell_Buff_Icons/MagicFist.(Texture).xdb#xpointer(/Texture)"/>
+	<SpellBookPredictions>
+		<Item href="/Text/Game/Spells/SpellBookPredictions/DirectDamage.txt"/>
+	</SpellBookPredictions>
+	<CombatLogTexts/>
+	<Level>1</Level>
+	<MagicSchool>MAGIC_SCHOOL_SUMMONING</MagicSchool>
+	<RequiredHeroLevel>0</RequiredHeroLevel>
+	<IsAimed>true</IsAimed>
+	<TrainedCost>5</TrainedCost>
+	<damage>
+		<Item>
+			<Base>20</Base>
+			<PerPower>10</PerPower>
+		</Item>
+		<Item>
+			<Base>30</Base>
+			<PerPower>15</PerPower>
+		</Item>
+		<Item>
+			<Base>40</Base>
+			<PerPower>20</PerPower>
+		</Item>
+		<Item>
+			<Base>50</Base>
+			<PerPower>25</PerPower>
+		</Item>
+	</damage>
+	<duration/>
+	<sSpellCost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>0</Gold>
+	</sSpellCost>
+	<IsAreaAttack>false</IsAreaAttack>
+	<CanSelectDead>false</CanSelectDead>
+	<Target>TARGET_HOSTILE</Target>
+	<Element>ELEMENT_NONE</Element>
+	<visuals>
+		<Item href="MagicFist.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+	</visuals>
+</Spell>

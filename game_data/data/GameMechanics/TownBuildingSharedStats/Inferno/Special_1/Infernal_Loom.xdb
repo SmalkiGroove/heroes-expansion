@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="70">
+	<NameFileRef href="/Text/Game/TownBuildings/Inferno/Special_1/Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Inferno/Special_1/Description.txt"/>
+	<Type>TB_SPECIAL_1</Type>
+	<Upgrade>BLD_UPG_1</Upgrade>
+	<Cost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>2</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>2</Sulfur>
+		<Gem>0</Gem>
+		<Gold>1000</Gold>
+	</Cost>
+	<ModObjectName>infloom</ModObjectName>
+	<dependencies/>
+	<Creature>CREATURE_UNKNOWN</Creature>
+	<DevLevelNeeded>3</DevLevelNeeded>
+	<UIObjectName>Special_3</UIObjectName>
+	<UIStackPosition>0</UIStackPosition>
+	<Icon href="/UI/TownHall/inferno/128/s3.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

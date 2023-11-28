@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RPGCombatUniqueCreatureStats ObjectRecordID="1000000">
+	<PrototypeCreature>CREATURE_PHOENIX</PrototypeCreature>
+	<Health>300</Health>
+	<Health_PerPower>10</Health_PerPower>
+	<Health_PerLevel>10</Health_PerLevel>
+	<Health_PerKnowledge>10</Health_PerKnowledge>
+	<DamageMin>25</DamageMin>
+	<DamageMin_PerPower>5</DamageMin_PerPower>
+	<DamageMin_PerLevel>0</DamageMin_PerLevel>
+	<DamageMax>50</DamageMax>
+	<DamageMax_PerPower>5</DamageMax_PerPower>
+	<DamageMax_PerLevel>0</DamageMax_PerLevel>
+	<Offence>20</Offence>
+	<Offence_PerPower>1</Offence_PerPower>
+	<Offence_PerLevel>2</Offence_PerLevel>
+	<Defence>20</Defence>
+	<Defence_PerPower>1</Defence_PerPower>
+	<Defence_PerLevel>2</Defence_PerLevel>
+	<Initiative>18</Initiative>
+	<Initiative_PerPower>0</Initiative_PerPower>
+	<Initiative_PerLevel>0</Initiative_PerLevel>
+	<Speed>9</Speed>
+	<Speed_PerPower>0</Speed_PerPower>
+	<Speed_PerLevel>0</Speed_PerLevel>
+	<NameFileRef href="/Text/Game/Creatures/Neutrals/ConjuredPhoenix.txt"/>
+	<Abilities>
+		<Item>
+			<Level>0</Level>
+			<Abilities>
+				<Item>ABILITY_FIRE_SHIELD</Item>
+				<Item>ABILITY_IMMUNITY_TO_FIRE</Item>
+				<Item>ABILITY_REBIRTH</Item>
+			</Abilities>
+		</Item>
+	</Abilities>
+</RPGCombatUniqueCreatureStats>

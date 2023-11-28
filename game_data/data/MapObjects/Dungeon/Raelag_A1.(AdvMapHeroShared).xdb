@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvMapHeroShared>
+	<Model href="/Characters/Heroes/Raelag_LOD.xdb#xpointer(/Model)"/>
+	<AnimSet href="/Characters/Heroes/Raelag_LOD-adv.xdb#xpointer(/AnimSet)"/>
+	<blockedTiles/>
+	<holeTiles/>
+	<activeTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+	</activeTiles>
+	<passableTiles/>
+	<PossessionMarkerTile>
+		<x>0</x>
+		<y>0</y>
+	</PossessionMarkerTile>
+	<Effect/>
+	<EffectWhenOwned/>
+	<messagesFileRef>
+		<Item href=""/>
+	</messagesFileRef>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect/>
+	<flybyMessageFileRef href=""/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Units.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>true</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128/>
+	<InternalName>Raelag_A1</InternalName>
+	<Class>HERO_CLASS_SORCERER</Class>
+	<Specialization>HERO_SPEC_MASTER_OF_INITIATIVE</Specialization>
+	<PrimarySkill>
+		<Mastery>MASTERY_BASIC</Mastery>
+		<SkillID>HERO_SKILL_INVOCATION</SkillID>
+	</PrimarySkill>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Dungeon/MasterOfInitiative/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Dungeon/MasterOfInitiative/Description.txt"/>
+	<SpecializationIcon href="/Textures/HeroScreen/Specializations/Dungeon/Prudent.xdb#xpointer(/Texture)"/>
+	<FaceTexture href="/Textures/Icons/Heroes/Dungeon/Dungeon_Raelag_128x128.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTextureSmall href="/Textures/Icons/Heroes/Dungeon/Dungeon_Raelag_128x128_64.(Texture).xdb#xpointer(/Texture)"/>
+	<HeroCharacterArena href="/Characters/Heroes/Raelag.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee/>
+	<HeroCharacterAdventure href="/Characters/Heroes/Raelag_LOD.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Warlock.xdb#xpointer(/CreatureVisual)"/>
+	<TownType>TOWN_DUNGEON</TownType>
+	<Editable>
+		<NameFileRef href="/Text/Game/Heroes/Persons/Dungeon/Raelag_A1/Name.txt"/>
+		<BiographyFileRef href="/Text/Game/Heroes/Persons/Dungeon/Raelag_A1/Bio.txt"/>
+		<Offence>1</Offence>
+		<Defence>0</Defence>
+		<Spellpower>3</Spellpower>
+		<Knowledge>1</Knowledge>
+		<skills/>
+		<perkIDs/>
+		<spellIDs/>
+		<Ballista>false</Ballista>
+		<FirstAidTent>false</FirstAidTent>
+		<AmmoCart>false</AmmoCart>
+		<FavoriteEnemies/>
+	</Editable>
+	<ArrowButtonState>0</ArrowButtonState>
+	<Decal/>
+	<Selection href="/_(Model)/Heroes/Warlock_Path/Symbol.xdb#xpointer(/Model)"/>
+	<Trace href="/MapObjects/_(AdvMapHeroTraceSet)/Dungeon.xdb#xpointer(/AdvMapHeroTraceSet)"/>
+	<RaceTraitIcon/>
+	<RaceTraitDescFileRef href=""/>
+	<ScenarioHero>true</ScenarioHero>
+	<AdventureMusic href="/Sounds/_(Music)/AdvMap-Heroes/Raelag.xdb#xpointer(/Music)"/>
+	<HideInEditor>false</HideInEditor>
+</AdvMapHeroShared>

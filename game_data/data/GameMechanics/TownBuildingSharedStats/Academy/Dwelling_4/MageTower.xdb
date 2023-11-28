@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="1000133">
+	<NameFileRef href="/Text/Game/TownBuildings/Academy/Dwelling_4/Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Academy/Dwelling_4/Description.txt"/>
+	<Type>TB_DWELLING_4</Type>
+	<Upgrade>BLD_UPG_1</Upgrade>
+	<Cost>
+		<Wood>10</Wood>
+		<Ore>2</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>1500</Gold>
+	</Cost>
+	<ModObjectName>MageTower</ModObjectName>
+	<dependencies/>
+	<Creature>CREATURE_MAGI</Creature>
+	<DevLevelNeeded>6</DevLevelNeeded>
+	<UIObjectName>Dwelling_4</UIObjectName>
+	<UIStackPosition>0</UIStackPosition>
+	<Icon href="/UI/TownHall/academy/128/d5.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

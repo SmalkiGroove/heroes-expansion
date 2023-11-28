@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdventureFlybyScene ObjectRecordID="1000044">
+	<Scenery href="/Maps/CombatArenas/SubTerra_Big_02/SubTerra_Big_02.xdb#xpointer(/AdvMapDesc)"/>
+	<cameraFlyupRole>
+		<Model/>
+		<AnimSet/>
+		<Player>PLAYER_NONE</Player>
+	</cameraFlyupRole>
+	<skyRole>
+		<Model/>
+		<AnimSet/>
+		<Player>PLAYER_NONE</Player>
+	</skyRole>
+	<MountPoint>
+		<Pos>
+			<x>27</x>
+			<y>40</y>
+		</Pos>
+		<Rot>0</Rot>
+	</MountPoint>
+	<AdditionalHeight>0</AdditionalHeight>
+	<Music/>
+	<AmbientSoundSet href="/Sounds/_(Ambient)/TerrainAmbients/Dungeon.xdb#xpointer(/AmbientSoundSet)"/>
+	<TextFormatFileRef href=""/>
+	<ObstaclesGroup/>
+	<CamerasSet/>
+	<MeleeAttackPoints>
+		<Use>false</Use>
+		<AttackerPoint>
+			<x>0</x>
+			<y>0</y>
+		</AttackerPoint>
+		<DefenderPoint>
+			<x>0</x>
+			<y>0</y>
+		</DefenderPoint>
+	</MeleeAttackPoints>
+</AdventureFlybyScene>

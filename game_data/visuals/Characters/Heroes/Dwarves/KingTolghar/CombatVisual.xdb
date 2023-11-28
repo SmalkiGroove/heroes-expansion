@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/GameMechanics/CreatureVisual/Heroes/"/>
+	<CreatureAbilitiesFileRef href="/GameMechanics/CreatureVisual/Heroes/"/>
+	<DescriptionFileRef href="/GameMechanics/CreatureVisual/Heroes/"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128/>
+	<AnimCharacter href="/Characters/Heroes/Tolghar.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot href="/GameMechanics/Shot/Creatures/Dwarf/Stormstrike.xdb#xpointer(/Shot)"/>
+	<SummoningEffect/>
+	<DamageEffect/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>0</x>
+		<y>0</y>
+		<z>0</z>
+	</MountPoint>
+	<MountBone/>
+</CreatureVisual>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimSet ObjectRecordID="130">
+	<animations>
+		<Item>
+			<Kind>death</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Imp/death.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>hit</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Imp/hit.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>idle00</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Imp/idle00.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>move</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Imp/move.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>specability</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Imp/specability.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>specability2</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Imp/hit.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>happy</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Imp/happy.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>attack00</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Imp/attack00.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>attack01</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Imp/attack01.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>stir00</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Imp/stir00.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>spneutral</Kind>
+			<Anim href="Imp-arena-spneutral.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+	</animations>
+	<ExpSrcScene href="/models/Creatures/Inferno/Imp.mb"/>
+	<ExpSrcClipFolder href="/Animations/Creatures/Inferno/Imp/Clip/"/>
+	<ExpRootTransform>Global</ExpRootTransform>
+</AnimSet>

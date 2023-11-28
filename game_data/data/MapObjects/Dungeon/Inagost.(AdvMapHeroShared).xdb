@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvMapHeroShared ObjectRecordID="20">
+	<Model href="/_(Model)/Heroes/DemonLord_LOD.(Model).xdb#xpointer(/Model)"/>
+	<AnimSet href="/_(AnimSet)/Heroes/DemonLord_LOD-adv.(AnimSet).xdb#xpointer(/AnimSet)"/>
+	<blockedTiles/>
+	<holeTiles/>
+	<activeTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+	</activeTiles>
+	<passableTiles/>
+	<PossessionMarkerTile>
+		<x>0</x>
+		<y>0</y>
+	</PossessionMarkerTile>
+	<Effect/>
+	<EffectWhenOwned/>
+	<messagesFileRef/>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect/>
+	<flybyMessageFileRef href=""/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Units.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>true</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128/>
+	<InternalName>Inagost</InternalName>
+	<Class>HERO_CLASS_SORCERER</Class>
+	<Specialization>HERO_SPEC_POWER_BARGAIN</Specialization>
+	<PrimarySkill>
+		<Mastery>MASTERY_BASIC</Mastery>
+		<SkillID>HERO_SKILL_INVOCATION</SkillID>
+	</PrimarySkill>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Dungeon/Power_Bargain/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Dungeon/Power_Bargain/Description.txt"/>
+	<SpecializationIcon href="/UI/H5A1/Icons/Abilites/Heroes_Abillites/128x128/Stormcaller.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTexture href="/Textures/Icons/Heroes/Dungeon/Dungeon_Sinitar_128x128.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTextureSmall/>
+	<HeroCharacterArena href="/Characters/Heroes/Dungeon/Inagost/HeroCharacterArena.xdb#xpointer(/Character)" />
+	<HeroCharacterArenaMelee href="/Characters/Heroes/Dungeon/Inagost/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
+	<HeroCharacterAdventure href="/Characters/Heroes/Dungeon/Inagost/HeroCharacterAdventure.xdb#xpointer(/Character)" />
+	<HeroIndividualCamera href="/Characters/Heroes/Dungeon/Inagost/HeroIndividualCamera.xdb#xpointer(/Camera)" />
+	<CombatVisual href="/Characters/Heroes/Dungeon/Inagost/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<TownType>TOWN_DUNGEON</TownType>
+	<Editable>
+		<NameFileRef href="/Text/Game/Heroes/Persons/Dungeon/Inagost/Name.txt"/>
+		<BiographyFileRef href="/Text/Game/Heroes/Persons/Dungeon/Inagost/Bio.txt"/>
+		<Offence>0</Offence>
+		<Defence>0</Defence>
+		<Spellpower>3</Spellpower>
+		<Knowledge>2</Knowledge>
+		<skills>
+			<Item>
+				<Mastery>MASTERY_BASIC</Mastery>
+				<SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID>
+			</Item>
+		</skills>
+		<perkIDs>
+			<Item>HERO_SKILL_EMPOWERED_SPELLS</Item>
+		</perkIDs>
+		<spellIDs>
+			<Item>SPELL_LIGHTNING_BOLT</Item>
+		</spellIDs>
+		<Ballista>false</Ballista>
+		<FirstAidTent>false</FirstAidTent>
+		<AmmoCart>false</AmmoCart>
+		<FavoriteEnemies/>
+	</Editable>
+	<ArrowButtonState>0</ArrowButtonState>
+	<Decal/>
+	<Selection href="/_(Model)/Heroes/Warlock_Path/Symbol.xdb#xpointer(/Model)"/>
+	<Trace href="/MapObjects/_(AdvMapHeroTraceSet)/Dungeon.xdb#xpointer(/AdvMapHeroTraceSet)"/>
+	<RaceTraitIcon/>
+	<RaceTraitDescFileRef href=""/>
+	<ScenarioHero>false</ScenarioHero>
+	<AdventureMusic/>
+	<HideInEditor>false</HideInEditor>
+</AdvMapHeroShared>

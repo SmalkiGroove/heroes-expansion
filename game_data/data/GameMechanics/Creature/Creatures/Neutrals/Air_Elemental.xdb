@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature ObjectRecordID="1000058">
+	<AttackSkill>4</AttackSkill>
+	<DefenceSkill>2</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>1</MinDamage>
+	<MaxDamage>6</MaxDamage>
+	<Speed>8</Speed>
+	<Initiative>16</Initiative>
+	<Flying>true</Flying>
+	<Health>80</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>88</Exp>
+	<Power>813</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>4</CreatureTier>
+	<Upgrade>true</Upgrade>
+	<PairCreature>CREATURE_UNKNOWN</PairCreature>
+	<CreatureTown>TOWN_NO_TYPE</CreatureTown>
+	<MagicElement>
+		<First>ELEMENT_AIR</First>
+		<Second>ELEMENT_NONE</Second>
+	</MagicElement>
+	<WeeklyGrowth>15</WeeklyGrowth>
+	<Cost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>150</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>false</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Neutral/Air_Elemental.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>1</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Neutrals/Air_Elemental.xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_UNKNOWN</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_NO_ENEMY_RETALIATION</Item>
+		<Item>ABILITY_ELEMENTAL</Item>
+		<Item>ABILITY_INCORPOREAL</Item>
+		<Item>ABILITY_IMMUNITY_TO_AIR</Item>
+	</Abilities>
+</Creature>

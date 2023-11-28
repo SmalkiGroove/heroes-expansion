@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvMapHeroShared ObjectRecordID="8">
+	<Model href="/_(Model)/Heroes/Knight_LOD.(Model).xdb#xpointer(/Model)"/>
+	<AnimSet href="/_(AnimSet)/Heroes/Knight_LOD-adv.(AnimSet).xdb#xpointer(/AnimSet)"/>
+	<blockedTiles/>
+	<holeTiles/>
+	<activeTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+	</activeTiles>
+	<passableTiles/>
+	<PossessionMarkerTile>
+		<x>0</x>
+		<y>0</y>
+	</PossessionMarkerTile>
+	<Effect/>
+	<EffectWhenOwned/>
+	<messagesFileRef/>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect/>
+	<flybyMessageFileRef href=""/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Units.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>true</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128 href="/Textures/Icons/Heroes/Heaven/Heaven_Godric_128x128.(Texture).xdb#xpointer(/Texture)"/>
+	<InternalName>Godric</InternalName>
+	<Class>HERO_CLASS_PALADIN</Class>
+	<Specialization>HERO_SPEC_HASTE</Specialization>
+	<PrimarySkill>
+		<Mastery>MASTERY_ADVANCED</Mastery>
+		<SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID>
+	</PrimarySkill>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Haven/Expediter/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Haven/Expediter/Description.txt"/>
+	<SpecializationIcon href="/Textures/HeroScreen/Specializations/Haven/Expediter.xdb#xpointer(/Texture)"/>
+	<FaceTexture href="/Textures/Icons/Heroes/Heaven/Heaven_Godric_128x128.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTextureSmall/>
+	<HeroCharacterArena href="/Characters/Heroes/Godric.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee href="/Characters/Heroes/Godric_Strike.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterAdventure href="/Characters/Heroes/Godric_LOD.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Knight.xdb#xpointer(/CreatureVisual)"/>
+	<TownType>TOWN_HEAVEN</TownType>
+	<Editable>
+		<NameFileRef href="/Text/Game/Heroes/Persons/Haven/Godric/Name.txt"/>
+		<BiographyFileRef href="/Text/Game/Heroes/Persons/Haven/Godric/Bio.txt"/>
+		<Offence>0</Offence>
+		<Defence>2</Defence>
+		<Spellpower>1</Spellpower>
+		<Knowledge>2</Knowledge>
+		<skills/>
+		<perkIDs>
+			<Item>HERO_SKILL_MASTER_OF_WRATH</Item>
+		</perkIDs>
+		<spellIDs>
+			<Item>SPELL_HASTE</Item>
+		</spellIDs>
+		<Ballista>false</Ballista>
+		<FirstAidTent>false</FirstAidTent>
+		<AmmoCart>false</AmmoCart>
+		<FavoriteEnemies/>
+	</Editable>
+	<ArrowButtonState>0</ArrowButtonState>
+	<Decal/>
+	<Selection href="/_(Model)/Heroes/Knight_Path/Symbol.(Model).xdb#xpointer(/Model)"/>
+	<Trace href="/MapObjects/_(AdvMapHeroTraceSet)/Haven.xdb#xpointer(/AdvMapHeroTraceSet)"/>
+	<RaceTraitIcon/>
+	<RaceTraitDescFileRef href=""/>
+	<ScenarioHero>true</ScenarioHero>
+	<AdventureMusic href="/Sounds/_(Music)/AdvMap-Heroes/Godric.xdb#xpointer(/Music)"/>
+	<HideInEditor>false</HideInEditor>
+</AdvMapHeroShared>

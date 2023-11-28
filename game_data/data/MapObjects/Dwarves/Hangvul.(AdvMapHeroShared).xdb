@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvMapHeroShared>
+	<Model href="/Characters/Heroes/RuneMage_LOD.xdb#xpointer(/Model)"/>
+	<AnimSet href="/Characters/Heroes/RuneMage_LOD-adv.xdb#xpointer(/AnimSet)"/>
+	<blockedTiles/>
+	<holeTiles/>
+	<activeTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+	</activeTiles>
+	<passableTiles/>
+	<PossessionMarkerTile>
+		<x>0</x>
+		<y>0</y>
+	</PossessionMarkerTile>
+	<Effect/>
+	<EffectWhenOwned/>
+	<messagesFileRef>
+		<Item href=""/>
+	</messagesFileRef>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect/>
+	<flybyMessageFileRef href=""/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Units.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>true</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128 href="/UI/H5A1/Icons/Heroes/Portrets128x128/Hangvul.(Texture).xdb#xpointer(/Texture)"/>
+	<InternalName>Hangvul</InternalName>
+	<Class>HERO_CLASS_FLAMEKEEPER</Class>
+	<Specialization>HERO_SPEC_RESEARCHER</Specialization>
+	<PrimarySkill>
+		<Mastery>MASTERY_EXTRA_EXPERT</Mastery>
+		<SkillID>HERO_SKILL_RUNELORE</SkillID>
+	</PrimarySkill>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Fortress/Researcher/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Fortress/Researcher/Description.txt"/>
+	<SpecializationIcon href="/UI/H5A1/Icons/Abilites/Heroes_Abillites/128x128/Researcher.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTexture href="/UI/H5A1/Icons/Heroes/Portrets128x128/Hangvul.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTextureSmall/>
+	<HeroCharacterArena href="/Characters/Heroes/Dwarves/Hangvul/HeroCharacterArena.xdb#xpointer(/Character)" />
+	<HeroCharacterArenaMelee href="/Characters/Heroes/Dwarves/Hangvul/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
+	<HeroCharacterAdventure href="/Characters/Heroes/Dwarves/Hangvul/HeroCharacterAdventure.xdb#xpointer(/Character)" />
+	<HeroIndividualCamera href="/Characters/Heroes/Dwarves/Hangvul/HeroIndividualCamera.xdb#xpointer(/Camera)" />
+	<CombatVisual href="/Characters/Heroes/Dwarves/Hangvul/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<TownType>TOWN_FORTRESS</TownType>
+	<Editable>
+		<NameFileRef href="/Text/Game/Heroes/Persons/Fortress/Hangvul/Name.txt"/>
+		<BiographyFileRef href="/Text/Game/Heroes/Persons/Fortress/Hangvul/Bio.txt"/>
+		<Offence>0</Offence>
+		<Defence>0</Defence>
+		<Spellpower>3</Spellpower>
+		<Knowledge>2</Knowledge>
+		<skills>
+			<Item>
+				<Mastery>MASTERY_BASIC</Mastery>
+				<SkillID>HERO_SKILL_LEARNING</SkillID>
+			</Item>
+		</skills>
+		<perkIDs>
+			<Item>HERO_SKILL_SCHOLAR</Item>
+		</perkIDs>
+		<spellIDs>
+			<Item>SPELL_STONESKIN</Item>
+		</spellIDs>
+		<Ballista>false</Ballista>
+		<FirstAidTent>false</FirstAidTent>
+		<AmmoCart>false</AmmoCart>
+		<FavoriteEnemies/>
+		<TalismanLevel>0</TalismanLevel>
+	</Editable>
+	<ArrowButtonState>0</ArrowButtonState>
+	<Decal/>
+	<Selection href="/_(Model)/Heroes/RuneMage_Path/Symbol.xdb#xpointer(/Model)"/>
+	<Trace href="/MapObjects/_(AdvMapHeroTraceSet)/Fortress.(AdvMapHeroTraceSet).xdb#xpointer(/AdvMapHeroTraceSet)"/>
+	<RaceTraitIcon/>
+	<RaceTraitDescFileRef href=""/>
+	<ScenarioHero>false</ScenarioHero>
+	<AdventureMusic href="/Sounds/_(Music)/AdvMap-Heroes/a1-Rolf.xdb#xpointer(/Music)"/>
+	<HideInEditor>false</HideInEditor>
+	<PresetMinimalAttributes>
+		<Offence>2</Offence>
+		<Defence>2</Defence>
+		<Spellpower>2</Spellpower>
+		<Knowledge>2</Knowledge>
+	</PresetMinimalAttributes>
+</AdvMapHeroShared>

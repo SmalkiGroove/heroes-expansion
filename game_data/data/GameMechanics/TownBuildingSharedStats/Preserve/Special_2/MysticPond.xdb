@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="1000112">
+	<NameFileRef href="/Text/Game/TownBuildings/Preserve/Special_2/Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Preserve/Special_2/Description.txt"/>
+	<Type>TB_SPECIAL_2</Type>
+	<Upgrade>BLD_UPG_1</Upgrade>
+	<Cost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>2</Mercury>
+		<Crystal>2</Crystal>
+		<Sulfur>2</Sulfur>
+		<Gem>2</Gem>
+		<Gold>0</Gold>
+	</Cost>
+	<ModObjectName>MysticPond</ModObjectName>
+	<dependencies>
+		<Item href="/GameMechanics/TownBuildingSharedStats/Preserve/MarketPlace/Marketplace.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_UNKNOWN</Creature>
+	<DevLevelNeeded>3</DevLevelNeeded>
+	<UIObjectName>Special_2</UIObjectName>
+	<UIStackPosition>0</UIStackPosition>
+	<Icon href="/UI/TownHall/preserve/128/MysticPond.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

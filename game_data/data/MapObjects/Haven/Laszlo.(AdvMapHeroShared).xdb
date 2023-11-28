@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvMapHeroShared ObjectRecordID="17">
+	<Model href="/Characters/Heroes/Lazlo_LOD.xdb#xpointer(/Model)"/>
+	<AnimSet href="/Characters/Heroes/Lazlo_LOD-adv.xdb#xpointer(/AnimSet)"/>
+	<blockedTiles/>
+	<holeTiles/>
+	<activeTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+	</activeTiles>
+	<passableTiles/>
+	<PossessionMarkerTile>
+		<x>0</x>
+		<y>0</y>
+	</PossessionMarkerTile>
+	<Effect/>
+	<EffectWhenOwned/>
+	<messagesFileRef/>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect/>
+	<flybyMessageFileRef href=""/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Units.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>true</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128/>
+	<InternalName>Laszlo</InternalName>
+	<Class>HERO_CLASS_KNIGHT</Class>
+	<Specialization>HERO_SPEC_FOOTMEN</Specialization>
+	<PrimarySkill>
+		<Mastery>MASTERY_BASIC</Mastery>
+		<SkillID>HERO_SKILL_TRAINING</SkillID>
+	</PrimarySkill>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Haven/Infantry_Commander/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Haven/Infantry_Commander/Description.txt"/>
+	<SpecializationIcon href="/Textures/HeroScreen/Specializations/Haven/Infantry_Commander.xdb#xpointer(/Texture)"/>
+	<FaceTexture href="/UI/H5A1/Icons/Heroes/Portrets128x128/Lazlo.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTextureSmall/>
+	<HeroCharacterArena href="/Characters/Heroes/Lazlo.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee href="/Characters/Heroes/Lazlo_strike.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterAdventure href="/Characters/Heroes/Lazlo_LOD.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Knight.xdb#xpointer(/CreatureVisual)"/>
+	<TownType>TOWN_HEAVEN</TownType>
+	<Editable>
+		<NameFileRef href="/Text/Game/Heroes/Persons/Haven/Laszlo/Name.txt"/>
+		<BiographyFileRef href="/Text/Game/Heroes/Persons/Haven/Laszlo/Bio.txt"/>
+		<Offence>1</Offence>
+		<Defence>2</Defence>
+		<Spellpower>1</Spellpower>
+		<Knowledge>1</Knowledge>
+		<skills>
+			<Item>
+				<Mastery>MASTERY_BASIC</Mastery>
+				<SkillID>HERO_SKILL_OFFENCE</SkillID>
+			</Item>
+		</skills>
+		<perkIDs>
+			<Item>HERO_SKILL_TACTICS</Item>
+		</perkIDs>
+		<spellIDs/>
+		<Ballista>false</Ballista>
+		<FirstAidTent>false</FirstAidTent>
+		<AmmoCart>true</AmmoCart>
+		<FavoriteEnemies/>
+	</Editable>
+	<ArrowButtonState>0</ArrowButtonState>
+	<Decal/>
+	<Selection href="/_(Model)/Heroes/Knight_Path/Symbol.(Model).xdb#xpointer(/Model)"/>
+	<Trace href="/MapObjects/_(AdvMapHeroTraceSet)/Haven.xdb#xpointer(/AdvMapHeroTraceSet)"/>
+	<RaceTraitIcon/>
+	<RaceTraitDescFileRef href=""/>
+	<ScenarioHero>true</ScenarioHero>
+	<AdventureMusic/>
+	<HideInEditor>false</HideInEditor>
+</AdvMapHeroShared>

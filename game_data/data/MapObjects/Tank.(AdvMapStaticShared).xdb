@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvMapStaticShared>
+	<Model href="/_(Model)/Artefacts/Tank.(Model).xdb#xpointer(/Model)"/>
+	<AnimSet href="/_(AnimSet)/Artefacts/General.(AnimSet).xdb#xpointer(/AnimSet)"/>
+	<blockedTiles/>
+	<holeTiles/>
+	<activeTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+	</activeTiles>
+	<passableTiles/>
+	<PossessionMarkerTile>
+		<x>0</x>
+		<y>0</y>
+	</PossessionMarkerTile>
+	<Effect href="/Effects/_(Effect)/Artefacts/General/Gold.xdb#xpointer(/Effect)"/>
+	<EffectWhenOwned/>
+	<messagesFileRef>
+		<Item href=""/>
+	</messagesFileRef>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect/>
+	<flybyMessageFileRef href=""/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Buildings.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>true</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128/>
+</AdvMapStaticShared>

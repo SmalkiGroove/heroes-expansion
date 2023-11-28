@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvMapDwellingShared ObjectRecordID="1000007">
+	<Model href="/_(Model)/Buildings/RefugeeCamp.(Model).xdb#xpointer(/Model)"/>
+	<AnimSet/>
+	<blockedTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+		<Item>
+			<x>0</x>
+			<y>1</y>
+		</Item>
+		<Item>
+			<x>-1</x>
+			<y>0</y>
+		</Item>
+		<Item>
+			<x>-1</x>
+			<y>1</y>
+		</Item>
+		<Item>
+			<x>-1</x>
+			<y>-1</y>
+		</Item>
+	</blockedTiles>
+	<holeTiles/>
+	<activeTiles>
+		<Item>
+			<x>0</x>
+			<y>-1</y>
+		</Item>
+	</activeTiles>
+	<passableTiles/>
+	<PossessionMarkerTile>
+		<x>0</x>
+		<y>0</y>
+	</PossessionMarkerTile>
+	<Effect href="/Effects/_(Effect)/Buildings/RefugeeCamp.(Effect).xdb#xpointer(/Effect)"/>
+	<EffectWhenOwned/>
+	<messagesFileRef>
+		<Item href="/Text/Game/Dwellings/RefugeeCamp/Name.txt"/>
+		<Item href="/Text/Game/Dwellings/RefugeeCamp/Description.txt"/>
+		<Item href=""/>
+		<Item href="/Text/Game/Dwellings/RefugeeCamp/SecondVisit.txt"/>
+		<Item href=""/>
+		<Item href="/Text/Game/Dwellings/RefugeeCamp/SecondVisitNoHire.txt"/>
+	</messagesFileRef>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect/>
+	<flybyMessageFileRef href=""/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Buildings.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>true</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128/>
+	<Type>BUILDING_REFUGEE_CAMP</Type>
+	<guards/>
+	<creatures>
+		<Item>CREATURE_MAGI</Item>
+		<Item>CREATURE_GENIE</Item>
+		<Item>CREATURE_RIDER</Item>
+		<Item>CREATURE_MATRON</Item>
+		<Item>CREATURE_GRIFFIN</Item>
+		<Item>CREATURE_PRIEST</Item>
+		<Item>CREATURE_SUCCUBUS</Item>
+		<Item>CREATURE_NIGHTMARE</Item>
+		<Item>CREATURE_VAMPIRE</Item>
+		<Item>CREATURE_LICH</Item>
+		<Item>CREATURE_DRUID</Item>
+		<Item>CREATURE_UNICORN</Item>
+		<Item>CREATURE_BEAR_RIDER</Item>
+		<Item>CREATURE_RUNE_MAGE</Item>
+		<Item>CREATURE_CENTAUR</Item>
+		<Item>CREATURE_ORCCHIEF_BUTCHER</Item>
+		<Item>CREATURE_WOLF</Item>
+		<Item>CREATURE_MANTICORE</Item>
+	</creatures>
+	<RandomType>DWELLING_TYPE_SPECIFIC</RandomType>
+</AdvMapDwellingShared>

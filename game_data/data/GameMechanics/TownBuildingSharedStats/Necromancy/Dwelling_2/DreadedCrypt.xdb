@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="1000037">
+	<NameFileRef href="/Text/Game/TownBuildings/Necromancy/Dwelling_2/Upgraded_Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Necromancy/Dwelling_2/Upgraded_Description.txt"/>
+	<Type>TB_DWELLING_2</Type>
+	<Upgrade>BLD_UPG_2</Upgrade>
+	<Cost>
+		<Wood>0</Wood>
+		<Ore>6</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>6</Gem>
+		<Gold>750</Gold>
+	</Cost>
+	<ModObjectName>Crypt</ModObjectName>
+	<dependencies>
+		<Item href="ForgottenCrypt.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_ZOMBIE</Creature>
+	<Creature2>CREATURE_DISEASE_ZOMBIE</Creature2>
+	<DevLevelNeeded>3</DevLevelNeeded>
+	<UIObjectName>Dwelling_2</UIObjectName>
+	<UIStackPosition>1</UIStackPosition>
+	<Icon href="/UI/TownHall/necropolis/128/d2u.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

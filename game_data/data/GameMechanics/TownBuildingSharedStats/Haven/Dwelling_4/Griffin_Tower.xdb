@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="21">
+	<NameFileRef href="/Text/Game/TownBuildings/Haven/Dwelling_4/Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Haven/Dwelling_4/Description.txt"/>
+	<Type>TB_DWELLING_4</Type>
+	<Upgrade>BLD_UPG_1</Upgrade>
+	<Cost>
+		<Wood>2</Wood>
+		<Ore>10</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>1500</Gold>
+	</Cost>
+	<ModObjectName>GriffinBastion</ModObjectName>
+	<dependencies/>
+	<Creature>CREATURE_GRIFFIN</Creature>
+	<DevLevelNeeded>6</DevLevelNeeded>
+	<UIObjectName>Dwelling_4</UIObjectName>
+	<UIStackPosition>0</UIStackPosition>
+	<Icon href="/UI/TownHall/haven/128/d4.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

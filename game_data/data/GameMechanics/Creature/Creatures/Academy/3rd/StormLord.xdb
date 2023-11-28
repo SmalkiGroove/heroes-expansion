@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature>
+	<AttackSkill>33</AttackSkill>
+	<DefenceSkill>33</DefenceSkill>
+	<Shots>3</Shots>
+	<MinDamage>40</MinDamage>
+	<MaxDamage>80</MaxDamage>
+	<Speed>5</Speed>
+	<Initiative>9</Initiative>
+	<Flying>false</Flying>
+	<Health>260</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>1</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>1000</Exp>
+	<Power>6000</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>7</CreatureTier>
+	<Upgrade>false</Upgrade>
+	<PairCreature>CREATURE_UNKNOWN</PairCreature>
+	<CreatureTown>TOWN_ACADEMY</CreatureTown>
+	<MagicElement>
+		<First>ELEMENT_AIR</First>
+		<Second>ELEMENT_WATER</Second>
+	</MagicElement>
+	<WeeklyGrowth>1</WeeklyGrowth>
+	<Cost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>3</Gem>
+		<Gold>3500</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Academy/Storm_Lord.xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>2</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Academy/3rd/StormLord.(CreatureVisual).xdb#xpointer(/CreatureVisual)"/>
+	<Range>-2</Range>
+	<BaseCreature>CREATURE_GIANT</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_NO_MELEE_PENALTY</Item>
+		<Item>ABILITY_IMMUNITY_TO_MIND_CONTROL</Item>
+		<Item>ABILITY_IMMUNITY_TO_AIR</Item>
+		<Item>ABILITY_SHIELD_WALL</Item>
+		<Item>ABILITY_CALL_STORM</Item>
+		<Item>ABILITY_LIGHTNING_BREATH</Item>
+	</Abilities>
+</Creature>

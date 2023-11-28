@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimSet>
+	<animations>
+		<Item>
+			<Kind>idle00</Kind>
+			<Anim href="Sareth_Unmounted-arena-idle00.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>move</Kind>
+			<Anim href="Sareth_Unmounted-arena-move.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>move_sp</Kind>
+			<Anim href="Sareth_Unmounted-arena-move_sp.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>spbellicose</Kind>
+			<Anim href="Sareth_Unmounted-arena-spbellicose.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>sphaughtiness</Kind>
+			<Anim href="Sareth_Unmounted-arena-sphaughtiness.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>spmockery</Kind>
+			<Anim href="Sareth_Unmounted-arena-spmockery.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>spneutral</Kind>
+			<Anim href="Sareth_Unmounted-arena-spneutral.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>sporator</Kind>
+			<Anim href="Sareth_Unmounted-arena-sporator.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>spsad</Kind>
+			<Anim href="Sareth_Unmounted-arena-spsad.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+	</animations>
+	<ExpSrcScene href="/H5A2/Heroes/Sareth/Sareth.mb"/>
+	<ExpSrcClipFolder href="/H5A2/Heroes/Sareth/Animations/Clip/"/>
+	<ExpRootTransform>Global</ExpRootTransform>
+</AnimSet>

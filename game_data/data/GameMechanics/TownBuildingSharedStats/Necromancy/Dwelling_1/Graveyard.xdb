@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="1000034">
+	<NameFileRef href="/Text/Game/TownBuildings/Necromancy/Dwelling_1/Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Necromancy/Dwelling_1/Description.txt"/>
+	<Type>TB_DWELLING_1</Type>
+	<Upgrade>BLD_UPG_1</Upgrade>
+	<Cost>
+		<Wood>0</Wood>
+		<Ore>4</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>500</Gold>
+	</Cost>
+	<ModObjectName>GraveYard</ModObjectName>
+	<dependencies/>
+	<Creature>CREATURE_SKELETON</Creature>
+	<DevLevelNeeded>0</DevLevelNeeded>
+	<UIObjectName>Dwelling_1</UIObjectName>
+	<UIStackPosition>0</UIStackPosition>
+	<Icon href="/UI/TownHall/necropolis/128/d1.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

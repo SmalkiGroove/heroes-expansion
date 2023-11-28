@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimSet ObjectRecordID="145">
+	<animations>
+		<Item>
+			<Kind>death</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Succubus/death.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>hit</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Succubus/hit.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>idle00</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Succubus/idle00.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>move</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Succubus/move.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>rangeattack</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Succubus/rangeattack.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>happy</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Succubus/happy.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>attack00</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Succubus/attack00.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>attack01</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Succubus/attack01.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>specability2</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Succubus/hit.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>stir00</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Succubus/stir00.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+	</animations>
+	<ExpSrcScene href="/models/Creatures/Inferno/Succubus.mb"/>
+	<ExpSrcClipFolder href="/Animations/Creatures/Inferno/Succubus/Clip/"/>
+	<ExpRootTransform>Global</ExpRootTransform>
+</AnimSet>

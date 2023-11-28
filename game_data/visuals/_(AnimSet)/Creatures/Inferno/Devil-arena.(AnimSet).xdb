@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimSet ObjectRecordID="133">
+	<animations>
+		<Item>
+			<Kind>death</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Devil/death.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>hit</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Devil/hit.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>idle00</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Devil/idle00.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>move</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Devil/move.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>moveStart</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Devil/moveStart.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>moveEnd</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Devil/moveEnd.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>happy</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Devil/happy.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>attack00</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Devil/attack00.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>attack01</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Devil/attack01.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>specability2</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Devil/hit.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>stir00</Kind>
+			<Anim href="/_(BasicSkelAnim)/Creatures/Inferno/Devil/stir00.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+	</animations>
+	<ExpSrcScene href="/models/Creatures/Inferno/Devil.mb"/>
+	<ExpSrcClipFolder href="/Animations/Creatures/Inferno/Devil/Clip/"/>
+	<ExpRootTransform>Global</ExpRootTransform>
+</AnimSet>

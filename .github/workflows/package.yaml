@@ -1,0 +1,16 @@
+# name: Package the mod
+# run-name: Generate .pak artifacts
+# on: [push]
+# jobs:
+#   paking:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v3
+#       - name: Archive mod content
+#         run: zip -q -x ".*" -x "pak.ps1" -r mod.pak .
+#       - name: Store pak archive
+#         uses: actions/upload-artifact@v3
+#         with:
+#           name: modpack
+#           path: mod.pak

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimSet>
+	<animations>
+		<Item>
+			<Kind>idle00</Kind>
+			<Anim href="/Characters/Heroes/Thralsai_LOD-adv-idle00.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>move</Kind>
+			<Anim href="/Characters/Heroes/Thralsai_LOD-adv-move.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+	</animations>
+	<ExpSrcScene href="/H5A1/Models/Heroes/Thralsai/Thralsai_M_LOD.mb"/>
+	<ExpSrcClipFolder href="/H5A1/Animations/Heroes/Thralsai/Clip_adventure/"/>
+	<ExpRootTransform>Global</ExpRootTransform>
+</AnimSet>

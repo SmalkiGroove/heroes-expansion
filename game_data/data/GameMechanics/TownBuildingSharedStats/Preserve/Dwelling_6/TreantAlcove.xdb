@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="1000013">
+	<NameFileRef href="/Text/Game/TownBuildings/Preserve/Dwelling_6/Upgraded_Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Preserve/Dwelling_6/Upgraded_Description.txt"/>
+	<Type>TB_DWELLING_6</Type>
+	<Upgrade>BLD_UPG_2</Upgrade>
+	<Cost>
+		<Wood>20</Wood>
+		<Ore>0</Ore>
+		<Mercury>10</Mercury>
+		<Crystal>5</Crystal>
+		<Sulfur>5</Sulfur>
+		<Gem>0</Gem>
+		<Gold>5000</Gold>
+	</Cost>
+	<ModObjectName>TreantArches</ModObjectName>
+	<dependencies>
+		<Item href="TreantArches.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_TREANT_GUARDIAN</Creature>
+	<Creature2>CREATURE_ANGER_TREANT</Creature2>
+	<DevLevelNeeded>12</DevLevelNeeded>
+	<UIObjectName>Dwelling_6</UIObjectName>
+	<UIStackPosition>1</UIStackPosition>
+	<Icon href="/UI/TownHall/preserve/128/d5u.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimSet>
+	<animations>
+		<Item>
+			<Kind>move</Kind>
+			<Anim href="/Characters/Heroes/Rolf_LOD-adv-move.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>idle00</Kind>
+			<Anim href="/Characters/Heroes/Rolf_LOD-adv-idle00.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+	</animations>
+	<ExpSrcScene href="/H5A1/Models/Heroes/Rolf/Rolf_LOD_M.mb"/>
+	<ExpSrcClipFolder href="/H5A1/Animations/Heroes/Rolf/Clip_adventure/"/>
+	<ExpRootTransform>Global</ExpRootTransform>
+</AnimSet>

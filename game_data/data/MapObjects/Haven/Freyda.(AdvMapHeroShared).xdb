@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvMapHeroShared ObjectRecordID="17">
+	<Model href="/Characters/Heroes/Freyda.xdb#xpointer(/Model)"/>
+	<AnimSet href="/Characters/Heroes/Freyda_LOD-adv.xdb#xpointer(/AnimSet)"/>
+	<blockedTiles/>
+	<holeTiles/>
+	<activeTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+	</activeTiles>
+	<passableTiles/>
+	<PossessionMarkerTile>
+		<x>0</x>
+		<y>0</y>
+	</PossessionMarkerTile>
+	<Effect/>
+	<EffectWhenOwned/>
+	<messagesFileRef/>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect/>
+	<flybyMessageFileRef href=""/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Units.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>true</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128/>
+	<InternalName>Freyda</InternalName>
+	<Class>HERO_CLASS_KNIGHT</Class>
+	<Specialization>HERO_SPEC_VESSEL_OF_ELRATH</Specialization>
+	<PrimarySkill>
+		<Mastery>MASTERY_BASIC</Mastery>
+		<SkillID>HERO_SKILL_TRAINING</SkillID>
+	</PrimarySkill>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Haven/VesselOfElrath/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Haven/VesselOfElrath/Description.txt"/>
+	<SpecializationIcon href="/UI/H5A2/Icons/Heroes_Specializations/VesselOfElrath.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTexture href="/Textures/Icons/Heroes/Heaven/Heaven_Freyda_128x128.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTextureSmall/>
+	<HeroCharacterArena href="/Characters/Heroes/Freyda.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee href="/Characters/Heroes/Freyda_Strike.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterAdventure href="/Characters/Heroes/Freyda_LOD.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Knight.xdb#xpointer(/CreatureVisual)"/>
+	<TownType>TOWN_HEAVEN</TownType>
+	<Editable>
+		<NameFileRef href="/Text/Game/Heroes/Persons/Haven/Freyda/Name.txt"/>
+		<BiographyFileRef href="/Text/Game/Heroes/Persons/Haven/Freyda/Bio.txt"/>
+		<Offence>1</Offence>
+		<Defence>2</Defence>
+		<Spellpower>1</Spellpower>
+		<Knowledge>1</Knowledge>
+		<skills>
+			<Item>
+				<Mastery>MASTERY_BASIC</Mastery>
+				<SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID>
+			</Item>
+			<Item>
+				<Mastery>MASTERY_BASIC</Mastery>
+				<SkillID>HERO_SKILL_OFFENCE</SkillID>
+			</Item>
+		</skills>
+		<perkIDs/>
+		<spellIDs>
+			<Item>SPELL_HASTE</Item>
+		</spellIDs>
+		<Ballista>false</Ballista>
+		<FirstAidTent>false</FirstAidTent>
+		<AmmoCart>false</AmmoCart>
+		<FavoriteEnemies/>
+		<TalismanLevel>0</TalismanLevel>
+	</Editable>
+	<ArrowButtonState>0</ArrowButtonState>
+	<Decal/>
+	<Selection href="/_(Model)/Heroes/Knight_Path/Symbol.(Model).xdb#xpointer(/Model)"/>
+	<Trace href="/MapObjects/_(AdvMapHeroTraceSet)/Haven.xdb#xpointer(/AdvMapHeroTraceSet)"/>
+	<RaceTraitIcon/>
+	<RaceTraitDescFileRef href=""/>
+	<ScenarioHero>true</ScenarioHero>
+	<AdventureMusic href="/Sounds/_(Music)/AdvMap-Heroes/a1-Freyda.xdb#xpointer(/Music)"/>
+	<HideInEditor>false</HideInEditor>
+	<PresetMinimalAttributes>
+		<Offence>2</Offence>
+		<Defence>2</Defence>
+		<Spellpower>2</Spellpower>
+		<Knowledge>2</Knowledge>
+	</PresetMinimalAttributes>
+</AdvMapHeroShared>

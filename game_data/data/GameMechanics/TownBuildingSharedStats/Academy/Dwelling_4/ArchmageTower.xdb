@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="1000140">
+	<NameFileRef href="/Text/Game/TownBuildings/Academy/Dwelling_4/Upgraded_Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Academy/Dwelling_4/Upgraded_Description.txt"/>
+	<Type>TB_DWELLING_4</Type>
+	<Upgrade>BLD_UPG_2</Upgrade>
+	<Cost>
+		<Wood>8</Wood>
+		<Ore>4</Ore>
+		<Mercury>6</Mercury>
+		<Crystal>2</Crystal>
+		<Sulfur>2</Sulfur>
+		<Gem>2</Gem>
+		<Gold>1500</Gold>
+	</Cost>
+	<ModObjectName>MageTower</ModObjectName>
+	<dependencies>
+		<Item href="MageTower.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_ARCH_MAGI</Creature>
+	<Creature2>CREATURE_COMBAT_MAGE</Creature2>
+	<DevLevelNeeded>6</DevLevelNeeded>
+	<UIObjectName>Dwelling_4</UIObjectName>
+	<UIStackPosition>1</UIStackPosition>
+	<Icon href="/UI/TownHall/academy/128/d5u.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

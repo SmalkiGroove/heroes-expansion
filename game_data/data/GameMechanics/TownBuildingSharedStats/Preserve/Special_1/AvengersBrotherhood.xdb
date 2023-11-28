@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="1000111">
+	<NameFileRef href="/Text/Game/TownBuildings/Preserve/Special_1/Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Preserve/Special_1/Description.txt"/>
+	<Type>TB_SPECIAL_0</Type>
+	<Upgrade>BLD_UPG_2</Upgrade>
+	<Cost>
+		<Wood>0</Wood>
+		<Ore>5</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>5</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>1500</Gold>
+	</Cost>
+	<ModObjectName>AvengersGuild</ModObjectName>
+	<dependencies>
+		<Item href="/GameMechanics/TownBuildingSharedStats/Preserve/Special_0/AvengersGuild.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_UNKNOWN</Creature>
+	<DevLevelNeeded>9</DevLevelNeeded>
+	<UIObjectName>Special_0</UIObjectName>
+	<UIStackPosition>0</UIStackPosition>
+	<Icon href="/UI/TownHall/preserve/128/s2.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

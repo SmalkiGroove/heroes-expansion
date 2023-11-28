@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="1000135">
+	<NameFileRef href="/Text/Game/TownBuildings/Academy/Dwelling_6/Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Academy/Dwelling_6/Description.txt"/>
+	<Type>TB_DWELLING_6</Type>
+	<Upgrade>BLD_UPG_1</Upgrade>
+	<Cost>
+		<Wood>5</Wood>
+		<Ore>15</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>5000</Gold>
+	</Cost>
+	<ModObjectName>SilverPavilion</ModObjectName>
+	<dependencies>
+		<Item href="/GameMechanics/TownBuildingSharedStats/Academy/Special_1/Library.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_RAKSHASA</Creature>
+	<DevLevelNeeded>12</DevLevelNeeded>
+	<UIObjectName>Dwelling_6</UIObjectName>
+	<UIStackPosition>0</UIStackPosition>
+	<Icon href="/UI/TownHall/academy/128/d6.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

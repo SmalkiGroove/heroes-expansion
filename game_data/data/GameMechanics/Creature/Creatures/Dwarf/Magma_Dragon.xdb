@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature>
+	<AttackSkill>30</AttackSkill>
+	<DefenceSkill>42</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>44</MinDamage>
+	<MaxDamage>55</MaxDamage>
+	<Speed>5</Speed>
+	<Initiative>9</Initiative>
+	<Flying>false</Flying>
+	<Health>280</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>1000</Exp>
+	<Power>6000</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>7</CreatureTier>
+	<Upgrade>true</Upgrade>
+	<PairCreature>CREATURE_FIRE_DRAGON</PairCreature>
+	<CreatureTown>TOWN_FORTRESS</CreatureTown>
+	<MagicElement>
+		<First>ELEMENT_FIRE</First>
+		<Second>ELEMENT_NONE</Second>
+	</MagicElement>
+	<WeeklyGrowth>1</WeeklyGrowth>
+	<Cost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>3</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>3500</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Dwarf/Magma_Dragon.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>2</CombatSize>
+	<PatternAttack href="/GameMechanics/Creature/Creatures/Dungeon/Deep_Dragon_Pattern.xdb#xpointer(/PatternAttack)"/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Dwarf/Magma_Dragon.xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_FIRE_DRAGON</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_ELEMENTAL</Item>
+		<Item>ABILITY_IMMUNITY_TO_FIRE</Item>
+		<Item>ABILITY_MAGIC_PROOF_25</Item>
+		<Item>ABILITY_FIRE_BREATH</Item>
+		<Item>ABILITY_MAGMA_SHIELD</Item>
+		<Item>ABILITY_LARGE_SHIELD</Item>
+	</Abilities>
+</Creature>

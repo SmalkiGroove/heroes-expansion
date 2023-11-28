@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimSet ObjectRecordID="27">
+	<animations>
+		<Item>
+			<Kind>idle00</Kind>
+			<Anim href="/_(BasicSkelAnim)/Heroes/Knight_LOD/idle00.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>move</Kind>
+			<Anim href="/_(BasicSkelAnim)/Heroes/Knight_LOD/move.(BasicSkelAnim).xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+	</animations>
+	<ExpSrcScene href="/models/Heroes/Knight/Knight_LOD.mb"/>
+	<ExpSrcClipFolder href="/Animations/Heroes/Knight/Clip_Adventure/"/>
+	<ExpRootTransform>Global</ExpRootTransform>
+</AnimSet>

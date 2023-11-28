@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdventureFlybyScene ObjectRecordID="1000040">
+	<Scenery href="/Maps/CombatArenas/ArenaOfLava_small/ArenaOfLava_small.(AdvMapDesc).xdb#xpointer(/AdvMapDesc)"/>
+	<cameraFlyupRole>
+		<Model/>
+		<AnimSet/>
+		<Player>PLAYER_NONE</Player>
+	</cameraFlyupRole>
+	<skyRole>
+		<Model/>
+		<AnimSet/>
+		<Player>PLAYER_NONE</Player>
+	</skyRole>
+	<MountPoint>
+		<Pos>
+			<x>32</x>
+			<y>39</y>
+		</Pos>
+		<Rot>0</Rot>
+	</MountPoint>
+	<AdditionalHeight>0</AdditionalHeight>
+	<Music/>
+	<AmbientSoundSet href="/Sounds/_(Ambient)/TerrainAmbients/Lava.xdb#xpointer(/AmbientSoundSet)"/>
+	<TextFormatFileRef href=""/>
+	<ObstaclesGroup href="/ArenaObjects/_(ArenaObstaclesGroup)/LavaArena/LavaObstacles.xdb#xpointer(/ArenaObstaclesGroup)"/>
+	<CamerasSet href="/_(CamerasSet)/Default.(CamerasSet).xdb#xpointer(/CamerasSet)"/>
+	<MeleeAttackPoints>
+		<Use>false</Use>
+		<AttackerPoint>
+			<x>0</x>
+			<y>0</y>
+		</AttackerPoint>
+		<DefenderPoint>
+			<x>0</x>
+			<y>0</y>
+		</DefenderPoint>
+	</MeleeAttackPoints>
+</AdventureFlybyScene>

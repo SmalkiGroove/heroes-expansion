@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimSet ObjectRecordID="1000181">
+	<animations>
+		<Item>
+			<Kind>buff</Kind>
+			<Anim href="/Characters/Heroes/Isabel-arena-buff.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>cast</Kind>
+			<Anim href="/Characters/Heroes/Isabel-arena-cast.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>happy</Kind>
+			<Anim href="/Characters/Heroes/Isabel-arena-happy.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>idle00</Kind>
+			<Anim href="/Characters/Heroes/Isabel-arena-idle00.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>stir02</Kind>
+			<Anim href="/Characters/Heroes/Isabel-arena-stir02.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>idle01</Kind>
+			<Anim href="/Characters/Heroes/Isabel-arena-idle01.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>spbellicose</Kind>
+			<Anim href="/Characters/Heroes/Isabel-arena-spbellicose.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>spneutral</Kind>
+			<Anim href="/Characters/Heroes/Isabel-arena-spneutral.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>move</Kind>
+			<Anim href="/Characters/Heroes/Isabel-arena-move.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>move_sp</Kind>
+			<Anim href="/Characters/Heroes/Isabel-arena-move_sp.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+	</animations>
+	<ExpSrcScene href="/models/Heroes/Isabel/Isabel.mb"/>
+	<ExpSrcClipFolder href="/Animations/Heroes/Isabel/Clip/"/>
+	<ExpRootTransform>Global</ExpRootTransform>
+</AnimSet>

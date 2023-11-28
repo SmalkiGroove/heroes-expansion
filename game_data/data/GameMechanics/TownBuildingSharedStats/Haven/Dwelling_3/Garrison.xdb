@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="27">
+	<NameFileRef href="/Text/Game/TownBuildings/Haven/Dwelling_3/Upgraded_Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Haven/Dwelling_3/Upgraded_Description.txt"/>
+	<Type>TB_DWELLING_3</Type>
+	<Upgrade>BLD_UPG_2</Upgrade>
+	<Cost>
+		<Wood>4</Wood>
+		<Ore>4</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>4</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>4</Gem>
+		<Gold>1000</Gold>
+	</Cost>
+	<ModObjectName>Barrack</ModObjectName>
+	<dependencies>
+		<Item href="Barracks.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_SWORDSMAN</Creature>
+	<Creature2>CREATURE_VINDICATOR</Creature2>
+	<DevLevelNeeded>3</DevLevelNeeded>
+	<UIObjectName>Dwelling_3</UIObjectName>
+	<UIStackPosition>1</UIStackPosition>
+	<Icon href="/UI/TownHall/haven/128/d3u.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

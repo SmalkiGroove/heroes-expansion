@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Spell ObjectRecordID="137">
+	<NameFileRef href="/Text/Game/Spells/Combat/Land_Mine/Name.txt"/>
+	<LongDescriptionFileRef href="/Text/Game/Spells/Combat/Land_Mine/Long_Description.txt"/>
+	<Texture href="/Textures/SpellBook______2618/Spells/Spell_LandMine.xdb#xpointer(/Texture)"/>
+	<EffectTexture href="/UI/Common/Icons/Spell_Buff_Icons/LandMine.(Texture).xdb#xpointer(/Texture)"/>
+	<SpellBookPredictions>
+		<Item href="/Text/Game/Spells/Combat/Land_Mine/SpellBookPrediction.txt"/>
+	</SpellBookPredictions>
+	<CombatLogTexts>
+		<Item href="/Text/CombatLog/Spells/LandMine.txt"/>
+	</CombatLogTexts>
+	<Level>2</Level>
+	<MagicSchool>MAGIC_SCHOOL_SUMMONING</MagicSchool>
+	<RequiredHeroLevel>0</RequiredHeroLevel>
+	<IsAimed>true</IsAimed>
+	<TrainedCost>8</TrainedCost>
+	<damage>
+		<Item>
+			<Base>250</Base>
+			<PerPower>25</PerPower>
+		</Item>
+		<Item>
+			<Base>300</Base>
+			<PerPower>30</PerPower>
+		</Item>
+		<Item>
+			<Base>350</Base>
+			<PerPower>35</PerPower>
+		</Item>
+		<Item>
+			<Base>400</Base>
+			<PerPower>40</PerPower>
+		</Item>
+	</damage>
+	<duration>
+		<Item>
+			<Base>3</Base>
+			<PerPower>0</PerPower>
+		</Item>
+		<Item>
+			<Base>5</Base>
+			<PerPower>0</PerPower>
+		</Item>
+		<Item>
+			<Base>7</Base>
+			<PerPower>0</PerPower>
+		</Item>
+		<Item>
+			<Base>9</Base>
+			<PerPower>0</PerPower>
+		</Item>
+	</duration>
+	<sSpellCost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>0</Gold>
+	</sSpellCost>
+	<IsAreaAttack>true</IsAreaAttack>
+	<CanSelectDead>false</CanSelectDead>
+	<Target>TARGET_NEUTRAL</Target>
+	<Element>ELEMENT_NONE</Element>
+	<visuals>
+		<Item href="LandMine.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+		<Item href="LandMine_Explosion.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+	</visuals>
+</Spell>

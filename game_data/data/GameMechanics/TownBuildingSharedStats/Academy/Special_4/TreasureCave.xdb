@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="1000147">
+	<NameFileRef href="/Text/Game/TownBuildings/Academy/Special_4/Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Academy/Special_4/Desc.txt"/>
+	<Type>TB_SPECIAL_4</Type>
+	<Upgrade>BLD_UPG_1</Upgrade>
+	<Cost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>4</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>4</Gem>
+		<Gold>4000</Gold>
+	</Cost>
+	<ModObjectName>TreasureCave</ModObjectName>
+	<dependencies>
+		<Item href="/GameMechanics/TownBuildingSharedStats/Academy/Dwelling_5/PinnacleOfWishes.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_UNKNOWN</Creature>
+	<DevLevelNeeded>12</DevLevelNeeded>
+	<UIObjectName>Special_4</UIObjectName>
+	<UIStackPosition>0</UIStackPosition>
+	<Icon href="/UI/TownHall/academy/128/s1.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvMapHeroShared>
+	<Model href="/Characters/Heroes/H5A2/Ornella_Mounted.xdb#xpointer(/Model)"/>
+	<AnimSet href="/Characters/Heroes/H5A2/Ornella_Mounted-arena.xdb#xpointer(/AnimSet)"/>
+	<blockedTiles/>
+	<holeTiles/>
+	<activeTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+	</activeTiles>
+	<passableTiles/>
+	<PossessionMarkerTile>
+		<x>0</x>
+		<y>0</y>
+	</PossessionMarkerTile>
+	<Effect/>
+	<EffectWhenOwned/>
+	<messagesFileRef>
+		<Item href=""/>
+	</messagesFileRef>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect/>
+	<flybyMessageFileRef href=""/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Units.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>true</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128 href="/UI/H5A2/Icons/Heroes/Portrets128x128/Necropolis_Ornella.(Texture).xdb#xpointer(/Texture)"/>
+	<InternalName>OrnellaNecro</InternalName>
+	<Class>HERO_CLASS_DEATHKNIGHT</Class>
+	<Specialization>HERO_SPEC_IMPREGNABLE</Specialization>
+	<PrimarySkill>
+		<Mastery>MASTERY_BASIC</Mastery>
+		<SkillID>HERO_SKILL_NECROMANCY</SkillID>
+	</PrimarySkill>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Necropolis/Impregnable/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Necropolis/Impregnable/Description.txt"/>
+	<SpecializationIcon href="/Textures/HeroScreen/Feats/Necromancer/Sorcery_SpellprofBones.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTexture href="/UI/H5A2/Icons/Heroes/Portrets128x128/Necropolis_Ornella.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTextureSmall/>
+	<HeroCharacterArena href="/Characters/Heroes/Necropolis/Ornella_necro/HeroCharacterArena.xdb#xpointer(/Character)" />
+	<HeroCharacterArenaMelee />
+	<HeroCharacterAdventure href="/Characters/Heroes/Necropolis/Ornella_necro/HeroCharacterAdventure.xdb#xpointer(/Character)" />
+	<HeroIndividualCamera href="/Characters/Heroes/Necropolis/Ornella_necro/HeroIndividualCamera.xdb#xpointer(/Camera)" />
+	<CombatVisual href="/Characters/Heroes/Necropolis/Ornella_necro/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<TownType>TOWN_NECROMANCY</TownType>
+	<Editable>
+		<NameFileRef href="/Text/Game/Heroes/Persons/Necropolis/OrnellaNecro/name.txt"/>
+		<BiographyFileRef href="/Text/Game/Heroes/Persons/Necropolis/OrnellaNecro/Bio.txt"/>
+		<Offence>1</Offence>
+		<Defence>5</Defence>
+		<Spellpower>1</Spellpower>
+		<Knowledge>1</Knowledge>
+		<skills>
+			<Item>
+				<Mastery>MASTERY_ADVANCED</Mastery>
+				<SkillID>HERO_SKILL_SORCERY</SkillID>
+			</Item>
+		</skills>
+		<perkIDs>
+			<Item>HERO_SKILL_MYSTICISM</Item>
+			<Item>HERO_SKILL_SPELLPROOF_BONES</Item>
+		</perkIDs>
+		<spellIDs/>
+		<Ballista>false</Ballista>
+		<FirstAidTent>true</FirstAidTent>
+		<AmmoCart>false</AmmoCart>
+		<FavoriteEnemies/>
+	</Editable>
+	<ArrowButtonState>0</ArrowButtonState>
+	<Decal/>
+	<Selection href="/_(Model)/Heroes/Necromancer_Path/Symbol.xdb#xpointer(/Model)"/>
+	<Trace href="/MapObjects/_(AdvMapHeroTraceSet)/Necropolis.xdb#xpointer(/AdvMapHeroTraceSet)"/>
+	<RaceTraitIcon/>
+	<RaceTraitDescFileRef href=""/>
+	<ScenarioHero>false</ScenarioHero>
+	<AdventureMusic href="/Sounds/_(Music)/AdvMap-Heroes/a2-Ornella.xdb#xpointer(/Music)"/>
+	<HideInEditor>false</HideInEditor>
+	<PresetMinimalAttributes>
+		<Offence>2</Offence>
+		<Defence>2</Defence>
+		<Spellpower>2</Spellpower>
+		<Knowledge>2</Knowledge>
+	</PresetMinimalAttributes>
+</AdvMapHeroShared>

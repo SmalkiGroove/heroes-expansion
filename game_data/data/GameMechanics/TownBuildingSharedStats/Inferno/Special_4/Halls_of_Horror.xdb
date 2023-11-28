@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="73">
+	<NameFileRef href="/Text/Game/TownBuildings/Inferno/Special_4/Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Inferno/Special_4/Description.txt"/>
+	<Type>TB_SPECIAL_4</Type>
+	<Upgrade>BLD_UPG_1</Upgrade>
+	<Cost>
+		<Wood>5</Wood>
+		<Ore>5</Ore>
+		<Mercury>3</Mercury>
+		<Crystal>3</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>3000</Gold>
+	</Cost>
+	<ModObjectName>Halls_of_Horror</ModObjectName>
+	<dependencies>
+		<Item href="/GameMechanics/TownBuildingSharedStats/Inferno/Dwelling_5/Hell_Hole.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_UNKNOWN</Creature>
+	<DevLevelNeeded>15</DevLevelNeeded>
+	<UIObjectName>Special_2</UIObjectName>
+	<UIStackPosition>0</UIStackPosition>
+	<Icon href="/UI/TownHall/inferno/128/s2.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="1000105">
+	<NameFileRef href="/Text/Game/TownBuildings/Dungeon/Fort/Castle_Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Dungeon/Fort/Castle_Description.txt"/>
+	<Type>TB_FORT</Type>
+	<Upgrade>BLD_UPG_3</Upgrade>
+	<Cost>
+		<Wood>8</Wood>
+		<Ore>8</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>3000</Gold>
+	</Cost>
+	<ModObjectName>fort</ModObjectName>
+	<dependencies>
+		<Item href="Citadel.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_UNKNOWN</Creature>
+	<DevLevelNeeded>12</DevLevelNeeded>
+	<UIObjectName>Castle</UIObjectName>
+	<UIStackPosition>0</UIStackPosition>
+	<Icon href="/UI/TownHall/dungeon/128/fort3.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

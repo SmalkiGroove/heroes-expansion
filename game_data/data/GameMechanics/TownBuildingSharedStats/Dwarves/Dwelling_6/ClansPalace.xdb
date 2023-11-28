@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="1000142">
+	<NameFileRef href="/Text/Game/TownBuildings/Dwarves/Dwelling_6/Upgraded_Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Dwarves/Dwelling_6/Upgraded_Description.txt"/>
+	<Type>TB_DWELLING_6</Type>
+	<Upgrade>BLD_UPG_2</Upgrade>
+	<Cost>
+		<Wood>10</Wood>
+		<Ore>10</Ore>
+		<Mercury>10</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>10</Gem>
+		<Gold>5000</Gold>
+	</Cost>
+	<ModObjectName>Dwelling_6</ModObjectName>
+	<dependencies>
+		<Item href="ClansHalls.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_WARLORD</Creature>
+	<Creature2>CREATURE_THUNDER_THANE</Creature2>
+	<DevLevelNeeded>12</DevLevelNeeded>
+	<UIObjectName>Dwelling_6</UIObjectName>
+	<UIStackPosition>0</UIStackPosition>
+	<Icon href="/UI/H5A1/Icons/Buildings/Towns/Fortress/Building_Mode_Icon/128x128/Clans_Palace.(Texture).xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

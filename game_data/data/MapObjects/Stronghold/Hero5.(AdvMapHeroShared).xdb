@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvMapHeroShared>
+	<Model href="/Characters/Heroes/H5A2/OrcWarrior_Hero.xdb#xpointer(/Model)"/>
+	<AnimSet href="/Characters/Heroes/H5A2/OrcWarrior_Hero-arena.xdb#xpointer(/AnimSet)"/>
+	<blockedTiles/>
+	<holeTiles/>
+	<activeTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+	</activeTiles>
+	<passableTiles/>
+	<PossessionMarkerTile>
+		<x>0</x>
+		<y>0</y>
+	</PossessionMarkerTile>
+	<Effect/>
+	<EffectWhenOwned/>
+	<messagesFileRef>
+		<Item href=""/>
+	</messagesFileRef>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect/>
+	<flybyMessageFileRef href=""/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Units.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>true</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128 href="/UI/H5A2/Icons/Heroes/Portrets128x128/Stronghold_Quroq.(Texture).xdb#xpointer(/Texture)"/>
+	<InternalName>Quroq</InternalName>
+	<Class>HERO_CLASS_BARBARIAN</Class>
+	<Specialization>HERO_SPEC_DEMON_HUNTER</Specialization>
+	<PrimarySkill>
+		<Mastery>MASTERY_BASIC</Mastery>
+		<SkillID>HERO_SKILL_DEMONIC_RAGE</SkillID>
+	</PrimarySkill>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Stronghold/DemonHunter/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Stronghold/DemonHunter/Description.txt"/>
+	<SpecializationIcon href="/UI/H5A2/Icons/Heroes_Specializations/Demon_Hunter.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTexture href="/UI/H5A2/Icons/Heroes/Portrets128x128/Stronghold_Quroq.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTextureSmall/>
+	<HeroCharacterArena href="/Characters/Heroes/Stronghold/Hero5/HeroCharacterArena.xdb#xpointer(/Character)" />
+	<HeroCharacterArenaMelee />
+	<HeroCharacterAdventure href="/Characters/Heroes/Stronghold/Hero5/HeroCharacterAdventure.xdb#xpointer(/Character)" />
+	<HeroIndividualCamera href="/Characters/Heroes/Stronghold/Hero5/HeroIndividualCamera.xdb#xpointer(/Camera)" />
+	<CombatVisual href="/Characters/Heroes/Stronghold/Hero5/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<TownType>TOWN_STRONGHOLD</TownType>
+	<Editable>
+		<NameFileRef href="/Text/Game/Heroes/Persons/Stronghold/Quroq/Name.txt"/>
+		<BiographyFileRef href="/Text/Game/Heroes/Persons/Stronghold/Quroq/Description.txt"/>
+		<Offence>3</Offence>
+		<Defence>0</Defence>
+		<Spellpower>1</Spellpower>
+		<Knowledge>1</Knowledge>
+		<skills>
+			<Item>
+				<Mastery>MASTERY_BASIC</Mastery>
+				<SkillID>HERO_SKILL_VOICE</SkillID>
+			</Item>
+		</skills>
+		<perkIDs>
+			<Item>HERO_SKILL_MEMORY_OF_OUR_BLOOD</Item>
+		</perkIDs>
+		<spellIDs/>
+		<Ballista>false</Ballista>
+		<FirstAidTent>false</FirstAidTent>
+		<AmmoCart>true</AmmoCart>
+		<FavoriteEnemies/>
+		<TalismanLevel>0</TalismanLevel>
+	</Editable>
+	<ArrowButtonState>0</ArrowButtonState>
+	<Decal/>
+	<Selection href="/_(Model)/Heroes/Orc_Warrior_Path/Symbol.xdb#xpointer(/Model)"/>
+	<Trace href="/MapObjects/_(AdvMapHeroTraceSet)/Barbarian.xdb#xpointer(/AdvMapHeroTraceSet)"/>
+	<RaceTraitIcon/>
+	<RaceTraitDescFileRef href=""/>
+	<ScenarioHero>false</ScenarioHero>
+	<AdventureMusic href="/Sounds/_(Music)/AdvMap-Campaign/a2-stronghold.(Music).xdb#xpointer(/Music)"/>
+	<HideInEditor>false</HideInEditor>
+	<PresetMinimalAttributes>
+		<Offence>2</Offence>
+		<Defence>2</Defence>
+		<Spellpower>2</Spellpower>
+		<Knowledge>2</Knowledge>
+	</PresetMinimalAttributes>
+</AdvMapHeroShared>

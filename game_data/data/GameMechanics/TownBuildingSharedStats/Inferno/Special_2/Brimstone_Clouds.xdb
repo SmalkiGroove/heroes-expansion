@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="71">
+	<NameFileRef href="/Text/Game/TownBuildings/Inferno/Special_2/Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Inferno/Special_2/Description.txt"/>
+	<Type>TB_SPECIAL_2</Type>
+	<Upgrade>BLD_UPG_1</Upgrade>
+	<Cost>
+		<Wood>0</Wood>
+		<Ore>2</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>2</Gem>
+		<Gold>800</Gold>
+	</Cost>
+	<ModObjectName>Brimstone_Clouds</ModObjectName>
+	<dependencies>
+		<Item href="/GameMechanics/TownBuildingSharedStats/Inferno/Dwelling_2/Demon_Gate.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_UNKNOWN</Creature>
+	<DevLevelNeeded>6</DevLevelNeeded>
+	<UIObjectName>Special_1</UIObjectName>
+	<UIStackPosition>0</UIStackPosition>
+	<Icon href="/UI/TownHall/inferno/128/brimstone_clouds.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

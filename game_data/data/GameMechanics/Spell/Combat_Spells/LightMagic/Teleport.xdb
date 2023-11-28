@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Spell ObjectRecordID="133">
+	<NameFileRef href="/Text/Game/Spells/Combat/Teleport/Name.txt"/>
+	<LongDescriptionFileRef href="/Text/Game/Spells/Combat/Teleport/Long_Description.txt"/>
+	<Texture href="/Textures/SpellBook______2618/Spells/Spell_Teleport.xdb#xpointer(/Texture)"/>
+	<EffectTexture href="/UI/Common/Icons/Spell_Buff_Icons/Teleport.(Texture).xdb#xpointer(/Texture)"/>
+	<SpellBookPredictions>
+		<Item href="/Text/Game/Spells/Combat/Teleport/SpellBookPrediction.txt"/>
+		<Item href="/Text/Game/Spells/Combat/Teleport/SpellBookPrediction_Expert.txt"/>
+	</SpellBookPredictions>
+	<CombatLogTexts/>
+	<Level>4</Level>
+	<MagicSchool>MAGIC_SCHOOL_LIGHT</MagicSchool>
+	<RequiredHeroLevel>0</RequiredHeroLevel>
+	<TrainedCost>8</TrainedCost>
+	<damage/>
+	<duration/>
+	<sSpellCost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>0</Gold>
+	</sSpellCost>
+	<IsAimed>true</IsAimed>
+	<IsAreaAttack>false</IsAreaAttack>
+	<CanSelectDead>false</CanSelectDead>
+	<Target>TARGET_FRIEND</Target>
+	<Element>ELEMENT_NONE</Element>
+	<DamageIsElemental>true</DamageIsElemental>
+	<visuals>
+		<Item href="Teleport.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+		<Item href="Teleport_End.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+	</visuals>
+	<PresetPrice>0</PresetPrice>
+	<AvailableForPresets>true</AvailableForPresets>
+</Spell>

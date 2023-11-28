@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="74">
+	<NameFileRef href="/Text/Game/TownBuildings/Inferno/Special_5/Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Inferno/Special_5/Description.txt"/>
+	<Type>TB_SPECIAL_5</Type>
+	<Upgrade>BLD_UPG_1</Upgrade>
+	<Cost>
+		<Wood>2</Wood>
+		<Ore>8</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>2</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>2000</Gold>
+	</Cost>
+	<ModObjectName>sacrificialpit</ModObjectName>
+	<dependencies>
+		<Item href="/GameMechanics/TownBuildingSharedStats/Inferno/Fort/Citadel.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_UNKNOWN</Creature>
+	<DevLevelNeeded>12</DevLevelNeeded>
+	<UIObjectName>Special_4</UIObjectName>
+	<UIStackPosition>0</UIStackPosition>
+	<Icon href="/UI/TownHall/inferno/128/s4.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>
