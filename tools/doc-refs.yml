@@ -1,0 +1,342 @@
+
+CREATURES:
+  HAVEN:
+    - name: PEASANT
+      tier: 1
+      upgrade: 0
+      path: Haven/Peasant.xdb
+    - name: CONSCRIPT
+      tier: 1
+      upgrade: 1
+      path: Haven/Militiaman.xdb
+    - name: MILITIA
+      tier: 1
+      upgrade: 2
+      path: Haven/Renegates/Landlord.xdb
+    - name: ARCHER
+      tier: 2
+      upgrade: 0
+      path: Haven/Archer.xdb
+    - name: MARKSMAN
+      tier: 2
+      upgrade: 1
+      path: Haven/Marksman.xdb
+    - name: CROSSBOWMAN
+      tier: 2
+      upgrade: 2
+      path: Haven/Renegates/Longbowman.xdb
+    - name: FOOTMAN
+      tier: 3
+      upgrade: 0
+      path: Haven/Footman.xdb
+    - name: SQUIRE
+      tier: 3
+      upgrade: 1
+      path: Haven/Swordsman.xdb
+    - name: VINDICATOR
+      tier: 3
+      upgrade: 2
+      path: Haven/Renegates/Vindicator.xdb
+    - name: GRIFFIN
+      tier: 4
+      upgrade: 0
+      path: Haven/Griffin.xdb
+    - name: IMPERIAL GRIFFIN
+      tier: 4
+      upgrade: 1
+      path: Haven/Royal_Griffin.xdb
+    - name: BATTLE GRIFFIN
+      tier: 4
+      upgrade: 2
+      path: Haven/Renegates/BattleGriffin.xdb
+    - name: PRIEST
+      tier: 5
+      upgrade: 0
+      path: Haven/Priest.xdb
+    - name: INQUISITOR
+      tier: 5
+      upgrade: 1
+      path: Haven/Cleric.xdb
+    - name: ZEALOT
+      tier: 5
+      upgrade: 2
+      path: Haven/Renegates/Zealot.xdb
+    - name: CAVALIER
+      tier: 6
+      upgrade: 0
+      path: Haven/Cavalier.xdb
+    - name: PALADIN
+      tier: 6
+      upgrade: 1
+      path: Haven/Paladin.xdb
+    - name: CHAMPION
+      tier: 6
+      upgrade: 2
+      path: Haven/Renegates/Champion.xdb
+    - name: ANGEL
+      tier: 7
+      upgrade: 0
+      path: Haven/Angel.xdb
+    - name: ARCHANGEL
+      tier: 7
+      upgrade: 1
+      path: Haven/Archangel.xdb
+    - name: SERAPH
+      tier: 7
+      upgrade: 2
+      path: Haven/Renegates/Seraph.xdb
+  PRESERVE:
+    - name: BLADE DANCER
+      tier: 1
+      upgrade: 0
+      path: Preserve/Blade_Juggler.xdb
+    - name: WAR DANCER
+      tier: 1
+      upgrade: 1
+      path: Preserve/War_Dancer.xdb
+    - name: WIND DANCER
+      tier: 1
+      upgrade: 2
+      path: Preserve/3rd/BladeSinger.xdb
+    - name: PIXIE
+      tier: 2
+      upgrade: 0
+      path: Preserve/Pixie.xdb
+    - name: SPRITE
+      tier: 2
+      upgrade: 1
+      path: Preserve/Sprite.xdb
+    - name: DRYAD
+      tier: 2
+      upgrade: 2
+      path: Preserve/3rd/Dryad.xdb
+    - name: HUNTER
+      tier: 3
+      upgrade: 0
+      path: Preserve/Wood_Elf.xdb
+    - name: MASTER HUNTER
+      tier: 3
+      upgrade: 1
+      path: Preserve/Grand_Elf.xdb
+    - name: SHARPSHOOTER
+      tier: 3
+      upgrade: 2
+      path: Preserve/3rd/Sharpshooter.xdb
+    - name: DRUID
+      tier: 4
+      upgrade: 0
+      path: Preserve/Druid.xdb
+    - name: DRUID ELDER
+      tier: 4
+      upgrade: 1
+      path: Preserve/Druid_Elder.xdb
+    - name: HIGH DRUID
+      tier: 4
+      upgrade: 2
+      path: Preserve/3rd/HighDruid.xdb
+    - name: UNICORN
+      tier: 5
+      upgrade: 0
+      path: Preserve/Unicorn.xdb
+    - name: SILVER UNICORN
+      tier: 5
+      upgrade: 1
+      path: Preserve/War_Unicorn.xdb
+    - name: WHITE UNICORN
+      tier: 5
+      upgrade: 2
+      path: Preserve/3rd/WhiteUnicorn.xdb
+    - name: TREANT
+      tier: 6
+      upgrade: 0
+      path: Preserve/Treant.xdb
+    - name: ANCIENT TREANT
+      tier: 6
+      upgrade: 1
+      path: Preserve/Treant_Guardian.xdb
+    - name: ANGER TREANT
+      tier: 6
+      upgrade: 2
+      path: Preserve/3rd/AngerTreant.xdb
+    - name: GREEN DRAGON
+      tier: 7
+      upgrade: 0
+      path: Preserve/Green_Dragon.xdb
+    - name: GOLDEN DRAGON
+      tier: 7
+      upgrade: 1
+      path: Preserve/Gold_Dragon.xdb
+    - name: CRYSTAL DRAGON
+      tier: 7
+      upgrade: 2
+      path: Preserve/3rd/RainbowDragon.xdb
+  FORTRESS:
+    - name: DEFENDER
+      tier: 1
+      upgrade: 0
+      path: Dwarf/Defender.xdb
+    - name: SHIELDGUARD
+      tier: 1
+      upgrade: 1
+      path: Dwarf/Stout_Defender.xdb
+    - name: MOUNTAIN GUARD
+      tier: 1
+      upgrade: 2
+      path: Dwarf/3rd/StoneDefender.xdb
+    - name: SPEARWIELDER
+      tier: 2
+      upgrade: 0
+      path: Dwarf/Axe_Fighter.xdb
+    - name: SKIRMISHER
+      tier: 2
+      upgrade: 1
+      path: Dwarf/Axe_Thrower.xdb
+    - name: HARPOONER
+      tier: 2
+      upgrade: 2
+      path: Dwarf/3rd/Harpooner.xdb
+    - name: BRAWLER
+      tier: 3
+      upgrade: 0
+      path: Dwarf/Brawler.xdb
+    - name: BERSERKER
+      tier: 3
+      upgrade: 1
+      path: Dwarf/Berserker.xdb
+    - name: BATTLERAGER
+      tier: 3
+      upgrade: 2
+      path: Dwarf/3rd/BattleRager.xdb
+    - name: BEAR RIDER
+      tier: 4
+      upgrade: 0
+      path: Dwarf/Bear_Raider.xdb
+    - name: BLACKBEAR RIDER
+      tier: 4
+      upgrade: 1
+      path: Dwarf/Blackbear_Raider.xdb
+    - name: WHITEBEAR RIDER
+      tier: 4
+      upgrade: 2
+      path: Dwarf/3rd/WhiteBearRider.xdb
+    - name: RUNE PRIEST
+      tier: 5
+      upgrade: 0
+      path: Dwarf/Rune_Mage.xdb
+    - name: RUNE PATRIARCH
+      tier: 5
+      upgrade: 1
+      path: Dwarf/Flame_Mage.xdb
+    - name: RUNE KEEPER
+      tier: 5
+      upgrade: 2
+      path: Dwarf/3rd/FlameKeeper.xdb
+    - name: THANE
+      tier: 6
+      upgrade: 0
+      path: Dwarf/Thane.xdb
+    - name: FLAME LORD
+      tier: 6
+      upgrade: 1
+      path: Dwarf/Warlord.xdb
+    - name: THUNDER THANE
+      tier: 6
+      upgrade: 2
+      path: Dwarf/3rd/ThunderThane.xdb
+    - name: FIRE DRAGON
+      tier: 7
+      upgrade: 0
+      path: Dwarf/Fire_Dragon.xdb
+    - name: MAGMA DRAGON
+      tier: 7
+      upgrade: 1
+      path: Dwarf/Magma_Dragon.xdb
+    - name: LAVA DRAGON
+      tier: 7
+      upgrade: 2
+      path: Dwarf/3rd/LavaDragon.xdb
+  ACADEMY:
+    - name: GREMLIN
+      tier: 1
+      upgrade: 0
+      path: Academy/Gremlin.xdb
+    - name: MASTER GREMLIN
+      tier: 1
+      upgrade: 1
+      path: Academy/Master_Gremlin.xdb
+    - name: GREMLIN SABOTEUR
+      tier: 1
+      upgrade: 2
+      path: Academy/3rd/GremlinSaboteur.xdb
+    - name: STONE GARGOYLE
+      tier: 2
+      upgrade: 0
+      path: Academy/Stone_Gargoyle.xdb
+    - name: OBSIDIAN GARGOYLE
+      tier: 2
+      upgrade: 1
+      path: Academy/Obsidian_Gargoyle.xdb
+    - name: ELEMENTAL GARGOYLE
+      tier: 2
+      upgrade: 2
+      path: Academy/3rd/MarbleGargoyle.xdb
+    - name: STONE GOLEM
+      tier: 3
+      upgrade: 0
+      path: Academy/Iron_Golem.xdb
+    - name: STEEL GOLEM
+      tier: 3
+      upgrade: 1
+      path: Academy/Steel_Golem.xdb
+    - name: MAGNETIC GOLEM
+      tier: 3
+      upgrade: 2
+      path: Academy/3rd/ObsidianGolem.xdb
+    - name: MAGE
+      tier: 4
+      upgrade: 0
+      path: Academy/Magi.xdb
+    - name: ARCHMAGE
+      tier: 4
+      upgrade: 1
+      path: Academy/Arch_Magi.xdb
+    - name: BATTLEMAGE
+      tier: 4
+      upgrade: 2
+      path: Academy/3rd/CombatMage.xdb
+    - name: DJINN
+      tier: 5
+      upgrade: 0
+      path: Academy/Genie.xdb
+    - name: DJINN SULTAN
+      tier: 5
+      upgrade: 1
+      path: Academy/Master_Genie.xdb
+    - name: DJINN VIZIER
+      tier: 5
+      upgrade: 2
+      path: Academy/3rd/DjinnVizier.xdb
+    - name: RAKSHASA RANI
+      tier: 6
+      upgrade: 0
+      path: Academy/Rakshasa.xdb
+    - name: RAKSHASA RAJA
+      tier: 6
+      upgrade: 1
+      path: Academy/Rakshasa_Rukh.xdb
+    - name: RAKSHASA KSHATRI
+      tier: 6
+      upgrade: 2
+      path: Academy/3rd/RakshasaKshatri.xdb
+    - name: GIANT
+      tier: 7
+      upgrade: 0
+      path: Academy/Giant.xdb
+    - name: TITAN
+      tier: 7
+      upgrade: 1
+      path: Academy/Titan.xdb
+    - name: COLOSSUS
+      tier: 7
+      upgrade: 2
+      path: Academy/3rd/StormLord.xdb
