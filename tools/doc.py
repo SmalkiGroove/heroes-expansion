@@ -1,4 +1,5 @@
 import os
+import re
 import yaml
 import xmltodict
 
@@ -9,8 +10,10 @@ workdir = os.path.dirname(os.path.abspath(__file__))
 reference_file = os.path.join(workdir, "doc-refs.yml")
 doc_path = "../doc"
 
-path_to_creatures = "../game_data/data/GameMechanics/Creature/Creatures"
+# CREATURES
+###############################################################################################################################################################
 
+path_to_creatures = "../game_data/data/GameMechanics/Creature/Creatures"
 
 def creature_doc_line(tier, upg, name, path):
     with open(path, 'r') as xdb:
@@ -40,7 +43,7 @@ def generate_creature_doc(ref_data):
     print("# CREATURES DOCUMENTATION", file=out)
     for faction in ref_data.keys():
         print("", file=out)
-        print(f"__{faction}:__", file=out)
+        print(f"### {faction}:", file=out)
         print("| CREATURE | TIER | NB | HP | ATT | DEF | DMG± | SPD | INIT | SPELLS | ABILITIES |", file=out)
         print("|----------|------|----|----|-----|-----|------|-----|------|--------|-----------|", file=out)
         for c in ref_data[faction]:
@@ -52,9 +55,44 @@ def generate_creature_doc(ref_data):
             print(line, file=out)
     out.close()
 
+###############################################################################################################################################################
+
+
+# HEROES
+###############################################################################################################################################################
+
+path_to_heroes = "../game_data/data/MapObjects"
+path_to_texts = "../game_data/texts"
+
+def hero_doc_line(name, path):
+    with open(path, 'r') as xdb:
+        hero = xmltodict.parse(xdb.read())
+    desc_path = os.path.join(workdir, path_to_texts + hero['AdvMapHeroShared']['SpecializationNameFileRef']['@href'])
+    with open(desc_path, 'r', encoding='utf-16') as desc_file:
+        desc = desc_file.read()
+    return re.sub(r'<[^>]+>', '', desc)
+
+def generate_heroes_doc(ref_data):
+    out = open(os.path.join(workdir, doc_path, 'HEROES.md'), 'w')
+    print("# HEROES DOCUMENTATION", file=out)
+    for faction in ref_data.keys():
+        print("", file=out)
+        print(f"### {faction}:", file=out)
+        for h in ref_data[faction]:
+            name = h['name']
+            path = os.path.join(workdir, path_to_heroes, h['path'])
+            hero = hero_doc_line(name, path)
+            print("", file=out)
+            print("---", file=out)
+            print(f"__{name} :__", file=out)
+            print(hero, file=out)
+    out.close()
+
+###############################################################################################################################################################
 
 
 with open(reference_file) as ref:
     data = yaml.safe_load(ref)
 
-generate_creature_doc(data['CREATURES'])
+# generate_creature_doc(data['CREATURES'])
+generate_heroes_doc(data['HEROES'])
