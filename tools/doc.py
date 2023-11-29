@@ -94,5 +94,5 @@ def generate_heroes_doc(ref_data):
 with open(reference_file) as ref:
     data = yaml.safe_load(ref)
 
-# generate_creature_doc(data['CREATURES'])
+generate_creature_doc(data['CREATURES'])
 generate_heroes_doc(data['HEROES'])
