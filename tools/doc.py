@@ -13,9 +13,9 @@ path_to_creatures = "../game_data/data/GameMechanics/Creature/Creatures"
 
 def creature_doc_header(faction):
     print("")
-    print(f"  {faction}:")
-    print("| CREATURE | TIER | GROWTH | HEALTH | ATT | DEF | DAMAGES | SPD | INIT | SPELLS | ABILITIES |")
-    print("|----------|------|--------|--------|-----|-----|---------|-----|------|--------|-----------|")
+    print(f"__{faction}:__")
+    print("| CREATURE | TIER | NB | HP | ATT | DEF | DMG | SPD | INIT | SPELLS | ABILITIES |")
+    print("|----------|------|----|----|-----|-----|-----|-----|------|--------|-----------|")
 
 def creature_doc_line(tier, upg, name, path):
     with open(path, 'r') as xdb:
@@ -30,14 +30,14 @@ def creature_doc_line(tier, upg, name, path):
     if creature['Creature']['KnownSpells']:
         spells = "WIP" #creature['Creature']['KnownSpells']['Item']
     else:
-        spells = "<None>"
+        spells = "_none_"
     if creature['Creature']['Abilities']:
         if isinstance(creature['Creature']['Abilities']['Item'], list):
             abilities = ','.join(creature['Creature']['Abilities']['Item'])
         else:
             abilities = creature['Creature']['Abilities']['Item']
     else:
-        abilities = '<None>'
+        abilities = '_none_'
     print(f"| {name} | {tier} | {growth} | {hp} | {atk} | {dfs} | {dmg} | {spd} | {init} | {spells} | {abilities} |")
 
 

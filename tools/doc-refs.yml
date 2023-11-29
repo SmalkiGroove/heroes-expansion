@@ -340,3 +340,343 @@ CREATURES:
       tier: 7
       upgrade: 2
       path: Academy/3rd/StormLord.xdb
+  DUNGEON:
+    - name: SCOUT
+      tier: 1
+      upgrade: 0
+      path: Dungeon/Scout.xdb
+    - name: ASSASSIN
+      tier: 1
+      upgrade: 1
+      path: Dungeon/Assassin.xdb
+    - name: STALKER
+      tier: 1
+      upgrade: 2
+      path: Dungeon/3rd/Stalker.xdb
+    - name: BLOOD WITCH
+      tier: 2
+      upgrade: 0
+      path: Dungeon/Witch.xdb
+    - name: BLOOD FURY
+      tier: 2
+      upgrade: 1
+      path: Dungeon/Blood_Witch.xdb
+    - name: POISON FURY
+      tier: 2
+      upgrade: 2
+      path: Dungeon/3rd/BloodWitch2.xdb
+    - name: MINOTAUR
+      tier: 3
+      upgrade: 0
+      path: Dungeon/Minotaur.xdb
+    - name: MINOTAUR KING
+      tier: 3
+      upgrade: 1
+      path: Dungeon/Minotaur_King.xdb
+    - name: MINOTAUR CAPTAIN
+      tier: 3
+      upgrade: 2
+      path: Dungeon/3rd/MinotaurCaptain.xdb
+    - name: RIDER
+      tier: 4
+      upgrade: 0
+      path: Dungeon/Rider.xdb
+    - name: RAVAGER
+      tier: 4
+      upgrade: 1
+      path: Dungeon/Ravager.xdb
+    - name: BLACK RIDER
+      tier: 4
+      upgrade: 2
+      path: Dungeon/3rd/BlackRider.xdb
+    - name: MATRON
+      tier: 5
+      upgrade: 0
+      path: Dungeon/Matron.xdb
+    - name: MATRIARCH
+      tier: 5
+      upgrade: 1
+      path: Dungeon/Matriarch.xdb
+    - name: SHADOW MISTRESS
+      tier: 5
+      upgrade: 2
+      path: Dungeon/3rd/ShadowMistress.xdb
+    - name: HYDRA
+      tier: 6
+      upgrade: 0
+      path: Dungeon/Hydra.xdb
+    - name: CHAOS HYDRA
+      tier: 6
+      upgrade: 1
+      path: Dungeon/Chaos_Hydra.xdb
+    - name: ACIDIC HYDRA
+      tier: 6
+      upgrade: 2
+      path: Dungeon/3rd/AcidicHydra.xdb
+    - name: DEEP DRAGON
+      tier: 7
+      upgrade: 0
+      path: Dungeon/Deep_Dragon.xdb
+    - name: BLACK DRAGON
+      tier: 7
+      upgrade: 1
+      path: Dungeon/Black_Dragon.xdb
+    - name: RED DRAGON
+      tier: 7
+      upgrade: 2
+      path: Dungeon/3rd/RedDragon.xdb
+  NECROPOLIS:
+    - name: SKELETON
+      tier: 1
+      upgrade: 0
+      path: Necropolis/Skeleton.xdb
+    - name: SKELETON ARCHER
+      tier: 1
+      upgrade: 1
+      path: Necropolis/Skeleton_Archer.xdb
+    - name: SKELETON WARRIOR
+      tier: 1
+      upgrade: 2
+      path: Necropolis/3rd/SkeletonWarrior.xdb
+    - name: WALKING DEAD
+      tier: 2
+      upgrade: 0
+      path: Necropolis/Walking_Dead.xdb
+    - name: INFECTED ZOMBIE
+      tier: 2
+      upgrade: 1
+      path: Necropolis/Zombie.xdb
+    - name: ROTTEN ZOMBIE
+      tier: 2
+      upgrade: 2
+      path: Necropolis/3rd/DiseaseZombie.xdb
+    - name: MANES
+      tier: 3
+      upgrade: 0
+      path: Necropolis/Manes.xdb
+    - name: GHOSTS
+      tier: 3
+      upgrade: 1
+      path: Necropolis/Ghosts.xdb
+    - name: POLTERGEISTS
+      tier: 3
+      upgrade: 2
+      path: Necropolis/3rd/Poltergeist.xdb
+    - name: VAMPIRE
+      tier: 4
+      upgrade: 0
+      path: Necropolis/Vampire.xdb
+    - name: VAMPIRE LORD
+      tier: 4
+      upgrade: 1
+      path: Necropolis/Vampire_Lord.xdb
+    - name: NOSFERATU
+      tier: 4
+      upgrade: 2
+      path: Necropolis/3rd/Nosferatu.xdb
+    - name: LICH
+      tier: 5
+      upgrade: 0
+      path: Necropolis/Lich.xdb
+    - name: ARCHILICH
+      tier: 5
+      upgrade: 1
+      path: Necropolis/Demilich.xdb
+    - name: LICH MASTER
+      tier: 5
+      upgrade: 2
+      path: Necropolis/3rd/LichMaster.xdb
+    - name: BONE DRAGON
+      tier: 6
+      upgrade: 0
+      path: Necropolis/Bone_Dragon.xdb
+    - name: SHADOW DRAGON
+      tier: 6
+      upgrade: 1
+      path: Necropolis/Shadow_Dragon.xdb
+    - name: HORROR DRAGON
+      tier: 6
+      upgrade: 2
+      path: Necropolis/3rd/HorrorDragon.xdb
+    - name: WIGHT
+      tier: 7
+      upgrade: 0
+      path: Necropolis/Wight.xdb
+    - name: WRAITH
+      tier: 7
+      upgrade: 1
+      path: Necropolis/Wraith.xdb
+    - name: BANSHEE
+      tier: 7
+      upgrade: 2
+      path: Necropolis/3rd/Banshee.xdb
+  INFERNO:
+    - name: FAMILIAR
+      tier: 1
+      upgrade: 0
+      path: Inferno/Familiar.xdb
+    - name: IMP
+      tier: 1
+      upgrade: 1
+      path: Inferno/Imp.xdb
+    - name: QUASIT
+      tier: 1
+      upgrade: 2
+      path: Inferno/3rd/Quasit.xdb
+    - name: HORNED DEMON
+      tier: 2
+      upgrade: 0
+      path: Inferno/Demon.xdb
+    - name: FIRE DEMON
+      tier: 2
+      upgrade: 1
+      path: Inferno/HornedDemon.xdb
+    - name: HORNED LEAPER
+      tier: 2
+      upgrade: 2
+      path: Inferno/3rd/HornedLeaper.xdb
+    - name: HELLHOUND
+      tier: 3
+      upgrade: 0
+      path: Inferno/HellHound.xdb
+    - name: CERBERUS
+      tier: 3
+      upgrade: 1
+      path: Inferno/Cerberius.xdb
+    - name: FIREBREATHER HOUND
+      tier: 3
+      upgrade: 2
+      path: Inferno/3rd/FirebreatherHound.xdb
+    - name: SUCCUBUS
+      tier: 4
+      upgrade: 0
+      path: Inferno/Succubus.xdb
+    - name: INFERNAL SUCCUBUS
+      tier: 4
+      upgrade: 1
+      path: Inferno/InfernalSuccubus.xdb
+    - name: SUCCUBUS SEDUCER
+      tier: 4
+      upgrade: 2
+      path: Inferno/3rd/SuccubusSeducer.xdb
+    - name: NIGHTMARE
+      tier: 5
+      upgrade: 0
+      path: Inferno/Nightmare.xdb
+    - name: FRIGHTFUL NIGHTMARE
+      tier: 5
+      upgrade: 1
+      path: Inferno/FrightfulNightmare.xdb
+    - name: HELLMARE
+      tier: 5
+      upgrade: 2
+      path: Inferno/3rd/Hellmare.xdb
+    - name: PITFIEND
+      tier: 6
+      upgrade: 0
+      path: Inferno/PitFiend.xdb
+    - name: PITLORD
+      tier: 6
+      upgrade: 1
+      path: Inferno/Balor.xdb
+    - name: PITSPAWN
+      tier: 6
+      upgrade: 2
+      path: Inferno/3rd/PitSpawn.xdb
+    - name: DEVIL
+      tier: 7
+      upgrade: 0
+      path: Inferno/Devil.xdb
+    - name: ARCH DEVIL
+      tier: 7
+      upgrade: 1
+      path: Inferno/ArchDevil_.xdb
+    - name: ARCH DEMON
+      tier: 7
+      upgrade: 2
+      path: Inferno/3rd/ArchDemon.xdb
+  STRONGHOLD:
+    - name: GOBLIN
+      tier: 1
+      upgrade: 0
+      path: Orcs/Goblin1.xdb
+    - name: GOBLIN TRAPPER
+      tier: 1
+      upgrade: 1
+      path: Orcs/Goblin2.xdb
+    - name: GOBLIN DEFILER
+      tier: 1
+      upgrade: 2
+      path: Orcs/3rd/GoblinDefiler.xdb
+    - name: SHAMAN
+      tier: 2
+      upgrade: 0
+      path: Orcs/Shaman1.xdb
+    - name: SKY DAUGHTER
+      tier: 2
+      upgrade: 1
+      path: Orcs/Shaman2.xdb
+    - name: EARTH DAUGHTER
+      tier: 2
+      upgrade: 2
+      path: Orcs/3rd/ShamanHag.xdb
+    - name: ORC WARRIOR
+      tier: 3
+      upgrade: 0
+      path: Orcs/Orc1.xdb
+    - name: ORC MAULER
+      tier: 3
+      upgrade: 1
+      path: Orcs/Orc2.xdb
+    - name: ORC WARMONGER
+      tier: 3
+      upgrade: 2
+      path: Orcs/3rd/OrcWarmonger.xdb
+    - name: CENTAUR
+      tier: 4
+      upgrade: 0
+      path: Orcs/Centaur1.xdb
+    - name: NOMAD CENTAUR
+      tier: 4
+      upgrade: 1
+      path: Orcs/Centaur2.xdb
+    - name: CENTAUR MARAUDER
+      tier: 4
+      upgrade: 2
+      path: Orcs/3rd/CentaurMaradeur.xdb
+    - name: BUTCHER
+      tier: 5
+      upgrade: 0
+      path: Orcs/OrcChief1.xdb
+    - name: EXECUTIONER
+      tier: 5
+      upgrade: 1
+      path: Orcs/OrcChief2.xdb
+    - name: CHIEFTAIN
+      tier: 5
+      upgrade: 2
+      path: Orcs/3rd/OrcchiefChieftain.xdb
+    - name: WYVERN
+      tier: 6
+      upgrade: 0
+      path: Orcs/Wyvern1.xdb
+    - name: VENOMOUS WYVERN
+      tier: 6
+      upgrade: 1
+      path: Orcs/Wyvern2.xdb
+    - name: PAO KAI
+      tier: 6
+      upgrade: 2
+      path: Orcs/3rd/WyvernPaokai.xdb
+    - name: CYCLOP
+      tier: 7
+      upgrade: 0
+      path: Orcs/Cyclop1.xdb
+    - name: UNCHAINED CYCLOP
+      tier: 7
+      upgrade: 1
+      path: Orcs/Cyclop2.xdb
+    - name: BLOODEYE CYCLOP
+      tier: 7
+      upgrade: 2
+      path: Orcs/3rd/CyclopBloodeyed.xdb
