@@ -353,7 +353,7 @@ CREATURES:
       tier: 1
       upgrade: 2
       path: Dungeon/3rd/Stalker.xdb
-    - name: BLOOD WITCH
+    - name: BLOOD MAIDEN
       tier: 2
       upgrade: 0
       path: Dungeon/Witch.xdb
@@ -361,7 +361,7 @@ CREATURES:
       tier: 2
       upgrade: 1
       path: Dungeon/Blood_Witch.xdb
-    - name: POISON FURY
+    - name: BLOOD SISTER
       tier: 2
       upgrade: 2
       path: Dungeon/3rd/BloodWitch2.xdb
@@ -369,31 +369,31 @@ CREATURES:
       tier: 3
       upgrade: 0
       path: Dungeon/Minotaur.xdb
-    - name: MINOTAUR KING
+    - name: MINOTAUR GUARD
       tier: 3
       upgrade: 1
       path: Dungeon/Minotaur_King.xdb
-    - name: MINOTAUR CAPTAIN
+    - name: MINOTAUR TASKMASTER
       tier: 3
       upgrade: 2
       path: Dungeon/3rd/MinotaurCaptain.xdb
-    - name: RIDER
+    - name: DARK RAIDER
       tier: 4
       upgrade: 0
       path: Dungeon/Rider.xdb
-    - name: RAVAGER
+    - name: GRIM RAIDER
       tier: 4
       upgrade: 1
       path: Dungeon/Ravager.xdb
-    - name: BLACK RIDER
+    - name: BRISK RAIDER
       tier: 4
       upgrade: 2
       path: Dungeon/3rd/BlackRider.xdb
-    - name: MATRON
+    - name: SHADOW WITCH
       tier: 5
       upgrade: 0
       path: Dungeon/Matron.xdb
-    - name: MATRIARCH
+    - name: SHADOW MATRIARCH
       tier: 5
       upgrade: 1
       path: Dungeon/Matriarch.xdb
@@ -409,7 +409,7 @@ CREATURES:
       tier: 6
       upgrade: 1
       path: Dungeon/Chaos_Hydra.xdb
-    - name: ACIDIC HYDRA
+    - name: FOUL HYDRA
       tier: 6
       upgrade: 2
       path: Dungeon/3rd/AcidicHydra.xdb
@@ -442,23 +442,23 @@ CREATURES:
       tier: 2
       upgrade: 0
       path: Necropolis/Walking_Dead.xdb
-    - name: INFECTED ZOMBIE
+    - name: PLAGUE ZOMBIE
       tier: 2
       upgrade: 1
       path: Necropolis/Zombie.xdb
-    - name: ROTTEN ZOMBIE
+    - name: ROT ZOMBIE
       tier: 2
       upgrade: 2
       path: Necropolis/3rd/DiseaseZombie.xdb
-    - name: MANES
+    - name: GHOST
       tier: 3
       upgrade: 0
       path: Necropolis/Manes.xdb
-    - name: GHOSTS
+    - name: SPECTRE
       tier: 3
       upgrade: 1
       path: Necropolis/Ghosts.xdb
-    - name: POLTERGEISTS
+    - name: POLTERGEIST
       tier: 3
       upgrade: 2
       path: Necropolis/3rd/Poltergeist.xdb
@@ -478,7 +478,7 @@ CREATURES:
       tier: 5
       upgrade: 0
       path: Necropolis/Lich.xdb
-    - name: ARCHILICH
+    - name: ARCHLICH
       tier: 5
       upgrade: 1
       path: Necropolis/Demilich.xdb
@@ -494,7 +494,7 @@ CREATURES:
       tier: 6
       upgrade: 1
       path: Necropolis/Shadow_Dragon.xdb
-    - name: HORROR DRAGON
+    - name: SPECTRAL DRAGON
       tier: 6
       upgrade: 2
       path: Necropolis/3rd/HorrorDragon.xdb
@@ -511,15 +511,15 @@ CREATURES:
       upgrade: 2
       path: Necropolis/3rd/Banshee.xdb
   INFERNO:
-    - name: FAMILIAR
+    - name: IMP
       tier: 1
       upgrade: 0
       path: Inferno/Familiar.xdb
-    - name: IMP
+    - name: FAMILIAR
       tier: 1
       upgrade: 1
       path: Inferno/Imp.xdb
-    - name: QUASIT
+    - name: VERMIN
       tier: 1
       upgrade: 2
       path: Inferno/3rd/Quasit.xdb
@@ -527,11 +527,11 @@ CREATURES:
       tier: 2
       upgrade: 0
       path: Inferno/Demon.xdb
-    - name: FIRE DEMON
+    - name: HORNED OVERSEER
       tier: 2
       upgrade: 1
       path: Inferno/HornedDemon.xdb
-    - name: HORNED LEAPER
+    - name: HORNED GRUNT
       tier: 2
       upgrade: 2
       path: Inferno/3rd/HornedLeaper.xdb
@@ -543,7 +543,7 @@ CREATURES:
       tier: 3
       upgrade: 1
       path: Inferno/Cerberius.xdb
-    - name: FIREBREATHER HOUND
+    - name: FIREHOUND
       tier: 3
       upgrade: 2
       path: Inferno/3rd/FirebreatherHound.xdb
@@ -551,7 +551,7 @@ CREATURES:
       tier: 4
       upgrade: 0
       path: Inferno/Succubus.xdb
-    - name: INFERNAL SUCCUBUS
+    - name: SUCCUBUS MISTRESS
       tier: 4
       upgrade: 1
       path: Inferno/InfernalSuccubus.xdb
@@ -559,27 +559,27 @@ CREATURES:
       tier: 4
       upgrade: 2
       path: Inferno/3rd/SuccubusSeducer.xdb
-    - name: NIGHTMARE
+    - name: HELL CHARGER
       tier: 5
       upgrade: 0
       path: Inferno/Nightmare.xdb
-    - name: FRIGHTFUL NIGHTMARE
+    - name: HELL STALLION
       tier: 5
       upgrade: 1
       path: Inferno/FrightfulNightmare.xdb
-    - name: HELLMARE
+    - name: NIGHTMARE
       tier: 5
       upgrade: 2
       path: Inferno/3rd/Hellmare.xdb
-    - name: PITFIEND
+    - name: PIT FIEND
       tier: 6
       upgrade: 0
       path: Inferno/PitFiend.xdb
-    - name: PITLORD
+    - name: PIT LORD
       tier: 6
       upgrade: 1
       path: Inferno/Balor.xdb
-    - name: PITSPAWN
+    - name: PIT SPAWN
       tier: 6
       upgrade: 2
       path: Inferno/3rd/PitSpawn.xdb
@@ -587,11 +587,11 @@ CREATURES:
       tier: 7
       upgrade: 0
       path: Inferno/Devil.xdb
-    - name: ARCH DEVIL
+    - name: ARCHDEVIL
       tier: 7
       upgrade: 1
       path: Inferno/ArchDevil_.xdb
-    - name: ARCH DEMON
+    - name: ARCHDEMON
       tier: 7
       upgrade: 2
       path: Inferno/3rd/ArchDemon.xdb
@@ -608,7 +608,7 @@ CREATURES:
       tier: 1
       upgrade: 2
       path: Orcs/3rd/GoblinDefiler.xdb
-    - name: SHAMAN
+    - name: SUN DAUGHTER
       tier: 2
       upgrade: 0
       path: Orcs/Shaman1.xdb
@@ -620,15 +620,15 @@ CREATURES:
       tier: 2
       upgrade: 2
       path: Orcs/3rd/ShamanHag.xdb
-    - name: ORC WARRIOR
+    - name: WARRIOR
       tier: 3
       upgrade: 0
       path: Orcs/Orc1.xdb
-    - name: ORC MAULER
+    - name: MAULER
       tier: 3
       upgrade: 1
       path: Orcs/Orc2.xdb
-    - name: ORC WARMONGER
+    - name: WARMONGER
       tier: 3
       upgrade: 2
       path: Orcs/3rd/OrcWarmonger.xdb
@@ -636,7 +636,7 @@ CREATURES:
       tier: 4
       upgrade: 0
       path: Orcs/Centaur1.xdb
-    - name: NOMAD CENTAUR
+    - name: CENTAUR NOMAD
       tier: 4
       upgrade: 1
       path: Orcs/Centaur2.xdb
@@ -644,7 +644,7 @@ CREATURES:
       tier: 4
       upgrade: 2
       path: Orcs/3rd/CentaurMaradeur.xdb
-    - name: BUTCHER
+    - name: SLAYER
       tier: 5
       upgrade: 0
       path: Orcs/OrcChief1.xdb
@@ -660,7 +660,7 @@ CREATURES:
       tier: 6
       upgrade: 0
       path: Orcs/Wyvern1.xdb
-    - name: VENOMOUS WYVERN
+    - name: FOUL WYVERN
       tier: 6
       upgrade: 1
       path: Orcs/Wyvern2.xdb
@@ -672,7 +672,7 @@ CREATURES:
       tier: 7
       upgrade: 0
       path: Orcs/Cyclop1.xdb
-    - name: UNCHAINED CYCLOP
+    - name: UNTAMED CYCLOP
       tier: 7
       upgrade: 1
       path: Orcs/Cyclop2.xdb

@@ -9,27 +9,27 @@
 		<Item href="/Text/Game/Spells/SpellBookPredictions/DirectDamageMasterOfFire.txt"/>
 	</SpellBookPredictions>
 	<CombatLogTexts/>
-	<Level>3</Level>
+	<Level>2</Level>
 	<MagicSchool>MAGIC_SCHOOL_DESTRUCTIVE</MagicSchool>
 	<RequiredHeroLevel>0</RequiredHeroLevel>
 	<IsAimed>true</IsAimed>
-	<TrainedCost>10</TrainedCost>
+	<TrainedCost>12</TrainedCost>
 	<damage>
 		<Item>
-			<Base>25</Base>
+			<Base>0</Base>
+			<PerPower>12</PerPower>
+		</Item>
+		<Item>
+			<Base>0</Base>
 			<PerPower>15</PerPower>
 		</Item>
 		<Item>
-			<Base>30</Base>
-			<PerPower>25</PerPower>
+			<Base>0</Base>
+			<PerPower>19</PerPower>
 		</Item>
 		<Item>
-			<Base>35</Base>
-			<PerPower>35</PerPower>
-		</Item>
-		<Item>
-			<Base>40</Base>
-			<PerPower>45</PerPower>
+			<Base>0</Base>
+			<PerPower>24</PerPower>
 		</Item>
 	</damage>
 	<duration/>

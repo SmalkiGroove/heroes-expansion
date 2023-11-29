@@ -9,26 +9,26 @@
 		<Item href="/Text/Game/Spells/SpellBookPredictions/DirectDamageMasterOfLightning.txt"/>
 	</SpellBookPredictions>
 	<CombatLogTexts/>
-	<Level>4</Level>
+	<Level>3</Level>
 	<MagicSchool>MAGIC_SCHOOL_DESTRUCTIVE</MagicSchool>
 	<RequiredHeroLevel>0</RequiredHeroLevel>
-	<TrainedCost>16</TrainedCost>
+	<TrainedCost>18</TrainedCost>
 	<damage>
 		<Item>
-			<Base>10</Base>
+			<Base>0</Base>
 			<PerPower>20</PerPower>
 		</Item>
 		<Item>
-			<Base>15</Base>
+			<Base>0</Base>
+			<PerPower>24</PerPower>
+		</Item>
+		<Item>
+			<Base>0</Base>
 			<PerPower>30</PerPower>
 		</Item>
 		<Item>
-			<Base>20</Base>
-			<PerPower>40</PerPower>
-		</Item>
-		<Item>
-			<Base>25</Base>
-			<PerPower>50</PerPower>
+			<Base>0</Base>
+			<PerPower>36</PerPower>
 		</Item>
 	</damage>
 	<duration/>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Spell ObjectRecordID="1000101">
 	<NameFileRef href="/Text/Game/Spells/Combat/StoneSpikes/Name.txt"/>
 	<LongDescriptionFileRef href="/Text/Game/Spells/Combat/StoneSpikes/Long_Description.txt"/>
@@ -12,22 +12,22 @@
 	<MagicSchool>MAGIC_SCHOOL_DESTRUCTIVE</MagicSchool>
 	<RequiredHeroLevel>0</RequiredHeroLevel>
 	<IsAimed>true</IsAimed>
-	<TrainedCost>7</TrainedCost>
+	<TrainedCost>9</TrainedCost>
 	<damage>
 		<Item>
-			<Base>15</Base>
-			<PerPower>5</PerPower>
-		</Item>
-		<Item>
-			<Base>30</Base>
+			<Base>20</Base>
 			<PerPower>10</PerPower>
 		</Item>
 		<Item>
-			<Base>45</Base>
-			<PerPower>15</PerPower>
+			<Base>20</Base>
+			<PerPower>13</PerPower>
 		</Item>
 		<Item>
-			<Base>60</Base>
+			<Base>20</Base>
+			<PerPower>16</PerPower>
+		</Item>
+		<Item>
+			<Base>20</Base>
 			<PerPower>20</PerPower>
 		</Item>
 	</damage>

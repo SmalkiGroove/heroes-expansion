@@ -8,45 +8,45 @@
 		<Item href="/Text/Game/Spells/Combat/Regeneration/SpellBookPrediction.txt"/>
 	</SpellBookPredictions>
 	<CombatLogTexts/>
-	<Level>3</Level>
-	<MagicSchool>MAGIC_SCHOOL_LIGHT</MagicSchool>
+	<Level>2</Level>
+	<MagicSchool>MAGIC_SCHOOL_SUMMONING</MagicSchool>
 	<RequiredHeroLevel>0</RequiredHeroLevel>
 	<IsAimed>true</IsAimed>
-	<TrainedCost>10</TrainedCost>
+	<TrainedCost>11</TrainedCost>
 	<damage>
 		<Item>
-			<Base>75</Base>
-			<PerPower>5</PerPower>
+			<Base>50</Base>
+			<PerPower>1</PerPower>
 		</Item>
 		<Item>
-			<Base>85</Base>
-			<PerPower>10</PerPower>
+			<Base>50</Base>
+			<PerPower>2</PerPower>
 		</Item>
 		<Item>
-			<Base>95</Base>
-			<PerPower>15</PerPower>
+			<Base>50</Base>
+			<PerPower>3</PerPower>
 		</Item>
 		<Item>
-			<Base>100</Base>
-			<PerPower>25</PerPower>
+			<Base>50</Base>
+			<PerPower>4</PerPower>
 		</Item>
 	</damage>
 	<duration>
 		<Item>
-			<Base>1</Base>
-			<PerPower>0.1</PerPower>
+			<Base>2.5</Base>
+			<PerPower>0.05</PerPower>
 		</Item>
 		<Item>
-			<Base>2</Base>
-			<PerPower>0.2</PerPower>
+			<Base>2.5</Base>
+			<PerPower>0.05</PerPower>
 		</Item>
 		<Item>
-			<Base>2</Base>
-			<PerPower>0.3</PerPower>
+			<Base>2.5</Base>
+			<PerPower>0.05</PerPower>
 		</Item>
 		<Item>
-			<Base>2</Base>
-			<PerPower>0.4</PerPower>
+			<Base>2.5</Base>
+			<PerPower>0.05</PerPower>
 		</Item>
 	</duration>
 	<sSpellCost>

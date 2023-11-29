@@ -8,44 +8,44 @@
 		<Item href="/Text/Game/Spells/Combat/Berserk/SpellBookPrediction.txt"/>
 	</SpellBookPredictions>
 	<CombatLogTexts/>
-	<Level>4</Level>
+	<Level>5</Level>
 	<MagicSchool>MAGIC_SCHOOL_DARK</MagicSchool>
 	<RequiredHeroLevel>0</RequiredHeroLevel>
-	<TrainedCost>20</TrainedCost>
+	<TrainedCost>35</TrainedCost>
 	<damage>
 		<Item>
-			<Base>0</Base>
+			<Base>-0.5</Base>
 			<PerPower>0.01</PerPower>
 		</Item>
 		<Item>
-			<Base>0</Base>
-			<PerPower>0.015</PerPower>
-		</Item>
-		<Item>
-			<Base>0</Base>
+			<Base>-0.5</Base>
 			<PerPower>0.02</PerPower>
 		</Item>
 		<Item>
-			<Base>0</Base>
-			<PerPower>0.03</PerPower>
+			<Base>-0.3</Base>
+			<PerPower>0.02</PerPower>
+		</Item>
+		<Item>
+			<Base>-0.1</Base>
+			<PerPower>0.02</PerPower>
 		</Item>
 	</damage>
 	<duration>
 		<Item>
 			<Base>1</Base>
-			<PerPower>0.05</PerPower>
+			<PerPower>0</PerPower>
 		</Item>
 		<Item>
 			<Base>1</Base>
-			<PerPower>0.05</PerPower>
+			<PerPower>0</PerPower>
 		</Item>
 		<Item>
 			<Base>1</Base>
-			<PerPower>0.05</PerPower>
+			<PerPower>0</PerPower>
 		</Item>
 		<Item>
 			<Base>1</Base>
-			<PerPower>0.05</PerPower>
+			<PerPower>0</PerPower>
 		</Item>
 	</duration>
 	<sSpellCost>

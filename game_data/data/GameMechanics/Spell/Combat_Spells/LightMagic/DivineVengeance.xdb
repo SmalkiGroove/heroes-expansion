@@ -6,26 +6,26 @@
 	<EffectTexture href="/UI/H5A2/Icons/Spells/Divine_Vengeance.(Texture).xdb#xpointer(/Texture)"/>
 	<SpellBookPredictions/>
 	<CombatLogTexts/>
-	<Level>4</Level>
+	<Level>3</Level>
 	<MagicSchool>MAGIC_SCHOOL_LIGHT</MagicSchool>
 	<RequiredHeroLevel>0</RequiredHeroLevel>
-	<TrainedCost>14</TrainedCost>
+	<TrainedCost>12</TrainedCost>
 	<damage>
 		<Item>
 			<Base>10</Base>
-			<PerPower>1</PerPower>
+			<PerPower>1.1</PerPower>
+		</Item>
+		<Item>
+			<Base>20</Base>
+			<PerPower>1.2</PerPower>
+		</Item>
+		<Item>
+			<Base>30</Base>
+			<PerPower>1.3</PerPower>
 		</Item>
 		<Item>
 			<Base>40</Base>
-			<PerPower>4</PerPower>
-		</Item>
-		<Item>
-			<Base>50</Base>
-			<PerPower>5</PerPower>
-		</Item>
-		<Item>
-			<Base>60</Base>
-			<PerPower>6</PerPower>
+			<PerPower>1.4</PerPower>
 		</Item>
 	</damage>
 	<duration/>

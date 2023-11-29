@@ -13,41 +13,41 @@
 	<Level>5</Level>
 	<MagicSchool>MAGIC_SCHOOL_LIGHT</MagicSchool>
 	<RequiredHeroLevel>0</RequiredHeroLevel>
-	<TrainedCost>25</TrainedCost>
+	<TrainedCost>28</TrainedCost>
 	<damage>
 		<Item>
-			<Base>300</Base>
-			<PerPower>10</PerPower>
+			<Base>0</Base>
+			<PerPower>25</PerPower>
 		</Item>
 		<Item>
-			<Base>400</Base>
-			<PerPower>15</PerPower>
+			<Base>0</Base>
+			<PerPower>32</PerPower>
 		</Item>
 		<Item>
-			<Base>500</Base>
-			<PerPower>20</PerPower>
-		</Item>
-		<Item>
-			<Base>500</Base>
+			<Base>0</Base>
 			<PerPower>40</PerPower>
+		</Item>
+		<Item>
+			<Base>0</Base>
+			<PerPower>50</PerPower>
 		</Item>
 	</damage>
 	<duration>
 		<Item>
-			<Base>0</Base>
-			<PerPower>0</PerPower>
+			<Base>0.25</Base>
+			<PerPower>-0.005</PerPower>
 		</Item>
 		<Item>
-			<Base>0</Base>
-			<PerPower>0</PerPower>
+			<Base>0.25</Base>
+			<PerPower>-0.005</PerPower>
 		</Item>
 		<Item>
-			<Base>0</Base>
-			<PerPower>0</PerPower>
+			<Base>0.20</Base>
+			<PerPower>-0.005</PerPower>
 		</Item>
 		<Item>
-			<Base>0</Base>
-			<PerPower>0</PerPower>
+			<Base>0.15</Base>
+			<PerPower>-0.005</PerPower>
 		</Item>
 	</duration>
 	<sSpellCost>

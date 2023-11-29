@@ -10,7 +10,7 @@
 	<MagicSchool>MAGIC_SCHOOL_DESTRUCTIVE</MagicSchool>
 	<RequiredHeroLevel>0</RequiredHeroLevel>
 	<IsAimed>false</IsAimed>
-	<TrainedCost>80</TrainedCost>
+	<TrainedCost>88</TrainedCost>
 	<damage>
 		<Item>
 			<Base>1</Base>
@@ -43,5 +43,8 @@
 	<CanSelectDead>false</CanSelectDead>
 	<Target>TARGET_HOSTILE</Target>
 	<Element>ELEMENT_FIRE</Element>
-	<visuals/>
+	<visuals>
+		<Item href="Armageddon.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+		<Item href="Armageddon_Hit.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+	</visuals>
 </Spell>

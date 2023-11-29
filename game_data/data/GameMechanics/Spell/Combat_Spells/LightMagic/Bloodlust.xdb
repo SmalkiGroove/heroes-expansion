@@ -8,45 +8,45 @@
 		<Item href="/Text/Game/Spells/Combat/Bloodlust/SpellBookPrediction.txt"/>
 	</SpellBookPredictions>
 	<CombatLogTexts/>
-	<Level>3</Level>
+	<Level>2</Level>
 	<MagicSchool>MAGIC_SCHOOL_LIGHT</MagicSchool>
 	<RequiredHeroLevel>0</RequiredHeroLevel>
 	<IsAimed>true</IsAimed>
-	<TrainedCost>6</TrainedCost>
+	<TrainedCost>7</TrainedCost>
 	<damage>
 		<Item>
 			<Base>4</Base>
-			<PerPower>0.1</PerPower>
-		</Item>
-		<Item>
-			<Base>6</Base>
 			<PerPower>0.2</PerPower>
 		</Item>
 		<Item>
-			<Base>8</Base>
-			<PerPower>0.3</PerPower>
+			<Base>6</Base>
+			<PerPower>0.25</PerPower>
 		</Item>
 		<Item>
-			<Base>10</Base>
+			<Base>7</Base>
+			<PerPower>0.33</PerPower>
+		</Item>
+		<Item>
+			<Base>8</Base>
 			<PerPower>0.4</PerPower>
 		</Item>
 	</damage>
 	<duration>
 		<Item>
 			<Base>1</Base>
-			<PerPower>0.5</PerPower>
+			<PerPower>0.075</PerPower>
 		</Item>
 		<Item>
-			<Base>2</Base>
-			<PerPower>0.5</PerPower>
+			<Base>1.5</Base>
+			<PerPower>0.075</PerPower>
 		</Item>
 		<Item>
-			<Base>2</Base>
-			<PerPower>0.5</PerPower>
+			<Base>1.5</Base>
+			<PerPower>0.075</PerPower>
 		</Item>
 		<Item>
-			<Base>2</Base>
-			<PerPower>0.5</PerPower>
+			<Base>1.5</Base>
+			<PerPower>0.075</PerPower>
 		</Item>
 	</duration>
 	<sSpellCost>

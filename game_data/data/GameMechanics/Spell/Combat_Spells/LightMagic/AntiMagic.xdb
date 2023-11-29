@@ -2,16 +2,16 @@
 <Spell ObjectRecordID="132">
 	<NameFileRef href="/Text/Game/Spells/Combat/Anti-magic/Name.txt"/>
 	<LongDescriptionFileRef href="/Text/Game/Spells/Combat/Anti-magic/Long_Description.txt"/>
-	<Texture href="/Textures/SpellBook______2618/Spells/Spell_AntiMagic.xdb#xpointer(/Texture)"/>
+	<Texture href="/Textures/SpellBook______2618/Spells/Spell_AntiMagic_sc.xdb#xpointer(/Texture)"/>
 	<EffectTexture href="/UI/Common/Icons/Spell_Buff_Icons/Antimagic.(Texture).xdb#xpointer(/Texture)"/>
 	<SpellBookPredictions>
 		<Item href="/Text/Game/Spells/Combat/Anti-magic/SpellBookPrediction.txt"/>
 	</SpellBookPredictions>
 	<CombatLogTexts/>
-	<Level>4</Level>
-	<MagicSchool>MAGIC_SCHOOL_LIGHT</MagicSchool>
+	<Level>3</Level>
+	<MagicSchool>MAGIC_SCHOOL_SUMMONING</MagicSchool>
 	<RequiredHeroLevel>0</RequiredHeroLevel>
-	<TrainedCost>7</TrainedCost>
+	<TrainedCost>16</TrainedCost>
 	<damage>
 		<Item>
 			<Base>2</Base>
@@ -33,19 +33,19 @@
 	<duration>
 		<Item>
 			<Base>1</Base>
-			<PerPower>0.5</PerPower>
+			<PerPower>0.075</PerPower>
 		</Item>
 		<Item>
-			<Base>2</Base>
-			<PerPower>0.5</PerPower>
+			<Base>1.5</Base>
+			<PerPower>0.075</PerPower>
 		</Item>
 		<Item>
-			<Base>2</Base>
-			<PerPower>0.5</PerPower>
+			<Base>1.5</Base>
+			<PerPower>0.075</PerPower>
 		</Item>
 		<Item>
-			<Base>2</Base>
-			<PerPower>0.5</PerPower>
+			<Base>1.5</Base>
+			<PerPower>0.075</PerPower>
 		</Item>
 	</duration>
 	<sSpellCost>
@@ -60,7 +60,7 @@
 	<IsAimed>true</IsAimed>
 	<IsAreaAttack>false</IsAreaAttack>
 	<CanSelectDead>false</CanSelectDead>
-	<Target>TARGET_FRIEND</Target>
+	<Target>TARGET_NEUTRAL</Target>
 	<Element>ELEMENT_NONE</Element>
 	<DamageIsElemental>true</DamageIsElemental>
 	<visuals>

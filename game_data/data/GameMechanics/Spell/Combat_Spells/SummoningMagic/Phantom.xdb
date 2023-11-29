@@ -2,33 +2,33 @@
 <Spell ObjectRecordID="138">
 	<NameFileRef href="/Text/Game/Spells/Combat/Phantom/Name.txt"/>
 	<LongDescriptionFileRef href="/Text/Game/Spells/Combat/Phantom/Long_Description.txt"/>
-	<Texture href="/Textures/SpellBook______2618/Spells/Spell_Phantom.xdb#xpointer(/Texture)"/>
+	<Texture href="/Textures/SpellBook______2618/Spells/Spell_Phantom_dc.xdb#xpointer(/Texture)"/>
 	<EffectTexture href="/UI/Common/Icons/Spell_Buff_Icons/Phantom.(Texture).xdb#xpointer(/Texture)"/>
 	<SpellBookPredictions>
 		<Item href=""/>
 	</SpellBookPredictions>
 	<CombatLogTexts/>
-	<Level>4</Level>
-	<MagicSchool>MAGIC_SCHOOL_SUMMONING</MagicSchool>
+	<Level>5</Level>
+	<MagicSchool>MAGIC_SCHOOL_DARK</MagicSchool>
 	<RequiredHeroLevel>0</RequiredHeroLevel>
 	<IsAimed>true</IsAimed>
-	<TrainedCost>18</TrainedCost>
+	<TrainedCost>28</TrainedCost>
 	<damage>
 		<Item>
+			<Base>2</Base>
+			<PerPower>0.1</PerPower>
+		</Item>
+		<Item>
+			<Base>3</Base>
+			<PerPower>0.1</PerPower>
+		</Item>
+		<Item>
 			<Base>4</Base>
-			<PerPower>0</PerPower>
+			<PerPower>0.1</PerPower>
 		</Item>
 		<Item>
 			<Base>5</Base>
-			<PerPower>0</PerPower>
-		</Item>
-		<Item>
-			<Base>6</Base>
-			<PerPower>0</PerPower>
-		</Item>
-		<Item>
-			<Base>7</Base>
-			<PerPower>0</PerPower>
+			<PerPower>0.1</PerPower>
 		</Item>
 	</damage>
 	<duration/>

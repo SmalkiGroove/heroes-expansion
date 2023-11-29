@@ -2,17 +2,17 @@
 <Spell ObjectRecordID="133">
 	<NameFileRef href="/Text/Game/Spells/Combat/Teleport/Name.txt"/>
 	<LongDescriptionFileRef href="/Text/Game/Spells/Combat/Teleport/Long_Description.txt"/>
-	<Texture href="/Textures/SpellBook______2618/Spells/Spell_Teleport.xdb#xpointer(/Texture)"/>
+	<Texture href="/Textures/SpellBook______2618/Spells/Spell_Tele_Dark.xdb#xpointer(/Texture)"/>
 	<EffectTexture href="/UI/Common/Icons/Spell_Buff_Icons/Teleport.(Texture).xdb#xpointer(/Texture)"/>
 	<SpellBookPredictions>
 		<Item href="/Text/Game/Spells/Combat/Teleport/SpellBookPrediction.txt"/>
 		<Item href="/Text/Game/Spells/Combat/Teleport/SpellBookPrediction_Expert.txt"/>
 	</SpellBookPredictions>
 	<CombatLogTexts/>
-	<Level>4</Level>
-	<MagicSchool>MAGIC_SCHOOL_LIGHT</MagicSchool>
+	<Level>3</Level>
+	<MagicSchool>MAGIC_SCHOOL_DARK</MagicSchool>
 	<RequiredHeroLevel>0</RequiredHeroLevel>
-	<TrainedCost>8</TrainedCost>
+	<TrainedCost>16</TrainedCost>
 	<damage/>
 	<duration/>
 	<sSpellCost>

@@ -8,7 +8,7 @@
 		<Item href="/Text/Game/Spells/Combat/Stoneskin/SpellBookPrediction.txt"/>
 	</SpellBookPredictions>
 	<CombatLogTexts/>
-	<Level>2</Level>
+	<Level>1</Level>
 	<MagicSchool>MAGIC_SCHOOL_LIGHT</MagicSchool>
 	<RequiredHeroLevel>0</RequiredHeroLevel>
 	<IsAimed>true</IsAimed>
@@ -16,37 +16,37 @@
 	<damage>
 		<Item>
 			<Base>4</Base>
-			<PerPower>0.1</PerPower>
-		</Item>
-		<Item>
-			<Base>6</Base>
 			<PerPower>0.2</PerPower>
 		</Item>
 		<Item>
-			<Base>8</Base>
-			<PerPower>0.3</PerPower>
+			<Base>6</Base>
+			<PerPower>0.25</PerPower>
 		</Item>
 		<Item>
-			<Base>10</Base>
+			<Base>7</Base>
+			<PerPower>0.33</PerPower>
+		</Item>
+		<Item>
+			<Base>8</Base>
 			<PerPower>0.4</PerPower>
 		</Item>
 	</damage>
 	<duration>
 		<Item>
 			<Base>1</Base>
-			<PerPower>0.5</PerPower>
+			<PerPower>0.075</PerPower>
 		</Item>
 		<Item>
-			<Base>2</Base>
-			<PerPower>0.5</PerPower>
+			<Base>1.5</Base>
+			<PerPower>0.075</PerPower>
 		</Item>
 		<Item>
-			<Base>2</Base>
-			<PerPower>0.5</PerPower>
+			<Base>1.5</Base>
+			<PerPower>0.075</PerPower>
 		</Item>
 		<Item>
-			<Base>2</Base>
-			<PerPower>0.5</PerPower>
+			<Base>1.5</Base>
+			<PerPower>0.075</PerPower>
 		</Item>
 	</duration>
 	<sSpellCost>
@@ -58,10 +58,12 @@
 		<Gem>0</Gem>
 		<Gold>0</Gold>
 	</sSpellCost>
+	<IsAimed>true</IsAimed>		
 	<IsAreaAttack>false</IsAreaAttack>
 	<CanSelectDead>false</CanSelectDead>
 	<Target>TARGET_FRIEND</Target>
 	<Element>ELEMENT_NONE</Element>
+	<DamageIsElemental>true</DamageIsElemental>		
 	<visuals>
 		<Item href="StoneSkin.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
 	</visuals>

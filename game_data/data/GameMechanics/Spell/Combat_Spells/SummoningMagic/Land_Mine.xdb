@@ -10,45 +10,45 @@
 	<CombatLogTexts>
 		<Item href="/Text/CombatLog/Spells/LandMine.txt"/>
 	</CombatLogTexts>
-	<Level>2</Level>
+	<Level>1</Level>
 	<MagicSchool>MAGIC_SCHOOL_SUMMONING</MagicSchool>
 	<RequiredHeroLevel>0</RequiredHeroLevel>
 	<IsAimed>true</IsAimed>
-	<TrainedCost>8</TrainedCost>
+	<TrainedCost>9</TrainedCost>
 	<damage>
 		<Item>
-			<Base>250</Base>
-			<PerPower>25</PerPower>
+			<Base>0</Base>
+			<PerPower>8</PerPower>
 		</Item>
 		<Item>
-			<Base>300</Base>
-			<PerPower>30</PerPower>
+			<Base>0</Base>
+			<PerPower>10</PerPower>
 		</Item>
 		<Item>
-			<Base>350</Base>
-			<PerPower>35</PerPower>
+			<Base>0</Base>
+			<PerPower>13</PerPower>
 		</Item>
 		<Item>
-			<Base>400</Base>
-			<PerPower>40</PerPower>
+			<Base>0</Base>
+			<PerPower>16</PerPower>
 		</Item>
 	</damage>
 	<duration>
 		<Item>
-			<Base>3</Base>
-			<PerPower>0</PerPower>
+			<Base>4.5</Base>
+			<PerPower>0.1</PerPower>
 		</Item>
 		<Item>
-			<Base>5</Base>
-			<PerPower>0</PerPower>
+			<Base>5.5</Base>
+			<PerPower>0.1</PerPower>
 		</Item>
 		<Item>
-			<Base>7</Base>
-			<PerPower>0</PerPower>
+			<Base>6.5</Base>
+			<PerPower>0.1</PerPower>
 		</Item>
 		<Item>
-			<Base>9</Base>
-			<PerPower>0</PerPower>
+			<Base>7.5</Base>
+			<PerPower>0.1</PerPower>
 		</Item>
 	</duration>
 	<sSpellCost>
@@ -63,7 +63,8 @@
 	<IsAreaAttack>true</IsAreaAttack>
 	<CanSelectDead>false</CanSelectDead>
 	<Target>TARGET_NEUTRAL</Target>
-	<Element>ELEMENT_NONE</Element>
+	<Element>ELEMENT_FIRE</Element>
+	<DamageIsElemental>true</DamageIsElemental>
 	<visuals>
 		<Item href="LandMine.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
 		<Item href="LandMine_Explosion.(SpellVisual).xdb#xpointer(/SpellVisual)"/>

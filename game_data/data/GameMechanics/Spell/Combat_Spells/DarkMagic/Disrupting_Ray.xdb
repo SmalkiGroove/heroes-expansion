@@ -9,26 +9,26 @@
 		<Item href="/Text/Game/Spells/Combat/Disrupting_Ray/SpellBookPrediction_Damage.txt"/>
 	</SpellBookPredictions>
 	<CombatLogTexts/>
-	<Level>2</Level>
+	<Level>1</Level>
 	<MagicSchool>MAGIC_SCHOOL_DARK</MagicSchool>
 	<RequiredHeroLevel>0</RequiredHeroLevel>
-	<TrainedCost>5</TrainedCost>
+	<TrainedCost>6</TrainedCost>
 	<damage>
 		<Item>
+			<Base>3</Base>
+			<PerPower>0.15</PerPower>
+		</Item>
+		<Item>
 			<Base>4</Base>
-			<PerPower>0.2</PerPower>
+			<PerPower>0.15</PerPower>
+		</Item>
+		<Item>
+			<Base>4.5</Base>
+			<PerPower>0.15</PerPower>
 		</Item>
 		<Item>
 			<Base>5</Base>
-			<PerPower>0.25</PerPower>
-		</Item>
-		<Item>
-			<Base>6</Base>
-			<PerPower>0.3</PerPower>
-		</Item>
-		<Item>
-			<Base>7</Base>
-			<PerPower>0.35</PerPower>
+			<PerPower>0.15</PerPower>
 		</Item>
 	</damage>
 	<duration/>

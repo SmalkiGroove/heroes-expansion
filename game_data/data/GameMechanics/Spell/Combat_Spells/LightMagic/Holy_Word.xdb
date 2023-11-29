@@ -9,26 +9,26 @@
 		<Item href="/Text/Game/Spells/SpellBookPredictions/DirectDamageMasterOfFire.txt"/>
 	</SpellBookPredictions>
 	<CombatLogTexts/>
-	<Level>5</Level>
+	<Level>4</Level>
 	<MagicSchool>MAGIC_SCHOOL_LIGHT</MagicSchool>
 	<RequiredHeroLevel>0</RequiredHeroLevel>
-	<TrainedCost>25</TrainedCost>
+	<TrainedCost>30</TrainedCost>
 	<damage>
 		<Item>
-			<Base>100</Base>
-			<PerPower>20</PerPower>
+			<Base>0</Base>
+			<PerPower>10</PerPower>
 		</Item>
 		<Item>
-			<Base>200</Base>
-			<PerPower>30</PerPower>
+			<Base>0</Base>
+			<PerPower>12</PerPower>
 		</Item>
 		<Item>
-			<Base>400</Base>
-			<PerPower>35</PerPower>
+			<Base>0</Base>
+			<PerPower>14</PerPower>
 		</Item>
 		<Item>
-			<Base>600</Base>
-			<PerPower>40</PerPower>
+			<Base>0</Base>
+			<PerPower>16</PerPower>
 		</Item>
 	</damage>
 	<duration/>

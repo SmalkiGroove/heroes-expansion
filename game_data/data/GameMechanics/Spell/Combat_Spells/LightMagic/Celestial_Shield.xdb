@@ -2,45 +2,45 @@
 <Spell ObjectRecordID="134">
 	<NameFileRef href="/Text/Game/Spells/Combat/Celestial_Shield/Name.txt"/>
 	<LongDescriptionFileRef href="/Text/Game/Spells/Combat/Celestial_Shield/Long_Description.txt"/>
-	<Texture href="/Textures/SpellBook______2618/Spells/Spell_CelestialShield.xdb#xpointer(/Texture)"/>
+	<Texture href="/Textures/SpellBook______2618/Spells/Spell_Arcane_Armor.xdb#xpointer(/Texture)"/>
 	<EffectTexture href="/UI/Common/Icons/Spell_Buff_Icons/CelestialShield.(Texture).xdb#xpointer(/Texture)"/>
 	<SpellBookPredictions>
 		<Item href="/Text/Game/Spells/Combat/Celestial_Shield/SpellBookPrediction.txt"/>
 	</SpellBookPredictions>
 	<CombatLogTexts/>
 	<Level>5</Level>
-	<MagicSchool>MAGIC_SCHOOL_SUMMONING</MagicSchool>
+	<MagicSchool>MAGIC_SCHOOL_LIGHT</MagicSchool>
 	<RequiredHeroLevel>0</RequiredHeroLevel>
-	<TrainedCost>20</TrainedCost>
+	<TrainedCost>30</TrainedCost>
 	<damage>
 		<Item>
-			<Base>0.3</Base>
-			<PerPower>0</PerPower>
+			<Base>0.4</Base>
+			<PerPower>0.005</PerPower>
 		</Item>
 		<Item>
 			<Base>0.5</Base>
-			<PerPower>0</PerPower>
+			<PerPower>0.005</PerPower>
+		</Item>
+		<Item>
+			<Base>0.6</Base>
+			<PerPower>0.005</PerPower>
 		</Item>
 		<Item>
 			<Base>0.7</Base>
-			<PerPower>0</PerPower>
-		</Item>
-		<Item>
-			<Base>0.9</Base>
-			<PerPower>0</PerPower>
+			<PerPower>0.005</PerPower>
 		</Item>
 	</damage>
 	<duration>
 		<Item>
-			<Base>100</Base>
+			<Base>200</Base>
 			<PerPower>30</PerPower>
 		</Item>
 		<Item>
-			<Base>200</Base>
+			<Base>250</Base>
 			<PerPower>40</PerPower>
 		</Item>
 		<Item>
-			<Base>300</Base>
+			<Base>330</Base>
 			<PerPower>50</PerPower>
 		</Item>
 		<Item>

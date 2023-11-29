@@ -11,41 +11,41 @@
 	<Level>4</Level>
 	<MagicSchool>MAGIC_SCHOOL_DARK</MagicSchool>
 	<RequiredHeroLevel>0</RequiredHeroLevel>
-	<TrainedCost>18</TrainedCost>
+	<TrainedCost>25</TrainedCost>
 	<damage>
 		<Item>
-			<Base>10</Base>
-			<PerPower>1</PerPower>
-		</Item>
-		<Item>
 			<Base>20</Base>
-			<PerPower>1</PerPower>
+			<PerPower>0.5</PerPower>
 		</Item>
 		<Item>
-			<Base>40</Base>
-			<PerPower>1</PerPower>
+			<Base>25</Base>
+			<PerPower>0.5</PerPower>
 		</Item>
 		<Item>
-			<Base>60</Base>
-			<PerPower>1</PerPower>
+			<Base>30</Base>
+			<PerPower>0.5</PerPower>
+		</Item>
+		<Item>
+			<Base>35</Base>
+			<PerPower>0.5</PerPower>
 		</Item>
 	</damage>
 	<duration>
 		<Item>
-			<Base>1</Base>
-			<PerPower>0.5</PerPower>
+			<Base>2</Base>
+			<PerPower>0.05</PerPower>
 		</Item>
 		<Item>
-			<Base>2</Base>
-			<PerPower>0.5</PerPower>
+			<Base>2.5</Base>
+			<PerPower>0.05</PerPower>
 		</Item>
 		<Item>
-			<Base>2</Base>
-			<PerPower>0.5</PerPower>
+			<Base>2.5</Base>
+			<PerPower>0.05</PerPower>
 		</Item>
 		<Item>
-			<Base>2</Base>
-			<PerPower>0.5</PerPower>
+			<Base>2.5</Base>
+			<PerPower>0.05</PerPower>
 		</Item>
 	</duration>
 	<sSpellCost>

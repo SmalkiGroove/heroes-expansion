@@ -12,23 +12,23 @@
 	<Level>4</Level>
 	<MagicSchool>MAGIC_SCHOOL_DESTRUCTIVE</MagicSchool>
 	<RequiredHeroLevel>0</RequiredHeroLevel>
-	<TrainedCost>16</TrainedCost>
+	<TrainedCost>27</TrainedCost>
 	<damage>
 		<Item>
-			<Base>60</Base>
+			<Base>0</Base>
+			<PerPower>24</PerPower>
+		</Item>
+		<Item>
+			<Base>0</Base>
 			<PerPower>30</PerPower>
 		</Item>
 		<Item>
-			<Base>80</Base>
-			<PerPower>40</PerPower>
+			<Base>0</Base>
+			<PerPower>36</PerPower>
 		</Item>
 		<Item>
-			<Base>100</Base>
-			<PerPower>50</PerPower>
-		</Item>
-		<Item>
-			<Base>120</Base>
-			<PerPower>60</PerPower>
+			<Base>0</Base>
+			<PerPower>45</PerPower>
 		</Item>
 	</damage>
 	<duration>

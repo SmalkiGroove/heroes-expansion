@@ -8,45 +8,45 @@
 		<Item href="/Text/Game/Spells/Combat/Weakness/SpellBookPrediction.txt"/>
 	</SpellBookPredictions>
 	<CombatLogTexts/>
-	<Level>3</Level>
+	<Level>2</Level>
 	<MagicSchool>MAGIC_SCHOOL_DARK</MagicSchool>
 	<RequiredHeroLevel>0</RequiredHeroLevel>
 	<IsAimed>true</IsAimed>
-	<TrainedCost>5</TrainedCost>
+	<TrainedCost>7</TrainedCost>
 	<damage>
 		<Item>
 			<Base>4</Base>
-			<PerPower>0.1</PerPower>
-		</Item>
-		<Item>
-			<Base>4</Base>
-			<PerPower>0.2</PerPower>
+			<PerPower>0.15</PerPower>
 		</Item>
 		<Item>
 			<Base>6</Base>
 			<PerPower>0.2</PerPower>
 		</Item>
 		<Item>
+			<Base>7</Base>
+			<PerPower>0.25</PerPower>
+		</Item>
+		<Item>
 			<Base>8</Base>
-			<PerPower>0.2</PerPower>
+			<PerPower>0.33</PerPower>
 		</Item>
 	</damage>
 	<duration>
 		<Item>
 			<Base>1</Base>
-			<PerPower>0.5</PerPower>
+			<PerPower>0.075</PerPower>
 		</Item>
 		<Item>
-			<Base>1</Base>
-			<PerPower>0.5</PerPower>
+			<Base>1.5</Base>
+			<PerPower>0.075</PerPower>
 		</Item>
 		<Item>
-			<Base>1</Base>
-			<PerPower>0.5</PerPower>
+			<Base>1.5</Base>
+			<PerPower>0.075</PerPower>
 		</Item>
 		<Item>
-			<Base>1</Base>
-			<PerPower>0.5</PerPower>
+			<Base>1.5</Base>
+			<PerPower>0.075</PerPower>
 		</Item>
 	</duration>
 	<sSpellCost>

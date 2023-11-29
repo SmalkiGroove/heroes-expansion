@@ -4,7 +4,9 @@
 	<LongDescriptionFileRef href="/Text/Game/Spells/Combat/Dispel/Long_Description.txt"/>
 	<Texture href="/Textures/SpellBook______2618/Spells/Spell_Dispel.xdb#xpointer(/Texture)"/>
 	<EffectTexture href="/UI/Common/Icons/Spell_Buff_Icons/Dispel.(Texture).xdb#xpointer(/Texture)"/>
-	<SpellBookPredictions/>
+	<SpellBookPredictions>
+		<Item href="/Text/Game/Spells/Combat/Dispel/SpellBookPrediction.txt"/>
+	</SpellBookPredictions>
 	<CombatLogTexts/>
 	<Level>2</Level>
 	<MagicSchool>MAGIC_SCHOOL_LIGHT</MagicSchool>
@@ -13,20 +15,20 @@
 	<TrainedCost>10</TrainedCost>
 	<damage>
 		<Item>
-			<Base>0.4</Base>
-			<PerPower>0.01</PerPower>
+			<Base>0.1</Base>
+			<PerPower>0.03</PerPower>
 		</Item>
 		<Item>
-			<Base>0.5</Base>
+			<Base>0.3</Base>
+			<PerPower>0.03</PerPower>
+		</Item>
+		<Item>
+			<Base>0.55</Base>
 			<PerPower>0.03</PerPower>
 		</Item>
 		<Item>
 			<Base>0.7</Base>
-			<PerPower>0.04</PerPower>
-		</Item>
-		<Item>
-			<Base>0.9</Base>
-			<PerPower>0.05</PerPower>
+			<PerPower>0.03</PerPower>
 		</Item>
 	</damage>
 	<duration/>

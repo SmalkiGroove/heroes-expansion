@@ -8,45 +8,45 @@
 		<Item href="/Text/Game/Spells/Combat/Forgetfulness/SpellBookPrediction.txt"/>
 	</SpellBookPredictions>
 	<CombatLogTexts/>
-	<Level>3</Level>
-	<MagicSchool>MAGIC_SCHOOL_DARK</MagicSchool>
+	<Level>2</Level>
+	<MagicSchool>MAGIC_SCHOOL_SUMMONING</MagicSchool>
 	<RequiredHeroLevel>0</RequiredHeroLevel>
 	<IsAimed>true</IsAimed>
-	<TrainedCost>9</TrainedCost>
+	<TrainedCost>8</TrainedCost>
 	<damage>
 		<Item>
-			<Base>0.4</Base>
-			<PerPower>0</PerPower>
+			<Base>0.2</Base>
+			<PerPower>0.01</PerPower>
 		</Item>
 		<Item>
-			<Base>0.6</Base>
-			<PerPower>0</PerPower>
+			<Base>0.25</Base>
+			<PerPower>0.01</PerPower>
 		</Item>
 		<Item>
-			<Base>0.8</Base>
-			<PerPower>0</PerPower>
+			<Base>0.3</Base>
+			<PerPower>0.01</PerPower>
 		</Item>
 		<Item>
-			<Base>1</Base>
-			<PerPower>0</PerPower>
+			<Base>0.35</Base>
+			<PerPower>0.01</PerPower>
 		</Item>
 	</damage>
 	<duration>
 		<Item>
 			<Base>1</Base>
-			<PerPower>0.5</PerPower>
+			<PerPower>0.075</PerPower>
 		</Item>
 		<Item>
-			<Base>2</Base>
-			<PerPower>0.5</PerPower>
+			<Base>1.5</Base>
+			<PerPower>0.075</PerPower>
 		</Item>
 		<Item>
-			<Base>2</Base>
-			<PerPower>0.5</PerPower>
+			<Base>1.5</Base>
+			<PerPower>0.075</PerPower>
 		</Item>
 		<Item>
-			<Base>2</Base>
-			<PerPower>0.5</PerPower>
+			<Base>1.5</Base>
+			<PerPower>0.075</PerPower>
 		</Item>
 	</duration>
 	<sSpellCost>
