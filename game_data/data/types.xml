@@ -1020,30 +1020,30 @@
 			</dbid>
 			<EnumEntries>
 				<Item>HERO_CLASS_NONE</Item>
-				<Item>HERO_CLASS_KNIGHT</Item>
-				<Item>HERO_CLASS_PALADIN</Item>
-				<Item>HERO_CLASS_WARLOCK</Item>
-				<Item>HERO_CLASS_DEMON_LORD</Item>
-				<Item>HERO_CLASS_ENGINEER</Item>
-				<Item>HERO_CLASS_SORCERER</Item>
-				<Item>HERO_CLASS_DEATHKNIGHT</Item>
-				<Item>HERO_CLASS_BARBARIAN</Item>
-				<Item>HERO_CLASS_HERETIC</Item>
-				<Item>HERO_CLASS_RANGER</Item>
-				<Item>HERO_CLASS_WARDEN</Item>
-				<Item>HERO_CLASS_DRUID</Item>
-				<Item>HERO_CLASS_ENCHANTER</Item>
-				<Item>HERO_CLASS_FLAMEKEEPER</Item>
-				<Item>HERO_CLASS_REAVER</Item>
-				<Item>HERO_CLASS_NECROMANCER</Item>
-				<Item>HERO_CLASS_BEASTMASTER</Item>
-				<Item>HERO_CLASS_SEER</Item>
-				<Item>HERO_CLASS_ASSASSIN</Item>
-				<Item>HERO_CLASS_WIZARD</Item>
-				<Item>HERO_CLASS_ELEMENTALIST</Item>
-				<Item>HERO_CLASS_RUNEMAGE</Item>
-				<Item>HERO_CLASS_BEWITCHER</Item>
-				<Item>HERO_CLASS_SHAMAN</Item>
+				<Item>HERO_CLASS_HAVEN_MIGHT</Item>
+				<Item>HERO_CLASS_HAVEN_MAGIC</Item>
+				<Item>HERO_CLASS_PRESERVE_MIGHT</Item>
+				<Item>HERO_CLASS_PRESERVE_MAGIC</Item>
+				<Item>HERO_CLASS_FORTRESS_MIGHT</Item>
+				<Item>HERO_CLASS_FORTRESS_MAGIC</Item>
+				<Item>HERO_CLASS_ACADEMY_MIGHT</Item>
+				<Item>HERO_CLASS_ACADEMY_MAGIC</Item>
+				<Item>HERO_CLASS_DUNGEON_MIGHT</Item>
+				<Item>HERO_CLASS_DUNGEON_MAGIC</Item>
+				<Item>HERO_CLASS_NECROPOLIS_MIGHT</Item>
+				<Item>HERO_CLASS_NECROPOLIS_MAGIC</Item>
+				<Item>HERO_CLASS_INFERNO_MIGHT</Item>
+				<Item>HERO_CLASS_INFERNO_MAGIC</Item>
+				<Item>HERO_CLASS_STRONGHOLD_MIGHT</Item>
+				<Item>HERO_CLASS_STRONGHOLD_MAGIC</Item>
+				<Item>HERO_CLASS_OTHER_1</Item>
+				<Item>HERO_CLASS_OTHER_2</Item>
+				<Item>HERO_CLASS_OTHER_3</Item>
+				<Item>HERO_CLASS_OTHER_4</Item>
+				<Item>HERO_CLASS_OTHER_5</Item>
+				<Item>HERO_CLASS_OTHER_6</Item>
+				<Item>HERO_CLASS_OTHER_7</Item>
+				<Item>HERO_CLASS_OTHER_8</Item>
 			</EnumEntries>
 		</Item>
 		<Item>
@@ -40293,99 +40293,99 @@
 					<Value>0</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_KNIGHT</Name>
+					<Name>HERO_CLASS_HAVEN_MIGHT</Name>
 					<Value>1</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_PALADIN</Name>
+					<Name>HERO_CLASS_HAVEN_MAGIC</Name>
 					<Value>2</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_WARLOCK</Name>
+					<Name>HERO_CLASS_PRESERVE_MIGHT</Name>
 					<Value>3</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_DEMON_LORD</Name>
+					<Name>HERO_CLASS_PRESERVE_MAGIC</Name>
 					<Value>4</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_ENGINEER</Name>
+					<Name>HERO_CLASS_FORTRESS_MIGHT</Name>
 					<Value>5</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_SORCERER</Name>
+					<Name>HERO_CLASS_FORTRESS_MAGIC</Name>
 					<Value>6</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_DEATHKNIGHT</Name>
+					<Name>HERO_CLASS_ACADEMY_MIGHT</Name>
 					<Value>7</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_BARBARIAN</Name>
+					<Name>HERO_CLASS_ACADEMY_MAGIC</Name>
 					<Value>8</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_HERETIC</Name>
+					<Name>HERO_CLASS_DUNGEON_MIGHT</Name>
 					<Value>9</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_RANGER</Name>
+					<Name>HERO_CLASS_DUNGEON_MAGIC</Name>
 					<Value>10</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_WARDEN</Name>
+					<Name>HERO_CLASS_NECROPOLIS_MIGHT</Name>
 					<Value>11</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_DRUID</Name>
+					<Name>HERO_CLASS_NECROPOLIS_MAGIC</Name>
 					<Value>12</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_ENCHANTER</Name>
+					<Name>HERO_CLASS_INFERNO_MIGHT</Name>
 					<Value>13</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_FLAMEKEEPER</Name>
+					<Name>HERO_CLASS_INFERNO_MAGIC</Name>
 					<Value>14</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_REAVER</Name>
+					<Name>HERO_CLASS_STRONGHOLD_MIGHT</Name>
 					<Value>15</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_NECROMANCER</Name>
+					<Name>HERO_CLASS_STRONGHOLD_MAGIC</Name>
 					<Value>16</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_BEWITCHER</Name>
+					<Name>HERO_CLASS_OTHER_1</Name>
 					<Value>17</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_BEASTMASTER</Name>
+					<Name>HERO_CLASS_OTHER_2</Name>
 					<Value>18</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_SEER</Name>
+					<Name>HERO_CLASS_OTHER_3</Name>
 					<Value>19</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_ASSASSIN</Name>
+					<Name>HERO_CLASS_OTHER_4</Name>
 					<Value>20</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_WIZARD</Name>
+					<Name>HERO_CLASS_OTHER_5</Name>
 					<Value>21</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_ELEMENTALIST</Name>
+					<Name>HERO_CLASS_OTHER_6</Name>
 					<Value>22</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_RUNEMAGE</Name>
+					<Name>HERO_CLASS_OTHER_7</Name>
 					<Value>23</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_SHAMAN</Name>
+					<Name>HERO_CLASS_OTHER_8</Name>
 					<Value>24</Value>
 				</Item>
 			</Entries>
