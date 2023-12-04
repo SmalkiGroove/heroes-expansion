@@ -304,11 +304,7 @@
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_SKILL</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
-				<spellBuffs>
-					<Item>SPELL_SKILL_LEADERSHIP1</Item>
-					<Item>SPELL_SKILL_LEADERSHIP2</Item>
-					<Item>SPELL_SKILL_LEADERSHIP3</Item>
-				</spellBuffs>
+				<spellBuffs/>
 				<BasicSkillID>HERO_SKILL_NONE</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
@@ -357,33 +353,33 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_LUCK</ID>
+			<ID>HERO_SKILL_TRAINING</ID>
 			<obj>
 				<Texture>
 					<Item/>
-					<Item href="/Textures/HeroScreen/Skills/Luck_1.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Skills/Luck_2.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Skills/Luck_3.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Skills/Training_1.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Skills/Training_2.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Skills/Training_3.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
-					<Item href="/Text/Game/Skills/Common/Luck/1/Name.txt"/>
-					<Item href="/Text/Game/Skills/Common/Luck/2/Name.txt"/>
-					<Item href="/Text/Game/Skills/Common/Luck/3/Name.txt"/>
+					<Item href="/Text/Game/Skills/Common/Training/1/Name.txt"/>
+					<Item href="/Text/Game/Skills/Common/Training/2/Name.txt"/>
+					<Item href="/Text/Game/Skills/Common/Training/3/Name.txt"/>
 				</NameFileRef>
 				<CommonNameFileRef href=""/>
 				<DescriptionFileRef>
-					<Item href="/Text/Game/Skills/Common/Luck/1/Description.txt"/>
-					<Item href="/Text/Game/Skills/Common/Luck/2/Description.txt"/>
-					<Item href="/Text/Game/Skills/Common/Luck/3/Description.txt"/>
+					<Item href="/Text/Game/Skills/Common/Training/1/Description.txt"/>
+					<Item href="/Text/Game/Skills/Common/Training/2/Description.txt"/>
+					<Item href="/Text/Game/Skills/Common/Training/3/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_SKILL</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs>
-					<Item>SPELL_SKILL_LUCK1</Item>
-					<Item>SPELL_SKILL_LUCK2</Item>
-					<Item>SPELL_SKILL_LUCK3</Item>
+					<Item>SPELL_DEMON_RAGE_LEVEL_1</Item>
+					<Item>SPELL_DEMON_RAGE_LEVEL_2</Item>
+					<Item>SPELL_DEMON_RAGE_LEVEL_3</Item>
 				</spellBuffs>
 				<BasicSkillID>HERO_SKILL_NONE</BasicSkillID>
 				<SkillPrerequisites/>
@@ -971,7 +967,12 @@
 				<CommonDescriptionFileRef href="/Text/Game/Skills/Unique/Training/Common/Description.txt"/>
 				<SkillType>SKILLTYPE_SKILL</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
-				<spellBuffs/>
+				<spellBuffs>
+					<Item>SPELL_SKILL_LEADERSHIP1</Item>
+					<Item>SPELL_SKILL_LEADERSHIP2</Item>
+					<Item>SPELL_SKILL_LEADERSHIP3</Item>
+					<Item>SPELL_SKILL_LEADERSHIP3</Item>
+				</spellBuffs>
 				<BasicSkillID>HERO_SKILL_NONE</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
@@ -1196,7 +1197,12 @@
 				<CommonDescriptionFileRef href="/Text/Game/Skills/Unique/Avenger/Common/Description.txt"/>
 				<SkillType>SKILLTYPE_SKILL</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
-				<spellBuffs/>
+				<spellBuffs>
+					<Item>SPELL_SKILL_LUCK1</Item>
+					<Item>SPELL_SKILL_LUCK2</Item>
+					<Item>SPELL_SKILL_LUCK3</Item>
+					<Item>SPELL_SKILL_LUCK3</Item>
+				</spellBuffs>
 				<BasicSkillID>HERO_SKILL_NONE</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
@@ -1544,15 +1550,15 @@
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
-					<Item href="/Text/Game/Skills/Absolute/Name.txt"/>
-					<Item href="/Text/Game/Skills/Absolute/Name.txt"/>
-					<Item href="/Text/Game/Skills/Absolute/Name.txt"/>
+					<Item href="/Text/Game/Skills/Common/Governance/1/Name.txt"/>
+					<Item href="/Text/Game/Skills/Common/Governance/2/Name.txt"/>
+					<Item href="/Text/Game/Skills/Common/Governance/3/Name.txt"/>
 				</NameFileRef>
 				<CommonNameFileRef href=""/>
 				<DescriptionFileRef>
-					<Item href="/Text/Game/Skills/Absolute/Description.txt"/>
-					<Item href="/Text/Game/Skills/Absolute/Description.txt"/>
-					<Item href="/Text/Game/Skills/Absolute/Description.txt"/>
+					<Item href="/Text/Game/Skills/Common/Governance/1/Description.txt"/>
+					<Item href="/Text/Game/Skills/Common/Governance/2/Description.txt"/>
+					<Item href="/Text/Game/Skills/Common/Governance/3/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_SKILL</SkillType>
@@ -12897,25 +12903,25 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_BARBARIAN_LEARNING</ID>
+			<ID>HERO_SKILL_INNATES</ID>
 			<obj>
 				<Texture>
 					<Item/>
-					<Item href="/Textures/HeroScreen/Skills/Learning_1.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Skills/Learning_2.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Skills/Learning_3.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Skills/Innates.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Skills/Innates.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Skills/Innates.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
-					<Item href="/Text/Game/Skills/Common/Learning/1/Name.txt"/>
-					<Item href="/Text/Game/Skills/Common/Learning/2/Name.txt"/>
-					<Item href="/Text/Game/Skills/Common/Learning/3/Name.txt"/>
+					<Item href="/Text/Game/Skills/Innates/Name.txt"/>
+					<Item href="/Text/Game/Skills/Innates/Name.txt"/>
+					<Item href="/Text/Game/Skills/Innates/Name.txt"/>
 				</NameFileRef>
 				<CommonNameFileRef href=""/>
 				<DescriptionFileRef>
-					<Item href="/Text/Game/Skills/Common/Learning/1/Description.txt"/>
-					<Item href="/Text/Game/Skills/Common/Learning/2/Description.txt"/>
-					<Item href="/Text/Game/Skills/Common/Learning/3/Description.txt"/>
+					<Item href="/Text/Game/Skills/Innates/Description.txt"/>
+					<Item href="/Text/Game/Skills/Innates/Description.txt"/>
+					<Item href="/Text/Game/Skills/Innates/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_SKILL</SkillType>
@@ -12960,9 +12966,9 @@
 						<FreelancerValue>0</FreelancerValue>
 					</Fortress>
 					<Stronghold>
-						<CommanderValue>1000</CommanderValue>
-						<CollectorSupplierValue>1000</CollectorSupplierValue>
-						<FreelancerValue>1000</FreelancerValue>
+						<CommanderValue>0</CommanderValue>
+						<CollectorSupplierValue>0</CollectorSupplierValue>
+						<FreelancerValue>0</FreelancerValue>
 					</Stronghold>
 				</AIRacesValues>
 				<PresetPrice>0</PresetPrice>
