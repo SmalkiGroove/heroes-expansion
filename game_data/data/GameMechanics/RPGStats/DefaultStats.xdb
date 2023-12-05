@@ -2694,13 +2694,11 @@
 							<Creature>CREATURE_DEFENDER</Creature>
 							<Bonus1>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
+									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
+									<IntParam>2</IntParam>
 									<FloatParam>0</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_FLAMEWAVE</Item>
-									</Abilities>
+									<Abilities />
 								</Item>
 							</Bonus1>
 							<Bonus2>
@@ -2710,19 +2708,17 @@
 									<FloatParam>0</FloatParam>
 									<Spells />
 									<Abilities>
-										<Item>ABILITY_HEXING_ATTACK</Item>
+										<Item>ABILITY_BRAVERY</Item>
 									</Abilities>
 								</Item>
 							</Bonus2>
 							<Bonus3>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
+									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
+									<IntParam>1</IntParam>
 									<FloatParam>0</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_MAGMA_SHIELD</Item>
-									</Abilities>
+									<Abilities />
 								</Item>
 							</Bonus3>
 						</Item>
@@ -2730,13 +2726,11 @@
 							<Creature>CREATURE_STOUT_DEFENDER</Creature>
 							<Bonus1>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
+									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
+									<IntParam>2</IntParam>
 									<FloatParam>0</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_FLAMEWAVE</Item>
-									</Abilities>
+									<Abilities />
 								</Item>
 							</Bonus1>
 							<Bonus2>
@@ -2746,19 +2740,17 @@
 									<FloatParam>0</FloatParam>
 									<Spells />
 									<Abilities>
-										<Item>ABILITY_HEXING_ATTACK</Item>
+										<Item>ABILITY_BRAVERY</Item>
 									</Abilities>
 								</Item>
 							</Bonus2>
 							<Bonus3>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
+									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
+									<IntParam>1</IntParam>
 									<FloatParam>0</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_MAGMA_SHIELD</Item>
-									</Abilities>
+									<Abilities />
 								</Item>
 							</Bonus3>
 						</Item>
@@ -2766,13 +2758,11 @@
 							<Creature>CREATURE_STONE_DEFENDER</Creature>
 							<Bonus1>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
+									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
+									<IntParam>2</IntParam>
 									<FloatParam>0</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_FLAMEWAVE</Item>
-									</Abilities>
+									<Abilities />
 								</Item>
 							</Bonus1>
 							<Bonus2>
@@ -2782,19 +2772,17 @@
 									<FloatParam>0</FloatParam>
 									<Spells />
 									<Abilities>
-										<Item>ABILITY_HEXING_ATTACK</Item>
+										<Item>ABILITY_BRAVERY</Item>
 									</Abilities>
 								</Item>
 							</Bonus2>
 							<Bonus3>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
+									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
+									<IntParam>1</IntParam>
 									<FloatParam>0</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_MAGMA_SHIELD</Item>
-									</Abilities>
+									<Abilities />
 								</Item>
 							</Bonus3>
 						</Item>
@@ -2802,13 +2790,11 @@
 							<Creature>CREATURE_AXE_FIGHTER</Creature>
 							<Bonus1>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
+									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
+									<IntParam>1</IntParam>
 									<FloatParam>0</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_FLAMEWAVE</Item>
-									</Abilities>
+									<Abilities />
 								</Item>
 							</Bonus1>
 							<Bonus2>
@@ -2818,19 +2804,24 @@
 									<FloatParam>0</FloatParam>
 									<Spells />
 									<Abilities>
-										<Item>ABILITY_HEXING_ATTACK</Item>
+										<Item>ABILITY_IMMUNITY_TO_CURSE</Item>
 									</Abilities>
 								</Item>
 							</Bonus2>
 							<Bonus3>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
+									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
+									<IntParam>2</IntParam>
 									<FloatParam>0</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_MAGMA_SHIELD</Item>
-									</Abilities>
+									<Abilities />
+								</Item>
+								<Item>
+									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
+									<IntParam>2</IntParam>
+									<FloatParam>0</FloatParam>
+									<Spells />
+									<Abilities />
 								</Item>
 							</Bonus3>
 						</Item>
@@ -2838,13 +2829,11 @@
 							<Creature>CREATURE_AXE_THROWER</Creature>
 							<Bonus1>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
+									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
+									<IntParam>1</IntParam>
 									<FloatParam>0</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_FLAMEWAVE</Item>
-									</Abilities>
+									<Abilities />
 								</Item>
 							</Bonus1>
 							<Bonus2>
@@ -2854,19 +2843,24 @@
 									<FloatParam>0</FloatParam>
 									<Spells />
 									<Abilities>
-										<Item>ABILITY_HEXING_ATTACK</Item>
+										<Item>ABILITY_IMMUNITY_TO_CURSE</Item>
 									</Abilities>
 								</Item>
 							</Bonus2>
 							<Bonus3>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
+									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
+									<IntParam>2</IntParam>
 									<FloatParam>0</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_MAGMA_SHIELD</Item>
-									</Abilities>
+									<Abilities />
+								</Item>
+								<Item>
+									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
+									<IntParam>2</IntParam>
+									<FloatParam>0</FloatParam>
+									<Spells />
+									<Abilities />
 								</Item>
 							</Bonus3>
 						</Item>
@@ -2874,13 +2868,11 @@
 							<Creature>CREATURE_HARPOONER</Creature>
 							<Bonus1>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
+									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
+									<IntParam>1</IntParam>
 									<FloatParam>0</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_FLAMEWAVE</Item>
-									</Abilities>
+									<Abilities />
 								</Item>
 							</Bonus1>
 							<Bonus2>
@@ -2890,19 +2882,114 @@
 									<FloatParam>0</FloatParam>
 									<Spells />
 									<Abilities>
-										<Item>ABILITY_HEXING_ATTACK</Item>
+										<Item>ABILITY_IMMUNITY_TO_CURSE</Item>
 									</Abilities>
 								</Item>
 							</Bonus2>
 							<Bonus3>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
+									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
+									<IntParam>2</IntParam>
 									<FloatParam>0</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_MAGMA_SHIELD</Item>
-									</Abilities>
+									<Abilities />
+								</Item>
+								<Item>
+									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
+									<IntParam>2</IntParam>
+									<FloatParam>0</FloatParam>
+									<Spells />
+									<Abilities />
+								</Item>
+							</Bonus3>
+						</Item>
+						<Item>
+							<Creature>CREATURE_BROWLER</Creature>
+							<Bonus1>
+								<Item>
+									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
+									<IntParam>3</IntParam>
+									<FloatParam>0</FloatParam>
+									<Spells />
+									<Abilities />
+								</Item>
+							</Bonus1>
+							<Bonus2>
+								<Item>
+									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
+									<IntParam>1</IntParam>
+									<FloatParam>0</FloatParam>
+									<Spells />
+									<Abilities />
+								</Item>
+							</Bonus2>
+							<Bonus3>
+								<Item>
+									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
+									<IntParam>2</IntParam>
+									<FloatParam>0</FloatParam>
+									<Spells />
+									<Abilities />
+								</Item>
+							</Bonus3>
+						</Item>
+						<Item>
+							<Creature>CREATURE_BERSERKER</Creature>
+							<Bonus1>
+								<Item>
+									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
+									<IntParam>3</IntParam>
+									<FloatParam>0</FloatParam>
+									<Spells />
+									<Abilities />
+								</Item>
+							</Bonus1>
+							<Bonus2>
+								<Item>
+									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
+									<IntParam>1</IntParam>
+									<FloatParam>0</FloatParam>
+									<Spells />
+									<Abilities />
+								</Item>
+							</Bonus2>
+							<Bonus3>
+								<Item>
+									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
+									<IntParam>2</IntParam>
+									<FloatParam>0</FloatParam>
+									<Spells />
+									<Abilities />
+								</Item>
+							</Bonus3>
+						</Item>
+						<Item>
+							<Creature>CREATURE_BATTLE_RAGER</Creature>
+							<Bonus1>
+								<Item>
+									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
+									<IntParam>3</IntParam>
+									<FloatParam>0</FloatParam>
+									<Spells />
+									<Abilities />
+								</Item>
+							</Bonus1>
+							<Bonus2>
+								<Item>
+									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
+									<IntParam>1</IntParam>
+									<FloatParam>0</FloatParam>
+									<Spells />
+									<Abilities />
+								</Item>
+							</Bonus2>
+							<Bonus3>
+								<Item>
+									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
+									<IntParam>2</IntParam>
+									<FloatParam>0</FloatParam>
+									<Spells />
+									<Abilities />
 								</Item>
 							</Bonus3>
 						</Item>
@@ -2915,19 +3002,17 @@
 									<FloatParam>0</FloatParam>
 									<Spells />
 									<Abilities>
-										<Item>ABILITY_FLAMEWAVE</Item>
+										<Item>ABILITY_LIZARD_BITE</Item>
 									</Abilities>
 								</Item>
 							</Bonus1>
 							<Bonus2>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
+									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
+									<IntParam>4</IntParam>
 									<FloatParam>0</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_HEXING_ATTACK</Item>
-									</Abilities>
+									<Abilities />
 								</Item>
 							</Bonus2>
 							<Bonus3>
@@ -2937,7 +3022,7 @@
 									<FloatParam>0</FloatParam>
 									<Spells />
 									<Abilities>
-										<Item>ABILITY_MAGMA_SHIELD</Item>
+										<Item>ABILITY_IMMUNITY_TO_SLOW</Item>
 									</Abilities>
 								</Item>
 							</Bonus3>
@@ -2951,19 +3036,17 @@
 									<FloatParam>0</FloatParam>
 									<Spells />
 									<Abilities>
-										<Item>ABILITY_FLAMEWAVE</Item>
+										<Item>ABILITY_LIZARD_BITE</Item>
 									</Abilities>
 								</Item>
 							</Bonus1>
 							<Bonus2>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
+									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
+									<IntParam>4</IntParam>
 									<FloatParam>0</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_HEXING_ATTACK</Item>
-									</Abilities>
+									<Abilities />
 								</Item>
 							</Bonus2>
 							<Bonus3>
@@ -2973,7 +3056,7 @@
 									<FloatParam>0</FloatParam>
 									<Spells />
 									<Abilities>
-										<Item>ABILITY_MAGMA_SHIELD</Item>
+										<Item>ABILITY_IMMUNITY_TO_SLOW</Item>
 									</Abilities>
 								</Item>
 							</Bonus3>
@@ -2987,19 +3070,17 @@
 									<FloatParam>0</FloatParam>
 									<Spells />
 									<Abilities>
-										<Item>ABILITY_FLAMEWAVE</Item>
+										<Item>ABILITY_LIZARD_BITE</Item>
 									</Abilities>
 								</Item>
 							</Bonus1>
 							<Bonus2>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
+									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
+									<IntParam>4</IntParam>
 									<FloatParam>0</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_HEXING_ATTACK</Item>
-									</Abilities>
+									<Abilities />
 								</Item>
 							</Bonus2>
 							<Bonus3>
@@ -3009,115 +3090,7 @@
 									<FloatParam>0</FloatParam>
 									<Spells />
 									<Abilities>
-										<Item>ABILITY_MAGMA_SHIELD</Item>
-									</Abilities>
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_BROWLER</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_FLAMEWAVE</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_HEXING_ATTACK</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_MAGMA_SHIELD</Item>
-									</Abilities>
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_BERSERKER</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_FLAMEWAVE</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_HEXING_ATTACK</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_MAGMA_SHIELD</Item>
-									</Abilities>
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_BATTLE_RAGER</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_FLAMEWAVE</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_HEXING_ATTACK</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_MAGMA_SHIELD</Item>
+										<Item>ABILITY_IMMUNITY_TO_SLOW</Item>
 									</Abilities>
 								</Item>
 							</Bonus3>
@@ -3131,7 +3104,7 @@
 									<FloatParam>0</FloatParam>
 									<Spells />
 									<Abilities>
-										<Item>ABILITY_FLAMEWAVE</Item>
+										<Item>ABILITY_IMMUNITY_TO_BERSERK</Item>
 									</Abilities>
 								</Item>
 							</Bonus1>
@@ -3142,19 +3115,17 @@
 									<FloatParam>0</FloatParam>
 									<Spells />
 									<Abilities>
-										<Item>ABILITY_HEXING_ATTACK</Item>
+										<Item>ABILITY_MANA_STEALER</Item>
 									</Abilities>
 								</Item>
 							</Bonus2>
 							<Bonus3>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
+									<Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type>
 									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
+									<FloatParam>1.2</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_MAGMA_SHIELD</Item>
-									</Abilities>
+									<Abilities />
 								</Item>
 							</Bonus3>
 						</Item>
@@ -3167,7 +3138,7 @@
 									<FloatParam>0</FloatParam>
 									<Spells />
 									<Abilities>
-										<Item>ABILITY_FLAMEWAVE</Item>
+										<Item>ABILITY_IMMUNITY_TO_BERSERK</Item>
 									</Abilities>
 								</Item>
 							</Bonus1>
@@ -3178,19 +3149,17 @@
 									<FloatParam>0</FloatParam>
 									<Spells />
 									<Abilities>
-										<Item>ABILITY_HEXING_ATTACK</Item>
+										<Item>ABILITY_MANA_STEALER</Item>
 									</Abilities>
 								</Item>
 							</Bonus2>
 							<Bonus3>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
+									<Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type>
 									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
+									<FloatParam>1.2</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_MAGMA_SHIELD</Item>
-									</Abilities>
+									<Abilities />
 								</Item>
 							</Bonus3>
 						</Item>
@@ -3203,7 +3172,7 @@
 									<FloatParam>0</FloatParam>
 									<Spells />
 									<Abilities>
-										<Item>ABILITY_FLAMEWAVE</Item>
+										<Item>ABILITY_IMMUNITY_TO_BERSERK</Item>
 									</Abilities>
 								</Item>
 							</Bonus1>
@@ -3214,19 +3183,17 @@
 									<FloatParam>0</FloatParam>
 									<Spells />
 									<Abilities>
-										<Item>ABILITY_HEXING_ATTACK</Item>
+										<Item>ABILITY_MANA_STEALER</Item>
 									</Abilities>
 								</Item>
 							</Bonus2>
 							<Bonus3>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
+									<Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type>
 									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
+									<FloatParam>1.2</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_MAGMA_SHIELD</Item>
-									</Abilities>
+									<Abilities />
 								</Item>
 							</Bonus3>
 						</Item>
@@ -3234,24 +3201,20 @@
 							<Creature>CREATURE_THANE</Creature>
 							<Bonus1>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
+									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
+									<IntParam>1</IntParam>
 									<FloatParam>0</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_FLAMEWAVE</Item>
-									</Abilities>
+									<Abilities />
 								</Item>
 							</Bonus1>
 							<Bonus2>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
+									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
+									<IntParam>1</IntParam>
 									<FloatParam>0</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_HEXING_ATTACK</Item>
-									</Abilities>
+									<Abilities />
 								</Item>
 							</Bonus2>
 							<Bonus3>
@@ -3261,7 +3224,7 @@
 									<FloatParam>0</FloatParam>
 									<Spells />
 									<Abilities>
-										<Item>ABILITY_MAGMA_SHIELD</Item>
+										<Item>ABILITY_AURA_OF_MAGIC_RESISTANCE</Item>
 									</Abilities>
 								</Item>
 							</Bonus3>
@@ -3270,24 +3233,20 @@
 							<Creature>CREATURE_WARLORD</Creature>
 							<Bonus1>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
+									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
+									<IntParam>1</IntParam>
 									<FloatParam>0</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_FLAMEWAVE</Item>
-									</Abilities>
+									<Abilities />
 								</Item>
 							</Bonus1>
 							<Bonus2>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
+									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
+									<IntParam>1</IntParam>
 									<FloatParam>0</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_HEXING_ATTACK</Item>
-									</Abilities>
+									<Abilities />
 								</Item>
 							</Bonus2>
 							<Bonus3>
@@ -3297,7 +3256,7 @@
 									<FloatParam>0</FloatParam>
 									<Spells />
 									<Abilities>
-										<Item>ABILITY_MAGMA_SHIELD</Item>
+										<Item>ABILITY_AURA_OF_MAGIC_RESISTANCE</Item>
 									</Abilities>
 								</Item>
 							</Bonus3>
@@ -3306,24 +3265,20 @@
 							<Creature>CREATURE_THUNDER_THANE</Creature>
 							<Bonus1>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
+									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
+									<IntParam>1</IntParam>
 									<FloatParam>0</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_FLAMEWAVE</Item>
-									</Abilities>
+									<Abilities />
 								</Item>
 							</Bonus1>
 							<Bonus2>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
+									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
+									<IntParam>1</IntParam>
 									<FloatParam>0</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_HEXING_ATTACK</Item>
-									</Abilities>
+									<Abilities />
 								</Item>
 							</Bonus2>
 							<Bonus3>
@@ -3333,7 +3288,7 @@
 									<FloatParam>0</FloatParam>
 									<Spells />
 									<Abilities>
-										<Item>ABILITY_MAGMA_SHIELD</Item>
+										<Item>ABILITY_AURA_OF_MAGIC_RESISTANCE</Item>
 									</Abilities>
 								</Item>
 							</Bonus3>
@@ -3342,24 +3297,20 @@
 							<Creature>CREATURE_FIRE_DRAGON</Creature>
 							<Bonus1>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
+									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
+									<IntParam>20</IntParam>
 									<FloatParam>0</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_FLAMEWAVE</Item>
-									</Abilities>
+									<Abilities />
 								</Item>
 							</Bonus1>
 							<Bonus2>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
+									<Type>DEMON_RAGE_BONUS_SPEED</Type>
+									<IntParam>1</IntParam>
 									<FloatParam>0</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_HEXING_ATTACK</Item>
-									</Abilities>
+									<Abilities />
 								</Item>
 							</Bonus2>
 							<Bonus3>
@@ -3369,7 +3320,7 @@
 									<FloatParam>0</FloatParam>
 									<Spells />
 									<Abilities>
-										<Item>ABILITY_MAGMA_SHIELD</Item>
+										<Item>ABILITY_REGENERATION</Item>
 									</Abilities>
 								</Item>
 							</Bonus3>
@@ -3378,24 +3329,20 @@
 							<Creature>CREATURE_MAGMA_DRAGON</Creature>
 							<Bonus1>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
+									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
+									<IntParam>20</IntParam>
 									<FloatParam>0</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_FLAMEWAVE</Item>
-									</Abilities>
+									<Abilities />
 								</Item>
 							</Bonus1>
 							<Bonus2>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
+									<Type>DEMON_RAGE_BONUS_SPEED</Type>
+									<IntParam>1</IntParam>
 									<FloatParam>0</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_HEXING_ATTACK</Item>
-									</Abilities>
+									<Abilities />
 								</Item>
 							</Bonus2>
 							<Bonus3>
@@ -3405,7 +3352,7 @@
 									<FloatParam>0</FloatParam>
 									<Spells />
 									<Abilities>
-										<Item>ABILITY_MAGMA_SHIELD</Item>
+										<Item>ABILITY_REGENERATION</Item>
 									</Abilities>
 								</Item>
 							</Bonus3>
@@ -3414,24 +3361,20 @@
 							<Creature>CREATURE_LAVA_DRAGON</Creature>
 							<Bonus1>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
+									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
+									<IntParam>20</IntParam>
 									<FloatParam>0</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_FLAMEWAVE</Item>
-									</Abilities>
+									<Abilities />
 								</Item>
 							</Bonus1>
 							<Bonus2>
 								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
+									<Type>DEMON_RAGE_BONUS_SPEED</Type>
+									<IntParam>1</IntParam>
 									<FloatParam>0</FloatParam>
 									<Spells />
-									<Abilities>
-										<Item>ABILITY_HEXING_ATTACK</Item>
-									</Abilities>
+									<Abilities />
 								</Item>
 							</Bonus2>
 							<Bonus3>
@@ -3441,11 +3384,18 @@
 									<FloatParam>0</FloatParam>
 									<Spells />
 									<Abilities>
-										<Item>ABILITY_MAGMA_SHIELD</Item>
+										<Item>ABILITY_REGENERATION</Item>
 									</Abilities>
 								</Item>
 							</Bonus3>
 						</Item>
+
+
+
+
+
+
+						
 						<Item>
 							<Creature>CREATURE_GOBLIN</Creature>
 							<Bonus1>
