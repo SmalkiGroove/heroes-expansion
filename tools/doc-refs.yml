@@ -142,7 +142,7 @@ CREATURES:
       tier: 5
       upgrade: 1
       path: Preserve/War_Unicorn.xdb
-    - name: WHITE UNICORN
+    - name: PRISTINE UNICORN
       tier: 5
       upgrade: 2
       path: Preserve/3rd/WhiteUnicorn.xdb
@@ -154,7 +154,7 @@ CREATURES:
       tier: 6
       upgrade: 1
       path: Preserve/Treant_Guardian.xdb
-    - name: ANGER TREANT
+    - name: SAVAGE TREANT
       tier: 6
       upgrade: 2
       path: Preserve/3rd/AngerTreant.xdb
@@ -276,7 +276,7 @@ CREATURES:
       tier: 2
       upgrade: 1
       path: Academy/Obsidian_Gargoyle.xdb
-    - name: ELEMENTAL GARGOYLE
+    - name: GOLDEN GARGOYLE
       tier: 2
       upgrade: 2
       path: Academy/3rd/MarbleGargoyle.xdb
@@ -324,7 +324,7 @@ CREATURES:
       tier: 6
       upgrade: 1
       path: Academy/Rakshasa_Rukh.xdb
-    - name: RAKSHASA KSHATRI
+    - name: RAKSHASA KSHATRA
       tier: 6
       upgrade: 2
       path: Academy/3rd/RakshasaKshatri.xdb
@@ -413,7 +413,7 @@ CREATURES:
       tier: 6
       upgrade: 2
       path: Dungeon/3rd/AcidicHydra.xdb
-    - name: DEEP DRAGON
+    - name: CAVE DRAGON
       tier: 7
       upgrade: 0
       path: Dungeon/Deep_Dragon.xdb
@@ -438,7 +438,7 @@ CREATURES:
       tier: 1
       upgrade: 2
       path: Necropolis/3rd/SkeletonWarrior.xdb
-    - name: WALKING DEAD
+    - name: ZOMBIE
       tier: 2
       upgrade: 0
       path: Necropolis/Walking_Dead.xdb
@@ -1010,3 +1010,245 @@ HEROES:
       path: Stronghold/Shiva.(AdvMapHeroShared).xdb
     - name: ZOULEIKA
       path: Stronghold/Zouleika.(AdvMapHeroShared).xdb
+
+SKILLS:
+  OFFENCE:
+    name: ''
+    desc: ''
+    perks:
+      - TACTICS
+      - OFFENSIVE_FORMATION
+      - SWIFTNESS
+      - ARCHERY
+      - FATAL_STRIKES
+      - PRECISION
+  DEFENSE:
+    name: ''
+    desc: ''
+    perks:
+      - HOLD_GROUND
+      - DEFENSIVE_FORMATION
+      - PREPARATION
+      - EVASION
+      - PROTECTION
+      - COVER
+  LEARNING:
+    name: ''
+    desc: ''
+    perks:
+      - INTUITION
+      - SCHOLAR
+      - MENTORING
+      - INTELLIGENCE
+      - EXALTATION
+      - MEDITATION
+  SORCERY:
+    name: ''
+    desc: ''
+    perks:
+      - ARCANE_INITIATION
+      - ARCANE_BRILLANCE
+      - ARCANE_EXCELLENCE
+      - MAGIC_INSIGHT
+      - GRADUATE
+      - OCCULTISM
+  VOICE:
+    name: ''
+    desc: ''
+    perks:
+      - VOICE_TRAINING
+      - BLOODLUST
+      - MIGHTY_SHOUT
+      - MIGHT_OVER_MAGIC
+      - DISTRACT
+      - PAIN_KILLER
+  LEADERSHIP:
+    name: ''
+    desc: ''
+    perks:
+      - DIPLOMACY
+      - LEADERSHIP_TODO1
+      - CHARISMA
+      - MOTIVATION
+      - ENCOURAGE
+      - LAST_STAND
+  GOVERNANCE:
+    name: ''
+    desc: ''
+    perks:
+      - ESTATES
+      - GEOLOGY
+      - INDUSTRY
+      - GEAR_UP
+      - HEROES_LEGACY
+      - MYTHS_AND_LEGENDS
+  LOGISTICS:
+    name: ''
+    desc: ''
+    perks:
+      - PATHFINDING
+      - SCOUTING
+      - SNATCH
+      - RECRUITMENT
+      - SPOILS_OF_WAR
+      - WAR_PATH
+  ARMY_SUPPORT:
+    name: ''
+    desc: ''
+    perks:
+      - BALLISTICS
+      - FLAMING_ARROWS
+      - RAPID_FIRE
+      - ANATOMY
+      - FIELD_ENGINEERS
+      - ARMY_SUPPORT_TODO1
+  TRAINING:
+    name: ''
+    desc: ''
+    perks:
+      - SHARPENING
+      - TOUGHNESS
+      - BATTLE_FRENZY
+      - EXPERTISE
+      - MAGIC_RESISTANCE
+      - DETERMINATION
+  COMBAT:
+    name: ''
+    desc: ''
+    perks:
+      - CRITICAL_STRIKE
+      - STUNNING_BLOW
+      - AVENGING_STRIKE
+      - POWERFUL_BLOW
+      - COMBAT_TODO1
+      - COMBAT_TODO2
+      - COMBAT_TODO3
+  LIGHT_MAGIC:
+    name: ''
+    desc: ''
+    perks:
+      - MASTER_OF_BLESSINGS
+      - MASTER_OF_ABJURATION
+      - MASTER_OF_WRATH
+      - FIRE_RESISTANCE
+      - ETERNAL_LIGHT
+      - COUNTERSPELL
+  DARK_MAGIC:
+    name: ''
+    desc: ''
+    perks:
+      - MASTER_OF_CURSES
+      - MASTER_OF_PAIN
+      - MASTER_OF_MIND
+      - PLAGUE_TENT
+      - SPIRIT_LINK
+      - PARIAH
+  NATURAL_MAGIC:
+    name: ''
+    desc: ''
+    perks:
+      - CONJURER
+      - ELEMENTAL_BALANCE
+      - SPIRIT_OF_THE_MAGMA
+      - SPIRIT_OF_THE_TORRENT
+      - SPIRIT_OF_THE_MOUNTAIN
+      - SPIRIT_OF_THE_HURRICANE
+      - SCORCHING_EARTH
+      - FOG_VEIL
+      - STORM_WIND
+  DESTRUCTIVE_MAGIC:
+    name: ''
+    desc: ''
+    perks:
+      - FROST_POWER
+      - DEADLY_COLD
+      - COLD_STEEL
+      - BLAZE_POWER
+      - IGNITE
+      - SECRETS_OF_DESTRUCT
+  COURAGE:
+    name: ''
+    desc: ''
+    perks:
+      - PRAYER
+      - EMPATHY
+      - GUARDIAN_ANGEL
+      - EXPERT_TRAINER
+      - RETALIATION_STRIKE
+      - HOLY_CHARGE
+      - RETRIBUTION
+  AVENGER:
+    name: ''
+    desc: ''
+    perks:
+      - IMBUE_ARROW
+      - IMBUE_BALLISTA
+      - BATTLE_COMMANDER
+      - DEADEYE_SHOT
+      - RAIN_OF_ARROWS
+      - SILENT_TRACKER
+      - SUPERNATURAL_LUCK
+  RUNELORE:
+    name: ''
+    desc: ''
+    perks:
+      - FINE_RUNE
+      - REFRESH_RUNE
+      - GREATER_RUNE
+      - TAP_RUNES
+      - RUNIC_ATTUNEMENT
+      - RUNIC_SHIELD
+      - BULWARK_RUNE
+  ARTIFICIER:
+    name: ''
+    desc: ''
+    perks:
+      - MARCH_OF_THE_GOLEMS
+      - ARTIFICIAL_GLORY
+      - REMOTE_CONTROL
+      - CONSUME_ARTIFACT
+      - MAGIC_BOND
+      - MAGIC_MIRROR
+      - OMNISCIENCE
+  ARCANISM:
+    name: ''
+    desc: ''
+    perks:
+      - EMPOWERED_SPELLS
+      - ERRATIC_MANA
+      - LUCKY_SPELLS
+      - POWER_OF_STONE
+      - POWER_OF_HASTE
+      - TELEPORT_ASSAULT
+  NECROMANCY:
+    name: ''
+    desc: ''
+    perks:
+      - CHILLING_BONES
+      - SPELLPROOF_BONES
+      - HERALD_OF_DEATH
+      - ETERNAL_SERVITUDE
+      - BANSHEE_HOWL
+      - HAUNTING
+  GATING:
+    name: ''
+    desc: ''
+    perks:
+      - SWIFT_GATING
+      - GATE_MASTER
+      - SWARMING_GATE
+      - HELLFIRE
+      - SEARING_FIRES
+      - FIERY_WRATH
+      - URGASHS_CALL
+  BLOOD_RAGE:
+    name: ''
+    desc: ''
+    perks:
+      - MEMORY_OF_OUR_BLOOD
+      - BATTLE_ELATION
+      - BLOODFIRE
+      - GOBLIN_SUPPORT
+      - DEFEND_US_ALL
+      - SHEER_STRENGTH
+      - ORCISH_FURY
