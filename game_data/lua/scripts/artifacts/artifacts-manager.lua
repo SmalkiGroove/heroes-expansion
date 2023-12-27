@@ -34,14 +34,10 @@ function ScanHeroArtifacts(hero)
     end
 end
 
-function UpdateArtifacts()
-    for player = 1,8 do
-        if IsPlayerCurrent(player) then
-			for i,hero in GetPlayerHeroes(player) do
-                print("Update artifact for hero "..hero)
-                ScanHeroArtifacts(hero)
-            end
-        end
+function UpdateArtifacts(player)
+    for i,hero in GetPlayerHeroes(player) do
+        print("Update artifact for hero "..hero)
+        ScanHeroArtifacts(hero)
     end
 end
 

@@ -164,6 +164,10 @@ function PlayerDailyHandler(player, newweek)
 			startThread(WEEKLY_ROUTINES[x_artifacts], player, hero)
 		end
 	end
+	while (IsPlayerCurrent(player)) do
+		-- UpdateArtifacts(player)
+		sleep(30)
+	end
 end
 
 function NewDayTrigger()
@@ -294,14 +298,5 @@ end
 InitializeHeroes()
 InitializeCombatHook()
 EnableBuildingConversion()
-
--- Game Loop
-function GameLoop()
-    while 1 do
-        sleep(30)
-        -- startThread(UpdateArtifacts)
-    end
-end
-startThread(GameLoop)
 
 INIT_SCRIPTS = 1
