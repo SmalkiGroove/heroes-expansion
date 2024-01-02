@@ -4511,15 +4511,15 @@
 				<HoldGround_DefendBonusMultiplier>2</HoldGround_DefendBonusMultiplier>
 				<HoldGround_TakeRootsBonusMultiplier>2</HoldGround_TakeRootsBonusMultiplier>
 				<Training>
-					<BasicDamageBonus>0.5</BasicDamageBonus>
-					<AdvancedDamageBonus>0.75</AdvancedDamageBonus>
-					<ExpertDamageBonus>1</ExpertDamageBonus>
-					<ExtraExpertDamageBonus>1.5</ExtraExpertDamageBonus>
+					<BasicDamageBonus>0.1</BasicDamageBonus>
+					<AdvancedDamageBonus>0.2</AdvancedDamageBonus>
+					<ExpertDamageBonus>0.3</ExpertDamageBonus>
+					<ExtraExpertDamageBonus>0.3</ExtraExpertDamageBonus>
 					<TrainingPointsPerWeek>7</TrainingPointsPerWeek>
 					<TrainingPointsPerWeek_Upgraded>20</TrainingPointsPerWeek_Upgraded>
 					<BaseCostMultiplier>2</BaseCostMultiplier>
-					<SkillTraining_CostDiscountPerLevel>15</SkillTraining_CostDiscountPerLevel>
-					<ExpertTrainer_CostDiscount>35</ExpertTrainer_CostDiscount>
+					<SkillTraining_CostDiscountPerLevel>0</SkillTraining_CostDiscountPerLevel>
+					<ExpertTrainer_CostDiscount>33</ExpertTrainer_CostDiscount>
 					<Suserain_CostDiscount>
 						<Base>1</Base>
 						<LevelDivisor>1</LevelDivisor>
@@ -4529,16 +4529,16 @@
 				<Prayer_DefenceBonus>2</Prayer_DefenceBonus>
 				<Prayer_InitiativeBonus>0.1</Prayer_InitiativeBonus>
 				<WhiteKnight_PrayerMultiplier>3</WhiteKnight_PrayerMultiplier>
-				<Encourage_ATBIncrease>0.5</Encourage_ATBIncrease>
+				<Encourage_ATBIncrease>0.3</Encourage_ATBIncrease>
 				<Retribution_DamageBonusPerMorale>0.05</Retribution_DamageBonusPerMorale>
 			</Knight>
 			<DemonLord>
 				<Gating>
 					<PortionOfSummonedByGatingLevel>
-						<Item>0.3</Item>
-						<Item>0.35</Item>
-						<Item>0.4</Item>
-						<Item>0.50</Item>
+						<Item>0.15</Item>
+						<Item>0.20</Item>
+						<Item>0.25</Item>
+						<Item>0.33</Item>
 					</PortionOfSummonedByGatingLevel>
 					<CallerStartATB>0.5</CallerStartATB>
 					<GatedStartATB>0</GatedStartATB>
@@ -4546,7 +4546,7 @@
 					<GatingMasteryPortionBonus>0.2</GatingMasteryPortionBonus>
 					<QuickGatingStartATB>0.75</QuickGatingStartATB>
 					<CriticalGatingConstantProb>0.1</CriticalGatingConstantProb>
-					<CriticalGatingPerLuckPointProb>0.05</CriticalGatingPerLuckPointProb>
+					<CriticalGatingPerLuckPointProb>0.1</CriticalGatingPerLuckPointProb>
 					<CriticalGatingPortionBonus>1</CriticalGatingPortionBonus>
 					<InfernalLoomPortionBonus>0.1</InfernalLoomPortionBonus>
 					<GatekeeperHeroSpecPerLevelPortionBonus>0.01</GatekeeperHeroSpecPerLevelPortionBonus>
@@ -4557,7 +4557,7 @@
 					<ManaCost>1</ManaCost>
 				</DemonicFire>
 				<ConsumeCorpseHPForOneMana>20</ConsumeCorpseHPForOneMana>
-				<CriticalStrike_ChanceToWork>50</CriticalStrike_ChanceToWork>
+				<CriticalStrike_ChanceToWork>40</CriticalStrike_ChanceToWork>
 			</DemonLord>
 			<Necromancer>
 				<Necromancy>
@@ -5147,7 +5147,7 @@
 				<DeathTread>
 					<SpeedBonus>3</SpeedBonus>
 				</DeathTread>
-				<SpiritLink_HPForOneMana>100</SpiritLink_HPForOneMana>
+				<SpiritLink_HPForOneMana>66</SpiritLink_HPForOneMana>
 				<DeathScream_MoralePenalty>1</DeathScream_MoralePenalty>
 				<DeathScream_InitiativePenalty>0.1</DeathScream_InitiativePenalty>
 				<DarkEissary_DeathScreamMultiplier>3</DarkEissary_DeathScreamMultiplier>
@@ -5157,7 +5157,7 @@
 				<ElementalChainBonusPerAltarOfChaos>0.1</ElementalChainBonusPerAltarOfChaos>
 				<ShakeGroundDamage>150</ShakeGroundDamage>
 				<ShakeGroundDamagePerPower>15</ShakeGroundDamagePerPower>
-				<ShakeGroundATBReduce>0.3</ShakeGroundATBReduce>
+				<ShakeGroundATBReduce>0.2</ShakeGroundATBReduce>
 			</Warlock>
 			<Wizard>
 				<Unsummon_DamagePerHeroLevel>40</Unsummon_DamagePerHeroLevel>
@@ -5170,27 +5170,27 @@
 				<SoilBurnDamagePerHeroLevel>10</SoilBurnDamagePerHeroLevel>
 				<StormWind_InitiativePenalty>0.2</StormWind_InitiativePenalty>
 				<StormWind_SpeedPenalty>1</StormWind_SpeedPenalty>
-				<FogVeil_InitiativePenalty>0.2</FogVeil_InitiativePenalty>
-				<FogVeil_DamageDecrease>0.2</FogVeil_DamageDecrease>
+				<FogVeil_InitiativePenalty>0.1</FogVeil_InitiativePenalty>
+				<FogVeil_DamageDecrease>0.1</FogVeil_DamageDecrease>
 				<ElvenLuck_DamageMultiplier>2.25</ElvenLuck_DamageMultiplier>
 				<ImbueArrow_ATBDropOnCast>0</ImbueArrow_ATBDropOnCast>
 			</Ranger>
 			<Runemage>
 				<StrongRune_2ndUseCostMultiplier>2</StrongRune_2ndUseCostMultiplier>
-				<FineRune_ChanceToActivateRuneForFree>50</FineRune_ChanceToActivateRuneForFree>
+				<FineRune_ChanceToActivateRuneForFree>30</FineRune_ChanceToActivateRuneForFree>
 				<QuicknessOfMind_InitiativeBonus>0.25</QuicknessOfMind_InitiativeBonus>
 				<TapRunes_ManaRestorePerKnowledge>0.5</TapRunes_ManaRestorePerKnowledge>
-				<RunicAttunement_EffectDurationInRounds>1</RunicAttunement_EffectDurationInRounds>
+				<RunicAttunement_EffectDurationInRounds>2</RunicAttunement_EffectDurationInRounds>
 				<RunicAttunement_MoraleBonus>2</RunicAttunement_MoraleBonus>
-				<Offensive_MaxOffenseBonus>10</Offensive_MaxOffenseBonus>
-				<Defensive_MaxDefenseBonus>10</Defensive_MaxDefenseBonus>
+				<Offensive_MaxOffenseBonus>15</Offensive_MaxOffenseBonus>
+				<Defensive_MaxDefenseBonus>15</Defensive_MaxDefenseBonus>
 				<Distract_EnemyHeroInitiativeDrop>0.15</Distract_EnemyHeroInitiativeDrop>
-				<SetAfire_DamageMultiplier>0.33</SetAfire_DamageMultiplier>
-				<SetAfire_DamageDurationInRounds>3</SetAfire_DamageDurationInRounds>
+				<SetAfire_DamageMultiplier>0.25</SetAfire_DamageMultiplier>
+				<SetAfire_DamageDurationInRounds>2</SetAfire_DamageDurationInRounds>
 				<ShrugDarkness_EnemySpellpowerMultiplier>0.5</ShrugDarkness_EnemySpellpowerMultiplier>
-				<RunicArmor_SpellpowerBonus>8</RunicArmor_SpellpowerBonus>
+				<RunicArmor_SpellpowerBonus>5</RunicArmor_SpellpowerBonus>
 				<RunicMachines_InitiativeBonus>3</RunicMachines_InitiativeBonus>
-				<Mentoring_ExpPecentToGiveToVisitor>0.33</Mentoring_ExpPecentToGiveToVisitor>
+				<Mentoring_ExpPecentToGiveToVisitor>0.3</Mentoring_ExpPecentToGiveToVisitor>
 				<Empathy_ATBAffectionOnMorale>0.1</Empathy_ATBAffectionOnMorale>
 				<Preparation_RetaliateToNER>true</Preparation_RetaliateToNER>
 			</Runemage>
@@ -5198,22 +5198,22 @@
 				<PowerfullBlow_ChanceToCritical>40</PowerfullBlow_ChanceToCritical>
 				<PathOfWar_MovePointsBonus>350</PathOfWar_MovePointsBonus>
 				<LuckOfTheBarbarian_MagicProofPerLuck>0.05</LuckOfTheBarbarian_MagicProofPerLuck>
-				<StunningBlow_ATBDrop>0.2</StunningBlow_ATBDrop>
+				<StunningBlow_ATBDrop>0.15</StunningBlow_ATBDrop>
 				<DefendUsAll_CreatureToCount>CREATURE_ORC_WARRIOR</DefendUsAll_CreatureToCount>
 				<DefendUsAll_CreatureCountMultiplier>2</DefendUsAll_CreatureCountMultiplier>
 				<GoblinSupport_GoblinsIncomePerDay>3</GoblinSupport_GoblinsIncomePerDay>
 				<Bodybuilding_HPBonusPercent>10</Bodybuilding_HPBonusPercent>
 				<VoiceTraining_WarcryCostDiscount>0.2</VoiceTraining_WarcryCostDiscount>
 				<DeathToNonexistent_DamageToSummonsMult>3</DeathToNonexistent_DamageToSummonsMult>
-				<MightyVoice_HeroLevelBonus>5</MightyVoice_HeroLevelBonus>
+				<MightyVoice_HeroLevelBonus>10</MightyVoice_HeroLevelBonus>
 				<VoiceOfRage_RageMultCallOfBlood>1.5</VoiceOfRage_RageMultCallOfBlood>
-				<VoiceOfRage_RageMultOther>2</VoiceOfRage_RageMultOther>
+				<VoiceOfRage_RageMultOther>1.5</VoiceOfRage_RageMultOther>
 				<BasicShatterMagic>
 					<SpellTrainedDecrease>
 						<Item>1</Item>
 						<Item>1</Item>
-						<Item>1</Item>
-						<Item>1</Item>
+						<Item>0</Item>
+						<Item>0</Item>
 						<Item>0</Item>
 					</SpellTrainedDecrease>
 					<SpellpowerDecreaseForTrainedDrop1BelowNone>0.25</SpellpowerDecreaseForTrainedDrop1BelowNone>
@@ -5221,8 +5221,8 @@
 				</BasicShatterMagic>
 				<AdvancedShatterMagic>
 					<SpellTrainedDecrease>
-						<Item>2</Item>
-						<Item>2</Item>
+						<Item>1</Item>
+						<Item>1</Item>
 						<Item>1</Item>
 						<Item>1</Item>
 						<Item>1</Item>
@@ -5241,9 +5241,9 @@
 					<SpellpowerDecreaseForTrainedDrop1BelowNone>0.25</SpellpowerDecreaseForTrainedDrop1BelowNone>
 					<SpellpowerDecreaseForTrainedDrop2BelowNone>0.5</SpellpowerDecreaseForTrainedDrop2BelowNone>
 				</ExpertShatterMagic>
-				<CorruptMagic_SpellCostIncrease>0.5</CorruptMagic_SpellCostIncrease>
-				<WeakenMagic_SpellPowerDecrease>0.3</WeakenMagic_SpellPowerDecrease>
-				<DetainMagic_CasterExtraATBDrop>0.3</DetainMagic_CasterExtraATBDrop>
+				<CorruptMagic_SpellCostIncrease>0.25</CorruptMagic_SpellCostIncrease>
+				<WeakenMagic_SpellPowerDecrease>0.25</WeakenMagic_SpellPowerDecrease>
+				<DetainMagic_CasterExtraATBDrop>0.25</DetainMagic_CasterExtraATBDrop>
 			</Barbarian>
 			<Melee>
 				<HeroDamageLevel1>
@@ -5274,15 +5274,15 @@
 			<DeathScreamLevelMultiplier>0.25</DeathScreamLevelMultiplier>
 			<SkillDefence>
 				<BasicDamageReduce>0.1</BasicDamageReduce>
-				<AdvancedDamageReduce>0.2</AdvancedDamageReduce>
-				<ExpertDamageReduce>0.3</ExpertDamageReduce>
-				<Evasion_DamageReduce>0.2</Evasion_DamageReduce>
+				<AdvancedDamageReduce>0.15</AdvancedDamageReduce>
+				<ExpertDamageReduce>0.2</ExpertDamageReduce>
+				<Evasion_DamageReduce>0.15</Evasion_DamageReduce>
 			</SkillDefence>
 			<SkillOffence>
 				<BasicDamageBonus>0.1</BasicDamageBonus>
 				<AdvancedDamageBonus>0.15</AdvancedDamageBonus>
 				<ExpertDamageBonus>0.2</ExpertDamageBonus>
-				<Archery_DamageBonus>0.2</Archery_DamageBonus>
+				<Archery_DamageBonus>0.15</Archery_DamageBonus>
 			</SkillOffence>
 		</HeroSkills>
 		<Obstacles>

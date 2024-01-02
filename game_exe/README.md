@@ -5,10 +5,10 @@
 - [x] 64 bits
 - [x] PEST enabled
 - [x] Adventure map and combat scripts enabled
-- [x] Expand to XXX hero classes
-- [x] Expand to XXX artifacts
-- [ ] Expand to XXX skills
-- [ ] Expand to XXX creatures
+- [x] Expand to 74 hero classes
+- [x] Expand to 196 artifacts
+- [ ] Expand to 255 skills
+- [ ] Expand to 255 creatures
 - [x] Allow heroes to learn up to 8 skills
 
 ### TOE bugfixes
@@ -65,8 +65,8 @@
 - [x] Make **Offensive / Defensive formation** skills applicable to all units
 - [x] Change **Chilling Bones** returned damage from 5% to 10%
 - [ ] Change **Dead Man's Luck** debuff from 1 to 2
-- [ ] Change **Protection** magic resistance from 15% to 20%
 - [x] Change **Erratic Mana** trigger chance from 50% to 100% and mana reduction from 10-50% to 10-30%
+- [ ] Change **Tactics** additional rows from 1 to 2
 
 ### Artifacts
 
@@ -89,7 +89,7 @@
 - [ ] Change spell charges for **Wand of X** and +4 spellpower when casting spell X
 - [ ] Change **Ring of Machine Affinity** multiplier for healing tent from 2 to 1
 - [ ] Add a 20% initiative buff to Ballista and Catapult for **Ring of Machine Affinity**
-- [ ] Change **Boots of the Swift Journey** movement buff value from 25% to 15%
+- [x] Change **Boots of the Swift Journey** movement buff value from 25% to 15%
 
 
 ### Spells
