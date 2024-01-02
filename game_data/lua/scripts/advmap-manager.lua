@@ -183,6 +183,7 @@ function AddPlayerHero(player, hero)
 	local faction = GetHeroFactionID(hero)
 	startThread(ReplaceStartingArmy, hero)
 	startThread(BindHeroLevelUpTrigger, hero)
+	startThread(BindHeroSkillTrigger, hero)
 	startThread(START_ROUTINES[faction], player, hero)
 end
 function AddPlayer1Hero(hero) AddPlayerHero(PLAYER_1, hero) end
@@ -196,6 +197,7 @@ function AddPlayer8Hero(hero) AddPlayerHero(PLAYER_8, hero) end
 
 function RemovePlayerHero(hero)
 	startThread(UnbindHeroLevelUpTrigger, hero)
+	startThread(UnbindHeroSkillTrigger, hero)
 end
 function RemovePlayer1Hero(hero) RemovePlayerHero(hero) end
 function RemovePlayer2Hero(hero) RemovePlayerHero(hero) end
