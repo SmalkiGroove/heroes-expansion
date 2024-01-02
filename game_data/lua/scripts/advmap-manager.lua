@@ -23,10 +23,6 @@ for i = 1,8 do
 	if IsPlayerCurrent(i) then startThread(InitMessage, i) end
 end
 
-x_skills=9 x_skills_data=18
-x_artifacts=10 x_artifacts_data=14 x_artifacts_sets=15 x_artifacts_manager=16
-x_conversion=11 x_combat_trigger=12 x_starting_armies=13
-
 ROUTINES_LOADED = {
 	[0] = 0, [1] = 0, [2] = 0, [3] = 0, [4] = 0, [5] = 0, [6] = 0, [7] = 0, [8] = 0,
 	[9] = 0, [10]= 0, [11]= 0, [12]= 0, [13]= 0, [14]= 0, [15]= 0, [16]= 0, [17]= 0,
@@ -48,15 +44,17 @@ LoadScript("/scripts/hero-advmap-routines/inferno.lua", INFERNO)
 LoadScript("/scripts/hero-advmap-routines/necropolis.lua", NECROPOLIS)
 LoadScript("/scripts/hero-advmap-routines/preserve.lua", PRESERVE)
 LoadScript("/scripts/hero-advmap-routines/stronghold.lua", STRONGHOLD)
-LoadScript("/scripts/artifacts/artifacts-data.lua", x_artifacts_data)
-LoadScript("/scripts/artifacts/artifact-sets.lua", x_artifacts_sets)
-LoadScript("/scripts/artifacts/artifacts-manager.lua", x_artifacts_manager)
-LoadScript("/scripts/hero-advmap-routines/x-artifacts.lua", x_artifacts)
-LoadScript("/scripts/building-conversion/conversion.lua", x_conversion)
-LoadScript("/scripts/object-initializers/combat-trigger.lua", x_combat_trigger)
-LoadScript("/scripts/object-initializers/starting-armies.lua", x_starting_armies)
-LoadScript("/scripts/skills/skills-data.lua", x_skills_data)
-LoadScript("/scripts/hero-advmap-routines/x-skills.lua", x_skills)
+LoadScript("/scripts/artifacts/artifacts-data.lua", 10)
+LoadScript("/scripts/artifacts/artifact-sets.lua", 11)
+LoadScript("/scripts/artifacts/artifacts-manager.lua", 12)
+LoadScript("/scripts/artifacts/artifacts-routines.lua", 13)
+LoadScript("/scripts/skills/skills-data.lua", 15)
+LoadScript("/scripts/skills/skills-manager.lua", 16)
+LoadScript("/scripts/skills/skills-routines.lua", 17)
+LoadScript("/scripts/building-conversion/conversion.lua", 20)
+LoadScript("/scripts/object-initializers/combat-trigger.lua", 21)
+LoadScript("/scripts/object-initializers/starting-armies.lua", 22)
+LoadScript("/scripts/object-initializers/hero-trigger.lua", 23)
 
 
 TURN = 1
@@ -92,7 +90,6 @@ START_ROUTINES = {
 	[6] = DoDungeonRoutine_Start,
 	[7] = DoFortressRoutine_Start,
 	[8] = DoStrongholdRoutine_Start,
-	[9] = DoSkillsRoutine_Start,
 }
 
 DAILY_ROUTINES = {
@@ -105,8 +102,6 @@ DAILY_ROUTINES = {
 	[6] = DoDungeonRoutine_Daily,
 	[7] = DoFortressRoutine_Daily,
 	[8] = DoStrongholdRoutine_Daily,
-	[9] = DoSkillsRoutine_Daily,
-	[10]= DoArtifactsRoutine_Daily,
 }
 
 WEEKLY_ROUTINES = {
@@ -119,20 +114,6 @@ WEEKLY_ROUTINES = {
 	[6] = DoDungeonRoutine_Weekly,
 	[7] = DoFortressRoutine_Weekly,
 	[8] = DoStrongholdRoutine_Weekly,
-	[9] = DoSkillsRoutine_Weekly,
-	[10]= DoArtifactsRoutine_Weekly,
-}
-
-LEVELUP_ROUTINES = {
-	[0] = DoCommonRoutine_LevelUp,
-	[1] = DoHavenRoutine_LevelUp,
-	[2] = DoPreserveRoutine_LevelUp,
-	[3] = DoInfernoRoutine_LevelUp,
-	[4] = DoNecropolisRoutine_LevelUp,
-	[5] = DoAcademyRoutine_LevelUp,
-	[6] = DoDungeonRoutine_LevelUp,
-	[7] = DoFortressRoutine_LevelUp,
-	[8] = DoStrongholdRoutine_LevelUp,
 }
 
 AFTER_COMBAT_ROUTINES = {
@@ -145,8 +126,6 @@ AFTER_COMBAT_ROUTINES = {
 	[6] = DoDungeonRoutine_AfterCombat,
 	[7] = DoFortressRoutine_AfterCombat,
 	[8] = DoStrongholdRoutine_AfterCombat,
-	[9] = DoSkillsRoutine_AfterCombat,
-	[10]= DoArtifactsRoutine_AfterCombat,
 }
 
 
@@ -156,12 +135,12 @@ function PlayerDailyHandler(player, newweek)
 	for i,hero in GetPlayerHeroes(player) do
 		local faction = GetHeroFactionID(hero)
 		startThread(DAILY_ROUTINES[faction], player, hero)
-		startThread(DAILY_ROUTINES[x_skills], player, hero)
-		startThread(DAILY_ROUTINES[x_artifacts], player, hero)
+		-- startThread(DAILY_ROUTINES[x_skills], player, hero)
+		-- startThread(DAILY_ROUTINES[x_artifacts], player, hero)
 		if newweek then 
 			startThread(WEEKLY_ROUTINES[faction], player, hero)
-			startThread(WEEKLY_ROUTINES[x_skills], player, hero)
-			startThread(WEEKLY_ROUTINES[x_artifacts], player, hero)
+			-- startThread(WEEKLY_ROUTINES[x_skills], player, hero)
+			-- startThread(WEEKLY_ROUTINES[x_artifacts], player, hero)
 		end
 	end
 	while (IsPlayerCurrent(player)) do
@@ -190,8 +169,8 @@ function CombatResultsHandler(combatIndex)
 		local player = GetSavedCombatArmyPlayer(combatIndex, 1)
 		local faction = GetHeroFactionID(hero)
 		startThread(AFTER_COMBAT_ROUTINES[faction], player, hero, combatIndex)
-		startThread(AFTER_COMBAT_ROUTINES[x_skills], player, hero, combatIndex)
-		startThread(AFTER_COMBAT_ROUTINES[x_artifacts], player, hero, combatIndex)
+		-- startThread(AFTER_COMBAT_ROUTINES[x_skills], player, hero, combatIndex)
+		-- startThread(AFTER_COMBAT_ROUTINES[x_artifacts], player, hero, combatIndex)
 	end
 end
 
@@ -200,79 +179,32 @@ Trigger(NEW_DAY_TRIGGER, "NewDayTrigger")
 Trigger(COMBAT_RESULTS_TRIGGER, "CombatResultsHandler")
 
 
-function AddPlayer1Hero(hero)
+function AddPlayerHero(player, hero)
 	local faction = GetHeroFactionID(hero)
 	startThread(ReplaceStartingArmy, hero)
-	startThread(START_ROUTINES[faction], PLAYER_1, hero)
-	startThread(LEVELUP_ROUTINES[faction], hero)
+	startThread(BindHeroLevelUpTrigger, hero)
+	startThread(START_ROUTINES[faction], player, hero)
 end
-function AddPlayer2Hero(hero)
-	local faction = GetHeroFactionID(hero)
-	startThread(ReplaceStartingArmy, hero)
-	startThread(START_ROUTINES[faction], PLAYER_2, hero)
-	startThread(LEVELUP_ROUTINES[faction], hero)
-end
-function AddPlayer3Hero(hero)
-	local faction = GetHeroFactionID(hero)
-	startThread(ReplaceStartingArmy, hero)
-	startThread(START_ROUTINES[faction], PLAYER_3, hero)
-	startThread(LEVELUP_ROUTINES[faction], hero)
-end
-function AddPlayer4Hero(hero)
-	local faction = GetHeroFactionID(hero)
-	startThread(ReplaceStartingArmy, hero)
-	startThread(START_ROUTINES[faction], PLAYER_4, hero)
-	startThread(LEVELUP_ROUTINES[faction], hero)
-end
-function AddPlayer5Hero(hero)
-	local faction = GetHeroFactionID(hero)
-	startThread(ReplaceStartingArmy, hero)
-	startThread(START_ROUTINES[faction], PLAYER_5, hero)
-	startThread(LEVELUP_ROUTINES[faction], hero)
-end
-function AddPlayer6Hero(hero)
-	local faction = GetHeroFactionID(hero)
-	startThread(ReplaceStartingArmy, hero)
-	startThread(START_ROUTINES[faction], PLAYER_6, hero)
-	startThread(LEVELUP_ROUTINES[faction], hero)
-end
-function AddPlayer7Hero(hero)
-	local faction = GetHeroFactionID(hero)
-	startThread(ReplaceStartingArmy, hero)
-	startThread(START_ROUTINES[faction], PLAYER_7, hero)
-	startThread(LEVELUP_ROUTINES[faction], hero)
-end
-function AddPlayer8Hero(hero)
-	local faction = GetHeroFactionID(hero)
-	startThread(ReplaceStartingArmy, hero)
-	startThread(START_ROUTINES[faction], PLAYER_8, hero)
-	startThread(LEVELUP_ROUTINES[faction], hero)
-end
+function AddPlayer1Hero(hero) AddPlayerHero(PLAYER_1, hero) end
+function AddPlayer2Hero(hero) AddPlayerHero(PLAYER_2, hero) end
+function AddPlayer3Hero(hero) AddPlayerHero(PLAYER_3, hero) end
+function AddPlayer4Hero(hero) AddPlayerHero(PLAYER_4, hero) end
+function AddPlayer5Hero(hero) AddPlayerHero(PLAYER_5, hero) end
+function AddPlayer6Hero(hero) AddPlayerHero(PLAYER_6, hero) end
+function AddPlayer7Hero(hero) AddPlayerHero(PLAYER_7, hero) end
+function AddPlayer8Hero(hero) AddPlayerHero(PLAYER_8, hero) end
 
-function RemovePlayer1Hero(hero)
-	Trigger(HERO_LEVELUP_TRIGGER, hero, nil)
+function RemovePlayerHero(hero)
+	startThread(UnbindHeroLevelUpTrigger, hero)
 end
-function RemovePlayer2Hero(hero)
-	Trigger(HERO_LEVELUP_TRIGGER, hero, nil)
-end
-function RemovePlayer3Hero(hero)
-	Trigger(HERO_LEVELUP_TRIGGER, hero, nil)
-end
-function RemovePlayer4Hero(hero)
-	Trigger(HERO_LEVELUP_TRIGGER, hero, nil)
-end
-function RemovePlayer5Hero(hero)
-	Trigger(HERO_LEVELUP_TRIGGER, hero, nil)
-end
-function RemovePlayer6Hero(hero)
-	Trigger(HERO_LEVELUP_TRIGGER, hero, nil)
-end
-function RemovePlayer7Hero(hero)
-	Trigger(HERO_LEVELUP_TRIGGER, hero, nil)
-end
-function RemovePlayer8Hero(hero)
-	Trigger(HERO_LEVELUP_TRIGGER, hero, nil)
-end
+function RemovePlayer1Hero(hero) RemovePlayerHero(hero) end
+function RemovePlayer2Hero(hero) RemovePlayerHero(hero) end
+function RemovePlayer3Hero(hero) RemovePlayerHero(hero) end
+function RemovePlayer4Hero(hero) RemovePlayerHero(hero) end
+function RemovePlayer5Hero(hero) RemovePlayerHero(hero) end
+function RemovePlayer6Hero(hero) RemovePlayerHero(hero) end
+function RemovePlayer7Hero(hero) RemovePlayerHero(hero) end
+function RemovePlayer8Hero(hero) RemovePlayerHero(hero) end
 
 for i = 1,8 do
 	Trigger(PLAYER_ADD_HERO_TRIGGER, i, ADD_PLAYER_HERO[i])
@@ -286,9 +218,9 @@ function InitializeHeroes()
 				-- print("Initialize hero "..hero)
 				local faction = GetHeroFactionID(hero)
 				startThread(ReplaceStartingArmy, hero)
-				startThread(LEVELUP_ROUTINES[faction], hero)
+				startThread(BindHeroLevelUpTrigger, hero)
 				startThread(START_ROUTINES[faction], player, hero)
-				startThread(START_ROUTINES[x_skills], player, hero)
+				-- startThread(START_ROUTINES[x_skills], player, hero)
 			end
 		end
 	end

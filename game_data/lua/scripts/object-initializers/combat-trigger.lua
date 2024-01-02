@@ -76,4 +76,4 @@ end
 
 
 -- print("Loaded monster advmap routines")
-ROUTINES_LOADED[x_combat_trigger] = 1
+ROUTINES_LOADED[21] = 1

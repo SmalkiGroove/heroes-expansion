@@ -200,8 +200,8 @@ function DoFortressRoutine_AfterCombat(player, hero, index)
     startThread(AFTER_COMBAT_TRIGGER_FORTRESS[hero], player, hero, index)
 end
 
-function DoFortressRoutine_LevelUp(hero)
-    Trigger(HERO_LEVELUP_TRIGGER, hero, LEVEL_UP_FORTRESS_HERO[hero])
+function DoFortressRoutine_LevelUp(player, hero)
+    startThread(LEVEL_UP_FORTRESS_HERO[hero], player, hero)
 end
 
 

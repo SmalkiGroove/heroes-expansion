@@ -159,4 +159,4 @@ end
 
 
 -- print("Loaded conversion advmap routines")
-ROUTINES_LOADED[x_conversion] = 1
+ROUTINES_LOADED[20] = 1

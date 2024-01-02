@@ -200,8 +200,8 @@ function DoNecropolisRoutine_AfterCombat(player, hero, index)
     startThread(AFTER_COMBAT_TRIGGER_NECROPOLIS[hero], player, hero, index)
 end
 
-function DoNecropolisRoutine_LevelUp(hero)
-    Trigger(HERO_LEVELUP_TRIGGER, hero, LEVEL_UP_NECRO_HERO[hero])
+function DoNecropolisRoutine_LevelUp(player, hero)
+    startThread(LEVEL_UP_NECRO_HERO[hero], player, hero)
 end
 
 

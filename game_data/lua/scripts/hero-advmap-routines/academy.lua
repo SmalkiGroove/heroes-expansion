@@ -178,8 +178,8 @@ function DoAcademyRoutine_AfterCombat(player, hero, index)
     startThread(AFTER_COMBAT_TRIGGER_ACADEMY[hero], player, hero, index)
 end
 
-function DoAcademyRoutine_LevelUp(hero)
-    Trigger(HERO_LEVELUP_TRIGGER, hero, LEVEL_UP_ACADEMY_HERO[hero])
+function DoAcademyRoutine_LevelUp(player, hero)
+    startThread(LEVEL_UP_ACADEMY_HERO[hero], player, hero)
 end
 
 

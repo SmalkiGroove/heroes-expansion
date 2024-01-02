@@ -204,8 +204,8 @@ function DoPreserveRoutine_AfterCombat(player, hero, index)
     startThread(AFTER_COMBAT_TRIGGER_PRESERVE[hero], player, hero, index)
 end
 
-function DoPreserveRoutine_LevelUp(hero)
-    Trigger(HERO_LEVELUP_TRIGGER, hero, LEVEL_UP_SYLVAN_HERO[hero])
+function DoPreserveRoutine_LevelUp(player, hero)
+    startThread(LEVEL_UP_SYLVAN_HERO[hero], player, hero)
 end
 
 

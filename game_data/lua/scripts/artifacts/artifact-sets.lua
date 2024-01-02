@@ -188,4 +188,4 @@ HERO_ACTIVE_ARTIFACT_SETS = {
 
 
 -- print("Loaded artifact sets script")
-ROUTINES_LOADED[x_artifacts_sets] = 1
+ROUTINES_LOADED[11] = 1

@@ -189,8 +189,8 @@ function DoHavenRoutine_AfterCombat(player, hero, index)
     startThread(AFTER_COMBAT_TRIGGER_HAVEN[hero], player, hero, index)
 end
 
-function DoHavenRoutine_LevelUp(hero)
-    Trigger(HERO_LEVELUP_TRIGGER, hero, LEVEL_UP_HAVEN_HERO[hero])
+function DoHavenRoutine_LevelUp(player, hero)
+    startThread(LEVEL_UP_HAVEN_HERO[hero], player, hero)
 end
 
 

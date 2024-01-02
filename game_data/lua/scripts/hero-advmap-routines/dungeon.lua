@@ -123,27 +123,6 @@ LEVEL_UP_DUNGEON_HERO = {
     [H_KASTORE] = "NoneRoutine",
 }
 
-LEARN_SKILL_DUNGEON_HERO = {
-    [H_SORGAL] = "NoneRoutine",
-    [H_KYTHRA] = "NoneRoutine",
-    [H_AGBETH] = "NoneRoutine",
-    [H_RANLETH] = "NoneRoutine",
-    [H_DARKSTORM] = "NoneRoutine",
-    [H_YRWANNA] = "NoneRoutine",
-    [H_VAYSHAN] = "NoneRoutine",
-    [H_THRALSAI] = "NoneRoutine",
-    [H_LETHOS] = "NoneRoutine",
-    [H_ERUINA] = "NoneRoutine",
-    [H_YRBETH] = "NoneRoutine",
-    [H_SYLSAI] = "NoneRoutine",
-    [H_SINITAR] = "NoneRoutine",
-    [H_SHADYA] = "NoneRoutine",
-    [H_RAELAG] = "NoneRoutine",
-    [H_YLAYA] = "NoneRoutine",
-    [H_SEPHINROTH] = "NoneRoutine",
-    [H_KASTORE] = "NoneRoutine",
-}
-
 START_TRIGGER_DUNGEON = {
     [H_SORGAL] = NoneRoutine,
     [H_KYTHRA] = NoneRoutine,
@@ -245,9 +224,8 @@ function DoDungeonRoutine_AfterCombat(player, hero, index)
     startThread(AFTER_COMBAT_TRIGGER_DUNGEON[hero], player, hero, index)
 end
 
-function DoDungeonRoutine_LevelUp(hero)
-    Trigger(HERO_LEVELUP_TRIGGER, hero, LEVEL_UP_DUNGEON_HERO[hero])
-    -- Trigger(HERO_ADD_SKILL_TRIGGER, hero, LEARN_SKILL_DUNGEON_HERO[hero])
+function DoDungeonRoutine_LevelUp(player, hero)
+    startThread(LEVEL_UP_DUNGEON_HERO[hero], player, hero)
 end
 
 

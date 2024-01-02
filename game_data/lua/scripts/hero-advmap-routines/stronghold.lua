@@ -240,8 +240,8 @@ function DoStrongholdRoutine_AfterCombat(player, hero, index)
     startThread(AFTER_COMBAT_TRIGGER_TRONGHOLD[hero], player, hero, index)
 end
 
-function DoStrongholdRoutine_LevelUp(hero)
-    Trigger(HERO_LEVELUP_TRIGGER, hero, LEVEL_UP_STRONGHOLD_HERO[hero])
+function DoStrongholdRoutine_LevelUp(player, hero)
+    startThread(LEVEL_UP_STRONGHOLD_HERO[hero], player, hero)
 end
 
 

@@ -3,7 +3,6 @@ function DoCommonRoutine_Start(player, hero) end
 function DoCommonRoutine_Daily(player, hero) end
 function DoCommonRoutine_Weekly(player, hero) end
 function DoCommonRoutine_AfterCombat(player, hero, index) end
-function DoCommonRoutine_LevelUp(hero) end
 
 function NoneRoutine()
     -- print("Nothing happens !")

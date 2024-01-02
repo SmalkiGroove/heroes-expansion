@@ -7,7 +7,6 @@ end
 
 START_TRIGGER_SKILLS_ROUTINES = {
     [SKILL_NONE] = NoneRoutine,
-    [SKILL_OFFENCE] = Routine_Offence,
 }
 
 DAILY_TRIGGER_SKILLS_ROUTINES = {
@@ -15,6 +14,10 @@ DAILY_TRIGGER_SKILLS_ROUTINES = {
 }
 
 WEEKLY_TRIGGER_SKILLS_ROUTINES = {
+    [SKILL_NONE] = NoneRoutine,
+}
+
+LEVELUP_TRIGGER_SKILLS_ROUTINES = {
     [SKILL_NONE] = NoneRoutine,
 }
 
@@ -48,6 +51,14 @@ function DoSkillsRoutine_Weekly(player, hero)
     end
 end
 
+function DoSkillsRoutine_LevelUp(player, hero)
+    for k,v in LEVELUP_TRIGGER_SKILLS_ROUTINES do
+        if HasHeroSkill(hero, k) then
+            startThread(v, player, hero)
+        end
+    end
+end
+
 function DoSkillsRoutine_AfterCombat(player, hero, index)
     for k,v in AFTER_COMBAT_TRIGGER_SKILLS_ROUTINES do
         if HasHeroSkill(hero, k) then
@@ -58,4 +69,4 @@ end
 
 
 -- print("Loaded skills advmap routines")
-ROUTINES_LOADED[x_skills] = 1
+ROUTINES_LOADED[17] = 1
