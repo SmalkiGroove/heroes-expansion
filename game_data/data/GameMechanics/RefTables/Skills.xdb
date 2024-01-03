@@ -1816,7 +1816,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_INFUSED</ID>
+			<ID>HERO_SKILL_INTELLIGENCE</ID>
 			<obj>
 				<Texture>
 					<Item href="/Textures/HeroScreen/Perks/Learning_Intelligence_grey.xdb#xpointer(/Texture)"/>
@@ -2450,11 +2450,18 @@
 					<Item href="/Text/Game/Skills/Common/Offence/Tactics/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
-				<SkillType>SKILLTYPE_STANDART_PERK</SkillType>
+				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
 				<BasicSkillID>HERO_SKILL_OFFENCE</BasicSkillID>
-				<SkillPrerequisites/>
+				<SkillPrerequisites>
+					<Item>
+						<Class>HERO_CLASS_NONE</Class>
+						<dependenciesIDs>
+							<Item>HERO_SKILL_OFFENSIVE_FORMATION</Item>
+						</dependenciesIDs>
+					</Item>
+				</SkillPrerequisites>
 				<AIRacesValues>
 					<Haven>
 						<CommanderValue>1000</CommanderValue>
@@ -9909,7 +9916,7 @@
 					<Item>
 						<Class>HERO_CLASS_NONE</Class>
 						<dependenciesIDs>
-							<Item>HERO_SKILL_OFFENSIVE_FORMATION</Item>
+							<Item>HERO_SKILL_TACTICS</Item>
 						</dependenciesIDs>
 					</Item>
 				</SkillPrerequisites>
@@ -11257,20 +11264,13 @@
 					<Item href="/Text/Game/Skills/Common/Offence/OffensiveFormation/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
-				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
+				<SkillType>SKILLTYPE_STANDART_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs>
 					<Item>SPELL_SKILL_OFFENSIVE_FORMATION</Item>
 				</spellBuffs>
 				<BasicSkillID>HERO_SKILL_OFFENCE</BasicSkillID>
-				<SkillPrerequisites>
-					<Item>
-						<Class>HERO_CLASS_NONE</Class>
-						<dependenciesIDs>
-							<Item>HERO_SKILL_TACTICS</Item>
-						</dependenciesIDs>
-					</Item>
-				</SkillPrerequisites>
+				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
 						<CommanderValue>1000</CommanderValue>
