@@ -1,26 +1,30 @@
 # Heroes Expansion
 
-The ultimate Heroes 5 fun experience !
+The new Heroes 5 experience !
 
 ## Context
 
-This mod was greatly inspired by Heroes 5.5 - thanks to Magnomagnus and Dredknight for their amazing ideas and realization.
-BUT... I personally don't enjoy that much playing H55 because most of the fun and unbalanced sh*t has been removed so I decided to change things and eventually made my own mod that keeps fun things from vanilla and from H55. And I tried to implement as much as I could the silly ideas of mine.
+This mod was greatly inspired by Heroes 5.5 - thanks to Magnomagnus and Dredknight for their amazing ideas and realization.  
+But this mod is made with a different spirit, it is not focused of perfect PvP balance but on "coolness" and fun, but still kind of balanced.  
+Heroes Expansion is a mix of the things we enjoy from vanilla H5 and H5.5, spiced with my own creations and edits.  
+Have fun !
 
 ## Mod Content
 
 ### Summary
 
 The main changes compared to vanilla are :
-- 2 hero classes per faction : one might and one magic
-- all hero specializations are more powerful and unique
-- revamped and unique skill tree
-- rebalancing of all creatures with a different tier curve
-- reworked and expanded artifacts and sets
-- and many more little things...
+- *2 hero classes per faction : one might and one magic*
+- *all hero specializations are more powerful and unique*
+- *revamped and unique skill tree*
+- *rebalancing of all creatures with a different power curve*
+- *reworked and expanded artifacts and sets*
+- *and many more little things...*
 
 ### Detailed documentation
 
 - [Creatures data](doc/CREATURES.md)
+- [Heroes data](doc/HEROES.md)
+- [Skills data](doc/SKILLS.md)
 
 Coming soon™
