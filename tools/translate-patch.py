@@ -40,13 +40,14 @@ for patch in content:
     elif "group: MapEditorOriginal" in patch:
         edits_editor.append(patch)
     else:
-        print("Invalid YAML block")
+        # print("Invalid YAML block")
+        continue
 del content
 print(f"> Processing patch file {path}")
 
 h5m_file = path.replace("patches_deflaktor", "patches\\h5toe").replace(os.path.basename(path), "h5m_" + os.path.basename(path))
 h5s_file = path.replace("patches_deflaktor", "patches\\h5qai").replace(os.path.basename(path), "h5s_" + os.path.basename(path))
-h5e_file = path.replace("patches_deflaktor", "patches\\h5qeditor").replace(os.path.basename(path), "h5e_" + os.path.basename(path))
+h5e_file = path.replace("patches_deflaktor", "patches\\h5editor").replace(os.path.basename(path), "h5e_" + os.path.basename(path))
 
 def get_size_type(t):
     type = str(t).lower()
