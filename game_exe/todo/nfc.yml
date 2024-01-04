@@ -1,0 +1,66 @@
+# ----------------------------------------------------
+# ----------- New Creatures Framework ----------------
+# ----------------------------------------------------
+# By SimonaK
+#
+# Original post:
+# http://heroescommunity.com/viewthread.php3?TID=27113
+# Updated thread:
+# http://heroescommunity.com/viewthread.php3?TID=27275
+#
+# -------------- Things you may want to modify -----------------
+definitions: 
+- &creatures_count      1000
+
+# -----------Things that should not be modified ----------------
+
+- &original_creatures_count  180
+
+--- # ----------- ORIGINAL EXE 3.1 PATCH DATA ------------
+ group: Original
+ checkAddress:   006CA770
+ checkBytes:     B8 05 00 00 00 C3 CC CC CC CC CC CC CC CC CC CC B8 B4 00 00 00 C3
+ patchAddress:   006CA781
+ valueType:      Integer
+ originalValue:  *original_creatures_count
+ patchValue:     *creatures_count
+---
+ group: Original
+ checkAddress:   006E1A10
+ checkBytes:     24 1C 89 7C 24 20 89 7C 24 24 E8 01 F5 91 FF 68
+ patchAddress:   006E1A20
+ valueType:      Integer
+ originalValue:  *original_creatures_count
+ patchValue:     *creatures_count
+--- # --------------- QUANTOMAS 3.1j PATCH DATA ---------------
+ group: Quantomas3.1j
+ checkAddress:   00448D30
+ checkBytes:     B8 05 00 00 00 C3 CC CC CC CC CC CC CC CC CC CC B8 B4 00 00 00 C3
+ patchAddress:   00448D41
+ valueType:      Integer
+ originalValue:  *original_creatures_count
+ patchValue:     *creatures_count
+---
+ group: Quantomas3.1j
+ checkAddress:   00461340
+ checkBytes:     B4 00 00 00 8D 44 24 24 50 8D 4C 24 1C 51 68 DC
+ patchAddress:   00461340
+ valueType:      Integer
+ originalValue:  *original_creatures_count
+ patchValue:     *creatures_count
+--- # ----------- MAP EDITOR EXE 3.1 PATCH DATA ------------
+ group: MapEditorOriginal
+ checkAddress:   004B6DB0
+ checkBytes:     B8 B4 00 00 00 C3 CC CC CC CC CC CC CC CC CC CC
+ patchAddress:   004B6DB1
+ valueType:      Integer
+ originalValue:  *original_creatures_count
+ patchValue:     *creatures_count
+---
+ group: MapEditorOriginal
+ checkAddress:   004CF860
+ checkBytes:     B4 00 00 00 8D 44 24 24 50 8D 4C 24 1C 51 68 10
+ patchAddress:   004CF860
+ valueType:      Integer
+ originalValue:  *original_creatures_count
+ patchValue:     *creatures_count
