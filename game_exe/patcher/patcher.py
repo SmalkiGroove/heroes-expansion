@@ -26,14 +26,17 @@ with open(path, 'r') as f:
     try:
         patch = yaml.safe_load(f)
         for c in patch['edits']:
-            check = c['address']
-            check = c['size']
-            check = c['type']
-            check = c['original']
-            check = c['modified']
+            check = int(c['address'], 16)
+            check = int(c['size'])
+            type = str(c['type'])
+            if not (type == 'int' or type == 'hex'):
+                raise ValueError()
+            check = int(c['original']) if type == 'int' else bytes.fromhex(c['original'])
+            check = int(c['modified']) if type == 'int' else bytes.fromhex(c['modified'])
     except:
         print(f"Patch file '{sys.argv[3]}' is not a valid patch file.")
         sys.exit(1)
+
 
 print(f"Files validation successful. Starting to {action} patch '{sys.argv[3]}' on binary file '{sys.argv[2]}'.")
 
@@ -52,8 +55,10 @@ def execute(address:int, size:int, before:bytes, after:bytes):
 
 for c in patch['edits']:
     address = int(c['address'], 16)
-    size = c['size']
-    type = c['type']
-    before = c['original']
-    after = c['modified']
+    size = int(c['size'])
+    type = str(c['type'])
+    original = int(c['original']).to_bytes(size, 'little') if type == 'int' else bytes.fromhex(str(c['original']))
+    modified = int(c['modified']).to_bytes(size, 'little') if type == 'int' else bytes.fromhex(str(c['modified']))
+    before = original if action == 'apply' else modified
+    after = modified if action == 'apply' else original
     execute(address, size, before, after)

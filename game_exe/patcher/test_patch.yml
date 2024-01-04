@@ -5,6 +5,11 @@ definitions:
 edits:
   - address: '00000000'
     size: 1
-    type: byte
+    type: int
     original: *original_value
     modified: *modified_value
+  - address: '00000010'
+    size: 2
+    type: hex
+    original: '80 88'
+    modified: '00 FF'
