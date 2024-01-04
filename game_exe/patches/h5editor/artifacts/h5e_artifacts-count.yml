@@ -1,0 +1,32 @@
+# Increase amount of artifacts to 255
+edits:
+  - name: Edit 1
+    address: '008C537F'
+    size: 2
+    type: hex
+    original: '6A 61'
+    modified: 'EB 57'
+  - name: Edit 2
+    address: '008C53D8'
+    size: 1
+    type: hex
+    original: 'CC'
+    modified: '68'
+  - name: Edit 3
+    address: '008C53D9'
+    size: 4
+    type: hex
+    original: 'CC CC CC CC'
+    modified: 'FF 00 00 00'
+  - name: Edit 4
+    address: '008C53DD'
+    size: 2
+    type: hex
+    original: 'CC CC'
+    modified: 'EB A2'
+  - name: Edit 5
+    address: '008C05D1'
+    size: 4
+    type: hex
+    original: '61 00 00 00'
+    modified: 'FF 00 00 00'

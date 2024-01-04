@@ -1,0 +1,15 @@
+# Description
+definitions: 
+- &tote_duration          01- &patched_duration       00edits:
+  - name: Edit 1
+    address: '004B8DA0'
+    size: 0
+    type: hex
+    original:  
+    modified:  
+  - name: Edit 2
+    address: '00587FB9'
+    size: 0
+    type: hex
+    original:  
+    modified:  

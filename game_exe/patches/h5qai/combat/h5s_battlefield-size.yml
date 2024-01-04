@@ -1,0 +1,15 @@
+# Description
+definitions: 
+- &original_width       12- &original_height      10- &modified_width       14- &modified_height      12edits:
+  - name: Edit 1
+    address: '0057D6E6'
+    size: 4
+    type: int
+    original: *original_width
+    modified: *modified_width
+  - name: Edit 2
+    address: '0057D6EC'
+    size: 4
+    type: int
+    original: *original_height  
+    modified: *modified_height

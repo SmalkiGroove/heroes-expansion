@@ -1,0 +1,8 @@
+# Description
+edits:
+  - name: Edit 1
+    address: '005BA74A'
+    size: 14
+    type: hex
+    original: 8B 06 8B E9 57 8B CE FF 50 6C 8B 16 8B CE
+    modified: 8B 16 8B E9 57 8B CE FF 52 6C 85 C0 74 69

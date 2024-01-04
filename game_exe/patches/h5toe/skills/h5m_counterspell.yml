@@ -1,0 +1,20 @@
+# Description
+edits:
+  - name: Edit 1
+    address: '00577A4B'
+    size: 6
+    type: hex
+    original: 8D 0C 3F 5E 2B C1
+    modified: E8 40 DD 7B 00 5E
+  - name: Edit 2
+    address: '00577AEF'
+    size: 5
+    type: hex
+    original: 8D 0C 1B 2B C1
+    modified: E8 A8 DC 7B 00
+  - name: Edit 3
+    address: '00BD9390'
+    size: 16
+    type: hex
+    original: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    modified: BB 0A 00 00 00 89 F9 0F AF C8 83 C1 64 29 C8 C3

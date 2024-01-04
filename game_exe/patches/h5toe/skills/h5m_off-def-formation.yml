@@ -1,0 +1,26 @@
+# Description
+edits:
+  - name: Edit 1
+    address: '004A18F1'
+    size: 6
+    type: hex
+    original: 0F 85 8D 00 00 00
+    modified: 90 90 90 90 90 90
+  - name: Edit 2
+    address: '004A1D6E'
+    size: 6
+    type: hex
+    original: 0F 85 F2 00 00 00
+    modified: 90 90 90 90 90 90
+  - name: Edit 3
+    address: '004A1DE6'
+    size: 2
+    type: hex
+    original: 75 0B
+    modified: 90 90
+  - name: Edit 4
+    address: '004A3DEE'
+    size: 6
+    type: hex
+    original: 0F 85 89 00 00 00
+    modified: 90 90 90 90 90 90

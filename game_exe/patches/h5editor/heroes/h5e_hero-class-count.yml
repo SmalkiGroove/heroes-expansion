@@ -1,0 +1,10 @@
+# Description
+definitions:
+- &new_class_count          74- &default_class_count      9             
+edits:
+  - name: Edit 1
+    address: '004CFC20'
+    size: 1
+    type: int
+    original: *default_class_count
+    modified: *new_class_count 

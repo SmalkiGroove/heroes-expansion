@@ -1,0 +1,35 @@
+# Description
+definitions: 
+ - &MOD_BASIC    25
+ - &MOD_ADVANCED 50
+ - &MOD_EXPERT   75
+ - &MOD_ULTIMATE 99
+ - &TOE_BASIC    20
+ - &TOE_ADVANCED 40
+ - &TOE_EXPERT   50
+ - &TOE_ULTIMATE 75
+edits:
+  - name: Edit 1
+    address: '00B4471C'
+    size: 1
+    type: int
+    original: *TOE_BASIC
+    modified: *MOD_BASIC
+  - name: Edit 2
+    address: '00B44720'
+    size: 1
+    type: int
+    original: *TOE_ADVANCED
+    modified: *MOD_ADVANCED
+  - name: Edit 3
+    address: '00B44724'
+    size: 1
+    type: int
+    original: *TOE_EXPERT
+    modified: *MOD_EXPERT
+  - name: Edit 4
+    address: '00B44728'
+    size: 1
+    type: int
+    original: *TOE_ULTIMATE
+    modified: *MOD_ULTIMATE

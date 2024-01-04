@@ -1,0 +1,40 @@
+# Change some hardcoded ATB related values
+definitions: 
+  - &mass_spells_atb                          0.30
+  - &wait_action_atb                          0.50
+  - &max_start_value_atb                      0.05
+  - &sorcery_atb                              0.10
+  - &original_atb_mass_spells                     0.50
+  - &original_atb_wait_action                     0.50
+  - &original_atb_max_start_value                 0.25
+edits:
+  - name: Edit mass spells ATB
+    address: '0074399F'
+    size: 4
+    type: float
+    original: *original_atb_mass_spells
+    modified: *mass_spells_atb
+  - name: Edit wait action ATB
+    address: '004C5C8C'
+    size: 4
+    type: float
+    original: *original_atb_wait_action
+    modified: *wait_action_atb
+  - name: Edit max start ATB
+    address: '004CE6F1'
+    size: 4
+    type: float
+    original: *original_atb_max_start_value
+    modified: *max_start_value_atb
+  - name: Store new sorcery bonus
+    address: '0000033C'
+    size: 4
+    type: float
+    original: 0
+    modified: *sorcery_atb
+  - name: Sorcery pointer to new value
+    address: '007439E9'
+    size: 4
+    type: hex
+    original: 'C0 9F E0 00'
+    modified: '3C 03 40 00'

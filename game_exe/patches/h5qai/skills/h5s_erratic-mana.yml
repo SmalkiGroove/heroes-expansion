@@ -1,0 +1,39 @@
+# Description
+definitions:
+- &MOD_chance  100
+- &MOD_max_multiplier 0.75
+- &MOD_min_multiplier 0.9
+- &TOE_chance  50
+- &TOE_max_multiplier 0.60000002
+- &TOE_min_multiplier 0.9
+edits:
+  - name: Edit 1
+    address: '005F7473'
+    size: 1
+    type: int
+    original: *TOE_chance
+    modified: *MOD_chance
+  - name: Edit 2
+    address: '005F749D'
+    size: 4
+    type: hex
+    original: D4 26 E2 00
+    modified: 34 C2 E0 00
+  - name: Edit 3
+    address: '007437FB'
+    size: 1
+    type: int
+    original: *TOE_chance
+    modified: *MOD_chance
+  - name: Edit 4
+    address: '00743832'
+    size: 4
+    type: int
+    original: *TOE_min_multiplier
+    modified: *MOD_min_multiplier
+  - name: Edit 5
+    address: '00743837'
+    size: 4
+    type: int
+    original: *TOE_max_multiplier
+    modified: *MOD_max_multiplier
