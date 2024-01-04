@@ -1,0 +1,10 @@
+# Test patch
+definitions:
+  - &original_value 0
+  - &modified_value 1
+edits:
+  - address: '00000000'
+    size: 1
+    type: byte
+    original: *original_value
+    modified: *modified_value
