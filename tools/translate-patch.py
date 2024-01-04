@@ -40,10 +40,9 @@ for patch in content:
     elif "group: MapEditorOriginal" in patch:
         edits_editor.append(patch)
     else:
-        print("Invalid YAML block :")
-        print(patch)
-        sys.exit(1)
+        print("Invalid YAML block")
 del content
+print(f"> Processing patch file {path}")
 
 h5m_file = path.replace("patches_deflaktor", "patches\\h5toe").replace(os.path.basename(path), "h5m_" + os.path.basename(path))
 h5s_file = path.replace("patches_deflaktor", "patches\\h5qai").replace(os.path.basename(path), "h5s_" + os.path.basename(path))
@@ -67,10 +66,10 @@ def get_size_type(t):
 def get_size_hex(h):
     hex = str(h).replace(" ","")
     n = len(hex)
-    if n % 2:
+    if n % 2 == 0:
         return int(0.5 * n)
     else:
-        print(f"WARN: hex string '{h}' has odd number of characters.")
+        print(f"WARN: hex string '{hex}' has odd number of characters.")
         return int(0.5 * (n+1))
     
 def write_patch(f, edits):
