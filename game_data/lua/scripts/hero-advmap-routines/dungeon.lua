@@ -1,45 +1,4 @@
 
-function Routine_AddHeroAttackPairLevel()
-    -- Attack - 1 per 2 level
-    local hero = H_KYTHRA
-    local player = GetObjectOwner(hero)
-    if mod(GetHeroLevel(hero), 2) == 0 then
-        AddHero_StatAmount(player, hero, STAT_ATTACK, 1)
-    end
-end
-
-function Routine_AddHeroSpellPowerPairLevel()
-    -- Spellpower - 1 per 2 level
-    local hero = H_SINITAR
-    local player = GetObjectOwner(hero)
-    if mod(GetHeroLevel(hero), 2) == 0 then
-        AddHero_StatAmount(player, hero, STAT_SPELL_POWER, 1)
-    end
-end
-
-function Routine_AddHeroLevel()
-    -- Level up every 5 levels
-    local hero = H_SHADYA
-    if mod(GetHeroLevel(hero), 5) == 0 then
-        LevelUpHero(hero)
-    end
-end
-
-function Routine_GainDragonArtifacts()
-    -- Dragon artfacts set
-    local hero = H_RAELAG
-    if GetHeroLevel(hero) == 40 then
-        GiveArtifact(hero, ARTIFACT_DRAGON_SCALE_ARMOR)
-        GiveArtifact(hero, ARTIFACT_DRAGON_SCALE_SHIELD)
-        GiveArtifact(hero, ARTIFACT_DRAGON_BONE_GRAVES)
-        GiveArtifact(hero, ARTIFACT_DRAGON_WING_MANTLE)
-        GiveArtifact(hero, ARTIFACT_DRAGON_TEETH_NECKLACE)
-        GiveArtifact(hero, ARTIFACT_DRAGON_TALON_CROWN)
-        GiveArtifact(hero, ARTIFACT_DRAGON_EYE_RING)
-        GiveArtifact(hero, ARTIFACT_DRAGON_FLAME_TONGUE)
-    end
-end
-
 function Routine_AddHeroRiders(player, hero)
     -- Riders - 1:4 - 2:10 - 3:17 - 4:24 - 5:30 ... 8:50
     AddHero_CreatureInTypes(player, hero, {CREATURE_RIDER,CREATURE_RAVAGER,CREATURE_BLACK_RIDER}, 0.15)
@@ -97,31 +56,45 @@ function Routine_UpgradeToWitches(player, hero)
     ChangeHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_RIDER, TOWN_BUILDING_DWELLING_5, CREATURE_MATRON, max_shadowwitch)
 end
 
+function Routine_AddHeroAttackPairLevel(player, hero)
+    -- Attack - 1 per 2 level
+    if mod(GetHeroLevel(hero), 2) == 0 then
+        AddHero_StatAmount(player, hero, STAT_ATTACK, 1)
+    end
+end
+
+function Routine_AddHeroSpellPowerPairLevel(player, hero)
+    -- Spellpower - 1 per 2 level
+    if mod(GetHeroLevel(hero), 2) == 0 then
+        AddHero_StatAmount(player, hero, STAT_SPELL_POWER, 1)
+    end
+end
+
+function Routine_AddHeroLevel(player, hero)
+    -- Level up every 5 levels
+    if mod(GetHeroLevel(hero), 6) == 0 then
+        LevelUpHero(hero)
+    end
+end
+
+function Routine_GainDragonArtifacts(player, hero)
+    -- Dragon artfacts set
+    if GetHeroLevel(hero) == 40 then
+        GiveArtifact(hero, ARTIFACT_DRAGON_SCALE_ARMOR)
+        GiveArtifact(hero, ARTIFACT_DRAGON_SCALE_SHIELD)
+        GiveArtifact(hero, ARTIFACT_DRAGON_BONE_GRAVES)
+        GiveArtifact(hero, ARTIFACT_DRAGON_WING_MANTLE)
+        GiveArtifact(hero, ARTIFACT_DRAGON_TEETH_NECKLACE)
+        GiveArtifact(hero, ARTIFACT_DRAGON_TALON_CROWN)
+        GiveArtifact(hero, ARTIFACT_DRAGON_EYE_RING)
+        GiveArtifact(hero, ARTIFACT_DRAGON_FLAME_TONGUE)
+    end
+end
+
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-LEVEL_UP_DUNGEON_HERO = {
-    [H_SORGAL] = "NoneRoutine",
-    [H_KYTHRA] = "Routine_AddHeroAttackPairLevel",
-    [H_AGBETH] = "NoneRoutine",
-    [H_RANLETH] = "NoneRoutine",
-    [H_DARKSTORM] = "NoneRoutine",
-    [H_YRWANNA] = "NoneRoutine",
-    [H_VAYSHAN] = "NoneRoutine",
-    [H_THRALSAI] = "NoneRoutine",
-    [H_LETHOS] = "NoneRoutine",
-    [H_ERUINA] = "NoneRoutine",
-    [H_YRBETH] = "NoneRoutine",
-    [H_SYLSAI] = "NoneRoutine",
-    [H_SINITAR] = "Routine_AddHeroSpellPowerPairLevel",
-    [H_SHADYA] = "Routine_AddHeroLevel",
-    [H_RAELAG] = "Routine_GainDragonArtifacts",
-    [H_YLAYA] = "NoneRoutine",
-    [H_SEPHINROTH] = "NoneRoutine",
-    [H_KASTORE] = "NoneRoutine",
-}
 
 START_TRIGGER_DUNGEON = {
     [H_SORGAL] = NoneRoutine,
@@ -186,6 +159,27 @@ WEEKLY_TRIGGER_DUNGEON = {
     [H_KASTORE] = NoneRoutine,
 }
 
+LEVEL_UP_DUNGEON_HERO = {
+    [H_SORGAL] = NoneRoutine,
+    [H_KYTHRA] = Routine_AddHeroAttackPairLevel,
+    [H_AGBETH] = NoneRoutine,
+    [H_RANLETH] = NoneRoutine,
+    [H_DARKSTORM] = NoneRoutine,
+    [H_YRWANNA] = NoneRoutine,
+    [H_VAYSHAN] = NoneRoutine,
+    [H_THRALSAI] = NoneRoutine,
+    [H_LETHOS] = NoneRoutine,
+    [H_ERUINA] = NoneRoutine,
+    [H_YRBETH] = NoneRoutine,
+    [H_SYLSAI] = NoneRoutine,
+    [H_SINITAR] = Routine_AddHeroSpellPowerPairLevel,
+    [H_SHADYA] = Routine_AddHeroLevel,
+    [H_RAELAG] = Routine_GainDragonArtifacts,
+    [H_YLAYA] = NoneRoutine,
+    [H_SEPHINROTH] = NoneRoutine,
+    [H_KASTORE] = NoneRoutine,
+}
+
 AFTER_COMBAT_TRIGGER_DUNGEON = {
     [H_SORGAL] = NoneRoutine,
     [H_KYTHRA] = NoneRoutine,
@@ -220,12 +214,12 @@ function DoDungeonRoutine_Weekly(player, hero)
     startThread(WEEKLY_TRIGGER_DUNGEON[hero], player, hero)
 end
 
-function DoDungeonRoutine_AfterCombat(player, hero, index)
-    startThread(AFTER_COMBAT_TRIGGER_DUNGEON[hero], player, hero, index)
-end
-
 function DoDungeonRoutine_LevelUp(player, hero)
     startThread(LEVEL_UP_DUNGEON_HERO[hero], player, hero)
+end
+
+function DoDungeonRoutine_AfterCombat(player, hero, index)
+    startThread(AFTER_COMBAT_TRIGGER_DUNGEON[hero], player, hero, index)
 end
 
 

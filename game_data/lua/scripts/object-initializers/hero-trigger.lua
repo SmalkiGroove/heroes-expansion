@@ -19,7 +19,7 @@ function HeroLevelUp(hero)
     -- print("Generic level up routine...")
     local player = GetObjectOwner(hero)
     local faction = GetHeroFactionID(hero)
-    startThread(LEVELUP_ROUTINES[faction], player, hero)
+    startThread(HEROSPE_LEVELUP_ROUTINES[faction], player, hero)
     startThread(SKILL_LEVELUP_ROUTINE, player, hero)
     startThread(ARTIFACT_LEVELUP_ROUTINE, player, hero)
 end

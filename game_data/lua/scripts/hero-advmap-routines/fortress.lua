@@ -21,17 +21,6 @@ TRANSFORM_ARRAY_FORTRESS = { 0,
 0 }
 
 
-function Routine_GainFortressArtifacts()
-    -- Dwarven artfacts set
-    local hero = H_HEDWIG
-    if GetHeroLevel(hero) == 40 then
-        GiveArtifact(hero, ARTIFACT_DWARVEN_MITHRAL_CUIRASS)
-        GiveArtifact(hero, ARTIFACT_DWARVEN_MITHRAL_GREAVES)
-        GiveArtifact(hero, ARTIFACT_DWARVEN_MITHRAL_HELMET)
-        GiveArtifact(hero, ARTIFACT_DWARVEN_MITHRAL_SHIELD)
-    end
-end
-
 function Routine_AddLuckAndMorale(player, hero)
     --Luck and Morale +2
     AddHero_StatAmount(player, hero, STAT_LUCK, 2)
@@ -78,30 +67,20 @@ function Routine_AddRecruitsBearRiders(player, hero)
     AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_BEAR_RIDER, 1.75)
 end
 
+function Routine_GainFortressArtifacts(player, hero)
+    -- Dwarven artfacts set
+    if GetHeroLevel(hero) == 40 then
+        GiveArtifact(hero, ARTIFACT_DWARVEN_MITHRAL_CUIRASS)
+        GiveArtifact(hero, ARTIFACT_DWARVEN_MITHRAL_GREAVES)
+        GiveArtifact(hero, ARTIFACT_DWARVEN_MITHRAL_HELMET)
+        GiveArtifact(hero, ARTIFACT_DWARVEN_MITHRAL_SHIELD)
+    end
+end
+
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-LEVEL_UP_FORTRESS_HERO = {
-    [H_INGVAR] = "NoneRoutine",
-    [H_ROLF] = "NoneRoutine",
-    [H_WULFSTAN] = "NoneRoutine",
-    [H_TAZAR] = "NoneRoutine",
-    [H_MAXIMUS] = "NoneRoutine",
-    [H_KARLI] = "NoneRoutine",
-    [H_HEDWIG] = "Routine_GainFortressArtifacts",
-    [H_TOLGHAR] = "NoneRoutine",
-    [H_EBBA] = "NoneRoutine",
-    [H_ULAND] = "NoneRoutine",
-    [H_HAEGEIR] = "NoneRoutine",
-    [H_HELMAR] = "NoneRoutine",
-    [H_BRAND] = "NoneRoutine",
-    [H_ERLING] = "NoneRoutine",
-    [H_HANGVUL] = "NoneRoutine",
-    [H_BART] = "NoneRoutine",
-    [H_INGA] = "NoneRoutine",
-}
 
 START_TRIGGER_FORTRESS = {
     [H_INGVAR] = NoneRoutine,
@@ -163,6 +142,26 @@ WEEKLY_TRIGGER_FORTRESS = {
     [H_INGA] = NoneRoutine,
 }
 
+LEVEL_UP_FORTRESS_HERO = {
+    [H_INGVAR] = NoneRoutine,
+    [H_ROLF] = NoneRoutine,
+    [H_WULFSTAN] = NoneRoutine,
+    [H_TAZAR] = NoneRoutine,
+    [H_MAXIMUS] = NoneRoutine,
+    [H_KARLI] = NoneRoutine,
+    [H_HEDWIG] = Routine_GainFortressArtifacts,
+    [H_TOLGHAR] = NoneRoutine,
+    [H_EBBA] = NoneRoutine,
+    [H_ULAND] = NoneRoutine,
+    [H_HAEGEIR] = NoneRoutine,
+    [H_HELMAR] = NoneRoutine,
+    [H_BRAND] = NoneRoutine,
+    [H_ERLING] = NoneRoutine,
+    [H_HANGVUL] = NoneRoutine,
+    [H_BART] = NoneRoutine,
+    [H_INGA] = NoneRoutine,
+}
+
 AFTER_COMBAT_TRIGGER_FORTRESS = {
     [H_INGVAR] = NoneRoutine,
     [H_ROLF] = NoneRoutine,
@@ -196,12 +195,12 @@ function DoFortressRoutine_Weekly(player, hero)
     startThread(WEEKLY_TRIGGER_FORTRESS[hero], player, hero)
 end
 
-function DoFortressRoutine_AfterCombat(player, hero, index)
-    startThread(AFTER_COMBAT_TRIGGER_FORTRESS[hero], player, hero, index)
-end
-
 function DoFortressRoutine_LevelUp(player, hero)
     startThread(LEVEL_UP_FORTRESS_HERO[hero], player, hero)
+end
+
+function DoFortressRoutine_AfterCombat(player, hero, index)
+    startThread(AFTER_COMBAT_TRIGGER_FORTRESS[hero], player, hero, index)
 end
 
 

@@ -1,22 +1,4 @@
 
-function Routine_AddHeroLuck()
-    --Luck +1 per 10 levels
-    local hero = H_ANWEN
-    local player = GetObjectOwner(hero)
-    if mod(GetHeroLevel(hero), 10) == 0 then
-        AddHero_StatAmount(player, hero, STAT_LUCK, 1)
-    end
-end
-
-function Routine_GainSylvanArtifacts()
-    -- Ring of haste and Moonblade
-    local hero = H_HEDWIG
-    if GetHeroLevel(hero) == 30 then
-        GiveArtifact(hero, ARTIFACT_RING_OF_HASTE)
-        GiveArtifact(hero, ARTIFACT_MOONBLADE)
-    end
-end
-
 function Routine_AddThreeMoralePoints(player, hero)
     -- Morale +3
     AddHero_StatAmount(player, hero, STAT_MORALE, 3)
@@ -70,6 +52,21 @@ function Routine_AddHeroSpellPower(player, hero)
     AddHero_StatPerLevel(player, hero, STAT_SPELL_POWER, 0.2)
 end
 
+function Routine_AddHeroLuck(player, hero)
+    --Luck +1 per 10 levels
+    if mod(GetHeroLevel(hero), 10) == 0 then
+        AddHero_StatAmount(player, hero, STAT_LUCK, 1)
+    end
+end
+
+function Routine_GainSylvanArtifacts(player, hero)
+    -- Ring of haste and Moonblade
+    if GetHeroLevel(hero) == 30 then
+        GiveArtifact(hero, ARTIFACT_RING_OF_HASTE)
+        GiveArtifact(hero, ARTIFACT_MOONBLADE)
+    end
+end
+
 function Routine_RezHunters(player, hero, combatIndex)
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
     for i = 0,stacks-1 do
@@ -86,26 +83,6 @@ end
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-LEVEL_UP_SYLVAN_HERO = {
-    [H_WYNGAAL] = "NoneRoutine",
-    [H_ANWEN] = "Routine_AddHeroLuck",
-    [H_TALANAR] = "NoneRoutine",
-    [H_OSSIR] = "NoneRoutine",
-    [H_FINDAN] = "NoneRoutine",
-    [H_JENOVA] = "NoneRoutine",
-    [H_GILRAEN] = "NoneRoutine",
-    [H_KYRRE] = "Routine_GainSylvanArtifacts",
-    [H_IVOR] = "NoneRoutine",
-    [H_MEPHALA] = "NoneRoutine",
-    [H_ALARON] = "NoneRoutine",
-    [H_DIRAEL] = "NoneRoutine",
-    [H_VINRAEL] = "NoneRoutine",
-    [H_YLTHIN] = "NoneRoutine",
-    [H_TIERU] = "NoneRoutine",
-    [H_GEM] = "NoneRoutine",
-    [H_ELLESHAR] = "NoneRoutine",
-}
 
 START_TRIGGER_PRESERVE = {
     [H_WYNGAAL] = Routine_AddThreeMoralePoints,
@@ -167,6 +144,26 @@ WEEKLY_TRIGGER_PRESERVE = {
     [H_ELLESHAR] = Routine_AddHeroSpellPower,
 }
 
+LEVEL_UP_SYLVAN_HERO = {
+    [H_WYNGAAL] = NoneRoutine,
+    [H_ANWEN] = Routine_AddHeroLuck,
+    [H_TALANAR] = NoneRoutine,
+    [H_OSSIR] = NoneRoutine,
+    [H_FINDAN] = NoneRoutine,
+    [H_JENOVA] = NoneRoutine,
+    [H_GILRAEN] = NoneRoutine,
+    [H_KYRRE] = Routine_GainSylvanArtifacts,
+    [H_IVOR] = NoneRoutine,
+    [H_MEPHALA] = NoneRoutine,
+    [H_ALARON] = NoneRoutine,
+    [H_DIRAEL] = NoneRoutine,
+    [H_VINRAEL] = NoneRoutine,
+    [H_YLTHIN] = NoneRoutine,
+    [H_TIERU] = NoneRoutine,
+    [H_GEM] = NoneRoutine,
+    [H_ELLESHAR] = NoneRoutine,
+}
+
 AFTER_COMBAT_TRIGGER_PRESERVE = {
     [H_WYNGAAL] = NoneRoutine,
     [H_ANWEN] = NoneRoutine,
@@ -200,12 +197,12 @@ function DoPreserveRoutine_Weekly(player, hero)
     startThread(WEEKLY_TRIGGER_PRESERVE[hero], player, hero)
 end
 
-function DoPreserveRoutine_AfterCombat(player, hero, index)
-    startThread(AFTER_COMBAT_TRIGGER_PRESERVE[hero], player, hero, index)
-end
-
 function DoPreserveRoutine_LevelUp(player, hero)
     startThread(LEVEL_UP_SYLVAN_HERO[hero], player, hero)
+end
+
+function DoPreserveRoutine_AfterCombat(player, hero, index)
+    startThread(AFTER_COMBAT_TRIGGER_PRESERVE[hero], player, hero, index)
 end
 
 

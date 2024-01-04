@@ -1,24 +1,4 @@
 
-function Routine_GainAttackInferno()
-    --Att +1 / 5 levels
-    local hero = H_NEBIROS
-    local player = GetObjectOwner(hero)
-    local level = GetHeroLevel(hero)
-    if mod(level, 5) == 0 then
-        AddHero_StatAmount(player, hero, STAT_ATTACK, 1)
-    end
-end
-
-function Routine_AddRandomStat()
-    -- Random attribute - +1 / lvl + lvl / 10
-    local hero = H_NEBIROS
-    local player = GetObjectOwner(hero)
-    local level = GetHeroLevel(hero)
-    local stat = random(1, 4, level)
-    local amount = 1 + trunc(level * 0.1)
-    AddHero_StatAmount(player, hero, stat, amount)
-end
-
 function Routine_AddHeroHellHounds(player, hero)
     -- Hell hounds - 1:2 - 2:5 - 3:8 - 4:11 - ... - 17:50
     AddHero_CreatureInTypes(player, hero, {CREATURE_HELL_HOUND,CREATURE_CERBERI,CREATURE_FIREBREATHER_HOUND}, 0.33)
@@ -58,30 +38,26 @@ function Routine_AddRecruitsInferno(player, hero)
     AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_7, CREATURE_DEVIL, 0.1)
 end
 
+function Routine_GainAttackInferno(player, hero)
+    --Att +1 / 5 levels
+    local level = GetHeroLevel(hero)
+    if mod(level, 5) == 0 then
+        AddHero_StatAmount(player, hero, STAT_ATTACK, 1)
+    end
+end
+
+function Routine_AddRandomStat(player, hero)
+    -- Random attribute - +1 / lvl + lvl / 10
+    local level = GetHeroLevel(hero)
+    local stat = random(1, 4, level)
+    local amount = 1 + trunc(level * 0.1)
+    AddHero_StatAmount(player, hero, stat, amount)
+end
+
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-LEVEL_UP_INFERNO_HERO = {
-    [H_GRAWL] = "NoneRoutine",
-    [H_NEBIROS] = "Routine_GainAttackInferno",
-    [H_MARBAS] = "NoneRoutine",
-    [H_HARKENRAZ] = "NoneRoutine",
-    [H_CALH] = "NoneRoutine",
-    [H_SHELTEM] = "NoneRoutine",
-    [H_ALASTOR] = "NoneRoutine",
-    [H_GROK] = "NoneRoutine",
-    [H_NYMUS] = "NoneRoutine",
-    [H_JEZEBETH] = "NoneRoutine",
-    [H_MALUSTAR] = "Routine_AddRandomStat",
-    [H_AGRAEL] = "NoneRoutine",
-    [H_BIARA] = "NoneRoutine",
-    [H_KHABELETH] = "NoneRoutine",
-    [H_ZYDAR] = "NoneRoutine",
-    [H_DELEB] = "NoneRoutine",
-    [H_CALID] = "NoneRoutine",
-}
 
 START_TRIGGER_INFERNO = {
     [H_GRAWL] = NoneRoutine,
@@ -143,6 +119,26 @@ WEEKLY_TRIGGER_INFERNO = {
     [H_CALID] = NoneRoutine,
 }
 
+LEVEL_UP_INFERNO_HERO = {
+    [H_GRAWL] = NoneRoutine,
+    [H_NEBIROS] = Routine_GainAttackInferno,
+    [H_MARBAS] = NoneRoutine,
+    [H_HARKENRAZ] = NoneRoutine,
+    [H_CALH] = NoneRoutine,
+    [H_SHELTEM] = NoneRoutine,
+    [H_ALASTOR] = NoneRoutine,
+    [H_GROK] = NoneRoutine,
+    [H_NYMUS] = NoneRoutine,
+    [H_JEZEBETH] = NoneRoutine,
+    [H_MALUSTAR] = Routine_AddRandomStat,
+    [H_AGRAEL] = NoneRoutine,
+    [H_BIARA] = NoneRoutine,
+    [H_KHABELETH] = NoneRoutine,
+    [H_ZYDAR] = NoneRoutine,
+    [H_DELEB] = NoneRoutine,
+    [H_CALID] = NoneRoutine,
+}
+
 AFTER_COMBAT_TRIGGER_INFERNO = {
     [H_GRAWL] = NoneRoutine,
     [H_NEBIROS] = NoneRoutine,
@@ -176,12 +172,12 @@ function DoInfernoRoutine_Weekly(player, hero)
     startThread(WEEKLY_TRIGGER_INFERNO[hero], player, hero)
 end
 
-function DoInfernoRoutine_AfterCombat(player, hero, index)
-    startThread(AFTER_COMBAT_TRIGGER_INFERNO[hero], player, hero, index)
-end
-
 function DoInfernoRoutine_LevelUp(player, hero)
     startThread(LEVEL_UP_INFERNO_HERO[hero], player, hero)
+end
+
+function DoInfernoRoutine_AfterCombat(player, hero, index)
+    startThread(AFTER_COMBAT_TRIGGER_INFERNO[hero], player, hero, index)
 end
 
 

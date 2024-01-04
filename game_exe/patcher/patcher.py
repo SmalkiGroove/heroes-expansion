@@ -35,11 +35,11 @@ with open(path, 'r') as f:
             check = int(c['original']) if type == 'int' else bytes.fromhex(c['original'])
             check = int(c['modified']) if type == 'int' else bytes.fromhex(c['modified'])
     except:
-        print(f"Patch file '{sys.argv[3]}' is not a valid patch file.")
+        print(f"Patch file '{os.path.basename(path)}' is not a valid patch file.")
         sys.exit(1)
 
 
-print(f"Files validation successful. Starting to {action} patch '{sys.argv[3]}' on binary file '{sys.argv[2]}'.")
+print(f"Files validation successful. Starting to {action} patch '{os.path.basename(path)}' on binary file '{os.path.basename(binary)}'.")
 
 def execute(name:str, address:int, size:int, before:bytes, after:bytes):
     with open(binary, 'r+b') as bin:

@@ -1,16 +1,4 @@
 
-function Routine_GainAcademyArtifacts()
-    -- Book of power / Tunic of enlightment / Sandal of the blessed / Staff of sar-issus / Tome of summoning magic
-    local hero = H_JOSEPHINE
-    local level = GetHeroLevel(hero)
-    if     level == 10 then GiveArtifact(hero, ARTIFACT_BOOK_OF_POWER)
-    elseif level == 20 then GiveArtifact(hero, ARTIFACT_CHAIN_MAIL_OF_ENLIGHTMENT)
-    elseif level == 30 then GiveArtifact(hero, ARTIFACT_SANDALS_OF_THE_SAINT)
-    elseif level == 40 then GiveArtifact(hero, ARTIFACT_STAFF_OF_MAGI)
-    elseif level == 50 then GiveArtifact(hero, ARTIFACT_TOME_OF_SUMMONING_MAGIC)
-    end
-end
-
 function Routine_GainArtifactTarotDeck(player, hero)
     -- Give hero artifact Tarot deck
     GiveArtifact(hero, ARTIFACT_TAROT_DECK)
@@ -56,30 +44,21 @@ function Routine_AddRecruitsRakshasas(player, hero)
     AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_6, CREATURE_RAKSHASA, 0.25)
 end
 
+function Routine_GainAcademyArtifacts(player, hero)
+    -- Book of power / Tunic of enlightment / Sandal of the blessed / Staff of sar-issus / Tome of summoning magic
+    local level = GetHeroLevel(hero)
+    if     level == 10 then GiveArtifact(hero, ARTIFACT_BOOK_OF_POWER)
+    elseif level == 20 then GiveArtifact(hero, ARTIFACT_CHAIN_MAIL_OF_ENLIGHTMENT)
+    elseif level == 30 then GiveArtifact(hero, ARTIFACT_SANDALS_OF_THE_SAINT)
+    elseif level == 40 then GiveArtifact(hero, ARTIFACT_STAFF_OF_MAGI)
+    elseif level == 50 then GiveArtifact(hero, ARTIFACT_TOME_OF_SUMMONING_MAGIC)
+    end
+end
+
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-LEVEL_UP_ACADEMY_HERO = {
-    [H_HAVEZ] = "NoneRoutine",
-    [H_MINASLI] = "NoneRoutine",
-    [H_JOSEPHINE] = "Routine_GainAcademyArtifacts",
-    [H_RAZZAK] = "NoneRoutine",
-    [H_DAVIUS] = "NoneRoutine",
-    [H_RISSA] = "NoneRoutine",
-    [H_GURVILIN] = "NoneRoutine",
-    [H_JHORA] = "NoneRoutine",
-    [H_CYRUS] = "NoneRoutine",
-    [H_FAIZ] = "NoneRoutine",
-    [H_MAAHIR] = "NoneRoutine",
-    [H_NATHIR] = "NoneRoutine",
-    [H_NUR] = "NoneRoutine",
-    [H_GALIB] = "NoneRoutine",
-    [H_ZEHIR] = "NoneRoutine",
-    [H_THEODORUS] = "NoneRoutine",
-    [H_EMILIA] = "NoneRoutine",
-}
 
 START_TRIGGER_ACADEMY = {
     [H_HAVEZ] = NoneRoutine,
@@ -141,6 +120,26 @@ WEEKLY_TRIGGER_ACADEMY = {
     [H_EMILIA] = NoneRoutine,
 }
 
+LEVEL_UP_ACADEMY_HERO = {
+    [H_HAVEZ] = NoneRoutine,
+    [H_MINASLI] = NoneRoutine,
+    [H_JOSEPHINE] = Routine_GainAcademyArtifacts,
+    [H_RAZZAK] = NoneRoutine,
+    [H_DAVIUS] = NoneRoutine,
+    [H_RISSA] = NoneRoutine,
+    [H_GURVILIN] = NoneRoutine,
+    [H_JHORA] = NoneRoutine,
+    [H_CYRUS] = NoneRoutine,
+    [H_FAIZ] = NoneRoutine,
+    [H_MAAHIR] = NoneRoutine,
+    [H_NATHIR] = NoneRoutine,
+    [H_NUR] = NoneRoutine,
+    [H_GALIB] = NoneRoutine,
+    [H_ZEHIR] = NoneRoutine,
+    [H_THEODORUS] = NoneRoutine,
+    [H_EMILIA] = NoneRoutine,
+}
+
 AFTER_COMBAT_TRIGGER_ACADEMY = {
     [H_HAVEZ] = NoneRoutine,
     [H_MINASLI] = NoneRoutine,
@@ -174,12 +173,12 @@ function DoAcademyRoutine_Weekly(player, hero)
     startThread(WEEKLY_TRIGGER_ACADEMY[hero], player, hero)
 end
 
-function DoAcademyRoutine_AfterCombat(player, hero, index)
-    startThread(AFTER_COMBAT_TRIGGER_ACADEMY[hero], player, hero, index)
-end
-
 function DoAcademyRoutine_LevelUp(player, hero)
     startThread(LEVEL_UP_ACADEMY_HERO[hero], player, hero)
+end
+
+function DoAcademyRoutine_AfterCombat(player, hero, index)
+    startThread(AFTER_COMBAT_TRIGGER_ACADEMY[hero], player, hero, index)
 end
 
 

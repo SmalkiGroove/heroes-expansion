@@ -1,27 +1,5 @@
 
 
-function Routine_GainHavenArtifacts()
-    -- Crown of leadership / Ring of life / Golden horseshoe / Crown of courage / Tome of light magic
-    local hero = H_RUTGER
-    local level = GetHeroLevel(hero)
-    if     level == 10 then GiveArtifact(hero, ARTIFACT_CROWN_OF_LEADER)
-    elseif level == 20 then GiveArtifact(hero, ARTIFACT_RING_OF_LIFE)
-    elseif level == 30 then GiveArtifact(hero, ARTIFACT_GOLDEN_HORSESHOE)
-    elseif level == 40 then GiveArtifact(hero, ARTIFACT_CROWN_OF_COURAGE)
-    elseif level == 50 then GiveArtifact(hero, ARTIFACT_TOME_OF_LIGHT_MAGIC)
-    end
-end
-
-function Routine_GainAttack()
-    --Att +1 / 4 levels
-    local hero = H_LASZLO
-    local player = GetObjectOwner(hero)
-    local level = GetHeroLevel(hero)
-    if mod(level, 4) == 0 then
-        AddHero_StatAmount(player, hero, STAT_ATTACK, 1)
-    end
-end
-
 function Routine_AddTwoLuckPoints(player, hero)
     --Luck +2
     AddHero_StatAmount(player, hero, STAT_LUCK, 2)
@@ -72,29 +50,29 @@ function Routine_GenerateExpFromGolds(player, hero)
     GiveExp(hero, exp)
 end
 
+function Routine_GainHavenArtifacts(player, hero)
+    -- Crown of leadership / Ring of life / Golden horseshoe / Crown of courage / Tome of light magic
+    local level = GetHeroLevel(hero)
+    if     level == 10 then GiveArtifact(hero, ARTIFACT_CROWN_OF_LEADER)
+    elseif level == 20 then GiveArtifact(hero, ARTIFACT_RING_OF_LIFE)
+    elseif level == 30 then GiveArtifact(hero, ARTIFACT_GOLDEN_HORSESHOE)
+    elseif level == 40 then GiveArtifact(hero, ARTIFACT_CROWN_OF_COURAGE)
+    elseif level == 50 then GiveArtifact(hero, ARTIFACT_TOME_OF_LIGHT_MAGIC)
+    end
+end
+
+function Routine_GainAttack(player, hero)
+    --Att +1 / 4 levels
+    local level = GetHeroLevel(hero)
+    if mod(level, 4) == 0 then
+        AddHero_StatAmount(player, hero, STAT_ATTACK, 1)
+    end
+end
+
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-LEVEL_UP_HAVEN_HERO = {
-    [H_DUNCAN] = "NoneRoutine",
-    [H_DOUGAL] = "NoneRoutine",
-    [H_KLAUS] = "NoneRoutine",
-    [H_IRINA] = "NoneRoutine",
-    [H_ISABEL] = "NoneRoutine",
-    [H_LASZLO] = "Routine_GainAttack",
-    [H_NICOLAI] = "NoneRoutine",
-    [H_GODRIC] = "NoneRoutine",
-    [H_FREYDA] = "NoneRoutine",
-    [H_RUTGER] = "Routine_GainHavenArtifacts",
-    [H_MAEVE] = "NoneRoutine",
-    [H_ELLAINE] = "NoneRoutine",
-    [H_ALARIC] = "NoneRoutine",
-    [H_GABRIELLE] = "NoneRoutine",
-    [H_ORLANDO] = "NoneRoutine",
-    [H_MARKAL] = "NoneRoutine",
-}
 
 START_TRIGGER_HAVEN = {
     [H_DUNCAN] = NoneRoutine,
@@ -153,6 +131,25 @@ WEEKLY_TRIGGER_HAVEN = {
     [H_MARKAL] = NoneRoutine,
 }
 
+LEVEL_UP_HAVEN_HERO = {
+    [H_DUNCAN] = NoneRoutine,
+    [H_DOUGAL] = NoneRoutine,
+    [H_KLAUS] = NoneRoutine,
+    [H_IRINA] = NoneRoutine,
+    [H_ISABEL] = NoneRoutine,
+    [H_LASZLO] = Routine_GainAttack,
+    [H_NICOLAI] = NoneRoutine,
+    [H_GODRIC] = NoneRoutine,
+    [H_FREYDA] = NoneRoutine,
+    [H_RUTGER] = Routine_GainHavenArtifacts,
+    [H_MAEVE] = NoneRoutine,
+    [H_ELLAINE] = NoneRoutine,
+    [H_ALARIC] = NoneRoutine,
+    [H_GABRIELLE] = NoneRoutine,
+    [H_ORLANDO] = NoneRoutine,
+    [H_MARKAL] = NoneRoutine,
+}
+
 AFTER_COMBAT_TRIGGER_HAVEN = {
     [H_DUNCAN] = NoneRoutine,
     [H_DOUGAL] = NoneRoutine,
@@ -185,12 +182,12 @@ function DoHavenRoutine_Weekly(player, hero)
     startThread(WEEKLY_TRIGGER_HAVEN[hero], player, hero)
 end
 
-function DoHavenRoutine_AfterCombat(player, hero, index)
-    startThread(AFTER_COMBAT_TRIGGER_HAVEN[hero], player, hero, index)
-end
-
 function DoHavenRoutine_LevelUp(player, hero)
     startThread(LEVEL_UP_HAVEN_HERO[hero], player, hero)
+end
+
+function DoHavenRoutine_AfterCombat(player, hero, index)
+    startThread(AFTER_COMBAT_TRIGGER_HAVEN[hero], player, hero, index)
 end
 
 

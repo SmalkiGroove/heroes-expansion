@@ -1,26 +1,4 @@
 
-function Routine_GainDefenceNecro()
-    --Def +1 / 4 levels
-    local hero = H_ORNELLA2
-    local player = GetObjectOwner(hero)
-    local level = GetHeroLevel(hero)
-    if mod(level, 4) == 0 then
-        AddHero_StatAmount(player, hero, STAT_DEFENCE, 1)
-    end
-end
-
-function Routine_GainNecroArtifacts()
-    -- Tunic of carved flesh / Amulet of Necromancy / Cursed Ring / Skull of Markal / Tome of dark magic
-    local hero = H_THANT
-    local level = GetHeroLevel(hero)
-    if     level == 10 then GiveArtifact(hero, ARTIFACT_BONESTUDDED_LEATHER)
-    elseif level == 20 then GiveArtifact(hero, ARTIFACT_NECROMANCER_PENDANT)
-    elseif level == 30 then GiveArtifact(hero, ARTIFACT_JINXING_BAND)
-    elseif level == 40 then GiveArtifact(hero, ARTIFACT_SKULL_OF_MARKAL)
-    elseif level == 50 then GiveArtifact(hero, ARTIFACT_TOME_OF_DARK_MAGIC)
-    end
-end
-
 function Routine_GainArtifactNecromancerHelm(player, hero)
     -- Hero gain artifact Necromancer's Helm
     GiveArtifact(hero, ARTIFACT_SKULL_HELMET)
@@ -78,30 +56,29 @@ function Routine_AddRecruitsNecropolis(player, hero)
     AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_3, CREATURE_MANES, 0.75)
 end
 
+function Routine_GainDefenceNecro(player, hero)
+    --Def +1 / 4 levels
+    local level = GetHeroLevel(hero)
+    if mod(level, 4) == 0 then
+        AddHero_StatAmount(player, hero, STAT_DEFENCE, 1)
+    end
+end
+
+function Routine_GainNecroArtifacts(player, hero)
+    -- Tunic of carved flesh / Amulet of Necromancy / Cursed Ring / Skull of Markal / Tome of dark magic
+    local level = GetHeroLevel(hero)
+    if     level == 10 then GiveArtifact(hero, ARTIFACT_BONESTUDDED_LEATHER)
+    elseif level == 20 then GiveArtifact(hero, ARTIFACT_NECROMANCER_PENDANT)
+    elseif level == 30 then GiveArtifact(hero, ARTIFACT_JINXING_BAND)
+    elseif level == 40 then GiveArtifact(hero, ARTIFACT_SKULL_OF_MARKAL)
+    elseif level == 50 then GiveArtifact(hero, ARTIFACT_TOME_OF_DARK_MAGIC)
+    end
+end
+
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-LEVEL_UP_NECRO_HERO = {
-    [H_KASPAR] = "NoneRoutine",
-    [H_VLADIMIR] = "NoneRoutine",
-    [H_ORSON] = "NoneRoutine",
-    [H_ORNELLA2] = "Routine_GainDefenceNecro",
-    [H_LUCRETIA] = "NoneRoutine",
-    [H_XERXON] = "NoneRoutine",
-    [H_DEIRDRE] = "NoneRoutine",
-    [H_NAADIR] = "NoneRoutine",
-    [H_AISLINN] = "NoneRoutine",
-    [H_GIOVANNI] = "NoneRoutine",
-    [H_ARCHILUS] = "NoneRoutine",
-    [H_ZOLTAN] = "NoneRoutine",
-    [H_RAVEN] = "NoneRoutine",
-    [H_ARANTIR] = "NoneRoutine",
-    [H_THANT] = "Routine_GainNecroArtifacts",
-    [H_SANDRO] = "NoneRoutine",
-    [H_VIDOMINA] = "NoneRoutine",
-}
 
 START_TRIGGER_NECROPOLIS = {
     [H_KASPAR] = NoneRoutine,
@@ -163,6 +140,26 @@ WEEKLY_TRIGGER_NECROPOLIS = {
     [H_VIDOMINA] = NoneRoutine,
 }
 
+LEVEL_UP_NECRO_HERO = {
+    [H_KASPAR] = NoneRoutine,
+    [H_VLADIMIR] = NoneRoutine,
+    [H_ORSON] = NoneRoutine,
+    [H_ORNELLA2] = Routine_GainDefenceNecro,
+    [H_LUCRETIA] = NoneRoutine,
+    [H_XERXON] = NoneRoutine,
+    [H_DEIRDRE] = NoneRoutine,
+    [H_NAADIR] = NoneRoutine,
+    [H_AISLINN] = NoneRoutine,
+    [H_GIOVANNI] = NoneRoutine,
+    [H_ARCHILUS] = NoneRoutine,
+    [H_ZOLTAN] = NoneRoutine,
+    [H_RAVEN] = NoneRoutine,
+    [H_ARANTIR] = NoneRoutine,
+    [H_THANT] = Routine_GainNecroArtifacts,
+    [H_SANDRO] = NoneRoutine,
+    [H_VIDOMINA] = NoneRoutine,
+}
+
 AFTER_COMBAT_TRIGGER_NECROPOLIS = {
     [H_KASPAR] = NoneRoutine,
     [H_VLADIMIR] = NoneRoutine,
@@ -196,12 +193,12 @@ function DoNecropolisRoutine_Weekly(player, hero)
     startThread(WEEKLY_TRIGGER_NECROPOLIS[hero], player, hero)
 end
 
-function DoNecropolisRoutine_AfterCombat(player, hero, index)
-    startThread(AFTER_COMBAT_TRIGGER_NECROPOLIS[hero], player, hero, index)
-end
-
 function DoNecropolisRoutine_LevelUp(player, hero)
     startThread(LEVEL_UP_NECRO_HERO[hero], player, hero)
+end
+
+function DoNecropolisRoutine_AfterCombat(player, hero, index)
+    startThread(AFTER_COMBAT_TRIGGER_NECROPOLIS[hero], player, hero, index)
 end
 
 
