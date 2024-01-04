@@ -1,0 +1,56 @@
+# Combines the contents of original Hero pane - "Skills" and "Biography" pages into one page.
+edits:
+  - name: Edit 1
+    address: '00243605'
+    size: 1
+    type: hex
+    original: '6A'
+    modified: '61'
+  - name: Edit 2
+    address: '0024360A'
+    size: 1
+    type: hex
+    original: '64'
+    modified: '58'
+  - name: Edit 3
+    address: '0024362E'
+    size: 1
+    type: hex
+    original: 'C4'
+    modified: 'F8'
+  - name: Edit 4
+    address: '00243633'
+    size: 2
+    type: hex
+    original: 'D9 D4'
+    modified: 'E9 F9'
+  - name: Edit 5
+    address: '00243645'
+    size: 1
+    type: hex
+    original: '61'
+    modified: '6A'
+  - name: Edit 6
+    address: '0024364A'
+    size: 1
+    type: hex
+    original: '58'
+    modified: '64'
+  - name: Edit 7
+    address: '00243676'
+    size: 1
+    type: hex
+    original: 'F8'
+    modified: 'C4'
+  - name: Edit 8
+    address: '0024367B'
+    size: 2
+    type: hex
+    original: 'A1 F9'
+    modified: '91 D4'
+  - name: Edit 9
+    address: '0024367F'
+    size: 2
+    type: hex
+    original: '8B 4C'
+    modified: 'EB 2A'
