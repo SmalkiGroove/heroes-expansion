@@ -2,21 +2,22 @@ import sys
 import os
 import yaml
 
-if len(sys.argv) == 4:
+if len(sys.argv) != 4:
+    print("Script requires 3 arguments. Example: 'patcher.py apply path/to/binary path/to/patch'.")
+    sys.exit(1)
+else:
     action = sys.argv[1]
     binary = sys.argv[2]
     path = sys.argv[3]
     if not (action == "apply" or action == "revert"):
         print(f"Argument 1 should be 'apply' or 'revert'. Got '{action}'.")
+        sys.exit(1)
     if not os.path.exists(binary) or not os.path.isfile(binary):
         print(f"Argument 2 should be a valid file path. Got '{binary}'.")
         sys.exit(1)
     if not os.path.exists(path) or not os.path.isfile(path):
         print(f"Argument 3 should be a valid file path. Got '{path}'.")
         sys.exit(1)
-else:
-    print("Script requires 3 arguments. Example: 'patcher.py apply path/to/binary path/to/patch'.")
-    sys.exit(1)
 
 binary = os.path.abspath(binary)
 path = os.path.abspath(path)
@@ -27,10 +28,11 @@ with open(path, 'r') as f:
         for c in patch['edits']:
             check = c['address']
             check = c['size']
+            check = c['type']
             check = c['original']
             check = c['modified']
     except:
-        print(f"Patch file '{sys.argv[3]}' is not a valid YAML file.")
+        print(f"Patch file '{sys.argv[3]}' is not a valid patch file.")
         sys.exit(1)
 
 print(f"Files validation successful. Starting to {action} patch '{sys.argv[3]}' on binary file '{sys.argv[2]}'.")
@@ -48,4 +50,10 @@ def execute(address:int, size:int, before:bytes, after:bytes):
         else:
             print(f"Unexpected value '{current}' at address '{address}'. Patch aborted.")
 
-
+for c in patch['edits']:
+    address = int(c['address'], 16)
+    size = c['size']
+    type = c['type']
+    before = c['original']
+    after = c['modified']
+    execute(address, size, before, after)
