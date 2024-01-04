@@ -3,12 +3,14 @@ definitions:
   - &original_value 0
   - &modified_value 1
 edits:
-  - address: '00000000'
+  - name: Replace first byte from 00 to 01
+    address: '00000000'
     size: 1
     type: int
     original: *original_value
     modified: *modified_value
-  - address: '00000010'
+  - name: Replace bytes 80 88 by 00 FF at offset 00000010
+    address: '00000010'
     size: 2
     type: hex
     original: '80 88'

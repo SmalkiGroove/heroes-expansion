@@ -26,6 +26,7 @@ with open(path, 'r') as f:
     try:
         patch = yaml.safe_load(f)
         for c in patch['edits']:
+            check = str(c['name'])
             check = int(c['address'], 16)
             check = int(c['size'])
             type = str(c['type'])
@@ -40,20 +41,23 @@ with open(path, 'r') as f:
 
 print(f"Files validation successful. Starting to {action} patch '{sys.argv[3]}' on binary file '{sys.argv[2]}'.")
 
-def execute(address:int, size:int, before:bytes, after:bytes):
+def execute(name:str, address:int, size:int, before:bytes, after:bytes):
     with open(binary, 'r+b') as bin:
         bin.seek(address)
         current = bin.read(size)
         if current == before:
             bin.seek(address)
             bin.write(after)
-            print("Patch applied successfully.")
+            print(f"Patch '{name}' applied successfully.")
         elif current == after:
-            print("Patch is already applied.")
+            print(f"Patch '{name}' is already applied.")
         else:
-            print(f"Unexpected value '{current}' at address '{address}'. Patch aborted.")
+            print(f"Unexpected value '{current}' at address '{address}'.")
+            print(f"Patch '{name}' failed. Aborting.")
+            sys.exit(1)
 
 for c in patch['edits']:
+    name = str(c['name'])
     address = int(c['address'], 16)
     size = int(c['size'])
     type = str(c['type'])
@@ -61,4 +65,4 @@ for c in patch['edits']:
     modified = int(c['modified']).to_bytes(size, 'little') if type == 'int' else bytes.fromhex(str(c['modified']))
     before = original if action == 'apply' else modified
     after = modified if action == 'apply' else original
-    execute(address, size, before, after)
+    execute(name, address, size, before, after)
