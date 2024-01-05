@@ -1,6 +1,7 @@
-# Description
+# ncreases Hero class count from 8 to 73
 definitions:
-- &new_class_count          74- &default_class_count      9             
+- &new_class_count          74
+- &default_class_count      9
 edits:
   - name: Edit 1
     address: '004CFC20'
