@@ -1,8 +1,8 @@
-# Description
+# Adds Hero retaliates not only on melee but also on ranged attacks against the marked creature
 edits:
   - name: Edit 1
     address: '0066496B'
     size: 2
     type: hex
-    original: 75 18
-    modified: 90 90
+    original: '75 18'
+    modified: '90 90'

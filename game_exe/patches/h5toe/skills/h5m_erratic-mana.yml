@@ -1,4 +1,4 @@
-# Description
+# Trigger chance increased from 50% to 100%, Mana reduction decreased from 0-50% to 0-30%
 definitions:
 - &MOD_chance  100
 - &MOD_max_multiplier 0.75
@@ -17,8 +17,8 @@ edits:
     address: '0074B96D'
     size: 4
     type: hex
-    original: 80 85 E1 00
-    modified: 98 56 E1 00
+    original: '80 85 E1 00'
+    modified: '98 56 E1 00'
   - name: Edit 3
     address: '007BEADB'
     size: 1
@@ -28,12 +28,12 @@ edits:
   - name: Edit 4
     address: '007BEB12'
     size: 4
-    type: int
+    type: float
     original: *TOE_min_multiplier
     modified: *MOD_min_multiplier
   - name: Edit 5
     address: '007BEB17'
     size: 4
-    type: int
+    type: float
     original: *TOE_max_multiplier
     modified: *MOD_max_multiplier

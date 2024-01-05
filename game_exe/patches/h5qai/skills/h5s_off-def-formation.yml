@@ -1,26 +1,26 @@
-# Description
+# Makes "Offensive & Defensive formation" skills applicable to all units
 edits:
   - name: Edit 1
     address: '004D9B21'
     size: 6
     type: hex
-    original: 0F 85 8D 00 00 00
-    modified: 90 90 90 90 90 90
+    original: '0F 85 8D 00 00 00'
+    modified: '90 90 90 90 90 90'
   - name: Edit 2
     address: '004D9F9E'
     size: 6
     type: hex
-    original: 0F 85 F2 00 00 00
-    modified: 90 90 90 90 90 90
+    original: '0F 85 F2 00 00 00'
+    modified: '90 90 90 90 90 90'
   - name: Edit 3
     address: '004DA016'
     size: 2
     type: hex
-    original: 75 0B
-    modified: 90 90
+    original: '75 0B'
+    modified: '90 90'
   - name: Edit 4
     address: '004DBFBE'
     size: 6
     type: hex
-    original: 0F 85 89 00 00 00
-    modified: 90 90 90 90 90 90
+    original: '0F 85 89 00 00 00'
+    modified: '90 90 90 90 90 90'
