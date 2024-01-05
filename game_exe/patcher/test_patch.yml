@@ -17,7 +17,7 @@ edits:
     type: hex
     original: '80 88'
     modified: '00 FF'
-  - name: Replaces float value 0.25 by 0.10 at offset 00000020
+  - name: Replace float value 0.25 by 0.10 at offset 00000020
     address: '00000020'
     size: 4
     type: float

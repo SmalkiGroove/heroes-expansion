@@ -10,7 +10,7 @@ else:
     action = sys.argv[1]
     binary = sys.argv[2]
     path = sys.argv[3]
-    if not (action == "apply" or action == "revert"):
+    if not (action == "apply" or action == "revert" or action == "check"):
         print(f"Argument 1 should be 'apply' or 'revert'. Got '{action}'.")
         sys.exit(1)
     if not os.path.exists(binary) or not os.path.isfile(binary):
@@ -19,6 +19,8 @@ else:
     if not os.path.exists(path) or not os.path.isfile(path):
         print(f"Argument 3 should be a valid file path. Got '{path}'.")
         sys.exit(1)
+
+print(f"> {action} patch '{os.path.basename(path)}' on binary file '{os.path.basename(binary)}'.")
 
 binary = os.path.abspath(binary)
 path = os.path.abspath(path)
@@ -39,23 +41,26 @@ with open(path, 'r') as f:
         print(f"Patch file '{os.path.basename(path)}' is not a valid patch file.")
         sys.exit(1)
 
-
-print(f"Files validation successful. Starting to {action} patch '{os.path.basename(path)}' on binary file '{os.path.basename(binary)}'.")
+print("Patch file validation successful.")
+# if action == "check":
+#     sys.exit(0)
 
 def execute(name:str, address:int, size:int, before:bytes, after:bytes):
     with open(binary, 'r+b') as bin:
         bin.seek(address)
         current = bin.read(size)
         if current == before:
-            bin.seek(address)
-            bin.write(after)
+            if action != "check":
+                bin.seek(address)
+                bin.write(after)
             print(f"Patch '{name}' applied successfully.")
         elif current == after:
             print(f"Patch '{name}' is already applied.")
         else:
             print(f"Unexpected value {current} at address '{hex(address)}'. Should be {before}.")
-            print(f"Patch '{name}' failed. Aborting.")
-            sys.exit(1)
+            if action != "check":
+                print(f"Patch '{name}' failed. Aborting.")
+                sys.exit(1)
 
 for c in patch['edits']:
     name = str(c['name'])
@@ -64,6 +69,6 @@ for c in patch['edits']:
     type = str(c['type'])
     original = bytes.fromhex(str(c['original'])) if type == 'hex' else int(c['original']).to_bytes(size, 'little') if type == 'int' else struct.pack('<f', float(c['original']))
     modified = bytes.fromhex(str(c['modified'])) if type == 'hex' else int(c['modified']).to_bytes(size, 'little') if type == 'int' else struct.pack('<f', float(c['modified']))
-    before = original if action == 'apply' else modified
-    after = modified if action == 'apply' else original
+    before = modified if action == 'revert' else original
+    after = original if action == 'revert' else modified
     execute(name, address, size, before, after)
