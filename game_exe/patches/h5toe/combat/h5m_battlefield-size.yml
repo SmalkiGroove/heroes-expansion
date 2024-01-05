@@ -1,6 +1,10 @@
-# Description
+# Change standard battlefield size
 definitions: 
-- &original_width       12- &original_height      10- &modified_width       14- &modified_height      12edits:
+- &original_width       12
+- &original_height      10
+- &modified_width       14
+- &modified_height      12
+edits:
   - name: Edit 1
     address: '006F08B6'
     size: 4
