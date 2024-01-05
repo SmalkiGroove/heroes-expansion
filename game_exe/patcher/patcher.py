@@ -1,6 +1,7 @@
 import sys
 import os
 import yaml
+import struct
 
 if len(sys.argv) != 4:
     print("Script requires 3 arguments. Example: 'patcher.py apply path/to/binary path/to/patch'.")
@@ -30,10 +31,10 @@ with open(path, 'r') as f:
             check = int(c['address'], 16)
             check = int(c['size'])
             type = str(c['type'])
-            if not (type == 'int' or type == 'hex'):
+            if not (type == 'hex' or type == 'int' or type == 'float'):
                 raise ValueError()
-            check = int(c['original']) if type == 'int' else bytes.fromhex(c['original'])
-            check = int(c['modified']) if type == 'int' else bytes.fromhex(c['modified'])
+            check = bytes.fromhex(c['original']) if type == 'hex' else int(c['original']) if type == 'int' else float(c['original'])
+            check = bytes.fromhex(c['modified']) if type == 'hex' else int(c['modified']) if type == 'int' else float(c['modified'])
     except:
         print(f"Patch file '{os.path.basename(path)}' is not a valid patch file.")
         sys.exit(1)
@@ -52,7 +53,7 @@ def execute(name:str, address:int, size:int, before:bytes, after:bytes):
         elif current == after:
             print(f"Patch '{name}' is already applied.")
         else:
-            print(f"Unexpected value '{current}' at address '{address}'.")
+            print(f"Unexpected value {current} at address '{hex(address)}'. Should be {before}.")
             print(f"Patch '{name}' failed. Aborting.")
             sys.exit(1)
 
@@ -61,8 +62,8 @@ for c in patch['edits']:
     address = int(c['address'], 16)
     size = int(c['size'])
     type = str(c['type'])
-    original = int(c['original']).to_bytes(size, 'little') if type == 'int' else bytes.fromhex(str(c['original']))
-    modified = int(c['modified']).to_bytes(size, 'little') if type == 'int' else bytes.fromhex(str(c['modified']))
+    original = bytes.fromhex(str(c['original'])) if type == 'hex' else int(c['original']).to_bytes(size, 'little') if type == 'int' else struct.pack('<f', float(c['original']))
+    modified = bytes.fromhex(str(c['modified'])) if type == 'hex' else int(c['modified']).to_bytes(size, 'little') if type == 'int' else struct.pack('<f', float(c['modified']))
     before = original if action == 'apply' else modified
     after = modified if action == 'apply' else original
     execute(name, address, size, before, after)

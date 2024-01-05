@@ -2,6 +2,8 @@
 definitions:
   - &original_value 0
   - &modified_value 1
+  - &original_percent 0.25
+  - &modified_percent 0.10
 edits:
   - name: Replace first byte from 00 to 01
     address: '00000000'
@@ -15,3 +17,9 @@ edits:
     type: hex
     original: '80 88'
     modified: '00 FF'
+  - name: Replaces float value 0.25 by 0.10 at offset 00000020
+    address: '00000020'
+    size: 4
+    type: float
+    original: *original_percent
+    modified: *modified_percent
