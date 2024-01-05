@@ -1,0 +1,95 @@
+# Change first aid tent healing values
+definitions:
+  - &mod_skill_for_mastery 2
+  - &mod_base_heal_mastery_none     20
+  - &mod_base_heal_mastery_basic    40
+  - &mod_base_heal_mastery_advanced 60
+  - &mod_base_heal_mastery_expert   80
+  - &mod_bonus_heal_per_defense_none     1
+  - &mod_bonus_heal_per_defense_basic    2
+  - &mod_bonus_heal_per_defense_advanced 3
+  - &mod_bonus_heal_per_defense_expert   4
+  - &toe_skill_for_mastery 2
+  - &toe_base_heal_mastery_none     10
+  - &toe_base_heal_mastery_basic    20
+  - &toe_base_heal_mastery_advanced 50
+  - &toe_base_heal_mastery_expert   100
+edits:
+  - name: Skill used for mastery
+    address: '00741DF6'
+    size: 1
+    type: int
+    original: *toe_skill_for_mastery
+    modified: *mod_skill_for_mastery
+  - name: Base heal mastery none
+    address: '004B26E6'
+    size: 4
+    type: int
+    original: *toe_base_heal_mastery_none
+    modified: *mod_base_heal_mastery_none
+  - name: Base heal mastery basic
+    address: '004B26F4'
+    size: 4
+    type: int
+    original: *toe_base_heal_mastery_basic
+    modified: *mod_base_heal_mastery_basic
+  - name: Base heal mastery advanced
+    address: '004B2702'
+    size: 4
+    type: int
+    original: *toe_base_heal_mastery_advanced
+    modified: *mod_base_heal_mastery_advanced
+  - name: Base heal mastery expert
+    address: '004B2710'
+    size: 4
+    type: int
+    original: *toe_base_heal_mastery_expert
+    modified: *mod_base_heal_mastery_expert
+  - name: Edit 6
+    address: '004B2708'
+    size: 4
+    type: int
+    original: 1
+    modified: 0
+  - name: Edit 7
+    address: '004B2716'
+    size: 4
+    type: int
+    original: 3
+    modified: 0
+  - name: Fork code
+    address: '004B2730'
+    size: 6
+    type: hex
+    original: '8B 46 04 8B 48 08'
+    modified: 'E9 15 40 55 00 90'
+  - name: Added code
+    address: '00A0674A'
+    size: 93
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+    modified: '8B 46 04 8B 48 08 8B 54 31 04 8D 4C 31 04 FF 92 94 01 00 00 50 8B 06 89 F1 FF 10 8B 10 6A 02 89 C1 FF 92 78 01 00 00 59 8B 04 85 AA 73 E0 00 F7 E1 01 07 8B 46 04 8B 48 08 8B 06 89 F1 FF 10 8B 10 6A 0B 89 C1 FF 92 78 01 00 00 89 44 24 3C 8B 46 04 8B 48 08 E9 92 BF AA FF 90 90 90 90 90 90'
+  - name: Bonus heal per def mastery none
+    address: '00A067AA'
+    size: 4
+    type: int
+    original: 0
+    modified: *mod_bonus_heal_per_defense_none
+  - name: Bonus heal per def mastery basic
+    address: '00A067AE'
+    size: 4
+    type: int
+    original: 0
+    modified: *mod_bonus_heal_per_defense_basic
+  - name: Bonus heal per def mastery advanced
+    address: '00A067B2'
+    size: 4
+    type: int
+    original: 0
+    modified: *mod_bonus_heal_per_defense_advanced
+  - name: Bonus heal per def mastery expert
+    address: '00A067B6'
+    size: 4
+    type: int
+    original: 0
+    modified: *mod_bonus_heal_per_defense_expert
