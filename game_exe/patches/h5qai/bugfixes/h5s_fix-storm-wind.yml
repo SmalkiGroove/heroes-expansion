@@ -1,0 +1,8 @@
+# Change storm wind from -1 to -2 Initiative
+edits:
+  - name: Edit 1
+    address: '004DBC0F'
+    size: 6
+    type: hex
+    original: 'D8 25 40 8D E0 00'
+    modified: 'D8 25 34 CD E0 00'

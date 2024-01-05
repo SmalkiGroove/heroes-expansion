@@ -1,0 +1,14 @@
+# Fix the game crashing when Gryphn with Chain attack buff attacks target with "Battle dive" ability.
+edits:
+  - name: Edit 1
+    address: '00598C05'
+    size: 4
+    type: hex
+    original: '80 7C 24 13'
+    modified: 'E8 D6 C9 7A'
+  - name: Edit 2
+    address: '00BD91E0'
+    size: 10
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00'
+    modified: '80 7C 24 17 00 8B 6C 24 2C C3'
