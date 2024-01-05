@@ -1,14 +1,14 @@
-# Description
+# Changes default hero skills count from 6 to 8.
 edits:
   - name: Edit 1
     address: '007501E5'
     size: 1
     type: hex
-    original: 14
-    modified: 1C
+    original: '14'
+    modified: '1C'
   - name: Edit 2
     address: '0074C799'
     size: 1
     type: hex
-    original: 05
-    modified: 08
+    original: '05'
+    modified: '08'
