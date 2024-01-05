@@ -1,8 +1,8 @@
-# Description
+# Changes Chain lighting damage multiplier from 0.5 to 0.75 per jump
 edits:
   - name: Edit 1
     address: '0045E40A'
     size: 3
     type: hex
-    original: 70 AB E0
-    modified: 5C 4C E3
+    original: '70 AB E0'
+    modified: '5C 4C E3'
