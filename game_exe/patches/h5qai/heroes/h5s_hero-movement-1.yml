@@ -13,7 +13,7 @@ edits:
     size: 4
     type: hex
     original: 'CC CC CC CC'
-    modified: '3D 4C CC CD'
+    modified: 'CD CC 4C 3D'
   - name: Pointer to boots
     address: '005F8DB7'
     size: 4
@@ -25,4 +25,4 @@ edits:
     size: 4
     type: hex
     original: 'CC CC CC CC'
-    modified: '3E 19 99 9A'
+    modified: '9A 99 19 3E'
