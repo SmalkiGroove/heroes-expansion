@@ -53,9 +53,9 @@ def execute(name:str, address:int, size:int, before:bytes, after:bytes):
             if action != "check":
                 bin.seek(address)
                 bin.write(after)
-            print(f"Patch '{name}' applied successfully.")
+            print(f"Patch applied successfully : '{name}'")
         elif current == after:
-            print(f"Patch '{name}' is already applied.")
+            print(f"Patch already applied : '{name}'")
         else:
             print(f"Unexpected value {current} at address '{hex(address)}'. Should be {before}.")
             if action != "check":
