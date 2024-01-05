@@ -1,0 +1,14 @@
+# Changes salvo chance to 30% + 1% per hero lvl and enables activation on non damaging and mass spells
+edits:
+  - name: Check if spell deals damage
+    address: '004B4310'
+    size: 18
+    type: hex
+    original: '8B 4F 04 8B D6 E8 76 CE B6 FF 84 C0 0F 84 96 01 00 00'
+    modified: '90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90'
+  - name: Salvo formula
+    address: '004B4410'
+    size: 3
+    type: hex
+    original: '6C 00 0A'
+    modified: '68 1E 90'
