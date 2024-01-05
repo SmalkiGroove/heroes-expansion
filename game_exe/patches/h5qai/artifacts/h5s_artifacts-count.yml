@@ -1,4 +1,6 @@
 # Increase amount of artifacts to 255
+definitions:
+  - &artifacts_count 'FF 00 00 00'
 edits:
   - name: Edit 1
     address: '0053E1CF'
@@ -17,7 +19,7 @@ edits:
     size: 4
     type: hex
     original: 'CC CC CC CC'
-    modified: 'FF 00 00 00'
+    modified: *artifacts_count
   - name: Edit 4
     address: '0053E22D'
     size: 2
@@ -29,4 +31,4 @@ edits:
     size: 4
     type: hex
     original: '61 00 00 00'
-    modified: 'FF 00 00 00'
+    modified: *artifacts_count
