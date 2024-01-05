@@ -93,3 +93,33 @@ edits:
     type: int
     original: 0
     modified: *mod_bonus_heal_per_defense_expert
+  - name: Edit plague tent 1
+    address: '004C2098'
+    size: 15
+    type: hex
+    original: '50 55 8D 54 24 30 8D 4C 24 48 E8 29 06 FF FF'
+    modified: 'E9 C3 37 88 00 E8 2E 06 FF FF E8 C9 37 88 00'
+  - name: Edit plague tent 2
+    address: '004B277F'
+    size: 8
+    type: hex
+    original: '7E 06 8B 07 03 C0 89 07'
+    modified: 'E9 1C 31 89 00 90 90 90'
+  - name: Edit plague tent 3
+    address: '004BBE69'
+    size: 10
+    type: hex
+    original: '84 C0 8B CD 0F 84 56 02 00 00'
+    modified: 'E9 4A 9A 88 00 90 90 90 90 90'
+  - name: Edit plague tent 4
+    address: '00BD9460'
+    size: 46
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+    modified: '50 55 8D 54 24 30 8D 4C 24 48 E9 2E C8 77 FF 90 81 7C 24 14 60 01 00 00 75 13 50 57 8B 3D 90 64 14 01 8B 07 8D 04 40 D1 E8 89 07 5F 58 C3'
+  - name: Edit ring of machine affinity bonus
+    address: '00BD94A0'
+    size: 62
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+    modified: '7E 09 8B 07 8D 04 40 D1 E8 89 07 89 3D 90 64 14 01 E9 CE CE 76 FF 00 00 84 C0 75 13 57 51 8B 0D 90 64 14 01 8B 39 8D 3C 7F D1 EF 89 39 59 5F 89 E9 84 C0 0F 84 F0 67 77 FF E9 90 65 77 FF'
