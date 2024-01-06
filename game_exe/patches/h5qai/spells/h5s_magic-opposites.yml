@@ -1,0 +1,32 @@
+# Disable dispel effect when casting a spell on top of an opposite one haste/slow; weakness/blodlust
+edits:
+  - name: Edit 1
+    address: '0061E4F3'
+    size: 1
+    type: int
+    original: 20
+    modified: 40
+  - name: Slow vs Haste
+    address: '0061DF01'
+    size: 3
+    type: hex
+    original: '0F 94 C0'
+    modified: 'B0 00 90'
+  - name: Weakness vs Bloodlust
+    address: '0061DEF3'
+    size: 3
+    type: hex
+    original: '0F 94 C0'
+    modified: 'B0 00 90'
+  - name: Haste vs Slow
+    address: '0061DF0F'
+    size: 3
+    type: hex
+    original: '0F 94 C0'
+    modified: 'B0 00 90'
+  - name: Bloodlust vs Weakness
+    address: '0061DEE5'
+    size: 3
+    type: hex
+    original: '0F 94 C0'
+    modified: 'B0 00 90'
