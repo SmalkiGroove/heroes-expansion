@@ -21,8 +21,60 @@
 				<NameFileRef href="HeroClass/HeroClassHavenMight.txt"/>
 				<SkillsProbs>
 					<Item>
+						<SkillID>HERO_SKILL_COURAGE</SkillID>
+						<Prob>25</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_OFFENCE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DEFENSE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEARNING</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_COMBAT</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID>
+						<Prob>10</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_DARK</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_DESTRUCT</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_NATURE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_TRAINING</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LOGISTICS</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
 						<SkillID>HERO_SKILL_LEADERSHIP</SkillID>
-						<Prob>100</Prob>
+						<Prob>10</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_GOVERNANCE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_ARMY_SUPPORT</SkillID>
+						<Prob>5</Prob>
 					</Item>
 				</SkillsProbs>
 				<AttributeProbs>
@@ -40,8 +92,60 @@
 				<NameFileRef href="HeroClass/HeroClassHavenMagic.txt"/>
 				<SkillsProbs>
 					<Item>
+						<SkillID>HERO_SKILL_COURAGE</SkillID>
+						<Prob>25</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_OFFENCE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DEFENSE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEARNING</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SORCERY</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID>
+						<Prob>10</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_DARK</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_DESTRUCT</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_TRAINING</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LOGISTICS</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
 						<SkillID>HERO_SKILL_LEADERSHIP</SkillID>
-						<Prob>100</Prob>
+						<Prob>10</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_GOVERNANCE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_ARMY_SUPPORT</SkillID>
+						<Prob>5</Prob>
 					</Item>
 				</SkillsProbs>
 				<AttributeProbs>
@@ -60,7 +164,59 @@
 				<SkillsProbs>
 					<Item>
 						<SkillID>HERO_SKILL_AVENGER</SkillID>
-						<Prob>100</Prob>
+						<Prob>25</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_OFFENCE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DEFENSE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEARNING</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_COMBAT</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_DARK</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_DESTRUCT</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID>
+						<Prob>10</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_TRAINING</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LOGISTICS</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEADERSHIP</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_GOVERNANCE</SkillID>
+						<Prob>10</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_ARMY_SUPPORT</SkillID>
+						<Prob>5</Prob>
 					</Item>
 				</SkillsProbs>
 				<AttributeProbs>
@@ -79,7 +235,59 @@
 				<SkillsProbs>
 					<Item>
 						<SkillID>HERO_SKILL_AVENGER</SkillID>
-						<Prob>100</Prob>
+						<Prob>25</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_OFFENCE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DEFENSE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEARNING</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SORCERY</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_DARK</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID>
+						<Prob>10</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_TRAINING</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LOGISTICS</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEADERSHIP</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_GOVERNANCE</SkillID>
+						<Prob>10</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_ARMY_SUPPORT</SkillID>
+						<Prob>5</Prob>
 					</Item>
 				</SkillsProbs>
 				<AttributeProbs>
@@ -98,7 +306,59 @@
 				<SkillsProbs>
 					<Item>
 						<SkillID>HERO_SKILL_RUNELORE</SkillID>
-						<Prob>100</Prob>
+						<Prob>25</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_OFFENCE</SkillID>
+						<Prob>10</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DEFENSE</SkillID>
+						<Prob>10</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEARNING</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_COMBAT</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_LIGHT</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_DARK</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_DESTRUCT</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_NATURE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_TRAINING</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LOGISTICS</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEADERSHIP</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_GOVERNANCE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_ARMY_SUPPORT</SkillID>
+						<Prob>5</Prob>
 					</Item>
 				</SkillsProbs>
 				<AttributeProbs>
@@ -117,7 +377,59 @@
 				<SkillsProbs>
 					<Item>
 						<SkillID>HERO_SKILL_RUNELORE</SkillID>
-						<Prob>100</Prob>
+						<Prob>25</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_OFFENCE</SkillID>
+						<Prob>10</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DEFENSE</SkillID>
+						<Prob>10</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEARNING</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SORCERY</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_DARK</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_NATURE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_TRAINING</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LOGISTICS</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEADERSHIP</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_GOVERNANCE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_ARMY_SUPPORT</SkillID>
+						<Prob>5</Prob>
 					</Item>
 				</SkillsProbs>
 				<AttributeProbs>
@@ -136,7 +448,59 @@
 				<SkillsProbs>
 					<Item>
 						<SkillID>HERO_SKILL_ARTIFICIER</SkillID>
-						<Prob>100</Prob>
+						<Prob>25</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_OFFENCE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DEFENSE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEARNING</SkillID>
+						<Prob>10</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SORCERY</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_LIGHT</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_DARK</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_TRAINING</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LOGISTICS</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEADERSHIP</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_GOVERNANCE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_ARMY_SUPPORT</SkillID>
+						<Prob>10</Prob>
 					</Item>
 				</SkillsProbs>
 				<AttributeProbs>
@@ -155,7 +519,59 @@
 				<SkillsProbs>
 					<Item>
 						<SkillID>HERO_SKILL_ARTIFICIER</SkillID>
-						<Prob>100</Prob>
+						<Prob>25</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_OFFENCE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DEFENSE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEARNING</SkillID>
+						<Prob>10</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SORCERY</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DARK_MAGIC</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_TRAINING</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LOGISTICS</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEADERSHIP</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_GOVERNANCE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_ARMY_SUPPORT</SkillID>
+						<Prob>10</Prob>
 					</Item>
 				</SkillsProbs>
 				<AttributeProbs>
@@ -174,7 +590,59 @@
 				<SkillsProbs>
 					<Item>
 						<SkillID>HERO_SKILL_INVOCATION</SkillID>
-						<Prob>100</Prob>
+						<Prob>25</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_OFFENCE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DEFENSE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEARNING</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_COMBAT</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_LIGHT</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_DARK</SkillID>
+						<Prob>10</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID>
+						<Prob>10</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_NATURE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_TRAINING</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LOGISTICS</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEADERSHIP</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_GOVERNANCE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_ARMY_SUPPORT</SkillID>
+						<Prob>5</Prob>
 					</Item>
 				</SkillsProbs>
 				<AttributeProbs>
@@ -193,7 +661,59 @@
 				<SkillsProbs>
 					<Item>
 						<SkillID>HERO_SKILL_INVOCATION</SkillID>
-						<Prob>100</Prob>
+						<Prob>25</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_OFFENCE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DEFENSE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEARNING</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SORCERY</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_LIGHT</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DARK_MAGIC</SkillID>
+						<Prob>10</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID>
+						<Prob>10</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_TRAINING</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LOGISTICS</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEADERSHIP</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_GOVERNANCE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_ARMY_SUPPORT</SkillID>
+						<Prob>5</Prob>
 					</Item>
 				</SkillsProbs>
 				<AttributeProbs>
@@ -212,7 +732,59 @@
 				<SkillsProbs>
 					<Item>
 						<SkillID>HERO_SKILL_NECROMANCY</SkillID>
-						<Prob>100</Prob>
+						<Prob>25</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_OFFENCE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DEFENSE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEARNING</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_COMBAT</SkillID>
+						<Prob>10</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_LIGHT</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DARK_MAGIC</SkillID>
+						<Prob>10</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_DESTRUCT</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_NATURE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_TRAINING</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LOGISTICS</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEADERSHIP</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_GOVERNANCE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_ARMY_SUPPORT</SkillID>
+						<Prob>5</Prob>
 					</Item>
 				</SkillsProbs>
 				<AttributeProbs>
@@ -231,7 +803,59 @@
 				<SkillsProbs>
 					<Item>
 						<SkillID>HERO_SKILL_NECROMANCY</SkillID>
-						<Prob>100</Prob>
+						<Prob>25</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_OFFENCE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DEFENSE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEARNING</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SORCERY</SkillID>
+						<Prob>10</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_LIGHT</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DARK_MAGIC</SkillID>
+						<Prob>10</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_TRAINING</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LOGISTICS</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEADERSHIP</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_GOVERNANCE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_ARMY_SUPPORT</SkillID>
+						<Prob>5</Prob>
 					</Item>
 				</SkillsProbs>
 				<AttributeProbs>
@@ -250,7 +874,59 @@
 				<SkillsProbs>
 					<Item>
 						<SkillID>HERO_SKILL_GATING</SkillID>
-						<Prob>100</Prob>
+						<Prob>25</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_OFFENCE</SkillID>
+						<Prob>10</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DEFENSE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEARNING</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_COMBAT</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_LIGHT</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_DARK</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_NATURE</SkillID>
+						<Prob>10</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_TRAINING</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LOGISTICS</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEADERSHIP</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_GOVERNANCE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_ARMY_SUPPORT</SkillID>
+						<Prob>5</Prob>
 					</Item>
 				</SkillsProbs>
 				<AttributeProbs>
@@ -269,7 +945,59 @@
 				<SkillsProbs>
 					<Item>
 						<SkillID>HERO_SKILL_GATING</SkillID>
-						<Prob>100</Prob>
+						<Prob>25</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_OFFENCE</SkillID>
+						<Prob>10</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DEFENSE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEARNING</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SORCERY</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_LIGHT</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DARK_MAGIC</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_NATURE</SkillID>
+						<Prob>10</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_TRAINING</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LOGISTICS</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEADERSHIP</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_GOVERNANCE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_ARMY_SUPPORT</SkillID>
+						<Prob>5</Prob>
 					</Item>
 				</SkillsProbs>
 				<AttributeProbs>
@@ -288,7 +1016,59 @@
 				<SkillsProbs>
 					<Item>
 						<SkillID>HERO_SKILL_DEMONIC_RAGE</SkillID>
-						<Prob>100</Prob>
+						<Prob>25</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_OFFENCE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DEFENSE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEARNING</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_COMBAT</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_VOICE</SkillID>
+						<Prob>10</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_DARK</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_DARK</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_DESTRUCT</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_NATURE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LOGISTICS</SkillID>
+						<Prob>10</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEADERSHIP</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_GOVERNANCE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_ARMY_SUPPORT</SkillID>
+						<Prob>5</Prob>
 					</Item>
 				</SkillsProbs>
 				<AttributeProbs>
@@ -307,7 +1087,71 @@
 				<SkillsProbs>
 					<Item>
 						<SkillID>HERO_SKILL_DEMONIC_RAGE</SkillID>
-						<Prob>100</Prob>
+						<Prob>15</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_OFFENCE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DEFENSE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEARNING</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SORCERY</SkillID>
+						<Prob>10</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DARK_MAGIC</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_LIGHT</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_DARK</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_DESTRUCT</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_SHATTER_NATURE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LOGISTICS</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_LEADERSHIP</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_GOVERNANCE</SkillID>
+						<Prob>5</Prob>
+					</Item>
+					<Item>
+						<SkillID>HERO_SKILL_ARMY_SUPPORT</SkillID>
+						<Prob>5</Prob>
 					</Item>
 				</SkillsProbs>
 				<AttributeProbs>
