@@ -6,7 +6,7 @@
 - [x] PEST enabled
 - [x] Adventure map and combat scripts enabled
 - [x] Expand to 74 hero classes
-- [x] Expand to 196 artifacts
+- [x] Expand to 255 artifacts
 - [ ] Expand to 255 skills
 - [ ] Expand to 255 creatures
 - [x] Allow heroes to learn up to 8 skills
@@ -21,17 +21,17 @@
 - [x] **Imbue Ballista** should not drain hero ATB when triggered
 - [x] **Snare** should not crash the game when stacked with an Arcane Crystal or Blade Barrier
 - [x] **Perks** should always have a chance to appear on a hero level-up if the unlock conditions are filled
+- [x] **War Machines** tier should be 8
 
 ### RMG
 
-- 
+- [ ] todo
 
 ### Advmap
 
 - [x] Change hero maximum level to 50 with realistic exp curve
 - [x] Change hero movement cost to 100 on homeland, 80 on roads, 90 on ship, and every move penalty to 20
 - [x] Barbarians should gain (500 * spell_level) experience when visiting a shrine instead of (1000 * spell_level)
-- 
 
 ### Combat
 
@@ -40,33 +40,36 @@
 - [x] Divide by 5 proc change of **Paw Strike** ability
 - [x] Change **Battle Dive** damage multiplier from 2 to 1.5
 - [x] Change **Energy Channel** mana reduction from 25% to 10%
+- [x] Tower damages should be increased
 
 ### War Machines
 
 - [x] Change base heal from **Healing Tent** from 10/20/50/100 to 20/40/60/80
-- [x] Add heal per hero level to **Healing Tent** depending on mastery level, equal to 1/2/3/4
 - [x] Add heal per point of Defense to **Healing Tent** depending on mastery level, equal to 1/2/3/4
 - [x] Change **Plague Tent** to not consume shots and increased its damage by 20%
 
 ### Hero spe
 
-- [x] Change **Embalmer** healing tent buff from 5 per hero level to 5% per hero level
+- [x] Change **Embalmer** healing tent buff from 5 per hero level to 4 + 4% per hero level
+- [x] Change **Coven Mistress** to work with non-damaging spells, and change formula
+- [x] Change **Master of Elements** to not spawn elementals when a stack dies in combat
 
 ### Skills
 
-- [ ] Make **Enlightenment** give only Knowledge every 6/5/4 levels
-- [ ] Make **Offence** give +1 Attack every 6/5/4 levels
-- [ ] Make **Defence** give +1 Defence every 6/5/4 levels
-- [ ] Make **Sorcery** and **Shouting** give +1 Spellpower every 6/5/4 levels
+- [x] Remove **Enlightenment** bonus stats per level
 - [x] Make **Avenger** work for all classes
 - [x] Change **Irresistible Magic** penetration values from 20/40/50/75 to 25/50/75/99
 - [x] Change **Logistics** movement buff per mastery level from 10% to 5%
 - [x] Change **Retaliation Strike** to apply on ranged attacks too
 - [x] Make **Offensive / Defensive formation** skills applicable to all units
 - [x] Change **Chilling Bones** returned damage from 5% to 10%
-- [ ] Change **Dead Man's Luck** debuff from 1 to 2
+- [ ] Change **Dead Man's Luck** debuff from 1 luck to 2 luck and morale
 - [x] Change **Erratic Mana** trigger chance from 50% to 100% and mana reduction from 10-50% to 10-30%
 - [ ] Change **Tactics** additional rows from 1 to 2
+- [x] Change **Ballista** and **Catapult** perks to not give additional shot
+- [x] Change **Triple Ballista** and **Triple Catapult** bonus shots from 2 to 1
+- [ ] Change skills **Tremors**, **Triple Catapult** and **Master of Lightnings** to make Summon Elementals spell summon only Earth/Water/Air elems
+- [ ] Change skill **Pyromancy** to remove 40% bonus elementals summoned
 
 ### Artifacts
 
@@ -91,14 +94,15 @@
 - [ ] Add a 20% initiative buff to Ballista and Catapult for **Ring of Machine Affinity**
 - [x] Change **Boots of the Swift Journey** movement buff value from 25% to 15%
 
-
 ### Spells
 
 - [x] Change **Chain Lightning** damage multiplier per hit from 0.5 to 0.75
 - [x] Change **Frenzy** duration to be always 1 turn
-- [ ] Change **Counterspell** mana drain multiplier from 2 to 1.1
+- [x] Change **Counterspell** mana drain multiplier from 2 to 1.1
 - [x] Change **Earthquake** spell to be usable anytime, to be affected by Tremors effect by default, and strike all units
 - [x] Change **Vulnerability** spell to be affected by Disruptor damage by default, with a Spellpower scaling
+- [ ] Change **Lightning Bolt** and **Chain Lightning** spells to be affected my Master of Lightnings by default
+- [ ] Remove dispel effect on magic opposites
 
 ### LUA
 
@@ -110,6 +114,7 @@
 ### Misc
 
 - [ ] Change condition for being able to learn spells from (does not have skill Blood Rage) to (should not be class Barbarian)
+- [x] Haven **Training Grounds** should not have class and skill requirements
 - [x] Hero screen UI
 
 ### Optional
