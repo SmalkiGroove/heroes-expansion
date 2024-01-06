@@ -68,8 +68,10 @@
 - [ ] Change **Tactics** additional rows from 1 to 2
 - [x] Change **Ballista** and **Catapult** perks to not give additional shot
 - [x] Change **Triple Ballista** and **Triple Catapult** bonus shots from 2 to 1
-- [ ] Change skills **Tremors**, **Triple Catapult** and **Master of Lightnings** to make Summon Elementals spell summon only Earth/Water/Air elems
-- [ ] Change skill **Pyromancy** to remove 40% bonus elementals summoned
+- [x] Change skills **Tremors**, **Triple Catapult** and **Master of Lightnings** to make Summon Elementals spell summon only Earth/Water/Air elems
+- [x] Change skill **Pyromancy** to remove 40% bonus elementals summoned
+- [ ] Move **Elemental Vision** requirement to **Irresistible magic**
+- [ ] Move **Hellwrath** requirement to **Hellfire**
 
 ### Artifacts
 
