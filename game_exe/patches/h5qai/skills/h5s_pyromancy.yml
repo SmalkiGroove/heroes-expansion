@@ -1,0 +1,8 @@
+# Remove Pyromancy bonus of 40% summoned elems
+edits:
+  - name: Edit 1
+    address: '006711CF'
+    size: 1
+    type: hex
+    original: '74'
+    modified: 'EB'
