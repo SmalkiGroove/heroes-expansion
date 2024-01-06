@@ -5,15 +5,15 @@ edits:
     size: 5
     type: hex
     original: 'E8 FE 71 2D 00'
-    modified: 'E9 9E 9F 7B 00'
+    modified: 'E9 0E A0 7B 00'
   - name: Edit 2
-    address: '00BDB7C0'
+    address: '00BDB830'
     size: 32
     type: hex
     original: '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
     modified: '3D 3D 3D 3D 3D 3D 3D 4D 4F 44 3D 3D 3D 3D 3D 3D 20 41 72 63 61 6E 65 20 20 72 65 6E 65 77 61 6C'
   - name: Edit 3
-    address: '00BDB7E0'
+    address: '00BDB850'
     size: 15
     type: hex
     original: '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
