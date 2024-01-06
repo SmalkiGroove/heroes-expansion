@@ -42,25 +42,28 @@ with open(path, 'r') as f:
         sys.exit(1)
 
 print("Patch file validation successful.")
-# if action == "check":
-#     sys.exit(0)
 
 def execute(name:str, address:int, size:int, before:bytes, after:bytes):
     with open(binary, 'r+b') as bin:
         bin.seek(address)
         current = bin.read(size)
-        if current == before:
+        if current == after:
+            print(f"Patch already applied : '{name}'")
+        elif current == before:
             if action != "check":
                 bin.seek(address)
                 bin.write(after)
             print(f"Patch applied successfully : '{name}'")
-        elif current == after:
-            print(f"Patch already applied : '{name}'")
         else:
-            print(f"Unexpected value {current} at address '{hex(address)}'. Should be {before}.")
-            if action != "check":
-                print(f"Patch '{name}' failed. Aborting.")
-                sys.exit(1)
+            if action == "revert":
+                bin.seek(address)
+                bin.write(after)
+                print(f"Patch applied successfully : '{name}'")
+            else:
+                print(f"Unexpected value {current} at address '{hex(address)}'. Should be {before}.")
+                if action == "apply":
+                    print(f"Patch '{name}' failed. Aborting.")
+                    sys.exit(1)
 
 for c in patch['edits']:
     name = str(c['name'])
