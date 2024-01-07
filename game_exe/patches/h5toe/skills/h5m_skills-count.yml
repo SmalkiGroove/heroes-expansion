@@ -1,0 +1,11 @@
+# Increases the max value of in-game hero skills
+definitions: 
+- &original_count       221
+- &modified_count       222
+edits:
+  - name: Edit 1
+    address: '006F08B6'
+    size: 4
+    type: int
+    original: *original_count
+    modified: *modified_count

@@ -5194,52 +5194,34 @@
 				<PowerfullBlow_ChanceToCritical>40</PowerfullBlow_ChanceToCritical>
 				<PathOfWar_MovePointsBonus>350</PathOfWar_MovePointsBonus>
 				<LuckOfTheBarbarian_MagicProofPerLuck>0.10</LuckOfTheBarbarian_MagicProofPerLuck>
-				<StunningBlow_ATBDrop>0.15</StunningBlow_ATBDrop>
-				<DefendUsAll_CreatureToCount>CREATURE_ORC_WARRIOR</DefendUsAll_CreatureToCount>
-				<DefendUsAll_CreatureCountMultiplier>2</DefendUsAll_CreatureCountMultiplier>
+				<StunningBlow_ATBDrop>0.20</StunningBlow_ATBDrop>
+				<DefendUsAll_CreatureToCount>CREATURE_ORC_SLAYER</DefendUsAll_CreatureToCount>
+				<DefendUsAll_CreatureCountMultiplier>10</DefendUsAll_CreatureCountMultiplier>
 				<GoblinSupport_GoblinsIncomePerDay>3</GoblinSupport_GoblinsIncomePerDay>
-				<Bodybuilding_HPBonusPercent>10</Bodybuilding_HPBonusPercent>
+				<Bodybuilding_HPBonusPercent>0</Bodybuilding_HPBonusPercent>
 				<VoiceTraining_WarcryCostDiscount>0.2</VoiceTraining_WarcryCostDiscount>
 				<DeathToNonexistent_DamageToSummonsMult>3</DeathToNonexistent_DamageToSummonsMult>
 				<MightyVoice_HeroLevelBonus>10</MightyVoice_HeroLevelBonus>
-				<VoiceOfRage_RageMultCallOfBlood>1.5</VoiceOfRage_RageMultCallOfBlood>
+				<VoiceOfRage_RageMultCallOfBlood>1.25</VoiceOfRage_RageMultCallOfBlood>
 				<VoiceOfRage_RageMultOther>1.5</VoiceOfRage_RageMultOther>
 				<BasicShatterMagic>
-					<SpellTrainedDecrease>
-						<Item>1</Item>
-						<Item>1</Item>
-						<Item>0</Item>
-						<Item>0</Item>
-						<Item>0</Item>
-					</SpellTrainedDecrease>
-					<SpellpowerDecreaseForTrainedDrop1BelowNone>0.25</SpellpowerDecreaseForTrainedDrop1BelowNone>
-					<SpellpowerDecreaseForTrainedDrop2BelowNone>0.5</SpellpowerDecreaseForTrainedDrop2BelowNone>
+					<SpellTrainedDecrease><Item>0</Item><Item>0</Item><Item>0</Item><Item>0</Item><Item>0</Item></SpellTrainedDecrease>
+					<SpellpowerDecreaseForTrainedDrop1BelowNone>0.0</SpellpowerDecreaseForTrainedDrop1BelowNone>
+					<SpellpowerDecreaseForTrainedDrop2BelowNone>0.0</SpellpowerDecreaseForTrainedDrop2BelowNone>
 				</BasicShatterMagic>
 				<AdvancedShatterMagic>
-					<SpellTrainedDecrease>
-						<Item>1</Item>
-						<Item>1</Item>
-						<Item>1</Item>
-						<Item>1</Item>
-						<Item>1</Item>
-					</SpellTrainedDecrease>
-					<SpellpowerDecreaseForTrainedDrop1BelowNone>0.25</SpellpowerDecreaseForTrainedDrop1BelowNone>
-					<SpellpowerDecreaseForTrainedDrop2BelowNone>0.5</SpellpowerDecreaseForTrainedDrop2BelowNone>
+					<SpellTrainedDecrease><Item>0</Item><Item>0</Item><Item>0</Item><Item>0</Item><Item>0</Item></SpellTrainedDecrease>
+					<SpellpowerDecreaseForTrainedDrop1BelowNone>0.0</SpellpowerDecreaseForTrainedDrop1BelowNone>
+					<SpellpowerDecreaseForTrainedDrop2BelowNone>0.0</SpellpowerDecreaseForTrainedDrop2BelowNone>
 				</AdvancedShatterMagic>
 				<ExpertShatterMagic>
-					<SpellTrainedDecrease>
-						<Item>2</Item>
-						<Item>2</Item>
-						<Item>2</Item>
-						<Item>2</Item>
-						<Item>2</Item>
-					</SpellTrainedDecrease>
-					<SpellpowerDecreaseForTrainedDrop1BelowNone>0.25</SpellpowerDecreaseForTrainedDrop1BelowNone>
-					<SpellpowerDecreaseForTrainedDrop2BelowNone>0.5</SpellpowerDecreaseForTrainedDrop2BelowNone>
+					<SpellTrainedDecrease><Item>0</Item><Item>0</Item><Item>0</Item><Item>0</Item><Item>0</Item></SpellTrainedDecrease>
+					<SpellpowerDecreaseForTrainedDrop1BelowNone>0.0</SpellpowerDecreaseForTrainedDrop1BelowNone>
+					<SpellpowerDecreaseForTrainedDrop2BelowNone>0.0</SpellpowerDecreaseForTrainedDrop2BelowNone>
 				</ExpertShatterMagic>
-				<CorruptMagic_SpellCostIncrease>0.25</CorruptMagic_SpellCostIncrease>
-				<WeakenMagic_SpellPowerDecrease>0.25</WeakenMagic_SpellPowerDecrease>
-				<DetainMagic_CasterExtraATBDrop>0.25</DetainMagic_CasterExtraATBDrop>
+				<CorruptMagic_SpellCostIncrease>0.0</CorruptMagic_SpellCostIncrease>
+				<WeakenMagic_SpellPowerDecrease>0.0</WeakenMagic_SpellPowerDecrease>
+				<DetainMagic_CasterExtraATBDrop>0.0</DetainMagic_CasterExtraATBDrop>
 			</Barbarian>
 			<Melee>
 				<HeroDamageLevel1>
