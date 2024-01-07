@@ -55,11 +55,13 @@
 		<Knowledge>4</Knowledge>
 		<skills>
 			<Item>
-				<Mastery>MASTERY_ADVANCED</Mastery>
-				<SkillID>HERO_SKILL_LEADERSHIP</SkillID>
-			</Item>
+				<Mastery>MASTERY_EXPERT</Mastery>
+				<SkillID>HERO_SKILL_INNATES</SkillID>
+			</Item>	
 		</skills>
-		<perkIDs/>
+		<perkIDs>
+			<Item>HERO_SKILL_FAMILIAR_LAND</Item>
+		</perkIDs>
 		<spellIDs/>
 		<Ballista>false</Ballista>
 		<FirstAidTent>false</FirstAidTent>

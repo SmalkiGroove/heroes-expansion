@@ -57,23 +57,13 @@
 		<Knowledge>2</Knowledge>
 		<skills>
 			<Item>
-				<Mastery>MASTERY_ADVANCED</Mastery>
-				<SkillID>HERO_SKILL_SHATTER_DARK_MAGIC</SkillID>
-			</Item>
-			<Item>
-				<Mastery>MASTERY_ADVANCED</Mastery>
-				<SkillID>HERO_SKILL_SHATTER_DESTRUCTIVE_MAGIC</SkillID>
-			</Item>
-			<Item>
-				<Mastery>MASTERY_ADVANCED</Mastery>
-				<SkillID>HERO_SKILL_SHATTER_LIGHT_MAGIC</SkillID>
-			</Item>
-			<Item>
-				<Mastery>MASTERY_ADVANCED</Mastery>
-				<SkillID>HERO_SKILL_SHATTER_SUMMONING_MAGIC</SkillID>
-			</Item>
+				<Mastery>MASTERY_EXPERT</Mastery>
+				<SkillID>HERO_SKILL_INNATES</SkillID>
+			</Item>	
 		</skills>
-		<perkIDs/>
+		<perkIDs>
+			<Item>HERO_SKILL_SIEGE</Item>
+		</perkIDs>
 		<spellIDs>
 			<Item>SPELL_DISPEL</Item>
 		</spellIDs>

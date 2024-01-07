@@ -55,8 +55,15 @@
 		<Defence>0</Defence>
 		<Spellpower>3</Spellpower>
 		<Knowledge>1</Knowledge>
-		<skills/>
-		<perkIDs/>
+		<skills>
+			<Item>
+				<Mastery>MASTERY_EXPERT</Mastery>
+				<SkillID>HERO_SKILL_INNATES</SkillID>
+			</Item>	
+		</skills>
+		<perkIDs>
+			<Item>HERO_SKILL_ELEMENTAL_VISION</Item>
+		</perkIDs>
 		<spellIDs/>
 		<Ballista>false</Ballista>
 		<FirstAidTent>false</FirstAidTent>

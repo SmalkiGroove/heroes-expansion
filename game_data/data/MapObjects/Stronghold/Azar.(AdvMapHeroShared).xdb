@@ -57,16 +57,12 @@
 		<Knowledge>1</Knowledge>
 		<skills>
 			<Item>
-				<Mastery>MASTERY_BASIC</Mastery>
-				<SkillID>HERO_SKILL_OFFENCE</SkillID>
-			</Item>
-			<Item>
-				<Mastery>MASTERY_BASIC</Mastery>
-				<SkillID>HERO_SKILL_VOICE</SkillID>
-			</Item>
+				<Mastery>MASTERY_EXPERT</Mastery>
+				<SkillID>HERO_SKILL_INNATES</SkillID>
+			</Item>	
 		</skills>
 		<perkIDs>
-			<Item>HERO_SKILL_FRENZY</Item>
+			<Item>HERO_SKILL_SIEGE</Item>
 		</perkIDs>
 		<spellIDs>
 			<Item>SPELL_WARCRY_SHOUT_OF_MANY</Item>
