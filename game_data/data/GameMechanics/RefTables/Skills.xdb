@@ -1763,7 +1763,7 @@
 					<Item>
 						<Class>HERO_CLASS_NONE</Class>
 						<dependenciesIDs>
-							<Item>HERO_SKILL_BATTLE_MECHANICS</Item>
+							<Item>HERO_SKILL_TECHNICAL_STAFF</Item>
 						</dependenciesIDs>
 					</Item>
 				</SkillPrerequisites>
@@ -2508,8 +2508,8 @@
 			<ID>HERO_SKILL_ARCHERY</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Perks/Offence_Archery_grey.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Perks/Offence_Archery.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/Archery_grey.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/Archery.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -3718,7 +3718,7 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_NATURAL_MAGIC</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
@@ -3850,7 +3850,7 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_NATURAL_MAGIC</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
@@ -4196,7 +4196,7 @@
 				<spellBuffs>
 					<Item>SPELL_SKILL_DEMONIC_FIRE</Item>
 				</spellBuffs>
-				<BasicSkillID>HERO_SKILL_GATING</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
@@ -4267,7 +4267,7 @@
 					<Item>
 						<Class>HERO_CLASS_NONE</Class>
 						<dependenciesIDs>
-							<Item>HERO_SKILL_CRITICAL_STRIKE</Item>
+							<Item>HERO_SKILL_STUNNING_BLOW</Item>
 						</dependenciesIDs>
 					</Item>
 				</SkillPrerequisites>
@@ -4410,7 +4410,7 @@
 				<SkillType>SKILLTYPE_STANDART_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_NECROMANCY</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
@@ -4473,18 +4473,11 @@
 					<Item href="/Text/Game/Skills/Unique/Necromancy/DeathScream/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
-				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
+				<SkillType>SKILLTYPE_STANDART_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
 				<BasicSkillID>HERO_SKILL_NECROMANCY</BasicSkillID>
-				<SkillPrerequisites>
-					<Item>
-						<Class>HERO_CLASS_NONE</Class>
-						<dependenciesIDs>
-							<Item>HERO_SKILL_ETERNAL_SERVITUDE</Item>
-						</dependenciesIDs>
-					</Item>
-				</SkillPrerequisites>
+				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
 						<CommanderValue>0</CommanderValue>
@@ -4546,18 +4539,11 @@
 					<Item href="/Text/Game/Skills/Unique/Avenger/Multishot/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
-				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
+				<SkillType>SKILLTYPE_STANDART_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_AVENGER</BasicSkillID>
-				<SkillPrerequisites>
-					<Item>
-						<Class>HERO_CLASS_NONE</Class>
-						<dependenciesIDs>
-							<Item>HERO_SKILL_DEADEYE_SHOT</Item>
-						</dependenciesIDs>
-					</Item>
-				</SkillPrerequisites>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
+				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
 						<CommanderValue>0</CommanderValue>
@@ -4604,7 +4590,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_DEADEYE_SHOT</ID>
+			<ID>HERO_SKILL_SNIPER</ID>
 			<obj>
 				<Texture>
 					<Item href="/Textures/HeroScreen/Perks/Avenger_SnipeDead_grey.xdb#xpointer(/Texture)"/>
@@ -4619,11 +4605,18 @@
 					<Item href="/Text/Game/Skills/Unique/Avenger/SnipeDead/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
-				<SkillType>SKILLTYPE_STANDART_PERK</SkillType>
+				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
 				<BasicSkillID>HERO_SKILL_AVENGER</BasicSkillID>
-				<SkillPrerequisites/>
+				<SkillPrerequisites>
+					<Item>
+						<Class>HERO_CLASS_NONE</Class>
+						<dependenciesIDs>
+							<Item>HERO_SKILL_KNOW_YOUR_ENEMY</Item>
+						</dependenciesIDs>
+					</Item>
+				</SkillPrerequisites>
 				<AIRacesValues>
 					<Haven>
 						<CommanderValue>0</CommanderValue>
@@ -5017,8 +5010,8 @@
 			<ID>HERO_SKILL_MEDITATION</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Feats/Warlock/LightMagic_EliteCasters_grey.(Texture).xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Feats/Warlock/LightMagic_EliteCasters.(Texture).xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/Meditation_grey.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/Meditation.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -5102,10 +5095,10 @@
 					<Item href="/Text/Game/Skills/Unique/Invocation/ElementalVision/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
-				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
+				<SkillType>SKILLTYPE_STANDART_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_ARCANISM</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>				
 				<AIRacesValues>
 					<Haven>
@@ -5168,10 +5161,10 @@
 					<Item href="/Text/Game/Skills/Common/Logistics/RoadHome/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
-				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
+				<SkillType>SKILLTYPE_STANDART_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_LOGISTICS</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
@@ -5180,9 +5173,9 @@
 						<FreelancerValue>1000</FreelancerValue>
 					</Haven>
 					<Sylvan>
-						<CommanderValue>1000</CommanderValue>
-						<CollectorSupplierValue>1000</CollectorSupplierValue>
-						<FreelancerValue>1000</FreelancerValue>
+						<CommanderValue>0</CommanderValue>
+						<CollectorSupplierValue>0</CollectorSupplierValue>
+						<FreelancerValue>0</FreelancerValue>
 					</Sylvan>
 					<Academy>
 						<CommanderValue>0</CommanderValue>
@@ -5238,7 +5231,14 @@
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
 				<BasicSkillID>HERO_SKILL_ARMY_SUPPORT</BasicSkillID>
-				<SkillPrerequisites/>
+				<SkillPrerequisites>
+					<Item>
+						<Class>HERO_CLASS_NONE</Class>
+						<dependenciesIDs>
+							<Item>HERO_SKILL_FLAMING_ARROWS</Item>
+						</dependenciesIDs>
+					</Item>
+				</SkillPrerequisites>
 				<AIRacesValues>
 					<Haven>
 						<CommanderValue>1000</CommanderValue>
@@ -5376,7 +5376,7 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_COURAGE</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
@@ -5439,11 +5439,18 @@
 					<Item href="/Text/Game/Skills/Common/Defence/HoldGround/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
-				<SkillType>SKILLTYPE_STANDART_PERK</SkillType>
+				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
 				<BasicSkillID>HERO_SKILL_DEFENSE</BasicSkillID>
-				<SkillPrerequisites/>
+				<SkillPrerequisites>
+					<Item>
+						<Class>HERO_CLASS_NONE</Class>
+						<dependenciesIDs>
+							<Item>HERO_SKILL_DEFENSIVE_FORMATION</Item>
+						</dependenciesIDs>
+					</Item>
+				</SkillPrerequisites>
 				<AIRacesValues>
 					<Haven>
 						<CommanderValue>1000</CommanderValue>
@@ -5647,7 +5654,7 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_LOGISTICS</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_GOVERNANCE</BasicSkillID>
 				<SkillPrerequisites>
 					<Item>
 						<Class>HERO_CLASS_NONE</Class>
@@ -5702,11 +5709,11 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_CASTER_CERTIFICATE</ID>
+			<ID>HERO_SKILL_INFUSION</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Feats/Knight/Sorcery_CasterCertificate_grey.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Feats/Knight/Sorcery_CasterCertificate.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Feats/Warlock/LightMagic_EliteCasters_grey.(Texture).xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Feats/Warlock/LightMagic_EliteCasters.(Texture).xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -5717,7 +5724,7 @@
 					<Item href="/Text/Game/Skills/Common/Sorcery/CasterCertificate/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
-				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
+				<SkillType>SKILLTYPE_STANDART_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
 				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
@@ -5734,9 +5741,9 @@
 						<FreelancerValue>0</FreelancerValue>
 					</Sylvan>
 					<Academy>
-						<CommanderValue>0</CommanderValue>
-						<CollectorSupplierValue>0</CollectorSupplierValue>
-						<FreelancerValue>0</FreelancerValue>
+						<CommanderValue>1000</CommanderValue>
+						<CollectorSupplierValue>1000</CollectorSupplierValue>
+						<FreelancerValue>1000</FreelancerValue>
 					</Academy>
 					<Dungeon>
 						<CommanderValue>0</CommanderValue>
@@ -6577,8 +6584,15 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_SORCERY</BasicSkillID>
-				<SkillPrerequisites/>
+				<BasicSkillID>HERO_SKILL_SHATTER_LIGHT</BasicSkillID>
+				<SkillPrerequisites>
+					<Item>
+						<Class>HERO_CLASS_NONE</Class>
+						<dependenciesIDs>
+							<Item>HERO_SKILL_CONSUME_CORPSE</Item>
+						</dependenciesIDs>
+					</Item>
+				</SkillPrerequisites>
 				<AIRacesValues>
 					<Haven>
 						<CommanderValue>1000</CommanderValue>
@@ -6709,7 +6723,7 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_DARK_MAGIC</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
@@ -6913,18 +6927,11 @@
 					<Item href="/Text/Game/Skills/Unique/Gating/AbsoluteGating/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
-				<SkillType>SKILLTYPE_UNIQUE_PERK</SkillType>
+				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_GATING</BasicSkillID>
-				<SkillPrerequisites>
-				    <Item>
-						<Class>HERO_CLASS_NONE</Class>
-						<dependenciesIDs>
-							<Item>HERO_SKILL_NONE</Item>
-						</dependenciesIDs>
-					</Item>
-				</SkillPrerequisites>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
+				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
 						<CommanderValue>0</CommanderValue>
@@ -6971,11 +6978,11 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_DEATH_TREAD</ID>
+			<ID>HERO_SKILL_SIEGE</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Added/Superior_Tactics_grey.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Added/Superior_Tactics.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/WarMachine_Catapult_grey.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/WarMachine_Catapult.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -6986,46 +6993,46 @@
 					<Item href="/Text/Game/Skills/Common/Logistics/DeathTread/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
-				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
+				<SkillType>SKILLTYPE_STANDART_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_LOGISTICS</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
-						<CommanderValue>1000</CommanderValue>
-						<CollectorSupplierValue>1000</CollectorSupplierValue>
-						<FreelancerValue>1000</FreelancerValue>
+						<CommanderValue>0</CommanderValue>
+						<CollectorSupplierValue>0</CollectorSupplierValue>
+						<FreelancerValue>0</FreelancerValue>
 					</Haven>
 					<Sylvan>
-						<CommanderValue>1000</CommanderValue>
-						<CollectorSupplierValue>1000</CollectorSupplierValue>
-						<FreelancerValue>1000</FreelancerValue>
+						<CommanderValue>0</CommanderValue>
+						<CollectorSupplierValue>0</CollectorSupplierValue>
+						<FreelancerValue>0</FreelancerValue>
 					</Sylvan>
 					<Academy>
-						<CommanderValue>1000</CommanderValue>
-						<CollectorSupplierValue>1000</CollectorSupplierValue>
-						<FreelancerValue>1000</FreelancerValue>
+						<CommanderValue>0</CommanderValue>
+						<CollectorSupplierValue>0</CollectorSupplierValue>
+						<FreelancerValue>0</FreelancerValue>
 					</Academy>
 					<Dungeon>
-						<CommanderValue>1000</CommanderValue>
-						<CollectorSupplierValue>1000</CollectorSupplierValue>
-						<FreelancerValue>1000</FreelancerValue>
+						<CommanderValue>0</CommanderValue>
+						<CollectorSupplierValue>0</CollectorSupplierValue>
+						<FreelancerValue>0</FreelancerValue>
 					</Dungeon>
 					<Necropolis>
-						<CommanderValue>1000</CommanderValue>
-						<CollectorSupplierValue>1000</CollectorSupplierValue>
-						<FreelancerValue>1000</FreelancerValue>
+						<CommanderValue>0</CommanderValue>
+						<CollectorSupplierValue>0</CollectorSupplierValue>
+						<FreelancerValue>0</FreelancerValue>
 					</Necropolis>
 					<Inferno>
-						<CommanderValue>1000</CommanderValue>
-						<CollectorSupplierValue>1000</CollectorSupplierValue>
-						<FreelancerValue>1000</FreelancerValue>
+						<CommanderValue>0</CommanderValue>
+						<CollectorSupplierValue>0</CollectorSupplierValue>
+						<FreelancerValue>0</FreelancerValue>
 					</Inferno>
 					<Fortress>
-						<CommanderValue>1000</CommanderValue>
-						<CollectorSupplierValue>1000</CollectorSupplierValue>
-						<FreelancerValue>1000</FreelancerValue>
+						<CommanderValue>0</CommanderValue>
+						<CollectorSupplierValue>0</CollectorSupplierValue>
+						<FreelancerValue>0</FreelancerValue>
 					</Fortress>
 					<Stronghold>
 						<CommanderValue>1000</CommanderValue>
@@ -7121,8 +7128,15 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_LEARNING</BasicSkillID>
-				<SkillPrerequisites/>
+				<BasicSkillID>HERO_SKILL_NECROMANCY</BasicSkillID>
+				<SkillPrerequisites>
+					<Item>
+						<Class>HERO_CLASS_NONE</Class>
+						<dependenciesIDs>
+							<Item>HERO_SKILL_HAUNTING</Item>
+						</dependenciesIDs>
+					</Item>
+				</SkillPrerequisites>
 				<AIRacesValues>
 					<Haven>
 						<CommanderValue>0</CommanderValue>
@@ -7257,18 +7271,11 @@
 					<Item href="/Text/Game/Skills/Common/Luck/DeadLuck/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
-				<SkillType>SKILLTYPE_UNIQUE_PERK</SkillType>
+				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_NECROMANCY</BasicSkillID>
-				<SkillPrerequisites>
-					<Item>
-						<Class>HERO_CLASS_NONE</Class>
-						<dependenciesIDs>
-							<Item>HERO_SKILL_NONE</Item>
-						</dependenciesIDs>
-					</Item>
-				</SkillPrerequisites>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
+				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
 						<CommanderValue>0</CommanderValue>
@@ -7693,7 +7700,7 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_LIGHT_MAGIC</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
@@ -7832,7 +7839,7 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_NECROMANCY</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
@@ -7895,18 +7902,11 @@
 					<Item href="/Text/Game/Skills/Common/Logistics/DisguiseAndReckon/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
-				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
+				<SkillType>SKILLTYPE_STANDART_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
 				<BasicSkillID>HERO_SKILL_AVENGER</BasicSkillID>
-				<SkillPrerequisites>
-					<Item>
-						<Class>HERO_CLASS_NONE</Class>
-						<dependenciesIDs>
-							<Item>HERO_SKILL_RAIN_OF_ARROWS</Item>
-						</dependenciesIDs>
-					</Item>
-				</SkillPrerequisites>
+				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
 						<CommanderValue>0</CommanderValue>
@@ -7974,7 +7974,7 @@
 				<BasicSkillID>HERO_SKILL_AVENGER</BasicSkillID>
 				<SkillPrerequisites>
 					<Item>
-						<Class>HERO_CLASS_RANGER</Class>
+						<Class>HERO_CLASS_NONE</Class>
 						<dependenciesIDs>
 							<Item>HERO_SKILL_IMBUE_ARROW</Item>
 						</dependenciesIDs>
@@ -8045,7 +8045,14 @@
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
 				<BasicSkillID>HERO_SKILL_AVENGER</BasicSkillID>
-				<SkillPrerequisites/>
+				<SkillPrerequisites>
+					<Item>
+						<Class>HERO_CLASS_NONE</Class>
+						<dependenciesIDs>
+							<Item>HERO_SKILL_SILENT_TRACKER</Item>
+						</dependenciesIDs>
+					</Item>
+				</SkillPrerequisites>
 				<AIRacesValues>
 					<Haven>
 						<CommanderValue>0</CommanderValue>
@@ -8113,7 +8120,7 @@
 				<BasicSkillID>HERO_SKILL_AVENGER</BasicSkillID>
 				<SkillPrerequisites>
 					<Item>
-						<Class>HERO_CLASS_RANGER</Class>
+						<Class>HERO_CLASS_NONE</Class>
 						<dependenciesIDs>
 							<Item>HERO_SKILL_IMBUE_BALLISTA</Item>
 						</dependenciesIDs>
@@ -8241,8 +8248,8 @@
 			<ID>HERO_SKILL_SHARPENING</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Feats/Ranger/Offence_ForestRage_grey.(Texture).xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Feats/Ranger/Offence_ForestRage.(Texture).xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/Sharpening_grey.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/Sharpening.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -8377,7 +8384,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_MAGIC_INSIGHT</ID>
+			<ID>HERO_SKILL_INSIGHTS</ID>
 			<obj>
 				<Texture>
 					<Item href="/Textures/HeroScreen/Feats/Ranger/Sorcery_Insights_grey.(Texture).xdb#xpointer(/Texture)"/>
@@ -8395,7 +8402,7 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_SORCERY</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
@@ -8519,8 +8526,8 @@
 			<ID>HERO_SKILL_SCORCHING_EARTH</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Feats/Ranger/DarkMagic_SoilBurn_grey.(Texture).xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Feats/Ranger/DarkMagic_SoilBurn.(Texture).xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/ScorchingEarth_grey.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/ScorchingEarth.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -8743,18 +8750,11 @@
 					<Item href="/Text/Game/Skills/Unique/Avenger/AbsoluteLuck/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
-				<SkillType>SKILLTYPE_UNIQUE_PERK</SkillType>
+				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_AVENGER</BasicSkillID>
-				<SkillPrerequisites>
-					<Item>
-						<Class>HERO_CLASS_NONE</Class>
-						<dependenciesIDs>
-							<Item>HERO_SKILL_NONE</Item>
-						</dependenciesIDs>
-					</Item>
-				</SkillPrerequisites>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
+				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
 						<CommanderValue>0</CommanderValue>
@@ -8958,7 +8958,7 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_LEARNING</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
@@ -9243,7 +9243,7 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_DEFENSE</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
@@ -9455,7 +9455,7 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_DARK_MAGIC</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
@@ -9521,7 +9521,7 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_LIGHT_MAGIC</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
@@ -9650,18 +9650,11 @@
 					<Item href="/Text/Game/Skills/Unique/Artificer/AbsoluteWizardy/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
-				<SkillType>SKILLTYPE_UNIQUE_PERK</SkillType>
+				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_ARTIFICIER</BasicSkillID>
-				<SkillPrerequisites>
-					<Item>
-						<Class>HERO_CLASS_NONE</Class>
-						<dependenciesIDs>
-							<Item>HERO_SKILL_NONE</Item>
-						</dependenciesIDs>
-					</Item>
-				</SkillPrerequisites>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
+				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
 						<CommanderValue>0</CommanderValue>
@@ -10021,7 +10014,7 @@
 				<BasicSkillID>HERO_SKILL_ARCANISM</BasicSkillID>
 				<SkillPrerequisites>
 					<Item>
-						<Class>HERO_CLASS_KNIGHT</Class>
+						<Class>HERO_CLASS_NONE</Class>
 						<dependenciesIDs>
 							<Item>HERO_SKILL_ERRATIC_MANA</Item>
 						</dependenciesIDs>
@@ -10215,8 +10208,8 @@
 			<ID>HERO_SKILL_ERRATIC_MANA</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Added/Erratic_Mana_grey.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Added/Erratic_Mana.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/Erratic_Mana_grey.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/Erratic_Mana.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -10231,7 +10224,14 @@
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
 				<BasicSkillID>HERO_SKILL_ARCANISM</BasicSkillID>
-				<SkillPrerequisites/>
+				<SkillPrerequisites>
+					<Item>
+						<Class>HERO_CLASS_NONE</Class>
+						<dependenciesIDs>
+							<Item>HERO_SKILL_EMPOWERED_SPELLS</Item>
+						</dependenciesIDs>
+					</Item>
+				</SkillPrerequisites>
 				<AIRacesValues>
 					<Haven>
 						<CommanderValue>0</CommanderValue>
@@ -10296,7 +10296,7 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
@@ -10347,8 +10347,8 @@
 			<ID>HERO_SKILL_SECRETS_OF_DESTRUCT</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Feats/Warlock/DarkMagic_Payback_grey.(Texture).xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Feats/Warlock/DarkMagic_Payback.(Texture).xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Feats/Warlock/DestructiveMagic_SecretsOfDestruction_grey.(Texture).xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Feats/Warlock/DestructiveMagic_SecretsOfDestruction.(Texture).xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -10578,18 +10578,11 @@
 					<Item href="/Text/Game/Skills/Unique/Invocation/AbsoluteChains/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
-				<SkillType>SKILLTYPE_UNIQUE_PERK</SkillType>
+				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_ARCANISM</BasicSkillID>
-				<SkillPrerequisites>
-					<Item>
-						<Class>HERO_CLASS_NONE</Class>
-						<dependenciesIDs>
-							<Item>HERO_SKILL_NONE</Item>
-						</dependenciesIDs>
-					</Item>
-				</SkillPrerequisites>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
+				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
 						<CommanderValue>0</CommanderValue>
@@ -10996,11 +10989,11 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_BATTLE_MECHANICS</ID>
+			<ID>HERO_SKILL_TECHNICAL_STAFF</ID>
 			<obj>
 				<Texture>
-					<Item href="/UI/H5A1/Icons/Abilites/Skills/128x128/Runic_Machines_Gray.(Texture).xdb#xpointer(/Texture)"/>
-					<Item href="/UI/H5A1/Icons/Abilites/Skills/128x128/Runic_Machines.(Texture).xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/TechnicalStaff_grey.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/TechnicalStaff.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -11366,20 +11359,13 @@
 					<Item href="/Text/Game/Skills/Common/Defence/DefensiveFormation/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
-				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
+				<SkillType>SKILLTYPE_STANDART_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs>
 					<Item>SPELL_SKILL_DEFENSIVE_FORMATION</Item>
 				</spellBuffs>
 				<BasicSkillID>HERO_SKILL_DEFENSE</BasicSkillID>
-				<SkillPrerequisites>
-					<Item>
-						<Class>HERO_CLASS_NONE</Class>
-						<dependenciesIDs>
-							<Item>HERO_SKILL_HOLD_GROUND</Item>
-						</dependenciesIDs>
-					</Item>
-				</SkillPrerequisites>
+				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
 						<CommanderValue>1000</CommanderValue>
@@ -11572,11 +11558,11 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_SHRUG_DARKNESS</ID>
+			<ID>HERO_SKILL_TENACITY</ID>
 			<obj>
 				<Texture>
-					<Item href="/UI/H5A1/Icons/Abilites/Skills/128x128/Shrug_Darkness_Gray.(Texture).xdb#xpointer(/Texture)"/>
-					<Item href="/UI/H5A1/Icons/Abilites/Skills/128x128/Shrug_Darkness.(Texture).xdb#xpointer(/Texture)"/>
+					<Item href="/UI/H5A1/Icons/Abilites/Skills/128x128/Quickness_of_Mind_Gray.(Texture).xdb#xpointer(/Texture)"/>
+					<Item href="/UI/H5A1/Icons/Abilites/Skills/128x128/Quickness_of_Mind.(Texture).xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -11587,41 +11573,41 @@
 					<Item href="/Text/Game/Skills/Common/DarkMagic/ShrugDarkness/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
-				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
+				<SkillType>SKILLTYPE_STANDART_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_SHATTER_DARK</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
-						<CommanderValue>1000</CommanderValue>
-						<CollectorSupplierValue>1000</CollectorSupplierValue>
-						<FreelancerValue>1000</FreelancerValue>
+						<CommanderValue>0</CommanderValue>
+						<CollectorSupplierValue>0</CollectorSupplierValue>
+						<FreelancerValue>0</FreelancerValue>
 					</Haven>
 					<Sylvan>
-						<CommanderValue>1000</CommanderValue>
-						<CollectorSupplierValue>1000</CollectorSupplierValue>
-						<FreelancerValue>1000</FreelancerValue>
+						<CommanderValue>0</CommanderValue>
+						<CollectorSupplierValue>0</CollectorSupplierValue>
+						<FreelancerValue>0</FreelancerValue>
 					</Sylvan>
 					<Academy>
-						<CommanderValue>1000</CommanderValue>
-						<CollectorSupplierValue>1000</CollectorSupplierValue>
-						<FreelancerValue>1000</FreelancerValue>
+						<CommanderValue>0</CommanderValue>
+						<CollectorSupplierValue>0</CollectorSupplierValue>
+						<FreelancerValue>0</FreelancerValue>
 					</Academy>
 					<Dungeon>
-						<CommanderValue>1000</CommanderValue>
-						<CollectorSupplierValue>1000</CollectorSupplierValue>
-						<FreelancerValue>1000</FreelancerValue>
+						<CommanderValue>0</CommanderValue>
+						<CollectorSupplierValue>0</CollectorSupplierValue>
+						<FreelancerValue>0</FreelancerValue>
 					</Dungeon>
 					<Necropolis>
-						<CommanderValue>1000</CommanderValue>
-						<CollectorSupplierValue>1000</CollectorSupplierValue>
-						<FreelancerValue>1000</FreelancerValue>
+						<CommanderValue>0</CommanderValue>
+						<CollectorSupplierValue>0</CollectorSupplierValue>
+						<FreelancerValue>0</FreelancerValue>
 					</Necropolis>
 					<Inferno>
-						<CommanderValue>1000</CommanderValue>
-						<CollectorSupplierValue>1000</CollectorSupplierValue>
-						<FreelancerValue>1000</FreelancerValue>
+						<CommanderValue>0</CommanderValue>
+						<CollectorSupplierValue>0</CollectorSupplierValue>
+						<FreelancerValue>0</FreelancerValue>
 					</Inferno>
 					<Fortress>
 						<CommanderValue>1000</CommanderValue>
@@ -11629,9 +11615,9 @@
 						<FreelancerValue>1000</FreelancerValue>
 					</Fortress>
 					<Stronghold>
-						<CommanderValue>1000</CommanderValue>
-						<CollectorSupplierValue>1000</CollectorSupplierValue>
-						<FreelancerValue>1000</FreelancerValue>
+						<CommanderValue>0</CommanderValue>
+						<CollectorSupplierValue>0</CollectorSupplierValue>
+						<FreelancerValue>0</FreelancerValue>
 					</Stronghold>
 				</AIRacesValues>
 				<PresetPrice>0</PresetPrice>
@@ -11799,20 +11785,13 @@
 					<Item href="/Text/Game/Skills/Unique/Runelore/AbsoluteProtection/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
-				<SkillType>SKILLTYPE_UNIQUE_PERK</SkillType>
+				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs>
 					<Item>SPELL_SKILL_ABSOLUTE_PROTECTION</Item>
 				</spellBuffs>
-				<BasicSkillID>HERO_SKILL_RUNELORE</BasicSkillID>
-				<SkillPrerequisites>
-					<Item>
-						<Class>HERO_CLASS_NONE</Class>
-						<dependenciesIDs>
-							<Item>HERO_SKILL_NONE</Item>
-						</dependenciesIDs>
-					</Item>		
-				</SkillPrerequisites>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
+				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
 						<CommanderValue>0</CommanderValue>
@@ -12101,7 +12080,7 @@
 					<Item>
 						<Class>HERO_CLASS_NONE</Class>
 						<dependenciesIDs>
-							<Item>HERO_SKILL_DEFENSIVE_FORMATION</Item>
+							<Item>HERO_SKILL_HOLD_GROUND</Item>
 						</dependenciesIDs>
 					</Item>
 				</SkillPrerequisites>
@@ -12446,18 +12425,11 @@
 					<Item href="/Text/Game/Skills/Unique/DemonicRage/AbsoluteRage/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
-				<SkillType>SKILLTYPE_UNIQUE_PERK</SkillType>
+				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_BLOOD_RAGE</BasicSkillID>
-				<SkillPrerequisites>
-					<Item>
-						<Class>HERO_CLASS_NONE</Class>
-						<dependenciesIDs>
-							<Item>HERO_SKILL_NONE</Item>
-						</dependenciesIDs>
-					</Item>
-				</SkillPrerequisites>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
+				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
 						<CommanderValue>0</CommanderValue>
@@ -14719,8 +14691,8 @@
 			<ID>HERO_SKILL_BARBARIAN_ANCIENT_SMITHY</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Feats/Knight/DestructiveMagic_AncientSmithy_grey.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Feats/Knight/DestructiveMagic_AncientSmithy.xdb#xpointer(/Texture)"/>
+					<Item href=""/>
+					<Item href=""/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -14734,7 +14706,7 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_SHATTER_DESTRUCT</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
@@ -14785,8 +14757,8 @@
 			<ID>HERO_SKILL_BARBARIAN_WEAKENING_STRIKE</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Added/AgonizingStrike_grey.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Added/AgonizingStrike.xdb#xpointer(/Texture)"/>
+					<Item href=""/>
+					<Item href=""/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -14800,7 +14772,7 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_SHATTER_DARK</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
@@ -14851,8 +14823,8 @@
 			<ID>HERO_SKILL_BARBARIAN_SOIL_BURN</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Added/CursedGround_grey.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Added/CursedGround.xdb#xpointer(/Texture)"/>
+					<Item href=""/>
+					<Item href=""/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -14866,7 +14838,7 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_SHATTER_DARK</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
@@ -14917,8 +14889,8 @@
 			<ID>HERO_SKILL_BARBARIAN_FOG_VEIL</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Feats/Ranger/SummoningMagic_FogVeil_grey.(Texture).xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Feats/Ranger/SummoningMagic_FogVeil.(Texture).xdb#xpointer(/Texture)"/>
+					<Item href=""/>
+					<Item href=""/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -14932,7 +14904,7 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_SHATTER_NATURE</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
@@ -14983,8 +14955,8 @@
 			<ID>HERO_SKILL_BARBARIAN_INTELLIGENCE</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Perks/Learning_Intelligence_grey.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Perks/Learning_Intelligence.xdb#xpointer(/Texture)"/>
+					<Item href=""/>
+					<Item href=""/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -15053,8 +15025,8 @@
 			<ID>HERO_SKILL_BARBARIAN_MYSTICISM</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Perks/Sorcery_Mysticism_grey.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Perks/Sorcery_Mysticism.xdb#xpointer(/Texture)"/>
+					<Item href=""/>
+					<Item href=""/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -15065,10 +15037,10 @@
 					<Item href="/Text/Game/Skills/Common/Sorcery/Mysticism/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
-				<SkillType>SKILLTYPE_STANDART_PERK</SkillType>
+				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_VOICE</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
@@ -15107,9 +15079,9 @@
 						<FreelancerValue>0</FreelancerValue>
 					</Fortress>
 					<Stronghold>
-						<CommanderValue>1000</CommanderValue>
-						<CollectorSupplierValue>1000</CollectorSupplierValue>
-						<FreelancerValue>1000</FreelancerValue>
+						<CommanderValue>0</CommanderValue>
+						<CollectorSupplierValue>0</CollectorSupplierValue>
+						<FreelancerValue>0</FreelancerValue>
 					</Stronghold>
 				</AIRacesValues>
 				<PresetPrice>0</PresetPrice>
@@ -15119,8 +15091,8 @@
 			<ID>HERO_SKILL_BARBARIAN_ELITE_CASTERS</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Feats/Warlock/LightMagic_EliteCasters_grey.(Texture).xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Feats/Warlock/LightMagic_EliteCasters.(Texture).xdb#xpointer(/Texture)"/>
+					<Item href=""/>
+					<Item href=""/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -15134,15 +15106,8 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_VOICE</BasicSkillID>
-				<SkillPrerequisites>
-					<Item>
-						<Class>HERO_CLASS_BARBARIAN</Class>
-						<dependenciesIDs>
-							<Item>HERO_SKILL_BARBARIAN_MYSTICISM</Item>
-						</dependenciesIDs>
-					</Item>
-				</SkillPrerequisites>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
+				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
 						<CommanderValue>0</CommanderValue>
@@ -15180,9 +15145,9 @@
 						<FreelancerValue>0</FreelancerValue>
 					</Fortress>
 					<Stronghold>
-						<CommanderValue>1000</CommanderValue>
-						<CollectorSupplierValue>1000</CollectorSupplierValue>
-						<FreelancerValue>1000</FreelancerValue>
+						<CommanderValue>0</CommanderValue>
+						<CollectorSupplierValue>0</CollectorSupplierValue>
+						<FreelancerValue>0</FreelancerValue>
 					</Stronghold>
 				</AIRacesValues>
 				<PresetPrice>0</PresetPrice>
@@ -15192,8 +15157,8 @@
 			<ID>HERO_SKILL_BARBARIAN_STORM_WIND</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Feats/Ranger/LightMagic_StormWind_grey.(Texture).xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Feats/Ranger/LightMagic_StormWind.(Texture).xdb#xpointer(/Texture)"/>
+					<Item href=""/>
+					<Item href=""/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -15207,15 +15172,8 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_VOICE</BasicSkillID>
-				<SkillPrerequisites>
-					<Item>
-						<Class>HERO_CLASS_BARBARIAN</Class>
-						<dependenciesIDs>
-							<Item>HERO_SKILL_BLOODLUST</Item>
-						</dependenciesIDs>
-					</Item>
-				</SkillPrerequisites>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
+				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
 						<CommanderValue>0</CommanderValue>
@@ -15253,9 +15211,9 @@
 						<FreelancerValue>0</FreelancerValue>
 					</Fortress>
 					<Stronghold>
-						<CommanderValue>1000</CommanderValue>
-						<CollectorSupplierValue>1000</CollectorSupplierValue>
-						<FreelancerValue>1000</FreelancerValue>
+						<CommanderValue>0</CommanderValue>
+						<CollectorSupplierValue>0</CollectorSupplierValue>
+						<FreelancerValue>0</FreelancerValue>
 					</Stronghold>
 				</AIRacesValues>
 				<PresetPrice>0</PresetPrice>
@@ -15265,8 +15223,8 @@
 			<ID>HERO_SKILL_BARBARIAN_FIRE_PROTECTION</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Feats/Demon_Lord/Demonic_FireProtection_grey.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Feats/Demon_Lord/Demonic_FireProtection.xdb#xpointer(/Texture)"/>
+					<Item href=""/>
+					<Item href=""/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -15282,7 +15240,7 @@
 				<spellBuffs>
 					<Item>SPELL_SKILL_FIRE_PROTECTION</Item>
 				</spellBuffs>
-				<BasicSkillID>HERO_SKILL_SHATTER_DESTRUCT</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
@@ -15333,8 +15291,8 @@
 			<ID>HERO_SKILL_BARBARIAN_SUN_FIRE</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Feats/Ranger/DestructiveMagic_SunFire_grey.(Texture).xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Feats/Ranger/DestructiveMagic_SunFire.(Texture).xdb#xpointer(/Texture)"/>
+					<Item href=""/>
+					<Item href=""/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -15348,7 +15306,7 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_SHATTER_DESTRUCT</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
@@ -15399,8 +15357,8 @@
 			<ID>HERO_SKILL_BARBARIAN_DISTRACT</ID>
 			<obj>
 				<Texture>
-					<Item href="/UI/H5A1/Icons/Abilites/Skills/128x128/Distract_Gray.(Texture).xdb#xpointer(/Texture)"/>
-					<Item href="/UI/H5A1/Icons/Abilites/Skills/128x128/Distract.(Texture).xdb#xpointer(/Texture)"/>
+					<Item href=""/>
+					<Item href=""/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -15414,15 +15372,8 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_VOICE</BasicSkillID>
-				<SkillPrerequisites>
-					<Item>
-						<Class>HERO_CLASS_BARBARIAN</Class>
-						<dependenciesIDs>
-							<Item>HERO_SKILL_MIGHTY_SHOUT</Item>
-						</dependenciesIDs>
-					</Item>
-				</SkillPrerequisites>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
+				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
 						<CommanderValue>0</CommanderValue>
@@ -15460,9 +15411,9 @@
 						<FreelancerValue>0</FreelancerValue>
 					</Fortress>
 					<Stronghold>
-						<CommanderValue>1000</CommanderValue>
-						<CollectorSupplierValue>1000</CollectorSupplierValue>
-						<FreelancerValue>1000</FreelancerValue>
+						<CommanderValue>0</CommanderValue>
+						<CollectorSupplierValue>0</CollectorSupplierValue>
+						<FreelancerValue>0</FreelancerValue>
 					</Stronghold>
 				</AIRacesValues>
 				<PresetPrice>0</PresetPrice>
@@ -15472,8 +15423,8 @@
 			<ID>HERO_SKILL_BARBARIAN_DARK_REVELATION</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Feats/Warlock/Learning_DarkRevelation_grey.(Texture).xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Feats/Warlock/Learning_DarkRevelation.(Texture).xdb#xpointer(/Texture)"/>
+					<Item href=""/>
+					<Item href=""/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -15488,26 +15439,7 @@
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
 				<BasicSkillID>HERO_SKILL_BARBARIAN_LEARNING</BasicSkillID>
-				<SkillPrerequisites>
-					<Item>
-						<Class>HERO_CLASS_BEWITCHER</Class>
-						<dependenciesIDs>
-							<Item>HERO_SKILL_SHEER_STRENGTH</Item>
-						</dependenciesIDs>
-					</Item>
-					<Item>
-						<Class>HERO_CLASS_BARBARIAN</Class>
-						<dependenciesIDs>
-							<Item>HERO_SKILL_SHEER_STRENGTH</Item>
-						</dependenciesIDs>
-					</Item>	
-					<Item>
-						<Class>HERO_CLASS_SHAMAN</Class>
-						<dependenciesIDs>
-							<Item>HERO_SKILL_SHEER_STRENGTH</Item>
-						</dependenciesIDs>
-					</Item>					
-				</SkillPrerequisites>		
+				<SkillPrerequisites/>	
 				<AIRacesValues>
 					<Haven>
 						<CommanderValue>0</CommanderValue>
@@ -15545,9 +15477,9 @@
 						<FreelancerValue>0</FreelancerValue>
 					</Fortress>
 					<Stronghold>
-						<CommanderValue>1000</CommanderValue>
-						<CollectorSupplierValue>1000</CollectorSupplierValue>
-						<FreelancerValue>1000</FreelancerValue>
+						<CommanderValue>0</CommanderValue>
+						<CollectorSupplierValue>0</CollectorSupplierValue>
+						<FreelancerValue>0</FreelancerValue>
 					</Stronghold>
 				</AIRacesValues>
 				<PresetPrice>0</PresetPrice>
@@ -15557,8 +15489,8 @@
 			<ID>HERO_SKILL_BARBARIAN_MENTORING</ID>
 			<obj>
 				<Texture>
-					<Item href="/UI/H5A1/Icons/Abilites/Heroes_Abillites/128x128/Mentoring.(Texture).xdb#xpointer(/Texture)"/>
-					<Item href="/UI/H5A1/Icons/Abilites/Heroes_Abillites/128x128/Mentoring.(Texture).xdb#xpointer(/Texture)"/>
+					<Item href=""/>
+					<Item href=""/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -15573,29 +15505,7 @@
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
 				<BasicSkillID>HERO_SKILL_BARBARIAN_LEARNING</BasicSkillID>
-				<SkillPrerequisites>
-					<Item>
-						<Class>HERO_CLASS_BEWITCHER</Class>
-						<dependenciesIDs>
-							<Item>HERO_SKILL_BARBARIAN_INTELLIGENCE</Item>
-							<Item>HERO_SKILL_WARCRY_LEARNING</Item>
-						</dependenciesIDs>
-					</Item>
-					<Item>
-						<Class>HERO_CLASS_BARBARIAN</Class>
-						<dependenciesIDs>
-							<Item>HERO_SKILL_BARBARIAN_INTELLIGENCE</Item>
-							<Item>HERO_SKILL_WARCRY_LEARNING</Item>
-						</dependenciesIDs>
-					</Item>
-					<Item>
-						<Class>HERO_CLASS_SHAMAN</Class>
-						<dependenciesIDs>
-							<Item>HERO_SKILL_BARBARIAN_INTELLIGENCE</Item>
-							<Item>HERO_SKILL_WARCRY_LEARNING</Item>
-						</dependenciesIDs>
-					</Item>
-				</SkillPrerequisites>
+				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven>
 						<CommanderValue>0</CommanderValue>
@@ -15633,9 +15543,9 @@
 						<FreelancerValue>0</FreelancerValue>
 					</Fortress>
 					<Stronghold>
-						<CommanderValue>1000</CommanderValue>
-						<CollectorSupplierValue>1000</CollectorSupplierValue>
-						<FreelancerValue>1000</FreelancerValue>
+						<CommanderValue>0</CommanderValue>
+						<CollectorSupplierValue>0</CollectorSupplierValue>
+						<FreelancerValue>0</FreelancerValue>
 					</Stronghold>
 				</AIRacesValues>
 				<PresetPrice>0</PresetPrice>

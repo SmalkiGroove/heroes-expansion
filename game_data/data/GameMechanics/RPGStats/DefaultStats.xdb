@@ -393,19 +393,15 @@
 				<HexingAttackSpells>
 					<Item>
 						<Spell>SPELL_CURSE</Spell>
-						<Mastery>MASTERY_ADVANCED</Mastery>
+						<Mastery>MASTERY_BASIC</Mastery>
 					</Item>
 					<Item>
 						<Spell>SPELL_SLOW</Spell>
-						<Mastery>MASTERY_ADVANCED</Mastery>
+						<Mastery>MASTERY_BASIC</Mastery>
 					</Item>
 					<Item>
-						<Spell>SPELL_WEAKNESS</Spell>
-						<Mastery>MASTERY_ADVANCED</Mastery>
-					</Item>
-					<Item>
-						<Spell>SPELL_DISRUPTING_RAY</Spell>
-						<Mastery>MASTERY_ADVANCED</Mastery>
+						<Spell>SPELL_PLAGUE</Spell>
+						<Mastery>MASTERY_BASIC</Mastery>
 					</Item>
 				</HexingAttackSpells>
 				<SpellDamageMultiplier>0.5</SpellDamageMultiplier>
@@ -5187,7 +5183,7 @@
 				<Distract_EnemyHeroInitiativeDrop>0.15</Distract_EnemyHeroInitiativeDrop>
 				<SetAfire_DamageMultiplier>0.25</SetAfire_DamageMultiplier>
 				<SetAfire_DamageDurationInRounds>2</SetAfire_DamageDurationInRounds>
-				<ShrugDarkness_EnemySpellpowerMultiplier>0.5</ShrugDarkness_EnemySpellpowerMultiplier>
+				<ShrugDarkness_EnemySpellpowerMultiplier>0.8</ShrugDarkness_EnemySpellpowerMultiplier>
 				<RunicArmor_SpellpowerBonus>5</RunicArmor_SpellpowerBonus>
 				<RunicMachines_InitiativeBonus>3</RunicMachines_InitiativeBonus>
 				<Mentoring_ExpPecentToGiveToVisitor>0.3</Mentoring_ExpPecentToGiveToVisitor>
@@ -5345,13 +5341,13 @@
 				<FeatherMage_InitiativeBonusPerLevel>0.01</FeatherMage_InitiativeBonusPerLevel>
 				<MasterOfElements_SpellpowerBonus>
 					<Base>1</Base>
-					<LevelDivisor>1</LevelDivisor>
-					<PerDividedLevel>1</PerDividedLevel>
+					<LevelDivisor>10</LevelDivisor>
+					<PerDividedLevel>4</PerDividedLevel>
 				</MasterOfElements_SpellpowerBonus>
 				<MasterOfElements_NumElementals>
 					<Base>1</Base>
 					<LevelDivisor>1</LevelDivisor>
-					<PerDividedLevel>5</PerDividedLevel>
+					<PerDividedLevel>1</PerDividedLevel>
 				</MasterOfElements_NumElementals>
 				<Inexhaustible_ManaRestorePerTurn>
 					<Base>1</Base>
