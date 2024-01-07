@@ -676,7 +676,11 @@
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_SKILL</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
-				<spellBuffs/>
+				<spellBuffs>
+					<Item>SPELL_EFFECT_MASTER_OF_LIGHTNING</Item>
+					<Item>SPELL_EFFECT_MASTER_OF_LIGHTNING</Item>
+					<Item>SPELL_EFFECT_MASTER_OF_LIGHTNING</Item>
+				</spellBuffs>
 				<BasicSkillID>HERO_SKILL_NONE</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
@@ -7273,7 +7277,9 @@
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
-				<spellBuffs/>
+				<spellBuffs>
+					<Item>SPELL_ARTFSET_NECROMANCERS_DEBUFF</Item>
+				</spellBuffs>
 				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
@@ -9242,9 +9248,18 @@
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
-				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
-				<SkillPrerequisites/>
+				<spellBuffs>
+					<Item>SPELL_TOWN_WALLS</Item>
+				</spellBuffs>
+				<BasicSkillID>HERO_SKILL_DEFENSE</BasicSkillID>
+				<SkillPrerequisites>
+					<Item>
+						<Class>HERO_CLASS_NONE</Class>
+						<dependenciesIDs>
+							<Item>HERO_SKILL_PROTECTION</Item>
+						</dependenciesIDs>
+					</Item>
+				</SkillPrerequisites>
 				<AIRacesValues>
 					<Haven>
 						<CommanderValue>1000</CommanderValue>
@@ -13137,7 +13152,9 @@
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
-				<spellBuffs/>
+				<spellBuffs>
+					<Item>SPELL_ABILITY_BEAR_ROAR</Item>
+				</spellBuffs>
 				<BasicSkillID>HERO_SKILL_BLOOD_RAGE</BasicSkillID>
 				<SkillPrerequisites>
 					<Item>
