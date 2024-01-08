@@ -541,7 +541,7 @@
 								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>2</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_BERSERK</Item><Item>ABILITY_IMMUNITY_TO_CURSE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_UNDISTURBED</Item><Item>ABILITY_UNFLAGGING</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>3</IntParam></Item>
@@ -553,7 +553,7 @@
 								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>2</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_BERSERK</Item><Item>ABILITY_IMMUNITY_TO_CURSE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_UNDISTURBED</Item><Item>ABILITY_UNFLAGGING</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>3</IntParam></Item>
@@ -565,7 +565,7 @@
 								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>2</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_BERSERK</Item><Item>ABILITY_IMMUNITY_TO_CURSE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_UNDISTURBED</Item><Item>ABILITY_UNFLAGGING</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>3</IntParam></Item>
@@ -645,7 +645,7 @@
 								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_RIDER_CHARGE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_CHARGE</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
 						<Item><Creature>CREATURE_PALADIN</Creature>
@@ -656,7 +656,7 @@
 								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_RIDER_CHARGE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_CHARGE</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
 						<Item><Creature>CREATURE_CHAMPION</Creature>
@@ -667,7 +667,7 @@
 								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_RIDER_CHARGE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_CHARGE</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
 						<Item><Creature>CREATURE_ANGEL</Creature>
@@ -705,10 +705,10 @@
 						</Item>
 						<Item><Creature>CREATURE_BLADE_JUGGLER</Creature>
 							<Bonus1>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_CURSE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_UNFLAGGING</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_SLOW</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_UNSTOPPABLE</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>2</IntParam></Item>
@@ -716,10 +716,10 @@
 						</Item>
 						<Item><Creature>CREATURE_WAR_DANCER</Creature>
 							<Bonus1>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_CURSE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_UNFLAGGING</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_SLOW</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_UNSTOPPABLE</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>2</IntParam></Item>
@@ -727,10 +727,10 @@
 						</Item>
 						<Item><Creature>CREATURE_BLADE_SINGER</Creature>
 							<Bonus1>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_CURSE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_UNFLAGGING</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_SLOW</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_UNSTOPPABLE</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>2</IntParam></Item>
@@ -777,7 +777,7 @@
 								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>2</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MANEURE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MANEUVER</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
@@ -789,7 +789,7 @@
 								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>2</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MANEURE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MANEUVER</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
@@ -801,7 +801,7 @@
 								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>2</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MANEURE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MANEUVER</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
@@ -810,10 +810,10 @@
 						</Item>
 						<Item><Creature>CREATURE_DRUID</Creature>
 							<Bonus1>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_PREPARED_POSITION</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_DEFENSIVE_STANCE</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_AURA_OF_BRAVERY</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_VALOROUS</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type><FloatParam>1.2</FloatParam></Item>
@@ -821,10 +821,10 @@
 						</Item>
 						<Item><Creature>CREATURE_DRUID_ELDER</Creature>
 							<Bonus1>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_PREPARED_POSITION</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_DEFENSIVE_STANCE</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_AURA_OF_BRAVERY</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_VALOROUS</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type><FloatParam>1.2</FloatParam></Item>
@@ -832,10 +832,10 @@
 						</Item>
 						<Item><Creature>CREATURE_HIGH_DRUID</Creature>
 							<Bonus1>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_PREPARED_POSITION</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_DEFENSIVE_STANCE</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_AURA_OF_BRAVERY</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_VALOROUS</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type><FloatParam>1.2</FloatParam></Item>
@@ -843,7 +843,7 @@
 						</Item>
 						<Item><Creature>CREATURE_UNICORN</Creature>
 							<Bonus1>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_SLOW</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_UNSTOPPABLE</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
 								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_NO_ENEMY_RETALIATION</Item></Abilities></Item>
@@ -854,7 +854,7 @@
 						</Item>
 						<Item><Creature>CREATURE_WAR_UNICORN</Creature>
 							<Bonus1>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_SLOW</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_UNSTOPPABLE</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
 								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_NO_ENEMY_RETALIATION</Item></Abilities></Item>
@@ -865,7 +865,7 @@
 						</Item>
 						<Item><Creature>CREATURE_WHITE_UNICORN</Creature>
 							<Bonus1>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_SLOW</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_UNSTOPPABLE</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
 								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_NO_ENEMY_RETALIATION</Item></Abilities></Item>
@@ -879,7 +879,7 @@
 								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MAGIC_PROOF_25</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_SHIELD_WALL</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_STURDINESS</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
@@ -890,7 +890,7 @@
 								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MAGIC_PROOF_25</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_SHIELD_WALL</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_STURDINESS</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
@@ -901,7 +901,7 @@
 								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MAGIC_PROOF_25</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_SHIELD_WALL</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_STURDINESS</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
@@ -945,7 +945,7 @@
 						</Item>
 						<Item><Creature>CREATURE_SCOUT</Creature>
 							<Bonus1>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_LIZARD_BITE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_BEAT_UP</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
 								<Item><Type>DEMON_RAGE_BONUS_SPEED</Type><IntParam>1</IntParam></Item>
@@ -956,7 +956,7 @@
 						</Item>
 						<Item><Creature>CREATURE_ASSASSIN</Creature>
 							<Bonus1>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_LIZARD_BITE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_BEAT_UP</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
 								<Item><Type>DEMON_RAGE_BONUS_SPEED</Type><IntParam>1</IntParam></Item>
@@ -967,7 +967,7 @@
 						</Item>
 						<Item><Creature>CREATURE_STALKER</Creature>
 							<Bonus1>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_LIZARD_BITE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_BEAT_UP</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
 								<Item><Type>DEMON_RAGE_BONUS_SPEED</Type><IntParam>1</IntParam></Item>
@@ -1011,7 +1011,7 @@
 						</Item>
 						<Item><Creature>CREATURE_MINOTAUR</Creature>
 							<Bonus1>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_ENRAGED</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_SPITE</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
 								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
@@ -1022,7 +1022,7 @@
 						</Item>
 						<Item><Creature>CREATURE_MINOTAUR_KING</Creature>
 							<Bonus1>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_ENRAGED</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_SPITE</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
 								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
@@ -1033,7 +1033,7 @@
 						</Item>
 						<Item><Creature>CREATURE_MINOTAUR_CAPTAIN</Creature>
 							<Bonus1>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_ENRAGED</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_SPITE</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
 								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
@@ -1051,7 +1051,7 @@
 								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>2</IntParam></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_BERSERK</Item><Item>ABILITY_IMMUNITY_TO_BLIND</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_UNDISTURBED</Item><Item>ABILITY_KEEN_EYE</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
 						<Item><Creature>CREATURE_RAVAGER</Creature>
@@ -1063,7 +1063,7 @@
 								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>2</IntParam></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_BERSERK</Item><Item>ABILITY_IMMUNITY_TO_BLIND</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_UNDISTURBED</Item><Item>ABILITY_KEEN_EYE</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
 						<Item><Creature>CREATURE_BLACK_RIDER</Creature>
@@ -1075,7 +1075,7 @@
 								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>2</IntParam></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_BERSERK</Item><Item>ABILITY_IMMUNITY_TO_BLIND</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_UNDISTURBED</Item><Item>ABILITY_KEEN_EYE</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
 						<Item><Creature>CREATURE_MATRON</Creature>
@@ -1083,7 +1083,7 @@
 								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_ENERGY_CHANNEL</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_HYPNOTIZE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_INCORRUPTIBLE</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type><FloatParam>1.2</FloatParam></Item>
@@ -1094,7 +1094,7 @@
 								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_ENERGY_CHANNEL</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_HYPNOTIZE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_INCORRUPTIBLE</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type><FloatParam>1.2</FloatParam></Item>
@@ -1105,7 +1105,7 @@
 								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_ENERGY_CHANNEL</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_HYPNOTIZE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_INCORRUPTIBLE</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type><FloatParam>1.2</FloatParam></Item>
@@ -1146,10 +1146,10 @@
 						</Item>
 						<Item><Creature>CREATURE_DEEP_DRAGON</Creature>
 							<Bonus1>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_HORROR_OF_THE_DEATH</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_PRESSURE</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_FRIGHT_AURA</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_FRIGHTFUL</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>4</IntParam></Item>
@@ -1158,10 +1158,10 @@
 						</Item>
 						<Item><Creature>CREATURE_BLACK_DRAGON</Creature>
 							<Bonus1>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_HORROR_OF_THE_DEATH</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_PRESSURE</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_FRIGHT_AURA</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_FRIGHTFUL</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>4</IntParam></Item>
@@ -1170,10 +1170,10 @@
 						</Item>
 						<Item><Creature>CREATURE_RED_DRAGON</Creature>
 							<Bonus1>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_HORROR_OF_THE_DEATH</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_PRESSURE</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_FRIGHT_AURA</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_FRIGHTFUL</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>4</IntParam></Item>
@@ -1218,7 +1218,7 @@
 								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>1</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_CURSE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_UNFLAGGING</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
@@ -1230,7 +1230,7 @@
 								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>1</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_CURSE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_UNFLAGGING</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
@@ -1242,7 +1242,7 @@
 								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>1</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_CURSE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_UNFLAGGING</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
@@ -1284,40 +1284,40 @@
 						</Item>
 						<Item><Creature>CREATURE_BEAR_RIDER</Creature>
 							<Bonus1>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_LIZARD_BITE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_BEAT_UP</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
 								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>4</IntParam></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_SLOW</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_UNSTOPPABLE</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
 						<Item><Creature>CREATURE_BLACKBEAR_RIDER</Creature>
 							<Bonus1>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_LIZARD_BITE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_BEAT_UP</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
 								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>4</IntParam></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_SLOW</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_UNSTOPPABLE</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
 						<Item><Creature>CREATURE_WHITE_BEAR_RIDER</Creature>
 							<Bonus1>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_LIZARD_BITE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_BEAT_UP</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
 								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>4</IntParam></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_SLOW</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_UNSTOPPABLE</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
 						<Item><Creature>CREATURE_RUNE_MAGE</Creature>
 							<Bonus1>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_BERSERK</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_UNDISTURBED</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
 								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MANA_STEALER</Item></Abilities></Item>
@@ -1328,7 +1328,7 @@
 						</Item>
 						<Item><Creature>CREATURE_FLAME_MAGE</Creature>
 							<Bonus1>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_BERSERK</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_UNDISTURBED</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
 								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MANA_STEALER</Item></Abilities></Item>
@@ -1339,7 +1339,7 @@
 						</Item>
 						<Item><Creature>CREATURE_FLAME_KEEPER</Creature>
 							<Bonus1>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_BERSERK</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_UNDISTURBED</Item></Abilities></Item>
 							</Bonus1>
 							<Bonus2>
 								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MANA_STEALER</Item></Abilities></Item>
@@ -1356,7 +1356,7 @@
 								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_AURA_OF_MAGIC_RESISTANCE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MAGIC_DISRUPTION</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
 						<Item><Creature>CREATURE_WARLORD</Creature>
@@ -1367,7 +1367,7 @@
 								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_AURA_OF_MAGIC_RESISTANCE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MAGIC_DISRUPTION</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
 						<Item><Creature>CREATURE_THUNDER_THANE</Creature>
@@ -1378,7 +1378,7 @@
 								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_AURA_OF_MAGIC_RESISTANCE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MAGIC_DISRUPTION</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
 						<Item><Creature>CREATURE_FIRE_DRAGON</Creature>
@@ -1429,7 +1429,7 @@
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_DISABLE_ABILITY</Type><Abilities><Item>ABILITY_COWARDICE</Item></Abilities></Item>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_SLOW</Item><Item>ABILITY_BRUTALITY</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_UNSTOPPABLE</Item><Item>ABILITY_VIOLENCE</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
 						<Item><Creature>CREATURE_GOBLIN_TRAPPER</Creature>
@@ -1443,7 +1443,7 @@
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_DISABLE_ABILITY</Type><Abilities><Item>ABILITY_COWARDICE</Item></Abilities></Item>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_SLOW</Item><Item>ABILITY_BRUTALITY</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_UNSTOPPABLE</Item><Item>ABILITY_VIOLENCE</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
 						<Item><Creature>CREATURE_GOBLIN_DEFILER</Creature>
@@ -1453,11 +1453,11 @@
 							</Bonus1>
 							<Bonus2>
 								<Item><Type>DEMON_RAGE_BONUS_DISABLE_ABILITY</Type><Abilities><Item>ABILITY_TREACHERY</Item></Abilities></Item>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_PURGER</Item><Item>ABILITY_AURA_OF_MAGIC_RESISTANCE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_PURGER</Item><Item>ABILITY_MAGIC_DISRUPTION</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_DISABLE_ABILITY</Type><Abilities><Item>ABILITY_COWARDICE</Item></Abilities></Item>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_SLOW</Item><Item>ABILITY_BRUTALITY</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_UNSTOPPABLE</Item><Item>ABILITY_VIOLENCE</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
 						<Item><Creature>CREATURE_SHAMAN</Creature>
@@ -1486,7 +1486,7 @@
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type><FloatParam>3.0</FloatParam></Item>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_STORMSTRIKE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_THUNDER_STRIKE</Item></Abilities></Item>
 								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>3</IntParam></Item>
 							</Bonus3>
 						</Item>
@@ -1515,7 +1515,7 @@
 								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_BASH</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_BERSERKER_RAGE</Item><Item>ABILITY_UNLIMITED_RETALIATION</Item><Item>ABILITY_MAGIC_PROOF_25</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_FURY</Item><Item>ABILITY_UNLIMITED_RETALIATION</Item><Item>ABILITY_MAGIC_PROOF_25</Item></Abilities></Item>
 								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>8</IntParam></Item>
 							</Bonus3>
 						</Item>
@@ -1529,7 +1529,7 @@
 								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_BASH</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_BERSERKER_RAGE</Item><Item>ABILITY_UNLIMITED_RETALIATION</Item><Item>ABILITY_MAGIC_PROOF_25</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_FURY</Item><Item>ABILITY_UNLIMITED_RETALIATION</Item><Item>ABILITY_MAGIC_PROOF_25</Item></Abilities></Item>
 								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>8</IntParam></Item>
 							</Bonus3>
 						</Item>
@@ -1540,10 +1540,10 @@
 							</Bonus1>
 							<Bonus2>
 								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>3</IntParam></Item>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_LARGE_SHIELD</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_SHIELDED</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_BERSERKER_RAGE</Item><Item>ABILITY_UNLIMITED_RETALIATION</Item><Item>ABILITY_MAGIC_PROOF_25</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_FURY</Item><Item>ABILITY_UNLIMITED_RETALIATION</Item><Item>ABILITY_MAGIC_PROOF_25</Item></Abilities></Item>
 								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>8</IntParam></Item>
 							</Bonus3>
 						</Item>
@@ -1554,11 +1554,11 @@
 							</Bonus1>
 							<Bonus2>
 								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>5</IntParam></Item>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_RANGED_RETALIATE</Item><Item>ABILITY_ENRAGED</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_RANGED_RETALIATE</Item><Item>ABILITY_SPITE</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_ACCURACY</Type><IntParam>1</IntParam></Item>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_PIERCING_ARROW</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_ARCANE_ARROW</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
 						<Item><Creature>CREATURE_CENTAUR_NOMAD</Creature>
@@ -1568,11 +1568,11 @@
 							</Bonus1>
 							<Bonus2>
 								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>5</IntParam></Item>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_RANGED_RETALIATE</Item><Item>ABILITY_ENRAGED</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_RANGED_RETALIATE</Item><Item>ABILITY_SPITE</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_ACCURACY</Type><IntParam>1</IntParam></Item>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_PIERCING_ARROW</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_ARCANE_ARROW</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
 						<Item><Creature>CREATURE_CENTAUR_MARADEUR</Creature>
@@ -1582,11 +1582,11 @@
 							</Bonus1>
 							<Bonus2>
 								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>5</IntParam></Item>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_RANGED_RETALIATE</Item><Item>ABILITY_ENRAGED</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_RANGED_RETALIATE</Item><Item>ABILITY_SPITE</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_ACCURACY</Type><IntParam>1</IntParam></Item>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_PIERCING_ARROW</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_ARCANE_ARROW</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
 						<Item><Creature>CREATURE_ORCCHIEF_BUTCHER</Creature>
@@ -1600,7 +1600,7 @@
 								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_NO_ENEMY_RETALIATION</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_VORPAL_SWORD</Item><Item>ABILITY_AXE_OF_SLAUGHTER</Item><Item>ABILITY_IMMUNITY_TO_BERSERK</Item><Item>ABILITY_IMMUNITY_TO_HYPNOTIZE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_VORPAL_SWORD</Item><Item>ABILITY_BLADE_OF_SLAUGHTER</Item><Item>ABILITY_UNDISTURBED</Item><Item>ABILITY_INCORRUPTIBLE</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
 						<Item><Creature>CREATURE_ORCCHIEF_EXECUTIONER</Creature>
@@ -1614,7 +1614,7 @@
 								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_NO_ENEMY_RETALIATION</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_VORPAL_SWORD</Item><Item>ABILITY_AXE_OF_SLAUGHTER</Item><Item>ABILITY_IMMUNITY_TO_BERSERK</Item><Item>ABILITY_IMMUNITY_TO_HYPNOTIZE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_VORPAL_SWORD</Item><Item>ABILITY_BLADE_OF_SLAUGHTER</Item><Item>ABILITY_UNDISTURBED</Item><Item>ABILITY_INCORRUPTIBLE</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
 						<Item><Creature>CREATURE_ORCCHIEF_CHIEFTAIN</Creature>
@@ -1628,7 +1628,7 @@
 								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_NO_ENEMY_RETALIATION</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_VORPAL_SWORD</Item><Item>ABILITY_AXE_OF_SLAUGHTER</Item><Item>ABILITY_IMMUNITY_TO_BERSERK</Item><Item>ABILITY_IMMUNITY_TO_HYPNOTIZE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_VORPAL_SWORD</Item><Item>ABILITY_BLADE_OF_SLAUGHTER</Item><Item>ABILITY_UNDISTURBED</Item><Item>ABILITY_INCORRUPTIBLE</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
 						<Item><Creature>CREATURE_CYCLOP</Creature>
@@ -1637,13 +1637,13 @@
 								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>10</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_HORROR_OF_THE_DEATH</Item><Item>ABILITY_FRIGHT_AURA</Item><Item>ABILITY_REGENERATION</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_PRESSURE</Item><Item>ABILITY_FRIGHTFUL</Item><Item>ABILITY_REGENERATION</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>4</IntParam></Item>
 								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>10</IntParam></Item>
 								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>10</IntParam></Item>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_MIND_CONTROL</Item><Item>ABILITY_FIRE_PROOF_50</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_FREE_MIND</Item><Item>ABILITY_FIRE_PROOF_50</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
 						<Item><Creature>CREATURE_CYCLOP_UNTAMED</Creature>
@@ -1652,13 +1652,13 @@
 								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>10</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_HORROR_OF_THE_DEATH</Item><Item>ABILITY_FRIGHT_AURA</Item><Item>ABILITY_REGENERATION</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_PRESSURE</Item><Item>ABILITY_FRIGHTFUL</Item><Item>ABILITY_REGENERATION</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>4</IntParam></Item>
 								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>10</IntParam></Item>
 								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>10</IntParam></Item>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_MIND_CONTROL</Item><Item>ABILITY_FIRE_PROOF_50</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_FREE_MIND</Item><Item>ABILITY_FIRE_PROOF_50</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
 						<Item><Creature>CREATURE_CYCLOP_BLOODEYED</Creature>
@@ -1667,13 +1667,13 @@
 								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>10</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_HORROR_OF_THE_DEATH</Item><Item>ABILITY_FRIGHT_AURA</Item><Item>ABILITY_REGENERATION</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_PRESSURE</Item><Item>ABILITY_FRIGHTFUL</Item><Item>ABILITY_REGENERATION</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>4</IntParam></Item>
 								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>10</IntParam></Item>
 								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>10</IntParam></Item>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_MIND_CONTROL</Item><Item>ABILITY_FIRE_PROOF_50</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_FREE_MIND</Item><Item>ABILITY_FIRE_PROOF_50</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
 					</Bonuses>
