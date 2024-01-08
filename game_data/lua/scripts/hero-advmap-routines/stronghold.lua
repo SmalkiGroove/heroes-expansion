@@ -40,7 +40,7 @@ function Routine_GainArtifactCrownLead(player, hero)
 end
 
 function Routine_LearnSpellShaman(player, hero)
-    if not HasHeroSkill(hero, HERO_SKILL_DEMONIC_RAGE) then
+    if not HasHeroSkill(hero, 172) then
         local level = GetHeroLevel(hero)
         if mod(level, 2) == 0 then
             local type = random(SPELL_TYPE_LIGHT_MAGIC, SPELL_TYPE_SUMMONING_MAGIC, mod(level,5))
@@ -51,7 +51,7 @@ function Routine_LearnSpellShaman(player, hero)
 end
 
 function Routine_LearnSpellWitch(player, hero)
-    if not HasHeroSkill(hero, HERO_SKILL_DEMONIC_RAGE) then
+    if not HasHeroSkill(hero, 172) then
         local level = GetHeroLevel(hero)
         if mod(level, 2) == 0 then
             local type = random(SPELL_TYPE_DESTRUCTIVE_MAGIC, SPELL_TYPE_DARK_MAGIC, mod(level,5))

@@ -2114,7 +2114,7 @@
 				<Item>HERO_SKILL_LOGISTICS</Item>
 				<Item>HERO_SKILL_ARMY_SUPPORT</Item>
 				<Item>HERO_SKILL_LEARNING</Item>
-				<Item>HERO_SKILL_LEADERSHIP</Item>
+				<Item>HERO_SKILL_MOTIVATION</Item>
 				<Item>HERO_SKILL_PRECISION</Item>
 				<Item>HERO_SKILL_OFFENCE</Item>
 				<Item>HERO_SKILL_DEFENSE</Item>
@@ -2301,18 +2301,18 @@
 				<Item>HERO_SKILL_VOICE_TRAINING</Item>
 				<Item>HERO_SKILL_MIGHTY_SHOUT</Item>
 				<Item>HERO_SKILL_BLOODLUST</Item>
-				<Item>HERO_SKILL_SHATTER_DESTRUCT</Item>
-				<Item>HERO_SKILL_CORRUPT_DESTRUCTIVE</Item>
+				<Item>HERO_SKILL_LEADERSHIP_TODO1</Item>
+				<Item>HERO_SKILL_CHARISMA</Item>
 				<Item>HERO_SKILL_WEAKEN_DESTRUCTIVE</Item>
 				<Item>HERO_SKILL_DETAIN_DESTRUCTIVE</Item>
 				<Item>HERO_SKILL_SHATTER_DARK</Item>
 				<Item>HERO_SKILL_CORRUPT_DARK</Item>
 				<Item>HERO_SKILL_WEAKEN_DARK</Item>
 				<Item>HERO_SKILL_DETAIN_DARK</Item>
-				<Item>HERO_SKILL_SHATTER_LIGHT</Item>
-				<Item>HERO_SKILL_CORRUPT_LIGHT</Item>
-				<Item>HERO_SKILL_WEAKEN_LIGHT</Item>
-				<Item>HERO_SKILL_DETAIN_LIGHT</Item>
+				<Item>HERO_SKILL_SHATTER_MAGIC</Item>
+				<Item>HERO_SKILL_GEAR_UP</Item>
+				<Item>HERO_SKILL_HEROES_LEGACY</Item>
+				<Item>HERO_SKILL_MYTHOLOGY</Item>
 				<Item>HERO_SKILL_SHATTER_NATURE</Item>
 				<Item>HERO_SKILL_CORRUPT_NATURAL</Item>
 				<Item>HERO_SKILL_WEAKEN_NATURAL</Item>
@@ -2322,7 +2322,7 @@
 				<Item>HERO_SKILL_BARBARIAN_WEAKENING_STRIKE</Item>
 				<Item>HERO_SKILL_BARBARIAN_SOIL_BURN</Item>
 				<Item>HERO_SKILL_BARBARIAN_FOG_VEIL</Item>
-				<Item>HERO_SKILL_BARBARIAN_INTELLIGENCE</Item>
+				<Item>HERO_SKILL_LEADERSHIP</Item>
 				<Item>HERO_SKILL_BARBARIAN_MYSTICISM</Item>
 				<Item>HERO_SKILL_BARBARIAN_ELITE_CASTERS</Item>
 				<Item>HERO_SKILL_BARBARIAN_STORM_WIND</Item>
@@ -62799,7 +62799,7 @@
 					<Value>3</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_LEADERSHIP</Name>
+					<Name>HERO_SKILL_MOTIVATION</Name>
 					<Value>4</Value>
 				</Item>
 				<Item>
@@ -63547,11 +63547,11 @@
 					<Value>190</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_SHATTER_DESTRUCT</Name>
+					<Name>HERO_SKILL_LEADERSHIP_TODO1</Name>
 					<Value>191</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_CORRUPT_DESTRUCTIVE</Name>
+					<Name>HERO_SKILL_CHARISMA</Name>
 					<Value>192</Value>
 				</Item>
 				<Item>
@@ -63579,19 +63579,19 @@
 					<Value>198</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_SHATTER_LIGHT</Name>
+					<Name>HERO_SKILL_SHATTER_MAGIC</Name>
 					<Value>199</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_CORRUPT_LIGHT</Name>
+					<Name>HERO_SKILL_GEAR_UP</Name>
 					<Value>200</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_WEAKEN_LIGHT</Name>
+					<Name>HERO_SKILL_HEROES_LEGACY</Name>
 					<Value>201</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_DETAIN_LIGHT</Name>
+					<Name>HERO_SKILL_MYTHOLOGY</Name>
 					<Value>202</Value>
 				</Item>
 				<Item>
@@ -63631,7 +63631,7 @@
 					<Value>211</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_BARBARIAN_INTELLIGENCE</Name>
+					<Name>HERO_SKILL_LEADERSHIP</Name>
 					<Value>212</Value>
 				</Item>
 				<Item>
