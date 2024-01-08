@@ -454,4006 +454,1226 @@
 						<PerDividedLevel>2</PerDividedLevel>
 					</DemonHunter_RPBonusPerHeroLevel>
 					<Bonuses>
-						<Item>
-							<Creature>CREATURE_PEASANT</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_MILITIAMAN</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_LANDLORD</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
+						<Item><Creature>CREATURE_PEASANT</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>1</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>1</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>1</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>1</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_MILITIAMAN</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>1</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>1</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>1</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>1</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_LANDLORD</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>1</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>1</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>1</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>1</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_ARCHER</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>2</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>1</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>1</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>2</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_MARKSMAN</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>2</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>1</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>1</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>2</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_LONGBOWMAN</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>2</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>1</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>1</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>2</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_FOOTMAN</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>2</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_BERSERK</Item><Item>ABILITY_IMMUNITY_TO_CURSE</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>3</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_SWORDSMAN</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>2</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_BERSERK</Item><Item>ABILITY_IMMUNITY_TO_CURSE</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>3</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_VINDICATOR</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>2</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_BERSERK</Item><Item>ABILITY_IMMUNITY_TO_CURSE</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>3</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_GRIFFIN</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>3</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_BATTLE_RAGE</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_NO_ENEMY_RETALIATION</Item></Abilities></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_ROYAL_GRIFFIN</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>3</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_BATTLE_RAGE</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_NO_ENEMY_RETALIATION</Item></Abilities></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_BATTLE_GRIFFIN</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>3</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_BATTLE_RAGE</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_NO_ENEMY_RETALIATION</Item></Abilities></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_PRIEST</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MAGIC_PROOF_25</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>5</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type><FloatParam>1.2</FloatParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_CLERIC</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MAGIC_PROOF_25</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>5</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type><FloatParam>1.2</FloatParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_ZEALOT</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MAGIC_PROOF_25</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>5</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type><FloatParam>1.2</FloatParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_CAVALIER</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>5</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_RIDER_CHARGE</Item></Abilities></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_PALADIN</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>5</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_RIDER_CHARGE</Item></Abilities></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_CHAMPION</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>5</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_RIDER_CHARGE</Item></Abilities></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_ANGEL</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>20</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_REGENERATION</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_VORPAL_SWORD</Item></Abilities></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_ARCHANGEL</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>20</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_REGENERATION</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_VORPAL_SWORD</Item></Abilities></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_SERAPH</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>20</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_REGENERATION</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_VORPAL_SWORD</Item></Abilities></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_BLADE_JUGGLER</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_CURSE</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_SLOW</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>2</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_WAR_DANCER</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_CURSE</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_SLOW</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>2</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_BLADE_SINGER</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_CURSE</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_SLOW</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>2</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_PIXIE</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>2</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_SYPHON_MANA</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_SPRITE</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>2</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_SYPHON_MANA</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_DRYAD</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>2</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_SYPHON_MANA</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_WOOD_ELF</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>2</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MANEURE</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>2</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_GRAND_ELF</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>2</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MANEURE</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>2</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_SHARP_SHOOTER</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>2</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MANEURE</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>2</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_DRUID</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_PREPARED_POSITION</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_AURA_OF_BRAVERY</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type><FloatParam>1.2</FloatParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_DRUID_ELDER</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_PREPARED_POSITION</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_AURA_OF_BRAVERY</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type><FloatParam>1.2</FloatParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_HIGH_DRUID</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_PREPARED_POSITION</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_AURA_OF_BRAVERY</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type><FloatParam>1.2</FloatParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_UNICORN</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_SLOW</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_NO_ENEMY_RETALIATION</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_SPEED</Type><IntParam>1</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_WAR_UNICORN</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_SLOW</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_NO_ENEMY_RETALIATION</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_SPEED</Type><IntParam>1</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_WHITE_UNICORN</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_SLOW</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_NO_ENEMY_RETALIATION</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_SPEED</Type><IntParam>1</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_TREANT</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MAGIC_PROOF_25</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_SHIELD_WALL</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_TREANT_GUARDIAN</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MAGIC_PROOF_25</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_SHIELD_WALL</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_ANGER_TREANT</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MAGIC_PROOF_25</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_SHIELD_WALL</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_GREEN_DRAGON</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>10</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>5</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_VENOM</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_CRYSTAL_SCALES</Item></Abilities></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_GOLD_DRAGON</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>10</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>5</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_VENOM</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_CRYSTAL_SCALES</Item></Abilities></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_RAINBOW_DRAGON</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>10</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>5</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_VENOM</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_CRYSTAL_SCALES</Item></Abilities></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_SCOUT</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_LIZARD_BITE</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_SPEED</Type><IntParam>1</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>3</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_ASSASSIN</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_LIZARD_BITE</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_SPEED</Type><IntParam>1</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>3</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_STALKER</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_LIZARD_BITE</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_SPEED</Type><IntParam>1</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>3</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_WITCH</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>2</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_AGILITY</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>1</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_BLOOD_WITCH</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>2</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_AGILITY</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>1</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_BLOOD_WITCH_2</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>2</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_AGILITY</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>1</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_MINOTAUR</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_ENRAGED</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>4</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_MINOTAUR_KING</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_ENRAGED</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>4</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_MINOTAUR_CAPTAIN</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_ENRAGED</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>4</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_RIDER</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>1</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>2</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_BERSERK</Item><Item>ABILITY_IMMUNITY_TO_BLIND</Item></Abilities></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_RAVAGER</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>1</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>2</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_BERSERK</Item><Item>ABILITY_IMMUNITY_TO_BLIND</Item></Abilities></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_BLACK_RIDER</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>1</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>2</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_BERSERK</Item><Item>ABILITY_IMMUNITY_TO_BLIND</Item></Abilities></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_MATRON</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_ENERGY_CHANNEL</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_HYPNOTIZE</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type><FloatParam>1.2</FloatParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_MATRIARCH</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_ENERGY_CHANNEL</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_HYPNOTIZE</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type><FloatParam>1.2</FloatParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_SHADOW_MISTRESS</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_ENERGY_CHANNEL</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_HYPNOTIZE</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type><FloatParam>1.2</FloatParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_HYDRA</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MAGIC_PROOF_25</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>10</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_CHAOS_HYDRA</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MAGIC_PROOF_25</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>10</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_ACIDIC_HYDRA</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MAGIC_PROOF_25</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>10</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_DEEP_DRAGON</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_HORROR_OF_THE_DEATH</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_FRIGHT_AURA</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>4</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>4</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_BLACK_DRAGON</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_HORROR_OF_THE_DEATH</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_FRIGHT_AURA</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>4</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>4</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_RED_DRAGON</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_HORROR_OF_THE_DEATH</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_FRIGHT_AURA</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>4</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>4</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_DEFENDER</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_BRAVERY</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_STOUT_DEFENDER</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_BRAVERY</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_STONE_DEFENDER</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_BRAVERY</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_AXE_FIGHTER</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>1</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_CURSE</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>2</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_AXE_THROWER</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>1</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_CURSE</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>2</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_HARPOONER</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>1</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_CURSE</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>2</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_BROWLER</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>3</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>1</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>2</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_BERSERKER</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>3</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>1</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>2</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_BATTLE_RAGER</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>3</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>1</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>2</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_BEAR_RIDER</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_LIZARD_BITE</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>4</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_SLOW</Item></Abilities></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_BLACKBEAR_RIDER</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_LIZARD_BITE</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>4</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_SLOW</Item></Abilities></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_WHITE_BEAR_RIDER</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_LIZARD_BITE</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>4</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_SLOW</Item></Abilities></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_RUNE_MAGE</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_BERSERK</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MANA_STEALER</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type><FloatParam>1.2</FloatParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_FLAME_MAGE</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_BERSERK</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MANA_STEALER</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type><FloatParam>1.2</FloatParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_FLAME_KEEPER</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_BERSERK</Item></Abilities></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_MANA_STEALER</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type><FloatParam>1.2</FloatParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_THANE</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>1</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_AURA_OF_MAGIC_RESISTANCE</Item></Abilities></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_WARLORD</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>1</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_AURA_OF_MAGIC_RESISTANCE</Item></Abilities></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_THUNDER_THANE</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>1</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_AURA_OF_MAGIC_RESISTANCE</Item></Abilities></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_FIRE_DRAGON</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>20</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_SPEED</Type><IntParam>1</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_REGENERATION</Item></Abilities></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_MAGMA_DRAGON</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>20</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_SPEED</Type><IntParam>1</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_REGENERATION</Item></Abilities></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_LAVA_DRAGON</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>20</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_SPEED</Type><IntParam>1</IntParam></Item>
+							</Bonus2>
 							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_ARCHER</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_MARKSMAN</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_LONGBOWMAN</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_FOOTMAN</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_BERSERK</Item>
-										<Item>ABILITY_IMMUNITY_TO_CURSE</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>3</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_SWORDSMAN</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_BERSERK</Item>
-										<Item>ABILITY_IMMUNITY_TO_CURSE</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>3</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_VINDICATOR</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_BERSERK</Item>
-										<Item>ABILITY_IMMUNITY_TO_CURSE</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>3</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_GRIFFIN</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>3</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_BATTLE_RAGE</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_NO_ENEMY_RETALIATION</Item>
-									</Abilities>
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_ROYAL_GRIFFIN</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>3</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_BATTLE_RAGE</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_NO_ENEMY_RETALIATION</Item>
-									</Abilities>
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_BATTLE_GRIFFIN</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>3</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_BATTLE_RAGE</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_NO_ENEMY_RETALIATION</Item>
-									</Abilities>
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_PRIEST</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_MAGIC_PROOF_25</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>5</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>1.2</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_CLERIC</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_MAGIC_PROOF_25</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>5</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>1.2</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_ZEALOT</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_MAGIC_PROOF_25</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>5</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>1.2</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_CAVALIER</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>5</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_RIDER_CHARGE</Item>
-									</Abilities>
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_PALADIN</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>5</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_RIDER_CHARGE</Item>
-									</Abilities>
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_CHAMPION</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>5</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_RIDER_CHARGE</Item>
-									</Abilities>
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_ANGEL</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>20</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_REGENERATION</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_VORPAL_SWORD</Item>
-									</Abilities>
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_ARCHANGEL</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>20</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_REGENERATION</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_VORPAL_SWORD</Item>
-									</Abilities>
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_SERAPH</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>20</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_REGENERATION</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_VORPAL_SWORD</Item>
-									</Abilities>
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_BLADE_JUGGLER</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_CURSE</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_SLOW</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_WAR_DANCER</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_CURSE</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_SLOW</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_BLADE_SINGER</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_CURSE</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_SLOW</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_PIXIE</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_SYPHON_MANA</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_SPRITE</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_SYPHON_MANA</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_DRYAD</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_SYPHON_MANA</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_WOOD_ELF</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_MANEURE</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_GRAND_ELF</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_MANEURE</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_SHARP_SHOOTER</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_MANEURE</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_DRUID</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_PREPARED_POSITION</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_AURA_OF_BRAVERY</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>1.2</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_DRUID_ELDER</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_PREPARED_POSITION</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_AURA_OF_BRAVERY</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>1.2</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_HIGH_DRUID</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_PREPARED_POSITION</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_AURA_OF_BRAVERY</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>1.2</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_UNICORN</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_SLOW</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_NO_ENEMY_RETALIATION</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPEED</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_WAR_UNICORN</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_SLOW</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_NO_ENEMY_RETALIATION</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPEED</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_WHITE_UNICORN</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_SLOW</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_NO_ENEMY_RETALIATION</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPEED</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_TREANT</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_MAGIC_PROOF_25</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_SHIELD_WALL</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_TREANT_GUARDIAN</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_MAGIC_PROOF_25</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_SHIELD_WALL</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_ANGER_TREANT</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_MAGIC_PROOF_25</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_SHIELD_WALL</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_GREEN_DRAGON</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>10</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
-									<IntParam>5</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_VENOM</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_CRYSTAL_SCALES</Item>
-									</Abilities>
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_GOLD_DRAGON</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>10</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
-									<IntParam>5</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_VENOM</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_CRYSTAL_SCALES</Item>
-									</Abilities>
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_RAINBOW_DRAGON</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>10</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
-									<IntParam>5</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_VENOM</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_CRYSTAL_SCALES</Item>
-									</Abilities>
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_SCOUT</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_LIZARD_BITE</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPEED</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>3</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_ASSASSIN</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_LIZARD_BITE</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPEED</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>3</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_STALKER</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_LIZARD_BITE</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPEED</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>3</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_WITCH</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_AGILITY</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_BLOOD_WITCH</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_AGILITY</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_BLOOD_WITCH_2</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_AGILITY</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_MINOTAUR</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_ENRAGED</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>4</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_MINOTAUR_KING</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_ENRAGED</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>4</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_MINOTAUR_CAPTAIN</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_ENRAGED</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>4</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_RIDER</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_BERSERK</Item>
-										<Item>ABILITY_IMMUNITY_TO_BLIND</Item>
-									</Abilities>
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_RAVAGER</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_BERSERK</Item>
-										<Item>ABILITY_IMMUNITY_TO_BLIND</Item>
-									</Abilities>
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_BLACK_RIDER</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_BERSERK</Item>
-										<Item>ABILITY_IMMUNITY_TO_BLIND</Item>
-									</Abilities>
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_MATRON</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_ENERGY_CHANNEL</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_HYPNOTIZE</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>1.2</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_MATRIARCH</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_ENERGY_CHANNEL</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_HYPNOTIZE</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>1.2</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_SHADOW_MISTRESS</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_ENERGY_CHANNEL</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_HYPNOTIZE</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>1.2</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_HYDRA</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_MAGIC_PROOF_25</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>10</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_CHAOS_HYDRA</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_MAGIC_PROOF_25</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>10</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_ACIDIC_HYDRA</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_MAGIC_PROOF_25</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>10</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_DEEP_DRAGON</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_HORROR_OF_THE_DEATH</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_FRIGHT_AURA</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>4</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>4</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_BLACK_DRAGON</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_HORROR_OF_THE_DEATH</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_FRIGHT_AURA</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>4</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>4</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_RED_DRAGON</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_HORROR_OF_THE_DEATH</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_FRIGHT_AURA</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>4</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>4</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_DEFENDER</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_BRAVERY</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_STOUT_DEFENDER</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_BRAVERY</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_STONE_DEFENDER</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_BRAVERY</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_AXE_FIGHTER</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_CURSE</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_AXE_THROWER</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_CURSE</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_HARPOONER</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_CURSE</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_BROWLER</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>3</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_BERSERKER</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>3</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_BATTLE_RAGER</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>3</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_BEAR_RIDER</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_LIZARD_BITE</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>4</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_SLOW</Item>
-									</Abilities>
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_BLACKBEAR_RIDER</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_LIZARD_BITE</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>4</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_SLOW</Item>
-									</Abilities>
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_WHITE_BEAR_RIDER</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_LIZARD_BITE</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>4</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_SLOW</Item>
-									</Abilities>
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_RUNE_MAGE</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_BERSERK</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_MANA_STEALER</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>1.2</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_FLAME_MAGE</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_BERSERK</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_MANA_STEALER</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>1.2</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_FLAME_KEEPER</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_BERSERK</Item>
-									</Abilities>
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_MANA_STEALER</Item>
-									</Abilities>
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>1.2</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_THANE</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_AURA_OF_MAGIC_RESISTANCE</Item>
-									</Abilities>
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_WARLORD</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_AURA_OF_MAGIC_RESISTANCE</Item>
-									</Abilities>
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_THUNDER_THANE</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_AURA_OF_MAGIC_RESISTANCE</Item>
-									</Abilities>
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_FIRE_DRAGON</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>20</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPEED</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_REGENERATION</Item>
-									</Abilities>
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_MAGMA_DRAGON</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>20</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPEED</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_REGENERATION</Item>
-									</Abilities>
-								</Item>
-							</Bonus3>
-						</Item>
-						<Item>
-							<Creature>CREATURE_LAVA_DRAGON</Creature>
-							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>20</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus1>
-							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPEED</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities />
-								</Item>
-							</Bonus2>
-							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells />
-									<Abilities>
-										<Item>ABILITY_REGENERATION</Item>
-									</Abilities>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_REGENERATION</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
 
 
 
 
-
-
-
-						<Item>
-							<Creature>CREATURE_GOBLIN</Creature>
+						<Item><Creature>CREATURE_GOBLIN</Creature>
 							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPEED</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_SPEED</Type><IntParam>1</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DISABLE_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_TREACHERY</Item>
-									</Abilities>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>4</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_DISABLE_ABILITY</Type><Abilities><Item>ABILITY_TREACHERY</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>4</IntParam></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DISABLE_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_COWARDICE</Item>
-									</Abilities>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_SLOW</Item>
-										<Item>ABILITY_BRUTALITY</Item>
-									</Abilities>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_DISABLE_ABILITY</Type><Abilities><Item>ABILITY_COWARDICE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_SLOW</Item><Item>ABILITY_BRUTALITY</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
-						<Item>
-							<Creature>CREATURE_GOBLIN_TRAPPER</Creature>
+						<Item><Creature>CREATURE_GOBLIN_TRAPPER</Creature>
 							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPEED</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_SPEED</Type><IntParam>1</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DISABLE_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_TREACHERY</Item>
-									</Abilities>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_WOUND</Item>
-										<Item>ABILITY_AGILITY</Item>
-									</Abilities>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_DISABLE_ABILITY</Type><Abilities><Item>ABILITY_TREACHERY</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_WOUND</Item><Item>ABILITY_AGILITY</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DISABLE_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_COWARDICE</Item>
-									</Abilities>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_SLOW</Item>
-										<Item>ABILITY_BRUTALITY</Item>
-									</Abilities>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_DISABLE_ABILITY</Type><Abilities><Item>ABILITY_COWARDICE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_SLOW</Item><Item>ABILITY_BRUTALITY</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
-						<Item>
-							<Creature>CREATURE_GOBLIN_DEFILER</Creature>
+						<Item><Creature>CREATURE_GOBLIN_DEFILER</Creature>
 							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPEED</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_SPEED</Type><IntParam>1</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DISABLE_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_TREACHERY</Item>
-									</Abilities>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_PURGER</Item>
-										<Item>ABILITY_AURA_OF_MAGIC_RESISTANCE</Item>
-									</Abilities>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_DISABLE_ABILITY</Type><Abilities><Item>ABILITY_TREACHERY</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_PURGER</Item><Item>ABILITY_AURA_OF_MAGIC_RESISTANCE</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DISABLE_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_COWARDICE</Item>
-									</Abilities>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_SLOW</Item>
-										<Item>ABILITY_BRUTALITY</Item>
-									</Abilities>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_DISABLE_ABILITY</Type><Abilities><Item>ABILITY_COWARDICE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_SLOW</Item><Item>ABILITY_BRUTALITY</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
-						<Item>
-							<Creature>CREATURE_SHAMAN</Creature>
+						<Item><Creature>CREATURE_SHAMAN</Creature>
 							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>1.5</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type><FloatParam>1.5</FloatParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>4</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>4</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>2</IntParam></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>3.0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
-									<IntParam>3</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>3</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type><FloatParam>3.0</FloatParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>3</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>3</IntParam></Item>
 							</Bonus3>
 						</Item>
-						<Item>
-							<Creature>CREATURE_SHAMAN_WITCH</Creature>
+						<Item><Creature>CREATURE_SHAMAN_WITCH</Creature>
 							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>1.5</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type><FloatParam>1.5</FloatParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>4</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>4</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>2</IntParam></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>3.0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_STORMSTRIKE</Item>
-									</Abilities>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>3</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type><FloatParam>3.0</FloatParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_STORMSTRIKE</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>3</IntParam></Item>
 							</Bonus3>
 						</Item>
-						<Item>
-							<Creature>CREATURE_SHAMAN_HAG</Creature>
+						<Item><Creature>CREATURE_SHAMAN_HAG</Creature>
 							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>1.5</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type><FloatParam>1.5</FloatParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>4</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>4</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>2</IntParam></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>3.0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
-									<IntParam>4</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>3</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type><FloatParam>3.0</FloatParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>4</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>3</IntParam></Item>
 							</Bonus3>
 						</Item>
-						<Item>
-							<Creature>CREATURE_ORC_WARRIOR</Creature>
+						<Item><Creature>CREATURE_ORC_WARRIOR</Creature>
 							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>6</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>4</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>6</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>4</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
-									<IntParam>3</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_BASH</Item>
-									</Abilities>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>3</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_BASH</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_BERSERKER_RAGE</Item>
-										<Item>ABILITY_UNLIMITED_RETALIATION</Item>
-										<Item>ABILITY_MAGIC_PROOF_25</Item>
-									</Abilities>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>8</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_BERSERKER_RAGE</Item><Item>ABILITY_UNLIMITED_RETALIATION</Item><Item>ABILITY_MAGIC_PROOF_25</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>8</IntParam></Item>
 							</Bonus3>
 						</Item>
-						<Item>
-							<Creature>CREATURE_ORC_SLAYER</Creature>
+						<Item><Creature>CREATURE_ORC_SLAYER</Creature>
 							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>6</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>4</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>6</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>4</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
-									<IntParam>3</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_BASH</Item>
-									</Abilities>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>3</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_BASH</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_BERSERKER_RAGE</Item>
-										<Item>ABILITY_UNLIMITED_RETALIATION</Item>
-										<Item>ABILITY_MAGIC_PROOF_25</Item>
-									</Abilities>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>8</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_BERSERKER_RAGE</Item><Item>ABILITY_UNLIMITED_RETALIATION</Item><Item>ABILITY_MAGIC_PROOF_25</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>8</IntParam></Item>
 							</Bonus3>
 						</Item>
-						<Item>
-							<Creature>CREATURE_ORC_WARMONGER</Creature>
+						<Item><Creature>CREATURE_ORC_WARMONGER</Creature>
 							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>6</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>4</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>6</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>4</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
-									<IntParam>3</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_LARGE_SHIELD</Item>
-									</Abilities>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>3</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_LARGE_SHIELD</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_BERSERKER_RAGE</Item>
-										<Item>ABILITY_UNLIMITED_RETALIATION</Item>
-										<Item>ABILITY_MAGIC_PROOF_25</Item>
-									</Abilities>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>8</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_BERSERKER_RAGE</Item><Item>ABILITY_UNLIMITED_RETALIATION</Item><Item>ABILITY_MAGIC_PROOF_25</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>8</IntParam></Item>
 							</Bonus3>
 						</Item>
-						<Item>
-							<Creature>CREATURE_CENTAUR</Creature>
+						<Item><Creature>CREATURE_CENTAUR</Creature>
 							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>4</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>4</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>5</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_RANGED_RETALIATE</Item>
-										<Item>ABILITY_ENRAGED</Item>
-									</Abilities>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>5</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_RANGED_RETALIATE</Item><Item>ABILITY_ENRAGED</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ACCURACY</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_PIERCING_ARROW</Item>
-									</Abilities>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_ACCURACY</Type><IntParam>1</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_PIERCING_ARROW</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
-						<Item>
-							<Creature>CREATURE_CENTAUR_NOMAD</Creature>
+						<Item><Creature>CREATURE_CENTAUR_NOMAD</Creature>
 							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>4</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>4</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>5</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_RANGED_RETALIATE</Item>
-										<Item>ABILITY_ENRAGED</Item>
-									</Abilities>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>5</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_RANGED_RETALIATE</Item><Item>ABILITY_ENRAGED</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ACCURACY</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_PIERCING_ARROW</Item>
-									</Abilities>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_ACCURACY</Type><IntParam>1</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_PIERCING_ARROW</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
-						<Item>
-							<Creature>CREATURE_CENTAUR_MARADEUR</Creature>
+						<Item><Creature>CREATURE_CENTAUR_MARADEUR</Creature>
 							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>2</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>4</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>4</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>5</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_RANGED_RETALIATE</Item>
-										<Item>ABILITY_ENRAGED</Item>
-									</Abilities>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>5</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_RANGED_RETALIATE</Item><Item>ABILITY_ENRAGED</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ACCURACY</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_PIERCING_ARROW</Item>
-									</Abilities>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_ACCURACY</Type><IntParam>1</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_PIERCING_ARROW</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
-						<Item>
-							<Creature>CREATURE_ORCCHIEF_BUTCHER</Creature>
+						<Item><Creature>CREATURE_ORCCHIEF_BUTCHER</Creature>
 							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>6</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>6</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>6</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>6</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPEED</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_NO_ENEMY_RETALIATION</Item>
-									</Abilities>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_SPEED</Type><IntParam>1</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_NO_ENEMY_RETALIATION</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_VORPAL_SWORD</Item>
-										<Item>ABILITY_AXE_OF_SLAUGHTER</Item>
-										<Item>ABILITY_IMMUNITY_TO_BERSERK</Item>
-										<Item>ABILITY_IMMUNITY_TO_HYPNOTIZE</Item>
-									</Abilities>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_VORPAL_SWORD</Item><Item>ABILITY_AXE_OF_SLAUGHTER</Item><Item>ABILITY_IMMUNITY_TO_BERSERK</Item><Item>ABILITY_IMMUNITY_TO_HYPNOTIZE</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
-						<Item>
-							<Creature>CREATURE_ORCCHIEF_EXECUTIONER</Creature>
+						<Item><Creature>CREATURE_ORCCHIEF_EXECUTIONER</Creature>
 							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>6</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>9</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>6</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>9</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPEED</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_NO_ENEMY_RETALIATION</Item>
-									</Abilities>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_SPEED</Type><IntParam>1</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_NO_ENEMY_RETALIATION</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_VORPAL_SWORD</Item>
-										<Item>ABILITY_AXE_OF_SLAUGHTER</Item>
-										<Item>ABILITY_IMMUNITY_TO_BERSERK</Item>
-										<Item>ABILITY_IMMUNITY_TO_HYPNOTIZE</Item>
-									</Abilities>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_VORPAL_SWORD</Item><Item>ABILITY_AXE_OF_SLAUGHTER</Item><Item>ABILITY_IMMUNITY_TO_BERSERK</Item><Item>ABILITY_IMMUNITY_TO_HYPNOTIZE</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
-						<Item>
-							<Creature>CREATURE_ORCCHIEF_CHIEFTAIN</Creature>
+						<Item><Creature>CREATURE_ORCCHIEF_CHIEFTAIN</Creature>
 							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>9</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>6</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>9</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>6</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_SPEED</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>1</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_NO_ENEMY_RETALIATION</Item>
-									</Abilities>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_SPEED</Type><IntParam>1</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_NO_ENEMY_RETALIATION</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_VORPAL_SWORD</Item>
-										<Item>ABILITY_AXE_OF_SLAUGHTER</Item>
-										<Item>ABILITY_IMMUNITY_TO_BERSERK</Item>
-										<Item>ABILITY_IMMUNITY_TO_HYPNOTIZE</Item>
-									</Abilities>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_VORPAL_SWORD</Item><Item>ABILITY_AXE_OF_SLAUGHTER</Item><Item>ABILITY_IMMUNITY_TO_BERSERK</Item><Item>ABILITY_IMMUNITY_TO_HYPNOTIZE</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
-						<Item>
-							<Creature>CREATURE_CYCLOP</Creature>
+						<Item><Creature>CREATURE_CYCLOP</Creature>
 							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>25</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
-									<IntParam>10</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>25</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>10</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_HORROR_OF_THE_DEATH</Item>
-										<Item>ABILITY_FRIGHT_AURA</Item>
-										<Item>ABILITY_REGENERATION</Item>
-									</Abilities>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_HORROR_OF_THE_DEATH</Item><Item>ABILITY_FRIGHT_AURA</Item><Item>ABILITY_REGENERATION</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>4</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>10</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>10</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_MIND_CONTROL</Item>
-										<Item>ABILITY_FIRE_PROOF_50</Item>
-									</Abilities>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>4</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>10</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>10</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_MIND_CONTROL</Item><Item>ABILITY_FIRE_PROOF_50</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
-						<Item>
-							<Creature>CREATURE_CYCLOP_UNTAMED</Creature>
+						<Item><Creature>CREATURE_CYCLOP_UNTAMED</Creature>
 							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>25</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
-									<IntParam>10</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>25</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>10</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_HORROR_OF_THE_DEATH</Item>
-										<Item>ABILITY_FRIGHT_AURA</Item>
-										<Item>ABILITY_REGENERATION</Item>
-									</Abilities>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_HORROR_OF_THE_DEATH</Item><Item>ABILITY_FRIGHT_AURA</Item><Item>ABILITY_REGENERATION</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>4</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>10</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>10</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_MIND_CONTROL</Item>
-										<Item>ABILITY_FIRE_PROOF_50</Item>
-									</Abilities>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>4</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>10</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>10</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_MIND_CONTROL</Item><Item>ABILITY_FIRE_PROOF_50</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
-						<Item>
-							<Creature>CREATURE_CYCLOP_BLOODEYED</Creature>
+						<Item><Creature>CREATURE_CYCLOP_BLOODEYED</Creature>
 							<Bonus1>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_HEALTH</Type>
-									<IntParam>25</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DAMAGE</Type>
-									<IntParam>10</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>25</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>10</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_HORROR_OF_THE_DEATH</Item>
-										<Item>ABILITY_FRIGHT_AURA</Item>
-										<Item>ABILITY_REGENERATION</Item>
-									</Abilities>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_HORROR_OF_THE_DEATH</Item><Item>ABILITY_FRIGHT_AURA</Item><Item>ABILITY_REGENERATION</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_INITIATIVE</Type>
-									<IntParam>4</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ATTACK</Type>
-									<IntParam>10</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_DEFENCE</Type>
-									<IntParam>10</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities/>
-								</Item>
-								<Item>
-									<Type>DEMON_RAGE_BONUS_ABILITY</Type>
-									<IntParam>0</IntParam>
-									<FloatParam>0</FloatParam>
-									<Spells/>
-									<Abilities>
-										<Item>ABILITY_IMMUNITY_TO_MIND_CONTROL</Item>
-										<Item>ABILITY_FIRE_PROOF_50</Item>
-									</Abilities>
-								</Item>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>4</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>10</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>10</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_MIND_CONTROL</Item><Item>ABILITY_FIRE_PROOF_50</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
 					</Bonuses>
