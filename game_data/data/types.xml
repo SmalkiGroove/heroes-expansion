@@ -2123,7 +2123,7 @@
 				<Item>HERO_SKILL_DARK_MAGIC</Item>
 				<Item>HERO_SKILL_LIGHT_MAGIC</Item>
 				<Item>HERO_SKILL_NATURAL_MAGIC</Item>
-				<Item>HERO_SKILL_COURAGE</Item>
+				<Item>HERO_SKILL_COMBAT</Item>
 				<Item>HERO_SKILL_GATING</Item>
 				<Item>HERO_SKILL_NECROMANCY</Item>
 				<Item>HERO_SKILL_AVENGER</Item>
@@ -2142,11 +2142,11 @@
 				<Item>HERO_SKILL_ESTATES</Item>
 				<Item>HERO_SKILL_DIPLOMACY</Item>
 				<Item>HERO_SKILL_MAGIC_RESISTANCE</Item>
-				<Item>HERO_SKILL_LUCKY_STRIKE</Item>
-				<Item>HERO_SKILL_FORTUNATE_ADVENTURER</Item>
+				<Item>HERO_SKILL_EXPERTISE</Item>
+				<Item>HERO_SKILL_GEOLOGY</Item>
 				<Item>HERO_SKILL_TACTICS</Item>
 				<Item>HERO_SKILL_ARCHERY</Item>
-				<Item>HERO_SKILL_FRENZY</Item>
+				<Item>HERO_SKILL_BATTLE_FRENZY</Item>
 				<Item>HERO_SKILL_PROTECTION</Item>
 				<Item>HERO_SKILL_EVASION</Item>
 				<Item>HERO_SKILL_TOUGHNESS</Item>
@@ -2154,7 +2154,7 @@
 				<Item>HERO_SKILL_MAGIC_INSIGHT</Item>
 				<Item>HERO_SKILL_ARCANE_INITIATION</Item>
 				<Item>HERO_SKILL_FROST_POWER</Item>
-				<Item>HERO_SKILL_MASTER_OF_FIRE</Item>
+				<Item>HERO_SKILL_BLAZE_POWER</Item>
 				<Item>HERO_SKILL_WARRIORS_OF_THE_SKY</Item>
 				<Item>HERO_SKILL_MASTER_OF_CURSES</Item>
 				<Item>HERO_SKILL_MASTER_OF_MIND</Item>
@@ -2170,8 +2170,8 @@
 				<Item>HERO_SKILL_EXPERT_TRAINER</Item>
 				<Item>HERO_SKILL_CONSUME_CORPSE</Item>
 				<Item>HERO_SKILL_HELLFIRE</Item>
-				<Item>HERO_SKILL_DEMONIC_STRIKE</Item>
-				<Item>HERO_SKILL_RAISE_ARCHERS</Item>
+				<Item>HERO_SKILL_MARK_OF_THE_DAMNED</Item>
+				<Item>HERO_SKILL_COURAGE</Item>
 				<Item>HERO_SKILL_ETERNAL_SERVITUDE</Item>
 				<Item>HERO_SKILL_BANSHEE_HOWL</Item>
 				<Item>HERO_SKILL_RAIN_OF_ARROWS</Item>
@@ -2201,7 +2201,7 @@
 				<Item>HERO_SKILL_WARRIORS_OF_THE_SEA</Item>
 				<Item>HERO_SKILL_GATE_MASTER</Item>
 				<Item>HERO_SKILL_SWARMING_GATE</Item>
-				<Item>HERO_SKILL_CRITICAL_STRIKE</Item>
+				<Item>HERO_SKILL_BRUTALITY</Item>
 				<Item>HERO_SKILL_HELLWRATH</Item>
 				<Item>HERO_SKILL_EXPLODING_CORPSES</Item>
 				<Item>HERO_SKILL_SEARING_FIRES</Item>
@@ -62835,7 +62835,7 @@
 					<Value>12</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_COURAGE</Name>
+					<Name>HERO_SKILL_COMBAT</Name>
 					<Value>13</Value>
 				</Item>
 				<Item>
@@ -62911,11 +62911,11 @@
 					<Value>31</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_LUCKY_STRIKE</Name>
+					<Name>HERO_SKILL_EXPERTISE</Name>
 					<Value>32</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_FORTUNATE_ADVENTURER</Name>
+					<Name>HERO_SKILL_GEOLOGY</Name>
 					<Value>33</Value>
 				</Item>
 				<Item>
@@ -62927,7 +62927,7 @@
 					<Value>35</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_FRENZY</Name>
+					<Name>HERO_SKILL_BATTLE_FRENZY</Name>
 					<Value>36</Value>
 				</Item>
 				<Item>
@@ -63023,11 +63023,11 @@
 					<Value>59</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_AVENGING_STRIKE</Name>
+					<Name>HERO_SKILL_MARK_OF_THE_DAMNED</Name>
 					<Value>60</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_RAISE_ARCHERS</Name>
+					<Name>HERO_SKILL_COURAGE</Name>
 					<Value>61</Value>
 				</Item>
 				<Item>
@@ -63147,7 +63147,7 @@
 					<Value>90</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_CRITICAL_STRIKE</Name>
+					<Name>HERO_SKILL_BRUTALITY</Name>
 					<Value>91</Value>
 				</Item>
 				<Item>
