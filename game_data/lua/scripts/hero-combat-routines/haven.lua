@@ -4,7 +4,7 @@ function Routine_BallistaRandomSalvo(side, hero, data)
     local n = 1 + trunc(GetUnitMaxManaPoints(hero) * 0.025)
     for i = 1,n do
         RandomShoot_Ballista(side)
-        sleep(500)
+        sleep(600)
     end
     COMBAT_PAUSE = 0
 end
