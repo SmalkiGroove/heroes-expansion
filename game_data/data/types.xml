@@ -1402,11 +1402,11 @@
 				<Item>SPELL_ABILITY_SUMMON_BALOR</Item>
 				<Item>SPELL_ABILITY_EXPLOSION</Item>
 				<Item>SPELL_ABILITY_EXPLOSION_EFFECT</Item>
-				<Item>SPELL_ABILITY_INFERNAL_CHAIN_END_EFFECT</Item>
+				<Item>SPELL_ABILITY_CHAIN_SHOT_END_EFFECT</Item>
 				<Item>SPELL_ABILITY_MANA_DESTROY</Item>
 				<Item>SPELL_ABILITY_MANA_STEAL</Item>
 				<Item>SPELL_ABILITY_LIFE_DRAIN</Item>
-				<Item>SPELL_ABILITY_MANAVOROUS</Item>
+				<Item>SPELL_ABILITY_MANA_DRAIN</Item>
 				<Item>SPELL_ABILITY_DEATH_CLOUD</Item>
 				<Item>SPELL_ABILITY_HARM_TOUCH</Item>
 				<Item>SPELL_ABILITY_MANA_FEED</Item>
@@ -1447,7 +1447,7 @@
 				<Item>SPELL_ARTFSET_NECROMANCERS_DEBUFF</Item>
 				<Item>SPELL_SKILL_CHILLING_BONES</Item>
 				<Item>SPELL_DEBUG_TELEPORT</Item>
-				<Item>SPELL_ABILITY_SPITE</Item>
+				<Item>SPELL_ABILITY_ENRAGED</Item>
 				<Item>SPELL_MASS_CURSE</Item>
 				<Item>SPELL_MASS_DISRUPTING_RAY</Item>
 				<Item>SPELL_MASS_SLOW</Item>
@@ -66269,7 +66269,7 @@
 					<Value>163</Value>
 				</Item>
 				<Item>
-					<Name>SPELL_ABILITY_INFERNAL_CHAIN_END_EFFECT</Name>
+					<Name>ABILITY_CHAIN_SHOT_END_EFFECT</Name>
 					<Value>164</Value>
 				</Item>
 				<Item>
@@ -66285,7 +66285,7 @@
 					<Value>167</Value>
 				</Item>
 				<Item>
-					<Name>SPELL_ABILITY_MANAVOROUS</Name>
+					<Name>SPELL_ABILITY_MANA_DRAIN</Name>
 					<Value>168</Value>
 				</Item>
 				<Item>
@@ -66449,7 +66449,7 @@
 					<Value>208</Value>
 				</Item>
 				<Item>
-					<Name>SPELL_ABILITY_SPITE</Name>
+					<Name>SPELL_ABILITY_ENRAGED</Name>
 					<Value>209</Value>
 				</Item>
 				<Item>
