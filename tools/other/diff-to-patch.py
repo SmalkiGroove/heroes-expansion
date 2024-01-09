@@ -43,7 +43,7 @@ broker:int = 0
 
 while ((byte1 := b1.read(1)) and (byte2 := b2.read(1))):
     if byte1 == byte2:
-        if len(chain1) > 0:
+        if chain1 is not None and len(chain1) > 0:
             broker = broker + 1
             if broker == 8:
                 make_edit(chain0, chain1[:-7], chain2[:-7])
