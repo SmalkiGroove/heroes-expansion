@@ -19,7 +19,7 @@ for i,hero in HEROES_ALL do
 end
 
 
-function SetHeroActiveSet(hero, pieces, set)
+function SetHeroActiveSet(hero, pieces, set, id)
     local faction = GetHeroFactionID(hero)
 
     local activations = set[0]
@@ -34,9 +34,9 @@ function SetHeroActiveSet(hero, pieces, set)
     end
 
     if before == artfset then
-        print("Hero "..hero.." artifact set "..artfset.." has not changed")
+        print("Hero "..hero.." artifact set "..id.." has not changed")
     else
-        print("Hero "..hero.." artifact set has changed from "..before.." to "..artfset)
+        print("Hero "..hero.." artifact set "..id.." has changed from "..before.." to "..artfset)
         replace(HERO_ACTIVE_ARTIFACT_SETS[hero], before, artfset, nil)
         print("["..HERO_ACTIVE_ARTIFACT_SETS[hero][1]..","..HERO_ACTIVE_ARTIFACT_SETS[hero][2].."]")
     end
@@ -92,6 +92,15 @@ function UpdateArtifacts(player)
     end
 end
 
+function WatchPlayerArtifacts(player, wait)
+    if wait then
+        while (not IsPlayerCurrent(player)) do sleep(10) end
+    end
+    while (IsPlayerCurrent(player)) do
+		UpdateArtifacts(player)
+		sleep(30)
+	end
+end
 
 -- print("Loaded artifact management script")
 ROUTINES_LOADED[12] = 1

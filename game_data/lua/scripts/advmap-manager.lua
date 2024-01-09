@@ -142,10 +142,7 @@ function PlayerDailyHandler(player, newweek)
 			startThread(DoArtifactsRoutine_Weekly, player, hero)
 		end
 	end
-	while (IsPlayerCurrent(player)) do
-		UpdateArtifacts(player)
-		sleep(30)
-	end
+	WatchPlayerArtifacts(player, nil)
 end
 
 function NewDayTrigger()
@@ -223,6 +220,7 @@ function InitializeHeroes()
 				startThread(START_ROUTINES[faction], player, hero)
 				-- startThread(START_ROUTINES[x_skills], player, hero)
 			end
+			startThread(WatchPlayerArtifacts, player, 1)
 		end
 	end
 end
