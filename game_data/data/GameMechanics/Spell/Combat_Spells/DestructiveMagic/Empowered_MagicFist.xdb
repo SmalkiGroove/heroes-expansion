@@ -6,7 +6,7 @@
 	<EffectTexture href="/UI/Common/Icons/Spell_Buff_Icons/MagicFist.(Texture).xdb#xpointer(/Texture)"/>
 	<SpellBookPredictions/>
 	<CombatLogTexts/>
-	<Level>1</Level>
+	<Level>4</Level>
 	<MagicSchool>MAGIC_SCHOOL_DESTRUCTIVE</MagicSchool>
 	<RequiredHeroLevel>0</RequiredHeroLevel>
 	<IsAimed>true</IsAimed>
@@ -42,6 +42,6 @@
 	<IsAreaAttack>false</IsAreaAttack>
 	<CanSelectDead>false</CanSelectDead>
 	<Target>TARGET_HOSTILE</Target>
-	<Element>ELEMENT_EARTH</Element>
+	<Element>ELEMENT_NONE</Element>
 	<visuals/>
 </Spell>
