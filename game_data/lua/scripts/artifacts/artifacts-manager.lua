@@ -1,5 +1,6 @@
 
 HERO_EQUIPPED_ARTIFACTS = {}
+HERO_ACTIVE_ARTIFACT_SETS = {}
 
 for i,hero in HEROES_ALL do
     HERO_EQUIPPED_ARTIFACTS[hero] = {
@@ -12,35 +13,74 @@ for i,hero in HEROES_ALL do
         [ARTIFACT_LOCATION_RING]      = ARTIFACT_NONE,
         [ARTIFACT_LOCATION_NECK]      = ARTIFACT_NONE,
         [ARTIFACT_LOCATION_POCKET]    = ARTIFACT_NONE,
+        [10]                          = ARTIFACT_NONE,
     }
+    HERO_ACTIVE_ARTIFACT_SETS[hero] = {0,0}
+end
+
+
+function SetHeroActiveSet(hero, pieces, set)
+    local faction = GetHeroFactionID(hero)
+
+    local activations = set[0]
+    if set[faction] then activations = set[faction] end
+
+    local artfset = 0
+    local before = 0
+    
+    for n,v in activations do
+        if pieces >= n then artfset = v end
+        if contains(HERO_ACTIVE_ARTIFACT_SETS[hero], v) then before = v end
+    end
+
+    if before == artfset then
+        print("Hero "..hero.." artifact set "..artfset.." has not changed")
+    else
+        print("Hero "..hero.." artifact set has changed from "..before.." to "..artfset)
+        replace(HERO_ACTIVE_ARTIFACT_SETS[hero], before, artfset, nil)
+        print("["..HERO_ACTIVE_ARTIFACT_SETS[hero][1]..","..HERO_ACTIVE_ARTIFACT_SETS[hero][2].."]")
+    end
+end
+
+function UpdateArtifactSets(hero, previous, artifact)
+    for set = 1,24 do
+        if contains(ARTIFACT_SETS[set], previous) or contains(ARTIFACT_SETS[set], artifact) then
+            local pieces = 0
+            for _,a in ARTIFACT_SETS[set] do
+                if HasArtefact(hero, a, 1) then
+                    pieces = pieces + 1
+                end
+            end
+            SetHeroActiveSet(hero, pieces, ARTIFACT_SETS_ACTIVATIONS[set])
+        end
+    end
 end
 
 
 function ScanHeroArtifacts(hero)
     for location = 1,9 do
+        local loc = location
         local artifact = HERO_EQUIPPED_ARTIFACTS[hero][location]
-        if artifact == ARTIFACT_NONE then
-            for _,a in ARTIFACT_LOCATIONS[loc] do
-                if HasArtefact(hero, a, 1) then
-                    print(hero.." now has artifact #"..a.." at location "..location)
+        local found = artifact == ARTIFACT_NONE
+        for _,a in ARTIFACT_LOCATIONS[location] do
+            if HasArtefact(hero, a, 1) then
+                found = a
+                local same = a == artifact
+                if location == ARTIFACT_LOCATION_RING and not same then
+                    same = a == HERO_EQUIPPED_ARTIFACTS[hero][10]
+                end
+                if not same then
+                    if location == ARTIFACT_LOCATION_RING and HasArtefact(hero, artifact, 1) then loc = 10; artifact = HERO_EQUIPPED_ARTIFACTS[hero][10] end
+                    print(hero.." now has artifact #"..a.." at location "..loc)
                     UpdateArtifactSets(hero, artifact, a)
-                    HERO_EQUIPPED_ARTIFACTS[hero][location] = a
-                    break
+                    HERO_EQUIPPED_ARTIFACTS[hero][loc] = a
                 end
             end
-        else
-            if not HasArtefact(hero, artifact, 1) then
-                local rep = ARTIFACT_NONE
-                for _,a in ARTIFACT_LOCATIONS[loc] do
-                    if HasArtefact(hero, a, 1) then
-                        rep = a
-                        break
-                    end
-                end
-                print(hero.." has replaced artifact #"..artifact.." by #"..rep.." at location "..location)
-                UpdateArtifactSets(hero, artifact, rep)
-                HERO_EQUIPPED_ARTIFACTS[hero][location] = rep
-            end
+        end
+        if not found then
+            print(hero.." has no more artifact at location "..location)
+            UpdateArtifactSets(hero, artifact, ARTIFACT_NONE)
+            HERO_EQUIPPED_ARTIFACTS[hero][location] = ARTIFACT_NONE
         end
     end
 end

@@ -82,8 +82,8 @@ function GetPlayerBrain( player )
             return HUMAN
         end
 	else
-		return OBSERVER;
-	end;
+		return OBSERVER
+    end
 end
 
 function GetPlayerFilter( player )

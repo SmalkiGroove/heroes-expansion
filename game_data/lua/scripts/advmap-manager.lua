@@ -45,7 +45,6 @@ LoadScript("/scripts/hero-advmap-routines/necropolis.lua", NECROPOLIS)
 LoadScript("/scripts/hero-advmap-routines/preserve.lua", PRESERVE)
 LoadScript("/scripts/hero-advmap-routines/stronghold.lua", STRONGHOLD)
 LoadScript("/scripts/artifacts/artifacts-data.lua", 10)
-LoadScript("/scripts/artifacts/artifact-sets.lua", 11)
 LoadScript("/scripts/artifacts/artifacts-manager.lua", 12)
 LoadScript("/scripts/artifacts/artifacts-routines.lua", 13)
 LoadScript("/scripts/skills/skills-data.lua", 15)
@@ -136,15 +135,15 @@ function PlayerDailyHandler(player, newweek)
 		local faction = GetHeroFactionID(hero)
 		startThread(DAILY_ROUTINES[faction], player, hero)
 		-- startThread(DAILY_ROUTINES[x_skills], player, hero)
-		-- startThread(DAILY_ROUTINES[x_artifacts], player, hero)
+		startThread(DoArtifactsRoutine_Daily, player, hero)
 		if newweek then 
 			startThread(WEEKLY_ROUTINES[faction], player, hero)
 			-- startThread(WEEKLY_ROUTINES[x_skills], player, hero)
-			-- startThread(WEEKLY_ROUTINES[x_artifacts], player, hero)
+			startThread(DoArtifactsRoutine_Weekly, player, hero)
 		end
 	end
 	while (IsPlayerCurrent(player)) do
-		-- UpdateArtifacts(player)
+		UpdateArtifacts(player)
 		sleep(30)
 	end
 end
@@ -170,7 +169,7 @@ function CombatResultsHandler(combatIndex)
 		local faction = GetHeroFactionID(hero)
 		startThread(AFTER_COMBAT_ROUTINES[faction], player, hero, combatIndex)
 		-- startThread(AFTER_COMBAT_ROUTINES[x_skills], player, hero, combatIndex)
-		-- startThread(AFTER_COMBAT_ROUTINES[x_artifacts], player, hero, combatIndex)
+		startThread(DoArtifactsRoutine_AfterCombat, player, hero, combatIndex)
 	end
 end
 
