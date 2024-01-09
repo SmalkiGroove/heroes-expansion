@@ -22,7 +22,7 @@ end
 
 function Routine_CastPowerfulBlowCentaur(side, hero, data)
     -- print("Trigger powerful blow on centaur !")
-    HeroCast_TargetCreatureTypes(hero, SPELL_EFFECT_POWERFULL_BLOW, NO_COST, side, {CREATURE_CENTAUR,CREATURE_CENTAUR_NOMAD,CREATURE_CENTAUR_MARADEUR})
+    HeroCast_TargetCreatureTypes(hero, SPELL_EFFECT_COORDINATION, NO_COST, side, {CREATURE_CENTAUR,CREATURE_CENTAUR_NOMAD,CREATURE_CENTAUR_MARADEUR})
     COMBAT_PAUSE = 0
 end
 
