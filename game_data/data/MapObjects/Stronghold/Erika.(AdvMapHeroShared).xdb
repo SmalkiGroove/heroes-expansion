@@ -34,8 +34,8 @@
 	<Class>HERO_CLASS_STRONGHOLD_MAGIC</Class>
 	<Specialization>HERO_SPEC_MALEDICTOR</Specialization>
 	<PrimarySkill>
+		<SkillID>HERO_SKILL_INNATES</SkillID>
 		<Mastery>MASTERY_EXPERT</Mastery>
-		<SkillID>HERO_SKILL_NAVIGATION</SkillID>
 	</PrimarySkill>
 	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Stronghold/Maledictor/Name.txt"/>
 	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Stronghold/Maledictor/Description.txt"/>
@@ -57,8 +57,8 @@
 		<Knowledge>2</Knowledge>
 		<skills>
 			<Item>
-				<Mastery>MASTERY_EXPERT</Mastery>
-				<SkillID>HERO_SKILL_INNATES</SkillID>
+				<SkillID>HERO_SKILL_BLOOD_RAGE</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
 			</Item>	
 		</skills>
 		<perkIDs>

@@ -32,8 +32,8 @@
 	<Class>HERO_CLASS_NECROPOLIS_MIGHT</Class>
 	<Specialization>HERO_SPEC_BLOODDRINKER</Specialization>
 	<PrimarySkill>
-		<Mastery>MASTERY_BASIC</Mastery>
-		<SkillID>HERO_SKILL_NECROMANCY</SkillID>
+		<SkillID>HERO_SKILL_INNATES</SkillID>
+		<Mastery>MASTERY_EXPERT</Mastery>
 	</PrimarySkill>
 	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Necropolis/Blooddrinker/Name.txt"/>
 	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Necropolis/Blooddrinker/Description.txt"/>
@@ -55,8 +55,8 @@
 		<Knowledge>1</Knowledge>
 		<skills>
 			<Item>
-				<Mastery>MASTERY_EXPERT</Mastery>
-				<SkillID>HERO_SKILL_INNATES</SkillID>
+				<SkillID>HERO_SKILL_NECROMANCY</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
 			</Item>	
 		</skills>
 		<perkIDs>

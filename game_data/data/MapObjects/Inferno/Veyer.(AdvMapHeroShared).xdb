@@ -32,8 +32,8 @@
 	<Class>HERO_CLASS_INFERNO_MIGHT</Class>
 	<Specialization>HERO_SPEC_IMPREGNABLE</Specialization>
 	<PrimarySkill>
-		<Mastery>MASTERY_BASIC</Mastery>
-		<SkillID>HERO_SKILL_GATING</SkillID>
+		<SkillID>HERO_SKILL_INNATES</SkillID>
+		<Mastery>MASTERY_EXPERT</Mastery>
 	</PrimarySkill>
 	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Inferno/Impregnable/Name.txt"/>
 	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Inferno/Impregnable/Description.txt"/>
@@ -55,8 +55,8 @@
 		<Knowledge>3</Knowledge>
 		<skills>
 			<Item>
-				<Mastery>MASTERY_EXPERT</Mastery>
-				<SkillID>HERO_SKILL_INNATES</SkillID>
+				<SkillID>HERO_SKILL_GATING</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
 			</Item>	
 		</skills>
 		<perkIDs>

@@ -32,8 +32,8 @@
 	<Class>HERO_CLASS_HAVEN_MAGIC</Class>
 	<Specialization>HERO_SPEC_WHITE_KNIGHT</Specialization>
 	<PrimarySkill>
-		<Mastery>MASTERY_BASIC</Mastery>
-		<SkillID>HERO_SKILL_COURAGE</SkillID>
+		<SkillID>HERO_SKILL_INNATES</SkillID>
+		<Mastery>MASTERY_EXPERT</Mastery>
 	</PrimarySkill>
 	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Haven/White_Knight/Name.txt"/>
 	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Haven/White_Knight/Description.txt"/>
@@ -55,8 +55,8 @@
 		<Knowledge>2</Knowledge>
 		<skills>
 			<Item>
-				<Mastery>MASTERY_EXPERT</Mastery>
-				<SkillID>HERO_SKILL_INNATES</SkillID>
+				<SkillID>HERO_SKILL_COURAGE</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
 			</Item>	
 		</skills>
 		<perkIDs>

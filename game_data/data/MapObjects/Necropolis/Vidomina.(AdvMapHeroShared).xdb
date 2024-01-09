@@ -32,8 +32,8 @@
 	<Class>HERO_CLASS_NECROPOLIS_MAGIC</Class>
 	<Specialization>HERO_SPEC_FLAGBEARER_OF_DARKNESS</Specialization>
 	<PrimarySkill>
-		<Mastery>MASTERY_BASIC</Mastery>
-		<SkillID>HERO_SKILL_NECROMANCY</SkillID>
+		<SkillID>HERO_SKILL_INNATES</SkillID>
+		<Mastery>MASTERY_EXPERT</Mastery>
 	</PrimarySkill>
 	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Necropolis/Flagbearer_Of_Darkness/Name.txt"/>
 	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Necropolis/Flagbearer_Of_Darkness/Description.txt"/>
@@ -55,8 +55,8 @@
 		<Knowledge>2</Knowledge>
 		<skills>
 			<Item>
-				<Mastery>MASTERY_EXPERT</Mastery>
-				<SkillID>HERO_SKILL_INNATES</SkillID>
+				<SkillID>HERO_SKILL_NECROMANCY</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
 			</Item>	
 		</skills>
 		<perkIDs>
