@@ -1,6 +1,6 @@
 
 function Routine_Leadership(player, hero, combatIndex)
-    print("> Routine_Leadership")
+    print("$ Routine_Leadership")
     local mastery = GetHeroSkillMastery(hero, SKILL_LEADERSHIP)
     local x, y, z = GetObjectPosition(hero)
     local dx, dy, dz = GetObjectPosition(PLAYER_MAIN_TOWN[player])
@@ -57,10 +57,10 @@ function DoSkillsRoutine_Weekly(player, hero)
     end
 end
 
-function DoSkillsRoutine_LevelUp(player, hero)
+function DoSkillsRoutine_LevelUp(player, hero, level)
     for k,v in LEVELUP_TRIGGER_SKILLS_ROUTINES do
         if HasHeroSkill(hero, k) then
-            startThread(v, player, hero)
+            startThread(v, player, hero, level)
         end
     end
 end

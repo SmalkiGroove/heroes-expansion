@@ -3,7 +3,7 @@ NB_CARAVAN = 0
 CURRENT_CARAVANS = {}
 
 function CaravanCountdown()
-    print("> CaravanCountdown")
+    print("$ CaravanCountdown")
     local caravans = {}
     for k,v in CURRENT_CARAVANS do
         if v > 0 then caravans[k] = v-1

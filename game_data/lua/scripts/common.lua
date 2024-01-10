@@ -1,14 +1,17 @@
 
 function trunc(num)
-    return num - mod(num, 1)
+    local n = num - mod(num, 1)
+    return n
 end
 
 function round(num)
-    return trunc(num + 0.5)
+    local n = trunc(num + 0.5)
+    return n
 end
 
 function ceil(num)
-    return trunc(num + 0.99)
+    local n = trunc(num + 0.99)
+    return n
 end
 
 function power(a, n)

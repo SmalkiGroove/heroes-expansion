@@ -36,23 +36,29 @@ end
 
 function RestoreHeroMana(hero)
     if GetHeroStat(hero, STAT_MANA_POINTS) > 1000 then
-        local x,y,z = GetObjectPosition(hero)
-        repeat sleep(10) until not IsEqualPosition(hero, x, y, z)
         local temp = 1000000000 + GetHeroLevel(hero) * 10000000 + HERO_ACTIVE_ARTIFACT_SETS[hero][1] * 100000 + HERO_ACTIVE_ARTIFACT_SETS[hero][2] * 1000
         ChangeHeroStat(hero, STAT_MANA_POINTS, -temp)
     end
 end
 
-function EngageCombat(hero, obj)
-    while (GetHeroStat(hero, STAT_KNOWLEDGE) > 200000000 or GetHeroStat(hero, STAT_MANA_POINTS) < 1000000000) do sleep(1) end
-    EngageInteraction(hero, obj)
+function WaitForRestoreMana(hero)
+    local x,y,z = GetObjectPosition(hero)
+    repeat sleep(5) until not IsEqualPosition(hero, x, y, z)
     RestoreHeroMana(hero)
 end
 
+function EngageCombat(hero, obj)
+    while (GetHeroStat(hero, STAT_KNOWLEDGE) > 200000000 or GetHeroStat(hero, STAT_MANA_POINTS) < 1000000000) do sleep(1) end
+    EngageInteraction(hero, obj)
+    WaitForRestoreMana(hero)
+end
+
 function EngageInteraction(hero, obj)
-    SetTriggerCombat(obj, nil)
-    MakeHeroInteractWithObject(hero, obj)
-    SetTriggerCombat(obj, not nil)
+    if IsObjectExists(obj) then
+        SetTriggerCombat(obj, nil)
+        MakeHeroInteractWithObject(hero, obj)
+        SetTriggerCombat(obj, not nil)
+    end
 end
 
 function HeroVisitCombatObject(hero, obj)

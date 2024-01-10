@@ -23,20 +23,20 @@ TRANSFORM_ARRAY_FORTRESS = { 0,
 
 function Routine_AddLuckAndMorale(player, hero)
     --Luck and Morale +2
-    print("> Routine_AddLuckAndMorale")
+    print("$ Routine_AddLuckAndMorale")
     AddHero_StatAmount(player, hero, STAT_LUCK, 2)
     AddHero_StatAmount(player, hero, STAT_MORALE, 2)
 end
 
 function Routine_AddHeroDefenders(player, hero)
     -- Defenders - 1:1 - 2:3 - 3:5 - 4:7 - 5:9 ... 25:49
-    print("> Routine_AddHeroDefenders")
+    print("$ Routine_AddHeroDefenders")
     AddHero_CreatureInTypes(player, hero, {CREATURE_DEFENDER,CREATURE_STOUT_DEFENDER,CREATURE_STONE_DEFENDER}, 0.5)
 end
 
 function Routine_GenerateCrystalsAndGems(player, hero)
     -- Crystals and Gems - +1 / 5 levels
-    print("> Routine_GenerateCrystalsAndGems")
+    print("$ Routine_GenerateCrystalsAndGems")
     local amount = trunc(GetHeroLevel(hero) * 0.2)
     AddPlayer_Resource(player, hero, CRYSTAL, amount)
     AddPlayer_Resource(player, hero, GEM, amount)
@@ -44,7 +44,7 @@ end
 
 function Routine_EvolveRunePriests(player, hero)
     -- Rune Priest to Thane (or upgrade) for n Defenders (or upgrade)
-    print("> Routine_EvolveRunePriests")
+    print("$ Routine_EvolveRunePriests")
     local n = 30 - trunc(GetHeroLevel(hero) * 0.5)
     ChangeHero_CreatureFusion(player, hero, CREATURE_RUNE_MAGE, CREATURE_DEFENDER, CREATURE_THANE, n)
     ChangeHero_CreatureFusion(player, hero, CREATURE_RUNE_MAGE, CREATURE_STOUT_DEFENDER, CREATURE_WARLORD, n)
@@ -53,32 +53,32 @@ end
 
 function Routine_TransformCreaturesToFortressUnits(player, hero)
     -- Transform creatures to Fortress units
-    print("> Routine_TransformCreaturesToFortressUnits")
+    print("$ Routine_TransformCreaturesToFortressUnits")
     ChangeHero_CreatureTransform(player, hero, TRANSFORM_ARRAY_FORTRESS)
 end
 
 function Routine_UpgradeRunePriests(player, hero)
     -- Upgrade Rune Priest to Rune Patriarch
-    print("> Routine_UpgradeRunePriests")
+    print("$ Routine_UpgradeRunePriests")
     ChangeHero_CreatureUpgrade(player, hero, CREATURE_RUNE_MAGE, CREATURE_FLAME_MAGE)
 end
 
 function Routine_AddHeroExperiencePercent(player, hero)
     -- Exp - 5% total hero exp
-    print("> Routine_AddHeroExperiencePercent")
+    print("$ Routine_AddHeroExperiencePercent")
     AddHero_StatPercent(player, hero, STAT_EXPERIENCE, 0.05)
 end
 
 function Routine_AddRecruitsBearRiders(player, hero)
     -- Bears - 1.75 * level recruits per week
-    print("> Routine_AddRecruitsBearRiders")
+    print("$ Routine_AddRecruitsBearRiders")
     AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_BEAR_RIDER, 1.75)
 end
 
-function Routine_GainFortressArtifacts(player, hero)
+function Routine_GainFortressArtifacts(player, hero, level)
     -- Dwarven artfacts set
-    print("> Routine_GainFortressArtifacts")
-    if GetHeroLevel(hero) == 40 then
+    print("$ Routine_GainFortressArtifacts")
+    if level == 40 then
         GiveArtifact(hero, ARTIFACT_DWARVEN_MITHRAL_CUIRASS)
         GiveArtifact(hero, ARTIFACT_DWARVEN_MITHRAL_GREAVES)
         GiveArtifact(hero, ARTIFACT_DWARVEN_MITHRAL_HELMET)
@@ -204,8 +204,8 @@ function DoFortressRoutine_Weekly(player, hero)
     startThread(WEEKLY_TRIGGER_FORTRESS[hero], player, hero)
 end
 
-function DoFortressRoutine_LevelUp(player, hero)
-    startThread(LEVEL_UP_FORTRESS_HERO[hero], player, hero)
+function DoFortressRoutine_LevelUp(player, hero, level)
+    startThread(LEVEL_UP_FORTRESS_HERO[hero], player, hero, level)
 end
 
 function DoFortressRoutine_AfterCombat(player, hero, index)

@@ -1,6 +1,6 @@
 
 function Routine_ArtifactSackOfGolds(player, hero)
-    print("> Routine_ArtifactSackOfGolds")
+    print("$ Routine_ArtifactSackOfGolds")
     local level = GetHeroLevel(hero)
     AddPlayer_Resource(player, hero, GOLD, level * 25)
 end
@@ -59,15 +59,15 @@ function DoArtifactsRoutine_Weekly(player, hero)
     end
 end
 
-function DoArtifactsRoutine_LevelUp(player, hero)
+function DoArtifactsRoutine_LevelUp(player, hero, level)
     for k,v in LEVELUP_TRIGGER_ARTIFACTS_ROUTINES do
         if HasArtefact(hero, k, 1) then
-            startThread(v, player, hero)
+            startThread(v, player, hero, level)
         end
     end
     for k,v in LEVELUP_TRIGGER_ARTFSETS_ROUTINES do
         if contains(HERO_ACTIVE_ARTIFACT_SETS[hero], k) then
-            startThread(v, player, hero)
+            startThread(v, player, hero, level)
         end
     end
 end

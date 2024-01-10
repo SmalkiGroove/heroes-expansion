@@ -16,12 +16,13 @@ ARTIFACT_LEVELUP_ROUTINE = DoArtifactsRoutine_LevelUp
 LEVEL_UP_HERO_CALLBACK = {}
 
 function HeroLevelUp(hero)
-    -- print("Generic level up routine...")
+    local level = GetHeroLevel(hero)
     local player = GetObjectOwner(hero)
     local faction = GetHeroFactionID(hero)
-    startThread(HEROSPE_LEVELUP_ROUTINES[faction], player, hero)
-    startThread(SKILL_LEVELUP_ROUTINE, player, hero)
-    startThread(ARTIFACT_LEVELUP_ROUTINE, player, hero)
+    print("Hero "..hero.." leveled up to level "..level)
+    startThread(HEROSPE_LEVELUP_ROUTINES[faction], player, hero, level)
+    startThread(SKILL_LEVELUP_ROUTINE, player, hero, level)
+    startThread(ARTIFACT_LEVELUP_ROUTINE, player, hero, level)
 end
 
 for hero,_ in HEROES do

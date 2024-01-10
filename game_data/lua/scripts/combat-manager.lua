@@ -56,12 +56,12 @@ end
 
 function ParseData(hero, data)
     local m = GetUnitManaPoints(hero)
+    print("Data : "..m)
     if m > 1000000000 then
         local level = mod(trunc(m * 0.0000001), 100)
-        local set1 = mod(trunc(m * 0.00001), 100)
-        local set2 = mod(trunc(m * 0.001), 100)
-        local mana = m - 1000000000 - level * 10000000 - set1 * 100000 - set2 * 1000 -- mod(n,1000) doesn't work if n too big
-        SetMana(hero, mana)
+        local set1  = mod(trunc(m * 0.00001), 100)
+        local set2  = mod(trunc(m * 0.001), 100)
+        SetUnitManaPoints(hero, m - 1000000000 - level * 10000000 - set1 * 100000 - set2 * 1000)
         data["LVL"] = level
         data["SET1"] = set1
         data["SET2"] = set2
