@@ -3,7 +3,7 @@
 function ReplaceStartingArmy(hero)
 	-- print("Starting army for hero "..hero)
 	if STARTING_ARMIES[hero] and STARTING_ARMIES[hero][1] then
-		AddHeroCreatures(hero, CREATURE_WOLF, 1, 6) sleep(1)
+		-- AddHeroCreatures(hero, CREATURE_WOLF, 1, 6) sleep(1)
 		local k, units, amounts = GetHeroArmySummary(hero)
 		for i = 1,k do
 			-- print("Remove hero creature type : "..units[i].." - "..amounts[i])
@@ -15,7 +15,7 @@ function ReplaceStartingArmy(hero)
 				AddHeroCreatures(hero, STARTING_ARMIES[hero][i][1], STARTING_ARMIES[hero][i][2], i-1)
 			end
 		end
-		sleep(1) RemoveHeroCreatures(hero, CREATURE_WOLF, 1)
+		-- sleep(1) RemoveHeroCreatures(hero, CREATURE_WOLF, 1)
 	end
 end
 

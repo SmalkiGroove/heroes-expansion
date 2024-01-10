@@ -147,19 +147,19 @@
 			<Scouting_VisibilityIncrease>6</Scouting_VisibilityIncrease>
 			<DisguiseAndReckon_VisibilityIncrease>12</DisguiseAndReckon_VisibilityIncrease>
 			<Intelligence_ManaPointsBonus>1.0</Intelligence_ManaPointsBonus>
-			<WarMachines_HealthBonusPerSkillTrained>25</WarMachines_HealthBonusPerSkillTrained>
+			<WarMachines_HealthBonusPerSkillTrained>10</WarMachines_HealthBonusPerSkillTrained>
 			<WarMachines_PerkSpecificHealthMultiplier>2</WarMachines_PerkSpecificHealthMultiplier>
 		</HeroSkills>
 		<TownBuildingBonuses>
-			<Heaven_GrailLuckBoost>2</Heaven_GrailLuckBoost>
+			<Heaven_GrailLuckBoost>1</Heaven_GrailLuckBoost>
 			<Inferno_InfernalLoomEnemyLuckPenalty>2</Inferno_InfernalLoomEnemyLuckPenalty>
-			<Inferno_GrailDefenderSpellpowerBonus>10</Inferno_GrailDefenderSpellpowerBonus>
+			<Inferno_GrailDefenderSpellpowerBonus>4</Inferno_GrailDefenderSpellpowerBonus>
 			<Sylvian_SparklingFountainDefenderLuckBonus>2</Sylvian_SparklingFountainDefenderLuckBonus>
-			<Sylvian_GrailLuckBoost>2</Sylvian_GrailLuckBoost>
-			<Necropolis_UnholyTempleEnemyMoralePenalty>2</Necropolis_UnholyTempleEnemyMoralePenalty>
-			<Academy_GrailDefenderKnowledgeBonus>10</Academy_GrailDefenderKnowledgeBonus>
+			<Sylvian_GrailLuckBoost>1</Sylvian_GrailLuckBoost>
+			<Necropolis_UnholyTempleEnemyMoralePenalty>1</Necropolis_UnholyTempleEnemyMoralePenalty>
+			<Academy_GrailDefenderKnowledgeBonus>4</Academy_GrailDefenderKnowledgeBonus>
 			<Dungeon_HallOfIntrigueKnowledgeBoost>1</Dungeon_HallOfIntrigueKnowledgeBoost>
-			<Dungeon_GrailDefenderSpellpowerBonus>10</Dungeon_GrailDefenderSpellpowerBonus>
+			<Dungeon_GrailDefenderSpellpowerBonus>4</Dungeon_GrailDefenderSpellpowerBonus>
 			<Fortress_Arena_BrawlerGrowthAddition>5</Fortress_Arena_BrawlerGrowthAddition>
 			<Fortress_Arena_RuneMageGrowthAddition>1</Fortress_Arena_RuneMageGrowthAddition>
 			<Fortress_GuardPostStats>
@@ -174,10 +174,10 @@
 				<BaseCreatureToPlace>CREATURE_STONE_DEFENDER</BaseCreatureToPlace>
 				<CreaturesPerTownLevelPerMonth>10</CreaturesPerTownLevelPerMonth>
 			</Fortress_GuardPostStats>
-			<Fortress_BlazingAnvil_DefenderDefenceBonus>6</Fortress_BlazingAnvil_DefenderDefenceBonus>
-			<Fortress_BlazingAnvil_DefenderSpellPowerBonus>6</Fortress_BlazingAnvil_DefenderSpellPowerBonus>
-			<Stronghold_TowerOfHeroes_OffenceBonus>5</Stronghold_TowerOfHeroes_OffenceBonus>
-			<Stronghold_GarbagePile_GoblinGrowthAddition>10</Stronghold_GarbagePile_GoblinGrowthAddition>
+			<Fortress_BlazingAnvil_DefenderDefenceBonus>2</Fortress_BlazingAnvil_DefenderDefenceBonus>
+			<Fortress_BlazingAnvil_DefenderSpellPowerBonus>2</Fortress_BlazingAnvil_DefenderSpellPowerBonus>
+			<Stronghold_TowerOfHeroes_OffenceBonus>2</Stronghold_TowerOfHeroes_OffenceBonus>
+			<Stronghold_GarbagePile_GoblinGrowthAddition>9</Stronghold_GarbagePile_GoblinGrowthAddition>
 		</TownBuildingBonuses>
 		<TalismanOfAdventure>
 			<Levels>
@@ -231,7 +231,7 @@
 						<Gem>2</Gem>
 						<Gold>7000</Gold>
 					</CostOfUpgrade>
-					<HeroLevel>20</HeroLevel>
+					<HeroLevel>30</HeroLevel>
 				</Item>
 			</Levels>
 		</TalismanOfAdventure>
@@ -1932,7 +1932,7 @@
 				<Prayer_InitiativeBonus>0.1</Prayer_InitiativeBonus>
 				<WhiteKnight_PrayerMultiplier>3</WhiteKnight_PrayerMultiplier>
 				<Encourage_ATBIncrease>0.3</Encourage_ATBIncrease>
-				<Retribution_DamageBonusPerMorale>0.05</Retribution_DamageBonusPerMorale>
+				<Retribution_DamageBonusPerMorale>0.07</Retribution_DamageBonusPerMorale>
 			</Knight>
 			<DemonLord>
 				<Gating>
@@ -2148,7 +2148,7 @@
 				<StormWind_SpeedPenalty>1</StormWind_SpeedPenalty>
 				<FogVeil_InitiativePenalty>0.1</FogVeil_InitiativePenalty>
 				<FogVeil_DamageDecrease>0.1</FogVeil_DamageDecrease>
-				<ElvenLuck_DamageMultiplier>2.25</ElvenLuck_DamageMultiplier>
+				<ElvenLuck_DamageMultiplier>2.0</ElvenLuck_DamageMultiplier>
 				<ImbueArrow_ATBDropOnCast>0</ImbueArrow_ATBDropOnCast>
 			</Ranger>
 			<Runemage>
@@ -2400,7 +2400,7 @@
 				<Object href="/GameMechanics/CreatureVisual/SpellSpawned/Hive.xdb#xpointer(/CreatureVisual)"/>
 				<Spell>
 					<Spell>SPELL_WASP_SWARM</Spell>
-					<Mastery>MASTERY_EXPERT</Mastery>
+					<Mastery>MASTERY_ADVANCED</Mastery>
 				</Spell>
 				<Tier>8</Tier>
 				<Power>10000</Power>
@@ -2424,19 +2424,19 @@
 				</Initiative>
 				<Health>
 					<Item>
-						<Base>10</Base>
+						<Base>15</Base>
 						<PerPower>5</PerPower>
 					</Item>
 					<Item>
-						<Base>25</Base>
+						<Base>30</Base>
 						<PerPower>5</PerPower>
 					</Item>
 					<Item>
-						<Base>50</Base>
+						<Base>45</Base>
 						<PerPower>5</PerPower>
 					</Item>
 					<Item>
-						<Base>100</Base>
+						<Base>60</Base>
 						<PerPower>5</PerPower>
 					</Item>
 				</Health>
@@ -2450,20 +2450,20 @@
 				<MagicProof>0.75</MagicProof>
 				<Health>
 					<Item>
-						<Base>20</Base>
+						<Base>100</Base>
+						<PerPower>4</PerPower>
+					</Item>
+					<Item>
+						<Base>130</Base>
 						<PerPower>6</PerPower>
 					</Item>
 					<Item>
-						<Base>40</Base>
+						<Base>160</Base>
 						<PerPower>8</PerPower>
 					</Item>
 					<Item>
-						<Base>60</Base>
+						<Base>190</Base>
 						<PerPower>10</PerPower>
-					</Item>
-					<Item>
-						<Base>96</Base>
-						<PerPower>12</PerPower>
 					</Item>
 				</Health>
 			</BladeBarrier>
@@ -2493,7 +2493,7 @@
 				<RPToArmyOnWarcryLevel3>75</RPToArmyOnWarcryLevel3>
 				<RallingCry_MoraleBonus>
 					<Base>1</Base>
-					<LevelDivisor>5</LevelDivisor>
+					<LevelDivisor>10</LevelDivisor>
 					<PerDividedLevel>1</PerDividedLevel>
 				</RallingCry_MoraleBonus>
 				<RallingCry_Duration>3</RallingCry_Duration>
@@ -2516,10 +2516,10 @@
 			</Warcries>
 		</Spells>
 		<LuckAndMorale>
-			<GoodLuck_DamageMultiplier>1.6</GoodLuck_DamageMultiplier>
-			<BadLuck_DamageMultiplier>0.6</BadLuck_DamageMultiplier>
-			<GoodMorale_ATBValue>0.5</GoodMorale_ATBValue>
-			<BadMorale_ATBValue>0.5</BadMorale_ATBValue>
+			<GoodLuck_DamageMultiplier>1.66</GoodLuck_DamageMultiplier>
+			<BadLuck_DamageMultiplier>0.66</BadLuck_DamageMultiplier>
+			<GoodMorale_ATBValue>0.4</GoodMorale_ATBValue>
+			<BadMorale_ATBValue>0.4</BadMorale_ATBValue>
 		</LuckAndMorale>
 	</combat>
 	<GhostMode>
@@ -2537,21 +2537,21 @@
 		</Revenge>
 	</GhostMode>
 	<HeroArmyGeneration>
-		<MinWeekGrowthCoef_Tier1>1</MinWeekGrowthCoef_Tier1>
-		<MaxWeekGrowthCoef_Tier1>1.5</MaxWeekGrowthCoef_Tier1>
-		<MinWeekGrowthCoef_Tier2>0.8</MinWeekGrowthCoef_Tier2>
-		<MaxWeekGrowthCoef_Tier2>1.2</MaxWeekGrowthCoef_Tier2>
-		<MinWeekGrowthCoef_Tier3>0.6</MinWeekGrowthCoef_Tier3>
-		<MaxWeekGrowthCoef_Tier3>1</MaxWeekGrowthCoef_Tier3>
-		<MinWeekGrowthCoef_SpecTier1>1</MinWeekGrowthCoef_SpecTier1>
-		<MaxWeekGrowthCoef_SpecTier1>1.2</MaxWeekGrowthCoef_SpecTier1>
-		<NumSuchStacks_SpecTier1>2</NumSuchStacks_SpecTier1>
-		<MinWeekGrowthCoef_SpecTier2>0.7</MinWeekGrowthCoef_SpecTier2>
-		<MaxWeekGrowthCoef_SpecTier2>0.8</MaxWeekGrowthCoef_SpecTier2>
-		<NumSuchStacks_SpecTier2>2</NumSuchStacks_SpecTier2>
-		<MinWeekGrowthCoef_SpecTier3>0.6</MinWeekGrowthCoef_SpecTier3>
-		<MaxWeekGrowthCoef_SpecTier3>0.7</MaxWeekGrowthCoef_SpecTier3>
-		<NumSuchStacks_SpecTier3>2</NumSuchStacks_SpecTier3>
+		<MinWeekGrowthCoef_Tier1>0</MinWeekGrowthCoef_Tier1>
+		<MaxWeekGrowthCoef_Tier1>0</MaxWeekGrowthCoef_Tier1>
+		<MinWeekGrowthCoef_Tier2>0</MinWeekGrowthCoef_Tier2>
+		<MaxWeekGrowthCoef_Tier2>0</MaxWeekGrowthCoef_Tier2>
+		<MinWeekGrowthCoef_Tier3>0</MinWeekGrowthCoef_Tier3>
+		<MaxWeekGrowthCoef_Tier3>0</MaxWeekGrowthCoef_Tier3>
+		<MinWeekGrowthCoef_SpecTier1>0</MinWeekGrowthCoef_SpecTier1>
+		<MaxWeekGrowthCoef_SpecTier1>0</MaxWeekGrowthCoef_SpecTier1>
+		<NumSuchStacks_SpecTier1>0</NumSuchStacks_SpecTier1>
+		<MinWeekGrowthCoef_SpecTier2>0</MinWeekGrowthCoef_SpecTier2>
+		<MaxWeekGrowthCoef_SpecTier2>0</MaxWeekGrowthCoef_SpecTier2>
+		<NumSuchStacks_SpecTier2>0</NumSuchStacks_SpecTier2>
+		<MinWeekGrowthCoef_SpecTier3>0</MinWeekGrowthCoef_SpecTier3>
+		<MaxWeekGrowthCoef_SpecTier3>0</MaxWeekGrowthCoef_SpecTier3>
+		<NumSuchStacks_SpecTier3>0</NumSuchStacks_SpecTier3>
 	</HeroArmyGeneration>
 	<AI>
 		<Combat>
@@ -2589,8 +2589,8 @@
 			<KamikazeMode>
 				<EnemyDamageCoef>100</EnemyDamageCoef>
 				<MyDamageCoef>100</MyDamageCoef>
-				<EnemyTroopsHealthCoef>40</EnemyTroopsHealthCoef>
-				<MyTroopsHealthCoef>10</MyTroopsHealthCoef>
+				<EnemyTroopsHealthCoef>100</EnemyTroopsHealthCoef>
+				<MyTroopsHealthCoef>100</MyTroopsHealthCoef>
 				<EnemyWarMachinesHealthCoef>1</EnemyWarMachinesHealthCoef>
 				<MyWarMachinesHealthCoef>1</MyWarMachinesHealthCoef>
 				<CombatValueCompareTreshold>0</CombatValueCompareTreshold>
@@ -2598,7 +2598,7 @@
 			<NormalMode>
 				<EnemyDamageCoef>100</EnemyDamageCoef>
 				<MyDamageCoef>100</MyDamageCoef>
-				<EnemyTroopsHealthCoef>40</EnemyTroopsHealthCoef>
+				<EnemyTroopsHealthCoef>100</EnemyTroopsHealthCoef>
 				<MyTroopsHealthCoef>10</MyTroopsHealthCoef>
 				<EnemyWarMachinesHealthCoef>1</EnemyWarMachinesHealthCoef>
 				<MyWarMachinesHealthCoef>1</MyWarMachinesHealthCoef>
@@ -2606,9 +2606,9 @@
 			</NormalMode>
 			<PowerSavingMode>
 				<EnemyDamageCoef>100</EnemyDamageCoef>
-				<MyDamageCoef>50</MyDamageCoef>
-				<EnemyTroopsHealthCoef>10</EnemyTroopsHealthCoef>
-				<MyTroopsHealthCoef>20</MyTroopsHealthCoef>
+				<MyDamageCoef>100</MyDamageCoef>
+				<EnemyTroopsHealthCoef>100</EnemyTroopsHealthCoef>
+				<MyTroopsHealthCoef>100</MyTroopsHealthCoef>
 				<EnemyWarMachinesHealthCoef>1</EnemyWarMachinesHealthCoef>
 				<MyWarMachinesHealthCoef>1</MyWarMachinesHealthCoef>
 				<CombatValueCompareTreshold>0</CombatValueCompareTreshold>
@@ -4445,50 +4445,32 @@
 		<Item>
 			<BuildingType>BUILDING_MERCENARY_CAMP</BuildingType>
 			<Attributes>
-				<Item>
-					<HeroAttribute>HERO_ATTRIB_OFFENCE</HeroAttribute>
-					<Value>1</Value>
-				</Item>
+				<Item><HeroAttribute>HERO_ATTRIB_OFFENCE</HeroAttribute><Value>1</Value></Item>
 			</Attributes>
 		</Item>
 		<Item>
 			<BuildingType>BUILDING_STAR_AXIS</BuildingType>
 			<Attributes>
-				<Item>
-					<HeroAttribute>HERO_ATTRIB_SPELLPOWER</HeroAttribute>
-					<Value>1</Value>
-				</Item>
+				<Item><HeroAttribute>HERO_ATTRIB_SPELLPOWER</HeroAttribute><Value>1</Value></Item>
 			</Attributes>
 		</Item>
 		<Item>
 			<BuildingType>BUILDING_GARDEN_OF_REVELATION</BuildingType>
 			<Attributes>
-				<Item>
-					<HeroAttribute>HERO_ATTRIB_KNOWLEDGE</HeroAttribute>
-					<Value>1</Value>
-				</Item>
+				<Item><HeroAttribute>HERO_ATTRIB_KNOWLEDGE</HeroAttribute><Value>1</Value></Item>
 			</Attributes>
 		</Item>
 		<Item>
 			<BuildingType>BUILDING_MARLETTO_TOWER</BuildingType>
 			<Attributes>
-				<Item>
-					<HeroAttribute>HERO_ATTRIB_DEFENCE</HeroAttribute>
-					<Value>1</Value>
-				</Item>
+				<Item><HeroAttribute>HERO_ATTRIB_DEFENCE</HeroAttribute><Value>1</Value></Item>
 			</Attributes>
 		</Item>
 		<Item>
 			<BuildingType>BUILDING_LIBRARY_OF_ENLIGHTENMENT</BuildingType>
 			<Attributes>
-				<Item>
-					<HeroAttribute>HERO_ATTRIB_KNOWLEDGE</HeroAttribute>
-					<Value>2</Value>
-				</Item>
-				<Item>
-					<HeroAttribute>HERO_ATTRIB_SPELLPOWER</HeroAttribute>
-					<Value>2</Value>
-				</Item>
+				<Item><HeroAttribute>HERO_ATTRIB_KNOWLEDGE</HeroAttribute><Value>1</Value></Item>
+				<Item><HeroAttribute>HERO_ATTRIB_SPELLPOWER</HeroAttribute><Value>1</Value></Item>
 			</Attributes>
 		</Item>
 	</RaiseAttributesBuildings>
@@ -4496,15 +4478,13 @@
 		<Item>
 			<BuildingType>BUILDING_ARENA</BuildingType>
 			<Variant1>
-				<HeroAttribute>HERO_ATTRIB_OFFENCE</HeroAttribute>
-				<Value>2</Value>
+				<HeroAttribute>HERO_ATTRIB_OFFENCE</HeroAttribute><Value>2</Value>
 				<Icon64 href="/Textures/HeroScreen/HeroParam/AttackPic.xdb#xpointer(/Texture)"/>
 				<TextFileRef href="/UI/AdvSelectAttribBuildings/Arena/offence_text.txt"/>
 				<TooltipFileRef href="/UI/AdvSelectAttribBuildings/Arena/offense_tooltip.txt"/>
 			</Variant1>
 			<Variant2>
-				<HeroAttribute>HERO_ATTRIB_DEFENCE</HeroAttribute>
-				<Value>2</Value>
+				<HeroAttribute>HERO_ATTRIB_DEFENCE</HeroAttribute><Value>2</Value>
 				<Icon64 href="/Textures/HeroScreen/HeroParam/DefensePic.xdb#xpointer(/Texture)"/>
 				<TextFileRef href="/UI/AdvSelectAttribBuildings/Arena/defence_text.txt"/>
 				<TooltipFileRef href="/UI/AdvSelectAttribBuildings/Arena/defence_tooltip.txt"/>
@@ -4517,15 +4497,13 @@
 		<Item>
 			<BuildingType>BUILDING_SCHOOL_OF_MAGIC</BuildingType>
 			<Variant1>
-				<HeroAttribute>HERO_ATTRIB_SPELLPOWER</HeroAttribute>
-				<Value>2</Value>
+				<HeroAttribute>HERO_ATTRIB_SPELLPOWER</HeroAttribute><Value>2</Value>
 				<Icon64 href="/Textures/HeroScreen/HeroParam/SpellPowerPic.xdb#xpointer(/Texture)"/>
 				<TextFileRef href="/UI/AdvSelectAttribBuildings/SchoolOfMagic/spell_power.txt"/>
 				<TooltipFileRef href="/UI/AdvSelectAttribBuildings/SchoolOfMagic/spell_power_tooltip.txt"/>
 			</Variant1>
 			<Variant2>
-				<HeroAttribute>HERO_ATTRIB_KNOWLEDGE</HeroAttribute>
-				<Value>2</Value>
+				<HeroAttribute>HERO_ATTRIB_KNOWLEDGE</HeroAttribute><Value>2</Value>
 				<Icon64 href="/Textures/HeroScreen/HeroParam/KnowledgePic.xdb#xpointer(/Texture)"/>
 				<TextFileRef href="/UI/AdvSelectAttribBuildings/SchoolOfMagic/knowledge.txt"/>
 				<TooltipFileRef href="/UI/AdvSelectAttribBuildings/SchoolOfMagic/knowledge_tooltip.txt"/>
@@ -4538,15 +4516,13 @@
 		<Item>
 			<BuildingType>BUILDING_WAR_ACADEMY</BuildingType>
 			<Variant1>
-				<HeroAttribute>HERO_ATTRIB_OFFENCE</HeroAttribute>
-				<Value>2</Value>
+				<HeroAttribute>HERO_ATTRIB_OFFENCE</HeroAttribute><Value>2</Value>
 				<Icon64 href="/Textures/HeroScreen/HeroParam/AttackPic.xdb#xpointer(/Texture)"/>
 				<TextFileRef href="/UI/AdvSelectAttribBuildings/WarAcademy/offence_text.txt"/>
 				<TooltipFileRef href="/UI/AdvSelectAttribBuildings/WarAcademy/offence_tooltip.txt"/>
 			</Variant1>
 			<Variant2>
-				<HeroAttribute>HERO_ATTRIB_KNOWLEDGE</HeroAttribute>
-				<Value>2</Value>
+				<HeroAttribute>HERO_ATTRIB_KNOWLEDGE</HeroAttribute><Value>2</Value>
 				<Icon64 href="/Textures/HeroScreen/HeroParam/KnowledgePic.xdb#xpointer(/Texture)"/>
 				<TextFileRef href="/UI/AdvSelectAttribBuildings/WarAcademy/knowledge.txt"/>
 				<TooltipFileRef href="/UI/AdvSelectAttribBuildings/WarAcademy/knowledge_tooltip.txt"/>
