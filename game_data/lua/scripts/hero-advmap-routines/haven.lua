@@ -2,48 +2,57 @@
 
 function Routine_AddTwoLuckPoints(player, hero)
     --Luck +2
+    print("> Routine_AddTwoLuckPoints")
     AddHero_StatAmount(player, hero, STAT_LUCK, 2)
 end
 
 function Routine_GainArtifactBoots(player, hero)
     -- Give hero artifact Wayfarer boots
+    print("> Routine_GainArtifactBoots")
     GiveArtifact(hero, ARTIFACT_WAYFARER_BOOTS)
 end
 
 function Routine_AddHeroCavaliers(player, hero)
     -- Cavalier - 1:10 - 2:30 - 3:50
+    print("> Routine_AddHeroCavaliers")
     AddHero_CreatureInTypes(player, hero, {CREATURE_CAVALIER,CREATURE_PALADIN,CREATURE_CHAMPION}, 0.05)
 end
 
 function Routine_AddHeroZealots(player, hero)
     -- Zealot - 1:4 - 2:12 - 3:20 - 4:27 ... 7:50
+    print("> Routine_AddHeroZealots")
     AddHero_CreatureType(player, hero, CREATURE_ZEALOT, 0.13)
 end
 
 function Routine_GenerateGoldsLinear(player, hero)
     -- Gold - 250 * level
+    print("> Routine_GenerateGoldsLinear")
     local amount = (GetHeroLevel(hero) - 1) * 250
     AddPlayer_Resource(player, hero, GOLD, amount)
 end
 
 function Routine_HeroCallGriffins(player, hero)
     -- Griffins - 1.5 * level transfered
+    print("> Routine_HeroCallGriffins")
     AddHero_CreatureFromDwelling(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_ROYAL_GRIFFIN, 1.5)
 end
 
 function Routine_IncreaseHeroArmy(player, hero)
     -- T2 T3 T5 : 1% * level
+    print("> Routine_IncreaseHeroArmy")
     local types = {CREATURE_ARCHER,CREATURE_MARKSMAN,CREATURE_LONGBOWMAN,CREATURE_FOOTMAN,CREATURE_SWORDSMAN,CREATURE_VINDICATOR,CREATURE_PRIEST,CREATURE_CLERIC,CREATURE_ZEALOT}
     AddHero_CreatureTypesPercent(player, hero, types, 0.01)
 end
 
 function Routine_AddRecruitsPeasants(player, hero)
     -- Peasants - 7 * level recruits per week
+    print("> Routine_AddRecruitsPeasants")
     AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_1, CREATURE_PEASANT, 7.0)
 end
 
 function Routine_GenerateExpFromGolds(player, hero)
     -- Give exp from golds stock
+    print("> Routine_GenerateExpFromGolds")
     local golds = GetPlayerResource(player, GOLD)
     local mult = GetHeroLevel(hero) + 1
     local exp = trunc(0.5 * golds * mult)
@@ -52,6 +61,7 @@ end
 
 function Routine_GainHavenArtifacts(player, hero)
     -- Crown of leadership / Ring of life / Golden horseshoe / Crown of courage / Tome of light magic
+    print("> Routine_GainHavenArtifacts")
     local level = GetHeroLevel(hero)
     if     level == 10 then GiveArtifact(hero, ARTIFACT_CROWN_OF_LEADER)
     elseif level == 20 then GiveArtifact(hero, ARTIFACT_RING_OF_LIFE)
@@ -63,6 +73,7 @@ end
 
 function Routine_GainAttack(player, hero)
     --Att +1 / 4 levels
+    print("> Routine_GainAttack")
     local level = GetHeroLevel(hero)
     if mod(level, 4) == 0 then
         AddHero_StatAmount(player, hero, STAT_ATTACK, 1)

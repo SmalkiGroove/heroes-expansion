@@ -1,11 +1,13 @@
 
 function Routine_AddHeroRiders(player, hero)
     -- Riders - 1:4 - 2:10 - 3:17 - 4:24 - 5:30 ... 8:50
+    print("> Routine_AddHeroRiders")
     AddHero_CreatureInTypes(player, hero, {CREATURE_RIDER,CREATURE_RAVAGER,CREATURE_BLACK_RIDER}, 0.15)
 end
 
 function Routine_GenerateGoldPerScout(player, hero)
     -- Gold - 1 per scout per 5 levels
+    print("> Routine_GenerateGoldPerScout")
     local mult = trunc(GetHeroLevel(hero) * 0.2)
     local army = GetHeroArmy(hero)
     local amount = 0
@@ -20,11 +22,13 @@ end
 
 function Routine_AddHeroManticores(player, hero)
     -- Manticore - 1:4 - 2:12 - 3:20 - 4:27 ... 7:50
+    print("> Routine_AddHeroManticores")
     AddHero_CreatureType(player, hero, CREATURE_MANTICORE, 0.13)
 end
 
 function Routine_ConvertOverflowManaToExp(player, hero)
     -- Mana excess to exp - excess * level * 10
+    print("> Routine_ConvertOverflowManaToExp")
     local cur_mana = GetHeroStat(hero, STAT_MANA_POINTS)
     local max_mana = 10 * GetHeroStat(hero, STAT_KNOWLEDGE)
     local diff = cur_mana - max_mana
@@ -39,16 +43,19 @@ end
 
 function Routine_HeroCallMinotaurs(player, hero)
     -- Minotaurs - 2 * level transfered
+    print("> Routine_HeroCallMinotaurs")
     AddHero_CreatureFromDwelling(player, hero, TOWN_BUILDING_DWELLING_3, CREATURE_MINOTAUR_KING, 2.0)
 end
 
 function Routine_AddRecruitsMatrons(player, hero)
     -- Matrons - 0.33 * level recruits per week
+    print("> Routine_AddRecruitsMatrons")
     AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_5, CREATURE_MATRON, 0.33)
 end
 
 function Routine_UpgradeToWitches(player, hero)
     -- Upgrade scouts recruits to blood witches and riders recruits to shadow witches
+    print("> Routine_UpgradeToWitches")
     local max_bloodwitch = GetHeroLevel(hero) * 2
     ChangeHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_1, CREATURE_SCOUT, TOWN_BUILDING_DWELLING_2, CREATURE_WITCH, max_bloodwitch)
     local max_shadowwitch = trunc(GetHeroLevel(hero) * 0.5)
@@ -57,6 +64,7 @@ end
 
 function Routine_AddHeroAttackPairLevel(player, hero)
     -- Attack - 1 per 2 level
+    print("> Routine_AddHeroAttackPairLevel")
     if mod(GetHeroLevel(hero), 2) == 0 then
         AddHero_StatAmount(player, hero, STAT_ATTACK, 1)
     end
@@ -64,6 +72,7 @@ end
 
 function Routine_AddHeroSpellPowerPairLevel(player, hero)
     -- Spellpower - 1 per 2 level
+    print("> Routine_AddHeroSpellPowerPairLevel")
     if mod(GetHeroLevel(hero), 2) == 0 then
         AddHero_StatAmount(player, hero, STAT_SPELL_POWER, 1)
     end
@@ -71,6 +80,7 @@ end
 
 function Routine_AddHeroLevel(player, hero)
     -- Level up every 5 levels
+    print("> Routine_AddHeroLevel")
     if mod(GetHeroLevel(hero), 6) == 0 then
         LevelUpHero(hero)
     end
@@ -78,6 +88,7 @@ end
 
 function Routine_GainDragonArtifacts(player, hero)
     -- Dragon artfacts set
+    print("> Routine_GainDragonArtifacts")
     if GetHeroLevel(hero) == 40 then
         GiveArtifact(hero, ARTIFACT_DRAGON_SCALE_ARMOR)
         GiveArtifact(hero, ARTIFACT_DRAGON_SCALE_SHIELD)

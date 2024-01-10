@@ -1,30 +1,36 @@
 
 function Routine_AddHeroWyverns(player, hero)
     -- Wyvern - 1:10 - 2:30 - 3:50
+    print("> Routine_AddHeroWyverns")
     AddHero_CreatureInTypes(player, hero, {CREATURE_WYVERN,CREATURE_WYVERN_POISONOUS,CREATURE_WYVERN_PAOKAI}, 0.05)
 end
 
 function Routine_HeroCallCentaurs(player, hero)
     -- Centaurs - 1 * level transfered
+    print("> Routine_HeroCallCentaurs")
     AddHero_CreatureFromDwelling(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_CENTAUR_MARADEUR, 1.0)
 end
 
 function Routine_AddRecruitsShamans(player, hero)
     -- Shamans - 3 * level recruits per week
+    print("> Routine_AddRecruitsShamans")
     AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_2, CREATURE_SHAMAN, 3.0)
 end
 
 function Routine_AddRecruitsCyclops(player, hero)
     -- Cyclops - 0.2 * level recruits per week
+    print("> Routine_AddRecruitsCyclops")
     AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_7, CREATURE_CYCLOP, 0.2)
 end
 
 function Routine_AddHeroTitans(player, hero)
     -- Titans - 1:7 - 2:20 - 3:34 - 4:47
+    print("> Routine_AddHeroTitans")
     AddHero_CreatureType(player, hero, CREATURE_TITAN, 0.075)
 end
 
 function Routine_GainStats(player, hero)
+    print("> Routine_GainStats")
     local level = GetHeroLevel(hero)
     if mod(level, 7) == 0 then
         AddHero_StatAmount(player, hero, STAT_ATTACK, 1)
@@ -33,6 +39,7 @@ function Routine_GainStats(player, hero)
 end
 
 function Routine_GainArtifactCrownLead(player, hero)
+    print("> Routine_GainArtifactCrownLead")
     local level = GetHeroLevel(hero)
     if level == 10 then 
         GiveArtifact(hero, ARTIFACT_CROWN_OF_LEADER)
@@ -40,6 +47,7 @@ function Routine_GainArtifactCrownLead(player, hero)
 end
 
 function Routine_LearnSpellShaman(player, hero)
+    print("> Routine_LearnSpellShaman")
     if not HasHeroSkill(hero, 172) then
         local level = GetHeroLevel(hero)
         if mod(level, 2) == 0 then
@@ -51,6 +59,7 @@ function Routine_LearnSpellShaman(player, hero)
 end
 
 function Routine_LearnSpellWitch(player, hero)
+    print("> Routine_LearnSpellWitch")
     if not HasHeroSkill(hero, 172) then
         local level = GetHeroLevel(hero)
         if mod(level, 2) == 0 then
@@ -62,6 +71,7 @@ function Routine_LearnSpellWitch(player, hero)
 end
 
 function Routine_GainArtifactMachineRing(player, hero)
+    print("> Routine_GainArtifactMachineRing")
     local level = GetHeroLevel(hero)
     if level == 25 then 
         GiveArtifact(hero, ARTIFACT_RING_OF_MACHINE_AFFINITY)

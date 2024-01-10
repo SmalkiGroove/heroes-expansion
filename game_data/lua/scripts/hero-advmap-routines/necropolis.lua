@@ -1,21 +1,25 @@
 
 function Routine_GainArtifactNecromancerHelm(player, hero)
     -- Hero gain artifact Necromancer's Helm
+    print("> Routine_GainArtifactNecromancerHelm")
     GiveArtifact(hero, ARTIFACT_SKULL_HELMET)
 end
 
 function Routine_AddHeroBlackKnights(player, hero)
     -- Black Knight - 1:5 - 2:15 - 3:25 - 4:35 - 5:45
+    print("> Routine_AddHeroBlackKnights")
     AddHero_CreatureType(player, hero, CREATURE_BLACK_KNIGHT, 0.1)
 end
 
 function Routine_AddHeroLiches(player, hero)
     -- Lich - 1:5 - 2:13 - 3:21 - 4:30 - 5:38 - 6:46
+    print("> Routine_AddHeroLiches")
     AddHero_CreatureInTypes(player, hero, {CREATURE_LICH,CREATURE_DEMILICH,CREATURE_LICH_MASTER}, 0.12)
 end
 
 function Routine_GenerateGoldPerNecroCreature(player, hero)
     -- Gold - 1 per creature in army per 10 levels
+    print("> Routine_GenerateGoldPerNecroCreature")
     local mult = ceil(GetHeroLevel(hero) * 0.067)
     local army = GetHeroArmy(hero)
     local amount = 0
@@ -28,11 +32,13 @@ end
 
 function Routine_AddHeroMummies(player, hero)
     -- Mummy - 1:2 - 2:6 - 3:10 - 4:14 - 5:18 ... 13:50
+    print("> Routine_AddHeroMummies")
     AddHero_CreatureType(player, hero, CREATURE_MUMMY, 0.25)
 end
 
 function Routine_HeroCallVampires(player, hero)
     -- Vampires - 1.5 * level transfered
+    print("> Routine_HeroCallVampires")
     local coef = 2 / GetHeroLevel(hero)
     AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_VAMPIRE, coef)
     sleep(10)
@@ -41,16 +47,19 @@ end
 
 function Routine_EvolveBlackKnights(player, hero)
     -- B.Knights to D.Knights for 1 Lich
+    print("> Routine_EvolveBlackKnights")
     ChangeHero_CreatureFusion(player, hero, CREATURE_BLACK_KNIGHT, CREATURE_LICH, CREATURE_DEATH_KNIGHT, 1)
 end
 
 function Routine_AddHeroBanshees(player, hero)
     -- Banshee - 1:8 - 2:22 - 3:36 - 4:50
+    print("> Routine_AddHeroBanshees")
     AddHero_CreatureType(player, hero, CREATURE_BANSHEE, 0.07)
 end
 
 function Routine_AddRecruitsNecropolis(player, hero)
     -- Skeletons - 3.5 * level recruits per week / Walking deads - 2 * level recruits per week / Manes - 0.75 * level recruits per week
+    print("> Routine_AddRecruitsNecropolis")
     AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_1, CREATURE_SKELETON, 3.5)
     AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_2, CREATURE_WALKING_DEAD, 2.0)
     AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_3, CREATURE_MANES, 0.75)
@@ -58,6 +67,7 @@ end
 
 function Routine_GainDefenceNecro(player, hero)
     --Def +1 / 4 levels
+    print("> Routine_GainDefenceNecro")
     local level = GetHeroLevel(hero)
     if mod(level, 4) == 0 then
         AddHero_StatAmount(player, hero, STAT_DEFENCE, 1)
@@ -66,6 +76,7 @@ end
 
 function Routine_GainNecroArtifacts(player, hero)
     -- Tunic of carved flesh / Amulet of Necromancy / Cursed Ring / Skull of Markal / Tome of dark magic
+    print("> Routine_GainNecroArtifacts")
     local level = GetHeroLevel(hero)
     if     level == 10 then GiveArtifact(hero, ARTIFACT_BONESTUDDED_LEATHER)
     elseif level == 20 then GiveArtifact(hero, ARTIFACT_NECROMANCER_PENDANT)
