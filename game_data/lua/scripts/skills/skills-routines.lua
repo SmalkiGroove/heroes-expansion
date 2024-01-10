@@ -1,5 +1,6 @@
 
 function Routine_Leadership(player, hero, combatIndex)
+    print("> Routine_Leadership")
     local mastery = GetHeroSkillMastery(hero, SKILL_LEADERSHIP)
     local x, y, z = GetObjectPosition(hero)
     local dx, dy, dz = GetObjectPosition(PLAYER_MAIN_TOWN[player])
@@ -8,7 +9,7 @@ function Routine_Leadership(player, hero, combatIndex)
     for i = -1,1 do for j = -1,1 do
         objects = GetObjectsFromPath(hero, x+i, y+j, z)
         if length(objects) == 0 then x=x+i; y=y+j; found = not nil; break end
-    end end
+    end if found then break end end
     if found then print("Spawn caravan at x="..x..", y="..y) else print("No available tile around hero was found"); return end
     local caravan = "Caravan-"..NB_CARAVAN
     NB_CARAVAN = NB_CARAVAN + 1
@@ -20,8 +21,7 @@ function Routine_Leadership(player, hero, combatIndex)
         local amount = trunc(died * (0.05 + 0.05 * mastery))
         AddObjectCreatures(caravan, creature, amount)
     end
-    sleep(1)
-    MakeHeroInteractWithObject(hero, caravan)
+    CURRENT_CARAVANS[caravan] = 3
 end
 
 DAILY_TRIGGER_SKILLS_ROUTINES = {

@@ -1,4 +1,18 @@
 
+NB_CARAVAN = 0
+CURRENT_CARAVANS = {}
+
+function CaravanCountdown()
+    print("> CaravanCountdown")
+    local caravans = {}
+    for k,v in CURRENT_CARAVANS do
+        if v > 0 then caravans[k] = v-1
+        elseif IsObjectExists(k) then RemoveObject(k)
+        end
+    end
+    CURRENT_CARAVANS = caravans
+end
+
 HERO_SKILL_BONUSES = {}
 
 for hero,_ in HEROES do

@@ -137,6 +137,48 @@ end
 
 PLAYER_MAIN_TOWN = {}
 
+function FactionToTownType(faction)
+	local town_type = -1
+	if     faction == HAVEN then town_type = TOWN_HEAVEN
+	elseif faction == PRESERVE then town_type = TOWN_PRESERVE
+	elseif faction == INFERNO then town_type = TOWN_INFERNO
+	elseif faction == NECROPOLIS then town_type = TOWN_NECROMANCY
+	elseif faction == ACADEMY then town_type = TOWN_ACADEMY
+	elseif faction == DUNGEON then town_type = TOWN_DUNGEON
+	elseif faction == FORTRESS then town_type = TOWN_FORTRESS
+	elseif faction == STRONGHOLD then town_type = TOWN_STRONGHOLD
+	end
+	return town_type
+end
+
+function GetTownFactionID(town)
+	local towntype = 0
+	if     contains(GetObjectNamesByType("TOWN_HEAVEN"),town) ~= nil then towntype = 1 
+	elseif contains(GetObjectNamesByType("TOWN_PRESERVE"),town) ~= nil then towntype = 2 
+	elseif contains(GetObjectNamesByType("TOWN_INFERNO"),town) ~= nil then towntype = 3 
+	elseif contains(GetObjectNamesByType("TOWN_NECROMANCY"),town) ~= nil then towntype = 4 
+	elseif contains(GetObjectNamesByType("TOWN_ACADEMY"),town) ~= nil then towntype = 5 
+	elseif contains(GetObjectNamesByType("TOWN_DUNGEON"),town) ~= nil then towntype = 6 
+	elseif contains(GetObjectNamesByType("TOWN_FORTRESS"),town) ~= nil then towntype = 7 
+	elseif contains(GetObjectNamesByType("TOWN_STRONGHOLD"),town) ~= nil then towntype = 8 end
+	return towntype
+end
+
+function GetFactionTowns(num)
+	local towntype = "TOWN"
+	if 	   num == 1 then towntype = "TOWN_HEAVEN"
+	elseif num == 2 then towntype = "TOWN_PRESERVE"
+	elseif num == 3 then towntype = "TOWN_INFERNO" 
+	elseif num == 4 then towntype = "TOWN_NECROMANCY" 
+	elseif num == 5 then towntype = "TOWN_ACADEMY" 
+	elseif num == 6 then towntype = "TOWN_DUNGEON" 
+	elseif num == 7 then towntype = "TOWN_FORTRESS" 
+	elseif num == 8 then towntype = "TOWN_STRONGHOLD" end
+    
+    local towns = GetObjectNamesByType(towntype)
+    return towns
+end
+
 function GetPlayerTowns(player)
 	local cities = {}
 	local towns = GetObjectNamesByType("TOWN")
@@ -181,7 +223,7 @@ function FindMainTown(player)
     local main_town = nil
     local max_value = 0
     local towns = GetPlayerTowns(player)
-    for town in towns do
+    for i,town in towns do
         local value = GetTownValue(town)
         if value > max_value then
             main_town = town
@@ -200,7 +242,7 @@ function CheckMainTown(player)
 end
 
 function InitializeMainTown()
-    for town in GetObjectNamesByType("TOWN") do
+    for i,town in GetObjectNamesByType("TOWN") do
         local owner = GetObjectOwner(town)
         if not PLAYER_MAIN_TOWN[owner] then PLAYER_MAIN_TOWN[owner] = town end
     end
