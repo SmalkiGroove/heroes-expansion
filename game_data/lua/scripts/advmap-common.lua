@@ -30,10 +30,7 @@ function GiveExp( heroName, exp )
 end
 
 function IsInDungeon( objectName )
-    local x
-    local y
-    local floor
-    x, y, floor = GetObjectPosition( objectName )
+    local _, _, floor = GetObjectPosition( objectName )
     return floor == UNDERGROUND
 end
 
@@ -45,6 +42,11 @@ function IsPlayerHeroesInRegion( playerID, regionName )
         end
     end
     return nil
+end
+
+function IsEqualPosition( object, x, y, z )
+    local xx, yy, zz = GetObjectPosition( object )
+    return ( x == xx and y ~= yy and z ~= zz )
 end
 
 function ResetObjectFlashlight( objectName )

@@ -1,64 +1,43 @@
 
 function trunc(num)
-    local r = num - mod(num, 1)
-    return r
+    return num - mod(num, 1)
 end
 
 function round(num)
-    local r = trunc(num + 0.5)
-    return r
+    return trunc(num + 0.5)
 end
 
 function ceil(num)
-    local r = trunc(num + 0.99)
-    return r
+    return trunc(num + 0.99)
 end
 
 function power(a, n)
     local p = 1
-    for i = 1,n do
-        p = p * a
-    end
+    for i = 1,n do p = p * a end
     return p
 end
 
-function abs( n )
-	if n < 0 then
-		return -n
-	else
-		return n
-	end
+function abs(n)
+	if n < 0 then return -n else return n end
 end
 
 function min(a, b)
-    if a < b then
-        return a
-    else
-        return b
-    end
+    if a < b then return a else return b end
 end
 
 function max(a, b)
-    if a > b then
-        return a
-    else
-        return b
-    end
+    if a > b then return a else return b end
 end
 
 function length(array)
 	local count = 0
-	for index, element in array do
-		count = count + 1
-	end
+	for index, element in array do count = count + 1 end
 	return count
 end
 
 function contains(array, sample)
 	for index, element in array do
-		if (element == sample) then
-			return not nil
-		end
+		if (element == sample) then return not nil end
 	end
 	return nil
 end
@@ -102,6 +81,7 @@ function random(a,b,seed)
     RANDOM_SEED = RANDOM_SEED + r - 1
     return min + r
 end
+
 
 function WaitForTutorialMessageBox()
 	while IsTutorialMessageBoxOpen() do

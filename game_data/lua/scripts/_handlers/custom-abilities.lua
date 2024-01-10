@@ -21,12 +21,12 @@ function ActivateBuildingConversion(player, hero)
     end
 end
 
-CUSTOM_ABILITIES = [
+CUSTOM_ABILITIES = {
     [CUSTOM_ABILITY_1] = NoneRoutine,
     [CUSTOM_ABILITY_2] = NoneRoutine,
     [CUSTOM_ABILITY_3] = NoneRoutine,
     [CUSTOM_ABILITY_4] = ActivateBuildingConversion,
-]
+}
 
 function CustomAbilityHandler(hero, id)
     local player = GetObjectOwner(hero)

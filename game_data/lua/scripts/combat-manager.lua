@@ -56,14 +56,21 @@ end
 
 function ParseData(hero, data)
     local m = GetUnitManaPoints(hero)
-    local mana = mod(m, 1000)
-    local level = mod(trunc(m * 0.0000001), 100)
-    local set1 = mod(trunc(m * 0.00001), 100)
-    local set2 = mod(trunc(m * 0.001), 100)
-    SetUnitManaPoints(hero, mana)
-    data["LVL"] = level
-    data["SET1"] = set1
-    data["SET2"] = set2
+    if m > 1000000000 then
+        local level = mod(trunc(m * 0.0000001), 100)
+        local set1 = mod(trunc(m * 0.00001), 100)
+        local set2 = mod(trunc(m * 0.001), 100)
+        local mana = m - 1000000000 - level * 10000000 - set1 * 100000 - set2 * 1000 -- mod(n,1000) doesn't work if n too big
+        SetMana(hero, mana)
+        data["LVL"] = level
+        data["SET1"] = set1
+        data["SET2"] = set2
+    else
+        print("Failed to pass data to combat script !")
+        data["LVL"] = 0.1 * GetUnitMaxManaPoints(hero)
+        data["SET1"] = ARTFSET_NONE
+        data["SET2"] = ARTFSET_NONE
+    end
 end
 
 function GetHeroLevel(data)
@@ -233,8 +240,8 @@ end
 function ManageCombatStart()
     -- print("Manage combat start")
     Pause()
-    ResetATB()
-    repeat sleep(1) until COMBAT_READY
+    -- ResetATB()
+    -- repeat sleep(1) until COMBAT_READY
     
 	if ATTACKER_HERO ~= "" then
         local startroutine = START_ROUTINES[ATTACKER_RACE]

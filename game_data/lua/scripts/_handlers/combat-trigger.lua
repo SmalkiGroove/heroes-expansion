@@ -20,7 +20,7 @@ COMBAT_TRIGGERING_OBJECTS = {
 }
 
 function SetTriggerCombat(obj, bool)
-    if not IsObjectExists(object) then return end
+    if not IsObjectExists(obj) then return end
     Trigger(OBJECT_TOUCH_TRIGGER, obj, bool and "HeroVisitCombatObject" or nil)
     SetObjectEnabled(obj, not bool)
 end
@@ -30,39 +30,43 @@ function HackHeroMana(hero)
     ChangeHeroStat(hero, STAT_KNOWLEDGE, 200000000)
     repeat sleep(1) until GetHeroStat(hero, STAT_KNOWLEDGE) > 200000000
     ChangeHeroStat(hero, STAT_MANA_POINTS, temp)
-    repeat sleep(1) until GetHeroStat(hero, STAT_MANA_POINTS) > 1000
+    repeat sleep(1) until GetHeroStat(hero, STAT_MANA_POINTS) > 1000000000
     ChangeHeroStat(hero, STAT_KNOWLEDGE, -200000000)
-    repeat sleep(1) until GetHeroStat(hero, STAT_KNOWLEDGE) < 200000000
 end
 
 function RestoreHeroMana(hero)
-    local player = GetObjectOwner(hero)
-    if PLAYER_BRAIN[player] == HUMAN then sleep(20) end
     if GetHeroStat(hero, STAT_MANA_POINTS) > 1000 then
+        local x,y,z = GetObjectPosition(hero)
+        repeat sleep(10) until not IsEqualPosition(hero, x, y, z)
         local temp = 1000000000 + GetHeroLevel(hero) * 10000000 + HERO_ACTIVE_ARTIFACT_SETS[hero][1] * 100000 + HERO_ACTIVE_ARTIFACT_SETS[hero][2] * 1000
         ChangeHeroStat(hero, STAT_MANA_POINTS, -temp)
     end
 end
 
-function EngageCombat(hero, object)
-    SetTriggerCombat(obj, nil)
-    MakeHeroInteractWithObject(hero, object)
-    SetTriggerCombat(obj, not nil)
-    startThread(RestoreHeroMana, hero)
+function EngageCombat(hero, obj)
+    while (GetHeroStat(hero, STAT_KNOWLEDGE) > 200000000 or GetHeroStat(hero, STAT_MANA_POINTS) < 1000000000) do sleep(1) end
+    EngageInteraction(hero, obj)
+    RestoreHeroMana(hero)
 end
 
-function HeroVisitCombatObject(hero, object)
+function EngageInteraction(hero, obj)
+    SetTriggerCombat(obj, nil)
+    MakeHeroInteractWithObject(hero, obj)
+    SetTriggerCombat(obj, not nil)
+end
+
+function HeroVisitCombatObject(hero, obj)
     if IsHeroHuman(hero) then
         local player = GetObjectOwner(hero)
-        local owner = GetObjectOwner(object)
+        local owner = GetObjectOwner(obj)
         if owner and owner == player then
-            MakeHeroInteractWithObject(hero, object)
+            EngageInteraction(hero, obj)
         else
             startThread(HackHeroMana, hero)
-            QuestionBoxForPlayers(GetPlayerFilter(player), "/Text/Game/Scripts/CombatTrigger.txt", "EngageCombat('"..hero.."','"..obj.."')", "NoneRoutine")
+            QuestionBoxForPlayers(GetPlayerFilter(player), "/Text/Game/Scripts/CombatTrigger.txt", "EngageCombat('"..hero.."','"..obj.."')", "RestoreHeroMana('"..hero.."')")
         end
     else
-        EngageCombat(hero, object)
+        EngageInteraction(hero, obj)
     end
 end
 

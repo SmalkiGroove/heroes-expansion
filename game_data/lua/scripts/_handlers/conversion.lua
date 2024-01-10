@@ -64,12 +64,9 @@ end
 function HeroVisitConvertible(hero, obj)
     if CanHeroConvert(hero, obj) then
         HeroInConvertible(hero, obj, CUSTOM_ABILITY_ENABLED)
-        local x,y,_ = GetObjectPosition(hero)
-        while (1) do
-            sleep(10)
-            local xx, yy, _ = GetObjectPosition(hero)
-            if x ~= xx or y ~= yy then HeroInConvertible(hero, obj, CUSTOM_ABILITY_DISABLED) break end
-        end
+        local x,y,z = GetObjectPosition(hero)
+        repeat sleep(10) until not IsEqualPosition(hero, x, y, z)
+        HeroInConvertible(hero, obj, CUSTOM_ABILITY_DISABLED)
     else
         SetTriggerConvertible(obj, nil)
         MakeHeroInteractWithObject(hero, obj)
@@ -81,7 +78,7 @@ function SetupMapObjectType(type, faction, tier)
     local names = GetObjectNamesByType(type)
     for _,name in names do
         MAP_CONVERTIBLES[name] = { [0]=faction, [1]=tier }
-        SetTriggerConvertible(obj, not nil)
+        SetTriggerConvertible(name, not nil)
     end
 end
 
