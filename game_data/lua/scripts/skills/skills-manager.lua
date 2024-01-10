@@ -1,7 +1,7 @@
 
 HERO_SKILL_BONUSES = {}
 
-for i,hero in HEROES_ALL do
+for hero,_ in HEROES do
     HERO_SKILL_BONUSES[hero] = {
         [SKILLBONUS_OFFENCE] = 0,
         [SKILLBONUS_DEFENSE] = 0,

@@ -1,6 +1,8 @@
 
 INIT_SCRIPTS = 0
 
+TURN = 1
+
 PLAYER_BRAIN = {
 	[1] = OBSERVER,
 	[2] = OBSERVER,
@@ -50,13 +52,12 @@ LoadScript("/scripts/artifacts/artifacts-routines.lua", 13)
 LoadScript("/scripts/skills/skills-data.lua", 15)
 LoadScript("/scripts/skills/skills-manager.lua", 16)
 LoadScript("/scripts/skills/skills-routines.lua", 17)
-LoadScript("/scripts/building-conversion/conversion.lua", 20)
-LoadScript("/scripts/object-initializers/combat-trigger.lua", 21)
-LoadScript("/scripts/object-initializers/starting-armies.lua", 22)
-LoadScript("/scripts/object-initializers/hero-trigger.lua", 23)
+LoadScript("/scripts/_handlers/conversion.lua", 20)
+LoadScript("/scripts/_handlers/combat-trigger.lua", 21)
+LoadScript("/scripts/_handlers/starting-armies.lua", 22)
+LoadScript("/scripts/_handlers/hero-trigger.lua", 23)
+LoadScript("/scripts/_handlers/custom-abilities.lua", 25)
 
-
-TURN = 1
 
 ADD_PLAYER_HERO = {
 	[1] = "AddPlayer1Hero",
@@ -142,7 +143,7 @@ function PlayerDailyHandler(player, newweek)
 			startThread(DoArtifactsRoutine_Weekly, player, hero)
 		end
 	end
-	WatchPlayerArtifacts(player, nil)
+	WatchPlayer(player, nil)
 end
 
 function NewDayTrigger()
@@ -153,9 +154,6 @@ function NewDayTrigger()
 		if (GetPlayerState(player) == 1) then
 			startThread(PlayerDailyHandler, player, newweek)
 		end
-	end
-	if newweek then
-		startThread(EnableBuildingConversion)
 	end
 end
 
@@ -173,6 +171,7 @@ end
 
 Trigger(NEW_DAY_TRIGGER, "NewDayTrigger")
 Trigger(COMBAT_RESULTS_TRIGGER, "CombatResultsHandler")
+Trigger(CUSTOM_ABILITY_TRIGGER, "CustomAbilityHandler")
 
 
 function AddPlayerHero(player, hero)
@@ -220,7 +219,7 @@ function InitializeHeroes()
 				startThread(START_ROUTINES[faction], player, hero)
 				-- startThread(START_ROUTINES[x_skills], player, hero)
 			end
-			startThread(WatchPlayerArtifacts, player, 1)
+			startThread(WatchPlayer, player, 1)
 		end
 	end
 end
@@ -228,6 +227,6 @@ end
 -- Initializers
 InitializeHeroes()
 InitializeCombatHook()
-EnableBuildingConversion()
+InitializeConvertibles()
 
 INIT_SCRIPTS = 1

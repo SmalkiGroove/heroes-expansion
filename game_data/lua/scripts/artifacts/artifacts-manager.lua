@@ -2,7 +2,7 @@
 HERO_EQUIPPED_ARTIFACTS = {}
 HERO_ACTIVE_ARTIFACT_SETS = {}
 
-for i,hero in HEROES_ALL do
+for hero,_ in HEROES do
     HERO_EQUIPPED_ARTIFACTS[hero] = {
         [ARTIFACT_LOCATION_BODY]      = ARTIFACT_NONE,
         [ARTIFACT_LOCATION_HEAD]      = ARTIFACT_NONE,
@@ -85,22 +85,6 @@ function ScanHeroArtifacts(hero)
     end
 end
 
-function UpdateArtifacts(player)
-    for i,hero in GetPlayerHeroes(player) do
-        -- print("Update artifact for hero "..hero)
-        ScanHeroArtifacts(hero)
-    end
-end
-
-function WatchPlayerArtifacts(player, wait)
-    if wait then
-        while (not IsPlayerCurrent(player)) do sleep(10) end
-    end
-    while (IsPlayerCurrent(player)) do
-		UpdateArtifacts(player)
-		sleep(30)
-	end
-end
 
 -- print("Loaded artifact management script")
 ROUTINES_LOADED[12] = 1

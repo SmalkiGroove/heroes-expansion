@@ -55,16 +55,7 @@ function GetFactionTowns(num)
 end
 
 function GetHeroFactionID(hero)
-	local race = 0
-	if 	   contains(HEROES_HAVEN,hero) ~= nil then race = 1 
-	elseif contains(HEROES_SYLVAN,hero) ~= nil then race = 2 
-	elseif contains(HEROES_INFERNO,hero) ~= nil then race = 3 
-	elseif contains(HEROES_NECRO,hero) ~= nil then race = 4 
-	elseif contains(HEROES_ACADEMY,hero) ~= nil then race = 5 
-	elseif contains(HEROES_DUNGEON,hero) ~= nil then race = 6 
-	elseif contains(HEROES_FORTRESS,hero) ~= nil then race = 7 	
-	elseif contains(HEROES_ORCS,hero) ~= nil then race = 8 end
-	return race
+	return HEROES[hero]
 end
 
 function GetPlayerTowns(player)

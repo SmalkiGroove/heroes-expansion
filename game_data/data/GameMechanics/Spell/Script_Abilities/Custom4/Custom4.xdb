@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Spell>
-	<NameFileRef href="/Text/Game/Scripts/TownPortal/TPName.txt"/>
-	<LongDescriptionFileRef href="/Text/Game/Scripts/TownPortal/TPDesc.txt"/>
-	<Texture href="/Textures/MyTownPortal/Spell_MyTownPortal.xdb#xpointer(/Texture)"/>
+	<NameFileRef href="Name.txt"/>
+	<LongDescriptionFileRef href="Desc.txt"/>
+	<Texture href="Icon.xdb#xpointer(/Texture)"/>
 	<EffectTexture/>
 	<SpellBookPredictions/>
 	<CombatLogTexts/>
-	<Level>4</Level>
+	<Level>1</Level>
 	<MagicSchool>MAGIC_SCHOOL_ADVENTURE</MagicSchool>
 	<RequiredHeroLevel>0</RequiredHeroLevel>
 	<TrainedCost>0</TrainedCost>
@@ -27,10 +27,7 @@
 	<Target>TARGET_FRIEND</Target>
 	<Element>ELEMENT_NONE</Element>
 	<DamageIsElemental>true</DamageIsElemental>
-	<visuals>
-		<Item href="TownPortalStart.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
-		<Item href="TownPortalEnd.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
-	</visuals>
+	<visuals/>
 	<PresetPrice>-1</PresetPrice>
 	<AvailableForPresets>false</AvailableForPresets>
 </Spell>

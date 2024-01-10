@@ -27,7 +27,6 @@ function Routine_ConvertOverflowManaToExp(player, hero)
     -- Mana excess to exp - excess * level * 10
     local cur_mana = GetHeroStat(hero, STAT_MANA_POINTS)
     local max_mana = 10 * GetHeroStat(hero, STAT_KNOWLEDGE)
-    if HasHeroSkill(hero, PERK_INTELLIGENCE) then max_mana = round(1.5 * max_mana) end
     local diff = cur_mana - max_mana
     if diff > 0 then
         local amount = diff * GetHeroLevel(hero) * 10

@@ -19,6 +19,12 @@ COMBAT_TRIGGERING_OBJECTS = {
     "BUILDING_DRAGON_UTOPIA",
 }
 
+function SetTriggerCombat(obj, bool)
+    if not IsObjectExists(object) then return end
+    Trigger(OBJECT_TOUCH_TRIGGER, obj, bool and "HeroVisitCombatObject" or nil)
+    SetObjectEnabled(obj, not bool)
+end
+
 function HackHeroMana(hero)
     local temp = 1000000000 + GetHeroLevel(hero) * 10000000 + HERO_ACTIVE_ARTIFACT_SETS[hero][1] * 100000 + HERO_ACTIVE_ARTIFACT_SETS[hero][2] * 1000
     ChangeHeroStat(hero, STAT_KNOWLEDGE, 200000000)
@@ -38,38 +44,32 @@ function RestoreHeroMana(hero)
     end
 end
 
-function EnableCombatHook(object)
-    if IsObjectExists(object) then
-        Trigger(OBJECT_TOUCH_TRIGGER, object, "HeroVisitObject")
-        SetObjectEnabled(object, nil)
-    end
-end
-
-function DisableCombatHook(object)
-    Trigger(OBJECT_TOUCH_TRIGGER, object, nil)
-    SetObjectEnabled(object, not nil)
-end
-
-function HeroVisitObject(hero, object)
-    local battle = not nil
-    if GetObjectOwner(object) then
-        if GetObjectOwner(object) == GetObjectOwner(hero) then
-            MakeHeroInteractWithObject(hero, object)
-            return
-        end
-    end
-    HackHeroMana(hero)
-    DisableCombatHook(object)
+function EngageCombat(hero, object)
+    SetTriggerCombat(obj, nil)
     MakeHeroInteractWithObject(hero, object)
-    EnableCombatHook(object)
+    SetTriggerCombat(obj, not nil)
     startThread(RestoreHeroMana, hero)
 end
 
+function HeroVisitCombatObject(hero, object)
+    if IsHeroHuman(hero) then
+        local player = GetObjectOwner(hero)
+        local owner = GetObjectOwner(object)
+        if owner and owner == player then
+            MakeHeroInteractWithObject(hero, object)
+        else
+            startThread(HackHeroMana, hero)
+            QuestionBoxForPlayers(GetPlayerFilter(player), "/Text/Game/Scripts/CombatTrigger.txt", "EngageCombat('"..hero.."','"..obj.."')", "NoneRoutine")
+        end
+    else
+        EngageCombat(hero, object)
+    end
+end
+
 function InitializeCombatHook()
-    for _,obj in COMBAT_TRIGGERING_OBJECTS do
-        local objects = GetObjectNamesByType(obj)
-        for _,o in objects do
-            EnableCombatHook(o)
+    for _,type in COMBAT_TRIGGERING_OBJECTS do
+        for _,obj in GetObjectNamesByType(type) do
+            SetTriggerCombat(obj, not nil)
         end
     end
 end

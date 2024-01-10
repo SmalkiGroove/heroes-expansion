@@ -24,7 +24,7 @@ function HeroLevelUp(hero)
     startThread(ARTIFACT_LEVELUP_ROUTINE, player, hero)
 end
 
-for i,hero in HEROES_ALL do
+for hero,_ in HEROES do
     LEVEL_UP_HERO_CALLBACK[hero] = "HeroLevelUp_"..hero
 end
 
@@ -195,6 +195,31 @@ function HeroLevelUp_Hero3() HeroLevelUp(H_GARUNA) end
 function HeroLevelUp_Zouleika() HeroLevelUp(H_ZOULEIKA) end
 function HeroLevelUp_Erika() HeroLevelUp(H_ERIKA) end
 function HeroLevelUp_Quroq() HeroLevelUp(H_QUROQ) end
+
+
+function WatchPlayer(player, wait)
+    if wait then
+        while (not IsPlayerCurrent(player)) do sleep(10) end
+    end
+
+    local tracker = {}
+    for _,hero in GetPlayerHeroes(player) do
+        if HasHeroSkill(hero, PERK_MEDITATION) then
+            tracker[hero] = GetObjectPosition(hero)
+            print(tracker[hero])
+        end
+    end
+
+    while (IsPlayerCurrent(player)) do
+		for _,hero in GetPlayerHeroes(player) do
+            ScanHeroArtifacts(hero)
+            if tracker[hero] then
+                print(GetObjectPosition(hero))
+            end
+        end
+		sleep(30)
+	end
+end
 
 
 -- print("Loaded hero trigger advmap routines")
