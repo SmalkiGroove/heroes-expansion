@@ -163,7 +163,7 @@ function CombatResultsHandler(combatIndex)
 		local player = GetSavedCombatArmyPlayer(combatIndex, 1)
 		local faction = GetHeroFactionID(hero)
 		startThread(AFTER_COMBAT_ROUTINES[faction], player, hero, combatIndex)
-		-- startThread(AFTER_COMBAT_ROUTINES[x_skills], player, hero, combatIndex)
+		startThread(DoSkillsRoutine_AfterCombat, player, hero, combatIndex)
 		startThread(DoArtifactsRoutine_AfterCombat, player, hero, combatIndex)
 	end
 end
@@ -216,17 +216,21 @@ function InitializeHeroes()
 				local faction = GetHeroFactionID(hero)
 				startThread(ReplaceStartingArmy, hero)
 				startThread(BindHeroLevelUpTrigger, hero)
+				startThread(BindHeroSkillTrigger, hero)
 				startThread(START_ROUTINES[faction], player, hero)
-				-- startThread(START_ROUTINES[x_skills], player, hero)
 			end
 			startThread(WatchPlayer, player, 1)
 		end
 	end
 end
 
+print("All scripts successfully loaded !")
+
 -- Initializers
 InitializeHeroes()
+InitializeMainTown()
 InitializeCombatHook()
 InitializeConvertibles()
 
+print("Initializers done. The game can start. Have fun !")
 INIT_SCRIPTS = 1

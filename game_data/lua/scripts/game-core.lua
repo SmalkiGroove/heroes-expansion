@@ -58,57 +58,5 @@ function GetHeroFactionID(hero)
 	return HEROES[hero]
 end
 
-function GetPlayerTowns(player)
-	local cities = {}
-	local towns = GetObjectNamesByType("TOWN")
-	for i,town in towns do
-		if GetObjectOwner(town) == player then
-			insert(cities,town)
-		end
-	end
-	return cities
-end
-
-function GetHeroTowns(player,hero)
-    local cities = {}
-    local factionID = GetHeroFactionID(hero)
-    local towns = GetFactionTowns(factionID)
-    for i,town in towns do
-		if GetObjectOwner(town) == player then
-			insert(cities,town)
-		end
-	end
-	return cities
-end
-
-function GetHeroArmy(hero)
-	local type = {}
-	type[1], type[2], type[3], type[4], type[5], type[6], type[7] = GetHeroCreaturesTypes(hero)
-	return type
-end
-
-function GetHeroArmySummary(hero)
-	local units = {}
-	local amounts = {}
-	local k = 0
-	local army = GetHeroArmy(hero)
-	for i = 1,7 do
-		local cr = army[i]
-		if cr and cr ~= 0 and not contains(units, cr) then
-			local nb = GetHeroCreatures(hero, cr)
-			-- print("Hero "..hero.." army contains "..nb.." creatures of type "..cr)
-			k = k + 1
-			units[k] = cr
-			amounts[k] = nb
-		end
-	end
-	return k, units, amounts
-end
-
-function IsHeroHuman(hero)
-	local player = GetObjectOwner(hero)
-	return PLAYER_BRAIN[player] == HUMAN
-end
-
 
 SOURCE_LOADED["game-core"] = 1
