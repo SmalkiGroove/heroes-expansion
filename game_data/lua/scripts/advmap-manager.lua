@@ -155,6 +155,7 @@ function NewDayTrigger()
 			startThread(PlayerDailyHandler, player, newweek)
 		end
 	end
+	CaravanCountdown()
 end
 
 function CombatResultsHandler(combatIndex)
@@ -217,9 +218,10 @@ function InitializeHeroes()
 				startThread(ReplaceStartingArmy, hero)
 				startThread(BindHeroLevelUpTrigger, hero)
 				startThread(BindHeroSkillTrigger, hero)
-				startThread(START_ROUTINES[faction], player, hero)
+				sleep(5) startThread(DoSkillsRoutine_Start, player, hero)
+				sleep(5) startThread(START_ROUTINES[faction], player, hero)
 			end
-			startThread(WatchPlayer, player, 1)
+			sleep(5) startThread(WatchPlayer, player, 1)
 		end
 	end
 end
