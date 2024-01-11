@@ -1,5 +1,6 @@
 
 function Routine_CheckOffence(player, hero, mastery)
+    print("$ Routine_CheckOffence")
     local level = GetHeroLevel(hero)
     local value = StatPerLevelDivisor(level, mastery, 7 - mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_OFFENCE]
@@ -10,6 +11,7 @@ function Routine_CheckOffence(player, hero, mastery)
 end
 
 function Routine_CheckDefense(player, hero, mastery)
+    print("$ Routine_CheckDefense")
     local level = GetHeroLevel(hero)
     local value = StatPerLevelDivisor(level, mastery, 7 - mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_DEFENSE]
@@ -20,6 +22,7 @@ function Routine_CheckDefense(player, hero, mastery)
 end
 
 function Routine_CheckLearning(player, hero, mastery)
+    print("$ Routine_CheckLearning")
     local level = GetHeroLevel(hero)
     local value = StatPerLevelDivisor(level, mastery, 7 - mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_LEARNING]
@@ -30,6 +33,7 @@ function Routine_CheckLearning(player, hero, mastery)
 end
 
 function Routine_CheckSorcery(player, hero, mastery)
+    print("$ Routine_CheckSorcery")
     local level = GetHeroLevel(hero)
     local value = StatPerLevelDivisor(level, mastery, 7 - mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_SORCERY]
@@ -40,6 +44,7 @@ function Routine_CheckSorcery(player, hero, mastery)
 end
 
 function Routine_CheckVoice(player, hero, mastery)
+    print("$ Routine_CheckVoice")
     local level = GetHeroLevel(hero)
     local value = StatPerLevelDivisor(level, mastery, 7 - mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_VOICE]
@@ -50,6 +55,7 @@ function Routine_CheckVoice(player, hero, mastery)
 end
 
 function Routine_CheckCombat(player, hero, mastery)
+    print("$ Routine_CheckCombat")
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_COMBAT]
     if diff ~= 0 then
@@ -60,6 +66,7 @@ function Routine_CheckCombat(player, hero, mastery)
 end
 
 function Routine_CheckCourage(player, hero, mastery)
+    print("$ Routine_CheckCourage")
     local level = GetHeroLevel(hero)
     local value = StatPerLevelDivisor(level, mastery, 7 - mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_COURAGE]
@@ -70,6 +77,7 @@ function Routine_CheckCourage(player, hero, mastery)
 end
 
 function Routine_CheckAvenger(player, hero, mastery)
+    print("$ Routine_CheckAvenger")
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_AVENGER]
     if diff ~= 0 then
@@ -79,6 +87,7 @@ function Routine_CheckAvenger(player, hero, mastery)
 end
 
 function Routine_CheckSpiritism(player, hero, mastery)
+    print("$ Routine_CheckSpiritism")
     local current = HERO_SKILL_BONUSES[hero][SKILLBONUS_SPIRITISM]
     if mastery > current then
         for rank = 1+current,mastery do
@@ -89,6 +98,7 @@ function Routine_CheckSpiritism(player, hero, mastery)
 end
 
 function Routine_CheckPrecision(player, hero, mastery)
+    print("$ Routine_CheckPrecision")
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_PRECISION]
     if diff ~= 0 then
@@ -98,6 +108,7 @@ function Routine_CheckPrecision(player, hero, mastery)
 end
 
 function Routine_CheckIntelligence(player, hero, mastery)
+    print("$ Routine_CheckIntelligence")
     local value = 5 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_INTELLIGENCE]
     if diff ~= 0 then
@@ -107,6 +118,7 @@ function Routine_CheckIntelligence(player, hero, mastery)
 end
 
 function Routine_CheckExaltation(player, hero, mastery)
+    print("$ Routine_CheckExaltation")
     local value = 3 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_EXALTATION]
     if diff ~= 0 then
@@ -116,6 +128,7 @@ function Routine_CheckExaltation(player, hero, mastery)
 end
 
 function Routine_CheckArcaneExcellence(player, hero, mastery)
+    print("$ Routine_CheckArcaneExcellence")
     local value = 4 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_ARCANE_EXCELLENCE]
     if diff ~= 0 then
@@ -125,6 +138,7 @@ function Routine_CheckArcaneExcellence(player, hero, mastery)
 end
 
 function Routine_CheckGraduate(player, hero, mastery)
+    print("$ Routine_CheckGraduate")
     local value = 3 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_GRADUATE]
     if diff ~= 0 then
@@ -134,6 +148,7 @@ function Routine_CheckGraduate(player, hero, mastery)
 end
 
 function Routine_CheckOccultism(player, hero, mastery)
+    print("$ Routine_CheckOccultism")
     local value = 6 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_OCCULTISM]
     if diff ~= 0 then
@@ -143,6 +158,7 @@ function Routine_CheckOccultism(player, hero, mastery)
 end
 
 function Routine_CheckSecretsOfDestruct(player, hero, mastery)
+    print("$ Routine_CheckSecretsOfDestruct")
     local value = 5 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_SECRETS_OF_DESTRUCT]
     if diff ~= 0 then
@@ -152,6 +168,7 @@ function Routine_CheckSecretsOfDestruct(player, hero, mastery)
 end
 
 function Routine_CheckMotivation(player, hero, mastery)
+    print("$ Routine_CheckMotivation")
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_MOTIVATION]
     if diff ~= 0 then
@@ -161,6 +178,7 @@ function Routine_CheckMotivation(player, hero, mastery)
 end
 
 function Routine_CheckSheerStrength(player, hero, mastery)
+    print("$ Routine_CheckSheerStrength")
     local value = 2 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_SHEER_STRENGTH]
     if diff ~= 0 then
@@ -168,6 +186,22 @@ function Routine_CheckSheerStrength(player, hero, mastery)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_SHEER_STRENGTH] = value
     end
 end
+
+
+function Routine_SpiritismManaRegen(player, hero, mastery)
+    print("$ Routine_SpiritismManaRegen")
+    local max_mana = 10 * GetHeroStat(hero, STAT_KNOWLEDGE)
+    local regen = max_mana * mastery * 0.05
+    local missing = max_mana - GetHeroStat(hero, STAT_MANA_POINTS)
+    ChangeHeroStat(hero, STAT_MANA_POINTS, min(regen, missing))
+end
+
+
+function Routine_SpiritismLevelUp(player, hero, mastery, level)
+    print("$ Routine_SpiritismLevelUp")
+    AddHero_RandomSpell(hero, SPELL_SCHOOL_ANY, mastery+2)
+end
+
 
 function Routine_Leadership(player, hero, mastery, combatIndex)
     print("$ Routine_Leadership")
@@ -194,6 +228,7 @@ function Routine_Leadership(player, hero, mastery, combatIndex)
     CURRENT_CARAVANS[caravan] = 3
 end
 
+
 START_TRIGGER_SKILLS_ROUTINES = {
     [SKILL_OFFENCE] = Routine_CheckOffence,
     [SKILL_DEFENSE] = Routine_CheckDefense,
@@ -216,7 +251,7 @@ START_TRIGGER_SKILLS_ROUTINES = {
 }
 
 DAILY_TRIGGER_SKILLS_ROUTINES = {
-    [SKILL_NONE] = NoneRoutine,
+    [SKILL_SPIRITISM] = Routine_SpiritismManaRegen,
 }
 
 WEEKLY_TRIGGER_SKILLS_ROUTINES = {
@@ -224,7 +259,7 @@ WEEKLY_TRIGGER_SKILLS_ROUTINES = {
 }
 
 LEVELUP_TRIGGER_SKILLS_ROUTINES = {
-    [SKILL_NONE] = NoneRoutine,
+    [SKILL_SPIRITISM] = Routine_SpiritismLevelUp,
 }
 
 AFTER_COMBAT_TRIGGER_SKILLS_ROUTINES = {
