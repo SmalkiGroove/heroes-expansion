@@ -1,5 +1,5 @@
 
-function ManageSkillBonus_Offence(player, hero, mastery)
+function Routine_CheckOffence(player, hero, mastery)
     local level = GetHeroLevel(hero)
     local value = StatPerLevelDivisor(level, mastery, 7 - mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_OFFENCE]
@@ -9,7 +9,7 @@ function ManageSkillBonus_Offence(player, hero, mastery)
     end
 end
 
-function ManageSkillBonus_Defense(player, hero, mastery)
+function Routine_CheckDefense(player, hero, mastery)
     local level = GetHeroLevel(hero)
     local value = StatPerLevelDivisor(level, mastery, 7 - mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_DEFENSE]
@@ -19,7 +19,7 @@ function ManageSkillBonus_Defense(player, hero, mastery)
     end
 end
 
-function ManageSkillBonus_Learning(player, hero, mastery)
+function Routine_CheckLearning(player, hero, mastery)
     local level = GetHeroLevel(hero)
     local value = StatPerLevelDivisor(level, mastery, 7 - mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_LEARNING]
@@ -29,7 +29,7 @@ function ManageSkillBonus_Learning(player, hero, mastery)
     end
 end
 
-function ManageSkillBonus_Sorcery(player, hero, mastery)
+function Routine_CheckSorcery(player, hero, mastery)
     local level = GetHeroLevel(hero)
     local value = StatPerLevelDivisor(level, mastery, 7 - mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_SORCERY]
@@ -39,7 +39,7 @@ function ManageSkillBonus_Sorcery(player, hero, mastery)
     end
 end
 
-function ManageSkillBonus_Voice(player, hero, mastery)
+function Routine_CheckVoice(player, hero, mastery)
     local level = GetHeroLevel(hero)
     local value = StatPerLevelDivisor(level, mastery, 7 - mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_VOICE]
@@ -49,7 +49,7 @@ function ManageSkillBonus_Voice(player, hero, mastery)
     end
 end
 
-function ManageSkillBonus_Combat(player, hero, mastery)
+function Routine_CheckCombat(player, hero, mastery)
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_COMBAT]
     if diff ~= 0 then
@@ -59,7 +59,7 @@ function ManageSkillBonus_Combat(player, hero, mastery)
     end
 end
 
-function ManageSkillBonus_Courage(player, hero, mastery)
+function Routine_CheckCourage(player, hero, mastery)
     local level = GetHeroLevel(hero)
     local value = StatPerLevelDivisor(level, mastery, 7 - mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_COURAGE]
@@ -69,7 +69,7 @@ function ManageSkillBonus_Courage(player, hero, mastery)
     end
 end
 
-function ManageSkillBonus_Avenger(player, hero, mastery)
+function Routine_CheckAvenger(player, hero, mastery)
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_AVENGER]
     if diff ~= 0 then
@@ -78,7 +78,7 @@ function ManageSkillBonus_Avenger(player, hero, mastery)
     end
 end
 
-function ManageSkillBonus_Spiritism(player, hero, mastery)
+function Routine_CheckSpiritism(player, hero, mastery)
     local current = HERO_SKILL_BONUSES[hero][SKILLBONUS_SPIRITISM]
     if mastery > current then
         for rank = 1+current,mastery do
@@ -88,7 +88,7 @@ function ManageSkillBonus_Spiritism(player, hero, mastery)
     end
 end
 
-function ManageSkillBonus_Precision(player, hero, mastery)
+function Routine_CheckPrecision(player, hero, mastery)
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_PRECISION]
     if diff ~= 0 then
@@ -97,7 +97,7 @@ function ManageSkillBonus_Precision(player, hero, mastery)
     end
 end
 
-function ManageSkillBonus_Intelligence(player, hero, mastery)
+function Routine_CheckIntelligence(player, hero, mastery)
     local value = 5 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_INTELLIGENCE]
     if diff ~= 0 then
@@ -106,7 +106,7 @@ function ManageSkillBonus_Intelligence(player, hero, mastery)
     end
 end
 
-function ManageSkillBonus_Exaltation(player, hero, mastery)
+function Routine_CheckExaltation(player, hero, mastery)
     local value = 3 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_EXALTATION]
     if diff ~= 0 then
@@ -115,7 +115,7 @@ function ManageSkillBonus_Exaltation(player, hero, mastery)
     end
 end
 
-function ManageSkillBonus_ArcaneExcellence(player, hero, mastery)
+function Routine_CheckArcaneExcellence(player, hero, mastery)
     local value = 4 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_ARCANE_EXCELLENCE]
     if diff ~= 0 then
@@ -124,7 +124,7 @@ function ManageSkillBonus_ArcaneExcellence(player, hero, mastery)
     end
 end
 
-function ManageSkillBonus_Graduate(player, hero, mastery)
+function Routine_CheckGraduate(player, hero, mastery)
     local value = 3 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_GRADUATE]
     if diff ~= 0 then
@@ -133,7 +133,7 @@ function ManageSkillBonus_Graduate(player, hero, mastery)
     end
 end
 
-function ManageSkillBonus_Occultism(player, hero, mastery)
+function Routine_CheckOccultism(player, hero, mastery)
     local value = 6 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_OCCULTISM]
     if diff ~= 0 then
@@ -142,7 +142,7 @@ function ManageSkillBonus_Occultism(player, hero, mastery)
     end
 end
 
-function ManageSkillBonus_SecretsOfDestruct(player, hero, mastery)
+function Routine_CheckSecretsOfDestruct(player, hero, mastery)
     local value = 5 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_SECRETS_OF_DESTRUCT]
     if diff ~= 0 then
@@ -151,7 +151,7 @@ function ManageSkillBonus_SecretsOfDestruct(player, hero, mastery)
     end
 end
 
-function ManageSkillBonus_Motivation(player, hero, mastery)
+function Routine_CheckMotivation(player, hero, mastery)
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_MOTIVATION]
     if diff ~= 0 then
@@ -160,7 +160,7 @@ function ManageSkillBonus_Motivation(player, hero, mastery)
     end
 end
 
-function ManageSkillBonus_SheerStrength(player, hero, mastery)
+function Routine_CheckSheerStrength(player, hero, mastery)
     local value = 2 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_SHEER_STRENGTH]
     if diff ~= 0 then
@@ -195,24 +195,24 @@ function Routine_Leadership(player, hero, mastery, combatIndex)
 end
 
 START_TRIGGER_SKILLS_ROUTINES = {
-    [SKILL_OFFENCE] = ManageSkillBonus_Offence,
-    [SKILL_DEFENSE] = ManageSkillBonus_Defense,
-    [SKILL_LEARNING] = ManageSkillBonus_Learning,
-    [SKILL_SORCERY] = ManageSkillBonus_Sorcery,
-    [SKILL_VOICE] = ManageSkillBonus_Voice,
-    [SKILL_COMBAT] = ManageSkillBonus_Combat,
-    [SKILL_COURAGE] = ManageSkillBonus_Courage,
-    [SKILL_AVENGER] = ManageSkillBonus_Avenger,
-    [SKILL_SPIRITISM] = ,
-    [PERK_PRECISION] = ManageSkillBonus_Precision,
-    [PERK_INTELLIGENCE] = ManageSkillBonus_Intelligence,
-    [PERK_EXALTATION] = ManageSkillBonus_Exaltation,
-    [PERK_ARCANE_EXCELLENCE] = ManageSkillBonus_ArcaneExcellence,
-    [PERK_GRADUATE] = ManageSkillBonus_Graduate,
-    [PERK_OCCULTISM] = ManageSkillBonus_Occultism,
-    [PERK_SECRETS_OF_DESTRUCT] = ManageSkillBonus_SecretsOfDestruct,
-    [PERK_MOTIVATION] = ManageSkillBonus_Motivation,
-    [PERK_SHEER_STRENGTH] = ManageSkillBonus_SheerStrength,
+    [SKILL_OFFENCE] = Routine_CheckOffence,
+    [SKILL_DEFENSE] = Routine_CheckDefense,
+    [SKILL_LEARNING] = Routine_CheckLearning,
+    [SKILL_SORCERY] = Routine_CheckSorcery,
+    [SKILL_VOICE] = Routine_CheckVoice,
+    [SKILL_COMBAT] = Routine_CheckCombat,
+    [SKILL_COURAGE] = Routine_CheckCourage,
+    [SKILL_AVENGER] = Routine_CheckAvenger,
+    [SKILL_SPIRITISM] = Routine_CheckSpiritism,
+    [PERK_PRECISION] = Routine_CheckPrecision,
+    [PERK_INTELLIGENCE] = Routine_CheckIntelligence,
+    [PERK_EXALTATION] = Routine_CheckExaltation,
+    [PERK_ARCANE_EXCELLENCE] = Routine_CheckArcaneExcellence,
+    [PERK_GRADUATE] = Routine_CheckGraduate,
+    [PERK_OCCULTISM] = Routine_CheckOccultism,
+    [PERK_SECRETS_OF_DESTRUCT] = Routine_CheckSecretsOfDestruct,
+    [PERK_MOTIVATION] = Routine_CheckMotivation,
+    [PERK_SHEER_STRENGTH] = Routine_CheckSheerStrength,
 }
 
 DAILY_TRIGGER_SKILLS_ROUTINES = {
