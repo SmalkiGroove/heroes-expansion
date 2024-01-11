@@ -226,21 +226,23 @@ PERK_BARBARIAN_MENTORING = 220 --unused
 
 -- Skill bonuses ID
 --
-SKILLBONUS_OFFENCE = 1
-SKILLBONUS_DEFENSE = 2
-SKILLBONUS_LEARNING = 3
-SKILLBONUS_SORCERY = 4
-SKILLBONUS_VOICE = 5
-SKILLBONUS_COURAGE = 6
-SKILLBONUS_PRECISION = 7
-SKILLBONUS_INTELLIGENCE = 8
-SKILLBONUS_EXALTATION = 9
-SKILLBONUS_ARCANE_EXCELLENCE = 10
-SKILLBONUS_GRADUATE = 11
-SKILLBONUS_OCCULTISM = 12
-SKILLBONUS_SECRETS_OF_DESTRUCT = 13
-SKILLBONUS_MOTIVATION = 14
-SKILLBONUS_SHEER_STRENGTH = 15
+_skillbonus_id = 0 
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_OFFENCE             = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_DEFENSE             = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_LEARNING            = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_SORCERY             = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_VOICE               = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_COMBAT              = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_COURAGE             = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_PRECISION           = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_INTELLIGENCE        = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_EXALTATION          = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_ARCANE_EXCELLENCE   = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_GRADUATE            = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_OCCULTISM           = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_SECRETS_OF_DESTRUCT = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_MOTIVATION          = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_SHEER_STRENGTH      = _skillbonus_id
 
 
 -- print("Loaded skills data script")

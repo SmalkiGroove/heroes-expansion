@@ -33,7 +33,7 @@ function TakePlayer_Resource(player, resource, amount)
 end
 
 function AddHero_StatAmount(player, hero, stat, amount)
-    if amount >= 1 then
+    if amount ~= 0 then
 		ChangeHeroStat(hero, stat, amount)
 		ShowFlyingSign({"/Text/Game/Scripts/Stats/"..ATTRIBUTE_TEXT[stat]..".txt"; num=amount}, hero, player, FLYING_SIGN_TIME)
 	end
@@ -43,7 +43,7 @@ function AddHero_StatPerLevel(player, hero, stat, coef)
 	-- print("Adding statistics to hero "..hero)
 	local level = GetHeroLevel(hero)
 	local amount = trunc(coef * level)
-	if amount >= 1 then
+	if amount ~= 0 then
 		ChangeHeroStat(hero, stat, amount)
 		ShowFlyingSign({"/Text/Game/Scripts/Stats/"..ATTRIBUTE_TEXT[stat]..".txt"; num=amount}, hero, player, FLYING_SIGN_TIME)
 	end
@@ -53,7 +53,7 @@ function AddHero_StatPercent(player, hero, stat, coef)
 	-- print("Adding statistics to hero "..hero)
 	local current = GetHeroStat(hero, stat)
 	local amount = round(coef * current)
-	if amount >= 1 then
+	if amount ~= 0 then
 		ChangeHeroStat(hero, stat, amount)
 		ShowFlyingSign({"/Text/Game/Scripts/Stats/"..ATTRIBUTE_TEXT[stat]..".txt"; num=amount}, hero, player, FLYING_SIGN_TIME)
 	end
