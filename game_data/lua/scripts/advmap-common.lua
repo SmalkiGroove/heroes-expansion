@@ -3,6 +3,7 @@ SOURCE_LOADED = {
 	["common"]    = 0,
 	["game-data"] = 0,
 	["game-core"] = 0,
+	["advmap-data"] = 0,
 }
 
 function Source(path, key)
@@ -14,6 +15,7 @@ end
 Source("/scripts/common.lua", "common")
 Source("/scripts/game-data.lua", "game-data")
 Source("/scripts/game-core.lua", "game-core")
+Source("/scripts/advmap-data.lua", "advmap-data")
 
 
 __difficulty = GetDifficulty()
@@ -134,8 +136,6 @@ function IsHeroHuman(hero)
 	return PLAYER_BRAIN[player] == HUMAN
 end
 
-
-PLAYER_MAIN_TOWN = {}
 
 function FactionToTownType(faction)
 	local town_type = -1

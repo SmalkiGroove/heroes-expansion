@@ -10,6 +10,8 @@ for hero,_ in HEROES do
         [SKILLBONUS_VOICE] = 0,
         [SKILLBONUS_COMBAT] = 0,
         [SKILLBONUS_COURAGE] = 0,
+        [SKILLBONUS_AVENGER] = 0,
+        [SKILLBONUS_SPIRITISM] = 0,
         [SKILLBONUS_PRECISION] = 0,
         [SKILLBONUS_INTELLIGENCE] = 0,
         [SKILLBONUS_EXALTATION] = 0,

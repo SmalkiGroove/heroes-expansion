@@ -1,19 +1,6 @@
 
 INIT_SCRIPTS = 0
 
-TURN = 1
-
-PLAYER_BRAIN = {
-	[1] = OBSERVER,
-	[2] = OBSERVER,
-	[3] = OBSERVER,
-	[4] = OBSERVER,
-	[5] = OBSERVER,
-	[6] = OBSERVER,
-	[7] = OBSERVER,
-	[8] = OBSERVER,
-}
-
 function InitMessage(player)
 	if INIT_SCRIPTS == 0 then
 		MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Game/Scripts/Init.txt", "InitMessage('"..player.."')")

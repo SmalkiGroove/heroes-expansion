@@ -69,6 +69,25 @@ function ManageSkillBonus_Courage(player, hero, mastery)
     end
 end
 
+function ManageSkillBonus_Avenger(player, hero, mastery)
+    local value = mastery
+    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_AVENGER]
+    if diff ~= 0 then
+        AddHero_StatAmount(player, hero, STAT_LUCK, diff)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_AVENGER] = value
+    end
+end
+
+function ManageSkillBonus_Spiritism(player, hero, mastery)
+    local current = HERO_SKILL_BONUSES[hero][SKILLBONUS_SPIRITISM]
+    if mastery > current then
+        for rank = 1+current,mastery do
+            local school = SPIRITISM_SCHOOL_AFFINITY[hero] and SPIRITISM_SCHOOL_AFFINITY[hero] or SPELL_SCHOOL_ANY
+            AddHero_RandomSpellTier(hero, school, rank+2)
+        end
+    end
+end
+
 function ManageSkillBonus_Precision(player, hero, mastery)
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_PRECISION]
@@ -152,6 +171,7 @@ end
 
 function Routine_Leadership(player, hero, mastery, combatIndex)
     print("$ Routine_Leadership")
+    if GetSavedCombatArmyHero(combatIndex, 0) then return end
     local x, y, z = GetObjectPosition(hero)
     local dx, dy, dz = GetObjectPosition(PLAYER_MAIN_TOWN[player])
     print("Hero at x="..x..", y="..y)
@@ -182,6 +202,8 @@ START_TRIGGER_SKILLS_ROUTINES = {
     [SKILL_VOICE] = ManageSkillBonus_Voice,
     [SKILL_COMBAT] = ManageSkillBonus_Combat,
     [SKILL_COURAGE] = ManageSkillBonus_Courage,
+    [SKILL_AVENGER] = ManageSkillBonus_Avenger,
+    [SKILL_SPIRITISM] = ,
     [PERK_PRECISION] = ManageSkillBonus_Precision,
     [PERK_INTELLIGENCE] = ManageSkillBonus_Intelligence,
     [PERK_EXALTATION] = ManageSkillBonus_Exaltation,

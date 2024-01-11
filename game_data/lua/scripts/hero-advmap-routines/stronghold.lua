@@ -44,28 +44,6 @@ function Routine_GainArtifactCrownLead(player, hero, level)
     end
 end
 
-function Routine_LearnSpellShaman(player, hero, level)
-    print("$ Routine_LearnSpellShaman")
-    if not HasHeroSkill(hero, 172) then
-        if mod(level, 2) == 0 then
-            local type = random(SPELL_TYPE_LIGHT_MAGIC, SPELL_TYPE_SUMMONING_MAGIC, mod(level,5))
-            local tier = ceil(level * 0.15)
-            AddHero_RandomSpell(hero, type, tier)
-        end
-    end
-end
-
-function Routine_LearnSpellWitch(player, hero, level)
-    print("$ Routine_LearnSpellWitch")
-    if not HasHeroSkill(hero, 172) then
-        if mod(level, 2) == 0 then
-            local type = random(SPELL_TYPE_DESTRUCTIVE_MAGIC, SPELL_TYPE_DARK_MAGIC, mod(level,5))
-            local tier = ceil(level * 0.15)
-            AddHero_RandomSpell(hero, type, tier)
-        end
-    end
-end
-
 function Routine_GainArtifactMachineRing(player, hero, level)
     print("$ Routine_GainArtifactMachineRing")
     if level == 25 then 
@@ -155,15 +133,15 @@ LEVEL_UP_STRONGHOLD_HERO = {
     [H_KILGHAN] = NoneRoutine,
     [H_CRAGHACK] = Routine_GainArtifactCrownLead,
     [H_KRAAL] = NoneRoutine,
-    [H_SHAKKARUKAT] = Routine_LearnSpellShaman,
-    [H_KUJIN] = Routine_LearnSpellShaman,
-    [H_SHIVA] = Routine_LearnSpellShaman,
-    [H_MUKHA] = Routine_LearnSpellShaman,
-    [H_HAGGASH] = Routine_LearnSpellShaman,
-    [H_URGHAT] = Routine_LearnSpellWitch,
-    [H_GARUNA] = Routine_LearnSpellWitch,
-    [H_ZOULEIKA] = Routine_LearnSpellWitch,
-    [H_ERIKA] = Routine_LearnSpellWitch,
+    [H_SHAKKARUKAT] = NoneRoutine,
+    [H_KUJIN] = NoneRoutine,
+    [H_SHIVA] = NoneRoutine,
+    [H_MUKHA] = NoneRoutine,
+    [H_HAGGASH] = NoneRoutine,
+    [H_URGHAT] = NoneRoutine,
+    [H_GARUNA] = NoneRoutine,
+    [H_ZOULEIKA] = NoneRoutine,
+    [H_ERIKA] = NoneRoutine,
 }
 
 AFTER_COMBAT_TRIGGER_TRONGHOLD = {

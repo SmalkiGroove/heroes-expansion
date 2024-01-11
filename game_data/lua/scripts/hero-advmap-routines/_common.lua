@@ -59,38 +59,58 @@ function AddHero_StatPercent(player, hero, stat, coef)
 	end
 end
 
-function AddHero_RandomSpell(hero, type, tier)
+function AddHero_RandomSpell(hero, school, maxtier)
 	-- print("Adding random spell to hero "..hero)
 	local spells = {}
-	if type == SPELL_TYPE_DESTRUCTIVE_MAGIC then
-		if tier >= 1 then insert(spells, SPELL_MAGIC_ARROW); insert(spells, SPELL_STONE_SPIKES) end
-		if tier >= 2 then insert(spells, SPELL_LIGHTNING_BOLT); insert(spells, SPELL_ICE_BOLT) end
-		if tier >= 3 then insert(spells, SPELL_FIREBALL); insert(spells, SPELL_FROST_RING) end
-		if tier >= 4 then insert(spells, SPELL_CHAIN_LIGHTNING); insert(spells, SPELL_METEOR_SHOWER); insert(spells, SPELL_DEEP_FREEZE) end
-		if tier >= 5 then insert(spells, SPELL_IMPLOSION); insert(spells, SPELL_ARMAGEDDON) end
-	elseif type == SPELL_TYPE_DARK_MAGIC then
-		if tier >= 1 then insert(spells, SPELL_CURSE); insert(spells, SPELL_SLOW); insert(spells, SPELL_SORROW) end
-		if tier >= 2 then insert(spells, SPELL_DISRUPTING_RAY); insert(spells, SPELL_PLAGUE) end
-		if tier >= 3 then insert(spells, SPELL_FORGETFULNESS); insert(spells, SPELL_WEAKNESS); insert(spells, SPELL_BLIND) end
-		if tier >= 4 then insert(spells, SPELL_BERSERK); insert(spells, SPELL_VAMPIRISM) end
-		if tier >= 5 then insert(spells, SPELL_HYPNOTIZE); insert(spells, SPELL_UNHOLY_WORD) end
-	elseif type == SPELL_TYPE_LIGHT_MAGIC then
-		if tier >= 1 then insert(spells, SPELL_BLESS); insert(spells, SPELL_HASTE) end
-		if tier >= 2 then insert(spells, SPELL_STONESKIN); insert(spells, SPELL_DISPEL) end
-		if tier >= 3 then insert(spells, SPELL_BLOODLUST); insert(spells, SPELL_REGENERATION); insert(spells, SPELL_DEFLECT_ARROWS) end
-		if tier >= 4 then insert(spells, SPELL_DIVINE_VENGEANCE); insert(spells, SPELL_TELEPORT); insert(spells, SPELL_ANTI_MAGIC) end
-		if tier >= 5 then insert(spells, SPELL_RESURRECT); insert(spells, SPELL_HOLY_WORD) end
-	elseif type == SPELL_TYPE_SUMMONING_MAGIC then
-		if tier >= 1 then insert(spells, SPELL_MAGIC_FIST); insert(spells, SPELL_ARCANE_CRYSTAL) end
-		if tier >= 2 then insert(spells, SPELL_LAND_MINE); insert(spells, SPELL_WASP_SWARM); insert(spells, SPELL_EARTHQUAKE) end
-		if tier >= 3 then insert(spells, SPELL_BLADE_BARRIER); insert(spells, SPELL_ANIMATE_DEAD); insert(spells, SPELL_SUMMON_ELEMENTALS) end
-		if tier >= 4 then insert(spells, SPELL_SUMMON_HIVE); insert(spells, SPELL_PHANTOM); insert(spells, SPELL_FIREWALL) end
-		if tier >= 5 then insert(spells, SPELL_CELESTIAL_SHIELD); insert(spells, SPELL_CONJURE_PHOENIX) end
+	if school == SPELL_SCHOOL_ANY then
+		for tier = 1,maxtier do
+			for _,spell in SPELLS_BY_TIER[tier] do
+				insert(spells, spell)
+			end
+		end
+	else
+		local last = 3 * (maxtier - 1)
+		print("Can learn spell up to "..SPELLS_BY_SCHOOL[school][last])
+		for i = 1,last do
+			insert(spells, SPELLS_BY_SCHOOL[school][i])
+		end
 	end
 	local nb = length(spells)
-	local spell = spells[random(0, nb-1, type)]
-	if KnowHeroSpell(hero, spell) then spell = spells[random(0, nb-1, type)] end
-	TeachHeroSpell(hero, spell)
+	local spell = SPELL_NONE
+	local tries = 5
+	repeat
+		tries = tries - 1
+		spell = spells[random(0, nb-1, TURN-school)]
+	until tries == 0 or not KnowHeroSpell(hero, spell)
+	if tries ~= 0 then
+		TeachHeroSpell(hero, spell)
+		ShowFlyingSign("/Text/Game/Scripts/LearnSpell.txt", hero, player, FLYING_SIGN_TIME)
+	end
+end
+
+function AddHero_RandomSpellTier(hero, school, tier)
+	-- print("Adding random spell of tier "..tier.." to hero "..hero)
+	local spells = {}
+	if school == SPELL_SCHOOL_ANY then
+		spells = SPELLS_BY_TIER[tier]
+	else
+		for _,spell in SPELLS_BY_TIER[tier] do
+			if contains(SPELLS_BY_SCHOOL[school], spell) then
+				insert(spells, spell)
+			end
+		end
+	end
+	local nb = length(spells)
+	local spell = SPELL_NONE
+	local tries = 5
+	repeat
+		tries = tries - 1
+		spell = spells[random(0, nb-1, TURN-school)]
+	until tries == 0 or not KnowHeroSpell(hero, spell)
+	if tries ~= 0 then
+		TeachHeroSpell(hero, spell)
+		ShowFlyingSign("/Text/Game/Scripts/LearnSpell.txt", hero, player, FLYING_SIGN_TIME)
+	end
 end
 
 function AddHero_CreatureType(player, hero, type, coef)

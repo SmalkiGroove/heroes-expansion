@@ -234,6 +234,8 @@ _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_SORCERY             = _skillbonu
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_VOICE               = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_COMBAT              = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_COURAGE             = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_AVENGER             = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_SPIRITISM           = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_PRECISION           = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_INTELLIGENCE        = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_EXALTATION          = _skillbonus_id
