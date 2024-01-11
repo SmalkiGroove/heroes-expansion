@@ -124,7 +124,7 @@ function PlayerDailyHandler(player, newweek)
 		startThread(DAILY_ROUTINES[faction], player, hero)
 		-- startThread(DAILY_ROUTINES[x_skills], player, hero)
 		startThread(DoArtifactsRoutine_Daily, player, hero)
-		if newweek then 
+		if newweek then
 			startThread(WEEKLY_ROUTINES[faction], player, hero)
 			-- startThread(WEEKLY_ROUTINES[x_skills], player, hero)
 			startThread(DoArtifactsRoutine_Weekly, player, hero)
@@ -137,6 +137,7 @@ function NewDayTrigger()
 	TURN = TURN + 1
 	print("New day ! Turn "..TURN)
 	local newweek = GetDate(DAY_OF_WEEK) == 1
+	if newweek then WEEK = WEEK + 1 end
 	for player = 1,8 do
 		if (GetPlayerState(player) == 1) then
 			startThread(PlayerDailyHandler, player, newweek)
