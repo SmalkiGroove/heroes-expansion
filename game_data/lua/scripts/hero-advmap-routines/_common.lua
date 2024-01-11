@@ -59,7 +59,7 @@ function AddHero_StatPercent(player, hero, stat, coef)
 	end
 end
 
-function AddHero_RandomSpell(hero, school, maxtier)
+function AddHero_RandomSpell(player, hero, school, maxtier)
 	-- print("Adding random spell to hero "..hero)
 	local spells = {}
 	if school == SPELL_SCHOOL_ANY then
@@ -88,7 +88,7 @@ function AddHero_RandomSpell(hero, school, maxtier)
 	end
 end
 
-function AddHero_RandomSpellTier(hero, school, tier)
+function AddHero_RandomSpellTier(player, hero, school, tier)
 	-- print("Adding random spell of tier "..tier.." to hero "..hero)
 	local spells = {}
 	if school == SPELL_SCHOOL_ANY then

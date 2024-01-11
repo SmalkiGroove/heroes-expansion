@@ -205,10 +205,10 @@ function InitializeHeroes()
 				startThread(ReplaceStartingArmy, hero)
 				startThread(BindHeroLevelUpTrigger, hero)
 				startThread(BindHeroSkillTrigger, hero)
-				sleep(5) startThread(DoSkillsRoutine_Start, player, hero)
-				sleep(5) startThread(START_ROUTINES[faction], player, hero)
+				sleep(1) startThread(DoSkillsRoutine_Start, player, hero)
+				sleep(1) startThread(START_ROUTINES[faction], player, hero)
 			end
-			sleep(5) startThread(WatchPlayer, player, 1)
+			sleep(1) startThread(WatchPlayer, player, 1)
 		end
 	end
 end
@@ -217,7 +217,7 @@ print("All scripts successfully loaded !")
 
 -- Initializers
 InitializeHeroes()
-InitializeMainTown()
+InitializeMapTowns()
 InitializeCombatHook()
 InitializeConvertibles()
 

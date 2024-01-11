@@ -62,7 +62,7 @@ function Routine_CheckSpiritism(player, hero, mastery)
     if mastery > current then
         for rank = 1+current,mastery do
             local school = SPIRITISM_SCHOOL_AFFINITY[hero] and SPIRITISM_SCHOOL_AFFINITY[hero] or SPELL_SCHOOL_ANY
-            AddHero_RandomSpellTier(hero, school, rank+2)
+            AddHero_RandomSpellTier(player, hero, school, rank+2)
         end
     end
 end
@@ -147,6 +147,68 @@ function Routine_CheckMotivation(player, hero, mastery)
     end
 end
 
+function Routine_CheckBattleCommander(player, hero, mastery)
+    print("$ Routine_CheckBattleCommander")
+    local value = mastery
+    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_BATTLE_COMMANDER]
+    if diff ~= 0 then
+        AddHero_StatAmount(player, hero, STAT_DEFENCE, 2*diff)
+        AddHero_StatAmount(player, hero, STAT_MORALE, diff)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_BATTLE_COMMANDER] = value
+    end
+end
+
+function Routine_CheckFineRune(player, hero, mastery)
+    print("$ Routine_CheckFineRune")
+    local value = mastery
+    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_FINE_RUNE]
+    if diff ~= 0 then
+        AddHero_StatAmount(player, hero, STAT_KNOWLEDGE, diff)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_FINE_RUNE] = value
+    end
+end
+
+function Routine_CheckRefreshRune(player, hero, mastery)
+    print("$ Routine_CheckRefreshRune")
+    local value = mastery
+    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_REFRESH_RUNE]
+    if diff ~= 0 then
+        AddHero_StatAmount(player, hero, STAT_KNOWLEDGE, diff)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_REFRESH_RUNE] = value
+    end
+end
+
+function Routine_CheckGreaterRune(player, hero, mastery)
+    print("$ Routine_CheckGreaterRune")
+    local value = mastery
+    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_GREATER_RUNE]
+    if diff ~= 0 then
+        AddHero_StatAmount(player, hero, STAT_KNOWLEDGE, diff)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_GREATER_RUNE] = value
+    end
+end
+
+function Routine_CheckLordOfTheUndead(player, hero, mastery)
+    print("$ Routine_CheckLordOfTheUndead")
+    local value = mastery
+    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_LORD_OF_THE_UNDEAD]
+    if diff ~= 0 then
+        AddHero_StatAmount(player, hero, STAT_SPELL_POWER, 3*diff)
+        AddHero_StatAmount(player, hero, STAT_KNOWLEDGE, 2*diff)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_LORD_OF_THE_UNDEAD] = value
+    end
+end
+
+function Routine_CheckDefendUsAll(player, hero, mastery)
+    print("$ Routine_CheckDefendUsAll")
+    local value = 2 * mastery
+    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_DEFEND_US_ALL]
+    if diff ~= 0 then
+        AddHero_StatAmount(player, hero, STAT_ATTACK, diff)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_DEFEND_US_ALL] = value
+    end
+end
+
 function Routine_CheckSheerStrength(player, hero, mastery)
     print("$ Routine_CheckSheerStrength")
     local value = 2 * mastery
@@ -157,6 +219,17 @@ function Routine_CheckSheerStrength(player, hero, mastery)
     end
 end
 
+function Routine_RageAwakening(player, hero, mastery)
+    print("$ Routine_RageAwakening")
+    GiveHeroSkill(hero, SKILL_BLOOD_RAGE)
+end
+
+
+function Routine_HeraldOfDeathGolds(player, hero, mastery)
+    print("$ Routine_HeraldOfDeathGolds")
+    local amount = GetHeroCreatures(hero, CREATURE_SKELETON) + GetHeroCreatures(hero, CREATURE_SKELETON_ARCHER) + GetHeroCreatures(hero, CREATURE_SKELETON_WARRIOR)
+    AddPlayer_Resource(player, hero, GOLD, amount)
+end
 
 function Routine_SpiritismManaRegen(player, hero, mastery)
     print("$ Routine_SpiritismManaRegen")
@@ -164,6 +237,23 @@ function Routine_SpiritismManaRegen(player, hero, mastery)
     local regen = max_mana * mastery * 0.05
     local missing = max_mana - GetHeroStat(hero, STAT_MANA_POINTS)
     ChangeHeroStat(hero, STAT_MANA_POINTS, min(regen, missing))
+end
+
+
+function Routine_LogisticsWeeklyProd(player, hero, mastery)
+    print("$ Routine_LogisticsWeeklyProd")
+    local x,y,z = GetObjectPosition(hero)
+    for _,town in GetPlayerTowns(player) do
+        local town_data = MAP_TOWNS[town]
+        if town_data then
+            if x == town_data[1] and y == town_data[2] and z == town_data[3] then
+            end
+        end
+    end
+end
+
+function Routine_HauntingWeeklyGhosts(player, hero, mastery)
+    print("$ Routine_HauntingWeeklyGhosts")
 end
 
 
@@ -235,15 +325,17 @@ end
 
 function Routine_SpiritismLevelUp(player, hero, mastery, level)
     print("$ Routine_SpiritismLevelUp")
-    AddHero_RandomSpell(hero, SPELL_SCHOOL_ANY, mastery+2)
+    if not HasHeroSkill(hero, SKILL_BLOOD_RAGE) then
+        AddHero_RandomSpell(player, hero, SPELL_SCHOOL_ANY, mastery+2)
+    end
 end
 
 
-function Routine_Leadership(player, hero, mastery, combatIndex)
-    print("$ Routine_Leadership")
+function Routine_LeadershipAfterBattle(player, hero, mastery, combatIndex)
+    print("$ Routine_LeadershipAfterBattle")
     if GetSavedCombatArmyHero(combatIndex, 0) then return end
     local x, y, z = GetObjectPosition(hero)
-    local dx, dy, dz = GetObjectPosition(PLAYER_MAIN_TOWN[player])
+    local town_data = PLAYER_MAIN_TOWN[player] and MAP_TOWNS[PLAYER_MAIN_TOWN[player]] or nil
     print("Hero at x="..x..", y="..y)
     local found = nil
     for i = -1,1 do for j = -1,1 do
@@ -251,9 +343,12 @@ function Routine_Leadership(player, hero, mastery, combatIndex)
         if length(objects) == 0 then x=x+i; y=y+j; found = not nil; break end
     end if found then break end end
     if found then print("Spawn caravan at x="..x..", y="..y) else print("No available tile around hero was found"); return end
+    local dx = town_data and town_data[1] or x
+    local dy = town_data and town_data[2] or y
+    local dz = town_data and town_data[3] or z
     local caravan = "Caravan-"..NB_CARAVAN
     NB_CARAVAN = NB_CARAVAN + 1
-    CreateCaravan(caravan, player, z, x, y, z, x, y)
+    CreateCaravan(caravan, player, z, x, y, dz, dx, dy)
     repeat sleep(1) until IsObjectExists(caravan)
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 0)
     for i = 0,stacks-1 do
@@ -283,15 +378,23 @@ START_TRIGGER_SKILLS_ROUTINES = {
     [PERK_OCCULTISM] = Routine_CheckOccultism,
     [PERK_SECRETS_OF_DESTRUCT] = Routine_CheckSecretsOfDestruct,
     [PERK_MOTIVATION] = Routine_CheckMotivation,
+    [PERK_FINE_RUNE] = Routine_CheckFineRune,
+    [PERK_REFRESH_RUNE] = Routine_CheckRefreshRune,
+    [PERK_GREATER_RUNE] = Routine_CheckGreaterRune,
+    [PERK_LORD_OF_UNDEAD] = Routine_CheckLordOfTheUndead,
+    [PERK_DEFEND_US_ALL] = Routine_CheckDefendUsAll,
     [PERK_SHEER_STRENGTH] = Routine_CheckSheerStrength,
+    [PERK_RAGE_AWAKENING] = Routine_RageAwakening,
 }
 
 DAILY_TRIGGER_SKILLS_ROUTINES = {
+    [PERK_HERALD_OF_DEATH] = Routine_HeraldOfDeathGolds,
     [SKILL_SPIRITISM] = Routine_SpiritismManaRegen,
 }
 
 WEEKLY_TRIGGER_SKILLS_ROUTINES = {
-    [SKILL_NONE] = NoneRoutine,
+    [SKILL_LOGISTICS] = Routine_LogisticsWeeklyProd,
+    [PERK_HAUNTING] = Routine_HauntingWeeklyGhosts,
 }
 
 LEVELUP_TRIGGER_SKILLS_ROUTINES = {
@@ -305,7 +408,7 @@ LEVELUP_TRIGGER_SKILLS_ROUTINES = {
 }
 
 AFTER_COMBAT_TRIGGER_SKILLS_ROUTINES = {
-    [SKILL_LEADERSHIP] = Routine_Leadership,
+    [SKILL_LEADERSHIP] = Routine_LeadershipAfterBattle,
 }
 
 

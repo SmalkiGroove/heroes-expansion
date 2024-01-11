@@ -241,10 +241,28 @@ function CheckMainTown(player)
     end
 end
 
-function InitializeMainTown()
-    for i,town in GetObjectNamesByType("TOWN") do
-        local owner = GetObjectOwner(town)
-        if not PLAYER_MAIN_TOWN[owner] then PLAYER_MAIN_TOWN[owner] = town end
+function InitializeMapTowns()
+    for faction,type in Towns_Types do
+        for _,town in GetObjectNamesByType(type) do
+            MAP_TOWNS_COUNT = MAP_TOWNS_COUNT + 1
+            local owner = GetObjectOwner(town)
+            if not PLAYER_MAIN_TOWN[owner] then PLAYER_MAIN_TOWN[owner] = town end
+            local x,y,floor = GetObjectPosition(town)
+            x = x - TOWN_TYPES_CENTER_TILE[type][1]
+            y = y - TOWN_TYPES_CENTER_TILE[type][2]
+            if     IsTilePassable(x, y+5, floor) then MAP_TOWNS[town] = {[0]=faction, [1]=x, [2]=y+5, [3]=floor}
+            elseif IsTilePassable(x+5, y, floor) then MAP_TOWNS[town] = {[0]=faction, [1]=x+5, [2]=y, [3]=floor}
+            elseif IsTilePassable(x, y-5, floor) then MAP_TOWNS[town] = {[0]=faction, [1]=x, [2]=y-5, [3]=floor}
+            elseif IsTilePassable(x-5, y, floor) then MAP_TOWNS[town] = {[0]=faction, [1]=x-5, [2]=y, [3]=floor}
+            else
+                print("Town "..town.." has no entrance ??")
+            end
+        end
+    end
+    for i = 1,8 do
+        if GetPlayerState(player) == 1 and not PLAYER_MAIN_TOWN[i] then
+            print("Player "..i.." has no main town ??")
+        end
     end
 end
 

@@ -244,6 +244,12 @@ _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_GRADUATE            = _skillbonu
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_OCCULTISM           = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_SECRETS_OF_DESTRUCT = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_MOTIVATION          = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_BATTLE_COMMANDER    = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_FINE_RUNE           = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_REFRESH_RUNE        = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_GREATER_RUNE        = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_LORD_OF_THE_UNDEAD  = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_DEFEND_US_ALL       = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_SHEER_STRENGTH      = _skillbonus_id
 
 
