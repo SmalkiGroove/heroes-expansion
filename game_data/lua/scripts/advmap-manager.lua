@@ -1,15 +1,6 @@
 
-INIT_SCRIPTS = 0
-
-function InitMessage(player)
-	if INIT_SCRIPTS == 0 then
-		MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Game/Scripts/Init.txt", "InitMessage('"..player.."')")
-	end
-end
-
 for i = 1,8 do
 	PLAYER_BRAIN[i] = GetPlayerBrain(i)
-	if IsPlayerCurrent(i) then startThread(InitMessage, i) end
 end
 
 ROUTINES_LOADED = {
@@ -223,4 +214,4 @@ InitializeCombatHook()
 InitializeConvertibles()
 
 print("Initializers done. The game can start. Have fun !")
-INIT_SCRIPTS = 1
+UnblockGame()

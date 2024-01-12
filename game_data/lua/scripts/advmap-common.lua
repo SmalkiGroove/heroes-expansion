@@ -242,26 +242,44 @@ function CheckMainTown(player)
 end
 
 function InitializeMapTowns()
+    local map_size = GetTerrainSize() - 1
     for faction,type in Towns_Types do
         for _,town in GetObjectNamesByType(type) do
             MAP_TOWNS_COUNT = MAP_TOWNS_COUNT + 1
             local owner = GetObjectOwner(town)
             if not PLAYER_MAIN_TOWN[owner] then PLAYER_MAIN_TOWN[owner] = town end
             local x,y,floor = GetObjectPosition(town)
-            x = x - TOWN_TYPES_CENTER_TILE[type][1]
-            y = y - TOWN_TYPES_CENTER_TILE[type][2]
-            if     IsTilePassable(x, y+5, floor) then MAP_TOWNS[town] = {[0]=faction, [1]=x, [2]=y+5, [3]=floor}
-            elseif IsTilePassable(x+5, y, floor) then MAP_TOWNS[town] = {[0]=faction, [1]=x+5, [2]=y, [3]=floor}
-            elseif IsTilePassable(x, y-5, floor) then MAP_TOWNS[town] = {[0]=faction, [1]=x, [2]=y-5, [3]=floor}
-            elseif IsTilePassable(x-5, y, floor) then MAP_TOWNS[town] = {[0]=faction, [1]=x-5, [2]=y, [3]=floor}
+            local dx = TOWN_TYPES_CENTER_TILE[type][1]
+            local dy = TOWN_TYPES_CENTER_TILE[type][2]
+            local found = nil
+            for i = -1,1 do for j = -1,1 do
+                if abs(i) ~= abs(j) then
+                    local xx = x + i*(5+dy) + j*dx
+                    local yy = y + j*(5+dy) - i*dx
+                    if (xx+i >= 0 and xx+i <= map_size and yy+j >= 0 and yy+j <= map_size) then
+                        if IsTilePassable(xx, yy, floor) then
+                            if not (IsTilePassable(xx+j, yy+i, floor) or IsTilePassable(xx-j, yy-i, floor)) then
+                                if IsTilePassable(xx+i, yy+j, floor) then
+                                    MAP_TOWNS[town] = {[0]=faction, [1]=xx, [2]=yy, [3]=floor}
+                                    found = not nil
+                                    break
+                                end
+                            end
+                        end
+                    end
+                end
+            end if found then break end end
+            if found then
+                local data = MAP_TOWNS[town]
+                print("Registered town of faction "..FACTION_TEXT[data[0]].." at coords x="..data[1]..",y="..data[2]..",z="..data[3].." (entrance)")
             else
-                print("Town "..town.." has no entrance ??")
+                print("Town "..town.." has no entrance ?? (type is "..type..")")
             end
         end
     end
-    for i = 1,8 do
-        if GetPlayerState(player) == 1 and not PLAYER_MAIN_TOWN[i] then
-            print("Player "..i.." has no main town ??")
+    for player = 1,8 do
+        if GetPlayerState(player) == 1 and not PLAYER_MAIN_TOWN[player] then
+            print("Player "..player.." has no main town ??")
         end
     end
 end

@@ -3,6 +3,8 @@
 
 	dofile('/scripts/events.lua')
 
+	BlockGame()
+
 	--
 	-- Logical constants
 	--
@@ -62,7 +64,7 @@
 		[3] = "Cystal",
 		[4] = "Sulfur",
 		[5] = "Gem",
-		[6] = "Golds"
+		[6] = "Golds",
 	}
 	
 	--
@@ -122,7 +124,7 @@
 		[5] = "Luck",
 		[6] = "Morale",
 		[7] = "Movement",
-		[8] = "Mana"
+		[8] = "Mana",
 	}
 	
 	--
@@ -146,6 +148,18 @@
 	TOWN_INFERNO = 5
 	TOWN_FORTRESS = 6
 	TOWN_STRONGHOLD = 7
+
+	FACTION_TEXT = {
+		[0] = "Neutral",
+		[1] = "Haven",
+		[2] = "Sylvan",
+		[3] = "Inferno",
+		[4] = "Necropolis",
+		[5] = "Academy",
+		[6] = "Dungeon",
+		[7] = "Fortress",
+		[8] = "Stronghold",
+	}
 
 	--
 	-- Town buildings IDs

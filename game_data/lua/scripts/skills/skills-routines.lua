@@ -247,7 +247,7 @@ function Routine_LogisticsWeeklyProd(player, hero, mastery)
             local fort = GetTownBuildingLevel(town, TOWN_BUILDING_FORT)
             local grail = GetTownBuildingLevel(town, TOWN_BUILDING_GRAIL)
             local multiplier = 1 + 0.5 * grail
-            if fort > 1 then multiplier = multiplier + 0.5 * (fort-1)
+            if fort > 1 then multiplier = multiplier + 0.5 * (fort-1) end
             if mastery >= 1 and GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_1) ~= 0 then
                 local creature = CREATURES_BY_FACTION[data[0]][1][0]
                 local current = GetObjectDwellingCreatures(town, creature)
@@ -438,6 +438,7 @@ AFTER_COMBAT_TRIGGER_SKILLS_ROUTINES = {
 function DoSkillsRoutine_Start(player, hero)
     for k,v in START_TRIGGER_SKILLS_ROUTINES do
         if HasHeroSkill(hero, k) then
+            print("Hero "..hero.." has strating skill "..k)
             local mastery = GetHeroSkillMastery(hero, k)
             startThread(v, player, hero, mastery)
         end
