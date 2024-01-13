@@ -61,7 +61,6 @@ for artifact in artifacts_data["Table_DBArtifact_ArtifactEffect"]["objects"]["It
         f.write(file_content)
     os.rename(os.path.join(visuals_path, texture_file[1:]), os.path.join(visuals_path, f'Textures/HeroScreen/Artifacts/{name}.xdb'))
     os.rename(os.path.join(visuals_path, texture_file_dds[1:]), os.path.join(visuals_path, f'Textures/HeroScreen/Artifacts/{name}.dds'))
-    break
 
 
 with open(os.path.join(data_path, artifact_file_path), 'w') as artifacts_file:
