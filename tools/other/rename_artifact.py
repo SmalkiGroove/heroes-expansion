@@ -31,31 +31,38 @@ for artifact in artifacts_data["Table_DBArtifact_ArtifactEffect"]["objects"]["It
     id = str(artifact["ID"])
     if id in excluded_ids:
         continue
+
     name = id_to_name(id.replace('ARTIFACT_',''))
     print(f'{id} => {name}')
+
     mapobject_file = str(artifact["obj"]["ArtifactShared"]["@href"]).replace("#xpointer(/AdvMapArtifactShared)","")
     texture_file = str(artifact["obj"]["Icon"]["@href"]).replace("#xpointer(/Texture)","")
     texture_file_dds = texture_file.replace(".xdb",".dds")
-    artifacts_file_content.replace(f'<NameFileRef href="{artifact["obj"]["NameFileRef"]["@href"]}"/>', f'<NameFileRef href="/Text/Game/Artifacts/{name}/Name.txt"/>')
-    artifacts_file_content.replace(f'<DescriptionFileRef href="{artifact["obj"]["DescriptionFileRef"]["@href"]}"/>', f'<DescriptionFileRef href="/Text/Game/Artifacts/{name}/Description.txt"/>')
-    artifacts_file_content.replace(f'<Icon href="{artifact["obj"]["Icon"]["@href"]}"/>', f'<Icon href="/Textures/HeroScreen/Artifacts/{name}.xdb#xpointer(/Texture)"/>')
-    artifacts_file_content.replace(f'<ArtifactShared href="{artifact["obj"]["ArtifactShared"]["@href"]}"/>', f'<ArtifactShared href="/MapObjects/Artifacts/{name}.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>')
-    with open(os.path.join(data_path, mapobject_file[1:]), 'r+') as f:
+    
+    artifacts_file_content = artifacts_file_content.replace(f'<NameFileRef href="{artifact["obj"]["NameFileRef"]["@href"]}"/>', f'<NameFileRef href="/Text/Game/Artifacts/{name}/Name.txt"/>')
+    artifacts_file_content = artifacts_file_content.replace(f'<DescriptionFileRef href="{artifact["obj"]["DescriptionFileRef"]["@href"]}"/>', f'<DescriptionFileRef href="/Text/Game/Artifacts/{name}/Description.txt"/>')
+    artifacts_file_content = artifacts_file_content.replace(f'<Icon href="{artifact["obj"]["Icon"]["@href"]}"/>', f'<Icon href="/Textures/HeroScreen/Artifacts/{name}.xdb#xpointer(/Texture)"/>')
+    artifacts_file_content = artifacts_file_content.replace(f'<ArtifactShared href="{artifact["obj"]["ArtifactShared"]["@href"]}"/>', f'<ArtifactShared href="/MapObjects/Artifacts/{name}.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>')
+    
+    with open(os.path.join(data_path, mapobject_file[1:]), 'r') as f:
         file_content = f.read()
         file_data = xmltodict.parse(file_content)
-        file_content.replace(file_data["AdvMapArtifactShared"]["messagesFileRef"]["Item"][0]["@href"], f'/Text/Game/Artifacts/{name}/Name.txt')
-        file_content.replace(file_data["AdvMapArtifactShared"]["messagesFileRef"]["Item"][1]["@href"], f'/Text/Game/Artifacts/{name}/Description.txt')
+        file_content = file_content.replace(file_data["AdvMapArtifactShared"]["messagesFileRef"]["Item"][0]["@href"], f'/Text/Game/Artifacts/{name}/Name.txt')
+        file_content = file_content.replace(file_data["AdvMapArtifactShared"]["messagesFileRef"]["Item"][1]["@href"], f'/Text/Game/Artifacts/{name}/Description.txt')
+    with open(os.path.join(data_path, mapobject_file[1:]), 'w') as f:
         f.write(file_content)
     os.rename(os.path.join(data_path, mapobject_file[1:]), os.path.join(data_path, f'MapObjects/Artifacts/{name}.(AdvMapArtifactShared).xdb'))
-    with open(os.path.join(visuals_path, texture_file[1:]), 'r+') as f:
+
+    with open(os.path.join(visuals_path, texture_file[1:]), 'r') as f:
         file_content = f.read()
         dest_file = xmltodict.parse(file_content)["Texture"]["DestName"]["@href"]
-        file_content.replace(f'<DestName href="{dest_file}"/>', f'<DestName href="{name}.dds"/>')
+        file_content = file_content.replace(f'<DestName href="{dest_file}"/>', f'<DestName href="{name}.dds"/>')
+    with open(os.path.join(visuals_path, texture_file[1:]), 'w') as f:
         f.write(file_content)
     os.rename(os.path.join(visuals_path, texture_file[1:]), os.path.join(visuals_path, f'Textures/HeroScreen/Artifacts/{name}.xdb'))
     os.rename(os.path.join(visuals_path, texture_file_dds[1:]), os.path.join(visuals_path, f'Textures/HeroScreen/Artifacts/{name}.dds'))
     break
 
 
-with open(os.path.join(data_path, artifact_file_path), 'r') as artifacts_file:
+with open(os.path.join(data_path, artifact_file_path), 'w') as artifacts_file:
     artifacts_file.write(artifacts_file_content)
