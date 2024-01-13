@@ -383,6 +383,13 @@ function Routine_LeadershipAfterBattle(player, hero, mastery, combatIndex)
 end
 
 
+function Routine_MeditationExp(player, hero)
+    print("$ Routine_MeditationExp")
+    local value = 100
+    AddHero_StatAmount(player, hero, STAT_EXPERIENCE, value)
+end
+
+
 START_TRIGGER_SKILLS_ROUTINES = {
     [SKILL_OFFENCE] = Routine_CheckOffence,
     [SKILL_DEFENSE] = Routine_CheckDefense,

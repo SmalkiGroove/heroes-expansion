@@ -79,10 +79,10 @@ function Routine_GainFortressArtifacts(player, hero, level)
     -- Dwarven artfacts set
     print("$ Routine_GainFortressArtifacts")
     if level == 40 then
-        GiveArtifact(hero, ARTIFACT_DWARVEN_MITHRAL_CUIRASS)
-        GiveArtifact(hero, ARTIFACT_DWARVEN_MITHRAL_GREAVES)
-        GiveArtifact(hero, ARTIFACT_DWARVEN_MITHRAL_HELMET)
-        GiveArtifact(hero, ARTIFACT_DWARVEN_MITHRAL_SHIELD)
+        GiveArtifact(hero, ARTIFACT_CUIRASS_OF_THE_DWARVEN_KINGS)
+        GiveArtifact(hero, ARTIFACT_GREAVES_OF_THE_DWARVEN_KINGS)
+        GiveArtifact(hero, ARTIFACT_HELM_OF_THE_DWARVEN_KINGS)
+        GiveArtifact(hero, ARTIFACT_SHIELD_OF_THE_DWARVEN_KINGS)
     end
 end
 

@@ -2,7 +2,7 @@
 function Routine_GainArtifactNecromancerHelm(player, hero)
     -- Hero gain artifact Necromancer's Helm
     print("$ Routine_GainArtifactNecromancerHelm")
-    GiveArtifact(hero, ARTIFACT_SKULL_HELMET)
+    GiveArtifact(hero, ARTIFACT_HELM_OF_THE_LICH)
 end
 
 function Routine_AddHeroBlackKnights(player, hero)
@@ -76,11 +76,11 @@ end
 function Routine_GainNecroArtifacts(player, hero, level)
     -- Tunic of carved flesh / Amulet of Necromancy / Cursed Ring / Skull of Markal / Tome of dark magic
     print("$ Routine_GainNecroArtifacts")
-    if     level == 10 then GiveArtifact(hero, ARTIFACT_BONESTUDDED_LEATHER)
-    elseif level == 20 then GiveArtifact(hero, ARTIFACT_NECROMANCER_PENDANT)
-    elseif level == 30 then GiveArtifact(hero, ARTIFACT_JINXING_BAND)
-    elseif level == 40 then GiveArtifact(hero, ARTIFACT_SKULL_OF_MARKAL)
-    elseif level == 50 then GiveArtifact(hero, ARTIFACT_TOME_OF_DARK_MAGIC)
+    if     level == 10 then GiveArtifact(hero, ARTIFACT_TUNIC_OF_CARVED_FLESH)
+    elseif level == 20 then GiveArtifact(hero, ARTIFACT_AMULET_OF_NECROMANCY)
+    elseif level == 30 then GiveArtifact(hero, ARTIFACT_CURSED_RING)
+    elseif level == 40 then GiveArtifact(hero, ARTIFACT_SKULL_OF_THE_FORBIDDEN)
+    elseif level == 50 then GiveArtifact(hero, ARTIFACT_TOME_OF_DARKNESS)
     end
 end
 

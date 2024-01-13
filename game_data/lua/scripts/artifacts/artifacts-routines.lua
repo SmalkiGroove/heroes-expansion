@@ -1,13 +1,13 @@
 
-function Routine_ArtifactSackOfGolds(player, hero)
-    print("$ Routine_ArtifactSackOfGolds")
+function Routine_ArtifactPouchOfGolds(player, hero)
+    print("$ Routine_ArtifactPouchOfGolds")
     local level = GetHeroLevel(hero)
     AddPlayer_Resource(player, hero, GOLD, level * 25)
 end
 
 
 DAILY_TRIGGER_ARTIFACTS_ROUTINES = {
-    [ARTIFACT_ENDLESS_BAG_OF_GOLD] = Routine_ArtifactSackOfGolds,
+    [ARTIFACT_ENDLESS_POUCH_OF_GOLD] = Routine_ArtifactPouchOfGolds,
 }
 WEEKLY_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_NONE] = NoneRoutine,

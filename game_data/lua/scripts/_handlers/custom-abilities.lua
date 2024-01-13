@@ -1,4 +1,9 @@
 
+function ActivateDigging(player, hero)
+    print("$ ActivateDigging")
+
+end
+
 
 function ActivateBuildingConversion(player, hero)
     print("$ ActivateBuildingConversion")

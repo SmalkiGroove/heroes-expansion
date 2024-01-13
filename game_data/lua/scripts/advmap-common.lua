@@ -136,6 +136,11 @@ function IsHeroHuman(hero)
 	return PLAYER_BRAIN[player] == HUMAN
 end
 
+function UnblockGameTimer(player)
+    if PLAYER_BRAIN[player] == COMPUTER then sleep(15) end
+    UnblockGame()
+end
+
 
 function FactionToTownType(faction)
 	local town_type = -1

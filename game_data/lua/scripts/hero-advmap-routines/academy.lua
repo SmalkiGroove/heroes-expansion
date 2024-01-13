@@ -55,10 +55,10 @@ function Routine_GainAcademyArtifacts(player, hero, level)
     -- Book of power / Tunic of enlightment / Sandal of the blessed / Staff of sar-issus / Tome of summoning magic
     print("$ Routine_GainAcademyArtifacts")
     if     level == 10 then GiveArtifact(hero, ARTIFACT_BOOK_OF_POWER)
-    elseif level == 20 then GiveArtifact(hero, ARTIFACT_CHAIN_MAIL_OF_ENLIGHTMENT)
-    elseif level == 30 then GiveArtifact(hero, ARTIFACT_SANDALS_OF_THE_SAINT)
-    elseif level == 40 then GiveArtifact(hero, ARTIFACT_STAFF_OF_MAGI)
-    elseif level == 50 then GiveArtifact(hero, ARTIFACT_TOME_OF_SUMMONING_MAGIC)
+    elseif level == 20 then GiveArtifact(hero, ARTIFACT_SCALE_MAIL_OF_ENLIGHTMENT)
+    elseif level == 30 then GiveArtifact(hero, ARTIFACT_SANDALS_OF_THE_BLESSED)
+    elseif level == 40 then GiveArtifact(hero, ARTIFACT_STAFF_OF_THE_MAGISTER)
+    elseif level == 50 then GiveArtifact(hero, ARTIFACT_TOME_OF_NATURE)
     end
 end
 

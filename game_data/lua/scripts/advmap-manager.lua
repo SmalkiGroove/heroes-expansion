@@ -107,8 +107,45 @@ AFTER_COMBAT_ROUTINES = {
 }
 
 
+function WatchPlayer(player, wait)
+    if wait then
+        while (not IsPlayerCurrent(player)) do sleep(10) end
+    end
+    local tracker = {}
+    for _,hero in GetPlayerHeroes(player) do
+		local x,y,z = GetObjectPosition(hero)
+		tracker[hero] = {
+			[0] = GetHeroStat(hero, STAT_MANA_POINTS),
+			[1] = x, [2] = y, [3] = z,
+			[9] = not nil
+		}
+    end
+	startThread(UnblockGameTimer, player)
+    while (IsPlayerCurrent(player)) do
+		for _,hero in GetPlayerHeroes(player) do
+            ScanHeroArtifacts(hero)
+			if tracker[hero][9] then
+				if GetHeroStat(hero, STAT_MOVE_POINTS) == 0 then
+					if IsEqualPosition(hero, tracker[hero][1], tracker[hero][2], tracker[hero][3]) then
+						if HasHeroSkill(hero, PERK_MEDITATION) and GetHeroStat(hero, STAT_MANA_POINTS) > tracker[hero][0] then
+							print("Hero "..hero.." has used Meditation")
+							startThread(Routine_MeditationExp, player, hero)
+						else
+							print("Hero "..hero.." has used digging")
+							startThread(ActivateDigging, player, hero)
+						end
+						tracker[hero][9] = nil
+					end
+				end
+			end
+        end
+		sleep(30)
+	end
+end
+
 function PlayerDailyHandler(player, newweek)
 	while (not IsPlayerCurrent(player)) do sleep(10) end
+	BlockGame()
 	print("Player "..player.." turn started")
 	for i,hero in GetPlayerHeroes(player) do
 		local faction = GetHeroFactionID(hero)
@@ -214,4 +251,4 @@ InitializeCombatHook()
 InitializeConvertibles()
 
 print("Initializers done. The game can start. Have fun !")
-UnblockGame()
+-- UnblockGame()

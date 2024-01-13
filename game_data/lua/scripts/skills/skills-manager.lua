@@ -63,12 +63,14 @@ START_TRIGGER_SKILLS_ROUTINES = {}
 function AddHeroSkill(hero, skill, mastery)
     print("Hero "..hero.." has learnt skill '"..skill.."' at level "..mastery..".")
     if START_TRIGGER_SKILLS_ROUTINES[skill] then
+        local player = GetObjectOwner(hero)
         startThread(START_TRIGGER_SKILLS_ROUTINES[skill], player, hero, mastery)
     end
 end
 function RemoveHeroSkill(hero, skill, mastery)
     print("Hero "..hero.." has removed skill '"..skill.."' at level "..mastery..".")
     if START_TRIGGER_SKILLS_ROUTINES[skill] then
+        local player = GetObjectOwner(hero)
         startThread(START_TRIGGER_SKILLS_ROUTINES[skill], player, hero, mastery)
     end
 end

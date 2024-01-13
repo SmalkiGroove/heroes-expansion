@@ -9,7 +9,7 @@ end
 function Routine_GainArtifactBoots(player, hero)
     -- Give hero artifact Wayfarer boots
     print("$ Routine_GainArtifactBoots")
-    GiveArtifact(hero, ARTIFACT_WAYFARER_BOOTS)
+    GiveArtifact(hero, ARTIFACT_BOOTS_OF_THE_OPEN_ROAD)
 end
 
 function Routine_AddHeroCavaliers(player, hero)
@@ -66,7 +66,7 @@ function Routine_GainHavenArtifacts(player, hero, level)
     elseif level == 20 then GiveArtifact(hero, ARTIFACT_RING_OF_LIFE)
     elseif level == 30 then GiveArtifact(hero, ARTIFACT_GOLDEN_HORSESHOE)
     elseif level == 40 then GiveArtifact(hero, ARTIFACT_CROWN_OF_COURAGE)
-    elseif level == 50 then GiveArtifact(hero, ARTIFACT_TOME_OF_LIGHT_MAGIC)
+    elseif level == 50 then GiveArtifact(hero, ARTIFACT_TOME_OF_LIGHT)
     end
 end
 

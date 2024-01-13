@@ -198,30 +198,5 @@ function HeroLevelUp_Erika() HeroLevelUp(H_ERIKA) end
 function HeroLevelUp_Quroq() HeroLevelUp(H_QUROQ) end
 
 
-function WatchPlayer(player, wait)
-    if wait then
-        while (not IsPlayerCurrent(player)) do sleep(10) end
-    end
-
-    local tracker = {}
-    for _,hero in GetPlayerHeroes(player) do
-        if HasHeroSkill(hero, PERK_MEDITATION) then
-            tracker[hero] = GetObjectPosition(hero)
-            print(tracker[hero])
-        end
-    end
-
-    while (IsPlayerCurrent(player)) do
-		for _,hero in GetPlayerHeroes(player) do
-            ScanHeroArtifacts(hero)
-            if tracker[hero] then
-                print(GetObjectPosition(hero))
-            end
-        end
-		sleep(30)
-	end
-end
-
-
 -- print("Loaded hero trigger advmap routines")
 ROUTINES_LOADED[23] = 1
