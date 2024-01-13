@@ -150,11 +150,11 @@ function PlayerDailyHandler(player, newweek)
 	for i,hero in GetPlayerHeroes(player) do
 		local faction = GetHeroFactionID(hero)
 		startThread(DAILY_ROUTINES[faction], player, hero)
-		-- startThread(DAILY_ROUTINES[x_skills], player, hero)
+		startThread(DoSkillsRoutine_Daily, player, hero)
 		startThread(DoArtifactsRoutine_Daily, player, hero)
 		if newweek then
 			startThread(WEEKLY_ROUTINES[faction], player, hero)
-			-- startThread(WEEKLY_ROUTINES[x_skills], player, hero)
+			startThread(DoSkillsRoutine_Weekly, player, hero)
 			startThread(DoArtifactsRoutine_Weekly, player, hero)
 		end
 	end
@@ -229,7 +229,7 @@ function InitializeHeroes()
 	for player = 1,8 do
 		if (GetPlayerState(player) == 1) then
 			for i,hero in GetPlayerHeroes(player) do
-				-- print("Initialize hero "..hero)
+				print("Initialize hero "..hero)
 				local faction = GetHeroFactionID(hero)
 				startThread(ReplaceStartingArmy, hero)
 				startThread(BindHeroLevelUpTrigger, hero)
