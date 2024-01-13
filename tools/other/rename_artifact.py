@@ -6,7 +6,7 @@ visuals_path = "../../game_data/visuals"
 
 artifact_file_path = "GameMechanics/RefTables/Artifacts.xdb"
 
-excluded_ids = ["ARTIFACT_NONE", "GRAAL", "ARTIFACT_PRINCESS", "ARTIFACT_FREIDA", "ARTIFACT_EMERALD_SLIPPERS", "ARTIFACT_CURSED_RING", "ARTIFACT_RING_OF_THE_UNREPENTANT", "ARTIFACT_SANDALS_OF_THE_BLESSED"]
+excluded_ids = ["ARTIFACT_NONE", "GRAAL", "ARTIFACT_PRINCESS", "ARTIFACT_FREIDA"]
 
 def id_to_name(id):
     name = str("")
