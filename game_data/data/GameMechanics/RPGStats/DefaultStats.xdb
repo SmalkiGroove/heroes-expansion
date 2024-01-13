@@ -4535,7 +4535,7 @@
 	</SelectAttributeBuildings>
 	<ArtifactSets>
 		<Sets>
-			<!-- <Item>
+			<Item>
 				<Effect>ARTFSET_EFFECT_DRAGONISH</Effect>
 				<Artifacts>
 					<Item>
@@ -4579,401 +4579,401 @@
 						<CombinesAtBackpack>false</CombinesAtBackpack>
 					</Item>
 				</Artifacts>
-				<NameFileRef href="ArtifactSets/Dragonish_Name.txt"/>
-				<DescriptionFileRef href="ArtifactSets/Dragonish_Desc.txt"/>
+				<NameFileRef/>
+				<DescriptionFileRef/>
 				<CombinedDescriptionsFileRefs>
-					<Item href=""/>
-					<Item href="ArtifactSets/Dragonish_Desc2.txt"/>
-					<Item href="ArtifactSets/Dragonish_Desc2.txt"/>
-					<Item href="ArtifactSets/Dragonish_Desc4.txt"/>
-					<Item href="ArtifactSets/Dragonish_Desc4.txt"/>
-					<Item href="ArtifactSets/Dragonish_Desc6.txt"/>
-					<Item href="ArtifactSets/Dragonish_Desc6.txt"/>
-					<Item href="ArtifactSets/Dragonish_Desc8.txt"/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
 				</CombinedDescriptionsFileRefs>
 				<CombinedHeroClassBonusesDescs/>
 				<CombinedIcons>
 					<Item/>
-					<Item href="/Textures/HeroScreen/Artifacts/Dragon_Scale_Armor.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Artifacts/Dragon_Scale_Armor.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Artifacts/Dragon_Scale_Armor.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Artifacts/Dragon_Scale_Armor.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Artifacts/Dragon_Scale_Armor.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Artifacts/Dragon_Scale_Armor.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Artifacts/Dragon_Scale_Armor.xdb#xpointer(/Texture)"/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
 				</CombinedIcons>
 			</Item>
 			<Item>
 				<Effect>ARTFSET_EFFECT_DWARVEN</Effect>
 				<Artifacts>
 					<Item>
-						<Artifact>ARTIFACT_CUIRASS_OF_THE_DWARVEN_KINGS</Artifact>
+						<Artifact>ARTIFACT_NONE</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 					<Item>
-						<Artifact>ARTIFACT_GREAVES_OF_THE_DWARVEN_KINGS</Artifact>
+						<Artifact>ARTIFACT_NONE</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 					<Item>
-						<Artifact>ARTIFACT_HELM_OF_THE_DWARVEN_KINGS</Artifact>
+						<Artifact>ARTIFACT_NONE</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 					<Item>
-						<Artifact>ARTIFACT_SHIELD_OF_THE_DWARVEN_KINGS</Artifact>
+						<Artifact>ARTIFACT_NONE</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 				</Artifacts>
-				<NameFileRef href="ArtifactSets/Dwarven_Name.txt"/>
-				<DescriptionFileRef href="ArtifactSets/Dwarven_Desc.txt"/>
+				<NameFileRef/>
+				<DescriptionFileRef/>
 				<CombinedDescriptionsFileRefs>
-					<Item href=""/>
-					<Item href="ArtifactSets/Dwarven_Desc2.txt"/>
-					<Item href="ArtifactSets/Dwarven_Desc2.txt"/>
-					<Item href="ArtifactSets/Dwarven_Desc4.txt"/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
 				</CombinedDescriptionsFileRefs>
 				<CombinedHeroClassBonusesDescs>
 					<Item>
 						<HeroClass>HERO_CLASS_NONE</HeroClass>
-						<BonusDescFileRef href=""/>
+						<BonusDescFileRef/>
 					</Item>
 					<Item>
-						<HeroClass>HERO_CLASS_RUNEMAGE</HeroClass>
-						<BonusDescFileRef href="ArtifactSets/Dwarven_Desc2_Runemage.txt"/>
+						<HeroClass>HERO_CLASS_NONE</HeroClass>
+						<BonusDescFileRef/>
 					</Item>
 				</CombinedHeroClassBonusesDescs>
 				<CombinedIcons>
 					<Item/>
-					<Item href="/Textures/HeroScreen/Artifacts/Dwarven_Mithral_Cuirass.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Artifacts/Dwarven_Mithral_Cuirass.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Artifacts/Dwarven_Mithral_Cuirass.xdb#xpointer(/Texture)"/>
+					<Item/>
+					<Item/>
+					<Item/>
 				</CombinedIcons>
 			</Item>
 			<Item>
 				<Effect>ARTFSET_EFFECT_LIONS</Effect>
 				<Artifacts>
 					<Item>
-						<Artifact>ARTIFACT_CROWN_OF_COURAGE</Artifact>
+						<Artifact>ARTIFACT_NONE</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 					<Item>
-						<Artifact>ARTIFACT_CAPE_OF_KINGS</Artifact>
+						<Artifact>ARTIFACT_NONE</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 					<Item>
-						<Artifact>ARTIFACT_NECKLACE_OF_THE_EAGLE</Artifact>
+						<Artifact>ARTIFACT_NONE</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 				</Artifacts>
-				<NameFileRef href="ArtifactSets/Lions_Name.txt"/>
-				<DescriptionFileRef href="ArtifactSets/Lions_Desc.txt"/>
+				<NameFileRef/>
+				<DescriptionFileRef/>
 				<CombinedDescriptionsFileRefs>
-					<Item href=""/>
-					<Item href=""/>
-					<Item href="ArtifactSets/Lions_Desc3.txt"/>
+					<Item/>
+					<Item/>
+					<Item/>
 				</CombinedDescriptionsFileRefs>
 				<CombinedHeroClassBonusesDescs>
 					<Item>
 						<HeroClass>HERO_CLASS_NONE</HeroClass>
-						<BonusDescFileRef href=""/>
+						<BonusDescFileRef/>
 					</Item>
 					<Item>
-						<HeroClass>HERO_CLASS_KNIGHT</HeroClass>
-						<BonusDescFileRef href="ArtifactSets/Lions_Desc2_Knight.txt"/>
+						<HeroClass>HERO_CLASS_NONE</HeroClass>
+						<BonusDescFileRef/>
 					</Item>
 				</CombinedHeroClassBonusesDescs>
 				<CombinedIcons>
 					<Item/>
-					<Item href="/Textures/HeroScreen/Artifacts/Lion_Hide_Cape.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Artifacts/Lion_Hide_Cape.xdb#xpointer(/Texture)"/>
+					<Item/>
+					<Item/>
 				</CombinedIcons>
 			</Item>
 			<Item>
 				<Effect>ARTFSET_EFFECT_MAGIS</Effect>
 				<Artifacts>
 					<Item>
-						<Artifact>ARTIFACT_ROBE_OF_THE_MAGISTER</Artifact>
+						<Artifact>ARTIFACT_NONE</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 					<Item>
-						<Artifact>ARTIFACT_STAFF_OF_THE_MAGISTER</Artifact>
+						<Artifact>ARTIFACT_NONE</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 					<Item>
-						<Artifact>ARTIFACT_CROWN_OF_THE_MAGISTER</Artifact>
+						<Artifact>ARTIFACT_NONE</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 					<Item>
-						<Artifact>ARTIFACT_RING_OF_THE_MAGISTER</Artifact>
+						<Artifact>ARTIFACT_NONE</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 				</Artifacts>
-				<NameFileRef href="ArtifactSets/Magis_Name.txt"/>
-				<DescriptionFileRef href="ArtifactSets/Magis_Desc.txt"/>
+				<NameFileRef/>
+				<DescriptionFileRef/>
 				<CombinedDescriptionsFileRefs>
-					<Item href=""/>
-					<Item href="ArtifactSets/Magis_Desc2.txt"/>
-					<Item href="ArtifactSets/Magis_Desc2.txt"/>
-					<Item href="ArtifactSets/Magis_Desc4.txt"/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
 				</CombinedDescriptionsFileRefs>
 				<CombinedHeroClassBonusesDescs>
 					<Item>
 						<HeroClass>HERO_CLASS_NONE</HeroClass>
-						<BonusDescFileRef href=""/>
-					</Item>
-					<Item>
-						<HeroClass>HERO_CLASS_WIZARD</HeroClass>
-						<BonusDescFileRef href="ArtifactSets/Magis_Desc2_Wizard.txt"/>
-					</Item>
-					<Item>
-						<HeroClass>HERO_CLASS_WIZARD</HeroClass>
-						<BonusDescFileRef href="ArtifactSets/Magis_Desc2_Wizard.txt"/>
+						<BonusDescFileRef/>
 					</Item>
 					<Item>
 						<HeroClass>HERO_CLASS_NONE</HeroClass>
-						<BonusDescFileRef href=""/>
+						<BonusDescFileRef/>
+					</Item>
+					<Item>
+						<HeroClass>HERO_CLASS_NONE</HeroClass>
+						<BonusDescFileRef/>
+					</Item>
+					<Item>
+						<HeroClass>HERO_CLASS_NONE</HeroClass>
+						<BonusDescFileRef/>
 					</Item>
 				</CombinedHeroClassBonusesDescs>
 				<CombinedIcons>
 					<Item/>
-					<Item href="/Textures/HeroScreen/Artifacts/Staff_of_Magi.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Artifacts/Staff_of_Magi.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Artifacts/Staff_of_Magi.xdb#xpointer(/Texture)"/>
+					<Item/>
+					<Item/>
+					<Item/>
 				</CombinedIcons>
 			</Item>
 			<Item>
 				<Effect>ARTFSET_EFFECT_NECROMANCERS</Effect>
 				<Artifacts>
 					<Item>
-						<Artifact>ARTIFACT_CLOAK_OF_DEATHS_SHADOW</Artifact>
+						<Artifact>ARTIFACT_NONE</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 					<Item>
-						<Artifact>ARTIFACT_STAFF_OF_THE_NETHERWORLD</Artifact>
+						<Artifact>ARTIFACT_NONE</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 					<Item>
-						<Artifact>ARTIFACT_RING_OF_THE_UNREPENTANT</Artifact>
+						<Artifact>ARTIFACT_NONE</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 					<Item>
-						<Artifact>ARTIFACT_AMULET_OF_NECROMANCY</Artifact>
+						<Artifact>ARTIFACT_NONE</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 				</Artifacts>
-				<NameFileRef href="ArtifactSets/Necromancers_Name.txt"/>
-				<DescriptionFileRef href="ArtifactSets/Necromancers_Desc.txt"/>
+				<NameFileRef/>
+				<DescriptionFileRef/>
 				<CombinedDescriptionsFileRefs>
-					<Item href=""/>
-					<Item href="ArtifactSets/Necromancers_Desc2.txt"/>
-					<Item href="ArtifactSets/Necromancers_Desc2.txt"/>
-					<Item href="ArtifactSets/Necromancers_Desc4.txt"/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
 				</CombinedDescriptionsFileRefs>
 				<CombinedHeroClassBonusesDescs>
 					<Item>
 						<HeroClass>HERO_CLASS_NONE</HeroClass>
-						<BonusDescFileRef href=""/>
+						<BonusDescFileRef/>
 					</Item>
 					<Item>
-						<HeroClass>HERO_CLASS_NECROMANCER</HeroClass>
-						<BonusDescFileRef href="ArtifactSets/Necromancers_Desc2_Necromancer.txt"/>
+						<HeroClass>HERO_CLASS_NONE</HeroClass>
+						<BonusDescFileRef/>
 					</Item>
 					<Item>
-						<HeroClass>HERO_CLASS_NECROMANCER</HeroClass>
-						<BonusDescFileRef href="ArtifactSets/Necromancers_Desc2_Necromancer.txt"/>
+						<HeroClass>HERO_CLASS_NONE</HeroClass>
+						<BonusDescFileRef/>
 					</Item>
 					<Item>
-						<HeroClass>HERO_CLASS_NECROMANCER</HeroClass>
-						<BonusDescFileRef href="ArtifactSets/Necromancers_Desc4_Necromancer.txt"/>
+						<HeroClass>HERO_CLASS_NONE</HeroClass>
+						<BonusDescFileRef/>
 					</Item>
 				</CombinedHeroClassBonusesDescs>
 				<CombinedIcons>
 					<Item/>
-					<Item href="/Textures/HeroScreen/Artifacts/Necromancer_Pendant.(Texture).xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Artifacts/Necromancer_Pendant.(Texture).xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Artifacts/Necromancer_Pendant.(Texture).xdb#xpointer(/Texture)"/>
+					<Item/>
+					<Item/>
+					<Item/>
 				</CombinedIcons>
 			</Item>
 			<Item>
 				<Effect>ARTFSET_EFFECT_EDUCATIONAL</Effect>
 				<Artifacts>
 					<Item>
-						<Artifact>ARTIFACT_TURBAN_OF_ENLIGHTMENT</Artifact>
+						<Artifact>ARTIFACT_NONE</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 					<Item>
-						<Artifact>ARTIFACT_SCALE_MAIL_OF_ENLIGHTMENT</Artifact>
+						<Artifact>ARTIFACT_NONE</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 				</Artifacts>
-				<NameFileRef href="ArtifactSets/Educational_Name.txt"/>
-				<DescriptionFileRef href="ArtifactSets/Educational_Desc.txt"/>
+				<NameFileRef/>
+				<DescriptionFileRef/>
 				<CombinedDescriptionsFileRefs>
-					<Item href=""/>
-					<Item href="ArtifactSets/Educational_Desc2.txt"/>
+					<Item/>
+					<Item/>
 				</CombinedDescriptionsFileRefs>
 				<CombinedHeroClassBonusesDescs/>
 				<CombinedIcons>
 					<Item/>
-					<Item href="/Textures/HeroScreen/Artifacts/Helm_of_Enlightenment.xdb#xpointer(/Texture)"/>
+					<Item/>
 				</CombinedIcons>
 			</Item>
 			<Item>
 				<Effect>ARTFSET_EFFECT_HUNTERS</Effect>
 				<Artifacts>
 					<Item>
-						<Artifact>ARTIFACT_UNICORN_HORN_BOW</Artifact>
+						<Artifact>ARTIFACT_NONE</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 					<Item>
-						<Artifact>ARTIFACT_TREEBORN_QUIVER</Artifact>
+						<Artifact>ARTIFACT_NONE</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 				</Artifacts>
-				<NameFileRef href="ArtifactSets/Hunters_Name.txt"/>
-				<DescriptionFileRef href="ArtifactSets/Hunters_Desc.txt"/>
+				<NameFileRef/>
+				<DescriptionFileRef/>
 				<CombinedDescriptionsFileRefs>
-					<Item href=""/>
-					<Item href="ArtifactSets/Hunters_Desc2.txt"/>
+					<Item/>
+					<Item/>
 				</CombinedDescriptionsFileRefs>
 				<CombinedHeroClassBonusesDescs>
 					<Item>
 						<HeroClass>HERO_CLASS_NONE</HeroClass>
-						<BonusDescFileRef href=""/>
+						<BonusDescFileRef/>
 					</Item>
 					<Item>
-						<HeroClass>HERO_CLASS_RANGER</HeroClass>
-						<BonusDescFileRef href="ArtifactSets/Hunters_Desc2_Ranger.txt"/>
+						<HeroClass>HERO_CLASS_NONE</HeroClass>
+						<BonusDescFileRef/>
 					</Item>
 				</CombinedHeroClassBonusesDescs>
 				<CombinedIcons>
 					<Item/>
-					<Item href="/Textures/HeroScreen/Artifacts/Unicorn_Horn_Bow.xdb#xpointer(/Texture)"/>
+					<Item/>
 				</CombinedIcons>
 			</Item>
 			<Item>
 				<Effect>ARTFSET_EFFECT_OGRES</Effect>
 				<Artifacts>
 					<Item>
-						<Artifact>ARTIFACT_OGRE_CLUB</Artifact>
+						<Artifact>ARTIFACT_NONE</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 					<Item>
-						<Artifact>ARTIFACT_OGRE_SHIELD</Artifact>
+						<Artifact>ARTIFACT_NONE</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 				</Artifacts>
-				<NameFileRef href="ArtifactSets/Ogres_Name.txt"/>
-				<DescriptionFileRef href="ArtifactSets/Ogres_Desc.txt"/>
+				<NameFileRef/>
+				<DescriptionFileRef/>
 				<CombinedDescriptionsFileRefs>
-					<Item href=""/>
-					<Item href="ArtifactSets/Ogres_Desc2.txt"/>
+					<Item/>
+					<Item/>
 				</CombinedDescriptionsFileRefs>
 				<CombinedHeroClassBonusesDescs>
 					<Item>
 						<HeroClass>HERO_CLASS_NONE</HeroClass>
-						<BonusDescFileRef href=""/>
+						<BonusDescFileRef/>
 					</Item>
 					<Item>
-						<HeroClass>HERO_CLASS_BARBARIAN</HeroClass>
-						<BonusDescFileRef href="ArtifactSets/Ogres_Desc2_Barbarian.txt"/>
+						<HeroClass>HERO_CLASS_NONE</HeroClass>
+						<BonusDescFileRef/>
 					</Item>
 				</CombinedHeroClassBonusesDescs>
 				<CombinedIcons>
 					<Item/>
-					<Item href="/UI/H5A1/Icons/Artefacts/128x128/Ogre_Shield.(Texture).xdb#xpointer(/Texture)"/>
+					<Item/>
 				</CombinedIcons>
 			</Item>
 			<Item>
 				<Effect>ARTFSET_EFFECT_RUNIC</Effect>
 				<Artifacts>
 					<Item>
-						<Artifact>ARTIFACT_RUNIC_WAR_AXE</Artifact>
+						<Artifact>ARTIFACT_NONE</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 					<Item>
-						<Artifact>ARTIFACT_RUNIC_WAR_HARNESS</Artifact>
+						<Artifact>ARTIFACT_NONE</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 				</Artifacts>
-				<NameFileRef href="ArtifactSets/Runic_Name.txt"/>
-				<DescriptionFileRef href="ArtifactSets/Runic_Desc.txt"/>
+				<NameFileRef/>
+				<DescriptionFileRef/>
 				<CombinedDescriptionsFileRefs>
-					<Item href=""/>
-					<Item href="ArtifactSets/Runic_Desc2.txt"/>
+					<Item/>
+					<Item/>
 				</CombinedDescriptionsFileRefs>
 				<CombinedHeroClassBonusesDescs>
 					<Item>
 						<HeroClass>HERO_CLASS_NONE</HeroClass>
-						<BonusDescFileRef href=""/>
+						<BonusDescFileRef/>
 					</Item>
 					<Item>
-						<HeroClass>HERO_CLASS_SORCERER</HeroClass>
-						<BonusDescFileRef href="ArtifactSets/Runic_Desc2_Warlock.txt"/>
+						<HeroClass>HERO_CLASS_NONE</HeroClass>
+						<BonusDescFileRef/>
 					</Item>
 				</CombinedHeroClassBonusesDescs>
 				<CombinedIcons>
 					<Item/>
-					<Item href="/UI/H5A1/Icons/Artefacts/128x128/Runic_War_Axe.(Texture).xdb#xpointer(/Texture)"/>
+					<Item/>
 				</CombinedIcons>
 			</Item>
 			<Item>
 				<Effect>ARTFSET_EFFECT_DEMONIC</Effect>
 				<Artifacts>
 					<Item>
-						<Artifact>ARTIFACT_HELM_OF_CHAOS</Artifact>
+						<Artifact>ARTIFACT_NONE</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 					<Item>
-						<Artifact>ARTIFACT_RING_OF_THE_BROKEN_WILL</Artifact>
+						<Artifact>ARTIFACT_NONE</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 				</Artifacts>
-				<NameFileRef href="ArtifactSets/Demonic_Name.txt"/>
-				<DescriptionFileRef href="ArtifactSets/Demonic_Desc.txt"/>
+				<NameFileRef/>
+				<DescriptionFileRef/>
 				<CombinedDescriptionsFileRefs>
-					<Item href=""/>
-					<Item href="ArtifactSets/Demonic_Desc2.txt"/>
+					<Item/>
+					<Item/>
 				</CombinedDescriptionsFileRefs>
 				<CombinedHeroClassBonusesDescs>
 					<Item>
 						<HeroClass>HERO_CLASS_NONE</HeroClass>
-						<BonusDescFileRef href=""/>
+						<BonusDescFileRef/>
 					</Item>
 					<Item>
-						<HeroClass>HERO_CLASS_DEMON_LORD</HeroClass>
-						<BonusDescFileRef href="ArtifactSets/Demonic_Desc2_Demonlord.txt"/>
+						<HeroClass>HERO_CLASS_NONE</HeroClass>
+						<BonusDescFileRef/>
 					</Item>
 				</CombinedHeroClassBonusesDescs>
 				<CombinedIcons>
 					<Item/>
-					<Item href="/Textures/HeroScreen/Artifacts/Helm_of_Chaos.xdb#xpointer(/Texture)"/>
+					<Item/>
 				</CombinedIcons>
-			</Item> -->
+			</Item>
 		</Sets>
 	</ArtifactSets>
 	<MonstersArmy>
@@ -4992,7 +4992,7 @@
 		<Dragonish_6_AllStats>5</Dragonish_6_AllStats>
 		<Dragonish_8_Creature_Tier>7</Dragonish_8_Creature_Tier>
 		<Dragonish_8_Creature_Count>1</Dragonish_8_Creature_Count>
-		<Dwarven_2_Creature_MagicProofPercents>40</Dwarven_2_Creature_MagicProofPercents>
+		<Dwarven_2_Creature_MagicProofPercents>25</Dwarven_2_Creature_MagicProofPercents>
 		<Dwarven_2Dwarf_SpellpowerPercents>10</Dwarven_2Dwarf_SpellpowerPercents>
 		<Dwarven_4_Creature_SpellsBuffsTurns>10</Dwarven_4_Creature_SpellsBuffsTurns>
 		<Lions_2_HeroAttack_DeMorale>2</Lions_2_HeroAttack_DeMorale>
@@ -5008,12 +5008,12 @@
 		<Necromancers_4Necromancer_NecromancyCreatureCostDisountPercents>25</Necromancers_4Necromancer_NecromancyCreatureCostDisountPercents>
 		<Educational_2_GainExperienceBonusPercents>25</Educational_2_GainExperienceBonusPercents>
 		<Hunters_2_ShootersATBLessPercents>30</Hunters_2_ShootersATBLessPercents>
-		<Ogres_2_Creature_Attack>5</Ogres_2_Creature_Attack>
-		<Ogres_2_Creature_HitPoints>3</Ogres_2_Creature_HitPoints>
+		<Ogres_2_Creature_Attack>0</Ogres_2_Creature_Attack>
+		<Ogres_2_Creature_HitPoints>1</Ogres_2_Creature_HitPoints>
 		<Ogres_2Barbarian_HeroAttack_ATBLessPercents>30</Ogres_2Barbarian_HeroAttack_ATBLessPercents>
-		<Runic_2_AllStats>3</Runic_2_AllStats>
+		<Runic_2_AllStats>0</Runic_2_AllStats>
 		<Runic_2Warlock_ElementalVisionMultiplier>2</Runic_2Warlock_ElementalVisionMultiplier>
-		<Demonic_2_Attack>8</Demonic_2_Attack>
+		<Demonic_2_Attack>0</Demonic_2_Attack>
 		<Demonic_2DemonLord_GatingBonusPercents>25</Demonic_2DemonLord_GatingBonusPercents>
 	</ArtifactsSetsEffectsConsts>
 	<SlaveMarketConsts>
