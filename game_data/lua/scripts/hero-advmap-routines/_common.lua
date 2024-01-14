@@ -15,7 +15,7 @@ end
 
 
 function AddPlayer_Resource(player, hero, resource, amount)
-	-- print("Adding resources from hero "..hero)
+	print("$ AddPlayer_Resource")
 	if amount >= 1 then
 		local curamount = GetPlayerResource(player, resource)
 		local newamount = curamount + amount
@@ -25,6 +25,7 @@ function AddPlayer_Resource(player, hero, resource, amount)
 end
 
 function TakePlayer_Resource(player, resource, amount)
+	print("$ TakePlayer_Resource")
 	if amount >= 1 then
 		local curamount = GetPlayerResource(player, resource)
 		local newamount = curamount - amount
@@ -33,6 +34,7 @@ function TakePlayer_Resource(player, resource, amount)
 end
 
 function AddHero_StatAmount(player, hero, stat, amount)
+	print("$ AddHero_StatAmount")
     if amount ~= 0 then
 		ChangeHeroStat(hero, stat, amount)
 		ShowFlyingSign({"/Text/Game/Scripts/Stats/"..ATTRIBUTE_TEXT[stat]..".txt"; num=amount}, hero, player, FLYING_SIGN_TIME)
@@ -40,7 +42,7 @@ function AddHero_StatAmount(player, hero, stat, amount)
 end
 
 function AddHero_StatPerLevel(player, hero, stat, coef)
-	-- print("Adding statistics to hero "..hero)
+	print("$ AddHero_StatPerLevel")
 	local level = GetHeroLevel(hero)
 	local amount = trunc(coef * level)
 	if amount ~= 0 then
@@ -50,7 +52,7 @@ function AddHero_StatPerLevel(player, hero, stat, coef)
 end
 
 function AddHero_StatPercent(player, hero, stat, coef)
-	-- print("Adding statistics to hero "..hero)
+	print("$ AddHero_StatPercent")
 	local current = GetHeroStat(hero, stat)
 	local amount = round(coef * current)
 	if amount ~= 0 then
@@ -60,7 +62,7 @@ function AddHero_StatPercent(player, hero, stat, coef)
 end
 
 function AddHero_RandomSpell(player, hero, school, maxtier)
-	-- print("Adding random spell to hero "..hero)
+	print("$ AddHero_RandomSpell")
 	local spells = {}
 	if school == SPELL_SCHOOL_ANY then
 		for tier = 1,maxtier do
@@ -89,7 +91,7 @@ function AddHero_RandomSpell(player, hero, school, maxtier)
 end
 
 function AddHero_RandomSpellTier(player, hero, school, tier)
-	-- print("Adding random spell of tier "..tier.." to hero "..hero)
+	print("$ AddHero_RandomSpellTier")
 	local spells = {}
 	if school == SPELL_SCHOOL_ANY then
 		spells = SPELLS_BY_TIER[tier]
@@ -114,7 +116,7 @@ function AddHero_RandomSpellTier(player, hero, school, tier)
 end
 
 function AddHero_CreatureType(player, hero, type, coef)
-	-- print("Add specific creature to hero "..hero)
+	print("AddHero_CreatureType")
 	local level = GetHeroLevel(hero)
 	local nb = round(coef * level)
 	if nb >= 1 then
@@ -124,7 +126,7 @@ function AddHero_CreatureType(player, hero, type, coef)
 end
 
 function AddHero_CreatureInTypes(player, hero, types, coef)
-	-- print("Add creatures to hero "..hero)
+	print("$ AddHero_CreatureInTypes")
 	local level = GetHeroLevel(hero)
 	local nb = round(coef * level)
 	if nb >= 1 then
@@ -143,7 +145,7 @@ function AddHero_CreatureInTypes(player, hero, types, coef)
 end
 
 function AddHero_CreatureTypesPercent(player, hero, types, coef)
-	-- print("Multiply army size for hero "..hero)
+	print("$ AddHero_CreatureTypesPercent")
 	local level = GetHeroLevel(hero)
 	local army = GetHeroArmy(hero)
 	local total = 0
@@ -161,7 +163,7 @@ function AddHero_CreatureTypesPercent(player, hero, types, coef)
 end
 
 function AddHero_TownRecruits(player, hero, dwelling, creature, coef)
-	-- print("Adding recruits from hero "..hero)
+	print("AddHero_TownRecruits")
 	local level = GetHeroLevel(hero)
 	local towns = GetHeroTowns(player, hero)
 	local nb = round(coef * level)
@@ -177,7 +179,7 @@ function AddHero_TownRecruits(player, hero, dwelling, creature, coef)
 end
 
 function AddHero_CreatureFromDwelling(player, hero, dwelling, creature, coef)
-	-- print("Call creatures from towns to hero "..hero)
+	print("$ AddHero_CreatureFromDwelling")
 	local level = GetHeroLevel(hero)
 	local towns = GetHeroTowns(player, hero)
 	for i,town in towns do
@@ -194,7 +196,7 @@ function AddHero_CreatureFromDwelling(player, hero, dwelling, creature, coef)
 end
 
 function ChangeHero_TownRecruits(player, hero, dwelling1, creature1, dwelling2, creature2, amount)
-	-- print("Upgrade recuits from hero "..hero)
+	print("$ ChangeHero_TownRecruits")
 	local towns = GetHeroTowns(player, hero)
 	for i,town in towns do
 		if GetTownBuildingLevel(town, dwelling1) ~= 0 and GetTownBuildingLevel(town, dwelling2) ~= 0 then
@@ -211,6 +213,7 @@ function ChangeHero_TownRecruits(player, hero, dwelling1, creature1, dwelling2, 
 end
 
 function ChangeHero_CreatureUpgrade(player, hero, base, upgrade)
+	print("$ ChangeHero_CreatureUpgrade")
 	local nb = GetHeroCreatures(hero, base)
 	RemoveHeroCreatures(hero, base, nb)
 	AddHeroCreatures(hero, upgrade, nb)
@@ -218,6 +221,7 @@ function ChangeHero_CreatureUpgrade(player, hero, base, upgrade)
 end
 
 function ChangeHero_CreatureFusion(player, hero, base, consume, upgrade, coef)
+	print("$ ChangeHero_CreatureFusion")
 	local nb_base = GetHeroCreatures(hero,base)
 	local nb_consume = GetHeroCreatures(hero,consume)
 	if nb_consume >= coef then
@@ -231,6 +235,7 @@ function ChangeHero_CreatureFusion(player, hero, base, consume, upgrade, coef)
 end
 
 function ChangeHero_CreatureTransform(player, hero, array)
+	print("$ ChangeHero_CreatureTransform")
 	local army = GetHeroArmy(hero)
 	for i = 1,7 do
         local cr = army[i]
