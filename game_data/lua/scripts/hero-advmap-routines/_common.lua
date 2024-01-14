@@ -139,7 +139,7 @@ function AddHero_CreatureInTypes(player, hero, types, coef)
                 return
             end
         end
-		AddHeroCreatures(hero, types[0], nb)
+		AddHeroCreatures(hero, types[1], nb)
 		ShowFlyingSign({"/Text/Game/Scripts/Reinforcements.txt"; num=nb}, hero, player, FLYING_SIGN_TIME)
 	end
 end
