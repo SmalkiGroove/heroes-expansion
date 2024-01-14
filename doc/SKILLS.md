@@ -1,51 +1,55 @@
 # SKILLS DOCUMENTATION
 
 ### OFFENCE
-- __Tactics__ : Increases the area in which the hero can rearrange creatures before combat
-- __Offensive Formation__ : Attack of Dwarven creatures in hero's army increased when close to each other on the battlefield.
-- __Aura of Swiftness__ : Combat movement speed of all units in hero army is increased by +1.
-- __Archery__ : Increases damage dealt by hero's creatures in ranged combat by 20%.
-- __Elven Luck__ : The Luck bonus to damage is increased by 25%.
+- __Offensive Formation__ : Attack of creatures in hero's army increased when close to each other on the battlefield.
+- __Tactics__ : Increases the area in which the hero can rearrange creatures before combat.
+- __Swiftness__ : Combat movement speed of all units in hero army is increased by +1.
+- __Archery__ : Increases damage dealt by hero's creatures in ranged combat by 15%.
+- __Fatal Strikes__ : The bonus to damage of critical strikes is increased by 20%.
+- __Precision__ : Gain a permanent +2 Luck, increasing hero troops critical strike chances.
 
 ### DEFENSE
-- __Stand Your Ground__ : Troops under hero's control get an aditional +30% bonus to their defense carrying out the Defend command.
-- __Defensive Formation__ : Defense of Dwarven creatures in hero's army increased when close to each other on the battlefield.
+- __Defensive Formation__ : Defense of creatures in hero's army increased when close to each other on the battlefield.
+- __Hold Ground__ : Troops under hero's control get an aditional +30% bonus to their defense carrying out the Defend command.
 - __Preparation__ : All the creatures, while discharging the Defend command, will retaliate any enemy, which assaults them, first, even if the enemy has “No retaliation” ability. 
 Moreover, if the defending creature has “Unlimited Retaliation” ability, it will attack the enemy twice: Before and after it’s assault.
-- __Evasion__ : Decreases damage dealt to your creatures by ranged attacks by 20%.
-- __Protection__ : Decreases damage dealt to your creatures by magic attacks by 15%.
+- __Evasion__ : Decreases damage dealt to your creatures by ranged attacks by 15%.
+- __Seal of Protection__ : Hero gains +2 defense permanently.
 
 ### LEARNING
-- __Arcane Intuition__ : Allows hero to learn an unknown spell used by an enemy hero or creature in combat (hero must be able to learn the spell with regards to school, level, etc.) and to see the contents of the enemy inventory.
+- __Intuition__ : Allows hero to learn an unknown spell used by an enemy hero or creature in combat (hero must be able to learn the spell with regards to school, level, etc.) and to see the contents of the enemy inventory.
 - __Scholar__ : Allows hero to teach other heroes and learn from them, effectively trading spells between spell books.
-- __Mentoring__ : When this hero meets another friendly hero, the latter gains as much experience as he or she needs to have his or her experience become equal to 25 percent of that of the mentor’s (this is only effective if that hero has less experience originally).
-- __Arcane Exaltation__ : Delving deep into the secrets of spellcraft, hero gains +2 Spellpower permanently.
+- __Mentoring__ : When this hero meets another friendly hero, the latter gains as much experience as he or she needs to have his or her experience become equal to 30 percent of that of the mentor’s (this is only effective if that hero has less experience originally).
+- __Intelligence__ : Grants the hero +5 Knowledge permanently.
+- __Exaltation__ : Delving deep into the secrets of spellcraft, hero gains +5 Spellpower permanently.
 - __Meditation__ : Special adventure ability. Hero spends entire day to meditate, grating experience and full mana. Can only be used at the beginning of the day.
 
 ### SORCERY
-- __Arcane Training__ : Reduces casting costs of all spells by 20%.
-- __Refined Mana__ : Casters in hero army will spend only half the required mana cost to cast spells.
+- __Arcane Initiation__ : Reduces casting costs of all spells by 20%.
+- __Arcane Brillance__ : Casters in hero army will spend only half the required mana cost to cast spells.
 - __Arcane Excellence__ : Hero gains a permanent +4 Spellpower, and has +25% bonus to Initiative at start of combat.
 - __Magic Insight__ : Allows a hero to learn magic spells of the third circle regardless of actual skills in the respective schools of magic.
-- __Dark Revelation__ : Hero qualifies for additional free level up.
-- __Mana Regeneration__ : Doubles mana regeneration
+- __Graduate__ : Hero gains a permanent +3 Knowledge and qualifies for additional level up.
+- __Occultism__ : The hero learns forbidden magic powers, granting him or her +6 Spellpower and twice faster Mana regeneration.
 
 ### VOICE
-- __Shout Training__ : All Warcries cost 20% less mana.
-- __Shout of Rage__ : The troops gain twice as more Rage points from Warcries used by the hero (but 1.5 more for the Call of Blood Warcry).
-- __Mighty Shout__ : When the effect from the Warcry is calculated, the Barbarian hero’s level is considered as being greater by 5 than its actual value.
+- __Voice Training__ : All Warcries cost 20% less mana.
+- __Bloodlust__ : The troops gain twice as more Rage points from Warcries used by the hero (but 1.5 more for the Call of Blood Warcry).
+- __Mighty Shout__ : When the effect from the Warcry is calculated, the Barbarian hero’s level is considered as being greater by 10 than its actual value.
 - __Might Over Magic__ : Decreases enemy Spellpower in combat in proportion of your Spellpower.
-- __Distract__ : Enemy hero will receive 20% penalty to Initiative after casting any spell in combat.
-- __Luck Of The Barbarian__ : The hero’s army gets +5% Magic Proof for every point of Luck.
+- __Distract__ : Enemy hero will receive 15% penalty to Initiative after casting any spell in combat.
+- __Pain Killer__ : The hero’s troops get a chance to avoid enemy spells.
 
 ### LEADERSHIP
 - __Diplomacy__ : Allows hero to effectively negotiate with hostile creatures. Increases chances and reduces costs of creatures that wish to join your army.
-- __Divine Guidance__ : The hero receives the special combat ability to encourage his troops on a battlefield, making their turns come faster.
+- __Motivation__ : Hero pactices his or her speeches skills to improve the Morale of his or her troops in combat by +1.
+- __Encourage__ : The hero receives the special combat ability to encourage his troops on a battlefield, making their turns come faster.
 - __Last Stand__ : All troops under hero's control are blessed with amazing vitality. If enemy creatures attack the hero's troops and kill them all, the last of the troops will survive the attack with 1 hit point.
 
 ### GOVERNANCE
 - __Estates__ : Hero contributes 250 gold pieces per day to your cause.
-- __Resourcefulness__ : In the course of adventures the hero tends to find more gold and resources and be more lucky overall.
+- __Geology__ : The hero finds more gold and resources on the map.
+- __Industry__ : The hero doubles the production of sawmills, ore pits, alchemist labs, sulfur deposits, crystal caverns, gem and any other mines when standing at their entrance at the start of the day.
 
 ### LOGISTICS
 - __Pathfinding__ : Reduces penalty for moving through rough terrain by 50%.
@@ -53,51 +57,169 @@ Moreover, if the defending creature has “Unlimited Retaliation” ability, it will
 - __Snatch__ : The hero spends no movement points to pick up resources, access buildings or boats and other similar actions.
 - __Recruitment__ : Increases weekly growth of 1st, 2nd and 3rd level creatures by +3, +2 and +1 respectively. Hero must be stationed within the friendly town on the last day of the week for effect to take place.
 - __Spoils of War__ : After every combat won, the hero earns a certain amount of money and resources, in proportion to the hiring costs of all killed enemy creatures.
-- __Warpath__ : The hero gets 100 additional movement points for every victory on the map.
+- __Warpath__ : The hero gets additional movement points for every victory on the map.
 
 ### ARMY_SUPPORT
-- __Ballista__ : Allows manual control of the Ballista. Ballista gains one extra shot. Restores the Ballista after the battle if it was destroyed
-- __Flaming Arrows__ : Ballista under hero's command negates enemy defense and deals additional elemental fire damage. Destroyed ballista will be restored in hero's army after combat.
-- __First Aid__ : Allows manual control of the First Aid Tent. Restores the First Aid Tent after the battle if it was destroyed
+- __Ballistics__ : Allows manual control of the Ballista. Restores the Ballista after the battle if it was destroyed.
+- __Flaming Arrows__ : Ballista under hero's command negates enemy defense and deals 50 additional elemental fire damage.
+- __Rapid Fire__ : Ballista gains an extra shot.
+- __Anatomy__ : Allows manual control of the First Aid Tent. Restores the First Aid Tent after the battle if it was destroyed.
+- __Technical Staff__ : Increases initiative of all war machines by +3.
+- __Houndmasters__ : An amount of Wolves are added to the hero's army now and each day, depending on the number of the week.
 
 ### TRAINING
-- __Nature's Wrath__ : All Sylvan creatures in Ranger's army gain +1 to maximum damage.
-- __Vitality__ : Increases hit points of all your creatures by 2 (Particularly effective for large armies)
-- __Battle Frenzy__ : Minimum and maximum damage inflicted by each creature under hero's control is increased by 1. Especially effective for armies of low level creatures.
-- __Soldier's Luck__ : Guarantees that useful combat abilities of creatures in hero's army (like Squires's  Bash, for example) will trigger more often.
+- __Toughness__ : Increases hit points of all your creatures by 2.
+- __Battle Frenzy__ : Minimum and maximum damage inflicted by each creature under hero's control is increased by 1.
+- __Warm Up__ : Hero troops start combats with doubled Attack and Defense, and 50% magic-proof.
+- __Expertise__ : Combat abilities of creatures in hero's army (like Bash or Blinding Attack) have twice more chance to trigger.
 - __Magic Resistance__ : Increases magic resistance of all creatures in hero's army by 15%. Creatures are more likely to avoid enemy magic.
-- __Dwarven Luck__ : Twice more chance to resist enemy spell
+- __Determination__ : Creatures in hero's army have wice more chance to resist enemy spells.
+
+### COMBAT
+- __Coordination__ : Links a hero with a selected creature in his army. Every time this creature performs an attack, the hero will assault the same target. The hero's attack is by 3 his levels more powerful than usual and has additional chance to inflict a critical hit.
+- __Stunning Blow__ : Every standard hero’s attack moves the target back along the ATB bar for 0.2 points.
+- __Mark of the Damned__ : The hero receives special combat ability to punish the target enemy creature with a powerful strike if that creature is about to attack, retaliate or cast any spell. Once declared, Mark of the Damned is active until the end of combat.
+- __Weakening Strike__ : Any standard hero's attack applies the effect of Suffering spell to the target.
+- __Critical Strike__ : Critical Strike improves the hero's attack ability. There's a 40% chance that an attack performed by the hero will deal double damage to a target.
+
+### SHATTER_MAGIC
+- __Back to the Void__ : All creatures led by the hero inflict triple damage to summoned enemies.
+- __Suppress Light__ : Enemy hero is forced to spend twice more mana to cast Light Magic spells in combat.
+- __Suppress Dark__ : Enemy hero is forced to spend twice more mana to cast Dark Magic spells in combat.
+- __Protection__ : Decreases damage dealt to your creatures by magic attacks by 15%.
+- __Sap Magic__ : Damage dealt by enemy spells is reduced by 20%.
+- __Mana Burst__ : The hero calls upon the forces of fire to affect enemy casters. Any time an enemy creature casts a spell it will receive damage 10 times the hero's level.
 
 ### LIGHT_MAGIC
-- __Master of Blessings__ : Grants mass effects to Divine Strength and area effect to Cleansing spells, but doubles the casting cost of these spells. Hero wastes only a halve of his current initiative to cast these spells
-- __Master of Abjuration__ : Grants mass effects to Deflect Missile and Endurance spells, but doubles the casting cost of these spells. Hero wastes only a halve of his current initiative to cast these spells
-- __Master of Wrath__ : Grants mass effects to Righteous Might and Haste spells, but doubles the casting cost of these spells. Hero wastes only a halve of his current initiative to cast these spells. Adds +4 to effective spellpower of Holy Word spell.
-- __Fire Resistance__ : Creatures under Hero's control receive only 50% damage from all fire spells attacks and are immune to armor damaging effects of Master of Fire ability.
-- __Eternal Light__ : Hero’s light spells are twice harder to dispel. Opposite spells (like Slow versus Haste) applied by an enemy to Hero’s creatures have 50% chance to fail.   
+- __Master of Abjuration__ : Grants mass effects to Deflect Missile and Endurance spells, for double the casting cost of these spells.
+- __Eternal Light__ : Hero’s light spells are twice harder to dispel. Opposite spells (like Slow versus Haste) applied by an enemy to Hero’s creatures have 50% chance to fail.
 
-- __Counterspell__ : Special combat ability. Negates all effects of the next spell cast by the enemy, but drains twice the mana cost of that spell.
+- __Counterspell__ : Special combat ability. Negates all effects of the next spell cast by the enemy, but drains mana equal to 10% more than the original cost of that spell.
+- __Master of Wrath__ : Grants mass effects to Righteous Might and Haste spells, for double the casting cost of these spells. Adds +4 to effective spellpower of Holy Word spell.
+- __Fire Resistance__ : Creatures under Hero's control receive only 50% damage from all fire spells attacks and are immune to armor damaging effects of Blaze Power ability.
 
 ### DARK_MAGIC
-- __Master of Curses__ : Grants mass effects to Weakness and Suffering spells, but doubles the casting cost of these spells. Hero wastes only a halve of his current initiative to cast these spells
-- __Master of Pain__ : Grants area effects to Decay and Vulnerability spells, but doubles the casting cost of these spells. Hero wastes only a halve of his current initiative to cast these spells. Adds +4 to effective spellpower of  Unholy Word spell.
-- __Master of Mind__ : Grants mass effects to Slow and Confusion spells, but doubles the casting cost of these spells. Hero wastes only a halve of his current initiative to cast these spells
+- __Master of Curses__ : Grants mass effects to Weakness and Suffering spells, for double the casting cost of these spells.
+- __Consume Corpse__ : The hero receives special combat ability to consume corpses of fallen creatures to restore mana. Consumed corpses disappear from the battlefield.
+- __Pariah__ : Troops under hero's control suffer -1 penalty to morale, but all Dark Magic spells cast by the hero are now more powerful (effective Spellpower is +5 for casting those spells).
+- __Master of Pain__ : Grants area effects to Decay and Rupture spells, for double the casting cost of these spells. Adds +4 to effective spellpower of Unholy Word spell.
+- __Spirit Link__ : Grants a hero the ability to tie his or her own spirit to the spirits of any creatures on the battlefield until the end of combat. If linked creatures receive any damage the hero will gain some mana, feeding upon those creatures' suffering.
 - __Plague Tent__ : The hero's First Aid Tent receives an ability to damage enemy creatures.
-- __Mark of the Necromancer__ : Grants a Necromancer the ability to tie his or her own spirit to the spirits of any creatures on the battlefield until the end of combat. If linked creatures receive any damage the Necromancer will gain some mana, feeding upon those creatures' suffering.
-- __Fallen Knight__ : Dedicated to learning all the secrets of Dark Magic, the Knight becomes a pariah among his or her own kind. Troops under knight's control suffer -1 penalty to morale, but all Dark Magic spells cast by the Knight are now more powerful (effective Spellpower is +5 for casting those spells).
 
 ### NATURAL_MAGIC
-- __Master of Conjuration__ : Makes Conjure Phoenix and Summon Elementals spells more powerful (effective Spellpower is increased by 4 for casting those spells).
+- __Conjurer__ : Makes Conjure Phoenix and Summon Elementals spells more powerful (effective Spellpower is increased by 4 for casting those spells).
 - __Elemental Balance__ : Superb knowledge of summoning magic allows the hero to counterbalance the combat situation when battling against skilled summoners. Each time the enemy uses the Summon Elementals spell, a small group of elementals of opposite aligment is automatically summoned to fight for the hero's cause.
-- __Corrupted Soil__ : The hero calls upon forces of nature to affect enemy melee-attacking creatures. Any time an enemy creature moves it will receive some damage. Inflicted damage equals hero's level.
+- __Warriors of the Magma__ : Hero casts of the Summon Elementals spell will always summon Fire Elementals.
+At the start of each week, new Fire Elementals will permanently join hero's army.
+- __Warriors of the Sea__ : Hero casts of the Summon Elementals spell will always summon Water Elementals.
+At the start of each week, new Water Elementals will permanently join hero's army.
+- __Warriors of the Mountain__ : Hero casts of the Summon Elementals spell will always summon Earth Elementals.
+At the start of each week, new Earth Elementals will permanently join hero's army.
+- __Warriors of the Sky__ : Hero casts of the Summon Elementals spell will always summon Air Elementals.
+At the start of each week, new Air Elementals will permanently join hero's army.
+- __Scorching Earth__ : The hero calls upon forces of nature to affect enemy melee-attacking creatures. Any time an enemy creature moves it will receive some damage.
 - __Fog Veil__ : The Hero calls upon the forces of nature to affect enemy ranged-attacking creatures. Initiative of all enemy shooters is decreased by 10% and their damage is decreased by 10%.
-- __Storm Wind__ : The hero calls upon the forces of nature to affect enemy flying creatures. Initiative and Speed of all enemy flyers is decreased by 1.
+- __Storm Wind__ : The hero calls upon the forces of nature to affect enemy flying creatures. All enemy flyers have their Speed decreased by 1 and their initiative by 2.
 
 ### DESTRUCTIVE_MAGIC
-- __Master of Ice__ : Grants freezing effect to Ice Bolt, Circle of Winter and Deep Freeze spells.
-- __Cold Death__ : Makes Hero’s casting of the spells Ice Bolt ,Circle of Winter and Deep Freeze more powerful. Those spells will always deal the damage required to kill at least one creature in the target stack (if that creature has no Immunity to Cold) in addition to the normal spell damage.
-- __Cold Steel__ : The hero enhances weapons of all troops in his or her army to strike with additional ice powers (Not only undead creatures receive these enchantments).
-- __Master of Fire__ : Grants armor-damaging effect to Fireball, Firewall and Armageddon spells. Creatures affected by these spells suffer additional -50% defence penalty.
-- __Ignite__ : Fire spells casted by the hero in combat will ignite enemies, inflicting 100% of current spell damage to the target during next 3 rounds.
-- __Dark Renewal__ : Should it happen that any magic spell is resisted by target, the hero gains back all the mana spent to cast that spell.
+- __Frost Power__ : Grants freezing effect to Ice Bolt, Circle of Winter and Deep Freeze spells, delaying target creature's turn by 1 turn.
+- __Deadly Cold__ : Makes Hero’s casting of the spells Ice Bolt, Circle of Winter and Deep Freeze more powerful. Those spells will deal additional damage to kill one creature in the target stack (if that creature has no Immunity to Cold).
+- __Cold Steel__ : The hero enhances weapons of all troops in his or her army to strike with 10% additional ice damages.
+- __Blaze Power__ : Grants armor-damaging effect to Fireball, Firewall and Armageddon spells. Creatures affected by these spells suffer additional -50% defence penalty.
+- __Ignite__ : Fire spells casted by the hero in combat will ignite enemies, inflicting 50% of current spell damage to the target during next 2 rounds.
+- __Secrets of Destruction__ : Grants the hero +5 Spellpower.
+Should it happen that any magic spell is resisted by target, the hero gains back all the mana spent to cast that spell.
 
 ### COURAGE
+- __Prayer__ : The hero receives special combat ability to temporarily raise the morale, initiative, attack and defense of his troops (doesn't work on undead and mechanical).
+- __Empathy__ : Each time when the Morale effect is triggered with any of the creatures in the hero’s army, the hero moves 10% forward along the ATB bar. Accordingly, when a negative Morale effect is triggered, the hero moves 10% back.
+- __Guardian Angel__ : When all the knight’s troops fall dead in combat, an Angel, summoned on a field of battle, resurrects the most powerful group of dead creatures and disappears.
+- __Expert Trainer__ : Troop training in Haven towns costs 35% less than normal. Hero must be stationed within the town with Training Grounds built for this effect to take place.
+- __Retaliation Strike__ : The hero receives special combat ability to guard any selected creature in his army until the end of combat by inflicting direct damage to every enemy that is attacking this guarded creature.
+- __Holy Charge__ : Hero's Retaliation Strike ability inflicts triple damage.
+
+### AVENGER
+- __Imbue Arrow__ : Allows Ranger to enhance his or her arrows with attacking or cursing spells. All Ranger's attacks (Multishot or Deadeye Shot) will now not only inflict damage upon enemy creatures but also will immediately cast an imbued spell, draining Ranger's mana. Imbue Arrow lasts till the end of the fight or untill all Ranger's mana is drained.
+- __Imbue Ballista__ : Imbue Arrow ability will now affect Ballista as well. All Ballista shots will carry hero's enchantments and therefore drain hero's mana.
+- __Battle Commander__ : Adds +2 to hero's Attack and Defense and +1 to Morale.
+War Dancers join the Ranger's army to fight for his or her cause now and at the start of each week.
+- __Deadeye Shot__ : Grants hero an ability to attack any enemy creatures on battlefield with the power of 3 more levels. If that creature is present in hero's favorite enemy list then the critical strike is fulfilled, the damage is doubled and it always kills at least one creature.
+- __Know Your Enemy__ : The chance of inflicting a critical hit using "Avenger" skill is increased by +10%.
+Non-sylvan creatures in hero's army can be exchanged for experience.
+- __Rage of the Forest__ : All creatures in hero's army are permanently under the effect of Rage of the Forest and gain +1 to maximum damage.
+
+### RUNELORE
+- __Fine Rune__ : There is a 50% chance of not using up resources on rune activation.
+- __Refresh Rune__ : Allows a previously placed rune (random if many) to be refreshed on selected creature prolonging its effect, wasting only 50% of current Initiative on this action.
+- __Greater Rune__ : Allows the same rune to be activated for the second time for triple resource cost.
+- __Tap Runes__ : Regains some mana (depending on Knowledge) each time any rune is used.
+- __Runic Attunement__ : Increases creature morale by +2 for two turns after rune casting.
+- __Runic Shield__ : Hero receives Celestial Shield spell and +5 effective Spellpower when casting it.
+
+### ARTIFICIER
+- __March of the Golems__ : All golems under hero's command have their speed and initiative increased by +2.
+- __Artificial Glory__ : War Machines and Golems are now affected by positive morale effects (negative morale does not apply).
+- __Remote Control__ : At the beginning of the combat one of the enemy War Machines comes under your control.
+- __Consume Artifact__ : Special combat ability. Allows hero to consume artifacts equipped on friendly creatures to heal and resurrect it in combat.
+- __Magic Bond__ : Special combat ability. Caster binds himself to the target with Magic Bond until the end of combat so that each subsequent spell striking that target has its effect doubled and costs as much mana as needed for this double effect. Moreover every spell striking another creature will affect this target as well. If there is not enough mana - effect is not doubled.
+- __Magic mirror__ : Every damaging or cursing spell cast by the enemy has a chance to be randomly reflected to some other target, including enemy units.
+
+### ARCANISM
+- __Empowered spells__ : Hero learns an empowered version of Destruction spells. Those spells deal 50% more damage, but the mana cost is doubled.
+- __Erratic Mana__ : Mana cost of spells cast by the hero is randomly reduced by up to 30% (actual reduction is determined while casting is in progress).
+- __Lucky Spells__ : Luck rolls will now be applied to destructive spells cast by the hero, thus allowing a chance for double damage from spells.
+- __Power of Stone__ : Hero acquires Mass Endurance spell on advanced level.
+- __Power of Speed__ : Hero acquires Mass Haste spell on advanced level.
+- __Teleport Assault__ : Hero acquires Teleportation spell and the ability to cast it with assault effect, increasing the initiative of creature being teleported.
+
+### NECROMANCY
+- __Chilling Bones__ : Enhances all undead troops under Necromancer's control with powerful ice enchantments. Any enemy creature which engages in melee combat with those troops will receive ice damage equal to 10% of damage dealt.
+- __Spellproof Bones__ : Damage inflicted by any Destructive Magic spells to all troops under Necromancer's command is reduced by 20% .
+- __Herald Of Death__ : All neutral creatures which join the hero's army will be automatically transformed into the undead creatures of their respective level.
+Moreover, hero generates 1 Gold per day for each Skeleton it his or her army.
+- __Banshee Howl__ : Grants a hero an ability to call upon death itself in combat. All enemy living creatures receive -1 to morale, luck and -10% on initiative.
+- __Haunting__ : After capturing an enemy mine the hero is able to haunt it. Some Ghosts will appear in mine's garrison, the number of summoned Ghosts depends upon the number of the week. All mines under hero's control will also produce new Ghosts each week.
+- __Lord of the Undead__ : The Necromancer receives +3 to Spellpower and Knowledge due to his or her intimate understanding of Death. The Necromancy skill is also increased by 10%.
+
+### GATING
+- __Swift Gating__ : Demonic creatures spend only 25% of their combat initiative to perform Gating.
+- __Gate Master__ : Gating ability becomes more potent, bringing 20% more reinforcements than normal.
+- __Swarming Gate__ : There's a 15-30% chance that the gated stack will summon twice as many reinforcements as normal (requires positive Luck).
+- __Hellfire__ : Creatures under hero's control are granted a 30% chance to deal additional fire damage on attack. Hellfire drains the hero's mana.
+- __Searing Fires__ : Searing Fires improves Hellfire ability. Fire damage dealt to enemy creatures by Hellfire ability is increased by 50%.
+- __Fiery Wrath__ : When attacking, the troops led by the hero will inflict an additional Fire damage that equals to 10% of the damage inflicted by this attack. (Enemies who have Immunity to Fire suffer no additional damage).
+
+### BLOOD_RAGE
+- __Memory Of Our Blood__ : All Stronghold creatures in the hero's army get from 50 up to 100 rage points (randomly) at the beginning of combat.
+- __Battle Elation__ : Every time when a Morale effect is triggered with a creature in the hero’s army, it gains 50 Rage points.
+- __Bloodfire__ : Every time when a creature in the hero’s army gets Rage, it gets 50% more than usual. But if a creature loses Rage, it loses 1.5 of the usual amount, too.
+- __Goblin Support__ : If there is an Ammo Cart in the hero’s army, there will be 3 Goblins joining his army every day.
+- __Defend Us All__ : This increases the hero’s Defense by +2 and grants him a reinforcement of Goblins depending on the amount of Warriors in the army. Moreover new Goblins and Warriors will join the hero's army at the start of each week.
+- __Sheer Strength__ : The hero gains +2 Attack and Defense and creatures in his army gain 10% bonus health.
+
+### SPIRITISM
+- __Witchcraft__ : Adds +2 to hero's Spellpower permanently. Hero also receives a new spell in his or her spell book.
+- __Exorcism__ : The hero obtains a combat ability that deals heavy damage to summoned enemy creatures.
+The damage is equal to 50 per hero level.
+- __Rage Awakening__ : The Shaman lays aside the exploration of the powers of magic to access the Blood Rage.
+<color_default>
+The hero will not be able to learn any new spell.
+
+### INNATES
+- __Familiar Land__ : All creatures in hero's army receive +1 movement speed if the battle is taking place on grass terrain.
+- __Silent Tracker__ : The enemy will see only the strongest creature in hero's army with no number at all. Also this ability allows to see courage of neutral monsters and enlarges hero's field of view by 12 tiles.
+- __Tenacity__ : Enemy Dark Magic spells will be cast with 20% less effective Spellpower.
+- __Infusion__ : The hero gains +2 Spellpower permanently and +100 temporary mana.
+- __Elemental Vision__ : Allows hero to see elements on enemy creatures so that Destructive Magic spells cast by the hero can inflict additional elemental damage.
+- __Eternal Servitude__ : The hero receives an ability to raise some of the fallen undead creatures in his or her army after combat.
+- __Siege__ : All hero's troops gain +3 speed during the siege of an enemy castle, and the Catapult gains an extra shot.
+
+### ULTIMATE
+- __Retribution__ : The troops led by the hero inflict additional melee and ranged damage if their Morale is above zero (+5% for each point of Morale).
+- __Nature's Luck__ : Units in hero army always have luck rolled on attacks.
+- __Absolute Protection__ : Normal attacks against hero's creatures are always unlucky. Lucky attacks are turned to normal. If enemy has Absolute Luck perk, effects of both perks are nullified.
+- __Omniscience__ : All spells that are in existance will be written to hero's spellbook and hero will be able to cast them on expert level.
+- __Rage of the Elements__ : Elemental chain effects inflict double damage.
+- __Dead Man's Curse__ : The hero has gained an ability to affect the Luck of enemy creatures. The Luck of all enemy troops is decreased by 1.
+- __Urgash's Call__ : Gating becomes instant.
+- __Orcish Fury__ : All stronghold creatures in hero’s army get additional 500 points of rage at the beginning of combat.

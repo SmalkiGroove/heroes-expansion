@@ -1016,8 +1016,8 @@ SKILLS:
     name: ''
     desc: ''
     perks:
-      - TACTICS
       - OFFENSIVE_FORMATION
+      - TACTICS
       - SWIFTNESS
       - ARCHERY
       - FATAL_STRIKES
@@ -1026,12 +1026,12 @@ SKILLS:
     name: ''
     desc: ''
     perks:
-      - HOLD_GROUND
       - DEFENSIVE_FORMATION
+      - HOLD_GROUND
       - PREPARATION
       - EVASION
-      - PROTECTION
-      - COVER
+      - SEAL_OF_PROTECTION
+      # - DEFENSE_TODO1
   LEARNING:
     name: ''
     desc: ''
@@ -1067,8 +1067,8 @@ SKILLS:
     desc: ''
     perks:
       - DIPLOMACY
-      - LEADERSHIP_TODO1
-      - CHARISMA
+      # - LEADERSHIP_TODO1
+      # - CHARISMA
       - MOTIVATION
       - ENCOURAGE
       - LAST_STAND
@@ -1079,9 +1079,9 @@ SKILLS:
       - ESTATES
       - GEOLOGY
       - INDUSTRY
-      - GEAR_UP
-      - HEROES_LEGACY
-      - MYTHS_AND_LEGENDS
+      # - GEAR_UP
+      # - HEROES_LEGACY
+      # - MYTHOLOGY
   LOGISTICS:
     name: ''
     desc: ''
@@ -1098,17 +1098,17 @@ SKILLS:
     perks:
       - BALLISTICS
       - FLAMING_ARROWS
-      - RAPID_FIRE
+      - RAPIDFIRE
       - ANATOMY
-      - FIELD_ENGINEERS
-      - ARMY_SUPPORT_TODO1
+      - TECHNICAL_STAFF
+      - HOUNDMASTERS
   TRAINING:
     name: ''
     desc: ''
     perks:
-      - RAGE_OF_THE_FOREST
       - TOUGHNESS
       - BATTLE_FRENZY
+      - WARM_UP
       - EXPERTISE
       - MAGIC_RESISTANCE
       - DETERMINATION
@@ -1116,43 +1116,52 @@ SKILLS:
     name: ''
     desc: ''
     perks:
-      - CRITICAL_STRIKE
+      - COORDINATION
       - STUNNING_BLOW
-      - AVENGING_STRIKE
-      - POWERFUL_BLOW
-      - COMBAT_TODO1
-      - COMBAT_TODO2
-      - COMBAT_TODO3
+      # - COMBAT_TODO1
+      - MARK_OF_THE_DAMNED
+      - WEAKENING_STRIKE
+      - BRUTALITY
+  SHATTER_MAGIC:
+    name: ''
+    desc: ''
+    perks:
+      - BACK_TO_THE_VOID
+      - SUPRESS_LIGHT
+      - SUPRESS_DARK
+      - PROTECTION
+      - SAP_MAGIC
+      - MANA_BURST
   LIGHT_MAGIC:
     name: ''
     desc: ''
     perks:
-      - MASTER_OF_BLESSINGS
       - MASTER_OF_ABJURATION
-      - MASTER_OF_WRATH
-      - FIRE_RESISTANCE
       - ETERNAL_LIGHT
       - COUNTERSPELL
+      - MASTER_OF_WRATH
+      - FIRE_RESISTANCE
+      # - LIGHT_TODO1
   DARK_MAGIC:
     name: ''
     desc: ''
     perks:
       - MASTER_OF_CURSES
-      - MASTER_OF_PAIN
-      - MASTER_OF_MIND
-      - PLAGUE_TENT
-      - SPIRIT_LINK
+      - CONSUME_CORPSE
       - PARIAH
+      - MASTER_OF_PAIN
+      - SPIRIT_LINK
+      - PLAGUE_TENT
   NATURAL_MAGIC:
     name: ''
     desc: ''
     perks:
       - CONJURER
       - ELEMENTAL_BALANCE
-      - SPIRIT_OF_THE_MAGMA
-      - SPIRIT_OF_THE_TORRENT
-      - SPIRIT_OF_THE_MOUNTAIN
-      - SPIRIT_OF_THE_HURRICANE
+      - WARRIORS_OF_THE_MAGMA
+      - WARRIORS_OF_THE_SEA
+      - WARRIORS_OF_THE_MOUNTAIN
+      - WARRIORS_OF_THE_SKY
       - SCORCHING_EARTH
       - FOG_VEIL
       - STORM_WIND
@@ -1176,7 +1185,6 @@ SKILLS:
       - EXPERT_TRAINER
       - RETALIATION_STRIKE
       - HOLY_CHARGE
-      - RETRIBUTION
   AVENGER:
     name: ''
     desc: ''
@@ -1184,10 +1192,9 @@ SKILLS:
       - IMBUE_ARROW
       - IMBUE_BALLISTA
       - BATTLE_COMMANDER
-      - DEADEYE_SHOT
-      - RAIN_OF_ARROWS
-      - SILENT_TRACKER
-      - SUPERNATURAL_LUCK
+      - SNIPER
+      - KNOW_YOUR_ENEMY
+      - RAGE_OF_THE_FOREST
   RUNELORE:
     name: ''
     desc: ''
@@ -1198,7 +1205,6 @@ SKILLS:
       - TAP_RUNES
       - RUNIC_ATTUNEMENT
       - RUNIC_SHIELD
-      - BULWARK_RUNE
   ARTIFICIER:
     name: ''
     desc: ''
@@ -1209,7 +1215,6 @@ SKILLS:
       - CONSUME_ARTIFACT
       - MAGIC_BOND
       - MAGIC_MIRROR
-      - OMNISCIENCE
   ARCANISM:
     name: ''
     desc: ''
@@ -1227,9 +1232,9 @@ SKILLS:
       - CHILLING_BONES
       - SPELLPROOF_BONES
       - HERALD_OF_DEATH
-      - ETERNAL_SERVITUDE
       - BANSHEE_HOWL
       - HAUNTING
+      - LORD_OF_UNDEAD
   GATING:
     name: ''
     desc: ''
@@ -1240,7 +1245,6 @@ SKILLS:
       - HELLFIRE
       - SEARING_FIRES
       - FIERY_WRATH
-      - URGASHS_CALL
   BLOOD_RAGE:
     name: ''
     desc: ''
@@ -1251,4 +1255,34 @@ SKILLS:
       - GOBLIN_SUPPORT
       - DEFEND_US_ALL
       - SHEER_STRENGTH
+  SPIRITISM:
+    name: ''
+    desc: ''
+    perks:
+      - WITCHCRAFT
+      - BANISH
+      - RAGE_AWAKENING
+  INNATES:
+    name: ''
+    desc: ''
+    perks:
+      - FAMILIAR_LAND
+      - SILENT_TRACKER
+      - TENACITY
+      - INFUSION
+      - ELEMENTAL_VISION
+      - ETERNAL_SERVITUDE
+      # - INFERNO_TODO1
+      - SIEGE
+  ULTIMATE:
+    name: ''
+    desc: ''
+    perks:
+      - RETRIBUTION
+      - SUPERNATURAL_LUCK
+      - BULWARK_RUNE
+      - OMNISCIENCE
+      - RAGE_OF_THE_ELEMENTS
+      - DEAD_MANS_CURSE
+      - URGASHS_CALL
       - ORCISH_FURY
