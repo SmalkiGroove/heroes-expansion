@@ -19,7 +19,7 @@ for hero,_ in HEROES do
         [SKILLBONUS_GRADUATE] = 0,
         [SKILLBONUS_OCCULTISM] = 0,
         [SKILLBONUS_SECRETS_OF_DESTRUCT] = 0,
-        [SKILLBONUS_MOTIVATION] = 0,
+        [SKILLBONUS_LAST_STAND] = 0,
         [SKILLBONUS_BATTLE_COMMANDER] = 0,
         [SKILLBONUS_FINE_RUNE] = 0,
         [SKILLBONUS_REFRESH_RUNE] = 0,
@@ -57,22 +57,42 @@ function StatPerLevelDivisor(level, base, divisor)
 end
 
 
+function CheckForUltimate(player, hero, level)
+    if level > 30 then
+        local nb = 0
+        for i,skill in SKILLS_BY_FACTION do
+            if GetHeroSkillMastery(hero, skill) >= 3 then
+                nb = nb + 1
+            end
+        end
+        for i,skill in SKILLS_COMMON do
+            if GetHeroSkillMastery(hero, skill) >= 3 then
+                nb = nb + 1
+            end
+        end
+        if nb == 8 then
+            GiveHeroSkill(hero, SKILL_ULTIMATE)
+            ShowFlyingSign("/Text/Game/Scripts/Ultimate.txt", hero, player, FLYING_SIGN_TIME)
+        end
+    end
+end
+
+
 
 START_TRIGGER_SKILLS_ROUTINES = {}
 
 function AddHeroSkill(hero, skill, mastery)
-    print("Hero "..hero.." has learnt skill '"..skill.."' at level "..mastery..".")
+    print("Hero "..hero.." has learnt skill '"..skill.."' rank "..mastery..".")
+    local player = GetObjectOwner(hero)
+    local level = GetHeroLevel(hero)
     if START_TRIGGER_SKILLS_ROUTINES[skill] then
-        local player = GetObjectOwner(hero)
-        startThread(START_TRIGGER_SKILLS_ROUTINES[skill], player, hero, mastery)
+        startThread(START_TRIGGER_SKILLS_ROUTINES[skill], player, hero, mastery, level)
     end
+    CheckForUltimate(player, hero, level)
 end
 function RemoveHeroSkill(hero, skill, mastery)
-    print("Hero "..hero.." has removed skill '"..skill.."' at level "..mastery..".")
-    if START_TRIGGER_SKILLS_ROUTINES[skill] then
-        local player = GetObjectOwner(hero)
-        startThread(START_TRIGGER_SKILLS_ROUTINES[skill], player, hero, mastery)
-    end
+    print("Hero "..hero.." has removed skill '"..skill.."' rank "..mastery..".")
+    AddHeroSkill(hero, skill, mastery)
 end
 
 function BindHeroSkillTrigger(hero)

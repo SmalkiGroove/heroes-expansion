@@ -221,8 +221,27 @@ PERK_BARBARIAN_STORM_WIND = 215 --unused
 PERK_BARBARIAN_FIRE_PROTECTION = 216 -- CAN BE USED - Morale debuff attacks
 PERK_BARBARIAN_SUN_FIRE = 217 --unused
 PERK_BARBARIAN_DISTRACT = 218 --unused
-PERK_ULTIMATE = 219
+SKILL_ULTIMATE = 219
 PERK_BARBARIAN_MENTORING = 220 --unused
+
+
+SKILLS_BY_FACTION = {
+    [HAVEN]      = SKILL_COURAGE,
+    [PRESERVE]   = SKILL_AVENGER,
+    [FORTRESS]   = SKILL_RUNELORE,
+    [ACADEMY]    = SKILL_ARTIFICIER,
+    [DUNGEON]    = SKILL_ARCANISM,
+    [NECROPOLIS] = SKILL_NECROMANCY,
+    [INFERNO]    = SKILL_GATING,
+    [STRONGHOLD] = SKILL_BLOOD_RAGE,
+}
+
+SKILLS_COMMON = {
+    SKILL_LOGISTICS, SKILL_SUPPORT, SKILL_COMBAT, SKILL_TRAINING, SKILL_GOVERNANCE, SKILL_LEADERSHIP,
+    SKILL_LIGHT_MAGIC, SKILL_DARK_MAGIC, SKILL_DESTRUCTIVE_MAGIC, SKILL_NATURAL_MAGIC, SKILL_SHATTER_MAGIC,
+    SKILL_OFFENCE, SKILL_DEFENSE, SKILL_LEARNING, SKILL_SORCERY, SKILL_VOICE, SKILL_SPIRITISM,
+}
+
 
 -- Skill bonuses ID
 --
@@ -243,7 +262,7 @@ _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_ARCANE_EXCELLENCE   = _skillbonu
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_GRADUATE            = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_OCCULTISM           = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_SECRETS_OF_DESTRUCT = _skillbonus_id
-_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_MOTIVATION          = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_LAST_STAND          = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_BATTLE_COMMANDER    = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_FINE_RUNE           = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_REFRESH_RUNE        = _skillbonus_id

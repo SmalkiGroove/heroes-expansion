@@ -1,49 +1,68 @@
 
-function Routine_CheckOffence(player, hero, mastery)
+function Routine_CheckOffence(player, hero, mastery, level)
     print("$ Routine_CheckOffence")
-    local level = GetHeroLevel(hero)
-    Routine_CheckOffenceLevelUp(player, hero, mastery, level)
-end
-
-function Routine_CheckDefense(player, hero, mastery)
-    print("$ Routine_CheckDefense")
-    local level = GetHeroLevel(hero)
-    Routine_CheckDefenseLevelUp(player, hero, mastery, level)
-end
-
-function Routine_CheckLearning(player, hero, mastery)
-    print("$ Routine_CheckLearning")
-    local level = GetHeroLevel(hero)
-    Routine_CheckLearningLevelUp(player, hero, mastery, level)
-end
-
-function Routine_CheckSorcery(player, hero, mastery)
-    print("$ Routine_CheckSorcery")
-    local level = GetHeroLevel(hero)
-    Routine_CheckSorceryLevelUp(player, hero, mastery, level)
-end
-
-function Routine_CheckVoice(player, hero, mastery)
-    print("$ Routine_CheckVoice")
-    local level = GetHeroLevel(hero)
-    Routine_CheckVoiceLevelUp(player, hero, mastery, level)
-end
-
-function Routine_CheckCombat(player, hero, mastery)
-    print("$ Routine_CheckCombat")
-    local value = mastery
-    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_COMBAT]
+    local level = level or GetHeroLevel(hero)
+    local value = StatPerLevelDivisor(level, mastery, 8 - mastery)
+    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_OFFENCE]
     if diff ~= 0 then
         AddHero_StatAmount(player, hero, STAT_ATTACK, diff)
-        AddHero_StatAmount(player, hero, STAT_DEFENCE, diff)
-        HERO_SKILL_BONUSES[hero][SKILLBONUS_COMBAT] = value
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_OFFENCE] = value
     end
 end
 
-function Routine_CheckCourage(player, hero, mastery)
+function Routine_CheckDefense(player, hero, mastery, level)
+    print("$ Routine_CheckDefense")
+    local level = level or GetHeroLevel(hero)
+    local value = StatPerLevelDivisor(level, mastery, 8 - mastery)
+    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_DEFENSE]
+    if diff ~= 0 then
+        AddHero_StatAmount(player, hero, STAT_DEFENCE, diff)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_DEFENSE] = value
+    end
+end
+
+function Routine_CheckLearning(player, hero, mastery, level)
+    print("$ Routine_CheckLearning")
+    local level = level or GetHeroLevel(hero)
+    local value = StatPerLevelDivisor(level, mastery, 8 - mastery)
+    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_LEARNING]
+    if diff ~= 0 then
+        AddHero_StatAmount(player, hero, STAT_KNOWLEDGE, diff)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_LEARNING] = value
+    end
+end
+
+function Routine_CheckSorcery(player, hero, mastery, level)
+    print("$ Routine_CheckSorcery")
+    local level = level or GetHeroLevel(hero)
+    local value = StatPerLevelDivisor(level, mastery, 8 - mastery)
+    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_SORCERY]
+    if diff ~= 0 then
+        AddHero_StatAmount(player, hero, STAT_SPELL_POWER, diff)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_SORCERY] = value
+    end
+end
+
+function Routine_CheckVoice(player, hero, mastery, level)
+    print("$ Routine_CheckVoice")
+    local level = level or GetHeroLevel(hero)
+    local value = StatPerLevelDivisor(level, mastery, 8 - mastery)
+    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_VOICE]
+    if diff ~= 0 then
+        AddHero_StatAmount(player, hero, STAT_SPELL_POWER, diff)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_VOICE] = value
+    end
+end
+
+function Routine_CheckCourage(player, hero, mastery, level)
     print("$ Routine_CheckCourage")
-    local level = GetHeroLevel(hero)
-    Routine_CheckCourageLevelUp(player, hero, mastery, level)
+    local level = level or GetHeroLevel(hero)
+    local value = mastery + trunc(0.1 * level) * mastery
+    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_COURAGE]
+    if diff ~= 0 then
+        AddHero_StatAmount(player, hero, STAT_MORALE, diff)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_COURAGE] = value
+    end
 end
 
 function Routine_CheckAvenger(player, hero, mastery)
@@ -64,6 +83,17 @@ function Routine_CheckSpiritism(player, hero, mastery)
             local school = SPIRITISM_SCHOOL_AFFINITY[hero] and SPIRITISM_SCHOOL_AFFINITY[hero] or SPELL_SCHOOL_ANY
             AddHero_RandomSpellTier(player, hero, school, rank+2)
         end
+    end
+end
+
+function Routine_CheckCombat(player, hero, mastery)
+    print("$ Routine_CheckCombat")
+    local value = mastery
+    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_COMBAT]
+    if diff ~= 0 then
+        AddHero_StatAmount(player, hero, STAT_ATTACK, diff)
+        AddHero_StatAmount(player, hero, STAT_DEFENCE, diff)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_COMBAT] = value
     end
 end
 
@@ -137,13 +167,13 @@ function Routine_CheckSecretsOfDestruct(player, hero, mastery)
     end
 end
 
-function Routine_CheckMotivation(player, hero, mastery)
-    print("$ Routine_CheckMotivation")
+function Routine_CheckLastStand(player, hero, mastery)
+    print("$ Routine_CheckLastStand")
     local value = mastery
-    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_MOTIVATION]
+    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_LAST_STAND]
     if diff ~= 0 then
         AddHero_StatAmount(player, hero, STAT_MORALE, diff)
-        HERO_SKILL_BONUSES[hero][SKILLBONUS_MOTIVATION] = value
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_LAST_STAND] = value
     end
 end
 
@@ -225,6 +255,7 @@ function Routine_RageAwakening(player, hero, mastery)
 end
 
 
+
 function Routine_HeraldOfDeathGolds(player, hero, mastery)
     print("$ Routine_HeraldOfDeathGolds")
     local amount = GetHeroCreatures(hero, CREATURE_SKELETON) + GetHeroCreatures(hero, CREATURE_SKELETON_ARCHER) + GetHeroCreatures(hero, CREATURE_SKELETON_WARRIOR)
@@ -238,6 +269,7 @@ function Routine_SpiritismManaRegen(player, hero, mastery)
     local missing = max_mana - GetHeroStat(hero, STAT_MANA_POINTS)
     ChangeHeroStat(hero, STAT_MANA_POINTS, min(regen, missing))
 end
+
 
 
 function Routine_LogisticsWeeklyProd(player, hero, mastery)
@@ -280,71 +312,6 @@ function Routine_HauntingWeeklyGhosts(player, hero, mastery)
 end
 
 
-function Routine_CheckOffenceLevelUp(player, hero, mastery, level)
-    print("$ Routine_CheckOffenceLevelUp")
-    local level = GetHeroLevel(hero)
-    local value = StatPerLevelDivisor(level, mastery, 8 - mastery)
-    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_OFFENCE]
-    if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_ATTACK, diff)
-        HERO_SKILL_BONUSES[hero][SKILLBONUS_OFFENCE] = value
-    end
-end
-
-function Routine_CheckDefenseLevelUp(player, hero, mastery, level)
-    print("$ Routine_CheckDefenseLevelUp")
-    local level = GetHeroLevel(hero)
-    local value = StatPerLevelDivisor(level, mastery, 8 - mastery)
-    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_DEFENSE]
-    if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_DEFENCE, diff)
-        HERO_SKILL_BONUSES[hero][SKILLBONUS_DEFENSE] = value
-    end
-end
-
-function Routine_CheckLearningLevelUp(player, hero, mastery, level)
-    print("$ Routine_CheckLearningLevelUp")
-    local level = GetHeroLevel(hero)
-    local value = StatPerLevelDivisor(level, mastery, 8 - mastery)
-    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_LEARNING]
-    if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_KNOWLEDGE, diff)
-        HERO_SKILL_BONUSES[hero][SKILLBONUS_LEARNING] = value
-    end
-end
-
-function Routine_CheckSorceryLevelUp(player, hero, mastery, level)
-    print("$ Routine_CheckSorceryLevelUp")
-    local level = GetHeroLevel(hero)
-    local value = StatPerLevelDivisor(level, mastery, 8 - mastery)
-    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_SORCERY]
-    if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_SPELL_POWER, diff)
-        HERO_SKILL_BONUSES[hero][SKILLBONUS_SORCERY] = value
-    end
-end
-
-function Routine_CheckVoiceLevelUp(player, hero, mastery, level)
-    print("$ Routine_CheckVoiceLevelUp")
-    local level = GetHeroLevel(hero)
-    local value = StatPerLevelDivisor(level, mastery, 8 - mastery)
-    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_VOICE]
-    if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_SPELL_POWER, diff)
-        HERO_SKILL_BONUSES[hero][SKILLBONUS_VOICE] = value
-    end
-end
-
-function Routine_CheckCourageLevelUp(player, hero, mastery, level)
-    print("$ Routine_CheckCourageLevelUp")
-    local level = GetHeroLevel(hero)
-    local value = mastery + trunc(0.1 * level) * mastery
-    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_COURAGE]
-    if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_MORALE, diff)
-        HERO_SKILL_BONUSES[hero][SKILLBONUS_COURAGE] = value
-    end
-end
 
 function Routine_SpiritismLevelUp(player, hero, mastery, level)
     print("$ Routine_SpiritismLevelUp")
@@ -352,6 +319,7 @@ function Routine_SpiritismLevelUp(player, hero, mastery, level)
         AddHero_RandomSpell(player, hero, SPELL_SCHOOL_ANY, mastery+2)
     end
 end
+
 
 
 function Routine_LeadershipAfterBattle(player, hero, mastery, combatIndex)
@@ -383,6 +351,7 @@ function Routine_LeadershipAfterBattle(player, hero, mastery, combatIndex)
 end
 
 
+
 function Routine_MeditationExp(player, hero)
     print("$ Routine_MeditationExp")
     local value = 100
@@ -407,7 +376,7 @@ START_TRIGGER_SKILLS_ROUTINES = {
     [PERK_GRADUATE] = Routine_CheckGraduate,
     [PERK_OCCULTISM] = Routine_CheckOccultism,
     [PERK_SECRETS_OF_DESTRUCT] = Routine_CheckSecretsOfDestruct,
-    [PERK_MOTIVATION] = Routine_CheckMotivation,
+    [PERK_MOTIVATION] = Routine_CheckLastStand,
     [PERK_FINE_RUNE] = Routine_CheckFineRune,
     [PERK_REFRESH_RUNE] = Routine_CheckRefreshRune,
     [PERK_GREATER_RUNE] = Routine_CheckGreaterRune,
@@ -428,12 +397,12 @@ WEEKLY_TRIGGER_SKILLS_ROUTINES = {
 }
 
 LEVELUP_TRIGGER_SKILLS_ROUTINES = {
-    [SKILL_OFFENCE] = Routine_CheckOffenceLevelUp,
-    [SKILL_DEFENSE] = Routine_CheckDefenseLevelUp,
-    [SKILL_LEARNING] = Routine_CheckLearningLevelUp,
-    [SKILL_SORCERY] = Routine_CheckSorceryLevelUp,
-    [SKILL_VOICE] = Routine_CheckVoiceLevelUp,
-    [SKILL_COURAGE] = Routine_CheckCourageLevelUp,
+    [SKILL_OFFENCE] = Routine_CheckOffence,
+    [SKILL_DEFENSE] = Routine_CheckDefense,
+    [SKILL_LEARNING] = Routine_CheckLearning,
+    [SKILL_SORCERY] = Routine_CheckSorcery,
+    [SKILL_VOICE] = Routine_CheckVoice,
+    [SKILL_COURAGE] = Routine_CheckCourage,
     [SKILL_SPIRITISM] = Routine_SpiritismLevelUp,
 }
 
