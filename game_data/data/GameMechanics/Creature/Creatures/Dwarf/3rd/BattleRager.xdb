@@ -3,12 +3,12 @@
 	<AttackSkill>6</AttackSkill>
 	<DefenceSkill>6</DefenceSkill>
 	<Shots>0</Shots>
-	<MinDamage>4</MinDamage>
+	<MinDamage>6</MinDamage>
 	<MaxDamage>6</MaxDamage>
 	<Speed>5</Speed>
 	<Initiative>13</Initiative>
 	<Flying>false</Flying>
-	<Health>24</Health>
+	<Health>22</Health>
 	<KnownSpells/>
 	<SpellPoints>0</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
@@ -20,18 +20,9 @@
 	<Upgrade>false</Upgrade>
 	<PairCreature>CREATURE_UNKNOWN</PairCreature>
 	<CreatureTown>TOWN_FORTRESS</CreatureTown>
-	<MagicElement>
-		<First>ELEMENT_EARTH</First>
-		<Second>ELEMENT_NONE</Second>
-	</MagicElement>
-	<WeeklyGrowth>25</WeeklyGrowth>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>21</WeeklyGrowth>
 	<Cost>
-		<Wood>0</Wood>
-		<Ore>0</Ore>
-		<Mercury>0</Mercury>
-		<Crystal>0</Crystal>
-		<Sulfur>0</Sulfur>
-		<Gem>0</Gem>
 		<Gold>100</Gold>
 	</Cost>
 	<PresetPrice>0</PresetPrice>
@@ -45,9 +36,9 @@
 	<BaseCreature>CREATURE_BROWLER</BaseCreature>
 	<Upgrades/>
 	<Abilities>
-		<Item>ABILITY_GIANT_SLAYER</Item>
 		<Item>ABILITY_UNLIMITED_RETALIATION</Item>
 		<Item>ABILITY_BATTLE_RAGE</Item>
 		<Item>ABILITY_FREE_MIND</Item>
+		<Item>ABILITY_GIANT_SLAYER</Item>
 	</Abilities>
 </Creature>

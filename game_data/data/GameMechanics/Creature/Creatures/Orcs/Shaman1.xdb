@@ -4,22 +4,16 @@
 	<DefenceSkill>2</DefenceSkill>
 	<Shots>0</Shots>
 	<MinDamage>2</MinDamage>
-	<MaxDamage>4</MaxDamage>
+	<MaxDamage>3</MaxDamage>
 	<Speed>4</Speed>
 	<Initiative>10</Initiative>
 	<Flying>false</Flying>
 	<Health>14</Health>
 	<KnownSpells>
-		<Item>
-			<Spell>SPELL_HASTE</Spell>
-			<Mastery>MASTERY_BASIC</Mastery>
-		</Item>
-		<Item>
-			<Spell>SPELL_SLOW</Spell>
-			<Mastery>MASTERY_BASIC</Mastery>
-		</Item>
+		<Item><Spell>SPELL_HASTE</Spell><Mastery>MASTERY_BASIC</Mastery></Item>
+		<Item><Spell>SPELL_SLOW</Spell><Mastery>MASTERY_BASIC</Mastery></Item>
 	</KnownSpells>
-	<SpellPoints>8</SpellPoints>
+	<SpellPoints>10</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
 	<SpellPoints2>0</SpellPoints2>
 	<Exp>22</Exp>
@@ -29,18 +23,9 @@
 	<Upgrade>false</Upgrade>
 	<PairCreature>CREATURE_SHAMAN_WITCH</PairCreature>
 	<CreatureTown>TOWN_STRONGHOLD</CreatureTown>
-	<MagicElement>
-		<First>ELEMENT_EARTH</First>
-		<Second>ELEMENT_NONE</Second>
-	</MagicElement>
-	<WeeklyGrowth>39</WeeklyGrowth>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>28</WeeklyGrowth>
 	<Cost>
-		<Wood>0</Wood>
-		<Ore>0</Ore>
-		<Mercury>0</Mercury>
-		<Crystal>0</Crystal>
-		<Sulfur>0</Sulfur>
-		<Gem>0</Gem>
 		<Gold>40</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
@@ -57,5 +42,6 @@
 	</Upgrades>
 	<Abilities>
 		<Item>ABILITY_RAGING_BLOOD</Item>
+		<Item>ABILITY_SACRIFICE_GOBLIN</Item>
 	</Abilities>
 </Creature>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature>
 	<AttackSkill>9</AttackSkill>
-	<DefenceSkill>13</DefenceSkill>
+	<DefenceSkill>9</DefenceSkill>
 	<Shots>0</Shots>
 	<MinDamage>6</MinDamage>
 	<MaxDamage>8</MaxDamage>
 	<Speed>6</Speed>
-	<Initiative>11</Initiative>
+	<Initiative>10</Initiative>
 	<Flying>false</Flying>
-	<Health>52</Health>
+	<Health>50</Health>
 	<KnownSpells/>
 	<SpellPoints>0</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
@@ -20,18 +20,9 @@
 	<Upgrade>false</Upgrade>
 	<PairCreature>CREATURE_UNKNOWN</PairCreature>
 	<CreatureTown>TOWN_FORTRESS</CreatureTown>
-	<MagicElement>
-		<First>ELEMENT_WATER</First>
-		<Second>ELEMENT_NONE</Second>
-	</MagicElement>
-	<WeeklyGrowth>12</WeeklyGrowth>
+	<MagicElement><First>ELEMENT_WATER</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>10</WeeklyGrowth>
 	<Cost>
-		<Wood>0</Wood>
-		<Ore>0</Ore>
-		<Mercury>0</Mercury>
-		<Crystal>0</Crystal>
-		<Sulfur>0</Sulfur>
-		<Gem>0</Gem>
 		<Gold>225</Gold>
 	</Cost>
 	<PresetPrice>0</PresetPrice>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature ObjectRecordID="1000013">
-	<AttackSkill>18</AttackSkill>
+	<AttackSkill>17</AttackSkill>
 	<DefenceSkill>27</DefenceSkill>
 	<Shots>0</Shots>
 	<MinDamage>7</MinDamage>
@@ -8,7 +8,7 @@
 	<Speed>5</Speed>
 	<Initiative>7</Initiative>
 	<Flying>false</Flying>
-	<Health>175</Health>
+	<Health>177</Health>
 	<KnownSpells/>
 	<SpellPoints>0</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
@@ -20,18 +20,10 @@
 	<Upgrade>false</Upgrade>
 	<PairCreature>CREATURE_TREANT_GUARDIAN</PairCreature>
 	<CreatureTown>TOWN_PRESERVE</CreatureTown>
-	<MagicElement>
-		<First>ELEMENT_EARTH</First>
-		<Second>ELEMENT_NONE</Second>
-	</MagicElement>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_NONE</Second></MagicElement>
 	<WeeklyGrowth>3</WeeklyGrowth>
 	<Cost>
-		<Wood>0</Wood>
-		<Ore>0</Ore>
 		<Mercury>1</Mercury>
-		<Crystal>0</Crystal>
-		<Sulfur>0</Sulfur>
-		<Gem>0</Gem>
 		<Gold>850</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>

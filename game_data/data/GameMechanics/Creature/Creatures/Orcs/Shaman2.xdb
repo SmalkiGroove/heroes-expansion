@@ -1,33 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature>
-	<AttackSkill>2</AttackSkill>
+	<AttackSkill>3</AttackSkill>
 	<DefenceSkill>3</DefenceSkill>
 	<Shots>0</Shots>
-	<MinDamage>3</MinDamage>
+	<MinDamage>2</MinDamage>
 	<MaxDamage>4</MaxDamage>
 	<Speed>4</Speed>
 	<Initiative>11</Initiative>
 	<Flying>false</Flying>
 	<Health>15</Health>
 	<KnownSpells>
-		<Item>
-			<Spell>SPELL_ABILITY_SACRIFICE_GOBLIN</Spell>
-			<Mastery>MASTERY_ADVANCED</Mastery>
-		</Item>
-		<Item>
-			<Spell>SPELL_HASTE</Spell>
-			<Mastery>MASTERY_BASIC</Mastery>
-		</Item>
-		<Item>
-			<Spell>SPELL_EMPOWERED_LIGHTNING_BOLT</Spell>
-			<Mastery>MASTERY_ADVANCED</Mastery>
-		</Item>
-		<Item>
-			<Spell>SPELL_CHAIN_LIGHTNING</Spell>
-			<Mastery>MASTERY_ADVANCED</Mastery>
-		</Item>
+		<Item><Spell>SPELL_ABILITY_SACRIFICE_GOBLIN</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+		<Item><Spell>SPELL_HASTE</Spell><Mastery>MASTERY_BASIC</Mastery></Item>
+		<Item><Spell>SPELL_EMPOWERED_LIGHTNING_BOLT</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+		<Item><Spell>SPELL_CHAIN_LIGHTNING</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
 	</KnownSpells>
-	<SpellPoints>8</SpellPoints>
+	<SpellPoints>10</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
 	<SpellPoints2>0</SpellPoints2>
 	<Exp>28</Exp>
@@ -37,18 +25,9 @@
 	<Upgrade>true</Upgrade>
 	<PairCreature>CREATURE_SHAMAN</PairCreature>
 	<CreatureTown>TOWN_STRONGHOLD</CreatureTown>
-	<MagicElement>
-		<First>ELEMENT_EARTH</First>
-		<Second>ELEMENT_NONE</Second>
-	</MagicElement>
-	<WeeklyGrowth>39</WeeklyGrowth>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>28</WeeklyGrowth>
 	<Cost>
-		<Wood>0</Wood>
-		<Ore>0</Ore>
-		<Mercury>0</Mercury>
-		<Crystal>0</Crystal>
-		<Sulfur>0</Sulfur>
-		<Gem>0</Gem>
 		<Gold>50</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>

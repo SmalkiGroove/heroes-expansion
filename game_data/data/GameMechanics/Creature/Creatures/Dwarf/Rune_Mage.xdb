@@ -6,18 +6,12 @@
 	<MinDamage>12</MinDamage>
 	<MaxDamage>16</MaxDamage>
 	<Speed>3</Speed>
-	<Initiative>8</Initiative>
+	<Initiative>9</Initiative>
 	<Flying>false</Flying>
-	<Health>62</Health>
+	<Health>60</Health>
 	<KnownSpells>
-		<Item>
-			<Spell>SPELL_MASS_DEFLECT_ARROWS</Spell>
-			<Mastery>MASTERY_ADVANCED</Mastery>
-		</Item>
-		<Item>
-			<Spell>SPELL_LAND_MINE</Spell>
-			<Mastery>MASTERY_ADVANCED</Mastery>
-		</Item>
+		<Item><Spell>SPELL_MASS_DEFLECT_ARROWS</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+		<Item><Spell>SPELL_LAND_MINE</Spell><Mastery>MASTERY_EXPERT</Mastery></Item>
 	</KnownSpells>
 	<SpellPoints>36</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
@@ -29,18 +23,9 @@
 	<Upgrade>false</Upgrade>
 	<PairCreature>CREATURE_FLAME_MAGE</PairCreature>
 	<CreatureTown>TOWN_FORTRESS</CreatureTown>
-	<MagicElement>
-		<First>ELEMENT_FIRE</First>
-		<Second>ELEMENT_NONE</Second>
-	</MagicElement>
-	<WeeklyGrowth>6</WeeklyGrowth>
+	<MagicElement><First>ELEMENT_FIRE</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>5</WeeklyGrowth>
 	<Cost>
-		<Wood>0</Wood>
-		<Ore>0</Ore>
-		<Mercury>0</Mercury>
-		<Crystal>0</Crystal>
-		<Sulfur>0</Sulfur>
-		<Gem>0</Gem>
 		<Gold>400</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>

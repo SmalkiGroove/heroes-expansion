@@ -10,14 +10,8 @@
 	<Flying>false</Flying>
 	<Health>130</Health>
 	<KnownSpells>
-		<Item>
-			<Spell>SPELL_ICE_BOLT</Spell>
-			<Mastery>MASTERY_EXPERT</Mastery>
-		</Item>
-		<Item>
-			<Spell>SPELL_FROST_RING</Spell>
-			<Mastery>MASTERY_EXPERT</Mastery>
-		</Item>
+		<Item><Spell>SPELL_ICE_BOLT</Spell><Mastery>MASTERY_EXPERT</Mastery></Item>
+		<Item><Spell>SPELL_FROST_RING</Spell><Mastery>MASTERY_EXPERT</Mastery></Item>
 	</KnownSpells>
 	<SpellPoints>18</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
@@ -29,10 +23,7 @@
 	<Upgrade>true</Upgrade>
 	<PairCreature>CREATURE_UNKNOWN</PairCreature>
 	<CreatureTown>TOWN_NO_TYPE</CreatureTown>
-	<MagicElement>
-		<First>ELEMENT_WATER</First>
-		<Second>ELEMENT_NONE</Second>
-	</MagicElement>
+	<MagicElement><First>ELEMENT_WATER</First><Second>ELEMENT_NONE</Second></MagicElement>
 	<WeeklyGrowth>15</WeeklyGrowth>
 	<Cost>
 		<Wood>0</Wood>

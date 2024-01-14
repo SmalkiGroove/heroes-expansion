@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature>
-	<AttackSkill>10</AttackSkill>
+	<AttackSkill>8</AttackSkill>
 	<DefenceSkill>8</DefenceSkill>
 	<Shots>5</Shots>
 	<MinDamage>12</MinDamage>
@@ -8,20 +8,11 @@
 	<Speed>3</Speed>
 	<Initiative>9</Initiative>
 	<Flying>false</Flying>
-	<Health>70</Health>
+	<Health>64</Health>
 	<KnownSpells>
-		<Item>
-			<Spell>SPELL_MASS_DEFLECT_ARROWS</Spell>
-			<Mastery>MASTERY_ADVANCED</Mastery>
-		</Item>
-		<Item>
-			<Spell>SPELL_LAND_MINE</Spell>
-			<Mastery>MASTERY_ADVANCED</Mastery>
-		</Item>
-		<Item>
-			<Spell>SPELL_FIREWALL</Spell>
-			<Mastery>MASTERY_ADVANCED</Mastery>
-		</Item>
+		<Item><Spell>SPELL_MASS_DEFLECT_ARROWS</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+		<Item><Spell>SPELL_LAND_MINE</Spell><Mastery>MASTERY_EXPERT</Mastery></Item>
+		<Item><Spell>SPELL_FIREWALL</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
 	</KnownSpells>
 	<SpellPoints>36</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
@@ -33,18 +24,9 @@
 	<Upgrade>true</Upgrade>
 	<PairCreature>CREATURE_RUNE_MAGE</PairCreature>
 	<CreatureTown>TOWN_FORTRESS</CreatureTown>
-	<MagicElement>
-		<First>ELEMENT_FIRE</First>
-		<Second>ELEMENT_NONE</Second>
-	</MagicElement>
-	<WeeklyGrowth>6</WeeklyGrowth>
+	<MagicElement><First>ELEMENT_FIRE</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>5</WeeklyGrowth>
 	<Cost>
-		<Wood>0</Wood>
-		<Ore>0</Ore>
-		<Mercury>0</Mercury>
-		<Crystal>0</Crystal>
-		<Sulfur>0</Sulfur>
-		<Gem>0</Gem>
 		<Gold>500</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>

@@ -1,27 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature ObjectRecordID="1000033">
-	<AttackSkill>11</AttackSkill>
-	<DefenceSkill>9</DefenceSkill>
-	<Shots>6</Shots>
+	<AttackSkill>10</AttackSkill>
+	<DefenceSkill>10</DefenceSkill>
+	<Shots>4</Shots>
 	<MinDamage>14</MinDamage>
 	<MaxDamage>15</MaxDamage>
 	<Speed>4</Speed>
 	<Initiative>10</Initiative>
 	<Flying>false</Flying>
-	<Health>55</Health>
+	<Health>46</Health>
 	<KnownSpells>
-		<Item>
-			<Spell>SPELL_SLOW</Spell>
-			<Mastery>MASTERY_ADVANCED</Mastery>
-		</Item>
-		<Item>
-			<Spell>SPELL_FORGETFULNESS</Spell>
-			<Mastery>MASTERY_ADVANCED</Mastery>
-		</Item>
-		<Item>
-			<Spell>SPELL_ARCANE_CRYSTAL</Spell>
-			<Mastery>MASTERY_ADVANCED</Mastery>
-		</Item>
+		<Item><Spell>SPELL_SLOW</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+		<Item><Spell>SPELL_FORGETFULNESS</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+		<Item><Spell>SPELL_ARCANE_CRYSTAL</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
 	</KnownSpells>
 	<SpellPoints>16</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
@@ -33,18 +24,9 @@
 	<Upgrade>true</Upgrade>
 	<PairCreature>CREATURE_MATRON</PairCreature>
 	<CreatureTown>TOWN_DUNGEON</CreatureTown>
-	<MagicElement>
-		<First>ELEMENT_EARTH</First>
-		<Second>ELEMENT_AIR</Second>
-	</MagicElement>
-	<WeeklyGrowth>6</WeeklyGrowth>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_AIR</Second></MagicElement>
+	<WeeklyGrowth>5</WeeklyGrowth>
 	<Cost>
-		<Wood>0</Wood>
-		<Ore>0</Ore>
-		<Mercury>0</Mercury>
-		<Crystal>0</Crystal>
-		<Sulfur>0</Sulfur>
-		<Gem>0</Gem>
 		<Gold>500</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
@@ -59,5 +41,6 @@
 	<Abilities>
 		<Item>ABILITY_LONG_RANGE</Item>
 		<Item>ABILITY_NO_MELEE_PENALTY</Item>
+		<Item>ABILITY_WHIP_STRIKE</Item>
 	</Abilities>
 </Creature>

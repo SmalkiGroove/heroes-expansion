@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature ObjectRecordID="1000037">
-	<AttackSkill>2</AttackSkill>
-	<DefenceSkill>2</DefenceSkill>
+	<AttackSkill>1</AttackSkill>
+	<DefenceSkill>1</DefenceSkill>
 	<Shots>5</Shots>
 	<MinDamage>1</MinDamage>
 	<MaxDamage>2</MaxDamage>
@@ -20,18 +20,9 @@
 	<Upgrade>false</Upgrade>
 	<PairCreature>CREATURE_MASTER_GREMLIN</PairCreature>
 	<CreatureTown>TOWN_ACADEMY</CreatureTown>
-	<MagicElement>
-		<First>ELEMENT_AIR</First>
-		<Second>ELEMENT_NONE</Second>
-	</MagicElement>
-	<WeeklyGrowth>64</WeeklyGrowth>
+	<MagicElement><First>ELEMENT_AIR</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>51</WeeklyGrowth>
 	<Cost>
-		<Wood>0</Wood>
-		<Ore>0</Ore>
-		<Mercury>0</Mercury>
-		<Crystal>0</Crystal>
-		<Sulfur>0</Sulfur>
-		<Gem>0</Gem>
 		<Gold>15</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>

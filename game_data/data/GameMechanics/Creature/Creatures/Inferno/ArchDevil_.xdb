@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature ObjectRecordID="48">
-	<AttackSkill>39</AttackSkill>
-	<DefenceSkill>29</DefenceSkill>
+	<AttackSkill>40</AttackSkill>
+	<DefenceSkill>36</DefenceSkill>
 	<Shots>0</Shots>
 	<MinDamage>44</MinDamage>
 	<MaxDamage>88</MaxDamage>
 	<Speed>9</Speed>
-	<Initiative>10</Initiative>
+	<Initiative>11</Initiative>
 	<Flying>true</Flying>
-	<Health>215</Health>
+	<Health>246</Health>
 	<KnownSpells>
-		<Item>
-			<Spell>SPELL_ABILITY_SUMMON_BALOR</Spell>
-			<Mastery>MASTERY_ADVANCED</Mastery>
-		</Item>
-		<Item>
-			<Spell>SPELL_HYPNOTIZE</Spell>
-			<Mastery>MASTERY_BASIC</Mastery>
-		</Item>
+		<Item><Spell>SPELL_ABILITY_SUMMON_BALOR</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+		<Item><Spell>SPELL_HYPNOTIZE</Spell><Mastery>MASTERY_BASIC</Mastery></Item>
 	</KnownSpells>
-	<SpellPoints>30</SpellPoints>
+	<SpellPoints>25</SpellPoints>
 	<SpellPoints1>1</SpellPoints1>
 	<SpellPoints2>1</SpellPoints2>
 	<Exp>1000</Exp>
@@ -29,18 +23,10 @@
 	<Upgrade>true</Upgrade>
 	<PairCreature>CREATURE_DEVIL</PairCreature>
 	<CreatureTown>TOWN_INFERNO</CreatureTown>
-	<MagicElement>
-		<First>ELEMENT_FIRE</First>
-		<Second>ELEMENT_EARTH</Second>
-	</MagicElement>
+	<MagicElement><First>ELEMENT_FIRE</First><Second>ELEMENT_EARTH</Second></MagicElement>
 	<WeeklyGrowth>1</WeeklyGrowth>
 	<Cost>
-		<Wood>0</Wood>
-		<Ore>0</Ore>
-		<Mercury>0</Mercury>
-		<Crystal>0</Crystal>
 		<Sulfur>3</Sulfur>
-		<Gem>0</Gem>
 		<Gold>3500</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>

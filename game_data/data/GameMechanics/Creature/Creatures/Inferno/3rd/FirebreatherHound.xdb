@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature>
-	<AttackSkill>6</AttackSkill>
-	<DefenceSkill>3</DefenceSkill>
+	<AttackSkill>7</AttackSkill>
+	<DefenceSkill>4</DefenceSkill>
 	<Shots>0</Shots>
-	<MinDamage>3</MinDamage>
+	<MinDamage>4</MinDamage>
 	<MaxDamage>6</MaxDamage>
 	<Speed>6</Speed>
 	<Initiative>11</Initiative>
@@ -20,18 +20,9 @@
 	<Upgrade>false</Upgrade>
 	<PairCreature>CREATURE_UNKNOWN</PairCreature>
 	<CreatureTown>TOWN_INFERNO</CreatureTown>
-	<MagicElement>
-		<First>ELEMENT_EARTH</First>
-		<Second>ELEMENT_WATER</Second>
-	</MagicElement>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_WATER</Second></MagicElement>
 	<WeeklyGrowth>22</WeeklyGrowth>
 	<Cost>
-		<Wood>0</Wood>
-		<Ore>0</Ore>
-		<Mercury>0</Mercury>
-		<Crystal>0</Crystal>
-		<Sulfur>0</Sulfur>
-		<Gem>0</Gem>
 		<Gold>100</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
@@ -46,7 +37,6 @@
 	<Abilities>
 		<Item>ABILITY_DEMONIC</Item>
 		<Item>ABILITY_FIRE_IMMUNED</Item>
-		<Item>ABILITY_THREE_HEADED_ATTACK</Item>
 		<Item>ABILITY_NO_ENEMY_RETALIATION</Item>
 		<Item>ABILITY_DRAGON_BREATH</Item>
 	</Abilities>

@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature ObjectRecordID="73">
-	<AttackSkill>37</AttackSkill>
-	<DefenceSkill>30</DefenceSkill>
+	<AttackSkill>31</AttackSkill>
+	<DefenceSkill>31</DefenceSkill>
 	<Shots>0</Shots>
-	<MinDamage>40</MinDamage>
-	<MaxDamage>70</MaxDamage>
+	<MinDamage>30</MinDamage>
+	<MaxDamage>90</MaxDamage>
 	<Speed>6</Speed>
 	<Initiative>9</Initiative>
 	<Flying>false</Flying>
 	<Health>200</Health>
 	<KnownSpells>
-		<Item>
-			<Spell>SPELL_ABILITY_HARM_TOUCH</Spell>
-			<Mastery>MASTERY_ADVANCED</Mastery>
-		</Item>
-		<Item>
-			<Spell>SPELL_PHANTOM</Spell>
-			<Mastery>MASTERY_BASIC</Mastery>
-		</Item>
+		<Item><Spell>SPELL_ABILITY_HARM_TOUCH</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+		<Item><Spell>SPELL_PHANTOM</Spell><Mastery>MASTERY_BASIC</Mastery></Item>
 	</KnownSpells>
-	<SpellPoints>18</SpellPoints>
+	<SpellPoints>25</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
 	<SpellPoints2>0</SpellPoints2>
 	<Exp>1000</Exp>
@@ -29,18 +23,10 @@
 	<Upgrade>true</Upgrade>
 	<PairCreature>CREATURE_WIGHT</PairCreature>
 	<CreatureTown>TOWN_NECROMANCY</CreatureTown>
-	<MagicElement>
-		<First>ELEMENT_WATER</First>
-		<Second>ELEMENT_FIRE</Second>
-	</MagicElement>
+	<MagicElement><First>ELEMENT_WATER</First><Second>ELEMENT_FIRE</Second></MagicElement>
 	<WeeklyGrowth>1</WeeklyGrowth>
 	<Cost>
-		<Wood>0</Wood>
-		<Ore>0</Ore>
 		<Mercury>3</Mercury>
-		<Crystal>0</Crystal>
-		<Sulfur>0</Sulfur>
-		<Gem>0</Gem>
 		<Gold>3500</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
@@ -50,193 +36,69 @@
 		<PatternAttack ObjectRecordID="1000012">
 			<Patterns>
 				<Item>
-					<cells>
-						<Item>
-							<x>1</x>
-							<y>1</y>
-						</Item>
-						<Item>
-							<x>1</x>
-							<y>0</y>
-						</Item>
-						<Item>
-							<x>1</x>
-							<y>-1</y>
-						</Item>
-						<Item>
-							<x>1</x>
-							<y>-2</y>
-						</Item>
-					</cells>
 					<AngleRotateTo>0</AngleRotateTo>
+					<cells>
+						<Item><x>1</x><y>0</y></Item>
+						<Item><x>1</x><y>-1</y></Item>
+					</cells>
 				</Item>
 				<Item>
-					<cells>
-						<Item>
-							<x>1</x>
-							<y>0</y>
-						</Item>
-						<Item>
-							<x>1</x>
-							<y>-1</y>
-						</Item>
-						<Item>
-							<x>1</x>
-							<y>-2</y>
-						</Item>
-						<Item>
-							<x>0</x>
-							<y>-2</y>
-						</Item>
-						<Item>
-							<x>-1</x>
-							<y>-2</y>
-						</Item>
-					</cells>
 					<AngleRotateTo>315</AngleRotateTo>
+					<cells>
+						<Item><x>1</x><y>-1</y></Item>
+						<Item><x>1</x><y>-2</y></Item>
+						<Item><x>0</x><y>-2</y></Item>
+					</cells>
 				</Item>
 				<Item>
-					<cells>
-						<Item>
-							<x>1</x>
-							<y>-2</y>
-						</Item>
-						<Item>
-							<x>0</x>
-							<y>-2</y>
-						</Item>
-						<Item>
-							<x>-1</x>
-							<y>-2</y>
-						</Item>
-						<Item>
-							<x>-2</x>
-							<y>-2</y>
-						</Item>
-					</cells>
 					<AngleRotateTo>270</AngleRotateTo>
+					<cells>
+						<Item><x>0</x><y>-2</y></Item>
+						<Item><x>-1</x><y>-2</y></Item>
+					</cells>
 				</Item>
 				<Item>
-					<cells>
-						<Item>
-							<x>0</x>
-							<y>-2</y>
-						</Item>
-						<Item>
-							<x>-1</x>
-							<y>-2</y>
-						</Item>
-						<Item>
-							<x>-2</x>
-							<y>-2</y>
-						</Item>
-						<Item>
-							<x>-2</x>
-							<y>-1</y>
-						</Item>
-						<Item>
-							<x>-2</x>
-							<y>0</y>
-						</Item>
-					</cells>
 					<AngleRotateTo>225</AngleRotateTo>
+					<cells>
+						<Item><x>-1</x><y>-2</y></Item>
+						<Item><x>-2</x><y>-2</y></Item>
+						<Item><x>-2</x><y>-1</y></Item>
+					</cells>
 				</Item>
 				<Item>
-					<cells>
-						<Item>
-							<x>-2</x>
-							<y>-2</y>
-						</Item>
-						<Item>
-							<x>-2</x>
-							<y>-1</y>
-						</Item>
-						<Item>
-							<x>-2</x>
-							<y>0</y>
-						</Item>
-						<Item>
-							<x>-2</x>
-							<y>1</y>
-						</Item>
-					</cells>
 					<AngleRotateTo>180</AngleRotateTo>
+					<cells>
+						<Item><x>-2</x><y>-1</y></Item>
+						<Item><x>-2</x><y>0</y></Item>
+					</cells>
 				</Item>
 				<Item>
-					<cells>
-						<Item>
-							<x>-2</x>
-							<y>-1</y>
-						</Item>
-						<Item>
-							<x>-2</x>
-							<y>0</y>
-						</Item>
-						<Item>
-							<x>-2</x>
-							<y>1</y>
-						</Item>
-						<Item>
-							<x>-1</x>
-							<y>1</y>
-						</Item>
-						<Item>
-							<x>0</x>
-							<y>1</y>
-						</Item>
-					</cells>
 					<AngleRotateTo>135</AngleRotateTo>
+					<cells>
+						<Item><x>-2</x><y>0</y></Item>
+						<Item><x>-2</x><y>1</y></Item>
+						<Item><x>-1</x><y>1</y></Item>
+					</cells>
 				</Item>
 				<Item>
-					<cells>
-						<Item>
-							<x>-2</x>
-							<y>1</y>
-						</Item>
-						<Item>
-							<x>-1</x>
-							<y>1</y>
-						</Item>
-						<Item>
-							<x>0</x>
-							<y>1</y>
-						</Item>
-						<Item>
-							<x>1</x>
-							<y>1</y>
-						</Item>
-					</cells>
 					<AngleRotateTo>90</AngleRotateTo>
+					<cells>
+						<Item><x>-1</x><y>1</y></Item>
+						<Item><x>0</x><y>1</y></Item>
+					</cells>
 				</Item>
 				<Item>
-					<cells>
-						<Item>
-							<x>-1</x>
-							<y>1</y>
-						</Item>
-						<Item>
-							<x>0</x>
-							<y>1</y>
-						</Item>
-						<Item>
-							<x>1</x>
-							<y>1</y>
-						</Item>
-						<Item>
-							<x>1</x>
-							<y>0</y>
-						</Item>
-						<Item>
-							<x>1</x>
-							<y>-1</y>
-						</Item>
-					</cells>
 					<AngleRotateTo>45</AngleRotateTo>
+					<cells>
+						<Item><x>0</x><y>1</y></Item>
+						<Item><x>1</x><y>1</y></Item>
+						<Item><x>1</x><y>0</y></Item>
+					</cells>
 				</Item>
 			</Patterns>
 			<RotateToMainTarget>true</RotateToMainTarget>
 			<DamageToMainTargetCoefficient>1</DamageToMainTargetCoefficient>
-			<DamageToOtherTargetsCoefficient>1</DamageToOtherTargetsCoefficient>
+			<DamageToOtherTargetsCoefficient>0.5</DamageToOtherTargetsCoefficient>
 			<DamageAll>false</DamageAll>
 		</PatternAttack>
 	</PatternAttack>
@@ -248,7 +110,7 @@
 	<Abilities>
 		<Item>ABILITY_UNDEAD</Item>
 		<Item>ABILITY_BLADE_OF_SLAUGHTER</Item>
-		<Item>ABILITY_FEAR</Item>
+		<Item>ABILITY_INTIMIDATE</Item>
 		<Item>ABILITY_HARM_TOUCH</Item>
 	</Abilities>
 </Creature>

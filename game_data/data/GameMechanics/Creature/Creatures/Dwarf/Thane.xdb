@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature>
-	<AttackSkill>16</AttackSkill>
+	<AttackSkill>18</AttackSkill>
 	<DefenceSkill>24</DefenceSkill>
 	<Shots>0</Shots>
-	<MinDamage>15</MinDamage>
-	<MaxDamage>25</MaxDamage>
+	<MinDamage>11</MinDamage>
+	<MaxDamage>13</MaxDamage>
 	<Speed>8</Speed>
 	<Initiative>10</Initiative>
 	<Flying>true</Flying>
@@ -20,18 +20,10 @@
 	<Upgrade>false</Upgrade>
 	<PairCreature>CREATURE_WARLORD</PairCreature>
 	<CreatureTown>TOWN_FORTRESS</CreatureTown>
-	<MagicElement>
-		<First>ELEMENT_AIR</First>
-		<Second>ELEMENT_NONE</Second>
-	</MagicElement>
+	<MagicElement><First>ELEMENT_AIR</First><Second>ELEMENT_NONE</Second></MagicElement>
 	<WeeklyGrowth>3</WeeklyGrowth>
 	<Cost>
-		<Wood>0</Wood>
-		<Ore>0</Ore>
 		<Mercury>1</Mercury>
-		<Crystal>0</Crystal>
-		<Sulfur>0</Sulfur>
-		<Gem>0</Gem>
 		<Gold>850</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
@@ -48,5 +40,6 @@
 	</Upgrades>
 	<Abilities>
 		<Item>ABILITY_STEADINESS</Item>
+		<Item>ABILITY_DOUBLE_ATTACK</Item>
 	</Abilities>
 </Creature>

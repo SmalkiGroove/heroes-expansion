@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature>
-	<AttackSkill>38</AttackSkill>
-	<DefenceSkill>29</DefenceSkill>
+	<AttackSkill>42</AttackSkill>
+	<DefenceSkill>34</DefenceSkill>
 	<Shots>0</Shots>
 	<MinDamage>25</MinDamage>
 	<MaxDamage>65</MaxDamage>
 	<Speed>5</Speed>
 	<Initiative>9</Initiative>
 	<Flying>false</Flying>
-	<Health>240</Health>
+	<Health>280</Health>
 	<KnownSpells>
-		<Item>
-			<Spell>SPELL_ABILITY_SWALLOW_GOBLIN</Spell>
-			<Mastery>MASTERY_ADVANCED</Mastery>
-		</Item>
+		<Item><Spell>SPELL_ABILITY_SWALLOW_GOBLIN</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
 	</KnownSpells>
 	<SpellPoints>0</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
@@ -25,18 +22,10 @@
 	<Upgrade>false</Upgrade>
 	<PairCreature>CREATURE_CYCLOP_UNTAMED</PairCreature>
 	<CreatureTown>TOWN_STRONGHOLD</CreatureTown>
-	<MagicElement>
-		<First>ELEMENT_EARTH</First>
-		<Second>ELEMENT_NONE</Second>
-	</MagicElement>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_NONE</Second></MagicElement>
 	<WeeklyGrowth>1</WeeklyGrowth>
 	<Cost>
-		<Wood>0</Wood>
-		<Ore>0</Ore>
 		<Mercury>2</Mercury>
-		<Crystal>0</Crystal>
-		<Sulfur>0</Sulfur>
-		<Gem>0</Gem>
 		<Gold>3000</Gold>
 	</Cost>
 	<PresetPrice>0</PresetPrice>

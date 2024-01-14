@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature ObjectRecordID="42">
-	<AttackSkill>8</AttackSkill>
+	<AttackSkill>9</AttackSkill>
 	<DefenceSkill>6</DefenceSkill>
 	<Shots>6</Shots>
-	<MinDamage>7</MinDamage>
-	<MaxDamage>14</MaxDamage>
+	<MinDamage>6</MinDamage>
+	<MaxDamage>12</MaxDamage>
 	<Speed>4</Speed>
 	<Initiative>9</Initiative>
 	<Flying>false</Flying>
-	<Health>28</Health>
+	<Health>26</Health>
 	<KnownSpells/>
 	<SpellPoints>0</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
@@ -20,18 +20,9 @@
 	<Upgrade>true</Upgrade>
 	<PairCreature>CREATURE_SUCCUBUS</PairCreature>
 	<CreatureTown>TOWN_INFERNO</CreatureTown>
-	<MagicElement>
-		<First>ELEMENT_AIR</First>
-		<Second>ELEMENT_FIRE</Second>
-	</MagicElement>
-	<WeeklyGrowth>12</WeeklyGrowth>
+	<MagicElement><First>ELEMENT_AIR</First><Second>ELEMENT_FIRE</Second></MagicElement>
+	<WeeklyGrowth>11</WeeklyGrowth>
 	<Cost>
-		<Wood>0</Wood>
-		<Ore>0</Ore>
-		<Mercury>0</Mercury>
-		<Crystal>0</Crystal>
-		<Sulfur>0</Sulfur>
-		<Gem>0</Gem>
 		<Gold>225</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>

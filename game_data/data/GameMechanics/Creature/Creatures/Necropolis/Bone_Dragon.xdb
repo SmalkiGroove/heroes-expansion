@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature ObjectRecordID="71">
-	<AttackSkill>21</AttackSkill>
-	<DefenceSkill>15</DefenceSkill>
+	<AttackSkill>27</AttackSkill>
+	<DefenceSkill>17</DefenceSkill>
 	<Shots>0</Shots>
-	<MinDamage>11</MinDamage>
-	<MaxDamage>24</MaxDamage>
-	<Speed>6</Speed>
+	<MinDamage>13</MinDamage>
+	<MaxDamage>23</MaxDamage>
+	<Speed>7</Speed>
 	<Initiative>11</Initiative>
 	<Flying>true</Flying>
 	<Health>80</Health>
@@ -20,18 +20,10 @@
 	<Upgrade>false</Upgrade>
 	<PairCreature>CREATURE_SHADOW_DRAGON</PairCreature>
 	<CreatureTown>TOWN_NECROMANCY</CreatureTown>
-	<MagicElement>
-		<First>ELEMENT_AIR</First>
-		<Second>ELEMENT_NONE</Second>
-	</MagicElement>
+	<MagicElement><First>ELEMENT_AIR</First><Second>ELEMENT_NONE</Second></MagicElement>
 	<WeeklyGrowth>3</WeeklyGrowth>
 	<Cost>
-		<Wood>0</Wood>
-		<Ore>0</Ore>
-		<Mercury>0</Mercury>
 		<Crystal>1</Crystal>
-		<Sulfur>0</Sulfur>
-		<Gem>0</Gem>
 		<Gold>850</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>

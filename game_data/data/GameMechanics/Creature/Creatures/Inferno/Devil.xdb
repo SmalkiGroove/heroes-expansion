@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature ObjectRecordID="47">
-	<AttackSkill>34</AttackSkill>
-	<DefenceSkill>25</DefenceSkill>
+	<AttackSkill>36</AttackSkill>
+	<DefenceSkill>36</DefenceSkill>
 	<Shots>0</Shots>
 	<MinDamage>44</MinDamage>
 	<MaxDamage>66</MaxDamage>
-	<Speed>8</Speed>
+	<Speed>9</Speed>
 	<Initiative>10</Initiative>
 	<Flying>true</Flying>
-	<Health>195</Health>
+	<Health>236</Health>
 	<KnownSpells/>
 	<SpellPoints>0</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
@@ -20,18 +20,10 @@
 	<Upgrade>false</Upgrade>
 	<PairCreature>CREATURE_ARCHDEVIL</PairCreature>
 	<CreatureTown>TOWN_INFERNO</CreatureTown>
-	<MagicElement>
-		<First>ELEMENT_FIRE</First>
-		<Second>ELEMENT_NONE</Second>
-	</MagicElement>
+	<MagicElement><First>ELEMENT_FIRE</First><Second>ELEMENT_NONE</Second></MagicElement>
 	<WeeklyGrowth>1</WeeklyGrowth>
 	<Cost>
-		<Wood>0</Wood>
-		<Ore>0</Ore>
-		<Mercury>0</Mercury>
-		<Crystal>0</Crystal>
 		<Sulfur>2</Sulfur>
-		<Gem>0</Gem>
 		<Gold>3000</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
@@ -48,6 +40,7 @@
 	</Upgrades>
 	<Abilities>
 		<Item>ABILITY_DEMONIC</Item>
+		<Item>ABILITY_FIRE_PROOF_50</Item>
 		<Item>ABILITY_ARDENT_AURA</Item>
 	</Abilities>
 </Creature>

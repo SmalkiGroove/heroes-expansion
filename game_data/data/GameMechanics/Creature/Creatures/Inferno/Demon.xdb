@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature ObjectRecordID="37">
-	<AttackSkill>4</AttackSkill>
-	<DefenceSkill>4</DefenceSkill>
+	<AttackSkill>5</AttackSkill>
+	<DefenceSkill>3</DefenceSkill>
 	<Shots>0</Shots>
 	<MinDamage>2</MinDamage>
-	<MaxDamage>4</MaxDamage>
+	<MaxDamage>3</MaxDamage>
 	<Speed>4</Speed>
 	<Initiative>8</Initiative>
 	<Flying>false</Flying>
@@ -20,18 +20,9 @@
 	<Upgrade>false</Upgrade>
 	<PairCreature>CREATURE_HORNED_DEMON</PairCreature>
 	<CreatureTown>TOWN_INFERNO</CreatureTown>
-	<MagicElement>
-		<First>ELEMENT_FIRE</First>
-		<Second>ELEMENT_NONE</Second>
-	</MagicElement>
-	<WeeklyGrowth>40</WeeklyGrowth>
+	<MagicElement><First>ELEMENT_FIRE</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>36</WeeklyGrowth>
 	<Cost>
-		<Wood>0</Wood>
-		<Ore>0</Ore>
-		<Mercury>0</Mercury>
-		<Crystal>0</Crystal>
-		<Sulfur>0</Sulfur>
-		<Gem>0</Gem>
 		<Gold>40</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
@@ -48,6 +39,7 @@
 	</Upgrades>
 	<Abilities>
 		<Item>ABILITY_DEMONIC</Item>
+		<Item>ABILITY_FIRE_PROOF_50</Item>
 		<Item>ABILITY_SPITE</Item>
 		<Item>ABILITY_FURY</Item>
 	</Abilities>

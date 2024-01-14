@@ -4,11 +4,11 @@
 	<DefenceSkill>2</DefenceSkill>
 	<Shots>5</Shots>
 	<MinDamage>2</MinDamage>
-	<MaxDamage>4</MaxDamage>
+	<MaxDamage>3</MaxDamage>
 	<Speed>5</Speed>
 	<Initiative>12</Initiative>
 	<Flying>false</Flying>
-	<Health>11</Health>
+	<Health>10</Health>
 	<KnownSpells/>
 	<SpellPoints>0</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
@@ -20,18 +20,9 @@
 	<Upgrade>false</Upgrade>
 	<PairCreature>CREATURE_ASSASSIN</PairCreature>
 	<CreatureTown>TOWN_DUNGEON</CreatureTown>
-	<MagicElement>
-		<First>ELEMENT_WATER</First>
-		<Second>ELEMENT_NONE</Second>
-	</MagicElement>
-	<WeeklyGrowth>56</WeeklyGrowth>
+	<MagicElement><First>ELEMENT_WATER</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>39</WeeklyGrowth>
 	<Cost>
-		<Wood>0</Wood>
-		<Ore>0</Ore>
-		<Mercury>0</Mercury>
-		<Crystal>0</Crystal>
-		<Sulfur>0</Sulfur>
-		<Gem>0</Gem>
 		<Gold>15</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>

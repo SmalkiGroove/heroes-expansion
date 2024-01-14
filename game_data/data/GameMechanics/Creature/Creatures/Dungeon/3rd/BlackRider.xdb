@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature>
 	<AttackSkill>10</AttackSkill>
-	<DefenceSkill>9</DefenceSkill>
+	<DefenceSkill>10</DefenceSkill>
 	<Shots>0</Shots>
-	<MinDamage>8</MinDamage>
-	<MaxDamage>14</MaxDamage>
-	<Speed>7</Speed>
-	<Initiative>14</Initiative>
+	<MinDamage>7</MinDamage>
+	<MaxDamage>10</MaxDamage>
+	<Speed>8</Speed>
+	<Initiative>16</Initiative>
 	<Flying>false</Flying>
-	<Health>54</Health>
+	<Health>42</Health>
 	<KnownSpells/>
 	<SpellPoints>0</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
@@ -20,18 +20,9 @@
 	<Upgrade>false</Upgrade>
 	<PairCreature>CREATURE_UNKNOWN</PairCreature>
 	<CreatureTown>TOWN_DUNGEON</CreatureTown>
-	<MagicElement>
-		<First>ELEMENT_EARTH</First>
-		<Second>ELEMENT_FIRE</Second>
-	</MagicElement>
-	<WeeklyGrowth>12</WeeklyGrowth>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_FIRE</Second></MagicElement>
+	<WeeklyGrowth>9</WeeklyGrowth>
 	<Cost>
-		<Wood>0</Wood>
-		<Ore>0</Ore>
-		<Mercury>0</Mercury>
-		<Crystal>0</Crystal>
-		<Sulfur>0</Sulfur>
-		<Gem>0</Gem>
 		<Gold>225</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
@@ -44,7 +35,8 @@
 	<BaseCreature>CREATURE_RIDER</BaseCreature>
 	<Upgrades/>
 	<Abilities>
-		<Item>ABILITY_BEAT_UP</Item>
 		<Item>ABILITY_RIDE_BY_ATTACK</Item>
+		<Item>ABILITY_BEAT_UP</Item>
+		<Item>ABILITY_KEEN_EYE</Item>
 	</Abilities>
 </Creature>

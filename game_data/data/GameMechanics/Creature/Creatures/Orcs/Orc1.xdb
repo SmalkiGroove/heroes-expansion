@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature>
-	<AttackSkill>6</AttackSkill>
-	<DefenceSkill>4</DefenceSkill>
+	<AttackSkill>5</AttackSkill>
+	<DefenceSkill>3</DefenceSkill>
 	<Shots>0</Shots>
-	<MinDamage>1</MinDamage>
-	<MaxDamage>6</MaxDamage>
-	<Speed>5</Speed>
+	<MinDamage>2</MinDamage>
+	<MaxDamage>5</MaxDamage>
+	<Speed>4</Speed>
 	<Initiative>10</Initiative>
 	<Flying>false</Flying>
-	<Health>20</Health>
+	<Health>23</Health>
 	<KnownSpells/>
 	<SpellPoints>0</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
@@ -20,18 +20,9 @@
 	<Upgrade>false</Upgrade>
 	<PairCreature>CREATURE_ORC_SLAYER</PairCreature>
 	<CreatureTown>TOWN_STRONGHOLD</CreatureTown>
-	<MagicElement>
-		<First>ELEMENT_EARTH</First>
-		<Second>ELEMENT_NONE</Second>
-	</MagicElement>
-	<WeeklyGrowth>24</WeeklyGrowth>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>21</WeeklyGrowth>
 	<Cost>
-		<Wood>0</Wood>
-		<Ore>0</Ore>
-		<Mercury>0</Mercury>
-		<Crystal>0</Crystal>
-		<Sulfur>0</Sulfur>
-		<Gem>0</Gem>
 		<Gold>80</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature>
 	<AttackSkill>17</AttackSkill>
-	<DefenceSkill>16</DefenceSkill>
+	<DefenceSkill>17</DefenceSkill>
 	<Shots>0</Shots>
-	<MinDamage>15</MinDamage>
-	<MaxDamage>25</MaxDamage>
-	<Speed>6</Speed>
+	<MinDamage>14</MinDamage>
+	<MaxDamage>18</MaxDamage>
+	<Speed>8</Speed>
 	<Initiative>12</Initiative>
 	<Flying>true</Flying>
-	<Health>85</Health>
+	<Health>88</Health>
 	<KnownSpells/>
 	<SpellPoints>0</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
@@ -20,17 +20,9 @@
 	<Upgrade>false</Upgrade>
 	<PairCreature>CREATURE_WYVERN_POISONOUS</PairCreature>
 	<CreatureTown>TOWN_STRONGHOLD</CreatureTown>
-	<MagicElement>
-		<First>ELEMENT_EARTH</First>
-		<Second>ELEMENT_NONE</Second>
-	</MagicElement>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_NONE</Second></MagicElement>
 	<WeeklyGrowth>3</WeeklyGrowth>
 	<Cost>
-		<Wood>0</Wood>
-		<Ore>0</Ore>
-		<Mercury>0</Mercury>
-		<Crystal>0</Crystal>
-		<Sulfur>0</Sulfur>
 		<Gem>1</Gem>
 		<Gold>850</Gold>
 	</Cost>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature>
-	<AttackSkill>18</AttackSkill>
-	<DefenceSkill>26</DefenceSkill>
+	<AttackSkill>22</AttackSkill>
+	<DefenceSkill>24</DefenceSkill>
 	<Shots>0</Shots>
-	<MinDamage>18</MinDamage>
-	<MaxDamage>26</MaxDamage>
+	<MinDamage>12</MinDamage>
+	<MaxDamage>14</MaxDamage>
 	<Speed>8</Speed>
 	<Initiative>10</Initiative>
 	<Flying>true</Flying>
-	<Health>125</Health>
+	<Health>115</Health>
 	<KnownSpells/>
 	<SpellPoints>0</SpellPoints>
 	<SpellPoints1>3</SpellPoints1>
@@ -20,18 +20,10 @@
 	<Upgrade>true</Upgrade>
 	<PairCreature>CREATURE_THANE</PairCreature>
 	<CreatureTown>TOWN_FORTRESS</CreatureTown>
-	<MagicElement>
-		<First>ELEMENT_AIR</First>
-		<Second>ELEMENT_NONE</Second>
-	</MagicElement>
+	<MagicElement><First>ELEMENT_AIR</First><Second>ELEMENT_NONE</Second></MagicElement>
 	<WeeklyGrowth>3</WeeklyGrowth>
 	<Cost>
-		<Wood>0</Wood>
-		<Ore>0</Ore>
 		<Mercury>1</Mercury>
-		<Crystal>0</Crystal>
-		<Sulfur>0</Sulfur>
-		<Gem>0</Gem>
 		<Gold>1100</Gold>
 	</Cost>
 	<PresetPrice>0</PresetPrice>
@@ -46,6 +38,7 @@
 	<Upgrades/>
 	<Abilities>
 		<Item>ABILITY_STEADINESS</Item>
+		<Item>ABILITY_DOUBLE_ATTACK</Item>
 		<Item>ABILITY_FIRE_IMMUNED</Item>
 		<Item>ABILITY_FLAMEWAVE</Item>
 		<Item>ABILITY_FLAMESTRIKE</Item>

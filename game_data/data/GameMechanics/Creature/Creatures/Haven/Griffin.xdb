@@ -5,7 +5,7 @@
 	<Shots>0</Shots>
 	<MinDamage>6</MinDamage>
 	<MaxDamage>11</MaxDamage>
-	<Speed>7</Speed>
+	<Speed>8</Speed>
 	<Initiative>15</Initiative>
 	<Flying>true</Flying>
 	<Health>34</Health>
@@ -20,18 +20,9 @@
 	<Upgrade>false</Upgrade>
 	<PairCreature>CREATURE_ROYAL_GRIFFIN</PairCreature>
 	<CreatureTown>TOWN_HEAVEN</CreatureTown>
-	<MagicElement>
-		<First>ELEMENT_AIR</First>
-		<Second>ELEMENT_NONE</Second>
-	</MagicElement>
-	<WeeklyGrowth>12</WeeklyGrowth>
+	<MagicElement><First>ELEMENT_AIR</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>9</WeeklyGrowth>
 	<Cost>
-		<Wood>0</Wood>
-		<Ore>0</Ore>
-		<Mercury>0</Mercury>
-		<Crystal>0</Crystal>
-		<Sulfur>0</Sulfur>
-		<Gem>0</Gem>
 		<Gold>175</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>

@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature ObjectRecordID="1000026">
-	<AttackSkill>8</AttackSkill>
-	<DefenceSkill>8</DefenceSkill>
+	<AttackSkill>6</AttackSkill>
+	<DefenceSkill>6</DefenceSkill>
 	<Shots>3</Shots>
-	<MinDamage>7</MinDamage>
-	<MaxDamage>7</MaxDamage>
-	<Speed>4</Speed>
-	<Initiative>10</Initiative>
+	<MinDamage>9</MinDamage>
+	<MaxDamage>9</MaxDamage>
+	<Speed>3</Speed>
+	<Initiative>9</Initiative>
 	<Flying>false</Flying>
-	<Health>26</Health>
+	<Health>24</Health>
 	<KnownSpells>
-		<Item>
-			<Spell>SPELL_MAGIC_FIST</Spell>
-			<Mastery>MASTERY_ADVANCED</Mastery>
-		</Item>
-		<Item>
-			<Spell>SPELL_DEFLECT_ARROWS</Spell>
-			<Mastery>MASTERY_ADVANCED</Mastery>
-		</Item>
+		<Item><Spell>SPELL_LIGHTNING_BOLT</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+		<Item><Spell>SPELL_DEFLECT_ARROWS</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
 	</KnownSpells>
 	<SpellPoints>15</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
@@ -29,18 +23,9 @@
 	<Upgrade>false</Upgrade>
 	<PairCreature>CREATURE_ARCH_MAGI</PairCreature>
 	<CreatureTown>TOWN_ACADEMY</CreatureTown>
-	<MagicElement>
-		<First>ELEMENT_FIRE</First>
-		<Second>ELEMENT_NONE</Second>
-	</MagicElement>
-	<WeeklyGrowth>12</WeeklyGrowth>
+	<MagicElement><First>ELEMENT_FIRE</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>10</WeeklyGrowth>
 	<Cost>
-		<Wood>0</Wood>
-		<Ore>0</Ore>
-		<Mercury>0</Mercury>
-		<Crystal>0</Crystal>
-		<Sulfur>0</Sulfur>
-		<Gem>0</Gem>
 		<Gold>175</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>

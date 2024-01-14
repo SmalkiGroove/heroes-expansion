@@ -10,14 +10,8 @@
 	<Flying>false</Flying>
 	<Health>60</Health>
 	<KnownSpells>
-		<Item>
-			<Spell>SPELL_FORGETFULNESS</Spell>
-			<Mastery>MASTERY_ADVANCED</Mastery>
-		</Item>
-		<Item>
-			<Spell>SPELL_WASP_SWARM</Spell>
-			<Mastery>MASTERY_ADVANCED</Mastery>
-		</Item>
+		<Item><Spell>SPELL_FORGETFULNESS</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+		<Item><Spell>SPELL_WASP_SWARM</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
 	</KnownSpells>
 	<SpellPoints>20</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
@@ -29,10 +23,7 @@
 	<Upgrade>true</Upgrade>
 	<PairCreature>CREATURE_UNKNOWN</PairCreature>
 	<CreatureTown>TOWN_NO_TYPE</CreatureTown>
-	<MagicElement>
-		<First>ELEMENT_EARTH</First>
-		<Second>ELEMENT_NONE</Second>
-	</MagicElement>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_NONE</Second></MagicElement>
 	<WeeklyGrowth>15</WeeklyGrowth>
 	<Cost>
 		<Wood>0</Wood>

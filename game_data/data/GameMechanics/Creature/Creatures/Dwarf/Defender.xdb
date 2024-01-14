@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature>
 	<AttackSkill>1</AttackSkill>
-	<DefenceSkill>5</DefenceSkill>
+	<DefenceSkill>4</DefenceSkill>
 	<Shots>0</Shots>
 	<MinDamage>1</MinDamage>
-	<MaxDamage>1</MaxDamage>
+	<MaxDamage>2</MaxDamage>
 	<Speed>4</Speed>
 	<Initiative>8</Initiative>
 	<Flying>false</Flying>
-	<Health>9</Health>
+	<Health>8</Health>
 	<KnownSpells/>
 	<SpellPoints>0</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
@@ -20,18 +20,9 @@
 	<Upgrade>false</Upgrade>
 	<PairCreature>CREATURE_STOUT_DEFENDER</PairCreature>
 	<CreatureTown>TOWN_FORTRESS</CreatureTown>
-	<MagicElement>
-		<First>ELEMENT_EARTH</First>
-		<Second>ELEMENT_NONE</Second>
-	</MagicElement>
-	<WeeklyGrowth>62</WeeklyGrowth>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>52</WeeklyGrowth>
 	<Cost>
-		<Wood>0</Wood>
-		<Ore>0</Ore>
-		<Mercury>0</Mercury>
-		<Crystal>0</Crystal>
-		<Sulfur>0</Sulfur>
-		<Gem>0</Gem>
 		<Gold>15</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
@@ -49,6 +40,6 @@
 	<Abilities>
 		<Item>ABILITY_SPITE</Item>
 		<Item>ABILITY_SHIELDED</Item>
-		<Item>ABILITY_HEAVY_ARMOR</Item>
+		<Item>ABILITY_SHIELD_WALL</Item>
 	</Abilities>
 </Creature>
