@@ -71,6 +71,7 @@ function ParseData(hero, data)
         data["SET1"] = ARTFSET_NONE
         data["SET2"] = ARTFSET_NONE
     end
+    print(GetGameVar("tmp_hero_"..hero.."_stat_spellpower"))
 end
 
 function GetHeroLevel(data)
