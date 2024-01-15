@@ -1021,20 +1021,20 @@
 			<EnumEntries>
 				<Item>HERO_CLASS_NONE</Item>
 				<Item>HERO_CLASS_HAVEN_MIGHT</Item>
-				<Item>HERO_CLASS_HAVEN_MAGIC</Item>
 				<Item>HERO_CLASS_PRESERVE_MIGHT</Item>
+				<Item>HERO_CLASS_ACADEMY_MAGIC</Item>
+				<Item>HERO_CLASS_INFERNO_MIGHT</Item>
+				<Item>HERO_CLASS_NECROPOLIS_MAGIC</Item>
+				<Item>HERO_CLASS_DUNGEON_MAGIC</Item>
+				<Item>HERO_CLASS_FORTRESS_MAGIC</Item>
+				<Item>HERO_CLASS_STRONGHOLD_MIGHT</Item>
+				<Item>HERO_CLASS_HAVEN_MAGIC</Item>
 				<Item>HERO_CLASS_PRESERVE_MAGIC</Item>
 				<Item>HERO_CLASS_FORTRESS_MIGHT</Item>
-				<Item>HERO_CLASS_FORTRESS_MAGIC</Item>
 				<Item>HERO_CLASS_ACADEMY_MIGHT</Item>
-				<Item>HERO_CLASS_ACADEMY_MAGIC</Item>
 				<Item>HERO_CLASS_DUNGEON_MIGHT</Item>
-				<Item>HERO_CLASS_DUNGEON_MAGIC</Item>
 				<Item>HERO_CLASS_NECROPOLIS_MIGHT</Item>
-				<Item>HERO_CLASS_NECROPOLIS_MAGIC</Item>
-				<Item>HERO_CLASS_INFERNO_MIGHT</Item>
 				<Item>HERO_CLASS_INFERNO_MAGIC</Item>
-				<Item>HERO_CLASS_STRONGHOLD_MIGHT</Item>
 				<Item>HERO_CLASS_STRONGHOLD_MAGIC</Item>
 				<Item>HERO_CLASS_OTHER_1</Item>
 				<Item>HERO_CLASS_OTHER_2</Item>
@@ -1691,99 +1691,99 @@
 			</dbid>
 			<EnumEntries>
 				<Item>ARTIFACT_NONE</Item>
-				<Item>ARTIFACT_SWORD_OF_MIGHT</Item>
-				<Item>ARTIFACT_AXE_OF_THE_MOUNTAIN_LORDS</Item>
-				<Item>ARTIFACT_WAND_OF_SPELL</Item>
-				<Item>ARTIFACT_UNICORN_HORN_BOW</Item>
-				<Item>ARTIFACT_TITANS_TRIDENT</Item>
-				<Item>ARTIFACT_STAFF_OF_THE_NETHERWORLD</Item>
-				<Item>ARTIFACT_SHACKLES_OF_THE_LAST_MAN</Item>
-				<Item>ARTIFACT_FOUR_LEAF_CLOVER</Item>
-				<Item>ARTIFACT_SHIELD_OF_CRYSTAL_ICE</Item>
-				<Item>ARTIFACT_OCEAN_CHARM</Item>
-				<Item>ARTIFACT_CROWN_OF_COURAGE</Item>
-				<Item>ARTIFACT_ALL_SEEING_CROWN</Item>
-				<Item>ARTIFACT_SENTINELS_BREASTPLATE</Item>
-				<Item>ARTIFACT_BREASTPLATE_OF_ELDRICHT_MIGHT</Item>
-				<Item>ARTIFACT_PEDANT_OF_MASTERY</Item>
-				<Item>ARTIFACT_NECKLACE_OF_THE_EAGLE</Item>
-				<Item>ARTIFACT_NECKLACE_OF_THE_BLOODY_CLAW</Item>
-				<Item>ARTIFACT_EVERCOLD_ICICLE</Item>
-				<Item>ARTIFACT_NECKLACE_OF_VICTORY</Item>
-				<Item>ARTIFACT_MAGNETIC_RING</Item>
-				<Item>ARTIFACT_RING_OF_LIFE</Item>
-				<Item>ARTIFACT_RING_OF_HASTE</Item>
-				<Item>ARTIFACT_RING_OF_THE_BROKEN_WILL</Item>
-				<Item>ARTIFACT_BOOTS_OF_THE_SWIFT_JOUNREY</Item>
-				<Item>ARTIFACT_GOLDEN_HORSESHOE</Item>
-				<Item>ARTIFACT_BOOTS_OF_THE_OPEN_ROAD</Item>
-				<Item>ARTIFACT_BOOTS_OF_INTERFERENCE</Item>
-				<Item>ARTIFACT_ENDLESS_SACK_OF_GOLD</Item>
-				<Item>ARTIFACT_ENDLESS_POUCH_OF_GOLD</Item>
-				<Item>ARTIFACT_ANGEL_WINGS</Item>
-				<Item>ARTIFACT_CAPE_OF_KINGS</Item>
-				<Item>ARTIFACT_PHOENIX_FEATHER_CAPE</Item>
-				<Item>ARTIFACT_CLOAK_OF_DEATHS_SHADOW</Item>
-				<Item>ARTIFACT_TURBAN_OF_ENLIGHTMENT</Item>
-				<Item>ARTIFACT_SCALE_MAIL_OF_ENLIGHTMENT</Item>
-				<Item>ARTIFACT_DRAGON_SCALE_ARMOR</Item>
-				<Item>ARTIFACT_DRAGON_SCALE_SHIELD</Item>
-				<Item>ARTIFACT_DRAGON_BONE_GRAVES</Item>
-				<Item>ARTIFACT_DRAGON_WING_MANTLE</Item>
-				<Item>ARTIFACT_DRAGON_TEETH_NECKLACE</Item>
-				<Item>ARTIFACT_DRAGON_TALON_CROWN</Item>
-				<Item>ARTIFACT_DRAGON_EYE_RING</Item>
-				<Item>ARTIFACT_DRAGON_FLAME_TONGUE</Item>
-				<Item>ARTIFACT_ROBE_OF_THE_MAGISTER</Item>
-				<Item>ARTIFACT_STAFF_OF_THE_MAGISTER</Item>
-				<Item>ARTIFACT_CROWN_OF_THE_MAGISTER</Item>
-				<Item>ARTIFACT_RING_OF_THE_MAGISTER</Item>
-				<Item>ARTIFACT_CUIRASS_OF_THE_DWARVEN_KINGS</Item>
-				<Item>ARTIFACT_GREAVES_OF_THE_DWARVEN_KINGS</Item>
-				<Item>ARTIFACT_HELM_OF_THE_DWARVEN_KINGS</Item>
-				<Item>ARTIFACT_SHIELD_OF_THE_DWARVEN_KINGS</Item>
-				<Item>ARTIFACT_MAGIC_SCROLL_OF_SPELL</Item>
+				<Item>SWORD_OF_RUINS</Item>
+				<Item>GREAT_AXE_OF_GIANT_SLAYING</Item>
+				<Item>WAND_OF_X</Item>
+				<Item>UNICORN_HORN_BOW</Item>
+				<Item>TITANS_TRIDENT</Item>
+				<Item>STAFF_OF_VEXINGS</Item>
+				<Item>SHACKLES_OF_WAR</Item>
+				<Item>FOUR_LEAF_CLOVER</Item>
+				<Item>ICEBERG_SHIELD</Item>
+				<Item>GOLDEN_SEXTANT</Item>
+				<Item>CROWN_OF_COURAGE</Item>
+				<Item>CROWN_OF_MANY_EYES</Item>
+				<Item>PLATE_MAIL_OF_STABILITY</Item>
+				<Item>BREASTPLATE_OF_PETRIFIED_WOOD</Item>
+				<Item>PEDANT_OF_MASTERY</Item>
+				<Item>NECKLACE_OF_BRAVERY</Item>
+				<Item>WEREWOLF_CLAW_NECKLACE</Item>
+				<Item>EVERCOLD_ICICLE</Item>
+				<Item>NECKLACE_OF_POWER</Item>
+				<Item>RING_OF_LIGHTING_PROTECTION</Item>
+				<Item>RING_OF_LIFE</Item>
+				<Item>RING_OF_HASTE</Item>
+				<Item>NIGHTMARISH_RING</Item>
+				<Item>BOOTS_OF_SPEED</Item>
+				<Item>GOLDEN_HORSESHOE</Item>
+				<Item>WAYFARER_BOOTS</Item>
+				<Item>BOOTS_OF_INTERFERENCE</Item>
+				<Item>ENDLESS_SACK_OF_GOLD</Item>
+				<Item>ENDLESS_BAG_OF_GOLD</Item>
+				<Item>ANGEL_WINGS</Item>
+				<Item>LION_HIDE_CAPE</Item>
+				<Item>PHOENIX_FEATHER_CAPE</Item>
+				<Item>CLOAK_OF_MOURNING</Item>
+				<Item>HELM_OF_ENLIGHTMENT</Item>
+				<Item>CHAIN_MAIL_OF_ENLIGHTMENT</Item>
+				<Item>DRAGON_SCALE_ARMOR</Item>
+				<Item>DRAGON_SCALE_SHIELD</Item>
+				<Item>DRAGON_BONE_GRAVES</Item>
+				<Item>DRAGON_WING_MANTLE</Item>
+				<Item>DRAGON_TEETH_NECKLACE</Item>
+				<Item>DRAGON_TALON_CROWN</Item>
+				<Item>DRAGON_EYE_RING</Item>
+				<Item>DRAGON_FLAME_TONGUE</Item>
+				<Item>ROBE_OF_MAGI</Item>
+				<Item>STAFF_OF_MAGI</Item>
+				<Item>CROWN_OF_MAGI</Item>
+				<Item>RING_OF_MAGI</Item>
+				<Item>DWARVEN_MITHRAL_CUIRASS</Item>
+				<Item>DWARVEN_MITHRAL_GREAVES</Item>
+				<Item>DWARVEN_MITHRAL_HELMET</Item>
+				<Item>DWARVEN_MITHRAL_SHIELD</Item>
+				<Item>SCROLL_OF_SPELL_X</Item>
 				<Item>GRAAL</Item>
-				<Item>ARTIFACT_BOOTS_OF_LEVITATION</Item>
-				<Item>ARTIFACT_HELM_OF_THE_LICH</Item>
-				<Item>ARTIFACT_ARMOR_OF_VALOR</Item>
+				<Item>BOOTS_OF_LEVITATION</Item>
+				<Item>ARTIFACT_SKULL_HELMET</Item>
+				<Item>ARTIFACT_VALORIOUS_ARMOR</Item>
 				<Item>ARTIFACT_BOOTS_OF_SWIFTNESS</Item>
 				<Item>ARTIFACT_MOONBLADE</Item>
 				<Item>ARTIFACT_RING_OF_CELERITY</Item>
 				<Item>ARTIFACT_BAND_OF_CONJURER</Item>
-				<Item>ARTIFACT_EMERALD_SLIPPERS</Item>
-				<Item>ARTIFACT_CLOAK_OF_SYLANNA</Item>
-				<Item>ARTIFACT_CURSED_RING</Item>
-				<Item>ARTIFACT_TUNIC_OF_CARVED_FLESH</Item>
-				<Item>ARTIFACT_RING_OF_CAUTION</Item>
+				<Item>ARTIFACT_EARTHSLIDERS</Item>
+				<Item>ARTIFACT_RIGID_MANTLE</Item>
+				<Item>ARTIFACT_JINXING_BAND</Item>
+				<Item>ARTIFACT_BONESTUDDED_LEATHER</Item>
+				<Item>ARTIFACT_WISPERING_RING</Item>
 				<Item>ARTIFACT_HELM_OF_CHAOS</Item>
-				<Item>ARTIFACT_PENDANT_OF_CONFLUX</Item>
-				<Item>ARTIFACT_SANDALS_OF_THE_BLESSED</Item>
-				<Item>ARTIFACT_SANDROS_CLOAK</Item>
-				<Item>ARTIFACT_RING_OF_THE_UNREPENTANT</Item>
-				<Item>ARTIFACT_AMULET_OF_NECROMANCY</Item>
+				<Item>ARTIFACT_TWISTING_NEITHER</Item>
+				<Item>ARTIFACT_SANDALS_OF_THE_SAINT</Item>
+				<Item>ARTIFACT_SHAWL_OF_GREAT_LICH</Item>
+				<Item>ARTIFACT_RING_OF_DEATH</Item>
+				<Item>ARTIFACT_NECROMANCER_PENDANT</Item>
 				<Item>ARTIFACT_FREIDA</Item>
 				<Item>ARTIFACT_RING_OF_THE_SHADOWBRAND</Item>
 				<Item>ARTIFACT_OGRE_CLUB</Item>
 				<Item>ARTIFACT_OGRE_SHIELD</Item>
 				<Item>ARTIFACT_TOME_OF_DESTRUCTION</Item>
-				<Item>ARTIFACT_TOME_OF_LIGHT</Item>
-				<Item>ARTIFACT_TOME_OF_DARKNESS</Item>
-				<Item>ARTIFACT_TOME_OF_NATURE</Item>
+				<Item>ARTIFACT_TOME_OF_LIGHT_MAGIC</Item>
+				<Item>ARTIFACT_TOME_OF_DARK_MAGIC</Item>
+				<Item>ARTIFACT_TOME_OF_SUMMONING_MAGIC</Item>
 				<Item>ARTIFACT_BEGINNER_MAGIC_STICK</Item>
 				<Item>ARTIFACT_RUNIC_WAR_AXE</Item>
 				<Item>ARTIFACT_RUNIC_WAR_HARNESS</Item>
-				<Item>ARTIFACT_SKULL_OF_THE_FORBIDDEN</Item>
+				<Item>ARTIFACT_SKULL_OF_MARKAL</Item>
 				<Item>ARTIFACT_BEARHIDE_WRAPS</Item>
 				<Item>ARTIFACT_DWARVEN_SMITHY_HUMMER</Item>
 				<Item>ARTIFACT_RUNE_OF_FLAME</Item>
 				<Item>ARTIFACT_TAROT_DECK</Item>
 				<Item>ARTIFACT_CROWN_OF_LEADER</Item>
-				<Item>ARTIFACT_MASK_OF_EQUITY</Item>
+				<Item>ARTIFACT_MASK_OF_DOPPELGANGER</Item>
 				<Item>ARTIFACT_EDGE_OF_BALANCE</Item>
 				<Item>ARTIFACT_RING_OF_MACHINE_AFFINITY</Item>
 				<Item>ARTIFACT_HORN_OF_PLENTY</Item>
-				<Item>ARTIFACT_RING_OF_BANISHMENT</Item>
+				<Item>ARTIFACT_RING_OF_UNSUMMONING</Item>
 				<Item>ARTIFACT_BOOK_OF_POWER</Item>
 				<Item>ARTIFACT_TREEBORN_QUIVER</Item>
 				<Item>ARTIFACT_PRINCESS</Item>
@@ -7005,7 +7005,7 @@
 							<__ClassTypeID>270062592</__ClassTypeID>
 							<__ObjectData>
 								<Min>0</Min>
-								<Max>12341</Max>
+								<Max>0</Max>
 								<Type>1</Type>
 							</__ObjectData>
 						</Item>
@@ -17156,211 +17156,211 @@
 					<Value>0</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_SWORD_OF_MIGHT</Name>
+					<Name>SWORD_OF_RUINS</Name>
 					<Value>1</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_AXE_OF_THE_MOUNTAIN_LORDS</Name>
+					<Name>GREAT_AXE_OF_GIANT_SLAYING</Name>
 					<Value>2</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_WAND_OF_SPELL</Name>
+					<Name>WAND_OF_X</Name>
 					<Value>3</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_UNICORN_HORN_BOW</Name>
+					<Name>UNICORN_HORN_BOW</Name>
 					<Value>4</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_TITANS_TRIDENT</Name>
+					<Name>TITANS_TRIDENT</Name>
 					<Value>5</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_STAFF_OF_THE_NETHERWORLD</Name>
+					<Name>STAFF_OF_VEXINGS</Name>
 					<Value>6</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_SHACKLES_OF_THE_LAST_MAN</Name>
+					<Name>SHACKLES_OF_WAR</Name>
 					<Value>7</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_FOUR_LEAF_CLOVER</Name>
+					<Name>FOUR_LEAF_CLOVER</Name>
 					<Value>8</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_SHIELD_OF_CRYSTAL_ICE</Name>
+					<Name>ICEBERG_SHIELD</Name>
 					<Value>9</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_OCEAN_CHARM</Name>
+					<Name>GOLDEN_SEXTANT</Name>
 					<Value>10</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_CROWN_OF_COURAGE</Name>
+					<Name>CROWN_OF_COURAGE</Name>
 					<Value>11</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_ALL_SEEING_CROWN</Name>
+					<Name>CROWN_OF_MANY_EYES</Name>
 					<Value>12</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_SENTINELS_BREASTPLATE</Name>
+					<Name>PLATE_MAIL_OF_STABILITY</Name>
 					<Value>13</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_BREASTPLATE_OF_ELDRICHT_MIGHT</Name>
+					<Name>BREASTPLATE_OF_PETRIFIED_WOOD</Name>
 					<Value>14</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_PEDANT_OF_MASTERY</Name>
+					<Name>PEDANT_OF_MASTERY</Name>
 					<Value>15</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_NECKLACE_OF_THE_EAGLE</Name>
+					<Name>NECKLACE_OF_BRAVERY</Name>
 					<Value>16</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_NECKLACE_OF_THE_BLOODY_CLAW</Name>
+					<Name>WEREWOLF_CLAW_NECKLACE</Name>
 					<Value>17</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_EVERCOLD_ICICLE</Name>
+					<Name>EVERCOLD_ICICLE</Name>
 					<Value>18</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_NECKLACE_OF_VICTORY</Name>
+					<Name>NECKLACE_OF_POWER</Name>
 					<Value>19</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_MAGNETIC_RING</Name>
+					<Name>RING_OF_LIGHTING_PROTECTION</Name>
 					<Value>20</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_RING_OF_LIFE</Name>
+					<Name>RING_OF_LIFE</Name>
 					<Value>21</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_RING_OF_HASTE</Name>
+					<Name>RING_OF_HASTE</Name>
 					<Value>22</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_RING_OF_THE_BROKEN_WILL</Name>
+					<Name>NIGHTMARISH_RING</Name>
 					<Value>23</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_BOOTS_OF_THE_SWIFT_JOUNREY</Name>
+					<Name>BOOTS_OF_SPEED</Name>
 					<Value>24</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_GOLDEN_HORSESHOE</Name>
+					<Name>GOLDEN_HORSESHOE</Name>
 					<Value>25</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_BOOTS_OF_THE_OPEN_ROAD</Name>
+					<Name>WAYFARER_BOOTS</Name>
 					<Value>26</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_BOOTS_OF_INTERFERENCE</Name>
+					<Name>BOOTS_OF_INTERFERENCE</Name>
 					<Value>27</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_ENDLESS_SACK_OF_GOLD</Name>
+					<Name>ENDLESS_SACK_OF_GOLD</Name>
 					<Value>28</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_ENDLESS_POUCH_OF_GOLD</Name>
+					<Name>ENDLESS_BAG_OF_GOLD</Name>
 					<Value>29</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_ANGEL_WINGS</Name>
+					<Name>ANGEL_WINGS</Name>
 					<Value>30</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_CAPE_OF_KINGS</Name>
+					<Name>LION_HIDE_CAPE</Name>
 					<Value>31</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_PHOENIX_FEATHER_CAPE</Name>
+					<Name>PHOENIX_FEATHER_CAPE</Name>
 					<Value>32</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_CLOAK_OF_DEATHS_SHADOW</Name>
+					<Name>CLOAK_OF_MOURNING</Name>
 					<Value>33</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_TURBAN_OF_ENLIGHTMENT</Name>
+					<Name>HELM_OF_ENLIGHTMENT</Name>
 					<Value>34</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_SCALE_MAIL_OF_ENLIGHTMENT</Name>
+					<Name>CHAIN_MAIL_OF_ENLIGHTMENT</Name>
 					<Value>35</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_DRAGON_SCALE_ARMOR</Name>
+					<Name>DRAGON_SCALE_ARMOR</Name>
 					<Value>36</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_DRAGON_SCALE_SHIELD</Name>
+					<Name>DRAGON_SCALE_SHIELD</Name>
 					<Value>37</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_DRAGON_BONE_GRAVES</Name>
+					<Name>DRAGON_BONE_GRAVES</Name>
 					<Value>38</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_DRAGON_WING_MANTLE</Name>
+					<Name>DRAGON_WING_MANTLE</Name>
 					<Value>39</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_DRAGON_TEETH_NECKLACE</Name>
+					<Name>DRAGON_TEETH_NECKLACE</Name>
 					<Value>40</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_DRAGON_TALON_CROWN</Name>
+					<Name>DRAGON_TALON_CROWN</Name>
 					<Value>41</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_DRAGON_EYE_RING</Name>
+					<Name>DRAGON_EYE_RING</Name>
 					<Value>42</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_DRAGON_FLAME_TONGUE</Name>
+					<Name>DRAGON_FLAME_TONGUE</Name>
 					<Value>43</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_ROBE_OF_THE_MAGISTER</Name>
+					<Name>ROBE_OF_MAGI</Name>
 					<Value>44</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_STAFF_OF_THE_MAGISTER</Name>
+					<Name>STAFF_OF_MAGI</Name>
 					<Value>45</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_CROWN_OF_THE_MAGISTER</Name>
+					<Name>CROWN_OF_MAGI</Name>
 					<Value>46</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_RING_OF_THE_MAGISTER</Name>
+					<Name>RING_OF_MAGI</Name>
 					<Value>47</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_CUIRASS_OF_THE_DWARVEN_KINGS</Name>
+					<Name>DWARVEN_MITHRAL_CUIRASS</Name>
 					<Value>48</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_GREAVES_OF_THE_DWARVEN_KINGS</Name>
+					<Name>DWARVEN_MITHRAL_GREAVES</Name>
 					<Value>49</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_HELM_OF_THE_DWARVEN_KINGS</Name>
+					<Name>DWARVEN_MITHRAL_HELMET</Name>
 					<Value>50</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_SHIELD_OF_THE_DWARVEN_KINGS</Name>
+					<Name>DWARVEN_MITHRAL_SHIELD</Name>
 					<Value>51</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_MAGIC_SCROLL_OF_SPELL</Name>
+					<Name>SCROLL_OF_SPELL_X</Name>
 					<Value>52</Value>
 				</Item>
 				<Item>
@@ -17368,15 +17368,15 @@
 					<Value>53</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_BOOTS_OF_LEVITATION</Name>
+					<Name>BOOTS_OF_LEVITATION</Name>
 					<Value>54</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_HELM_OF_THE_LICH</Name>
+					<Name>ARTIFACT_SKULL_HELMET</Name>
 					<Value>55</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_ARMOR_OF_VALOR</Name>
+					<Name>ARTIFACT_VALORIOUS_ARMOR</Name>
 					<Value>56</Value>
 				</Item>
 				<Item>
@@ -17396,23 +17396,23 @@
 					<Value>60</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_EMERALD_SLIPPERS</Name>
+					<Name>ARTIFACT_EARTHSLIDERS</Name>
 					<Value>61</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_CLOAK_OF_SYLANNA</Name>
+					<Name>ARTIFACT_RIGID_MANTLE</Name>
 					<Value>62</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_CURSED_RING</Name>
+					<Name>ARTIFACT_JINXING_BAND</Name>
 					<Value>63</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_TUNIC_OF_CARVED_FLESH</Name>
+					<Name>ARTIFACT_BONESTUDDED_LEATHER</Name>
 					<Value>64</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_RING_OF_CAUTION</Name>
+					<Name>ARTIFACT_WISPERING_RING</Name>
 					<Value>65</Value>
 				</Item>
 				<Item>
@@ -17420,23 +17420,23 @@
 					<Value>66</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_PENDANT_OF_CONFLUX</Name>
+					<Name>ARTIFACT_TWISTING_NEITHER</Name>
 					<Value>67</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_SANDALS_OF_THE_BLESSED</Name>
+					<Name>ARTIFACT_SANDALS_OF_THE_SAINT</Name>
 					<Value>68</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_SANDROS_CLOAK</Name>
+					<Name>ARTIFACT_SHAWL_OF_GREAT_LICH</Name>
 					<Value>69</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_RING_OF_THE_UNREPENTANT</Name>
+					<Name>ARTIFACT_RING_OF_DEATH</Name>
 					<Value>70</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_AMULET_OF_NECROMANCY</Name>
+					<Name>ARTIFACT_NECROMANCER_PENDANT</Name>
 					<Value>71</Value>
 				</Item>
 				<Item>
@@ -17460,15 +17460,15 @@
 					<Value>76</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_TOME_OF_LIGHT</Name>
+					<Name>ARTIFACT_TOME_OF_LIGHT_MAGIC</Name>
 					<Value>77</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_TOME_OF_DARKNESS</Name>
+					<Name>ARTIFACT_TOME_OF_DARK_MAGIC</Name>
 					<Value>78</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_TOME_OF_NATURE</Name>
+					<Name>ARTIFACT_TOME_OF_SUMMONING_MAGIC</Name>
 					<Value>79</Value>
 				</Item>
 				<Item>
@@ -17484,7 +17484,7 @@
 					<Value>82</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_SKULL_OF_THE_FORBIDDEN</Name>
+					<Name>ARTIFACT_SKULL_OF_MARKAL</Name>
 					<Value>83</Value>
 				</Item>
 				<Item>
@@ -17508,7 +17508,7 @@
 					<Value>88</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_MASK_OF_EQUITY</Name>
+					<Name>ARTIFACT_MASK_OF_DOPPELGANGER</Name>
 					<Value>89</Value>
 				</Item>
 				<Item>
@@ -17524,7 +17524,7 @@
 					<Value>92</Value>
 				</Item>
 				<Item>
-					<Name>ARTIFACT_RING_OF_BANISHMENT</Name>
+					<Name>ARTIFACT_RING_OF_UNSUMMONING</Name>
 					<Value>93</Value>
 				</Item>
 				<Item>
@@ -37017,59 +37017,59 @@
 					<Value>1</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_HAVEN_MAGIC</Name>
+					<Name>HERO_CLASS_PRESERVE_MIGHT</Name>
 					<Value>2</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_PRESERVE_MIGHT</Name>
+					<Name>HERO_CLASS_ACADEMY_MAGIC</Name>
 					<Value>3</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_PRESERVE_MAGIC</Name>
+					<Name>HERO_CLASS_INFERNO_MIGHT</Name>
 					<Value>4</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_FORTRESS_MIGHT</Name>
+					<Name>HERO_CLASS_NECROPOLIS_MAGIC</Name>
 					<Value>5</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_FORTRESS_MAGIC</Name>
+					<Name>HERO_CLASS_DUNGEON_MAGIC</Name>
 					<Value>6</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_ACADEMY_MIGHT</Name>
+					<Name>HERO_CLASS_FORTRESS_MAGIC</Name>
 					<Value>7</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_ACADEMY_MAGIC</Name>
+					<Name>HERO_CLASS_STRONGHOLD_MIGHT</Name>
 					<Value>8</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_DUNGEON_MIGHT</Name>
+					<Name>HERO_CLASS_HAVEN_MAGIC</Name>
 					<Value>9</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_DUNGEON_MAGIC</Name>
+					<Name>HERO_CLASS_PRESERVE_MAGIC</Name>
 					<Value>10</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_NECROPOLIS_MIGHT</Name>
+					<Name>HERO_CLASS_FORTRESS_MIGHT</Name>
 					<Value>11</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_NECROPOLIS_MAGIC</Name>
+					<Name>HERO_CLASS_ACADEMY_MIGHT</Name>
 					<Value>12</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_INFERNO_MIGHT</Name>
+					<Name>HERO_CLASS_DUNGEON_MIGHT</Name>
 					<Value>13</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_INFERNO_MAGIC</Name>
+					<Name>HERO_CLASS_NECROPOLIS_MIGHT</Name>
 					<Value>14</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_STRONGHOLD_MIGHT</Name>
+					<Name>HERO_CLASS_INFERNO_MAGIC</Name>
 					<Value>15</Value>
 				</Item>
 				<Item>
@@ -66269,7 +66269,7 @@
 					<Value>163</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_CHAIN_SHOT_END_EFFECT</Name>
+					<Name>SPELL_ABILITY_CHAIN_SHOT_END_EFFECT</Name>
 					<Value>164</Value>
 				</Item>
 				<Item>
