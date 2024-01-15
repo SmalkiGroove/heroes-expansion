@@ -12,8 +12,6 @@ function HackHeroMana(hero)
     ChangeHeroStat(hero, STAT_MANA_POINTS, temp)
     repeat sleep(1) until GetHeroStat(hero, STAT_MANA_POINTS) > 1000000000
     ChangeHeroStat(hero, STAT_KNOWLEDGE, -200000000)
-    consoleCmd("@SetGameVar('tmp_hero_"..hero.."_stat_spellpower', '"..GetHeroStat(hero, STAT_SPELL_POWER).."')")
-    print(GetGameVar("tmp_hero_"..hero.."_stat_spellpower"))
 end
 
 function RestoreHeroMana(hero)

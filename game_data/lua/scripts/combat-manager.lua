@@ -1,5 +1,4 @@
 COMBAT_PAUSE = 0
-COMBAT_READY = nil
 
 COMBAT_TURN = 0
 CURRENT_UNIT = "none"
@@ -21,12 +20,6 @@ ATB_INSTANT = 1
 ATB_NEXT = 0.99
 ATB_HALF = 0.5
 ATB_ZERO = 0
-
-NO_ATB_RESET_HEROES = {
-    [HERO] = { H_BERTRAND, H_FINDAN, H_NEBIROS, H_THRALSAI, H_KRAGH },
-    [CREATURE] = { H_WYNGAAL, H_CRAGHACK },
-    [WAR_MACHINE] = { },
-}
 
 UNIT_SIDE_PREFIX = {
     [0] = "attacker",
@@ -71,7 +64,6 @@ function ParseData(hero, data)
         data["SET1"] = ARTFSET_NONE
         data["SET2"] = ARTFSET_NONE
     end
-    print(GetGameVar("tmp_hero_"..hero.."_stat_spellpower"))
 end
 
 function GetHeroLevel(data)
@@ -113,31 +105,6 @@ function DoCastGlobalSpell(unit,spell,mana)
     repeat sleep(1) until GetUnitManaPoints(unit) >= mana
 	UnitCastGlobalSpell(unit,spell)
 	THREAD_STATE = 1
-end
-
-function ResetATB()
-    if contains(NO_ATB_RESET_HEROES[CREATURE], ATTACKER_HERO) == nil then
-        for i,cr in GetUnits(ATTACKER, CREATURE) do setATB(cr, ATB_ZERO) end
-    end
-    if contains(NO_ATB_RESET_HEROES[CREATURE], DEFENDER_HERO) == nil then
-        for i,cr in GetUnits(DEFENDER, CREATURE) do setATB(cr, ATB_ZERO) end
-    end
-
-    if contains(NO_ATB_RESET_HEROES[WAR_MACHINE], ATTACKER_HERO) == nil then
-        for i,wm in GetUnits(ATTACKER, WAR_MACHINE) do setATB(wm, ATB_ZERO) end
-    end
-    if contains(NO_ATB_RESET_HEROES[WAR_MACHINE], DEFENDER_HERO) == nil then
-        for i,wm in GetUnits(DEFENDER, WAR_MACHINE) do setATB(wm, ATB_ZERO) end
-    end
-
-    if contains(NO_ATB_RESET_HEROES[HERO], ATTACKER_HERO) == nil then
-        if ATTACKER_HERO ~= "" then setATB(ATTACKER_HERO_ID, ATB_ZERO) end
-    end
-    if contains(NO_ATB_RESET_HEROES[HERO], DEFENDER_HERO) == nil then
-        if DEFENDER_HERO ~= "" then setATB(DEFENDER_HERO_ID, ATB_ZERO) end
-    end
-
-    COMBAT_READY = not nil
 end
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -241,8 +208,6 @@ end
 function ManageCombatStart()
     -- print("Manage combat start")
     Pause()
-    -- ResetATB()
-    -- repeat sleep(1) until COMBAT_READY
     
 	if ATTACKER_HERO ~= "" then
         local startroutine = START_ROUTINES[ATTACKER_RACE]

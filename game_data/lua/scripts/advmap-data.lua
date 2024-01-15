@@ -2,6 +2,7 @@
 TURN = 1
 WEEK = 1
 
+NB_HUMAN = 0
 PLAYER_BRAIN = {
 	[1] = OBSERVER,
 	[2] = OBSERVER,

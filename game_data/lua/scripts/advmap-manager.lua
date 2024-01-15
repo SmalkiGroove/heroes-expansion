@@ -1,6 +1,12 @@
 
 for i = 1,8 do
 	PLAYER_BRAIN[i] = GetPlayerBrain(i)
+	if PLAYER_BRAIN[i] == HUMAN then NB_HUMAN = NB_HUMAN + 1 end
+end
+if NB_HUMAN > 1 then
+	print("SETUP MULTIPLAYER GAME")
+else
+	print("SETUP SINGLEPLAYER GAME")
 end
 
 ROUTINES_LOADED = {
