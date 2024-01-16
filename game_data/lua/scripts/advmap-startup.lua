@@ -3,7 +3,8 @@
 
 	dofile('/scripts/events.lua')
 
-	BlockGame()
+	-- BlockGame()
+	consoleCmd('console_size 1000')
 
 	--
 	-- Logical constants

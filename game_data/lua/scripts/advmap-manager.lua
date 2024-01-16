@@ -1,12 +1,32 @@
 
+ExecConsoleCommand("@BlockGame()")
+ExecConsoleCommand("@GAME_READY = 0")
+ExecConsoleCommand("@SetGameVar('h5x_init','false')")
+
+function ScriptEnabler()
+	ExecConsoleCommand(
+		"@repeat sleep(1) until GAME_READY == 1"..
+		" if GetGameVar('h5x_init') == 'false' then"..
+		" SetGameVar('h5x_init','true')"..
+		" Init()"..
+		" end"
+	)
+end
+
 for i = 1,8 do
 	PLAYER_BRAIN[i] = GetPlayerBrain(i)
 	if PLAYER_BRAIN[i] == HUMAN then NB_HUMAN = NB_HUMAN + 1 end
 end
-if NB_HUMAN > 1 then
-	print("SETUP MULTIPLAYER GAME")
+
+if NB_HUMAN == 1 then
+	ScriptEnabler()
 else
-	print("SETUP SINGLEPLAYER GAME")
+	for i = 1,8 do
+		if PLAYER_BRAIN[i] == HUMAN and IsPlayerCurrent(i) then
+			MessageBoxForPlayers(GetPlayerFilter(i), "/Text/Game/Scripts/Init.txt", "ScriptEnabler")
+			break
+		end
+	end
 end
 
 ROUTINES_LOADED = {
@@ -16,7 +36,7 @@ ROUTINES_LOADED = {
 }
 
 function LoadScript(path, key)
-	print("Loading script "..path)
+	-- print("Loading script "..path)
 	dofile(path)
 	repeat sleep(1) until ROUTINES_LOADED[key] == 1
 end
@@ -37,11 +57,9 @@ LoadScript("/scripts/skills/skills-data.lua", 15)
 LoadScript("/scripts/skills/skills-manager.lua", 16)
 LoadScript("/scripts/skills/skills-routines.lua", 17)
 LoadScript("/scripts/_handlers/conversion.lua", 20)
-LoadScript("/scripts/_handlers/combat-trigger.lua", 21)
 LoadScript("/scripts/_handlers/starting-armies.lua", 22)
 LoadScript("/scripts/_handlers/hero-trigger.lua", 23)
 LoadScript("/scripts/_handlers/custom-abilities.lua", 25)
-
 
 ADD_PLAYER_HERO = {
 	[1] = "AddPlayer1Hero",
@@ -129,6 +147,7 @@ function WatchPlayer(player, wait)
 	startThread(UnblockGameTimer, player)
     while (IsPlayerCurrent(player)) do
 		for _,hero in GetPlayerHeroes(player) do
+			SetHeroGameVars(hero)
             ScanHeroArtifacts(hero)
 			if tracker[hero][9] then
 				if GetHeroStat(hero, STAT_MOVE_POINTS) == 0 then
@@ -248,13 +267,36 @@ function InitializeHeroes()
 	end
 end
 
+function SetHeroGameVars(hero)
+	Register(VarHeroLevel(hero), GetHeroLevel(hero))
+	Register(VarHeroStatAttack(hero), GetHeroStat(hero, STAT_ATTACK))
+	Register(VarHeroStatDefense(hero), GetHeroStat(hero, STAT_DEFENCE))
+	Register(VarHeroStatSpellpower(hero), GetHeroStat(hero, STAT_SPELL_POWER))
+	Register(VarHeroStatKnowledge(hero), GetHeroStat(hero, STAT_KNOWLEDGE))
+	Register(VarHeroStatMorale(hero), GetHeroStat(hero, STAT_MORALE))
+	Register(VarHeroStatLuck(hero), GetHeroStat(hero, STAT_LUCK))
+end
+
+function InitializeGameVars()
+	for player = 1,8 do
+		if (GetPlayerState(player) == 1) then
+			for i,hero in GetPlayerHeroes(player) do
+				SetHeroGameVars()
+			end
+		end
+	end
+end
+
 print("All scripts successfully loaded !")
+ExecConsoleCommand("@GAME_READY = 1")
 
 -- Initializers
-InitializeHeroes()
-InitializeMapTowns()
-InitializeCombatHook()
-InitializeConvertibles()
+function Init()
+	InitializeHeroes()
+	InitializeMapTowns()
+	InitializeConvertibles()
+	InitializeGameVars()
+	print("Initializers done. The game can start. Have fun !")
+	ExecConsoleCommand("@UnblockGame()")
+end
 
-print("Initializers done. The game can start. Have fun !")
--- UnblockGame()

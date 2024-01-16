@@ -1,5 +1,5 @@
 
-function Routine_BallistaRandomSalvo(side, hero, data)
+function Routine_BallistaRandomSalvo(side, hero)
     -- print("Trigger ballista random shoot !")
     local n = 1 + trunc(GetUnitMaxManaPoints(hero) * 0.025)
     for i = 1,n do
@@ -9,13 +9,13 @@ function Routine_BallistaRandomSalvo(side, hero, data)
     COMBAT_PAUSE = 0
 end
 
-function Routine_ArchersMoveFirst(side, hero, data)
+function Routine_ArchersMoveFirst(side, hero)
     -- print("Trigger archers atb boost !")
     SetATB_CreatureTypes(side, {CREATURE_ARCHER,CREATURE_MARKSMAN,CREATURE_LONGBOWMAN}, ATB_INSTANT)
     COMBAT_PAUSE = 0
 end
 
-function Routine_BlessGriffins(side, hero, data)
+function Routine_BlessGriffins(side, hero)
     -- print("Trigger spells on griffins !")
     HeroCast_TargetCreatureTypes(hero, SPELL_DEFLECT_ARROWS, FREE_MANA, side, {CREATURE_GRIFFIN,CREATURE_ROYAL_GRIFFIN,CREATURE_BATTLE_GRIFFIN})
     sleep(600)
@@ -24,19 +24,19 @@ function Routine_BlessGriffins(side, hero, data)
     COMBAT_PAUSE = 0
 end
 
-function Routine_CastPrayer(side, hero, data)
+function Routine_CastPrayer(side, hero)
     -- print("Trigger cast Prayer !")
     HeroCast_Global(hero, SPELL_PRAYER, NO_COST)
     COMBAT_PAUSE = 0
 end
 
-function Routine_CastMassConfusion(side, hero, data)
+function Routine_CastMassConfusion(side, hero)
     -- print("Trigger cast Mass Confusion !")
     HeroCast_Global(hero, SPELL_MASS_FORGETFULNESS, FREE_MANA)
     COMBAT_PAUSE = 0
 end
 
-function Routine_CastRandomStoneskinAndDeflect(side, hero, data)
+function Routine_CastRandomStoneskinAndDeflect(side, hero)
     -- print("Trigger random stoneskin and deflect arrows !")
     if CURRENT_UNIT == hero then
         local unit = RandomCreature(side, COMBAT_TURN)
@@ -47,7 +47,7 @@ function Routine_CastRandomStoneskinAndDeflect(side, hero, data)
     COMBAT_PAUSE = 0
 end
 
-function Routine_CastRandomEncourage(side, hero, data)
+function Routine_CastRandomEncourage(side, hero)
     -- print("Trigger random Encourage !")
     if CURRENT_UNIT == hero then
         HeroCast_RandomCreature(hero, SPELL_ENCOURAGE, NO_COST, side)
@@ -56,7 +56,7 @@ function Routine_CastRandomEncourage(side, hero, data)
     COMBAT_PAUSE = 0
 end
 
-function Routine_CastRandomVampirism(side, hero, data)
+function Routine_CastRandomVampirism(side, hero)
     -- print("Trigger random Vampirism !")
     if CURRENT_UNIT == hero then
         if GetUnitManaPoints(hero) >= 100 then
@@ -145,20 +145,20 @@ HAVEN_UNIT_DIED = {
 }
 
 
-function DoHavenRoutine_CombatPrepare(side, name, id, data)
-    startThread(HAVEN_COMBAT_PREPARE[name], side, id, data)
+function DoHavenRoutine_CombatPrepare(side, name, id)
+    startThread(HAVEN_COMBAT_PREPARE[name], side, id)
 end
 
-function DoHavenRoutine_CombatStart(side, name, id, data)
-    startThread(HAVEN_COMBAT_START[name], side, id, data)
+function DoHavenRoutine_CombatStart(side, name, id)
+    startThread(HAVEN_COMBAT_START[name], side, id)
 end
 
-function DoHavenRoutine_CombatTurn(side, name, id, data)
-    startThread(HAVEN_COMBAT_TURN[name], side, id, data)
+function DoHavenRoutine_CombatTurn(side, name, id)
+    startThread(HAVEN_COMBAT_TURN[name], side, id)
 end
 
-function DoHavenRoutine_UnitDied(side, name, id, data, unit)
-    startThread(HAVEN_UNIT_DIED[name], side, id, data, unit)
+function DoHavenRoutine_UnitDied(side, name, id, unit)
+    startThread(HAVEN_UNIT_DIED[name], side, id, unit)
 end
 
 

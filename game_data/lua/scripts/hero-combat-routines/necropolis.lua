@@ -1,7 +1,7 @@
 
 AVATAR_OF_DEATH_ID = "none"
 
-function Routine_SummonAndKillEnnemySkeleton(side, hero, data)
+function Routine_SummonAndKillEnnemySkeleton(side, hero)
     -- print("Trigger summon and kill skeleton !")
     local n = length(GetUnits(1-side, CREATURE))
     SummonCreatureStack_X(1-side, CREATURE_SKELETON, 1, 6)
@@ -10,7 +10,7 @@ function Routine_SummonAndKillEnnemySkeleton(side, hero, data)
     COMBAT_PAUSE = 0
 end
 
-function Routine_SummonAvatarOfDeath(side, hero, data)
+function Routine_SummonAvatarOfDeath(side, hero)
     -- print("Trigger summon avatar of death !")
     local units = GetUnits(side, CREATURE)
     HeroCast_Global(hero, SPELL_ABILITY_AVATAR_OF_DEATH, FREE_MANA)
@@ -19,13 +19,13 @@ function Routine_SummonAvatarOfDeath(side, hero, data)
     COMBAT_PAUSE = 0
 end
 
-function Routine_CastMassWeakness(side, hero, data)
+function Routine_CastMassWeakness(side, hero)
     -- print("Trigger cast mass weakness !")
     HeroCast_Global(hero, SPELL_MASS_CURSE, FREE_MANA)
     COMBAT_PAUSE = 0
 end
 
-function Routine_CastMultipleSorrow(side, hero, data)
+function Routine_CastMultipleSorrow(side, hero)
     -- print("Trigger random sorrow")
     local e = GetUnits(1-side, CREATURE)
     local m = GetUnitMaxManaPoints(hero) * 0.02
@@ -36,7 +36,7 @@ function Routine_CastMultipleSorrow(side, hero, data)
     COMBAT_PAUSE = 0
 end
 
-function Routine_DuplicateArmyGhosts(side, hero, data)
+function Routine_DuplicateArmyGhosts(side, hero)
     -- print("Trigger duplicate ghosts !")
     for i,cr in GetUnits(side, CREATURE) do
         local type = GetCreatureType(cr)
@@ -50,7 +50,7 @@ function Routine_DuplicateArmyGhosts(side, hero, data)
     COMBAT_PAUSE = 0
 end
 
-function Routine_CastRandomPlague(side, hero, data)
+function Routine_CastRandomPlague(side, hero)
     -- print("Trigger random Plague !")
     if CURRENT_UNIT == hero then
         HeroCast_RandomCreature(hero, SPELL_PLAGUE, FREE_MANA, 1-side)
@@ -59,7 +59,7 @@ function Routine_CastRandomPlague(side, hero, data)
     COMBAT_PAUSE = 0
 end
 
-function Routine_SummonZombieStack(side, hero, data)
+function Routine_SummonZombieStack(side, hero)
     -- print("Trigger summon zombies !")
     if CURRENT_UNIT == hero then
         local m = GetUnitManaPoints(hero)
@@ -68,7 +68,7 @@ function Routine_SummonZombieStack(side, hero, data)
     COMBAT_PAUSE = 0
 end
 
-function Routine_CastRandomIceBolt(side, hero, data)
+function Routine_CastRandomIceBolt(side, hero)
     -- print("Trigger random Ice Bolt !")
     if CURRENT_UNIT == hero then
         HeroCast_RandomCreature(hero, SPELL_ICE_BOLT, FREE_MANA, 1-side)
@@ -77,7 +77,7 @@ function Routine_CastRandomIceBolt(side, hero, data)
     COMBAT_PAUSE = 0
 end
 
-function Routine_AvatarDead(side, hero, data, unit)
+function Routine_AvatarDead(side, hero, unit)
     -- print("Trigger mass Blindness on Avatar of Death's death !")
     if unit == AVATAR_OF_DEATH_ID then
         HeroCast_AllCreatures(hero, SPELL_BLIND, FREE_MANA, 1-side)
@@ -168,20 +168,20 @@ NECROPOLIS_UNIT_DIED = {
 }
 
 
-function DoNecropolisRoutine_CombatPrepare(side, name, id, data)
-    startThread(NECROPOLIS_COMBAT_PREPARE[name], side, id, data)
+function DoNecropolisRoutine_CombatPrepare(side, name, id)
+    startThread(NECROPOLIS_COMBAT_PREPARE[name], side, id)
 end
 
-function DoNecropolisRoutine_CombatStart(side, name, id, data)
-    startThread(NECROPOLIS_COMBAT_START[name], side, id, data)
+function DoNecropolisRoutine_CombatStart(side, name, id)
+    startThread(NECROPOLIS_COMBAT_START[name], side, id)
 end
 
-function DoNecropolisRoutine_CombatTurn(side, name, id, data)
-    startThread(NECROPOLIS_COMBAT_TURN[name], side, id, data)
+function DoNecropolisRoutine_CombatTurn(side, name, id)
+    startThread(NECROPOLIS_COMBAT_TURN[name], side, id)
 end
 
-function DoNecropolisRoutine_UnitDied(side, name, id, data, unit)
-    startThread(NECROPOLIS_UNIT_DIED[name], side, id, data, unit)
+function DoNecropolisRoutine_UnitDied(side, name, id, unit)
+    startThread(NECROPOLIS_UNIT_DIED[name], side, id, unit)
 end
 
 

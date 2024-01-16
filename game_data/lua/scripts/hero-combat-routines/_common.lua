@@ -1,8 +1,8 @@
 
-function DoCommonRoutine_CombatPrepare(side, name, id, data) end
-function DoCommonRoutine_CombatStart(side, name, id, data) end
-function DoCommonRoutine_CombatTurn(side, name, id, data) end
-function DoCommonRoutine_UnitDied(side, name, id, data, unit) end
+function DoCommonRoutine_CombatPrepare(side, name, id) end
+function DoCommonRoutine_CombatStart(side, name, id) end
+function DoCommonRoutine_CombatTurn(side, name, id) end
+function DoCommonRoutine_UnitDied(side, name, id, unit) end
 
 function NoneRoutine()
     -- print("Trigger nothing !")

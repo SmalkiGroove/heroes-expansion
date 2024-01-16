@@ -1,5 +1,5 @@
 
-function Routine_InvokeBladeBarriers(side, hero, data)
+function Routine_InvokeBladeBarriers(side, hero)
     -- print("Trigger cast Blade Barriers !")
     local m = GetUnitManaPoints(hero)
     local x1 = 12 - 9 * side
@@ -12,7 +12,7 @@ function Routine_InvokeBladeBarriers(side, hero, data)
     COMBAT_PAUSE = 0
 end
 
-function Routine_CastVampirismOnWitches(side, hero, data)
+function Routine_CastVampirismOnWitches(side, hero)
     -- print("Trigger cast Vampirism !")
     local w = {}
     for i,cr in GetUnits(side, CREATURE) do
@@ -29,19 +29,19 @@ function Routine_CastVampirismOnWitches(side, hero, data)
     COMBAT_PAUSE = 0
 end
 
-function Routine_ScoutsMoveFirst(side, hero, data)
+function Routine_ScoutsMoveFirst(side, hero)
     -- print("Trigger scouts play first !")
     SetATB_CreatureTypes(side, {CREATURE_SCOUT,CREATURE_ASSASSIN,CREATURE_STALKER}, ATB_INSTANT)
     COMBAT_PAUSE = 0
 end
 
-function Routine_HeroMoveFirst(side, hero, data)
+function Routine_HeroMoveFirst(side, hero)
     -- print("Trigger hero play first !")
     SetATB_ID(hero, ATB_INSTANT)
     COMBAT_PAUSE = 0
 end
 
-function Routine_HeroCastRage(side, hero, data)
+function Routine_HeroCastRage(side, hero)
     -- print("Trigger hero cast rage")
     local ennemies = GetUnits(1-side, CREATURE)
     local m = trunc(GetUnitMaxManaPoints(hero) * 0.02)
@@ -52,25 +52,25 @@ function Routine_HeroCastRage(side, hero, data)
     COMBAT_PAUSE = 0
 end
 
-function Routine_CastRandomDeepFrost(side, hero, data)
+function Routine_CastRandomDeepFrost(side, hero)
     -- print("Trigger cast deep frost !")
     HeroCast_RandomCreature(hero, SPELL_DEEP_FREEZE, FREE_MANA, 1-side)
     COMBAT_PAUSE = 0
 end
 
-function Routine_CastRandomLightningBolt(side, hero, data)
+function Routine_CastRandomLightningBolt(side, hero)
     -- print("Trigger cast lightning bolt !")
     HeroCast_RandomCreature(hero, SPELL_LIGHTNING_BOLT, FREE_MANA, 1-side)
     COMBAT_PAUSE = 0
 end
 
-function Routine_CastConjurePhoenix(side, hero, data)
+function Routine_CastConjurePhoenix(side, hero)
     -- print("Trigger cast conjure phoenix !")
     HeroCast_Global(hero, SPELL_CONJURE_PHOENIX, FREE_MANA)
     COMBAT_PAUSE = 0
 end
 
-function Routine_RidersHydraSynergy(side, hero, data)
+function Routine_RidersHydraSynergy(side, hero)
     -- print("Trigger riders boost hydras atb !")
     if CURRENT_UNIT_SIDE == side then
         local type = GetCreatureType(CURRENT_UNIT)
@@ -84,7 +84,7 @@ function Routine_RidersHydraSynergy(side, hero, data)
     COMBAT_PAUSE = 0
 end
 
-function Routine_MinotaursMoveNext(side, hero, data)
+function Routine_MinotaursMoveNext(side, hero)
     -- print("Trigger minotaurs play next !")
     if CURRENT_UNIT == hero then
         SetATB_CreatureTypes(side, {CREATURE_MINOTAUR,CREATURE_MINOTAUR_KING,CREATURE_MINOTAUR_CAPTAIN}, ATB_NEXT)
@@ -92,7 +92,7 @@ function Routine_MinotaursMoveNext(side, hero, data)
     COMBAT_PAUSE = 0
 end
 
-function Routine_RefreshMatronMana(side, hero, data)
+function Routine_RefreshMatronMana(side, hero)
     -- print("Trigger refresh shadow witches mana !")
     if CURRENT_UNIT == hero then
         for i,cr in GetUnits(side, CREATURE) do
@@ -106,7 +106,7 @@ function Routine_RefreshMatronMana(side, hero, data)
     COMBAT_PAUSE = 0
 end
 
-function Routine_CastRandomLightningBolt2(side, hero, data)
+function Routine_CastRandomLightningBolt2(side, hero)
     -- print("Trigger cast lightning bolt !")
     if CURRENT_UNIT == hero then
         HeroCast_RandomCreature(hero, SPELL_LIGHTNING_BOLT, FREE_MANA, 1-side)
@@ -114,7 +114,7 @@ function Routine_CastRandomLightningBolt2(side, hero, data)
     COMBAT_PAUSE = 0
 end
 
-function Routine_SummonDeadEnnemyCreature(side, hero, data, unit)
+function Routine_SummonDeadEnnemyCreature(side, hero, unit)
     -- print("Trigger revive ennemy creature !")
     if CURRENT_UNIT_SIDE ~= side then
         local type = GetCreatureType(unit)
@@ -210,20 +210,20 @@ DUNGEON_UNIT_DIED = {
     [H_KASTORE] = NoneRoutine,
 }
 
-function DoDungeonRoutine_CombatPrepare(side, name, id, data)
-    startThread(DUNGEON_COMBAT_PREPARE[name], side, id, data)
+function DoDungeonRoutine_CombatPrepare(side, name, id)
+    startThread(DUNGEON_COMBAT_PREPARE[name], side, id)
 end
 
-function DoDungeonRoutine_CombatStart(side, name, id, data)
-    startThread(DUNGEON_COMBAT_START[name], side, id, data)
+function DoDungeonRoutine_CombatStart(side, name, id)
+    startThread(DUNGEON_COMBAT_START[name], side, id)
 end
 
-function DoDungeonRoutine_CombatTurn(side, name, id, data)
-    startThread(DUNGEON_COMBAT_TURN[name], side, id, data)
+function DoDungeonRoutine_CombatTurn(side, name, id)
+    startThread(DUNGEON_COMBAT_TURN[name], side, id)
 end
 
-function DoDungeonRoutine_UnitDied(side, name, id, data, unit)
-    startThread(DUNGEON_UNIT_DIED[name], side, id, data, unit)
+function DoDungeonRoutine_UnitDied(side, name, id, unit)
+    startThread(DUNGEON_UNIT_DIED[name], side, id, unit)
 end
 
 

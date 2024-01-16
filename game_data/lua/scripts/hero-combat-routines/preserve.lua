@@ -6,25 +6,25 @@ ENRAGED_CREATURES_ELVEN_FURY = {
     CREATURE_TREANT, CREATURE_TREANT_GUARDIAN, CREATURE_ANGER_TREANT,
 }
 
-function Routine_AngerTreantsAbility(side, hero, data)
+function Routine_AngerTreantsAbility(side, hero)
     -- print("Trigger anger treants rage of forest !")
     CreatureTypesAbility_Untargeted(side, {CREATURE_ANGER_TREANT}, SPELL_ABILITY_RAGE_OF_THE_FOREST)
     COMBAT_PAUSE = 0
 end
 
-function Routine_CastBloodlustEnraged(side, hero, data)
+function Routine_CastBloodlustEnraged(side, hero)
     -- print("Trigger bloodlust on enraged !")
     HeroCast_TargetCreatureTypes(hero, SPELL_BLOODLUST, FREE_MANA, side, ENRAGED_CREATURES_ELVEN_FURY)
     COMBAT_PAUSE = 0
 end
 
-function Routine_HunterRandomShoot(side, hero, data)
+function Routine_HunterRandomShoot(side, hero)
     -- print("Trigger hunters random shoot !")
     RandomShoot_CreatureTypes(side, {CREATURE_WOOD_ELF,CREATURE_GRAND_ELF,CREATURE_SHARP_SHOOTER})
     COMBAT_PAUSE = 0
 end
 
-function Routine_SummonDruidStack(side, hero, data)
+function Routine_SummonDruidStack(side, hero)
     -- print("Trigger elder druids summoning !")
     local m = GetUnitMaxManaPoints(hero) * 0.1
     local amount = trunc(0.5 * m * m)
@@ -32,13 +32,13 @@ function Routine_SummonDruidStack(side, hero, data)
     COMBAT_PAUSE = 0
 end
 
-function Routine_CastMassHaste(side, hero, data)
+function Routine_CastMassHaste(side, hero)
     -- print("Trigger hero cast Mass Haste !")
     HeroCast_Global(hero, SPELL_MASS_HASTE, FREE_MANA)
     COMBAT_PAUSE = 0
 end
 
-function Routine_SiphonEnnemyMana(side, hero, data)
+function Routine_SiphonEnnemyMana(side, hero)
     -- print("Trigger siphon mana !")
     local hero_cur_mana = GetUnitManaPoints(hero)
     local hero_max_mana = GetUnitMaxManaPoints(hero)
@@ -57,7 +57,7 @@ function Routine_SiphonEnnemyMana(side, hero, data)
     COMBAT_PAUSE = 0
 end
 
-function Routine_HeroMoveNext(side, hero, data)
+function Routine_HeroMoveNext(side, hero)
     -- print("Trigger hero play next !")
     if CURRENT_UNIT_SIDE ~= GetUnitSide(hero) then
         local m = GetUnitMaxManaPoints(hero) + 20
@@ -68,7 +68,7 @@ function Routine_HeroMoveNext(side, hero, data)
     COMBAT_PAUSE = 0
 end
 
-function Routine_SummonWolfStack(side, hero, data)
+function Routine_SummonWolfStack(side, hero)
     -- print("Trigger spawn wolves pack !")
     if CURRENT_UNIT == hero then
         local amount = trunc(GetUnitManaPoints(hero) * 0.34)
@@ -77,7 +77,7 @@ function Routine_SummonWolfStack(side, hero, data)
     COMBAT_PAUSE = 0
 end
 
-function Routine_DruidsMoveNext(side, hero, data)
+function Routine_DruidsMoveNext(side, hero)
     -- print("Trigger druids play next !")
     if CURRENT_UNIT == hero then
         SetATB_CreatureTypes(side, {CREATURE_DRUID,CREATURE_DRUID_ELDER,CREATURE_HIGH_DRUID}, ATB_NEXT)
@@ -85,7 +85,7 @@ function Routine_DruidsMoveNext(side, hero, data)
     COMBAT_PAUSE = 0
 end
 
-function Routine_ResetAtbOnKillEnraged(side, hero, data, unit)
+function Routine_ResetAtbOnKillEnraged(side, hero, unit)
     -- print("Trigger reset enraged atb !")
     if GetUnitSide(unit) ~= GetUnitSide(hero) then
         if not contains(ENRAGED_CREATURES_ELVEN_FURY, GetCreatureType(CURRENT_UNIT)) then SetATB_ID(CURRENT_UNIT, ATB_NEXT) end
@@ -176,20 +176,20 @@ SYLVAN_UNIT_DIED = {
 }
 
 
-function DoPreserveRoutine_CombatPrepare(side, name, id, data)
-    startThread(SYLVAN_COMBAT_PREPARE[name], side, id, data)
+function DoPreserveRoutine_CombatPrepare(side, name, id)
+    startThread(SYLVAN_COMBAT_PREPARE[name], side, id)
 end
 
-function DoPreserveRoutine_CombatStart(side, name, id, data)
-    startThread(SYLVAN_COMBAT_START[name], side, id, data)
+function DoPreserveRoutine_CombatStart(side, name, id)
+    startThread(SYLVAN_COMBAT_START[name], side, id)
 end
 
-function DoPreserveRoutine_CombatTurn(side, name, id, data)
-    startThread(SYLVAN_COMBAT_TURN[name], side, id, data)
+function DoPreserveRoutine_CombatTurn(side, name, id)
+    startThread(SYLVAN_COMBAT_TURN[name], side, id)
 end
 
-function DoPreserveRoutine_UnitDied(side, name, id, data, unit)
-    startThread(SYLVAN_UNIT_DIED[name], side, id, data, unit)
+function DoPreserveRoutine_UnitDied(side, name, id, unit)
+    startThread(SYLVAN_UNIT_DIED[name], side, id, unit)
 end
 
 

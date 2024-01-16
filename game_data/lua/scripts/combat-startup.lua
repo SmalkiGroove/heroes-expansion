@@ -31,8 +31,7 @@ ATTACKER_RACE = 0
 DEFENDER_RACE = 0
 ATTACKER_HERO = ""
 DEFENDER_HERO = ""
-ATTACKER_HERO_DATA = { ["LVL"]=0, ["SET1"]=0, ["SET2"]=0 }
-DEFENDER_HERO_DATA = { ["LVL"]=0, ["SET1"]=0, ["SET2"]=0 }
+HERO_DATA = { }
 
 
 function GetHero(side)
