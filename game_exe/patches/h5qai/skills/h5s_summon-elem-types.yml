@@ -1,7 +1,8 @@
 # Enable certain perks to force specific elemental type casts by "Summon Elementals" spell as follow:
-# - Tremors: Earth elementals only
-# - Triple Catapult: Water elementals only
-# - Master of Lightnings: Air elementals only
+definitions: 
+  - &skill_id_earth  139   # Tremors
+  - &skill_id_water  88    # Triple catapult
+  - &skill_id_air    203   # Shatter summoning
 edits:
   - name: Edit pointer
     address: '0066FFE4'
@@ -9,7 +10,7 @@ edits:
     type: hex
     original: '57 8D 54 24 1C'
     modified: 'E9 87 7B 6D 00'
-  - name: Added code
+  - name: ASCII Text
     address: '00BDB750'
     size: 32
     type: hex
@@ -20,4 +21,22 @@ edits:
     size: 91
     type: hex
     original: '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
-    modified: '8B 55 00 BB 57 00 00 00 68 8B 00 00 00 89 E9 FF 92 84 02 00 00 84 C0 0F 85 69 84 92 FF 8B 55 00 BB 56 00 00 00 6A 58 89 E9 FF 92 84 02 00 00 84 C0 0F 85 4F 84 92 FF 8B 55 00 BB 58 00 00 00 6A 2D 89 E9 FF 92 84 02 00 00 84 C0 0F 85 35 84 92 FF 57 8D 54 24 1C E9 1E 84 92 FF'
+    modified: '8B 55 00 BB 57 00 00 00 68 00 00 00 00 89 E9 FF 92 84 02 00 00 84 C0 0F 85 69 84 92 FF 8B 55 00 BB 56 00 00 00 6A 00 89 E9 FF 92 84 02 00 00 84 C0 0F 85 4F 84 92 FF 8B 55 00 BB 58 00 00 00 6A 00 89 E9 FF 92 84 02 00 00 84 C0 0F 85 35 84 92 FF 57 8D 54 24 1C E9 1E 84 92 FF'
+  - name: Set skill ID for Earth
+    address: '00BDB779'
+    size: 1
+    type: int
+    original: 0
+    modified: *skill_id_earth
+  - name: Set skill ID for Water
+    address: '00BDB796'
+    size: 1
+    type: int
+    original: 0
+    modified: *skill_id_water
+  - name: Set skill ID for Air
+    address: '00BDB7B0'
+    size: 1
+    type: int
+    original: 0
+    modified: *skill_id_air
