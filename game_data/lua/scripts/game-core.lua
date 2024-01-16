@@ -19,7 +19,7 @@ end
 
 
 function Register(var, value)
-    ExecConsoleCommand("@SetGameVar('"..var.."','"value"')")
+    ExecConsoleCommand("@SetGameVar('"..var.."','"..value.."')")
 end
 
 

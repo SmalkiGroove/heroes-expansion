@@ -48,14 +48,21 @@ function Wait()
 end
 
 function ParseData(hero)
+    local level = GetGameVar(VarHeroLevel(hero))
+    local attack = GetGameVar(VarHeroStatAttack(hero))
+    local defense = GetGameVar(VarHeroStatDefense(hero))
+    local spellpower = GetGameVar(VarHeroStatSpellpower(hero))
+    local knowledge = GetGameVar(VarHeroStatKnowledge(hero))
+    local morale = GetGameVar(VarHeroStatMorale(hero))
+    local luck = GetGameVar(VarHeroStatLuck(hero))
     HERO_DATA[hero] = {
-        [0] = 0 + GetGameVar(VarHeroLevel(hero)),
-        [1] = 0 + GetGameVar(VarHeroStatAttack(hero)),
-        [2] = 0 + GetGameVar(VarHeroStatDefense(hero)),
-        [3] = 0 + GetGameVar(VarHeroStatSpellpower(hero)),
-        [4] = 0 + GetGameVar(VarHeroStatKnowledge(hero)),
-        [5] = 0 + GetGameVar(VarHeroStatMorale(hero)),
-        [6] = 0 + GetGameVar(VarHeroStatLuck(hero)),
+        [0] = 0 + level,
+        [1] = 0 + attack,
+        [2] = 0 + defense,
+        [3] = 0 + spellpower,
+        [4] = 0 + knowledge,
+        [5] = 0 + morale,
+        [6] = 0 + luck,
     }
     print("Hero "..hero.." data collected. Lvl "..HERO_DATA[hero][0])
 end

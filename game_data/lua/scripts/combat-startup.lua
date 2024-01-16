@@ -160,18 +160,33 @@ LOAD_SOURCES = 0
 dofile("/scripts/combat-common.lua")
 repeat sleep(1) until LOAD_SOURCES == 1
 
+---------------------------
+consoleCmd("@SetGameVar('h5x_combat_init', 'false')")
+repeat sleep(1) until GetGameVar('h5x_combat_init') == 'false'
+
+SCRIPT_ENABLED = 0
+function EnableScript() SCRIPT_ENABLED = 1 end
+
+consoleCmd("@if GetGameVar('h5x_combat_init') == 'false' then SetGameVar('h5x_combat_init', 'true') EnableScript() end")
+sleep(1)
+---------------------------
+
 dofile("/scripts/combat-manager.lua")
 
 function Prepare() end
 function DoPrepare()
-	ManageCombatPrepare()
+	if SCRIPT_ENABLED == 1 then
+		ManageCombatPrepare()
+	end
 	Prepare()
 	return nil
 end
 
 function Start() end
 function DoStart()
-	ManageCombatStart()
+	if SCRIPT_ENABLED == 1 then
+		ManageCombatStart()
+	end
 	Start()
 	return nil
 end
@@ -214,7 +229,9 @@ end
 
 function UnitMove(unitName)
 	local temp = nil
-	ManageCombatTurn(unitName)
+	if SCRIPT_ENABLED == 1 then
+		ManageCombatTurn(unitName)
+	end
 	if IsAttacker(unitName) then
 		temp = AttackerUnitMove(unitName)
 	elseif IsDefender(unitName) then
@@ -261,7 +278,9 @@ function DefenderUnitDeath(unitName)
 end
 
 function UnitDeath(unitName)
-	ManageUnitDeath(unitName)
+	if SCRIPT_ENABLED == 1 then
+		ManageUnitDeath(unitName)
+	end
 	if IsAttacker(unitName) then
 		AttackerUnitDeath(unitName)
 	elseif IsDefender(unitName) then

@@ -281,7 +281,7 @@ function InitializeGameVars()
 	for player = 1,8 do
 		if (GetPlayerState(player) == 1) then
 			for i,hero in GetPlayerHeroes(player) do
-				SetHeroGameVars()
+				SetHeroGameVars(hero)
 			end
 		end
 	end
