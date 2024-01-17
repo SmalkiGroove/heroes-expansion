@@ -249,6 +249,11 @@ function Routine_CheckSheerStrength(player, hero, mastery)
     end
 end
 
+function Routine_StaminaBuff(player, hero, mastery)
+    print("$ Routine_StaminaBuff")
+    GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_HITPOINTS)
+end
+
 function Routine_RageAwakening(player, hero, mastery)
     print("$ Routine_RageAwakening")
     GiveHeroSkill(hero, SKILL_BLOOD_RAGE)
@@ -383,6 +388,7 @@ START_TRIGGER_SKILLS_ROUTINES = {
     [PERK_LORD_OF_UNDEAD] = Routine_CheckLordOfTheUndead,
     [PERK_DEFEND_US_ALL] = Routine_CheckDefendUsAll,
     [PERK_SHEER_STRENGTH] = Routine_CheckSheerStrength,
+    [PERK_STAMINA] = Routine_StaminaBuff,
     [PERK_RAGE_AWAKENING] = Routine_RageAwakening,
 }
 
@@ -408,6 +414,7 @@ LEVELUP_TRIGGER_SKILLS_ROUTINES = {
 
 AFTER_COMBAT_TRIGGER_SKILLS_ROUTINES = {
     [SKILL_LEADERSHIP] = Routine_LeadershipAfterBattle,
+    [PERK_STAMINA] = Routine_StaminaBuff,
 }
 
 

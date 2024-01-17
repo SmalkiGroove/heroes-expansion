@@ -5294,7 +5294,7 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs>
-					<Item>SPELL_SPEC_EVASIVE</Item>
+					<Item>SPELL_RUNE_OF_DRAGONFORM</Item>
 				</spellBuffs>
 				<BasicSkillID>HERO_SKILL_DEFENSE</BasicSkillID>
 				<SkillPrerequisites>
@@ -7921,28 +7921,45 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_DETAIN_DESTRUCTIVE</ID>
+			<ID>HERO_SKILL_SIPHON_GRACE</ID>
 			<obj>
 				<Texture>
-					<Item href="/UI/H5A2/Icons/Heroes_Skills/Other_Perks/Detain_Destruction_grey.(Texture).xdb#xpointer(/Texture)"/>
-					<Item href="/UI/H5A2/Icons/Heroes_Skills/Other_Perks/Detain_Destruction.(Texture).xdb#xpointer(/Texture)"/>
+					<Item href="/UI/H5A2/Icons/Heroes_Skills/Other_Perks/Corrupt_Light_Grey.(Texture).xdb#xpointer(/Texture)"/>
+					<Item href="/UI/H5A2/Icons/Heroes_Skills/Other_Perks/Corrupt_Light.(Texture).xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
-					<Item href="/Text/Game/Skills/BarbarianSpec/DestructiveMagic/DetainDestructive/Name.txt"/>
+					<Item href="/Text/Game/Skills/Common/LightMagic/SiphonGrace/Name.txt"/>
 				</NameFileRef>
 				<CommonNameFileRef href=""/>
 				<DescriptionFileRef>
-					<Item href="/Text/Game/Skills/BarbarianSpec/DestructiveMagic/DetainDestructive/Description.txt"/>
+					<Item href="/Text/Game/Skills/Common/LightMagic/SiphonGrace/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
-				<SkillType>SKILLTYPE_STANDART_PERK</SkillType>
+				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs>
 					<Item>SPELL_RUNE_OF_MAGIC_CONTROL</Item>
 				</spellBuffs>
 				<BasicSkillID>HERO_SKILL_LIGHT_MAGIC</BasicSkillID>
-				<SkillPrerequisites/>
+				<SkillPrerequisites>
+					<Item><Class>HERO_CLASS_HAVEN_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_FIRE_RESISTANCE</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_HAVEN_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_FIRE_RESISTANCE</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_FIRE_RESISTANCE</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_FIRE_RESISTANCE</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_FORTRESS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_FIRE_RESISTANCE</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_FORTRESS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_FIRE_RESISTANCE</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_ACADEMY_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_FIRE_RESISTANCE</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_ACADEMY_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_FIRE_RESISTANCE</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_DUNGEON_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_FIRE_RESISTANCE</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_DUNGEON_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_FIRE_RESISTANCE</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_NECROPOLIS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_FIRE_RESISTANCE</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_NECROPOLIS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_FIRE_RESISTANCE</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_INFERNO_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_FIRE_RESISTANCE</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_INFERNO_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_FIRE_RESISTANCE</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_STRONGHOLD_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_FIRE_RESISTANCE</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_STRONGHOLD_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_FIRE_RESISTANCE</Item></dependenciesIDs></Item>
+				</SkillPrerequisites>
 				<AIRacesValues>
 					<Haven><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Haven>
 					<Sylvan><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Sylvan>
@@ -8109,15 +8126,15 @@
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
-					<Item href="/Text/Game/Skills/BarbarianSpec/LightMagic/1/Name.txt"/>
-					<Item href="/Text/Game/Skills/BarbarianSpec/LightMagic/2/Name.txt"/>
-					<Item href="/Text/Game/Skills/BarbarianSpec/LightMagic/3/Name.txt"/>
+					<Item href="/Text/Game/Skills/Common/ShatterMagic/1/Name.txt"/>
+					<Item href="/Text/Game/Skills/Common/ShatterMagic/2/Name.txt"/>
+					<Item href="/Text/Game/Skills/Common/ShatterMagic/3/Name.txt"/>
 				</NameFileRef>
 				<CommonNameFileRef href=""/>
 				<DescriptionFileRef>
-					<Item href="/Text/Game/Skills/BarbarianSpec/LightMagic/1/Description.txt"/>
-					<Item href="/Text/Game/Skills/BarbarianSpec/LightMagic/2/Description.txt"/>
-					<Item href="/Text/Game/Skills/BarbarianSpec/LightMagic/3/Description.txt"/>
+					<Item href="/Text/Game/Skills/Common/ShatterMagic/1/Description.txt"/>
+					<Item href="/Text/Game/Skills/Common/ShatterMagic/2/Description.txt"/>
+					<Item href="/Text/Game/Skills/Common/ShatterMagic/3/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_SKILL</SkillType>
@@ -8330,26 +8347,43 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_CORRUPT_NATURAL</ID>
+			<ID>HERO_SKILL_STAMINA</ID>
 			<obj>
 				<Texture>
-					<Item href="/UI/H5A2/Icons/Heroes_Skills/Other_Perks/Corrupt_Summoning_Grey.(Texture).xdb#xpointer(/Texture)"/>
-					<Item href="/UI/H5A2/Icons/Heroes_Skills/Other_Perks/Corrupt_Summoning.(Texture).xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/Stamina_grey.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/Stamina.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
-					<Item href="/Text/Game/Skills/BarbarianSpec/SummoningMagic/CorruptSummoning/Name.txt"/>
+					<Item href="/Text/Game/Skills/Common/Defence/Stamina/Name.txt"/>
 				</NameFileRef>
 				<CommonNameFileRef href=""/>
 				<DescriptionFileRef>
-					<Item href="/Text/Game/Skills/BarbarianSpec/SummoningMagic/CorruptSummoning/Description.txt"/>
+					<Item href="/Text/Game/Skills/Common/Defence/Stamina/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_NONE</BasicSkillID>
-				<SkillPrerequisites/>
+				<BasicSkillID>HERO_SKILL_DEFENSE</BasicSkillID>
+				<SkillPrerequisites>
+					<Item><Class>HERO_CLASS_HAVEN_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SEAL_OF_PROTECTION</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_HAVEN_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SEAL_OF_PROTECTION</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SEAL_OF_PROTECTION</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SEAL_OF_PROTECTION</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_FORTRESS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SEAL_OF_PROTECTION</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_FORTRESS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SEAL_OF_PROTECTION</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_ACADEMY_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SEAL_OF_PROTECTION</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_ACADEMY_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SEAL_OF_PROTECTION</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_DUNGEON_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SEAL_OF_PROTECTION</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_DUNGEON_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SEAL_OF_PROTECTION</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_NECROPOLIS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SEAL_OF_PROTECTION</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_NECROPOLIS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SEAL_OF_PROTECTION</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_INFERNO_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SEAL_OF_PROTECTION</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_INFERNO_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SEAL_OF_PROTECTION</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_STRONGHOLD_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SEAL_OF_PROTECTION</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_STRONGHOLD_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SEAL_OF_PROTECTION</Item></dependenciesIDs></Item>
+				</SkillPrerequisites>
 				<AIRacesValues>
 					<Haven><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Haven>
 					<Sylvan><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Sylvan>
@@ -8780,28 +8814,9 @@
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
-				<spellBuffs>
-					<Item>SPELL_ARTFSET_LIONS_DEMORALIZED</Item>
-				</spellBuffs>
-				<BasicSkillID>HERO_SKILL_COMBAT</BasicSkillID>
-				<SkillPrerequisites>
-					<Item><Class>HERO_CLASS_HAVEN_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_STUNNING_BLOW</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_HAVEN_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_STUNNING_BLOW</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_STUNNING_BLOW</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_STUNNING_BLOW</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_FORTRESS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_STUNNING_BLOW</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_FORTRESS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_STUNNING_BLOW</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_ACADEMY_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_STUNNING_BLOW</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_ACADEMY_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_STUNNING_BLOW</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_DUNGEON_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_STUNNING_BLOW</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_DUNGEON_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_STUNNING_BLOW</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_NECROPOLIS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_STUNNING_BLOW</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_NECROPOLIS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_STUNNING_BLOW</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_INFERNO_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_STUNNING_BLOW</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_INFERNO_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_STUNNING_BLOW</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_STRONGHOLD_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_STUNNING_BLOW</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_STRONGHOLD_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_STUNNING_BLOW</Item></dependenciesIDs></Item>
-				</SkillPrerequisites>
+				<spellBuffs/>
+				<BasicSkillID>HERO_SKILL_NONE</BasicSkillID>
+				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Haven>
 					<Sylvan><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Sylvan>
