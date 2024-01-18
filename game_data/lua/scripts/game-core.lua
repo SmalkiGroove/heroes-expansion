@@ -21,6 +21,9 @@ end
 function Register(var, value)
     ExecConsoleCommand("@SetGameVar('"..var.."','"..value.."')")
 end
+function SetVarString(var, value)
+	return "SetGameVar('"..var.."','"..value.."') "
+end
 
 
 function VarHeroLevel(hero)

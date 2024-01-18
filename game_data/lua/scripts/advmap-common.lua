@@ -290,4 +290,18 @@ function InitializeMapTowns()
 end
 
 
+function StoreData(hero)
+	local setvars = SetVarString(VarHeroLevel(hero),GetHeroLevel(hero))..
+					SetVarString(VarHeroStatAttack(hero),GetHeroStat(hero, STAT_ATTACK))..
+					SetVarString(VarHeroStatDefense(hero),GetHeroStat(hero, STAT_DEFENCE))..
+					SetVarString(VarHeroStatSpellpower(hero),GetHeroStat(hero, STAT_SPELL_POWER))..
+					SetVarString(VarHeroStatKnowledge(hero),GetHeroStat(hero, STAT_KNOWLEDGE))..
+					SetVarString(VarHeroStatMorale(hero),GetHeroStat(hero, STAT_MORALE))..
+					SetVarString(VarHeroStatLuck(hero),GetHeroStat(hero, STAT_LUCK))
+    -- print(setvars)
+	ExecConsoleCommand("@"..setvars)
+end
+
+
+
 LOAD_SOURCES = 1

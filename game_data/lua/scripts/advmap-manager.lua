@@ -144,13 +144,13 @@ function WatchPlayer(player, wait)
 			[9] = not nil
 		}
     end
-	startThread(UnblockGameTimer, player)
     while (IsPlayerCurrent(player)) do
 		for _,hero in GetPlayerHeroes(player) do
-			SetHeroGameVars(hero)
             ScanHeroArtifacts(hero)
+			StoreData(hero)
 			if tracker[hero][9] then
 				if GetHeroStat(hero, STAT_MOVE_POINTS) == 0 then
+					print("Hero "..hero.." has 0 move points")
 					if IsEqualPosition(hero, tracker[hero][1], tracker[hero][2], tracker[hero][3]) then
 						if HasHeroSkill(hero, PERK_MEDITATION) and GetHeroStat(hero, STAT_MANA_POINTS) > tracker[hero][0] then
 							print("Hero "..hero.." has used Meditation")
@@ -164,7 +164,7 @@ function WatchPlayer(player, wait)
 				end
 			end
         end
-		sleep(30)
+		sleep(50)
 	end
 end
 
@@ -267,21 +267,11 @@ function InitializeHeroes()
 	end
 end
 
-function SetHeroGameVars(hero)
-	Register(VarHeroLevel(hero), GetHeroLevel(hero))
-	Register(VarHeroStatAttack(hero), GetHeroStat(hero, STAT_ATTACK))
-	Register(VarHeroStatDefense(hero), GetHeroStat(hero, STAT_DEFENCE))
-	Register(VarHeroStatSpellpower(hero), GetHeroStat(hero, STAT_SPELL_POWER))
-	Register(VarHeroStatKnowledge(hero), GetHeroStat(hero, STAT_KNOWLEDGE))
-	Register(VarHeroStatMorale(hero), GetHeroStat(hero, STAT_MORALE))
-	Register(VarHeroStatLuck(hero), GetHeroStat(hero, STAT_LUCK))
-end
-
 function InitializeGameVars()
 	for player = 1,8 do
 		if (GetPlayerState(player) == 1) then
 			for i,hero in GetPlayerHeroes(player) do
-				SetHeroGameVars(hero)
+				StoreData(hero)
 			end
 		end
 	end
@@ -296,7 +286,7 @@ function Init()
 	InitializeMapTowns()
 	InitializeConvertibles()
 	InitializeGameVars()
+	ExecConsoleCommand("@UnblockGame()") UnblockGame()
 	print("Initializers done. The game can start. Have fun !")
-	ExecConsoleCommand("@UnblockGame()")
 end
 

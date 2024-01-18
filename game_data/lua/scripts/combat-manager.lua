@@ -47,7 +47,7 @@ function Wait()
     if THREAD_FINISHER == 0 then THREAD_STATE = 1 end
 end
 
-function ParseData(hero)
+function FetchData(hero)
     local level = GetGameVar(VarHeroLevel(hero))
     local attack = GetGameVar(VarHeroStatAttack(hero))
     local defense = GetGameVar(VarHeroStatDefense(hero))
@@ -64,7 +64,10 @@ function ParseData(hero)
         [5] = 0 + morale,
         [6] = 0 + luck,
     }
-    print("Hero "..hero.." data collected. Lvl "..HERO_DATA[hero][0])
+    print("Hero "..hero.." data collected. Lvl "..HERO_DATA[hero][0]..
+        " / Att "..HERO_DATA[hero][1].." / Def "..HERO_DATA[hero][2]..
+        " / Spp "..HERO_DATA[hero][3].." / Klg "..HERO_DATA[hero][4]..
+        " / Mrl "..HERO_DATA[hero][5].." / Lck "..HERO_DATA[hero][6])
 end
 
 function GetHeroLevel(hero) return HERO_DATA[hero][0] end
@@ -196,11 +199,11 @@ function ManageCombatPrepare()
     DEFENDER_HERO = GetHero(DEFENDER) and GetHeroName(DEFENDER_HERO_ID) or ""
     if ATTACKER_HERO ~= "" then
         ATTACKER_RACE = GetHeroFactionID(ATTACKER_HERO)
-        ParseData(ATTACKER_HERO)
+        FetchData(ATTACKER_HERO)
     end
     if DEFENDER_HERO ~= "" then
         DEFENDER_RACE = GetHeroFactionID(DEFENDER_HERO)
-        ParseData(DEFENDER_HERO)
+        FetchData(DEFENDER_HERO)
     end
 end
 
