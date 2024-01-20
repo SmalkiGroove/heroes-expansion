@@ -200,23 +200,33 @@ AFTER_COMBAT_TRIGGER_PRESERVE = {
 
 
 function DoPreserveRoutine_Start(player, hero)
-    startThread(START_TRIGGER_PRESERVE[hero], player, hero)
+    if START_TRIGGER_PRESERVE[hero] then
+        startThread(START_TRIGGER_PRESERVE[hero], player, hero)
+    end
 end
 
 function DoPreserveRoutine_Daily(player, hero)
-    startThread(DAILY_TRIGGER_PRESERVE[hero], player, hero)
+    if DAILY_TRIGGER_PRESERVE[hero] then
+        startThread(DAILY_TRIGGER_PRESERVE[hero], player, hero)
+    end
 end
 
 function DoPreserveRoutine_Weekly(player, hero)
-    startThread(WEEKLY_TRIGGER_PRESERVE[hero], player, hero)
+    if WEEKLY_TRIGGER_PRESERVE[hero] then
+        startThread(WEEKLY_TRIGGER_PRESERVE[hero], player, hero)
+    end
 end
 
 function DoPreserveRoutine_LevelUp(player, hero, level)
-    startThread(LEVEL_UP_SYLVAN_HERO[hero], player, hero, level)
+    if LEVEL_UP_SYLVAN_HERO[hero] then
+        startThread(LEVEL_UP_SYLVAN_HERO[hero], player, hero, level)
+    end
 end
 
 function DoPreserveRoutine_AfterCombat(player, hero, index)
-    startThread(AFTER_COMBAT_TRIGGER_PRESERVE[hero], player, hero, index)
+    if AFTER_COMBAT_TRIGGER_PRESERVE[hero] then
+        startThread(AFTER_COMBAT_TRIGGER_PRESERVE[hero], player, hero, index)
+    end
 end
 
 

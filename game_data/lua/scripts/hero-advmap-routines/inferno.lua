@@ -168,23 +168,33 @@ AFTER_COMBAT_TRIGGER_INFERNO = {
 
 
 function DoInfernoRoutine_Start(player, hero)
-    startThread(START_TRIGGER_INFERNO[hero], player, hero)
+    if START_TRIGGER_INFERNO[hero] then
+        startThread(START_TRIGGER_INFERNO[hero], player, hero)
+    end
 end
 
 function DoInfernoRoutine_Daily(player, hero)
-    startThread(DAILY_TRIGGER_INFERNO[hero], player, hero)
+    if DAILY_TRIGGER_INFERNO[hero] then
+        startThread(DAILY_TRIGGER_INFERNO[hero], player, hero)
+    end
 end
 
 function DoInfernoRoutine_Weekly(player, hero)
-    startThread(WEEKLY_TRIGGER_INFERNO[hero], player, hero)
+    if WEEKLY_TRIGGER_INFERNO[hero] then
+        startThread(WEEKLY_TRIGGER_INFERNO[hero], player, hero)
+    end
 end
 
 function DoInfernoRoutine_LevelUp(player, hero, level)
-    startThread(LEVEL_UP_INFERNO_HERO[hero], player, hero, level)
+    if LEVEL_UP_INFERNO_HERO[hero] then
+        startThread(LEVEL_UP_INFERNO_HERO[hero], player, hero, level)
+    end
 end
 
 function DoInfernoRoutine_AfterCombat(player, hero, index)
-    startThread(AFTER_COMBAT_TRIGGER_INFERNO[hero], player, hero, index)
+    if AFTER_COMBAT_TRIGGER_INFERNO[hero] then
+        startThread(AFTER_COMBAT_TRIGGER_INFERNO[hero], player, hero, index)
+    end
 end
 
 

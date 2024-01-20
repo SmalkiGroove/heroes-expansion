@@ -168,23 +168,33 @@ AFTER_COMBAT_TRIGGER_TRONGHOLD = {
 
 
 function DoStrongholdRoutine_Start(player, hero)
-    startThread(START_TRIGGER_STRONGHOLD[hero], player, hero)
+    if START_TRIGGER_STRONGHOLD[hero] then
+        startThread(START_TRIGGER_STRONGHOLD[hero], player, hero)
+    end
 end
 
 function DoStrongholdRoutine_Daily(player, hero)
-    startThread(DAILY_TRIGGER_STRONGHOLD[hero], player, hero)
+    if DAILY_TRIGGER_STRONGHOLD[hero] then
+        startThread(DAILY_TRIGGER_STRONGHOLD[hero], player, hero)
+    end
 end
 
 function DoStrongholdRoutine_Weekly(player, hero)
-    startThread(WEEKLY_TRIGGER_TRONGHOLD[hero], player, hero)
+    if WEEKLY_TRIGGER_TRONGHOLD[hero] then
+        startThread(WEEKLY_TRIGGER_TRONGHOLD[hero], player, hero)
+    end
 end
 
 function DoStrongholdRoutine_LevelUp(player, hero, level)
-    startThread(LEVEL_UP_STRONGHOLD_HERO[hero], player, hero, level)
+    if LEVEL_UP_STRONGHOLD_HERO[hero] then
+        startThread(LEVEL_UP_STRONGHOLD_HERO[hero], player, hero, level)
+    end
 end
 
 function DoStrongholdRoutine_AfterCombat(player, hero, index)
-    startThread(AFTER_COMBAT_TRIGGER_TRONGHOLD[hero], player, hero, index)
+    if AFTER_COMBAT_TRIGGER_TRONGHOLD[hero] then
+        startThread(AFTER_COMBAT_TRIGGER_TRONGHOLD[hero], player, hero, index)
+    end
 end
 
 

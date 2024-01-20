@@ -191,23 +191,33 @@ AFTER_COMBAT_TRIGGER_NECROPOLIS = {
 
 
 function DoNecropolisRoutine_Start(player, hero)
-    startThread(START_TRIGGER_NECROPOLIS[hero], player, hero)
+    if START_TRIGGER_NECROPOLIS[hero] then
+        startThread(START_TRIGGER_NECROPOLIS[hero], player, hero)
+    end
 end
 
 function DoNecropolisRoutine_Daily(player, hero)
-    startThread(DAILY_TRIGGER_NECROPOLIS[hero], player, hero)
+    if DAILY_TRIGGER_NECROPOLIS[hero] then
+        startThread(DAILY_TRIGGER_NECROPOLIS[hero], player, hero)
+    end
 end
 
 function DoNecropolisRoutine_Weekly(player, hero)
-    startThread(WEEKLY_TRIGGER_NECROPOLIS[hero], player, hero)
+    if WEEKLY_TRIGGER_NECROPOLIS[hero] then
+        startThread(WEEKLY_TRIGGER_NECROPOLIS[hero], player, hero)
+    end
 end
 
 function DoNecropolisRoutine_LevelUp(player, hero, level)
-    startThread(LEVEL_UP_NECRO_HERO[hero], player, hero, level)
+    if LEVEL_UP_NECRO_HERO[hero] then
+        startThread(LEVEL_UP_NECRO_HERO[hero], player, hero, level)
+    end
 end
 
 function DoNecropolisRoutine_AfterCombat(player, hero, index)
-    startThread(AFTER_COMBAT_TRIGGER_NECROPOLIS[hero], player, hero, index)
+    if AFTER_COMBAT_TRIGGER_NECROPOLIS[hero] then
+        startThread(AFTER_COMBAT_TRIGGER_NECROPOLIS[hero], player, hero, index)
+    end
 end
 
 

@@ -1,89 +1,57 @@
 
-TRANSFORM_ARRAY_FORTRESS = { 0,
-92,93,94,95,98,99,96,97,100,101,102,103,104,105,
-92,93,94,95,98,99,96,97,100,101,102,103,104,105,
-92,93,94,95,98,99,96,97,100,101,104,105,102,103,
-94,95,92,93,98,99,96,97,100,101,102,103,104,105,
-92,93,94,95,98,99,96,97,100,101,102,103,104,105,
-92,93,94,95,98,99,96,97,102,103,100,101,104,105,
-0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-166,167,169,168,170,171,172,
-0,0,0,0,
-92,93,96,97,98,99,94,95,100,101,102,103,104,105,
-166,167,169,168,170,171,172,
-166,167,169,168,171,170,172,
-167,166,169,168,170,171,172,
-166,167,169,168,170,172,171,
-166,167,169,168,170,171,172,
-0,0,0,0,0,0,0,
-166,168,169,167,170,171,172,
-0 }
-
-
-function Routine_AddLuckAndMorale(player, hero)
-    --Luck and Morale +2
-    print("$ Routine_AddLuckAndMorale")
-    AddHero_StatAmount(player, hero, STAT_LUCK, 2)
-    AddHero_StatAmount(player, hero, STAT_MORALE, 2)
-end
-
 function Routine_AddHeroDefenders(player, hero)
-    -- Defenders - 1:1 - 2:3 - 3:5 - 4:7 - 5:9 ... 25:49
     print("$ Routine_AddHeroDefenders")
-    AddHero_CreatureInTypes(player, hero, {CREATURE_DEFENDER,CREATURE_STOUT_DEFENDER,CREATURE_STONE_DEFENDER}, 0.5)
+    AddHero_CreatureInTypes(player, hero, {CREATURE_DEFENDER,CREATURE_STOUT_DEFENDER,CREATURE_STONE_DEFENDER}, 0.4)
 end
 
-function Routine_GenerateCrystalsAndGems(player, hero)
-    -- Crystals and Gems - +1 / 5 levels
-    print("$ Routine_GenerateCrystalsAndGems")
-    local amount = trunc(GetHeroLevel(hero) * 0.2)
-    AddPlayer_Resource(player, hero, CRYSTAL, amount)
-    AddPlayer_Resource(player, hero, GEM, amount)
+function Routine_AddRecruitsBearRiders(player, hero)
+    print("$ Routine_AddRecruitsBearRiders")
+    AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_BEAR_RIDER, 1.5)
 end
 
-function Routine_EvolveRunePriests(player, hero)
-    -- Rune Priest to Thane (or upgrade) for n Defenders (or upgrade)
-    print("$ Routine_EvolveRunePriests")
-    local n = 30 - trunc(GetHeroLevel(hero) * 0.5)
-    ChangeHero_CreatureFusion(player, hero, CREATURE_RUNE_MAGE, CREATURE_DEFENDER, CREATURE_THANE, n)
-    ChangeHero_CreatureFusion(player, hero, CREATURE_RUNE_MAGE, CREATURE_STOUT_DEFENDER, CREATURE_WARLORD, n)
-    ChangeHero_CreatureFusion(player, hero, CREATURE_RUNE_MAGE, CREATURE_STONE_DEFENDER, CREATURE_THUNDER_THANE, n)
+function Routine_RezSpearwielders(player, hero, combatIndex)
+    print("$ Routine_RezSpearwielders")
+    local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
+    for i = 0,stacks-1 do
+        local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
+        if died > 0 and contains({CREATURE_AXE_FIGHTER,CREATURE_AXE_THROWER,CREATURE_HARPOONER}, creature) then
+            local cap = 5 + GetHeroLevel(hero)
+            local rez = min(cap, died)
+            AddHeroCreatures(hero, creature, rez)
+        end
+    end
 end
 
-function Routine_TransformCreaturesToFortressUnits(player, hero)
-    -- Transform creatures to Fortress units
-    print("$ Routine_TransformCreaturesToFortressUnits")
-    ChangeHero_CreatureTransform(player, hero, TRANSFORM_ARRAY_FORTRESS)
+function Routine_GiveArtifactRingOfMachineAffinity(player, hero)
+    print("$ Routine_GiveArtifactRingOfMachineAffinity")
+    GiveArtifact(hero, ARTIFACT_RING_OF_MACHINE_AFFINITY, 1)
 end
 
 function Routine_UpgradeRunePriests(player, hero)
-    -- Upgrade Rune Priest to Rune Patriarch
     print("$ Routine_UpgradeRunePriests")
     ChangeHero_CreatureUpgrade(player, hero, CREATURE_RUNE_MAGE, CREATURE_FLAME_MAGE)
 end
 
-function Routine_AddHeroExperiencePercent(player, hero)
-    -- Exp - 5% total hero exp
-    print("$ Routine_AddHeroExperiencePercent")
-    AddHero_StatPercent(player, hero, STAT_EXPERIENCE, 0.05)
+function Routine_AddLuckAndMorale(player, hero)
+    print("$ Routine_AddLuckAndMorale")
+    ChangeHeroStat(hero, STAT_LUCK, 2)
+    ChangeHeroStat(hero, STAT_MORALE, 2)
 end
 
-function Routine_AddRecruitsBearRiders(player, hero)
-    -- Bears - 1.75 * level recruits per week
-    print("$ Routine_AddRecruitsBearRiders")
-    AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_BEAR_RIDER, 1.75)
+function Routine_GiveArtifactRuneOfFlame(player, hero)
+    print("$ Routine_GiveArtifactRuneOfFlame")
+    GiveArtifact(hero, ARTIFACT_RUNE_OF_FLAME, 1)
 end
 
-function Routine_GainFortressArtifacts(player, hero, level)
-    -- Dwarven artfacts set
-    print("$ Routine_GainFortressArtifacts")
-    if level == 40 then
-        GiveArtifact(hero, ARTIFACT_CUIRASS_OF_THE_DWARVEN_KINGS)
-        GiveArtifact(hero, ARTIFACT_GREAVES_OF_THE_DWARVEN_KINGS)
-        GiveArtifact(hero, ARTIFACT_HELM_OF_THE_DWARVEN_KINGS)
-        GiveArtifact(hero, ARTIFACT_SHIELD_OF_THE_DWARVEN_KINGS)
+function Routine_GenerateCrystalsAndGems(player, hero)
+    print("$ Routine_GenerateCrystalsAndGems")
+    local n = ceil(GetHeroLevel(hero) * 0.1)
+    for rune = SPELL_RUNE_OF_CHARGE,SPELL_RUNE_OF_DRAGONFORM do
+        if KnowHeroSpell(hero, rune) then n = n+1 end
     end
+    local split = mod(TURN,n)
+    AddPlayer_Resource(player, hero, CRYSTAL, split)
+    AddPlayer_Resource(player, hero, GEM, n-split)
 end
 
 
@@ -92,124 +60,57 @@ end
 
 
 START_TRIGGER_FORTRESS = {
-    [H_INGVAR] = NoneRoutine,
-    [H_ROLF] = NoneRoutine,
-    [H_WULFSTAN] = NoneRoutine,
-    [H_TAZAR] = NoneRoutine,
-    [H_MAXIMUS] = NoneRoutine,
-    [H_KARLI] = NoneRoutine,
-    [H_HEDWIG] = NoneRoutine,
+    [H_WULFSTAN] = Routine_GiveArtifactRingOfMachineAffinity,
     [H_TOLGHAR] = Routine_AddLuckAndMorale,
-    [H_EBBA] = NoneRoutine,
-    [H_ULAND] = NoneRoutine,
-    [H_HAEGEIR] = NoneRoutine,
-    [H_HELMAR] = NoneRoutine,
-    [H_BRAND] = NoneRoutine,
-    [H_ERLING] = NoneRoutine,
-    [H_HANGVUL] = NoneRoutine,
-    [H_BART] = NoneRoutine,
-    [H_INGA] = NoneRoutine,
+    [H_EBBA] = Routine_GiveArtifactRuneOfFlame,
 }
 
 DAILY_TRIGGER_FORTRESS = {
     [H_INGVAR] = Routine_AddHeroDefenders,
-    [H_ROLF] = NoneRoutine,
-    [H_WULFSTAN] = NoneRoutine,
-    [H_TAZAR] = NoneRoutine,
-    [H_MAXIMUS] = NoneRoutine,
-    [H_KARLI] = NoneRoutine,
-    [H_HEDWIG] = NoneRoutine,
-    [H_TOLGHAR] = NoneRoutine,
-    [H_EBBA] = Routine_GenerateCrystalsAndGems,
-    [H_ULAND] = Routine_EvolveRunePriests,
-    [H_HAEGEIR] = Routine_TransformCreaturesToFortressUnits,
-    [H_HELMAR] = NoneRoutine,
-    [H_BRAND] = NoneRoutine,
     [H_ERLING] = Routine_UpgradeRunePriests,
-    [H_HANGVUL] = Routine_AddHeroExperiencePercent,
-    [H_BART] = NoneRoutine,
-    [H_INGA] = NoneRoutine,
 }
 
 WEEKLY_TRIGGER_FORTRESS = {
-    [H_INGVAR] = NoneRoutine,
     [H_ROLF] = Routine_AddRecruitsBearRiders,
-    [H_WULFSTAN] = NoneRoutine,
-    [H_TAZAR] = NoneRoutine,
-    [H_MAXIMUS] = NoneRoutine,
-    [H_KARLI] = NoneRoutine,
-    [H_HEDWIG] = NoneRoutine,
-    [H_TOLGHAR] = NoneRoutine,
-    [H_EBBA] = NoneRoutine,
-    [H_ULAND] = NoneRoutine,
-    [H_HAEGEIR] = NoneRoutine,
-    [H_HELMAR] = NoneRoutine,
-    [H_BRAND] = NoneRoutine,
-    [H_ERLING] = NoneRoutine,
-    [H_HANGVUL] = NoneRoutine,
-    [H_BART] = NoneRoutine,
-    [H_INGA] = NoneRoutine,
+    [H_EBBA] = Routine_GenerateCrystalsAndGems,
 }
 
 LEVEL_UP_FORTRESS_HERO = {
-    [H_INGVAR] = NoneRoutine,
-    [H_ROLF] = NoneRoutine,
-    [H_WULFSTAN] = NoneRoutine,
-    [H_TAZAR] = NoneRoutine,
-    [H_MAXIMUS] = NoneRoutine,
-    [H_KARLI] = NoneRoutine,
-    [H_HEDWIG] = Routine_GainFortressArtifacts,
-    [H_TOLGHAR] = NoneRoutine,
-    [H_EBBA] = NoneRoutine,
-    [H_ULAND] = NoneRoutine,
-    [H_HAEGEIR] = NoneRoutine,
-    [H_HELMAR] = NoneRoutine,
-    [H_BRAND] = NoneRoutine,
-    [H_ERLING] = NoneRoutine,
-    [H_HANGVUL] = NoneRoutine,
-    [H_BART] = NoneRoutine,
-    [H_INGA] = NoneRoutine,
 }
 
 AFTER_COMBAT_TRIGGER_FORTRESS = {
-    [H_INGVAR] = NoneRoutine,
-    [H_ROLF] = NoneRoutine,
-    [H_WULFSTAN] = NoneRoutine,
-    [H_TAZAR] = NoneRoutine,
-    [H_MAXIMUS] = NoneRoutine,
-    [H_KARLI] = NoneRoutine,
-    [H_HEDWIG] = NoneRoutine,
-    [H_TOLGHAR] = NoneRoutine,
-    [H_EBBA] = NoneRoutine,
-    [H_ULAND] = NoneRoutine,
-    [H_HAEGEIR] = NoneRoutine,
-    [H_HELMAR] = NoneRoutine,
-    [H_BRAND] = NoneRoutine,
-    [H_ERLING] = NoneRoutine,
-    [H_HANGVUL] = NoneRoutine,
-    [H_BART] = NoneRoutine,
-    [H_INGA] = NoneRoutine,
+    [H_KARLI] = Routine_RezSpearwielders,
 }
 
 
 function DoFortressRoutine_Start(player, hero)
-    startThread(START_TRIGGER_FORTRESS[hero], player, hero)
+    if START_TRIGGER_FORTRESS[hero] then
+        startThread(START_TRIGGER_FORTRESS[hero], player, hero)
+    end
 end
 
 function DoFortressRoutine_Daily(player, hero)
-    startThread(DAILY_TRIGGER_FORTRESS[hero], player, hero)
+    if DAILY_TRIGGER_FORTRESS[hero] then
+        startThread(DAILY_TRIGGER_FORTRESS[hero], player, hero)
+    end
 end
 
 function DoFortressRoutine_Weekly(player, hero)
-    startThread(WEEKLY_TRIGGER_FORTRESS[hero], player, hero)
+    if WEEKLY_TRIGGER_FORTRESS[hero] then
+        startThread(WEEKLY_TRIGGER_FORTRESS[hero], player, hero)
+    end
 end
 
 function DoFortressRoutine_LevelUp(player, hero, level)
-    startThread(LEVEL_UP_FORTRESS_HERO[hero], player, hero, level)
+    if LEVEL_UP_FORTRESS_HERO[hero] then
+        startThread(LEVEL_UP_FORTRESS_HERO[hero], player, hero, level)
+    end
 end
 
 function DoFortressRoutine_AfterCombat(player, hero, index)
-    startThread(AFTER_COMBAT_TRIGGER_FORTRESS[hero], player, hero, index)
+    if AFTER_COMBAT_TRIGGER_FORTRESS[hero] then
+        startThread(AFTER_COMBAT_TRIGGER_FORTRESS[hero], player, hero, index)
+    end
 end
 
 

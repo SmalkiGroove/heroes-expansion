@@ -1,65 +1,71 @@
 
-function Routine_GainArtifactTarotDeck(player, hero)
-    -- Give hero artifact Tarot deck
-    print("$ Routine_GainArtifactTarotDeck")
-    GiveArtifact(hero, ARTIFACT_TAROT_DECK)
-end
-
 function Routine_AddOtherHeroesGremlins(player, hero)
-    -- Gremlins (other heroes) - 1 * level
     print("$ Routine_AddOtherHeroesGremlins")
-    for i,h in GetPlayerHeroes(player) do
+    for _,h in GetPlayerHeroes(player) do
         if h ~= hero then
-            AddHero_CreatureInTypes(player, h, {CREATURE_GREMLIN,CREATURE_MASTER_GREMLIN,CREATURE_GREMLIN_SABOTEUR}, 1.0)
+            AddHero_CreatureInTypes(player, h, {CREATURE_GREMLIN,CREATURE_MASTER_GREMLIN,CREATURE_GREMLIN_SABOTEUR}, 0.5)
         end
     end
 end
 
-function Routine_GenerateGoldsExponential(player, hero)
-    -- Gold - 1:250 - 7:500 - 14:1000 - 21:2000 ... 49:32k
-    print("$ Routine_GenerateGoldsExponential")
-    local amount = 250 * power(2, trunc(0.143 * GetHeroLevel(hero)))
-    AddPlayer_Resource(player, hero, GOLD, amount)
-end
-
-function Routine_AddOtherHeroesExperience(player, hero)
-    -- Exp (other heroes) - 3% total hero exp
-    print("$ Routine_AddOtherHeroesExperience")
-    for i,h in GetPlayerHeroes(player) do
-        if h ~= hero then
-            AddHero_StatPercent(player, hero, STAT_EXPERIENCE, 0.03)
+function Routine_AssembleGargoyles(player, hero)
+    print("$ Routine_AssembleGargoyles")
+    local max = 2 * GetHeroLevel(hero)
+    local total = 0
+    local assemble_table = {
+        [CREATURE_STONE_GARGOYLE] = CREATURE_IRON_GOLEM,
+        [CREATURE_OBSIDIAN_GARGOYLE] = CREATURE_STEEL_GOLEM,
+        [CREATURE_MARBLE_GARGOYLE] = CREATURE_OBSIDIAN_GOLEM,
+    }
+    for garg,golem in assemble_table do
+        local nb_garg = GetHeroCreatures(hero, garg)
+        if mod(nb_garg, 2) == 1 then nb_garg = nb_garg - 1 end
+        if nb_garg > 0 then
+            local amount = min(max, nb_garg)
+            RemoveHeroCreatures(hero, garg, amount)
+            AddHeroCreatures(hero, golem, 0.5 * amount)
+            total = total + amount
         end
+    end
+    if total > 0 then
+        ShowFlyingSign({"/Text/Game/Scripts/HeroSpe/AssembleGargoyles.txt"; num=total}, hero, player, FLYING_SIGN_TIME)
     end
 end
 
 function Routine_AddHeroDjinns(player, hero)
-    -- Djinn - 1:4 - 2:10 - 3:17 - 4:24 - 5:30 ... 8:50
     print("$ Routine_AddHeroDjinns")
-    AddHero_CreatureInTypes(player, hero, {CREATURE_GENIE,CREATURE_MASTER_GENIE,CREATURE_DJINN_VIZIER}, 0.15)
-end
-
-function Routine_AddAndEvolveEagles(player, hero)
-    -- Eagle - 1:6 - 2:17 - 3:28 - 4:39 - 5:50 / Eagle to Phoenix for 50 Elemental Gargoyles
-    print("$ Routine_AddAndEvolveEagles")
-    AddHero_CreatureType(player, hero, CREATURE_SNOW_APE, 0.09)
-    ChangeHero_CreatureFusion(player, hero, CREATURE_SNOW_APE, CREATURE_MARBLE_GARGOYLE, CREATURE_PHOENIX, 50)
+    AddHero_CreatureInTypes(player, hero, {CREATURE_GENIE,CREATURE_MASTER_GENIE,CREATURE_DJINN_VIZIER}, 0.3)
 end
 
 function Routine_AddRecruitsRakshasas(player, hero)
-    -- Rakshasas - 0.25 * level recruits per week
     print("$ Routine_AddRecruitsRakshasas")
-    AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_6, CREATURE_RAKSHASA, 0.25)
+    AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_6, CREATURE_RAKSHASA, 0.2)
 end
 
-function Routine_GainAcademyArtifacts(player, hero, level)
-    -- Book of power / Tunic of enlightment / Sandal of the blessed / Staff of sar-issus / Tome of summoning magic
-    print("$ Routine_GainAcademyArtifacts")
-    if     level == 10 then GiveArtifact(hero, ARTIFACT_BOOK_OF_POWER)
-    elseif level == 20 then GiveArtifact(hero, ARTIFACT_SCALE_MAIL_OF_ENLIGHTMENT)
-    elseif level == 30 then GiveArtifact(hero, ARTIFACT_SANDALS_OF_THE_BLESSED)
-    elseif level == 40 then GiveArtifact(hero, ARTIFACT_STAFF_OF_THE_MAGISTER)
-    elseif level == 50 then GiveArtifact(hero, ARTIFACT_TOME_OF_NATURE)
+function Routine_ActivateArtfsetNecro(player, hero)
+    print("$ Routine_ActivateArtfsetNecro")
+    -- GiveArtifact(hero, ___, 1)
+    -- GiveArtifact(hero, ___, 1)
+end
+
+function Routine_UpgradeMages(player, hero)
+    print("$ Routine_UpgradeMages")
+    ChangeHero_CreatureUpgrade(player, hero, CREATURE_MAGI, CREATURE_ARCH_MAGI)
+end
+
+function Routine_AddOtherHeroesExperience(player, hero)
+    print("$ Routine_AddOtherHeroesExperience")
+    local exp = round(0.01 * GetHeroStat(hero, STAT_EXPERIENCE))
+    for _,h in GetPlayerHeroes(player) do
+        if h ~= hero then
+            AddHero_StatAmount(player, h, STAT_EXPERIENCE, exp)
+        end
     end
+end
+
+function Routine_AddHeroEagles(player, hero)
+    print("$ Routine_AddHeroEagles")
+    AddHero_CreatureType(player, hero, CREATURE_SNOW_APE, 0.2)
 end
 
 
@@ -68,124 +74,57 @@ end
 
 
 START_TRIGGER_ACADEMY = {
-    [H_HAVEZ] = NoneRoutine,
-    [H_MINASLI] = NoneRoutine,
-    [H_JOSEPHINE] = Routine_GainArtifactTarotDeck,
-    [H_RAZZAK] = NoneRoutine,
-    [H_DAVIUS] = NoneRoutine,
-    [H_RISSA] = NoneRoutine,
-    [H_GURVILIN] = NoneRoutine,
-    [H_JHORA] = NoneRoutine,
-    [H_CYRUS] = NoneRoutine,
-    [H_FAIZ] = NoneRoutine,
-    [H_MAAHIR] = NoneRoutine,
-    [H_NATHIR] = NoneRoutine,
-    [H_NUR] = NoneRoutine,
-    [H_GALIB] = NoneRoutine,
-    [H_ZEHIR] = NoneRoutine,
-    [H_THEODORUS] = NoneRoutine,
-    [H_EMILIA] = NoneRoutine,
+    [H_RISSA] = Routine_ActivateArtfsetNecro,
 }
 
 DAILY_TRIGGER_ACADEMY = {
     [H_HAVEZ] = Routine_AddOtherHeroesGremlins,
-    [H_MINASLI] = NoneRoutine,
-    [H_JOSEPHINE] = NoneRoutine,
-    [H_RAZZAK] = NoneRoutine,
-    [H_DAVIUS] = NoneRoutine,
-    [H_RISSA] = NoneRoutine,
-    [H_GURVILIN] = NoneRoutine,
-    [H_JHORA] = NoneRoutine,
-    [H_CYRUS] = NoneRoutine,
-    [H_FAIZ] = Routine_GenerateGoldsExponential,
+    [H_CYRUS] = Routine_UpgradeMages,
     [H_MAAHIR] = Routine_AddOtherHeroesExperience,
-    [H_NATHIR] = NoneRoutine,
-    [H_NUR] = NoneRoutine,
-    [H_GALIB] = Routine_AddHeroDjinns,
-    [H_ZEHIR] = NoneRoutine,
-    [H_THEODORUS] = Routine_AddAndEvolveEagles,
-    [H_EMILIA] = NoneRoutine,
 }
 
 WEEKLY_TRIGGER_ACADEMY = {
-    [H_HAVEZ] = NoneRoutine,
-    [H_MINASLI] = NoneRoutine,
-    [H_JOSEPHINE] = NoneRoutine,
-    [H_RAZZAK] = NoneRoutine,
+    [H_RAZZAK] = Routine_AssembleGargoyles,
+    [H_GALIB] = Routine_AddHeroDjinns,
     [H_DAVIUS] = Routine_AddRecruitsRakshasas,
-    [H_RISSA] = NoneRoutine,
-    [H_GURVILIN] = NoneRoutine,
-    [H_JHORA] = NoneRoutine,
-    [H_CYRUS] = NoneRoutine,
-    [H_FAIZ] = NoneRoutine,
-    [H_MAAHIR] = NoneRoutine,
-    [H_NATHIR] = NoneRoutine,
-    [H_NUR] = NoneRoutine,
-    [H_GALIB] = NoneRoutine,
-    [H_ZEHIR] = NoneRoutine,
-    [H_THEODORUS] = NoneRoutine,
-    [H_EMILIA] = NoneRoutine,
+    [H_MINASLI] = Routine_AddHeroEagles,
 }
 
 LEVEL_UP_ACADEMY_HERO = {
-    [H_HAVEZ] = NoneRoutine,
-    [H_MINASLI] = NoneRoutine,
-    [H_JOSEPHINE] = Routine_GainAcademyArtifacts,
-    [H_RAZZAK] = NoneRoutine,
-    [H_DAVIUS] = NoneRoutine,
-    [H_RISSA] = NoneRoutine,
-    [H_GURVILIN] = NoneRoutine,
-    [H_JHORA] = NoneRoutine,
-    [H_CYRUS] = NoneRoutine,
-    [H_FAIZ] = NoneRoutine,
-    [H_MAAHIR] = NoneRoutine,
-    [H_NATHIR] = NoneRoutine,
-    [H_NUR] = NoneRoutine,
-    [H_GALIB] = NoneRoutine,
-    [H_ZEHIR] = NoneRoutine,
-    [H_THEODORUS] = NoneRoutine,
-    [H_EMILIA] = NoneRoutine,
 }
 
 AFTER_COMBAT_TRIGGER_ACADEMY = {
-    [H_HAVEZ] = NoneRoutine,
-    [H_MINASLI] = NoneRoutine,
-    [H_JOSEPHINE] = NoneRoutine,
-    [H_RAZZAK] = NoneRoutine,
-    [H_DAVIUS] = NoneRoutine,
-    [H_RISSA] = NoneRoutine,
-    [H_GURVILIN] = NoneRoutine,
-    [H_JHORA] = NoneRoutine,
-    [H_CYRUS] = NoneRoutine,
-    [H_FAIZ] = NoneRoutine,
-    [H_MAAHIR] = NoneRoutine,
-    [H_NATHIR] = NoneRoutine,
-    [H_NUR] = NoneRoutine,
-    [H_GALIB] = NoneRoutine,
-    [H_ZEHIR] = NoneRoutine,
-    [H_THEODORUS] = NoneRoutine,
-    [H_EMILIA] = NoneRoutine,
 }
 
 
 function DoAcademyRoutine_Start(player, hero)
-    startThread(START_TRIGGER_ACADEMY[hero], player, hero)
+    if START_TRIGGER_ACADEMY[hero] then
+        startThread(START_TRIGGER_ACADEMY[hero], player, hero)
+    end
 end
 
 function DoAcademyRoutine_Daily(player, hero)
-    startThread(DAILY_TRIGGER_ACADEMY[hero], player, hero)
+    if DAILY_TRIGGER_ACADEMY[hero] then
+        startThread(DAILY_TRIGGER_ACADEMY[hero], player, hero)
+    end
 end
 
 function DoAcademyRoutine_Weekly(player, hero)
-    startThread(WEEKLY_TRIGGER_ACADEMY[hero], player, hero)
+    if WEEKLY_TRIGGER_ACADEMY[hero] then
+        startThread(WEEKLY_TRIGGER_ACADEMY[hero], player, hero)
+    end
 end
 
 function DoAcademyRoutine_LevelUp(player, hero, level)
-    startThread(LEVEL_UP_ACADEMY_HERO[hero], player, hero, level)
+    if LEVEL_UP_ACADEMY_HERO[hero] then
+        startThread(LEVEL_UP_ACADEMY_HERO[hero], player, hero, level)
+    end
 end
 
 function DoAcademyRoutine_AfterCombat(player, hero, index)
-    startThread(AFTER_COMBAT_TRIGGER_ACADEMY[hero], player, hero, index)
+    if AFTER_COMBAT_TRIGGER_ACADEMY[hero] then
+        startThread(AFTER_COMBAT_TRIGGER_ACADEMY[hero], player, hero, index)
+    end
 end
 
 
