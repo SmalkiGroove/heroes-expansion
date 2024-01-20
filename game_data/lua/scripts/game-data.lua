@@ -16,216 +16,144 @@ STRONGHOLD = 8
 -- HEROES
 
 -- haven
-H_DUNCAN = 'Duncan'                 -- ballista
+H_DUNCAN = 'Duncan'                 -- diplomacy
+H_VITTORIO = 'Christian'            -- ballista
+H_MAEVE = 'Maeve'                   -- peasants
 H_DOUGAL = 'Orrin'                  -- archers
+H_LASZLO = 'Laszlo'                 -- footmen
 H_KLAUS = 'Sarge'                   -- cavaliers
-H_IRINA = 'Ving'                    -- griffins
-H_ISABEL = 'Isabell'                -- bless
-H_LASZLO = 'Mardigo'                -- footmen
-H_NICOLAI = 'Nicolai'               -- diplomacy
-H_GODRIC = 'GodricMP'               -- arcane shield
 H_FREYDA = 'Axel'                   -- prayer
-H_RUTGER = 'Brem'                   -- logistics
-H_MAEVE = 'Maeve'                   -- hero initiative
-H_ELLAINE = 'Nathaniel'             -- peasants
-H_ALARIC = 'Alaric'                 -- fireball
-H_GABRIELLE = 'RedHeavenHero06'     -- counterspell
-H_ORLANDO = 'Orlando'               -- suzerain
-H_MARKAL = 'Markal'                 -- confusion
-H_ORNELLA = 'Ornella'               -- OFF
-H_JEDDITE = 'Jeddite'               -- OFF
-H_ANDREAS = 'RedHeavenHero01'       -- OFF
-H_LORENZO = 'RedHeavenHero02'       -- OFF
-H_VALERIA = 'RedHeavenHero03'       -- OFF
-H_BENEDIKT = 'RedHeavenHero04'      -- OFF
-H_BERTRAND = 'RedHeavenHero05'      -- OFF
+H_ISABEL = 'Isabell'                -- bless
+H_GODRIC = 'GodricMP'               -- celestial shield
+H_NICOLAI = 'Nicolai'               -- suzerain
+H_GABRIELLE = 'RedHeavenHero06'     -- ?
+H_ALARIC = 'Alaric'                 -- counterspell
 
 -- sylvan
-H_WYNGAAL = 'Linaas'                -- start ititiative
-H_ANWEN = 'Metlirn'                 -- avenger
+H_WYNGAAL = 'Linaas'                -- logistics
+H_KYRRE = 'Kyrre'                   -- experience
 H_TALANAR = 'Nadaur'                -- rage
-H_OSSIR = 'Ossir'                   -- hunters
-H_FINDAN = 'Heam'                   -- offender
-H_JENOVA = 'Jenova'                 -- dragons
-H_GILRAEN = 'Gillion'               -- blades
-H_KYRRE = 'Kyrre'                   -- logistics
+H_JENOVA = 'Jenova'                 -- offender
+H_FINDAN = 'Heam'                   -- hunters
 H_IVOR = 'Arniel'                   -- wolves
-H_MEPHALA = 'Mephala'               -- border guard
-H_ALARON = 'Ildar'                  -- druids
 H_DIRAEL = 'Diraya'                 -- wasps
-H_VINRAEL = 'Elleshar'              -- experience
+H_VINRAEL = 'Vinrael'               -- haste
+H_TIERU = 'Vaniel'                  -- druids
 H_YLTHIN = 'Itil'                   -- unicorns
-H_TIERU = 'Vaniel'                  -- haste
-H_GEM = 'Gem'                       -- mana regen
-H_ELLESHAR = 'Vinrael'              -- spellpower
-H_MELODIA = 'Melodia'               -- OFF
+H_ELLESHAR = 'Elleshar'             -- spellpower
+H_MELODIA = 'Melodia'               -- regeneration
 
 -- academy
 H_HAVEZ = 'Havez'                   -- gremlins
-H_MINASLI = 'Minasli'               -- bombardier
-H_JOSEPHINE = 'Josephine'           -- artificier
-H_RAZZAK = 'Isher'                  -- golems
+H_RAZZAK = 'Razzak'                 -- golems
 H_DAVIUS = 'Davius'                 -- rakshasas
-H_RISSA = 'Rissa'                   -- slowness
-H_GURVILIN = 'Gurvilin'             -- vulnerability
-H_JHORA = 'Sufi'                    -- hero initiative
-H_CYRUS = 'Cyrus'                   -- mages
-H_FAIZ = 'Faiz'                     -- economy
-H_MAAHIR = 'Maahir'                 -- experience
-H_NATHIR = 'Nur'                    -- empowered spells
-H_NUR = 'Astral'                    -- mana regen
+H_NATHIR = 'Astral'                 -- bombardier
+H_THEODORUS = 'Timerkhan'           -- exauster
 H_GALIB = 'Tan'                     -- magic mirror
+H_NUR = 'Nur'                       -- mana regen
 H_ZEHIR = 'Zehir'                   -- elementals
-H_THEODORUS = 'Timerkhan'           -- phoenix
-H_EMILIA = 'Emilia'                 -- wasps
-H_NARXES = 'Razzak'                 -- OFF
+H_CYRUS = 'Cyrus'                   -- mages
+H_MINASLI = 'Minasli'               -- eagles
+H_RISSA = 'Rissa'                   -- time shifter
+H_MAAHIR = 'Maahir'                 -- experience
 
 -- fortress
 H_INGVAR = 'Ingvar'                 -- defenders
-H_ROLF = 'Rolf'                     -- bear riders
-H_WULFSTAN = 'Wulfstan'             -- ballista
-H_TAZAR = 'Tazar'                   -- initiative
-H_MAXIMUS = 'Maximus'               -- border guard
 H_KARLI = 'Skeggy'                  -- skirmishers
-H_HEDWIG = 'Vilma'                  -- evasion
+H_ROLF = 'Rolf'                     -- bear riders
+H_HANGVUL = 'Hangvul2'              -- thanes
+H_TAZAR = 'Tazar'                   -- initiative
+H_WULFSTAN = 'Wulfstan'             -- ballista
 H_TOLGHAR = 'KingTolghar'           -- stun rune
-H_EBBA = 'Bersy'                    -- economist
-H_ULAND = 'Hangvul2'                -- thanes
-H_HAEGEIR = 'Ufretin'               -- diplomacy
-H_HELMAR = 'Ottar'                  -- arcane shield
-H_BRAND = 'Brand'                   -- fireball
 H_ERLING = 'Egil'                   -- rune priests
-H_HANGVUL = 'Hangvul'               -- researcher
-H_BART = 'Bart'                     -- elementals
+H_HEDWIG = 'Vilma'                  -- evasion
+H_BRAND = 'Brand'                   -- fireball
+H_EBBA = 'Bersy'                    -- economist
 H_INGA = 'Una'                      -- earth spells
-H_VEGEYR = 'Vegeyr'                 -- OFF
 
 -- necropolis
-H_KASPAR = 'Gles'                   -- plague tent
-H_VLADIMIR = 'Pelt'                 -- blooddrinker
+H_VLADIMIR = 'Pelt'                 -- blood drinker
+H_ARANTIR = 'Arantir'               -- diplomacy
 H_ORSON = 'Straker'                 -- zombies
-H_ORNELLA2 = 'OrnellaNecro'         -- magic resist
 H_LUCRETIA = 'Tamika'               -- vampires
 H_XERXON = 'Xerxon'                 -- black knights
-H_DEIRDRE = 'Nemor'                 -- banshee scream
-H_NAADIR = 'Muscip'                 -- ghosts
-H_AISLINN = 'Aislinn'               -- weakness
-H_GIOVANNI = 'Giovanni'             -- ice mage
+H_KASPAR = 'Gles'                   -- plague tent
+H_RAVEN = 'Effig'                   -- reanimator
 H_ARCHILUS = 'Archilus'             -- avatar of death
-H_ZOLTAN = 'Aberrar'                -- counterspell
-H_RAVEN = 'Effig'                   -- necromancer
-H_ARANTIR = 'Arantir'               -- reanimator
-H_THANT = 'Thant'                   -- mummies
-H_SANDRO = 'Sandro'                 -- diplomacy
-H_VIDOMINA = 'Vidomina'             -- unluck
-H_NIMBUS = 'Nimbus'                 -- OFF
+H_THANT = 'Thant'                   -- curse mummies
+H_SANDRO = 'Sandro'                 -- ?
+H_ORNELLA = 'OrnellaNecro'          -- frost mage
+H_DEIRDRE = 'Nemor'                 -- banshee scream
 
 -- inferno
-H_GRAWL = 'Calid'                   -- hell hounds
-H_NEBIROS = 'Jazaz'                 -- offender
-H_MARBAS = 'Marder'                 -- fire dragons
-H_HARKENRAZ = 'Harkenraz'           -- sulfur
-H_CALH = 'Calh'                     -- haste
-H_SHELTEM = 'Sheltem'               -- bombardier
-H_ALASTOR = 'Efion'                 -- confusion
 H_GROK = 'Grok'                     -- logistics
+H_SHELTEM = 'Sheltem'               -- bombardier
+H_GRAWL = 'Guarg'                   -- hell hounds
+H_ASH = 'Ash'                       -- offender
 H_NYMUS = 'Nymus'                   -- gating
-H_JEZEBETH = 'Oddrema'              -- bless
-H_MALUSTAR = 'Malustar'             -- stats
-H_AGRAEL = 'Agrael'                 -- explosions
-H_BIARA = 'Biara'                   -- succubus
-H_KHABELETH = 'Sovereign'           -- pitlords
-H_ZYDAR = 'Zydar'                   -- border guard
-H_DELEB = 'Deleb'                   -- earth spells
+H_MALUSTAR = 'Malustar'             -- explosions
 H_CALID = 'Calid2'                  -- fireball
-H_ASH = 'Ash'                       -- OFF
+H_MARBAS = 'Marder'                 -- confusion
+H_ORLANDO = 'Orlando'               -- ?
+H_BIARA = 'Biara'                   -- succubus
+H_DELEB = 'Deleb'                   -- fire traps
+H_KHABELETH = 'Sovereign2'          -- pit lords
 
 -- dungeon
-H_SORGAL = 'Ferigl'                 -- lizard bite
-H_KYTHRA = 'Menel'                  -- border guard
-H_AGBETH = 'Agbeth'                 -- evasive
-H_RANLETH = 'Ranleth'               -- windspeaker
-H_DARKSTORM = 'Darkstorm'           -- minotaurs
-H_YRWANNA = 'Urunir'                -- blood witches
 H_VAYSHAN = 'Ohtarig'               -- scouts
-H_THRALSAI = 'Thralsai'             -- bombardier
-H_LETHOS = 'Dalom'                  -- poisoner
-H_ERUINA = 'Eruina'                 -- shadow witches
+H_YRWANNA = 'Urunir'                -- blood witches
+H_DARKSTORM = 'Darkstorm'           -- minotaurs
+H_SORGAL = 'Ferigl'                 -- beastmaster
 H_SYLSAI = 'Sylsai'                 -- corrupter
+H_RAELAG = 'Raelag'                 -- dragon set
 H_SINITAR = 'Inagost'               -- power bargain
+H_RANLETH = 'Ranleth'               -- learning
+H_ERUINA = 'Eruina'                 -- shadow witches
 H_SHADYA = 'Kelodin'                -- witch queen
-H_RAELAG = 'Raelag'                 -- initiative down
-H_YLAYA = 'Shadwyn'                 -- stormcaller
-H_SEPHINROTH = 'Sephinroth'         -- dark ritual
-H_KASTORE = 'Kastore'               -- summon phoenix
-H_YRBETH = 'Almegir'                -- OFF
+H_LETHOS = 'Dalom'                  -- poisoner
+H_SEPHINROTH = 'Sephinroth'         -- elemental vision
 
 -- stronghold
-H_TELSEK = 'Hero8'                  -- warriors
-H_GORSHAK = 'Hero4'                 -- centaurs
+H_KRAGH = 'Hero1'                   -- atb boost
 H_GOTAI = 'Gottai'                  -- warcries
-H_AZAR = 'Azar'                     -- blooddrinker
-H_MATEWA = 'Matewa'                 -- cyclops
-H_KUNYAK = 'Kunyak'                 -- butchers
-H_KRAGH = 'Hero1'                   -- offender
 H_KILGHAN = 'Hero9'                 -- goblins
-H_CRAGHACK = 'Crag'                 -- start initiative
-H_KRAAL = 'Kraal'                   -- ballista
-H_SHAKKARUKAT = 'Hero6'             -- wyverns
-H_KUJIN = 'KujinMP'                 -- bless
-H_SHIVA = 'Shiva'                   -- shamans
+H_TELSEK = 'Hero8'                  -- warriors
+H_GARUNA = 'Hero3'                  -- centaurs
+H_GORSHAK = 'Hero4'                 -- slayers
+H_KARUKAT = 'Hero6'                 -- wyverns
 H_HAGGASH = 'Hero7'                 -- magic resist
 H_MUKHA = 'Mokka'                   -- lightning
-H_URGHAT = 'Hero2'                  -- dark ritual
-H_GARUNA = 'Hero3'                  -- plague tent
-H_ZOULEIKA = 'Zouleika'             -- vulnerability
-H_ERIKA = 'Erika'                   -- weakness
-H_QUROQ = 'Quroq'                   -- OFF
+H_URGHAT = 'Hero2'                  -- ?
+H_ZOULEIKA = 'Zouleika'             -- healing tent
+H_KUJIN = 'KujinMP'                 -- shamans
 
 
 HEROES = {
-    [H_DUNCAN]    = HAVEN,        [H_WYNGAAL]  = PRESERVE,     [H_HAVEZ]     = ACADEMY,      [H_INGVAR]   = FORTRESS,
-    [H_DOUGAL]    = HAVEN,        [H_ANWEN]    = PRESERVE,     [H_MINASLI]   = ACADEMY,      [H_ROLF]     = FORTRESS,
-    [H_KLAUS]     = HAVEN,        [H_TALANAR]  = PRESERVE,     [H_JOSEPHINE] = ACADEMY,      [H_WULFSTAN] = FORTRESS,
-    [H_IRINA]     = HAVEN,        [H_OSSIR]    = PRESERVE,     [H_RAZZAK]    = ACADEMY,      [H_TAZAR]    = FORTRESS,
-    [H_ISABEL]    = HAVEN,        [H_FINDAN]   = PRESERVE,     [H_DAVIUS]    = ACADEMY,      [H_MAXIMUS]  = FORTRESS,
-    [H_LASZLO]    = HAVEN,        [H_JENOVA]   = PRESERVE,     [H_RISSA]     = ACADEMY,      [H_KARLI]    = FORTRESS,
-    [H_NICOLAI]   = HAVEN,        [H_GILRAEN]  = PRESERVE,     [H_GURVILIN]  = ACADEMY,      [H_HEDWIG]   = FORTRESS,
-    [H_GODRIC]    = HAVEN,        [H_KYRRE]    = PRESERVE,     [H_JHORA]     = ACADEMY,      [H_TOLGHAR]  = FORTRESS,
-    [H_FREYDA]    = HAVEN,        [H_IVOR]     = PRESERVE,     [H_CYRUS]     = ACADEMY,      [H_EBBA]     = FORTRESS,
-    [H_RUTGER]    = HAVEN,        [H_MEPHALA]  = PRESERVE,     [H_FAIZ]      = ACADEMY,      [H_ULAND]    = FORTRESS,
-    [H_MAEVE]     = HAVEN,        [H_ALARON]   = PRESERVE,     [H_MAAHIR]    = ACADEMY,      [H_HAEGEIR]  = FORTRESS,
-    [H_ELLAINE]   = HAVEN,        [H_DIRAEL]   = PRESERVE,     [H_NATHIR]    = ACADEMY,      [H_HELMAR]   = FORTRESS,
-    [H_ALARIC]    = HAVEN,        [H_VINRAEL]  = PRESERVE,     [H_NUR]       = ACADEMY,      [H_BRAND]    = FORTRESS,
-    [H_GABRIELLE] = HAVEN,        [H_YLTHIN]   = PRESERVE,     [H_GALIB]     = ACADEMY,      [H_ERLING]   = FORTRESS,
-    [H_ORLANDO]   = HAVEN,        [H_TIERU]    = PRESERVE,     [H_ZEHIR]     = ACADEMY,      [H_HANGVUL]  = FORTRESS,
-    [H_MARKAL]    = HAVEN,        [H_GEM]      = PRESERVE,     [H_THEODORUS] = ACADEMY,      [H_BART]     = FORTRESS,
-    [H_ORNELLA]   = HAVEN,        [H_ELLESHAR] = PRESERVE,     [H_EMILIA]    = ACADEMY,      [H_INGA]     = FORTRESS,
-    [H_JEDDITE]   = HAVEN,        [H_MELODIA]  = PRESERVE,     [H_NARXES]    = ACADEMY,      [H_VEGEYR]   = FORTRESS,
-    [H_ANDREAS]   = HAVEN,   
-    [H_LORENZO]   = HAVEN,   
-    [H_VALERIA]   = HAVEN,   
-    [H_BENEDIKT]  = HAVEN,   
-    [H_BERTRAND]  = HAVEN,                                                                   [H_GORSHAK]     = STRONGHOLD,
-                                                                                             [H_TELSEK]      = STRONGHOLD,
-    [H_KASPAR]   = NECROPOLIS,    [H_GRAWL]     = INFERNO,     [H_SORGAL]     = DUNGEON,     [H_GOTAI]       = STRONGHOLD,
-    [H_VLADIMIR] = NECROPOLIS,    [H_NEBIROS]   = INFERNO,     [H_KYTHRA]     = DUNGEON,     [H_AZAR]        = STRONGHOLD,
-    [H_ORSON]    = NECROPOLIS,    [H_MARBAS]    = INFERNO,     [H_AGBETH]     = DUNGEON,     [H_MATEWA]      = STRONGHOLD,
-    [H_ORNELLA2] = NECROPOLIS,    [H_HARKENRAZ] = INFERNO,     [H_RANLETH]    = DUNGEON,     [H_KUNYAK]      = STRONGHOLD,
-    [H_LUCRETIA] = NECROPOLIS,    [H_CALH]      = INFERNO,     [H_DARKSTORM]  = DUNGEON,     [H_KRAGH]       = STRONGHOLD,
-    [H_XERXON]   = NECROPOLIS,    [H_SHELTEM]   = INFERNO,     [H_YRWANNA]    = DUNGEON,     [H_KILGHAN]     = STRONGHOLD,
-    [H_DEIRDRE]  = NECROPOLIS,    [H_ALASTOR]   = INFERNO,     [H_VAYSHAN]    = DUNGEON,     [H_CRAGHACK]    = STRONGHOLD,
-    [H_NAADIR]   = NECROPOLIS,    [H_GROK]      = INFERNO,     [H_THRALSAI]   = DUNGEON,     [H_KRAAL]       = STRONGHOLD,
-    [H_AISLINN]  = NECROPOLIS,    [H_NYMUS]     = INFERNO,     [H_LETHOS]     = DUNGEON,     [H_QUROQ]       = STRONGHOLD,
-    [H_GIOVANNI] = NECROPOLIS,    [H_JEZEBETH]  = INFERNO,     [H_ERUINA]     = DUNGEON,     [H_SHAKKARUKAT] = STRONGHOLD,
-    [H_ARCHILUS] = NECROPOLIS,    [H_MALUSTAR]  = INFERNO,     [H_SYLSAI]     = DUNGEON,     [H_KUJIN]       = STRONGHOLD,
-    [H_ZOLTAN]   = NECROPOLIS,    [H_AGRAEL]    = INFERNO,     [H_SINITAR]    = DUNGEON,     [H_SHIVA]       = STRONGHOLD,
-    [H_RAVEN]    = NECROPOLIS,    [H_BIARA]     = INFERNO,     [H_SHADYA]     = DUNGEON,     [H_HAGGASH]     = STRONGHOLD,
-    [H_ARANTIR]  = NECROPOLIS,    [H_KHABELETH] = INFERNO,     [H_RAELAG]     = DUNGEON,     [H_MUKHA]       = STRONGHOLD,
-    [H_THANT]    = NECROPOLIS,    [H_ZYDAR]     = INFERNO,     [H_YLAYA]      = DUNGEON,     [H_URGHAT]      = STRONGHOLD,
-    [H_SANDRO]   = NECROPOLIS,    [H_DELEB]     = INFERNO,     [H_SEPHINROTH] = DUNGEON,     [H_GARUNA]      = STRONGHOLD,
-    [H_VIDOMINA] = NECROPOLIS,    [H_CALID]     = INFERNO,     [H_KASTORE]    = DUNGEON,     [H_ZOULEIKA]    = STRONGHOLD,
-    [H_NIMBUS]   = NECROPOLIS,    [H_ASH]       = INFERNO,     [H_YRBETH]     = DUNGEON,     [H_ERIKA]       = STRONGHOLD,
+    [H_DUNCAN]    = HAVEN,        [H_WYNGAAL]  = PRESERVE,     [H_HAVEZ]     = ACADEMY,      [H_INGVAR]    = FORTRESS,
+    [H_VITTORIO]  = HAVEN,        [H_KYRRE]    = PRESERVE,     [H_RAZZAK]    = ACADEMY,      [H_KARLI]     = FORTRESS,
+    [H_MAEVE]     = HAVEN,        [H_TALANAR]  = PRESERVE,     [H_DAVIUS]    = ACADEMY,      [H_ROLF]      = FORTRESS,
+    [H_DOUGAL]    = HAVEN,        [H_JENOVA]   = PRESERVE,     [H_NATHIR]    = ACADEMY,      [H_HANGVUL]   = FORTRESS,
+    [H_LASZLO]    = HAVEN,        [H_FINDAN]   = PRESERVE,     [H_THEODORUS] = ACADEMY,      [H_TAZAR]     = FORTRESS,
+    [H_KLAUS]     = HAVEN,        [H_IVOR]     = PRESERVE,     [H_GALIB]     = ACADEMY,      [H_WULFSTAN]  = FORTRESS,
+    [H_FREYDA]    = HAVEN,        [H_DIRAEL]   = PRESERVE,     [H_NUR]       = ACADEMY,      [H_TOLGHAR]   = FORTRESS,
+    [H_ISABEL]    = HAVEN,        [H_VINRAEL]  = PRESERVE,     [H_ZEHIR]     = ACADEMY,      [H_ERLING]    = FORTRESS,
+    [H_GODRIC]    = HAVEN,        [H_TIERU]    = PRESERVE,     [H_CYRUS]     = ACADEMY,      [H_HEDWIG]    = FORTRESS,
+    [H_NICOLAI]   = HAVEN,        [H_YLTHIN]   = PRESERVE,     [H_MINASLI]   = ACADEMY,      [H_BRAND]     = FORTRESS,
+    [H_GABRIELLE] = HAVEN,        [H_ELLESHAR] = PRESERVE,     [H_RISSA]     = ACADEMY,      [H_EBBA]      = FORTRESS,
+    [H_ALARIC]    = HAVEN,        [H_MELODIA]  = PRESERVE,     [H_MAAHIR]    = ACADEMY,      [H_INGA]      = FORTRESS,
+    
+    [H_VLADIMIR] = NECROPOLIS,    [H_GROK]      = INFERNO,     [H_VAYSHAN]    = DUNGEON,     [H_KRAGH]    = STRONGHOLD,
+    [H_ARANTIR]  = NECROPOLIS,    [H_SHELTEM]   = INFERNO,     [H_YRWANNA]    = DUNGEON,     [H_GOTAI]    = STRONGHOLD,
+    [H_ORSON]    = NECROPOLIS,    [H_GRAWL]     = INFERNO,     [H_DARKSTORM]  = DUNGEON,     [H_KILGHAN]  = STRONGHOLD,
+    [H_LUCRETIA] = NECROPOLIS,    [H_ASH]       = INFERNO,     [H_SORGAL]     = DUNGEON,     [H_TELSEK]   = STRONGHOLD,
+    [H_XERXON]   = NECROPOLIS,    [H_NYMUS]     = INFERNO,     [H_SYLSAI]     = DUNGEON,     [H_GARUNA]   = STRONGHOLD,
+    [H_KASPAR]   = NECROPOLIS,    [H_MALUSTAR]  = INFERNO,     [H_RAELAG]     = DUNGEON,     [H_GORSHAK]  = STRONGHOLD,
+    [H_RAVEN]    = NECROPOLIS,    [H_CALID]     = INFERNO,     [H_SINITAR]    = DUNGEON,     [H_KARUKAT]  = STRONGHOLD,
+    [H_ARCHILUS] = NECROPOLIS,    [H_MARBAS]    = INFERNO,     [H_RANLETH]    = DUNGEON,     [H_HAGGASH]  = STRONGHOLD,
+    [H_THANT]    = NECROPOLIS,    [H_ORLANDO]   = INFERNO,     [H_ERUINA]     = DUNGEON,     [H_MUKHA]    = STRONGHOLD,
+    [H_SANDRO]   = NECROPOLIS,    [H_BIARA]     = INFERNO,     [H_SHADYA]     = DUNGEON,     [H_URGHAT]   = STRONGHOLD,
+    [H_ORNELLA]  = NECROPOLIS,    [H_DELEB]     = INFERNO,     [H_LETHOS]     = DUNGEON,     [H_ZOULEIKA] = STRONGHOLD,
+    [H_DEIRDRE]  = NECROPOLIS,    [H_KHABELETH] = INFERNO,     [H_SEPHINROTH] = DUNGEON,     [H_KUJIN]    = STRONGHOLD,
 }
 
 --------------------------------------------------------------------------------------------------------------------------------------------
