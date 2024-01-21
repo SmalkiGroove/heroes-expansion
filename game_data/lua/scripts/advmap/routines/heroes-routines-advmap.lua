@@ -69,7 +69,7 @@ Var_Kyrre_BattleWon = 0
 function Routine_AddHeroExperience(player, hero)
     print("$ Routine_AddHeroExperience")
     local exp = 1000 + Var_Kyrre_BattleWon * 50 * (GetHeroLevel(hero) + 10)
-    AddHero_StatPerLevel(player, hero, STAT_EXPERIENCE, 300)
+    AddHero_StatAmount(player, hero, STAT_EXPERIENCE, exp)
 end
 
 function Routine_KyrreVictoryCounter(player, hero, combatIndex)

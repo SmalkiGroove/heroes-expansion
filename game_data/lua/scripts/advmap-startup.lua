@@ -2,6 +2,7 @@
 	dofile = doFile
 
 	dofile('/scripts/events.lua')
+	dofile("/scripts/common.lua")
 
 	-- BlockGame()
 	consoleCmd('console_size 1000')
@@ -517,9 +518,6 @@
 	FLYING_SIGN_TIME = 9
 
 function createAdvmapAliases()
-    --
-    -- dumb command aliasing
-    --
 	names = GetAllNames
 	GiveExpToLevel = LevelUpHero
     Exists = IsObjectExists
@@ -540,7 +538,6 @@ end
 MakeSyncCommandCallback = function(event_id)
 	return function() mark_event(%event_id)	end
 end
-
 SyncCommand = function(command, arg, callback, saveName)
 	if saveName == nil then
 		saveName = ''
@@ -552,7 +549,6 @@ SyncCommand = function(command, arg, callback, saveName)
 		parse(callback .. '()')()
 	end
 end
-
 if MessageBoxInt then
 	MessageBox = function(name, callback) SyncCommand(MessageBoxInt, name, callback) end
 end
@@ -566,10 +562,20 @@ end
 if StartDialogSceneInt then
 	StartDialogScene = function(name, callback, saveName) SyncCommand(StartDialogSceneInt, name, callback, saveName) end
 end
-
-
-LOAD_SOURCES = 0
-dofile("/scripts/advmap-common.lua")
-repeat sleep(1) until LOAD_SOURCES == 1
+function GiveExp( heroName, exp )
+    ChangeHeroStat( heroName, STAT_EXPERIENCE, exp )
+end
+function GetPlayerFilter( player )
+	if player == PLAYER_1 then return PLAYERFLT_1 end
+	if player == PLAYER_2 then return PLAYERFLT_2 end
+	if player == PLAYER_3 then return PLAYERFLT_3 end
+	if player == PLAYER_4 then return PLAYERFLT_4 end
+	if player == PLAYER_5 then return PLAYERFLT_5 end
+	if player == PLAYER_6 then return PLAYERFLT_6 end
+	if player == PLAYER_7 then return PLAYERFLT_7 end
+	if player == PLAYER_8 then return PLAYERFLT_8 end
+	return 0
+end
+  
 
 dofile("/scripts/advmap-manager.lua")
