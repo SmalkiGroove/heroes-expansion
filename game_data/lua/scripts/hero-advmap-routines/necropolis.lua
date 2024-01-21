@@ -1,87 +1,43 @@
 
-function Routine_GainArtifactNecromancerHelm(player, hero)
-    -- Hero gain artifact Necromancer's Helm
-    print("$ Routine_GainArtifactNecromancerHelm")
-    GiveArtifact(hero, ARTIFACT_HELM_OF_THE_LICH)
+function Routine_HeroCallVampires(player, hero)
+    print("$ Routine_HeroCallVampires")
+    AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_VAMPIRE, 0.8)
+    sleep(10)
+    AddHero_CreatureFromDwelling(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_NOSFERATU, 1.2)
 end
 
 function Routine_AddHeroBlackKnights(player, hero)
-    -- Black Knight - 1:5 - 2:15 - 3:25 - 4:35 - 5:45
     print("$ Routine_AddHeroBlackKnights")
     AddHero_CreatureType(player, hero, CREATURE_BLACK_KNIGHT, 0.1)
 end
 
-function Routine_AddHeroLiches(player, hero)
-    -- Lich - 1:5 - 2:13 - 3:21 - 4:30 - 5:38 - 6:46
-    print("$ Routine_AddHeroLiches")
-    AddHero_CreatureInTypes(player, hero, {CREATURE_LICH,CREATURE_DEMILICH,CREATURE_LICH_MASTER}, 0.12)
-end
-
-function Routine_GenerateGoldPerNecroCreature(player, hero)
-    -- Gold - 1 per creature in army per 10 levels
-    print("$ Routine_GenerateGoldPerNecroCreature")
-    local mult = ceil(GetHeroLevel(hero) * 0.067)
-    local army = GetHeroArmy(hero)
-    local amount = 0
-    for i = 1,7 do
-        local cr = army[i]
-        if cr and GetCreatureFactionID(cr) == NECROPOLIS then amount = amount + GetHeroCreatures(hero, cr) end
-    end
-    AddPlayer_Resource(player, hero, GOLD, amount)
-end
-
-function Routine_AddHeroMummies(player, hero)
-    -- Mummy - 1:2 - 2:6 - 3:10 - 4:14 - 5:18 ... 13:50
-    print("$ Routine_AddHeroMummies")
-    AddHero_CreatureType(player, hero, CREATURE_MUMMY, 0.25)
-end
-
-function Routine_HeroCallVampires(player, hero)
-    -- Vampires - 1.5 * level transfered
-    print("$ Routine_HeroCallVampires")
-    local coef = 2 / GetHeroLevel(hero)
-    AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_VAMPIRE, coef)
-    sleep(10)
-    AddHero_CreatureFromDwelling(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_NOSFERATU, 1.5)
-end
-
-function Routine_EvolveBlackKnights(player, hero)
-    -- B.Knights to D.Knights for 1 Lich
+function Routine_EvolveBlackKnights(player, hero, combatIndex)
     print("$ Routine_EvolveBlackKnights")
-    ChangeHero_CreatureFusion(player, hero, CREATURE_BLACK_KNIGHT, CREATURE_LICH, CREATURE_DEATH_KNIGHT, 1)
-end
-
-function Routine_AddHeroBanshees(player, hero)
-    -- Banshee - 1:8 - 2:22 - 3:36 - 4:50
-    print("$ Routine_AddHeroBanshees")
-    AddHero_CreatureType(player, hero, CREATURE_BANSHEE, 0.07)
+    local max = trunc(GetHeroLevel(hero) * 0.15)
+    local bks = GetHeroCreatures(hero, CREATURE_BLACK_KNIGHT)
+    local nb = min(bks, max)
+    if nb > 0 then
+        RemoveHeroCreatures(hero, CREATURE_BLACK_KNIGHT, nb)
+        AddHeroCreatures(hero, CREATURE_DEATH_KNIGHT, nb)
+        ShowFlyingSign({"/Text/Game/Scripts/Evolve.txt"; num=nb}, hero, player, FLYING_SIGN_TIME)
+    end
 end
 
 function Routine_AddRecruitsNecropolis(player, hero)
-    -- Skeletons - 3.5 * level recruits per week / Walking deads - 2 * level recruits per week / Manes - 0.75 * level recruits per week
     print("$ Routine_AddRecruitsNecropolis")
-    AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_1, CREATURE_SKELETON, 3.5)
-    AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_2, CREATURE_WALKING_DEAD, 2.0)
-    AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_3, CREATURE_MANES, 0.75)
+    AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_1, CREATURE_SKELETON, 2.5)
+    AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_2, CREATURE_WALKING_DEAD, 1.25)
+    AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_3, CREATURE_MANES, 0.5)
 end
 
-function Routine_GainDefenceNecro(player, hero, level)
-    --Def +1 / 4 levels
-    print("$ Routine_GainDefenceNecro")
-    if mod(level, 4) == 0 then
-        AddHero_StatAmount(player, hero, STAT_DEFENCE, 1)
-    end
+function Routine_AddHeroMummies(player, hero)
+    print("$ Routine_AddHeroMummies")
+    AddHero_CreatureType(player, hero, CREATURE_MUMMY, 0.85)
 end
 
-function Routine_GainNecroArtifacts(player, hero, level)
-    -- Tunic of carved flesh / Amulet of Necromancy / Cursed Ring / Skull of Markal / Tome of dark magic
-    print("$ Routine_GainNecroArtifacts")
-    if     level == 10 then GiveArtifact(hero, ARTIFACT_TUNIC_OF_CARVED_FLESH)
-    elseif level == 20 then GiveArtifact(hero, ARTIFACT_AMULET_OF_NECROMANCY)
-    elseif level == 30 then GiveArtifact(hero, ARTIFACT_CURSED_RING)
-    elseif level == 40 then GiveArtifact(hero, ARTIFACT_SKULL_OF_THE_FORBIDDEN)
-    elseif level == 50 then GiveArtifact(hero, ARTIFACT_TOME_OF_DARKNESS)
-    end
+function Routine_AddHeroBanshees(player, hero)
+    print("$ Routine_AddHeroBanshees")
+    AddHero_CreatureType(player, hero, CREATURE_BANSHEE, 0.06)
 end
 
 
@@ -90,103 +46,24 @@ end
 
 
 START_TRIGGER_NECROPOLIS = {
-    [H_KASPAR] = NoneRoutine,
-    [H_VLADIMIR] = NoneRoutine,
-    [H_ORSON] = NoneRoutine,
-    [H_ORNELLA2] = NoneRoutine,
-    [H_LUCRETIA] = NoneRoutine,
-    [H_XERXON] = NoneRoutine,
-    [H_DEIRDRE] = NoneRoutine,
-    [H_NAADIR] = NoneRoutine,
-    [H_AISLINN] = NoneRoutine,
-    [H_GIOVANNI] = NoneRoutine,
-    [H_ARCHILUS] = NoneRoutine,
-    [H_ZOLTAN] = NoneRoutine,
-    [H_RAVEN] = NoneRoutine,
-    [H_ARANTIR] = NoneRoutine,
-    [H_THANT] = Routine_GainArtifactNecromancerHelm,
-    [H_SANDRO] = NoneRoutine,
-    [H_VIDOMINA] = NoneRoutine,
 }
 
 DAILY_TRIGGER_NECROPOLIS = {
-    [H_KASPAR] = NoneRoutine,
-    [H_VLADIMIR] = NoneRoutine,
-    [H_ORSON] = NoneRoutine,
-    [H_ORNELLA2] = NoneRoutine,
-    [H_LUCRETIA] = NoneRoutine,
     [H_XERXON] = Routine_AddHeroBlackKnights,
-    [H_DEIRDRE] = NoneRoutine,
-    [H_NAADIR] = NoneRoutine,
-    [H_AISLINN] = NoneRoutine,
-    [H_GIOVANNI] = NoneRoutine,
-    [H_ARCHILUS] = NoneRoutine,
-    [H_ZOLTAN] = Routine_AddHeroLiches,
-    [H_RAVEN] = Routine_GenerateGoldPerNecroCreature,
-    [H_ARANTIR] = NoneRoutine,
-    [H_THANT] = Routine_AddHeroMummies,
-    [H_SANDRO] = NoneRoutine,
-    [H_VIDOMINA] = NoneRoutine,
 }
 
 WEEKLY_TRIGGER_NECROPOLIS = {
-    [H_KASPAR] = NoneRoutine,
-    [H_VLADIMIR] = NoneRoutine,
-    [H_ORSON] = NoneRoutine,
-    [H_ORNELLA2] = NoneRoutine,
     [H_LUCRETIA] = Routine_HeroCallVampires,
-    [H_XERXON] = Routine_EvolveBlackKnights,
+    [H_RAVEN] = Routine_AddRecruitsNecropolis,
+    [H_THANT] = Routine_AddHeroMummies,
     [H_DEIRDRE] = Routine_AddHeroBanshees,
-    [H_NAADIR] = NoneRoutine,
-    [H_AISLINN] = NoneRoutine,
-    [H_GIOVANNI] = NoneRoutine,
-    [H_ARCHILUS] = NoneRoutine,
-    [H_ZOLTAN] = NoneRoutine,
-    [H_RAVEN] = NoneRoutine,
-    [H_ARANTIR] = Routine_AddRecruitsNecropolis,
-    [H_THANT] = NoneRoutine,
-    [H_SANDRO] = NoneRoutine,
-    [H_VIDOMINA] = NoneRoutine,
 }
 
 LEVEL_UP_NECRO_HERO = {
-    [H_KASPAR] = NoneRoutine,
-    [H_VLADIMIR] = NoneRoutine,
-    [H_ORSON] = NoneRoutine,
-    [H_ORNELLA2] = Routine_GainDefenceNecro,
-    [H_LUCRETIA] = NoneRoutine,
-    [H_XERXON] = NoneRoutine,
-    [H_DEIRDRE] = NoneRoutine,
-    [H_NAADIR] = NoneRoutine,
-    [H_AISLINN] = NoneRoutine,
-    [H_GIOVANNI] = NoneRoutine,
-    [H_ARCHILUS] = NoneRoutine,
-    [H_ZOLTAN] = NoneRoutine,
-    [H_RAVEN] = NoneRoutine,
-    [H_ARANTIR] = NoneRoutine,
-    [H_THANT] = Routine_GainNecroArtifacts,
-    [H_SANDRO] = NoneRoutine,
-    [H_VIDOMINA] = NoneRoutine,
 }
 
 AFTER_COMBAT_TRIGGER_NECROPOLIS = {
-    [H_KASPAR] = NoneRoutine,
-    [H_VLADIMIR] = NoneRoutine,
-    [H_ORSON] = NoneRoutine,
-    [H_ORNELLA2] = NoneRoutine,
-    [H_LUCRETIA] = NoneRoutine,
-    [H_XERXON] = NoneRoutine,
-    [H_DEIRDRE] = NoneRoutine,
-    [H_NAADIR] = NoneRoutine,
-    [H_AISLINN] = NoneRoutine,
-    [H_GIOVANNI] = NoneRoutine,
-    [H_ARCHILUS] = NoneRoutine,
-    [H_ZOLTAN] = NoneRoutine,
-    [H_RAVEN] = NoneRoutine,
-    [H_ARANTIR] = NoneRoutine,
-    [H_THANT] = NoneRoutine,
-    [H_SANDRO] = NoneRoutine,
-    [H_VIDOMINA] = NoneRoutine,
+    [H_XERXON] = Routine_EvolveBlackKnights,
 }
 
 

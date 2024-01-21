@@ -11,11 +11,11 @@ end
 
 function Routine_RezSpearwielders(player, hero, combatIndex)
     print("$ Routine_RezSpearwielders")
+    local cap = 5 + GetHeroLevel(hero)
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
     for i = 0,stacks-1 do
         local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
         if died > 0 and contains({CREATURE_AXE_FIGHTER,CREATURE_AXE_THROWER,CREATURE_HARPOONER}, creature) then
-            local cap = 5 + GetHeroLevel(hero)
             local rez = min(cap, died)
             AddHeroCreatures(hero, creature, rez)
         end
