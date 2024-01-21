@@ -1,54 +1,33 @@
 
-function Routine_AddHeroWyverns(player, hero)
-    -- Wyvern - 1:10 - 2:30 - 3:50
-    print("$ Routine_AddHeroWyverns")
-    AddHero_CreatureInTypes(player, hero, {CREATURE_WYVERN,CREATURE_WYVERN_POISONOUS,CREATURE_WYVERN_PAOKAI}, 0.05)
+function Routine_AddRecruitsCentaurs(player, hero)
+    print("$ Routine_AddRecruitsCentaurs")
+    AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_CENTAUR, 0.75)
 end
 
-function Routine_HeroCallCentaurs(player, hero)
-    -- Centaurs - 1 * level transfered
-    print("$ Routine_HeroCallCentaurs")
-    AddHero_CreatureFromDwelling(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_CENTAUR_MARADEUR, 1.0)
-end
-
-function Routine_AddRecruitsShamans(player, hero)
-    -- Shamans - 3 * level recruits per week
-    print("$ Routine_AddRecruitsShamans")
-    AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_2, CREATURE_SHAMAN, 3.0)
-end
-
-function Routine_AddRecruitsCyclops(player, hero)
-    -- Cyclops - 0.2 * level recruits per week
-    print("$ Routine_AddRecruitsCyclops")
-    AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_7, CREATURE_CYCLOP, 0.2)
-end
-
-function Routine_AddHeroTitans(player, hero)
-    -- Titans - 1:7 - 2:20 - 3:34 - 4:47
-    print("$ Routine_AddHeroTitans")
-    AddHero_CreatureType(player, hero, CREATURE_TITAN, 0.075)
-end
-
-function Routine_GainStats(player, hero, level)
-    print("$ Routine_GainStats")
-    if mod(level, 7) == 0 then
+Var_Gorshak_BattleWon = 0
+function Routine_GainAttackDefense(player, hero, combatIndex)
+    print("$ Routine_GainAttackDefense")
+    Var_Gorshak_BattleWon = Var_Gorshak_BattleWon + 1
+    if mod(Var_Gorshak_BattleWon, 10) == 0 then
         AddHero_StatAmount(player, hero, STAT_ATTACK, 1)
         AddHero_StatAmount(player, hero, STAT_DEFENCE, 1)
     end
 end
 
-function Routine_GainArtifactCrownLead(player, hero, level)
-    print("$ Routine_GainArtifactCrownLead")
-    if level == 10 then 
-        GiveArtifact(hero, ARTIFACT_CROWN_OF_LEADER)
-    end
+function Routine_AddHeroWyverns(player, hero)
+    print("$ Routine_AddHeroWyverns")
+    AddHero_CreatureInTypes(player, hero, {CREATURE_WYVERN,CREATURE_WYVERN_POISONOUS,CREATURE_WYVERN_PAOKAI}, 0.25)
 end
 
-function Routine_GainArtifactMachineRing(player, hero, level)
-    print("$ Routine_GainArtifactMachineRing")
-    if level == 25 then 
-        GiveArtifact(hero, ARTIFACT_RING_OF_MACHINE_AFFINITY)
-    end
+function Routine_ActivateArtfsetSarIssus(player, hero)
+    print("$ Routine_ActivateArtfsetSarIssus")
+    -- GiveArtifact(hero, ___, 1)
+    -- GiveArtifact(hero, ___, 1)
+end
+
+function Routine_AddRecruitsShamans(player, hero)
+    print("$ Routine_AddRecruitsShamans")
+    AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_2, CREATURE_SHAMAN, 2.4)
 end
 
 
@@ -57,113 +36,23 @@ end
 
 
 START_TRIGGER_STRONGHOLD = {
-    [H_TELSEK] = NoneRoutine,
-    [H_GORSHAK] = NoneRoutine,
-    [H_GOTAI] = NoneRoutine,
-    [H_AZAR] = NoneRoutine,
-    [H_MATEWA] = NoneRoutine,
-    [H_KUNYAK] = NoneRoutine,
-    [H_KRAGH] = NoneRoutine,
-    [H_KILGHAN] = NoneRoutine,
-    [H_CRAGHACK] = NoneRoutine,
-    [H_KRAAL] = NoneRoutine,
-    [H_SHAKKARUKAT] = NoneRoutine,
-    [H_KUJIN] = NoneRoutine,
-    [H_SHIVA] = NoneRoutine,
-    [H_MUKHA] = NoneRoutine,
-    [H_HAGGASH] = NoneRoutine,
-    [H_URGHAT] = NoneRoutine,
-    [H_GARUNA] = NoneRoutine,
-    [H_ZOULEIKA] = NoneRoutine,
-    [H_ERIKA] = NoneRoutine,
+    [H_KUJIN] = Routine_ActivateArtfsetSarIssus,
 }
 
 DAILY_TRIGGER_STRONGHOLD = {
-    [H_TELSEK] = NoneRoutine,
-    [H_GORSHAK] = NoneRoutine,
-    [H_GOTAI] = NoneRoutine,
-    [H_AZAR] = NoneRoutine,
-    [H_MATEWA] = NoneRoutine,
-    [H_KUNYAK] = NoneRoutine,
-    [H_KRAGH] = NoneRoutine,
-    [H_KILGHAN] = NoneRoutine,
-    [H_CRAGHACK] = NoneRoutine,
-    [H_KRAAL] = NoneRoutine,
-    [H_SHAKKARUKAT] = Routine_AddHeroWyverns,
-    [H_KUJIN] = NoneRoutine,
-    [H_SHIVA] = NoneRoutine,
-    [H_MUKHA] = NoneRoutine,
-    [H_HAGGASH] = NoneRoutine,
-    [H_URGHAT] = NoneRoutine,
-    [H_GARUNA] = NoneRoutine,
-    [H_ZOULEIKA] = NoneRoutine,
-    [H_ERIKA] = NoneRoutine,
 }
 
 WEEKLY_TRIGGER_TRONGHOLD = {
-    [H_TELSEK] = NoneRoutine,
-    [H_GORSHAK] = Routine_HeroCallCentaurs,
-    [H_GOTAI] = NoneRoutine,
-    [H_AZAR] = NoneRoutine,
-    [H_MATEWA] = Routine_AddRecruitsCyclops,
-    [H_KUNYAK] = NoneRoutine,
-    [H_KRAGH] = NoneRoutine,
-    [H_KILGHAN] = NoneRoutine,
-    [H_CRAGHACK] = NoneRoutine,
-    [H_KRAAL] = NoneRoutine,
-    [H_SHAKKARUKAT] = NoneRoutine,
-    [H_KUJIN] = NoneRoutine,
-    [H_SHIVA] = Routine_AddRecruitsShamans,
-    [H_MUKHA] = Routine_AddHeroTitans,
-    [H_HAGGASH] = NoneRoutine,
-    [H_URGHAT] = NoneRoutine,
-    [H_GARUNA] = NoneRoutine,
-    [H_ZOULEIKA] = NoneRoutine,
-    [H_ERIKA] = NoneRoutine,
+    [H_GARUNA] = Routine_AddRecruitsCentaurs,
+    [H_SHAKKARUKAT] = Routine_AddHeroWyverns,
+    [H_KUJIN] = Routine_AddRecruitsShamans,
 }
 
 LEVEL_UP_STRONGHOLD_HERO = {
-    [H_TELSEK] = NoneRoutine,
-    [H_GORSHAK] = NoneRoutine,
-    [H_GOTAI] = NoneRoutine,
-    [H_AZAR] = NoneRoutine,
-    [H_MATEWA] = NoneRoutine,
-    [H_KUNYAK] = Routine_GainStats,
-    [H_KRAGH] = NoneRoutine,
-    [H_KILGHAN] = NoneRoutine,
-    [H_CRAGHACK] = Routine_GainArtifactCrownLead,
-    [H_KRAAL] = NoneRoutine,
-    [H_SHAKKARUKAT] = NoneRoutine,
-    [H_KUJIN] = NoneRoutine,
-    [H_SHIVA] = NoneRoutine,
-    [H_MUKHA] = NoneRoutine,
-    [H_HAGGASH] = NoneRoutine,
-    [H_URGHAT] = NoneRoutine,
-    [H_GARUNA] = NoneRoutine,
-    [H_ZOULEIKA] = NoneRoutine,
-    [H_ERIKA] = NoneRoutine,
 }
 
 AFTER_COMBAT_TRIGGER_TRONGHOLD = {
-    [H_TELSEK] = NoneRoutine,
-    [H_GORSHAK] = NoneRoutine,
-    [H_GOTAI] = NoneRoutine,
-    [H_AZAR] = NoneRoutine,
-    [H_MATEWA] = NoneRoutine,
-    [H_KUNYAK] = NoneRoutine,
-    [H_KRAGH] = NoneRoutine,
-    [H_KILGHAN] = NoneRoutine,
-    [H_CRAGHACK] = NoneRoutine,
-    [H_KRAAL] = NoneRoutine,
-    [H_SHAKKARUKAT] = NoneRoutine,
-    [H_KUJIN] = NoneRoutine,
-    [H_SHIVA] = NoneRoutine,
-    [H_MUKHA] = NoneRoutine,
-    [H_HAGGASH] = NoneRoutine,
-    [H_URGHAT] = NoneRoutine,
-    [H_GARUNA] = NoneRoutine,
-    [H_ZOULEIKA] = NoneRoutine,
-    [H_ERIKA] = NoneRoutine,
+    [H_GORSHAK] = Routine_GainAttackDefense,
 }
 
 
