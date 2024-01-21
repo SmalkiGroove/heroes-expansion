@@ -11,7 +11,7 @@ function CanHeroConvert(hero, obj)
     if IsHeroHuman(hero) then
         if HasHeroSkill(hero, SKILL_GOVERNANCE) then
             if GetObjectOwner(obj) == GetObjectOwner(hero) then
-                return GetHeroFactionID(hero) ~= MAP_CONVERTIBLES[obj][0]
+                return HEROES[hero] ~= MAP_CONVERTIBLES[obj][0]
             end
         end
     end
@@ -33,7 +33,7 @@ function ConvertTown(player, hero, town)
         TakePlayer_Resource(player, WOOD, resource_cost)
         TakePlayer_Resource(player, ORE, resource_cost)
         TakePlayer_Resource(player, GOLD, gold_cost)
-        local faction = GetHeroFactionID(hero)
+        local faction = HEROES[hero]
         TransformTown(town, FactionToTownType(faction))
         MAP_CONVERTIBLES[town][0] = faction
     end
@@ -49,7 +49,7 @@ function ConvertDwelling(player, hero, dwelling, tier)
         TakePlayer_Resource(player, WOOD, resource_cost)
         TakePlayer_Resource(player, ORE, resource_cost)
         TakePlayer_Resource(player, GOLD, gold_cost)
-        local faction = GetHeroFactionID(hero)
+        local faction = HEROES[hero]
         ReplaceDwelling(dwelling, FactionToTownType(faction))
         MAP_CONVERTIBLES[dwelling][0] = faction
     end

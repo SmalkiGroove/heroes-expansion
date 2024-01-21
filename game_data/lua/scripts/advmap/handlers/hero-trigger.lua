@@ -18,7 +18,7 @@ LEVEL_UP_HERO_CALLBACK = {}
 function HeroLevelUp(hero)
     local level = GetHeroLevel(hero)
     local player = GetObjectOwner(hero)
-    local faction = GetHeroFactionID(hero)
+    local faction = HEROES[hero]
     print("Hero "..hero.." leveled up to level "..level)
     startThread(HEROSPE_LEVELUP_ROUTINES[faction], player, hero, level)
     startThread(SKILL_LEVELUP_ROUTINE, player, hero, level)

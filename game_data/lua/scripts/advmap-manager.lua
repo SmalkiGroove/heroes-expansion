@@ -41,15 +41,9 @@ function LoadScript(path, key)
 	repeat sleep(1) until ROUTINES_LOADED[key] == 1
 end
 
-LoadScript("/scripts/hero-advmap-routines/_common.lua", 0)
-LoadScript("/scripts/hero-advmap-routines/academy.lua", ACADEMY)
-LoadScript("/scripts/hero-advmap-routines/dungeon.lua", DUNGEON)
-LoadScript("/scripts/hero-advmap-routines/fortress.lua", FORTRESS)
-LoadScript("/scripts/hero-advmap-routines/haven.lua", HAVEN)
-LoadScript("/scripts/hero-advmap-routines/inferno.lua", INFERNO)
-LoadScript("/scripts/hero-advmap-routines/necropolis.lua", NECROPOLIS)
-LoadScript("/scripts/hero-advmap-routines/preserve.lua", PRESERVE)
-LoadScript("/scripts/hero-advmap-routines/stronghold.lua", STRONGHOLD)
+LoadScript("/scripts/advmap-data", 0)
+LoadScript("/scripts/data/creatures-data", 1)
+LoadScript("/scripts/data/spells-data", 2)
 LoadScript("/scripts/artifacts/artifacts-data.lua", 10)
 LoadScript("/scripts/artifacts/artifacts-manager.lua", 12)
 LoadScript("/scripts/artifacts/artifacts-routines.lua", 13)
@@ -80,54 +74,6 @@ REMOVE_PLAYER_HERO = {
 	[6] = "RemovePlayer6Hero",
 	[7] = "RemovePlayer7Hero",
 	[8] = "RemovePlayer8Hero",
-}
-
-START_ROUTINES = {
-	[0] = DoCommonRoutine_Start,
-	[1] = DoHavenRoutine_Start,
-	[2] = DoPreserveRoutine_Start,
-	[3] = DoInfernoRoutine_Start,
-	[4] = DoNecropolisRoutine_Start,
-	[5] = DoAcademyRoutine_Start,
-	[6] = DoDungeonRoutine_Start,
-	[7] = DoFortressRoutine_Start,
-	[8] = DoStrongholdRoutine_Start,
-}
-
-DAILY_ROUTINES = {
-	[0] = DoCommonRoutine_Daily,
-	[1] = DoHavenRoutine_Daily,
-	[2] = DoPreserveRoutine_Daily,
-	[3] = DoInfernoRoutine_Daily,
-	[4] = DoNecropolisRoutine_Daily,
-	[5] = DoAcademyRoutine_Daily,
-	[6] = DoDungeonRoutine_Daily,
-	[7] = DoFortressRoutine_Daily,
-	[8] = DoStrongholdRoutine_Daily,
-}
-
-WEEKLY_ROUTINES = {
-	[0] = DoCommonRoutine_Weekly,
-	[1] = DoHavenRoutine_Weekly,
-	[2] = DoPreserveRoutine_Weekly,
-	[3] = DoInfernoRoutine_Weekly,
-	[4] = DoNecropolisRoutine_Weekly,
-	[5] = DoAcademyRoutine_Weekly,
-	[6] = DoDungeonRoutine_Weekly,
-	[7] = DoFortressRoutine_Weekly,
-	[8] = DoStrongholdRoutine_Weekly,
-}
-
-AFTER_COMBAT_ROUTINES = {
-	[0] = DoCommonRoutine_AfterCombat,
-	[1] = DoHavenRoutine_AfterCombat,
-	[2] = DoPreserveRoutine_AfterCombat,
-	[3] = DoInfernoRoutine_AfterCombat,
-	[4] = DoNecropolisRoutine_AfterCombat,
-	[5] = DoAcademyRoutine_AfterCombat,
-	[6] = DoDungeonRoutine_AfterCombat,
-	[7] = DoFortressRoutine_AfterCombat,
-	[8] = DoStrongholdRoutine_AfterCombat,
 }
 
 
@@ -173,12 +119,12 @@ function PlayerDailyHandler(player, newweek)
 	BlockGame()
 	print("Player "..player.." turn started")
 	for i,hero in GetPlayerHeroes(player) do
-		local faction = GetHeroFactionID(hero)
-		startThread(DAILY_ROUTINES[faction], player, hero)
+		local faction = HEROES[hero]
+		startThread(DoHeroSpeRoutine_Daily, player, hero)
 		startThread(DoSkillsRoutine_Daily, player, hero)
 		startThread(DoArtifactsRoutine_Daily, player, hero)
 		if newweek then
-			startThread(WEEKLY_ROUTINES[faction], player, hero)
+			startThread(DoHeroSpeRoutine_Weekly, player, hero)
 			startThread(DoSkillsRoutine_Weekly, player, hero)
 			startThread(DoArtifactsRoutine_Weekly, player, hero)
 		end
@@ -203,8 +149,8 @@ function CombatResultsHandler(combatIndex)
 	local hero = GetSavedCombatArmyHero(combatIndex, 1)
 	if hero ~= nil then
 		local player = GetSavedCombatArmyPlayer(combatIndex, 1)
-		local faction = GetHeroFactionID(hero)
-		startThread(AFTER_COMBAT_ROUTINES[faction], player, hero, combatIndex)
+		local faction = HEROES[hero]
+		startThread(DoHeroSpeRoutine_AfterCombat, player, hero, combatIndex)
 		startThread(DoSkillsRoutine_AfterCombat, player, hero, combatIndex)
 		startThread(DoArtifactsRoutine_AfterCombat, player, hero, combatIndex)
 	end
@@ -217,11 +163,11 @@ Trigger(CUSTOM_ABILITY_TRIGGER, "CustomAbilityHandler")
 
 
 function AddPlayerHero(player, hero)
-	local faction = GetHeroFactionID(hero)
+	local faction = HEROES[hero]
 	startThread(ReplaceStartingArmy, hero)
 	startThread(BindHeroLevelUpTrigger, hero)
 	startThread(BindHeroSkillTrigger, hero)
-	startThread(START_ROUTINES[faction], player, hero)
+	startThread(DoHeroSpeRoutine_Start, player, hero)
 end
 function AddPlayer1Hero(hero) AddPlayerHero(PLAYER_1, hero) end
 function AddPlayer2Hero(hero) AddPlayerHero(PLAYER_2, hero) end
@@ -255,12 +201,12 @@ function InitializeHeroes()
 		if (GetPlayerState(player) == 1) then
 			for i,hero in GetPlayerHeroes(player) do
 				print("Initialize hero "..hero)
-				local faction = GetHeroFactionID(hero)
+				local faction = HEROES[hero]
 				startThread(ReplaceStartingArmy, hero)
 				startThread(BindHeroLevelUpTrigger, hero)
 				startThread(BindHeroSkillTrigger, hero)
 				sleep(1) startThread(DoSkillsRoutine_Start, player, hero)
-				sleep(1) startThread(START_ROUTINES[faction], player, hero)
+				sleep(1) startThread(DoHeroSpeRoutine_Start, player, hero)
 			end
 			sleep(1) startThread(WatchPlayer, player, 1)
 		end

@@ -198,11 +198,11 @@ function ManageCombatPrepare()
     ATTACKER_HERO = GetHero(ATTACKER) and GetHeroName(ATTACKER_HERO_ID) or ""
     DEFENDER_HERO = GetHero(DEFENDER) and GetHeroName(DEFENDER_HERO_ID) or ""
     if ATTACKER_HERO ~= "" then
-        ATTACKER_RACE = GetHeroFactionID(ATTACKER_HERO)
+        ATTACKER_RACE = HEROES[ATTACKER_HERO]
         FetchData(ATTACKER_HERO)
     end
     if DEFENDER_HERO ~= "" then
-        DEFENDER_RACE = GetHeroFactionID(DEFENDER_HERO)
+        DEFENDER_RACE = HEROES[DEFENDER_HERO]
         FetchData(DEFENDER_HERO)
     end
 end

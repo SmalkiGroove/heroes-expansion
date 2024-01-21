@@ -1,6 +1,8 @@
 function StopTrigger() end --needed for lualib
 dofile = doFile
 
+dofile("/scripts/common.lua") sleep(10)
+
 function IsHuman(side) return GetHost(side) == HUMAN end
 function IsComputer(side) return GetHost(side) == COMPUTER end
 

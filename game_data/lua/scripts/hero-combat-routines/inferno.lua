@@ -57,7 +57,7 @@ function Routine_DemonicCreatureExplosion(side, hero)
     if CURRENT_UNIT_SIDE == side then
         if IsCreature(CURRENT_UNIT) then
             local id = GetCreatureType(CURRENT_UNIT)
-            if GetCreatureFactionID(id) == INFERNO then
+            if CREATURES[id][1] == INFERNO then
                 local x,y = GetUnitPosition(CURRENT_UNIT)
                 UnitCastAreaSpell(CURRENT_UNIT, SPELL_ABILITY_EXPLOSION, x, y)
                 SetATB_ID(CURRENT_UNIT, ATB_INSTANT)

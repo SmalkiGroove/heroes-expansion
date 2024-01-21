@@ -1,26 +1,11 @@
 
-SOURCE_LOADED = {
-	["common"]    = 0,
-	["game-data"] = 0,
-	["game-core"] = 0,
-	["advmap-data"] = 0,
-}
-
-function Source(path, key)
-	-- print("Loading script "..path)
-	dofile(path)
-	repeat sleep(1) until SOURCE_LOADED[key] == 1
-end
-
-Source("/scripts/common.lua", "common")
-Source("/scripts/game-data.lua", "game-data")
-Source("/scripts/game-core.lua", "game-core")
-Source("/scripts/advmap-data.lua", "advmap-data")
+dofile("/scripts/common.lua") sleep(1)
 
 
 __difficulty = GetDifficulty()
 __defaultResources = { 20, 20, 10, 10, 10, 10, 20000 }
 __difficultyResModifiers = { 1.5, 1.0, 1.0, 0.5 }
+
 
 function SetPlayerStartResource( nPlayer, nRes, nAmount )
     local resbonus = GetPlayerResource( nPlayer, nRes ) - __defaultResources[nRes + 1] * __difficultyResModifiers[__difficulty + 1]
@@ -197,7 +182,7 @@ end
 
 function GetHeroTowns(player, hero)
     local cities = {}
-    local factionID = GetHeroFactionID(hero)
+    local factionID = HEROES[hero]
     local towns = GetFactionTowns(factionID)
     for i,town in towns do
 		if GetObjectOwner(town) == player then
@@ -287,6 +272,44 @@ function InitializeMapTowns()
             print("Player "..player.." has no main town ??")
         end
     end
+end
+
+
+
+function Register(var, value)
+    ExecConsoleCommand("@SetGameVar('"..var.."','"..value.."')")
+end
+function SetVarString(var, value)
+	return "SetGameVar('"..var.."','"..value.."') "
+end
+
+
+function VarHeroLevel(hero)
+	return "h5x_hero_"..hero.."_level"
+end
+function VarHeroStatAttack(hero)
+	return "h5x_hero_"..hero.."_stat_attack"
+end
+function VarHeroStatDefense(hero)
+	return "h5x_hero_"..hero.."_stat_defense"
+end
+function VarHeroStatSpellpower(hero)
+	return "h5x_hero_"..hero.."_stat_spellpower"
+end
+function VarHeroStatKnowledge(hero)
+	return "h5x_hero_"..hero.."_stat_knowledge"
+end
+function VarHeroStatMorale(hero)
+	return "h5x_hero_"..hero.."_stat_morale"
+end
+function VarHeroStatLuck(hero)
+	return "h5x_hero_"..hero.."_stat_luck"
+end
+function VarHeroSkillId(hero, skill)
+	return "h5x_hero_"..hero.."_skill_"..id
+end
+function VarHeroArtifactId(hero, artifact)
+	return "h5x_hero_"..hero.."_artifact_"..id
 end
 
 
