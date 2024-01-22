@@ -29,7 +29,7 @@
 	<RazedStatic/>
 	<Icon128/>
 	<InternalName>Melodia</InternalName>
-	<Class>HERO_CLASS_PRESERVE_MIGHT</Class>
+	<Class>HERO_CLASS_PRESERVE_MAGIC</Class>
 	<Specialization>HERO_SPEC_FLAGBEARER_OF_DARKNESS</Specialization>
 	<PrimarySkill>
 		<SkillID>HERO_SKILL_INNATES</SkillID>
@@ -50,8 +50,8 @@
 		<NameFileRef href="/Text/Game/Heroes/Persons/Preserve/Melodia/Name.txt"/>
 		<BiographyFileRef href="/Text/Game/Heroes/Persons/Preserve/Melodia/Bio.txt"/>
 		<Offence>0</Offence>
-		<Defence>2</Defence>
-		<Spellpower>2</Spellpower>
+		<Defence>0</Defence>
+		<Spellpower>1</Spellpower>
 		<Knowledge>1</Knowledge>
 		<skills>
 			<Item>

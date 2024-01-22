@@ -29,7 +29,7 @@
 	<RazedStatic/>
 	<Icon128 href="/Maps/Scenario/A2C3M4/Dungeon Agaris_128_128.1.(Texture).xdb#xpointer(/Texture)"/>
 	<InternalName>Ranleth</InternalName>
-	<Class>HERO_CLASS_DUNGEON_MIGHT</Class>
+	<Class>HERO_CLASS_DUNGEON_MAGIC</Class>
 	<Specialization>HERO_SPEC_FEATHER_MAGE</Specialization>
 	<PrimarySkill>
 		<SkillID>HERO_SKILL_INNATES</SkillID>
@@ -49,8 +49,8 @@
 	<Editable>
 		<NameFileRef href="/Maps/Scenario/A2C3M4/name.2.txt"/>
 		<BiographyFileRef href="/Maps/Scenario/A2C3M4/bio.1.txt"/>
-		<Offence>2</Offence>
-		<Defence>1</Defence>
+		<Offence>0</Offence>
+		<Defence>0</Defence>
 		<Spellpower>1</Spellpower>
 		<Knowledge>1</Knowledge>
 		<skills>

@@ -31,7 +31,7 @@
 	<RazedStatic/>
 	<Icon128 href="/UI/H5A2/Icons/Heroes/Portrets128x128/Stronghold_Garuna.(Texture).xdb#xpointer(/Texture)"/>
 	<InternalName>Hero3</InternalName>
-	<Class>HERO_CLASS_STRONGHOLD_MAGIC</Class>
+	<Class>HERO_CLASS_STRONGHOLD_MIGHT</Class>
 	<Specialization>HERO_SPEC_EMPIRIC</Specialization>
 	<PrimarySkill>
 		<SkillID>HERO_SKILL_INNATES</SkillID>
@@ -51,10 +51,10 @@
 	<Editable>
 		<NameFileRef href="/Text/Game/Heroes/Persons/Stronghold/Hero3/Name.txt"/>
 		<BiographyFileRef href="/Text/Game/Heroes/Persons/Stronghold/Hero3/Bio.txt"/>
-		<Offence>0</Offence>
-		<Defence>1</Defence>
-		<Spellpower>2</Spellpower>
-		<Knowledge>2</Knowledge>
+		<Offence>1</Offence>
+		<Defence>0</Defence>
+		<Spellpower>0</Spellpower>
+		<Knowledge>1</Knowledge>
 		<skills>
 			<Item>
 				<SkillID>HERO_SKILL_BLOOD_RAGE</SkillID>

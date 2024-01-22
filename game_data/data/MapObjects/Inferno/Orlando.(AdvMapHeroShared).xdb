@@ -31,7 +31,7 @@
 	<RazedStatic/>
 	<Icon128/>
 	<InternalName>Orlando</InternalName>
-	<Class>HERO_CLASS_INFERNO_MIGHT</Class>
+	<Class>HERO_CLASS_INFERNO_MAGIC</Class>
 	<Specialization>HERO_SPEC_FURIOUS</Specialization>
 	<PrimarySkill>
 		<SkillID>HERO_SKILL_INNATES</SkillID>
@@ -51,10 +51,10 @@
 	<Editable>
 		<NameFileRef href="/Text/Game/Heroes/Persons/Inferno/Orlando/Name.txt"/>
 		<BiographyFileRef href="/Text/Game/Heroes/Persons/Inferno/Orlando/Bio.txt"/>
-		<Offence>4</Offence>
-		<Defence>2</Defence>
-		<Spellpower>2</Spellpower>
-		<Knowledge>3</Knowledge>
+		<Offence>0</Offence>
+		<Defence>0</Defence>
+		<Spellpower>1</Spellpower>
+		<Knowledge>1</Knowledge>
 		<skills>
 			<Item>
 				<SkillID>HERO_SKILL_GATING</SkillID>

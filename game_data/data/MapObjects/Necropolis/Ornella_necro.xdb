@@ -31,7 +31,7 @@
 	<RazedStatic/>
 	<Icon128 href="/UI/H5A2/Icons/Heroes/Portrets128x128/Necropolis_Ornella.(Texture).xdb#xpointer(/Texture)"/>
 	<InternalName>OrnellaNecro</InternalName>
-	<Class>HERO_CLASS_NECROPOLIS_MIGHT</Class>
+	<Class>HERO_CLASS_NECROPOLIS_MAGIC</Class>
 	<Specialization>HERO_SPEC_IMPREGNABLE</Specialization>
 	<PrimarySkill>
 		<SkillID>HERO_SKILL_INNATES</SkillID>
@@ -51,8 +51,8 @@
 	<Editable>
 		<NameFileRef href="/Text/Game/Heroes/Persons/Necropolis/OrnellaNecro/name.txt"/>
 		<BiographyFileRef href="/Text/Game/Heroes/Persons/Necropolis/OrnellaNecro/Bio.txt"/>
-		<Offence>1</Offence>
-		<Defence>5</Defence>
+		<Offence>0</Offence>
+		<Defence>0</Defence>
 		<Spellpower>1</Spellpower>
 		<Knowledge>1</Knowledge>
 		<skills>

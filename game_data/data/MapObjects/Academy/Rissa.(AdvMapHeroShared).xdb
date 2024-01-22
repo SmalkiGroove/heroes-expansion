@@ -29,7 +29,7 @@
 	<RazedStatic/>
 	<Icon128 href="/Textures/Icons/Heroes/Academy/Academy_Maahir_128x128.(Texture).xdb#xpointer(/Texture)"/>
 	<InternalName>Rissa</InternalName>
-	<Class>HERO_CLASS_ACADEMY_MIGHT</Class>
+	<Class>HERO_CLASS_ACADEMY_MAGIC</Class>
 	<Specialization>HERO_SPEC_PRUDENT</Specialization>
 	<PrimarySkill>
 		<SkillID>HERO_SKILL_INNATES</SkillID>
@@ -49,10 +49,10 @@
 	<Editable>
 		<NameFileRef href="/Text/Game/Heroes/Persons/Academy/Rissa/Name.txt"/>
 		<BiographyFileRef href="/Text/Game/Heroes/Persons/Academy/Rissa/Bio.txt"/>
-		<Offence>2</Offence>
+		<Offence>0</Offence>
 		<Defence>0</Defence>
 		<Spellpower>1</Spellpower>
-		<Knowledge>2</Knowledge>
+		<Knowledge>1</Knowledge>
 		<skills>
 			<Item>
 				<SkillID>HERO_SKILL_ARTIFICIER</SkillID>

@@ -29,7 +29,7 @@
 	<RazedStatic/>
 	<Icon128/>
 	<InternalName>Maeve</InternalName>
-	<Class>HERO_CLASS_HAVEN_MAGIC</Class>
+	<Class>HERO_CLASS_HAVEN_MIGHT</Class>
 	<Specialization>HERO_SPEC_FEATHER_MAGE</Specialization>
 	<PrimarySkill>
 		<SkillID>HERO_SKILL_INNATES</SkillID>
@@ -50,9 +50,9 @@
 		<NameFileRef href="/Text/Game/Heroes/Persons/Haven/Maeve/Name.txt"/>
 		<BiographyFileRef href="/Text/Game/Heroes/Persons/Haven/Maeve/Bio.txt"/>
 		<Offence>0</Offence>
-		<Defence>2</Defence>
-		<Spellpower>1</Spellpower>
-		<Knowledge>2</Knowledge>
+		<Defence>1</Defence>
+		<Spellpower>0</Spellpower>
+		<Knowledge>1</Knowledge>
 		<skills>
 			<Item>
 				<SkillID>HERO_SKILL_COURAGE</SkillID>

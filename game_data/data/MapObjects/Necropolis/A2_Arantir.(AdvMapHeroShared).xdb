@@ -31,7 +31,7 @@
 	<RazedStatic/>
 	<Icon128 href="/UI/H5A2/Icons/Heroes/Portrets128x128/Necropolis_Arantir.(Texture).xdb#xpointer(/Texture)"/>
 	<InternalName>Arantir</InternalName>
-	<Class>HERO_CLASS_NECROPOLIS_MAGIC</Class>
+	<Class>HERO_CLASS_NECROPOLIS_MIGHT</Class>
 	<Specialization>HERO_SPEC_REANIMATOR</Specialization>
 	<PrimarySkill>
 		<SkillID>HERO_SKILL_INNATES</SkillID>
@@ -52,9 +52,9 @@
 		<NameFileRef href="/Text/Game/Heroes/Persons/Necropolis/Arantir/Name.txt"/>
 		<BiographyFileRef href="/Text/Game/Heroes/Persons/Necropolis/Arantir/Bio.txt"/>
 		<Offence>0</Offence>
-		<Defence>0</Defence>
-		<Spellpower>3</Spellpower>
-		<Knowledge>2</Knowledge>
+		<Defence>1</Defence>
+		<Spellpower>0</Spellpower>
+		<Knowledge>1</Knowledge>
 		<skills>
 			<Item>
 				<SkillID>HERO_SKILL_NECROMANCY</SkillID>
