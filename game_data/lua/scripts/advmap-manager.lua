@@ -134,7 +134,6 @@ function PlayerDailyHandler(player, newweek)
 	BlockGame()
 	print("Player "..player.." turn started")
 	for i,hero in GetPlayerHeroes(player) do
-		local faction = HEROES[hero]
 		startThread(DoHeroSpeRoutine_Daily, player, hero)
 		startThread(DoSkillsRoutine_Daily, player, hero)
 		startThread(DoArtifactsRoutine_Daily, player, hero)
@@ -164,7 +163,6 @@ function CombatResultsHandler(combatIndex)
 	local hero = GetSavedCombatArmyHero(combatIndex, 1)
 	if hero ~= nil then
 		local player = GetSavedCombatArmyPlayer(combatIndex, 1)
-		local faction = HEROES[hero]
 		startThread(DoHeroSpeRoutine_AfterCombat, player, hero, combatIndex)
 		startThread(DoSkillsRoutine_AfterCombat, player, hero, combatIndex)
 		startThread(DoArtifactsRoutine_AfterCombat, player, hero, combatIndex)
@@ -178,7 +176,6 @@ Trigger(CUSTOM_ABILITY_TRIGGER, "CustomAbilityHandler")
 
 
 function AddPlayerHero(player, hero)
-	local faction = HEROES[hero]
 	startThread(ReplaceStartingArmy, hero)
 	startThread(BindHeroLevelUpTrigger, hero)
 	startThread(BindHeroSkillTrigger, hero)
@@ -216,7 +213,6 @@ function InitializeHeroes()
 		if (GetPlayerState(player) == 1) then
 			for i,hero in GetPlayerHeroes(player) do
 				print("Initialize hero "..hero)
-				local faction = HEROES[hero]
 				startThread(ReplaceStartingArmy, hero)
 				startThread(BindHeroLevelUpTrigger, hero)
 				startThread(BindHeroSkillTrigger, hero)

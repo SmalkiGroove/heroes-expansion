@@ -1,8 +1,14 @@
 
 
 function ReplaceStartingArmy(hero)
-	-- print("Starting army for hero "..hero)
-    local army = STARTING_ARMIES[hero] and STARTING_ARMIES[hero] or STARTING_ARMIES[FACTION_TEXT[HEROES[hero]]]
+	-- print("$ ReplaceStartingArmy")
+    local army = {}
+    if STARTING_ARMIES[hero] then
+        army = STARTING_ARMIES[hero]
+    else
+        local faction = FACTION_TEXT[HEROES[hero]] print(faction)
+        army = STARTING_ARMIES[faction]
+    end
     local k, units, amounts = GetHeroArmySummary(hero)
     for i = 1,k do
         RemoveHeroCreatures(hero, units[i], amounts[i])
