@@ -528,7 +528,7 @@ WEEKLY_TRIGGER_HERO_ROUTINES = {
     [H_GRAWL] = Routine_AddHeroHellHounds,
     -- stronghold
     [H_GARUNA] = Routine_AddRecruitsCentaurs,
-    [H_SHAKKARUKAT] = Routine_AddHeroWyverns,
+    [H_KARUKAT] = Routine_AddHeroWyverns,
     [H_KUJIN] = Routine_AddRecruitsShamans,
 }
 
