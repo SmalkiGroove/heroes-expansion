@@ -40,5 +40,5 @@ function CustomAbilityHandler(hero, id)
 end
 
 
--- print("Loaded custom abilities routines")
+-- print("Loaded custom-abilities.lua")
 ROUTINES_LOADED[25] = 1

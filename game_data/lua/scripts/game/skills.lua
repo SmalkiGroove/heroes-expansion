@@ -272,5 +272,5 @@ _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_DEFEND_US_ALL       = _skillbonu
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_SHEER_STRENGTH      = _skillbonus_id
 
 
--- print("Loaded skills data script")
-ROUTINES_LOADED[15] = 1
+-- print("Loaded skills.lua")
+ROUTINES_LOADED[3] = 1

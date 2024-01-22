@@ -86,5 +86,5 @@ function DoArtifactsRoutine_AfterCombat(player, hero, index)
 end
 
 
--- print("Loaded artifacts advmap routines")
-ROUTINES_LOADED[13] = 1
+-- print("Loaded artifacts-routines-advmap.lua")
+ROUTINES_LOADED[12] = 1

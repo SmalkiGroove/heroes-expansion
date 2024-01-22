@@ -620,5 +620,5 @@ ARTIFACT_SETS_ACTIVATIONS = {
 }
 
 
--- print("Loaded artifacts data script")
-ROUTINES_LOADED[10] = 1
+-- print("Loaded artifacts.lua")
+ROUTINES_LOADED[4] = 1

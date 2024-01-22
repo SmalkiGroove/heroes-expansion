@@ -47,3 +47,7 @@ function StoreData(hero)
     -- print(setvars)
 	ExecConsoleCommand("@"..setvars)
 end
+
+
+-- print("Loaded game-vars.lua")
+ROUTINES_LOADED[30] = 1

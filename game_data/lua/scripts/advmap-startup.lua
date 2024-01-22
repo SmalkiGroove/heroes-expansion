@@ -576,6 +576,16 @@ function GetPlayerFilter( player )
 	if player == PLAYER_8 then return PLAYERFLT_8 end
 	return 0
 end
-  
+function GetPlayerBrain( player )
+    if (GetPlayerState(player) == 1) then
+        if mod(GetPlayerResource(player, GOLD), 2) == 1 then
+            return COMPUTER
+        else
+            return HUMAN
+        end
+	else
+		return OBSERVER
+    end
+end
 
 dofile("/scripts/advmap-manager.lua")

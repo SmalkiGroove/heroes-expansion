@@ -465,5 +465,5 @@ function DoSkillsRoutine_AfterCombat(player, hero, index)
 end
 
 
--- print("Loaded skills advmap routines")
-ROUTINES_LOADED[17] = 1
+-- print("Loaded skills-routines-advmap.lua")
+ROUTINES_LOADED[11] = 1

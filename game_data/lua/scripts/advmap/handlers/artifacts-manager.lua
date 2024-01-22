@@ -86,5 +86,5 @@ function ScanHeroArtifacts(hero)
 end
 
 
--- print("Loaded artifact management script")
-ROUTINES_LOADED[12] = 1
+-- print("Loaded artifact-manager.lua")
+ROUTINES_LOADED[17] = 1

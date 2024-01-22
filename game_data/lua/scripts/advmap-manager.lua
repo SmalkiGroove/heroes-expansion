@@ -1,7 +1,5 @@
 
-ExecConsoleCommand("@BlockGame()")
-ExecConsoleCommand("@GAME_READY = 0")
-ExecConsoleCommand("@SetGameVar('h5x_init','false')")
+ExecConsoleCommand("@BlockGame(); GAME_READY = 0; SetGameVar('h5x_init','false')")
 
 function ScriptEnabler()
 	ExecConsoleCommand(
@@ -12,6 +10,18 @@ function ScriptEnabler()
 		" end"
 	)
 end
+
+NB_HUMAN = 0
+PLAYER_BRAIN = {
+	[1] = OBSERVER,
+	[2] = OBSERVER,
+	[3] = OBSERVER,
+	[4] = OBSERVER,
+	[5] = OBSERVER,
+	[6] = OBSERVER,
+	[7] = OBSERVER,
+	[8] = OBSERVER,
+}
 
 for i = 1,8 do
 	PLAYER_BRAIN[i] = GetPlayerBrain(i)
@@ -30,9 +40,9 @@ else
 end
 
 ROUTINES_LOADED = {
-	[0] = 0, [1] = 0, [2] = 0, [3] = 0, [4] = 0, [5] = 0, [6] = 0, [7] = 0, [8] = 0,
-	[9] = 0, [10]= 0, [11]= 0, [12]= 0, [13]= 0, [14]= 0, [15]= 0, [16]= 0, [17]= 0,
-	[18] = 0, [19]= 0, [20]= 0, [21]= 0, [22]= 0, [23]= 0, [24]= 0, [25]= 0, [26]= 0,
+	[1] = 0, [2] = 0, [3] = 0, [4] = 0, [5] = 0, [6] = 0, [7] = 0, [8] = 0, [9] = 0, [10]= 0,
+	[11]= 0, [12]= 0, [13]= 0, [14]= 0, [15]= 0, [16]= 0, [17]= 0, [18]= 0, [19]= 0, [20]= 0,
+	[21]= 0, [22]= 0, [23]= 0, [24]= 0, [25]= 0, [26]= 0, [27]= 0, [28]= 0, [29]= 0, [30]= 0,
 }
 
 function LoadScript(path, key)
@@ -41,19 +51,24 @@ function LoadScript(path, key)
 	repeat sleep(1) until ROUTINES_LOADED[key] == 1
 end
 
-LoadScript("/scripts/advmap-data", 0)
-LoadScript("/scripts/data/creatures-data", 1)
-LoadScript("/scripts/data/spells-data", 2)
-LoadScript("/scripts/artifacts/artifacts-data.lua", 10)
-LoadScript("/scripts/artifacts/artifacts-manager.lua", 12)
-LoadScript("/scripts/artifacts/artifacts-routines.lua", 13)
-LoadScript("/scripts/skills/skills-data.lua", 15)
-LoadScript("/scripts/skills/skills-manager.lua", 16)
-LoadScript("/scripts/skills/skills-routines.lua", 17)
-LoadScript("/scripts/_handlers/conversion.lua", 20)
-LoadScript("/scripts/_handlers/starting-armies.lua", 22)
-LoadScript("/scripts/_handlers/hero-trigger.lua", 23)
-LoadScript("/scripts/_handlers/custom-abilities.lua", 25)
+LoadScript("/scripts/game/creatures.lua", 1)
+LoadScript("/scripts/game/spells.lua", 2)
+LoadScript("/scripts/game/skills.lua",3)
+LoadScript("/scripts/game/artifacts.lua", 4)
+LoadScript("/scripts/game/heroes.lua", 5)
+LoadScript("/scripts/advmap/advmap-data.lua", 8)
+LoadScript("/scripts/advmap/advmap-utils.lua", 9)
+LoadScript("/scripts/advmap/routines/skills-routines-advmap.lua", 11)
+LoadScript("/scripts/advmap/routines/artifacts-routines-advmap.lua", 12)
+LoadScript("/scripts/advmap/routines/heroes-routines-advmap.lua", 13)
+LoadScript("/scripts/advmap/handlers/skills-manager.lua", 16)
+LoadScript("/scripts/advmap/handlers/artifacts-manager.lua", 17)
+LoadScript("/scripts/advmap/handlers/heroes-manager.lua", 18)
+LoadScript("/scripts/advmap/handlers/starting-armies.lua", 21)
+LoadScript("/scripts/advmap/handlers/town-conversion.lua", 22)
+LoadScript("/scripts/advmap/handlers/custom-abilities.lua", 23)
+LoadScript("/scripts/advmap/handlers/game-vars.lua", 30)
+
 
 ADD_PLAYER_HERO = {
 	[1] = "AddPlayer1Hero",

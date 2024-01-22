@@ -321,3 +321,7 @@ CREATURES_BY_FACTION = {
         [7] = {CREATURE_CYCLOP, CREATURE_CYCLOP_UNTAMED, CREATURE_CYCLOP_BLOODEYED},
     },
 }
+
+
+-- print("Loaded creatures.lua")
+ROUTINES_LOADED[1] = 1

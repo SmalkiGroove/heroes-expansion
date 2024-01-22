@@ -597,5 +597,5 @@ function DoHeroSpeRoutine_AfterCombat(player, hero, index)
 end
 
 
--- print("Loaded hero spe advmap routines")
-ROUTINES_LOADED[1] = 1
+-- print("Loaded heroes-routines-advmap.lua")
+ROUTINES_LOADED[13] = 1

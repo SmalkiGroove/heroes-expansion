@@ -6,36 +6,13 @@ end
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
--- BRAIN
+-- HERO MISC
 
-
-function GetPlayerBrain( player )
-    if (GetPlayerState(player) == 1) then
-        if mod(GetPlayerResource(player, GOLD), 2) == 1 then
-            return COMPUTER
-        else
-            return HUMAN
-        end
-	else
-		return OBSERVER
-    end
-end
 
 function IsHeroHuman(hero)
 	local player = GetObjectOwner(hero)
 	return PLAYER_BRAIN[player] == HUMAN
 end
-
-function UnblockGameTimer(player)
-    if PLAYER_BRAIN[player] == COMPUTER then sleep(15) end
-    UnblockGame()
-end
-
-
------------------------------------------------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------------------------------------------
--- ARMIES
-
 
 function GetHeroArmy(hero)
 	local type = {}
@@ -399,5 +376,5 @@ end
 
 
 
--- print("Loaded advmap-utils")
-ROUTINES_LOADED[0] = 1
+-- print("Loaded advmap-utils.lua")
+ROUTINES_LOADED[9] = 1

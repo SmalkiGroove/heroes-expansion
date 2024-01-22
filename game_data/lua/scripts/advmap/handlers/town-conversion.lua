@@ -87,5 +87,5 @@ function InitializeConvertibles()
 end
 
 
--- print("Loaded conversion advmap routines")
-ROUTINES_LOADED[20] = 1
+-- print("Loaded town-conversion.lua")
+ROUTINES_LOADED[22] = 1

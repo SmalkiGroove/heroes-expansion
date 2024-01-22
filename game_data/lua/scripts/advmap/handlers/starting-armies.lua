@@ -3,19 +3,15 @@
 function ReplaceStartingArmy(hero)
 	-- print("Starting army for hero "..hero)
 	if STARTING_ARMIES[hero] and STARTING_ARMIES[hero][1] then
-		-- AddHeroCreatures(hero, CREATURE_WOLF, 1, 6) sleep(1)
 		local k, units, amounts = GetHeroArmySummary(hero)
 		for i = 1,k do
-			-- print("Remove hero creature type : "..units[i].." - "..amounts[i])
 			RemoveHeroCreatures(hero, units[i], amounts[i])
 		end
 		for i = 1,7 do
 			if STARTING_ARMIES[hero][i] then
-				-- print("Add hero creature type "..STARTING_ARMIES[hero][i][1].." - "..STARTING_ARMIES[hero][i][2])
 				AddHeroCreatures(hero, STARTING_ARMIES[hero][i][1], STARTING_ARMIES[hero][i][2], i-1)
 			end
 		end
-		-- sleep(1) RemoveHeroCreatures(hero, CREATURE_WOLF, 1)
 	end
 end
 
@@ -184,5 +180,5 @@ STARTING_ARMIES = {
 }
 
 
--- print("Loaded starting armies advmap routines")
-ROUTINES_LOADED[22] = 1
+-- print("Loaded starting-armies.lua")
+ROUTINES_LOADED[21] = 1

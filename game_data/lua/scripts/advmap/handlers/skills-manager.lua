@@ -105,5 +105,5 @@ function UnbindHeroSkillTrigger(hero)
 end
 
 
--- print("Loaded skills management script")
+-- print("Loaded skills-manager.lua")
 ROUTINES_LOADED[16] = 1

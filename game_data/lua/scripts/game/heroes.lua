@@ -143,4 +143,5 @@ HEROES = {
 }
 
 
-SOURCE_LOADED["heroes-data"] = 1
+-- print("Loaded heroes.lua")
+ROUTINES_LOADED[5] = 1
