@@ -30,42 +30,45 @@
 	<Icon128/>
 	<InternalName>Astral</InternalName>
 	<Class>HERO_CLASS_ACADEMY_MIGHT</Class>
-	<Specialization>HERO_SPEC_INEXHAUSTIBLE</Specialization>
+	<Specialization>HERO_SPEC_BOMBARDIER</Specialization>
 	<PrimarySkill>
 		<SkillID>HERO_SKILL_INNATES</SkillID>
 		<Mastery>MASTERY_EXPERT</Mastery>
 	</PrimarySkill>
-	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Academy/Inexhaustible/Name.txt"/>
-	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Academy/Inexhaustible/Description.txt"/>
-	<SpecializationIcon href="/Textures/HeroScreen/Specializations/Academy/Inexhaustible.xdb#xpointer(/Texture)"/>
-	<FaceTexture href="/Textures/Icons/Heroes/Academy/Academy_Nur_128x128.(Texture).xdb#xpointer(/Texture)"/>
-	<FaceTextureSmall/>
-	<HeroCharacterArena href="/Characters/Heroes/Academy/Astral/HeroCharacterArena.xdb#xpointer(/Character)" />
-	<HeroCharacterArenaMelee href="/Characters/Heroes/Academy/Astral/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
-	<HeroCharacterAdventure href="/Characters/Heroes/Academy/Astral/HeroCharacterAdventure.xdb#xpointer(/Character)" />
-	<HeroIndividualCamera href="/Characters/Heroes/Academy/Astral/HeroIndividualCamera.xdb#xpointer(/Camera)" />
-	<CombatVisual href="/Characters/Heroes/Academy/Astral/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Academy/Nathir/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Academy/Nathir/Description.txt"/>
+	<SpecializationIcon href=""/>
+	<FaceTexture href="/Textures/Icons/Heroes/Academy/Academy_Nathir_128x128.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTextureSmall href="/Textures/Icons/Heroes/Academy/Academy_Nathir_128x128_64.(Texture).xdb#xpointer(/Texture)"/>
+	<HeroCharacterArena href="/Characters/Heroes/Wizard.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee/>
+	<HeroCharacterAdventure href="/Characters/Heroes/Wizard_LOD.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Wizard.xdb#xpointer(/CreatureVisual)"/>
 	<TownType>TOWN_ACADEMY</TownType>
 	<Editable>
 		<NameFileRef href="/Text/Game/Heroes/Persons/Academy/Astral/Name.txt"/>
 		<BiographyFileRef href="/Text/Game/Heroes/Persons/Academy/Astral/Bio.txt"/>
 		<Offence>0</Offence>
-		<Defence>0</Defence>
-		<Spellpower>1</Spellpower>
+		<Defence>1</Defence>
+		<Spellpower>0</Spellpower>
 		<Knowledge>1</Knowledge>
 		<skills>
 			<Item>
 				<SkillID>HERO_SKILL_ARTIFICIER</SkillID>
 				<Mastery>MASTERY_BASIC</Mastery>
-			</Item>	
+			</Item>
+			<Item>
+				<SkillID>HERO_SKILL_SORCERY</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
 		</skills>
 		<perkIDs>
 			<Item>HERO_SKILL_INFUSION</Item>
+			<Item>HERO_SKILL_ARTIFICIAL_GLORY</Item>
 		</perkIDs>
-		<spellIDs>
-			<Item>SPELL_MAGIC_ARROW</Item>
-		</spellIDs>
-		<Ballista>false</Ballista>
+		<spellIDs/>
+		<Ballista>true</Ballista>
 		<FirstAidTent>false</FirstAidTent>
 		<AmmoCart>false</AmmoCart>
 		<FavoriteEnemies/>

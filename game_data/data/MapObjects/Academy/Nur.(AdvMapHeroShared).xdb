@@ -30,21 +30,21 @@
 	<Icon128/>
 	<InternalName>Nur</InternalName>
 	<Class>HERO_CLASS_ACADEMY_MAGIC</Class>
-	<Specialization>HERO_SPEC_POWER_BARGAIN</Specialization>
+	<Specialization>HERO_SPEC_INEXHAUSTIBLE</Specialization>
 	<PrimarySkill>
 		<SkillID>HERO_SKILL_INNATES</SkillID>
 		<Mastery>MASTERY_EXPERT</Mastery>
 	</PrimarySkill>
-	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Academy/Power_Bargain/Name.txt"/>
-	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Academy/Power_Bargain/Description.txt"/>
-	<SpecializationIcon href="/UI/H5A1/Icons/Abilites/Heroes_Abillites/128x128/Stormcaller.(Texture).xdb#xpointer(/Texture)"/>
-	<FaceTexture href="/Textures/Icons/Heroes/Academy/Academy_Nathir_128x128.(Texture).xdb#xpointer(/Texture)"/>
-	<FaceTextureSmall/>
-	<HeroCharacterArena href="/Characters/Heroes/Academy/Nur/HeroCharacterArena.xdb#xpointer(/Character)" />
-	<HeroCharacterArenaMelee href="/Characters/Heroes/Academy/Nur/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
-	<HeroCharacterAdventure href="/Characters/Heroes/Academy/Nur/HeroCharacterAdventure.xdb#xpointer(/Character)" />
-	<HeroIndividualCamera href="/Characters/Heroes/Academy/Nur/HeroIndividualCamera.xdb#xpointer(/Camera)" />
-	<CombatVisual href="/Characters/Heroes/Academy/Nur/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Academy/Nur/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Academy/Nur/Description.txt"/>
+	<SpecializationIcon href=""/>
+	<FaceTexture href="/Textures/Icons/Heroes/Academy/Academy_Nur_128x128.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTextureSmall href="/Textures/Icons/Heroes/Academy/Academy_Nur_128x128_64.(Texture).xdb#xpointer(/Texture)"/>
+	<HeroCharacterArena href="/Characters/Heroes/Wizard.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee/>
+	<HeroCharacterAdventure href="/Characters/Heroes/Wizard_LOD.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Wizard.xdb#xpointer(/CreatureVisual)"/>
 	<TownType>TOWN_ACADEMY</TownType>
 	<Editable>
 		<NameFileRef href="/Text/Game/Heroes/Persons/Academy/Nur/Name.txt"/>
@@ -57,16 +57,21 @@
 			<Item>
 				<SkillID>HERO_SKILL_ARTIFICIER</SkillID>
 				<Mastery>MASTERY_BASIC</Mastery>
-			</Item>	
+			</Item>
+			<Item>
+				<SkillID>HERO_SKILL_SORCERY</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
 		</skills>
 		<perkIDs>
 			<Item>HERO_SKILL_INFUSION</Item>
+			<Item>HERO_SKILL_MAGIC_INSIGHT</Item>
 		</perkIDs>
 		<spellIDs>
-			<Item>SPELL_MAGIC_FIST</Item>
+			<Item>SPELL_ARCANE_CRYSTAL</Item>
 		</spellIDs>
 		<Ballista>false</Ballista>
-		<FirstAidTent>false</FirstAidTent>
+		<FirstAidTent>true</FirstAidTent>
 		<AmmoCart>false</AmmoCart>
 		<FavoriteEnemies/>
 	</Editable>

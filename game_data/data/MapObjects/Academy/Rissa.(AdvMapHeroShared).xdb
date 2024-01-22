@@ -30,21 +30,21 @@
 	<Icon128 href="/Textures/Icons/Heroes/Academy/Academy_Maahir_128x128.(Texture).xdb#xpointer(/Texture)"/>
 	<InternalName>Rissa</InternalName>
 	<Class>HERO_CLASS_ACADEMY_MAGIC</Class>
-	<Specialization>HERO_SPEC_PRUDENT</Specialization>
+	<Specialization>HERO_SPEC_TIME_SHIFT</Specialization>
 	<PrimarySkill>
 		<SkillID>HERO_SKILL_INNATES</SkillID>
 		<Mastery>MASTERY_EXPERT</Mastery>
 	</PrimarySkill>
-	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Academy/Prudent/Name.txt"/>
-	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Academy/Prudent/Description.txt"/>
-	<SpecializationIcon href="/Textures/SpellBook______2618/Spells/Spell_Slow.xdb#xpointer(/Texture)"/>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Academy/Rissa/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Academy/Rissa/Description.txt"/>
+	<SpecializationIcon href=""/>
 	<FaceTexture href="/Textures/Icons/Heroes/Academy/Academy_Rissa_128x128.(Texture).xdb#xpointer(/Texture)"/>
 	<FaceTextureSmall/>
-	<HeroCharacterArena href="/Characters/Heroes/Academy/Rissa/HeroCharacterArena.xdb#xpointer(/Character)" />
-	<HeroCharacterArenaMelee href="/Characters/Heroes/Academy/Rissa/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
-	<HeroCharacterAdventure href="/Characters/Heroes/Academy/Rissa/HeroCharacterAdventure.xdb#xpointer(/Character)" />
-	<HeroIndividualCamera href="/Characters/Heroes/Academy/Rissa/HeroIndividualCamera.xdb#xpointer(/Camera)" />
-	<CombatVisual href="/Characters/Heroes/Academy/Rissa/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<HeroCharacterArena href="/Characters/Heroes/Wizard.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee/>
+	<HeroCharacterAdventure href="/Characters/Heroes/Wizard_LOD.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Wizard.xdb#xpointer(/CreatureVisual)"/>
 	<TownType>TOWN_ACADEMY</TownType>
 	<Editable>
 		<NameFileRef href="/Text/Game/Heroes/Persons/Academy/Rissa/Name.txt"/>
@@ -57,17 +57,22 @@
 			<Item>
 				<SkillID>HERO_SKILL_ARTIFICIER</SkillID>
 				<Mastery>MASTERY_BASIC</Mastery>
-			</Item>	
+			</Item>
+			<Item>
+				<SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
 		</skills>
 		<perkIDs>
 			<Item>HERO_SKILL_INFUSION</Item>
+			<Item>HERO_SKILL_CONSUME_ARTIFACT</Item>
 		</perkIDs>
 		<spellIDs>
-			<Item>SPELL_SLOW</Item>
+			<Item>SPELL_TELEPORT</Item>
 		</spellIDs>
 		<Ballista>false</Ballista>
 		<FirstAidTent>false</FirstAidTent>
-		<AmmoCart>false</AmmoCart>
+		<AmmoCart>true</AmmoCart>
 		<FavoriteEnemies/>
 	</Editable>
 	<ArrowButtonState>0</ArrowButtonState>

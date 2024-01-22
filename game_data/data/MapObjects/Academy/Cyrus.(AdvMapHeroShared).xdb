@@ -35,16 +35,16 @@
 		<SkillID>HERO_SKILL_INNATES</SkillID>
 		<Mastery>MASTERY_EXPERT</Mastery>
 	</PrimarySkill>
-	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Academy/Mentor/Name.txt"/>
-	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Academy/Mentor/Description.txt"/>
-	<SpecializationIcon href="/Textures/HeroScreen/Specializations/Academy/Mentor.xdb#xpointer(/Texture)"/>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Academy/Cyrus/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Academy/Cyrus/Description.txt"/>
+	<SpecializationIcon href=""/>
 	<FaceTexture href="/Textures/Icons/Heroes/Academy/Academy_Cyrus_128x128.(Texture).xdb#xpointer(/Texture)"/>
-	<FaceTextureSmall/>
-	<HeroCharacterArena href="/Characters/Heroes/Academy/Cyrus/HeroCharacterArena.xdb#xpointer(/Character)" />
-	<HeroCharacterArenaMelee href="/Characters/Heroes/Academy/Cyrus/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
-	<HeroCharacterAdventure href="/Characters/Heroes/Academy/Cyrus/HeroCharacterAdventure.xdb#xpointer(/Character)" />
-	<HeroIndividualCamera href="/Characters/Heroes/Academy/Cyrus/HeroIndividualCamera.xdb#xpointer(/Camera)" />
-	<CombatVisual href="/Characters/Heroes/Academy/Cyrus/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<FaceTextureSmall href="/Textures/Icons/Heroes/Academy/Academy_Cyrus_128x128_64.(Texture).xdb#xpointer(/Texture)"/>
+	<HeroCharacterArena href="/Characters/Heroes/Wizard.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee/>
+	<HeroCharacterAdventure href="/Characters/Heroes/Wizard_LOD.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Wizard.xdb#xpointer(/CreatureVisual)"/>
 	<TownType>TOWN_ACADEMY</TownType>
 	<Editable>
 		<NameFileRef href="/Text/Game/Heroes/Persons/Academy/Cyrus/Name.txt"/>
@@ -57,16 +57,21 @@
 			<Item>
 				<SkillID>HERO_SKILL_ARTIFICIER</SkillID>
 				<Mastery>MASTERY_BASIC</Mastery>
-			</Item>	
+			</Item>
+			<Item>
+				<SkillID>HERO_SKILL_GOVERNANCE</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
 		</skills>
 		<perkIDs>
 			<Item>HERO_SKILL_INFUSION</Item>
+			<Item>HERO_SKILL_ESTATES</Item>
 		</perkIDs>
 		<spellIDs>
-			<Item>SPELL_MAGIC_FIST</Item>
+			<Item>SPELL_LIGHTNING_BOLT</Item>
 		</spellIDs>
 		<Ballista>false</Ballista>
-		<FirstAidTent>false</FirstAidTent>
+		<FirstAidTent>true</FirstAidTent>
 		<AmmoCart>false</AmmoCart>
 		<FavoriteEnemies/>
 	</Editable>
