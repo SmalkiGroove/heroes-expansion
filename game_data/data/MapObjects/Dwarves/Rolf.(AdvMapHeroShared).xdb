@@ -35,16 +35,16 @@
 		<SkillID>HERO_SKILL_INNATES</SkillID>
 		<Mastery>MASTERY_EXPERT</Mastery>
 	</PrimarySkill>
-	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Fortress/Rider/Name.txt"/>
-	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Fortress/Rider/Description.txt"/>
-	<SpecializationIcon href="/UI/H5A1/Icons/Abilites/Heroes_Abillites/128x128/Rider.(Texture).xdb#xpointer(/Texture)"/>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Fortress/Rolf/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Fortress/Rolf/Description.txt"/>
+	<SpecializationIcon href=""/>
 	<FaceTexture href="/UI/H5A1/Icons/Heroes/Portrets128x128/Rolf.(Texture).xdb#xpointer(/Texture)"/>
 	<FaceTextureSmall/>
-	<HeroCharacterArena href="/Characters/Heroes/Dwarves/Rolf/HeroCharacterArena.xdb#xpointer(/Character)" />
-	<HeroCharacterArenaMelee href="/Characters/Heroes/Dwarves/Rolf/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
-	<HeroCharacterAdventure href="/Characters/Heroes/Dwarves/Rolf/HeroCharacterAdventure.xdb#xpointer(/Character)" />
-	<HeroIndividualCamera href="/Characters/Heroes/Dwarves/Rolf/HeroIndividualCamera.xdb#xpointer(/Camera)" />
-	<CombatVisual href="/Characters/Heroes/Dwarves/Rolf/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<HeroCharacterArena href="/Characters/Heroes/Rolf.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee href="/Characters/Heroes/Rolf_Strike.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterAdventure href="/Characters/Heroes/Rolf_LOD.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Rolf.xdb#xpointer(/CreatureVisual)"/>
 	<TownType>TOWN_FORTRESS</TownType>
 	<Editable>
 		<NameFileRef href="/Text/Game/Heroes/Persons/Dwarves/Rolf/Name.txt"/>
@@ -57,13 +57,18 @@
 			<Item>
 				<SkillID>HERO_SKILL_RUNELORE</SkillID>
 				<Mastery>MASTERY_BASIC</Mastery>
-			</Item>	
+			</Item>
+			<Item>
+				<SkillID>HERO_SKILL_LOGISTICS</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
 		</skills>
 		<perkIDs>
 			<Item>HERO_SKILL_TENACITY</Item>
+			<Item>HERO_SKILL_RECRUITMENT</Item>
 		</perkIDs>
 		<spellIDs/>
-		<Ballista>false</Ballista>
+		<Ballista>true</Ballista>
 		<FirstAidTent>false</FirstAidTent>
 		<AmmoCart>false</AmmoCart>
 		<FavoriteEnemies/>
@@ -75,6 +80,6 @@
 	<RaceTraitIcon/>
 	<RaceTraitDescFileRef href=""/>
 	<ScenarioHero>false</ScenarioHero>
-	<AdventureMusic href="/Sounds/_(Music)/AdvMap-Heroes/a1-Rolf.xdb#xpointer(/Music)"/>
+	<AdventureMusic/>
 	<HideInEditor>false</HideInEditor>
 </AdvMapHeroShared>
