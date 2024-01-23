@@ -35,9 +35,9 @@
 		<SkillID>HERO_SKILL_INNATES</SkillID>
 		<Mastery>MASTERY_EXPERT</Mastery>
 	</PrimarySkill>
-	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Dungeon/Slaveholder/Name.txt"/>
-	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Dungeon/Slaveholder/Description.txt"/>
-	<SpecializationIcon href="/Textures/HeroScreen/Specializations/Dungeon/Slaveholder.xdb#xpointer(/Texture)"/>	
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Dungeon/Darkstorm/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Dungeon/Darkstorm/Description.txt"/>
+	<SpecializationIcon href=""/>	
 	<FaceTexture href="/Textures/Icons/Heroes/Dungeon/Dungeon_Darkstorm_128x128.(Texture).xdb#xpointer(/Texture)"/>	
 	<FaceTextureSmall/>
 	<HeroCharacterArena href="/Characters/Heroes/Dungeon/Darkstorm/HeroCharacterArena.xdb#xpointer(/Character)" />
@@ -57,10 +57,15 @@
 			<Item>
 				<SkillID>HERO_SKILL_ARCANISM</SkillID>
 				<Mastery>MASTERY_BASIC</Mastery>
-			</Item>	
+			</Item>
+			<Item>
+				<SkillID>HERO_SKILL_LEADERSHIP</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
 		</skills>
 		<perkIDs>
 			<Item>HERO_SKILL_ELEMENTAL_VISION</Item>
+			<Item>HERO_SKILL_MOTIVATION</Item>
 		</perkIDs>
 		<spellIDs/>
 		<Ballista>false</Ballista>

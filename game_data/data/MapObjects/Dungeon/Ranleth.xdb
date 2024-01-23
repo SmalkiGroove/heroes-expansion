@@ -30,21 +30,21 @@
 	<Icon128 href="/Maps/Scenario/A2C3M4/Dungeon Agaris_128_128.1.(Texture).xdb#xpointer(/Texture)"/>
 	<InternalName>Ranleth</InternalName>
 	<Class>HERO_CLASS_DUNGEON_MAGIC</Class>
-	<Specialization>HERO_SPEC_FEATHER_MAGE</Specialization>
+	<Specialization>HERO_SPEC_DARK_ACOLYTE</Specialization>
 	<PrimarySkill>
 		<SkillID>HERO_SKILL_INNATES</SkillID>
 		<Mastery>MASTERY_EXPERT</Mastery>
 	</PrimarySkill>
-	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Dungeon/Feather_Mage/Name.txt"/>
-	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Dungeon/Feather_Mage/Description.txt"/>
-	<SpecializationIcon href="/UI/H5A1/Icons/Abilites/Heroes_Abillites/128x128/The_Chosen_by_Gods.(Texture).xdb#xpointer(/Texture)"/>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Dungeon/Ranleth/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Dungeon/Ranleth/Description.txt"/>
+	<SpecializationIcon href=""/>
 	<FaceTexture href="/Maps/Scenario/A2C3M4/Dungeon Agaris_128_128.1.(Texture).xdb#xpointer(/Texture)"/>
 	<FaceTextureSmall href=""/>
-	<HeroCharacterArena href="/Characters/Heroes/Dungeon/Ranleth/HeroCharacterArena.xdb#xpointer(/Character)" />
-	<HeroCharacterArenaMelee href="/Characters/Heroes/Dungeon/Ranleth/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
-	<HeroCharacterAdventure href="/Characters/Heroes/Dungeon/Ranleth/HeroCharacterAdventure.xdb#xpointer(/Character)" />
-	<HeroIndividualCamera href="/Characters/Heroes/Dungeon/Ranleth/HeroIndividualCamera.xdb#xpointer(/Camera)" />
-	<CombatVisual href="/Characters/Heroes/Dungeon/Ranleth/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<HeroCharacterArena href="/Characters/Heroes/Warlock.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee/>
+	<HeroCharacterAdventure href="/Characters/Heroes/Warlock_LOD.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Warlock.xdb#xpointer(/CreatureVisual)"/>
 	<TownType>TOWN_DUNGEON</TownType>
 	<Editable>
 		<NameFileRef href="/Maps/Scenario/A2C3M4/name.2.txt"/>
@@ -57,16 +57,21 @@
 			<Item>
 				<SkillID>HERO_SKILL_ARCANISM</SkillID>
 				<Mastery>MASTERY_BASIC</Mastery>
-			</Item>	
+			</Item>
+			<Item>
+				<SkillID>HERO_SKILL_LEARNING</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
 		</skills>
 		<perkIDs>
 			<Item>HERO_SKILL_ELEMENTAL_VISION</Item>
+			<Item>HERO_SKILL_STUDENT_AWARD</Item>
 		</perkIDs>
 		<spellIDs>
-			<Item>SPELL_MAGIC_FIST</Item>
+			<Item>SPELL_DISPEL</Item>
 		</spellIDs>
 		<Ballista>false</Ballista>
-		<FirstAidTent>false</FirstAidTent>
+		<FirstAidTent>true</FirstAidTent>
 		<AmmoCart>false</AmmoCart>
 		<FavoriteEnemies/>
 	</Editable>
