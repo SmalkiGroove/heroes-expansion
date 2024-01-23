@@ -32,21 +32,21 @@
 	<Icon128 href="/UI/H5A2/Icons/Heroes/Portrets128x128/Haven_Alaric.(Texture).xdb#xpointer(/Texture)"/>
 	<InternalName>Alaric</InternalName>
 	<Class>HERO_CLASS_HAVEN_MAGIC</Class>
-	<Specialization>HERO_SPEC_WEILDER_OF_FIRE</Specialization>
+	<Specialization>HERO_SPEC_MIND_CLEANER</Specialization>
 	<PrimarySkill>
 		<SkillID>HERO_SKILL_INNATES</SkillID>
 		<Mastery>MASTERY_EXPERT</Mastery>
 	</PrimarySkill>
-	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Haven/Weilder_of_Fire/Name.txt"/>
-	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Haven/Weilder_of_Fire/Description.txt"/>
-	<SpecializationIcon href="/Textures/HeroScreen/Specializations/Academy/Weilder_of_Fire.xdb#xpointer(/Texture)"/>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Haven/Alaric/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Haven/Alaric/Description.txt"/>
+	<SpecializationIcon href=""/>
 	<FaceTexture href="/UI/H5A2/Icons/Heroes/Portrets128x128/Haven_Alaric.(Texture).xdb#xpointer(/Texture)"/>
 	<FaceTextureSmall/>
-	<HeroCharacterArena href="/Characters/Heroes/Haven/Alaric/HeroCharacterArena.xdb#xpointer(/Character)" />
-	<HeroCharacterArenaMelee href="/Characters/Heroes/Haven/Alaric/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
-	<HeroCharacterAdventure href="/Characters/Heroes/Haven/Alaric/HeroCharacterAdventure.xdb#xpointer(/Character)" />
-	<HeroIndividualCamera href="/Characters/Heroes/Haven/Alaric/HeroIndividualCamera.xdb#xpointer(/Camera)" />
-	<CombatVisual href="/Characters/Heroes/Haven/Alaric/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<HeroCharacterArena href="/Characters/Heroes/DS/Alaric_DS_U.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee/>
+	<HeroCharacterAdventure href="/Characters/Heroes/DS/Alaric_DS_U.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera href="/Cameras/Heroes/H5A2/Alaric/Alaric_Idle.(Camera).xdb#xpointer(/Camera)"/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Alaric.(CreatureVisual).xdb#xpointer(/CreatureVisual)"/>
 	<TownType>TOWN_HEAVEN</TownType>
 	<Editable>
 		<NameFileRef href="/Text/Game/Heroes/Persons/Haven/Alaric/Name.txt"/>
@@ -59,17 +59,22 @@
 			<Item>
 				<SkillID>HERO_SKILL_COURAGE</SkillID>
 				<Mastery>MASTERY_BASIC</Mastery>
-			</Item>	
+			</Item>
+			<Item>
+				<SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
 		</skills>
 		<perkIDs>
 			<Item>HERO_SKILL_FAMILIAR_LAND</Item>
+			<Item>HERO_SKILL_MASTER_OF_ABJURATION</Item>
 		</perkIDs>
 		<spellIDs>
-			<Item>SPELL_FIREBALL</Item>
+			<Item>SPELL_DISPEL</Item>
 		</spellIDs>
 		<Ballista>false</Ballista>
 		<FirstAidTent>false</FirstAidTent>
-		<AmmoCart>false</AmmoCart>
+		<AmmoCart>true</AmmoCart>
 		<FavoriteEnemies/>
 		<TalismanLevel>0</TalismanLevel>
 	</Editable>

@@ -35,14 +35,14 @@
 		<SkillID>HERO_SKILL_INNATES</SkillID>
 		<Mastery>MASTERY_EXPERT</Mastery>
 	</PrimarySkill>
-	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Haven/Infantry_Commander/Name.txt"/>
-	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Haven/Infantry_Commander/Description.txt"/>
-	<SpecializationIcon href="/Textures/HeroScreen/Specializations/Haven/Infantry_Commander.xdb#xpointer(/Texture)"/>
-	<FaceTexture href="/UI/H5A1/Icons/Heroes/Portrets128x128/Lazlo.(Texture).xdb#xpointer(/Texture)"/>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Haven/Laszlo/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Haven/Laszlo/Description.txt"/>
+	<SpecializationIcon href=""/>
+	<FaceTexture href="/Textures/Icons/Heroes/Heaven/Heaven_Lazlo_128x128.(Texture).xdb#xpointer(/Texture)"/>
 	<FaceTextureSmall/>
-	<HeroCharacterArena href="/Characters/Heroes/Lazlo.(Character).xdb#xpointer(/Character)"/>
-	<HeroCharacterArenaMelee href="/Characters/Heroes/Lazlo_strike.(Character).xdb#xpointer(/Character)"/>
-	<HeroCharacterAdventure href="/Characters/Heroes/Lazlo_LOD.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArena href="/Characters/Heroes/Knight.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee href="/Characters/Heroes/Knight_strike.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterAdventure href="/Characters/Heroes/Knight_LOD.(Character).xdb#xpointer(/Character)"/>
 	<HeroIndividualCamera/>
 	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Knight.xdb#xpointer(/CreatureVisual)"/>
 	<TownType>TOWN_HEAVEN</TownType>
@@ -57,15 +57,20 @@
 			<Item>
 				<SkillID>HERO_SKILL_COURAGE</SkillID>
 				<Mastery>MASTERY_BASIC</Mastery>
-			</Item>	
+			</Item>
+			<Item>
+				<SkillID>HERO_SKILL_COMBAT</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
 		</skills>
 		<perkIDs>
 			<Item>HERO_SKILL_FAMILIAR_LAND</Item>
+			<Item>HERO_SKILL_EXPERT_TRAINER</Item>
 		</perkIDs>
 		<spellIDs/>
 		<Ballista>false</Ballista>
-		<FirstAidTent>false</FirstAidTent>
-		<AmmoCart>true</AmmoCart>
+		<FirstAidTent>true</FirstAidTent>
+		<AmmoCart>false</AmmoCart>
 		<FavoriteEnemies/>
 	</Editable>
 	<ArrowButtonState>0</ArrowButtonState>

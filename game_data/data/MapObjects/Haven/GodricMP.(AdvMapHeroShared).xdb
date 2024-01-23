@@ -35,16 +35,16 @@
 		<SkillID>HERO_SKILL_INNATES</SkillID>
 		<Mastery>MASTERY_EXPERT</Mastery>
 	</PrimarySkill>
-	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Haven/Sacred_Hammer/Name.txt"/>
-	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Haven/Sacred_Hammer/Description.txt"/>
-	<SpecializationIcon href="/UI/H5A1/Icons/Abilites/Heroes_Abillites/128x128/Sacred_hammer.(Texture).xdb#xpointer(/Texture)"/>	
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Haven/Godric/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Haven/Godric/Description.txt"/>
+	<SpecializationIcon href=""/>	
 	<FaceTexture href="/Textures/Icons/Heroes/Heaven/Heaven_Godric_128x128.(Texture).xdb#xpointer(/Texture)"/>
 	<FaceTextureSmall/>
-	<HeroCharacterArena href="/Characters/Heroes/Haven/GodricMP/HeroCharacterArena.xdb#xpointer(/Character)" />
-	<HeroCharacterArenaMelee href="/Characters/Heroes/Haven/GodricMP/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
-	<HeroCharacterAdventure href="/Characters/Heroes/Haven/GodricMP/HeroCharacterAdventure.xdb#xpointer(/Character)" />
-	<HeroIndividualCamera href="/Characters/Heroes/Haven/GodricMP/HeroIndividualCamera.xdb#xpointer(/Camera)" />
-	<CombatVisual href="/Characters/Heroes/Haven/GodricMP/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<HeroCharacterArena href="/Characters/Heroes/Godric.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee href="/Characters/Heroes/Godric_Strike.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterAdventure href="/Characters/Heroes/Godric_LOD.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Knight.xdb#xpointer(/CreatureVisual)"/>
 	<TownType>TOWN_HEAVEN</TownType>
 	<Editable>
 		<NameFileRef href="/Text/Game/Heroes/Persons/Haven/Godric/Name.txt"/>
@@ -57,12 +57,18 @@
 			<Item>
 				<SkillID>HERO_SKILL_COURAGE</SkillID>
 				<Mastery>MASTERY_BASIC</Mastery>
-			</Item>	
+			</Item>
+			<Item>
+				<SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
 		</skills>
 		<perkIDs>
 			<Item>HERO_SKILL_FAMILIAR_LAND</Item>
+			<Item>HERO_SKILL_MASTER_OF_ABJURATION</Item>
 		</perkIDs>
 		<spellIDs>
+			<Item>SPELL_STONESKIN</Item>
 			<Item>SPELL_CELESTIAL_SHIELD</Item>
 		</spellIDs>
 		<Ballista>false</Ballista>
