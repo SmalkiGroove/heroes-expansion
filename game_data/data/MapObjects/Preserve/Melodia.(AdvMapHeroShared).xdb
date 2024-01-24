@@ -30,21 +30,21 @@
 	<Icon128/>
 	<InternalName>Melodia</InternalName>
 	<Class>HERO_CLASS_PRESERVE_MAGIC</Class>
-	<Specialization>HERO_SPEC_FLAGBEARER_OF_DARKNESS</Specialization>
+	<Specialization/>
 	<PrimarySkill>
 		<SkillID>HERO_SKILL_INNATES</SkillID>
 		<Mastery>MASTERY_EXPERT</Mastery>
 	</PrimarySkill>
-	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Preserve/Flagbearer_of_Darkness/Name.txt"/>
-	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Preserve/Flagbearer_of_Darkness/Description.txt"/>
-	<SpecializationIcon href="/Textures/HeroScreen/Perks/Luck_FortunateAdventurer.xdb#xpointer(/Texture)"/>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Preserve/Melodia/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Preserve/Melodia/Description.txt"/>
+	<SpecializationIcon href=""/>
 	<FaceTexture href="/Textures/Icons/Heroes/Preserve/Preserve_Melodia_128x128.(Texture).xdb#xpointer(/Texture)"/>
 	<FaceTextureSmall href=""/>
-	<HeroCharacterArena href="/Characters/Heroes/Preserve/Melodia/HeroCharacterArena.xdb#xpointer(/Character)" />
-	<HeroCharacterArenaMelee href="/Characters/Heroes/Preserve/Melodia/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
-	<HeroCharacterAdventure href="/Characters/Heroes/Preserve/Melodia/HeroCharacterAdventure.xdb#xpointer(/Character)" />
-	<HeroIndividualCamera href="/Characters/Heroes/Preserve/Melodia/HeroIndividualCamera.xdb#xpointer(/Camera)" />
-	<CombatVisual href="/Characters/Heroes/Preserve/Melodia/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<HeroCharacterArena href="/Characters/Heroes/Ranger.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee/>
+	<HeroCharacterAdventure href="/Characters/Heroes/Ranger_LOD.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Ranger.xdb#xpointer(/CreatureVisual)"/>
 	<TownType>TOWN_PRESERVE</TownType>
 	<Editable>
 		<NameFileRef href="/Text/Game/Heroes/Persons/Preserve/Melodia/Name.txt"/>
@@ -57,16 +57,21 @@
 			<Item>
 				<SkillID>HERO_SKILL_AVENGER</SkillID>
 				<Mastery>MASTERY_BASIC</Mastery>
-			</Item>	
+			</Item>
+			<Item>
+				<SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
 		</skills>
 		<perkIDs>
 			<Item>HERO_SKILL_SILENT_TRACKER</Item>
+			<Item>HERO_SKILL_SNIPER</Item>
 		</perkIDs>
 		<spellIDs>
-			<Item>SPELL_STONESKIN</Item>
+			<Item>SPELL_REGENERATION</Item>
 		</spellIDs>
 		<Ballista>false</Ballista>
-		<FirstAidTent>false</FirstAidTent>
+		<FirstAidTent>true</FirstAidTent>
 		<AmmoCart>false</AmmoCart>
 		<FavoriteEnemies/>
 	</Editable>

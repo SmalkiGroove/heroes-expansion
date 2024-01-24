@@ -30,22 +30,21 @@
 	<Icon128 href="/UI/H5A2/Icons/Heroes/Portrets128x128/Sylvan_Tieru.(Texture).xdb#xpointer(/Texture)"/>
 	<InternalName>Vaniel</InternalName>
 	<Class>HERO_CLASS_PRESERVE_MAGIC</Class>
-	<Specialization>HERO_SPEC_HASTE</Specialization>
+	<Specialization/>
 	<PrimarySkill>
 		<SkillID>HERO_SKILL_INNATES</SkillID>
 		<Mastery>MASTERY_EXPERT</Mastery>
 	</PrimarySkill>
-	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Preserve/Expediter/Name.txt"/>
-	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Preserve/Expediter/Description.txt"/>
-	<SpecializationIcon href="/Textures/HeroScreen/Specializations/Haven/Expediter.xdb#xpointer(/Texture)"/>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Preserve/Tieru/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Preserve/Tieru/Description.txt"/>
+	<SpecializationIcon href=""/>
 	<FaceTexture href="/UI/H5A2/Icons/Heroes/Portrets128x128/Sylvan_Tieru.(Texture).xdb#xpointer(/Texture)"/>
 	<FaceTextureSmall href=""/>
-	<FaceTextureSmall href=""/>
-	<HeroCharacterArena href="/Characters/Heroes/Preserve/Vaniel/HeroCharacterArena.xdb#xpointer(/Character)" />
-	<HeroCharacterArenaMelee href="/Characters/Heroes/Preserve/Vaniel/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
-	<HeroCharacterAdventure href="/Characters/Heroes/Preserve/Vaniel/HeroCharacterAdventure.xdb#xpointer(/Character)" />
-	<HeroIndividualCamera href="/Characters/Heroes/Preserve/Vaniel/HeroIndividualCamera.xdb#xpointer(/Camera)" />
-	<CombatVisual href="/Characters/Heroes/Preserve/Vaniel/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<HeroCharacterArena href="/Characters/Heroes/Ranger.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee/>
+	<HeroCharacterAdventure href="/Characters/Heroes/Ranger_LOD.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Ranger.xdb#xpointer(/CreatureVisual)"/>
 	<TownType>TOWN_PRESERVE</TownType>
 	<Editable>
 		<NameFileRef href="/Maps/SingleMissions/A2S2/name.2.txt"/>
@@ -58,16 +57,21 @@
 			<Item>
 				<SkillID>HERO_SKILL_AVENGER</SkillID>
 				<Mastery>MASTERY_BASIC</Mastery>
-			</Item>	
+			</Item>
+			<Item>
+				<SkillID>HERO_SKILL_LEARNING</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
 		</skills>
 		<perkIDs>
 			<Item>HERO_SKILL_SILENT_TRACKER</Item>
+			<Item>HERO_SKILL_INTUITION</Item>
 		</perkIDs>
 		<spellIDs>
-			<Item>SPELL_HASTE</Item>
+			<Item>SPELL_STONE_SPIKES</Item>
 		</spellIDs>
 		<Ballista>false</Ballista>
-		<FirstAidTent>false</FirstAidTent>
+		<FirstAidTent>true</FirstAidTent>
 		<AmmoCart>false</AmmoCart>
 		<FavoriteEnemies/>
 	</Editable>
@@ -78,6 +82,6 @@
 	<RaceTraitIcon/>
 	<RaceTraitDescFileRef href=""/>
 	<ScenarioHero>false</ScenarioHero>
-	<AdventureMusic href="/Sounds/_(Music)/AdvMap-Heroes/Tieru.xdb#xpointer(/Music)"/>
+	<AdventureMusic/>
 	<HideInEditor>false</HideInEditor>
 </AdvMapHeroShared>

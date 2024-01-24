@@ -30,21 +30,21 @@
 	<Icon128 href="/Textures/Icons/Heroes/Preserve/Preserve_Findan_128x128.(Texture).xdb#xpointer(/Texture)"/>
 	<InternalName>Heam</InternalName>
 	<Class>HERO_CLASS_PRESERVE_MIGHT</Class>
-	<Specialization>HERO_SPEC_OFFENDER</Specialization>
+	<Specialization>HERO_SPEC_ELVES</Specialization>
 	<PrimarySkill>
 		<SkillID>HERO_SKILL_INNATES</SkillID>
 		<Mastery>MASTERY_EXPERT</Mastery>
 	</PrimarySkill>
-	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Preserve/Offender/Name.txt"/>
-	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Preserve/Offender/Description.txt"/>
-	<SpecializationIcon href="/Textures/HeroScreen/Specializations/Preserve/Elven_Volley.xdb#xpointer(/Texture)"/>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Preserve/Findan/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Preserve/Findan/Description.txt"/>
+	<SpecializationIcon href=""/>
 	<FaceTexture href="/Textures/Icons/Heroes/Preserve/Preserve_Findan_128x128.(Texture).xdb#xpointer(/Texture)"/>
 	<FaceTextureSmall/>
-	<HeroCharacterArena href="/Characters/Heroes/Preserve/Heam/HeroCharacterArena.xdb#xpointer(/Character)" />
-	<HeroCharacterArenaMelee href="/Characters/Heroes/Preserve/Heam/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
-	<HeroCharacterAdventure href="/Characters/Heroes/Preserve/Heam/HeroCharacterAdventure.xdb#xpointer(/Character)" />
-	<HeroIndividualCamera href="/Characters/Heroes/Preserve/Heam/HeroIndividualCamera.xdb#xpointer(/Camera)" />
-	<CombatVisual href="/Characters/Heroes/Preserve/Heam/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<HeroCharacterArena href="/Characters/Heroes/Findan.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee/>
+	<HeroCharacterAdventure href="/Characters/Heroes/Findan_LOD.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Ranger.xdb#xpointer(/CreatureVisual)"/>
 	<TownType>TOWN_PRESERVE</TownType>
 	<Editable>
 		<NameFileRef href="/Text/Game/Heroes/Persons/Preserve/Heam/Name.txt"/>
@@ -57,17 +57,20 @@
 			<Item>
 				<SkillID>HERO_SKILL_AVENGER</SkillID>
 				<Mastery>MASTERY_BASIC</Mastery>
-			</Item>	
+			</Item>
+			<Item>
+				<SkillID>HERO_SKILL_OFFENCE</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
 		</skills>
 		<perkIDs>
 			<Item>HERO_SKILL_SILENT_TRACKER</Item>
+			<Item>HERO_SKILL_ARCHERY</Item>
 		</perkIDs>
-		<spellIDs>
-			<Item>SPELL_LIGHTNING_BOLT</Item>
-		</spellIDs>
-		<Ballista>true</Ballista>
+		<spellIDs/>
+		<Ballista>false</Ballista>
 		<FirstAidTent>false</FirstAidTent>
-		<AmmoCart>false</AmmoCart>
+		<AmmoCart>true</AmmoCart>
 		<FavoriteEnemies/>
 	</Editable>
 	<ArrowButtonState>0</ArrowButtonState>
@@ -77,6 +80,6 @@
 	<RaceTraitIcon/>
 	<RaceTraitDescFileRef href=""/>
 	<ScenarioHero>false</ScenarioHero>
-	<AdventureMusic href="/Sounds/_(Music)/AdvMap-Heroes/Findan.xdb#xpointer(/Music)"/>
+	<AdventureMusic/>
 	<HideInEditor>false</HideInEditor>
 </AdvMapHeroShared>

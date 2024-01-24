@@ -35,16 +35,16 @@
 		<SkillID>HERO_SKILL_INNATES</SkillID>
 		<Mastery>MASTERY_EXPERT</Mastery>
 	</PrimarySkill>
-	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Preserve/Elven_Fury/Name.txt"/>
-	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Preserve/Elven_Fury/Description.txt"/>
-	<SpecializationIcon href="/Textures/HeroScreen/Specializations/Preserve/Elven_Fury.xdb#xpointer(/Texture)"/>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Preserve/Talanar/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Preserve/Talanar/Description.txt"/>
+	<SpecializationIcon href=""/>
 	<FaceTexture href="/Textures/Icons/Heroes/Preserve/Preserve_Talanar_128x128.(Texture).xdb#xpointer(/Texture)"/>
 	<FaceTextureSmall/>
-	<HeroCharacterArena href="/Characters/Heroes/Preserve/Nadaur/HeroCharacterArena.xdb#xpointer(/Character)" />
-	<HeroCharacterArenaMelee href="/Characters/Heroes/Preserve/Nadaur/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
-	<HeroCharacterAdventure href="/Characters/Heroes/Preserve/Nadaur/HeroCharacterAdventure.xdb#xpointer(/Character)" />
-	<HeroIndividualCamera href="/Characters/Heroes/Preserve/Nadaur/HeroIndividualCamera.xdb#xpointer(/Camera)" />
-	<CombatVisual href="/Characters/Heroes/Preserve/Nadaur/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<HeroCharacterArena href="/Characters/Heroes/Ranger.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee/>
+	<HeroCharacterAdventure href="/Characters/Heroes/Ranger_LOD.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Ranger.xdb#xpointer(/CreatureVisual)"/>
 	<TownType>TOWN_PRESERVE</TownType>
 	<Editable>
 		<NameFileRef href="/Text/Game/Heroes/Persons/Preserve/Nadaur/Name.txt"/>
@@ -57,17 +57,20 @@
 			<Item>
 				<SkillID>HERO_SKILL_AVENGER</SkillID>
 				<Mastery>MASTERY_BASIC</Mastery>
-			</Item>	
+			</Item>
+			<Item>
+				<SkillID>HERO_SKILL_TRAINING</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
 		</skills>
 		<perkIDs>
 			<Item>HERO_SKILL_SILENT_TRACKER</Item>
+			<Item>HERO_SKILL_TOUGHNESS</Item>
 		</perkIDs>
-		<spellIDs>
-			<Item>SPELL_BLOODLUST</Item>
-		</spellIDs>
-		<Ballista>false</Ballista>
+		<spellIDs/>
+		<Ballista>true</Ballista>
 		<FirstAidTent>false</FirstAidTent>
-		<AmmoCart>true</AmmoCart>
+		<AmmoCart>false</AmmoCart>
 		<FavoriteEnemies/>
 	</Editable>
 	<ArrowButtonState>0</ArrowButtonState>
