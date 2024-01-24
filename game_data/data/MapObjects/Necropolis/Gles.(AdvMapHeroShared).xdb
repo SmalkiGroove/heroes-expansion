@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <AdvMapHeroShared ObjectRecordID="61">
-	<Model href="/Characters/Heroes/DM/Sareth_DS_M.xdb#xpointer(/Model)"/>
-	<AnimSet href="/Characters/Heroes/DS/Dunkan_DS_M-arena.xdb#xpointer(/AnimSet)"/>
+	<Model href="/_(Model)/Heroes/Knight_LOD.(Model).xdb#xpointer(/Model)"/>
+	<AnimSet href="/_(AnimSet)/Heroes/Knight_LOD-adv.(AnimSet).xdb#xpointer(/AnimSet)"/>
 	<blockedTiles/>
 	<holeTiles/>
 	<activeTiles>
@@ -35,16 +35,16 @@
 		<SkillID>HERO_SKILL_INNATES</SkillID>
 		<Mastery>MASTERY_EXPERT</Mastery>
 	</PrimarySkill>
-	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Necropolis/Empiric/Name.txt"/>
-	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Necropolis/Empiric/Description.txt"/>
-	<SpecializationIcon href="/Textures/HeroScreen/Specializations/Necropolis/Empiric.xdb#xpointer(/Texture)"/>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Necropolis/Kaspar/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Necropolis/Kaspar/Description.txt"/>
+	<SpecializationIcon href=""/>
 	<FaceTexture href="/Textures/Icons/Heroes/Necropolis/Necropolis_Kaspar_128x128.(Texture).xdb#xpointer(/Texture)"/>
 	<FaceTextureSmall/>
-	<HeroCharacterArena href="/Characters/Heroes/Necropolis/Gles/HeroCharacterArena.xdb#xpointer(/Character)" />
-	<HeroCharacterArenaMelee href="/Characters/Heroes/Necropolis/Gles/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
-	<HeroCharacterAdventure href="/Characters/Heroes/Necropolis/Gles/HeroCharacterAdventure.xdb#xpointer(/Character)" />
-	<HeroIndividualCamera href="/Characters/Heroes/Necropolis/Gles/HeroIndividualCamera.xdb#xpointer(/Camera)" />
-	<CombatVisual href="/Characters/Heroes/Necropolis/Gles/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<HeroCharacterArena href="/Characters/Heroes/Necromancer.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee/>
+	<HeroCharacterAdventure href="/Characters/Heroes/Necromancer_LOD.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Necromancer.xdb#xpointer(/CreatureVisual)"/>
 	<TownType>TOWN_NECROMANCY</TownType>
 	<Editable>
 		<NameFileRef href="/Text/Game/Heroes/Persons/Necropolis/Gles/Name.txt"/>
@@ -57,14 +57,17 @@
 			<Item>
 				<SkillID>HERO_SKILL_NECROMANCY</SkillID>
 				<Mastery>MASTERY_BASIC</Mastery>
-			</Item>	
+			</Item>
+			<Item>
+				<SkillID>HERO_SKILL_DARK_MAGIC</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
 		</skills>
 		<perkIDs>
 			<Item>HERO_SKILL_ETERNAL_SERVITUDE</Item>
+			<Item>HERO_SKILL_MASTER_OF_PAIN</Item>
 		</perkIDs>
-		<spellIDs>
-			<Item>SPELL_PLAGUE</Item>
-		</spellIDs>
+		<spellIDs/>
 		<Ballista>false</Ballista>
 		<FirstAidTent>true</FirstAidTent>
 		<AmmoCart>false</AmmoCart>

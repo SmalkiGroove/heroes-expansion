@@ -35,16 +35,16 @@
 		<SkillID>HERO_SKILL_INNATES</SkillID>
 		<Mastery>MASTERY_EXPERT</Mastery>
 	</PrimarySkill>
-	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Necropolis/AvatarOfDeath/Name.txt"/>
-	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Necropolis/AvatarOfDeath/Description.txt"/>
-	<SpecializationIcon href="/UI/H5A2/Icons/Heroes_Specializations/AvatarOfDeath.(Texture).xdb#xpointer(/Texture)"/>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Necropolis/Archilus/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Necropolis/Archilus/Description.txt"/>
+	<SpecializationIcon href=""/>
 	<FaceTexture href="/Textures/Icons/Heroes/Necropolis/Necropolis_Archilus_128x128.(Texture).xdb#xpointer(/Texture)"/>
 	<FaceTextureSmall/>
-	<HeroCharacterArena href="/Characters/Heroes/Necropolis/Archilus/HeroCharacterArena.xdb#xpointer(/Character)" />
-	<HeroCharacterArenaMelee href="/Characters/Heroes/Necropolis/Archilus/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
-	<HeroCharacterAdventure href="/Characters/Heroes/Necropolis/Archilus/HeroCharacterAdventure.xdb#xpointer(/Character)" />
-	<HeroIndividualCamera href="/Characters/Heroes/Necropolis/Archilus/HeroIndividualCamera.xdb#xpointer(/Camera)" />
-	<CombatVisual href="/Characters/Heroes/Necropolis/Archilus/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<HeroCharacterArena href="/Characters/Heroes/Necromancer.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee/>
+	<HeroCharacterAdventure href="/Characters/Heroes/Necromancer_LOD.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Necromancer.xdb#xpointer(/CreatureVisual)"/>
 	<TownType>TOWN_NECROMANCY</TownType>
 	<Editable>
 		<NameFileRef href="/Text/Game/Heroes/Persons/Necropolis/Archilus/Name.txt"/>
@@ -57,16 +57,20 @@
 			<Item>
 				<SkillID>HERO_SKILL_NECROMANCY</SkillID>
 				<Mastery>MASTERY_BASIC</Mastery>
-			</Item>	
+			</Item>
+			<Item>
+				<SkillID>HERO_SKILL_LEARNING</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
 		</skills>
 		<perkIDs>
 			<Item>HERO_SKILL_ETERNAL_SERVITUDE</Item>
+			<Item>HERO_SKILL_INTELLIGENCE</Item>
 		</perkIDs>
 		<spellIDs>
-			<Item>SPELL_CURSE</Item>
-			<Item>SPELL_BLIND</Item>
+			<Item>SPELL_SORROW</Item>
 		</spellIDs>
-		<Ballista>false</Ballista>
+		<Ballista>true</Ballista>
 		<FirstAidTent>false</FirstAidTent>
 		<AmmoCart>false</AmmoCart>
 		<FavoriteEnemies/>

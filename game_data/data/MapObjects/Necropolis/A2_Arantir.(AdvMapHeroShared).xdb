@@ -32,21 +32,21 @@
 	<Icon128 href="/UI/H5A2/Icons/Heroes/Portrets128x128/Necropolis_Arantir.(Texture).xdb#xpointer(/Texture)"/>
 	<InternalName>Arantir</InternalName>
 	<Class>HERO_CLASS_NECROPOLIS_MIGHT</Class>
-	<Specialization>HERO_SPEC_REANIMATOR</Specialization>
+	<Specialization>HERO_SPEC_COURTIER</Specialization>
 	<PrimarySkill>
 		<SkillID>HERO_SKILL_INNATES</SkillID>
 		<Mastery>MASTERY_EXPERT</Mastery>
 	</PrimarySkill>
-	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Necropolis/Reanimator/Name.txt"/>
-	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Necropolis/Reanimator/Description.txt"/>
-	<SpecializationIcon href="/Textures/HeroScreen/Specializations/Necropolis/Reanimator.xdb#xpointer(/Texture)"/>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Necropolis/Arantir/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Necropolis/Arantir/Description.txt"/>
+	<SpecializationIcon href=""/>
 	<FaceTexture href="/UI/H5A2/Icons/Heroes/Portrets128x128/Necropolis_Arantir.(Texture).xdb#xpointer(/Texture)"/>
 	<FaceTextureSmall/>
-	<HeroCharacterArena href="/Characters/Heroes/Necropolis/A2_Arantir/HeroCharacterArena.xdb#xpointer(/Character)" />
-	<HeroCharacterArenaMelee href="/Characters/Heroes/Necropolis/A2_Arantir/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
-	<HeroCharacterAdventure href="/Characters/Heroes/Necropolis/A2_Arantir/HeroCharacterAdventure.xdb#xpointer(/Character)" />
-	<HeroIndividualCamera href="/Characters/Heroes/Necropolis/A2_Arantir/HeroIndividualCamera.xdb#xpointer(/Camera)" />
-	<CombatVisual href="/Characters/Heroes/Necropolis/A2_Arantir/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<HeroCharacterArena href="/Characters/Heroes/H5A2/Arantir_Mounted.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee/>
+	<HeroCharacterAdventure href="/Characters/Heroes/H5A2/Arantir_Mounted.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Necromancer.xdb#xpointer(/CreatureVisual)"/>
 	<TownType>TOWN_NECROMANCY</TownType>
 	<Editable>
 		<NameFileRef href="/Text/Game/Heroes/Persons/Necropolis/Arantir/Name.txt"/>
@@ -59,16 +59,19 @@
 			<Item>
 				<SkillID>HERO_SKILL_NECROMANCY</SkillID>
 				<Mastery>MASTERY_BASIC</Mastery>
-			</Item>	
+			</Item>
+			<Item>
+				<SkillID>HERO_SKILL_LEADERSHIP</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
 		</skills>
 		<perkIDs>
 			<Item>HERO_SKILL_ETERNAL_SERVITUDE</Item>
+			<Item>HERO_SKILL_DIPLOMACY</Item>
 		</perkIDs>
-		<spellIDs>
-			<Item>SPELL_ANIMATE_DEAD</Item>
-		</spellIDs>
+		<spellIDs/>
 		<Ballista>false</Ballista>
-		<FirstAidTent>false</FirstAidTent>
+		<FirstAidTent>true</FirstAidTent>
 		<AmmoCart>false</AmmoCart>
 		<FavoriteEnemies/>
 	</Editable>
@@ -79,7 +82,7 @@
 	<RaceTraitIcon/>
 	<RaceTraitDescFileRef href=""/>
 	<ScenarioHero>false</ScenarioHero>
-	<AdventureMusic href="/Sounds/_(Music)/AdvMap-Heroes/a2-Arantir.xdb#xpointer(/Music)"/>
+	<AdventureMusic/>
 	<HideInEditor>false</HideInEditor>
 	<PresetMinimalAttributes>
 		<Offence>2</Offence>

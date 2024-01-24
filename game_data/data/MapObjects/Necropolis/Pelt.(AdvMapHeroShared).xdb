@@ -35,16 +35,16 @@
 		<SkillID>HERO_SKILL_INNATES</SkillID>
 		<Mastery>MASTERY_EXPERT</Mastery>
 	</PrimarySkill>
-	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Necropolis/Blooddrinker/Name.txt"/>
-	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Necropolis/Blooddrinker/Description.txt"/>
-	<SpecializationIcon href="/UI/H5A2/Icons/Spells/Divine_Wrath.(Texture).xdb#xpointer(/Texture)"/>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Necropolis/Vladimir/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Necropolis/Vladimir/Description.txt"/>
+	<SpecializationIcon href=""/>
 	<FaceTexture href="/Textures/Icons/Heroes/Necropolis/Necropolis_Vladimir_128x128.(Texture).xdb#xpointer(/Texture)"/>
 	<FaceTextureSmall/>
-	<HeroCharacterArena href="/Characters/Heroes/Necropolis/Pelt/HeroCharacterArena.xdb#xpointer(/Character)" />
-	<HeroCharacterArenaMelee href="/Characters/Heroes/Necropolis/Pelt/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
-	<HeroCharacterAdventure href="/Characters/Heroes/Necropolis/Pelt/HeroCharacterAdventure.xdb#xpointer(/Character)" />
-	<HeroIndividualCamera href="/Characters/Heroes/Necropolis/Pelt/HeroIndividualCamera.xdb#xpointer(/Camera)" />
-	<CombatVisual href="/Characters/Heroes/Necropolis/Pelt/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<HeroCharacterArena href="/Characters/Heroes/Necromancer.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee/>
+	<HeroCharacterAdventure href="/Characters/Heroes/Necromancer_LOD.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Necromancer.xdb#xpointer(/CreatureVisual)"/>
 	<TownType>TOWN_NECROMANCY</TownType>
 	<Editable>
 		<NameFileRef href="/Text/Game/Heroes/Persons/Necropolis/Pelt/Name.txt"/>
@@ -57,16 +57,21 @@
 			<Item>
 				<SkillID>HERO_SKILL_NECROMANCY</SkillID>
 				<Mastery>MASTERY_BASIC</Mastery>
-			</Item>	
+			</Item>
+			<Item>
+				<SkillID>HERO_SKILL_LOGISTICS</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
 		</skills>
 		<perkIDs>
 			<Item>HERO_SKILL_ETERNAL_SERVITUDE</Item>
+			<Item>HERO_SKILL_RECRUITMENT</Item>
 		</perkIDs>
 		<spellIDs>
-			<Item>SPELL_MAGIC_ARROW</Item>
+			<Item>SPELL_MAGIC_FIST</Item>
 		</spellIDs>
 		<Ballista>false</Ballista>
-		<FirstAidTent>true</FirstAidTent>
+		<FirstAidTent>false</FirstAidTent>
 		<AmmoCart>false</AmmoCart>
 		<FavoriteEnemies/>
 	</Editable>

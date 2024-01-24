@@ -32,21 +32,21 @@
 	<Icon128 href="/UI/H5A2/Icons/Heroes/Portrets128x128/Necropolis_Ornella.(Texture).xdb#xpointer(/Texture)"/>
 	<InternalName>OrnellaNecro</InternalName>
 	<Class>HERO_CLASS_NECROPOLIS_MAGIC</Class>
-	<Specialization>HERO_SPEC_IMPREGNABLE</Specialization>
+	<Specialization>HERO_SPEC_FEATHER_MAGE</Specialization>
 	<PrimarySkill>
 		<SkillID>HERO_SKILL_INNATES</SkillID>
 		<Mastery>MASTERY_EXPERT</Mastery>
 	</PrimarySkill>
-	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Necropolis/Impregnable/Name.txt"/>
-	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Necropolis/Impregnable/Description.txt"/>
-	<SpecializationIcon href="/Textures/HeroScreen/Feats/Necromancer/Sorcery_SpellprofBones.(Texture).xdb#xpointer(/Texture)"/>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Necropolis/Ornella/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Necropolis/Ornella/Description.txt"/>
+	<SpecializationIcon href=""/>
 	<FaceTexture href="/UI/H5A2/Icons/Heroes/Portrets128x128/Necropolis_Ornella.(Texture).xdb#xpointer(/Texture)"/>
 	<FaceTextureSmall/>
-	<HeroCharacterArena href="/Characters/Heroes/Necropolis/Ornella_necro/HeroCharacterArena.xdb#xpointer(/Character)" />
-	<HeroCharacterArenaMelee />
-	<HeroCharacterAdventure href="/Characters/Heroes/Necropolis/Ornella_necro/HeroCharacterAdventure.xdb#xpointer(/Character)" />
-	<HeroIndividualCamera href="/Characters/Heroes/Necropolis/Ornella_necro/HeroIndividualCamera.xdb#xpointer(/Camera)" />
-	<CombatVisual href="/Characters/Heroes/Necropolis/Ornella_necro/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<HeroCharacterArena href="/Characters/Heroes/H5A2/Ornella_Mounted.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee/>
+	<HeroCharacterAdventure href="/Characters/Heroes/H5A2/Ornella_Mounted.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Knight.xdb#xpointer(/CreatureVisual)"/>
 	<TownType>TOWN_NECROMANCY</TownType>
 	<Editable>
 		<NameFileRef href="/Text/Game/Heroes/Persons/Necropolis/OrnellaNecro/name.txt"/>
@@ -59,12 +59,19 @@
 			<Item>
 				<SkillID>HERO_SKILL_NECROMANCY</SkillID>
 				<Mastery>MASTERY_BASIC</Mastery>
-			</Item>	
+			</Item>
+			<Item>
+				<SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
 		</skills>
 		<perkIDs>
 			<Item>HERO_SKILL_ETERNAL_SERVITUDE</Item>
+			<Item>HERO_SKILL_FROST_POWER</Item>
 		</perkIDs>
-		<spellIDs/>
+		<spellIDs>
+			<Item>SPELL_ICE_BOLT</Item>
+		</spellIDs>
 		<Ballista>false</Ballista>
 		<FirstAidTent>true</FirstAidTent>
 		<AmmoCart>false</AmmoCart>
@@ -77,7 +84,7 @@
 	<RaceTraitIcon/>
 	<RaceTraitDescFileRef href=""/>
 	<ScenarioHero>false</ScenarioHero>
-	<AdventureMusic href="/Sounds/_(Music)/AdvMap-Heroes/a2-Ornella.xdb#xpointer(/Music)"/>
+	<AdventureMusic/>
 	<HideInEditor>false</HideInEditor>
 	<PresetMinimalAttributes>
 		<Offence>2</Offence>
