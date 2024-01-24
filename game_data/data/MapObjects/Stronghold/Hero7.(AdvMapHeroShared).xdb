@@ -37,16 +37,16 @@
 		<SkillID>HERO_SKILL_INNATES</SkillID>
 		<Mastery>MASTERY_EXPERT</Mastery>
 	</PrimarySkill>
-	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Stronghold/Impregnable/Name.txt"/>
-	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Stronghold/Impregnable/Description.txt"/>
-	<SpecializationIcon href="/Textures/HeroScreen/Skills/SummoningMagic_3.xdb#xpointer(/Texture)"/>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Stronghold/Haggash/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Stronghold/Haggash/Description.txt"/>
+	<SpecializationIcon href=""/>
 	<FaceTexture href="/UI/H5A2/Icons/Heroes/Portrets128x128/Stronghold_Haggash.(Texture).xdb#xpointer(/Texture)"/>
 	<FaceTextureSmall/>
-	<HeroCharacterArena href="/Characters/Heroes/Stronghold/Hero7/HeroCharacterArena.xdb#xpointer(/Character)" />
-	<HeroCharacterArenaMelee href="/Characters/Heroes/Stronghold/Hero7/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
-	<HeroCharacterAdventure href="/Characters/Heroes/Stronghold/Hero7/HeroCharacterAdventure.xdb#xpointer(/Character)" />
-	<HeroIndividualCamera href="/Characters/Heroes/Stronghold/Hero7/HeroIndividualCamera.xdb#xpointer(/Camera)" />
-	<CombatVisual href="/Characters/Heroes/Stronghold/Hero7/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<HeroCharacterArena href="/Characters/Heroes/H5A2/OrcWarrior_Hero.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee/>
+	<HeroCharacterAdventure href="/Characters/Heroes/H5A2/OrcWarrior_Hero.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Barbarian.xdb#xpointer(/CreatureVisual)"/>
 	<TownType>TOWN_STRONGHOLD</TownType>
 	<Editable>
 		<NameFileRef href="/Text/Game/Heroes/Persons/Stronghold/Hero7/Name.txt"/>
@@ -59,17 +59,22 @@
 			<Item>
 				<SkillID>HERO_SKILL_SPIRITISM</SkillID>
 				<Mastery>MASTERY_BASIC</Mastery>
-			</Item>	
+			</Item>
+			<Item>
+				<SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
 		</skills>
 		<perkIDs>
 			<Item>HERO_SKILL_SIEGE</Item>
+			<Item>HERO_SKILL_BACK_TO_THE_VOID</Item>
 		</perkIDs>
 		<spellIDs>
 			<Item>SPELL_DISPEL</Item>
 		</spellIDs>
 		<Ballista>false</Ballista>
 		<FirstAidTent>false</FirstAidTent>
-		<AmmoCart>false</AmmoCart>
+		<AmmoCart>true</AmmoCart>
 		<FavoriteEnemies/>
 		<TalismanLevel>0</TalismanLevel>
 	</Editable>

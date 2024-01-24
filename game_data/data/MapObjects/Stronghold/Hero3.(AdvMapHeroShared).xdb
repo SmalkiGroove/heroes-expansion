@@ -32,21 +32,21 @@
 	<Icon128 href="/UI/H5A2/Icons/Heroes/Portrets128x128/Stronghold_Garuna.(Texture).xdb#xpointer(/Texture)"/>
 	<InternalName>Hero3</InternalName>
 	<Class>HERO_CLASS_STRONGHOLD_MIGHT</Class>
-	<Specialization>HERO_SPEC_EMPIRIC</Specialization>
+	<Specialization>HERO_SPEC_CENTAUR_MISTRESS</Specialization>
 	<PrimarySkill>
 		<SkillID>HERO_SKILL_INNATES</SkillID>
 		<Mastery>MASTERY_EXPERT</Mastery>
 	</PrimarySkill>
-	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Stronghold/Empiric/Name.txt"/>
-	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Stronghold/Empiric/Description.txt"/>
-	<SpecializationIcon href="/Textures/HeroScreen/Skills/DestructiveMagic_3.xdb#xpointer(/Texture)"/>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Stronghold/Garuna/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Stronghold/Garuna/Description.txt"/>
+	<SpecializationIcon href=""/>
 	<FaceTexture href="/UI/H5A2/Icons/Heroes/Portrets128x128/Stronghold_Garuna.(Texture).xdb#xpointer(/Texture)"/>
 	<FaceTextureSmall/>
-	<HeroCharacterArena href="/Characters/Heroes/Stronghold/Hero3/HeroCharacterArena.xdb#xpointer(/Character)" />
-	<HeroCharacterArenaMelee href="/Characters/Heroes/Stronghold/Hero3/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
-	<HeroCharacterAdventure href="/Characters/Heroes/Stronghold/Hero3/HeroCharacterAdventure.xdb#xpointer(/Character)" />
-	<HeroIndividualCamera href="/Characters/Heroes/Stronghold/Hero3/HeroIndividualCamera.xdb#xpointer(/Camera)" />
-	<CombatVisual href="/Characters/Heroes/Stronghold/Hero3/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<HeroCharacterArena href="/Characters/Heroes/H5A2/OrcWarrior_Hero.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee/>
+	<HeroCharacterAdventure href="/Characters/Heroes/H5A2/OrcWarrior_Hero.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Barbarian.xdb#xpointer(/CreatureVisual)"/>
 	<TownType>TOWN_STRONGHOLD</TownType>
 	<Editable>
 		<NameFileRef href="/Text/Game/Heroes/Persons/Stronghold/Hero3/Name.txt"/>
@@ -59,18 +59,20 @@
 			<Item>
 				<SkillID>HERO_SKILL_BLOOD_RAGE</SkillID>
 				<Mastery>MASTERY_BASIC</Mastery>
-			</Item>	
+			</Item>
+			<Item>
+				<SkillID>HERO_SKILL_OFFENCE</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
 		</skills>
 		<perkIDs>
 			<Item>HERO_SKILL_SIEGE</Item>
+			<Item>HERO_SKILL_ARCHERY</Item>
 		</perkIDs>
-		<spellIDs>
-			<Item>SPELL_REGENERATION</Item>
-			<Item>SPELL_PLAGUE</Item>
-		</spellIDs>
+		<spellIDs/>
 		<Ballista>false</Ballista>
 		<FirstAidTent>false</FirstAidTent>
-		<AmmoCart>false</AmmoCart>
+		<AmmoCart>true</AmmoCart>
 		<FavoriteEnemies/>
 		<TalismanLevel>0</TalismanLevel>
 	</Editable>

@@ -37,16 +37,16 @@
 		<SkillID>HERO_SKILL_INNATES</SkillID>
 		<Mastery>MASTERY_EXPERT</Mastery>
 	</PrimarySkill>
-	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Stronghold/WarLeader/Name.txt"/>
-	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Stronghold/WarLeader/Description.txt"/>
-	<SpecializationIcon href="/UI/H5A2/Icons/Heroes_Specializations/War_Leader.(Texture).xdb#xpointer(/Texture)"/>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Stronghold/Gottai/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Stronghold/Gottai/Description.txt"/>
+	<SpecializationIcon href=""/>
 	<FaceTexture href="/UI/H5A2/Icons/Heroes/Portrets128x128/Stronghold_Gotai.(Texture).xdb#xpointer(/Texture)"/>
 	<FaceTextureSmall/>
-	<HeroCharacterArena href="/Characters/Heroes/Stronghold/Gottai/HeroCharacterArena.xdb#xpointer(/Character)" />
-	<HeroCharacterArenaMelee />
-	<HeroCharacterAdventure href="/Characters/Heroes/Stronghold/Gottai/HeroCharacterAdventure.xdb#xpointer(/Character)" />
-	<HeroIndividualCamera href="/Characters/Heroes/Stronghold/Gottai/HeroIndividualCamera.xdb#xpointer(/Camera)" />
-	<CombatVisual href="/Characters/Heroes/Stronghold/Gottai/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<HeroCharacterArena href="/Characters/Heroes/H5A2/Gotay_Mounted.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee/>
+	<HeroCharacterAdventure href="/Characters/Heroes/H5A2/Gotay_Mounted.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Barbarian.xdb#xpointer(/CreatureVisual)"/>
 	<TownType>TOWN_STRONGHOLD</TownType>
 	<Editable>
 		<NameFileRef href="/Text/Game/Heroes/Persons/Stronghold/Gottai/Name.txt"/>
@@ -59,10 +59,15 @@
 			<Item>
 				<SkillID>HERO_SKILL_BLOOD_RAGE</SkillID>
 				<Mastery>MASTERY_BASIC</Mastery>
-			</Item>	
+			</Item>
+			<Item>
+				<SkillID>HERO_SKILL_VOICE</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
 		</skills>
 		<perkIDs>
 			<Item>HERO_SKILL_SIEGE</Item>
+			<Item>HERO_SKILL_VOICE_TRAINING</Item>
 		</perkIDs>
 		<spellIDs>
 			<Item>SPELL_WARCRY_BATTLECRY</Item>
@@ -80,7 +85,7 @@
 	<RaceTraitIcon/>
 	<RaceTraitDescFileRef href=""/>
 	<ScenarioHero>false</ScenarioHero>
-	<AdventureMusic href="/Sounds/_(Music)/AdvMap-Heroes/a2-Gotai.(Music).xdb#xpointer(/Music)"/>
+	<AdventureMusic/>
 	<HideInEditor>false</HideInEditor>
 	<PresetMinimalAttributes>
 		<Offence>2</Offence>

@@ -32,21 +32,21 @@
 	<Icon128/>
 	<InternalName>Zouleika</InternalName>
 	<Class>HERO_CLASS_STRONGHOLD_MAGIC</Class>
-	<Specialization>HERO_SPEC_DISRUPTER</Specialization>
+	<Specialization>HERO_SPEC_EMPIRIC</Specialization>
 	<PrimarySkill>
 		<SkillID>HERO_SKILL_INNATES</SkillID>
 		<Mastery>MASTERY_EXPERT</Mastery>
 	</PrimarySkill>
-	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Stronghold/Disrupter/Name.txt"/>
-	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Stronghold/Disrupter/Description.txt"/>
-	<SpecializationIcon href="/Textures/HeroScreen/Skills/DarkMagic_3.xdb#xpointer(/Texture)"/>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Stronghold/Zouleika/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Stronghold/Zouleika/Description.txt"/>
+	<SpecializationIcon href=""/>
 	<FaceTexture href="/Textures/Icons/Heroes/Stronghold/Stronghold_Zouleika_128x128.(Texture).xdb#xpointer(/Texture)"/>
 	<FaceTextureSmall/>
-	<HeroCharacterArena href="/Characters/Heroes/Stronghold/Zouleika/HeroCharacterArena.xdb#xpointer(/Character)" />
-	<HeroCharacterArenaMelee href="/Characters/Heroes/Stronghold/Zouleika/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
-	<HeroCharacterAdventure href="/Characters/Heroes/Stronghold/Zouleika/HeroCharacterAdventure.xdb#xpointer(/Character)" />
-	<HeroIndividualCamera href="/Characters/Heroes/Stronghold/Zouleika/HeroIndividualCamera.xdb#xpointer(/Camera)" />
-	<CombatVisual href="/Characters/Heroes/Stronghold/Zouleika/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<HeroCharacterArena href="/Characters/Heroes/H5A2/OrcWarrior_Hero.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee/>
+	<HeroCharacterAdventure href="/Characters/Heroes/H5A2/OrcWarrior_Hero.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Barbarian.xdb#xpointer(/CreatureVisual)"/>
 	<TownType>TOWN_STRONGHOLD</TownType>
 	<Editable>
 		<NameFileRef href="/Text/Game/Heroes/Persons/Stronghold/Zouleika/Name.txt"/>
@@ -60,15 +60,20 @@
 				<SkillID>HERO_SKILL_SPIRITISM</SkillID>
 				<Mastery>MASTERY_BASIC</Mastery>
 			</Item>
+			<Item>
+				<SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
 		</skills>
 		<perkIDs>
 			<Item>HERO_SKILL_SIEGE</Item>
+			<Item>HERO_SKILL_MASTER_OF_ABJURATION</Item>
 		</perkIDs>
 		<spellIDs>
-			<Item>SPELL_DISRUPTING_RAY</Item>
+			<Item>SPELL_STONESKIN</Item>
 		</spellIDs>
 		<Ballista>false</Ballista>
-		<FirstAidTent>false</FirstAidTent>
+		<FirstAidTent>true</FirstAidTent>
 		<AmmoCart>false</AmmoCart>
 		<FavoriteEnemies/>
 		<TalismanLevel>0</TalismanLevel>
@@ -80,7 +85,7 @@
 	<RaceTraitIcon/>
 	<RaceTraitDescFileRef href=""/>
 	<ScenarioHero>false</ScenarioHero>
-	<AdventureMusic href="/Sounds/_(Music)/AdvMap-Heroes/a2-Kujin.(Music).xdb#xpointer(/Music)"/>
+	<AdventureMusic/>
 	<HideInEditor>false</HideInEditor>
 	<PresetMinimalAttributes>
 		<Offence>2</Offence>
