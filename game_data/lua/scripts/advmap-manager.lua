@@ -125,7 +125,7 @@ function WatchPlayer(player, wait)
 				end
 			end
         end
-		sleep(50)
+		sleep(30)
 	end
 end
 

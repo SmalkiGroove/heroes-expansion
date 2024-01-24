@@ -1,8 +1,6 @@
 function StopTrigger() end --needed for lualib
 dofile = doFile
 
-dofile("/scripts/common.lua") sleep(10)
-
 function IsHuman(side) return GetHost(side) == HUMAN end
 function IsComputer(side) return GetHost(side) == COMPUTER end
 
@@ -29,8 +27,6 @@ function IsSpellSpawn(unit) return GetUnitType(unit) == SPELL_SPAWN end
 
 ATTACKER_HERO_ID = "attacker-hero"
 DEFENDER_HERO_ID = "defender-hero"
-ATTACKER_RACE = 0
-DEFENDER_RACE = 0
 ATTACKER_HERO = ""
 DEFENDER_HERO = ""
 HERO_DATA = { }
@@ -158,37 +154,19 @@ function createTutorialAliases()
     HideTutorialMessage = clearMessage
 end
 
-LOAD_SOURCES = 0
-dofile("/scripts/combat-common.lua")
-repeat sleep(1) until LOAD_SOURCES == 1
-
----------------------------
-consoleCmd("@SetGameVar('h5x_combat_init', 'false')")
-repeat sleep(1) until GetGameVar('h5x_combat_init') == 'false'
-
-SCRIPT_ENABLED = 0
-function EnableScript() SCRIPT_ENABLED = 1 end
-
-consoleCmd("@if GetGameVar('h5x_combat_init') == 'false' then SetGameVar('h5x_combat_init', 'true') EnableScript() end")
-sleep(1)
----------------------------
-
+dofile("/scripts/common.lua")
 dofile("/scripts/combat-manager.lua")
 
 function Prepare() end
 function DoPrepare()
-	if SCRIPT_ENABLED == 1 then
-		ManageCombatPrepare()
-	end
 	Prepare()
+	ManageCombatPrepare()
 	return nil
 end
 
 function Start() end
 function DoStart()
-	if SCRIPT_ENABLED == 1 then
-		ManageCombatStart()
-	end
+	ManageCombatStart()
 	Start()
 	return nil
 end
@@ -231,9 +209,7 @@ end
 
 function UnitMove(unitName)
 	local temp = nil
-	if SCRIPT_ENABLED == 1 then
-		ManageCombatTurn(unitName)
-	end
+	ManageCombatTurn(unitName)
 	if IsAttacker(unitName) then
 		temp = AttackerUnitMove(unitName)
 	elseif IsDefender(unitName) then
@@ -280,9 +256,7 @@ function DefenderUnitDeath(unitName)
 end
 
 function UnitDeath(unitName)
-	if SCRIPT_ENABLED == 1 then
-		ManageUnitDeath(unitName)
-	end
+	ManageUnitDeath(unitName)
 	if IsAttacker(unitName) then
 		AttackerUnitDeath(unitName)
 	elseif IsDefender(unitName) then
