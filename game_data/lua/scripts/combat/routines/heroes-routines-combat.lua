@@ -3,6 +3,28 @@
 ---------------------------------------------------------------------------------------------------------------------------------------------
 -- HAVEN
 
+function Routine_BallistaRandomSalvo(side, hero)
+    -- print("Trigger ballista random shoot !")
+    local n = 1 + trunc(GetUnitMaxManaPoints(hero) * 0.025)
+    for i = 1,n do
+        RandomShoot_Ballista(side)
+        sleep(600)
+    end
+    COMBAT_PAUSE = 0
+end
+
+function Routine_ArchersMoveFirst(side, hero)
+    -- print("Trigger archers atb boost !")
+    SetATB_CreatureTypes(side, {CREATURE_ARCHER,CREATURE_MARKSMAN,CREATURE_LONGBOWMAN}, ATB_INSTANT)
+    COMBAT_PAUSE = 0
+end
+
+function Routine_CastPrayer(side, hero)
+    -- print("Trigger cast Prayer !")
+    HeroCast_Global(hero, SPELL_PRAYER, NO_COST)
+    COMBAT_PAUSE = 0
+end
+
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -226,6 +248,9 @@ COMBAT_PREPART_HERO_ROUTINES = {
 
 COMBAT_START_HERO_ROUTINES = {
     -- haven
+    [H_VITTORIO] = Routine_BallistaRandomSalvo,
+    [H_DOUGAL] = Routine_ArchersMoveFirst,
+    [H_FREYDA] = Routine_CastPrayer,
     -- preserve
     -- fortress
     [H_WULFSTAN] = Routine_BallistaMoveFirst,
@@ -276,19 +301,27 @@ UNIT_DIED_HERO_ROUTINES = {
 
 
 function DoHeroSpeRoutine_CombatPrepare(side, name, id)
-    startThread(COMBAT_PREPART_HERO_ROUTINES[name], side, id)
+    if COMBAT_PREPART_HERO_ROUTINES[name] then
+        startThread(COMBAT_PREPART_HERO_ROUTINES[name], side, id)
+    end
 end
 
 function DoHeroSpeRoutine_CombatStart(side, name, id)
-    startThread(COMBAT_START_HERO_ROUTINES[name], side, id)
+    if COMBAT_START_HERO_ROUTINES[name] then
+        startThread(COMBAT_START_HERO_ROUTINES[name], side, id)
+    end
 end
 
 function DoHeroSpeRoutine_CombatTurn(side, name, id)
-    startThread(COMBAT_TURN_HERO_ROUTINES[name], side, id)
+    if COMBAT_TURN_HERO_ROUTINES[name] then
+        startThread(COMBAT_TURN_HERO_ROUTINES[name], side, id)
+    end
 end
 
 function DoHeroSpeRoutine_UnitDied(side, name, id, unit)
-    startThread(UNIT_DIED_HERO_ROUTINES[name], side, id, unit)
+    if UNIT_DIED_HERO_ROUTINES[name] then
+        startThread(UNIT_DIED_HERO_ROUTINES[name], side, id, unit)
+    end
 end
 
 

@@ -1,32 +1,10 @@
 
-function Routine_BallistaRandomSalvo(side, hero)
-    -- print("Trigger ballista random shoot !")
-    local n = 1 + trunc(GetUnitMaxManaPoints(hero) * 0.025)
-    for i = 1,n do
-        RandomShoot_Ballista(side)
-        sleep(600)
-    end
-    COMBAT_PAUSE = 0
-end
-
-function Routine_ArchersMoveFirst(side, hero)
-    -- print("Trigger archers atb boost !")
-    SetATB_CreatureTypes(side, {CREATURE_ARCHER,CREATURE_MARKSMAN,CREATURE_LONGBOWMAN}, ATB_INSTANT)
-    COMBAT_PAUSE = 0
-end
-
 function Routine_BlessGriffins(side, hero)
     -- print("Trigger spells on griffins !")
     HeroCast_TargetCreatureTypes(hero, SPELL_DEFLECT_ARROWS, FREE_MANA, side, {CREATURE_GRIFFIN,CREATURE_ROYAL_GRIFFIN,CREATURE_BATTLE_GRIFFIN})
     sleep(600)
     HeroCast_TargetCreatureTypes(hero, SPELL_BLESS, FREE_MANA, side, {CREATURE_GRIFFIN,CREATURE_ROYAL_GRIFFIN,CREATURE_BATTLE_GRIFFIN})
     sleep(600)
-    COMBAT_PAUSE = 0
-end
-
-function Routine_CastPrayer(side, hero)
-    -- print("Trigger cast Prayer !")
-    HeroCast_Global(hero, SPELL_PRAYER, NO_COST)
     COMBAT_PAUSE = 0
 end
 
