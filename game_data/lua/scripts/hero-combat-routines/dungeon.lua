@@ -30,14 +30,6 @@ function Routine_CastConjurePhoenix(side, hero)
     COMBAT_PAUSE = 0
 end
 
-function Routine_CastRandomLightningBolt2(side, hero)
-    -- print("Trigger cast lightning bolt !")
-    if CURRENT_UNIT == hero then
-        HeroCast_RandomCreature(hero, SPELL_LIGHTNING_BOLT, FREE_MANA, 1-side)
-    end
-    COMBAT_PAUSE = 0
-end
-
 
 DUNGEON_COMBAT_PREPARE = {
     [H_SORGAL] = NoneRoutine,

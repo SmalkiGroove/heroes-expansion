@@ -1,17 +1,5 @@
 GOBLIN_AMOUNT = 0
 
-function Routine_CastCallOfBlood(side, hero)
-    -- print("Trigger call of blood !")
-    HeroCast_TargetCreatureTypes(hero, SPELL_WARCRY_CALL_OF_BLOOD, FREE_MANA, side, {CREATURE_ORC_WARRIOR,CREATURE_ORC_SLAYER,CREATURE_ORC_WARMONGER})
-    COMBAT_PAUSE = 0
-end
-
-function Routine_CastBattlecry(side, hero)
-    -- print("Trigger battlecry !")
-    HeroCast_Global(hero, SPELL_WARCRY_BATTLECRY, FREE_MANA)
-    COMBAT_PAUSE = 0
-end
-
 function Routine_CastHordeAnger(side, hero)
     -- print("Trigger horde's anger !")
     if GetUnitManaPoints(hero) >= 10 then
@@ -37,12 +25,6 @@ function Routine_GetMaxGoblinStack(side, hero)
             end
         end
     end
-    COMBAT_PAUSE = 0
-end
-
-function Routine_CastRallingCry(side, hero)
-    -- print("Trigger ralling cry !")
-    HeroCast_Global(hero, SPELL_WARCRY_RALLING_CRY, FREE_MANA)
     COMBAT_PAUSE = 0
 end
 
@@ -73,46 +55,10 @@ function Routine_SummonMatron(side, hero)
     COMBAT_PAUSE = 0
 end
 
-function Routine_CyclopsMoveNext(side, hero)
-    -- print("Trigger cyclops play next !")
-    if CURRENT_UNIT == hero then
-        SetATB_CreatureTypes(side, {CREATURE_CYCLOP,CREATURE_CYCLOP_UNTAMED,CREATURE_CYCLOP_BLOODEYED}, ATB_NEXT)
-    end
-    COMBAT_PAUSE = 0
-end
-
-function Routine_SummonGoblinStack(side, hero)
-    -- print("Trigger summon goblins !")
-    if CURRENT_UNIT == hero then
-        local amount = trunc(GOBLIN_AMOUNT * 0.1)
-        SummonCreatureStack(side, CREATURE_GOBLIN, amount)
-    end
-    COMBAT_PAUSE = 0
-end
-
 function Routine_BallistaRandomShoot2(side, hero)
     -- print("Trigger ballista random shoot !")
     if CURRENT_UNIT == hero then
         RandomShoot_Ballista(side)
-    end
-    COMBAT_PAUSE = 0
-end
-
-function Routine_ShamansManaRegen(side, hero)
-    -- print("Trigger shamans mana !")
-    if CURRENT_UNIT_SIDE == side then
-        local type = GetCreatureType(CURRENT_UNIT)
-        if type == CREATURE_SHAMAN or type == CREATURE_SHAMAN_WITCH or type == CREATURE_SHAMAN_HAG then
-            local n = trunc(GetUnitMaxManaPoints(hero) * 0.1)
-            local m = GetUnitManaPoints(CURRENT_UNIT)
-            SetMana(CURRENT_UNIT, m + n)
-            if m + n >= 30 then
-                if type == CREATURE_SHAMAN then UnitCastAimedSpell(CURRENT_UNIT,SPELL_DISPEL,CURRENT_UNIT) end
-                if type == CREATURE_SHAMAN_WITCH then UnitCastAimedSpell(CURRENT_UNIT,SPELL_STONESKIN,CURRENT_UNIT) end
-                if type == CREATURE_SHAMAN_HAG then UnitCastAimedSpell(CURRENT_UNIT,SPELL_DEFLECT_ARROWS,CURRENT_UNIT) end
-                SetATB_ID(CURRENT_UNIT, ATB_INSTANT)
-            end
-        end
     end
     COMBAT_PAUSE = 0
 end
@@ -162,20 +108,16 @@ STRONGHOLD_COMBAT_PREPARE = {
 }
 
 STRONGHOLD_COMBAT_START = {
-    [H_TELSEK] = Routine_CastCallOfBlood,
     [H_GORSHAK] = NoneRoutine,
-    [H_GOTAI] = Routine_CastBattlecry,
     [H_AZAR] = Routine_CastHordeAnger,
     [H_MATEWA] = NoneRoutine,
     [H_KUNYAK] = NoneRoutine,
     [H_KRAGH] = Routine_CastPowerfulBlowCentaur,
     [H_KILGHAN] = Routine_GetMaxGoblinStack,
-    [H_CRAGHACK] = Routine_CastRallingCry,
     [H_KRAAL] = Routine_BallistaRandomShoot,
     [H_SHAKKARUKAT] = NoneRoutine,
     [H_KUJIN] = NoneRoutine,
     [H_SHIVA] = Routine_ShamanCastPowerFeed,
-    [H_MUKHA] = Routine_CastLightningSpell,
     [H_HAGGASH] = NoneRoutine,
     [H_URGHAT] = NoneRoutine,
     [H_GARUNA] = NoneRoutine,
@@ -191,7 +133,6 @@ STRONGHOLD_COMBAT_TURN = {
     [H_MATEWA] = Routine_CyclopsMoveNext,
     [H_KUNYAK] = NoneRoutine,
     [H_KRAGH] = NoneRoutine,
-    [H_KILGHAN] = Routine_SummonGoblinStack,
     [H_CRAGHACK] = NoneRoutine,
     [H_KRAAL] = Routine_BallistaRandomShoot2,
     [H_SHAKKARUKAT] = NoneRoutine,

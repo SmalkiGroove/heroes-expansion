@@ -404,6 +404,62 @@ end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 -- STRONGHOLD
 
+function Routine_CastRallingCry(side, hero)
+    -- print("Trigger ralling cry !")
+    HeroCast_Global(hero, SPELL_WARCRY_RALLING_CRY, FREE_MANA)
+    COMBAT_PAUSE = 0
+end
+
+function Routine_CastBattlecry(side, hero)
+    -- print("Trigger battlecry !")
+    HeroCast_Global(hero, SPELL_WARCRY_BATTLECRY, FREE_MANA)
+    COMBAT_PAUSE = 0
+end
+
+function Routine_CastCallOfBlood(side, hero)
+    -- print("Trigger call of blood !")
+    HeroCast_TargetCreatureTypes(hero, SPELL_WARCRY_CALL_OF_BLOOD, FREE_MANA, side, {CREATURE_ORC_WARRIOR,CREATURE_ORC_SLAYER,CREATURE_ORC_WARMONGER})
+    COMBAT_PAUSE = 0
+end
+
+function Routine_SummonGoblinStack(side, hero)
+    -- print("Trigger summon goblins !")
+    if CURRENT_UNIT == hero then
+        local amount = trunc(GOBLIN_AMOUNT * 0.1)
+        SummonCreatureStack(side, CREATURE_GOBLIN, amount)
+    end
+    COMBAT_PAUSE = 0
+end
+
+function Routine_HealingTentMoveNext(side, hero)
+    -- print("Trigger healing tent play next !")
+    if CURRENT_UNIT == hero then
+        SetATB_WarMachineType(side, WAR_MACHINE_FIRST_AID_TENT, ATB_NEXT)
+    end
+    COMBAT_PAUSE = 0
+end
+
+function Routine_ShamansManaRegen(side, hero)
+    -- print("Trigger shamans mana !")
+    if CURRENT_UNIT_SIDE == side then
+        local type = GetCreatureType(CURRENT_UNIT)
+        if type == CREATURE_SHAMAN or type == CREATURE_SHAMAN_WITCH or type == CREATURE_SHAMAN_HAG then
+            local n = trunc(GetUnitMaxManaPoints(hero) * 0.1)
+            local m = GetUnitManaPoints(CURRENT_UNIT)
+            SetMana(CURRENT_UNIT, m + n)
+        end
+    end
+    COMBAT_PAUSE = 0
+end
+
+function Routine_CastRandomLightningBolt(side, hero)
+    -- print("Trigger cast lightning bolt !")
+    if CURRENT_UNIT == hero then
+        HeroCast_RandomCreature(hero, SPELL_LIGHTNING_BOLT, FREE_MANA, 1-side)
+    end
+    COMBAT_PAUSE = 0
+end
+
 
 
 
@@ -448,6 +504,9 @@ COMBAT_START_HERO_ROUTINES = {
     -- inferno
     [H_DELEB] = Routine_CastMineFields,
     -- stronghold
+    [H_KRAGH] = Routine_CastRallingCry,
+    [H_GOTAI] = Routine_CastBattlecry,
+    [H_TELSEK] = Routine_CastCallOfBlood,
 }
 
 COMBAT_TURN_HERO_ROUTINES = {
@@ -468,6 +527,10 @@ COMBAT_TURN_HERO_ROUTINES = {
     [H_MALUSTAR] = Routine_DemonicCreatureExplosion,
     [H_CALID] = Routine_CastRandomFireball,
     -- stronghold
+    [H_KILGHAN] = Routine_SummonGoblinStack,
+    [H_ZOULEIKA] = Routine_HealingTentMoveNext,
+    [H_KUJIN] = Routine_ShamansManaRegen,
+    [H_MUKHA] = Routine_CastRandomLightningBolt,
 }
 
 UNIT_DIED_HERO_ROUTINES = {
