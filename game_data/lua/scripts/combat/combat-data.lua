@@ -17,6 +17,10 @@ UNIT_SIDE_PREFIX = {
     [1] = "defender"
 }
 
+ROUTINE_VARS = {
+    ["avatar-id"] = "none"
+    ["calid-atb"] = nil,
+}
 
 -- print("Loaded combat-data.lua")
 ROUTINES_LOADED[8] = 1

@@ -1,30 +1,6 @@
 
 AVATAR_OF_DEATH_ID = "none"
 
-function Routine_SummonAndKillEnnemySkeleton(side, hero)
-    -- print("Trigger summon and kill skeleton !")
-    local n = length(GetUnits(1-side, CREATURE))
-    SummonCreatureStack_X(1-side, CREATURE_SKELETON, 1, 6)
-    repeat sleep(10) until length(GetUnits(1-side, CREATURE)) == n + 1
-    HeroCast_Target(hero, SPELL_MAGIC_ARROW, FREE_MANA, GetUnits(1-side, CREATURE)[n])
-    COMBAT_PAUSE = 0
-end
-
-function Routine_SummonAvatarOfDeath(side, hero)
-    -- print("Trigger summon avatar of death !")
-    local units = GetUnits(side, CREATURE)
-    HeroCast_Global(hero, SPELL_ABILITY_AVATAR_OF_DEATH, FREE_MANA)
-    sleep(100)
-    AVATAR_OF_DEATH_ID = GetUnits(side, CREATURE)[length(units)]
-    COMBAT_PAUSE = 0
-end
-
-function Routine_CastMassWeakness(side, hero)
-    -- print("Trigger cast mass weakness !")
-    HeroCast_Global(hero, SPELL_MASS_CURSE, FREE_MANA)
-    COMBAT_PAUSE = 0
-end
-
 function Routine_CastMultipleSorrow(side, hero)
     -- print("Trigger random sorrow")
     local e = GetUnits(1-side, CREATURE)
@@ -55,33 +31,6 @@ function Routine_CastRandomPlague(side, hero)
     if CURRENT_UNIT == hero then
         HeroCast_RandomCreature(hero, SPELL_PLAGUE, FREE_MANA, 1-side)
         if IsHuman(side) then SetATB_ID(hero, ATB_INSTANT) end
-    end
-    COMBAT_PAUSE = 0
-end
-
-function Routine_SummonZombieStack(side, hero)
-    -- print("Trigger summon zombies !")
-    if CURRENT_UNIT == hero then
-        local m = GetUnitManaPoints(hero)
-        if m > 0 then SummonCreatureStack(side, CREATURE_DISEASE_ZOMBIE, m) end
-    end
-    COMBAT_PAUSE = 0
-end
-
-function Routine_CastRandomIceBolt(side, hero)
-    -- print("Trigger random Ice Bolt !")
-    if CURRENT_UNIT == hero then
-        HeroCast_RandomCreature(hero, SPELL_ICE_BOLT, FREE_MANA, 1-side)
-        if IsHuman(side) then SetATB_ID(hero, ATB_INSTANT) end
-    end
-    COMBAT_PAUSE = 0
-end
-
-function Routine_AvatarDead(side, hero, unit)
-    -- print("Trigger mass Blindness on Avatar of Death's death !")
-    if unit == AVATAR_OF_DEATH_ID then
-        HeroCast_AllCreatures(hero, SPELL_BLIND, FREE_MANA, 1-side)
-        sleep(100); SetMana(hero, 10)
     end
     COMBAT_PAUSE = 0
 end

@@ -221,6 +221,63 @@ end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 -- NECROPOLIS
 
+function Routine_SummonAndKillEnnemySkeleton(side, hero)
+    -- print("Trigger summon and kill skeleton !")
+    local n = length(GetUnits(1-side, CREATURE))
+    SummonCreatureStack_X(1-side, CREATURE_SKELETON, 1, 6)
+    repeat sleep(10) until length(GetUnits(1-side, CREATURE)) == n + 1
+    HeroCast_Target(hero, SPELL_MAGIC_FIST, FREE_MANA, GetUnits(1-side, CREATURE)[n])
+    COMBAT_PAUSE = 0
+end
+
+function Routine_SummonZombieStack(side, hero)
+    -- print("Trigger summon zombies !")
+    if CURRENT_UNIT == hero then
+        local m = GetUnitManaPoints(hero)
+        if m > 0 then SummonCreatureStack(side, CREATURE_DISEASE_ZOMBIE, m) end
+    end
+    COMBAT_PAUSE = 0
+end
+
+function Routine_HealingTentMoveFirst(side, hero)
+    -- print("Trigger healing tent play first !")
+    SetATB_WarMachineType(side, WAR_MACHINE_FIRST_AID_TENT, ATB_INSTANT)
+    COMBAT_PAUSE = 0
+end
+
+function Routine_SummonAvatarOfDeath(side, hero)
+    -- print("Trigger summon avatar of death !")
+    local units = GetUnits(side, CREATURE)
+    HeroCast_Global(hero, SPELL_ABILITY_AVATAR_OF_DEATH, FREE_MANA)
+    sleep(100)
+    ROUTINE_VARS["avatar-id"] = GetUnits(side, CREATURE)[length(units)]
+    COMBAT_PAUSE = 0
+end
+
+function Routine_AvatarDead(side, hero, unit)
+    -- print("Trigger mass Blindness on Avatar of Death's death !")
+    if unit == ROUTINE_VARS["avatar-id"] then
+        HeroCast_AllCreatures(hero, SPELL_BLIND, FREE_MANA, 1-side)
+        sleep(100); SetMana(hero, 10)
+    end
+    COMBAT_PAUSE = 0
+end
+
+function Routine_CastMassWeakness(side, hero)
+    -- print("Trigger cast mass weakness !")
+    HeroCast_Global(hero, SPELL_MASS_CURSE, FREE_MANA)
+    COMBAT_PAUSE = 0
+end
+
+function Routine_CastRandomIceBolt(side, hero)
+    -- print("Trigger random Ice Bolt !")
+    if CURRENT_UNIT == hero then
+        HeroCast_RandomCreature(hero, SPELL_ICE_BOLT, FREE_MANA, 1-side)
+        if IsHuman(side) then SetATB_ID(hero, ATB_INSTANT) end
+    end
+    COMBAT_PAUSE = 0
+end
+
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -257,15 +314,14 @@ function Routine_DemonicCreatureExplosion(side, hero)
     COMBAT_PAUSE = 0
 end
 
-Var_Calid_Atb = nil
 function Routine_CastRandomFireball(side, hero)
     -- print("Trigger random Fireball !")
     if CURRENT_UNIT == hero then
         HeroCast_RandomCreatureArea(hero, SPELL_FIREBALL, FREE_MANA, 1-side)
-        RESET_HERO_ATB = not nil
-    elseif RESET_HERO_ATB then
-        RESET_HERO_ATB = nil
-        SetATB_ID(hero, 0.66)
+        ROUTINE_VARS["calid-atb"] = not nil
+    elseif ROUTINE_VARS["calid-atb"] then
+        ROUTINE_VARS["calid-atb"] = nil
+        SetATB_ID(hero, 0.6)
     end
     COMBAT_PAUSE = 0
 end
