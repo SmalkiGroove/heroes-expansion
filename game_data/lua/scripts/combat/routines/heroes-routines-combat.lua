@@ -501,6 +501,9 @@ COMBAT_START_HERO_ROUTINES = {
     [H_SYLSAI] = Routine_HeroCastRage,
     [H_SHADYA] = Routine_CastRandomDeepFrost,
     -- necropolis
+    [H_VLADIMIR] = Routine_SummonAndKillEnnemySkeleton,
+    [H_THANT] = Routine_CastMassWeakness,
+    [H_ARCHILUS] = Routine_SummonAvatarOfDeath,
     -- inferno
     [H_DELEB] = Routine_CastMineFields,
     -- stronghold
@@ -522,6 +525,8 @@ COMBAT_TURN_HERO_ROUTINES = {
     [H_SORGAL] = Routine_RidersHydraSynergy,
     [H_ERUINA] = Routine_RefreshMatronMana,
     -- necropolis
+    [H_ORSON] = Routine_SummonZombieStack,
+    [H_ORNELLA] = Routine_CastRandomIceBolt,
     -- inferno
     [H_SHELTEM] = Routine_BallistaShootUnit,
     [H_MALUSTAR] = Routine_DemonicCreatureExplosion,
@@ -542,6 +547,7 @@ UNIT_DIED_HERO_ROUTINES = {
     -- dungeon
     [H_SYLSAI] = Routine_SummonDeadEnnemyCreature,
     -- necropolis
+    [H_ARCHILUS] = Routine_AvatarDead,
     -- inferno
     -- stronghold
 }
