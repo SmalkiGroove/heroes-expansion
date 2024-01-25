@@ -30,6 +30,62 @@ end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 -- PRESERVE
 
+function Routine_HeroMoveNext(side, hero)
+    -- print("Trigger hero play next !")
+    if CURRENT_UNIT_SIDE ~= GetUnitSide(hero) then
+        local m = GetUnitMaxManaPoints(hero) + 20
+        if m > random(0, 200, COMBAT_TURN*m) then
+            SetATB_ID(hero, ATB_NEXT)
+        end
+    end
+    COMBAT_PAUSE = 0
+end
+
+function Routine_ResetAtbOnKillEnraged(side, hero, unit)
+    -- print("Trigger reset enraged atb !")
+    if GetUnitSide(unit) ~= GetUnitSide(hero) then
+        if not contains(ENRAGED_CREATURES_ELVEN_FURY, GetCreatureType(CURRENT_UNIT)) then SetATB_ID(CURRENT_UNIT, ATB_NEXT) end
+        SetATB_CreatureTypes(side, ENRAGED_CREATURES_ELVEN_FURY, ATB_INSTANT)
+    end
+    COMBAT_PAUSE = 0
+end
+
+function Routine_HunterRandomShoot(side, hero)
+    -- print("Trigger hunters random shoot !")
+    RandomShoot_CreatureTypes(side, {CREATURE_WOOD_ELF,CREATURE_GRAND_ELF,CREATURE_SHARP_SHOOTER})
+    COMBAT_PAUSE = 0
+end
+
+function Routine_CastSummonHive(side, hero)
+    -- print("Trigger summon beehives !")
+    local x = 15 - 13 * side
+    HeroCast_Area(hero, SPELL_SUMMON_HIVE, FREE_MANA, x, GRID_Y_MIN)
+    HeroCast_Area(hero, SPELL_SUMMON_HIVE, FREE_MANA, x, GRID_Y_MAX)
+    COMBAT_PAUSE = 0
+end
+
+function Routine_CastMassHaste(side, hero)
+    -- print("Trigger hero cast Mass Haste !")
+    HeroCast_Global(hero, SPELL_MASS_HASTE, FREE_MANA)
+    COMBAT_PAUSE = 0
+end
+
+function Routine_SummonDruidStack(side, hero)
+    -- print("Trigger elder druids summoning !")
+    local m = GetUnitMaxManaPoints(hero) * 0.1
+    local amount = trunc(0.5 * m * m)
+    SummonCreatureStack_X(side, CREATURE_DRUID_ELDER, amount, 0)
+    COMBAT_PAUSE = 0
+end
+
+function Routine_DruidsMoveNext(side, hero)
+    -- print("Trigger druids play next !")
+    if CURRENT_UNIT == hero then
+        SetATB_CreatureTypes(side, {CREATURE_DRUID,CREATURE_DRUID_ELDER,CREATURE_HIGH_DRUID}, ATB_NEXT)
+    end
+    COMBAT_PAUSE = 0
+end
+
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -354,6 +410,7 @@ end
 COMBAT_PREPART_HERO_ROUTINES = {
     -- haven
     -- preserve
+    [H_TIERU] = Routine_SummonDruidStack,
     -- fortress
     [H_BRAND] = Routine_CastFireWalls,
     -- academy
@@ -370,6 +427,8 @@ COMBAT_START_HERO_ROUTINES = {
     [H_DOUGAL] = Routine_ArchersMoveFirst,
     [H_FREYDA] = Routine_CastPrayer,
     -- preserve
+    [H_FINDAN] = Routine_HunterRandomShoot,
+    [H_VINRAEL] = Routine_CastMassHaste,
     -- fortress
     [H_WULFSTAN] = Routine_BallistaMoveFirst,
     [H_KARLI] = Routine_SkirmishersRandomShoot,
@@ -394,6 +453,8 @@ COMBAT_START_HERO_ROUTINES = {
 COMBAT_TURN_HERO_ROUTINES = {
     -- haven
     -- preserve
+    [H_JENOVA] = Routine_HeroMoveNext,
+    [H_TIERU] = Routine_DruidsMoveNext,
     -- fortress
     -- academy
     [H_NATHIR] = Routine_BallistaMoveNext,
@@ -412,6 +473,7 @@ COMBAT_TURN_HERO_ROUTINES = {
 UNIT_DIED_HERO_ROUTINES = {
     -- haven
     -- preserve
+    [H_TALANAR] = Routine_ResetAtbOnKillEnraged,
     -- fortress
     -- academy
     -- dungeon

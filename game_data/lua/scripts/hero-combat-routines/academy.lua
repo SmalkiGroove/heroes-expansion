@@ -27,14 +27,6 @@ function Routine_CastMultipleVulnerability(side, hero)
     COMBAT_PAUSE = 0
 end
 
-function Routine_CastSummonHive(side, hero)
-    -- print("Trigger summon beehives !")
-    local x = 15 - 13 * side
-    HeroCast_Area(hero, SPELL_SUMMON_HIVE, FREE_MANA, x, GRID_Y_MIN)
-    HeroCast_Area(hero, SPELL_SUMMON_HIVE, FREE_MANA, x, GRID_Y_MAX)
-    COMBAT_PAUSE = 0
-end
-
 function Routine_CastRandomSlow(side, hero)
     -- print("Trigger random Slow !")
     if CURRENT_UNIT == hero and GetUnitManaPoints(hero) >= 20 then

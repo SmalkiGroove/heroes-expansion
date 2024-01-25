@@ -18,26 +18,6 @@ function Routine_CastBloodlustEnraged(side, hero)
     COMBAT_PAUSE = 0
 end
 
-function Routine_HunterRandomShoot(side, hero)
-    -- print("Trigger hunters random shoot !")
-    RandomShoot_CreatureTypes(side, {CREATURE_WOOD_ELF,CREATURE_GRAND_ELF,CREATURE_SHARP_SHOOTER})
-    COMBAT_PAUSE = 0
-end
-
-function Routine_SummonDruidStack(side, hero)
-    -- print("Trigger elder druids summoning !")
-    local m = GetUnitMaxManaPoints(hero) * 0.1
-    local amount = trunc(0.5 * m * m)
-    SummonCreatureStack_X(side, CREATURE_DRUID_ELDER, amount, 0)
-    COMBAT_PAUSE = 0
-end
-
-function Routine_CastMassHaste(side, hero)
-    -- print("Trigger hero cast Mass Haste !")
-    HeroCast_Global(hero, SPELL_MASS_HASTE, FREE_MANA)
-    COMBAT_PAUSE = 0
-end
-
 function Routine_SiphonEnnemyMana(side, hero)
     -- print("Trigger siphon mana !")
     local hero_cur_mana = GetUnitManaPoints(hero)
@@ -57,39 +37,11 @@ function Routine_SiphonEnnemyMana(side, hero)
     COMBAT_PAUSE = 0
 end
 
-function Routine_HeroMoveNext(side, hero)
-    -- print("Trigger hero play next !")
-    if CURRENT_UNIT_SIDE ~= GetUnitSide(hero) then
-        local m = GetUnitMaxManaPoints(hero) + 20
-        if m > random(0, 200, COMBAT_TURN*m) then
-            SetATB_ID(hero, ATB_NEXT)
-        end
-    end
-    COMBAT_PAUSE = 0
-end
-
 function Routine_SummonWolfStack(side, hero)
     -- print("Trigger spawn wolves pack !")
     if CURRENT_UNIT == hero then
         local amount = trunc(GetUnitManaPoints(hero) * 0.34)
         if amount > 0 then SummonCreatureStack(side, CREATURE_WOLF, amount) end
-    end
-    COMBAT_PAUSE = 0
-end
-
-function Routine_DruidsMoveNext(side, hero)
-    -- print("Trigger druids play next !")
-    if CURRENT_UNIT == hero then
-        SetATB_CreatureTypes(side, {CREATURE_DRUID,CREATURE_DRUID_ELDER,CREATURE_HIGH_DRUID}, ATB_NEXT)
-    end
-    COMBAT_PAUSE = 0
-end
-
-function Routine_ResetAtbOnKillEnraged(side, hero, unit)
-    -- print("Trigger reset enraged atb !")
-    if GetUnitSide(unit) ~= GetUnitSide(hero) then
-        if not contains(ENRAGED_CREATURES_ELVEN_FURY, GetCreatureType(CURRENT_UNIT)) then SetATB_ID(CURRENT_UNIT, ATB_NEXT) end
-        SetATB_CreatureTypes(side, ENRAGED_CREATURES_ELVEN_FURY, ATB_INSTANT)
     end
     COMBAT_PAUSE = 0
 end
@@ -119,18 +71,15 @@ SYLVAN_COMBAT_START = {
     [H_WYNGAAL] = NoneRoutine,
     [H_ANWEN] = Routine_AngerTreantsAbility,
     [H_TALANAR] = Routine_CastBloodlustEnraged,
-    [H_OSSIR] = Routine_HunterRandomShoot,
     [H_FINDAN] = NoneRoutine,
     [H_JENOVA] = NoneRoutine,
     [H_GILRAEN] = NoneRoutine,
     [H_KYRRE] = NoneRoutine,
     [H_IVOR] = NoneRoutine,
     [H_MEPHALA] = NoneRoutine,
-    [H_ALARON] = Routine_SummonDruidStack,
     [H_DIRAEL] = NoneRoutine,
     [H_VINRAEL] = NoneRoutine,
     [H_YLTHIN] = NoneRoutine,
-    [H_TIERU] = Routine_CastMassHaste,
     [H_GEM] = Routine_SiphonEnnemyMana,
     [H_ELLESHAR] = NoneRoutine,
 }
@@ -140,13 +89,11 @@ SYLVAN_COMBAT_TURN = {
     [H_ANWEN] = NoneRoutine,
     [H_TALANAR] = NoneRoutine,
     [H_OSSIR] = NoneRoutine,
-    [H_FINDAN] = Routine_HeroMoveNext,
     [H_JENOVA] = NoneRoutine,
     [H_GILRAEN] = NoneRoutine,
     [H_KYRRE] = NoneRoutine,
     [H_IVOR] = Routine_SummonWolfStack,
     [H_MEPHALA] = NoneRoutine,
-    [H_ALARON] = Routine_DruidsMoveNext,
     [H_DIRAEL] = NoneRoutine,
     [H_VINRAEL] = NoneRoutine,
     [H_YLTHIN] = NoneRoutine,
@@ -158,7 +105,6 @@ SYLVAN_COMBAT_TURN = {
 SYLVAN_UNIT_DIED = {
     [H_WYNGAAL] = NoneRoutine,
     [H_ANWEN] = NoneRoutine,
-    [H_TALANAR] = Routine_ResetAtbOnKillEnraged,
     [H_OSSIR] = NoneRoutine,
     [H_FINDAN] = NoneRoutine,
     [H_JENOVA] = NoneRoutine,
