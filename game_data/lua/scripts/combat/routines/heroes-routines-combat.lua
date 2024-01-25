@@ -226,6 +226,67 @@ end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 -- INFERNO
 
+function Routine_BallistaShootUnit(side, hero)
+    -- print("Trigger fireball ballista shoot !")
+    if CURRENT_UNIT == UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_BALLISTA' then
+        SetATB_ID(CURRENT_UNIT, ATB_ZERO)
+    elseif CURRENT_UNIT_SIDE ~= side then
+        if IsCreature(CURRENT_UNIT) then
+            local m = GetUnitManaPoints(hero)
+            if m > 3 then
+                TargetShoot_Ballista(side, CURRENT_UNIT)
+                SetMana(unit, m-3)
+            end
+        end
+    end
+    COMBAT_PAUSE = 0
+end
+
+function Routine_DemonicCreatureExplosion(side, hero)
+    -- print("Trigger creature explosion !")
+    if CURRENT_UNIT_SIDE == side then
+        if IsCreature(CURRENT_UNIT) then
+            local id = GetCreatureType(CURRENT_UNIT)
+            if CREATURES[id][1] == INFERNO then
+                local x,y = GetUnitPosition(CURRENT_UNIT)
+                UnitCastAreaSpell(CURRENT_UNIT, SPELL_ABILITY_EXPLOSION, x, y)
+                SetATB_ID(CURRENT_UNIT, ATB_INSTANT)
+            end
+        end
+    end
+    COMBAT_PAUSE = 0
+end
+
+Var_Calid_Atb = nil
+function Routine_CastRandomFireball(side, hero)
+    -- print("Trigger random Fireball !")
+    if CURRENT_UNIT == hero then
+        HeroCast_RandomCreatureArea(hero, SPELL_FIREBALL, FREE_MANA, 1-side)
+        RESET_HERO_ATB = not nil
+    elseif RESET_HERO_ATB then
+        RESET_HERO_ATB = nil
+        SetATB_ID(hero, 0.66)
+    end
+    COMBAT_PAUSE = 0
+end
+
+function Routine_CastMineFields(side, hero)
+    -- print("Trigger mine fields !")
+    local x = 12 - 9 * side
+    HeroCast_Area(hero, SPELL_LAND_MINE, FREE_MANA, x, 9)
+    HeroCast_Area(hero, SPELL_LAND_MINE, FREE_MANA, x, 4)
+    COMBAT_PAUSE = 0
+end
+
+function Routine_SummonPitlords(side, hero)
+    -- print("Trigger pit lords summoning !")
+    local m = GetUnitMaxManaPoints(hero) * 0.1
+    local amount = trunc(0.1 * m * m)
+    SummonCreatureStack_X(side, CREATURE_BALOR, amount, 0)
+    SummonCreatureStack_X(side, CREATURE_BALOR, amount, 0)
+    COMBAT_PAUSE = 0
+end
+
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -243,6 +304,7 @@ COMBAT_PREPART_HERO_ROUTINES = {
     -- dungeon
     -- necropolis
     -- inferno
+    [H_KHABELETH] = Routine_SummonPitlords,
     -- stronghold
 }
 
@@ -269,6 +331,7 @@ COMBAT_START_HERO_ROUTINES = {
     [H_SHADYA] = Routine_CastRandomDeepFrost,
     -- necropolis
     -- inferno
+    [H_DELEB] = Routine_CastMineFields,
     -- stronghold
 }
 
@@ -284,6 +347,9 @@ COMBAT_TURN_HERO_ROUTINES = {
     [H_ERUINA] = Routine_RefreshMatronMana,
     -- necropolis
     -- inferno
+    [H_SHELTEM] = Routine_BallistaShootUnit,
+    [H_MALUSTAR] = Routine_DemonicCreatureExplosion,
+    [H_CALID] = Routine_CastRandomFireball,
     -- stronghold
 }
 
