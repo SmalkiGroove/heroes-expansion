@@ -12,49 +12,9 @@ function Routine_InvokeBladeBarriers(side, hero)
     COMBAT_PAUSE = 0
 end
 
-function Routine_CastVampirismOnWitches(side, hero)
-    -- print("Trigger cast Vampirism !")
-    local w = {}
-    for i,cr in GetUnits(side, CREATURE) do
-        local type = GetCreatureType(CURRENT_UNIT)
-        if type == CREATURE_WITCH or type == CREATURE_BLOOD_WITCH or type == CREATURE_BLOOD_WITCH_2 then
-            insert(w, cr)
-        end
-    end
-    local m = trunc(GetUnitMaxManaPoints(hero) * 0.01)
-    local n = min(length(w), 1 + m)
-    for i = 1,n do
-        HeroCast_Target(hero, SPELL_VAMPIRISM, FREE_MANA, w[i])
-    end
-    COMBAT_PAUSE = 0
-end
-
-function Routine_ScoutsMoveFirst(side, hero)
-    -- print("Trigger scouts play first !")
-    SetATB_CreatureTypes(side, {CREATURE_SCOUT,CREATURE_ASSASSIN,CREATURE_STALKER}, ATB_INSTANT)
-    COMBAT_PAUSE = 0
-end
-
 function Routine_HeroMoveFirst(side, hero)
     -- print("Trigger hero play first !")
     SetATB_ID(hero, ATB_INSTANT)
-    COMBAT_PAUSE = 0
-end
-
-function Routine_HeroCastRage(side, hero)
-    -- print("Trigger hero cast rage")
-    local ennemies = GetUnits(1-side, CREATURE)
-    local m = trunc(GetUnitMaxManaPoints(hero) * 0.02)
-    local n = min(length(ennemies), m)
-    for i = 1,n do
-        HeroCast_Target(hero, SPELL_BERSERK, FREE_MANA, ennemies[i-1])
-    end
-    COMBAT_PAUSE = 0
-end
-
-function Routine_CastRandomDeepFrost(side, hero)
-    -- print("Trigger cast deep frost !")
-    HeroCast_RandomCreature(hero, SPELL_DEEP_FREEZE, FREE_MANA, 1-side)
     COMBAT_PAUSE = 0
 end
 
@@ -70,57 +30,10 @@ function Routine_CastConjurePhoenix(side, hero)
     COMBAT_PAUSE = 0
 end
 
-function Routine_RidersHydraSynergy(side, hero)
-    -- print("Trigger riders boost hydras atb !")
-    if CURRENT_UNIT_SIDE == side then
-        local type = GetCreatureType(CURRENT_UNIT)
-        if type == CREATURE_RIDER or type == CREATURE_RAVAGER or type == CREATURE_BLACK_RIDER then
-            local r = 20 + trunc(GetUnitMaxManaPoints(hero) * 0.2)
-            if random(0, 100, COMBAT_TURN) <= r then
-                SetATB_CreatureTypes(side, {CREATURE_HYDRA,CREATURE_CHAOS_HYDRA,CREATURE_ACIDIC_HYDRA}, ATB_NEXT)
-            end
-        end
-    end
-    COMBAT_PAUSE = 0
-end
-
-function Routine_MinotaursMoveNext(side, hero)
-    -- print("Trigger minotaurs play next !")
-    if CURRENT_UNIT == hero then
-        SetATB_CreatureTypes(side, {CREATURE_MINOTAUR,CREATURE_MINOTAUR_KING,CREATURE_MINOTAUR_CAPTAIN}, ATB_NEXT)
-    end
-    COMBAT_PAUSE = 0
-end
-
-function Routine_RefreshMatronMana(side, hero)
-    -- print("Trigger refresh shadow witches mana !")
-    if CURRENT_UNIT == hero then
-        for i,cr in GetUnits(side, CREATURE) do
-            local type = GetCreatureType(cr)
-            if type == CREATURE_MATRON or type == CREATURE_MATRIARCH or type == CREATURE_SHADOW_MISTRESS then
-                local m = GetUnitMaxManaPoints(cr)
-                SetMana(cr, m)
-            end
-        end
-    end
-    COMBAT_PAUSE = 0
-end
-
 function Routine_CastRandomLightningBolt2(side, hero)
     -- print("Trigger cast lightning bolt !")
     if CURRENT_UNIT == hero then
         HeroCast_RandomCreature(hero, SPELL_LIGHTNING_BOLT, FREE_MANA, 1-side)
-    end
-    COMBAT_PAUSE = 0
-end
-
-function Routine_SummonDeadEnnemyCreature(side, hero, unit)
-    -- print("Trigger revive ennemy creature !")
-    if CURRENT_UNIT_SIDE ~= side then
-        local type = GetCreatureType(unit)
-        local x,y = GetUnitPosition(unit)
-        local amount = trunc(GetUnitMaxManaPoints(hero) * 0.1)
-        SummonCreatureStack_XY(side, type, amount, x, y)
     end
     COMBAT_PAUSE = 0
 end
