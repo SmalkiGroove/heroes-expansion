@@ -10,24 +10,6 @@ THREAD_LIMIT = 50
 THREAD_STATE = 0
 THREAD_FINISHER = THREAD_LIMIT
 
-GRID_X_MIN = 2
-GRID_X_MAX = 15
-GRID_Y_MIN = 1
-GRID_Y_MAX = 12
-
-NO_COST = 0
-FREE_MANA = 99
-
-ATB_INSTANT = 1
-ATB_NEXT = 0.99
-ATB_HALF = 0.5
-ATB_ZERO = 0
-
-UNIT_SIDE_PREFIX = {
-    [0] = "attacker",
-    [1] = "defender"
-}
-
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -84,7 +66,7 @@ end
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 function ManageCombatPrepare()
-    print("Manage combat prepare")
+    -- print("$ Manage combat prepare")
     CheckEnableScript()
     if ENABLE_SCRIPT == 0 then return end
 
@@ -99,7 +81,7 @@ function ManageCombatPrepare()
 end
 
 function ManageCombatStart()
-    print("Manage combat start")
+    -- print("$ Manage combat start")
     if ENABLE_SCRIPT == 0 then return end
 
     Pause()
@@ -113,7 +95,7 @@ function ManageCombatStart()
 end
 
 function ManageCombatTurn(unit)
-    print("Manage combat turn")
+    -- print("$ Manage combat turn")
     if ENABLE_SCRIPT == 0 then return end
 
     if CURRENT_UNIT ~= unit then
@@ -133,7 +115,7 @@ function ManageCombatTurn(unit)
 end
 
 function ManageUnitDeath(unit)
-    print("Manage unit death")
+    -- print("$ Manage unit death")
     if ENABLE_SCRIPT == 0 then return end
 
     Pause()
@@ -150,61 +132,10 @@ end
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-function GetHeroLevel(hero) return HERO_DATA[hero][0] end
-function GetHeroAttack(hero) return HERO_DATA[hero][1] end
-function GetHeroDefense(hero) return HERO_DATA[hero][2] end
-function GetHeroSpellpower(hero) return HERO_DATA[hero][3] end
-function GetHeroKnowledge(hero) return HERO_DATA[hero][4] end
-function GetHeroMorale(hero) return HERO_DATA[hero][5] end
-function GetHeroLuck(hero) return HERO_DATA[hero][6] end
-
-function RandomCreature(side, seed)
-    local creatures = GetUnits(side, CREATURE)
-    local stacks = length(creatures)
-    local target = 0
-    if stacks >= 2 then target = random(0,stacks-1,seed) end
-    return creatures[target]
-end
-
-function SetMana(unit,mana)
-    repeat
-        SetUnitManaPoints(unit,mana)
-        sleep(1)
-    until GetUnitManaPoints(unit) == mana
-end
-
-function DoCastTargetSpell(unit,spell,mana,target)
-    repeat sleep(1) until GetUnitManaPoints(unit) >= mana
-	UnitCastAimedSpell(unit,spell,target)
-	THREAD_STATE = 1
-end
-
-function DoCastAreaSpell(unit,spell,mana,x,y)
-    repeat sleep(1) until GetUnitManaPoints(unit) >= mana
-	UnitCastAreaSpell(unit,spell,x,y)
-	THREAD_STATE = 1
-end
-
-function DoCastGlobalSpell(unit,spell,mana)
-    repeat sleep(1) until GetUnitManaPoints(unit) >= mana
-	UnitCastGlobalSpell(unit,spell)
-	THREAD_STATE = 1
-end
-
------------------------------------------------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------------------------------------------
-
 ROUTINES_LOADED = {
-	[0] = 0,
-	[1] = 0,
-	[2] = 0,
-	[3] = 0,
-	[4] = 0,
-	[5] = 0,
-	[6] = 0,
-	[7] = 0,
-	[8] = 0,
+	[1] = 0, [2] = 0, [3] = 0, [4] = 0, [5] = 0,
+	[6] = 0, [7] = 0, [8] = 0, [9] = 0, [10]= 0,
+    [11]= 0, [12]= 0, [13]= 0, [14]= 0, [15]= 0,
 }
 
 function LoadScript(path, key)
@@ -218,5 +149,7 @@ LoadScript("/scripts/game/spells.lua", 2)
 LoadScript("/scripts/game/skills.lua",3)
 LoadScript("/scripts/game/artifacts.lua", 4)
 LoadScript("/scripts/game/heroes.lua", 5)
-LoadScript("/scripts/combat/handlers/game-vars.lua", 6)
-LoadScript("/scripts/hero-combat-routines/_common.lua", 8)
+LoadScript("/scripts/combat/combat-data.lua", 8)
+LoadScript("/scripts/combat/combat-utils.lua", 9)
+LoadScript("/scripts/combat/routines/heroes-routines-combat.lua", 11)
+LoadScript("/scripts/combat/handlers/game-vars.lua", 15)
