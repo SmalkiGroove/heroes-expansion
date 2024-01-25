@@ -13,6 +13,49 @@
 ---------------------------------------------------------------------------------------------------------------------------------------------
 -- FORTRESS
 
+function Routine_BallistaMoveFirst(side, hero)
+    -- print("Trigger ballista play first !")
+    SetATB_WarMachineType(side, WAR_MACHINE_BALLISTA, ATB_INSTANT)
+    COMBAT_PAUSE = 0
+end
+
+function Routine_SkirmishersRandomShoot(side, hero)
+    -- print("Trigger spearwielders random shoot !")
+    RandomShoot_CreatureTypes(side, {CREATURE_AXE_FIGHTER,CREATURE_AXE_THROWER,CREATURE_HARPOONER})
+    COMBAT_PAUSE = 0
+end
+
+function Routine_ThanesAbility(side, hero)
+    -- print("Trigger Thanes ability !")
+    CreatureTypesAbility_RandomTarget(side, 1-side, {CREATURE_WARLORD}, SPELL_ABILITY_FLAMESTRIKE)
+    CreatureTypesAbility_RandomTarget(side, 1-side, {CREATURE_THUNDER_THANE}, SPELL_ABILITY_STORMBOLT)
+    COMBAT_PAUSE = 0
+end
+
+function Routine_CastFireWalls(side, hero)
+    -- print("Trigger cast Fire walls !")
+    local m = GetUnitManaPoints(hero)
+    local x = 11 - 7 * side
+    for y = GRID_Y_MIN+1,GRID_Y_MAX-1 do
+        HeroCast_Area(hero, SPELL_FIREWALL, FREE_MANA, x, y)
+    end
+    SetMana(hero, m)
+    COMBAT_PAUSE = 0
+end
+
+function Routine_RunePriestsMoveFirst(side, hero)
+    -- print("Trigger rune priests play first !")
+    SetATB_CreatureTypes(side, {CREATURE_RUNE_MAGE,CREATURE_FLAME_MAGECREATURE_FLAME_KEEPER}, ATB_INSTANT)
+    COMBAT_PAUSE = 0
+end
+
+function Routine_CastEarthquake(side, hero)
+    -- print("Trigger earthquake !")
+    -- HeroCast_Area(hero, SPELL_UBER_METEOR_SHOWER, FREE_MANA, x, r)
+    sleep(600)
+    COMBAT_PAUSE = 0
+end
+
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -173,6 +216,7 @@ COMBAT_PREPART_HERO_ROUTINES = {
     -- haven
     -- preserve
     -- fortress
+    [H_BRAND] = Routine_CastFireWalls,
     -- academy
     -- dungeon
     -- necropolis
@@ -184,6 +228,11 @@ COMBAT_START_HERO_ROUTINES = {
     -- haven
     -- preserve
     -- fortress
+    [H_WULFSTAN] = Routine_BallistaMoveFirst,
+    [H_KARLI] = Routine_SkirmishersRandomShoot,
+    [H_HANGVUL] = Routine_ThanesAbility,
+    [H_ERLING] = Routine_RunePriestsMoveFirst,
+    [H_INGA] = Routine_CastEarthquake,
     -- academy
     [H_DAVIUS] = Routine_RakshasasAbility,
     [H_NUR] = Routine_CastMultipleArcaneCrystals,
