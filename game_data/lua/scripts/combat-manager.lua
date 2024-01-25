@@ -1,4 +1,6 @@
 
+dofile("/scripts/combat/handlers/game-vars.lua")
+
 ENABLE_SCRIPT = 0
 COMBAT_PAUSE = 0
 
@@ -152,4 +154,3 @@ LoadScript("/scripts/game/heroes.lua", 5)
 LoadScript("/scripts/combat/combat-data.lua", 8)
 LoadScript("/scripts/combat/combat-utils.lua", 9)
 LoadScript("/scripts/combat/routines/heroes-routines-combat.lua", 11)
-LoadScript("/scripts/combat/handlers/game-vars.lua", 15)

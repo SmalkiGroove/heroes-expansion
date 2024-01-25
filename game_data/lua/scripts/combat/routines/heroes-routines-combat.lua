@@ -1,4 +1,9 @@
 
+function NoneRoutine()
+    -- print("Trigger nothing !")
+    COMBAT_PAUSE = 0
+end
+
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------------------------
 -- HAVEN
@@ -250,6 +255,7 @@ end
 
 function Routine_FullDragonSet(side, hero)
     -- print("Trigger full dragon set !")
+    COMBAT_PAUSE = 0
 end
 
 function Routine_RefreshMatronMana(side, hero)
@@ -556,24 +562,32 @@ UNIT_DIED_HERO_ROUTINES = {
 function DoHeroSpeRoutine_CombatPrepare(side, name, id)
     if COMBAT_PREPART_HERO_ROUTINES[name] then
         startThread(COMBAT_PREPART_HERO_ROUTINES[name], side, id)
+    else
+        startThread(NoneRoutine)
     end
 end
 
 function DoHeroSpeRoutine_CombatStart(side, name, id)
     if COMBAT_START_HERO_ROUTINES[name] then
         startThread(COMBAT_START_HERO_ROUTINES[name], side, id)
+    else
+        startThread(NoneRoutine)
     end
 end
 
 function DoHeroSpeRoutine_CombatTurn(side, name, id)
     if COMBAT_TURN_HERO_ROUTINES[name] then
         startThread(COMBAT_TURN_HERO_ROUTINES[name], side, id)
+    else
+        startThread(NoneRoutine)
     end
 end
 
 function DoHeroSpeRoutine_UnitDied(side, name, id, unit)
     if UNIT_DIED_HERO_ROUTINES[name] then
         startThread(UNIT_DIED_HERO_ROUTINES[name], side, id, unit)
+    else
+        startThread(NoneRoutine)
     end
 end
 

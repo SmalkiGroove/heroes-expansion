@@ -29,4 +29,4 @@ end
 
 
 -- print("Loaded game-vars.lua")
-ROUTINES_LOADED[6] = 1
+ROUTINES_LOADED[15] = 1

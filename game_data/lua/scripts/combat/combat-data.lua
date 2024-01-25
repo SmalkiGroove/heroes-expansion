@@ -18,7 +18,7 @@ UNIT_SIDE_PREFIX = {
 }
 
 ROUTINE_VARS = {
-    ["avatar-id"] = "none"
+    ["avatar-id"] = "none",
     ["calid-atb"] = nil,
 }
 

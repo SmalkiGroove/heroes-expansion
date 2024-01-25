@@ -1,9 +1,4 @@
 
-function NoneRoutine()
-    -- print("Trigger nothing !")
-    COMBAT_PAUSE = 0
-end
-
 function GetHeroLevel(hero) return HERO_DATA[hero][0] end
 function GetHeroAttack(hero) return HERO_DATA[hero][1] end
 function GetHeroDefense(hero) return HERO_DATA[hero][2] end
