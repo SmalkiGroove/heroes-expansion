@@ -125,13 +125,13 @@ function WatchPlayer(player, wait)
 				end
 			end
         end
-		sleep(30)
+		sleep(42)
 	end
 end
 
 function PlayerDailyHandler(player, newweek)
 	while (not IsPlayerCurrent(player)) do sleep(10) end
-	BlockGame()
+	if PLAYER_BRAIN[player] == COMPUTER then startThread(FreezeAI) end
 	print("Player "..player.." turn started")
 	for i,hero in GetPlayerHeroes(player) do
 		startThread(DoHeroSpeRoutine_Daily, player, hero)
