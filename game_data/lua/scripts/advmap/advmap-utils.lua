@@ -374,10 +374,6 @@ function IsEqualPosition(object, x, y, z)
     return (x == xx and y == yy and z == zz)
 end
 
-function FreezeAI()
-	ExecConsoleCommand("@BlockGame(); sleep(1000); UnblockGame()")
-end
-
 
 -- print("Loaded advmap-utils.lua")
 ROUTINES_LOADED[9] = 1
