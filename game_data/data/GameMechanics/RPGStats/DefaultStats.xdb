@@ -2273,7 +2273,7 @@
 			<Necromancer>
 				<Soulhunter_ManesSummonedBase>10</Soulhunter_ManesSummonedBase>
 				<Soulhunter_ManesSummonedPerLevel>10</Soulhunter_ManesSummonedPerLevel>
-				<Reanimator_SpellpowerBonus>1</Reanimator_SpellpowerBonus>
+				<Reanimator_SpellpowerBonus>3</Reanimator_SpellpowerBonus>
 				<Reanimator_SpellpowerBonusLevelDivisor>3</Reanimator_SpellpowerBonusLevelDivisor>
 				<Reanimator_SpellpowerBonusPerLevel>1</Reanimator_SpellpowerBonusPerLevel>
 				<AvatarOfDeath_Creature href="AvatarOfDeath.xdb#xpointer(/RPGCombatUniqueCreatureStats)"/>
@@ -2295,18 +2295,18 @@
 					<PerDividedLevel>4</PerDividedLevel>
 				</MasterOfElements_SpellpowerBonus>
 				<MasterOfElements_NumElementals>
-					<Base>1</Base>
+					<Base>0</Base>
 					<LevelDivisor>1</LevelDivisor>
-					<PerDividedLevel>1</PerDividedLevel>
+					<PerDividedLevel>0</PerDividedLevel>
 				</MasterOfElements_NumElementals>
 				<Inexhaustible_ManaRestorePerTurn>
-					<Base>1</Base>
+					<Base>3</Base>
 					<LevelDivisor>3</LevelDivisor>
 					<PerDividedLevel>1</PerDividedLevel>
 				</Inexhaustible_ManaRestorePerTurn>
 				<WeilderOfFire_FireballSpellpowerBonus>
-					<Base>5</Base>
-					<LevelDivisor>2</LevelDivisor>
+					<Base>3</Base>
+					<LevelDivisor>3</LevelDivisor>
 					<PerDividedLevel>1</PerDividedLevel>
 				</WeilderOfFire_FireballSpellpowerBonus>
 			</Wizard>
@@ -2332,14 +2332,14 @@
 				<SacredHammer_SpellToCast>SPELL_CELESTIAL_SHIELD</SacredHammer_SpellToCast>
 				<Economist_FineRuneChanceBonusBase>0.2</Economist_FineRuneChanceBonusBase>
 				<Economist_FineRuneChanceBonusPerLevel>0.01</Economist_FineRuneChanceBonusPerLevel>
-				<FineRuneProbability>0.5</FineRuneProbability>
+				<FineRuneProbability>0.3</FineRuneProbability>
 				<StrongRuneCostConstant>3</StrongRuneCostConstant>
 				<StrongAndFineRuneCostConstant>2</StrongAndFineRuneCostConstant>
 			</Runemage>
 			<Barbarian>
 				<Rash_MovementPenaltyReducePerLevel>0.02</Rash_MovementPenaltyReducePerLevel>
 				<Rash_MovePointsIncreasePerPevel>0.01</Rash_MovePointsIncreasePerPevel>
-				<CentaurMistress_StartATBBonusPerHeroLevel>0.01</CentaurMistress_StartATBBonusPerHeroLevel>
+				<CentaurMistress_StartATBBonusPerHeroLevel>0.02</CentaurMistress_StartATBBonusPerHeroLevel>
 				<Offender_HeroAttackDamageBonusPerLevel>0.1</Offender_HeroAttackDamageBonusPerLevel>
 				<WyvernTamer_HealthBonus>
 					<Base>0</Base>
