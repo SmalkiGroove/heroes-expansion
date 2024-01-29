@@ -62,32 +62,32 @@
 					<Visual href="/GameMechanics/CreatureVisual/WarMachines/Ballista.xdb#xpointer(/CreatureVisual)"/>
 					<TimeToCommand>10</TimeToCommand>
 					<Offense>
-						<Item>5</Item>
-						<Item>9</Item>
-						<Item>12</Item>
-						<Item>15</Item>
-						<Item>17</Item>
+						<Item>7</Item>
+						<Item>10</Item>
+						<Item>13</Item>
+						<Item>16</Item>
+						<Item>19</Item>
 					</Offense>
 					<Defense>
+						<Item>5</Item>
+						<Item>7</Item>
 						<Item>9</Item>
-						<Item>12</Item>
-						<Item>15</Item>
-						<Item>17</Item>
-						<Item>20</Item>
+						<Item>11</Item>
+						<Item>13</Item>
 					</Defense>
 					<MinDamageFactor>
-						<Item>2</Item>
 						<Item>3</Item>
 						<Item>4</Item>
 						<Item>5</Item>
 						<Item>6</Item>
+						<Item>7</Item>
 					</MinDamageFactor>
 					<MaxDamageFactor>
-						<Item>4</Item>
 						<Item>5</Item>
 						<Item>6</Item>
 						<Item>7</Item>
 						<Item>8</Item>
+						<Item>9</Item>
 					</MaxDamageFactor>
 					<PresetPrice>250</PresetPrice>
 				</WarMachine>
@@ -128,18 +128,18 @@
 						<Item>20</Item>
 					</Defense>
 					<MinDamageFactor>
-						<Item>150</Item>
-						<Item>200</Item>
 						<Item>250</Item>
 						<Item>300</Item>
-						<Item>300</Item>
+						<Item>350</Item>
+						<Item>400</Item>
+						<Item>450</Item>
 					</MinDamageFactor>
 					<MaxDamageFactor>
-						<Item>200</Item>
 						<Item>300</Item>
 						<Item>400</Item>
 						<Item>500</Item>
-						<Item>500</Item>
+						<Item>600</Item>
+						<Item>700</Item>
 					</MaxDamageFactor>
 					<PresetPrice>400</PresetPrice>
 				</WarMachine>
@@ -175,11 +175,11 @@
 					<TimeToCommand>10</TimeToCommand>
 					<Offense/>
 					<Defense>
-						<Item>9</Item>
+						<Item>4</Item>
+						<Item>6</Item>
+						<Item>8</Item>
+						<Item>10</Item>
 						<Item>12</Item>
-						<Item>15</Item>
-						<Item>17</Item>
-						<Item>20</Item>
 					</Defense>
 					<MinDamageFactor/>
 					<MaxDamageFactor/>
@@ -215,11 +215,11 @@
 					<TimeToCommand>10</TimeToCommand>
 					<Offense/>
 					<Defense>
-						<Item>9</Item>
+						<Item>4</Item>
+						<Item>6</Item>
+						<Item>8</Item>
+						<Item>10</Item>
 						<Item>12</Item>
-						<Item>15</Item>
-						<Item>17</Item>
-						<Item>20</Item>
 					</Defense>
 					<MinDamageFactor/>
 					<MaxDamageFactor/>
