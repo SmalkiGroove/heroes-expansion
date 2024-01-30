@@ -281,22 +281,23 @@ function Routine_LogisticsWeeklyProd(player, hero, mastery)
     print("$ Routine_LogisticsWeeklyProd")
     for town,data in MAP_TOWNS do
         if IsHeroInTown(hero, town, 1, 1) then
+            local faction = data[0]
             local fort = GetTownBuildingLevel(town, TOWN_BUILDING_FORT)
             local grail = GetTownBuildingLevel(town, TOWN_BUILDING_GRAIL)
             local multiplier = 1 + 0.5 * grail
             if fort > 1 then multiplier = multiplier + 0.5 * (fort-1) end
             if mastery >= 1 and GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_1) ~= 0 then
-                local creature = CREATURES_BY_FACTION[data[0]][1][0]
+                local creature = CREATURES_BY_FACTION[faction][1][1]
                 local current = GetObjectDwellingCreatures(town, creature)
                 SetObjectDwellingCreatures(town, creature, current + 5*multiplier)
             end
             if mastery >= 2 and GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_2) ~= 0 then
-                local creature = CREATURES_BY_FACTION[data[0]][2][0]
+                local creature = CREATURES_BY_FACTION[faction][2][1]
                 local current = GetObjectDwellingCreatures(town, creature)
                 SetObjectDwellingCreatures(town, creature, current + 3*multiplier)
             end
             if mastery >= 3 and GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_3) ~= 0 then
-                local creature = CREATURES_BY_FACTION[data[0]][3][0]
+                local creature = CREATURES_BY_FACTION[faction][3][1]
                 local current = GetObjectDwellingCreatures(town, creature)
                 SetObjectDwellingCreatures(town, creature, current + 2*multiplier)
             end
