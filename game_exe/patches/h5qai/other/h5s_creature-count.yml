@@ -15,3 +15,15 @@ edits:
     type: int
     original: *original_creatures_count
     modified: *modified_creatures_count
+  - name: Edit 3
+    address: '000051E6'
+    size: 2
+    type: hex
+    original: '8B F1'
+    modified: 'EB 3B'
+  - name: Edit 4
+    address: '00005223'
+    size: 9
+    type: hex
+    original: 'CC CC CC CC CC CC CC CC CC'
+    modified: '83 FF 0C 74 F4 89 CE EB BC'

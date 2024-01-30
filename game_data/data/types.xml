@@ -1231,6 +1231,27 @@
 				<Item>CREATURE_ORCCHIEF_CHIEFTAIN</Item>
 				<Item>CREATURE_WYVERN_PAOKAI</Item>
 				<Item>CREATURE_CYCLOP_BLOODEYED</Item>
+				<Item>CREATURE_180</Item>
+				<Item>CREATURE_181</Item>
+				<Item>CREATURE_182</Item>
+				<Item>CREATURE_183</Item>
+				<Item>CREATURE_184</Item>
+				<Item>CREATURE_185</Item>
+				<Item>CREATURE_186</Item>
+				<Item>CREATURE_187</Item>
+				<Item>CREATURE_188</Item>
+				<Item>CREATURE_189</Item>
+				<Item>CREATURE_190</Item>
+				<Item>CREATURE_191</Item>
+				<Item>CREATURE_192</Item>
+				<Item>CREATURE_193</Item>
+				<Item>CREATURE_194</Item>
+				<Item>CREATURE_195</Item>
+				<Item>CREATURE_196</Item>
+				<Item>CREATURE_197</Item>
+				<Item>CREATURE_198</Item>
+				<Item>CREATURE_199</Item>
+				<Item>CREATURE_200</Item>
 			</EnumEntries>
 		</Item>
 		<Item>
@@ -29060,6 +29081,90 @@
 				<Item>
 					<Name>CREATURE_CYCLOP_BLOODEYED</Name>
 					<Value>179</Value>
+				</Item>
+				<Item>
+					<Name>CREATURE_180</Name>
+					<Value>180</Value>
+				</Item>
+				<Item>
+					<Name>CREATURE_181</Name>
+					<Value>181</Value>
+				</Item>
+				<Item>
+					<Name>CREATURE_182</Name>
+					<Value>182</Value>
+				</Item>
+				<Item>
+					<Name>CREATURE_183</Name>
+					<Value>183</Value>
+				</Item>
+				<Item>
+					<Name>CREATURE_184</Name>
+					<Value>184</Value>
+				</Item>
+				<Item>
+					<Name>CREATURE_185</Name>
+					<Value>185</Value>
+				</Item>
+				<Item>
+					<Name>CREATURE_186</Name>
+					<Value>186</Value>
+				</Item>
+				<Item>
+					<Name>CREATURE_187</Name>
+					<Value>187</Value>
+				</Item>
+				<Item>
+					<Name>CREATURE_188</Name>
+					<Value>188</Value>
+				</Item>
+				<Item>
+					<Name>CREATURE_189</Name>
+					<Value>189</Value>
+				</Item>
+				<Item>
+					<Name>CREATURE_190</Name>
+					<Value>190</Value>
+				</Item>
+				<Item>
+					<Name>CREATURE_191</Name>
+					<Value>191</Value>
+				</Item>
+				<Item>
+					<Name>CREATURE_192</Name>
+					<Value>192</Value>
+				</Item>
+				<Item>
+					<Name>CREATURE_193</Name>
+					<Value>193</Value>
+				</Item>
+				<Item>
+					<Name>CREATURE_194</Name>
+					<Value>194</Value>
+				</Item>
+				<Item>
+					<Name>CREATURE_195</Name>
+					<Value>195</Value>
+				</Item>
+				<Item>
+					<Name>CREATURE_196</Name>
+					<Value>196</Value>
+				</Item>
+				<Item>
+					<Name>CREATURE_197</Name>
+					<Value>197</Value>
+				</Item>
+				<Item>
+					<Name>CREATURE_198</Name>
+					<Value>198</Value>
+				</Item>
+				<Item>
+					<Name>CREATURE_199</Name>
+					<Value>199</Value>
+				</Item>
+				<Item>
+					<Name>200</Name>
+					<Value>200</Value>
 				</Item>
 			</Entries>
 			<Attributes/>
@@ -68720,7 +68825,7 @@
 							<Key>ref_table_num_objs</Key>
 							<Data>
 								<Type>01000000</Type>
-								<Data>1000</Data>
+								<Data>200</Data>
 							</Data>
 						</Item>
 						<Item>
@@ -68769,7 +68874,7 @@
 							<__ClassTypeID>270062596</__ClassTypeID>
 							<__ObjectData>
 								<MinElements>180</MinElements>
-								<MaxElements>1000</MaxElements>
+								<MaxElements>200</MaxElements>
 							</__ObjectData>
 						</Item>
 					</Constraints>

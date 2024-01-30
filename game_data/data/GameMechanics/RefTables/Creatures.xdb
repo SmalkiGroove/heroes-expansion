@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Table_Creature_CreatureType ObjectRecordIDs="1" ObjectRecordID="-1">
+	<objects>
+		<Item>
+			<ID>CREATURE_UNKNOWN</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/None.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_PEASANT</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Haven/Peasant.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_MILITIAMAN</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Haven/Militiaman.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_ARCHER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Haven/Archer.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_MARKSMAN</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Haven/Marksman.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_FOOTMAN</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Haven/Footman.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_SWORDSMAN</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Haven/Swordsman.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_GRIFFIN</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Haven/Griffin.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_ROYAL_GRIFFIN</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Haven/Royal_Griffin.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_PRIEST</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Haven/Priest.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_CLERIC</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Haven/Cleric.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_CAVALIER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Haven/Cavalier.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_PALADIN</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Haven/Paladin.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_ANGEL</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Haven/Angel.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_ARCHANGEL</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Haven/Archangel.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_FAMILIAR</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Inferno/Familiar.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_IMP</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Inferno/Imp.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_DEMON</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Inferno/Demon.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_HORNED_DEMON</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Inferno/HornedDemon.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_HELL_HOUND</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Inferno/HellHound.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_CERBERI</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Inferno/Cerberius.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_SUCCUBUS</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Inferno/Succubus.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_INFERNAL_SUCCUBUS</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Inferno/InfernalSuccubus.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_NIGHTMARE</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Inferno/Nightmare.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_FRIGHTFUL_NIGHTMARE</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Inferno/FrightfulNightmare.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_PIT_FIEND</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Inferno/PitFiend.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_BALOR</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Inferno/Balor.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_DEVIL</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Inferno/Devil.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_ARCHDEVIL</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Inferno/ArchDevil_.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_SKELETON</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Necropolis/Skeleton.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_SKELETON_ARCHER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Necropolis/Skeleton_Archer.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_WALKING_DEAD</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Necropolis/Walking_Dead.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_ZOMBIE</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Necropolis/Zombie.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_MANES</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Necropolis/Manes.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_GHOST</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Necropolis/Ghosts.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_VAMPIRE</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Necropolis/Vampire.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_VAMPIRE_LORD</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Necropolis/Vampire_Lord.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_LICH</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Necropolis/Lich.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_DEMILICH</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Necropolis/Demilich.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_WIGHT</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Necropolis/Wight.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_WRAITH</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Necropolis/Wraith.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_BONE_DRAGON</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Necropolis/Bone_Dragon.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_SHADOW_DRAGON</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Necropolis/Shadow_Dragon.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_PIXIE</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Preserve/Pixie.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_SPRITE</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Preserve/Sprite.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_BLADE_JUGGLER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Preserve/Blade_Juggler.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_WAR_DANCER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Preserve/War_Dancer.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_WOOD_ELF</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Preserve/Wood_Elf.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_GRAND_ELF</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Preserve/Grand_Elf.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_DRUID</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Preserve/Druid.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_DRUID_ELDER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Preserve/Druid_Elder.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_UNICORN</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Preserve/Unicorn.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_WAR_UNICORN</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Preserve/War_Unicorn.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_TREANT</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Preserve/Treant.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_TREANT_GUARDIAN</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Preserve/Treant_Guardian.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_GREEN_DRAGON</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Preserve/Green_Dragon.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_GOLD_DRAGON</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Preserve/Gold_Dragon.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_GREMLIN</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Academy/Gremlin.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_MASTER_GREMLIN</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Academy/Master_Gremlin.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_STONE_GARGOYLE</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Academy/Stone_Gargoyle.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_OBSIDIAN_GARGOYLE</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Academy/Obsidian_Gargoyle.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_IRON_GOLEM</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Academy/Iron_Golem.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_STEEL_GOLEM</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Academy/Steel_Golem.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_MAGI</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Academy/Magi.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_ARCH_MAGI</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Academy/Arch_Magi.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_GENIE</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Academy/Genie.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_MASTER_GENIE</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Academy/Master_Genie.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_RAKSHASA</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Academy/Rakshasa.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_RAKSHASA_RUKH</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Academy/Rakshasa_Rukh.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_GIANT</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Academy/Giant.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_TITAN</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Academy/Titan.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_SCOUT</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dungeon/Scout.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_ASSASSIN</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dungeon/Assassin.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_WITCH</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dungeon/Witch.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_BLOOD_WITCH</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dungeon/Blood_Witch.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_MINOTAUR</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dungeon/Minotaur.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_MINOTAUR_KING</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dungeon/Minotaur_King.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_RIDER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dungeon/Rider.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_RAVAGER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dungeon/Ravager.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_HYDRA</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dungeon/Hydra.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_CHAOS_HYDRA</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dungeon/Chaos_Hydra.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_MATRON</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dungeon/Matron.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_MATRIARCH</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dungeon/Matriarch.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_DEEP_DRAGON</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dungeon/Deep_Dragon.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_BLACK_DRAGON</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dungeon/Black_Dragon.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_FIRE_ELEMENTAL</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Neutrals/Fire_Elemental.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_WATER_ELEMENTAL</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Neutrals/Water_Elemental.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_EARTH_ELEMENTAL</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Neutrals/Earth_Elemental.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_AIR_ELEMENTAL</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Neutrals/Air_Elemental.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_BLACK_KNIGHT</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Neutrals/Black_Knight.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_DEATH_KNIGHT</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Neutrals/Death_Knight.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_PHOENIX</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Neutrals/Phoenix.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_DEFENDER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dwarf/Defender.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_STOUT_DEFENDER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dwarf/Stout_Defender.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_AXE_FIGHTER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dwarf/Axe_Fighter.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_AXE_THROWER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dwarf/Axe_Thrower.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_BEAR_RIDER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dwarf/Bear_Raider.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_BLACKBEAR_RIDER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dwarf/Blackbear_Raider.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_BROWLER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dwarf/Brawler.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_BERSERKER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dwarf/Berserker.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_RUNE_MAGE</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dwarf/Rune_Mage.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_FLAME_MAGE</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dwarf/Flame_Mage.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_THANE</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dwarf/Thane.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_WARLORD</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dwarf/Warlord.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_FIRE_DRAGON</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dwarf/Fire_Dragon.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_MAGMA_DRAGON</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dwarf/Magma_Dragon.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_LANDLORD</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Haven/Renegates/Landlord.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_LONGBOWMAN</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Haven/Renegates/Longbowman.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_VINDICATOR</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Haven/Renegates/Vindicator.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_BATTLE_GRIFFIN</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Haven/Renegates/BattleGriffin.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_ZEALOT</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Haven/Renegates/Zealot.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_CHAMPION</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Haven/Renegates/Champion.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_SERAPH</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Haven/Renegates/Seraph.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_WOLF</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Neutrals/Wolf.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_SNOW_APE</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Neutrals/SnowApe.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_MANTICORE</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Neutrals/Manticore.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_MUMMY</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Neutrals/Mummy.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_GOBLIN</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Orcs/Goblin1.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_GOBLIN_TRAPPER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Orcs/Goblin2.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_CENTAUR</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Orcs/Centaur1.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_CENTAUR_NOMAD</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Orcs/Centaur2.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_ORC_WARRIOR</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Orcs/Orc1.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_ORC_SLAYER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Orcs/Orc2.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_SHAMAN</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Orcs/Shaman1.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_SHAMAN_WITCH</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Orcs/Shaman2.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_ORCCHIEF_BUTCHER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Orcs/OrcChief1.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_ORCCHIEF_EXECUTIONER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Orcs/OrcChief2.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_WYVERN</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Orcs/Wyvern1.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_WYVERN_POISONOUS</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Orcs/Wyvern2.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_CYCLOP</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Orcs/Cyclop1.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_CYCLOP_UNTAMED</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Orcs/Cyclop2.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_QUASIT</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Inferno/3rd/Quasit.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_HORNED_LEAPER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Inferno/3rd/HornedLeaper.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_FIREBREATHER_HOUND</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Inferno/3rd/FirebreatherHound.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_SUCCUBUS_SEDUCER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Inferno/3rd/SuccubusSeducer.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_HELLMARE</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Inferno/3rd/Hellmare.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_PIT_SPAWN</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Inferno/3rd/PitSpawn.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_ARCH_DEMON</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Inferno/3rd/ArchDemon.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_STALKER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dungeon/3rd/Stalker.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_BLOOD_WITCH_2</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dungeon/3rd/BloodWitch2.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_MINOTAUR_CAPTAIN</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dungeon/3rd/MinotaurCaptain.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_BLACK_RIDER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dungeon/3rd/BlackRider.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_ACIDIC_HYDRA</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dungeon/3rd/AcidicHydra.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_SHADOW_MISTRESS</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dungeon/3rd/ShadowMistress.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_RED_DRAGON</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dungeon/3rd/RedDragon.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_DRYAD</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Preserve/3rd/Dryad.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_BLADE_SINGER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Preserve/3rd/BladeSinger.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_SHARP_SHOOTER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Preserve/3rd/SharpShooter.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_HIGH_DRUID</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Preserve/3rd/HighDruid.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_WHITE_UNICORN</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Preserve/3rd/WhiteUnicorn.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_ANGER_TREANT</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Preserve/3rd/AngerTreant.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_RAINBOW_DRAGON</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Preserve/3rd/RainbowDragon.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_SKELETON_WARRIOR</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Necropolis/3rd/SkeletonWarrior.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_DISEASE_ZOMBIE</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Necropolis/3rd/DiseaseZombie.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_POLTERGEIST</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Necropolis/3rd/Poltergeist.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_NOSFERATU</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Necropolis/3rd/Nosferatu.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_LICH_MASTER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Necropolis/3rd/LichMaster.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_BANSHEE</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Necropolis/3rd/Banshee.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_HORROR_DRAGON</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Necropolis/3rd/HorrorDragon.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_GREMLIN_SABOTEUR</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Academy/3rd/GremlinSaboteur.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_MARBLE_GARGOYLE</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Academy/3rd/MarbleGargoyle.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_OBSIDIAN_GOLEM</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Academy/3rd/ObsidianGolem.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_COMBAT_MAGE</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Academy/3rd/CombatMage.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_DJINN_VIZIER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Academy/3rd/DjinnVizier.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_RAKSHASA_KSHATRI</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Academy/3rd/RakshasaKshatri.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_STORM_LORD</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Academy/3rd/StormLord.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_STONE_DEFENDER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dwarf/3rd/StoneDefender.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_HARPOONER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dwarf/3rd/Harpooner.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_WHITE_BEAR_RIDER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dwarf/3rd/WhiteBearRider.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_BATTLE_RAGER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dwarf/3rd/BattleRager.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_FLAME_KEEPER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dwarf/3rd/FlameKeeper.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_THUNDER_THANE</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dwarf/3rd/ThunderThane.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_LAVA_DRAGON</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Dwarf/3rd/LavaDragon.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_GOBLIN_DEFILER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Orcs/3rd/GoblinDefiler.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_CENTAUR_MARADEUR</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Orcs/3rd/CentaurMaradeur.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_ORC_WARMONGER</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Orcs/3rd/OrcWarmonger.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_SHAMAN_HAG</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Orcs/3rd/ShamanHag.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_ORCCHIEF_CHIEFTAIN</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Orcs/3rd/OrcchiefChieftain.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_WYVERN_PAOKAI</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Orcs/3rd/WyvernPaokai.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_CYCLOP_BLOODEYED</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Orcs/3rd/CyclopBloodeyed.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_180</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Added/Creature_180.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_181</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Added/Creature_181.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_182</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Added/Creature_182.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_183</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Added/Creature_183.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_184</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Added/Creature_184.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_185</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Added/Creature_185.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_186</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Added/Creature_186.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_187</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Added/Creature_187.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_188</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Added/Creature_188.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_189</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Added/Creature_189.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_190</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Added/Creature_190.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_191</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Added/Creature_191.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_192</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Added/Creature_192.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_193</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Added/Creature_193.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_194</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Added/Creature_194.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_195</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Added/Creature_195.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_196</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Added/Creature_196.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_197</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Added/Creature_197.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_198</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Added/Creature_198.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_199</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Added/Creature_199.xdb#xpointer(/Creature)"/>
+		</Item>
+		<Item>
+			<ID>CREATURE_200</ID>
+			<Obj href="/GameMechanics/Creature/Creatures/Added/Creature_200.xdb#xpointer(/Creature)"/>
+		</Item>
+	</objects>
+</Table_Creature_CreatureType>
