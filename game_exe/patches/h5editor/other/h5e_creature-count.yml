@@ -1,0 +1,17 @@
+# Increase the maximum amount of creatures in the game
+definitions: 
+  - &modified_creatures_count  200
+  - &original_creatures_count  180
+edits:
+  - name: Edit 1
+    address: '004B6DB1'
+    size: 4
+    type: int
+    original: *original_creatures_count
+    modified: *modified_creatures_count
+  - name: Edit 2
+    address: '004CF860'
+    size: 4
+    type: int
+    original: *original_creatures_count
+    modified: *modified_creatures_count
