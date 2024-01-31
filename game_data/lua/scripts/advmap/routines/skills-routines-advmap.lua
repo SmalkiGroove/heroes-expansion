@@ -107,6 +107,16 @@ function Routine_CheckPrecision(player, hero, mastery)
     end
 end
 
+function Routine_CheckHoldGround(player, hero, mastery)
+    print("$ Routine_CheckHoldGround")
+    local value = 2 * mastery
+    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_HOLD_GROUND]
+    if diff ~= 0 then
+        AddHero_StatAmount(player, hero, STAT_DEFENCE, diff)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_HOLD_GROUND] = value
+    end
+end
+
 function Routine_CheckIntelligence(player, hero, mastery)
     print("$ Routine_CheckIntelligence")
     local value = 4 * mastery
@@ -350,10 +360,26 @@ function Routine_LeadershipAfterBattle(player, hero, mastery, combatIndex)
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 0)
     for i = 0,stacks-1 do
         local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 0, i)
-        local amount = trunc(died * (0.05 + 0.05 * mastery))
+        local amount = trunc(count * (0.05 + 0.05 * mastery))
+        if HasHeroSkill(hero, PERK_CHARISMA) then amount = 2 * amount end
         AddObjectCreatures(caravan, creature, amount)
     end
     CURRENT_CARAVANS[caravan] = 3
+end
+
+function Routine_TaleTellers(player, hero, mastery, combatIndex)
+    print("$ Routine_TaleTellers")
+    local exp = 0
+    local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 0)
+    for i = 0,stacks-1 do
+        local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 0, i)
+        exp = exp + count * power(2, CREATURES[creature][2])
+    end
+    for _,h in GetPlayerHeroes(player) do
+        if h ~= hero then
+            AddHero_StatAmount(player, h, STAT_EXPERIENCE, exp)
+        end
+    end
 end
 
 
@@ -376,6 +402,7 @@ START_TRIGGER_SKILLS_ROUTINES = {
     [SKILL_AVENGER] = Routine_CheckAvenger,
     [SKILL_SPIRITISM] = Routine_CheckSpiritism,
     [PERK_PRECISION] = Routine_CheckPrecision,
+    [PERK_HOLD_GROUND] = Routine_CheckHoldGround,
     [PERK_INTELLIGENCE] = Routine_CheckIntelligence,
     [PERK_EXALTATION] = Routine_CheckExaltation,
     [PERK_ARCANE_EXCELLENCE] = Routine_CheckArcaneExcellence,

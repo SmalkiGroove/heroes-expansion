@@ -193,7 +193,7 @@ SKILL_VOICE = 187
 PERK_VOICE_TRAINING = 188
 PERK_MIGHTY_SHOUT = 189
 PERK_BLOODLUST = 190
-PERK_LEADERSHIP_TODO1 = 191
+PERK_TALETELLERS = 191
 PERK_CHARISMA = 192
 PERK_WARM_UP = 193 -- CAN BE USED
 PERK_SIPHON_GRACE = 194
@@ -208,7 +208,7 @@ PERK_MYTHOLOGY = 202
 PERK_WARRIORS_OF_THE_SKY = 203
 PERK_STAMINA = 204
 PERK_ROYAL_CHARGE = 205
-PERK_DETAIN_NATURAL = 206 -- CAN BE USED
+PERK_MAGIC_FILTER = 206 -- CAN BE USED
 PERK_BACK_TO_THE_VOID = 207
 PERK_BARBARIAN_ANCIENT_SMITHY = 208 --unused
 PERK_BARBARIAN_WEAKENING_STRIKE = 209 --unused
@@ -256,6 +256,7 @@ _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_COURAGE             = _skillbonu
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_AVENGER             = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_SPIRITISM           = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_PRECISION           = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_HOLD_GROUND         = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_INTELLIGENCE        = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_EXALTATION          = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_ARCANE_EXCELLENCE   = _skillbonus_id
