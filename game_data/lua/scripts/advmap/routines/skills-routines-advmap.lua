@@ -282,7 +282,7 @@ end
 
 function Routine_StaminaBuff(player, hero, mastery)
     print("$ Routine_StaminaBuff")
-    GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_HITPOINTS)
+    GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_HITPOINTS, 10)
 end
 
 function Routine_RageAwakening(player, hero, mastery)
@@ -294,8 +294,8 @@ end
 
 function Routine_OnslaughtBuff(player, hero, mastery)
     print("$ Routine_OnslaughtBuff")
-    GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_INITIATIVE)
-    GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_SPEED)
+    GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_INITIATIVE, 2)
+    GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_SPEED, 1)
 end
 
 function Routine_HeraldOfDeathGolds(player, hero, mastery)
