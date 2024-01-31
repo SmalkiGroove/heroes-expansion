@@ -79,8 +79,6 @@ end
 
 
 
-START_TRIGGER_SKILLS_ROUTINES = {}
-
 function AddHeroSkill(hero, skill, mastery)
     print("Hero "..hero.." has learnt skill '"..skill.."' rank "..mastery..".")
     local player = GetObjectOwner(hero)

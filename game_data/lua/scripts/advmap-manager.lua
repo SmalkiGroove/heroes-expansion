@@ -115,7 +115,8 @@ function WatchPlayer(player, wait)
 					if IsEqualPosition(hero, tracker[hero][1], tracker[hero][2], tracker[hero][3]) then
 						if HasHeroSkill(hero, PERK_MEDITATION) and GetHeroStat(hero, STAT_MANA_POINTS) > tracker[hero][0] then
 							print("Hero "..hero.." has used Meditation")
-							startThread(Routine_MeditationExp, player, hero)
+							local amount = GetHeroStat(hero, STAT_MANA_POINTS) - tracker[hero][0]
+							startThread(Routine_MeditationExp, player, hero, amount)
 						else
 							print("Hero "..hero.." has used digging")
 							startThread(ActivateDigging, player, hero)

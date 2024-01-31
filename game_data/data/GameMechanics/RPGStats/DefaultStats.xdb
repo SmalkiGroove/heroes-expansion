@@ -266,7 +266,7 @@
 			<Haven>
 				<PreciseShotRange>4</PreciseShotRange>
 				<Jousting_DamageBonusPerPathCell>0.05</Jousting_DamageBonusPerPathCell>
-				<Bash_ProcFactor>2</Bash_ProcFactor>
+				<Bash_ProcFactor>1.5</Bash_ProcFactor>
 				<BattleFrenzyBoostFactor>1.5</BattleFrenzyBoostFactor>
 				<ChampionChargeMinimalDistance>3</ChampionChargeMinimalDistance>
 				<ChampionChargePattern href="/GameMechanics/Creature/Creatures/Haven/ChampionCharge.xdb#xpointer(/PatternAttack)"/>
@@ -279,7 +279,7 @@
 				<SearingAuraDamageHits>10</SearingAuraDamageHits>
 				<AxeOfSlaughterDamageHits>2</AxeOfSlaughterDamageHits>
 				<SyphonManaCoef>0.5</SyphonManaCoef>
-				<Leap_JumpDistanceMin>3</Leap_JumpDistanceMin>
+				<Leap_JumpDistanceMin>5</Leap_JumpDistanceMin>
 				<Leap_JumpDistanceMax>8</Leap_JumpDistanceMax>
 				<Leap_AttackDamageBonusBase>0.1</Leap_AttackDamageBonusBase>
 				<Leap_AttackDamageBonusPerPathCell>0.05</Leap_AttackDamageBonusPerPathCell>
@@ -319,14 +319,14 @@
 				<TreeanUnionCasterHits>4</TreeanUnionCasterHits>
 				<TreeanUnionTargetHits>25</TreeanUnionTargetHits>
 				<TreeanUnionTargetBaseCreature>CREATURE_TREANT</TreeanUnionTargetBaseCreature>
-				<RageOfTheForestInitiativeInc>6</RageOfTheForestInitiativeInc>
+				<RageOfTheForestInitiativeInc>3</RageOfTheForestInitiativeInc>
 				<PowerFeedOnlyRanger>false</PowerFeedOnlyRanger>
 				<BondOfLight_MinDuplicatedEffectMastery>1</BondOfLight_MinDuplicatedEffectMastery>
 				<AgilityDefenceBoostPerCell>2</AgilityDefenceBoostPerCell>
 			</Sylvan>
 			<Academy>
-				<GremlinRepairPowerPreCreature>5</GremlinRepairPowerPreCreature>
-				<Dash_InitiativeFactor>2</Dash_InitiativeFactor>
+				<GremlinRepairPowerPreCreature>4</GremlinRepairPowerPreCreature>
+				<Dash_InitiativeFactor>1.5</Dash_InitiativeFactor>
 				<Dash_Duration>3</Dash_Duration>
 				<VulnerabilityDamageCoef>1.5</VulnerabilityDamageCoef>
 				<EnchantedObsidian_DamageToHealCoef>0.5</EnchantedObsidian_DamageToHealCoef>
@@ -349,12 +349,12 @@
 				<AuraOfBraveryMoraleMin>1</AuraOfBraveryMoraleMin>
 				<Invisibility_DurationInRounds>2</Invisibility_DurationInRounds>
 				<IncinerateCoef>1.5</IncinerateCoef>
-				<RideByAttack_DamageCoef>0.4</RideByAttack_DamageCoef>
+				<RideByAttack_DamageCoef>0.35</RideByAttack_DamageCoef>
 				<RideByAttack_LastPointsToExclude>1</RideByAttack_LastPointsToExclude>
 			</Dungeon>
 			<Fortress>
 				<ShieldWall_DamageReducePerPathCell>0.1</ShieldWall_DamageReducePerPathCell>
-				<ShieldWall_MaxDamageReduce>0.9</ShieldWall_MaxDamageReduce>
+				<ShieldWall_MaxDamageReduce>0.75</ShieldWall_MaxDamageReduce>
 				<Wound_EffectDurationInRounds>2</Wound_EffectDurationInRounds>
 				<Wound_SpeedDecrease>0.33</Wound_SpeedDecrease>
 				<Wound_InitiativeDecrease>0.33</Wound_InitiativeDecrease>
@@ -383,8 +383,8 @@
 				<FlameWave_WaveLength>5</FlameWave_WaveLength>
 				<FlameWave_ProcFactor>2.5</FlameWave_ProcFactor>
 				<FlameWave_WaveSpeed>15</FlameWave_WaveSpeed>
-				<Flamestrike_DamageMultipiler>0.9</Flamestrike_DamageMultipiler>
-				<PawStrike_ProcFactor>0.5</PawStrike_ProcFactor>
+				<Flamestrike_DamageMultipiler>0.8</Flamestrike_DamageMultipiler>
+				<PawStrike_ProcFactor>1.5</PawStrike_ProcFactor>
 			</Fortress>
 			<Neutral>
 				<HowlMaxATBValueAtStart>0.5</HowlMaxATBValueAtStart>

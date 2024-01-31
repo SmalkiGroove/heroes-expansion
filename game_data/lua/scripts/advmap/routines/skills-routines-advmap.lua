@@ -109,7 +109,7 @@ end
 
 function Routine_CheckIntelligence(player, hero, mastery)
     print("$ Routine_CheckIntelligence")
-    local value = 5 * mastery
+    local value = 4 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_INTELLIGENCE]
     if diff ~= 0 then
         AddHero_StatAmount(player, hero, STAT_KNOWLEDGE, diff)
@@ -119,7 +119,7 @@ end
 
 function Routine_CheckExaltation(player, hero, mastery)
     print("$ Routine_CheckExaltation")
-    local value = 3 * mastery
+    local value = 2 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_EXALTATION]
     if diff ~= 0 then
         AddHero_StatAmount(player, hero, STAT_SPELL_POWER, diff)
@@ -129,7 +129,7 @@ end
 
 function Routine_CheckArcaneExcellence(player, hero, mastery)
     print("$ Routine_CheckArcaneExcellence")
-    local value = 4 * mastery
+    local value = 3 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_ARCANE_EXCELLENCE]
     if diff ~= 0 then
         AddHero_StatAmount(player, hero, STAT_SPELL_POWER, diff)
@@ -139,7 +139,7 @@ end
 
 function Routine_CheckGraduate(player, hero, mastery)
     print("$ Routine_CheckGraduate")
-    local value = 3 * mastery
+    local value = 2 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_GRADUATE]
     if diff ~= 0 then
         AddHero_StatAmount(player, hero, STAT_KNOWLEDGE, diff)
@@ -149,7 +149,7 @@ end
 
 function Routine_CheckOccultism(player, hero, mastery)
     print("$ Routine_CheckOccultism")
-    local value = 6 * mastery
+    local value = 5 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_OCCULTISM]
     if diff ~= 0 then
         AddHero_StatAmount(player, hero, STAT_SPELL_POWER, diff)
@@ -159,7 +159,7 @@ end
 
 function Routine_CheckSecretsOfDestruct(player, hero, mastery)
     print("$ Routine_CheckSecretsOfDestruct")
-    local value = 5 * mastery
+    local value = 4 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_SECRETS_OF_DESTRUCT]
     if diff ~= 0 then
         AddHero_StatAmount(player, hero, STAT_SPELL_POWER, diff)
@@ -358,9 +358,9 @@ end
 
 
 
-function Routine_MeditationExp(player, hero)
+function Routine_MeditationExp(player, hero, amount)
     print("$ Routine_MeditationExp")
-    local value = 100
+    local value = (50 + amount) * GetHeroLevel(hero)
     AddHero_StatAmount(player, hero, STAT_EXPERIENCE, value)
 end
 
