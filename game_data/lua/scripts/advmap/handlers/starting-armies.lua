@@ -7,7 +7,7 @@ function ReplaceStartingArmy(hero)
     if STARTING_ARMIES[hero] then
         army = STARTING_ARMIES[hero]
     else
-        local faction = FACTION_TEXT[HEROES[hero]] print(faction)
+        local faction = FACTION_TEXT[HEROES[hero]]
         army = STARTING_ARMIES[faction]
     end
     local k, units, amounts = GetHeroArmySummary(hero)
