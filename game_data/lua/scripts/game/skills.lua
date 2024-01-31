@@ -195,20 +195,20 @@ PERK_MIGHTY_SHOUT = 189
 PERK_BLOODLUST = 190
 PERK_TALETELLERS = 191
 PERK_CHARISMA = 192
-PERK_WARM_UP = 193 -- CAN BE USED
+PERK_ONSLAUGHT = 193
 PERK_SIPHON_GRACE = 194
-SKILL_SHATTER_DARK = 195 -- CAN BE USED
-PERK_CORRUPT_DARK = 196 -- CAN BE USED
+PERK_GET_STRONGER = 195
+PERK_GET_WISER = 196
 PERK_WEAKEN_DARK = 197 -- CAN BE USED
 PERK_DETAIN_DARK = 198 -- CAN BE USED
-SKILL_SHATTER_MAGIC = 199 -- try impregnable
+SKILL_SHATTER_MAGIC = 199
 PERK_GEAR_UP = 200
 PERK_HEROES_LEGACY = 201
 PERK_MYTHOLOGY = 202
 PERK_WARRIORS_OF_THE_SKY = 203
 PERK_STAMINA = 204
 PERK_ROYAL_CHARGE = 205
-PERK_MAGIC_FILTER = 206 -- CAN BE USED
+PERK_MAGIC_FILTER = 206
 PERK_BACK_TO_THE_VOID = 207
 PERK_BARBARIAN_ANCIENT_SMITHY = 208 --unused
 PERK_BARBARIAN_WEAKENING_STRIKE = 209 --unused
@@ -263,6 +263,8 @@ _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_ARCANE_EXCELLENCE   = _skillbonu
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_GRADUATE            = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_OCCULTISM           = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_SECRETS_OF_DESTRUCT = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_GET_STRONGER        = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_GET_WISER           = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_LAST_STAND          = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_BATTLE_COMMANDER    = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_FINE_RUNE           = _skillbonus_id

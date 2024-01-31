@@ -177,6 +177,27 @@ function Routine_CheckSecretsOfDestruct(player, hero, mastery)
     end
 end
 
+function Routine_CheckGetStronger(player, hero, mastery)
+    print("$ Routine_CheckGetStronger")
+    local value = mastery
+    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_GET_STRONGER]
+    if diff ~= 0 then
+        AddHero_StatAmount(player, hero, STAT_ATTACK, diff)
+        AddHero_StatAmount(player, hero, STAT_DEFENCE, diff)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_GET_STRONGER] = value
+    end
+end
+
+function Routine_CheckGetWiser(player, hero, mastery)
+    print("$ Routine_CheckGetWiser")
+    local value = 2000
+    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_GET_WISER]
+    if diff ~= 0 then
+        AddHero_StatAmount(player, hero, STAT_EXPERIENCE, diff)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_GET_WISER] = value
+    end
+end
+
 function Routine_CheckLastStand(player, hero, mastery)
     print("$ Routine_CheckLastStand")
     local value = mastery
@@ -270,6 +291,12 @@ function Routine_RageAwakening(player, hero, mastery)
 end
 
 
+
+function Routine_OnslaughtBuff(player, hero, mastery)
+    print("$ Routine_OnslaughtBuff")
+    GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_INITIATIVE)
+    GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_SPEED)
+end
 
 function Routine_HeraldOfDeathGolds(player, hero, mastery)
     print("$ Routine_HeraldOfDeathGolds")
@@ -409,6 +436,9 @@ START_TRIGGER_SKILLS_ROUTINES = {
     [PERK_GRADUATE] = Routine_CheckGraduate,
     [PERK_OCCULTISM] = Routine_CheckOccultism,
     [PERK_SECRETS_OF_DESTRUCT] = Routine_CheckSecretsOfDestruct,
+    [PERK_GET_STRONGER] = Routine_CheckGetStronger,
+    [PERK_GET_WISER] = Routine_CheckGetWiser,
+    [PERK_ONSLAUGHT] = Routine_OnslaughtBuff,
     [PERK_MOTIVATION] = Routine_CheckLastStand,
     [PERK_FINE_RUNE] = Routine_CheckFineRune,
     [PERK_REFRESH_RUNE] = Routine_CheckRefreshRune,
@@ -421,6 +451,7 @@ START_TRIGGER_SKILLS_ROUTINES = {
 }
 
 DAILY_TRIGGER_SKILLS_ROUTINES = {
+    [PERK_ONSLAUGHT] = Routine_OnslaughtBuff,
     [PERK_HERALD_OF_DEATH] = Routine_HeraldOfDeathGolds,
     [SKILL_SPIRITISM] = Routine_SpiritismManaRegen,
 }
@@ -442,6 +473,7 @@ LEVELUP_TRIGGER_SKILLS_ROUTINES = {
 
 AFTER_COMBAT_TRIGGER_SKILLS_ROUTINES = {
     [SKILL_LEADERSHIP] = Routine_LeadershipAfterBattle,
+    [PERK_TALETELLERS] = Routine_TaleTellers,
     [PERK_STAMINA] = Routine_StaminaBuff,
 }
 
