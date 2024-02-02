@@ -10,8 +10,8 @@ end
 
 function Routine_ActivateArtfsetHaven(player, hero)
     print("$ Routine_ActivateArtfsetHaven")
-    -- GiveArtifact(hero, ___, 1)
-    -- GiveArtifact(hero, ___, 1)
+    GiveArtifact(hero, 244, 1)
+    GiveArtifact(hero, 245, 1)
 end
 
 function Routine_AddRecruitsPeasants(player, hero)
@@ -215,8 +215,8 @@ end
 
 function Routine_ActivateArtfsetNecro(player, hero)
     print("$ Routine_ActivateArtfsetNecro")
-    -- GiveArtifact(hero, ___, 1)
-    -- GiveArtifact(hero, ___, 1)
+    GiveArtifact(hero, 251, 1)
+    GiveArtifact(hero, 252, 1)
 end
 
 function Routine_UpgradeMages(player, hero)
@@ -291,14 +291,14 @@ end
 
 function Routine_ActivateArtfsetEnlightenment(player, hero)
     print("$ Routine_ActivateArtfsetEnlightenment")
-    -- GiveArtifact(hero, ___, 1)
-    -- GiveArtifact(hero, ___, 1)
+    GiveArtifact(hero, 230, 1)
+    GiveArtifact(hero, 231, 1)
 end
 
 function Routine_ActivateArtfsetDungeon(player, hero)
     print("$ Routine_ActivateArtfsetDungeon")
-    -- GiveArtifact(hero, ___, 1)
-    -- GiveArtifact(hero, ___, 1)
+    GiveArtifact(hero, 236, 1)
+    GiveArtifact(hero, 237, 1)
 end
 
 Var_Sephinroth_Bonus = 0
@@ -397,6 +397,12 @@ function Routine_GainAttackPerLevel(player, hero, level)
     end
 end
 
+function Routine_ActivateArtfsetHunter(player, hero)
+    print("$ Routine_ActivateArtfsetHunter")
+    GiveArtifact(hero, 232, 1)
+    GiveArtifact(hero, 233, 1)
+end
+
 function Routine_RezSuccubus(player, hero, combatIndex)
     print("$ Routine_RezSuccubus")
     local cap = 3 + trunc(0.66 * GetHeroLevel(hero))
@@ -443,8 +449,8 @@ end
 
 function Routine_ActivateArtfsetSarIssus(player, hero)
     print("$ Routine_ActivateArtfsetSarIssus")
-    -- GiveArtifact(hero, ___, 1)
-    -- GiveArtifact(hero, ___, 1)
+    GiveArtifact(hero, 247, 1)
+    GiveArtifact(hero, 248, 1)
 end
 
 function Routine_AddRecruitsShamans(player, hero)
@@ -473,6 +479,7 @@ START_TRIGGER_HERO_ROUTINES = {
     [H_SEPHINROTH] = Routine_ActivateArtfsetDungeon,
     -- necropolis
     -- inferno
+    [H_BIARA] = Routine_ActivateArtfsetHunter,
     -- stronghold
     [H_KUJIN] = Routine_ActivateArtfsetSarIssus,
 }
