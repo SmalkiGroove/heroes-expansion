@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature ObjectRecordID="1000055">
-	<AttackSkill>6</AttackSkill>
-	<DefenceSkill>3</DefenceSkill>
-	<Shots>50</Shots>
-	<MinDamage>7</MinDamage>
-	<MaxDamage>17</MaxDamage>
+	<AttackSkill>9</AttackSkill>
+	<DefenceSkill>7</DefenceSkill>
+	<Shots>9</Shots>
+	<MinDamage>9</MinDamage>
+	<MaxDamage>13</MaxDamage>
 	<Speed>3</Speed>
-	<Initiative>12</Initiative>
+	<Initiative>11</Initiative>
 	<Flying>false</Flying>
-	<Health>65</Health>
+	<Health>60</Health>
 	<KnownSpells/>
 	<SpellPoints>0</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
@@ -16,20 +16,14 @@
 	<Exp>88</Exp>
 	<Power>829</Power>
 	<TimeToCommand>10</TimeToCommand>
-	<CreatureTier>4</CreatureTier>
+	<CreatureTier>5</CreatureTier>
 	<Upgrade>true</Upgrade>
 	<PairCreature>CREATURE_UNKNOWN</PairCreature>
 	<CreatureTown>TOWN_NO_TYPE</CreatureTown>
 	<MagicElement><First>ELEMENT_FIRE</First><Second>ELEMENT_NONE</Second></MagicElement>
-	<WeeklyGrowth>15</WeeklyGrowth>
+	<WeeklyGrowth>10</WeeklyGrowth>
 	<Cost>
-		<Wood>0</Wood>
-		<Ore>0</Ore>
-		<Mercury>0</Mercury>
-		<Crystal>0</Crystal>
-		<Sulfur>0</Sulfur>
-		<Gem>0</Gem>
-		<Gold>150</Gold>
+		<Gold>200</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>false</SubjectOfRandomGeneration>
 	<MonsterShared href="/MapObjects/Neutral/Fire_Elemental.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
@@ -43,6 +37,8 @@
 	<Abilities>
 		<Item>ABILITY_ELEMENTAL</Item>
 		<Item>ABILITY_FIRE_IMMUNED</Item>
+		<Item>ABILITY_ARDENT_AURA</Item>
+		<Item>ABILITY_MARK_OF_FIRE</Item>
 		<Item>ABILITY_BURNING_BODY</Item>
 	</Abilities>
 </Creature>

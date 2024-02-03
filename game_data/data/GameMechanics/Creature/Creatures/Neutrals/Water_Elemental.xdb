@@ -1,38 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature ObjectRecordID="1000056">
-	<AttackSkill>1</AttackSkill>
-	<DefenceSkill>10</DefenceSkill>
+	<AttackSkill>3</AttackSkill>
+	<DefenceSkill>12</DefenceSkill>
 	<Shots>0</Shots>
 	<MinDamage>4</MinDamage>
-	<MaxDamage>6</MaxDamage>
+	<MaxDamage>7</MaxDamage>
 	<Speed>4</Speed>
-	<Initiative>9</Initiative>
+	<Initiative>8</Initiative>
 	<Flying>false</Flying>
-	<Health>130</Health>
+	<Health>90</Health>
 	<KnownSpells>
 		<Item><Spell>SPELL_ICE_BOLT</Spell><Mastery>MASTERY_EXPERT</Mastery></Item>
 		<Item><Spell>SPELL_FROST_RING</Spell><Mastery>MASTERY_EXPERT</Mastery></Item>
 	</KnownSpells>
-	<SpellPoints>18</SpellPoints>
+	<SpellPoints>50</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
 	<SpellPoints2>0</SpellPoints2>
 	<Exp>88</Exp>
 	<Power>795</Power>
 	<TimeToCommand>15</TimeToCommand>
-	<CreatureTier>4</CreatureTier>
+	<CreatureTier>5</CreatureTier>
 	<Upgrade>true</Upgrade>
 	<PairCreature>CREATURE_UNKNOWN</PairCreature>
 	<CreatureTown>TOWN_NO_TYPE</CreatureTown>
 	<MagicElement><First>ELEMENT_WATER</First><Second>ELEMENT_NONE</Second></MagicElement>
-	<WeeklyGrowth>15</WeeklyGrowth>
+	<WeeklyGrowth>10</WeeklyGrowth>
 	<Cost>
-		<Wood>0</Wood>
-		<Ore>0</Ore>
-		<Mercury>0</Mercury>
-		<Crystal>0</Crystal>
-		<Sulfur>0</Sulfur>
-		<Gem>0</Gem>
-		<Gold>150</Gold>
+		<Gold>200</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>false</SubjectOfRandomGeneration>
 	<MonsterShared href="/MapObjects/Neutral/Water_Elemental.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
@@ -46,5 +40,8 @@
 	<Abilities>
 		<Item>ABILITY_ELEMENTAL</Item>
 		<Item>ABILITY_ICE_IMMUNED</Item>
+		<Item>ABILITY_CHILLING_AURA</Item>
+		<Item>ABILITY_REGENERATION</Item>
+		<Item>ABILITY_FIERCE_RETALIATION</Item>
 	</Abilities>
 </Creature>
