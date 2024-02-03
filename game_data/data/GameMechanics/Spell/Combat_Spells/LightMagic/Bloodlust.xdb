@@ -12,29 +12,29 @@
 	<MagicSchool>MAGIC_SCHOOL_LIGHT</MagicSchool>
 	<RequiredHeroLevel>0</RequiredHeroLevel>
 	<IsAimed>true</IsAimed>
-	<TrainedCost>7</TrainedCost>
+	<TrainedCost>8</TrainedCost>
 	<damage>
 		<Item>
 			<Base>4</Base>
-			<PerPower>0.2</PerPower>
+			<PerPower>0.15</PerPower>
 		</Item>
 		<Item>
-			<Base>6</Base>
+			<Base>5</Base>
 			<PerPower>0.25</PerPower>
 		</Item>
 		<Item>
-			<Base>7</Base>
-			<PerPower>0.33</PerPower>
+			<Base>6</Base>
+			<PerPower>0.35</PerPower>
 		</Item>
 		<Item>
-			<Base>8</Base>
-			<PerPower>0.4</PerPower>
+			<Base>7</Base>
+			<PerPower>0.45</PerPower>
 		</Item>
 	</damage>
 	<duration>
 		<Item>
 			<Base>1</Base>
-			<PerPower>0.075</PerPower>
+			<PerPower>0.05</PerPower>
 		</Item>
 		<Item>
 			<Base>1.5</Base>
@@ -42,11 +42,11 @@
 		</Item>
 		<Item>
 			<Base>1.5</Base>
-			<PerPower>0.075</PerPower>
+			<PerPower>0.1</PerPower>
 		</Item>
 		<Item>
 			<Base>1.5</Base>
-			<PerPower>0.075</PerPower>
+			<PerPower>0.125</PerPower>
 		</Item>
 	</duration>
 	<sSpellCost>

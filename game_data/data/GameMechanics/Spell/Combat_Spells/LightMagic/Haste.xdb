@@ -16,25 +16,25 @@
 	<damage>
 		<Item>
 			<Base>0.15</Base>
-			<PerPower>0.0033</PerPower>
-		</Item>
-		<Item>
-			<Base>0.16</Base>
 			<PerPower>0.005</PerPower>
 		</Item>
 		<Item>
-			<Base>0.18</Base>
+			<Base>0.2</Base>
 			<PerPower>0.005</PerPower>
 		</Item>
 		<Item>
-			<Base>0.20</Base>
+			<Base>0.25</Base>
+			<PerPower>0.005</PerPower>
+		</Item>
+		<Item>
+			<Base>0.30</Base>
 			<PerPower>0.005</PerPower>
 		</Item>
 	</damage>
 	<duration>
 		<Item>
 			<Base>1</Base>
-			<PerPower>0.075</PerPower>
+			<PerPower>0.05</PerPower>
 		</Item>
 		<Item>
 			<Base>1.5</Base>
@@ -42,11 +42,11 @@
 		</Item>
 		<Item>
 			<Base>1.5</Base>
-			<PerPower>0.075</PerPower>
+			<PerPower>0.1</PerPower>
 		</Item>
 		<Item>
 			<Base>1.5</Base>
-			<PerPower>0.075</PerPower>
+			<PerPower>0.125</PerPower>
 		</Item>
 	</duration>
 	<sSpellCost>
