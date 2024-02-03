@@ -28,15 +28,15 @@
 ### PRESERVE:
 | CREATURE | TIER | NB | HP | ATT | DEF | DMG± | SPD | INIT | SPELLS | ABILITIES |
 |----------|------|----|----|-----|-----|------|-----|------|--------|-----------|
-| BLADE DANCER | 1 | 40 | 9 | 3 | 2 | 2-3 | 5 | 12 | _none_ | _none_ |
-| WAR DANCER | 1 | 40 | 10 | 4 | 3 | 2-4 | 5 | 12 | _none_ | WAR_DANCE |
-| WIND DANCER | 1 | 40 | 9 | 3 | 2 | 3-3 | 6 | 13 | _none_ | AGILITY |
+| BLADE DANCER | 1 | 38 | 9 | 3 | 2 | 2-2 | 5 | 12 | _none_ | _none_ |
+| WAR DANCER | 1 | 38 | 10 | 4 | 3 | 2-2 | 5 | 12 | _none_ | WAR_DANCE |
+| WIND DANCER | 1 | 38 | 9 | 3 | 2 | 2-3 | 6 | 13 | _none_ | AGILITY |
 | PIXIE | 2 | 22 | 11 | 1 | 1 | 2-4 | 6 | 9 | _none_ | NO_ENEMY_RETALIATION, SPRAY_ATTACK, EARTH_IMMUNED |
 | SPRITE | 2 | 22 | 13 | 1 | 1 | 3-4 | 6 | 9 | WIP | NO_ENEMY_RETALIATION, SPRAY_ATTACK, EARTH_IMMUNED |
 | DRYAD | 2 | 22 | 12 | 1 | 1 | 2-4 | 6 | 10 | _none_ | NO_ENEMY_RETALIATION, SPRAY_ATTACK, EARTH_IMMUNED, TREEANT_UNION |
-| HUNTER | 3 | 15 | 15 | 4 | 2 | 3-6 | 5 | 10 | _none_ | TWIN_ARROWS |
-| MASTER HUNTER | 3 | 15 | 16 | 5 | 3 | 5-6 | 5 | 11 | _none_ | TWIN_ARROWS, WARDING_ARROWS |
-| SHARPSHOOTER | 3 | 15 | 15 | 4 | 2 | 7-8 | 4 | 9 | _none_ | ARCANE_ARROW, LONG_RANGE |
+| HUNTER | 3 | 14 | 15 | 4 | 2 | 3-6 | 5 | 10 | _none_ | TWIN_ARROWS |
+| MASTER HUNTER | 3 | 14 | 16 | 5 | 3 | 5-6 | 5 | 11 | _none_ | TWIN_ARROWS, WARDING_ARROWS |
+| SHARPSHOOTER | 3 | 14 | 15 | 4 | 2 | 7-8 | 4 | 9 | _none_ | ARCANE_ARROW, LONG_RANGE |
 | DRUID | 4 | 9 | 37 | 7 | 7 | 6-9 | 4 | 8 | WIP | FREE_MIND, MAGIC_DISRUPTION |
 | DRUID ELDER | 4 | 9 | 42 | 7 | 7 | 6-9 | 4 | 8 | WIP | FREE_MIND, MAGIC_DISRUPTION, MANA_FEED |
 | HIGH DRUID | 4 | 9 | 40 | 9 | 9 | 8-9 | 4 | 8 | WIP | FREE_MIND, MAGIC_DISRUPTION, POWER_FEED |
@@ -56,9 +56,9 @@
 | DEFENDER | 1 | 52 | 8 | 1 | 4 | 1-2 | 4 | 8 | _none_ | SPITE, SHIELDED, SHIELD_WALL |
 | SHIELDGUARD | 1 | 52 | 8 | 2 | 4 | 1-2 | 4 | 8 | _none_ | SPITE, SHIELDED, SHIELD_WALL, STURDINESS |
 | MOUNTAIN GUARD | 1 | 52 | 8 | 1 | 5 | 1-2 | 4 | 8 | _none_ | SPITE, SHIELDED, SHIELD_WALL, HEAVY_ARMOR, STEADINESS, DEFENSIVE_STANCE, FIERCE_RETALIATION |
-| SPEARWIELDER | 2 | 35 | 11 | 3 | 4 | 1-4 | 4 | 10 | _none_ | NO_MELEE_PENALTY, WOUND |
-| SKIRMISHER | 2 | 35 | 11 | 5 | 4 | 1-5 | 5 | 10 | _none_ | NO_MELEE_PENALTY, WOUND |
-| HARPOONER | 2 | 35 | 11 | 3 | 4 | 2-5 | 4 | 10 | _none_ | HARPOON_STRIKE, WOUND |
+| SPEARWIELDER | 2 | 34 | 11 | 3 | 4 | 1-4 | 4 | 10 | _none_ | NO_MELEE_PENALTY, WOUND |
+| SKIRMISHER | 2 | 34 | 11 | 5 | 4 | 1-5 | 5 | 10 | _none_ | NO_MELEE_PENALTY, WOUND |
+| HARPOONER | 2 | 34 | 11 | 3 | 4 | 2-5 | 4 | 10 | _none_ | HARPOON_STRIKE, WOUND |
 | BRAWLER | 3 | 21 | 20 | 5 | 5 | 4-6 | 5 | 12 | _none_ | UNLIMITED_RETALIATION, BATTLE_RAGE |
 | BERSERKER | 3 | 21 | 20 | 8 | 5 | 4-8 | 5 | 12 | WIP | UNLIMITED_RETALIATION, BATTLE_RAGE, FURY, NO_ENEMY_RETALIATION |
 | BATTLERAGER | 3 | 21 | 22 | 6 | 6 | 6-6 | 5 | 13 | _none_ | UNLIMITED_RETALIATION, BATTLE_RAGE, FREE_MIND, GIANT_SLAYER |

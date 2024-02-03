@@ -683,333 +683,206 @@ CREATURES:
 
 HEROES:
   HAVEN:
-    - name: ALARIC
-      path: Haven/Alaric.(AdvMapHeroShared).xdb
-    - name: FREYDA
-      path: Haven/Axel.(AdvMapHeroShared).xdb
-    - name: BIARA?
-      path: Haven/Biara_Saint_Isabel.(AdvMapHeroShared).xdb
-    - name: RUTGER
-      path: Haven/Brem.(AdvMapHeroShared).xdb
-    - name: CHRISTIAN?
-      path: Haven/Christian.(AdvMapHeroShared).xdb
     - name: DUNCAN
       path: Haven/Duncan.(AdvMapHeroShared).xdb
-    - name: GIAR?
-      path: Haven/Giar.(AdvMapHeroShared).xdb
-    - name: GLEN?
-      path: Haven/Glen.(AdvMapHeroShared).xdb
-    - name: GODRIC
-      path: Haven/GodricMP.(AdvMapHeroShared).xdb
-    - name: ISABEL
-      path: Haven/Isabell.(AdvMapHeroShared).xdb
-    - name: JEDDITE*
-      path: Haven/Jeddite.(AdvMapHeroShared).xdb
-    - name: LASZL?
-      path: Haven/Laszlo.(AdvMapHeroShared).xdb
+    - name: VITTORIO
+      path: Haven/Christian.(AdvMapHeroShared).xdb
     - name: MAEVE
       path: Haven/Maeve.(AdvMapHeroShared).xdb
-    - name: LASZLO
-      path: Haven/Mardigo.(AdvMapHeroShared).xdb
-    - name: MARKAL
-      path: Haven/Markal.(AdvMapHeroShared).xdb
-    - name: ELLAINE
-      path: Haven/Nathaniel.(AdvMapHeroShared).xdb
-    - name: NICOLAI
-      path: Haven/Nicolai.(AdvMapHeroShared).xdb
-    - name: ORNELLA*
-      path: Haven/Ornella.(AdvMapHeroShared).xdb
     - name: DOUGAL
       path: Haven/Orrin.(AdvMapHeroShared).xdb
-    - name: ORLANDO
-      path: Haven/RedHeaven07_Orlando.(AdvMapHeroShared).xdb
-    - name: ANDREAS*
-      path: Haven/RedHeavenHero01.(AdvMapHeroShared).xdb
-    - name: VALERIA*
-      path: Haven/RedHeavenHero03.(AdvMapHeroShared).xdb
-    - name: BERTRAND*
-      path: Haven/RedHeavenHero05.(AdvMapHeroShared).xdb
-    - name: GABRIELLE
-      path: Haven/RedHeavenHero06.(AdvMapHeroShared).xdb
+    - name: LASZLO
+      path: Haven/Laszlo.(AdvMapHeroShared).xdb
     - name: KLAUS
       path: Haven/Sarge.(AdvMapHeroShared).xdb
-    - name: IRINA
-      path: Haven/Ving.(AdvMapHeroShared).xdb
+    - name: FREYDA
+      path: Haven/Axel.(AdvMapHeroShared).xdb
+    - name: ISABEL
+      path: Haven/Isabell.(AdvMapHeroShared).xdb
+    - name: GODRIC
+      path: Haven/GodricMP.(AdvMapHeroShared).xdb
+    - name: NICOLAI
+      path: Haven/Nicolai.(AdvMapHeroShared).xdb
+    # - name: GABRIELLE
+    #   path: Haven/RedHeavenHero06.(AdvMapHeroShared).xdb
+    - name: ALARIC
+      path: Haven/Alaric.(AdvMapHeroShared).xdb
   PRESERVE:
+    - name: WYNGAAL
+      path: Preserve/Linaas.(AdvMapHeroShared).xdb
+    - name: KYRRE
+      path: Preserve/Kyrre.(AdvMapHeroShared).xdb
+    - name: TALANAR
+      path: Preserve/Nadaur.(AdvMapHeroShared).xdb
+    - name: JENOVA
+      path: Preserve/Jenova.(AdvMapHeroShared).xdb
+    - name: FINDAN
+      path: Preserve/Heam.(AdvMapHeroShared).xdb
     - name: IVOR
       path: Preserve/Arniel.(AdvMapHeroShared).xdb
     - name: DIRAEL
       path: Preserve/Diraya.(AdvMapHeroShared).xdb
     - name: VINRAEL
-      path: Preserve/Elleshar.(AdvMapHeroShared).xdb
-    - name: GEM
-      path: Preserve/Gem.(AdvMapHeroShared).xdb
-    - name: GILRAEN
-      path: Preserve/Gillion.(AdvMapHeroShared).xdb
-    - name: FINDAN
-      path: Preserve/Heam.(AdvMapHeroShared).xdb
-    - name: ALARON
-      path: Preserve/Ildar.(AdvMapHeroShared).xdb
+      path: Preserve/Vinrael.(AdvMapHeroShared).xdb
+    - name: TIERU
+      path: Preserve/Vaniel.(AdvMapHeroShared).xdb
     - name: YLTHIN
       path: Preserve/Itil.(AdvMapHeroShared).xdb
-    - name: JENOVA
-      path: Preserve/Jenova.(AdvMapHeroShared).xdb
-    - name: KYRRE
-      path: Preserve/Kyrre.(AdvMapHeroShared).xdb
-    - name: WYNGAAL
-      path: Preserve/Linaas.(AdvMapHeroShared).xdb
-    - name: MEPHALA
-      path: Preserve/Mephala.(AdvMapHeroShared).xdb
-    - name: ANWEN
-      path: Preserve/Metlirn.(AdvMapHeroShared).xdb
-    - name: TALANAR
-      path: Preserve/Nadaur.(AdvMapHeroShared).xdb
-    - name: OSSIR
-      path: Preserve/Ossir.(AdvMapHeroShared).xdb
-    - name: TIERU?
-      path: Preserve/Tieru.xdb
     - name: ELLESHAR
-      path: Preserve/Vaniel.(AdvMapHeroShared).xdb
-    - name: VINRAEL?
-      path: Preserve/Vinrael.(AdvMapHeroShared).xdb
+      path: Preserve/Elleshar.(AdvMapHeroShared).xdb
+    - name: MELODIA
+      path: Preserve/Melodia.(AdvMapHeroShared).xdb
   FORTRESS:
-    - name: BART
-      path: Dwarves/Bart.(AdvMapHeroShared).xdb
-    - name: EBBA
-      path: Dwarves/Bersy.(AdvMapHeroShared).xdb
-    - name: BRAND
-      path: Dwarves/Brand.(AdvMapHeroShared).xdb
-    - name: ERLING
-      path: Dwarves/Egil.(AdvMapHeroShared).xdb
-    - name: HANGVUL
-      path: Dwarves/Hangvul.(AdvMapHeroShared).xdb
-    - name: ULAND
-      path: Dwarves/Hangvul2.(AdvMapHeroShared).xdb
     - name: INGVAR
       path: Dwarves/Ingvar.(AdvMapHeroShared).xdb
-    - name: TOLGHAR
-      path: Dwarves/KingTolghar.(AdvMapHeroShared).xdb
-    - name: MAXIMUS
-      path: Dwarves/Maximus.(AdvMapHeroShared).xdb
-    - name: HELMAR
-      path: Dwarves/Ottar.(AdvMapHeroShared).xdb
-    - name: ROLF
-      path: Dwarves/Rolf.(AdvMapHeroShared).xdb
     - name: KARLI
       path: Dwarves/Skeggy.(AdvMapHeroShared).xdb
+    - name: ROLF
+      path: Dwarves/Rolf.(AdvMapHeroShared).xdb
+    - name: HANGVUL
+      path: Dwarves/Hangvul2.(AdvMapHeroShared).xdb
     - name: TAZAR
       path: Dwarves/Tazar.(AdvMapHeroShared).xdb
-    - name: HAEGEIR
-      path: Dwarves/Ufretin.(AdvMapHeroShared).xdb
-    - name: INGA
-      path: Dwarves/Una.(AdvMapHeroShared).xdb
-    - name: EDWIG
-      path: Dwarves/Vilma.(AdvMapHeroShared).xdb
     - name: WULFSTAN
       path: Dwarves/Wulfstan.(AdvMapHeroShared).xdb
+    - name: TOLGHAR
+      path: Dwarves/KingTolghar.(AdvMapHeroShared).xdb
+    - name: ERLING
+      path: Dwarves/Egil.(AdvMapHeroShared).xdb
+    - name: EDWIG
+      path: Dwarves/Vilma.(AdvMapHeroShared).xdb
+    - name: BRAND
+      path: Dwarves/Brand.(AdvMapHeroShared).xdb
+    - name: EBBA
+      path: Dwarves/Bersy.(AdvMapHeroShared).xdb
+    - name: INGA
+      path: Dwarves/Una.(AdvMapHeroShared).xdb
   ACADEMY:
-    - name: NUR
-      path: Academy/Astral.(AdvMapHeroShared).xdb
-    - name: CYRUS
-      path: Academy/Cyrus.(AdvMapHeroShared).xdb
-    - name: DAVIUS
-      path: Academy/Davius.(AdvMapHeroShared).xdb
-    - name: EMILIA
-      path: Academy/Emilia.(AdvMapHeroShared).xdb
-    - name: FAIZ
-      path: Academy/Faiz.(AdvMapHeroShared).xdb
-    - name: GURVILIN
-      path: Academy/Gurvilin.(AdvMapHeroShared).xdb
     - name: HAVEZ
       path: Academy/Havez.(AdvMapHeroShared).xdb
     - name: RAZZAK
-      path: Academy/Isher.(AdvMapHeroShared).xdb
-    - name: JOSEPHINE
-      path: Academy/Josephine.(AdvMapHeroShared).xdb
-    - name: MAAHIR
-      path: Academy/Maahir.(AdvMapHeroShared).xdb
-    - name: MINASLI
-      path: Academy/Minasli.(AdvMapHeroShared).xdb
-    - name: NATHIR
-      path: Academy/Nur.(AdvMapHeroShared).xdb
-    - name: NARXES*
       path: Academy/Razzak.(AdvMapHeroShared).xdb
-    - name: RISSA
-      path: Academy/Rissa.(AdvMapHeroShared).xdb
-    - name: JHORA
-      path: Academy/Sufi.(AdvMapHeroShared).xdb
-    - name: GALIB
-      path: Academy/Tan.(AdvMapHeroShared).xdb
+    - name: DAVIUS
+      path: Academy/Davius.(AdvMapHeroShared).xdb
+    - name: NATHIR
+      path: Academy/Astral.(AdvMapHeroShared).xdb
     - name: THEODORUS
       path: Academy/Timerkhan.(AdvMapHeroShared).xdb
+    - name: GALIB
+      path: Academy/Tan.(AdvMapHeroShared).xdb
+    - name: NUR
+      path: Academy/Nur.(AdvMapHeroShared).xdb
     - name: ZEHIR
       path: Academy/Zehir.(AdvMapHeroShared).xdb
+    - name: CYRUS
+      path: Academy/Cyrus.(AdvMapHeroShared).xdb
+    - name: MINASLI
+      path: Academy/Minasli.(AdvMapHeroShared).xdb
+    - name: RISSA
+      path: Academy/Rissa.(AdvMapHeroShared).xdb
+    - name: MAAHIR
+      path: Academy/Maahir.(AdvMapHeroShared).xdb
   DUNGEON:
-    - name: AGBETH
-      path: Dungeon/Agbeth.xdb
-    - name: LETHOS
-      path: Dungeon/Dalom.(AdvMapHeroShared).xdb
-    - name: DARKSTORM
-      path: Dungeon/Darkstorm.(AdvMapHeroShared).xdb
-    - name: ERUINA
-      path: Dungeon/Eruina.(AdvMapHeroShared).xdb
-    - name: ERUINA?
-      path: Dungeon/Eruina_A1.(AdvMapHeroShared).xdb
-    - name: SORGAL
-      path: Dungeon/Ferigl.(AdvMapHeroShared).xdb
-    - name: SINITAR
-      path: Dungeon/Inagost.(AdvMapHeroShared).xdb
-    - name: KASTORE
-      path: Dungeon/Kastore.(AdvMapHeroShared).xdb
-    - name: SHADYA
-      path: Dungeon/Kelodin.(AdvMapHeroShared).xdb
-    - name: KYTHRA
-      path: Dungeon/Menel.(AdvMapHeroShared).xdb
-    - name: OHTAR?
-      path: Dungeon/Ohtar.(AdvMapHeroShared).xdb
     - name: VAYSHAN
       path: Dungeon/Ohtarig.(AdvMapHeroShared).xdb
-    - name: RAELAG
-      path: Dungeon/Raelag.(AdvMapHeroShared).xdb
-    - name: RANLETH
-      path: Dungeon/Ranleth.xdb
-    - name: SEGREF?
-      path: Dungeon/Segref.(AdvMapHeroShared).xdb
-    - name: SEPHINROTH
-      path: Dungeon/Sephinroth.(AdvMapHeroShared).xdb
-    - name: YLAYA
-      path: Dungeon/Shadwyn.(AdvMapHeroShared).xdb
-    - name: SYLSAI
-      path: Dungeon/Sylsai.(AdvMapHeroShared).xdb
-    - name: THRALSAI
-      path: Dungeon/Thralsai.(AdvMapHeroShared).xdb
     - name: YRWANNA
       path: Dungeon/Urunir.(AdvMapHeroShared).xdb
+    - name: DARKSTORM
+      path: Dungeon/Darkstorm.(AdvMapHeroShared).xdb
+    - name: SORGAL
+      path: Dungeon/Ferigl.(AdvMapHeroShared).xdb
+    - name: SYLSAI
+      path: Dungeon/Sylsai.(AdvMapHeroShared).xdb
+    - name: RAELAG
+      path: Dungeon/Raelag.(AdvMapHeroShared).xdb
+    - name: SINITAR
+      path: Dungeon/Inagost.(AdvMapHeroShared).xdb
+    - name: RANLETH
+      path: Dungeon/Ranleth.xdb
+    - name: ERUINA
+      path: Dungeon/Eruina.(AdvMapHeroShared).xdb
+    - name: SHADYA
+      path: Dungeon/Kelodin.(AdvMapHeroShared).xdb
+    - name: LETHOS
+      path: Dungeon/Dalom.(AdvMapHeroShared).xdb
+    - name: SEPHINROTH
+      path: Dungeon/Sephinroth.(AdvMapHeroShared).xdb
   NECROPOLIS:
-    - name: ARANTIR
-      path: Necropolis/A2_Arantir.(AdvMapHeroShared).xdb
-    - name: ZOLTAN
-      path: Necropolis/Aberrar.(AdvMapHeroShared).xdb
-    - name: AISLINN
-      path: Necropolis/Aislinn.(AdvMapHeroShared).xdb
-    - name: ARCHILUS
-      path: Necropolis/Archilus.(AdvMapHeroShared).xdb
-    - name: BEREIN?
-      path: Necropolis/Berein.(AdvMapHeroShared).xdb
-    - name: RAVEN
-      path: Necropolis/Effig.(AdvMapHeroShared).xdb
-    - name: GIOVANNI
-      path: Necropolis/Giovanni.(AdvMapHeroShared).xdb
-    - name: KASPAR
-      path: Necropolis/Gles.(AdvMapHeroShared).xdb
-    - name: NAADIR
-      path: Necropolis/Muscip.(AdvMapHeroShared).xdb
-    - name: DEIRDRE
-      path: Necropolis/Nemor.(AdvMapHeroShared).xdb
-    - name: NIKOLAY?
-      path: Necropolis/Nikolay.(AdvMapHeroShared).xdb
-    - name: ORNELLA2
-      path: Necropolis/Ornella_necro.xdb
     - name: VLADIMIR
       path: Necropolis/Pelt.(AdvMapHeroShared).xdb
-    - name: SANDRO
-      path: Necropolis/Sandro.(AdvMapHeroShared).xdb
+    - name: ARANTIR
+      path: Necropolis/A2_Arantir.(AdvMapHeroShared).xdb
     - name: ORSON
       path: Necropolis/Straker.(AdvMapHeroShared).xdb
     - name: LUCRETIA
       path: Necropolis/Tamika.(AdvMapHeroShared).xdb
-    - name: THANT
-      path: Necropolis/Thant.(AdvMapHeroShared).xdb
-    - name: VIDOMINA
-      path: Necropolis/Vidomina.(AdvMapHeroShared).xdb
     - name: XERXON
       path: Necropolis/Xerxon.(AdvMapHeroShared).xdb
+    - name: KASPAR
+      path: Necropolis/Gles.(AdvMapHeroShared).xdb
+    - name: RAVEN
+      path: Necropolis/Effig.(AdvMapHeroShared).xdb
+    - name: ARCHILUS
+      path: Necropolis/Archilus.(AdvMapHeroShared).xdb
+    - name: THANT
+      path: Necropolis/Thant.(AdvMapHeroShared).xdb
+    # - name: SANDRO
+    #   path: Necropolis/Sandro.(AdvMapHeroShared).xdb
+    - name: ORNELLA
+      path: Necropolis/Ornella_necro.xdb
+    - name: DEIRDRE
+      path: Necropolis/Nemor.(AdvMapHeroShared).xdb
   INFERNO:
-    - name: AGRAEL
-      path: Inferno/Agrael.(AdvMapHeroShared).xdb
-    - name: BIARA
-      path: Inferno/Biara.(AdvMapHeroShared).xdb
-    - name: CALH
-      path: Inferno/Calh.(AdvMapHeroShared).xdb
-    - name: GRAWL
-      path: Inferno/Calid.(AdvMapHeroShared).xdb
-    - name: CALID
-      path: Inferno/Calid2.(AdvMapHeroShared).xdb
-    - name: DELEB
-      path: Inferno/Deleb.(AdvMapHeroShared).xdb
-    - name: ALASTOR
-      path: Inferno/Efion.(AdvMapHeroShared).xdb
-    - name: GAMOR?
-      path: Inferno/Gamor.(AdvMapHeroShared).xdb
     - name: GROK
       path: Inferno/Grok.(AdvMapHeroShared).xdb
-    - name: GUARG?
-      path: Inferno/Guarg.(AdvMapHeroShared).xdb
-    - name: HARKENRAZ
-      path: Inferno/Harkenraz.(AdvMapHeroShared).xdb
-    - name: NEBIROS
-      path: Inferno/Jazaz.(AdvMapHeroShared).xdb
-    - name: MALUSTAR
-      path: Inferno/Malustar.(AdvMapHeroShared).xdb
-    - name: MARBAS
-      path: Inferno/Marder.(AdvMapHeroShared).xdb
-    - name: NYMUS
-      path: Inferno/Nymus.(AdvMapHeroShared).xdb
-    - name: JEZEBETH
-      path: Inferno/Oddrema.(AdvMapHeroShared).xdb
-    - name: ORLANDO?
-      path: Inferno/Orlando.(AdvMapHeroShared).xdb
     - name: SHELTEM
       path: Inferno/Sheltem.(AdvMapHeroShared).xdb
-    - name: KHA BELETH
-      path: Inferno/Sovereign.(AdvMapHeroShared).xdb
-    - name: SOVEREIGN?
+    - name: GRAWL
+      path: Inferno/Guarg.(AdvMapHeroShared).xdb
+    - name: ASH
+      path: Inferno/Ash.(AdvMapHeroShared).xdb
+    - name: NYMUS
+      path: Inferno/Nymus.(AdvMapHeroShared).xdb
+    - name: MALUSTAR
+      path: Inferno/Malustar.(AdvMapHeroShared).xdb
+    - name: AGRAEL
+      path: Inferno/Agrael.(AdvMapHeroShared).xdb
+    - name: MARBAS
+      path: Inferno/Marder.(AdvMapHeroShared).xdb
+    # - name: ORLANDO
+    #   path: Inferno/Orlando.(AdvMapHeroShared).xdb
+    - name: BIARA
+      path: Inferno/Biara.(AdvMapHeroShared).xdb
+    - name: DELEB
+      path: Inferno/Deleb.(AdvMapHeroShared).xdb
+    - name: SOVEREIGN
       path: Inferno/Sovereign2.(AdvMapHeroShared).xdb
-    - name: ZYDAR
-      path: Inferno/Zydar.(AdvMapHeroShared).xdb
   STRONGHOLD:
-    - name: AZAR
-      path: Stronghold/Azar.(AdvMapHeroShared).xdb
-    - name: CRAGHACK
-      path: Stronghold/Crag.(AdvMapHeroShared).xdb
-    - name: ERIKA
-      path: Stronghold/Erika.(AdvMapHeroShared).xdb
-    - name: GOTAI
-      path: Stronghold/Gottai.xdb
     - name: KRAGH
       path: Stronghold/Hero1.(AdvMapHeroShared).xdb
-    - name: URGHAT
-      path: Stronghold/Hero2.(AdvMapHeroShared).xdb
+    - name: GOTAI
+      path: Stronghold/Gottai.xdb
+    - name: KILGHAN
+      path: Stronghold/Hero9.(AdvMapHeroShared).xdb
+    - name: TELSEK
+      path: Stronghold/Hero8.(AdvMapHeroShared).xdb
     - name: GARUNA
       path: Stronghold/Hero3.(AdvMapHeroShared).xdb
     - name: GORSHAK
       path: Stronghold/Hero4.(AdvMapHeroShared).xdb
-    - name: HERO5?
-      path: Stronghold/Hero5.(AdvMapHeroShared).xdb
     - name: SHAK KARUKAT
       path: Stronghold/Hero6.(AdvMapHeroShared).xdb
     - name: HAGGASH
       path: Stronghold/Hero7.(AdvMapHeroShared).xdb
-    - name: TELSEK
-      path: Stronghold/Hero8.(AdvMapHeroShared).xdb
-    - name: KILGHAN
-      path: Stronghold/Hero9.(AdvMapHeroShared).xdb
-    - name: KRAAL
-      path: Stronghold/Kraal.(AdvMapHeroShared).xdb
-    - name: KUJIN?
-      path: Stronghold/Kujin.(AdvMapHeroShared).xdb
-    - name: KUJIN
-      path: Stronghold/KujinMP.(AdvMapHeroShared).xdb
-    - name: KUNYAK
-      path: Stronghold/Kunyak.xdb
-    - name: MATEWA
-      path: Stronghold/Matewa.(AdvMapHeroShared).xdb
     - name: MUKHA
       path: Stronghold/Mokka.(AdvMapHeroShared).xdb
-    - name: SHIVA
-      path: Stronghold/Shiva.(AdvMapHeroShared).xdb
+    # - name: URGHAT
+    #   path: Stronghold/Hero2.(AdvMapHeroShared).xdb
     - name: ZOULEIKA
       path: Stronghold/Zouleika.(AdvMapHeroShared).xdb
+    - name: KUJIN
+      path: Stronghold/KujinMP.(AdvMapHeroShared).xdb
+
 
 SKILLS:
   OFFENCE:
@@ -1031,7 +904,7 @@ SKILLS:
       - PREPARATION
       - EVASION
       - SEAL_OF_PROTECTION
-      # - DEFENSE_TODO1
+      - STAMINA
   LEARNING:
     name: ''
     desc: ''
@@ -1067,8 +940,8 @@ SKILLS:
     desc: ''
     perks:
       - DIPLOMACY
-      # - LEADERSHIP_TODO1
-      # - CHARISMA
+      - TALETELLERS
+      - CHARISMA
       - MOTIVATION
       - ENCOURAGE
       - LAST_STAND
@@ -1079,9 +952,9 @@ SKILLS:
       - ESTATES
       - GEOLOGY
       - INDUSTRY
-      # - GEAR_UP
-      # - HEROES_LEGACY
-      # - MYTHOLOGY
+      - GEAR_UP
+      - HEROES_LEGACY
+      - MYTHOLOGY
   LOGISTICS:
     name: ''
     desc: ''
@@ -1108,7 +981,7 @@ SKILLS:
     perks:
       - TOUGHNESS
       - BATTLE_FRENZY
-      - WARM_UP
+      - ONSLAUGHT
       - EXPERTISE
       - MAGIC_RESISTANCE
       - DETERMINATION
@@ -1116,22 +989,23 @@ SKILLS:
     name: ''
     desc: ''
     perks:
+      - GET_WISER
       - COORDINATION
       - STUNNING_BLOW
-      # - COMBAT_TODO1
+      - GET_STRONGER
       - MARK_OF_THE_DAMNED
-      - WEAKENING_STRIKE
       - BRUTALITY
   SHATTER_MAGIC:
     name: ''
     desc: ''
     perks:
       - BACK_TO_THE_VOID
-      - SUPRESS_LIGHT
-      - SUPRESS_DARK
+      - MANA_BURST
+      - MAGIC_FILTER
       - PROTECTION
       - SAP_MAGIC
-      - MANA_BURST
+      - SUPRESS_LIGHT
+      - SUPRESS_DARK
   LIGHT_MAGIC:
     name: ''
     desc: ''
@@ -1141,7 +1015,7 @@ SKILLS:
       - COUNTERSPELL
       - MASTER_OF_WRATH
       - FIRE_RESISTANCE
-      # - LIGHT_TODO1
+      - SIPHON_GRACE
   DARK_MAGIC:
     name: ''
     desc: ''
@@ -1272,7 +1146,7 @@ SKILLS:
       - INFUSION
       - ELEMENTAL_VISION
       - ETERNAL_SERVITUDE
-      # - INFERNO_TODO1
+      - BARBARIAN_SOIL_BURN
       - SIEGE
   ULTIMATE:
     name: ''
