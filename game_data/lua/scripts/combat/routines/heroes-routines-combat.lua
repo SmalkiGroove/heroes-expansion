@@ -49,8 +49,11 @@ end
 function Routine_ResetAtbOnKillEnraged(side, hero, unit)
     -- print("Trigger reset enraged atb !")
     if GetUnitSide(unit) ~= GetUnitSide(hero) then
-        if not contains(ENRAGED_CREATURES_ELVEN_FURY, GetCreatureType(CURRENT_UNIT)) then SetATB_ID(CURRENT_UNIT, ATB_NEXT) end
-        SetATB_CreatureTypes(side, ENRAGED_CREATURES_ELVEN_FURY, ATB_INSTANT)
+        SetATB_ID(CURRENT_UNIT, ATB_NEXT)
+        SetATB_CreatureTypes(side, CREATURES_BY_FACTION[PRESERVE][6], ATB_INSTANT)
+        SetATB_CreatureTypes(side, CREATURES_BY_FACTION[PRESERVE][4], ATB_INSTANT)
+        SetATB_CreatureTypes(side, CREATURES_BY_FACTION[PRESERVE][3], ATB_INSTANT)
+        SetATB_CreatureTypes(side, CREATURES_BY_FACTION[PRESERVE][1], ATB_INSTANT)
     end
     COMBAT_PAUSE = 0
 end

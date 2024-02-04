@@ -43,7 +43,7 @@ function SetHeroActiveSet(hero, pieces, set, id)
 end
 
 function UpdateArtifactSets(hero, previous, artifact)
-    for set = 1,24 do
+    for set = 1,ARTIFACT_SET_COUNT do
         if contains(ARTIFACT_SETS[set], previous) or contains(ARTIFACT_SETS[set], artifact) then
             local pieces = 0
             for _,a in ARTIFACT_SETS[set] do
