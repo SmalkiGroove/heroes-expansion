@@ -2,7 +2,7 @@
 function Routine_CheckOffence(player, hero, mastery, level)
     print("$ Routine_CheckOffence")
     local level = level or GetHeroLevel(hero)
-    local value = StatPerLevelDivisor(level, mastery, 8 - mastery)
+    local value = StatPerLevelDivisor(level, 0, 8 - mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_OFFENCE]
     if diff ~= 0 then
         AddHero_StatAmount(player, hero, STAT_ATTACK, diff)
@@ -13,7 +13,7 @@ end
 function Routine_CheckDefense(player, hero, mastery, level)
     print("$ Routine_CheckDefense")
     local level = level or GetHeroLevel(hero)
-    local value = StatPerLevelDivisor(level, mastery, 8 - mastery)
+    local value = StatPerLevelDivisor(level, 0, 8 - mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_DEFENSE]
     if diff ~= 0 then
         AddHero_StatAmount(player, hero, STAT_DEFENCE, diff)
@@ -24,7 +24,7 @@ end
 function Routine_CheckLearning(player, hero, mastery, level)
     print("$ Routine_CheckLearning")
     local level = level or GetHeroLevel(hero)
-    local value = StatPerLevelDivisor(level, mastery, 8 - mastery)
+    local value = StatPerLevelDivisor(level, 0, 8 - mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_LEARNING]
     if diff ~= 0 then
         AddHero_StatAmount(player, hero, STAT_KNOWLEDGE, diff)
@@ -35,7 +35,7 @@ end
 function Routine_CheckSorcery(player, hero, mastery, level)
     print("$ Routine_CheckSorcery")
     local level = level or GetHeroLevel(hero)
-    local value = StatPerLevelDivisor(level, mastery, 8 - mastery)
+    local value = StatPerLevelDivisor(level, 0, 8 - mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_SORCERY]
     if diff ~= 0 then
         AddHero_StatAmount(player, hero, STAT_SPELL_POWER, diff)
@@ -46,7 +46,7 @@ end
 function Routine_CheckVoice(player, hero, mastery, level)
     print("$ Routine_CheckVoice")
     local level = level or GetHeroLevel(hero)
-    local value = StatPerLevelDivisor(level, mastery, 8 - mastery)
+    local value = StatPerLevelDivisor(level, 0, 8 - mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_VOICE]
     if diff ~= 0 then
         AddHero_StatAmount(player, hero, STAT_SPELL_POWER, diff)

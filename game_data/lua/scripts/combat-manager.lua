@@ -75,10 +75,12 @@ function ManageCombatPrepare()
     ATTACKER_HERO = GetHero(ATTACKER) and GetHeroName(ATTACKER_HERO_ID) or ""
     DEFENDER_HERO = GetHero(DEFENDER) and GetHeroName(DEFENDER_HERO_ID) or ""
     if ATTACKER_HERO ~= "" then
-        startThread(FetchData, ATTACKER_HERO)
+        startThread(FetchData, ATTACKER_HERO) sleep(500)
+		startThread(DoHeroSpeRoutine_CombatPrepare, ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
     end
     if DEFENDER_HERO ~= "" then
-        startThread(FetchData, DEFENDER_HERO)
+        startThread(FetchData, DEFENDER_HERO) sleep(500)
+		startThread(DoHeroSpeRoutine_CombatPrepare, DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
     end
 end
 

@@ -472,7 +472,7 @@ end
 
 
 
-COMBAT_PREPART_HERO_ROUTINES = {
+COMBAT_PREPARE_HERO_ROUTINES = {
     -- haven
     -- preserve
     [H_TIERU] = Routine_SummonDruidStack,
@@ -563,8 +563,8 @@ UNIT_DIED_HERO_ROUTINES = {
 
 
 function DoHeroSpeRoutine_CombatPrepare(side, name, id)
-    if COMBAT_PREPART_HERO_ROUTINES[name] then
-        startThread(COMBAT_PREPART_HERO_ROUTINES[name], side, id)
+    if COMBAT_PREPARE_HERO_ROUTINES[name] then
+        startThread(COMBAT_PREPARE_HERO_ROUTINES[name], side, id)
     else
         startThread(NoneRoutine)
     end
