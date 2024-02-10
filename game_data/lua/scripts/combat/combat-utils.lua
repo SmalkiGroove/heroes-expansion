@@ -6,6 +6,7 @@ function GetHeroSpellpower(hero) return HERO_DATA[hero][3] end
 function GetHeroKnowledge(hero) return HERO_DATA[hero][4] end
 function GetHeroMorale(hero) return HERO_DATA[hero][5] end
 function GetHeroLuck(hero) return HERO_DATA[hero][6] end
+function GetHeroSkillMastery(hero,skill) return HERO_DATA[hero][skill] end
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------

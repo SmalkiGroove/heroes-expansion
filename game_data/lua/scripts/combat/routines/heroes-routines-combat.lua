@@ -81,8 +81,9 @@ end
 function Routine_SummonDruidStack(side, hero)
     -- print("Trigger elder druids summoning !")
     local m = GetUnitMaxManaPoints(hero) * 0.1
+    local x = 2 + side * 13
     local amount = trunc(0.5 * m * m)
-    SummonCreatureStack_X(side, CREATURE_DRUID_ELDER, amount, 0)
+    SummonCreatureStack_X(side, CREATURE_DRUID_ELDER, amount, x)
     COMBAT_PAUSE = 0
 end
 
@@ -402,9 +403,10 @@ end
 function Routine_SummonPitlords(side, hero)
     -- print("Trigger pit lords summoning !")
     local m = GetUnitMaxManaPoints(hero) * 0.1
+    local x = 2 + side * 13
     local amount = trunc(0.1 * m * m)
-    SummonCreatureStack_X(side, CREATURE_BALOR, amount, 0)
-    SummonCreatureStack_X(side, CREATURE_BALOR, amount, 0)
+    SummonCreatureStack_X(side, CREATURE_BALOR, amount, x)
+    SummonCreatureStack_X(side, CREATURE_BALOR, amount, x)
     COMBAT_PAUSE = 0
 end
 
@@ -595,5 +597,5 @@ function DoHeroSpeRoutine_UnitDied(side, name, id, unit)
 end
 
 
--- print("Loaded hero spe advmap routines")
-ROUTINES_LOADED[1] = 1
+-- print("Loaded heroes-routines-combat.lua")
+ROUTINES_LOADED[11] = 1

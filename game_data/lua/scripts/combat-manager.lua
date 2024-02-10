@@ -32,6 +32,7 @@ function FetchData(hero)
     local knowledge = GetGameVar(VarHeroStatKnowledge(hero))
     local morale = GetGameVar(VarHeroStatMorale(hero))
     local luck = GetGameVar(VarHeroStatLuck(hero))
+    local houndmasters = GetGameVar(VarHeroSkillId(hero,PERK_HOUNDMASTERS))
     HERO_DATA[hero] = {
         [0] = 0 + level,
         [1] = 0 + attack,
@@ -40,11 +41,14 @@ function FetchData(hero)
         [4] = 0 + knowledge,
         [5] = 0 + morale,
         [6] = 0 + luck,
+        [PERK_HOUNDMASTERS] = houndmasters,
     }
     print("Hero "..hero.." data collected. Lvl "..HERO_DATA[hero][0]..
         " / Att "..HERO_DATA[hero][1].." / Def "..HERO_DATA[hero][2]..
         " / Spp "..HERO_DATA[hero][3].." / Klg "..HERO_DATA[hero][4]..
-        " / Mrl "..HERO_DATA[hero][5].." / Lck "..HERO_DATA[hero][6])
+        " / Mrl "..HERO_DATA[hero][5].." / Lck "..HERO_DATA[hero][6]..
+        " // Houndmasters "..HERO_DATA[hero][PERK_HOUNDMASTERS]
+    )
 end
 
 function Pause()
@@ -76,10 +80,12 @@ function ManageCombatPrepare()
     DEFENDER_HERO = GetHero(DEFENDER) and GetHeroName(DEFENDER_HERO_ID) or ""
     if ATTACKER_HERO ~= "" then
         startThread(FetchData, ATTACKER_HERO) sleep(500)
+        startThread(DoSkillRoutine_CombatPrepare, ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
 		startThread(DoHeroSpeRoutine_CombatPrepare, ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
     end
     if DEFENDER_HERO ~= "" then
         startThread(FetchData, DEFENDER_HERO) sleep(500)
+		startThread(DoSkillRoutine_CombatPrepare, DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
 		startThread(DoHeroSpeRoutine_CombatPrepare, DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
     end
 end
@@ -156,3 +162,4 @@ LoadScript("/scripts/game/heroes.lua", 5)
 LoadScript("/scripts/combat/combat-data.lua", 8)
 LoadScript("/scripts/combat/combat-utils.lua", 9)
 LoadScript("/scripts/combat/routines/heroes-routines-combat.lua", 11)
+LoadScript("/scripts/combat/routines/skills-routines-combat.lua", 12)

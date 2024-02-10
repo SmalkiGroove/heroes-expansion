@@ -374,6 +374,12 @@ function IsEqualPosition(object, x, y, z)
     return (x == xx and y == yy and z == zz)
 end
 
+function CreatureToUndead(creature)
+	if CREATURES[creature][1] == NECROPOLIS then return creature end
+	local tier = CREATURES[creature][2]
+	return CREATURES_BY_FACTION[NECROPOLIS][tier][1]
+end
+
 
 -- print("Loaded advmap-utils.lua")
 ROUTINES_LOADED[9] = 1

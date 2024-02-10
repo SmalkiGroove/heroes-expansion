@@ -3734,7 +3734,7 @@
 				<spellBuffs/>
 				<BasicSkillID>HERO_SKILL_SPIRITISM</BasicSkillID>
 				<SkillPrerequisites>
-					<Item><Class>HERO_CLASS_STRONGHOLD_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_WITCHCRAFT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_STRONGHOLD_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BANISH</Item></dependenciesIDs></Item>
 				</SkillPrerequisites>
 				<AIRacesValues>
 					<Haven><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Haven>
@@ -4390,17 +4390,17 @@
 				</Texture>
 				<CommonTexture href="/Textures/HeroScreen/Skills/Spiritism_1.xdb#xpointer(/Texture)"/>
 				<NameFileRef>
-					<Item href="/Text/Game/Skills/Common/Spiritism/1/Name.txt"/>
-					<Item href="/Text/Game/Skills/Common/Spiritism/2/Name.txt"/>
-					<Item href="/Text/Game/Skills/Common/Spiritism/3/Name.txt"/>
+					<Item href="/Text/Game/Skills/Unique/Spiritism/1/Name.txt"/>
+					<Item href="/Text/Game/Skills/Unique/Spiritism/2/Name.txt"/>
+					<Item href="/Text/Game/Skills/Unique/Spiritism/3/Name.txt"/>
 				</NameFileRef>
-				<CommonNameFileRef href="/Text/Game/Skills/Common/Spiritism/Common/name.txt"/>
+				<CommonNameFileRef href="/Text/Game/Skills/Unique/Spiritism/Common/name.txt"/>
 				<DescriptionFileRef>
-					<Item href="/Text/Game/Skills/Common/Spiritism/1/Description.txt"/>
-					<Item href="/Text/Game/Skills/Common/Spiritism/2/Description.txt"/>
-					<Item href="/Text/Game/Skills/Common/Spiritism/3/Description.txt"/>
+					<Item href="/Text/Game/Skills/Unique/Spiritism/1/Description.txt"/>
+					<Item href="/Text/Game/Skills/Unique/Spiritism/2/Description.txt"/>
+					<Item href="/Text/Game/Skills/Unique/Spiritism/3/Description.txt"/>
 				</DescriptionFileRef>
-				<CommonDescriptionFileRef href="/Text/Game/Skills/Common/Spiritism/Common/Description.txt"/>
+				<CommonDescriptionFileRef href="/Text/Game/Skills/Unique/Spiritism/Common/Description.txt"/>
 				<SkillType>SKILLTYPE_SKILL</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
@@ -8178,8 +8178,8 @@
 			<ID>HERO_SKILL_GEAR_UP</ID>
 			<obj>
 				<Texture>
-					<Item href=""/>
-					<Item href=""/>
+					<Item href="/Textures/HeroScreen/Perks/GearUp_grey.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/GearUp.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -8212,8 +8212,8 @@
 			<ID>HERO_SKILL_HEROES_LEGACY</ID>
 			<obj>
 				<Texture>
-					<Item href=""/>
-					<Item href=""/>
+					<Item href="/Textures/HeroScreen/Perks/HeroesLegacy_grey.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/HeroesLegacy.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>

@@ -16,6 +16,7 @@ function Routine_CheckDefense(player, hero, mastery, level)
     local value = StatPerLevelDivisor(level, 0, 8 - mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_DEFENSE]
     if diff ~= 0 then
+        if hero == H_HEDWIG then diff = 2 * diff end
         AddHero_StatAmount(player, hero, STAT_DEFENCE, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_DEFENSE] = value
     end
@@ -27,6 +28,7 @@ function Routine_CheckLearning(player, hero, mastery, level)
     local value = StatPerLevelDivisor(level, 0, 8 - mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_LEARNING]
     if diff ~= 0 then
+        if hero == H_RANLETH then diff = 2 * diff end
         AddHero_StatAmount(player, hero, STAT_KNOWLEDGE, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_LEARNING] = value
     end
@@ -122,6 +124,7 @@ function Routine_CheckIntelligence(player, hero, mastery)
     local value = 4 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_INTELLIGENCE]
     if diff ~= 0 then
+        if hero == H_RANLETH then diff = 1.5 * diff end
         AddHero_StatAmount(player, hero, STAT_KNOWLEDGE, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_INTELLIGENCE] = value
     end
@@ -132,6 +135,7 @@ function Routine_CheckExaltation(player, hero, mastery)
     local value = 2 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_EXALTATION]
     if diff ~= 0 then
+        if hero == H_RANLETH then diff = 2 * diff end
         AddHero_StatAmount(player, hero, STAT_SPELL_POWER, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_EXALTATION] = value
     end
@@ -359,7 +363,9 @@ end
 function Routine_SpiritismLevelUp(player, hero, mastery, level)
     print("$ Routine_SpiritismLevelUp")
     if not HasHeroSkill(hero, SKILL_BLOOD_RAGE) then
-        AddHero_RandomSpell(player, hero, SPELL_SCHOOL_ANY, mastery+2)
+        if mod(level, 2) == 0 then
+            AddHero_RandomSpell(player, hero, SPELL_SCHOOL_ANY, mastery+2)
+        end
     end
 end
 
@@ -389,6 +395,8 @@ function Routine_LeadershipAfterBattle(player, hero, mastery, combatIndex)
         local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 0, i)
         local amount = trunc(count * (0.05 + 0.05 * mastery))
         if HasHeroSkill(hero, PERK_CHARISMA) then amount = 2 * amount end
+        if hero == H_DUNCAN then amount = amount * (1 + GetHeroLevel(hero) * 0.05) end
+        if hero == H_ARANTIR then creature = CreatureToUndead(creature) end
         AddObjectCreatures(caravan, creature, amount)
     end
     CURRENT_CARAVANS[caravan] = 3
