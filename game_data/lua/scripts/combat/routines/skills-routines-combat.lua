@@ -24,33 +24,33 @@ UNIT_DIED_SKILL_ROUTINES = {
 
 
 function DoSkillRoutine_CombatPrepare(side, name, id)
-    for _,skill in COMBAT_PREPARE_SKILL_ROUTINES do
-        if GetHeroSkillMastery(hero, skill) >= 1 then
-            startThread(COMBAT_PREPARE_SKILL_ROUTINES[skill], side, id)
+    for skill,routine in COMBAT_PREPARE_SKILL_ROUTINES do
+        if GetHeroSkillMastery(name, skill) >= 1 then
+            startThread(routine, side, id)
         end
     end
 end
 
 function DoSkillRoutine_CombatStart(side, name, id)
-    for _,skill in COMBAT_START_SKILL_ROUTINES do
-        if GetHeroSkillMastery(hero, skill) >= 1 then
-            startThread(COMBAT_START_SKILL_ROUTINES[skill], side, id)
+    for skill,routine in COMBAT_START_SKILL_ROUTINES do
+        if GetHeroSkillMastery(name, skill) >= 1 then
+            startThread(routine, side, id)
         end
     end
 end
 
 function DoSkillRoutine_CombatTurn(side, name, id)
-    for _,skill in COMBAT_TURN_SKILL_ROUTINES do
-        if GetHeroSkillMastery(hero, skill) >= 1 then
-            startThread(COMBAT_TURN_SKILL_ROUTINES[skill], side, id)
+    for skill,routine in COMBAT_TURN_SKILL_ROUTINES do
+        if GetHeroSkillMastery(name, skill) >= 1 then
+            startThread(routine, side, id)
         end
     end
 end
 
 function DoSkillRoutine_UnitDied(side, name, id, unit)
-    for _,skill in UNIT_DIED_SKILL_ROUTINES do
-        if GetHeroSkillMastery(hero, skill) >= 1 then
-            startThread(UNIT_DIED_SKILL_ROUTINES[skill], side, id, unit)
+    for skill,routine in UNIT_DIED_SKILL_ROUTINES do
+        if GetHeroSkillMastery(name, skill) >= 1 then
+            startThread(routine, side, id, unit)
         end
     end
 end

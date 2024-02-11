@@ -41,7 +41,7 @@ function FetchData(hero)
         [4] = 0 + knowledge,
         [5] = 0 + morale,
         [6] = 0 + luck,
-        [PERK_HOUNDMASTERS] = houndmasters,
+        [PERK_HOUNDMASTERS] = 0 + houndmasters,
     }
     print("Hero "..hero.." data collected. Lvl "..HERO_DATA[hero][0]..
         " / Att "..HERO_DATA[hero][1].." / Def "..HERO_DATA[hero][2]..

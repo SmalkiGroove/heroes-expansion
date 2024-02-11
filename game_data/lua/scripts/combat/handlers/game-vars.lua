@@ -21,10 +21,10 @@ function VarHeroStatLuck(hero)
 	return "h5x_hero_"..hero.."_stat_luck"
 end
 function VarHeroSkillId(hero, skill)
-	return "h5x_hero_"..hero.."_skill_"..id
+	return "h5x_hero_"..hero.."_skill_"..skill
 end
 function VarHeroArtifactId(hero, artifact)
-	return "h5x_hero_"..hero.."_artifact_"..id
+	return "h5x_hero_"..hero.."_artifact_"..artifact
 end
 
 
