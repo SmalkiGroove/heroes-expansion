@@ -1,12 +1,12 @@
 
-function GetHeroLevel(hero) return HERO_DATA[hero][0] end
-function GetHeroAttack(hero) return HERO_DATA[hero][1] end
-function GetHeroDefense(hero) return HERO_DATA[hero][2] end
-function GetHeroSpellpower(hero) return HERO_DATA[hero][3] end
-function GetHeroKnowledge(hero) return HERO_DATA[hero][4] end
-function GetHeroMorale(hero) return HERO_DATA[hero][5] end
-function GetHeroLuck(hero) return HERO_DATA[hero][6] end
-function GetHeroSkillMastery(hero, skill) return HERO_DATA[hero][skill] end
+function GetHeroLevel(id) return HERO_DATA[id][0] end
+function GetHeroAttack(id) return HERO_DATA[id][1] end
+function GetHeroDefense(id) return HERO_DATA[id][2] end
+function GetHeroSpellpower(id) return HERO_DATA[id][3] end
+function GetHeroKnowledge(id) return HERO_DATA[id][4] end
+function GetHeroMorale(id) return HERO_DATA[id][5] end
+function GetHeroLuck(id) return HERO_DATA[id][6] end
+function GetHeroSkillMastery(id, skill) return HERO_DATA[id][skill] end
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------

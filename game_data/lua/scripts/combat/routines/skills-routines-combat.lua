@@ -1,12 +1,14 @@
 
 function Routine_Houndmasters(side, hero, id)
     -- print("Trigger Houndmasters !")
-    local level = GetHeroLevel(id)
-    local amount = 10 + 2 * level + random(1, level, 99)
+    local level = GetHeroLevel(side)
+    local amount = 10 + 2 * level --+ random(1, level, 99)
     local x = 1 + side * 11
-    if hero == H_IVOR then SummonCreatureStack_X(side, CREATURE_WOLF, amount, x) sleep(50) end
+    if hero == H_IVOR then
+        SummonCreatureStack_X(side, CREATURE_WOLF, amount, x)
+        sleep(50)
+    end
     SummonCreatureStack_X(side, CREATURE_WOLF, amount, x)
-    COMBAT_PAUSE = 0
 end
 
 
@@ -27,7 +29,7 @@ UNIT_DIED_SKILL_ROUTINES = {
 
 function DoSkillRoutine_CombatPrepare(side, name, id)
     for skill,routine in COMBAT_PREPARE_SKILL_ROUTINES do
-        if GetHeroSkillMastery(id, skill) >= 1 then
+        if GetHeroSkillMastery(side, skill) >= 1 then
             startThread(routine, side, name, id)
         end
     end
@@ -35,7 +37,7 @@ end
 
 function DoSkillRoutine_CombatStart(side, name, id)
     for skill,routine in COMBAT_START_SKILL_ROUTINES do
-        if GetHeroSkillMastery(id, skill) >= 1 then
+        if GetHeroSkillMastery(side, skill) >= 1 then
             startThread(routine, side, name, id)
         end
     end
@@ -43,7 +45,7 @@ end
 
 function DoSkillRoutine_CombatTurn(side, name, id)
     for skill,routine in COMBAT_TURN_SKILL_ROUTINES do
-        if GetHeroSkillMastery(id, skill) >= 1 then
+        if GetHeroSkillMastery(side, skill) >= 1 then
             startThread(routine, side, name, id)
         end
     end
@@ -51,7 +53,7 @@ end
 
 function DoSkillRoutine_UnitDied(side, name, id, unit)
     for skill,routine in UNIT_DIED_SKILL_ROUTINES do
-        if GetHeroSkillMastery(id, skill) >= 1 then
+        if GetHeroSkillMastery(side, skill) >= 1 then
             startThread(routine, side, name, id, unit)
         end
     end
