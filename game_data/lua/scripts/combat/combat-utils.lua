@@ -77,51 +77,11 @@ function TargetShoot_Ballista(side, target)
     ShootCombatUnit(ballista, target)
 end
 
-function CreatureTypesCast_Target(unit_side, target, types, spell)
-    local creatures = GetUnits(unit_side, CREATURE)
-    for i,cr in creatures do
-        if contains(types, GetCreatureType(cr)) then
-            UnitCastAimedSpell(cr, spell, target)
-            sleep(100)
-        end
-    end
-end
-
 function CreatureTypesCast_RandomTarget(unit_side, target_side, types, spell)
     local creatures = GetUnits(unit_side, CREATURE)
     for i,cr in creatures do
         if contains(types, GetCreatureType(cr)) then
             UnitCastAimedSpell(cr, spell, RandomCreature(target_side,i))
-            sleep(100)
-        end
-    end
-end
-
-function CreatureTypesCast_Untargeted(unit_side, types, spell)
-    local creatures = GetUnits(unit_side, CREATURE)
-    for i,cr in creatures do
-        if contains(types, GetCreatureType(cr)) then
-            UnitCastGlobalSpell(cr, spell)
-            sleep(100)
-        end
-    end
-end
-
-function CreatureTypesAbility_Untargeted(unit_side, types, ability)
-    local creatures = GetUnits(unit_side, CREATURE)
-    for i,cr in creatures do
-        if contains(types, GetCreatureType(cr)) then
-            UseCombatAbility(cr, ability)
-        end
-    end
-end
-
-function CreatureTypesAbility_RandomTarget(unit_side, target_side, types, ability)
-    local creatures = GetUnits(unit_side, CREATURE)
-    for i,cr in creatures do
-        if contains(types, GetCreatureType(cr)) then
-            local x,y = GetUnitPosition(RandomCreature(target_side,i))
-            UseCombatAbility(cr, ability, x, y)
             sleep(100)
         end
     end
@@ -171,16 +131,6 @@ function HeroCast_RandomCreature(hero, spell, mana, side)
     if mana == FREE_MANA then SetMana(hero,m) end
 end
 
-function HeroCast_RandomCreatureArea(hero, spell, mana, side)
-    local m = GetUnitManaPoints(hero)
-    if mana == FREE_MANA then SetMana(hero, FREE_MANA) end
-    local x,y = GetUnitPosition(RandomCreature(side,m-COMBAT_TURN))
-    startThread(DoCastAreaSpell, hero, spell, mana, x, y)
-    repeat Wait() until THREAD_STATE == 1
-    THREAD_STATE = 0 THREAD_FINISHER = THREAD_LIMIT
-    if mana == FREE_MANA then SetMana(hero, m) end
-end
-
 function HeroCast_Area(hero, spell, mana, x, y)
     local m = GetUnitManaPoints(hero)
     if mana == FREE_MANA then SetMana(hero, FREE_MANA) end
@@ -197,13 +147,6 @@ function HeroCast_Global(hero, spell, mana)
     repeat Wait() until THREAD_STATE == 1
     THREAD_STATE = 0 THREAD_FINISHER = THREAD_LIMIT
     if mana == FREE_MANA then SetMana(hero, m) end
-end
-
-function HeroAttack_RandomEnnemy(side)
-    SetControlMode(side,MODE_AUTO)
-    sleep(1)
-    SetControlMode(side,MODE_MANUAL)
-    SetControlMode(side,MODE_NORMAL)
 end
 
 function SummonCreatureStack(side, type, amount)

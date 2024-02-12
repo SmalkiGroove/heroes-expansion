@@ -81,7 +81,7 @@ end
 function Routine_SummonDruidStack(side, hero)
     -- print("Trigger elder druids summoning !")
     local m = GetUnitMaxManaPoints(hero) * 0.1
-    local x = 2 + side * 13
+    local x = side * 14
     local amount = trunc(0.5 * m * m)
     SummonCreatureStack_X(side, CREATURE_DRUID_ELDER, amount, x)
     COMBAT_PAUSE = 0
@@ -114,8 +114,18 @@ end
 
 function Routine_ThanesAbility(side, hero)
     -- print("Trigger Thanes ability !")
-    CreatureTypesAbility_RandomTarget(side, 1-side, {CREATURE_WARLORD}, SPELL_ABILITY_FLAMESTRIKE)
-    CreatureTypesAbility_RandomTarget(side, 1-side, {CREATURE_THUNDER_THANE}, SPELL_ABILITY_STORMBOLT)
+    local creatures = GetUnits(side, CREATURE)
+    for i,cr in creatures do
+        if GetCreatureType(cr) == CREATURE_WARLORD then
+            local x,y = GetUnitPosition(RandomCreature(1-side, i))
+            UseCombatAbility(cr, SPELL_ABILITY_FLAMESTRIKE, x, y)
+            sleep(100)
+        elseif GetCreatureType(cr) == CREATURE_THUNDER_THANE then
+            local x,y = GetUnitPosition(RandomCreature(1-side, i))
+            UseCombatAbility(cr, SPELL_ABILITY_STORMBOLT, x, y)
+            sleep(100)
+        end
+    end
     COMBAT_PAUSE = 0
 end
 
@@ -150,7 +160,13 @@ end
 
 function Routine_RakshasasAbility(side, hero)
     -- print("Trigger rakshasas dash !")
-    CreatureTypesAbility_Untargeted(side, {CREATURE_RAKSHASA,CREATURE_RAKSHASA_RUKH,CREATURE_RAKSHASA_KSHATRI}, SPELL_ABILITY_DASH)
+    local creatures = GetUnits(side, CREATURE)
+    for i,cr in creatures do
+        local type = GetCreatureType(cr)
+        if type == CREATURE_RAKSHASA or type == CREATURE_RAKSHASA_RUKH or type == CREATURE_RAKSHASA_KSHATRI then
+            UseCombatAbility(cr, SPELL_ABILITY_DASH)
+        end
+    end
     COMBAT_PAUSE = 0
 end
 
@@ -383,11 +399,12 @@ end
 function Routine_CastRandomFireball(side, hero)
     -- print("Trigger random Fireball !")
     if CURRENT_UNIT == hero then
-        HeroCast_RandomCreatureArea(hero, SPELL_FIREBALL, FREE_MANA, 1-side)
+        local x,y = GetUnitPosition(RandomCreature(side, COMBAT_TURN))
+        HeroCast_Area(hero, SPELL_FIREBALL, FREE_MANA, x, y)
         ROUTINE_VARS["calid-atb"] = not nil
     elseif ROUTINE_VARS["calid-atb"] then
         ROUTINE_VARS["calid-atb"] = nil
-        SetATB_ID(hero, 0.6)
+        SetATB_ID(hero, 0.5)
     end
     COMBAT_PAUSE = 0
 end
