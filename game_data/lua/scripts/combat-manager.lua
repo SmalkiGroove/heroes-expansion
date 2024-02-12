@@ -24,7 +24,7 @@ function CheckEnableScript()
     repeat sleep(1) until GetGameVar('h5x_combat_init') == 'true'
 end
 
-function FetchData(hero)
+function FetchData(hero, id)
     local level = GetGameVar(VarHeroLevel(hero))
     local attack = GetGameVar(VarHeroStatAttack(hero))
     local defense = GetGameVar(VarHeroStatDefense(hero))
@@ -33,7 +33,7 @@ function FetchData(hero)
     local morale = GetGameVar(VarHeroStatMorale(hero))
     local luck = GetGameVar(VarHeroStatLuck(hero))
     local houndmasters = GetGameVar(VarHeroSkillId(hero,PERK_HOUNDMASTERS))
-    HERO_DATA[hero] = {
+    HERO_DATA[id] = {
         [0] = 0 + level,
         [1] = 0 + attack,
         [2] = 0 + defense,
@@ -43,11 +43,11 @@ function FetchData(hero)
         [6] = 0 + luck,
         [PERK_HOUNDMASTERS] = 0 + houndmasters,
     }
-    print("Hero "..hero.." data collected. Lvl "..HERO_DATA[hero][0]..
-        " / Att "..HERO_DATA[hero][1].." / Def "..HERO_DATA[hero][2]..
-        " / Spp "..HERO_DATA[hero][3].." / Klg "..HERO_DATA[hero][4]..
-        " / Mrl "..HERO_DATA[hero][5].." / Lck "..HERO_DATA[hero][6]..
-        " // Houndmasters "..HERO_DATA[hero][PERK_HOUNDMASTERS]
+    print("Hero "..hero.." data collected. Lvl "..HERO_DATA[id][0]..
+        " / Att "..HERO_DATA[id][1].." / Def "..HERO_DATA[id][2]..
+        " / Spp "..HERO_DATA[id][3].." / Klg "..HERO_DATA[id][4]..
+        " / Mrl "..HERO_DATA[id][5].." / Lck "..HERO_DATA[id][6]..
+        " // Houndmasters "..HERO_DATA[id][PERK_HOUNDMASTERS]
     )
 end
 
@@ -79,12 +79,12 @@ function ManageCombatPrepare()
     ATTACKER_HERO = GetHero(ATTACKER) and GetHeroName(ATTACKER_HERO_ID) or ""
     DEFENDER_HERO = GetHero(DEFENDER) and GetHeroName(DEFENDER_HERO_ID) or ""
     if ATTACKER_HERO ~= "" then
-        startThread(FetchData, ATTACKER_HERO) sleep(500)
+        FetchData(ATTACKER_HERO, ATTACKER_HERO_ID)
         startThread(DoSkillRoutine_CombatPrepare, ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
 		startThread(DoHeroSpeRoutine_CombatPrepare, ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
     end
     if DEFENDER_HERO ~= "" then
-        startThread(FetchData, DEFENDER_HERO) sleep(500)
+        FetchData(DEFENDER_HERO, DEFENDER_HERO_ID)
 		startThread(DoSkillRoutine_CombatPrepare, DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
 		startThread(DoHeroSpeRoutine_CombatPrepare, DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
     end
