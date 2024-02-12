@@ -2,7 +2,7 @@
 function Routine_Houndmasters(side, hero)
     -- print("Trigger Houndmasters !")
     local amount = 10
-    local x = 2 + side * 13
+    local x = 1 + side * 11
     SummonCreatureStack_X(side, CREATURE_WOLF, amount, x)
     COMBAT_PAUSE = 0
 end

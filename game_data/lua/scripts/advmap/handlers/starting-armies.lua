@@ -2,7 +2,7 @@
 
 function ReplaceStartingArmy(hero)
 	-- print("$ ReplaceStartingArmy")
-    AddHeroCreatures(hero, CREATURE_PHOENIX, 1, 6) sleep()
+    AddHeroCreatures(hero, CREATURE_180, 1, 6) sleep()
     local army = {}
     if STARTING_ARMIES[hero] then
         army = STARTING_ARMIES[hero]
@@ -19,7 +19,12 @@ function ReplaceStartingArmy(hero)
             AddHeroCreatures(hero, army[i][1], army[i][2], i-1)
         end
     end
-    sleep() RemoveHeroCreatures(hero, CREATURE_PHOENIX, 1)
+    sleep() RemoveHeroCreatures(hero, CREATURE_180, 1)
+    sleep()
+    sleep()
+    for _,h in GetPlayerHeroes(GetObjectOwner(hero)) do
+        if GetHeroCreatures(h, CREATURE_180) > 0 then RemoveHeroCreatures(hero, CREATURE_180, 1) end
+    end
 end
 
 

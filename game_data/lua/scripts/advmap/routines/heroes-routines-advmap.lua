@@ -79,12 +79,13 @@ end
 
 function Routine_RezHunters(player, hero, combatIndex)
     print("$ Routine_RezHunters")
-    local cap = 5 + GetHeroLevel(hero)
+    local cap = 3 + GetHeroLevel(hero)
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
     for i = 0,stacks-1 do
         local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
         if died > 0 and contains({CREATURE_WOOD_ELF,CREATURE_GRAND_ELF,CREATURE_SHARP_SHOOTER}, creature) then
             local rez = min(cap, died)
+            cap = cap - rez
             AddHeroCreatures(hero, creature, rez)
         end
     end
@@ -122,12 +123,13 @@ end
 
 function Routine_RezSpearwielders(player, hero, combatIndex)
     print("$ Routine_RezSpearwielders")
-    local cap = 5 + GetHeroLevel(hero)
+    local cap = 5 + trunc(1.5 * GetHeroLevel(hero))
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
     for i = 0,stacks-1 do
         local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
         if died > 0 and contains({CREATURE_AXE_FIGHTER,CREATURE_AXE_THROWER,CREATURE_HARPOONER}, creature) then
             local rez = min(cap, died)
+            cap = cap - rez
             AddHeroCreatures(hero, creature, rez)
         end
     end
@@ -411,6 +413,7 @@ function Routine_RezSuccubus(player, hero, combatIndex)
         local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
         if died > 0 and contains({CREATURE_SUCCUBUS,CREATURE_INFERNAL_SUCCUBUS,CREATURE_SUCCUBUS_SEDUCER}, creature) then
             local rez = min(cap, died)
+            cap = cap - rez
             AddHeroCreatures(hero, creature, rez)
         end
     end

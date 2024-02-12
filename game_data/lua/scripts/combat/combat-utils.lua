@@ -51,7 +51,7 @@ function RandomShoot_CreatureTypes(side, types)
     local creatures = GetUnits(side,CREATURE)
     for i,cr in creatures do
         if contains(types, GetCreatureType(cr)) then
-            ShootCombatUnit(cr, RandomCreature(1-side,i))
+            ShootCombatUnit(cr, RandomCreature(1-side,1+i))
             sleep(100)
         end
     end
