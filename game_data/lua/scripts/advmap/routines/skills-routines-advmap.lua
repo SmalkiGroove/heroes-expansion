@@ -327,6 +327,7 @@ function Routine_LogisticsWeeklyProd(player, hero, mastery)
             local grail = GetTownBuildingLevel(town, TOWN_BUILDING_GRAIL)
             local multiplier = 1 + 0.5 * grail
             if fort > 1 then multiplier = multiplier + 0.5 * (fort-1) end
+            if hero == H_WYNGAAL then multiplier = 2 * multiplier end
             if mastery >= 1 and GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_1) ~= 0 then
                 local creature = CREATURES_BY_FACTION[faction][1][1]
                 local current = GetObjectDwellingCreatures(town, creature)
@@ -344,6 +345,15 @@ function Routine_LogisticsWeeklyProd(player, hero, mastery)
             end
         end
     end
+end
+
+function Routine_GovernanceWeeklyResources(player, hero, mastery)
+    print("$ Routine_GovernanceWeeklyResources")
+    local golds = { [0]=0, [1]=1000, [2]=2500, [3]=5000 }
+    local res = { [HAVEN]=CRYSTAL, [PRESERVE]=GEM, [FORTRESS]=CRYSTAL, [ACADEMY]=GEM, [DUNGEON]=SULFUR, [NECROPOLIS]=MERCURY, [INFERNO]=SULFUR, [STRONGHOLD]=MERCURY }
+    local faction = HEROES[hero]
+    sleep(3) AddPlayer_Resource(player, hero, GOLD, golds[mastery])
+    sleep(3) AddPlayer_Resource(player, hero, res[faction], mastery)
 end
 
 function Routine_HauntingWeeklyGhosts(player, hero, mastery)
@@ -466,6 +476,7 @@ DAILY_TRIGGER_SKILLS_ROUTINES = {
 
 WEEKLY_TRIGGER_SKILLS_ROUTINES = {
     [SKILL_LOGISTICS] = Routine_LogisticsWeeklyProd,
+    [SKILL_GOVERNANCE] = Routine_GovernanceWeeklyResources,
     [PERK_HAUNTING] = Routine_HauntingWeeklyGhosts,
 }
 
