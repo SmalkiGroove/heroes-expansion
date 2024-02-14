@@ -10,7 +10,7 @@ end
 
 function Routine_BallistaRandomSalvo(side, hero)
     -- print("Trigger ballista random shoot !")
-    local n = 1 + trunc(GetUnitMaxManaPoints(hero) * 0.025)
+    local n = 1 + trunc(GetHeroLevel(side) * 0.1)
     for i = 1,n do
         RandomShoot_Ballista(side)
         sleep(600)
@@ -38,8 +38,8 @@ end
 function Routine_HeroMoveNext(side, hero)
     -- print("Trigger hero play next !")
     if CURRENT_UNIT_SIDE ~= GetUnitSide(hero) then
-        local m = GetUnitMaxManaPoints(hero) + 20
-        if m > random(0, 200, COMBAT_TURN*m) then
+        local n = 15 + trunc(GetHeroLevel(side) * 0.5)
+        if n > random(0, 100, COMBAT_TURN) then
             SetATB_ID(hero, ATB_NEXT)
         end
     end
@@ -80,9 +80,9 @@ end
 
 function Routine_SummonDruidStack(side, hero)
     -- print("Trigger elder druids summoning !")
-    local m = GetUnitMaxManaPoints(hero) * 0.1
+    local s = GetHeroSpellpower(side)
     local x = side * 14
-    local amount = trunc(0.5 * m * m)
+    local amount = trunc(0.5 * s * s)
     SummonCreatureStack_X(side, CREATURE_DRUID_ELDER, amount, x)
     COMBAT_PAUSE = 0
 end
@@ -242,8 +242,8 @@ function Routine_RidersHydraSynergy(side, hero)
     if CURRENT_UNIT_SIDE == side then
         local type = GetCreatureType(CURRENT_UNIT)
         if type == CREATURE_RIDER or type == CREATURE_RAVAGER or type == CREATURE_BLACK_RIDER then
-            local r = 20 + trunc(GetUnitMaxManaPoints(hero) * 0.2)
-            if random(0, 100, COMBAT_TURN) <= r then
+            local r = 25 + trunc(GetHeroLevel(side) * 0.25)
+            if r > random(0, 100, COMBAT_TURN) then
                 SetATB_CreatureTypes(side, {CREATURE_HYDRA,CREATURE_CHAOS_HYDRA,CREATURE_ACIDIC_HYDRA}, ATB_NEXT)
             end
         end
@@ -253,21 +253,23 @@ end
 
 function Routine_HeroCastRage(side, hero)
     -- print("Trigger hero cast rage")
-    local ennemies = GetUnits(1-side, CREATURE)
-    local m = trunc(GetUnitMaxManaPoints(hero) * 0.02)
-    local n = min(length(ennemies), m)
+    local enemies = GetUnits(1-side, CREATURE)
+    local s = 1 + trunc(GetHeroSpellpower(side) * 0.05)
+    local n = min(length(enemies), s)
     for i = 1,n do
-        HeroCast_Target(hero, SPELL_BERSERK, FREE_MANA, ennemies[i-1])
+        HeroCast_Target(hero, SPELL_BERSERK, FREE_MANA, enemies[i-1])
     end
+    GetArmySummary(side)
     COMBAT_PAUSE = 0
 end
 
 function Routine_SummonDeadEnnemyCreature(side, hero, unit)
-    -- print("Trigger revive ennemy creature !")
+    -- print("Trigger revive enemy creature !")
     if CURRENT_UNIT_SIDE ~= side then
         local type = GetCreatureType(unit)
         local x,y = GetUnitPosition(unit)
-        local amount = trunc(GetUnitMaxManaPoints(hero) * 0.1)
+        local p = 10 + GetHeroLevel(side)
+        local amount = trunc(ROUTINE_VARS["initial-counts"][unit] * p * 0.01)
         SummonCreatureStack_XY(side, type, amount, x, y)
     end
     COMBAT_PAUSE = 0
@@ -284,7 +286,9 @@ function Routine_RefreshMatronMana(side, hero)
         for i,cr in GetUnits(side, CREATURE) do
             local type = GetCreatureType(cr)
             if type == CREATURE_MATRON or type == CREATURE_MATRIARCH or type == CREATURE_SHADOW_MISTRESS then
-                local m = GetUnitMaxManaPoints(cr)
+                local max = GetUnitMaxManaPoints(cr)
+                local cur = GetUnitManaPoints(cr)
+                local m = min(max, cur + 10)
                 SetMana(cr, m)
             end
         end
@@ -419,9 +423,9 @@ end
 
 function Routine_SummonPitlords(side, hero)
     -- print("Trigger pit lords summoning !")
-    local m = GetUnitMaxManaPoints(hero) * 0.1
+    local n = 10 + GetHeroLevel(side)
     local x = 2 + side * 13
-    local amount = trunc(0.1 * m * m)
+    local amount = trunc(0.01 * n * n)
     SummonCreatureStack_X(side, CREATURE_BALOR, amount, x)
     SummonCreatureStack_X(side, CREATURE_BALOR, amount, x)
     COMBAT_PAUSE = 0

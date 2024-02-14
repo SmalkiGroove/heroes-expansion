@@ -11,6 +11,14 @@ function GetHeroSkillMastery(id, skill) return HERO_DATA[id][skill] end
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
+function GetArmySummary(side)
+    local creatures = GetUnits(side, CREATURE)
+    for i,cr in creatures do
+        local nb = GetCreatureNumber(cr)
+        ROUTINE_VARS["initial-counts"][cr] = nb
+    end
+end
+
 function RandomCreature(side, seed)
     local creatures = GetUnits(side, CREATURE)
     local stacks = length(creatures)

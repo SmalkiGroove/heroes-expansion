@@ -18,6 +18,7 @@ UNIT_SIDE_PREFIX = {
 }
 
 ROUTINE_VARS = {
+    ["initial-counts"] = {},
     ["avatar-id"] = "none",
     ["calid-atb"] = nil,
 }

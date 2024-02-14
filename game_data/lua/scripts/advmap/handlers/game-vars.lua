@@ -44,6 +44,7 @@ function StoreData(hero)
 					SetVarString(VarHeroStatKnowledge(hero),GetHeroStat(hero, STAT_KNOWLEDGE))..
 					SetVarString(VarHeroStatMorale(hero),GetHeroStat(hero, STAT_MORALE))..
 					SetVarString(VarHeroStatLuck(hero),GetHeroStat(hero, STAT_LUCK))..
+					SetVarString(VarHeroSkillId(hero,SKILL_SHATTER_MAGIC), GetHeroSkillMastery(hero, SKILL_SHATTER_MAGIC))..
 					SetVarString(VarHeroSkillId(hero,PERK_HOUNDMASTERS), GetHeroSkillMastery(hero, PERK_HOUNDMASTERS))
     -- print(setvars)
 	ExecConsoleCommand("@"..setvars)

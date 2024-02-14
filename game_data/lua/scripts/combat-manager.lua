@@ -33,6 +33,7 @@ function FetchData(name, id)
     local knowledge = GetGameVar(VarHeroStatKnowledge(name))
     local morale = GetGameVar(VarHeroStatMorale(name))
     local luck = GetGameVar(VarHeroStatLuck(name))
+    local shattermagic = GetGameVar(VarHeroSkillId(name,SKILL_SHATTER_MAGIC))
     local houndmasters = GetGameVar(VarHeroSkillId(name,PERK_HOUNDMASTERS))
     HERO_DATA[id] = {
         [0] = 0 + level,
@@ -42,12 +43,14 @@ function FetchData(name, id)
         [4] = 0 + knowledge,
         [5] = 0 + morale,
         [6] = 0 + luck,
+        [SKILL_SHATTER_MAGIC] = 0 + shattermagic,
         [PERK_HOUNDMASTERS] = 0 + houndmasters,
     }
     print("Lvl "..HERO_DATA[id][0]..
         " / Att "..HERO_DATA[id][1].." / Def "..HERO_DATA[id][2]..
         " / Spp "..HERO_DATA[id][3].." / Klg "..HERO_DATA[id][4]..
         " / Mrl "..HERO_DATA[id][5].." / Lck "..HERO_DATA[id][6]..
+        " // Shatter Magic "..HERO_DATA[id][SKILL_SHATTER_MAGIC]..
         " // Houndmasters "..HERO_DATA[id][PERK_HOUNDMASTERS]
     )
 end
@@ -97,9 +100,11 @@ function ManageCombatStart()
 
     Pause()
 	if ATTACKER_HERO ~= "" then
+        startThread(DoSkillRoutine_CombatStart, ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
 		startThread(DoHeroSpeRoutine_CombatStart, ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
 	end
 	if DEFENDER_HERO ~= "" then
+		startThread(DoSkillRoutine_CombatStart, DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
 		startThread(DoHeroSpeRoutine_CombatStart, DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
 	end
     Resume()
