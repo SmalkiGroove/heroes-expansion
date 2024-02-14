@@ -345,7 +345,7 @@ end
 
 function Routine_AddHeroBlackKnights(player, hero)
     print("$ Routine_AddHeroBlackKnights")
-    AddHero_CreatureType(player, hero, CREATURE_BLACK_KNIGHT, 0.1)
+    AddHero_CreatureType(player, hero, CREATURE_BLACK_KNIGHT, 0.25)
 end
 
 function Routine_EvolveBlackKnights(player, hero, combatIndex)
@@ -369,7 +369,7 @@ end
 
 function Routine_AddHeroMummies(player, hero)
     print("$ Routine_AddHeroMummies")
-    AddHero_CreatureType(player, hero, CREATURE_MUMMY, 0.85)
+    AddHero_CreatureType(player, hero, CREATURE_MUMMY, 0.3)
 end
 
 function Routine_AddHeroBanshees(player, hero)
@@ -447,7 +447,7 @@ end
 
 function Routine_AddHeroWyverns(player, hero)
     print("$ Routine_AddHeroWyverns")
-    AddHero_CreatureInTypes(player, hero, {CREATURE_WYVERN,CREATURE_WYVERN_POISONOUS,CREATURE_WYVERN_PAOKAI}, 0.25)
+    AddHero_CreatureInTypes(player, hero, {CREATURE_WYVERN,CREATURE_WYVERN_POISONOUS,CREATURE_WYVERN_PAOKAI}, 0.22)
 end
 
 function Routine_ActivateArtfsetSarIssus(player, hero)
@@ -502,7 +502,7 @@ DAILY_TRIGGER_HERO_ROUTINES = {
     [H_VAYSHAN] = Routine_GenerateGoldPerScout,
     [H_SORGAL] = Routine_AddHeroRiders,
     -- necropolis
-    [H_XERXON] = Routine_AddHeroBlackKnights,
+    [H_THANT] = Routine_AddHeroMummies,
     -- inferno
     [H_DELEB] = Routine_GenerateSulfur,
     -- stronghold
@@ -531,7 +531,7 @@ WEEKLY_TRIGGER_HERO_ROUTINES = {
     -- necropolis
     [H_LUCRETIA] = Routine_HeroCallVampires,
     [H_RAVEN] = Routine_AddRecruitsNecropolis,
-    [H_THANT] = Routine_AddHeroMummies,
+    [H_XERXON] = Routine_AddHeroBlackKnights,
     [H_DEIRDRE] = Routine_AddHeroBanshees,
     -- inferno
     [H_GROK] = Routine_TransferNightmares,

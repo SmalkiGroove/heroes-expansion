@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature>
-	<AttackSkill>5</AttackSkill>
-	<DefenceSkill>15</DefenceSkill>
+	<AttackSkill>4</AttackSkill>
+	<DefenceSkill>7</DefenceSkill>
 	<Shots>0</Shots>
-	<MinDamage>10</MinDamage>
-	<MaxDamage>12</MaxDamage>
+	<MinDamage>2</MinDamage>
+	<MaxDamage>4</MaxDamage>
 	<Speed>4</Speed>
 	<Initiative>8</Initiative>
 	<Flying>false</Flying>
-	<Health>60</Health>
+	<Health>30</Health>
 	<KnownSpells>
-		<Item><Spell>SPELL_FORGETFULNESS</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
-		<Item><Spell>SPELL_WASP_SWARM</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+		<Item><Spell>SPELL_FORGETFULNESS</Spell><Mastery>MASTERY_BASIC</Mastery></Item>
+		<Item><Spell>SPELL_WASP_SWARM</Spell><Mastery>MASTERY_BASIC</Mastery></Item>
 	</KnownSpells>
-	<SpellPoints>20</SpellPoints>
+	<SpellPoints>18</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
 	<SpellPoints2>0</SpellPoints2>
 	<Exp>200</Exp>
 	<Power>1542</Power>
 	<TimeToCommand>15</TimeToCommand>
-	<CreatureTier>4</CreatureTier>
+	<CreatureTier>3</CreatureTier>
 	<Upgrade>true</Upgrade>
 	<PairCreature>CREATURE_UNKNOWN</PairCreature>
 	<CreatureTown>TOWN_NO_TYPE</CreatureTown>
 	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_NONE</Second></MagicElement>
-	<WeeklyGrowth>15</WeeklyGrowth>
+	<WeeklyGrowth>20</WeeklyGrowth>
 	<Cost>
 		<Wood>0</Wood>
 		<Ore>0</Ore>
