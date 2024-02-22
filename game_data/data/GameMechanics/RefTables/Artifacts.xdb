@@ -148,7 +148,7 @@
 				</HeroStatsModif>
 				<ArtifactShared href="/MapObjects/Artifacts/TitansTrident.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
-				<PresetPrice>800</PresetPrice>
+				<PresetPrice>0</PresetPrice>
 			</obj>
 		</Item>
 		<Item>
@@ -248,7 +248,7 @@
 				</HeroStatsModif>
 				<ArtifactShared href="/MapObjects/Artifacts/ShieldOfCrystalIce.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
-				<PresetPrice>1000</PresetPrice>
+				<PresetPrice>0</PresetPrice>
 			</obj>
 		</Item>
 		<Item>
@@ -360,14 +360,14 @@
 				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>CHEST</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/BreastplateOfEldrichtMight.xdb#xpointer(/Texture)"/>
-				<CostOfGold>2000</CostOfGold>
-				<AIValue>2600</AIValue>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>10000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
-					<Attack>0</Attack>
+					<Attack>1</Attack>
 					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
-					<SpellPower>2</SpellPower>
+					<SpellPower>1</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
@@ -386,13 +386,13 @@
 				<Slot>NECK</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/PedantOfMastery.xdb#xpointer(/Texture)"/>
 				<CostOfGold>20000</CostOfGold>
-				<AIValue>12000</AIValue>
-				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
+				<AIValue>1</AIValue>
+				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
 				<HeroStatsModif>
-					<Attack>0</Attack>
-					<Defence>0</Defence>
-					<Knowledge>0</Knowledge>
-					<SpellPower>0</SpellPower>
+					<Attack>1</Attack>
+					<Defence>1</Defence>
+					<Knowledge>1</Knowledge>
+					<SpellPower>1</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
@@ -410,8 +410,8 @@
 				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>NECK</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/NecklaceOfTheEagle.xdb#xpointer(/Texture)"/>
-				<CostOfGold>2500</CostOfGold>
-				<AIValue>2600</AIValue>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>10000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>1</Attack>
@@ -435,8 +435,8 @@
 				<Type>ARTF_CLASS_MAJOR</Type>
 				<Slot>NECK</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/NecklaceOfTheBloodyClaw.xdb#xpointer(/Texture)"/>
-				<CostOfGold>12000</CostOfGold>
-				<AIValue>4000</AIValue>
+				<CostOfGold>10000</CostOfGold>
+				<AIValue>20000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
@@ -460,20 +460,20 @@
 				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>NECK</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/EvercoldIcicle.xdb#xpointer(/Texture)"/>
-				<CostOfGold>3500</CostOfGold>
-				<AIValue>4000</AIValue>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>1</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
-					<SpellPower>3</SpellPower>
+					<SpellPower>1</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
 				<ArtifactShared href="/MapObjects/Artifacts/EvercoldIcicle.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
-				<PresetPrice>800</PresetPrice>
+				<PresetPrice>0</PresetPrice>
 			</obj>
 		</Item>
 		<Item>
@@ -486,19 +486,19 @@
 				<Slot>NECK</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/NecklaceOfVictory.xdb#xpointer(/Texture)"/>
 				<CostOfGold>10000</CostOfGold>
-				<AIValue>5300</AIValue>
+				<AIValue>20000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
-					<Attack>2</Attack>
-					<Defence>2</Defence>
-					<Knowledge>2</Knowledge>
-					<SpellPower>2</SpellPower>
-					<Morale>0</Morale>
+					<Attack>1</Attack>
+					<Defence>1</Defence>
+					<Knowledge>1</Knowledge>
+					<SpellPower>1</SpellPower>
+					<Morale>1</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
 				<ArtifactShared href="/MapObjects/Artifacts/NecklaceOfVictory.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
-				<PresetPrice>1000</PresetPrice>
+				<PresetPrice>0</PresetPrice>
 			</obj>
 		</Item>
 		<Item>
@@ -507,23 +507,23 @@
 				<NameFileRef href="/Text/Game/Artifacts/MagneticRing/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/MagneticRing/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MINOR</Type>
+				<Type>ARTF_CLASS_MAJOR</Type>
 				<Slot>FINGER</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/MagneticRing.xdb#xpointer(/Texture)"/>
-				<CostOfGold>3000</CostOfGold>
-				<AIValue>2600</AIValue>
+				<CostOfGold>10000</CostOfGold>
+				<AIValue>20000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
-					<SpellPower>0</SpellPower>
+					<SpellPower>1</SpellPower>
 					<Morale>0</Morale>
-					<Luck>1</Luck>
+					<Luck>0</Luck>
 				</HeroStatsModif>
 				<ArtifactShared href="/MapObjects/Artifacts/MagneticRing.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
-				<PresetPrice>500</PresetPrice>
+				<PresetPrice>0</PresetPrice>
 			</obj>
 		</Item>
 		<Item>
@@ -535,8 +535,8 @@
 				<Type>ARTF_CLASS_MAJOR</Type>
 				<Slot>FINGER</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/RingOfLife.xdb#xpointer(/Texture)"/>
-				<CostOfGold>12000</CostOfGold>
-				<AIValue>5300</AIValue>
+				<CostOfGold>10000</CostOfGold>
+				<AIValue>20000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
