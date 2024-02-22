@@ -249,10 +249,10 @@
 		<Marketplace_ArtifactSellCostOfGoldCoef>0.6</Marketplace_ArtifactSellCostOfGoldCoef>
 	</adventure>
 	<combat>
-		<DamageIncrease>0.05</DamageIncrease>
+		<DamageIncrease>0.03</DamageIncrease>
 		<DamageIncreaseCap>3</DamageIncreaseCap>
-		<DamageDecrease>0.05</DamageDecrease>
-		<DamageDecreaseCap>0.05</DamageDecreaseCap>
+		<DamageDecrease>0.03</DamageDecrease>
+		<DamageDecreaseCap>0.01</DamageDecreaseCap>
 		<DynamicBattle_HeroTimeToCommand>20</DynamicBattle_HeroTimeToCommand>
 		<DynamicBattle_ChoosePresetTime>40</DynamicBattle_ChoosePresetTime>
 		<DynamicBattle_TacticsTime>60</DynamicBattle_TacticsTime>
@@ -2194,28 +2194,28 @@
 			</Barbarian>
 			<Melee>
 				<HeroDamageLevel1>
-					<Item>3</Item>
-					<Item>2</Item>
-					<Item>1</Item>
-					<Item>0.8</Item>
-					<Item>0.5</Item>
+					<Item>2.8</Item>
+					<Item>2.1</Item>
+					<Item>1.5</Item>
+					<Item>1.0</Item>
+					<Item>0.6</Item>
 					<Item>0.3</Item>
-					<Item>0.2</Item>
+					<Item>0.1</Item>
 					<Item>0.01</Item>
 				</HeroDamageLevel1>
 				<HeroDamageLevel30>
-					<Item>24</Item>
-					<Item>18</Item>
-					<Item>12</Item>
-					<Item>8</Item>
-					<Item>5</Item>
+					<Item>28</Item>
+					<Item>21</Item>
+					<Item>15</Item>
+					<Item>10</Item>
+					<Item>6</Item>
 					<Item>3</Item>
-					<Item>1.5</Item>
+					<Item>1</Item>
 					<Item>0.15</Item>
 				</HeroDamageLevel30>
 			</Melee>
 			<EmpoweredLightningATBDrop>0.3</EmpoweredLightningATBDrop>
-			<EmpoweredIceFreezeDuration>1</EmpoweredIceFreezeDuration>
+			<EmpoweredIceFreezeDuration>0.7</EmpoweredIceFreezeDuration>
 			<MagicMirrorLevelMultiplier>2</MagicMirrorLevelMultiplier>
 			<PrayerLevelMultiplier>0.25</PrayerLevelMultiplier>
 			<DeathScreamLevelMultiplier>0.25</DeathScreamLevelMultiplier>

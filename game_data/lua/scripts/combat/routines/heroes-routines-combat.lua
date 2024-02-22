@@ -319,8 +319,9 @@ end
 function Routine_SummonZombieStack(side, hero)
     -- print("Trigger summon zombies !")
     if CURRENT_UNIT == hero then
-        local m = GetUnitManaPoints(hero)
-        if m > 0 then SummonCreatureStack(side, CREATURE_DISEASE_ZOMBIE, m) end
+        local n = 10 + trunc(1.5*GetHeroLevel(side))
+        local type = random(1, 3, COMBAT_TURN)
+        SummonCreatureStack(side, CREATURES_BY_FACTION[NECROPOLIS][2][type], n) end
     end
     COMBAT_PAUSE = 0
 end
@@ -476,7 +477,7 @@ function Routine_ShamansManaRegen(side, hero)
     if CURRENT_UNIT_SIDE == side then
         local type = GetCreatureType(CURRENT_UNIT)
         if type == CREATURE_SHAMAN or type == CREATURE_SHAMAN_WITCH or type == CREATURE_SHAMAN_HAG then
-            local n = trunc(GetUnitMaxManaPoints(hero) * 0.1)
+            local n = 1 + trunc(GetHeroLevel(side) * 0.1)
             local m = GetUnitManaPoints(CURRENT_UNIT)
             SetMana(CURRENT_UNIT, m + n)
         end
@@ -488,6 +489,7 @@ function Routine_CastRandomLightningBolt(side, hero)
     -- print("Trigger cast lightning bolt !")
     if CURRENT_UNIT == hero then
         HeroCast_RandomCreature(hero, SPELL_LIGHTNING_BOLT, FREE_MANA, 1-side)
+        if IsHuman(side) then SetATB_ID(hero, ATB_INSTANT) end
     end
     COMBAT_PAUSE = 0
 end
