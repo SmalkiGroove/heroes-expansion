@@ -319,9 +319,10 @@ end
 function Routine_SummonZombieStack(side, hero)
     -- print("Trigger summon zombies !")
     if CURRENT_UNIT == hero then
-        local n = 10 + trunc(1.5*GetHeroLevel(side))
+        local n = 9 + trunc(1.5 * GetHeroLevel(side))
         local type = random(1, 3, COMBAT_TURN)
-        SummonCreatureStack(side, CREATURES_BY_FACTION[NECROPOLIS][2][type], n) end
+        local id = CREATURES_BY_FACTION[NECROPOLIS][2][type]
+        SummonCreatureStack(side, id, n)
     end
     COMBAT_PAUSE = 0
 end
@@ -475,11 +476,13 @@ end
 function Routine_ShamansManaRegen(side, hero)
     -- print("Trigger shamans mana !")
     if CURRENT_UNIT_SIDE == side then
-        local type = GetCreatureType(CURRENT_UNIT)
-        if type == CREATURE_SHAMAN or type == CREATURE_SHAMAN_WITCH or type == CREATURE_SHAMAN_HAG then
-            local n = 1 + trunc(GetHeroLevel(side) * 0.1)
-            local m = GetUnitManaPoints(CURRENT_UNIT)
-            SetMana(CURRENT_UNIT, m + n)
+        if IsCreature(CURRENT_UNIT) then
+            local type = GetCreatureType(CURRENT_UNIT)
+            if type == CREATURE_SHAMAN or type == CREATURE_SHAMAN_WITCH or type == CREATURE_SHAMAN_HAG then
+                local n = 1 + trunc(GetHeroLevel(side) * 0.1)
+                local m = GetUnitManaPoints(CURRENT_UNIT)
+                SetMana(CURRENT_UNIT, m + n)
+            end
         end
     end
     COMBAT_PAUSE = 0
