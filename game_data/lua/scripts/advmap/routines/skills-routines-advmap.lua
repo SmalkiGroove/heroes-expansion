@@ -351,7 +351,7 @@ function Routine_GovernanceWeeklyResources(player, hero, mastery)
     print("$ Routine_GovernanceWeeklyResources")
     local golds = { [0]=0, [1]=1000, [2]=2500, [3]=5000 }
     local res = { [HAVEN]=CRYSTAL, [PRESERVE]=GEM, [FORTRESS]=CRYSTAL, [ACADEMY]=GEM, [DUNGEON]=SULFUR, [NECROPOLIS]=MERCURY, [INFERNO]=SULFUR, [STRONGHOLD]=MERCURY }
-    local faction = HEROES[hero]
+    local faction = HEROES[hero].faction
     sleep(3) AddPlayer_Resource(player, hero, GOLD, golds[mastery])
     sleep(3) AddPlayer_Resource(player, hero, res[faction], mastery)
 end

@@ -9,7 +9,7 @@ function ActivateBuildingConversion(player, hero)
     print("$ ActivateBuildingConversion")
     local obj = HERO_IN_CONVERTIBLE[hero]
     if not obj then ShowFlyingSign("/Text/Game/Scripts/Abilities/HeroNotInConvertible.txt", hero, player, 3) return end
-    local tier = MAP_CONVERTIBLES[obj][1]
+    local tier = MAP_CONVERTIBLES[obj].tier
     if tier == 0 then
         QuestionBoxForPlayers(
             GetPlayerFilter(player),

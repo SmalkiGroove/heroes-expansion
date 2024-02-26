@@ -20,7 +20,7 @@ end
 
 
 function SetHeroActiveSet(hero, pieces, set, id)
-    local faction = HEROES[hero]
+    local faction = HEROES[hero].faction
 
     local activations = set[0]
     if set[faction] then activations = set[faction] end

@@ -3,15 +3,27 @@ MAP_CONVERTIBLES = {}
 HERO_IN_CONVERTIBLE = {}
 
 function HeroInConvertible(hero, obj, value)
+    -- print("$ HeroInConvertible")
     ControlHeroCustomAbility(hero, CUSTOM_ABILITY_4, value)
     HERO_IN_CONVERTIBLE[hero] = (value == 1) and obj or nil
 end
 
+function EnableTownConversionAbility(hero, obj)
+    -- print("$ EnableTownConversionAbility")
+    HeroInConvertible(hero, obj, CUSTOM_ABILITY_ENABLED)
+    local x,y,z = GetObjectPosition(hero)
+    repeat sleep(10) until not IsEqualPosition(hero, x, y, z)
+    HeroInConvertible(hero, obj, CUSTOM_ABILITY_DISABLED)
+end
+
 function CanHeroConvert(hero, obj)
+    -- print("$ CanHeroConvert obj="..obj)
     if IsHeroHuman(hero) then
         if HasHeroSkill(hero, SKILL_GOVERNANCE) then
             if GetObjectOwner(obj) == GetObjectOwner(hero) then
-                return HEROES[hero] ~= MAP_CONVERTIBLES[obj][0]
+                local fh = HEROES[hero].faction
+                local fo = MAP_CONVERTIBLES[obj].faction
+                return fh ~= fo
             end
         end
     end
@@ -24,6 +36,7 @@ function SetTriggerConvertible(obj, bool)
 end
 
 function ConvertTown(player, hero, town)
+    -- print("$ ConvertTown")
     local resource_cost = 20
     local gold_cost = 10000
     if     GetPlayerResource(player, WOOD) < resource_cost then ShowFlyingSign("/Text/Game/Scripts/Resources/xNotEnoughWood.txt", hero, player, 3)
@@ -33,13 +46,14 @@ function ConvertTown(player, hero, town)
         TakePlayer_Resource(player, WOOD, resource_cost)
         TakePlayer_Resource(player, ORE, resource_cost)
         TakePlayer_Resource(player, GOLD, gold_cost)
-        local faction = HEROES[hero]
-        TransformTown(town, FactionToTownType(faction))
-        MAP_CONVERTIBLES[town][0] = faction
+        local f = HEROES[hero].faction
+        TransformTown(town, FactionToTownType(f))
+        MAP_CONVERTIBLES[town] = { faction=f, tier=0 }
     end
 end
 
 function ConvertDwelling(player, hero, dwelling, tier)
+    -- print("$ ConvertDwelling")
     local resource_cost = 3 * tier
     local gold_cost = 1000 * tier
     if     GetPlayerResource(player, WOOD) < resource_cost then ShowFlyingSign("/Text/Game/Scripts/Resources/xNotEnoughWood.txt", hero, player, 3)
@@ -49,29 +63,26 @@ function ConvertDwelling(player, hero, dwelling, tier)
         TakePlayer_Resource(player, WOOD, resource_cost)
         TakePlayer_Resource(player, ORE, resource_cost)
         TakePlayer_Resource(player, GOLD, gold_cost)
-        local faction = HEROES[hero]
-        ReplaceDwelling(dwelling, FactionToTownType(faction))
-        MAP_CONVERTIBLES[dwelling][0] = faction
+        local f = HEROES[hero].faction
+        ReplaceDwelling(dwelling, FactionToTownType(f))
+        MAP_CONVERTIBLES[dwelling] = { faction=f, tier=tier }
     end
 end
 
 function HeroVisitConvertible(hero, obj)
+    -- print("$ HeroVisitConvertible")
     if CanHeroConvert(hero, obj) then
-        HeroInConvertible(hero, obj, CUSTOM_ABILITY_ENABLED)
-        local x,y,z = GetObjectPosition(hero)
-        repeat sleep(10) until not IsEqualPosition(hero, x, y, z)
-        HeroInConvertible(hero, obj, CUSTOM_ABILITY_DISABLED)
-    else
-        SetTriggerConvertible(obj, nil)
-        MakeHeroInteractWithObject(hero, obj)
-        SetTriggerConvertible(obj, not nil)
+        startThread(EnableTownConversionAbility, hero, obj)
     end
+    SetTriggerConvertible(obj, nil)
+    MakeHeroInteractWithObject(hero, obj)
+    SetTriggerConvertible(obj, not nil)
 end
 
-function SetupMapObjectType(type, faction, tier)
+function SetupMapObjectType(type, f, t)
     local names = GetObjectNamesByType(type)
     for _,name in names do
-        MAP_CONVERTIBLES[name] = { [0]=faction, [1]=tier }
+        MAP_CONVERTIBLES[name] = { faction=f, tier=t }
         SetTriggerConvertible(name, not nil)
     end
 end

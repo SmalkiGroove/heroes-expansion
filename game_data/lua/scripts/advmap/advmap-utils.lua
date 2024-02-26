@@ -97,7 +97,7 @@ end
 
 function GetHeroTowns(player, hero)
     local cities = {}
-    local factionID = HEROES[hero]
+    local factionID = HEROES[hero].faction
     local towns = GetFactionTowns(factionID)
     for i,town in towns do
 		if GetObjectOwner(town) == player then
