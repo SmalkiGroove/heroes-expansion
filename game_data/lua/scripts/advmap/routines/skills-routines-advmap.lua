@@ -294,6 +294,17 @@ function Routine_RageAwakening(player, hero, mastery)
     GiveHeroSkill(hero, SKILL_BLOOD_RAGE)
 end
 
+function Routine_CheckInfusion(player, hero, mastery)
+    print("$ Routine_CheckInfusion")
+    local value = 2 * mastery
+    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_INFUSION]
+    if diff ~= 0 then
+        AddHero_StatAmount(player, hero, STAT_SPELL_POWER, diff)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_INFUSION] = value
+        ChangeHeroStat(hero, STAT_MANA_POINTS, 100)
+    end
+end
+
 
 
 function Routine_OnslaughtBuff(player, hero, mastery)
@@ -322,7 +333,7 @@ function Routine_LogisticsWeeklyProd(player, hero, mastery)
     print("$ Routine_LogisticsWeeklyProd")
     for town,data in MAP_TOWNS do
         if IsHeroInTown(hero, town, 1, 1) then
-            local faction = data[0]
+            local faction = data.faction
             local fort = GetTownBuildingLevel(town, TOWN_BUILDING_FORT)
             local grail = GetTownBuildingLevel(town, TOWN_BUILDING_GRAIL)
             local multiplier = 1 + 0.5 * grail
@@ -393,9 +404,9 @@ function Routine_LeadershipAfterBattle(player, hero, mastery, combatIndex)
         if length(objects) == 0 then x=x+i; y=y+j; found = not nil; break end
     end if found then break end end
     if found then print("Spawn caravan at x="..x..", y="..y) else print("No available tile around hero was found"); return end
-    local dx = town_data and town_data[1] or x
-    local dy = town_data and town_data[2] or y
-    local dz = town_data and town_data[3] or z
+    local dx = town_data and town_data.x or x
+    local dy = town_data and town_data.y or y
+    local dz = town_data and town_data.z or z
     local caravan = "Caravan-"..NB_CARAVAN
     NB_CARAVAN = NB_CARAVAN + 1
     CreateCaravan(caravan, player, z, x, y, dz, dx, dy)
@@ -466,6 +477,7 @@ START_TRIGGER_SKILLS_ROUTINES = {
     [PERK_SHEER_STRENGTH] = Routine_CheckSheerStrength,
     [PERK_STAMINA] = Routine_StaminaBuff,
     [PERK_RAGE_AWAKENING] = Routine_RageAwakening,
+    [PERK_INFUSION] = Routine_CheckInfusion,
 }
 
 DAILY_TRIGGER_SKILLS_ROUTINES = {

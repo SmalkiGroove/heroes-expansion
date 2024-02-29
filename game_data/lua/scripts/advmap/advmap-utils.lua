@@ -165,7 +165,7 @@ function InitializeMapTowns()
                         if IsTilePassable(xx, yy, floor) then
                             if not (IsTilePassable(xx+j, yy+i, floor) or IsTilePassable(xx-j, yy-i, floor)) then
                                 if IsTilePassable(xx+i, yy+j, floor) then
-                                    MAP_TOWNS[town] = {[0]=faction, [1]=xx, [2]=yy, [3]=floor}
+                                    MAP_TOWNS[town] = {faction=faction, x=xx, y=yy, z=floor}
                                     found = not nil
                                     break
                                 end
@@ -176,7 +176,7 @@ function InitializeMapTowns()
             end if found then break end end
             if found then
                 local data = MAP_TOWNS[town]
-                print("Registered town of faction "..FACTION_TEXT[data[0]].." at coords x="..data[1]..",y="..data[2]..",z="..data[3].." (entrance)")
+                print("Registered town of faction "..FACTION_TEXT[data.faction].." at coords x="..data.x..",y="..data.y..",z="..data.z.." (entrance)")
             else
                 print("Town "..town.." has no entrance ?? (type is "..type..")")
             end

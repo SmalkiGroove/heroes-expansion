@@ -175,7 +175,7 @@ end
 function Routine_AddOtherHeroesGremlins(player, hero)
     print("$ Routine_AddOtherHeroesGremlins")
     for _,h in GetPlayerHeroes(player) do
-        if h ~= hero then
+        if h ~= hero and HEROES[h].faction == ACADEMY then
             AddHero_CreatureInTypes(player, h, {CREATURE_GREMLIN,CREATURE_MASTER_GREMLIN,CREATURE_GREMLIN_SABOTEUR}, 0.5)
         end
     end
@@ -198,6 +198,7 @@ function Routine_AssembleGargoyles(player, hero)
             RemoveHeroCreatures(hero, garg, amount)
             AddHeroCreatures(hero, golem, 0.5 * amount)
             total = total + amount
+            max = max - amount
         end
     end
     if total > 0 then
@@ -239,6 +240,26 @@ end
 function Routine_AddHeroEagles(player, hero)
     print("$ Routine_AddHeroEagles")
     AddHero_CreatureType(player, hero, CREATURE_SNOW_APE, 0.2)
+end
+
+function Routine_EvolveEagleToPhoenix(player, hero)
+    print("$ Routine_EvolveEagleToPhoenix")
+    for town,data in MAP_TOWNS do
+        if data.faction == ACADEMY then
+            if IsHeroInTown(hero, town, 0, 1) then
+                local mana = GetHeroStat(hero, STAT_MANA_POINTS)
+                local crystals = GetPlayerResource(player, CRYSTAL)
+                local eagles = GetHeroCreatures(hero, CREATURE_SNOW_APE)
+                local max = min(trunc(0.02*mana), trunc(0.34*crystals))
+                local amount = min(max, eagles)
+                if amount > 0 then
+                    ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
+                    RemoveHeroCreatures(hero, CREATURE_SNOW_APE, amount)
+                    AddHeroCreatures(hero, CREATURE_PHOENIX, amount)
+                end
+            end
+        end
+    end
 end
 
 
@@ -498,6 +519,7 @@ DAILY_TRIGGER_HERO_ROUTINES = {
     [H_HAVEZ] = Routine_AddOtherHeroesGremlins,
     [H_CYRUS] = Routine_UpgradeMages,
     [H_MAAHIR] = Routine_AddOtherHeroesExperience,
+    [H_MINASLI] = Routine_EvolveEagleToPhoenix,
     -- dungeon
     [H_VAYSHAN] = Routine_GenerateGoldPerScout,
     [H_SORGAL] = Routine_AddHeroRiders,
