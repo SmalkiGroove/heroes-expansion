@@ -512,7 +512,7 @@ AFTER_COMBAT_TRIGGER_SKILLS_ROUTINES = {
 function DoSkillsRoutine_Start(player, hero)
     for k,v in START_TRIGGER_SKILLS_ROUTINES do
         if HasHeroSkill(hero, k) then
-            print("Hero "..hero.." has strating skill "..k)
+            print("Hero "..hero.." has starting skill "..k)
             local mastery = GetHeroSkillMastery(hero, k)
             startThread(v, player, hero, mastery)
         end

@@ -1,17 +1,7 @@
-
-ExecConsoleCommand("@BlockGame(); GAME_READY = 0; SetGameVar('h5x_init','false')")
-
-function ScriptEnabler()
-	ExecConsoleCommand(
-		"@repeat sleep(1) until GAME_READY == 1"..
-		" if GetGameVar('h5x_init') == 'false' then"..
-		" SetGameVar('h5x_init','true')"..
-		" Init()"..
-		" end"
-	)
-end
+ExecConsoleCommand("@BlockGame()")
 
 NB_HUMAN = 0
+FIRST_PLAYER = 0
 PLAYER_BRAIN = {
 	[1] = OBSERVER,
 	[2] = OBSERVER,
@@ -25,19 +15,10 @@ PLAYER_BRAIN = {
 
 for i = 1,8 do
 	PLAYER_BRAIN[i] = GetPlayerBrain(i)
+	if FIRST_PLAYER == 0 and GetPlayerState(i) == PLAYER_ACTIVE then FIRST_PLAYER = i end
 	if PLAYER_BRAIN[i] == HUMAN then NB_HUMAN = NB_HUMAN + 1 end
 end
 
-if NB_HUMAN == 1 then
-	ScriptEnabler()
-else
-	for i = 1,8 do
-		if PLAYER_BRAIN[i] == HUMAN and IsPlayerCurrent(i) then
-			MessageBoxForPlayers(GetPlayerFilter(i), "/Text/Game/Scripts/Init.txt", "ScriptEnabler")
-			break
-		end
-	end
-end
 
 ROUTINES_LOADED = {
 	[1] = 0, [2] = 0, [3] = 0, [4] = 0, [5] = 0, [6] = 0, [7] = 0, [8] = 0, [9] = 0, [10]= 0,
@@ -218,32 +199,31 @@ function InitializeHeroes()
 				startThread(BindHeroSkillTrigger, hero)
 				sleep(1) startThread(DoSkillsRoutine_Start, player, hero)
 				sleep(1) startThread(DoHeroSpeRoutine_Start, player, hero)
+				sleep(1) startThread(StoreData, hero)
 			end
 			sleep(1) startThread(WatchPlayer, player, 1)
 		end
 	end
 end
 
-function InitializeGameVars()
-	for player = 1,8 do
-		if (GetPlayerState(player) == 1) then
-			for i,hero in GetPlayerHeroes(player) do
-				StoreData(hero)
-			end
-		end
-	end
-end
-
 print("All scripts successfully loaded !")
-ExecConsoleCommand("@GAME_READY = 1")
 
 -- Initializers
 function Init()
 	InitializeHeroes()
 	InitializeMapTowns()
 	InitializeConvertibles()
-	InitializeGameVars()
 	ExecConsoleCommand("@UnblockGame()") UnblockGame()
 	print("Initializers done. The game can start. Have fun !")
 end
 
+-- Script enabler
+if NB_HUMAN == 0 then
+	Init()
+else
+	print("Objective H5X state is "..GetObjectiveState('H5X', FIRST_PLAYER))
+	Trigger(OBJECTIVE_STATE_CHANGE_TRIGGER, 'H5X', FIRST_PLAYER, 'Init') sleep()
+	ExecConsoleCommand("@if GetObjectiveState('H5X', FIRST_PLAYER) == OBJECTIVE_UNKNOWN then SetObjectiveState('H5X', OBJECTIVE_ACTIVE, FIRST_PLAYER) end")
+	sleep(3)
+	print("Objective H5X state is "..GetObjectiveState('H5X', FIRST_PLAYER))
+end
