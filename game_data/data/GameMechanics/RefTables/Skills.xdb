@@ -8419,16 +8419,18 @@
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
-					<Item href="/Text/Game/Skills/Special/RoyalCharge/Name.txt"/>
+					<Item href="/Text/Game/Skills/Unique/Runelore/RoyalCharge/Name.txt"/>
 				</NameFileRef>
 				<CommonNameFileRef href=""/>
 				<DescriptionFileRef>
-					<Item href="/Text/Game/Skills/Special/RoyalCharge/Description.txt"/>
+					<Item href="/Text/Game/Skills/Unique/Runelore/RoyalCharge/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
-				<spellBuffs/>
+				<spellBuffs>
+					<Item>SPELL_RUNE_OF_CHARGE</Item>
+				</spellBuffs>
 				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>

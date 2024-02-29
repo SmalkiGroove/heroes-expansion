@@ -476,7 +476,7 @@ START_TRIGGER_HERO_ROUTINES = {
     [H_TOLGHAR] = Routine_AddLuckAndMorale,
     [H_EBBA] = Routine_GiveArtifactRuneOfFlame,
     -- academy
-    [H_RISSA] = Routine_ActivateArtfsetNecro,
+    [H_THEODORUS] = Routine_ActivateArtfsetNecro,
     -- dungeon
     [H_RANLETH] = Routine_ActivateArtfsetEnlightenment,
     [H_SEPHINROTH] = Routine_ActivateArtfsetDungeon,
