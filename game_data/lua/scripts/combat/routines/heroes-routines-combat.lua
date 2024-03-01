@@ -149,6 +149,7 @@ end
 function Routine_CastEarthquake(side, hero)
     -- print("Trigger earthquake !")
     -- HeroCast_Area(hero, SPELL_UBER_METEOR_SHOWER, FREE_MANA, x, r)
+    HeroCast_Global(hero, SPELL_EARTHQUAKE, FREE_MANA)
     sleep(600)
     COMBAT_PAUSE = 0
 end

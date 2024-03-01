@@ -197,11 +197,9 @@ function InitializeHeroes()
 				startThread(ReplaceStartingArmy, hero)
 				startThread(BindHeroLevelUpTrigger, hero)
 				startThread(BindHeroSkillTrigger, hero)
-				sleep(1) startThread(DoSkillsRoutine_Start, player, hero)
-				sleep(1) startThread(DoHeroSpeRoutine_Start, player, hero)
-				sleep(1) startThread(StoreData, hero)
+				startThread(DoSkillsRoutine_Start, player, hero) sleep(1)
+				startThread(DoHeroSpeRoutine_Start, player, hero) sleep(1)
 			end
-			sleep(1) startThread(WatchPlayer, player, 1)
 		end
 	end
 end
@@ -213,17 +211,28 @@ function Init()
 	InitializeHeroes()
 	InitializeMapTowns()
 	InitializeConvertibles()
-	ExecConsoleCommand("@UnblockGame()") UnblockGame()
 	print("Initializers done. The game can start. Have fun !")
+end
+
+function SetupGameData()
+	for player = 1,8 do
+		if (GetPlayerState(player) == 1) then
+			for i,hero in GetPlayerHeroes(player) do
+				startThread(StoreData, hero)
+			end
+			startThread(WatchPlayer, player, 1)
+		end
+	end
+	ExecConsoleCommand("@UnblockGame()") UnblockGame()
 end
 
 -- Script enabler
 if NB_HUMAN == 0 then
 	Init()
 else
-	print("Objective H5X state is "..GetObjectiveState('H5X', FIRST_PLAYER))
 	Trigger(OBJECTIVE_STATE_CHANGE_TRIGGER, 'H5X', FIRST_PLAYER, 'Init') sleep()
 	ExecConsoleCommand("@if GetObjectiveState('H5X', FIRST_PLAYER) == OBJECTIVE_UNKNOWN then SetObjectiveState('H5X', OBJECTIVE_ACTIVE, FIRST_PLAYER) end")
-	sleep(3)
-	print("Objective H5X state is "..GetObjectiveState('H5X', FIRST_PLAYER))
 end
+
+sleep(30)
+SetupGameData()

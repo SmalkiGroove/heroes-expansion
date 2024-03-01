@@ -6,6 +6,7 @@
 
 	-- BlockGame()
 	consoleCmd('console_size 1000')
+	consoleCmd('game_writelog 1')
 
 	--
 	-- Logical constants
