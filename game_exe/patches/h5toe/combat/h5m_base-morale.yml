@@ -1,0 +1,11 @@
+# Changes army morale bonus provided by the hero when he is of the same alignment
+definitions: 
+  - &bonusMoraleModified 0
+  - &bonusMoraleOriginal 1
+edits:
+  - name: Edit
+    address: '0005A963'
+    size: 1
+    type: int
+    original: *bonusMoraleOriginal
+    modified: *bonusMoraleModified
