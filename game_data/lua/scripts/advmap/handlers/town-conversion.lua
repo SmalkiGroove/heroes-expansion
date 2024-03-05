@@ -9,11 +9,12 @@ function HeroInConvertible(hero, obj, value)
 end
 
 function EnableTownConversionAbility(hero, obj)
-    -- print("$ EnableTownConversionAbility")
+    print("$ EnableTownConversionAbility")
     HeroInConvertible(hero, obj, CUSTOM_ABILITY_ENABLED)
     local x,y,z = GetObjectPosition(hero)
     repeat sleep(10) until not IsEqualPosition(hero, x, y, z)
     HeroInConvertible(hero, obj, CUSTOM_ABILITY_DISABLED)
+    print("Hero moved - conversion ability disabled")
 end
 
 function CanHeroConvert(hero, obj)
@@ -70,8 +71,9 @@ function ConvertDwelling(player, hero, dwelling, tier)
 end
 
 function HeroVisitConvertible(hero, obj)
-    -- print("$ HeroVisitConvertible")
+    print("$ HeroVisitConvertible")
     if CanHeroConvert(hero, obj) then
+        print("Building can be converted")
         startThread(EnableTownConversionAbility, hero, obj)
     end
     SetTriggerConvertible(obj, nil)

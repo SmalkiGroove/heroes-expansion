@@ -160,6 +160,7 @@ function AddPlayerHero(player, hero)
 	startThread(ReplaceStartingArmy, hero)
 	startThread(BindHeroLevelUpTrigger, hero)
 	startThread(BindHeroSkillTrigger, hero)
+	startThread(DoSkillsRoutine_Start, player, hero)
 	startThread(DoHeroSpeRoutine_Start, player, hero)
 end
 function AddPlayer1Hero(hero) AddPlayerHero(PLAYER_1, hero) end
