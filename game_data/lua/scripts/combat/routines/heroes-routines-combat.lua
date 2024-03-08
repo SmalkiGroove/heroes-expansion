@@ -379,9 +379,9 @@ function Routine_BallistaShootUnit(side, hero)
     elseif CURRENT_UNIT_SIDE ~= side then
         if IsCreature(CURRENT_UNIT) then
             local m = GetUnitManaPoints(hero)
-            if m > 3 then
+            if m >= 3 then
                 TargetShoot_Ballista(side, CURRENT_UNIT)
-                SetMana(unit, m-3)
+                SetMana(hero, m-3)
             end
         end
     end
