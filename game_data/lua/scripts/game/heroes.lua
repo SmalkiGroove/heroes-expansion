@@ -82,7 +82,7 @@ H_MARBAS = 'Marder'                 -- confusion
 H_ORLANDO = 'Orlando'               -- ?
 H_BIARA = 'Biara'                   -- succubus
 H_DELEB = 'Deleb'                   -- fire traps
-H_KHABELETH = 'Sovereign2'          -- pit lords
+H_KHABELETH = 'Sovereign'           -- pit lords
 
 -- dungeon
 H_VAYSHAN = 'Ohtarig'               -- scouts

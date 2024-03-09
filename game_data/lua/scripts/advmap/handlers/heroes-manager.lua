@@ -101,7 +101,7 @@ function HeroLevelUp_Guarg() HeroLevelUp(H_GRAWL) end
 function HeroLevelUp_Ash() HeroLevelUp(H_ASH) end
 function HeroLevelUp_Nymus() HeroLevelUp(H_NYMUS) end
 function HeroLevelUp_Malustar() HeroLevelUp(H_MALUSTAR) end
-function HeroLevelUp_Calid2() HeroLevelUp(H_CALID) end
+function HeroLevelUp_Agrael() HeroLevelUp(H_AGRAEL) end
 function HeroLevelUp_Marder() HeroLevelUp(H_MARBAS) end
 function HeroLevelUp_Orlando() HeroLevelUp(H_ORLANDO) end
 function HeroLevelUp_Biara() HeroLevelUp(H_BIARA) end

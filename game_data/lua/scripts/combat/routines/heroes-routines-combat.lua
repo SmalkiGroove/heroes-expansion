@@ -408,9 +408,9 @@ function Routine_CastRandomFireball(side, hero)
     if CURRENT_UNIT == hero then
         local x,y = GetUnitPosition(RandomCreature(side, COMBAT_TURN))
         HeroCast_Area(hero, SPELL_FIREBALL, FREE_MANA, x, y)
-        ROUTINE_VARS["calid-atb"] = not nil
-    elseif ROUTINE_VARS["calid-atb"] then
-        ROUTINE_VARS["calid-atb"] = nil
+        ROUTINE_VARS["boomer-atb"] = not nil
+    elseif ROUTINE_VARS["boomer-atb"] then
+        ROUTINE_VARS["boomer-atb"] = nil
         SetATB_ID(hero, 0.5)
     end
     COMBAT_PAUSE = 0
@@ -568,7 +568,7 @@ COMBAT_TURN_HERO_ROUTINES = {
     -- inferno
     [H_SHELTEM] = Routine_BallistaShootUnit,
     [H_MALUSTAR] = Routine_DemonicCreatureExplosion,
-    [H_CALID] = Routine_CastRandomFireball,
+    [H_AGRAEL] = Routine_CastRandomFireball,
     -- stronghold
     [H_KILGHAN] = Routine_SummonGoblinStack,
     [H_ZOULEIKA] = Routine_HealingTentMoveNext,
