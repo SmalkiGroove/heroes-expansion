@@ -14,8 +14,20 @@ end
 
 function Routine_ShatterMagic(side, hero, id, mastery)
     -- print("Trigger Shatter Magic !")
-    local mult = 0.95 - 0.05 * mastery
-    
+    local mult = 0.05 + 0.05 * mastery
+    local h = GetHero(1-side)
+    if h then
+        local max = GetUnitMaxManaPoints(h)
+        local cur = GetUnitManaPoints(h)
+        local burn = min(cur, round(mult * max))
+        SetMana(h, cur-burn)
+    end
+    local creatures = GetUnits(1-side, CREATURE)
+    for i,cr in creatures do
+        local m = GetUnitMaxManaPoints(cr)
+        local burn = round(mult * m)
+        SetMana(cr, m-burn)
+    end
 end
 
 

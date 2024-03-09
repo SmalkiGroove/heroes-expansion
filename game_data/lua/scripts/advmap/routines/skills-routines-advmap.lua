@@ -331,6 +331,30 @@ end
 
 
 
+function Routine_WarriorsOfTheMagma(player, hero, mastery)
+    print("$ Routine_WarriorsOfTheMagma")
+    local amount = 10
+    AddHeroCreatures(hero, CREATURE_FIRE_ELEMENTAL, amount)
+end
+
+function Routine_WarriorsOfTheSea(player, hero, mastery)
+    print("$ Routine_WarriorsOfTheSea")
+    local amount = 10
+    AddHeroCreatures(hero, CREATURE_WATER_ELEMENTAL, amount)
+end
+
+function Routine_WarriorsOfTheSky(player, hero, mastery)
+    print("$ Routine_WarriorsOfTheSky")
+    local amount = 10
+    AddHeroCreatures(hero, CREATURE_AIR_ELEMENTAL, amount)
+end
+
+function Routine_WarriorsOfTheMountain(player, hero, mastery)
+    print("$ Routine_WarriorsOfTheMountain")
+    local amount = 10
+    AddHeroCreatures(hero, CREATURE_EARTH_ELEMENTAL, amount)
+end
+
 function Routine_LogisticsWeeklyProd(player, hero, mastery)
     print("$ Routine_LogisticsWeeklyProd")
     for town,data in MAP_TOWNS do
@@ -444,8 +468,7 @@ end
 
 function Routine_MeditationExp(player, hero, amount)
     print("$ Routine_MeditationExp")
-    local value = (50 + amount) * GetHeroLevel(hero)
-    AddHero_StatAmount(player, hero, STAT_EXPERIENCE, value)
+    AddHero_StatAmount(player, hero, STAT_EXPERIENCE, 50 * amount)
 end
 
 
@@ -489,6 +512,10 @@ DAILY_TRIGGER_SKILLS_ROUTINES = {
 }
 
 WEEKLY_TRIGGER_SKILLS_ROUTINES = {
+    [PERK_WARRIORS_OF_THE_MAGMA] = Routine_WarriorsOfTheMagma,
+    [PERK_WARRIORS_OF_THE_SEA] = Routine_WarriorsOfTheSea,
+    [PERK_WARRIORS_OF_THE_SKY] = Routine_WarriorsOfTheSky,
+    [PERK_WARRIORS_OF_THE_MOUNTAIN] = Routine_WarriorsOfTheMountain,
     [SKILL_LOGISTICS] = Routine_LogisticsWeeklyProd,
     [SKILL_GOVERNANCE] = Routine_GovernanceWeeklyResources,
     [PERK_HAUNTING] = Routine_HauntingWeeklyGhosts,

@@ -134,7 +134,7 @@ HEROES = {
     [H_LUCRETIA] = {faction=NECROPOLIS},    [H_ASH]       = {faction=INFERNO},     [H_SORGAL]     = {faction=DUNGEON},     [H_TELSEK]   = {faction=STRONGHOLD},
     [H_XERXON]   = {faction=NECROPOLIS},    [H_NYMUS]     = {faction=INFERNO},     [H_SYLSAI]     = {faction=DUNGEON},     [H_GARUNA]   = {faction=STRONGHOLD},
     [H_KASPAR]   = {faction=NECROPOLIS},    [H_MALUSTAR]  = {faction=INFERNO},     [H_RAELAG]     = {faction=DUNGEON},     [H_GORSHAK]  = {faction=STRONGHOLD},
-    [H_RAVEN]    = {faction=NECROPOLIS},    [H_CALID]     = {faction=INFERNO},     [H_SINITAR]    = {faction=DUNGEON},     [H_KARUKAT]  = {faction=STRONGHOLD},
+    [H_RAVEN]    = {faction=NECROPOLIS},    [H_AGRAEL]    = {faction=INFERNO},     [H_SINITAR]    = {faction=DUNGEON},     [H_KARUKAT]  = {faction=STRONGHOLD},
     [H_ARCHILUS] = {faction=NECROPOLIS},    [H_MARBAS]    = {faction=INFERNO},     [H_RANLETH]    = {faction=DUNGEON},     [H_HAGGASH]  = {faction=STRONGHOLD},
     [H_THANT]    = {faction=NECROPOLIS},    [H_ORLANDO]   = {faction=INFERNO},     [H_ERUINA]     = {faction=DUNGEON},     [H_MUKHA]    = {faction=STRONGHOLD},
     [H_SANDRO]   = {faction=NECROPOLIS},    [H_BIARA]     = {faction=INFERNO},     [H_SHADYA]     = {faction=DUNGEON},     [H_URGHAT]   = {faction=STRONGHOLD},
