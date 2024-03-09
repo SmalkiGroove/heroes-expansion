@@ -278,6 +278,20 @@ end
 
 function Routine_FullDragonSet(side, hero)
     -- print("Trigger full dragon set !")
+    local n = length(GetUnits(side, CREATURE))
+    local x = 7
+    local amount = GetHeroLevel(side)
+    SummonCreatureStack_X(side, CREATURE_DEEP_DRAGON, amount, x)
+    sleep(450)
+    local dragon = GetUnits(side, CREATURE)[n]
+    local target = RandomCreature(1-side, n)
+    AttackCombatUnit(dragon, target)
+    if hero then
+        sleep(1000)
+        playAnimation(dragon, "death")
+        sleep(550)
+        RemoveCombatUnit(dragon)
+    end
     COMBAT_PAUSE = 0
 end
 
@@ -537,6 +551,7 @@ COMBAT_START_HERO_ROUTINES = {
     -- dungeon
     [H_VAYSHAN] = Routine_ScoutsMoveFirst,
     [H_SYLSAI] = Routine_HeroCastRage,
+    [H_RAELAG] = Routine_FullDragonSet,
     [H_SHADYA] = Routine_CastRandomDeepFrost,
     -- necropolis
     [H_VLADIMIR] = Routine_SummonAndKillEnnemySkeleton,
