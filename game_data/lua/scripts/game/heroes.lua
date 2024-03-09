@@ -77,7 +77,7 @@ H_GRAWL = 'Guarg'                   -- hell hounds
 H_ASH = 'Ash'                       -- offender
 H_NYMUS = 'Nymus'                   -- gating
 H_MALUSTAR = 'Malustar'             -- explosions
-H_CALID = 'Calid2'                  -- fireball
+H_AGRAEL = 'Agrael'                 -- fireball
 H_MARBAS = 'Marder'                 -- confusion
 H_ORLANDO = 'Orlando'               -- ?
 H_BIARA = 'Biara'                   -- succubus
@@ -96,7 +96,7 @@ H_RANLETH = 'Ranleth'               -- learning
 H_ERUINA = 'Eruina'                 -- shadow witches
 H_SHADYA = 'Kelodin'                -- witch queen
 H_LETHOS = 'Dalom'                  -- poisoner
-H_SEPHINROTH = 'Sephinroth'         -- elemental vision
+H_SEPHINROTH = 'Sephinroth'         -- elemental chain
 
 -- stronghold
 H_KRAGH = 'Hero1'                   -- atb boost
