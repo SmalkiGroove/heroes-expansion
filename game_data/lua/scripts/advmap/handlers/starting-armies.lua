@@ -11,21 +11,17 @@ function ReplaceStartingArmy(hero)
         army = STARTING_ARMIES[faction]
     end
     local k, units, amounts = GetHeroArmySummary(hero)
-    print("Remove current army")
     for i = 1,k do
         RemoveHeroCreatures(hero, units[i], amounts[i])
     end
-    print("Add new army")
     for i = 1,7 do
         if army[i] then
             AddHeroCreatures(hero, army[i][1], army[i][2], i-1)
         end
     end
-    print("Remove dummy creature")
     sleep() RemoveHeroCreatures(hero, CREATURE_180, 1)
     sleep()
     sleep()
-    print("Search other dummy creature")
     for _,h in GetPlayerHeroes(GetObjectOwner(hero)) do
         if GetHeroCreatures(h, CREATURE_180) > 0 then RemoveHeroCreatures(hero, CREATURE_180, 1) end
     end
