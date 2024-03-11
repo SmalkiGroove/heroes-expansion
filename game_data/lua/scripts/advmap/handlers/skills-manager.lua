@@ -62,6 +62,7 @@ end
 
 
 function CheckForUltimate(player, hero, level)
+    print("$ CheckForUltimate")
     if level > 30 then
         local nb = 0
         for i,skill in SKILLS_BY_FACTION do
@@ -70,7 +71,7 @@ function CheckForUltimate(player, hero, level)
             end
         end
         for i,skill in SKILLS_COMMON do
-            if GetHeroSkillMastery(hero, skill) >= 3 then
+            if GetHeroSkillMastery(hero, skill) >= 1 then
                 nb = nb + 1
             end
         end
