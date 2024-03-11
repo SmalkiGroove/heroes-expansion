@@ -62,7 +62,8 @@ end
 
 
 function CheckForUltimate(player, hero, level)
-    print("$ CheckForUltimate")
+    -- print("$ CheckForUltimate")
+    if HasHeroSkill(hero, SKILL_ULTIMATE) then return end
     if level > 30 then
         local nb = 0
         for i,skill in SKILLS_BY_FACTION do
@@ -75,7 +76,9 @@ function CheckForUltimate(player, hero, level)
                 nb = nb + 1
             end
         end
-        if nb == 8 then
+        if nb == 7 then
+            GiveHeroSkill(hero, SKILL_ULTIMATE)
+            GiveHeroSkill(hero, SKILL_ULTIMATE)
             GiveHeroSkill(hero, SKILL_ULTIMATE)
             ShowFlyingSign("/Text/Game/Scripts/Ultimate.txt", hero, player, FLYING_SIGN_TIME)
         end
