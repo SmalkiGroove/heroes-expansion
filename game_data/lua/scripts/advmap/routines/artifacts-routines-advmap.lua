@@ -6,6 +6,12 @@ function Routine_ArtifactPouchOfGolds(player, hero)
 end
 
 
+function Routine_ArtifactGreatLich(player, hero)
+    print("$ Routine_ArtifactGreatLich")
+    AddHero_CreatureInTypes(player, hero, {CREATURE_LICH,CREATURE_DEMILICH,CREATURE_LICH_MASTER}, 1)
+end
+
+
 DAILY_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_ENDLESS_POUCH_OF_GOLD] = Routine_ArtifactPouchOfGolds,
 }
@@ -13,7 +19,7 @@ WEEKLY_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_NONE] = NoneRoutine,
 }
 LEVELUP_TRIGGER_ARTIFACTS_ROUTINES = {
-    [ARTIFACT_NONE] = NoneRoutine,
+    [ARTIFACT_SANDROS_CLOAK] = Routine_ArtifactGreatLich,
 }
 AFTER_COMBAT_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_NONE] = NoneRoutine,

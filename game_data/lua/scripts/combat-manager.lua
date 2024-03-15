@@ -97,6 +97,8 @@ end
 function ManageCombatStart()
     -- print("$ Manage combat start")
     if ENABLE_SCRIPT == 0 then return end
+    startThread(GetArmySummary, ATTACKER)
+    startThread(GetArmySummary, DEFENDER)
 
     Pause()
 	if ATTACKER_HERO ~= "" then
@@ -117,7 +119,7 @@ function ManageCombatTurn(unit)
     if CURRENT_UNIT ~= unit then
         COMBAT_TURN = COMBAT_TURN + 1
         CURRENT_UNIT = unit
-        CURRENT_UNIT_SIDE = IsAttacker(unit) and ATTACKER or DEFENDER
+        CURRENT_UNIT_SIDE = GetUnitSide(unit)
 
         Pause()
         if ATTACKER_HERO ~= "" then

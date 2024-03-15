@@ -5,7 +5,8 @@
 
 function Routine_AddHeroCavaliers(player, hero)
     print("$ Routine_AddHeroCavaliers")
-    AddHero_CreatureInTypes(player, hero, {CREATURE_CAVALIER,CREATURE_PALADIN,CREATURE_CHAMPION}, 0.11)
+    local amount = round(0.11 * GetHeroLevel(hero))
+    AddHero_CreatureInTypes(player, hero, {CREATURE_CAVALIER,CREATURE_PALADIN,CREATURE_CHAMPION}, amount)
 end
 
 function Routine_ActivateArtfsetHaven(player, hero)
@@ -113,7 +114,8 @@ end
 
 function Routine_AddHeroDefenders(player, hero)
     print("$ Routine_AddHeroDefenders")
-    AddHero_CreatureInTypes(player, hero, {CREATURE_DEFENDER,CREATURE_STOUT_DEFENDER,CREATURE_STONE_DEFENDER}, 0.4)
+    local amount = round(0.40 * GetHeroLevel(hero))
+    AddHero_CreatureInTypes(player, hero, {CREATURE_DEFENDER,CREATURE_STOUT_DEFENDER,CREATURE_STONE_DEFENDER}, amount)
 end
 
 function Routine_AddRecruitsBearRiders(player, hero)
@@ -174,9 +176,10 @@ end
 
 function Routine_AddOtherHeroesGremlins(player, hero)
     print("$ Routine_AddOtherHeroesGremlins")
+    local amount = round(0.50 * GetHeroLevel(hero))
     for _,h in GetPlayerHeroes(player) do
         if h ~= hero and HEROES[h].faction == ACADEMY then
-            AddHero_CreatureInTypes(player, h, {CREATURE_GREMLIN,CREATURE_MASTER_GREMLIN,CREATURE_GREMLIN_SABOTEUR}, 0.5)
+            AddHero_CreatureInTypes(player, h, {CREATURE_GREMLIN,CREATURE_MASTER_GREMLIN,CREATURE_GREMLIN_SABOTEUR}, amount)
         end
     end
 end
@@ -208,7 +211,8 @@ end
 
 function Routine_AddHeroDjinns(player, hero)
     print("$ Routine_AddHeroDjinns")
-    AddHero_CreatureInTypes(player, hero, {CREATURE_GENIE,CREATURE_MASTER_GENIE,CREATURE_DJINN_VIZIER}, 0.3)
+    local amount = round(0.30 * GetHeroLevel(hero))
+    AddHero_CreatureInTypes(player, hero, {CREATURE_GENIE,CREATURE_MASTER_GENIE,CREATURE_DJINN_VIZIER}, amount)
 end
 
 function Routine_AddRecruitsRakshasas(player, hero)
@@ -281,7 +285,8 @@ end
 
 function Routine_AddHeroRiders(player, hero)
     print("$ Routine_AddHeroRiders")
-    AddHero_CreatureInTypes(player, hero, {CREATURE_RIDER,CREATURE_RAVAGER,CREATURE_BLACK_RIDER}, 0.12)
+    local amount = round(0.12 * GetHeroLevel(hero))
+    AddHero_CreatureInTypes(player, hero, {CREATURE_RIDER,CREATURE_RAVAGER,CREATURE_BLACK_RIDER}, amount)
 end
 
 function Routine_GainDragonArtifacts(player, hero, combatIndex)
@@ -398,6 +403,11 @@ function Routine_AddHeroBanshees(player, hero)
     AddHero_CreatureType(player, hero, CREATURE_BANSHEE, 0.06)
 end
 
+function Routine_GiveSandrosCloak(player, hero)
+    print("$ Routine_GiveSandrosCloak")
+    GiveArtifact(hero, ARTIFACT_SANDROS_CLOAK, 1)
+end
+
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -410,7 +420,8 @@ end
 
 function Routine_AddHeroHellHounds(player, hero)
     print("$ Routine_AddHeroHellHounds")
-    AddHero_CreatureInTypes(player, hero, {CREATURE_HELL_HOUND,CREATURE_CERBERI,CREATURE_FIREBREATHER_HOUND}, 0.9)
+    local amount = round(0.90 * GetHeroLevel(hero))
+    AddHero_CreatureInTypes(player, hero, {CREATURE_HELL_HOUND,CREATURE_CERBERI,CREATURE_FIREBREATHER_HOUND}, amount)
 end
 
 function Routine_GainAttackPerLevel(player, hero, level)
@@ -468,7 +479,8 @@ end
 
 function Routine_AddHeroWyverns(player, hero)
     print("$ Routine_AddHeroWyverns")
-    AddHero_CreatureInTypes(player, hero, {CREATURE_WYVERN,CREATURE_WYVERN_POISONOUS,CREATURE_WYVERN_PAOKAI}, 0.22)
+    local amount = round(0.22 * GetHeroLevel(hero))
+    AddHero_CreatureInTypes(player, hero, {CREATURE_WYVERN,CREATURE_WYVERN_POISONOUS,CREATURE_WYVERN_PAOKAI}, amount)
 end
 
 function Routine_ActivateArtfsetSarIssus(player, hero)
@@ -502,6 +514,7 @@ START_TRIGGER_HERO_ROUTINES = {
     [H_RANLETH] = Routine_ActivateArtfsetEnlightenment,
     [H_SEPHINROTH] = Routine_ActivateArtfsetDungeon,
     -- necropolis
+    [H_SANDRO] = Routine_GiveSandrosCloak,
     -- inferno
     [H_BIARA] = Routine_ActivateArtfsetHunter,
     -- stronghold

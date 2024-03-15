@@ -1692,7 +1692,7 @@
 					<Attack>0</Attack>
 					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
-					<SpellPower>0</SpellPower>
+					<SpellPower>2</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
@@ -1710,15 +1710,15 @@
 				<Type>ARTF_CLASS_MAJOR</Type>
 				<Slot>FEET</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/SandalsOfTheBlessed.xdb#xpointer(/Texture)"/>
-				<CostOfGold>14000</CostOfGold>
-				<AIValue>8000</AIValue>
+				<CostOfGold>10000</CostOfGold>
+				<AIValue>20000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
-					<Attack>1</Attack>
-					<Defence>1</Defence>
-					<Knowledge>1</Knowledge>
-					<SpellPower>1</SpellPower>
-					<Morale>1</Morale>
+					<Attack>0</Attack>
+					<Defence>3</Defence>
+					<Knowledge>0</Knowledge>
+					<SpellPower>0</SpellPower>
+					<Morale>0</Morale>
 					<Luck>1</Luck>
 				</HeroStatsModif>
 				<ArtifactShared href="/MapObjects/Artifacts/SandalsOfTheBlessed.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
@@ -1735,13 +1735,13 @@
 				<Type>ARTF_CLASS_RELIC</Type>
 				<Slot>SHOULDERS</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/SandrosCloak.xdb#xpointer(/Texture)"/>
-				<CostOfGold>17000</CostOfGold>
-				<AIValue>11000</AIValue>
-				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
+				<CostOfGold>1</CostOfGold>
+				<AIValue>1</AIValue>
+				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
-					<Knowledge>8</Knowledge>
+					<Knowledge>4</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>

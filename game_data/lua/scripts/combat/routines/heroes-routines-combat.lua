@@ -260,13 +260,12 @@ function Routine_HeroCastRage(side, hero)
     for i = 1,n do
         HeroCast_Target(hero, SPELL_BERSERK, FREE_MANA, enemies[i-1])
     end
-    GetArmySummary(side)
     COMBAT_PAUSE = 0
 end
 
 function Routine_SummonDeadEnnemyCreature(side, hero, unit)
     -- print("Trigger revive enemy creature !")
-    if CURRENT_UNIT_SIDE ~= side then
+    if GetUnitSide(unit) ~= side then
         local type = GetCreatureType(unit)
         local x,y = GetUnitPosition(unit)
         local p = 10 + GetHeroLevel(side)
@@ -358,10 +357,11 @@ function Routine_SummonAvatarOfDeath(side, hero)
 end
 
 function Routine_AvatarDead(side, hero, unit)
-    -- print("Trigger mass Blindness on Avatar of Death's death !")
+    -- print("Trigger mass Sorrow on Avatar of Death's death !")
     if unit == ROUTINE_VARS["avatar-id"] then
-        HeroCast_AllCreatures(hero, SPELL_BLIND, FREE_MANA, 1-side)
-        sleep(100); SetMana(hero, 10)
+        HeroCast_AllCreatures(hero, SPELL_SORROW, FREE_MANA, 1-side)
+        sleep(100)
+        SetMana(hero, GetHeroLevel(side))
     end
     COMBAT_PAUSE = 0
 end
@@ -377,6 +377,19 @@ function Routine_CastRandomIceBolt(side, hero)
     if CURRENT_UNIT == hero then
         HeroCast_RandomCreature(hero, SPELL_ICE_BOLT, FREE_MANA, 1-side)
         if IsHuman(side) then SetATB_ID(hero, ATB_INSTANT) end
+    end
+    COMBAT_PAUSE = 0
+end
+
+function Routine_RaiseUndead(side, hero, unit)
+    -- print("Trigger raise undead equivalent !")
+    if GetUnitSide(unit) ~= side then
+        local dead = GetCreatureType(unit)
+        local type = CreatureToUndead(dead)
+        local x,y = GetUnitPosition(unit)
+        local p = 10 + GetHeroLevel(side)
+        local amount = trunc(ROUTINE_VARS["initial-counts"][unit] * p * 0.01)
+        SummonCreatureStack_XY(side, type, amount, x, y)
     end
     COMBAT_PAUSE = 0
 end
@@ -601,6 +614,7 @@ UNIT_DIED_HERO_ROUTINES = {
     [H_SYLSAI] = Routine_SummonDeadEnnemyCreature,
     -- necropolis
     [H_ARCHILUS] = Routine_AvatarDead,
+    [H_SANDRO] = Routine_RaiseUndead,
     -- inferno
     -- stronghold
 }

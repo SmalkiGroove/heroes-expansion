@@ -198,6 +198,13 @@ function SetATB_WarMachineType(side, type, value)
     end
 end
 
+function CreatureToUndead(creature)
+	if CREATURES[creature][1] == NECROPOLIS then return creature end
+	local tier = CREATURES[creature][2]
+	return CREATURES_BY_FACTION[NECROPOLIS][tier][1]
+end
+
+
 
 
 -- print("Loaded combat-utils.lua")
