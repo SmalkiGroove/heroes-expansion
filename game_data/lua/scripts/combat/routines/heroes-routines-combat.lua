@@ -202,6 +202,22 @@ function Routine_CastSummonElementals(side, hero)
     COMBAT_PAUSE = 0
 end
 
+function Routine_TimeShift(side, hero)
+    -- print("Trigger time shift !")
+    if CURRENT_UNIT == hero and COMBAT_TURN > 1 then
+        local r = 40 + GetHeroLevel(side)
+        if r > random(0, 100, COMBAT_TURN) then
+            local friendly = RandomCreature(side, COMBAT_TURN)
+            local enemy = RandomCreature(1-side, COMBAT_TURN)
+            SetATB_ID(friendly, ATB_NEXT)
+            ShowFlyingSign("/Text/Game/Scripts/Combat/TimeShift.txt", friendly, 9)
+            SetATB_ID(enemy, ATB_ZERO)
+            ShowFlyingSign("/Text/Game/Scripts/Combat/TimeShift.txt", enemy, 9)
+        end
+    end
+    COMBAT_PAUSE = 0
+end
+
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -586,6 +602,7 @@ COMBAT_TURN_HERO_ROUTINES = {
     -- fortress
     -- academy
     [H_NATHIR] = Routine_BallistaMoveNext,
+    [H_RISSA] = Routine_TimeShift,
     -- dungeon
     [H_DARKSTORM] = Routine_MinotaursMoveNext,
     [H_SORGAL] = Routine_RidersHydraSynergy,
