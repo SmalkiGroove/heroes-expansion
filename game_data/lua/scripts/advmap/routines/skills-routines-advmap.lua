@@ -307,6 +307,17 @@ function Routine_CheckInfusion(player, hero, mastery)
     end
 end
 
+function Routine_CheckEnlightened(player, hero, mastery)
+    print("$ Routine_CheckEnlightened")
+    local value = 2 * mastery
+    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_ENLIGHTENED]
+    if diff ~= 0 then
+        AddHero_StatAmount(player, hero, STAT_KNOWLEDGE, diff)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_ENLIGHTENED] = value
+        ChangeHeroStat(hero, STAT_EXPERIENCE, 1000)
+    end
+end
+
 
 
 function Routine_OnslaughtBuff(player, hero, mastery)
@@ -503,6 +514,7 @@ START_TRIGGER_SKILLS_ROUTINES = {
     [PERK_STAMINA] = Routine_StaminaBuff,
     [PERK_RAGE_AWAKENING] = Routine_RageAwakening,
     [PERK_INFUSION] = Routine_CheckInfusion,
+    [PERK_ENLIGHTENED] = Routine_CheckEnlightened,
 }
 
 DAILY_TRIGGER_SKILLS_ROUTINES = {

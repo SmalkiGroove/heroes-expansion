@@ -274,6 +274,7 @@ _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_LORD_OF_THE_UNDEAD  = _skillbonu
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_DEFEND_US_ALL       = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_SHEER_STRENGTH      = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_INFUSION            = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_ENLIGHTENED         = _skillbonus_id
 
 
 -- print("Loaded skills.lua")

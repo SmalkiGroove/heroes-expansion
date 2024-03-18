@@ -257,11 +257,13 @@ end
 function Routine_RidersHydraSynergy(side, hero)
     -- print("Trigger riders boost hydras atb !")
     if CURRENT_UNIT_SIDE == side then
-        local type = GetCreatureType(CURRENT_UNIT)
-        if type == CREATURE_RIDER or type == CREATURE_RAVAGER or type == CREATURE_BLACK_RIDER then
-            local r = 25 + trunc(GetHeroLevel(side) * 0.25)
-            if r > random(0, 100, COMBAT_TURN) then
-                SetATB_CreatureTypes(side, {CREATURE_HYDRA,CREATURE_CHAOS_HYDRA,CREATURE_ACIDIC_HYDRA}, ATB_NEXT)
+        if IsCreature(CURRENT_UNIT) then
+            local type = GetCreatureType(CURRENT_UNIT)
+            if type == CREATURE_RIDER or type == CREATURE_RAVAGER or type == CREATURE_BLACK_RIDER then
+                local r = 25 + trunc(GetHeroLevel(side) * 0.25)
+                if r > random(0, 100, COMBAT_TURN) then
+                    SetATB_CreatureTypes(side, {CREATURE_HYDRA,CREATURE_CHAOS_HYDRA,CREATURE_ACIDIC_HYDRA}, ATB_NEXT)
+                end
             end
         end
     end

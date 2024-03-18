@@ -31,6 +31,7 @@ for hero,_ in HEROES do
         [SKILLBONUS_DEFEND_US_ALL] = 0,
         [SKILLBONUS_SHEER_STRENGTH] = 0,
         [SKILLBONUS_INFUSION] = 0,
+        [SKILLBONUS_ENLIGHTENED] = 0,
     }
 end
 

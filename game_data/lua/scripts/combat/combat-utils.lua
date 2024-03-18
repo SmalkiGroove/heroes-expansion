@@ -158,22 +158,25 @@ function HeroCast_Global(hero, spell, mana)
 end
 
 function SummonCreatureStack(side, type, amount)
-    if amount == 0 then amount = 1 end
-    SummonCreature(side, type, amount)
-    sleep(1)
+    if amount > 0 then
+        SummonCreature(side, type, amount)
+        sleep(1)
+    end
 end
 
 function SummonCreatureStack_X(side, type, amount, offset)
-    if amount == 0 then amount = 1 end
-    local x = (side == ATTACKER) and (GRID_X_MIN + offset) or (GRID_X_MAX - offset)
-    SummonCreature(side, type, amount, x)
-    sleep(1)
+    if amount > 0 then
+        local x = (side == ATTACKER) and (GRID_X_MIN + offset) or (GRID_X_MAX - offset)
+        SummonCreature(side, type, amount, x)
+        sleep(1)
+    end
 end
 
 function SummonCreatureStack_XY(side, type, amount, x, y)
-    if amount == 0 then amount = 1 end
-    SummonCreature(side, type, amount, x, y)
-    sleep(1)
+    if amount > 0 then
+        SummonCreature(side, type, amount, x, y)
+        sleep(1)
+    end
 end
 
 function SetATB_ID(id, value)
