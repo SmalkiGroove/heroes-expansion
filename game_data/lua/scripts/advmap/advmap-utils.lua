@@ -195,8 +195,8 @@ end
 -- COMMON
 
 
-function AddPlayer_Resource(player, hero, resource, amount)
-	print("$ AddPlayer_Resource")
+function AddPlayerResource(player, hero, resource, amount)
+	print("$ AddPlayerResource")
 	if amount >= 1 then
 		local curamount = GetPlayerResource(player, resource)
 		local newamount = curamount + amount
@@ -205,8 +205,8 @@ function AddPlayer_Resource(player, hero, resource, amount)
 	end
 end
 
-function TakePlayer_Resource(player, resource, amount)
-	print("$ TakePlayer_Resource")
+function RemovePlayerResource(player, resource, amount)
+	print("$ RemovePlayerResource")
 	if amount >= 1 then
 		local curamount = GetPlayerResource(player, resource)
 		local newamount = curamount - amount
@@ -214,16 +214,16 @@ function TakePlayer_Resource(player, resource, amount)
 	end
 end
 
-function AddHero_StatAmount(player, hero, stat, amount)
-	print("$ AddHero_StatAmount")
+function AddHeroStatAmount(player, hero, stat, amount)
+	print("$ AddHeroStatAmount")
     if amount ~= 0 then
 		ChangeHeroStat(hero, stat, amount)
 		-- ShowFlyingSign({"/Text/Game/Scripts/Stats/"..ATTRIBUTE_TEXT[stat]..".txt"; num=amount}, hero, player, FLYING_SIGN_TIME)
 	end
 end
 
-function AddHero_RandomSpell(player, hero, school, maxtier)
-	print("$ AddHero_RandomSpell")
+function TeachHeroRandomSpell(player, hero, school, maxtier)
+	print("$ TeachHeroRandomSpell")
 	local spells = {}
 	if school == SPELL_SCHOOL_ANY then
 		for tier = 1,maxtier do
@@ -251,8 +251,8 @@ function AddHero_RandomSpell(player, hero, school, maxtier)
 	end
 end
 
-function AddHero_RandomSpellTier(player, hero, school, tier)
-	print("$ AddHero_RandomSpellTier")
+function TeachHeroRandomSpellTier(player, hero, school, tier)
+	print("$ TeachHeroRandomSpellTier")
 	local spells = {}
 	if school == SPELL_SCHOOL_ANY then
 		spells = SPELLS_BY_TIER[tier]
@@ -276,8 +276,8 @@ function AddHero_RandomSpellTier(player, hero, school, tier)
 	end
 end
 
-function AddHero_CreatureType(player, hero, type, coef)
-	print("AddHero_CreatureType")
+function AddHeroCreaturePerLevel(player, hero, type, coef)
+	print("AddHeroCreaturePerLevel")
 	local level = GetHeroLevel(hero)
 	local nb = round(coef * level)
 	if nb >= 1 then
@@ -286,8 +286,8 @@ function AddHero_CreatureType(player, hero, type, coef)
 	end
 end
 
-function AddHero_CreatureInTypes(player, hero, types, nb)
-	print("$ AddHero_CreatureInTypes")
+function AddHeroCreatureType(player, hero, types, nb)
+	print("$ AddHeroCreatureType")
 	if nb >= 1 then
 		local army = GetHeroArmy(hero)
 		local b = 0
@@ -303,8 +303,8 @@ function AddHero_CreatureInTypes(player, hero, types, nb)
 	end
 end
 
-function AddHero_TownRecruits(player, hero, dwelling, creature, coef)
-	print("AddHero_TownRecruits")
+function AddHeroTownRecruits(player, hero, dwelling, creature, coef)
+	print("AddHeroTownRecruits")
 	local level = GetHeroLevel(hero)
 	local towns = GetHeroTowns(player, hero)
 	local nb = round(coef * level)
@@ -319,8 +319,8 @@ function AddHero_TownRecruits(player, hero, dwelling, creature, coef)
 	end
 end
 
-function AddHero_CreatureFromDwelling(player, hero, dwelling, creature, coef)
-	print("$ AddHero_CreatureFromDwelling")
+function TransferCreatureFromTown(player, hero, dwelling, creature, coef)
+	print("$ TransferCreatureFromTown")
 	local level = GetHeroLevel(hero)
 	local towns = GetHeroTowns(player, hero)
 	for i,town in towns do
@@ -336,8 +336,8 @@ function AddHero_CreatureFromDwelling(player, hero, dwelling, creature, coef)
 	end
 end
 
-function ChangeHero_TownRecruits(player, hero, dwelling1, creature1, dwelling2, creature2, amount)
-	print("$ ChangeHero_TownRecruits")
+function TransformTownRecruits(player, hero, dwelling1, creature1, dwelling2, creature2, amount)
+	print("$ TransformTownRecruits")
 	local towns = GetHeroTowns(player, hero)
 	for i,town in towns do
 		if GetTownBuildingLevel(town, dwelling1) ~= 0 and GetTownBuildingLevel(town, dwelling2) ~= 0 then
@@ -353,14 +353,29 @@ function ChangeHero_TownRecruits(player, hero, dwelling1, creature1, dwelling2, 
 	end
 end
 
-function ChangeHero_CreatureUpgrade(player, hero, base, upgrade)
-	print("$ ChangeHero_CreatureUpgrade")
+function UpgradeHeroCreatures(player, hero, base, upgrade)
+	print("$ UpgradeHeroCreatures")
 	local nb = GetHeroCreatures(hero, base)
 	if nb >= 1 then
 		RemoveHeroCreatures(hero, base, nb)
 		AddHeroCreatures(hero, upgrade, nb)
 		-- ShowFlyingSign({"/Text/Game/Scripts/Evolve.txt"; num=nb}, hero, player, FLYING_SIGN_TIME)
 	end
+end
+
+function ResurrectCreatureType(player, hero, combatIndex, faction, tier, max)
+	print("$ ResurrectCreatureType")
+	local cap = max
+    local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
+    for i = 0,stacks-1 do
+        local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
+        if died > 0 and cap > 0 then
+            if CREATURES[creature][0] == faction and CREATURES[creature][1] == tier then
+            local rez = min(cap, died)
+            cap = cap - rez
+            AddHeroCreatures(hero, creature, rez)
+        end
+    end
 end
 
 

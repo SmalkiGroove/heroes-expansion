@@ -44,9 +44,9 @@ function ConvertTown(player, hero, town)
     elseif GetPlayerResource(player, ORE) < resource_cost then ShowFlyingSign("/Text/Game/Scripts/Resources/xNotEnoughOre.txt", hero, player, 3)
     elseif GetPlayerResource(player, GOLD) < gold_cost then ShowFlyingSign("/Text/Game/Scripts/Resources/xNotEnoughGolds.txt", hero, player, 3)
     else
-        TakePlayer_Resource(player, WOOD, resource_cost)
-        TakePlayer_Resource(player, ORE, resource_cost)
-        TakePlayer_Resource(player, GOLD, gold_cost)
+        RemovePlayerResource(player, WOOD, resource_cost)
+        RemovePlayerResource(player, ORE, resource_cost)
+        RemovePlayerResource(player, GOLD, gold_cost)
         local f = HEROES[hero].faction
         TransformTown(town, FactionToTownType(f))
         MAP_CONVERTIBLES[town] = { faction=f, tier=0 }
@@ -61,9 +61,9 @@ function ConvertDwelling(player, hero, dwelling, tier)
     elseif GetPlayerResource(player, ORE) < resource_cost then ShowFlyingSign("/Text/Game/Scripts/Resources/xNotEnoughOre.txt", hero, player, 3)
     elseif GetPlayerResource(player, GOLD) < gold_cost then ShowFlyingSign("/Text/Game/Scripts/Resources/xNotEnoughGolds.txt", hero, player, 3)
     else
-        TakePlayer_Resource(player, WOOD, resource_cost)
-        TakePlayer_Resource(player, ORE, resource_cost)
-        TakePlayer_Resource(player, GOLD, gold_cost)
+        RemovePlayerResource(player, WOOD, resource_cost)
+        RemovePlayerResource(player, ORE, resource_cost)
+        RemovePlayerResource(player, GOLD, gold_cost)
         local f = HEROES[hero].faction
         ReplaceDwelling(dwelling, FactionToTownType(f))
         MAP_CONVERTIBLES[dwelling] = { faction=f, tier=tier }

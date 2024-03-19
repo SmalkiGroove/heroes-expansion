@@ -6,7 +6,7 @@
 function Routine_AddHeroCavaliers(player, hero)
     print("$ Routine_AddHeroCavaliers")
     local amount = round(0.11 * GetHeroLevel(hero))
-    AddHero_CreatureInTypes(player, hero, {CREATURE_CAVALIER,CREATURE_PALADIN,CREATURE_CHAMPION}, amount)
+    AddHeroCreatureType(player, hero, {CREATURE_CAVALIER,CREATURE_PALADIN,CREATURE_CHAMPION}, amount)
 end
 
 function Routine_ActivateArtfsetHaven(player, hero)
@@ -17,7 +17,7 @@ end
 
 function Routine_AddRecruitsPeasants(player, hero)
     print("$ Routine_AddRecruitsPeasants")
-    AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_1, CREATURE_PEASANT, 4.5)
+    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_1, CREATURE_PEASANT, 4.5)
 end
 
 function Routine_TrainPeasantsToArchersCheck(player, hero, town)
@@ -48,12 +48,12 @@ function Routine_GainExpFromTotalGolds(player, hero)
     print("$ Routine_GainExpFromTotalGolds")
     local mult = trunc(GetHeroLevel(hero) * 0.1)
     local amount = GetPlayerResource(player, GOLD) * mult
-    AddHero_StatAmount(player, hero, STAT_EXPERIENCE, amount)
+    AddHeroStatAmount(player, hero, STAT_EXPERIENCE, amount)
 end
 
 function Routine_AddHeroZealots(player, hero)
     print("$ Routine_AddHeroZealots")
-    AddHero_CreatureType(player, hero, CREATURE_ZEALOT, 0.1)
+    AddHeroCreaturePerLevel(player, hero, CREATURE_ZEALOT, 0.1)
 end
 
 function Routine_AddTwoLuckPoints(player, hero)
@@ -70,7 +70,7 @@ Var_Kyrre_BattleWon = 0
 function Routine_AddHeroExperience(player, hero)
     print("$ Routine_AddHeroExperience")
     local exp = 1000 + Var_Kyrre_BattleWon * 50 * (GetHeroLevel(hero) + 10)
-    AddHero_StatAmount(player, hero, STAT_EXPERIENCE, exp)
+    AddHeroStatAmount(player, hero, STAT_EXPERIENCE, exp)
 end
 
 function Routine_KyrreVictoryCounter(player, hero, combatIndex)
@@ -80,31 +80,23 @@ end
 
 function Routine_RezHunters(player, hero, combatIndex)
     print("$ Routine_RezHunters")
-    local cap = 3 + GetHeroLevel(hero)
-    local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
-    for i = 0,stacks-1 do
-        local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
-        if died > 0 and contains({CREATURE_WOOD_ELF,CREATURE_GRAND_ELF,CREATURE_SHARP_SHOOTER}, creature) then
-            local rez = min(cap, died)
-            cap = cap - rez
-            AddHeroCreatures(hero, creature, rez)
-        end
-    end
+    local max = 3 + GetHeroLevel(hero)
+    ResurrectCreatureType(player, hero, combatIndex, PRESERVE, 3, max)
 end
 
 function Routine_AddHeroWolves(player, hero)
     print("$ Routine_AddHeroWolves")
-    AddHero_CreatureType(player, hero, CREATURE_WOLF, 2.0)
+    AddHeroCreaturePerLevel(player, hero, CREATURE_WOLF, 2.0)
 end
 
 function Routine_HeroCallUnicorns(player, hero)
     print("$ Routine_HeroCallUnicorns")
-    AddHero_CreatureFromDwelling(player, hero, TOWN_BUILDING_DWELLING_5, CREATURE_WHITE_UNICORN, 0.75)
+    TransferCreatureFromTown(player, hero, TOWN_BUILDING_DWELLING_5, CREATURE_WHITE_UNICORN, 0.75)
 end
 
 function Routine_AddHeroSpellPower(player, hero, combatIndex)
     print("$ Routine_AddHeroSpellPower")
-    AddHero_StatAmount(player, hero, STAT_SPELL_POWER, 1)
+    AddHeroStatAmount(player, hero, STAT_SPELL_POWER, 1)
 end
 
 
@@ -115,26 +107,18 @@ end
 function Routine_AddHeroDefenders(player, hero)
     print("$ Routine_AddHeroDefenders")
     local amount = round(0.40 * GetHeroLevel(hero))
-    AddHero_CreatureInTypes(player, hero, {CREATURE_DEFENDER,CREATURE_STOUT_DEFENDER,CREATURE_STONE_DEFENDER}, amount)
+    AddHeroCreatureType(player, hero, {CREATURE_DEFENDER,CREATURE_STOUT_DEFENDER,CREATURE_STONE_DEFENDER}, amount)
 end
 
 function Routine_AddRecruitsBearRiders(player, hero)
     print("$ Routine_AddRecruitsBearRiders")
-    AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_BEAR_RIDER, 1.5)
+    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_BEAR_RIDER, 1.5)
 end
 
 function Routine_RezSpearwielders(player, hero, combatIndex)
     print("$ Routine_RezSpearwielders")
-    local cap = 5 + trunc(1.5 * GetHeroLevel(hero))
-    local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
-    for i = 0,stacks-1 do
-        local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
-        if died > 0 and contains({CREATURE_AXE_FIGHTER,CREATURE_AXE_THROWER,CREATURE_HARPOONER}, creature) then
-            local rez = min(cap, died)
-            cap = cap - rez
-            AddHeroCreatures(hero, creature, rez)
-        end
-    end
+    local max = 5 + trunc(1.5 * GetHeroLevel(hero))
+    ResurrectCreatureType(player, hero, combatIndex, FORTRESS, 2, max)
 end
 
 function Routine_GiveArtifactRingOfMachineAffinity(player, hero)
@@ -144,7 +128,7 @@ end
 
 function Routine_UpgradeRunePriests(player, hero)
     print("$ Routine_UpgradeRunePriests")
-    ChangeHero_CreatureUpgrade(player, hero, CREATURE_RUNE_MAGE, CREATURE_FLAME_MAGE)
+    UpgradeHeroCreatures(player, hero, CREATURE_RUNE_MAGE, CREATURE_FLAME_MAGE)
 end
 
 function Routine_AddLuckAndMorale(player, hero)
@@ -165,8 +149,8 @@ function Routine_GenerateCrystalsAndGems(player, hero)
         if KnowHeroSpell(hero, rune) then n = n+1 end
     end
     local split = mod(TURN,n)
-    AddPlayer_Resource(player, hero, CRYSTAL, split)
-    AddPlayer_Resource(player, hero, GEM, n-split)
+    AddPlayerResource(player, hero, CRYSTAL, split)
+    AddPlayerResource(player, hero, GEM, n-split)
 end
 
 
@@ -179,7 +163,7 @@ function Routine_AddOtherHeroesGremlins(player, hero)
     local amount = round(0.50 * GetHeroLevel(hero))
     for _,h in GetPlayerHeroes(player) do
         if h ~= hero and HEROES[h].faction == ACADEMY then
-            AddHero_CreatureInTypes(player, h, {CREATURE_GREMLIN,CREATURE_MASTER_GREMLIN,CREATURE_GREMLIN_SABOTEUR}, amount)
+            AddHeroCreatureType(player, h, {CREATURE_GREMLIN,CREATURE_MASTER_GREMLIN,CREATURE_GREMLIN_SABOTEUR}, amount)
         end
     end
 end
@@ -212,12 +196,12 @@ end
 function Routine_AddHeroDjinns(player, hero)
     print("$ Routine_AddHeroDjinns")
     local amount = round(0.30 * GetHeroLevel(hero))
-    AddHero_CreatureInTypes(player, hero, {CREATURE_GENIE,CREATURE_MASTER_GENIE,CREATURE_DJINN_VIZIER}, amount)
+    AddHeroCreatureType(player, hero, {CREATURE_GENIE,CREATURE_MASTER_GENIE,CREATURE_DJINN_VIZIER}, amount)
 end
 
 function Routine_AddRecruitsRakshasas(player, hero)
     print("$ Routine_AddRecruitsRakshasas")
-    AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_6, CREATURE_RAKSHASA, 0.2)
+    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_6, CREATURE_RAKSHASA, 0.2)
 end
 
 function Routine_ActivateArtfsetNecro(player, hero)
@@ -228,7 +212,7 @@ end
 
 function Routine_UpgradeMages(player, hero)
     print("$ Routine_UpgradeMages")
-    ChangeHero_CreatureUpgrade(player, hero, CREATURE_MAGI, CREATURE_ARCH_MAGI)
+    UpgradeHeroCreatures(player, hero, CREATURE_MAGI, CREATURE_ARCH_MAGI)
 end
 
 function Routine_AddOtherHeroesExperience(player, hero)
@@ -236,14 +220,14 @@ function Routine_AddOtherHeroesExperience(player, hero)
     local exp = round(0.01 * GetHeroStat(hero, STAT_EXPERIENCE))
     for _,h in GetPlayerHeroes(player) do
         if h ~= hero then
-            AddHero_StatAmount(player, h, STAT_EXPERIENCE, exp)
+            AddHeroStatAmount(player, h, STAT_EXPERIENCE, exp)
         end
     end
 end
 
 function Routine_AddHeroEagles(player, hero)
     print("$ Routine_AddHeroEagles")
-    AddHero_CreatureType(player, hero, CREATURE_SNOW_APE, 0.2)
+    AddHeroCreaturePerLevel(player, hero, CREATURE_SNOW_APE, 0.2)
 end
 
 function Routine_EvolveEagleToPhoenix(player, hero)
@@ -279,14 +263,14 @@ function Routine_GenerateGoldPerScout(player, hero)
         amount = amount + GetHeroCreatures(hero, CREATURE_SCOUT)
         amount = amount + GetHeroCreatures(hero, CREATURE_ASSASSIN)
         amount = amount + GetHeroCreatures(hero, CREATURE_STALKER)
-        AddPlayer_Resource(player, hero, GOLD, amount * mult)
+        AddPlayerResource(player, hero, GOLD, amount * mult)
     end
 end
 
 function Routine_AddHeroRiders(player, hero)
     print("$ Routine_AddHeroRiders")
     local amount = round(0.12 * GetHeroLevel(hero))
-    AddHero_CreatureInTypes(player, hero, {CREATURE_RIDER,CREATURE_RAVAGER,CREATURE_BLACK_RIDER}, amount)
+    AddHeroCreatureType(player, hero, {CREATURE_RIDER,CREATURE_RAVAGER,CREATURE_BLACK_RIDER}, amount)
 end
 
 function Routine_GainDragonArtifacts(player, hero, combatIndex)
@@ -347,14 +331,14 @@ end
 function Routine_UpgradeToWitches(player, hero)
     print("$ Routine_UpgradeToWitches")
     local max_bloodwitch = GetHeroLevel(hero) * 2
-    ChangeHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_1, CREATURE_SCOUT, TOWN_BUILDING_DWELLING_2, CREATURE_WITCH, max_bloodwitch)
+    TransformTownRecruits(player, hero, TOWN_BUILDING_DWELLING_1, CREATURE_SCOUT, TOWN_BUILDING_DWELLING_2, CREATURE_WITCH, max_bloodwitch)
     local max_shadowwitch = trunc(GetHeroLevel(hero) * 0.5)
-    ChangeHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_RIDER, TOWN_BUILDING_DWELLING_5, CREATURE_MATRON, max_shadowwitch)
+    TransformTownRecruits(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_RIDER, TOWN_BUILDING_DWELLING_5, CREATURE_MATRON, max_shadowwitch)
 end
 
 function Routine_AddHeroManticores(player, hero)
     print("$ Routine_AddHeroManticores")
-    AddHero_CreatureType(player, hero, CREATURE_MANTICORE, 0.3)
+    AddHeroCreaturePerLevel(player, hero, CREATURE_MANTICORE, 0.3)
 end
 
 
@@ -364,14 +348,14 @@ end
 
 function Routine_HeroCallVampires(player, hero)
     print("$ Routine_HeroCallVampires")
-    AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_VAMPIRE, 0.8)
+    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_VAMPIRE, 0.8)
     sleep(10)
-    AddHero_CreatureFromDwelling(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_NOSFERATU, 1.2)
+    TransferCreatureFromTown(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_NOSFERATU, 1.2)
 end
 
 function Routine_AddHeroBlackKnights(player, hero)
     print("$ Routine_AddHeroBlackKnights")
-    AddHero_CreatureType(player, hero, CREATURE_BLACK_KNIGHT, 0.25)
+    AddHeroCreaturePerLevel(player, hero, CREATURE_BLACK_KNIGHT, 0.25)
 end
 
 function Routine_EvolveBlackKnights(player, hero, combatIndex)
@@ -388,19 +372,19 @@ end
 
 function Routine_AddRecruitsNecropolis(player, hero)
     print("$ Routine_AddRecruitsNecropolis")
-    AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_1, CREATURE_SKELETON, 2.5)
-    AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_2, CREATURE_WALKING_DEAD, 1.25)
-    AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_3, CREATURE_MANES, 0.5)
+    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_1, CREATURE_SKELETON, 2.5)
+    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_2, CREATURE_WALKING_DEAD, 1.25)
+    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_3, CREATURE_MANES, 0.5)
 end
 
 function Routine_AddHeroMummies(player, hero)
     print("$ Routine_AddHeroMummies")
-    AddHero_CreatureType(player, hero, CREATURE_MUMMY, 0.3)
+    AddHeroCreaturePerLevel(player, hero, CREATURE_MUMMY, 0.3)
 end
 
 function Routine_AddHeroBanshees(player, hero)
     print("$ Routine_AddHeroBanshees")
-    AddHero_CreatureType(player, hero, CREATURE_BANSHEE, 0.06)
+    AddHeroCreaturePerLevel(player, hero, CREATURE_BANSHEE, 0.06)
 end
 
 function Routine_GiveSandrosCloak(player, hero)
@@ -415,19 +399,19 @@ end
 
 function Routine_TransferNightmares(player, hero)
     print("$ Routine_TransferNightmares")
-    AddHero_CreatureFromDwelling(player, hero, TOWN_BUILDING_DWELLING_5, CREATURE_NIGHTMARE, 0.4)
+    TransferCreatureFromTown(player, hero, TOWN_BUILDING_DWELLING_5, CREATURE_NIGHTMARE, 0.4)
 end
 
 function Routine_AddHeroHellHounds(player, hero)
     print("$ Routine_AddHeroHellHounds")
     local amount = round(0.90 * GetHeroLevel(hero))
-    AddHero_CreatureInTypes(player, hero, {CREATURE_HELL_HOUND,CREATURE_CERBERI,CREATURE_FIREBREATHER_HOUND}, amount)
+    AddHeroCreatureType(player, hero, {CREATURE_HELL_HOUND,CREATURE_CERBERI,CREATURE_FIREBREATHER_HOUND}, amount)
 end
 
 function Routine_GainAttackPerLevel(player, hero, level)
     print("$ Routine_GainAttackPerLevel")
     if mod(level, 5) == 0 then
-        AddHero_StatAmount(player, hero, STAT_ATTACK, 1)
+        AddHeroStatAmount(player, hero, STAT_ATTACK, 1)
     end
 end
 
@@ -454,7 +438,7 @@ end
 function Routine_GenerateSulfur(player, hero)
     print("$ Routine_GenerateSulfur")
     local amount = trunc(0.2 * GetHeroLevel(hero))
-    AddPlayer_Resource(player, hero, SULFUR, amount)
+    AddPlayerResource(player, hero, SULFUR, amount)
 end
 
 
@@ -464,7 +448,7 @@ end
 
 function Routine_AddRecruitsCentaurs(player, hero)
     print("$ Routine_AddRecruitsCentaurs")
-    AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_CENTAUR, 0.75)
+    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_CENTAUR, 0.75)
 end
 
 Var_Gorshak_BattleWon = 0
@@ -472,15 +456,15 @@ function Routine_GainAttackDefense(player, hero, combatIndex)
     print("$ Routine_GainAttackDefense")
     Var_Gorshak_BattleWon = Var_Gorshak_BattleWon + 1
     if mod(Var_Gorshak_BattleWon, 10) == 0 then
-        AddHero_StatAmount(player, hero, STAT_ATTACK, 1)
-        AddHero_StatAmount(player, hero, STAT_DEFENCE, 1)
+        AddHeroStatAmount(player, hero, STAT_ATTACK, 1)
+        AddHeroStatAmount(player, hero, STAT_DEFENCE, 1)
     end
 end
 
 function Routine_AddHeroWyverns(player, hero)
     print("$ Routine_AddHeroWyverns")
     local amount = round(0.22 * GetHeroLevel(hero))
-    AddHero_CreatureInTypes(player, hero, {CREATURE_WYVERN,CREATURE_WYVERN_POISONOUS,CREATURE_WYVERN_PAOKAI}, amount)
+    AddHeroCreatureType(player, hero, {CREATURE_WYVERN,CREATURE_WYVERN_POISONOUS,CREATURE_WYVERN_PAOKAI}, amount)
 end
 
 function Routine_ActivateArtfsetSarIssus(player, hero)
@@ -491,7 +475,7 @@ end
 
 function Routine_AddRecruitsShamans(player, hero)
     print("$ Routine_AddRecruitsShamans")
-    AddHero_TownRecruits(player, hero, TOWN_BUILDING_DWELLING_2, CREATURE_SHAMAN, 2.4)
+    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_2, CREATURE_SHAMAN, 2.4)
 end
 
 

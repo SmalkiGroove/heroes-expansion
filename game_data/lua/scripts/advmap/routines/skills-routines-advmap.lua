@@ -5,7 +5,7 @@ function Routine_CheckOffence(player, hero, mastery, level)
     local value = StatPerLevelDivisor(level, 0, 8 - mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_OFFENCE]
     if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_ATTACK, diff)
+        AddHeroStatAmount(player, hero, STAT_ATTACK, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_OFFENCE] = value
     end
 end
@@ -17,7 +17,7 @@ function Routine_CheckDefense(player, hero, mastery, level)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_DEFENSE]
     if diff ~= 0 then
         if hero == H_HEDWIG then diff = 2 * diff end
-        AddHero_StatAmount(player, hero, STAT_DEFENCE, diff)
+        AddHeroStatAmount(player, hero, STAT_DEFENCE, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_DEFENSE] = value
     end
 end
@@ -29,7 +29,7 @@ function Routine_CheckLearning(player, hero, mastery, level)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_LEARNING]
     if diff ~= 0 then
         if hero == H_RANLETH then diff = 2 * diff end
-        AddHero_StatAmount(player, hero, STAT_KNOWLEDGE, diff)
+        AddHeroStatAmount(player, hero, STAT_KNOWLEDGE, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_LEARNING] = value
     end
 end
@@ -40,7 +40,7 @@ function Routine_CheckSorcery(player, hero, mastery, level)
     local value = StatPerLevelDivisor(level, 0, 8 - mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_SORCERY]
     if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_SPELL_POWER, diff)
+        AddHeroStatAmount(player, hero, STAT_SPELL_POWER, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_SORCERY] = value
     end
 end
@@ -51,7 +51,7 @@ function Routine_CheckVoice(player, hero, mastery, level)
     local value = StatPerLevelDivisor(level, 0, 8 - mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_VOICE]
     if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_SPELL_POWER, diff)
+        AddHeroStatAmount(player, hero, STAT_SPELL_POWER, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_VOICE] = value
     end
 end
@@ -62,7 +62,7 @@ function Routine_CheckCourage(player, hero, mastery, level)
     local value = mastery + trunc(0.1 * level) * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_COURAGE]
     if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_MORALE, diff)
+        AddHeroStatAmount(player, hero, STAT_MORALE, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_COURAGE] = value
     end
 end
@@ -72,7 +72,7 @@ function Routine_CheckAvenger(player, hero, mastery)
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_AVENGER]
     if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_LUCK, diff)
+        AddHeroStatAmount(player, hero, STAT_LUCK, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_AVENGER] = value
     end
 end
@@ -83,7 +83,7 @@ function Routine_CheckSpiritism(player, hero, mastery)
     if mastery > current then
         for rank = 1+current,mastery do
             local school = SPIRITISM_SCHOOL_AFFINITY[hero] and SPIRITISM_SCHOOL_AFFINITY[hero] or SPELL_SCHOOL_ANY
-            AddHero_RandomSpellTier(player, hero, school, rank+2)
+            TeachHeroRandomSpellTier(player, hero, school, rank+2)
         end
     end
 end
@@ -93,8 +93,8 @@ function Routine_CheckCombat(player, hero, mastery)
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_COMBAT]
     if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_ATTACK, diff)
-        AddHero_StatAmount(player, hero, STAT_DEFENCE, diff)
+        AddHeroStatAmount(player, hero, STAT_ATTACK, diff)
+        AddHeroStatAmount(player, hero, STAT_DEFENCE, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_COMBAT] = value
     end
 end
@@ -104,7 +104,7 @@ function Routine_CheckPrecision(player, hero, mastery)
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_PRECISION]
     if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_LUCK, diff)
+        AddHeroStatAmount(player, hero, STAT_LUCK, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_PRECISION] = value
     end
 end
@@ -114,7 +114,7 @@ function Routine_CheckHoldGround(player, hero, mastery)
     local value = 2 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_HOLD_GROUND]
     if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_DEFENCE, diff)
+        AddHeroStatAmount(player, hero, STAT_DEFENCE, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_HOLD_GROUND] = value
     end
 end
@@ -125,7 +125,7 @@ function Routine_CheckIntelligence(player, hero, mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_INTELLIGENCE]
     if diff ~= 0 then
         if hero == H_RANLETH then diff = 1.5 * diff end
-        AddHero_StatAmount(player, hero, STAT_KNOWLEDGE, diff)
+        AddHeroStatAmount(player, hero, STAT_KNOWLEDGE, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_INTELLIGENCE] = value
     end
 end
@@ -136,7 +136,7 @@ function Routine_CheckExaltation(player, hero, mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_EXALTATION]
     if diff ~= 0 then
         if hero == H_RANLETH then diff = 2 * diff end
-        AddHero_StatAmount(player, hero, STAT_SPELL_POWER, diff)
+        AddHeroStatAmount(player, hero, STAT_SPELL_POWER, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_EXALTATION] = value
     end
 end
@@ -146,7 +146,7 @@ function Routine_CheckArcaneExcellence(player, hero, mastery)
     local value = 3 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_ARCANE_EXCELLENCE]
     if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_SPELL_POWER, diff)
+        AddHeroStatAmount(player, hero, STAT_SPELL_POWER, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_ARCANE_EXCELLENCE] = value
     end
 end
@@ -156,7 +156,7 @@ function Routine_CheckGraduate(player, hero, mastery)
     local value = 2 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_GRADUATE]
     if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_KNOWLEDGE, diff)
+        AddHeroStatAmount(player, hero, STAT_KNOWLEDGE, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_GRADUATE] = value
     end
 end
@@ -166,7 +166,7 @@ function Routine_CheckOccultism(player, hero, mastery)
     local value = 5 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_OCCULTISM]
     if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_SPELL_POWER, diff)
+        AddHeroStatAmount(player, hero, STAT_SPELL_POWER, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_OCCULTISM] = value
     end
 end
@@ -176,7 +176,7 @@ function Routine_CheckSecretsOfDestruct(player, hero, mastery)
     local value = 4 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_SECRETS_OF_DESTRUCT]
     if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_SPELL_POWER, diff)
+        AddHeroStatAmount(player, hero, STAT_SPELL_POWER, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_SECRETS_OF_DESTRUCT] = value
     end
 end
@@ -186,8 +186,8 @@ function Routine_CheckGetStronger(player, hero, mastery)
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_GET_STRONGER]
     if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_ATTACK, diff)
-        AddHero_StatAmount(player, hero, STAT_DEFENCE, diff)
+        AddHeroStatAmount(player, hero, STAT_ATTACK, diff)
+        AddHeroStatAmount(player, hero, STAT_DEFENCE, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_GET_STRONGER] = value
     end
 end
@@ -197,7 +197,7 @@ function Routine_CheckGetWiser(player, hero, mastery)
     local value = 2000
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_GET_WISER]
     if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_EXPERIENCE, diff)
+        AddHeroStatAmount(player, hero, STAT_EXPERIENCE, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_GET_WISER] = value
     end
 end
@@ -207,7 +207,7 @@ function Routine_CheckLastStand(player, hero, mastery)
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_LAST_STAND]
     if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_MORALE, diff)
+        AddHeroStatAmount(player, hero, STAT_MORALE, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_LAST_STAND] = value
     end
 end
@@ -217,8 +217,8 @@ function Routine_CheckBattleCommander(player, hero, mastery)
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_BATTLE_COMMANDER]
     if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_DEFENCE, 2*diff)
-        AddHero_StatAmount(player, hero, STAT_MORALE, diff)
+        AddHeroStatAmount(player, hero, STAT_DEFENCE, 2*diff)
+        AddHeroStatAmount(player, hero, STAT_MORALE, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_BATTLE_COMMANDER] = value
     end
 end
@@ -228,7 +228,7 @@ function Routine_CheckFineRune(player, hero, mastery)
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_FINE_RUNE]
     if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_KNOWLEDGE, diff)
+        AddHeroStatAmount(player, hero, STAT_KNOWLEDGE, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_FINE_RUNE] = value
     end
 end
@@ -238,7 +238,7 @@ function Routine_CheckRefreshRune(player, hero, mastery)
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_REFRESH_RUNE]
     if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_KNOWLEDGE, diff)
+        AddHeroStatAmount(player, hero, STAT_KNOWLEDGE, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_REFRESH_RUNE] = value
     end
 end
@@ -248,7 +248,7 @@ function Routine_CheckGreaterRune(player, hero, mastery)
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_GREATER_RUNE]
     if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_KNOWLEDGE, diff)
+        AddHeroStatAmount(player, hero, STAT_KNOWLEDGE, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_GREATER_RUNE] = value
     end
 end
@@ -258,8 +258,8 @@ function Routine_CheckLordOfTheUndead(player, hero, mastery)
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_LORD_OF_THE_UNDEAD]
     if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_SPELL_POWER, 3*diff)
-        AddHero_StatAmount(player, hero, STAT_KNOWLEDGE, 2*diff)
+        AddHeroStatAmount(player, hero, STAT_SPELL_POWER, 3*diff)
+        AddHeroStatAmount(player, hero, STAT_KNOWLEDGE, 2*diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_LORD_OF_THE_UNDEAD] = value
     end
 end
@@ -269,7 +269,7 @@ function Routine_CheckDefendUsAll(player, hero, mastery)
     local value = 2 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_DEFEND_US_ALL]
     if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_ATTACK, diff)
+        AddHeroStatAmount(player, hero, STAT_ATTACK, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_DEFEND_US_ALL] = value
     end
 end
@@ -279,7 +279,7 @@ function Routine_CheckSheerStrength(player, hero, mastery)
     local value = 2 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_SHEER_STRENGTH]
     if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_ATTACK, diff)
+        AddHeroStatAmount(player, hero, STAT_ATTACK, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_SHEER_STRENGTH] = value
     end
 end
@@ -299,7 +299,7 @@ function Routine_CheckInfusion(player, hero, mastery)
     local value = 2 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_INFUSION]
     if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_SPELL_POWER, diff)
+        AddHeroStatAmount(player, hero, STAT_SPELL_POWER, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_INFUSION] = value
         ChangeHeroStat(hero, STAT_KNOWLEDGE, 10) sleep()
         ChangeHeroStat(hero, STAT_MANA_POINTS, 100) sleep()
@@ -312,7 +312,7 @@ function Routine_CheckEnlightened(player, hero, mastery)
     local value = 2 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_ENLIGHTENED]
     if diff ~= 0 then
-        AddHero_StatAmount(player, hero, STAT_KNOWLEDGE, diff)
+        AddHeroStatAmount(player, hero, STAT_KNOWLEDGE, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_ENLIGHTENED] = value
         ChangeHeroStat(hero, STAT_EXPERIENCE, 1000)
     end
@@ -329,7 +329,7 @@ end
 function Routine_HeraldOfDeathGolds(player, hero, mastery)
     print("$ Routine_HeraldOfDeathGolds")
     local amount = GetHeroCreatures(hero, CREATURE_SKELETON) + GetHeroCreatures(hero, CREATURE_SKELETON_ARCHER) + GetHeroCreatures(hero, CREATURE_SKELETON_WARRIOR)
-    AddPlayer_Resource(player, hero, GOLD, amount)
+    AddPlayerResource(player, hero, GOLD, amount)
 end
 
 function Routine_SpiritismManaRegen(player, hero, mastery)
@@ -400,17 +400,17 @@ function Routine_GovernanceWeeklyResources(player, hero, mastery)
     local golds = { [0]=0, [1]=1000, [2]=2500, [3]=5000 }
     local res = { [HAVEN]=CRYSTAL, [PRESERVE]=GEM, [FORTRESS]=CRYSTAL, [ACADEMY]=GEM, [DUNGEON]=SULFUR, [NECROPOLIS]=MERCURY, [INFERNO]=SULFUR, [STRONGHOLD]=MERCURY }
     local faction = HEROES[hero].faction
-    sleep(3) AddPlayer_Resource(player, hero, GOLD, golds[mastery])
-    sleep(3) AddPlayer_Resource(player, hero, res[faction], mastery)
+    sleep(3) AddPlayerResource(player, hero, GOLD, golds[mastery])
+    sleep(3) AddPlayerResource(player, hero, res[faction], mastery)
 end
 
 function Routine_HauntingWeeklyGhosts(player, hero, mastery)
     print("$ Routine_HauntingWeeklyGhosts")
-    local amount = 10 + 5 * WEEK
+    local amount = 9 + 3 * WEEK
     for _,type in RESOURCE_GENERATING_OBJECTS do
         for _,building in GetObjectNamesByType(type) do
             if GetObjectOwner(building) == player then
-                AddObjectCreatures(building, CREATURE_GHOST, amount)
+                AddObjectCreatures(building, CREATURE_MANES, amount)
             end
         end
     end
@@ -422,7 +422,7 @@ function Routine_SpiritismLevelUp(player, hero, mastery, level)
     print("$ Routine_SpiritismLevelUp")
     if not HasHeroSkill(hero, SKILL_BLOOD_RAGE) then
         if mod(level, 2) == 0 then
-            AddHero_RandomSpell(player, hero, SPELL_SCHOOL_ANY, mastery+2)
+            TeachHeroRandomSpell(player, hero, SPELL_SCHOOL_ANY, mastery+2)
         end
     end
 end
@@ -470,7 +470,7 @@ function Routine_TaleTellers(player, hero, mastery, combatIndex)
     end
     for _,h in GetPlayerHeroes(player) do
         if h ~= hero then
-            AddHero_StatAmount(player, h, STAT_EXPERIENCE, exp)
+            AddHeroStatAmount(player, h, STAT_EXPERIENCE, exp)
         end
     end
 end
@@ -479,7 +479,7 @@ end
 
 function Routine_MeditationExp(player, hero, amount)
     print("$ Routine_MeditationExp")
-    AddHero_StatAmount(player, hero, STAT_EXPERIENCE, 50 * amount)
+    AddHeroStatAmount(player, hero, STAT_EXPERIENCE, 50 * amount)
 end
 
 

@@ -2,13 +2,13 @@
 function Routine_ArtifactPouchOfGolds(player, hero)
     print("$ Routine_ArtifactPouchOfGolds")
     local level = GetHeroLevel(hero)
-    AddPlayer_Resource(player, hero, GOLD, level * 25)
+    AddPlayerResource(player, hero, GOLD, level * 25)
 end
 
 
 function Routine_ArtifactGreatLich(player, hero)
     print("$ Routine_ArtifactGreatLich")
-    AddHero_CreatureInTypes(player, hero, {CREATURE_LICH,CREATURE_DEMILICH,CREATURE_LICH_MASTER}, 1)
+    AddHeroCreatureType(player, hero, {CREATURE_LICH,CREATURE_DEMILICH,CREATURE_LICH_MASTER}, 1)
 end
 
 
