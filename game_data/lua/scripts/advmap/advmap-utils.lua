@@ -371,9 +371,10 @@ function ResurrectCreatureType(player, hero, combatIndex, faction, tier, max)
         local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
         if died > 0 and cap > 0 then
             if CREATURES[creature][0] == faction and CREATURES[creature][1] == tier then
-            local rez = min(cap, died)
-            cap = cap - rez
-            AddHeroCreatures(hero, creature, rez)
+				local rez = min(cap, died)
+				cap = cap - rez
+				AddHeroCreatures(hero, creature, rez)
+			end
         end
     end
 end
