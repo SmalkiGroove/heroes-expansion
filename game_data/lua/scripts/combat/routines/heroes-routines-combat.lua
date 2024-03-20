@@ -18,6 +18,14 @@ function Routine_BallistaRandomSalvo(side, hero)
     COMBAT_PAUSE = 0
 end
 
+function Routine_PeasantsMoveNext(side, hero)
+    -- print("Trigger peasants play next !")
+    if CURRENT_UNIT == hero then
+        SetATB_CreatureTypes(side, {CREATURE_PEASANT,CREATURE_MILITIAMAN,CREATURE_LANDLORD}, ATB_NEXT)
+    end
+    COMBAT_PAUSE = 0
+end
+
 function Routine_ArchersMoveFirst(side, hero)
     -- print("Trigger archers atb boost !")
     SetATB_CreatureTypes(side, {CREATURE_ARCHER,CREATURE_MARKSMAN,CREATURE_LONGBOWMAN}, ATB_INSTANT)
@@ -611,6 +619,7 @@ COMBAT_START_HERO_ROUTINES = {
 
 COMBAT_TURN_HERO_ROUTINES = {
     -- haven
+    [H_MAEVE] = Routine_PeasantsMoveNext,
     -- preserve
     [H_JENOVA] = Routine_HeroMoveNext,
     [H_TIERU] = Routine_DruidsMoveNext,

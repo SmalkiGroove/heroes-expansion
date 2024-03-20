@@ -3,6 +3,15 @@
 ---------------------------------------------------------------------------------------------------------------------------------------------
 -- HAVEN
 
+function Routine_DoublePeasantTax(player, hero)
+    print("$ Routine_DoublePeasantTax")
+    local amount = 0
+    amount = amount + GetHeroCreatures(hero, CREATURE_PEASANT)
+    amount = amount + GetHeroCreatures(hero, CREATURE_MILITIAMAN)
+    amount = amount + GetHeroCreatures(hero, CREATURE_LANDLORD)
+    AddPlayerResource(player, hero, GOLD, amount)
+end
+
 function Routine_AddHeroCavaliers(player, hero)
     print("$ Routine_AddHeroCavaliers")
     local amount = round(0.11 * GetHeroLevel(hero))
@@ -518,6 +527,7 @@ START_TRIGGER_HERO_ROUTINES = {
 DAILY_TRIGGER_HERO_ROUTINES = {
     -- haven
     [H_ALARIC] = Routine_AddHeroZealots,
+    [H_MAEVE] = Routine_DoublePeasantTax,
     -- preserve
     -- fortress
     [H_INGVAR] = Routine_AddHeroDefenders,
