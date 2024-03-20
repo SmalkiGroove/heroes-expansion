@@ -24,6 +24,18 @@ function Routine_ArchersMoveFirst(side, hero)
     COMBAT_PAUSE = 0
 end
 
+function Routine_InfantryDash(side, hero)
+    -- print("Trigger footmen dash !")
+    local creatures = GetUnits(side, CREATURE)
+    for i,cr in creatures do
+        local type = GetCreatureType(cr)
+        if type == CREATURE_FOOTMAN or type == CREATURE_SWORDSMAN or type == CREATURE_VINDICATOR then
+            UseCombatAbility(cr, SPELL_ABILITY_DASH)
+        end
+    end
+    COMBAT_PAUSE = 0
+end
+
 function Routine_CastPrayer(side, hero)
     -- print("Trigger cast Prayer !")
     HeroCast_Global(hero, SPELL_PRAYER, NO_COST)
@@ -564,6 +576,7 @@ COMBAT_START_HERO_ROUTINES = {
     -- haven
     [H_VITTORIO] = Routine_BallistaRandomSalvo,
     [H_DOUGAL] = Routine_ArchersMoveFirst,
+    [H_LASZLO] = Routine_InfantryDash,
     [H_FREYDA] = Routine_CastPrayer,
     -- preserve
     [H_FINDAN] = Routine_HunterRandomShoot,

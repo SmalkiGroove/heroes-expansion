@@ -89,6 +89,16 @@ function Routine_AddHeroWolves(player, hero)
     AddHeroCreaturePerLevel(player, hero, CREATURE_WOLF, 2.0)
 end
 
+Var_Ylthin_BattleWon = 0
+function Routine_YlthinVictoryCounter(player, hero, combatIndex)
+    print("$ Routine_YlthinVictoryCounter")
+    Var_Ylthin_BattleWon = Var_Ylthin_BattleWon + 1
+    if Var_Ylthin_BattleWon == 25 then
+        GiveArtifact(hero, ARTIFACT_UNICORN_HORN_BOW, 0)
+        ShowFlyingSign("/Text/Game/Scripts/HeroSpe/GainUnicornBow.txt", hero, player, FLYING_SIGN_TIME)
+    end
+end
+
 function Routine_HeroCallUnicorns(player, hero)
     print("$ Routine_HeroCallUnicorns")
     TransferCreatureFromTown(player, hero, TOWN_BUILDING_DWELLING_5, CREATURE_WHITE_UNICORN, 0.75)
@@ -581,6 +591,7 @@ AFTER_COMBAT_TRIGGER_HERO_ROUTINES = {
     [H_KYRRE] = Routine_KyrreVictoryCounter,
     [H_FINDAN] = Routine_RezHunters,
     [H_ELLESHAR] = Routine_AddHeroSpellPower,
+    [H_YLTHIN] = Routine_YlthinVictoryCounter,
     -- fortress
     [H_KARLI] = Routine_RezSpearwielders,
     -- academy
