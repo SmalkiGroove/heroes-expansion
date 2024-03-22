@@ -442,16 +442,79 @@ end
 
 function Routine_RezSuccubus(player, hero, combatIndex)
     print("$ Routine_RezSuccubus")
-    local cap = 3 + trunc(0.66 * GetHeroLevel(hero))
-    local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
+    local max = 2 + trunc(0.66 * GetHeroLevel(hero))
+    ResurrectCreatureType(player, hero, combatIndex, INFERNO, 4, max)
+end
+
+function Routine_GainBonusExpAndRes(player, hero, combatIndex)
+    print("$ Routine_GainBonusExpAndRes")
+    local total = 0
+    local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 0)
     for i = 0,stacks-1 do
-        local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
-        if died > 0 and contains({CREATURE_SUCCUBUS,CREATURE_INFERNAL_SUCCUBUS,CREATURE_SUCCUBUS_SEDUCER}, creature) then
-            local rez = min(cap, died)
-            cap = cap - rez
-            AddHeroCreatures(hero, creature, rez)
+        local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 0, i)
+        local tier = CREATURES[creature][2]
+        local value = tier + power(2, tier)
+        total = total + count * value
+    end
+    AddHeroStatAmount(player, hero, STAT_EXPERIENCE, total)
+    AddPlayerResource(player, hero, GOLD, trunc(0.5*total))
+end
+
+function Routine_TownBuildingUp(player, hero)
+    print("$ Routine_TownBuildingUp")
+    for town,data in MAP_TOWNS do
+        if data.faction == INFERNO then
+            if IsHeroInTown(hero, town, 1, 0) then
+                local buildings = {
+                    [TOWN_BUILDING_MARKETPLACE] = {500, 4500},
+                    [TOWN_BUILDING_DWELLING_1] = {1500, 3500},
+                    [TOWN_BUILDING_DWELLING_2] = {2250, 5250},
+                    [TOWN_BUILDING_DWELLING_3] = {3000, 7000},
+                    [TOWN_BUILDING_DWELLING_4] = {4500, 10500},
+                    [TOWN_BUILDING_DWELLING_5] = {6500, 14500},
+                    [TOWN_BUILDING_DWELLING_6] = {10000, 20000},
+                    [TOWN_BUILDING_DWELLING_7] = {17500, 32500},
+                    [TOWN_BUILDING_INFERNO_INFERNAL_LOOM] = {3000},
+                    [TOWN_BUILDING_INFERNO_SACRIFICIAL_PIT] = {5500},
+                }
+                local name_root = "/Text/Game/TownBuildings/Inferno/"
+                local name_file = {
+                    [TOWN_BUILDING_MARKETPLACE] = {"Marketplace/Name.txt", "Marketplace/Resource_Silo_Name.txt"},
+                    [TOWN_BUILDING_DWELLING_1] = {"Dwelling_1/Name.txt", "Dwelling_1/Upgraded_Name.txt"},
+                    [TOWN_BUILDING_DWELLING_2] = {"Dwelling_2/Name.txt", "Dwelling_2/Upgraded_Name.txt"},
+                    [TOWN_BUILDING_DWELLING_3] = {"Dwelling_3/Name.txt", "Dwelling_3/Upgraded_Name.txt"},
+                    [TOWN_BUILDING_DWELLING_4] = {"Dwelling_4/Name.txt", "Dwelling_4/Upgraded_Name.txt"},
+                    [TOWN_BUILDING_DWELLING_5] = {"Dwelling_5/Name.txt", "Dwelling_5/Upgraded_Name.txt"},
+                    [TOWN_BUILDING_DWELLING_6] = {"Dwelling_6/Name.txt", "Dwelling_6/Upgraded_Name.txt"},
+                    [TOWN_BUILDING_DWELLING_7] = {"Dwelling_7/Name.txt", "Dwelling_7/Upgraded_Name.txt"},
+                    [TOWN_BUILDING_INFERNO_INFERNAL_LOOM] = {"Special_1/Name.txt"},
+                    [TOWN_BUILDING_INFERNO_SACRIFICIAL_PIT] = {"Special_5/Name.txt"},
+                }
+                for k,v in buildings do
+                    local cur = GetTownBuildingLevel(town, k)
+                    if cur < length(v) then
+                        local cost = v[cur+1]
+                        if (750 * GetHeroLevel(hero) >= cost) and (GetPlayerResource(player, GOLD) >= cost) then
+                            local name = name_root..name_file[k][cur+1]
+                            QuestionBoxForPlayers(
+                                GetPlayerFilter(player),
+                                {"/Text/Game/Scripts/HeroSpe/TownBuildingUp.txt"; building=name, golds=cost},
+                                "Routine_TownBuildingUpConfirm('"..player.."','"..hero.."','"..town.."','"..k.."','"..cost.."')",
+                                "NoneRoutine"
+                            )
+                            break
+                        end
+                    end
+                end
+            end
         end
     end
+end
+
+function Routine_TownBuildingUpConfirm(player, hero, town, building, cost)
+    UpgradeTownBuilding(town, building)
+    RemovePlayerResource(player, GOLD, 0+cost)
+    ChangeHeroStat(hero, STAT_MOVE_POINTS, -500)
 end
 
 function Routine_GenerateSulfur(player, hero)
@@ -543,6 +606,7 @@ DAILY_TRIGGER_HERO_ROUTINES = {
     -- necropolis
     [H_THANT] = Routine_AddHeroMummies,
     -- inferno
+    [H_ORLANDO] = Routine_TownBuildingUp,
     [H_DELEB] = Routine_GenerateSulfur,
     -- stronghold
 }
@@ -611,6 +675,7 @@ AFTER_COMBAT_TRIGGER_HERO_ROUTINES = {
     [H_XERXON] = Routine_EvolveBlackKnights,
     -- inferno
     [H_BIARA] = Routine_RezSuccubus,
+    [H_ORLANDO] = Routine_GainBonusExpAndRes,
     -- stronghold
     [H_GORSHAK] = Routine_GainAttackDefense,
 }

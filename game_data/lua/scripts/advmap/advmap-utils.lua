@@ -200,7 +200,7 @@ function AddPlayerResource(player, hero, resource, amount)
 	if amount >= 1 then
 		local curamount = GetPlayerResource(player, resource)
 		local newamount = curamount + amount
-		SetPlayerResource(player, resource, newamount)
+		SetPlayerResource(player, resource, newamount, hero)
 		-- ShowFlyingSign({"/Text/Game/Scripts/Resources/"..RESOURCE_TEXT[resource]..".txt"; num=amount}, hero, player, FLYING_SIGN_TIME)
 	end
 end

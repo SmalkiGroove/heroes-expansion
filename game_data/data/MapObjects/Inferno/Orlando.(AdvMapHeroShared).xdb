@@ -32,7 +32,7 @@
 	<Icon128/>
 	<InternalName>Orlando</InternalName>
 	<Class>HERO_CLASS_INFERNO_MAGIC</Class>
-	<Specialization>HERO_SPEC_FURIOUS</Specialization>
+	<Specialization/>
 	<PrimarySkill>
 		<SkillID>HERO_SKILL_INNATES</SkillID>
 		<Mastery>MASTERY_EXPERT</Mastery>
@@ -67,10 +67,13 @@
 		</skills>
 		<perkIDs>
 			<Item>HERO_SKILL_BARBARIAN_SOIL_BURN</Item>
+			<Item>HERO_SKILL_GEAR_UP</Item>
 		</perkIDs>
-		<spellIDs/>
+		<spellIDs>
+			<Item>SPELL_MAGIC_ARROW</Item>
+		</spellIDs>
 		<Ballista>false</Ballista>
-		<FirstAidTent>false</FirstAidTent>
+		<FirstAidTent>true</FirstAidTent>
 		<AmmoCart>false</AmmoCart>
 		<FavoriteEnemies/>
 		<TalismanLevel>0</TalismanLevel>
