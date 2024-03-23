@@ -5,6 +5,23 @@ function Routine_ArtifactPouchOfGolds(player, hero)
     AddPlayerResource(player, hero, GOLD, level * 25)
 end
 
+function Routine_ArtifactSackOfGolds(player, hero)
+    print("$ Routine_ArtifactSackOfGolds")
+    local level = GetHeroLevel(hero)
+    AddPlayerResource(player, hero, GOLD, level * 50)
+end
+
+
+function Routine_ArtifactHornOfPlenty(player, hero)
+    print("$ Routine_ArtifactHornOfPlenty")
+    AddPlayerResource(player, hero, WOOD, 1)
+    AddPlayerResource(player, hero, ORE, 1)
+    AddPlayerResource(player, hero, MERCURY, 1)
+    AddPlayerResource(player, hero, CRYSTAL, 1)
+    AddPlayerResource(player, hero, SULFUR, 1)
+    AddPlayerResource(player, hero, GEM, 1)
+end
+
 
 function Routine_ArtifactGreatLich(player, hero)
     print("$ Routine_ArtifactGreatLich")
@@ -12,17 +29,25 @@ function Routine_ArtifactGreatLich(player, hero)
 end
 
 
+function Routine_Restore10Mana(player, hero, combatIndex)
+    print("$ Routine_Restore10Mana")
+    ChangeHeroStat(hero, STAT_MANA_POINTS, 10)
+end
+
+
 DAILY_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_ENDLESS_POUCH_OF_GOLD] = Routine_ArtifactPouchOfGolds,
+    [ARTIFACT_ENDLESS_SACK_OF_GOLD] = Routine_ArtifactSackOfGolds,
 }
 WEEKLY_TRIGGER_ARTIFACTS_ROUTINES = {
-    [ARTIFACT_NONE] = NoneRoutine,
+    [ARTIFACT_HORN_OF_PLENTY] = Routine_ArtifactHornOfPlenty,
 }
 LEVELUP_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_SANDROS_CLOAK] = Routine_ArtifactGreatLich,
 }
 AFTER_COMBAT_TRIGGER_ARTIFACTS_ROUTINES = {
-    [ARTIFACT_NONE] = NoneRoutine,
+    [ARTIFACT_RUNIC_WAR_AXE] = Routine_Restore10Mana,
+    [ARTIFACT_RUNIC_WAR_HARNESS] = Routine_Restore10Mana,
 }
 
 DAILY_TRIGGER_ARTFSETS_ROUTINES = {
