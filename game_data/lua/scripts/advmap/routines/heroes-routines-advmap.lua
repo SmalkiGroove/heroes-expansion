@@ -113,9 +113,13 @@ function Routine_HeroCallUnicorns(player, hero)
     TransferCreatureFromTown(player, hero, TOWN_BUILDING_DWELLING_5, CREATURE_WHITE_UNICORN, 0.75)
 end
 
+Var_Elleshar_BattleWon = 0
 function Routine_AddHeroSpellPower(player, hero, combatIndex)
     print("$ Routine_AddHeroSpellPower")
-    AddHeroStatAmount(player, hero, STAT_SPELL_POWER, 1)
+    Var_Elleshar_BattleWon = Var_Elleshar_BattleWon + 1
+    if mod(Var_Elleshar_BattleWon, 4) == 0 then
+        AddHeroStatAmount(player, hero, STAT_SPELL_POWER, 1)
+    end
 end
 
 

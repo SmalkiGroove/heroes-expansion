@@ -302,7 +302,7 @@
 				<WeakeningAuraDeffenceDec>3</WeakeningAuraDeffenceDec>
 				<SleepingStrike_Duration>2</SleepingStrike_Duration>
 				<SleepingStrike_ProcFactor>2.5</SleepingStrike_ProcFactor>
-				<SorrowStrike_SpellTrained>3</SorrowStrike_SpellTrained>
+				<SorrowStrike_SpellTrained>2</SorrowStrike_SpellTrained>
 				<HorrorOfDeath_MoraleDecrease>1</HorrorOfDeath_MoraleDecrease>
 				<AmmoSteal_CalcDistanceIgnoreObstacles>true</AmmoSteal_CalcDistanceIgnoreObstacles>
 				<AmmoSteal_DistanceDecrease>0</AmmoSteal_DistanceDecrease>
@@ -340,7 +340,7 @@
 			<Dungeon>
 				<AssasinPoisonDamagePerPower>1</AssasinPoisonDamagePerPower>
 				<AssasinPoisonCounter>2</AssasinPoisonCounter>
-				<WhipStrikeSpellPower>5</WhipStrikeSpellPower>
+				<WhipStrikeSpellPower>10</WhipStrikeSpellPower>
 				<WhipStrike_ProcFactor>2</WhipStrike_ProcFactor>
 				<HydraRegenerationMin>50</HydraRegenerationMin>
 				<HydraRegenerationMax>100</HydraRegenerationMax>
@@ -356,8 +356,8 @@
 				<ShieldWall_DamageReducePerPathCell>0.1</ShieldWall_DamageReducePerPathCell>
 				<ShieldWall_MaxDamageReduce>0.75</ShieldWall_MaxDamageReduce>
 				<Wound_EffectDurationInRounds>2</Wound_EffectDurationInRounds>
-				<Wound_SpeedDecrease>0.33</Wound_SpeedDecrease>
-				<Wound_InitiativeDecrease>0.33</Wound_InitiativeDecrease>
+				<Wound_SpeedDecrease>0.5</Wound_SpeedDecrease>
+				<Wound_InitiativeDecrease>0.5</Wound_InitiativeDecrease>
 				<Wound_ProcFactor>1.5</Wound_ProcFactor>
 				<MarkOfFire_EffectDurationInRounds>3</MarkOfFire_EffectDurationInRounds>
 				<MarkOfFire_FireDamageMultiplier>2</MarkOfFire_FireDamageMultiplier>
@@ -379,7 +379,7 @@
 				<PreparedPosition_DefenceBonus>5</PreparedPosition_DefenceBonus>
 				<BattleRage_InitiativeBonus>2</BattleRage_InitiativeBonus>
 				<BattleRage_AttackBonus>4</BattleRage_AttackBonus>
-				<BattleRage_EffectDuration>2</BattleRage_EffectDuration>
+				<BattleRage_EffectDuration>1</BattleRage_EffectDuration>
 				<FlameWave_WaveLength>5</FlameWave_WaveLength>
 				<FlameWave_ProcFactor>2.5</FlameWave_ProcFactor>
 				<FlameWave_WaveSpeed>15</FlameWave_WaveSpeed>
@@ -1600,6 +1600,40 @@
 								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_REGENERATION</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
+						
+
+						<Item><Creature>CREATURE_WOLF</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>2</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_BEAT_UP</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>3</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>3</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>3</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_BEAT_UP</Item></Abilities></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_MANTICORE</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>4</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>4</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_SPEED</Type><IntParam>1</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>4</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>4</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_SPEED</Type><IntParam>1</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_VENOM</Item></Abilities></Item>
+							</Bonus3>
+						</Item>
 
 
 
@@ -2240,7 +2274,7 @@
 			<MinMixedObstacles>1</MinMixedObstacles>
 			<MaxMixedObstacles>4</MaxMixedObstacles>
 			<ObstaclesMaxArea>21</ObstaclesMaxArea>
-			<FreeLines>2</FreeLines>
+			<FreeLines>3</FreeLines>
 		</Obstacles>
 		<HeroSpecializations>
 			<Knight>
@@ -2255,7 +2289,7 @@
 			<Demonlord>
 				<Hypnotist_ManaDrainPerLevel>1</Hypnotist_ManaDrainPerLevel>
 				<Bombardier_FireballSpellpower>1</Bombardier_FireballSpellpower>
-				<Bombardier_FireballSpellpowerLevelDivisor>2</Bombardier_FireballSpellpowerLevelDivisor>
+				<Bombardier_FireballSpellpowerLevelDivisor>3</Bombardier_FireballSpellpowerLevelDivisor>
 				<Bombardier_FireballSpellpowerPerLevel>1</Bombardier_FireballSpellpowerPerLevel>
 				<Beater_MPBonusBase>0.05</Beater_MPBonusBase>
 				<Beater_MPBonusPerLevel>0.01</Beater_MPBonusPerLevel>
@@ -2287,9 +2321,9 @@
 				<Disrupter_DamageLevelDivisor>1</Disrupter_DamageLevelDivisor>
 				<Disrupter_DamagePerLevel>9</Disrupter_DamagePerLevel>
 				<TimeShiftStopFactor>0.05</TimeShiftStopFactor>
-				<TimeShiftBonusATBPerLevel>0.5</TimeShiftBonusATBPerLevel>
-				<FeatherMage_InitiativeBonusBase>0.05</FeatherMage_InitiativeBonusBase>
-				<FeatherMage_InitiativeBonusPerLevel>0.01</FeatherMage_InitiativeBonusPerLevel>
+				<TimeShiftBonusATBPerLevel>1</TimeShiftBonusATBPerLevel>
+				<FeatherMage_InitiativeBonusBase>0.10</FeatherMage_InitiativeBonusBase>
+				<FeatherMage_InitiativeBonusPerLevel>0</FeatherMage_InitiativeBonusPerLevel>
 				<MasterOfElements_SpellpowerBonus>
 					<Base>1</Base>
 					<LevelDivisor>10</LevelDivisor>
@@ -4458,8 +4492,8 @@
 		<Item>
 			<BuildingType>BUILDING_LIBRARY_OF_ENLIGHTENMENT</BuildingType>
 			<Attributes>
-				<Item><HeroAttribute>HERO_ATTRIB_KNOWLEDGE</HeroAttribute><Value>1</Value></Item>
-				<Item><HeroAttribute>HERO_ATTRIB_SPELLPOWER</HeroAttribute><Value>1</Value></Item>
+				<Item><HeroAttribute>HERO_ATTRIB_KNOWLEDGE</HeroAttribute><Value>2</Value></Item>
+				<Item><HeroAttribute>HERO_ATTRIB_SPELLPOWER</HeroAttribute><Value>2</Value></Item>
 			</Attributes>
 		</Item>
 	</RaiseAttributesBuildings>
@@ -5006,7 +5040,7 @@
 		<Demonic_2DemonLord_GatingBonusPercents>25</Demonic_2DemonLord_GatingBonusPercents>
 	</ArtifactsSetsEffectsConsts>
 	<SlaveMarketConsts>
-		<BasePercents>95</BasePercents>
+		<BasePercents>90</BasePercents>
 		<BonusPercentsPerMarketplace>5</BonusPercentsPerMarketplace>
 		<AffectResources>false</AffectResources>
 	</SlaveMarketConsts>
