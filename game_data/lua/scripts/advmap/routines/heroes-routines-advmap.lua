@@ -40,18 +40,23 @@ function Routine_TrainPeasantsToArchersCheck(player, hero)
     for town,data in MAP_TOWNS do
         if data.faction == HAVEN then
             if IsHeroInTown(hero, town, 1, 0) then
-                local b = GetTownBuildingLevel(town, TOWN_BUILDING_HAVEN_TRAINING_GROUNDS)
-                local max = GetObjectDwellingCreatures(town, CREATURE_PEASANT)
-                local n = 0
-                if b == 1 then n = 7 - Var_Dougal_TrainCount elseif b == 2 then n = 20 - Var_Dougal_TrainCount end
-                n = min(n, max)
-                if n > 0 then
-                    QuestionBoxForPlayers(
-                        GetPlayerFilter(player),
-                        {"/Text/Game/Scripts/HeroSpe/TrainArchers.txt"; num=n},
-                        "Routine_TrainPeasantsToArchersConfirm('"..player.."','"..hero.."','"..town.."','"..n.."')",
-                        "NoneRoutine"
-                    )
+                if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_1) > 0 and GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_2) > 0 then
+                    if GetTownBuildingLevel(town, TOWN_BUILDING_HAVEN_TRAINING_GROUNDS) > 0 then
+                        local max = GetObjectDwellingCreatures(town, CREATURE_PEASANT)
+                        local n = 7 - Var_Dougal_TrainCount
+                        if GetTownBuildingLevel(town, TOWN_BUILDING_HAVEN_MONUMENT_TO_FALLEN_HEROES) then
+                            n = n + 13
+                        end
+                        n = min(n, max)
+                        if n > 0 then
+                            QuestionBoxForPlayers(
+                                GetPlayerFilter(player),
+                                {"/Text/Game/Scripts/HeroSpe/TrainArchers.txt"; num=n},
+                                "Routine_TrainPeasantsToArchersConfirm('"..player.."','"..hero.."','"..town.."','"..n.."')",
+                                "NoneRoutine"
+                            )
+                        end
+                    end
                 end
             end
         end
@@ -59,10 +64,12 @@ function Routine_TrainPeasantsToArchersCheck(player, hero)
 end
 
 function Routine_TrainPeasantsToArchersConfirm(player, hero, town, amount)
+    print("Train "..amount.." peasants to archers in town "..town)
     local peasants = GetObjectDwellingCreatures(town, CREATURE_PEASANT)
     local archers = GetObjectDwellingCreatures(town, CREATURE_ARCHER)
-    SetObjectDwellingCreatures(town, TOWN_BUILDING_DWELLING_1, peasants - amount)
-    SetObjectDwellingCreatures(town, TOWN_BUILDING_DWELLING_2, archers + amount)
+    SetObjectDwellingCreatures(town, CREATURE_PEASANT, peasants - amount)
+    SetObjectDwellingCreatures(town, CREATURE_ARCHER, archers + amount)
+    Var_Dougal_TrainCount = Var_Dougal_TrainCount + amount
 end
 
 function Routine_GainExpFromTotalGolds(player, hero)
