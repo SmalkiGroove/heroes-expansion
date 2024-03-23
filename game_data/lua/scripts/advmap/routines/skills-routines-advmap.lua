@@ -439,7 +439,7 @@ function Routine_LeadershipAfterBattle(player, hero, mastery, combatIndex)
     print("$ Routine_LeadershipAfterBattle")
     if GetSavedCombatArmyHero(combatIndex, 0) then return end
     local x, y, z = GetObjectPosition(hero)
-    local town_data = PLAYER_MAIN_TOWN[player] and MAP_TOWNS[PLAYER_MAIN_TOWN[player]] or nil
+    -- local town_data = PLAYER_MAIN_TOWN[player] and MAP_TOWNS[PLAYER_MAIN_TOWN[player]] or nil
     print("Hero at x="..x..", y="..y)
     local found = nil
     for i = -1,1 do for j = -1,1 do
