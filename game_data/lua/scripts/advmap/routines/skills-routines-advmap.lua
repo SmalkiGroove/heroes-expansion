@@ -404,6 +404,12 @@ function Routine_GovernanceWeeklyResources(player, hero, mastery)
     sleep(3) AddPlayerResource(player, hero, res[faction], mastery)
 end
 
+function Routine_GetStrongerWeeklyBonus(player, hero, mastery)
+    print("$ Routine_GetStrongerWeeklyBonus")
+    AddHeroStatAmount(player, hero, STAT_ATTACK, 1)
+    AddHeroStatAmount(player, hero, STAT_DEFENCE, 1)
+end
+
 function Routine_HauntingWeeklyGhosts(player, hero, mastery)
     print("$ Routine_HauntingWeeklyGhosts")
     local amount = 9 + 3 * WEEK
@@ -475,6 +481,17 @@ function Routine_TaleTellers(player, hero, mastery, combatIndex)
     end
 end
 
+function Routine_GetWiserBonusExp(player, hero, mastery, combatIndex)
+    print("$ Routine_GetWiserBonusExp")
+    local exp = 0
+    local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 0)
+    for i = 0,stacks-1 do
+        local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 0, i)
+        exp = exp + count * power(2, CREATURES[creature][2])
+    end
+    AddHeroStatAmount(player, hero, STAT_EXPERIENCE, exp)
+end
+
 
 
 function Routine_MeditationExp(player, hero, amount)
@@ -530,6 +547,7 @@ WEEKLY_TRIGGER_SKILLS_ROUTINES = {
     [PERK_WARRIORS_OF_THE_MOUNTAIN] = Routine_WarriorsOfTheMountain,
     [SKILL_LOGISTICS] = Routine_LogisticsWeeklyProd,
     [SKILL_GOVERNANCE] = Routine_GovernanceWeeklyResources,
+    [PERK_GET_STRONGER] = Routine_GetStrongerWeeklyBonus,
     [PERK_HAUNTING] = Routine_HauntingWeeklyGhosts,
 }
 
@@ -546,6 +564,7 @@ LEVELUP_TRIGGER_SKILLS_ROUTINES = {
 AFTER_COMBAT_TRIGGER_SKILLS_ROUTINES = {
     [SKILL_LEADERSHIP] = Routine_LeadershipAfterBattle,
     [PERK_TALETELLERS] = Routine_TaleTellers,
+    [PERK_GET_WISER] = Routine_GetWiserBonusExp,
     [PERK_STAMINA] = Routine_StaminaBuff,
 }
 
