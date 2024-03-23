@@ -44,7 +44,7 @@ function Routine_TrainPeasantsToArchersCheck(player, hero)
                     if GetTownBuildingLevel(town, TOWN_BUILDING_HAVEN_TRAINING_GROUNDS) > 0 then
                         local max = GetObjectDwellingCreatures(town, CREATURE_PEASANT)
                         local n = 7 - Var_Dougal_TrainCount
-                        if GetTownBuildingLevel(town, TOWN_BUILDING_HAVEN_MONUMENT_TO_FALLEN_HEROES) then
+                        if GetTownBuildingLevel(town, TOWN_BUILDING_HAVEN_MONUMENT_TO_FALLEN_HEROES) > 0 then
                             n = n + 13
                         end
                         n = min(n, max)

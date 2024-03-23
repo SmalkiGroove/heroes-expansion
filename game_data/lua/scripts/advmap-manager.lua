@@ -115,14 +115,15 @@ function PlayerDailyHandler(player, newweek)
 	while (not IsPlayerCurrent(player)) do sleep(10) end
 	print("Player "..player.." turn started")
 	for i,hero in GetPlayerHeroes(player) do
-		startThread(DoHeroSpeRoutine_Daily, player, hero)
-		startThread(DoSkillsRoutine_Daily, player, hero)
-		startThread(DoArtifactsRoutine_Daily, player, hero)
 		if newweek then
 			startThread(DoHeroSpeRoutine_Weekly, player, hero)
 			startThread(DoSkillsRoutine_Weekly, player, hero)
 			startThread(DoArtifactsRoutine_Weekly, player, hero)
+			sleep(5)
 		end
+		startThread(DoHeroSpeRoutine_Daily, player, hero)
+		startThread(DoSkillsRoutine_Daily, player, hero)
+		startThread(DoArtifactsRoutine_Daily, player, hero)
 	end
 	WatchPlayer(player, nil)
 end
