@@ -30,7 +30,7 @@
 	<Icon128 href="/UI/H5A2/Icons/Heroes/Portrets128x128/RedHeaven_Gabrielle.(Texture).xdb#xpointer(/Texture)"/>
 	<InternalName>RedHeavenHero06</InternalName>
 	<Class>HERO_CLASS_HAVEN_MAGIC</Class>
-	<Specialization/>
+	<Specialization>HERO_SPEC_GRIFFINS</Specialization>
 	<PrimarySkill>
 		<SkillID>HERO_SKILL_INNATES</SkillID>
 		<Mastery>MASTERY_EXPERT</Mastery>
@@ -65,12 +65,13 @@
 		</skills>
 		<perkIDs>
 			<Item>HERO_SKILL_FAMILIAR_LAND</Item>
+			<Item>HERO_SKILL_EXPERT_TRAINER</Item>
 		</perkIDs>
 		<spellIDs>
 			<Item>SPELL_HASTE</Item>
 		</spellIDs>
 		<Ballista>false</Ballista>
-		<FirstAidTent>false</FirstAidTent>
+		<FirstAidTent>true</FirstAidTent>
 		<AmmoCart>false</AmmoCart>
 		<FavoriteEnemies/>
 	</Editable>

@@ -29,24 +29,36 @@ function Routine_AddRecruitsPeasants(player, hero)
     AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_1, CREATURE_PEASANT, 4.5)
 end
 
-function Routine_TrainPeasantsToArchersCheck(player, hero, town)
+Var_Dougal_TrainCount = 0
+function Routine_EnableTrainPeasantsToArchers(player, hero)
+    print("$ Routine_EnableTrainPeasantsToArchers")
+    Var_Dougal_TrainCount = 0
+end
+
+function Routine_TrainPeasantsToArchersCheck(player, hero)
     print("$ Routine_TrainPeasantsToArchersCheck")
-    local b = GetTownBuildingLevel(town, TOWN_BUILDING_HAVEN_TRAINING_GROUNDS)
-    local max = GetObjectDwellingCreatures(town, CREATURE_PEASANT)
-    local n = 0
-    if b == 1 then n = 7 elseif b == 2 then n = 20 end
-    n = min(n, max)
-    if n > 0 then
-        QuestionBoxForPlayers(
-            GetPlayerFilter(player),
-            {"/Text/Game/Scripts/HeroSpe/TrainArchers.txt"; num=n},
-            "Routine_TrainPeasantsToArchersConfirm('"..player.."','"..hero.."','"..town.."','"..n.."')", "NoneRoutine"
-        )
+    for town,data in MAP_TOWNS do
+        if data.faction == HAVEN then
+            if IsHeroInTown(hero, town, 1, 0) then
+                local b = GetTownBuildingLevel(town, TOWN_BUILDING_HAVEN_TRAINING_GROUNDS)
+                local max = GetObjectDwellingCreatures(town, CREATURE_PEASANT)
+                local n = 0
+                if b == 1 then n = 7 - Var_Dougal_TrainCount elseif b == 2 then n = 20 - Var_Dougal_TrainCount end
+                n = min(n, max)
+                if n > 0 then
+                    QuestionBoxForPlayers(
+                        GetPlayerFilter(player),
+                        {"/Text/Game/Scripts/HeroSpe/TrainArchers.txt"; num=n},
+                        "Routine_TrainPeasantsToArchersConfirm('"..player.."','"..hero.."','"..town.."','"..n.."')",
+                        "NoneRoutine"
+                    )
+                end
+            end
+        end
     end
 end
 
 function Routine_TrainPeasantsToArchersConfirm(player, hero, town, amount)
-    print("$ Routine_TrainPeasantsToArchersConfirm")
     local peasants = GetObjectDwellingCreatures(town, CREATURE_PEASANT)
     local archers = GetObjectDwellingCreatures(town, CREATURE_ARCHER)
     SetObjectDwellingCreatures(town, TOWN_BUILDING_DWELLING_1, peasants - amount)
@@ -68,6 +80,15 @@ end
 function Routine_AddTwoLuckPoints(player, hero)
     print("$ Routine_AddTwoLuckPoints")
     ChangeHeroStat(hero, STAT_LUCK, 2)
+end
+
+function Routine_MovePointsPerGriffin(player, hero)
+    print("$ Routine_MovePointsPerGriffin")
+    local n = 0
+    n = n + GetHeroCreatures(hero, CREATURE_GRIFFIN)
+    n = n + GetHeroCreatures(hero, CREATURE_ROYAL_GRIFFIN)
+    n = n + GetHeroCreatures(hero, CREATURE_BATTLE_GRIFFIN)
+    ChangeHeroStat(hero, STAT_MOVE_POINTS, 50 * n)
 end
 
 
@@ -593,8 +614,10 @@ START_TRIGGER_HERO_ROUTINES = {
 
 DAILY_TRIGGER_HERO_ROUTINES = {
     -- haven
+    [H_DOUGAL] = Routine_TrainPeasantsToArchersCheck,
     [H_ALARIC] = Routine_AddHeroZealots,
     [H_MAEVE] = Routine_DoublePeasantTax,
+    [H_GABRIELLE] = Routine_MovePointsPerGriffin,
     -- preserve
     -- fortress
     [H_INGVAR] = Routine_AddHeroDefenders,
@@ -617,6 +640,7 @@ DAILY_TRIGGER_HERO_ROUTINES = {
 
 WEEKLY_TRIGGER_HERO_ROUTINES = {
     -- haven
+    [H_DOUGAL] = Routine_EnableTrainPeasantsToArchers,
     [H_MAEVE] = Routine_AddRecruitsPeasants,
     [H_KLAUS] = Routine_AddHeroCavaliers,
     [H_NICOLAI] = Routine_GainExpFromTotalGolds,
