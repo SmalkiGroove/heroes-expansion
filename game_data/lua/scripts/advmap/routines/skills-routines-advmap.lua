@@ -447,21 +447,21 @@ function Routine_LeadershipAfterBattle(player, hero, mastery, combatIndex)
         if length(objects) == 0 then x=x+i; y=y+j; found = not nil; break end
     end if found then break end end
     if found then print("Spawn caravan at x="..x..", y="..y) else print("No available tile around hero was found"); return end
-    local dx = town_data and town_data.x or x
-    local dy = town_data and town_data.y or y
-    local dz = town_data and town_data.z or z
+    -- local dx = town_data and town_data.x or x
+    -- local dy = town_data and town_data.y or y
+    -- local dz = town_data and town_data.z or z
     local caravan = "Caravan-"..NB_CARAVAN
     NB_CARAVAN = NB_CARAVAN + 1
-    CreateCaravan(caravan, player, z, x, y, dz, dx, dy)
+    CreateCaravan(caravan, player, z, x, y, z, x, y)
     repeat sleep(1) until IsObjectExists(caravan)
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 0)
     for i = 0,stacks-1 do
         local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 0, i)
-        local amount = trunc(count * (0.05 + 0.05 * mastery))
+        local amount = count * (0.05 + 0.05 * mastery)
         if HasHeroSkill(hero, PERK_CHARISMA) then amount = 2 * amount end
         if hero == H_DUNCAN then amount = amount * (1 + GetHeroLevel(hero) * 0.05) end
         if hero == H_ARANTIR then creature = CreatureToUndead(creature) end
-        AddObjectCreatures(caravan, creature, amount)
+        AddObjectCreatures(caravan, creature, trunc(amount))
     end
     CURRENT_CARAVANS[caravan] = 3
 end
