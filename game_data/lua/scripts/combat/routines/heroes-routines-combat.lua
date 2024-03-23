@@ -50,6 +50,39 @@ function Routine_CastPrayer(side, hero)
     COMBAT_PAUSE = 0
 end
 
+function Routine_GriffinInstantDive(side, hero)
+    -- print("Trigger instant dive !")
+    for k,v in ROUTINE_VARS.GriffinDives do
+        if v == 1 then
+            local found = nil
+            for i,cr in GetUnits(side, CREATURE) do
+                if cr == k then found = not nil end
+            end
+            if not found then
+                SetATB_ID(k, ATB_INSTANT)
+                SetATB_ID(k, ATB_NEXT)
+            end
+        end
+    end
+    if CURRENT_UNIT_SIDE == side then
+        if IsCreature(CURRENT_UNIT) then
+            local type = GetCreatureType(CURRENT_UNIT)
+            if type == CREATURE_BATTLE_GRIFFIN or type == CREATURE_ROYAL_GRIFFIN then
+                ROUTINE_VARS.GriffinDives[CURRENT_UNIT] = 1
+            end
+        end
+    end
+    COMBAT_PAUSE = 0
+end
+
+function Routine_GriffinDead(side, hero, unit)
+    -- print("Trigger dead griffin unregister !")
+    if ROUTINE_VARS.GriffinDives[unit] then
+        ROUTINE_VARS.GriffinDives[unit] = 0
+    end
+    COMBAT_PAUSE = 0
+end
+
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -307,7 +340,7 @@ function Routine_SummonDeadEnnemyCreature(side, hero, unit)
         local type = GetCreatureType(unit)
         local x,y = GetUnitPosition(unit)
         local p = 10 + GetHeroLevel(side)
-        local amount = trunc(ROUTINE_VARS["initial-counts"][unit] * p * 0.01)
+        local amount = trunc(ROUTINE_VARS.InitialCounts[unit] * p * 0.01)
         SummonCreatureStack_XY(side, type, amount, x, y)
     end
     COMBAT_PAUSE = 0
@@ -390,13 +423,13 @@ function Routine_SummonAvatarOfDeath(side, hero)
     local units = GetUnits(side, CREATURE)
     HeroCast_Global(hero, SPELL_ABILITY_AVATAR_OF_DEATH, FREE_MANA)
     sleep(100)
-    ROUTINE_VARS["avatar-id"] = GetUnits(side, CREATURE)[length(units)]
+    ROUTINE_VARS.AvatarOfDeath = GetUnits(side, CREATURE)[length(units)]
     COMBAT_PAUSE = 0
 end
 
 function Routine_AvatarDead(side, hero, unit)
     -- print("Trigger mass Sorrow on Avatar of Death's death !")
-    if unit == ROUTINE_VARS["avatar-id"] then
+    if unit == ROUTINE_VARS.AvatarOfDeath then
         HeroCast_AllCreatures(hero, SPELL_SORROW, FREE_MANA, 1-side)
         sleep(100)
         SetMana(hero, GetHeroLevel(side))
@@ -426,7 +459,7 @@ function Routine_RaiseUndead(side, hero, unit)
         local type = CreatureToUndead(dead)
         local x,y = GetUnitPosition(unit)
         local p = 10 + GetHeroLevel(side)
-        local amount = trunc(ROUTINE_VARS["initial-counts"][unit] * p * 0.01)
+        local amount = trunc(ROUTINE_VARS.InitialCounts[unit] * p * 0.01)
         SummonCreatureStack_XY(side, type, amount, x, y)
     end
     COMBAT_PAUSE = 0
@@ -473,9 +506,9 @@ function Routine_CastRandomFireball(side, hero)
     if CURRENT_UNIT == hero then
         local x,y = GetUnitPosition(RandomCreature(side, COMBAT_TURN))
         HeroCast_Area(hero, SPELL_FIREBALL, FREE_MANA, x, y)
-        ROUTINE_VARS["boomer-atb"] = not nil
-    elseif ROUTINE_VARS["boomer-atb"] then
-        ROUTINE_VARS["boomer-atb"] = nil
+        ROUTINE_VARS.Incendiary = not nil
+    elseif ROUTINE_VARS.Incendiary then
+        ROUTINE_VARS.Incendiary = nil
         SetATB_ID(hero, 0.5)
     end
     COMBAT_PAUSE = 0
@@ -620,6 +653,7 @@ COMBAT_START_HERO_ROUTINES = {
 COMBAT_TURN_HERO_ROUTINES = {
     -- haven
     [H_MAEVE] = Routine_PeasantsMoveNext,
+    [H_GABRIELLE] = Routine_GriffinInstantDive,
     -- preserve
     [H_JENOVA] = Routine_HeroMoveNext,
     [H_TIERU] = Routine_DruidsMoveNext,
@@ -647,6 +681,7 @@ COMBAT_TURN_HERO_ROUTINES = {
 
 UNIT_DIED_HERO_ROUTINES = {
     -- haven
+    [H_GABRIELLE] = Routine_GriffinDead,
     -- preserve
     [H_TALANAR] = Routine_ResetAtbOnKillEnraged,
     -- fortress

@@ -18,9 +18,10 @@ UNIT_SIDE_PREFIX = {
 }
 
 ROUTINE_VARS = {
-    ["initial-counts"] = {},
-    ["avatar-id"] = "none",
-    ["boomer-atb"] = nil,
+    InitialCounts = {},
+    GriffinDives = {},
+    AvatarOfDeath = "none",
+    Incendiary = nil,
 }
 
 -- print("Loaded combat-data.lua")

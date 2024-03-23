@@ -15,7 +15,7 @@ function GetArmySummary(side)
     local creatures = GetUnits(side, CREATURE)
     for i,cr in creatures do
         local nb = GetCreatureNumber(cr)
-        ROUTINE_VARS["initial-counts"][cr] = nb
+        ROUTINE_VARS.InitialCounts[cr] = nb
     end
 end
 
