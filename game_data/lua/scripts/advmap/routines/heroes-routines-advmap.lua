@@ -91,11 +91,20 @@ end
 
 function Routine_MovePointsPerGriffin(player, hero)
     print("$ Routine_MovePointsPerGriffin")
+    local movement = GetHeroStat(hero, STAT_MOVE_POINTS)
     local n = 0
     n = n + GetHeroCreatures(hero, CREATURE_GRIFFIN)
     n = n + GetHeroCreatures(hero, CREATURE_ROYAL_GRIFFIN)
     n = n + GetHeroCreatures(hero, CREATURE_BATTLE_GRIFFIN)
-    ChangeHeroStat(hero, STAT_MOVE_POINTS, 50 * n)
+    while n > 0 do
+        sleep(2)
+        if not IsPlayerCurrent(player) then break end
+        local m = GetHeroStat(hero, STAT_MOVE_POINTS) + 25
+        if m <= movement then
+            ChangeHeroStat(hero, STAT_MOVE_POINTS, 25)
+            n = n - 1
+        end
+    end
 end
 
 

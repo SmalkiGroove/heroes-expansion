@@ -54,13 +54,11 @@ function Routine_GriffinInstantDive(side, hero)
     -- print("Trigger instant dive !")
     for k,v in ROUTINE_VARS.GriffinDives do
         if v == 1 then
-            print("Check if Griffin "..k.." is in the air")
             local found = nil
             for i,cr in GetUnits(side, CREATURE) do
                 if cr == k then found = not nil end
             end
             if not found then
-                print("Do instant Dive !")
                 SetATB_ID(k, ATB_INSTANT)
                 SetATB_ID(CURRENT_UNIT, ATB_NEXT)
             end
@@ -71,7 +69,6 @@ function Routine_GriffinInstantDive(side, hero)
             local type = GetCreatureType(CURRENT_UNIT)
             if type == CREATURE_GRIFFIN or type == CREATURE_BATTLE_GRIFFIN or type == CREATURE_ROYAL_GRIFFIN then
                 ROUTINE_VARS.GriffinDives[CURRENT_UNIT] = 1
-                print("Griffin "..CURRENT_UNIT.." played")
             end
         end
     end
