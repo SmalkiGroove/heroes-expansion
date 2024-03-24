@@ -20,6 +20,12 @@ function power(a, n)
     return p
 end
 
+function sign(n)
+    if n < -1 then return -1
+    elseif n > 1 then return 1
+    else return n end
+end
+
 function abs(n)
 	if n < 0 then return -n else return n end
 end
