@@ -223,6 +223,11 @@ function Routine_CheckBattleCommander(player, hero, mastery)
     end
 end
 
+function Routine_CheckKnowYourEnemy(player, hero, mastery)
+    print("$ Routine_CheckKnowYourEnemy")
+    ControlHeroCustomAbility(hero, CUSTOM_ABILITY_2, mastery)
+end
+
 function Routine_CheckFineRune(player, hero, mastery)
     print("$ Routine_CheckFineRune")
     local value = mastery
@@ -410,6 +415,12 @@ function Routine_GetStrongerWeeklyBonus(player, hero, mastery)
     AddHeroStatAmount(player, hero, STAT_DEFENCE, 1)
 end
 
+function Routine_BattleCommanderWeeklyUnits(player, hero, mastery)
+    print("$ Routine_BattleCommanderWeeklyUnits")
+    local amount = 25 + 7 * WEEK
+    AddHeroCreatureType(player, hero, {CREATURE_BLADE_JUGGLER,CREATURE_WAR_DANCER,CREATURE_BLADE_SINGER}, amount)
+end
+
 function Routine_HauntingWeeklyGhosts(player, hero, mastery)
     print("$ Routine_HauntingWeeklyGhosts")
     local amount = 9 + 3 * WEEK
@@ -522,6 +533,8 @@ START_TRIGGER_SKILLS_ROUTINES = {
     [PERK_GET_WISER] = Routine_CheckGetWiser,
     [PERK_ONSLAUGHT] = Routine_OnslaughtBuff,
     [PERK_LAST_STAND] = Routine_CheckLastStand,
+    [PERK_BATTLE_COMMANDER] = Routine_CheckBattleCommander,
+    [PERK_KNOW_YOUR_ENEMY] = Routine_CheckKnowYourEnemy,
     [PERK_FINE_RUNE] = Routine_CheckFineRune,
     [PERK_REFRESH_RUNE] = Routine_CheckRefreshRune,
     [PERK_GREATER_RUNE] = Routine_CheckGreaterRune,
@@ -548,6 +561,7 @@ WEEKLY_TRIGGER_SKILLS_ROUTINES = {
     [SKILL_LOGISTICS] = Routine_LogisticsWeeklyProd,
     [SKILL_GOVERNANCE] = Routine_GovernanceWeeklyResources,
     [PERK_GET_STRONGER] = Routine_GetStrongerWeeklyBonus,
+    [PERK_BATTLE_COMMANDER] = Routine_BattleCommanderWeeklyUnits,
     [PERK_HAUNTING] = Routine_HauntingWeeklyGhosts,
 }
 
