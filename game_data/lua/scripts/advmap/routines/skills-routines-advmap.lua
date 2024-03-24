@@ -415,15 +415,15 @@ function Routine_GetStrongerWeeklyBonus(player, hero, mastery)
     AddHeroStatAmount(player, hero, STAT_DEFENCE, 1)
 end
 
-function Routine_BattleCommanderWeeklyUnits(player, hero, mastery)
-    print("$ Routine_BattleCommanderWeeklyUnits")
-    local amount = 25 + 7 * WEEK
+function Routine_BattleCommanderWeeklyDancers(player, hero, mastery)
+    print("$ Routine_BattleCommanderWeeklyDancers")
+    local amount = 27 + 12 * WEEK
     AddHeroCreatureType(player, hero, {CREATURE_BLADE_JUGGLER,CREATURE_WAR_DANCER,CREATURE_BLADE_SINGER}, amount)
 end
 
 function Routine_HauntingWeeklyGhosts(player, hero, mastery)
     print("$ Routine_HauntingWeeklyGhosts")
-    local amount = 9 + 3 * WEEK
+    local amount = 6 + 3 * WEEK
     for _,type in RESOURCE_GENERATING_OBJECTS do
         for _,building in GetObjectNamesByType(type) do
             if GetObjectOwner(building) == player then
@@ -431,6 +431,12 @@ function Routine_HauntingWeeklyGhosts(player, hero, mastery)
             end
         end
     end
+end
+
+function Routine_DefendUsAllWeeklyWarriors(player, hero, mastery)
+    print("$ Routine_DefendUsAllWeeklyWarriors")
+    local amount = 17 + 7 * WEEK
+    AddHeroCreatureType(player, hero, {CREATURE_ORC_WARRIOR,CREATURE_ORC_SLAYER,CREATURE_ORC_WARMONGER}, amount)
 end
 
 
@@ -468,10 +474,20 @@ function Routine_LeadershipAfterBattle(player, hero, mastery, combatIndex)
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 0)
     for i = 0,stacks-1 do
         local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 0, i)
-        local amount = count * (0.05 + 0.05 * mastery)
-        if HasHeroSkill(hero, PERK_CHARISMA) then amount = 2 * amount end
-        if hero == H_DUNCAN then amount = amount * (1 + GetHeroLevel(hero) * 0.05) end
-        if hero == H_ARANTIR then creature = CreatureToUndead(creature) end
+        local bonus = 0
+        if hero == H_DUNCAN then
+            bonus = bonus + GetHeroLevel(hero)
+        end
+        if hero == H_ARANTIR then
+            if CREATURES[creature][1] == NECROPOLIS or creature == CREATURE_BLACK_KNIGHT or creature == CREATURE_DEATH_KNIGHT or creature == CREATURE_MUMMY then
+                bonus = bonus + 50
+            end
+        end
+        if HasHeroSkill(hero, PERK_CHARISMA) then
+            bonus = bonus + 5 + 5 * mastery
+        end
+        local amount = count * (0.05 + 0.05 * mastery + 0.01 * bonus)
+        if HasHeroSkill(hero, PERK_HERALD_OF_DEATH) then creature = CreatureToUndead(creature) end
         AddObjectCreatures(caravan, creature, trunc(amount))
     end
     CURRENT_CARAVANS[caravan] = 3
@@ -561,8 +577,9 @@ WEEKLY_TRIGGER_SKILLS_ROUTINES = {
     [SKILL_LOGISTICS] = Routine_LogisticsWeeklyProd,
     [SKILL_GOVERNANCE] = Routine_GovernanceWeeklyResources,
     [PERK_GET_STRONGER] = Routine_GetStrongerWeeklyBonus,
-    [PERK_BATTLE_COMMANDER] = Routine_BattleCommanderWeeklyUnits,
+    [PERK_BATTLE_COMMANDER] = Routine_BattleCommanderWeeklyDancers,
     [PERK_HAUNTING] = Routine_HauntingWeeklyGhosts,
+    [PERK_DEFEND_US_ALL] = Routine_DefendUsAllWeeklyWarriors,
 }
 
 LEVELUP_TRIGGER_SKILLS_ROUTINES = {
