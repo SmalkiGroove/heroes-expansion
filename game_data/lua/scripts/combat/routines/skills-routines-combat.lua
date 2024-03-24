@@ -85,4 +85,4 @@ end
 
 
 -- print("Loaded skills-routines-combat.lua")
-ROUTINES_LOADED[11] = 1
+ROUTINES_LOADED[12] = 1
