@@ -1,7 +1,7 @@
 
 function NoneRoutine()
     -- print("Trigger nothing !")
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -15,7 +15,7 @@ function Routine_BallistaRandomSalvo(side, hero)
         RandomShoot_Ballista(side)
         sleep(600)
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_PeasantsMoveNext(side, hero)
@@ -23,13 +23,13 @@ function Routine_PeasantsMoveNext(side, hero)
     if CURRENT_UNIT == hero then
         SetATB_CreatureTypes(side, {CREATURE_PEASANT,CREATURE_MILITIAMAN,CREATURE_LANDLORD}, ATB_NEXT)
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_ArchersMoveFirst(side, hero)
     -- print("Trigger archers atb boost !")
     SetATB_CreatureTypes(side, {CREATURE_ARCHER,CREATURE_MARKSMAN,CREATURE_LONGBOWMAN}, ATB_INSTANT)
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_InfantryDash(side, hero)
@@ -41,13 +41,13 @@ function Routine_InfantryDash(side, hero)
             UseCombatAbility(cr, SPELL_ABILITY_DASH)
         end
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_CastPrayer(side, hero)
     -- print("Trigger cast Prayer !")
     HeroCast_Global(hero, SPELL_PRAYER, NO_COST)
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_GriffinInstantDive(side, hero)
@@ -72,7 +72,7 @@ function Routine_GriffinInstantDive(side, hero)
             end
         end
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_GriffinDead(side, hero, unit)
@@ -80,7 +80,7 @@ function Routine_GriffinDead(side, hero, unit)
     if ROUTINE_VARS.GriffinDives[unit] then
         ROUTINE_VARS.GriffinDives[unit] = 0
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 
@@ -96,7 +96,7 @@ function Routine_HeroMoveNext(side, hero)
             SetATB_ID(hero, ATB_NEXT)
         end
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_ResetAtbOnKillEnraged(side, hero, unit)
@@ -108,13 +108,13 @@ function Routine_ResetAtbOnKillEnraged(side, hero, unit)
         SetATB_CreatureTypes(side, CREATURES_BY_FACTION[PRESERVE][3], ATB_INSTANT)
         SetATB_CreatureTypes(side, CREATURES_BY_FACTION[PRESERVE][1], ATB_INSTANT)
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_HunterRandomShoot(side, hero)
     -- print("Trigger hunters random shoot !")
     RandomShoot_CreatureTypes(side, {CREATURE_WOOD_ELF,CREATURE_GRAND_ELF,CREATURE_SHARP_SHOOTER})
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_CastSummonHive(side, hero)
@@ -122,13 +122,13 @@ function Routine_CastSummonHive(side, hero)
     local x = 15 - 13 * side
     HeroCast_Area(hero, SPELL_SUMMON_HIVE, FREE_MANA, x, GRID_Y_MIN)
     HeroCast_Area(hero, SPELL_SUMMON_HIVE, FREE_MANA, x, GRID_Y_MAX)
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_CastMassHaste(side, hero)
     -- print("Trigger hero cast Mass Haste !")
     HeroCast_Global(hero, SPELL_MASS_HASTE, FREE_MANA)
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_SummonDruidStack(side, hero)
@@ -137,7 +137,7 @@ function Routine_SummonDruidStack(side, hero)
     local x = side * 14
     local amount = trunc(0.5 * s * s)
     SummonCreatureStack_X(side, CREATURE_DRUID_ELDER, amount, x)
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_DruidsMoveNext(side, hero)
@@ -145,7 +145,7 @@ function Routine_DruidsMoveNext(side, hero)
     if CURRENT_UNIT == hero then
         SetATB_CreatureTypes(side, {CREATURE_DRUID,CREATURE_DRUID_ELDER,CREATURE_HIGH_DRUID}, ATB_NEXT)
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 
@@ -156,13 +156,13 @@ end
 function Routine_BallistaMoveFirst(side, hero)
     -- print("Trigger ballista play first !")
     SetATB_WarMachineType(side, WAR_MACHINE_BALLISTA, ATB_INSTANT)
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_SkirmishersRandomShoot(side, hero)
     -- print("Trigger spearwielders random shoot !")
     RandomShoot_CreatureTypes(side, {CREATURE_AXE_FIGHTER,CREATURE_AXE_THROWER,CREATURE_HARPOONER})
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_ThanesAbility(side, hero)
@@ -179,7 +179,7 @@ function Routine_ThanesAbility(side, hero)
             sleep(100)
         end
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_CastFireWalls(side, hero)
@@ -190,13 +190,13 @@ function Routine_CastFireWalls(side, hero)
         HeroCast_Area(hero, SPELL_FIREWALL, FREE_MANA, x, y)
     end
     SetMana(hero, m)
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_RunePriestsMoveFirst(side, hero)
     -- print("Trigger rune priests play first !")
     SetATB_CreatureTypes(side, {CREATURE_RUNE_MAGE,CREATURE_FLAME_MAGECREATURE_FLAME_KEEPER}, ATB_INSTANT)
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_CastEarthquake(side, hero)
@@ -204,7 +204,7 @@ function Routine_CastEarthquake(side, hero)
     -- HeroCast_Area(hero, SPELL_UBER_METEOR_SHOWER, FREE_MANA, x, r)
     HeroCast_Global(hero, SPELL_EARTHQUAKE, FREE_MANA)
     sleep(600)
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 
@@ -221,7 +221,7 @@ function Routine_RakshasasAbility(side, hero)
             UseCombatAbility(cr, SPELL_ABILITY_DASH)
         end
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_BallistaMoveNext(side, hero)
@@ -229,7 +229,7 @@ function Routine_BallistaMoveNext(side, hero)
     if CURRENT_UNIT == hero then
         SetATB_WarMachineType(side, WAR_MACHINE_BALLISTA, ATB_NEXT)
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_CastMultipleArcaneCrystals(side, hero)
@@ -240,19 +240,19 @@ function Routine_CastMultipleArcaneCrystals(side, hero)
     for i = 1,n do
         HeroCast_Area(hero, SPELL_ARCANE_CRYSTAL, FREE_MANA, random(x1,x2,i), random(GRID_Y_MIN,GRID_Y_MAX,i))
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_MagesCastMagicFist(side, hero)
     -- print("Trigger mages magic fist !")
     CreatureTypesCast_RandomTarget(side, 1-side, {CREATURE_MAGI,CREATURE_ARCH_MAGI,CREATURE_COMBAT_MAGE}, SPELL_MAGIC_FIST)
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_CastSummonElementals(side, hero)
     -- print("Trigger summon elementals !")
     HeroCast_Global(hero, SPELL_SUMMON_ELEMENTALS, FREE_MANA)
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_TimeShift(side, hero)
@@ -268,7 +268,7 @@ function Routine_TimeShift(side, hero)
             ShowFlyingSign("/Text/Game/Scripts/Combat/TimeShift.txt", enemy, 9)
         end
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 
@@ -279,7 +279,7 @@ end
 function Routine_ScoutsMoveFirst(side, hero)
     -- print("Trigger scouts play first !")
     SetATB_CreatureTypes(side, {CREATURE_SCOUT,CREATURE_ASSASSIN,CREATURE_STALKER}, ATB_INSTANT)
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_CastVampirismOnWitches(side, hero)
@@ -296,7 +296,7 @@ function Routine_CastVampirismOnWitches(side, hero)
     for i = 1,n do
         HeroCast_Target(hero, SPELL_VAMPIRISM, FREE_MANA, w[i])
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_MinotaursMoveNext(side, hero)
@@ -304,7 +304,7 @@ function Routine_MinotaursMoveNext(side, hero)
     if CURRENT_UNIT == hero then
         SetATB_CreatureTypes(side, {CREATURE_MINOTAUR,CREATURE_MINOTAUR_KING,CREATURE_MINOTAUR_CAPTAIN}, ATB_NEXT)
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_RidersHydraSynergy(side, hero)
@@ -320,7 +320,7 @@ function Routine_RidersHydraSynergy(side, hero)
             end
         end
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_HeroCastRage(side, hero)
@@ -331,7 +331,7 @@ function Routine_HeroCastRage(side, hero)
     for i = 1,n do
         HeroCast_Target(hero, SPELL_BERSERK, FREE_MANA, enemies[i-1])
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_SummonDeadEnnemyCreature(side, hero, unit)
@@ -343,7 +343,7 @@ function Routine_SummonDeadEnnemyCreature(side, hero, unit)
         local amount = trunc(ROUTINE_VARS.InitialCounts[unit] * p * 0.01)
         SummonCreatureStack_XY(side, type, amount, x, y)
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_FullDragonSet(side, hero)
@@ -362,7 +362,7 @@ function Routine_FullDragonSet(side, hero)
         sleep(550)
         RemoveCombatUnit(dragon)
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_RefreshMatronMana(side, hero)
@@ -378,13 +378,13 @@ function Routine_RefreshMatronMana(side, hero)
             end
         end
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_CastRandomDeepFrost(side, hero)
     -- print("Trigger cast deep frost !")
     HeroCast_RandomCreature(hero, SPELL_DEEP_FREEZE, FREE_MANA, 1-side)
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 
@@ -398,7 +398,7 @@ function Routine_SummonAndKillEnnemySkeleton(side, hero)
     SummonCreatureStack_X(1-side, CREATURE_SKELETON, 1, 6)
     repeat sleep(10) until length(GetUnits(1-side, CREATURE)) == n + 1
     HeroCast_Target(hero, SPELL_MAGIC_FIST, FREE_MANA, GetUnits(1-side, CREATURE)[n])
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_SummonZombieStack(side, hero)
@@ -409,13 +409,13 @@ function Routine_SummonZombieStack(side, hero)
         local id = CREATURES_BY_FACTION[NECROPOLIS][2][type]
         SummonCreatureStack(side, id, n)
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_HealingTentMoveFirst(side, hero)
     -- print("Trigger healing tent play first !")
     SetATB_WarMachineType(side, WAR_MACHINE_FIRST_AID_TENT, ATB_INSTANT)
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_SummonAvatarOfDeath(side, hero)
@@ -424,7 +424,7 @@ function Routine_SummonAvatarOfDeath(side, hero)
     HeroCast_Global(hero, SPELL_ABILITY_AVATAR_OF_DEATH, FREE_MANA)
     sleep(100)
     ROUTINE_VARS.AvatarOfDeath = GetUnits(side, CREATURE)[length(units)]
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_AvatarDead(side, hero, unit)
@@ -434,13 +434,13 @@ function Routine_AvatarDead(side, hero, unit)
         sleep(100)
         SetMana(hero, GetHeroLevel(side))
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_CastMassWeakness(side, hero)
     -- print("Trigger cast mass weakness !")
     HeroCast_Global(hero, SPELL_MASS_CURSE, FREE_MANA)
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_CastRandomIceBolt(side, hero)
@@ -449,7 +449,7 @@ function Routine_CastRandomIceBolt(side, hero)
         HeroCast_RandomCreature(hero, SPELL_ICE_BOLT, FREE_MANA, 1-side)
         if IsHuman(side) then SetATB_ID(hero, ATB_INSTANT) end
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_RaiseUndead(side, hero, unit)
@@ -462,7 +462,7 @@ function Routine_RaiseUndead(side, hero, unit)
         local amount = trunc(ROUTINE_VARS.InitialCounts[unit] * p * 0.01)
         SummonCreatureStack_XY(side, type, amount, x, y)
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 
@@ -483,7 +483,7 @@ function Routine_BallistaShootUnit(side, hero)
             end
         end
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_DemonicCreatureExplosion(side, hero)
@@ -498,7 +498,7 @@ function Routine_DemonicCreatureExplosion(side, hero)
             end
         end
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_CastRandomFireball(side, hero)
@@ -511,7 +511,7 @@ function Routine_CastRandomFireball(side, hero)
         ROUTINE_VARS.Incendiary = nil
         SetATB_ID(hero, 0.5)
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_CastMineFields(side, hero)
@@ -519,7 +519,7 @@ function Routine_CastMineFields(side, hero)
     local x = 12 - 9 * side
     HeroCast_Area(hero, SPELL_LAND_MINE, FREE_MANA, x, 9)
     HeroCast_Area(hero, SPELL_LAND_MINE, FREE_MANA, x, 4)
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_SummonPitlords(side, hero)
@@ -529,7 +529,7 @@ function Routine_SummonPitlords(side, hero)
     local amount = trunc(0.01 * n * n)
     SummonCreatureStack_X(side, CREATURE_BALOR, amount, x)
     SummonCreatureStack_X(side, CREATURE_BALOR, amount, x)
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 
@@ -540,19 +540,19 @@ end
 function Routine_CastRallingCry(side, hero)
     -- print("Trigger ralling cry !")
     HeroCast_Global(hero, SPELL_WARCRY_RALLING_CRY, FREE_MANA)
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_CastBattlecry(side, hero)
     -- print("Trigger battlecry !")
     HeroCast_Global(hero, SPELL_WARCRY_BATTLECRY, FREE_MANA)
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_CastCallOfBlood(side, hero)
     -- print("Trigger call of blood !")
     HeroCast_TargetCreatureTypes(hero, SPELL_WARCRY_CALL_OF_BLOOD, FREE_MANA, side, {CREATURE_ORC_WARRIOR,CREATURE_ORC_SLAYER,CREATURE_ORC_WARMONGER})
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_SummonGoblinStack(side, hero)
@@ -561,7 +561,7 @@ function Routine_SummonGoblinStack(side, hero)
         local amount = trunc(GOBLIN_AMOUNT * 0.1)
         SummonCreatureStack(side, CREATURE_GOBLIN, amount)
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_HealingTentMoveNext(side, hero)
@@ -569,7 +569,7 @@ function Routine_HealingTentMoveNext(side, hero)
     if CURRENT_UNIT == hero then
         SetATB_WarMachineType(side, WAR_MACHINE_FIRST_AID_TENT, ATB_NEXT)
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_ShamansManaRegen(side, hero)
@@ -584,7 +584,7 @@ function Routine_ShamansManaRegen(side, hero)
             end
         end
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 function Routine_CastRandomLightningBolt(side, hero)
@@ -593,7 +593,7 @@ function Routine_CastRandomLightningBolt(side, hero)
         HeroCast_RandomCreature(hero, SPELL_LIGHTNING_BOLT, FREE_MANA, 1-side)
         if IsHuman(side) then SetATB_ID(hero, ATB_INSTANT) end
     end
-    COMBAT_PAUSE = 0
+    -- COMBAT_PAUSE = 0
 end
 
 
@@ -698,33 +698,33 @@ UNIT_DIED_HERO_ROUTINES = {
 
 function DoHeroSpeRoutine_CombatPrepare(side, name, id)
     if COMBAT_PREPARE_HERO_ROUTINES[name] then
-        startThread(COMBAT_PREPARE_HERO_ROUTINES[name], side, id)
-    else
-        startThread(NoneRoutine)
+        COMBAT_PREPARE_HERO_ROUTINES[name](side, id)
+    -- else
+    --     startThread(NoneRoutine)
     end
 end
 
 function DoHeroSpeRoutine_CombatStart(side, name, id)
     if COMBAT_START_HERO_ROUTINES[name] then
-        startThread(COMBAT_START_HERO_ROUTINES[name], side, id)
-    else
-        startThread(NoneRoutine)
+        COMBAT_START_HERO_ROUTINES[name](side, id)
+    -- else
+    --     startThread(NoneRoutine)
     end
 end
 
 function DoHeroSpeRoutine_CombatTurn(side, name, id)
     if COMBAT_TURN_HERO_ROUTINES[name] then
-        startThread(COMBAT_TURN_HERO_ROUTINES[name], side, id)
-    else
-        startThread(NoneRoutine)
+        COMBAT_TURN_HERO_ROUTINES[name](side, id)
+    -- else
+    --     startThread(NoneRoutine)
     end
 end
 
 function DoHeroSpeRoutine_UnitDied(side, name, id, unit)
     if UNIT_DIED_HERO_ROUTINES[name] then
-        startThread(UNIT_DIED_HERO_ROUTINES[name], side, id, unit)
-    else
-        startThread(NoneRoutine)
+        UNIT_DIED_HERO_ROUTINES[name](side, id, unit)
+    -- else
+    --     startThread(NoneRoutine)
     end
 end
 

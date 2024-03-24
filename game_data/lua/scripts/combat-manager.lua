@@ -56,12 +56,12 @@ function FetchData(name, id)
 end
 
 function Pause()
-    COMBAT_PAUSE = 1
+    -- COMBAT_PAUSE = 1
     combatSetPause(1)
 end
 
 function Resume()
-    repeat sleep(5) until COMBAT_PAUSE == 0
+    -- repeat sleep(5) until COMBAT_PAUSE == 0
     combatSetPause(nil)
 end
 
@@ -84,13 +84,13 @@ function ManageCombatPrepare()
     DEFENDER_HERO = GetHero(DEFENDER) and GetHeroName(DEFENDER_HERO_ID) or ""
     if ATTACKER_HERO ~= "" then
         FetchData(ATTACKER_HERO, ATTACKER)
-        startThread(DoSkillRoutine_CombatPrepare, ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
-		startThread(DoHeroSpeRoutine_CombatPrepare, ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
+        DoSkillRoutine_CombatPrepare(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
+		DoHeroSpeRoutine_CombatPrepare(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
     end
     if DEFENDER_HERO ~= "" then
         FetchData(DEFENDER_HERO, DEFENDER)
-		startThread(DoSkillRoutine_CombatPrepare, DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
-		startThread(DoHeroSpeRoutine_CombatPrepare, DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
+		DoSkillRoutine_CombatPrepare(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
+		DoHeroSpeRoutine_CombatPrepare(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
     end
 end
 
@@ -102,12 +102,12 @@ function ManageCombatStart()
 
     Pause()
 	if ATTACKER_HERO ~= "" then
-        startThread(DoSkillRoutine_CombatStart, ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
-		startThread(DoHeroSpeRoutine_CombatStart, ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
+        DoSkillRoutine_CombatStart(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
+		DoHeroSpeRoutine_CombatStart(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
 	end
 	if DEFENDER_HERO ~= "" then
-		startThread(DoSkillRoutine_CombatStart, DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
-		startThread(DoHeroSpeRoutine_CombatStart, DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
+		DoSkillRoutine_CombatStart(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
+		DoHeroSpeRoutine_CombatStart(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
 	end
     Resume()
 end
@@ -123,11 +123,12 @@ function ManageCombatTurn(unit)
 
         Pause()
         if ATTACKER_HERO ~= "" then
-            startThread(DoHeroSpeRoutine_CombatTurn, ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
+            DoHeroSpeRoutine_CombatTurn(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
         end
         if DEFENDER_HERO ~= "" then
-            startThread(DoHeroSpeRoutine_CombatTurn, DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
+            DoHeroSpeRoutine_CombatTurn(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
         end
+        DoAbilitiesRoutine_CombatTurn()
         Resume()
     end
 end
@@ -138,10 +139,10 @@ function ManageUnitDeath(unit)
 
     Pause()
     if ATTACKER_HERO ~= "" then
-		startThread(DoHeroSpeRoutine_UnitDied, ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID, unit)
+		DoHeroSpeRoutine_UnitDied(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID, unit)
 	end
 	if DEFENDER_HERO ~= "" then
-		startThread(DoHeroSpeRoutine_UnitDied, DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID, unit)
+		DoHeroSpeRoutine_UnitDied(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID, unit)
 	end
     Resume()
 end
