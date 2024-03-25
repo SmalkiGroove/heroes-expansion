@@ -19,9 +19,9 @@ function EnableScript() ENABLE_SCRIPT = 1 end
 
 function CheckEnableScript()
     consoleCmd("@SetGameVar('h5x_combat_init', 'false')")
-    repeat sleep(1) until GetGameVar('h5x_combat_init') == 'false'
+    repeat sleep() until GetGameVar('h5x_combat_init') == 'false'
     consoleCmd("@if GetGameVar('h5x_combat_init') == 'false' then SetGameVar('h5x_combat_init', 'true') EnableScript() end")
-    repeat sleep(1) until GetGameVar('h5x_combat_init') == 'true'
+    repeat sleep() until GetGameVar('h5x_combat_init') == 'true'
 end
 
 function FetchData(name, id)
@@ -55,16 +55,6 @@ function FetchData(name, id)
     )
 end
 
-function Pause()
-    -- COMBAT_PAUSE = 1
-    combatSetPause(1)
-end
-
-function Resume()
-    -- repeat sleep(5) until COMBAT_PAUSE == 0
-    combatSetPause(nil)
-end
-
 function Wait()
     sleep(1)
     THREAD_FINISHER = THREAD_FINISHER - 1
@@ -84,13 +74,13 @@ function ManageCombatPrepare()
     DEFENDER_HERO = GetHero(DEFENDER) and GetHeroName(DEFENDER_HERO_ID) or ""
     if ATTACKER_HERO ~= "" then
         FetchData(ATTACKER_HERO, ATTACKER)
-        DoSkillRoutine_CombatPrepare(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
-		DoHeroSpeRoutine_CombatPrepare(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
+        -- DoSkillRoutine_CombatPrepare(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
+		-- DoHeroSpeRoutine_CombatPrepare(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
     end
     if DEFENDER_HERO ~= "" then
         FetchData(DEFENDER_HERO, DEFENDER)
-		DoSkillRoutine_CombatPrepare(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
-		DoHeroSpeRoutine_CombatPrepare(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
+		-- DoSkillRoutine_CombatPrepare(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
+		-- DoHeroSpeRoutine_CombatPrepare(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
     end
 end
 
@@ -100,7 +90,7 @@ function ManageCombatStart()
     startThread(GetArmySummary, ATTACKER)
     startThread(GetArmySummary, DEFENDER)
 
-    Pause()
+    combatSetPause(1)
 	if ATTACKER_HERO ~= "" then
         DoSkillRoutine_CombatStart(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
 		DoHeroSpeRoutine_CombatStart(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
@@ -109,7 +99,7 @@ function ManageCombatStart()
 		DoSkillRoutine_CombatStart(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
 		DoHeroSpeRoutine_CombatStart(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
 	end
-    Resume()
+    combatSetPause(nil)
 end
 
 function ManageCombatTurn(unit)
@@ -121,7 +111,7 @@ function ManageCombatTurn(unit)
         CURRENT_UNIT = unit
         CURRENT_UNIT_SIDE = GetUnitSide(unit)
 
-        Pause()
+        combatSetPause(1)
         if ATTACKER_HERO ~= "" then
             DoHeroSpeRoutine_CombatTurn(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
         end
@@ -129,7 +119,7 @@ function ManageCombatTurn(unit)
             DoHeroSpeRoutine_CombatTurn(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
         end
         DoAbilitiesRoutine_CombatTurn()
-        Resume()
+        combatSetPause(nil)
     end
 end
 
@@ -137,14 +127,14 @@ function ManageUnitDeath(unit)
     -- print("$ Manage unit death")
     if ENABLE_SCRIPT == 0 then return end
 
-    Pause()
+    combatSetPause(1)
     if ATTACKER_HERO ~= "" then
 		DoHeroSpeRoutine_UnitDied(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID, unit)
 	end
 	if DEFENDER_HERO ~= "" then
 		DoHeroSpeRoutine_UnitDied(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID, unit)
 	end
-    Resume()
+    combatSetPause(nil)
 end
 
 
@@ -159,8 +149,8 @@ ROUTINES_LOADED = {
 
 function LoadScript(path, key)
 	-- print("Loading script "..path)
-	dofile(path)
-	repeat sleep(1) until ROUTINES_LOADED[key] == 1
+	dofile(path) sleep()
+	-- repeat sleep() until ROUTINES_LOADED[key] == 1
 end
 
 LoadScript("/scripts/game/creatures.lua", 1)
