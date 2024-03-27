@@ -61,16 +61,16 @@ end
 
 function ManageCombatPrepare()
     -- print("$ Manage combat prepare")
-    CheckEnableScript()
+    -- CheckEnableScript()
     if ENABLE_SCRIPT == 0 then return end
 
     ATTACKER_HERO = GetHero(ATTACKER) and GetHeroName(ATTACKER_HERO_ID) or ""
     DEFENDER_HERO = GetHero(DEFENDER) and GetHeroName(DEFENDER_HERO_ID) or ""
     if ATTACKER_HERO ~= "" then
-        FetchData(ATTACKER_HERO, ATTACKER)
+        startThread(FetchData, ATTACKER_HERO, ATTACKER)
     end
     if DEFENDER_HERO ~= "" then
-        FetchData(DEFENDER_HERO, DEFENDER)
+        startThread(FetchData, DEFENDER_HERO, DEFENDER)
     end
 end
 

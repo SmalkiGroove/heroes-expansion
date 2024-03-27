@@ -157,11 +157,19 @@ Trigger(CUSTOM_ABILITY_TRIGGER, "CustomAbilityHandler")
 
 
 function AddPlayerHero(player, hero)
-	startThread(ReplaceStartingArmy, hero)
-	startThread(BindHeroLevelUpTrigger, hero)
-	startThread(BindHeroSkillTrigger, hero)
-	startThread(DoSkillsRoutine_Start, player, hero)
-	startThread(DoHeroSpeRoutine_Start, player, hero)
+	if MAP_HEROES[hero] then
+		print("Comeback hero "..hero)
+		startThread(BindHeroLevelUpTrigger, hero)
+		startThread(BindHeroSkillTrigger, hero)
+	else
+		startThread(ReplaceStartingArmy, hero)
+		startThread(BindHeroLevelUpTrigger, hero)
+		startThread(BindHeroSkillTrigger, hero)
+		startThread(DoSkillsRoutine_Start, player, hero)
+		startThread(DoHeroSpeRoutine_Start, player, hero)
+		insert(MAP_HEROES, hero)
+	end
+	startThread(StoreData, hero)
 end
 function AddPlayer1Hero(hero) AddPlayerHero(PLAYER_1, hero) end
 function AddPlayer2Hero(hero) AddPlayerHero(PLAYER_2, hero) end
@@ -200,6 +208,7 @@ function InitializeHeroes()
 				startThread(BindHeroSkillTrigger, hero)
 				startThread(DoSkillsRoutine_Start, player, hero) sleep(1)
 				startThread(DoHeroSpeRoutine_Start, player, hero) sleep(1)
+				insert(MAP_HEROES, hero)
 			end
 		end
 	end
