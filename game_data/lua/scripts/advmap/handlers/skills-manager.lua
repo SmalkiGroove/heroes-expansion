@@ -93,13 +93,19 @@ function AddHeroSkill(hero, skill, mastery)
     local player = GetObjectOwner(hero)
     local level = GetHeroLevel(hero)
     if START_TRIGGER_SKILLS_ROUTINES[skill] then
-        startThread(START_TRIGGER_SKILLS_ROUTINES[skill], player, hero, mastery, level)
+        START_TRIGGER_SKILLS_ROUTINES[skill](player, hero, mastery, level)
     end
+    Register(VarHeroSkillId(hero, skill), mastery)
     CheckForUltimate(player, hero, level)
 end
 function RemoveHeroSkill(hero, skill, mastery)
     print("Hero "..hero.." has removed skill '"..skill.."' rank "..mastery..".")
-    AddHeroSkill(hero, skill, mastery)
+    local player = GetObjectOwner(hero)
+    local level = GetHeroLevel(hero)
+    if START_TRIGGER_SKILLS_ROUTINES[skill] then
+        START_TRIGGER_SKILLS_ROUTINES[skill](player, hero, mastery, level)
+    end
+    Register(VarHeroSkillId(hero, skill), mastery)
 end
 
 function BindHeroSkillTrigger(hero)

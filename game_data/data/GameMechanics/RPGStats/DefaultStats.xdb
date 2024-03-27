@@ -992,11 +992,13 @@
 							<Bonus2>
 								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>15</IntParam></Item>
 								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>5</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_AGILITY</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>15</IntParam></Item>
 								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>5</IntParam></Item>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_CRYSTAL_SCALES</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_SPEED</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_AGILITY</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
 						<Item><Creature>CREATURE_GOLD_DRAGON</Creature>
@@ -1007,11 +1009,13 @@
 							<Bonus2>
 								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>15</IntParam></Item>
 								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>5</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_AGILITY</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>15</IntParam></Item>
 								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>5</IntParam></Item>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_CRYSTAL_SCALES</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_SPEED</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_AGILITY</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
 						<Item><Creature>CREATURE_RAINBOW_DRAGON</Creature>
@@ -1022,11 +1026,13 @@
 							<Bonus2>
 								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>15</IntParam></Item>
 								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>5</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_AGILITY</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
 								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>15</IntParam></Item>
 								<Item><Type>DEMON_RAGE_BONUS_DAMAGE</Type><IntParam>5</IntParam></Item>
-								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_CRYSTAL_SCALES</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_SPEED</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_AGILITY</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
 

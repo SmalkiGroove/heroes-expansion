@@ -32,11 +32,8 @@ end
 
 
 
-COMBAT_PREPARE_SKILL_ROUTINES = {
-    [PERK_HOUNDMASTERS] = Routine_Houndmasters,
-}
-
 COMBAT_START_SKILL_ROUTINES = {
+    [PERK_HOUNDMASTERS] = Routine_Houndmasters,
     [SKILL_SHATTER_MAGIC] = Routine_ShatterMagic,
 }
 
@@ -47,20 +44,11 @@ UNIT_DIED_SKILL_ROUTINES = {
 }
 
 
-function DoSkillRoutine_CombatPrepare(side, name, id)
-    for skill,routine in COMBAT_PREPARE_SKILL_ROUTINES do
-        local mastery = GetHeroSkillMastery(side, skill)
-        if mastery >= 1 then
-            startThread(routine, side, name, id, mastery)
-        end
-    end
-end
-
 function DoSkillRoutine_CombatStart(side, name, id)
     for skill,routine in COMBAT_START_SKILL_ROUTINES do
         local mastery = GetHeroSkillMastery(side, skill)
         if mastery >= 1 then
-            startThread(routine, side, name, id, mastery)
+            routine(side, name, id, mastery)
         end
     end
 end
@@ -69,7 +57,7 @@ function DoSkillRoutine_CombatTurn(side, name, id)
     for skill,routine in COMBAT_TURN_SKILL_ROUTINES do
         local mastery = GetHeroSkillMastery(side, skill)
         if mastery >= 1 then
-            startThread(routine, side, name, id, mastery)
+            routine(side, name, id, mastery)
         end
     end
 end
@@ -78,7 +66,7 @@ function DoSkillRoutine_UnitDied(side, name, id, unit)
     for skill,routine in UNIT_DIED_SKILL_ROUTINES do
         local mastery = GetHeroSkillMastery(side, skill)
         if mastery >= 1 then
-            startThread(routine, side, name, id, mastery, unit)
+            routine(side, name, id, mastery, unit)
         end
     end
 end

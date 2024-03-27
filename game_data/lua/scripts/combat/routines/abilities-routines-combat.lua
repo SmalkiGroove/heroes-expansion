@@ -37,9 +37,6 @@ function Routine_AbilityMagneticField()
 end
 
 
-COMBAT_PREPARE_ABILITIES_ROUTINES = {
-}
-
 COMBAT_START_ABILITIES_ROUTINES = {
 }
 
@@ -51,9 +48,6 @@ COMBAT_TURN_ABILITIES_ROUTINES = {
 UNIT_DIED_ABILITIES_ROUTINES = {
 }
 
-
-function DoAbilitiesRoutine_CombatPrepare()
-end
 
 function DoAbilitiesRoutine_CombatStart()
 end

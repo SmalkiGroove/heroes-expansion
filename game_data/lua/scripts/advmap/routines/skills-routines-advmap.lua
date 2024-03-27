@@ -501,6 +501,7 @@ function Routine_TaleTellers(player, hero, mastery, combatIndex)
         local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 0, i)
         exp = exp + count * power(2, CREATURES[creature][2])
     end
+    exp = trunc(0.67 * exp)
     for _,h in GetPlayerHeroes(player) do
         if h ~= hero then
             AddHeroStatAmount(player, h, STAT_EXPERIENCE, exp)

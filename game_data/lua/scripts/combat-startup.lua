@@ -29,7 +29,6 @@ ATTACKER_HERO_ID = "attacker-hero"
 DEFENDER_HERO_ID = "defender-hero"
 ATTACKER_HERO = ""
 DEFENDER_HERO = ""
-HERO_DATA = { }
 
 
 function GetHero(side)

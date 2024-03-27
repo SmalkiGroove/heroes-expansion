@@ -121,9 +121,9 @@ end
 
 function Routine_SummonDruidStack(side, hero)
     -- print("Trigger elder druids summoning !")
-    local s = GetHeroSpellpower(side)
-    local x = side * 14
-    local amount = trunc(0.5 * s * s)
+    local n = GetHeroLevel(side)
+    local x = 1 + side * 13
+    local amount = trunc(0.5 * n * n)
     SummonCreatureStack_X(side, CREATURE_DRUID_ELDER, amount, x)
 end
 
@@ -298,8 +298,8 @@ end
 function Routine_HeroCastRage(side, hero)
     -- print("Trigger hero cast rage")
     local enemies = GetUnits(1-side, CREATURE)
-    local s = 1 + trunc(GetHeroSpellpower(side) * 0.05)
-    local n = min(length(enemies), s)
+    local v = 1 + trunc(GetHeroLevel(side) * 0.05)
+    local n = min(length(enemies), v)
     for i = 1,n do
         HeroCast_Target(hero, SPELL_BERSERK, FREE_MANA, enemies[i-1])
     end
@@ -546,21 +546,6 @@ end
 
 
 
-
-COMBAT_PREPARE_HERO_ROUTINES = {
-    -- haven
-    -- preserve
-    [H_TIERU] = Routine_SummonDruidStack,
-    -- fortress
-    [H_BRAND] = Routine_CastFireWalls,
-    -- academy
-    -- dungeon
-    -- necropolis
-    -- inferno
-    [H_KHABELETH] = Routine_SummonPitlords,
-    -- stronghold
-}
-
 COMBAT_START_HERO_ROUTINES = {
     -- haven
     [H_VITTORIO] = Routine_BallistaRandomSalvo,
@@ -570,10 +555,12 @@ COMBAT_START_HERO_ROUTINES = {
     -- preserve
     [H_FINDAN] = Routine_HunterRandomShoot,
     [H_VINRAEL] = Routine_CastMassHaste,
+    [H_TIERU] = Routine_SummonDruidStack,
     -- fortress
     [H_WULFSTAN] = Routine_BallistaMoveFirst,
     [H_KARLI] = Routine_SkirmishersRandomShoot,
     [H_HANGVUL] = Routine_ThanesAbility,
+    [H_BRAND] = Routine_CastFireWalls,
     [H_ERLING] = Routine_RunePriestsMoveFirst,
     [H_INGA] = Routine_CastEarthquake,
     -- academy
@@ -592,6 +579,7 @@ COMBAT_START_HERO_ROUTINES = {
     [H_ARCHILUS] = Routine_SummonAvatarOfDeath,
     -- inferno
     [H_DELEB] = Routine_CastMineFields,
+    [H_KHABELETH] = Routine_SummonPitlords,
     -- stronghold
     [H_KRAGH] = Routine_CastRallingCry,
     [H_GOTAI] = Routine_CastBattlecry,
@@ -644,35 +632,21 @@ UNIT_DIED_HERO_ROUTINES = {
 }
 
 
-function DoHeroSpeRoutine_CombatPrepare(side, name, id)
-    if COMBAT_PREPARE_HERO_ROUTINES[name] then
-        COMBAT_PREPARE_HERO_ROUTINES[name](side, id)
-    -- else
-    --     startThread(NoneRoutine)
-    end
-end
-
 function DoHeroSpeRoutine_CombatStart(side, name, id)
     if COMBAT_START_HERO_ROUTINES[name] then
         COMBAT_START_HERO_ROUTINES[name](side, id)
-    -- else
-    --     startThread(NoneRoutine)
     end
 end
 
 function DoHeroSpeRoutine_CombatTurn(side, name, id)
     if COMBAT_TURN_HERO_ROUTINES[name] then
         COMBAT_TURN_HERO_ROUTINES[name](side, id)
-    -- else
-    --     startThread(NoneRoutine)
     end
 end
 
 function DoHeroSpeRoutine_UnitDied(side, name, id, unit)
     if UNIT_DIED_HERO_ROUTINES[name] then
         UNIT_DIED_HERO_ROUTINES[name](side, id, unit)
-    -- else
-    --     startThread(NoneRoutine)
     end
 end
 

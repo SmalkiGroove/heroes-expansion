@@ -81,33 +81,32 @@ function WatchPlayer(player, wait)
     for _,hero in GetPlayerHeroes(player) do
 		local x,y,z = GetObjectPosition(hero)
 		tracker[hero] = {
-			[0] = GetHeroStat(hero, STAT_MANA_POINTS),
-			[1] = x, [2] = y, [3] = z,
-			[9] = not nil
+			check = not nil,
+			x = x, y = y, z = z,
+			mana = GetHeroStat(hero, STAT_MANA_POINTS),
 		}
     end
     while (IsPlayerCurrent(player)) do
 		for _,hero in GetPlayerHeroes(player) do
-            ScanHeroArtifacts(hero)
-			StoreData(hero)
-			if tracker[hero][9] then
+            -- ScanHeroArtifacts(hero)
+			if tracker[hero].check then
 				if GetHeroStat(hero, STAT_MOVE_POINTS) == 0 then
 					print("Hero "..hero.." has 0 move points")
-					if IsEqualPosition(hero, tracker[hero][1], tracker[hero][2], tracker[hero][3]) then
-						if HasHeroSkill(hero, PERK_MEDITATION) and GetHeroStat(hero, STAT_MANA_POINTS) > tracker[hero][0] then
+					if IsEqualPosition(hero, tracker[hero].x, tracker[hero].y, tracker[hero].z) then
+						if HasHeroSkill(hero, PERK_MEDITATION) and GetHeroStat(hero, STAT_MANA_POINTS) > tracker[hero].mana then
 							print("Hero "..hero.." has used Meditation")
-							local amount = GetHeroStat(hero, STAT_MANA_POINTS) - tracker[hero][0]
+							local amount = GetHeroStat(hero, STAT_MANA_POINTS) - tracker[hero].mana
 							startThread(Routine_MeditationExp, player, hero, amount)
 						else
 							print("Hero "..hero.." has used digging")
 							startThread(ActivateDigging, player, hero)
 						end
-						tracker[hero][9] = nil
+						tracker[hero].check = nil
 					end
 				end
 			end
         end
-		sleep(42)
+		sleep(30)
 	end
 end
 
@@ -206,6 +205,15 @@ function InitializeHeroes()
 	end
 end
 
+for player = 1,8 do
+	if (GetPlayerState(player) == 1) then
+		for i,hero in GetPlayerHeroes(player) do
+			startThread(StoreData, hero)
+		end
+		-- startThread(WatchPlayer, player, 1)
+	end
+end
+
 print("All scripts successfully loaded !")
 
 -- Initializers
@@ -213,28 +221,14 @@ function Init()
 	InitializeHeroes()
 	InitializeMapTowns()
 	InitializeConvertibles()
+	ExecConsoleCommand("@UnblockGame()") UnblockGame()
 	print("Initializers done. The game can start. Have fun !")
 end
 
-function SetupGameData()
-	for player = 1,8 do
-		if (GetPlayerState(player) == 1) then
-			for i,hero in GetPlayerHeroes(player) do
-				startThread(StoreData, hero)
-			end
-			startThread(WatchPlayer, player, 1)
-		end
-	end
-	ExecConsoleCommand("@UnblockGame()") UnblockGame()
-end
-
 -- Script enabler
-if NB_HUMAN == 0 then
+if NB_HUMAN <= 1 then
 	Init()
 else
 	Trigger(OBJECTIVE_STATE_CHANGE_TRIGGER, 'H5X', FIRST_PLAYER, 'Init') sleep()
 	ExecConsoleCommand("@if GetObjectiveState('H5X', FIRST_PLAYER) == OBJECTIVE_UNKNOWN then SetObjectiveState('H5X', OBJECTIVE_ACTIVE, FIRST_PLAYER) end")
 end
-
-sleep(30)
-SetupGameData()

@@ -16,8 +16,8 @@ end
 function HeroLevelUp(hero)
     local level = GetHeroLevel(hero)
     local player = GetObjectOwner(hero)
-    local faction = HEROES[hero].faction
     print("Hero "..hero.." leveled up to level "..level)
+    Register(VarHeroLevel(hero), level)
     startThread(DoHeroSpeRoutine_LevelUp, player, hero, level)
     startThread(DoSkillsRoutine_LevelUp, player, hero, level)
     startThread(DoArtifactsRoutine_LevelUp, player, hero, level)

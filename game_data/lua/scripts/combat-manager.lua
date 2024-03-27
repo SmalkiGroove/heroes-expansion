@@ -2,7 +2,6 @@
 dofile("/scripts/combat/handlers/game-vars.lua")
 
 ENABLE_SCRIPT = 0
-COMBAT_PAUSE = 0
 
 COMBAT_TURN = 0
 CURRENT_UNIT = "none"
@@ -11,6 +10,19 @@ CURRENT_UNIT_SIDE = nil
 THREAD_LIMIT = 50
 THREAD_STATE = 0
 THREAD_FINISHER = THREAD_LIMIT
+
+HERO_DATA = {
+    [ATTACKER] = {
+        Level = 1,
+        Skills = {},
+        ArtfSets = {},
+    },
+    [DEFENDER] = {
+        Level = 1,
+        Skills = {},
+        ArtfSets = {},
+    }
+}
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -27,32 +39,14 @@ end
 function FetchData(name, id)
     print("Fetch data for hero "..name)
     local level = GetGameVar(VarHeroLevel(name))
-    local attack = GetGameVar(VarHeroStatAttack(name))
-    local defense = GetGameVar(VarHeroStatDefense(name))
-    local spellpower = GetGameVar(VarHeroStatSpellpower(name))
-    local knowledge = GetGameVar(VarHeroStatKnowledge(name))
-    local morale = GetGameVar(VarHeroStatMorale(name))
-    local luck = GetGameVar(VarHeroStatLuck(name))
     local shattermagic = GetGameVar(VarHeroSkillId(name,SKILL_SHATTER_MAGIC))
     local houndmasters = GetGameVar(VarHeroSkillId(name,PERK_HOUNDMASTERS))
-    HERO_DATA[id] = {
-        [0] = 0 + level,
-        [1] = 0 + attack,
-        [2] = 0 + defense,
-        [3] = 0 + spellpower,
-        [4] = 0 + knowledge,
-        [5] = 0 + morale,
-        [6] = 0 + luck,
+    HERO_DATA[id].Level = 0 + level
+    HERO_DATA[id].Skills = {
         [SKILL_SHATTER_MAGIC] = 0 + shattermagic,
         [PERK_HOUNDMASTERS] = 0 + houndmasters,
     }
-    print("Lvl "..HERO_DATA[id][0]..
-        " / Att "..HERO_DATA[id][1].." / Def "..HERO_DATA[id][2]..
-        " / Spp "..HERO_DATA[id][3].." / Klg "..HERO_DATA[id][4]..
-        " / Mrl "..HERO_DATA[id][5].." / Lck "..HERO_DATA[id][6]..
-        " // Shatter Magic "..HERO_DATA[id][SKILL_SHATTER_MAGIC]..
-        " // Houndmasters "..HERO_DATA[id][PERK_HOUNDMASTERS]
-    )
+    print("Lvl "..HERO_DATA[id].Level)
 end
 
 function Wait()
@@ -74,13 +68,9 @@ function ManageCombatPrepare()
     DEFENDER_HERO = GetHero(DEFENDER) and GetHeroName(DEFENDER_HERO_ID) or ""
     if ATTACKER_HERO ~= "" then
         FetchData(ATTACKER_HERO, ATTACKER)
-        -- DoSkillRoutine_CombatPrepare(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
-		-- DoHeroSpeRoutine_CombatPrepare(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
     end
     if DEFENDER_HERO ~= "" then
         FetchData(DEFENDER_HERO, DEFENDER)
-		-- DoSkillRoutine_CombatPrepare(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
-		-- DoHeroSpeRoutine_CombatPrepare(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
     end
 end
 
