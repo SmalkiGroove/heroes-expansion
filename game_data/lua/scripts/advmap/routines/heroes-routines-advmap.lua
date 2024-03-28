@@ -167,7 +167,7 @@ end
 
 function Routine_AddHeroDefenders(player, hero)
     print("$ Routine_AddHeroDefenders")
-    local amount = round(0.40 * GetHeroLevel(hero))
+    local amount = trunc(0.3 * GetHeroLevel(hero))
     AddHeroCreatureType(player, hero, {CREATURE_DEFENDER,CREATURE_STOUT_DEFENDER,CREATURE_STONE_DEFENDER}, amount)
 end
 
@@ -175,12 +175,6 @@ function Routine_AddRecruitsBearRiders(player, hero)
     print("$ Routine_AddRecruitsBearRiders")
     local amount = trunc(1.3 * GetHeroLevel(hero))
     AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_BEAR_RIDER, amount)
-end
-
-function Routine_RezSpearwielders(player, hero, combatIndex)
-    print("$ Routine_RezSpearwielders")
-    local max = 5 + trunc(1.5 * GetHeroLevel(hero))
-    ResurrectCreatureType(player, hero, combatIndex, FORTRESS, 2, max)
 end
 
 function Routine_GiveArtifactRingOfMachineAffinity(player, hero)
@@ -794,7 +788,6 @@ AFTER_COMBAT_TRIGGER_HERO_ROUTINES = {
     [H_ELLESHAR] = Routine_AddHeroSpellPower,
     [H_YLTHIN] = Routine_YlthinVictoryCounter,
     -- fortress
-    [H_KARLI] = Routine_RezSpearwielders,
     -- academy
     -- dungeon
     [H_RAELAG] = Routine_GainDragonArtifacts,

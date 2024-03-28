@@ -148,9 +148,16 @@ function Routine_BallistaMoveFirst(side, hero)
     -- ShowFlyingSign("/Text/Game/Scripts/Combat/WorkshopExpert.txt", hero, 9)
 end
 
-function Routine_SkirmishersRandomShoot(side, hero)
-    -- print("Trigger spearwielders random shoot !")
-    RandomShoot_CreatureTypes(side, {CREATURE_AXE_FIGHTER,CREATURE_AXE_THROWER,CREATURE_HARPOONER})
+function Routine_SpearWielderCoordination(side, hero)
+    -- print("Trigger spearwielders coordination !")
+    if CURRENT_UNIT_SIDE == side then
+        if IsCreature(CURRENT_UNIT) then
+            local type = GetCreatureType(CURRENT_UNIT)
+            if type == CREATURE_AXE_FIGHTER or type == CREATURE_AXE_THROWER or type == CREATURE_HARPOONER then
+                HeroCast_Target(hero, SPELL_EFFECT_COORDINATION, NO_COST, CURRENT_UNIT)
+            end
+        end
+    end
 end
 
 function Routine_ThanesAbility(side, hero)
@@ -192,6 +199,23 @@ function Routine_CastEarthquake(side, hero)
     -- HeroCast_Area(hero, SPELL_UBER_METEOR_SHOWER, FREE_MANA, x, r)
     HeroCast_Global(hero, SPELL_EARTHQUAKE, FREE_MANA)
     sleep(600)
+end
+
+function Routine_DwavenDefendOrder(side, hero)
+    -- print("Trigger defend order !")
+    if CURRENT_UNIT_SIDE == side then
+        if IsCreature(CURRENT_UNIT) then
+            local type = GetCreatureType(CURRENT_UNIT)
+            if CREATURES[type][1] == FORTRESS then
+                startThread(Routine_DwavenDefendOrderWait, CURRENT_UNIT)
+            end
+        end
+    end
+end
+
+function Routine_DwavenDefendOrderWait(id)
+    repeat sleep(10) until CURRENT_UNIT ~= id
+    DefendCombatUnit(id)
 end
 
 
@@ -565,7 +589,6 @@ COMBAT_START_HERO_ROUTINES = {
     [H_TIERU] = Routine_SummonDruidStack,
     -- fortress
     [H_WULFSTAN] = Routine_BallistaMoveFirst,
-    [H_KARLI] = Routine_SkirmishersRandomShoot,
     [H_HANGVUL] = Routine_ThanesAbility,
     [H_BRAND] = Routine_CastFireWalls,
     [H_ERLING] = Routine_RunePriestsMoveFirst,
@@ -601,6 +624,8 @@ COMBAT_TURN_HERO_ROUTINES = {
     [H_JENOVA] = Routine_HeroMoveNext,
     [H_TIERU] = Routine_DruidsMoveNext,
     -- fortress
+    [H_KARLI] = Routine_SpearWielderCoordination,
+    [H_HEDWIG] = Routine_DwavenDefendOrder,
     -- academy
     [H_NATHIR] = Routine_BallistaMoveNext,
     [H_RISSA] = Routine_TimeShift,
