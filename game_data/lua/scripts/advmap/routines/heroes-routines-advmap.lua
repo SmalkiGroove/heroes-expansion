@@ -26,7 +26,8 @@ end
 
 function Routine_AddRecruitsPeasants(player, hero)
     print("$ Routine_AddRecruitsPeasants")
-    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_1, CREATURE_PEASANT, 4.5)
+    local amount = trunc(4.2 * GetHeroLevel(hero))
+    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_1, CREATURE_PEASANT, amount)
 end
 
 Var_Dougal_TrainCount = 0
@@ -172,7 +173,8 @@ end
 
 function Routine_AddRecruitsBearRiders(player, hero)
     print("$ Routine_AddRecruitsBearRiders")
-    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_BEAR_RIDER, 1.5)
+    local amount = trunc(1.3 * GetHeroLevel(hero))
+    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_BEAR_RIDER, amount)
 end
 
 function Routine_RezSpearwielders(player, hero, combatIndex)
@@ -186,9 +188,71 @@ function Routine_GiveArtifactRingOfMachineAffinity(player, hero)
     GiveArtifact(hero, ARTIFACT_RING_OF_MACHINE_AFFINITY, 1)
 end
 
-function Routine_UpgradeRunePriests(player, hero)
-    print("$ Routine_UpgradeRunePriests")
-    UpgradeHeroCreatures(player, hero, CREATURE_RUNE_MAGE, CREATURE_FLAME_MAGE)
+function Routine_GarnisonDwarvenWorkers(player, hero)
+    print("$ Routine_GarnisonDwarvenWorkers")
+    local level = GetHeroLevel(hero)
+    local amount1 = 1 + level
+    local amount2 = trunc(0.4 * level)
+    local amount4 = trunc(0.1 * level)
+    for obj,_ in RESOURCE_GENERATING_OBJECTS do
+        for _,building in GetObjectNamesByType(obj) do
+            if GetObjectOwner(building) == player then
+                if amount1 > 0 then AddObjectCreatures(building, CREATURE_DEFENDER, amount1) end
+                if amount2 > 0 then AddObjectCreatures(building, CREATURE_AXE_FIGHTER, amount2) end
+                if amount4 > 0 then AddObjectCreatures(building, CREATURE_BEAR_RIDER, amount4) end
+            end
+        end
+    end
+end
+
+function Routine_ProductionIncreaseDwarvenWorkers(player, hero)
+    print("$ Routine_ProductionIncreaseDwarvenWorkers")
+    for obj,data in RESOURCE_GENERATING_OBJECTS do
+        for _,building in GetObjectNamesByType(obj) do
+            if GetObjectOwner(building) == player then
+                local work = 0
+                work = work + GetObjectCreatures(building, CREATURE_DEFENDER)
+                work = work + GetObjectCreatures(building, CREATURE_STONE_DEFENDER)
+                work = work + GetObjectCreatures(building, CREATURE_STOUT_DEFENDER)
+                work = work + 2 * GetObjectCreatures(building, CREATURE_AXE_FIGHTER)
+                work = work + 2 * GetObjectCreatures(building, CREATURE_AXE_THROWER)
+                work = work + 2 * GetObjectCreatures(building, CREATURE_HARPOONER)
+                work = work + 5 * GetObjectCreatures(building, CREATURE_BEAR_RIDER)
+                work = work + 5 * GetObjectCreatures(building, CREATURE_BLACKBEAR_RIDER)
+                work = work + 5 * GetObjectCreatures(building, CREATURE_WHITE_BEAR_RIDER)
+                local bonus = trunc(data.amount * work * 0.002)
+                if bonus > 0 then AddPlayerResource(player, hero, data.type, bonus) end
+            end
+        end
+    end
+end
+
+function Routine_RunePriestDwellingUp(player, hero)
+    print("$ Routine_RunePriestDwellingUp")
+    for town,data in MAP_TOWNS do
+        if data.faction == FORTRESS then
+            if IsHeroInTown(hero, town, 1, 0) then
+                local dw = GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_5)
+                if dw < 2 then
+                    local discount = 1 - 0.05 * GetHeroLevel(hero)
+                    local cost = trunc((10000 + dw * 7500) * discount)
+                    local name_file = {"Name.txt","Upgraded_Name.txt"}
+                    local name = "/Text/Game/TownBuildings/Dwarves/Dwelling_5/"..name_file[dw+1]
+                    QuestionBoxForPlayers(
+                        GetPlayerFilter(player),
+                        {"/Text/Game/Scripts/HeroSpe/RunePriestDwelling.txt"; building=name, golds=cost},
+                        "Routine_RunePriestDwellingUpConfirm('"..player.."','"..hero.."','"..town.."','"..TOWN_BUILDING_DWELLING_5.."','"..cost.."')",
+                        "NoneRoutine"
+                    )
+                end
+            end
+        end
+    end
+end
+
+function Routine_RunePriestDwellingUpConfirm(player, hero, town, building, cost)
+    UpgradeTownBuilding(town, building)
+    RemovePlayerResource(player, GOLD, 0+cost)
 end
 
 function Routine_AddLuckAndMorale(player, hero)
@@ -261,7 +325,17 @@ end
 
 function Routine_AddRecruitsRakshasas(player, hero)
     print("$ Routine_AddRecruitsRakshasas")
-    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_6, CREATURE_RAKSHASA, 0.2)
+    for i,town in GetHeroTowns(player, hero) do
+        if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_6) ~= 0 then
+            local fort = GetTownBuildingLevel(town, TOWN_BUILDING_FORT)
+            local grail = GetTownBuildingLevel(town, TOWN_BUILDING_GRAIL)
+            local multiplier = 1 + 0.5 * grail
+            if fort > 1 then multiplier = multiplier + 0.5 * (fort-1) end
+            local nb = round(3 * multiplier)
+            local current = GetObjectDwellingCreatures(town, CREATURE_RAKSHASA)
+            SetObjectDwellingCreatures(town, CREATURE_RAKSHASA, current + nb)
+        end
+    end
 end
 
 function Routine_ActivateArtfsetNecro(player, hero)
@@ -408,7 +482,9 @@ end
 
 function Routine_HeroCallVampires(player, hero)
     print("$ Routine_HeroCallVampires")
-    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_VAMPIRE, 0.8)
+    local amount = trunc(0.7 * GetHeroLevel(hero))
+    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_6, CREATURE_RAKSHASA, 0.2)
+    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_VAMPIRE, amount)
     sleep(10)
     TransferCreatureFromTown(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_NOSFERATU, 1.2)
 end
@@ -432,9 +508,12 @@ end
 
 function Routine_AddRecruitsNecropolis(player, hero)
     print("$ Routine_AddRecruitsNecropolis")
-    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_1, CREATURE_SKELETON, 2.5)
-    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_2, CREATURE_WALKING_DEAD, 1.25)
-    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_3, CREATURE_MANES, 0.5)
+    local amount1 = trunc(2.5 * GetHeroLevel(hero))
+    local amount2 = trunc(1.3 * GetHeroLevel(hero))
+    local amount3 = trunc(0.5 * GetHeroLevel(hero))
+    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_1, CREATURE_SKELETON, amount1)
+    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_2, CREATURE_WALKING_DEAD, amount2)
+    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_3, CREATURE_MANES, amount3)
 end
 
 function Routine_AddHeroMummies(player, hero)
@@ -571,7 +650,8 @@ end
 
 function Routine_AddRecruitsCentaurs(player, hero)
     print("$ Routine_AddRecruitsCentaurs")
-    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_CENTAUR, 0.75)
+    local amount = trunc(0.75 * GetHeroLevel(hero))
+    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_CENTAUR, amount)
 end
 
 Var_Gorshak_BattleWon = 0
@@ -598,7 +678,8 @@ end
 
 function Routine_AddRecruitsShamans(player, hero)
     print("$ Routine_AddRecruitsShamans")
-    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_2, CREATURE_SHAMAN, 2.4)
+    local amount = trunc(2.3 * GetHeroLevel(hero))
+    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_2, CREATURE_SHAMAN, amount)
 end
 
 
@@ -637,7 +718,8 @@ DAILY_TRIGGER_HERO_ROUTINES = {
     -- preserve
     -- fortress
     [H_INGVAR] = Routine_AddHeroDefenders,
-    [H_ERLING] = Routine_UpgradeRunePriests,
+    [H_HANGVUL] = Routine_ProductionIncreaseDwarvenWorkers,
+    [H_ERLING] = Routine_RunePriestDwellingUp,
     -- academy
     [H_HAVEZ] = Routine_AddOtherHeroesGremlins,
     [H_CYRUS] = Routine_UpgradeMages,
@@ -666,6 +748,7 @@ WEEKLY_TRIGGER_HERO_ROUTINES = {
     [H_YLTHIN] = Routine_HeroCallUnicorns,
     -- fortress
     [H_ROLF] = Routine_AddRecruitsBearRiders,
+    [H_HANGVUL] = Routine_GarnisonDwarvenWorkers,
     [H_EBBA] = Routine_GenerateCrystalsAndGems,
     -- academy
     [H_RAZZAK] = Routine_AssembleGargoyles,

@@ -303,11 +303,9 @@ function AddHeroCreatureType(player, hero, types, nb)
 	end
 end
 
-function AddHeroTownRecruits(player, hero, dwelling, creature, coef)
+function AddHeroTownRecruits(player, hero, dwelling, creature, nb)
 	print("AddHeroTownRecruits")
-	local level = GetHeroLevel(hero)
 	local towns = GetHeroTowns(player, hero)
-	local nb = round(coef * level)
 	if nb >= 1 then
 		for i,town in towns do
 			if GetTownBuildingLevel(town, dwelling) ~= 0 then

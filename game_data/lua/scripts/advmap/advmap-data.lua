@@ -45,14 +45,14 @@ COMBAT_TRIGGERING_OBJECTS = {
 }
 
 RESOURCE_GENERATING_OBJECTS = {
-    "BUILDING_SAWMILL",
-    "BUILDING_ORE_PIT",
-    "BUILDING_ALCHEMIST_LAB",
-    "BUILDING_CRYSTAL_CAVERN",
-    "BUILDING_SULFUR_DUNE",
-    "BUILDING_GEM_POND",
-    "BUILDING_GOLD_MINE",
-    "BUILDING_ABANDONED_MINE",
+    ["BUILDING_SAWMILL"]        = {type=WOOD, amount=2},
+    ["BUILDING_ORE_PIT"]        = {type=ORE, amount=2},
+    ["BUILDING_ALCHEMIST_LAB"]  = {type=MERCURY, amount=1},
+    ["BUILDING_CRYSTAL_CAVERN"] = {type=CRYSTAL, amount=1},
+    ["BUILDING_SULFUR_DUNE"]    = {type=SULFUR, amount=1},
+    ["BUILDING_GEM_POND"]       = {type=GEM, amount=1},
+    ["BUILDING_GOLD_MINE"]      = {type=GOLD, amount=1000},
+    ["BUILDING_ABANDONED_MINE"] = {type=GOLD, amount=500},
 }
 
 

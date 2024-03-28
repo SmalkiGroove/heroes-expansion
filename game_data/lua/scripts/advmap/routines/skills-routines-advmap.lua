@@ -424,8 +424,8 @@ end
 function Routine_HauntingWeeklyGhosts(player, hero, mastery)
     print("$ Routine_HauntingWeeklyGhosts")
     local amount = 6 + 3 * WEEK
-    for _,type in RESOURCE_GENERATING_OBJECTS do
-        for _,building in GetObjectNamesByType(type) do
+    for obj,_ in RESOURCE_GENERATING_OBJECTS do
+        for _,building in GetObjectNamesByType(obj) do
             if GetObjectOwner(building) == player then
                 AddObjectCreatures(building, CREATURE_MANES, amount)
             end
