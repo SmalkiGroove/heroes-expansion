@@ -125,8 +125,8 @@ function Routine_KyrreVictoryCounter(player, hero, combatIndex)
     Var_Kyrre_BattleWon = Var_Kyrre_BattleWon + 1
 end
 
-function Routine_RezHunters(player, hero, combatIndex)
-    print("$ Routine_RezHunters")
+function Routine_ReviveHunters(player, hero, combatIndex)
+    print("$ Routine_ReviveHunters")
     local max = 3 + GetHeroLevel(hero)
     ResurrectCreatureType(player, hero, combatIndex, PRESERVE, 3, max)
 end
@@ -171,10 +171,28 @@ function Routine_AddHeroDefenders(player, hero)
     AddHeroCreatureType(player, hero, {CREATURE_DEFENDER,CREATURE_STOUT_DEFENDER,CREATURE_STONE_DEFENDER}, amount)
 end
 
-function Routine_AddRecruitsBearRiders(player, hero)
-    print("$ Routine_AddRecruitsBearRiders")
-    local amount = trunc(1.3 * GetHeroLevel(hero))
-    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_BEAR_RIDER, amount)
+function Routine_MovePointsPerBear(player, hero)
+    print("$ Routine_MovePointsPerBear")
+    local movement = GetHeroStat(hero, STAT_MOVE_POINTS)
+    local n = 0
+    n = n + GetHeroCreatures(hero, CREATURE_BEAR_RIDER)
+    n = n + GetHeroCreatures(hero, CREATURE_BLACKBEAR_RIDER)
+    n = n + GetHeroCreatures(hero, CREATURE_WHITE_BEAR_RIDER)
+    while n > 0 do
+        sleep(2)
+        if not IsPlayerCurrent(player) then break end
+        local m = GetHeroStat(hero, STAT_MOVE_POINTS) + 10
+        if m <= movement then
+            ChangeHeroStat(hero, STAT_MOVE_POINTS, 10)
+            n = n - 1
+        end
+    end
+end
+
+function Routine_ReviveBearRiders(player, hero, combatIndex)
+    print("$ Routine_ReviveBearRiders")
+    local max = 2 + trunc(0.66 * GetHeroLevel(hero))
+    ResurrectCreatureType(player, hero, combatIndex, FORTRESS, 4, max)
 end
 
 function Routine_GiveArtifactRingOfMachineAffinity(player, hero)
@@ -258,6 +276,20 @@ end
 function Routine_GiveArtifactRuneOfFlame(player, hero)
     print("$ Routine_GiveArtifactRuneOfFlame")
     GiveArtifact(hero, ARTIFACT_RUNE_OF_FLAME, 1)
+end
+
+Var_Ebba_SpellpowerBonus = 0
+function Routine_GainSpellpowerPerRune(player, hero)
+    print("$ Routine_GainSpellpowerPerRune")
+    local n = 0
+    for rune = SPELL_RUNE_OF_CHARGE,SPELL_RUNE_OF_DRAGONFORM do
+        if KnowHeroSpell(hero, rune) then n = n+1 end
+    end
+    local diff = n - Var_Ebba_SpellpowerBonus
+    if diff ~= 0 then
+        AddHeroStatAmount(player, hero, STAT_SPELL_POWER, diff)
+        Var_Ebba_SpellpowerBonus = n
+    end
 end
 
 function Routine_GenerateCrystalsAndGems(player, hero)
@@ -554,8 +586,8 @@ function Routine_ActivateArtfsetHunter(player, hero)
     GiveArtifact(hero, 233, 1)
 end
 
-function Routine_RezSuccubus(player, hero, combatIndex)
-    print("$ Routine_RezSuccubus")
+function Routine_ReviveSuccubus(player, hero, combatIndex)
+    print("$ Routine_ReviveSuccubus")
     local max = 2 + trunc(0.66 * GetHeroLevel(hero))
     ResurrectCreatureType(player, hero, combatIndex, INFERNO, 4, max)
 end
@@ -712,8 +744,10 @@ DAILY_TRIGGER_HERO_ROUTINES = {
     -- preserve
     -- fortress
     [H_INGVAR] = Routine_AddHeroDefenders,
+    [H_ROLF] = Routine_MovePointsPerBear,
     [H_HANGVUL] = Routine_ProductionIncreaseDwarvenWorkers,
     [H_ERLING] = Routine_RunePriestDwellingUp,
+    [H_EBBA] = Routine_GainSpellpowerPerRune,
     -- academy
     [H_HAVEZ] = Routine_AddOtherHeroesGremlins,
     [H_CYRUS] = Routine_UpgradeMages,
@@ -741,7 +775,6 @@ WEEKLY_TRIGGER_HERO_ROUTINES = {
     [H_IVOR] = Routine_AddHeroWolves,
     [H_YLTHIN] = Routine_HeroCallUnicorns,
     -- fortress
-    [H_ROLF] = Routine_AddRecruitsBearRiders,
     [H_HANGVUL] = Routine_GarnisonDwarvenWorkers,
     [H_EBBA] = Routine_GenerateCrystalsAndGems,
     -- academy
@@ -784,17 +817,18 @@ AFTER_COMBAT_TRIGGER_HERO_ROUTINES = {
     -- haven
     -- preserve
     [H_KYRRE] = Routine_KyrreVictoryCounter,
-    [H_FINDAN] = Routine_RezHunters,
+    [H_FINDAN] = Routine_ReviveHunters,
     [H_ELLESHAR] = Routine_AddHeroSpellPower,
     [H_YLTHIN] = Routine_YlthinVictoryCounter,
     -- fortress
+    [H_ROLF] = Routine_ReviveBearRiders,
     -- academy
     -- dungeon
     [H_RAELAG] = Routine_GainDragonArtifacts,
     -- necropolis
     [H_XERXON] = Routine_EvolveBlackKnights,
     -- inferno
-    [H_BIARA] = Routine_RezSuccubus,
+    [H_BIARA] = Routine_ReviveSuccubus,
     [H_ORLANDO] = Routine_GainBonusExpAndRes,
     -- stronghold
     [H_GORSHAK] = Routine_GainAttackDefense,
