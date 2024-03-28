@@ -193,8 +193,8 @@ end
 
 function Routine_AddLuckAndMorale(player, hero)
     print("$ Routine_AddLuckAndMorale")
-    ChangeHeroStat(hero, STAT_LUCK, 2)
-    ChangeHeroStat(hero, STAT_MORALE, 2)
+    ChangeHeroStat(hero, STAT_LUCK, 1)
+    ChangeHeroStat(hero, STAT_MORALE, 1)
 end
 
 function Routine_GiveArtifactRuneOfFlame(player, hero)

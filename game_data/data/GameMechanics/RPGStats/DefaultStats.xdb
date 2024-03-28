@@ -1608,6 +1608,56 @@
 						</Item>
 						
 
+						<Item><Creature>CREATURE_RAKSHASA</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>10</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>10</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>3</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>3</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>10</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>3</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>3</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_BLADE_OF_SLAUGHTER</Item></Abilities></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_RAKSHASA_RUKH</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>10</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>10</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>3</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>3</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>10</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>3</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>3</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_BLADE_OF_SLAUGHTER</Item></Abilities></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_RAKSHASA_KSHATRI</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>10</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>10</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>3</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>3</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>10</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>3</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>3</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_BLADE_OF_SLAUGHTER</Item></Abilities></Item>
+							</Bonus3>
+						</Item>
+						
+
 						<Item><Creature>CREATURE_WOLF</Creature>
 							<Bonus1>
 								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>2</IntParam></Item>

@@ -25,6 +25,7 @@ end
 
 function Routine_ArchersMoveFirst(side, hero)
     -- print("Trigger archers atb boost !")
+    SetATB_ID(CURRENT_UNIT, ATB_NEXT)
     SetATB_CreatureTypes(side, {CREATURE_ARCHER,CREATURE_MARKSMAN,CREATURE_LONGBOWMAN}, ATB_INSTANT)
 end
 
@@ -35,6 +36,7 @@ function Routine_InfantryDash(side, hero)
         local type = GetCreatureType(cr)
         if type == CREATURE_FOOTMAN or type == CREATURE_SWORDSMAN or type == CREATURE_VINDICATOR then
             UseCombatAbility(cr, SPELL_ABILITY_DASH)
+            SetATB_ID(cr, ATB_HALF)
         end
     end
 end
@@ -105,6 +107,7 @@ end
 function Routine_HunterRandomShoot(side, hero)
     -- print("Trigger hunters random shoot !")
     RandomShoot_CreatureTypes(side, {CREATURE_WOOD_ELF,CREATURE_GRAND_ELF,CREATURE_SHARP_SHOOTER})
+    SetATB_CreatureTypes(side, {CREATURE_WOOD_ELF,CREATURE_GRAND_ELF,CREATURE_SHARP_SHOOTER}, 0.25)
 end
 
 function Routine_CastSummonHive(side, hero)
@@ -157,10 +160,12 @@ function Routine_ThanesAbility(side, hero)
         if GetCreatureType(cr) == CREATURE_WARLORD then
             local x,y = GetUnitPosition(RandomCreature(1-side, i))
             UseCombatAbility(cr, SPELL_ABILITY_FLAMESTRIKE, x, y)
+            SetATB_ID(cr, ATB_HALF)
             sleep(100)
         elseif GetCreatureType(cr) == CREATURE_THUNDER_THANE then
             local x,y = GetUnitPosition(RandomCreature(1-side, i))
             UseCombatAbility(cr, SPELL_ABILITY_STORMBOLT, x, y)
+            SetATB_ID(cr, ATB_HALF)
             sleep(100)
         end
     end
@@ -201,6 +206,7 @@ function Routine_RakshasasAbility(side, hero)
         local type = GetCreatureType(cr)
         if type == CREATURE_RAKSHASA or type == CREATURE_RAKSHASA_RUKH or type == CREATURE_RAKSHASA_KSHATRI then
             UseCombatAbility(cr, SPELL_ABILITY_DASH)
+            SetATB_ID(cr, ATB_HALF)
         end
     end
 end
@@ -225,6 +231,7 @@ end
 function Routine_MagesCastMagicFist(side, hero)
     -- print("Trigger mages magic fist !")
     CreatureTypesCast_RandomTarget(side, 1-side, {CREATURE_MAGI,CREATURE_ARCH_MAGI,CREATURE_COMBAT_MAGE}, SPELL_MAGIC_FIST)
+    SetATB_CreatureTypes(side, {CREATURE_MAGI,CREATURE_ARCH_MAGI,CREATURE_COMBAT_MAGE}, 0.25)
 end
 
 function Routine_CastSummonElementals(side, hero)

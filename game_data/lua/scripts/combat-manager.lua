@@ -1,7 +1,7 @@
 
 dofile("/scripts/combat/handlers/game-vars.lua")
 
-ENABLE_SCRIPT = 0
+ENABLE_SCRIPT = 1
 
 COMBAT_TURN = 0
 CURRENT_UNIT = "none"
@@ -64,6 +64,7 @@ function ManageCombatPrepare()
     -- CheckEnableScript()
     if ENABLE_SCRIPT == 0 then return end
 
+    combatSetPause(1)
     ATTACKER_HERO = GetHero(ATTACKER) and GetHeroName(ATTACKER_HERO_ID) or ""
     DEFENDER_HERO = GetHero(DEFENDER) and GetHeroName(DEFENDER_HERO_ID) or ""
     if ATTACKER_HERO ~= "" then
