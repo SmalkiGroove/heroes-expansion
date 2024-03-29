@@ -20,15 +20,18 @@ function Routine_AbilityMagneticField()
     local distance = 1000
     local target = {0,0}
     for i,cr in GetUnits(1-CURRENT_UNIT_SIDE, CREATURE) do
-        local xx,yy = GetUnitPosition(cr)
-        local dx = x-xx
-        local dy = y-yy
-        local d = dx*dx + dy*dy
-        if d < distance then
-            unit = cr
-            distance = d
-            if 2*dx*dx >= dy*dy then target[1] = xx+sign(dx) else target[1] = xx end
-            if 2*dy*dy >= dx*dx then target[2] = yy+sign(dy) else target[2] = yy end
+        local type = GetCreatureType(cr)
+        if CREATURES[type][2] <= 3 then
+            local xx,yy = GetUnitPosition(cr)
+            local dx = x-xx
+            local dy = y-yy
+            local d = dx*dx + dy*dy
+            if d < distance then
+                unit = cr
+                distance = d
+                if 2*dx*dx >= dy*dy then target[1] = xx+sign(dx) else target[1] = xx end
+                if 2*dy*dy >= dx*dx then target[2] = yy+sign(dy) else target[2] = yy end
+            end
         end
     end
     if distance > 2 then

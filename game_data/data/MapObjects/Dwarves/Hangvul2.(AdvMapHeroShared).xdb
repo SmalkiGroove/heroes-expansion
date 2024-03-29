@@ -29,7 +29,7 @@
 	<FlyPassable>true</FlyPassable>
 	<AdventureSoundEffect/>
 	<RazedStatic/>
-	<Icon128 href="/UI/H5A1/Icons/Heroes/Portrets128x128/Hangvul.(Texture).xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Icons/Heroes/Fortress/Fortress_Hangvul2_128x128.(Texture).xdb#xpointer(/Texture)"/>
 	<InternalName>Hangvul2</InternalName>
 	<Class>HERO_CLASS_FORTRESS_MIGHT</Class>
 	<Specialization/>
@@ -39,8 +39,8 @@
 	</PrimarySkill>
 	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Fortress/Hangvul/Name.txt"/>
 	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Fortress/Hangvul/Description.txt"/>
-	<SpecializationIcon href="/UI/H5A1/Icons/Heroes/Portrets128x128/Hangvul.(Texture).xdb#xpointer(/Texture)"/>
-	<FaceTexture href="/UI/H5A1/Icons/Heroes/Portrets128x128/Hangvul.(Texture).xdb#xpointer(/Texture)"/>
+	<SpecializationIcon href="/Textures/Icons/Heroes/Fortress/Fortress_Hangvul2_128x128.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTexture href="/Textures/Icons/Heroes/Fortress/Fortress_Hangvul2_128x128.(Texture).xdb#xpointer(/Texture)"/>
 	<FaceTextureSmall/>
 	<HeroCharacterArena href="/Characters/Heroes/DS/Hungvul_DS_U.(Character).xdb#xpointer(/Character)"/>
 	<HeroCharacterArenaMelee href="/Characters/Heroes/RuneMage.(Character).xdb#xpointer(/Character)"/>
@@ -49,8 +49,8 @@
 	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Rolf.xdb#xpointer(/CreatureVisual)"/>
 	<TownType>TOWN_FORTRESS</TownType>
 	<Editable>
-		<NameFileRef href="/Text/Game/Heroes/Persons/Dwarves/Uland/Name.txt"/>
-		<BiographyFileRef href="/Text/Game/Heroes/Persons/Dwarves/Uland/Bio.txt"/>
+		<NameFileRef href="/Text/Game/Heroes/Persons/Dwarves/Hangvul/Name.txt"/>
+		<BiographyFileRef href="/Text/Game/Heroes/Persons/Dwarves/Hangvul/Bio.txt"/>
 		<Offence>1</Offence>
 		<Defence>1</Defence>
 		<Spellpower>1</Spellpower>

@@ -191,7 +191,7 @@ end
 
 function Routine_RunePriestsMoveFirst(side, hero)
     -- print("Trigger rune priests play first !")
-    SetATB_CreatureTypes(side, {CREATURE_RUNE_MAGE,CREATURE_FLAME_MAGECREATURE_FLAME_KEEPER}, ATB_INSTANT)
+    SetATB_CreatureTypes(side, {CREATURE_RUNE_MAGE,CREATURE_FLAME_MAGE,CREATURE_FLAME_KEEPER}, ATB_INSTANT)
 end
 
 function Routine_CastEarthquake(side, hero)

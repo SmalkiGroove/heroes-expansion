@@ -356,8 +356,8 @@
 				<ShieldWall_DamageReducePerPathCell>0.1</ShieldWall_DamageReducePerPathCell>
 				<ShieldWall_MaxDamageReduce>0.75</ShieldWall_MaxDamageReduce>
 				<Wound_EffectDurationInRounds>2</Wound_EffectDurationInRounds>
-				<Wound_SpeedDecrease>0.5</Wound_SpeedDecrease>
-				<Wound_InitiativeDecrease>0.5</Wound_InitiativeDecrease>
+				<Wound_SpeedDecrease>0.3</Wound_SpeedDecrease>
+				<Wound_InitiativeDecrease>0.3</Wound_InitiativeDecrease>
 				<Wound_ProcFactor>1.5</Wound_ProcFactor>
 				<MarkOfFire_EffectDurationInRounds>3</MarkOfFire_EffectDurationInRounds>
 				<MarkOfFire_FireDamageMultiplier>2</MarkOfFire_FireDamageMultiplier>
@@ -371,7 +371,7 @@
 				<BearRoar_MoraleBonus>0</BearRoar_MoraleBonus>
 				<BearRoar_HealthBonus>0.1</BearRoar_HealthBonus>
 				<BearRoar_ProcFactor>2</BearRoar_ProcFactor>
-				<HarpoonStrike_DamageBonus>1.05</HarpoonStrike_DamageBonus>
+				<HarpoonStrike_DamageBonus>0.05</HarpoonStrike_DamageBonus>
 				<HarpoonStrike_WorksOnLargeCreatures>false</HarpoonStrike_WorksOnLargeCreatures>
 				<LiquidFlameBreath_DamagePerCreature>25</LiquidFlameBreath_DamagePerCreature>
 				<LiquidFlameBreath_MinDuration>3</LiquidFlameBreath_MinDuration>
@@ -383,7 +383,7 @@
 				<FlameWave_WaveLength>5</FlameWave_WaveLength>
 				<FlameWave_ProcFactor>2.5</FlameWave_ProcFactor>
 				<FlameWave_WaveSpeed>15</FlameWave_WaveSpeed>
-				<Flamestrike_DamageMultipiler>0.8</Flamestrike_DamageMultipiler>
+				<Flamestrike_DamageMultipiler>1.5</Flamestrike_DamageMultipiler>
 				<PawStrike_ProcFactor>1.5</PawStrike_ProcFactor>
 			</Fortress>
 			<Neutral>
