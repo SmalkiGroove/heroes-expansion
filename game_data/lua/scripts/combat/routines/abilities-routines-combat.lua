@@ -34,7 +34,7 @@ function Routine_AbilityMagneticField()
             end
         end
     end
-    if distance > 2 then
+    if unit ~= "none" and distance > 2 then
         SetCombatPosition(unit, target[1], target[2])
     end
 end
