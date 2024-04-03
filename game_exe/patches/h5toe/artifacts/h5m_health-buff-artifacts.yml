@@ -1,0 +1,23 @@
+# Hooks health function so new artifacts, skills and abilities can be added. Current changes:
+# - Added artifact ID 110 to increase HP by 1
+# - Added artifact ID 198 to increase HP by 1
+# - Added artifact ID 169 to increase HP by 3
+edits:
+  - name: Jump from health function to added code
+    address: '000BB8F4'
+    size: 6
+    type: hex
+    original: '8B 4B 1C 8D 2C 47'
+    modified: 'E9 27 B1 C7 00 90'
+  - name: Add ASCII description
+    address: '00BDA600'
+    size: 32
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+    modified: '3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 4D 4F 44 20 68 65 61 6C 74 68 20 66 75 6E 63 74'
+  - name: Added code
+    address: '00BDA620'
+    size: 86
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+    modified: '8D 2C 47 8B 06 68 6E 00 00 00 89 F1 FF 50 74 89 C1 E8 4A F0 B6 FF 84 C0 74 03 83 C5 01 8B 06 6A C6 89 F1 FF 50 74 89 C1 E8 33 F0 B6 FF 84 C0 74 03 83 C5 01 8B 06 68 A9 00 00 00 89 F1 FF 50 74 89 C1 E8 19 F0 B6 FF 84 C0 74 03 83 C5 03 8B 4B 1C E9 84 4E 38 FF'
