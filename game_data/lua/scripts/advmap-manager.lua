@@ -88,7 +88,7 @@ function WatchPlayer(player, wait)
     end
     while (IsPlayerCurrent(player)) do
 		for _,hero in GetPlayerHeroes(player) do
-            -- ScanHeroArtifacts(hero)
+            ScanHeroArtifacts(hero)
 			if tracker[hero].check then
 				if GetHeroStat(hero, STAT_MOVE_POINTS) == 0 then
 					print("Hero "..hero.." has 0 move points")

@@ -212,6 +212,54 @@ function Routine_CheckLastStand(player, hero, mastery)
     end
 end
 
+function Routine_GearUp(player, hero, mastery)
+    print("$ Routine_GearUp")
+    if mastery > HERO_SKILL_BONUSES[hero][SKILLBONUS_GEAR_UP] then
+        local faction = HEROES[hero].faction
+        local minors = {}
+        for _,a in ARTIFACT_SETS[faction] do
+            if ARTIFACTS_DATA[a].special == 0 and ARTIFACTS_DATA[a].class == ARTIFACT_CLASS_MINOR then
+                insert(minors, a)
+            end
+        end
+        local artifact = minors[random(1, length(minors), TURN)]
+        GiveArtifact(hero, artifact)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_GEAR_UP] = 1
+    end
+end
+
+function Routine_HeroesLegacy(player, hero, mastery)
+    print("$ Routine_HeroesLegacy")
+    if mastery > HERO_SKILL_BONUSES[hero][SKILLBONUS_HEROES_LEGACY] then
+        local faction = HEROES[hero].faction
+        local majors = {}
+        for _,a in ARTIFACT_SETS[faction] do
+            if ARTIFACTS_DATA[a].special == 0 and ARTIFACTS_DATA[a].class == ARTIFACT_CLASS_MINOR then
+                insert(majors, a)
+            end
+        end
+        local artifact = majors[random(1, length(majors), TURN)]
+        GiveArtifact(hero, artifact)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_HEROES_LEGACY] = 1
+    end
+end
+
+function Routine_Mythology(player, hero, mastery)
+    print("$ Routine_Mythology")
+    if mastery > HERO_SKILL_BONUSES[hero][SKILLBONUS_MYTHOLOGY] then
+        local faction = HEROES[hero].faction
+        local relics = {}
+        for _,a in ARTIFACT_SETS[faction] do
+            if ARTIFACTS_DATA[a].special == 0 and ARTIFACTS_DATA[a].class == ARTIFACT_CLASS_MINOR then
+                insert(relics, a)
+            end
+        end
+        local artifact = relics[random(1, length(relics), TURN)]
+        GiveArtifact(hero, artifact)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_MYTHOLOGY] = 1
+    end
+end
+
 function Routine_CheckBattleCommander(player, hero, mastery)
     print("$ Routine_CheckBattleCommander")
     local value = mastery
@@ -327,8 +375,11 @@ end
 
 function Routine_OnslaughtBuff(player, hero, mastery)
     print("$ Routine_OnslaughtBuff")
-    GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_INITIATIVE, 2)
-    GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_SPEED, 1)
+    if HERO_SKILL_BONUSES[hero][SKILLBONUS_ONSLAUGHT] == 0 then
+        GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_INITIATIVE, 2)
+        GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_SPEED, 1)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_ONSLAUGHT] = 1
+    end
 end
 
 function Routine_HeraldOfDeathGolds(player, hero, mastery)
@@ -520,6 +571,11 @@ function Routine_GetWiserBonusExp(player, hero, mastery, combatIndex)
     AddHeroStatAmount(player, hero, STAT_EXPERIENCE, exp)
 end
 
+function Routine_OnslaughtReset(player, hero, mastery, combatIndex)
+    print("$ Routine_OnslaughtReset")
+    HERO_SKILL_BONUSES[hero][SKILLBONUS_ONSLAUGHT] = 0
+end
+
 
 
 function Routine_MeditationExp(player, hero, amount)
@@ -550,6 +606,9 @@ START_TRIGGER_SKILLS_ROUTINES = {
     [PERK_GET_WISER] = Routine_CheckGetWiser,
     [PERK_ONSLAUGHT] = Routine_OnslaughtBuff,
     [PERK_LAST_STAND] = Routine_CheckLastStand,
+    [PERK_GEAR_UP] = Routine_GearUp,
+    [PERK_HEROES_LEGACY] = Routine_HeroesLegacy,
+    [PERK_MYTHOLOGY] = Routine_Mythology,
     [PERK_BATTLE_COMMANDER] = Routine_CheckBattleCommander,
     [PERK_KNOW_YOUR_ENEMY] = Routine_CheckKnowYourEnemy,
     [PERK_FINE_RUNE] = Routine_CheckFineRune,
@@ -597,6 +656,7 @@ AFTER_COMBAT_TRIGGER_SKILLS_ROUTINES = {
     [SKILL_LEADERSHIP] = Routine_LeadershipAfterBattle,
     [PERK_TALETELLERS] = Routine_TaleTellers,
     [PERK_GET_WISER] = Routine_GetWiserBonusExp,
+    [PERK_ONSLAUGHT] = Routine_OnslaughtReset,
     [PERK_STAMINA] = Routine_StaminaBuff,
 }
 

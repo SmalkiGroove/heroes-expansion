@@ -38,6 +38,7 @@ end
 
 function Routine_TrainPeasantsToArchersCheck(player, hero)
     print("$ Routine_TrainPeasantsToArchersCheck")
+    if PLAYER_BRAIN[player] ~= HUMAN then return end
     for town,data in MAP_TOWNS do
         if data.faction == HAVEN then
             if IsHeroInTown(hero, town, 1, 0) then
@@ -241,6 +242,7 @@ end
 
 function Routine_RunePriestDwellingUp(player, hero)
     print("$ Routine_RunePriestDwellingUp")
+    if PLAYER_BRAIN[player] ~= HUMAN then return end
     for town,data in MAP_TOWNS do
         if data.faction == FORTRESS then
             if IsHeroInTown(hero, town, 1, 0) then
@@ -608,6 +610,7 @@ end
 
 function Routine_TownBuildingUp(player, hero)
     print("$ Routine_TownBuildingUp")
+    if PLAYER_BRAIN[player] ~= HUMAN then return end
     for town,data in MAP_TOWNS do
         if data.faction == INFERNO then
             if IsHeroInTown(hero, town, 1, 0) then

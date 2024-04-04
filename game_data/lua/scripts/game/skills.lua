@@ -265,7 +265,11 @@ _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_OCCULTISM           = _skillbonu
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_SECRETS_OF_DESTRUCT = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_GET_STRONGER        = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_GET_WISER           = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_ONSLAUGHT           = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_LAST_STAND          = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_GEAR_UP             = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_HEROES_LEGACY       = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_MYTHOLOGY           = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_BATTLE_COMMANDER    = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_FINE_RUNE           = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_REFRESH_RUNE        = _skillbonus_id
