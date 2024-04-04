@@ -634,7 +634,7 @@
 				<NameFileRef href="/Text/Game/Artifacts/GoldenHorseshoe/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/GoldenHorseshoe/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MAJOR</Type>
+				<Type>ARTF_CLASS_RELIC</Type>
 				<Slot>MISCSLOT1</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/GoldenHorseshoe.xdb#xpointer(/Texture)"/>
 				<CostOfGold>20000</CostOfGold>
@@ -1841,7 +1841,7 @@
 				<Icon href="/Textures/HeroScreen/Artifacts/RingOfTheShadowbrand.xdb#xpointer(/Texture)"/>
 				<CostOfGold>24000</CostOfGold>
 				<AIValue>10000</AIValue>
-				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
+				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
