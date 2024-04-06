@@ -106,7 +106,7 @@ function WatchPlayer(player, wait)
 				end
 			end
         end
-		sleep(30)
+		sleep(18)
 	end
 end
 
@@ -219,7 +219,7 @@ for player = 1,8 do
 		for i,hero in GetPlayerHeroes(player) do
 			startThread(StoreData, hero)
 		end
-		-- startThread(WatchPlayer, player, 1)
+		startThread(WatchPlayer, player, 1)
 	end
 end
 

@@ -71,7 +71,7 @@ function DoArtifactsRoutine_Daily(player, hero)
         end
     end
     for k,v in DAILY_TRIGGER_ARTFSETS_ROUTINES do
-        if contains(HERO_ACTIVE_ARTIFACT_SETS[hero], k) then
+        if HERO_ARTFSETS_STATUS[hero][k] == 1 then
             startThread(v, player, hero)
         end
     end
@@ -84,7 +84,7 @@ function DoArtifactsRoutine_Weekly(player, hero)
         end
     end
     for k,v in WEEKLY_TRIGGER_ARTFSETS_ROUTINES do
-        if contains(HERO_ACTIVE_ARTIFACT_SETS[hero], k) then
+        if HERO_ARTFSETS_STATUS[hero][k] == 1 then
             startThread(v, player, hero)
         end
     end
@@ -97,7 +97,7 @@ function DoArtifactsRoutine_LevelUp(player, hero, level)
         end
     end
     for k,v in LEVELUP_TRIGGER_ARTFSETS_ROUTINES do
-        if contains(HERO_ACTIVE_ARTIFACT_SETS[hero], k) then
+        if HERO_ARTFSETS_STATUS[hero][k] == 1 then
             startThread(v, player, hero, level)
         end
     end
@@ -110,7 +110,7 @@ function DoArtifactsRoutine_AfterCombat(player, hero, index)
         end
     end
     for k,v in AFTER_COMBAT_TRIGGER_ARTFSETS_ROUTINES do
-        if contains(HERO_ACTIVE_ARTIFACT_SETS[hero], k) then
+        if HERO_ARTFSETS_STATUS[hero][k] == 1 then
             startThread(v, player, hero, index)
         end
     end
