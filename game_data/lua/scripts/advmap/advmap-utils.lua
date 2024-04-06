@@ -148,9 +148,10 @@ end
 
 function InitializeMapTowns()
     local map_size = GetTerrainSize() - 1
+	local towns_count = 0
     for faction,type in Towns_Types do
         for _,town in GetObjectNamesByType(type) do
-            MAP_TOWNS_COUNT = MAP_TOWNS_COUNT + 1
+            towns_count = towns_count + 1
             local owner = GetObjectOwner(town)
             if not PLAYER_MAIN_TOWN[owner] then PLAYER_MAIN_TOWN[owner] = town end
             local x,y,floor = GetObjectPosition(town)

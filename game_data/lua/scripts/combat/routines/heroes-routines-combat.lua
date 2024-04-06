@@ -358,7 +358,7 @@ function Routine_DragonStrike(side, hero)
     local dragon = GetUnits(side, CREATURE)[n]
     local target = RandomCreature(1-side, n)
     AttackCombatUnit(dragon, target)
-    combatPlayEmotion(side, "happy")
+    combatPlayEmotion(side, 1)
     if hero then
         sleep(1000)
         playAnimation(dragon, "death")
