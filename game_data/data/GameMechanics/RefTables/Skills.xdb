@@ -69,7 +69,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_ARMY_SUPPORT</ID>
+			<ID>HERO_SKILL_WARFARE</ID>
 			<obj>
 				<Texture>
 					<Item/>
@@ -935,7 +935,7 @@
 				<spellBuffs>
 					<Item>SPELL_SKILL_FIRST_AID</Item>
 				</spellBuffs>
-				<BasicSkillID>HERO_SKILL_ARMY_SUPPORT</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_WARFARE</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Haven>
@@ -971,7 +971,7 @@
 				<spellBuffs>
 					<Item>SPELL_SKILL_BALLISTA</Item>
 				</spellBuffs>
-				<BasicSkillID>HERO_SKILL_ARMY_SUPPORT</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_WARFARE</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Haven>
@@ -1005,7 +1005,7 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_ARMY_SUPPORT</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_WARFARE</BasicSkillID>
 				<SkillPrerequisites>
 					<Item><Class>HERO_CLASS_HAVEN_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_TECHNICAL_STAFF</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_HAVEN_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_TECHNICAL_STAFF</Item></dependenciesIDs></Item>
@@ -2913,7 +2913,7 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_ARMY_SUPPORT</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_WARFARE</BasicSkillID>
 				<SkillPrerequisites>
 					<Item><Class>HERO_CLASS_HAVEN_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_FLAMING_ARROWS</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_HAVEN_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_FLAMING_ARROWS</Item></dependenciesIDs></Item>
@@ -5252,7 +5252,7 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_ARMY_SUPPORT</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_WARFARE</BasicSkillID>
 				<SkillPrerequisites>
 					<Item><Class>HERO_CLASS_HAVEN_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BALLISTICS</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_HAVEN_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BALLISTICS</Item></dependenciesIDs></Item>
@@ -6377,7 +6377,7 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_ARMY_SUPPORT</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_WARFARE</BasicSkillID>
 				<SkillPrerequisites>
 					<Item><Class>HERO_CLASS_HAVEN_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ANATOMY</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_HAVEN_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ANATOMY</Item></dependenciesIDs></Item>

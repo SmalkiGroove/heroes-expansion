@@ -22,6 +22,7 @@ ROUTINE_VARS = {
     GriffinDives = {},
     AvatarOfDeath = "none",
     Incendiary = nil,
+    GoblinsTotal = 0,
 }
 
 -- print("Loaded combat-data.lua")

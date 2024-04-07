@@ -540,11 +540,23 @@ function Routine_CastCallOfBlood(side, hero)
     HeroCast_TargetCreatureTypes(hero, SPELL_WARCRY_CALL_OF_BLOOD, FREE_MANA, side, {CREATURE_ORC_WARRIOR,CREATURE_ORC_SLAYER,CREATURE_ORC_WARMONGER})
 end
 
+function Routine_CountInitialGoblins(side, hero)
+    -- print("Trigger count goblins")
+    local creatures = GetUnits(side, CREATURE)
+    local goblins = 0
+    for i,cr in creatures do
+        local type = GetCreatureType(cr)
+        if type == CREATURE_GOBLIN or type == CREATURE_GOBLIN_TRAPPER or type == CREATURE_GOBLIN_DEFILER then
+            goblins = goblins + GetCreatureNumber(cr)
+        end
+    end
+    ROUTINE_VARS.GoblinsTotal = trunc(0.1 * goblins)
+end
+
 function Routine_SummonGoblinStack(side, hero)
     -- print("Trigger summon goblins !")
     if CURRENT_UNIT == hero then
-        local amount = trunc(GOBLIN_AMOUNT * 0.1)
-        SummonCreatureStack(side, CREATURE_GOBLIN, amount)
+        SummonCreatureStack(side, CREATURE_GOBLIN, ROUTINE_VARS.GoblinsTotal)
     end
 end
 
@@ -615,6 +627,7 @@ COMBAT_START_HERO_ROUTINES = {
     -- stronghold
     [H_KRAGH] = Routine_CastRallingCry,
     [H_GOTAI] = Routine_CastBattlecry,
+    [H_KILGHAN] = Routine_CountInitialGoblins,
     [H_TELSEK] = Routine_CastCallOfBlood,
 }
 
