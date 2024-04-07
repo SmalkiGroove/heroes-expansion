@@ -29,7 +29,7 @@
 	<RazedStatic/>
 	<Icon128/>
 	<InternalName>Maeve</InternalName>
-	<Class>HERO_CLASS_HAVEN_MIGHT</Class>
+	<Class>HERO_CLASS_HAVEN_MAGIC</Class>
 	<Specialization/>
 	<PrimarySkill>
 		<SkillID>HERO_SKILL_INNATES</SkillID>
@@ -67,7 +67,9 @@
 			<Item>HERO_SKILL_FAMILIAR_LAND</Item>
 			<Item>HERO_SKILL_TOUGHNESS</Item>
 		</perkIDs>
-		<spellIDs/>
+		<spellIDs>
+			<Item>SPELL_DEFLECT_ARROWS</Item>
+		</spellIDs>
 		<Ballista>true</Ballista>
 		<FirstAidTent>false</FirstAidTent>
 		<AmmoCart>false</AmmoCart>

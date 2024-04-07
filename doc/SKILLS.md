@@ -88,11 +88,11 @@ All troops under hero's control are blessed with amazing vitality. If enemy crea
 - __Stunning Blow__ : Every standard hero’s attack moves the target back along the ATB bar for 0.2 points.
 - __Get Stronger__ : Hero gains +1 Attack and Defense.
 - __Mark of the Damned__ : The hero receives special combat ability to punish the target enemy creature with a powerful strike if that creature is about to attack, retaliate or cast any spell. Once declared, Mark of the Damned is active until the end of combat.
-- __Critical Strike__ : Critical Strike improves the hero's attack ability. There's a 40% chance that an attack performed by the hero will deal double damage to a target.
+- __Critical Strike__ : Hero's attacks will always deal double damage to a target.
 
 ### SHATTER_MAGIC
 - __Back to the Void__ : All creatures led by the hero inflict triple damage to summoned enemies.
-- __Mana Burst__ : The hero calls upon the forces of fire to affect enemy casters. Any time an enemy creature casts a spell it will receive damage 10 times the hero's level.
+- __Mana Burst__ : The hero calls upon the forces of fire to affect enemy casters. Any time an enemy creature casts a spell it will receive damage equal to 12 per hero level.
 - __Magic Filter__ : Creatures in hero's army are immuned to 2 random elements during battles.
 - __Protection__ : Decreases damage dealt to your creatures by magic attacks by 15%.
 - __Sap Magic__ : Damage dealt by enemy spells is reduced by 20%.
@@ -127,7 +127,7 @@ At the start of each week, new Water Elementals will permanently join hero's arm
 At the start of each week, new Earth Elementals will permanently join hero's army.
 - __Warriors of the Sky__ : Hero casts of the Summon Elementals spell will always summon Air Elementals.
 At the start of each week, new Air Elementals will permanently join hero's army.
-- __Scorching Earth__ : The hero calls upon forces of nature to affect enemy melee-attacking creatures. Any time an enemy creature moves it will receive some damage.
+- __Scorching Earth__ : The hero calls upon forces of nature to affect enemy walking creatures. Any time an enemy creature moves it will receive damage equal to 8 times hero level.
 - __Fog Veil__ : The Hero calls upon the forces of nature to affect enemy ranged-attacking creatures. Initiative of all enemy shooters is decreased by 10% and their damage is decreased by 10%.
 - __Storm Wind__ : The hero calls upon the forces of nature to affect enemy flying creatures. All enemy flyers have their Speed decreased by 1 and their initiative by 2.
 
@@ -188,7 +188,7 @@ Gain +1 Knowledge.
 ### NECROMANCY
 - __Chilling Bones__ : Enhances all undead troops under Necromancer's control with powerful ice enchantments. Any enemy creature which engages in melee combat with those troops will receive ice damage equal to 10% of damage dealt.
 - __Spellproof Bones__ : Damage inflicted by any Destructive Magic spells to all troops under Necromancer's command is reduced by 20% .
-- __Herald Of Death__ : All neutral creatures which join the hero's army will be automatically transformed into the undead creatures of their respective level.
+- __Herald Of Death__ : All neutral creatures which join the hero (including caravans from Leadership skill) will be automatically transformed into the undead creatures of their respective level.
 Moreover, hero generates 1 Gold per day for each Skeleton it his or her army.
 - __Banshee Howl__ : Grants a hero an ability to call upon death itself in combat. All enemy living creatures receive -1 to morale, luck and -10% on initiative.
 - __Haunting__ : After capturing an enemy mine the hero is able to haunt it. Some Ghosts will appear in mine's garrison, the number of summoned Ghosts depends upon the number of the week. All mines under hero's control will also produce new Ghosts each week.
@@ -207,7 +207,7 @@ Moreover, hero generates 1 Gold per day for each Skeleton it his or her army.
 - __Battle Elation__ : Every time when a Morale effect is triggered with a creature in the hero’s army, it gains 50 Rage points.
 - __Bloodfire__ : Every time when a creature in the hero’s army gets Rage, it gets 50% more than usual. But if a creature loses Rage, it loses 1.5 of the usual amount, too.
 - __Goblin Support__ : If there is an Ammo Cart in the hero’s army, there will be 3 Goblins joining his army every day.
-- __Defend Us All__ : This increases the hero’s Attack and Defense by +2 and grants him a reinforcement of Goblins depending on the amount of Warriors in the army. Moreover new Goblins and Orcchiefs will join the hero's army at the start of each week.
+- __Defend Us All__ : Increases the hero’s Attack and Defense by +2 and grants him a reinforcement of Goblins depending on the amount of Warriors in the army. Moreover new Warriors will join the hero's army at the start of each week.
 - __Sheer Strength__ : The hero gains +2 Attack and Defense and creatures in his army gain 10% bonus health.
 
 ### SPIRITISM
@@ -225,7 +225,7 @@ The hero will not be able to learn any new spell.
 - __Infusion__ : The hero gains +2 Spellpower permanently and +100 temporary mana.
 - __Elemental Vision__ : Allows hero to see elements on enemy creatures so that Destructive Magic spells cast by the hero can inflict additional elemental damage.
 - __Eternal Servitude__ : The hero receives an ability to raise some of the fallen undead creatures in his or her army after combat.
-- __Scorching Earth__ : The hero calls upon forces of nature to affect enemy melee-attacking creatures. Any time an enemy creature moves it will receive some damage.
+- __Soil Burn__ : Enemy walking creatures will receive damage equal to 8 times hero level when moving.
 - __Siege__ : All hero's troops gain +3 speed during the siege of an enemy castle, and the Catapult gains an extra shot.
 
 ### ULTIMATE

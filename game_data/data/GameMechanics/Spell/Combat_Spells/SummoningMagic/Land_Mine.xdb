@@ -10,40 +10,40 @@
 	<CombatLogTexts>
 		<Item href="/Text/CombatLog/Spells/LandMine.txt"/>
 	</CombatLogTexts>
-	<Level>1</Level>
+	<Level>2</Level>
 	<MagicSchool>MAGIC_SCHOOL_SUMMONING</MagicSchool>
 	<RequiredHeroLevel>0</RequiredHeroLevel>
 	<IsAimed>true</IsAimed>
 	<TrainedCost>7</TrainedCost>
 	<damage>
 		<Item>
-			<Base>30</Base>
-			<PerPower>7</PerPower>
+			<Base>11</Base>
+			<PerPower>8</PerPower>
 		</Item>
 		<Item>
-			<Base>50</Base>
-			<PerPower>10</PerPower>
+			<Base>22</Base>
+			<PerPower>12</PerPower>
 		</Item>
 		<Item>
-			<Base>60</Base>
-			<PerPower>13</PerPower>
-		</Item>
-		<Item>
-			<Base>70</Base>
+			<Base>33</Base>
 			<PerPower>16</PerPower>
+		</Item>
+		<Item>
+			<Base>44</Base>
+			<PerPower>20</PerPower>
 		</Item>
 	</damage>
 	<duration>
 		<Item>
-			<Base>4</Base>
+			<Base>5.5</Base>
 			<PerPower>0.1</PerPower>
 		</Item>
 		<Item>
-			<Base>5</Base>
+			<Base>6</Base>
 			<PerPower>0.13</PerPower>
 		</Item>
 		<Item>
-			<Base>6</Base>
+			<Base>6.5</Base>
 			<PerPower>0.16</PerPower>
 		</Item>
 		<Item>

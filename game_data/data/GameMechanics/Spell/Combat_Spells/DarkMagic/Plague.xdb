@@ -10,7 +10,7 @@
 	<CombatLogTexts>
 		<Item href="/Text/CombatLog/Spells/Plague.txt"/>
 	</CombatLogTexts>
-	<Level>2</Level>
+	<Level>3</Level>
 	<MagicSchool>MAGIC_SCHOOL_DARK</MagicSchool>
 	<RequiredHeroLevel>0</RequiredHeroLevel>
 	<IsAimed>true</IsAimed>
@@ -18,19 +18,19 @@
 	<damage>
 		<Item>
 			<Base>5</Base>
-			<PerPower>10</PerPower>
+			<PerPower>11</PerPower>
 		</Item>
 		<Item>
 			<Base>15</Base>
-			<PerPower>15</PerPower>
+			<PerPower>17</PerPower>
 		</Item>
 		<Item>
 			<Base>25</Base>
-			<PerPower>20</PerPower>
+			<PerPower>23</PerPower>
 		</Item>
 		<Item>
 			<Base>35</Base>
-			<PerPower>25</PerPower>
+			<PerPower>29</PerPower>
 		</Item>
 	</damage>
 	<duration>
@@ -39,15 +39,15 @@
 			<PerPower>0.04</PerPower>
 		</Item>
 		<Item>
-			<Base>2</Base>
+			<Base>2.35</Base>
 			<PerPower>0.06</PerPower>
 		</Item>
 		<Item>
-			<Base>2</Base>
+			<Base>2.65</Base>
 			<PerPower>0.08</PerPower>
 		</Item>
 		<Item>
-			<Base>2</Base>
+			<Base>3</Base>
 			<PerPower>0.10</PerPower>
 		</Item>
 	</duration>
