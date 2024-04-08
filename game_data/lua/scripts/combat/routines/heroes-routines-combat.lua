@@ -125,9 +125,8 @@ end
 function Routine_SummonDruidStack(side, hero)
     -- print("Trigger elder druids summoning !")
     local n = GetHeroLevel(side)
-    local x = 2 + side * 13
     local amount = trunc(0.4 * n * n)
-    SummonCreatureStack_X(side, CREATURE_DRUID_ELDER, amount, x)
+    SummonCreatureStack_X(side, CREATURE_DRUID_ELDER, amount, 0)
 end
 
 function Routine_DruidsMoveNext(side, hero)
@@ -352,8 +351,7 @@ function Routine_DragonStrike(side, hero)
     local level = GetHeroLevel(side)
     local amount = 1 + trunc(0.01 * level * level)
     local n = length(GetUnits(side, CREATURE))
-    local x = 7
-    SummonCreatureStack_X(side, CREATURE_DEEP_DRAGON, amount, x)
+    SummonCreatureStack_X(side, CREATURE_DEEP_DRAGON, amount, 7)
     sleep(500)
     local dragon = GetUnits(side, CREATURE)[n]
     local target = RandomCreature(1-side, n)
@@ -440,7 +438,7 @@ end
 function Routine_CastRandomIceBolt(side, hero)
     -- print("Trigger random Ice Bolt !")
     if CURRENT_UNIT == hero then
-        HeroCast_RandomCreature(hero, SPELL_ICE_BOLT, FREE_MANA, 1-side)
+        HeroCast_RandomCreature(hero, SPELL_ICE_BOLT, 1, 1-side)
         if IsHuman(side) then SetATB_ID(hero, ATB_INSTANT) end
     end
 end
@@ -514,10 +512,9 @@ end
 function Routine_SummonPitlords(side, hero)
     -- print("Trigger pit lords summoning !")
     local n = 10 + GetHeroLevel(side)
-    local x = 2 + side * 13
     local amount = trunc(0.01 * n * n)
-    SummonCreatureStack_X(side, CREATURE_BALOR, amount, x)
-    SummonCreatureStack_X(side, CREATURE_BALOR, amount, x)
+    SummonCreatureStack_X(side, CREATURE_BALOR, amount, 0)
+    SummonCreatureStack_X(side, CREATURE_BALOR, amount, 0)
 end
 
 
@@ -584,7 +581,7 @@ end
 function Routine_CastRandomLightningBolt(side, hero)
     -- print("Trigger cast lightning bolt !")
     if CURRENT_UNIT == hero then
-        HeroCast_RandomCreature(hero, SPELL_LIGHTNING_BOLT, FREE_MANA, 1-side)
+        HeroCast_RandomCreature(hero, SPELL_LIGHTNING_BOLT, 1, 1-side)
         if IsHuman(side) then SetATB_ID(hero, ATB_INSTANT) end
     end
 end

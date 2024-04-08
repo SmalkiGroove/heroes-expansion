@@ -118,14 +118,12 @@ function ManageUnitDeath(unit)
     -- print("$ Manage unit death")
     if ENABLE_SCRIPT == 0 then return end
 
-    combatSetPause(1)
     if ATTACKER_HERO ~= "" then
 		DoHeroSpeRoutine_UnitDied(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID, unit)
 	end
 	if DEFENDER_HERO ~= "" then
 		DoHeroSpeRoutine_UnitDied(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID, unit)
 	end
-    combatSetPause(nil)
 end
 
 

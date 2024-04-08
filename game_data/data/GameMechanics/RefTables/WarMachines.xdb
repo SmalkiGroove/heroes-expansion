@@ -76,20 +76,20 @@
 						<Item>13</Item>
 					</Defense>
 					<MinDamageFactor>
-						<Item>3</Item>
-						<Item>4</Item>
-						<Item>5</Item>
-						<Item>6</Item>
-						<Item>7</Item>
-					</MinDamageFactor>
-					<MaxDamageFactor>
 						<Item>5</Item>
 						<Item>6</Item>
 						<Item>7</Item>
 						<Item>8</Item>
 						<Item>9</Item>
+					</MinDamageFactor>
+					<MaxDamageFactor>
+						<Item>7</Item>
+						<Item>8</Item>
+						<Item>9</Item>
+						<Item>10</Item>
+						<Item>11</Item>
 					</MaxDamageFactor>
-					<PresetPrice>250</PresetPrice>
+					<PresetPrice>0</PresetPrice>
 				</WarMachine>
 			</Obj>
 		</Item>
@@ -141,7 +141,7 @@
 						<Item>600</Item>
 						<Item>700</Item>
 					</MaxDamageFactor>
-					<PresetPrice>400</PresetPrice>
+					<PresetPrice>0</PresetPrice>
 				</WarMachine>
 			</Obj>
 		</Item>
@@ -167,7 +167,7 @@
 						<Crystal>0</Crystal>
 						<Sulfur>0</Sulfur>
 						<Gem>0</Gem>
-						<Gold>250</Gold>
+						<Gold>500</Gold>
 					</Cost>
 					<CombatSize>2</CombatSize>
 					<flybySequence/>
@@ -183,7 +183,7 @@
 					</Defense>
 					<MinDamageFactor/>
 					<MaxDamageFactor/>
-					<PresetPrice>200</PresetPrice>
+					<PresetPrice>0</PresetPrice>
 				</WarMachine>
 			</Obj>
 		</Item>
@@ -207,7 +207,7 @@
 						<Crystal>0</Crystal>
 						<Sulfur>0</Sulfur>
 						<Gem>0</Gem>
-						<Gold>500</Gold>
+						<Gold>250</Gold>
 					</Cost>
 					<CombatSize>1</CombatSize>
 					<flybySequence/>
@@ -223,7 +223,7 @@
 					</Defense>
 					<MinDamageFactor/>
 					<MaxDamageFactor/>
-					<PresetPrice>150</PresetPrice>
+					<PresetPrice>0</PresetPrice>
 				</WarMachine>
 			</Obj>
 		</Item>

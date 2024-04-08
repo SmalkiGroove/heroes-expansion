@@ -3,12 +3,11 @@ function Routine_Houndmasters(side, hero, id, mastery)
     -- print("Trigger Houndmasters !")
     local level = GetHeroLevel(side)
     local amount = 10 + 2 * level + random(1, level, 99)
-    local x = 1 + side * 11
     if hero == H_IVOR then
-        SummonCreatureStack_X(side, CREATURE_WOLF, amount, x)
+        SummonCreatureStack_X(side, CREATURE_WOLF, amount, 1)
         sleep(50)
     end
-    SummonCreatureStack_X(side, CREATURE_WOLF, amount, x)
+    SummonCreatureStack_X(side, CREATURE_WOLF, amount, 1)
 end
 
 
