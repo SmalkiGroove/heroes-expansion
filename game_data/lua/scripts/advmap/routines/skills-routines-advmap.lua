@@ -234,7 +234,7 @@ function Routine_HeroesLegacy(player, hero, mastery)
         local faction = HEROES[hero].faction
         local majors = {}
         for _,a in ARTIFACT_SETS[faction] do
-            if ARTIFACTS_DATA[a].special == 0 and ARTIFACTS_DATA[a].class == ARTIFACT_CLASS_MINOR then
+            if ARTIFACTS_DATA[a].special == 0 and ARTIFACTS_DATA[a].class == ARTIFACT_CLASS_MAJOR then
                 insert(majors, a)
             end
         end
@@ -250,7 +250,7 @@ function Routine_Mythology(player, hero, mastery)
         local faction = HEROES[hero].faction
         local relics = {}
         for _,a in ARTIFACT_SETS[faction] do
-            if ARTIFACTS_DATA[a].special == 0 and ARTIFACTS_DATA[a].class == ARTIFACT_CLASS_MINOR then
+            if ARTIFACTS_DATA[a].special == 0 and ARTIFACTS_DATA[a].class == ARTIFACT_CLASS_RELIC then
                 insert(relics, a)
             end
         end
