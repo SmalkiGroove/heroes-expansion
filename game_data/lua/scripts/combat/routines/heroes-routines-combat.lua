@@ -125,8 +125,8 @@ end
 function Routine_SummonDruidStack(side, hero)
     -- print("Trigger elder druids summoning !")
     local n = GetHeroLevel(side)
-    local x = 1 + side * 13
-    local amount = trunc(0.5 * n * n)
+    local x = 2 + side * 13
+    local amount = trunc(0.4 * n * n)
     SummonCreatureStack_X(side, CREATURE_DRUID_ELDER, amount, x)
 end
 
