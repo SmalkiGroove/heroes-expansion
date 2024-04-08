@@ -112,7 +112,7 @@ end
 
 function Routine_CastSummonHive(side, hero)
     -- print("Trigger summon beehives !")
-    local x = 15 - 13 * side
+    local x = (side == ATTACKER) and GRID_X_MAX or GRID_X_MIN
     HeroCast_Area(hero, SPELL_SUMMON_HIVE, FREE_MANA, x, GRID_Y_MIN)
     HeroCast_Area(hero, SPELL_SUMMON_HIVE, FREE_MANA, x, GRID_Y_MAX)
 end
@@ -596,6 +596,7 @@ COMBAT_START_HERO_ROUTINES = {
     [H_FREYDA] = Routine_CastPrayer,
     -- preserve
     [H_FINDAN] = Routine_HunterRandomShoot,
+    [H_DIRAEL] = Routine_CastSummonHive,
     [H_VINRAEL] = Routine_CastMassHaste,
     [H_TIERU] = Routine_SummonDruidStack,
     -- fortress
