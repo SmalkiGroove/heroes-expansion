@@ -395,6 +395,22 @@ function CreatureToUndead(creature)
 	return CREATURES_BY_FACTION[NECROPOLIS][tier][1]
 end
 
+function InitializeRandomSeed()
+	local value = GetTerrainSize() + GetDifficulty()
+	for p = 1,8 do
+		if (GetPlayerState(p) == 1) then
+			value = value + p
+			for _,h in GetPlayerHeroes(p) do
+				for s = 0,220 do
+					if HasHeroSkill(h, s) then value = value + s end
+				end
+			end
+		end
+	end
+	RANDOM_SEED = value
+	print("Random seed = "..RANDOM_SEED)
+end
+
 
 -- print("Loaded advmap-utils.lua")
 ROUTINES_LOADED[9] = 1

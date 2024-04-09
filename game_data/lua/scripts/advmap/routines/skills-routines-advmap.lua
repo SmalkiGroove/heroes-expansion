@@ -306,6 +306,16 @@ function Routine_CheckGreaterRune(player, hero, mastery)
     end
 end
 
+function Routine_CheckLuckySpells(player, hero, mastery)
+    print("$ Routine_CheckLuckySpells")
+    local value = mastery
+    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_LUCKYS_PELLS]
+    if diff ~= 0 then
+        AddHeroStatAmount(player, hero, STAT_LUCK, diff)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_LUCKYS_PELLS] = value
+    end
+end
+
 function Routine_CheckLordOfTheUndead(player, hero, mastery)
     print("$ Routine_CheckLordOfTheUndead")
     local value = mastery
@@ -614,6 +624,7 @@ START_TRIGGER_SKILLS_ROUTINES = {
     [PERK_FINE_RUNE] = Routine_CheckFineRune,
     [PERK_REFRESH_RUNE] = Routine_CheckRefreshRune,
     [PERK_GREATER_RUNE] = Routine_CheckGreaterRune,
+    [PERK_LUCKY_SPELLS] = Routine_CheckLuckySpells,
     [PERK_LORD_OF_UNDEAD] = Routine_CheckLordOfTheUndead,
     [PERK_DEFEND_US_ALL] = Routine_CheckDefendUsAll,
     [PERK_SHEER_STRENGTH] = Routine_CheckSheerStrength,

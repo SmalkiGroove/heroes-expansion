@@ -30,7 +30,7 @@
 	<Icon128/>
 	<InternalName>Malustar</InternalName>
 	<Class>HERO_CLASS_INFERNO_MIGHT</Class>
-	<Specialization/>
+	<Specialization>HERO_SPEC_INFERNAL_MACHINE</Specialization>
 	<PrimarySkill>
 		<SkillID>HERO_SKILL_INNATES</SkillID>
 		<Mastery>MASTERY_EXPERT</Mastery>
@@ -66,7 +66,6 @@
 		<perkIDs>
 			<Item>HERO_SKILL_BARBARIAN_SOIL_BURN</Item>
 			<Item>HERO_SKILL_HELLFIRE</Item>
-			<Item>HERO_SKILL_BARBARIAN_SUN_FIRE</Item>
 		</perkIDs>
 		<spellIDs/>
 		<Ballista>false</Ballista>

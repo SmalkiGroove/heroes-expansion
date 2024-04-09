@@ -227,6 +227,7 @@ print("All scripts successfully loaded !")
 
 -- Initializers
 function Init()
+	InitializeRandomSeed()
 	InitializeHeroes()
 	InitializeMapTowns()
 	InitializeConvertibles()

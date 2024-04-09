@@ -401,10 +401,12 @@ end
 function Routine_SummonZombieStack(side, hero)
     -- print("Trigger summon zombies !")
     if CURRENT_UNIT == hero then
-        local n = 9 + trunc(1.5 * GetHeroLevel(side))
+        local turns = COMBAT_TURN - ROUTINE_VARS.TurnMarker
+        local n = 1 + trunc(1.5 * (GetHeroLevel(side) + turns))
         local type = random(1, 3, COMBAT_TURN)
         local id = CREATURES_BY_FACTION[NECROPOLIS][2][type]
         SummonCreatureStack(side, id, n)
+        ROUTINE_VARS.TurnMarker = COMBAT_TURN
     end
 end
 
@@ -512,8 +514,8 @@ end
 function Routine_SummonPitlords(side, hero)
     -- print("Trigger pit lords summoning !")
     local n = 10 + GetHeroLevel(side)
-    local amount = trunc(0.01 * n * n)
-    SummonCreatureStack_X(side, CREATURE_BALOR, amount, 0)
+    local amount = trunc(0.02 * n * n)
+    -- SummonCreatureStack_X(side, 181, amount, 0)
     SummonCreatureStack_X(side, CREATURE_BALOR, amount, 0)
 end
 

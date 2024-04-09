@@ -19,6 +19,7 @@ UNIT_SIDE_PREFIX = {
 
 ROUTINE_VARS = {
     InitialCounts = {},
+    TurnMarker = 0,
     GriffinDives = {},
     AvatarOfDeath = "none",
     Incendiary = nil,
