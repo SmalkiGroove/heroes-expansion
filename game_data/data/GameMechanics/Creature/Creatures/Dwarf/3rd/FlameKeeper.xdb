@@ -10,11 +10,10 @@
 	<Flying>false</Flying>
 	<Health>60</Health>
 	<KnownSpells>
-		<Item><Spell>SPELL_BLIND</Spell><Mastery>MASTERY_NONE</Mastery></Item>
-		<Item><Spell>SPELL_LAND_MINE</Spell><Mastery>MASTERY_EXPERT</Mastery></Item>
+		<Item><Spell>SPELL_MASS_DISPEL</Spell><Mastery>MASTERY_BASIC</Mastery></Item>
 		<Item><Spell>SPELL_FIREBALL</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
 	</KnownSpells>
-	<SpellPoints>36</SpellPoints>
+	<SpellPoints>38</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
 	<SpellPoints2>0</SpellPoints2>
 	<Exp>250</Exp>
@@ -42,6 +41,7 @@
 	<Abilities>
 		<Item>ABILITY_FIRE_PROOF_50</Item>
 		<Item>ABILITY_MARK_OF_FIRE</Item>
+		<Item>ABILITY_MINE_FIELD</Item>
 		<Item>ABILITY_MANA_FEED</Item>
 		<Item>ABILITY_POWER_FEED</Item>
 	</Abilities>

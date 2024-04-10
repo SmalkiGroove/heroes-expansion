@@ -82,6 +82,7 @@ function ManageCombatStart()
     startThread(GetArmySummary, DEFENDER)
 
     combatSetPause(1)
+    DoAbilitiesRoutine_CombatStart()
 	if ATTACKER_HERO ~= "" then
         DoSkillRoutine_CombatStart(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
 		DoHeroSpeRoutine_CombatStart(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)

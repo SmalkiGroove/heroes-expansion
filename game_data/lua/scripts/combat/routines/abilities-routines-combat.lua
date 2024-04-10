@@ -1,5 +1,5 @@
 
-function Routine_AbilityCommandBallista()
+function Routine_AbilityCommandBallista(side, unit)
     print("$ Routine_AbilityCommandBallista")
     local x,y = GetUnitPosition(CURRENT_UNIT)
     local ballista = GetWarMachine(CURRENT_UNIT_SIDE, WAR_MACHINE_BALLISTA)
@@ -13,7 +13,7 @@ function Routine_AbilityCommandBallista()
     end
 end
 
-function Routine_AbilityMagneticField()
+function Routine_AbilityMagneticField(side, unit)
     print("$ Routine_AbilityMagneticField")
     local x,y = GetUnitPosition(CURRENT_UNIT)
     local unit = "none"
@@ -39,8 +39,18 @@ function Routine_AbilityMagneticField()
     end
 end
 
+function Routine_AbilityMineField(side, unit)
+    print("$ Routine_AbilityMineField")
+    local x,y = GetUnitPosition(unit)
+    local offset = 2 - 4 * side
+    HeroCast_Area(unit, SPELL_LAND_MINE, FREE_MANA, x + offset, y)
+end
+
 
 COMBAT_START_ABILITIES_ROUTINES = {
+    [CREATURE_RUNE_MAGE] = Routine_AbilityMineField,
+    [CREATURE_FLAME_MAGE] = Routine_AbilityMineField,
+    [CREATURE_FLAME_KEEPER] = Routine_AbilityMineField,
 }
 
 COMBAT_TURN_ABILITIES_ROUTINES = {
@@ -53,13 +63,25 @@ UNIT_DIED_ABILITIES_ROUTINES = {
 
 
 function DoAbilitiesRoutine_CombatStart()
+    for _,cr in GetUnits(ATTACKER, CREATURE) do
+        local type = GetCreatureType(cr)
+        if COMBAT_START_ABILITIES_ROUTINES[type] then
+            COMBAT_START_ABILITIES_ROUTINES[type](ATTACKER, cr)
+        end
+    end
+    for _,cr in GetUnits(DEFENDER, CREATURE) do
+        local type = GetCreatureType(cr)
+        if COMBAT_START_ABILITIES_ROUTINES[type] then
+            COMBAT_START_ABILITIES_ROUTINES[type](DEFENDER, cr)
+        end
+    end
 end
 
 function DoAbilitiesRoutine_CombatTurn()
     if IsCreature(CURRENT_UNIT) then
         local type = GetCreatureType(CURRENT_UNIT)
         if COMBAT_TURN_ABILITIES_ROUTINES[type] then
-            COMBAT_TURN_ABILITIES_ROUTINES[type]()
+            COMBAT_TURN_ABILITIES_ROUTINES[type](CURRENT_UNIT_SIDE, CURRENT_UNIT)
         end
     end
 end
