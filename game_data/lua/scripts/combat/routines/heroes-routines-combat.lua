@@ -181,7 +181,7 @@ function Routine_CastFireWalls(side, hero)
     -- print("Trigger cast Fire walls !")
     local m = GetUnitManaPoints(hero)
     local x = 11 - 7 * side
-    for _,y in {2,5,8,11} do
+    for _,y in {3,6,9} do
         HeroCast_Area(hero, SPELL_FIREWALL, FREE_MANA, x, y)
         sleep(10)
     end
@@ -495,7 +495,7 @@ end
 function Routine_CastRandomFireball(side, hero)
     -- print("Trigger random Fireball !")
     if CURRENT_UNIT == hero then
-        local x,y = GetUnitPosition(RandomCreature(side, COMBAT_TURN))
+        local x,y = GetUnitPosition(RandomCreature(1-side, COMBAT_TURN))
         HeroCast_Area(hero, SPELL_FIREBALL, FREE_MANA, x, y)
         ROUTINE_VARS.Incendiary = not nil
     elseif ROUTINE_VARS.Incendiary then

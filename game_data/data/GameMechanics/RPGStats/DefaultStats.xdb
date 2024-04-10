@@ -4,19 +4,19 @@
 	<SpellInitiative>10</SpellInitiative>
 	<ATBEndTime>20000</ATBEndTime>
 	<ATBBaseTime>100000</ATBBaseTime>
-	<RumorCost>100</RumorCost>
+	<RumorCost>50</RumorCost>
 	<adventure>
-		<BaseHeroMovement>2750</BaseHeroMovement>
-		<BaseHeroLookRange>12</BaseHeroLookRange>
+		<BaseHeroMovement>2500</BaseHeroMovement>
+		<BaseHeroLookRange>10</BaseHeroLookRange>
 		<MinCreatureSpeed>1</MinCreatureSpeed>
 		<MaxCreatureSpeed>14</MaxCreatureSpeed>
 		<DepthBetweenFloors>10</DepthBetweenFloors>
-		<VisitFountainOfYouthMovementBonus>1000</VisitFountainOfYouthMovementBonus>
-		<VisitRallyFlagMovementBonus>1000</VisitRallyFlagMovementBonus>
-		<VisitOasisMovementBonus>1000</VisitOasisMovementBonus>
-		<VisitStablesMovementBonus>800</VisitStablesMovementBonus>
-		<ForWeekStablesMaxLandMovementBonus>400</ForWeekStablesMaxLandMovementBonus>
-		<LighthouseMaxSeaMovementBonus>800</LighthouseMaxSeaMovementBonus>
+		<VisitFountainOfYouthMovementBonus>500</VisitFountainOfYouthMovementBonus>
+		<VisitRallyFlagMovementBonus>500</VisitRallyFlagMovementBonus>
+		<VisitOasisMovementBonus>500</VisitOasisMovementBonus>
+		<VisitStablesMovementBonus>500</VisitStablesMovementBonus>
+		<ForWeekStablesMaxLandMovementBonus>500</ForWeekStablesMaxLandMovementBonus>
+		<LighthouseMaxSeaMovementBonus>500</LighthouseMaxSeaMovementBonus>
 		<HeroManaPerKnowledge>10</HeroManaPerKnowledge>
 		<Respawn>
 			<MonstersMin>2</MonstersMin>
@@ -145,7 +145,7 @@
 		</NeutralsNotInCampaign>
 		<HeroSkills>
 			<Scouting_VisibilityIncrease>6</Scouting_VisibilityIncrease>
-			<DisguiseAndReckon_VisibilityIncrease>6</DisguiseAndReckon_VisibilityIncrease>
+			<DisguiseAndReckon_VisibilityIncrease>8</DisguiseAndReckon_VisibilityIncrease>
 			<Intelligence_ManaPointsBonus>1.0</Intelligence_ManaPointsBonus>
 			<WarMachines_HealthBonusPerSkillTrained>10</WarMachines_HealthBonusPerSkillTrained>
 			<WarMachines_PerkSpecificHealthMultiplier>2</WarMachines_PerkSpecificHealthMultiplier>
@@ -246,7 +246,7 @@
 		</AstrologerCallWeekCost>
 		<SacrificialAltar_ArtifactCostOfGoldToExpCoef>3</SacrificialAltar_ArtifactCostOfGoldToExpCoef>
 		<SacrificialAltar_CreatureHitsToExpCoef>3</SacrificialAltar_CreatureHitsToExpCoef>
-		<Marketplace_ArtifactSellCostOfGoldCoef>0.6</Marketplace_ArtifactSellCostOfGoldCoef>
+		<Marketplace_ArtifactSellCostOfGoldCoef>0.75</Marketplace_ArtifactSellCostOfGoldCoef>
 	</adventure>
 	<combat>
 		<DamageIncrease>0.03</DamageIncrease>
