@@ -1,1 +1,0 @@
-print("Map script loaded !")

@@ -2,6 +2,7 @@
 
 function ReplaceStartingArmy(hero)
 	print("$ ReplaceStartingArmy hero="..hero)
+    local mult = (GetDifficulty() == 0) and 1.5 or 1
     local army = {}
     if STARTING_ARMIES[hero] then
         army = STARTING_ARMIES[hero]
@@ -11,7 +12,9 @@ function ReplaceStartingArmy(hero)
     end
     for i = 1,7 do
         if army[i] then
-            AddHeroCreatures(hero, army[i][1], army[i][2], i-1)
+            local creature = army[i][1]
+            local nb = round(mult * army[i][2])
+            AddHeroCreatures(hero, creature, nb, i-1)
         end
     end
 end
