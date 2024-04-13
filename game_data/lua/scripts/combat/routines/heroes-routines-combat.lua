@@ -243,12 +243,15 @@ end
 
 function Routine_CastMultipleArcaneCrystals(side, hero)
     -- print("Trigger random arcane crystals !")
-    local n = trunc(GetUnitManaPoints(hero) * 0.05)
-    local x1 = 13 - 11 * side
-    local x2 = 9 - 3 * side
+    local m = GetUnitManaPoints(hero)
+    local n = trunc(0.11 * m)
+    local x1 = 15 - 13 * side
+    local x2 = 11 - 5 * side
     for i = 1,n do
-        HeroCast_Area(hero, SPELL_ARCANE_CRYSTAL, FREE_MANA, random(x1,x2,i), random(GRID_Y_MIN,GRID_Y_MAX,i))
+        HeroCast_Area(hero, SPELL_ARCANE_CRYSTAL, 10, random(x1,x2,m-i), random(GRID_Y_MIN,GRID_Y_MAX,m-i))
+        sleep(10)
     end
+    SetMana(hero, m-n)
 end
 
 function Routine_MagesCastMagicFist(side, hero)
