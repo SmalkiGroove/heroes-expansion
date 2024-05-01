@@ -182,10 +182,10 @@
 				<NameFileRef href="/Text/Game/Artifacts/ShacklesOfTheLastMan/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/ShacklesOfTheLastMan/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_RELIC</Type>
+				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>MISCSLOT1</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/ShacklesOfTheLastMan.xdb#xpointer(/Texture)"/>
-				<CostOfGold>20000</CostOfGold>
+				<CostOfGold>5000</CostOfGold>
 				<AIValue>1</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
@@ -193,7 +193,7 @@
 					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
-					<Morale>0</Morale>
+					<Morale>-1</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
 				<ArtifactShared href="/MapObjects/Artifacts/ShacklesOfTheLastMan.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>

@@ -34,12 +34,6 @@ function Routine_Restore10Mana(player, hero, combatIndex)
     ChangeHeroStat(hero, STAT_MANA_POINTS, 10)
 end
 
-function Routine_HarpyBoots(player, hero, combatIndex)
-    print("$ Routine_HarpyBoots")
-    GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_INITIATIVE, 1)
-    GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_SPEED, 1)
-end
-
 
 
 DAILY_TRIGGER_ARTIFACTS_ROUTINES = {
