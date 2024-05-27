@@ -46,6 +46,19 @@ function Routine_AbilityMineField(side, unit)
     HeroCast_Area(unit, SPELL_LAND_MINE, FREE_MANA, x + offset, y)
 end
 
+function Routine_AbilityRefreshMana(side, unit, amount)
+    print("$ Routine_AbilityRefreshMana")
+    local cur = GetUnitManaPoints(unit)
+    local max = GetUnitMaxManaPoints(unit)
+    if cur < max then
+        SetMana(unit, min(cur+amount,max))
+    end
+end
+
+function Routine_AbilityRefreshMana5(side, unit)
+    Routine_AbilityRefreshMana(side, unit, 5)
+end
+
 
 COMBAT_START_ABILITIES_ROUTINES = {
     [CREATURE_RUNE_MAGE] = Routine_AbilityMineField,
