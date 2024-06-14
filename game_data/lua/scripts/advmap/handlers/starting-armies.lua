@@ -1,8 +1,8 @@
 
+MULT = (GetDifficulty() == 0) and 1.5 or 1
 
 function ReplaceStartingArmy(hero)
-	print("$ ReplaceStartingArmy hero="..hero)
-    local mult = (GetDifficulty() == 0) and 1.5 or 1
+	-- print("$ ReplaceStartingArmy hero="..hero)
     local army = {}
     if STARTING_ARMIES[hero] then
         army = STARTING_ARMIES[hero]
@@ -13,7 +13,7 @@ function ReplaceStartingArmy(hero)
     for i = 1,7 do
         if army[i] then
             local creature = army[i][1]
-            local nb = round(mult * army[i][2])
+            local nb = round(MULT * army[i][2])
             AddHeroCreatures(hero, creature, nb, i-1)
         end
     end
@@ -83,6 +83,16 @@ STARTING_ARMIES = {
     [H_KUJIN] = { {CREATURE_GOBLIN,35}, {CREATURE_SHAMAN,10}, {CREATURE_SHAMAN,10} },
 }
 
+
+function UpdateTavernHeroes()
+    for hero,data in HEROES do
+        if not IsHeroAlive(hero) then
+            if not data.owner then
+                startThread(ReplaceStartingArmy, hero)
+            end
+        end
+    end
+end
 
 -- print("Loaded starting-armies.lua")
 ROUTINES_LOADED[21] = 1

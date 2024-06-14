@@ -113,6 +113,7 @@ end
 function PlayerDailyHandler(player, newweek)
 	while (not IsPlayerCurrent(player)) do sleep(10) end
 	print("Player "..player.." turn started")
+	UpdateTavernHeroes()
 	for i,hero in GetPlayerHeroes(player) do
 		if newweek then
 			startThread(DoHeroSpeRoutine_Weekly, player, hero)
@@ -162,7 +163,8 @@ function AddPlayerHero(player, hero)
 		startThread(BindHeroLevelUpTrigger, hero)
 		startThread(BindHeroSkillTrigger, hero)
 	else
-		startThread(ReplaceStartingArmy, hero)
+		print("Initialize hero "..hero)
+		-- startThread(ReplaceStartingArmy, hero)
 		startThread(BindHeroLevelUpTrigger, hero)
 		startThread(BindHeroSkillTrigger, hero)
 		startThread(DoSkillsRoutine_Start, player, hero)
@@ -212,6 +214,7 @@ function InitializeHeroes()
 			end
 		end
 	end
+	UpdateTavernHeroes()
 end
 
 for player = 1,8 do
@@ -243,4 +246,4 @@ else
 	ExecConsoleCommand("@if GetObjectiveState('H5X', FIRST_PLAYER) == OBJECTIVE_UNKNOWN then SetObjectiveState('H5X', OBJECTIVE_ACTIVE, FIRST_PLAYER) end")
 end
 
-sleep(60) UnblockGame()
+sleep(300) UnblockGame()
