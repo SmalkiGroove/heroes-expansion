@@ -503,7 +503,7 @@ function Routine_CastRandomFireball(side, hero)
         ROUTINE_VARS.Incendiary = not nil
     elseif ROUTINE_VARS.Incendiary then
         ROUTINE_VARS.Incendiary = nil
-        SetATB_ID(hero, 0.5)
+        SetATB_ID(hero, 0.55)
     end
 end
 
@@ -511,7 +511,7 @@ function Routine_CastMineFields(side, hero)
     -- print("Trigger mine fields !")
     local x = 12 - 9 * side
     HeroCast_Area(hero, SPELL_LAND_MINE, FREE_MANA, x, 9)
-    HeroCast_Area(hero, SPELL_LAND_MINE, FREE_MANA, x, 4)
+    HeroCast_Area(hero, SPELL_LAND_MINE, FREE_MANA, x, 3)
 end
 
 function Routine_SummonPitlords(side, hero)

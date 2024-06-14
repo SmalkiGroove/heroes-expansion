@@ -113,7 +113,6 @@ end
 function PlayerDailyHandler(player, newweek)
 	while (not IsPlayerCurrent(player)) do sleep(10) end
 	print("Player "..player.." turn started")
-	UpdateTavernHeroes()
 	for i,hero in GetPlayerHeroes(player) do
 		if newweek then
 			startThread(DoHeroSpeRoutine_Weekly, player, hero)
@@ -133,6 +132,7 @@ function NewDayTrigger()
 	print("New day ! Turn "..TURN)
 	local newweek = GetDate(DAY_OF_WEEK) == 1
 	if newweek then WEEK = WEEK + 1 end
+	UpdateTavernHeroes()
 	for player = 1,8 do
 		if (GetPlayerState(player) == 1) then
 			startThread(PlayerDailyHandler, player, newweek)
