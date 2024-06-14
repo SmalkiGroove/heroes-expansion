@@ -29,7 +29,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_LONG_RANGE</ID>
+			<ID>ABILITY_NO_RANGE_PENALTY</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/No_range_penalty/No_range_penalty_name.txt"/>
@@ -38,7 +38,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_SHORT_RANGE</ID>
+			<ID>ABILITY_RANGE_PENALTY</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Range_penalty/Range_penalty_name.txt"/>
@@ -130,7 +130,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_LIVING</ID>
+			<ID>ABILITY_FLESH_AND_BLOOD</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Flesh_and_blood/Flesh_and_blood_name.txt"/>
@@ -139,7 +139,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_SPITE</ID>
+			<ID>ABILITY_ENRAGED</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Enraged/Enraged_name.txt"/>
@@ -148,7 +148,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_KEEN_EYE</ID>
+			<ID>ABILITY_IMMUNITY_TO_BLIND</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_blind/Immunity_to_blind_name.txt"/>
@@ -157,7 +157,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_CHAOS_INCARNATE</ID>
+			<ID>ABILITY_IMMUNITY_TO_MAGIC</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_magic/Immunity_to_magic_name.txt"/>
@@ -166,7 +166,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_UNSTOPPABLE</ID>
+			<ID>ABILITY_IMMUNITY_TO_SLOW</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_slow/Immunity_to_slow_name.txt"/>
@@ -175,7 +175,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_FREE_MIND</ID>
+			<ID>ABILITY_IMMUNITY_TO_MIND_CONTROL</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_mind_control/Immunity_to_mind_control_name.txt"/>
@@ -184,7 +184,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_LIGHTNING_IMMUNED</ID>
+			<ID>ABILITY_IMMUNITY_TO_AIR</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_air/Immunity_to_air_name.txt"/>
@@ -193,7 +193,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_FIRE_IMMUNED</ID>
+			<ID>ABILITY_IMMUNITY_TO_FIRE</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_fire/Immunity_to_fire_name.txt"/>
@@ -202,7 +202,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_ICE_IMMUNED</ID>
+			<ID>ABILITY_IMMUNITY_TO_WATER</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_water/Immunity_to_water_name.txt"/>
@@ -211,7 +211,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_EARTH_IMMUNED</ID>
+			<ID>ABILITY_IMMUNITY_TO_EARTH</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_earth/Immunity_to_earth_name.txt"/>
@@ -229,7 +229,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_WEAKPOINT</ID>
+			<ID>ABILITY_PRECISE_SHOT</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Precise_shot/Precise_shot_name.txt"/>
@@ -238,7 +238,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_SHIELDED</ID>
+			<ID>ABILITY_LARGE_SHIELD</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Large_shield/Large_shield_name.txt"/>
@@ -247,7 +247,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_SHIELD_WALL</ID>
+			<ID>ABILITY_SHIELD_OTHER</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Shiled_other/Shield_other_name.txt"/>
@@ -332,7 +332,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_FRIGHTFUL</ID>
+			<ID>ABILITY_FRIGHT_AURA</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Fright_aura/Fright_aura_name.txt"/>
@@ -352,7 +352,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_INFERNAL_CHAIN</ID>
+			<ID>ABILITY_CHAIN_SHOT</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Chain_shot/Chain_shot_name.txt"/>
@@ -361,7 +361,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_INFECTION</ID>
+			<ID>ABILITY_WEAKENING_STRIKE</ID>
 			<obj>
 				<CombatLogTexts>
 					<Item href="/Text/CombatLog/Abilities/WeakeningStrike.txt"/>
@@ -383,7 +383,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_MANAVOROUS</ID>
+			<ID>ABILITY_MANA_DRAIN</ID>
 			<obj>
 				<CombatLogTexts>
 					<Item href="/Text/CombatLog/Abilities/ManaDrain.txt"/>
@@ -414,7 +414,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_TWIN_ARROWS</ID>
+			<ID>ABILITY_ELVES_DOUBLE_SHOT</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Elves_double_shot/Elves_double_shot_name.txt"/>
@@ -434,7 +434,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_BLINDING_HORN</ID>
+			<ID>ABILITY_BLINDING_ATTACK</ID>
 			<obj>
 				<CombatLogTexts>
 					<Item href="/Text/CombatLog/Abilities/BlindingAttack.txt"/>
@@ -445,7 +445,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_MAGIC_DISRUPTION</ID>
+			<ID>ABILITY_AURA_OF_MAGIC_RESISTANCE</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Aura_of_magic_resistance/Aura_of_magic_resistance_name.txt"/>
@@ -510,7 +510,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_POISON</ID>
+			<ID>ABILITY_POISONOUS_ATTACK</ID>
 			<obj>
 				<CombatLogTexts>
 					<Item href="/Text/CombatLog/Abilities/PoisonousAttack.txt"/>
@@ -539,7 +539,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_CHARGE</ID>
+			<ID>ABILITY_RIDER_CHARGE</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Rider_charge/Rider_charge_name.txt"/>
@@ -548,7 +548,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_BEAT_UP</ID>
+			<ID>ABILITY_LIZARD_BITE</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Lizard_bite_name/Lizard_bite_name.txt"/>
@@ -586,7 +586,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_BURNING_BODY</ID>
+			<ID>ABILITY_FIRE_SHIELD</ID>
 			<obj>
 				<CombatLogTexts>
 					<Item href="/Text/CombatLog/Spells/FireShield.txt"/>
@@ -619,7 +619,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_INTIMIDATE</ID>
+			<ID>ABILITY_FRIGHTFUL_PRESENCE</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Frightful_presence/Frightful_precence_name.txt"/>
@@ -718,7 +718,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_DRAGON_BREATH</ID>
+			<ID>ABILITY_FIRE_BREATH</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Fire_breath/Fire_breath_name.txt"/>
@@ -754,7 +754,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_RANDOM_CURSE</ID>
+			<ID>ABILITY_RANDOM_CASTER</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Random_caster/Random_caster_name.txt"/>
@@ -799,7 +799,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_HEAVY_ARMOR</ID>
+			<ID>ABILITY_ARMORED</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Armored/Armored_name.txt"/>
@@ -808,7 +808,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_STURDINESS</ID>
+			<ID>ABILITY_SHIELD_WALL</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Shield_wall/Shield_wall_name.txt"/>
@@ -839,7 +839,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_FURY</ID>
+			<ID>ABILITY_BERSERKER_RAGE</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Berserker_Rage/Berserker_Rage_name.txt"/>
@@ -848,7 +848,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_THUNDER_SHOCK</ID>
+			<ID>ABILITY_STORMBOLT</ID>
 			<obj>
 				<CombatLogTexts>
 					<Item href="/Text/CombatLog/Abilities/StormStrike.txt"/>
@@ -859,7 +859,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_THUNDER_STRIKE</ID>
+			<ID>ABILITY_STORMSTRIKE</ID>
 			<obj>
 				<CombatLogTexts>
 					<Item href="/Text/CombatLog/Abilities/StormStrike.txt"/>
@@ -881,7 +881,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_MAGIC_ATTACK</ID>
+			<ID>ABILITY_CROSS_ATTACK</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Cross_attack/Cross_attack_name.txt"/>
@@ -901,7 +901,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_HORDE</ID>
+			<ID>ABILITY_PACK_HUNTER</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Pack_hunter/name.txt"/>
@@ -952,7 +952,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_FRENZY</ID>
+			<ID>ABILITY_BATTLE_FRENZY</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Battle_frenzy/name.txt"/>
@@ -1001,7 +1001,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_RAGING_BLOOD</ID>
+			<ID>ABILITY_DEMON_RAGED</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Demon_raged/name.txt"/>
@@ -1050,7 +1050,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_MANEUVER</ID>
+			<ID>ABILITY_MANEURE</ID>
 			<obj>
 				<CombatLogTexts>
 					<Item href="/Text/CombatLog/Abilities/Maneure.txt"/>
@@ -1061,7 +1061,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_VIOLENCE</ID>
+			<ID>ABILITY_BRUTALITY</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Brutality/name.txt"/>
@@ -1099,7 +1099,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_SWIFT_STRIKE</ID>
+			<ID>ABILITY_FAST_ATTACK</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Fast_attack/name.txt"/>
@@ -1108,7 +1108,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_BATTLE_LEADER</ID>
+			<ID>ABILITY_PRESENCE_OF_COMMANDER</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Presnce_of_commander/name.txt"/>
@@ -1146,7 +1146,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_SHOCKING_STRIKE</ID>
+			<ID>ABILITY_LIGHTNING_BREATH</ID>
 			<obj>
 				<CombatLogTexts>
 					<Item href="/Text/CombatLog/Abilities/LightningBreath.txt"/>
@@ -1195,7 +1195,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_RANDOM_BLESSING</ID>
+			<ID>ABILITY_RANDOM_CASTER_BLESS</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Random_Caster_Bless/Name.txt"/>
@@ -1226,7 +1226,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_BLADE_OF_SLAUGHTER</ID>
+			<ID>ABILITY_AXE_OF_SLAUGHTER</ID>
 			<obj>
 				<CombatLogTexts>
 					<Item href="/Text/CombatLog/Abilities/AxeOfSlaughter.txt"/>
@@ -1237,7 +1237,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_CONVOCATION</ID>
+			<ID>ABILITY_SUMMON_OTHER</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Summon_other/Name.txt"/>
@@ -1273,7 +1273,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_FESTERING_AURA</ID>
+			<ID>ABILITY_WEAKENING_AURA</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Weakening_Aura/name.txt"/>
@@ -1291,7 +1291,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_TORPOR</ID>
+			<ID>ABILITY_SLEEPING_STRIKE</ID>
 			<obj>
 				<CombatLogTexts>
 					<Item href="/Text/CombatLog/Abilities/SleepingStrike.txt"/>
@@ -1302,7 +1302,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_DESPIRITING_ATTACK</ID>
+			<ID>ABILITY_SORROW_STRIKE</ID>
 			<obj>
 				<CombatLogTexts>
 					<Item href="/Text/CombatLog/Abilities/SorrowStrike.txt"/>
@@ -1313,7 +1313,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_PRESSURE</ID>
+			<ID>ABILITY_HORROR_OF_THE_DEATH</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Horror_of_death/Name.txt"/>
@@ -1322,7 +1322,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_ARCANE_ARROW</ID>
+			<ID>ABILITY_PIERCING_ARROW</ID>
 			<obj>
 				<CombatLogTexts>
 					<Item href="ForceArrow.txt"/>
@@ -1387,7 +1387,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_BACKLINER</ID>
+			<ID>ABILITY_ELDRITCH_AURA</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Eldritch_aura/name.txt"/>
@@ -1396,7 +1396,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_COMMAND_BALLISTA</ID>
+			<ID>ABILITY_AURA_OF_FIRE_VULNERABILITY</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Aura_of_fire_vulnerability/name.txt"/>
@@ -1405,7 +1405,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_CHILLING_AURA</ID>
+			<ID>ABILITY_AURA_OF_ICE_VULNERABILITY</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Aura_of_ice_vulnerability/name.txt"/>
@@ -1414,7 +1414,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_MAGNETIC</ID>
+			<ID>ABILITY_AURA_OF_LIGHTNING_VULNERABILITY</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Aura_of_lightning_vulnerability/name.txt"/>
@@ -1423,7 +1423,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_MINE_FIELD</ID>
+			<ID>ABILITY_AURA_OF_EARTH_VULNERABILITY</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Aura_of_earth_vulnerability/name.txt"/>
@@ -1450,7 +1450,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_WHEEL_OF_FORTUNE</ID>
+			<ID>ABILITY_LUCK_GAMBLER</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Luck_gambler/Name.txt"/>
@@ -1459,7 +1459,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_ENCHANTED_METAL</ID>
+			<ID>ABILITY_ENCHANTED_OBSIDIAN</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/EnchantedObsidian/Name.txt"/>
@@ -1479,7 +1479,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_VALOROUS</ID>
+			<ID>ABILITY_AURA_OF_BRAVERY</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Aura_of_bravery/name.txt"/>
@@ -1488,7 +1488,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_ANNIHILATE</ID>
+			<ID>ABILITY_INCINERATE</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Incinerate/name.txt"/>
@@ -1497,7 +1497,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_CAMOUFLAGE</ID>
+			<ID>ABILITY_INVISIBILITY</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Invisibility/Name.txt"/>
@@ -1517,7 +1517,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_GIANT_SLAYER</ID>
+			<ID>ABILITY_ANTI_GIANT</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Anti_giant/name.txt"/>
@@ -1526,7 +1526,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_LAST_BURST</ID>
+			<ID>ABILITY_AVENGING_FLAME</ID>
 			<obj>
 				<CombatLogTexts>
 					<Item href="/Text/CombatLog/Abilities/AvengingFlame.txt"/>
@@ -1537,7 +1537,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_DEFENSIVE_STANCE</ID>
+			<ID>ABILITY_PREPARED_POSITION</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Prepared_position/Name.txt"/>
@@ -1564,7 +1564,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_ROAR</ID>
+			<ID>ABILITY_BEAR_ROAR</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/BearRoar/Name.txt"/>
@@ -1573,7 +1573,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_STEADINESS</ID>
+			<ID>ABILITY_HOLD_GROUND</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Hold_ground/Name.txt"/>
@@ -1602,7 +1602,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_MELTING_BREATH</ID>
+			<ID>ABILITY_LIQUID_FLAME_BREATH</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Liquid_flame/Name.txt"/>
@@ -1611,7 +1611,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_UNFLAGGING</ID>
+			<ID>ABILITY_IMMUNITY_TO_CURSE</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_curse/Name.txt"/>
@@ -1620,7 +1620,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_UNDISTURBED</ID>
+			<ID>ABILITY_IMMUNITY_TO_BERSERK</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_berserk/Name.txt"/>
@@ -1629,7 +1629,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_INCORRUPTIBLE</ID>
+			<ID>ABILITY_IMMUNITY_TO_HYPNOTIZE</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_hypnotize/Name.txt"/>
@@ -1656,7 +1656,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ABILITY_MAGNETISM</ID>
+			<ID>ABILITY_DESTRUCTION_MAGIC_MAGNETISM</ID>
 			<obj>
 				<CombatLogTexts/>
 				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/DestructionMagicMagnetism/Name.txt"/>

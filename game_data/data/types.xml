@@ -1439,7 +1439,7 @@
 				<Item>SPELL_ABILITY_DASH_EFFECT</Item>
 				<Item>SPELL_REMOTE_CONTROL</Item>
 				<Item>SPELL_EFFECT_ARMOR_CRUSHING</Item>
-				<Item>SPELL_ABILITY_POISONOUS_ATTACK</Item>
+				<Item>SPELL_ABILITY_POISONOUS_ATTACKOUS_ATTACK</Item>
 				<Item>SPELL_LIZARD_BITE_HIT</Item>
 				<Item>SPELL_EFFECT_REGENRATION</Item>
 				<Item>SPELL_EFFECT_REBIRTH</Item>
@@ -1976,8 +1976,8 @@
 				<Item>ABILITY_NONE</Item>
 				<Item>ABILITY_SHOOTER</Item>
 				<Item>ABILITY_NO_MELEE_PENALTY</Item>
-				<Item>ABILITY_LONG_RANGE</Item>
-				<Item>ABILITY_SHORT_RANGE</Item>
+				<Item>ABILITY_NO_RANGE_PENALTY</Item>
+				<Item>ABILITY_RANGE_PENALTY</Item>
 				<Item>ABILITY_NO_ENEMY_RETALIATION</Item>
 				<Item>ABILITY_UNLIMITED_RETALIATION</Item>
 				<Item>ABILITY_DOUBLE_ATTACK</Item>
@@ -1987,20 +1987,20 @@
 				<Item>ABILITY_DEMONIC</Item>
 				<Item>ABILITY_ELEMENTAL</Item>
 				<Item>ABILITY_CURSING_ATTACK</Item>
-				<Item>ABILITY_LIVING</Item>
-				<Item>ABILITY_SPITE</Item>
-				<Item>ABILITY_KEEN_EYE</Item>
-				<Item>ABILITY_CHAOS_INCARNATE</Item>
-				<Item>ABILITY_UNSTOPPABLE</Item>
-				<Item>ABILITY_FREE_MIND</Item>
-				<Item>ABILITY_LIGHTNING_IMMUNED</Item>
-				<Item>ABILITY_FIRE_IMMUNED</Item>
-				<Item>ABILITY_ICE_IMMUNED</Item>
-				<Item>ABILITY_EARTH_IMMUNED</Item>
+				<Item>ABILITY_FLESH_AND_BLOOD</Item>
+				<Item>ABILITY_ENRAGED</Item>
+				<Item>ABILITY_IMMUNITY_TO_BLIND</Item>
+				<Item>ABILITY_IMMUNITY_TO_MAGIC</Item>
+				<Item>ABILITY_IMMUNITY_TO_SLOW</Item>
+				<Item>ABILITY_IMMUNITY_TO_MIND_CONTROL</Item>
+				<Item>ABILITY_IMMUNITY_TO_AIR</Item>
+				<Item>ABILITY_IMMUNITY_TO_FIRE</Item>
+				<Item>ABILITY_IMMUNITY_TO_WATER</Item>
+				<Item>ABILITY_IMMUNITY_TO_EARTH</Item>
 				<Item>ABILITY_MAGIC_PROOF_50</Item>
-				<Item>ABILITY_WEAKPOINT</Item>
-				<Item>ABILITY_SHIELDED</Item>
-				<Item>ABILITY_SHIELD_WALL</Item>
+				<Item>ABILITY_PRECISE_SHOT</Item>
+				<Item>ABILITY_LARGE_SHIELD</Item>
+				<Item>ABILITY_SHIELD_OTHER</Item>
 				<Item>ABILITY_JOUSTING</Item>
 				<Item>ABILITY_BASH</Item>
 				<Item>ABILITY_BATTLE_DIVE</Item>
@@ -2009,36 +2009,36 @@
 				<Item>ABILITY_EXPLOSION</Item>
 				<Item>ABILITY_RANGED_RETALIATE</Item>
 				<Item>ABILITY_FEAR</Item>
-				<Item>ABILITY_FRIGHTFUL</Item>
+				<Item>ABILITY_FRIGHT_AURA</Item>
 				<Item>ABILITY_VORPAL_SWORD</Item>
-				<Item>ABILITY_INFERNAL_CHAIN</Item>
-				<Item>ABILITY_INFECTION</Item>
+				<Item>ABILITY_CHAIN_SHOT</Item>
+				<Item>ABILITY_WEAKENING_STRIKE</Item>
 				<Item>ABILITY_INCORPOREAL</Item>
-				<Item>ABILITY_MANAVOROUS</Item>
+				<Item>ABILITY_MANA_DRAIN</Item>
 				<Item>ABILITY_LIFE_DRAIN</Item>
 				<Item>ABILITY_DEATH_CLOUD</Item>
-				<Item>ABILITY_TWIN_ARROWS</Item>
+				<Item>ABILITY_ELVES_DOUBLE_SHOT</Item>
 				<Item>ABILITY_WARDING_ARROWS</Item>
-				<Item>ABILITY_BLINDING_HORN</Item>
-				<Item>ABILITY_MAGIC_DISRUPTION</Item>
+				<Item>ABILITY_BLINDING_ATTACK</Item>
+				<Item>ABILITY_AURA_OF_MAGIC_RESISTANCE</Item>
 				<Item>ABILITY_TAKE_ROOTS</Item>
 				<Item>ABILITY_ENTANGLING_ROOTS</Item>
 				<Item>ABILITY_ACID_BREATH</Item>
 				<Item>ABILITY_PIERCING_SHOT</Item>
 				<Item>ABILITY_ENERGY_CHANNEL</Item>
 				<Item>ABILITY_MAGIC_PROOF_75</Item>
-				<Item>ABILITY_POISON</Item>
+				<Item>ABILITY_POISONOUS_ATTACK</Item>
 				<Item>ABILITY_STRIKE_AND_RETURN</Item>
 				<Item>ABILITY_BRAVERY</Item>
-				<Item>ABILITY_CHARGE</Item>
-				<Item>ABILITY_BEAT_UP</Item>
+				<Item>ABILITY_RIDER_CHARGE</Item>
+				<Item>ABILITY_LIZARD_BITE</Item>
 				<Item>ABILITY_SIX_HEADED_ATTACK</Item>
 				<Item>ABILITY_REGENERATION</Item>
 				<Item>ABILITY_WHIP_STRIKE</Item>
-				<Item>ABILITY_BURNING_BODY</Item>
+				<Item>ABILITY_FIRE_SHIELD</Item>
 				<Item>ABILITY_DEADLY_STRIKE</Item>
 				<Item>ABILITY_REBIRTH</Item>
-				<Item>ABILITY_INTIMIDATE</Item>
+				<Item>ABILITY_FRIGHTFUL_PRESENCE</Item>
 				<Item>ABILITY_CRYSTAL_SCALES</Item>
 				<Item>ABILITY_LARGE_CREATURE</Item>
 				<Item>ABILITY_FLYER</Item>
@@ -2049,105 +2049,105 @@
 				<Item>ABILITY_BALOR_SUMMONIG</Item>
 				<Item>ABILITY_SPRAY_ATTACK</Item>
 				<Item>ABILITY_MANA_FEED</Item>
-				<Item>ABILITY_DRAGON_BREATH</Item>
+				<Item>ABILITY_FIRE_BREATH</Item>
 				<Item>ABILITY_HARM_TOUCH</Item>
 				<Item>ABILITY_WAR_DANCE</Item>
 				<Item>ABILITY_REPAIR</Item>
-				<Item>ABILITY_RANDOM_CURSE</Item>
+				<Item>ABILITY_RANDOM_CASTER</Item>
 				<Item>ABILITY_DASH</Item>
 				<Item>ABILITY_CALL_LIGHTNING</Item>
 				<Item>ABILITY_LAY_HANDS</Item>
 				<Item>ABILITY_THREE_HEADED_ATTACK</Item>
-				<Item>ABILITY_HEAVY_ARMOR</Item>
-				<Item>ABILITY_STURDINESS</Item>
+				<Item>ABILITY_ARMORED</Item>
+				<Item>ABILITY_SHIELD_WALL</Item>
 				<Item>ABILITY_WOUND</Item>
 				<Item>ABILITY_PAW_STRIKE</Item>
-				<Item>ABILITY_FURY</Item>
-				<Item>ABILITY_THUNDER_SHOCK</Item>
-				<Item>ABILITY_THUNDER_STRIKE</Item>
+				<Item>ABILITY_BERSERKER_RAGE</Item>
+				<Item>ABILITY_STORMBOLT</Item>
+				<Item>ABILITY_STORMSTRIKE</Item>
 				<Item>ABILITY_MARK_OF_FIRE</Item>
-				<Item>ABILITY_MAGIC_ATTACK</Item>
+				<Item>ABILITY_CROSS_ATTACK</Item>
 				<Item>ABILITY_MAGMA_SHIELD</Item>
-				<Item>ABILITY_HORDE</Item>
+				<Item>ABILITY_PACK_HUNTER</Item>
 				<Item>ABILITY_HOWL</Item>
 				<Item>ABILITY_AGILITY</Item>
 				<Item>ABILITY_HEXING_ATTACK</Item>
 				<Item>ABILITY_CLEAVE</Item>
-				<Item>ABILITY_FRENZY</Item>
+				<Item>ABILITY_BATTLE_FRENZY</Item>
 				<Item>ABILITY_PACK_DIVE</Item>
 				<Item>ABILITY_CHAMPION_CHARGE</Item>
 				<Item>ABILITY_PURGER</Item>
 				<Item>ABILITY_BLADE_BARRIER</Item>
-				<Item>ABILITY_RAGING_BLOOD</Item>
+				<Item>ABILITY_DEMON_RAGED</Item>
 				<Item>ABILITY_COWARDICE</Item>
 				<Item>ABILITY_TREACHERY</Item>
 				<Item>ABILITY_SET_SNARES</Item>
 				<Item>ABILITY_DEFILE_MAGIC</Item>
-				<Item>ABILITY_MANEUVER</Item>
-				<Item>ABILITY_VIOLENCE</Item>
+				<Item>ABILITY_MANEURE</Item>
+				<Item>ABILITY_BRUTALITY</Item>
 				<Item>ABILITY_TAUNT</Item>
 				<Item>ABILITY_FIERCE_RETALIATION</Item>
 				<Item>ABILITY_SACRIFICE_GOBLIN</Item>
-				<Item>ABILITY_SWIFT_STRIKE</Item>
-				<Item>ABILITY_BATTLE_LEADER</Item>
+				<Item>ABILITY_FAST_ATTACK</Item>
+				<Item>ABILITY_PRESENCE_OF_COMMANDER</Item>
 				<Item>ABILITY_ORDER_OF_THE_CHIEF</Item>
 				<Item>ABILITY_VENOM</Item>
 				<Item>ABILITY_SCAVENGER</Item>
-				<Item>ABILITY_SHOCKING_STRIKE</Item>
+				<Item>ABILITY_LIGHTNING_BREATH</Item>
 				<Item>ABILITY_SWALLOW_GOBLIN</Item>
 				<Item>ABILITY_GOBLIN_THROWER</Item>
 				<Item>ABILITY_CRUSHING_BLOW</Item>
 				<Item>ABILITY_EVIL_EYE</Item>
-				<Item>ABILITY_RANDOM_BLESSING</Item>
+				<Item>ABILITY_RANDOM_CASTER_BLESS</Item>
 				<Item>ABILITY_SYPHON_MANA</Item>
 				<Item>ABILITY_SEARING_AURA</Item>
-				<Item>ABILITY_BLADE_OF_SLAUGHTER</Item>
-				<Item>ABILITY_CONVOCATION</Item>
+				<Item>ABILITY_AXE_OF_SLAUGHTER</Item>
+				<Item>ABILITY_SUMMON_OTHER</Item>
 				<Item>ABILITY_SEDUCE</Item>
 				<Item>ABILITY_LEAP</Item>
 				<Item>ABILITY_DEATH_WAIL</Item>
-				<Item>ABILITY_FESTERING_AURA</Item>
+				<Item>ABILITY_WEAKENING_AURA</Item>
 				<Item>ABILITY_AMMO_STEAL</Item>
-				<Item>ABILITY_TORPOR</Item>
-				<Item>ABILITY_DESPIRITING_ATTACK</Item>
-				<Item>ABILITY_PRESSURE</Item>
-				<Item>ABILITY_ARCANE_ARROW</Item>
+				<Item>ABILITY_SLEEPING_STRIKE</Item>
+				<Item>ABILITY_SORROW_STRIKE</Item>
+				<Item>ABILITY_HORROR_OF_THE_DEATH</Item>
+				<Item>ABILITY_PIERCING_ARROW</Item>
 				<Item>ABILITY_TREEANT_UNION</Item>
 				<Item>ABILITY_RAGE_OF_THE_FOREST</Item>
 				<Item>ABILITY_POWER_FEED</Item>
 				<Item>ABILITY_RAINBOW_BREATH</Item>
 				<Item>ABILITY_BOND_OF_LIGHT</Item>
 				<Item>ABILITY_WHIRLWIND</Item>
-				<Item>ABILITY_BACKLINER</Item>
-				<Item>ABILITY_COMMAND_BALLISTA</Item>
-				<Item>ABILITY_CHILLING_AURA</Item>
-				<Item>ABILITY_MAGNETIC</Item>
-				<Item>ABILITY_MINE_FIELD</Item>
+				<Item>ABILITY_ELDRITCH_AURA</Item>
+				<Item>ABILITY_AURA_OF_FIRE_VULNERABILITY</Item>
+				<Item>ABILITY_AURA_OF_ICE_VULNERABILITY</Item>
+				<Item>ABILITY_AURA_OF_LIGHTNING_VULNERABILITY</Item>
+				<Item>ABILITY_AURA_OF_EARTH_VULNERABILITY</Item>
 				<Item>ABILITY_CALL_STORM</Item>
 				<Item>ABILITY_SABOTAGE</Item>
-				<Item>ABILITY_WHEEL_OF_FORTUNE</Item>
-				<Item>ABILITY_ENCHANTED_METAL</Item>
+				<Item>ABILITY_LUCK_GAMBLER</Item>
+				<Item>ABILITY_ENCHANTED_OBSIDIAN</Item>
 				<Item>ABILITY_ACID_BLOOD</Item>
-				<Item>ABILITY_VALOROUS</Item>
-				<Item>ABILITY_ANNIHILATE</Item>
-				<Item>ABILITY_CAMOUFLAGE</Item>
+				<Item>ABILITY_AURA_OF_BRAVERY</Item>
+				<Item>ABILITY_INCINERATE</Item>
+				<Item>ABILITY_INVISIBILITY</Item>
 				<Item>ABILITY_RIDE_BY_ATTACK</Item>
-				<Item>ABILITY_GIANT_SLAYER</Item>
-				<Item>ABILITY_LAST_BURST</Item>
-				<Item>ABILITY_DEFENSIVE_STANCE</Item>
+				<Item>ABILITY_ANTI_GIANT</Item>
+				<Item>ABILITY_AVENGING_FLAME</Item>
+				<Item>ABILITY_PREPARED_POSITION</Item>
 				<Item>ABILITY_BATTLE_RAGE</Item>
 				<Item>ABILITY_HARPOON_STRIKE</Item>
-				<Item>ABILITY_ROAR</Item>
-				<Item>ABILITY_STEADINESS</Item>
+				<Item>ABILITY_BEAR_ROAR</Item>
+				<Item>ABILITY_HOLD_GROUND</Item>
 				<Item>ABILITY_FLAMEWAVE</Item>
 				<Item>ABILITY_FLAMESTRIKE</Item>
-				<Item>ABILITY_MELTING_BREATH</Item>
-				<Item>ABILITY_UNFLAGGING</Item>
-				<Item>ABILITY_UNDISTURBED</Item>
-				<Item>ABILITY_INCORRUPTIBLE</Item>
+				<Item>ABILITY_LIQUID_FLAME_BREATH</Item>
+				<Item>ABILITY_IMMUNITY_TO_CURSE</Item>
+				<Item>ABILITY_IMMUNITY_TO_BERSERK</Item>
+				<Item>ABILITY_IMMUNITY_TO_HYPNOTIZE</Item>
 				<Item>ABILITY_MAGIC_PROOF_25</Item>
 				<Item>ABILITY_FIRE_PROOF_50</Item>
-				<Item>ABILITY_MAGNETISM</Item>
+				<Item>ABILITY_DESTRUCTION_MAGIC_MAGNETISM</Item>
 			</EnumEntries>
 		</Item>
 		<Item>
@@ -24001,11 +24001,11 @@
 					<Value>2</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_LONG_RANGE</Name>
+					<Name>ABILITY_NO_RANGE_PENALTY</Name>
 					<Value>3</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_SHORT_RANGE</Name>
+					<Name>ABILITY_RANGE_PENALTY</Name>
 					<Value>4</Value>
 				</Item>
 				<Item>
@@ -24045,43 +24045,43 @@
 					<Value>13</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_LIVING</Name>
+					<Name>ABILITY_FLESH_AND_BLOOD</Name>
 					<Value>14</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_SPITE</Name>
+					<Name>ABILITY_ENRAGED</Name>
 					<Value>15</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_KEEN_EYE</Name>
+					<Name>ABILITY_IMMUNITY_TO_BLIND</Name>
 					<Value>16</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_CHAOS_INCARNATE</Name>
+					<Name>ABILITY_IMMUNITY_TO_MAGIC</Name>
 					<Value>17</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_UNSTOPPABLE</Name>
+					<Name>ABILITY_IMMUNITY_TO_SLOW</Name>
 					<Value>18</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_FREE_MIND</Name>
+					<Name>ABILITY_IMMUNITY_TO_MIND_CONTROL</Name>
 					<Value>19</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_LIGHTNING_IMMUNED</Name>
+					<Name>ABILITY_IMMUNITY_TO_AIR</Name>
 					<Value>20</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_FIRE_IMMUNED</Name>
+					<Name>ABILITY_IMMUNITY_TO_FIRE</Name>
 					<Value>21</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_ICE_IMMUNED</Name>
+					<Name>ABILITY_IMMUNITY_TO_WATER</Name>
 					<Value>22</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_EARTH_IMMUNED</Name>
+					<Name>ABILITY_IMMUNITY_TO_EARTH</Name>
 					<Value>23</Value>
 				</Item>
 				<Item>
@@ -24089,15 +24089,15 @@
 					<Value>24</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_WEAKPOINT</Name>
+					<Name>ABILITY_PRECISE_SHOT</Name>
 					<Value>25</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_SHIELDED</Name>
+					<Name>ABILITY_LARGE_SHIELD</Name>
 					<Value>26</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_SHIELD_WALL</Name>
+					<Name>ABILITY_SHIELD_OTHER</Name>
 					<Value>27</Value>
 				</Item>
 				<Item>
@@ -24133,7 +24133,7 @@
 					<Value>35</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_FRIGHTFUL</Name>
+					<Name>ABILITY_FRIGHT_AURA</Name>
 					<Value>36</Value>
 				</Item>
 				<Item>
@@ -24141,11 +24141,11 @@
 					<Value>37</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_INFERNAL_CHAIN</Name>
+					<Name>ABILITY_CHAIN_SHOT</Name>
 					<Value>38</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_INFECTION</Name>
+					<Name>ABILITY_WEAKENING_STRIKE</Name>
 					<Value>39</Value>
 				</Item>
 				<Item>
@@ -24153,7 +24153,7 @@
 					<Value>40</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_MANAVOROUS</Name>
+					<Name>ABILITY_MANA_DRAIN</Name>
 					<Value>41</Value>
 				</Item>
 				<Item>
@@ -24165,7 +24165,7 @@
 					<Value>43</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_TWIN_ARROWS</Name>
+					<Name>ABILITY_ELVES_DOUBLE_SHOT</Name>
 					<Value>44</Value>
 				</Item>
 				<Item>
@@ -24173,11 +24173,11 @@
 					<Value>45</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_BLINDING_HORN</Name>
+					<Name>ABILITY_BLINDING_ATTACK</Name>
 					<Value>46</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_MAGIC_DISRUPTION</Name>
+					<Name>ABILITY_AURA_OF_MAGIC_RESISTANCE</Name>
 					<Value>47</Value>
 				</Item>
 				<Item>
@@ -24205,7 +24205,7 @@
 					<Value>53</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_POISON</Name>
+					<Name>ABILITY_POISONOUS_ATTACK</Name>
 					<Value>54</Value>
 				</Item>
 				<Item>
@@ -24217,11 +24217,11 @@
 					<Value>56</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_CHARGE</Name>
+					<Name>ABILITY_RIDER_CHARGE</Name>
 					<Value>57</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_BEAT_UP</Name>
+					<Name>ABILITY_LIZARD_BITE</Name>
 					<Value>58</Value>
 				</Item>
 				<Item>
@@ -24237,7 +24237,7 @@
 					<Value>61</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_BURNING_BODY</Name>
+					<Name>ABILITY_FIRE_SHIELD</Name>
 					<Value>62</Value>
 				</Item>
 				<Item>
@@ -24249,7 +24249,7 @@
 					<Value>64</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_INTIMIDATE</Name>
+					<Name>ABILITY_FRIGHTFUL_PRESENCE</Name>
 					<Value>65</Value>
 				</Item>
 				<Item>
@@ -24293,7 +24293,7 @@
 					<Value>75</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_DRAGON_BREATH</Name>
+					<Name>ABILITY_FIRE_BREATH</Name>
 					<Value>76</Value>
 				</Item>
 				<Item>
@@ -24309,7 +24309,7 @@
 					<Value>79</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_RANDOM_CURSE</Name>
+					<Name>ABILITY_RANDOM_CASTER</Name>
 					<Value>80</Value>
 				</Item>
 				<Item>
@@ -24329,11 +24329,11 @@
 					<Value>84</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_HEAVY_ARMOR</Name>
+					<Name>ABILITY_ARMORED</Name>
 					<Value>85</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_STURDINESS</Name>
+					<Name>ABILITY_SHIELD_WALL</Name>
 					<Value>86</Value>
 				</Item>
 				<Item>
@@ -24345,15 +24345,15 @@
 					<Value>88</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_FURY</Name>
+					<Name>ABILITY_BERSERKER_RAGE</Name>
 					<Value>89</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_THUNDER_SHOCK</Name>
+					<Name>ABILITY_STORMBOLT</Name>
 					<Value>90</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_THUNDER_STRIKE</Name>
+					<Name>ABILITY_STORMSTRIKE</Name>
 					<Value>91</Value>
 				</Item>
 				<Item>
@@ -24361,7 +24361,7 @@
 					<Value>92</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_MAGIC_ATTACK</Name>
+					<Name>ABILITY_CROSS_ATTACK</Name>
 					<Value>93</Value>
 				</Item>
 				<Item>
@@ -24369,7 +24369,7 @@
 					<Value>94</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_HORDE</Name>
+					<Name>ABILITY_PACK_HUNTER</Name>
 					<Value>95</Value>
 				</Item>
 				<Item>
@@ -24389,7 +24389,7 @@
 					<Value>99</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_FRENZY</Name>
+					<Name>ABILITY_BATTLE_FRENZY</Name>
 					<Value>100</Value>
 				</Item>
 				<Item>
@@ -24409,7 +24409,7 @@
 					<Value>104</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_RAGING_BLOOD</Name>
+					<Name>ABILITY_DEMON_RAGED</Name>
 					<Value>105</Value>
 				</Item>
 				<Item>
@@ -24429,11 +24429,11 @@
 					<Value>109</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_MANEUVER</Name>
+					<Name>ABILITY_MANEURE</Name>
 					<Value>110</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_VIOLENCE</Name>
+					<Name>ABILITY_BRUTALITY</Name>
 					<Value>111</Value>
 				</Item>
 				<Item>
@@ -24449,11 +24449,11 @@
 					<Value>114</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_SWIFT_STRIKE</Name>
+					<Name>ABILITY_FAST_ATTACK</Name>
 					<Value>115</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_BATTLE_LEADER</Name>
+					<Name>ABILITY_PRESENCE_OF_COMMANDER</Name>
 					<Value>116</Value>
 				</Item>
 				<Item>
@@ -24469,7 +24469,7 @@
 					<Value>119</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_SHOCKING_STRIKE</Name>
+					<Name>ABILITY_LIGHTNING_BREATH</Name>
 					<Value>120</Value>
 				</Item>
 				<Item>
@@ -24489,7 +24489,7 @@
 					<Value>124</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_RANDOM_BLESSING</Name>
+					<Name>ABILITY_RANDOM_CASTER_BLESS</Name>
 					<Value>125</Value>
 				</Item>
 				<Item>
@@ -24501,11 +24501,11 @@
 					<Value>127</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_BLADE_OF_SLAUGHTER</Name>
+					<Name>ABILITY_AXE_OF_SLAUGHTER</Name>
 					<Value>128</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_CONVOCATION</Name>
+					<Name>ABILITY_SUMMON_OTHER</Name>
 					<Value>129</Value>
 				</Item>
 				<Item>
@@ -24521,7 +24521,7 @@
 					<Value>132</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_FESTERING_AURA</Name>
+					<Name>ABILITY_WEAKENING_AURA</Name>
 					<Value>133</Value>
 				</Item>
 				<Item>
@@ -24529,19 +24529,19 @@
 					<Value>134</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_TORPOR</Name>
+					<Name>ABILITY_SLEEPING_STRIKE</Name>
 					<Value>135</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_DESPIRITING_ATTACK</Name>
+					<Name>ABILITY_SORROW_STRIKE</Name>
 					<Value>136</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_PRESSURE</Name>
+					<Name>ABILITY_HORROR_OF_THE_DEATH</Name>
 					<Value>137</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_ARCANE_ARROW</Name>
+					<Name>ABILITY_PIERCING_ARROW</Name>
 					<Value>138</Value>
 				</Item>
 				<Item>
@@ -24569,23 +24569,23 @@
 					<Value>144</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_BACKLINER</Name>
+					<Name>ABILITY_ELDRITCH_AURA</Name>
 					<Value>145</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_COMMAND_BALLISTA</Name>
+					<Name>ABILITY_AURA_OF_FIRE_VULNERABILITY</Name>
 					<Value>146</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_CHILLING_AURA</Name>
+					<Name>ABILITY_AURA_OF_ICE_VULNERABILITY</Name>
 					<Value>147</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_MAGNETIC</Name>
+					<Name>ABILITY_AURA_OF_LIGHTNING_VULNERABILITY</Name>
 					<Value>148</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_MINE_FIELD</Name>
+					<Name>ABILITY_AURA_OF_EARTH_VULNERABILITY</Name>
 					<Value>149</Value>
 				</Item>
 				<Item>
@@ -24597,11 +24597,11 @@
 					<Value>151</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_WHEEL_OF_FORTUNE</Name>
+					<Name>ABILITY_LUCK_GAMBLER</Name>
 					<Value>152</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_ENCHANTED_METAL</Name>
+					<Name>ABILITY_ENCHANTED_OBSIDIAN</Name>
 					<Value>153</Value>
 				</Item>
 				<Item>
@@ -24609,15 +24609,15 @@
 					<Value>154</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_VALOROUS</Name>
+					<Name>ABILITY_AURA_OF_BRAVERY</Name>
 					<Value>155</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_ANNIHILATE</Name>
+					<Name>ABILITY_INCINERATE</Name>
 					<Value>156</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_CAMOUFLAGE</Name>
+					<Name>ABILITY_INVISIBILITY</Name>
 					<Value>157</Value>
 				</Item>
 				<Item>
@@ -24625,15 +24625,15 @@
 					<Value>158</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_GIANT_SLAYER</Name>
+					<Name>ABILITY_ANTI_GIANT</Name>
 					<Value>159</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_LAST_BURST</Name>
+					<Name>ABILITY_AVENGING_FLAME</Name>
 					<Value>160</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_DEFENSIVE_STANCE</Name>
+					<Name>ABILITY_PREPARED_POSITION</Name>
 					<Value>161</Value>
 				</Item>
 				<Item>
@@ -24645,11 +24645,11 @@
 					<Value>163</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_ROAR</Name>
+					<Name>ABILITY_BEAR_ROAR</Name>
 					<Value>164</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_STEADINESS</Name>
+					<Name>ABILITY_HOLD_GROUND</Name>
 					<Value>165</Value>
 				</Item>
 				<Item>
@@ -24661,19 +24661,19 @@
 					<Value>167</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_MELTING_BREATH</Name>
+					<Name>ABILITY_LIQUID_FLAME_BREATH</Name>
 					<Value>168</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_UNFLAGGING</Name>
+					<Name>ABILITY_IMMUNITY_TO_CURSE</Name>
 					<Value>169</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_UNDISTURBED</Name>
+					<Name>ABILITY_IMMUNITY_TO_BERSERK</Name>
 					<Value>170</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_INCORRUPTIBLE</Name>
+					<Name>ABILITY_IMMUNITY_TO_HYPNOTIZE</Name>
 					<Value>171</Value>
 				</Item>
 				<Item>
@@ -24685,7 +24685,7 @@
 					<Value>173</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_MAGNETISM</Name>
+					<Name>ABILITY_DESTRUCTION_MAGIC_MAGNETISM</Name>
 					<Value>174</Value>
 				</Item>
 			</Entries>
@@ -66733,7 +66733,7 @@
 					<Value>179</Value>
 				</Item>
 				<Item>
-					<Name>SPELL_ABILITY_POISONOUS_ATTACK</Name>
+					<Name>SPELL_ABILITY_POISONOUS_ATTACKOUS_ATTACK</Name>
 					<Value>180</Value>
 				</Item>
 				<Item>
