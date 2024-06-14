@@ -1439,7 +1439,7 @@
 				<Item>SPELL_ABILITY_DASH_EFFECT</Item>
 				<Item>SPELL_REMOTE_CONTROL</Item>
 				<Item>SPELL_EFFECT_ARMOR_CRUSHING</Item>
-				<Item>SPELL_ABILITY_POISONOUS_ATTACKOUS_ATTACK</Item>
+				<Item>SPELL_ABILITY_POISONOUS_ATTACK</Item>
 				<Item>SPELL_LIZARD_BITE_HIT</Item>
 				<Item>SPELL_EFFECT_REGENRATION</Item>
 				<Item>SPELL_EFFECT_REBIRTH</Item>
@@ -2024,7 +2024,7 @@
 				<Item>ABILITY_TAKE_ROOTS</Item>
 				<Item>ABILITY_ENTANGLING_ROOTS</Item>
 				<Item>ABILITY_ACID_BREATH</Item>
-				<Item>ABILITY_PIERCING_SHOT</Item>
+				<Item>ABILITY_MAGIC_ATTACK</Item>
 				<Item>ABILITY_ENERGY_CHANNEL</Item>
 				<Item>ABILITY_MAGIC_PROOF_75</Item>
 				<Item>ABILITY_POISONOUS_ATTACK</Item>
@@ -24193,7 +24193,7 @@
 					<Value>50</Value>
 				</Item>
 				<Item>
-					<Name>ABILITY_PIERCING_SHOT</Name>
+					<Name>ABILITY_MAGIC_ATTACK</Name>
 					<Value>51</Value>
 				</Item>
 				<Item>
@@ -29458,7 +29458,7 @@
 					<Value>199</Value>
 				</Item>
 				<Item>
-					<Name>200</Name>
+					<Name>CREATURE_200</Name>
 					<Value>200</Value>
 				</Item>
 			</Entries>
@@ -66733,7 +66733,7 @@
 					<Value>179</Value>
 				</Item>
 				<Item>
-					<Name>SPELL_ABILITY_POISONOUS_ATTACKOUS_ATTACK</Name>
+					<Name>SPELL_ABILITY_POISONOUS_ATTACK</Name>
 					<Value>180</Value>
 				</Item>
 				<Item>
