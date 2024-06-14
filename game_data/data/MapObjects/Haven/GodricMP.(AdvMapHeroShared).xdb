@@ -40,9 +40,9 @@
 	<SpecializationIcon href="/Textures/Icons/Heroes/Heaven/Heaven_Godric_128x128.(Texture).xdb#xpointer(/Texture)"/>	
 	<FaceTexture href="/Textures/Icons/Heroes/Heaven/Heaven_Godric_128x128.(Texture).xdb#xpointer(/Texture)"/>
 	<FaceTextureSmall/>
-	<HeroCharacterArena href="/Characters/Heroes/Godric.(Character).xdb#xpointer(/Character)"/>
-	<HeroCharacterArenaMelee href="/Characters/Heroes/Godric_Strike.(Character).xdb#xpointer(/Character)"/>
-	<HeroCharacterAdventure href="/Characters/Heroes/Godric_LOD.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArena href="/Characters/Heroes/Knight.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee href="/Characters/Heroes/Knight_strike.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterAdventure href="/Characters/Heroes/Knight_LOD.(Character).xdb#xpointer(/Character)"/>
 	<HeroIndividualCamera/>
 	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Knight.xdb#xpointer(/CreatureVisual)"/>
 	<TownType>TOWN_HEAVEN</TownType>
@@ -83,6 +83,6 @@
 	<RaceTraitIcon/>
 	<RaceTraitDescFileRef href=""/>
 	<ScenarioHero>false</ScenarioHero>
-	<AdventureMusic href="/Sounds/_(Music)/AdvMap-Heroes/Godric.xdb#xpointer(/Music)"/>
+	<AdventureMusic/>
 	<HideInEditor>false</HideInEditor>
 </AdvMapHeroShared>
