@@ -88,7 +88,10 @@ function UpdateTavernHeroes()
     for hero,data in HEROES do
         if not IsHeroAlive(hero) then
             if not data.owner then
-                startThread(ReplaceStartingArmy, hero)
+                local first = GetHeroArmy(hero)[1]
+                if first == 0 or GetHeroCreatures(hero, first) == 1 then
+                    startThread(ReplaceStartingArmy, hero)
+                end
             end
         end
     end

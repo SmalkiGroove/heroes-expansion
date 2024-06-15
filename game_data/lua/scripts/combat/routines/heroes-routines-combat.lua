@@ -107,7 +107,7 @@ end
 function Routine_HunterRandomShoot(side, hero)
     -- print("Trigger hunters random shoot !")
     RandomShoot_CreatureTypes(side, {CREATURE_WOOD_ELF,CREATURE_GRAND_ELF,CREATURE_SHARP_SHOOTER})
-    SetATB_CreatureTypes(side, {CREATURE_WOOD_ELF,CREATURE_GRAND_ELF,CREATURE_SHARP_SHOOTER}, 0.25)
+    SetATB_CreatureTypes(side, {CREATURE_WOOD_ELF,CREATURE_GRAND_ELF,CREATURE_SHARP_SHOOTER}, 0.1)
 end
 
 function Routine_CastSummonHive(side, hero)
