@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WindowSimpleShared ObjectRecordID="1000860">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="brace1/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="brace2/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="brace3/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="brace4/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="brace5/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="brace6/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="brace7/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="brace8/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="Heroclass1.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="Heroclass2.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="Heroclass3.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="Heroclass4.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="Heroclass5.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="Heroclass6.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="Heroclass7.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="Heroclass8.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="ExitButton.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="knight/000001.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="demon/000002.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="necro/000003.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="warlock/000004.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="ranger/000005.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="wizard/000006.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="runemage/000007.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="barbarian/000008.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="About.(WindowStaticText).xdb#xpointer(/WindowStaticText)"/>
+		<Item href="Selection/000000.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="Description/000000.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+	</Children>
+	<Background href="Background.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
+	<Foreground/>
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea/>
+	<IgnoreDblClick>false</IgnoreDblClick>
+	<ActiveMask/>
+</WindowSimpleShared>
