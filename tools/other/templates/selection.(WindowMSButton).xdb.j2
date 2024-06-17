@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowMSButton ObjectRecordID="1000123">
 	<ClassTypeID>285694855</ClassTypeID>
-	<Shared href="201000.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
-	<Name>Button201000</Name>
-	<TooltipFileRef href="/Text/Game/Skills/BarbarianSpec/LightMagic/WeakenLight/Description.txt"/>
+	<Shared href="Shared.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
+	<Name>{{ selection_button_id }}</Name>
+	<TooltipFileRef/>
 	<Visible>true</Visible>
 	<Priority>0</Priority>
-	<GameMessageReactions/>
+	<GameMessageReactions>
+		<Item>
+			<GameMessage>DocSkillsHideAll</GameMessage>
+			<LogicalReaction/>
+			<VisualReaction>
+				<Commands>
+					<Item href="010700.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+				</Commands>
+				<Reversable>false</Reversable>
+			</VisualReaction>
+			<WaitVisual>false</WaitVisual>
+			<Forward>true</Forward>
+		</Item>
+	</GameMessageReactions>
 	<Placement>
 		<Position>
 			<First>
-				<x>230</x>
-				<y>626</y>
+				<x>{{ pos_x }}</x>
+				<y>{{ pos_y }}</y>
 			</First>
 			<Second>true</Second>
 		</Position>

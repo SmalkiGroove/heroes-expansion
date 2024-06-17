@@ -1,0 +1,61 @@
+
+import os
+import xmltodict
+from jinja2 import Environment, FileSystemLoader, Template
+
+
+root_data_path = "../../game_data/data"
+skills_xdb_path = "../../game_data/data/GameMechanics/RefTables/Skills.xdb"
+skill_tree_path = "../../game_data/skilltree/UI/Doc/Skills"
+
+jinja_env = Environment(loader=FileSystemLoader(searchpath="templates"))
+
+with open(skills_xdb_path, 'r') as skills_xdb:
+    skills_data = xmltodict.parse(skills_xdb.read())
+
+
+def button_base_path(id, faction):
+    return os.path.join(skill_tree_path, faction, f"{id}.(WindowMSButton).xdb")
+def button_shared_path(id, faction):
+    return os.path.join(skill_tree_path, faction, f"{id}.(WindowMSButtonShared).xdb")
+
+def write_from_template(tpl_name, output_path, variables):
+    tpl = jinja_env.get_template(tpl_name)
+    rendered = tpl.render(variables)
+    with open(output_path, 'w') as out_file:
+        out_file.write(rendered)
+
+
+counter = -1
+for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
+    counter = counter + 1
+    elements = {}
+    if skill["obj"]["SkillType"] == "SKILLTYPE_SKILL":
+        if not skill["obj"]["NameFileRef"]:
+            continue
+        ranks = len(skill["obj"]["NameFileRef"]["Item"])
+        for k in range(1,ranks+1):
+            id = f"{counter:03}{k:03}"
+            elements[id] = {
+                'icon': skill["obj"]["Texture"]["Item"][k]["@href"],
+                'name': skill["obj"]["NameFileRef"]["Item"][k-1]["@href"],
+                'desc': skill["obj"]["DescriptionFileRef"]["Item"][k-1]["@href"],
+            }
+    else:
+        id = f"{counter:03}000"
+        elements[id] = {
+            'icon': skill["obj"]["Texture"]["Item"][1]["@href"],
+            'name': skill["obj"]["NameFileRef"]["Item"]["@href"],
+            'desc': skill["obj"]["DescriptionFileRef"]["Item"]["@href"],
+        }
+    for id in elements:
+        faction = "Common"
+        if os.path.isfile(button_base_path(id, faction)):
+            print(f"Processing ID {id}...")
+            with open(button_base_path(id)) as button_base_xdb:
+                button_data = xmltodict.parse(button_base_xdb.read())
+                x = button_data["WindowMSButton"]["Placement"]["Position"]["First"]["x"]
+                y = button_data["WindowMSButton"]["Placement"]["Position"]["First"]["y"]
+            write_from_template("buttonshared.(WindowMSButtonShared).xdb.j2", button_shared_path(id, faction), {'skill_id': id})
+        else:
+            print(f"WARN: missing button file for ID {id}")
