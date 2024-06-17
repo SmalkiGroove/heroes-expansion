@@ -1,7 +1,7 @@
 
 import os
 import xmltodict
-from jinja2 import Environment, FileSystemLoader, Template
+from jinja2 import Environment, FileSystemLoader
 
 
 root_data_path = "../../game_data/data"
@@ -24,6 +24,22 @@ def ui_message_up_path(id):
     return os.path.join(skill_tree_path, "Selection", f"{id}_up.(UISSendUIMessage).xdb")
 def ui_message_down_path(id):
     return os.path.join(skill_tree_path, "Selection", f"{id}_down.(UISSendUIMessage).xdb")
+def desc_ui_message_path(id):
+    return os.path.join(skill_tree_path, "Description", f"{id}.(UISSendUIMessage).xdb")
+def desc_window_base_path(id):
+    return os.path.join(skill_tree_path, "Description", f"{id}_window.(WindowSimple).xdb")
+def desc_window_shared_path(id):
+    return os.path.join(skill_tree_path, "Description", f"{id}_window.(WindowSimpleShared).xdb")
+def desc_icon_base_path(id):
+    return os.path.join(skill_tree_path, "Description", f"{id}_icon.(WindowMSButton).xdb")
+def desc_icon_shared_path(id):
+    return os.path.join(skill_tree_path, "Description", f"{id}_icon.(WindowMSButtonShared).xdb")
+def desc_icon_path(id):
+    return os.path.join(skill_tree_path, "Description", f"{id}_icon.(BackgroundSimpleScallingTexture).xdb")
+def skill_name_path(id):
+    return os.path.join(skill_tree_path, "Description", f"{id}_name.(WindowTextView).xdb")
+def skill_desc_path(id):
+    return os.path.join(skill_tree_path, "Description", f"{id}_desc.(WindowTextView).xdb")
 
 def write_from_template(tpl_name, output_path, variables):
     tpl = jinja_env.get_template(tpl_name)
@@ -66,5 +82,13 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
             write_from_template("selection.(WindowMSButton).xdb.j2", button_selected_path(id), {'skill_id': id, 'pos_x': x, 'pos_y': y})
             write_from_template("uimessage1.(UISSendUIMessage).xdb.j2", ui_message_up_path(id), {'skill_id': id})
             write_from_template("uimessage2.(UISSendUIMessage).xdb.j2", ui_message_down_path(id), {'skill_id': id})
+            write_from_template("descuimessage.(UISSendUIMessage).xdb.j2", desc_ui_message_path(id), {'skill_id': id})
+            write_from_template("windowbase.(WindowSimple).xdb.j2", desc_window_base_path(id), {'skill_id': id})
+            write_from_template("windowshared.(WindowSimpleShared).xdb.j2", desc_window_shared_path(id), {'skill_id': id})
+            write_from_template("iconbase.(WindowMSButton).xdb.j2", desc_icon_base_path(id), {'skill_id': id})
+            write_from_template("iconshared.(WindowMSButtonShared).xdb.j2", desc_icon_shared_path(id), {'skill_id': id})
+            write_from_template("icon.(BackgroundSimpleScallingTexture).xdb.j2", desc_icon_path(id), {'icon_path': elements[id]['icon']})
+            write_from_template("skillname.(WindowTextView).xdb.j2", skill_name_path(id), {'skill_id': id, 'name_path': elements[id]['name']})
+            write_from_template("skilldesc.(WindowTextView).xdb.j2", skill_desc_path(id), {'skill_id': id, 'desc_path': elements[id]['desc']})
         else:
             print(f"WARN: missing button file for ID {id}")
