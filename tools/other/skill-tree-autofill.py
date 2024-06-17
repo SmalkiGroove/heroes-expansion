@@ -13,6 +13,9 @@ jinja_env = Environment(loader=FileSystemLoader(searchpath="templates"))
 with open(skills_xdb_path, 'r') as skills_xdb:
     skills_data = xmltodict.parse(skills_xdb.read())
 
+all_buttons = open("out_buttons.xml", 'w')
+all_selected = open("out_selected.xml", 'w')
+all_windows = open("out_windows.xml", 'w')
 
 def button_base_path(id, faction):
     return os.path.join(skill_tree_path, faction, f"{id}.(WindowMSButton).xdb")
@@ -98,5 +101,12 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
                 write_from_template("icon.(BackgroundSimpleScallingTexture).xdb.j2", desc_icon_path(id), {'icon_path': elements[id]['icon']})
                 write_from_template("skillname.(WindowTextView).xdb.j2", skill_name_path(id), {'skill_id': id, 'name_path': elements[id]['name']})
                 write_from_template("skilldesc.(WindowTextView).xdb.j2", skill_desc_path(id), {'skill_id': id, 'desc_path': elements[id]['desc']})
+                all_buttons.write(f"<Item href=\"/UI/Doc/Skills/{faction}/{id}.(WindowMSButton).xdb#xpointer(/WindowMSButton)\"/>\n")
+                all_selected.write(f"<Item href=\"{id}_select.(WindowMSButton).xdb#xpointer(/WindowMSButton)\"/>\n")
+                all_windows.write(f"<Item href=\"{id}_window.(WindowSimple).xdb#xpointer(/WindowSimple)\"/>\n")
         if not found:
             print(f"WARN: missing button file for ID {id}")
+
+all_buttons.close()
+all_selected.close()
+all_windows.close()
