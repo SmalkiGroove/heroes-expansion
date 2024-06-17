@@ -48,6 +48,8 @@ def write_from_template(tpl_name, output_path, variables):
         out_file.write(rendered)
 
 
+factions = ["Common", "knight", "ranger", "runemage", "wizard", "warlock", "necro", "demon", "barbarian"]
+
 counter = -1
 for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
     counter = counter + 1
@@ -71,24 +73,30 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
             'desc': skill["obj"]["DescriptionFileRef"]["Item"]["@href"],
         }
     for id in elements:
-        faction = "Common"
-        if os.path.isfile(button_base_path(id, faction)):
-            print(f"Processing ID {id}...")
-            with open(button_base_path(id, faction)) as button_base_xdb:
-                button_data = xmltodict.parse(button_base_xdb.read())
-                x = button_data["WindowMSButton"]["Placement"]["Position"]["First"]["x"]
-                y = button_data["WindowMSButton"]["Placement"]["Position"]["First"]["y"]
-            write_from_template("buttonshared.(WindowMSButtonShared).xdb.j2", button_shared_path(id, faction), {'skill_id': id})
-            write_from_template("selection.(WindowMSButton).xdb.j2", button_selected_path(id), {'skill_id': id, 'pos_x': x, 'pos_y': y})
-            write_from_template("uimessage1.(UISSendUIMessage).xdb.j2", ui_message_up_path(id), {'skill_id': id})
-            write_from_template("uimessage2.(UISSendUIMessage).xdb.j2", ui_message_down_path(id), {'skill_id': id})
-            write_from_template("descuimessage.(UISSendUIMessage).xdb.j2", desc_ui_message_path(id), {'skill_id': id})
-            write_from_template("windowbase.(WindowSimple).xdb.j2", desc_window_base_path(id), {'skill_id': id})
-            write_from_template("windowshared.(WindowSimpleShared).xdb.j2", desc_window_shared_path(id), {'skill_id': id})
-            write_from_template("iconbase.(WindowMSButton).xdb.j2", desc_icon_base_path(id), {'skill_id': id})
-            write_from_template("iconshared.(WindowMSButtonShared).xdb.j2", desc_icon_shared_path(id), {'skill_id': id})
-            write_from_template("icon.(BackgroundSimpleScallingTexture).xdb.j2", desc_icon_path(id), {'icon_path': elements[id]['icon']})
-            write_from_template("skillname.(WindowTextView).xdb.j2", skill_name_path(id), {'skill_id': id, 'name_path': elements[id]['name']})
-            write_from_template("skilldesc.(WindowTextView).xdb.j2", skill_desc_path(id), {'skill_id': id, 'desc_path': elements[id]['desc']})
-        else:
+        found = False
+        for faction in factions:
+            if os.path.isfile(button_base_path(id, faction)):
+                print(f"Processing ID {id}...")
+                if found:
+                    print(f"WARN: found duplicate button file for ID {id}")
+                    continue
+                else:
+                    found = True
+                with open(button_base_path(id, faction)) as button_base_xdb:
+                    button_data = xmltodict.parse(button_base_xdb.read())
+                    x = button_data["WindowMSButton"]["Placement"]["Position"]["First"]["x"]
+                    y = button_data["WindowMSButton"]["Placement"]["Position"]["First"]["y"]
+                write_from_template("buttonshared.(WindowMSButtonShared).xdb.j2", button_shared_path(id, faction), {'skill_id': id})
+                write_from_template("selection.(WindowMSButton).xdb.j2", button_selected_path(id), {'skill_id': id, 'pos_x': x, 'pos_y': y})
+                write_from_template("uimessage1.(UISSendUIMessage).xdb.j2", ui_message_up_path(id), {'skill_id': id})
+                write_from_template("uimessage2.(UISSendUIMessage).xdb.j2", ui_message_down_path(id), {'skill_id': id})
+                write_from_template("descuimessage.(UISSendUIMessage).xdb.j2", desc_ui_message_path(id), {'skill_id': id})
+                write_from_template("windowbase.(WindowSimple).xdb.j2", desc_window_base_path(id), {'skill_id': id})
+                write_from_template("windowshared.(WindowSimpleShared).xdb.j2", desc_window_shared_path(id), {'skill_id': id})
+                write_from_template("iconbase.(WindowMSButton).xdb.j2", desc_icon_base_path(id), {'skill_id': id})
+                write_from_template("iconshared.(WindowMSButtonShared).xdb.j2", desc_icon_shared_path(id), {'skill_id': id})
+                write_from_template("icon.(BackgroundSimpleScallingTexture).xdb.j2", desc_icon_path(id), {'icon_path': elements[id]['icon']})
+                write_from_template("skillname.(WindowTextView).xdb.j2", skill_name_path(id), {'skill_id': id, 'name_path': elements[id]['name']})
+                write_from_template("skilldesc.(WindowTextView).xdb.j2", skill_desc_path(id), {'skill_id': id, 'desc_path': elements[id]['desc']})
+        if not found:
             print(f"WARN: missing button file for ID {id}")
