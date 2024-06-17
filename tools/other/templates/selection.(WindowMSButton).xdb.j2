@@ -2,7 +2,7 @@
 <WindowMSButton ObjectRecordID="1000123">
 	<ClassTypeID>285694855</ClassTypeID>
 	<Shared href="Shared.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
-	<Name>{{ selection_button_id }}</Name>
+	<Name>DocSkillsSelection{{ skill_id }}</Name>
 	<TooltipFileRef/>
 	<Visible>true</Visible>
 	<Priority>0</Priority>
@@ -12,7 +12,7 @@
 			<LogicalReaction/>
 			<VisualReaction>
 				<Commands>
-					<Item href="010700.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="{{ skill_id }}_down.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 				</Commands>
 				<Reversable>false</Reversable>
 			</VisualReaction>
