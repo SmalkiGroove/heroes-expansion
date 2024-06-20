@@ -87,8 +87,19 @@ STARTING_ARMIES = {
 function UpdateTavernHeroes()
     for hero,data in HEROES do
         if not IsHeroAlive(hero) then
-            if not data.owner then
-                local first = GetHeroArmy(hero)[1]
+            local army = GetHeroArmy(hero)
+            if data.owner then
+                local cc = 0
+                for _,cr in army do
+                    if cr ~= 0 and CREATURES[cr][2] ~= 1 then
+                        cc = cc + GetHeroCreatures(hero, cr)
+                    end
+                end
+                if cc <= 1 then
+                    startThread(ReplaceStartingArmy, hero)
+                end
+            else
+                local first = army[1]
                 if first == 0 or GetHeroCreatures(hero, first) == 1 then
                     startThread(ReplaceStartingArmy, hero)
                 end
