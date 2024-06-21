@@ -328,7 +328,8 @@ function TransferCreatureFromTown(player, hero, dwelling, creature, coef)
 			local nb = min(trunc(coef * level), recruits)
 			if nb >= 1 then
 				SetObjectDwellingCreatures(town, creature, recruits-nb)
-				AddHeroCreatures(hero, creature, nb)
+				local types = CREATURES_BY_FACTION[CREATURES[creature][1]][CREATURES[creature][2]]
+				AddHeroCreatureType(player, hero, types, nb)
 				-- ShowFlyingSign({"/Text/Game/Scripts/Reinforcements.txt"; num=nb}, hero, player, FLYING_SIGN_TIME)
 			end
 		end

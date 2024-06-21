@@ -115,6 +115,7 @@ function Routine_CastSummonHive(side, hero)
     local x = (side == ATTACKER) and GRID_X_MAX or GRID_X_MIN
     HeroCast_Area(hero, SPELL_SUMMON_HIVE, FREE_MANA, x, GRID_Y_MIN)
     HeroCast_Area(hero, SPELL_SUMMON_HIVE, FREE_MANA, x, GRID_Y_MAX)
+    -- TODO retry if tile is taken
 end
 
 function Routine_CastMassHaste(side, hero)

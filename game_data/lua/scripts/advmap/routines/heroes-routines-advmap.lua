@@ -149,7 +149,7 @@ end
 
 function Routine_HeroCallUnicorns(player, hero)
     print("$ Routine_HeroCallUnicorns")
-    TransferCreatureFromTown(player, hero, TOWN_BUILDING_DWELLING_5, CREATURE_WHITE_UNICORN, 0.75)
+    TransferCreatureFromTown(player, hero, TOWN_BUILDING_DWELLING_5, CREATURE_UNICORN, 0.75)
 end
 
 Var_Elleshar_BattleWon = 0
