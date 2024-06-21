@@ -2,12 +2,12 @@
 $zip = @{
   Path = "..\game_data\data\*"
   CompressionLevel = "Optimal"
-  DestinationPath = ".\mod-data.zip"
+  DestinationPath = ".\h5x-data.zip"
 }
 Compress-Archive @zip
-Move-Item "mod-data.zip" "mod-data.pak" -Force
+Move-Item "h5x-data.zip" "h5x-data.pak" -Force
 # Read-Host
 
 $game_path = "D:\Ubisoft\Heroes of Might and Magic V - Tribes of the East"
-Robocopy.exe "." "$game_path\data" "mod-data.pak" /Z /mov
+Robocopy.exe "." "$game_path\data" "h5x-data.pak" /Z /mov
 Read-Host

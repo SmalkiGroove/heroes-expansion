@@ -2,12 +2,12 @@
 $zip = @{
   Path = "..\game_data\lua\*"
   CompressionLevel = "Optimal"
-  DestinationPath = ".\mod-lua.zip"
+  DestinationPath = ".\h5x-lua.zip"
 }
 Compress-Archive @zip
-Move-Item "mod-lua.zip" "mod-lua.pak" -Force
+Move-Item "h5x-lua.zip" "h5x-lua.pak" -Force
 # Read-Host
 
 $game_path = "D:\Ubisoft\Heroes of Might and Magic V - Tribes of the East"
-Robocopy.exe "." "$game_path\data" "mod-lua.pak" /Z /mov
+Robocopy.exe "." "$game_path\data" "h5x-lua.pak" /Z /mov
 Read-Host
