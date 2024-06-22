@@ -73,6 +73,20 @@ function ScanHeroArtifacts(hero)
             Register(VarHeroArtfsetId(hero,k), v)
         end
     end
+    -- do
+    --     if HasHeroArtifact(hero, 230) and hero ~= H_RANLETH then RemoveArtefact(hero, 230) end
+    --     if HasHeroArtifact(hero, 231) and hero ~= H_RANLETH then RemoveArtefact(hero, 231) end
+    --     if HasHeroArtifact(hero, 232) and hero ~= H_BIARA then RemoveArtefact(hero, 232) end
+    --     if HasHeroArtifact(hero, 233) and hero ~= H_BIARA then RemoveArtefact(hero, 233) end
+    --     if HasHeroArtifact(hero, 236) and hero ~= H_SEPHINROTH then RemoveArtefact(hero, 236) end
+    --     if HasHeroArtifact(hero, 237) and hero ~= H_SEPHINROTH then RemoveArtefact(hero, 237) end
+    --     if HasHeroArtifact(hero, 244) and hero ~= H_LASZLO then RemoveArtefact(hero, 244) end
+    --     if HasHeroArtifact(hero, 245) and hero ~= H_LASZLO then RemoveArtefact(hero, 245) end
+    --     if HasHeroArtifact(hero, 247) and hero ~= H_KUJIN then RemoveArtefact(hero, 247) end
+    --     if HasHeroArtifact(hero, 248) and hero ~= H_KUJIN then RemoveArtefact(hero, 248) end
+    --     if HasHeroArtifact(hero, 251) and hero ~= H_THEODORUS then RemoveArtefact(hero, 251) end
+    --     if HasHeroArtifact(hero, 252) and hero ~= H_THEODORUS then RemoveArtefact(hero, 252) end
+    -- end
 end
 
 

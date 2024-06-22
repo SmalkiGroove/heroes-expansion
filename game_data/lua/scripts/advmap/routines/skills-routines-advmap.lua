@@ -363,10 +363,8 @@ function Routine_CheckInfusion(player, hero, mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_INFUSION]
     if diff ~= 0 then
         AddHeroStatAmount(player, hero, STAT_SPELL_POWER, diff)
+        AddHeroManaUnbound(player, hero, 100)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_INFUSION] = value
-        ChangeHeroStat(hero, STAT_KNOWLEDGE, 10) sleep()
-        ChangeHeroStat(hero, STAT_MANA_POINTS, 100) sleep()
-        ChangeHeroStat(hero, STAT_KNOWLEDGE, -10) sleep()
     end
 end
 

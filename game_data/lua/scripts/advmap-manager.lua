@@ -81,16 +81,18 @@ function WatchPlayer(player, wait)
     for _,hero in GetPlayerHeroes(player) do
 		local x,y,z = GetObjectPosition(hero)
 		tracker[hero] = {
-			check = not nil,
+			track = not nil,
 			x = x, y = y, z = z,
+			move = GetHeroStat(hero, STAT_MOVE_POINTS),
 			mana = GetHeroStat(hero, STAT_MANA_POINTS),
 		}
     end
-    while (IsPlayerCurrent(player)) do
+    while IsPlayerCurrent(player) do
 		for _,hero in GetPlayerHeroes(player) do
             ScanHeroArtifacts(hero)
-			if tracker[hero].check then
-				if GetHeroStat(hero, STAT_MOVE_POINTS) == 0 then
+			if tracker[hero].track then
+				local mvp = GetHeroStat(hero, STAT_MOVE_POINTS)
+				if mvp == 0 then
 					print("Hero "..hero.." has 0 move points")
 					if IsEqualPosition(hero, tracker[hero].x, tracker[hero].y, tracker[hero].z) then
 						if HasHeroSkill(hero, PERK_MEDITATION) and GetHeroStat(hero, STAT_MANA_POINTS) > tracker[hero].mana then
@@ -101,11 +103,14 @@ function WatchPlayer(player, wait)
 							print("Hero "..hero.." has used digging")
 							startThread(ActivateDigging, player, hero)
 						end
-						tracker[hero].check = nil
+						tracker[hero].track = nil
 					end
+				elseif mvp < tracker[hero].move then
+					tracker[hero].track = nil
 				end
 			end
         end
+		startThread(DoArtifactsRoutine_Continuous, player, hero)
 		sleep(18)
 	end
 end
@@ -148,6 +153,11 @@ function CombatResultsHandler(combatIndex)
 		startThread(DoHeroSpeRoutine_AfterCombat, player, hero, combatIndex)
 		startThread(DoSkillsRoutine_AfterCombat, player, hero, combatIndex)
 		startThread(DoArtifactsRoutine_AfterCombat, player, hero, combatIndex)
+	end
+	local loser = GetSavedCombatArmyHero(combatIndex, 0)
+	if loser ~= nil then
+		local player = GetSavedCombatArmyPlayer(combatIndex, 0)
+		startThread(HeroLostBattle, player, loser, hero)
 	end
 end
 

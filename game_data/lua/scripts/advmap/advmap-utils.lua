@@ -223,6 +223,33 @@ function AddHeroStatAmount(player, hero, stat, amount)
 	end
 end
 
+function AddHeroLowestStat(player, hero, amount)
+	print("$ AddHeroLowestStat")
+    if amount ~= 0 then
+		local stat = 0
+		local value = 9999
+		for s = 1,4 do
+			local v = GetHeroStat(hero, s)
+			if v < value then
+				stat = s
+				value = v
+			end
+		end
+		if stat ~= 0 then
+			ChangeHeroStat(hero, stat, amount)
+			-- ShowFlyingSign({"/Text/Game/Scripts/Stats/"..ATTRIBUTE_TEXT[stat]..".txt"; num=amount}, hero, player, FLYING_SIGN_TIME)
+		end
+	end
+end
+
+function AddHeroManaUnbound(player, hero, amount)
+	print("$ AddHeroManaUnbound")
+	local klg = ceil(0.1 * amount)
+	ChangeHeroStat(hero, STAT_KNOWLEDGE, klg) sleep()
+	ChangeHeroStat(hero, STAT_MANA_POINTS, amount) sleep()
+	ChangeHeroStat(hero, STAT_KNOWLEDGE, -klg) sleep()
+end
+
 function TeachHeroRandomSpell(player, hero, school, maxtier)
 	print("$ TeachHeroRandomSpell")
 	local spells = {}

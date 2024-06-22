@@ -29,13 +29,59 @@ function Routine_ArtifactGreatLich(player, hero)
 end
 
 
-function Routine_Restore10Mana(player, hero, combatIndex)
-    print("$ Routine_Restore10Mana")
+function Routine_ArtifactRunicWar(player, hero, combatIndex)
+    print("$ Routine_ArtifactRunicWar")
     ChangeHeroStat(hero, STAT_MANA_POINTS, 10)
+end
+
+Var_StaffLyreVictories = {}
+function Routine_ArtifactStaffOfTheLyre(player, hero, combatIndex)
+    print("$ Routine_ArtifactStaffOfTheLyre")
+    if Var_StaffLyreVictories[hero] then
+        local nb = Var_StaffLyreVictories[hero] + 1
+        Var_StaffLyreVictories[hero] = nb
+        if mod(nb, 5) == 0 then
+            AddHeroLowestStat(player, hero, 1)
+        end
+    else
+        Var_StaffLyreVictories[hero] = 1
+    end
+end
+
+Var_PendantLyreVictories = {}
+function Routine_ArtifactPendantOfTheLyre(player, hero, combatIndex)
+    print("$ Routine_ArtifactPendantOfTheLyre")
+    if Var_PendantLyreVictories[hero] then
+        local nb = Var_PendantLyreVictories[hero] + 1
+        Var_PendantLyreVictories[hero] = nb
+        if mod(nb, 5) == 0 then
+            local exp = 1000 + trunc(0.01 * GetHeroStat(hero, STAT_EXPERIENCE))
+            AddHeroStatAmount(player, hero, STAT_EXPERIENCE, exp)
+            AddHeroManaUnbound(player, hero, 100)
+        end
+    else
+        Var_PendantLyreVictories[hero] = 1
+    end
+end
+
+
+function Routine_ArtfsetSailor(player, hero)
+    print("$ Routine_ArtfsetSailor")
+    if IsHeroInBoat(hero) then
+        ChangeHeroStat(hero, STAT_MOVE_POINTS, 1000)
+    end
+end
+
+
+function Routine_ArtfsetEnlighten(player, hero)
+    print("$ Routine_ArtfsetEnlighten")
+    AddHeroLowestStat(player, hero, 2)
 end
 
 
 
+CONTINUOUS_TRIGGER_ARTIFACTS_ROUTINES = {
+}
 DAILY_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_ENDLESS_POUCH_OF_GOLD] = Routine_ArtifactPouchOfGolds,
     [ARTIFACT_ENDLESS_SACK_OF_GOLD] = Routine_ArtifactSackOfGolds,
@@ -47,10 +93,13 @@ LEVELUP_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_SANDROS_CLOAK] = Routine_ArtifactGreatLich,
 }
 AFTER_COMBAT_TRIGGER_ARTIFACTS_ROUTINES = {
-    [ARTIFACT_RUNIC_WAR_AXE] = Routine_Restore10Mana,
-    [ARTIFACT_RUNIC_WAR_HARNESS] = Routine_Restore10Mana,
+    [ARTIFACT_RUNIC_WAR_AXE] = Routine_ArtifactRunicWar,
+    [ARTIFACT_RUNIC_WAR_HARNESS] = Routine_ArtifactRunicWar,
 }
 
+CONTINUOUS_TRIGGER_ARTFSETS_ROUTINES = {
+    [ARTFSET_SAILOR_3PC] = Routine_ArtfsetSailor,
+}
 DAILY_TRIGGER_ARTFSETS_ROUTINES = {
     [ARTFSET_NONE] = NoneRoutine,
 }
@@ -58,12 +107,25 @@ WEEKLY_TRIGGER_ARTFSETS_ROUTINES = {
     [ARTFSET_NONE] = NoneRoutine,
 }
 LEVELUP_TRIGGER_ARTFSETS_ROUTINES = {
-    [ARTFSET_NONE] = NoneRoutine,
+    [ARTFSET_ENLIGHTEN_4PC] = Routine_ArtfsetEnlighten,
 }
 AFTER_COMBAT_TRIGGER_ARTFSETS_ROUTINES = {
     [ARTFSET_NONE] = NoneRoutine,
 }
 
+
+function DoArtifactsRoutine_Continuous(player, hero)
+    for k,v in CONTINUOUS_TRIGGER_ARTIFACTS_ROUTINES do
+        if HasArtefact(hero, k, 1) then
+            startThread(v, player, hero)
+        end
+    end
+    for k,v in CONTINUOUS_TRIGGER_ARTFSETS_ROUTINES do
+        if HERO_ARTFSETS_STATUS[hero][k] == 1 then
+            startThread(v, player, hero)
+        end
+    end
+end
 
 function DoArtifactsRoutine_Daily(player, hero)
     for k,v in DAILY_TRIGGER_ARTIFACTS_ROUTINES do
