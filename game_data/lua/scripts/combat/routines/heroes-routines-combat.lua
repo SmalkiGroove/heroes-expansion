@@ -563,6 +563,31 @@ function Routine_SummonGoblinStack(side, hero)
     end
 end
 
+function Routine_WatchRageLevels(side, hero)
+    -- print("Trigger watch rage levels !")
+    startThread(Routine_WatchRageLevelsThread, side, hero)
+end
+
+function Routine_WatchRageLevelsThread(side, hero)
+    local RageLevels = {}
+    while 1 do
+        local up = nil
+        for i,cr in GetUnits(side, CREATURE) do
+            local type = GetCreatureType(cr)
+            if CREATURES[type][1] == STRONGHOLD and CREATURES[type][2] ~= 6 then
+                if not RageLevels[cr] then
+                    RageLevels[cr] = GetRageLevel(cr)
+                else
+                    if RageLevels[cr] < GetRageLevel(cr) then up = not nil end
+                    RageLevels[cr] = GetRageLevel(cr)
+                end
+            end
+        end
+        if up then SetATB_ID(hero, 1) end
+        sleep(100)
+    end
+end
+
 function Routine_HealingTentMoveNext(side, hero)
     -- print("Trigger healing tent play next !")
     if CURRENT_UNIT == hero then
@@ -633,6 +658,7 @@ COMBAT_START_HERO_ROUTINES = {
     [H_GOTAI] = Routine_CastBattlecry,
     [H_KILGHAN] = Routine_CountInitialGoblins,
     [H_TELSEK] = Routine_CastCallOfBlood,
+    [H_HAGGASH] = Routine_WatchRageLevels,
 }
 
 COMBAT_TURN_HERO_ROUTINES = {

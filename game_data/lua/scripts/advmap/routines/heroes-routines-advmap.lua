@@ -473,6 +473,7 @@ function Routine_ActivateArtfsetDungeon(player, hero)
     print("$ Routine_ActivateArtfsetDungeon")
     GiveArtifact(hero, 236, 1)
     GiveArtifact(hero, 237, 1)
+    TeachHeroRandomSpell(player, hero, SPELL_SCHOOL_DESTRUCT, 5)
 end
 
 Var_Sephinroth_Bonus = 0

@@ -152,7 +152,7 @@ LEVELUP_TRIGGER_ARTFSETS_ROUTINES = {
     [ARTFSET_MOON_4PC] = Routine_ArtfsetMoon,
 }
 AFTER_COMBAT_TRIGGER_ARTFSETS_ROUTINES = {
-    [ARTFSET_VIZIR_5PC] = Routine_ArtfsetVizir,
+    [ARTFSET_VIZIR_4PC] = Routine_ArtfsetVizir,
 }
 
 

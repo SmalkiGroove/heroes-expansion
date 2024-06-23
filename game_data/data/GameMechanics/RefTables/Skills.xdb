@@ -8829,16 +8829,16 @@
 			<ID>HERO_SKILL_BARBARIAN_FIRE_PROTECTION</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Feats/Demon_Lord/Demonic_FireProtection_grey.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Feats/Demon_Lord/Demonic_FireProtection.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/BurningBlood.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/BurningBlood.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
-					<Item href="/Text/Game/Skills/Common/LightMagic/FireProtection/Name.txt"/>
+					<Item href="/Text/Game/Skills/BarbarianSpec/DestructiveMagic/FireProtection/Name.txt"/>
 				</NameFileRef>
 				<CommonNameFileRef href=""/>
 				<DescriptionFileRef>
-					<Item href="/Text/Game/Skills/Common/LightMagic/FireProtection/Description.txt"/>
+					<Item href="/Text/Game/Skills/BarbarianSpec/DestructiveMagic/FireProtection/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
