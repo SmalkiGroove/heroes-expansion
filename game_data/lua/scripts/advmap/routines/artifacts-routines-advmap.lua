@@ -29,9 +29,14 @@ function Routine_ArtifactGreatLich(player, hero)
 end
 
 
+function Routine_ArtifactBeginnerMagicStick(player, hero, combatIndex)
+    print("$ Routine_ArtifactBeginnerMagicStick")
+    ChangeHeroStat(hero, STAT_MANA_POINTS, 10)
+end
+
 function Routine_ArtifactRunicWar(player, hero, combatIndex)
     print("$ Routine_ArtifactRunicWar")
-    ChangeHeroStat(hero, STAT_MANA_POINTS, 10)
+    ChangeHeroStat(hero, STAT_MANA_POINTS, 25)
 end
 
 Var_StaffLyreVictories = {}
@@ -64,6 +69,7 @@ function Routine_ArtifactPendantOfTheLyre(player, hero, combatIndex)
     end
 end
 
+--------------------------------------------------------------------------------------------------------------------------------
 
 function Routine_ArtfsetSailor(player, hero)
     print("$ Routine_ArtfsetSailor")
@@ -73,9 +79,42 @@ function Routine_ArtfsetSailor(player, hero)
 end
 
 
+function Routine_ArtfsetEldena(player, hero)
+    print("$ Routine_ArtfsetEldena")
+    local faction = HEROES[hero].faction
+    AddHeroCreatureType(player, hero, CREATURES_BY_FACTION[faction][4], 4)
+    AddHeroCreatureType(player, hero, CREATURES_BY_FACTION[faction][5], 2)
+end
+
 function Routine_ArtfsetEnlighten(player, hero)
     print("$ Routine_ArtfsetEnlighten")
     AddHeroLowestStat(player, hero, 2)
+end
+
+Var_MoonLevelUp = {}
+function Routine_ArtfsetMoon(player, hero)
+    print("$ Routine_ArtfsetMoon")
+    if Var_MoonLevelUp[hero] then
+        LevelUpHero(hero)
+        Var_MoonLevelUp[hero] = nil
+    else
+        Var_MoonLevelUp[hero] = not nil
+    end
+end
+
+function Routine_ArtfsetVizir(player, hero, combatIndex)
+    print("$ Routine_ArtfsetVizir")
+    local value = GetArmyStrength(combatIndex, 0)
+    local class = ARTIFACT_CLASS_MINOR
+    if value > 99999 then class = ARTIFACT_CLASS_RELIC
+    elseif value > 9999 then class = ARTIFACT_CLASS_MAJOR
+    end
+    local pool = {}
+    for artifact,data in ARTIFACTS_DATA do
+        if data.special == 0 and data.class == class then insert(pool, a) end
+    end
+    local artefact = pool[random(0, length(pool)-1, value)]
+    GiveArtifact(hero, artefact)
 end
 
 
@@ -93,6 +132,7 @@ LEVELUP_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_SANDROS_CLOAK] = Routine_ArtifactGreatLich,
 }
 AFTER_COMBAT_TRIGGER_ARTIFACTS_ROUTINES = {
+    [ARTIFACT_BEGINNER_MAGIC_STICK] = Routine_ArtifactBeginnerMagicStick,
     [ARTIFACT_RUNIC_WAR_AXE] = Routine_ArtifactRunicWar,
     [ARTIFACT_RUNIC_WAR_HARNESS] = Routine_ArtifactRunicWar,
 }
@@ -107,10 +147,12 @@ WEEKLY_TRIGGER_ARTFSETS_ROUTINES = {
     [ARTFSET_NONE] = NoneRoutine,
 }
 LEVELUP_TRIGGER_ARTFSETS_ROUTINES = {
+    [ARTFSET_ELDENA_3PC] = Routine_ArtfsetEldena,
     [ARTFSET_ENLIGHTEN_4PC] = Routine_ArtfsetEnlighten,
+    [ARTFSET_MOON_4PC] = Routine_ArtfsetMoon,
 }
 AFTER_COMBAT_TRIGGER_ARTFSETS_ROUTINES = {
-    [ARTFSET_NONE] = NoneRoutine,
+    [ARTFSET_VIZIR_5PC] = Routine_ArtfsetVizir,
 }
 
 

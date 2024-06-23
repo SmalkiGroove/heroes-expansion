@@ -37,6 +37,15 @@ function GetHeroArmySummary(hero)
 	return k, units, amounts
 end
 
+function GetArmyStrength(combatIndex, side)
+	local value = 0
+    local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, side)
+	for i = 0,stacks-1 do
+        local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, side, i)
+        value = value + count * power(2, CREATURES[creature][2])
+    end
+end
+
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------

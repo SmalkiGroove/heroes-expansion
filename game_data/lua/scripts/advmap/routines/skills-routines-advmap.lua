@@ -554,13 +554,7 @@ end
 
 function Routine_TaleTellers(player, hero, mastery, combatIndex)
     print("$ Routine_TaleTellers")
-    local exp = 0
-    local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 0)
-    for i = 0,stacks-1 do
-        local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 0, i)
-        exp = exp + count * power(2, CREATURES[creature][2])
-    end
-    exp = trunc(0.67 * exp)
+    local exp = trunc(0.67 * GetArmyStrength(combatIndex, 0))
     for _,h in GetPlayerHeroes(player) do
         if h ~= hero then
             AddHeroStatAmount(player, h, STAT_EXPERIENCE, exp)
@@ -570,12 +564,7 @@ end
 
 function Routine_GetWiserBonusExp(player, hero, mastery, combatIndex)
     print("$ Routine_GetWiserBonusExp")
-    local exp = 0
-    local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 0)
-    for i = 0,stacks-1 do
-        local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 0, i)
-        exp = exp + count * power(2, CREATURES[creature][2])
-    end
+    local exp = GetArmyStrength(combatIndex, 0)
     AddHeroStatAmount(player, hero, STAT_EXPERIENCE, exp)
 end
 
