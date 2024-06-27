@@ -11,7 +11,6 @@ function Routine_ArtifactSackOfGolds(player, hero)
     AddPlayerResource(player, hero, GOLD, level * 50)
 end
 
-
 function Routine_ArtifactHornOfPlenty(player, hero)
     print("$ Routine_ArtifactHornOfPlenty")
     AddPlayerResource(player, hero, WOOD, 1)
@@ -22,10 +21,40 @@ function Routine_ArtifactHornOfPlenty(player, hero)
     AddPlayerResource(player, hero, GEM, 1)
 end
 
+function Routine_ArtifactCapeOfKings(player, hero)
+    print("$ Routine_ArtifactCapeOfKings")
+    if GetDate(DAY_OF_WEEK) ~= 1 then
+        local mastery = GetHeroSkillMastery(hero, SKILL_GOVERNANCE)
+        if mastery > 0 then
+            Routine_GovernanceWeeklyResources(player, hero, mastery)
+        end
+    end
+end
 
 function Routine_ArtifactGreatLich(player, hero)
     print("$ Routine_ArtifactGreatLich")
     AddHeroCreatureType(player, hero, NECROPOLIS, 5, 1)
+end
+
+function Routine_EldenaRedScarf(player, hero)
+    print("$ Routine_EldenaRedScarf")
+    local nb = 5
+    for k = 1,WEEKS,4 do nb = 2 * nb end
+    AddHeroCreatureType(player, hero, HEROES[hero].faction, 1, nb)
+end
+
+function Routine_EldenaRedCoat(player, hero)
+    print("$ Routine_EldenaRedCoat")
+    local nb = 4
+    for k = 1,WEEKS,4 do nb = 2 * nb end
+    AddHeroCreatureType(player, hero, HEROES[hero].faction, 2, nb)
+end
+
+function Routine_EldenaCirclet(player, hero)
+    print("$ Routine_EldenaCirclet")
+    local nb = 3
+    for k = 1,WEEKS,4 do nb = 2 * nb end
+    AddHeroCreatureType(player, hero, HEROES[hero].faction, 3, nb)
 end
 
 
@@ -37,6 +66,18 @@ end
 function Routine_ArtifactRunicWar(player, hero, combatIndex)
     print("$ Routine_ArtifactRunicWar")
     ChangeHeroStat(hero, STAT_MANA_POINTS, 25)
+end
+
+function Routine_ArtifactVikingHatchet(player, hero, combatIndex)
+    print("$ Routine_ArtifactVikingHatchet")
+    local value = GetArmyStrength(combatIndex, 0)
+    AddPlayerResource(player, hero, GOLD, round(0.5 * value))
+end
+
+function Routine_ArtifactVikingShield(player, hero, combatIndex)
+    print("$ Routine_ArtifactVikingShield")
+    local value = GetArmyStrength(combatIndex, 0)
+    AddPlayerResource(player, hero, WOOD, round(0.05 * value))
 end
 
 Var_StaffLyreVictories = {}
@@ -82,8 +123,14 @@ end
 function Routine_ArtfsetEldena(player, hero)
     print("$ Routine_ArtfsetEldena")
     local faction = HEROES[hero].faction
-    AddHeroCreatureType(player, hero, faction, 4, 4)
-    AddHeroCreatureType(player, hero, faction, 5, 2)
+    local nb4 = 2
+    local nb5 = 1
+    for k = 1,WEEKS,4 do
+        nb4 = 2 * nb4
+        nb5 = 2 * nb5
+    end
+    AddHeroCreatureType(player, hero, faction, 4, nb4)
+    AddHeroCreatureType(player, hero, faction, 5, nb5)
 end
 
 function Routine_ArtfsetEnlighten(player, hero)
@@ -124,17 +171,23 @@ CONTINUOUS_TRIGGER_ARTIFACTS_ROUTINES = {
 DAILY_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_ENDLESS_POUCH_OF_GOLD] = Routine_ArtifactPouchOfGolds,
     [ARTIFACT_ENDLESS_SACK_OF_GOLD] = Routine_ArtifactSackOfGolds,
+    [ARTIFACT_CAPE_OF_KINGS] = Routine_ArtifactCapeOfKings,
 }
 WEEKLY_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_HORN_OF_PLENTY] = Routine_ArtifactHornOfPlenty,
 }
 LEVELUP_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_SANDROS_CLOAK] = Routine_ArtifactGreatLich,
+    [ARTIFACT_ELDENAS_RED_SCARF] = Routine_EldenaRedScarf,
+    [ARTIFACT_ELDENAS_RED_COAT] = Routine_EldenaRedCoat,
+    [ARTIFACT_ELDENAS_CIRCLET] = Routine_EldenaCirclet,
 }
 AFTER_COMBAT_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_BEGINNER_MAGIC_STICK] = Routine_ArtifactBeginnerMagicStick,
     [ARTIFACT_RUNIC_WAR_AXE] = Routine_ArtifactRunicWar,
     [ARTIFACT_RUNIC_WAR_HARNESS] = Routine_ArtifactRunicWar,
+    [ARTIFACT_VIKING_HATCHET] = Routine_ArtifactVikingHatchet,
+    [ARTIFACT_VIKING_SHIELD] = Routine_ArtifactVikingShield,
 }
 
 CONTINUOUS_TRIGGER_ARTFSETS_ROUTINES = {

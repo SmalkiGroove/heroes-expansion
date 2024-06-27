@@ -136,7 +136,7 @@ function NewDayTrigger()
 	TURN = TURN + 1
 	print("New day ! Turn "..TURN)
 	local newweek = GetDate(DAY_OF_WEEK) == 1
-	if newweek then WEEK = WEEK + 1 end
+	if newweek then WEEKS = WEEKS + 1 end
 	UpdateTavernHeroes()
 	for player = 1,8 do
 		if (GetPlayerState(player) == 1) then
@@ -241,8 +241,8 @@ print("All scripts successfully loaded !")
 -- Initializers
 function Init()
 	InitializeRandomSeed()
-	InitializeHeroes()
 	InitializeMapTowns()
+	InitializeHeroes()
 	InitializeConvertibles()
 	ExecConsoleCommand("@UnblockGame()") UnblockGame()
 	print("Initializers done. The game can start. Have fun !")

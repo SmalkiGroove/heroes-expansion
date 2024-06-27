@@ -476,13 +476,13 @@ end
 
 function Routine_BattleCommanderWeeklyDancers(player, hero, mastery)
     print("$ Routine_BattleCommanderWeeklyDancers")
-    local amount = 27 + 12 * WEEK
+    local amount = 27 + 12 * WEEKS
     AddHeroCreatureType(player, hero, PRESERVE, 1, amount)
 end
 
 function Routine_HauntingWeeklyGhosts(player, hero, mastery)
     print("$ Routine_HauntingWeeklyGhosts")
-    local amount = 6 + 3 * WEEK
+    local amount = 6 + 3 * WEEKS
     for obj,_ in RESOURCE_GENERATING_OBJECTS do
         for _,building in GetObjectNamesByType(obj) do
             if GetObjectOwner(building) == player then
@@ -494,7 +494,7 @@ end
 
 function Routine_DefendUsAllWeeklyWarriors(player, hero, mastery)
     print("$ Routine_DefendUsAllWeeklyWarriors")
-    local amount = 17 + 7 * WEEK
+    local amount = 17 + 7 * WEEKS
     AddHeroCreatureType(player, hero, STRONGHOLD, 3, amount)
 end
 

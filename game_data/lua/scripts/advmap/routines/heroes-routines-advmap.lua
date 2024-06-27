@@ -312,7 +312,8 @@ end
 
 function Routine_AddOtherHeroesGremlins(player, hero)
     print("$ Routine_AddOtherHeroesGremlins")
-    local amount = round(0.50 * GetHeroLevel(hero))
+    local amount = GetHeroLevel(hero)
+    -- local amount = round(0.50 * GetHeroLevel(hero))
     for _,h in GetPlayerHeroes(player) do
         if h ~= hero and HEROES[h].faction == ACADEMY then
             AddHeroCreatureType(player, h, ACADEMY, 1, amount)
@@ -322,7 +323,7 @@ end
 
 function Routine_AssembleGargoyles(player, hero)
     print("$ Routine_AssembleGargoyles")
-    local max = 2 * GetHeroLevel(hero)v
+    local max = 2 * GetHeroLevel(hero)
     local assemble_table = {
         [CREATURE_STONE_GARGOYLE] = CREATURE_IRON_GOLEM,
         [CREATURE_OBSIDIAN_GARGOYLE] = CREATURE_STEEL_GOLEM,
@@ -796,6 +797,7 @@ START_TRIGGER_HERO_ROUTINES = {
     -- academy
     [H_DAVIUS] = Routine_UpgradeSilverPavillon,
     [H_THEODORUS] = Routine_ActivateArtfsetNecro,
+    [H_RISSA] = Routine_RefreshTimeShift,
     -- dungeon
     [H_RANLETH] = Routine_ActivateArtfsetEnlightenment,
     [H_SEPHINROTH] = Routine_ActivateArtfsetDungeon,
