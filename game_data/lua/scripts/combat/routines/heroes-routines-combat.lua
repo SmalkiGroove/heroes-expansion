@@ -154,7 +154,9 @@ function Routine_SpearWielderCoordination(side, hero)
         if IsCreature(CURRENT_UNIT) then
             local type = GetCreatureType(CURRENT_UNIT)
             if type == CREATURE_AXE_FIGHTER or type == CREATURE_AXE_THROWER or type == CREATURE_HARPOONER then
-                HeroCast_Target(hero, SPELL_EFFECT_COORDINATION, NO_COST, CURRENT_UNIT)
+                if GetCreatureNumber(CURRENT_UNIT) > 10 then
+                    HeroCast_Target(hero, SPELL_EFFECT_COORDINATION, NO_COST, CURRENT_UNIT)
+                end
             end
         end
     end
@@ -181,7 +183,7 @@ end
 function Routine_CastFireWalls(side, hero)
     -- print("Trigger cast Fire walls !")
     local m = GetUnitManaPoints(hero)
-    local x = 11 - 7 * side
+    local x = 11 - 6 * side
     for _,y in {3,6,9} do
         HeroCast_Area(hero, SPELL_FIREWALL, FREE_MANA, x, y)
         sleep(10)

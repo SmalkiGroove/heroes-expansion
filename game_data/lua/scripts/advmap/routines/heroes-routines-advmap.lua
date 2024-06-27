@@ -15,7 +15,7 @@ end
 function Routine_AddHeroCavaliers(player, hero)
     print("$ Routine_AddHeroCavaliers")
     local amount = round(0.11 * GetHeroLevel(hero))
-    AddHeroCreatureType(player, hero, {CREATURE_CAVALIER,CREATURE_PALADIN,CREATURE_CHAMPION}, amount)
+    AddHeroCreatureType(player, hero, HAVEN, 6, amount)
 end
 
 function Routine_ActivateArtfsetHaven(player, hero)
@@ -169,7 +169,7 @@ end
 function Routine_AddHeroDefenders(player, hero)
     print("$ Routine_AddHeroDefenders")
     local amount = trunc(0.3 * GetHeroLevel(hero))
-    AddHeroCreatureType(player, hero, {CREATURE_DEFENDER,CREATURE_STOUT_DEFENDER,CREATURE_STONE_DEFENDER}, amount)
+    AddHeroCreatureType(player, hero, FORTRESS, 1, amount)
 end
 
 function Routine_MovePointsPerBear(player, hero)
@@ -315,15 +315,14 @@ function Routine_AddOtherHeroesGremlins(player, hero)
     local amount = round(0.50 * GetHeroLevel(hero))
     for _,h in GetPlayerHeroes(player) do
         if h ~= hero and HEROES[h].faction == ACADEMY then
-            AddHeroCreatureType(player, h, {CREATURE_GREMLIN,CREATURE_MASTER_GREMLIN,CREATURE_GREMLIN_SABOTEUR}, amount)
+            AddHeroCreatureType(player, h, ACADEMY, 1, amount)
         end
     end
 end
 
 function Routine_AssembleGargoyles(player, hero)
     print("$ Routine_AssembleGargoyles")
-    local max = 2 * GetHeroLevel(hero)
-    local total = 0
+    local max = 2 * GetHeroLevel(hero)v
     local assemble_table = {
         [CREATURE_STONE_GARGOYLE] = CREATURE_IRON_GOLEM,
         [CREATURE_OBSIDIAN_GARGOYLE] = CREATURE_STEEL_GOLEM,
@@ -345,23 +344,71 @@ function Routine_AssembleGargoyles(player, hero)
     end
 end
 
-function Routine_AddHeroDjinns(player, hero)
-    print("$ Routine_AddHeroDjinns")
-    local amount = round(0.30 * GetHeroLevel(hero))
-    AddHeroCreatureType(player, hero, {CREATURE_GENIE,CREATURE_MASTER_GENIE,CREATURE_DJINN_VIZIER}, amount)
+function Routine_FixDestroyedGolems(player, hero, combatIndex)
+    print("$ Routine_FixDestroyedGolems")
+    local total = 0
+    local fix_table = {
+        [CREATURE_IRON_GOLEM] = CREATURE_STONE_GARGOYLE,
+        [CREATURE_STEEL_GOLEM] = CREATURE_OBSIDIAN_GARGOYLE,
+        [CREATURE_OBSIDIAN_GOLEM] = CREATURE_MARBLE_GARGOYLE,
+    }
+    local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
+    for i = 0,stacks-1 do
+        local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
+        if died > 0 then
+            if creature == CREATURE_IRON_GOLEM or creature == CREATURE_STEEL_GOLEM or creature == CREATURE_OBSIDIAN_GOLEM then
+                local rez = min(GetHeroCreatures(hero, fix_table[creature]), died)
+                total = total + rez
+                AddHeroCreatures(hero, creature, rez)
+            end
+        end
+    end
+    if total > 0 then
+        ShowFlyingSign({"/Text/Game/Scripts/HeroSpe/AssembleGargoyles.txt"; num=total}, hero, player, FLYING_SIGN_TIME)
+    end
 end
 
-function Routine_AddRecruitsRakshasas(player, hero)
+function Routine_GenerateGoldsPerDjinn(player, hero)
+    print("$ Routine_GenerateGoldsPerDjinn")
+    local djinns = CountHeroCreatureType(player, hero, ACADEMY, 5)
+    local amount = GetHeroLevel(hero) * djinns
+    AddPlayerResource(player, hero, GOLD, amount)
+end
+
+function Routine_RespawnDjinns(player, hero, combatIndex)
+    print("$ Routine_RespawnDjinns")
+    AddHeroCreatureType(player, hero, ACADEMY, 5, nb)
+    local mana = GetHeroStat(hero, STAT_MANA_POINTS)
+    local djinns = CountHeroCreatureType(player, hero, ACADEMY, 5)
+    local cap = trunc(0.1 * (mana + djinns))
+    local rez_total = 0
+    local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
+    for i = 0,stacks-1 do
+        local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
+        if died > 0  and cap > 0 then
+            if creature == CREATURE_GENIE or creature == CREATURE_MASTER_GENIE or creature == CREATURE_DJINN_VIZIER then
+                local rez = min(cap, died)
+                cap = cap - rez
+                rez_total = rez_total + rez
+                AddHeroCreatures(hero, creature, rez)
+            end
+        end
+    end
+    local cost = 10 * rez_total - djinns
+    ChangeHeroStat(hero, STAT_MANA_POINTS, -cost)
+end
+
+function Routine_UpgradeSilverPavillon(player, hero)
     print("$ Routine_AddRecruitsRakshasas")
-    for i,town in GetHeroTowns(player, hero) do
-        if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_6) ~= 0 then
-            local fort = GetTownBuildingLevel(town, TOWN_BUILDING_FORT)
-            local grail = GetTownBuildingLevel(town, TOWN_BUILDING_GRAIL)
-            local multiplier = 1 + 0.5 * grail
-            if fort > 1 then multiplier = multiplier + 0.5 * (fort-1) end
-            local nb = round(3 * multiplier)
-            local current = GetObjectDwellingCreatures(town, CREATURE_RAKSHASA)
-            SetObjectDwellingCreatures(town, CREATURE_RAKSHASA, current + nb)
+    for town,data in MAP_TOWNS do
+        if IsHeroInTown(hero, town, 1, 1) then
+            if data.faction == ACADEMY then
+                UpgradeTownBuilding(town, TOWN_BUILDING_DWELLING_6)
+                sleep()
+                if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_6) == 1 then
+                    SetObjectDwellingCreatures(town, CREATURE_RAKSHASA, 0)
+                end
+            end
         end
     end
 end
@@ -372,9 +419,19 @@ function Routine_ActivateArtfsetNecro(player, hero)
     GiveArtifact(hero, 252, 1)
 end
 
-function Routine_UpgradeMages(player, hero)
-    print("$ Routine_UpgradeMages")
-    UpgradeHeroCreatures(player, hero, CREATURE_MAGI, CREATURE_ARCH_MAGI)
+function Routine_AddRecruitsMages(player, hero)
+    print("$ Routine_AddRecruitsMages")
+    for i,town in GetHeroTowns(player, hero) do
+        if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_4) ~= 0 then
+            local fort = GetTownBuildingLevel(town, TOWN_BUILDING_FORT)
+            local grail = GetTownBuildingLevel(town, TOWN_BUILDING_GRAIL)
+            local multiplier = 1 + 0.5 * grail
+            if fort > 1 then multiplier = multiplier + 0.5 * (fort-1) end
+            local nb = round(10 * multiplier)
+            local current = GetObjectDwellingCreatures(town, CREATURE_MAGI)
+            SetObjectDwellingCreatures(town, CREATURE_MAGI, current + nb)
+        end
+    end
 end
 
 function Routine_AddOtherHeroesExperience(player, hero)
@@ -387,8 +444,18 @@ function Routine_AddOtherHeroesExperience(player, hero)
     end
 end
 
-function Routine_AddHeroEagles(player, hero)
-    print("$ Routine_AddHeroEagles")
+function Routine_RefreshTimeShift(player, hero)
+    print("$ Routine_RefreshTimeShift")
+    ControlHeroCustomAbility(hero, CUSTOM_ABILITY_3, CUSTOM_ABILITY_ENABLED)
+end
+
+function Routine_AddHeroEaglesPerWeek(player, hero)
+    print("$ Routine_AddHeroEaglesPerWeek")
+    AddHeroCreaturePerLevel(player, hero, CREATURE_SNOW_APE, 0.2)
+end
+
+function Routine_AddHeroEaglePerLevel(player, hero)
+    print("$ Routine_AddHeroEaglePerLevel")
     AddHeroCreaturePerLevel(player, hero, CREATURE_SNOW_APE, 0.2)
 end
 
@@ -432,7 +499,7 @@ end
 function Routine_AddHeroRiders(player, hero)
     print("$ Routine_AddHeroRiders")
     local amount = round(0.12 * GetHeroLevel(hero))
-    AddHeroCreatureType(player, hero, {CREATURE_RIDER,CREATURE_RAVAGER,CREATURE_BLACK_RIDER}, amount)
+    AddHeroCreatureType(player, hero, DUNGEON, 4, amount)
 end
 
 function Routine_GainDragonArtifacts(player, hero, combatIndex)
@@ -573,7 +640,7 @@ end
 function Routine_AddHeroHellHounds(player, hero)
     print("$ Routine_AddHeroHellHounds")
     local amount = round(0.90 * GetHeroLevel(hero))
-    AddHeroCreatureType(player, hero, {CREATURE_HELL_HOUND,CREATURE_CERBERI,CREATURE_FIREBREATHER_HOUND}, amount)
+    AddHeroCreatureType(player, hero, INFERNO, 3, amount)
 end
 
 function Routine_GainAttackPerLevel(player, hero, level)
@@ -697,7 +764,7 @@ end
 function Routine_AddHeroWyverns(player, hero)
     print("$ Routine_AddHeroWyverns")
     local amount = round(0.22 * GetHeroLevel(hero))
-    AddHeroCreatureType(player, hero, {CREATURE_WYVERN,CREATURE_WYVERN_POISONOUS,CREATURE_WYVERN_PAOKAI}, amount)
+    AddHeroCreatureType(player, hero, STRONGHOLD, 6, amount)
 end
 
 function Routine_ActivateArtfsetSarIssus(player, hero)
@@ -727,6 +794,7 @@ START_TRIGGER_HERO_ROUTINES = {
     [H_TOLGHAR] = Routine_AddLuckAndMorale,
     [H_EBBA] = Routine_GiveArtifactRuneOfFlame,
     -- academy
+    [H_DAVIUS] = Routine_UpgradeSilverPavillon,
     [H_THEODORUS] = Routine_ActivateArtfsetNecro,
     -- dungeon
     [H_RANLETH] = Routine_ActivateArtfsetEnlightenment,
@@ -754,8 +822,9 @@ DAILY_TRIGGER_HERO_ROUTINES = {
     [H_EBBA] = Routine_GainSpellpowerPerRune,
     -- academy
     [H_HAVEZ] = Routine_AddOtherHeroesGremlins,
-    [H_CYRUS] = Routine_UpgradeMages,
     [H_MAAHIR] = Routine_AddOtherHeroesExperience,
+    [H_GALIB] = Routine_GenerateGoldsPerDjinn,
+    [H_RISSA] = Routine_RefreshTimeShift,
     [H_MINASLI] = Routine_EvolveEagleToPhoenix,
     -- dungeon
     [H_VAYSHAN] = Routine_GenerateGoldPerScout,
@@ -783,9 +852,8 @@ WEEKLY_TRIGGER_HERO_ROUTINES = {
     [H_EBBA] = Routine_GenerateCrystalsAndGems,
     -- academy
     [H_RAZZAK] = Routine_AssembleGargoyles,
-    [H_GALIB] = Routine_AddHeroDjinns,
-    [H_DAVIUS] = Routine_AddRecruitsRakshasas,
-    [H_MINASLI] = Routine_AddHeroEagles,
+    [H_CYRUS] = Routine_AddRecruitsMages,
+    [H_MINASLI] = Routine_AddHeroEaglesPerWeek,
     -- dungeon
     [H_SHADYA] = Routine_UpgradeToWitches,
     [H_LETHOS] = Routine_AddHeroManticores,
@@ -808,6 +876,7 @@ LEVEL_UP_HERO_ROUTINES_HERO = {
     -- preserve
     -- fortress
     -- academy
+    [H_MINASLI] = Routine_AddHeroEaglePerLevel,
     -- dungeon
     [H_SINITAR] = Routine_ConvertKnowledgeToSpellpower,
     [H_SHADYA] = Routine_AddHeroLevel,
@@ -827,6 +896,8 @@ AFTER_COMBAT_TRIGGER_HERO_ROUTINES = {
     -- fortress
     [H_ROLF] = Routine_ReviveBearRiders,
     -- academy
+    [H_RAZZAK] = Routine_FixDestroyedGolems,
+    [H_GALIB] = Routine_RespawnDjinns,
     -- dungeon
     [H_RAELAG] = Routine_GainDragonArtifacts,
     -- necropolis

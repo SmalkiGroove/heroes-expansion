@@ -477,7 +477,7 @@ end
 function Routine_BattleCommanderWeeklyDancers(player, hero, mastery)
     print("$ Routine_BattleCommanderWeeklyDancers")
     local amount = 27 + 12 * WEEK
-    AddHeroCreatureType(player, hero, {CREATURE_BLADE_JUGGLER,CREATURE_WAR_DANCER,CREATURE_BLADE_SINGER}, amount)
+    AddHeroCreatureType(player, hero, PRESERVE, 1, amount)
 end
 
 function Routine_HauntingWeeklyGhosts(player, hero, mastery)
@@ -495,7 +495,7 @@ end
 function Routine_DefendUsAllWeeklyWarriors(player, hero, mastery)
     print("$ Routine_DefendUsAllWeeklyWarriors")
     local amount = 17 + 7 * WEEK
-    AddHeroCreatureType(player, hero, {CREATURE_ORC_WARRIOR,CREATURE_ORC_SLAYER,CREATURE_ORC_WARMONGER}, amount)
+    AddHeroCreatureType(player, hero, STRONGHOLD, 3, amount)
 end
 
 

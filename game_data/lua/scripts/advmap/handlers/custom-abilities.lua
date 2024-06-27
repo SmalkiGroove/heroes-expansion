@@ -7,20 +7,32 @@ end
 
 function ActivateKnowYourEnemy(player, hero)
     print("$ ActivateKnowYourEnemy")
+    if GetHeroStat(hero, STAT_MOVE_POINTS) < 100 then
+        return
+    end
     local exp = 0
     local k, units, amounts = GetHeroArmySummary(hero)
     for i = 1,k do
-        local faction = CREATURES[units[i]][1]
+        local creature = units[i]
+        local faction = CREATURES[creature][1]
         if faction ~= PRESERVE and faction ~= NEUTRAL then
             local count = amounts[i]
-            local tier = CREATURES[units[i]][2]
+            local tier = CREATURES[creature][2]
             exp = exp + count * power(2, tier+1)
+            RemoveHeroCreatures(hero, creature, count)
         end
     end
     if exp > 0 then
         AddHeroStatAmount(player, hero, STAT_EXPERIENCE, exp)
         ChangeHeroStat(hero, STAT_MOVE_POINTS, -100)
     end
+end
+
+
+function ActivateHeroTimeShift(player, hero)
+    print("$ ActivateHeroTimeShift")
+    
+    ControlHeroCustomAbility(hero, CUSTOM_ABILITY_3, CUSTOM_ABILITY_DISABLED)
 end
 
 
@@ -49,7 +61,7 @@ end
 CUSTOM_ABILITIES = {
     [CUSTOM_ABILITY_1] = NoneRoutine,
     [CUSTOM_ABILITY_2] = ActivateKnowYourEnemy,
-    [CUSTOM_ABILITY_3] = NoneRoutine,
+    [CUSTOM_ABILITY_3] = ActivateHeroTimeShift,
     [CUSTOM_ABILITY_4] = ActivateBuildingConversion,
 }
 

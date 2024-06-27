@@ -323,21 +323,30 @@ function AddHeroCreaturePerLevel(player, hero, type, coef)
 	end
 end
 
-function AddHeroCreatureType(player, hero, types, nb)
+function AddHeroCreatureType(player, hero, faction, tier, nb)
 	print("$ AddHeroCreatureType")
 	if nb >= 1 then
 		local army = GetHeroArmy(hero)
 		local b = 0
 		for i = 1,7 do
-            if contains(types, army[i]) then
+            if contains(CREATURES_BY_FACTION[faction][tier], army[i]) then
                 AddHeroCreatures(hero, army[i], nb)
                 -- ShowFlyingSign({"/Text/Game/Scripts/Reinforcements.txt"; num=nb}, hero, player, FLYING_SIGN_TIME)
                 return
             end
         end
-		AddHeroCreatures(hero, types[1], nb)
+		AddHeroCreatures(hero, CREATURES_BY_FACTION[faction][tier][1], nb)
 		-- ShowFlyingSign({"/Text/Game/Scripts/Reinforcements.txt"; num=nb}, hero, player, FLYING_SIGN_TIME)
 	end
+end
+
+function CountHeroCreatureType(player, hero, faction, tier)
+	print("$ CountHeroCreatureType")
+	local count = 0
+	for _,cr in CREATURES_BY_FACTION[faction][tier] do
+		count = count + GetHeroCreatures(hero, cr)
+	end
+	return count
 end
 
 function AddHeroTownRecruits(player, hero, dwelling, creature, nb)
@@ -364,8 +373,7 @@ function TransferCreatureFromTown(player, hero, dwelling, creature, coef)
 			local nb = min(trunc(coef * level), recruits)
 			if nb >= 1 then
 				SetObjectDwellingCreatures(town, creature, recruits-nb)
-				local types = CREATURES_BY_FACTION[CREATURES[creature][1]][CREATURES[creature][2]]
-				AddHeroCreatureType(player, hero, types, nb)
+				AddHeroCreatureType(player, hero, CREATURES[creature][1], CREATURES[creature][2], nb)
 				-- ShowFlyingSign({"/Text/Game/Scripts/Reinforcements.txt"; num=nb}, hero, player, FLYING_SIGN_TIME)
 			end
 		end

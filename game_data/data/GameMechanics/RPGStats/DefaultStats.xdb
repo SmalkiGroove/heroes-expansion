@@ -7,7 +7,7 @@
 	<RumorCost>50</RumorCost>
 	<adventure>
 		<BaseHeroMovement>2350</BaseHeroMovement>
-		<BaseHeroLookRange>10</BaseHeroLookRange>
+		<BaseHeroLookRange>9</BaseHeroLookRange>
 		<MinCreatureSpeed>2</MinCreatureSpeed>
 		<MaxCreatureSpeed>14</MaxCreatureSpeed>
 		<DepthBetweenFloors>10</DepthBetweenFloors>
@@ -145,7 +145,7 @@
 		</NeutralsNotInCampaign>
 		<HeroSkills>
 			<Scouting_VisibilityIncrease>6</Scouting_VisibilityIncrease>
-			<DisguiseAndReckon_VisibilityIncrease>8</DisguiseAndReckon_VisibilityIncrease>
+			<DisguiseAndReckon_VisibilityIncrease>9</DisguiseAndReckon_VisibilityIncrease>
 			<Intelligence_ManaPointsBonus>1.0</Intelligence_ManaPointsBonus>
 			<WarMachines_HealthBonusPerSkillTrained>10</WarMachines_HealthBonusPerSkillTrained>
 			<WarMachines_PerkSpecificHealthMultiplier>2</WarMachines_PerkSpecificHealthMultiplier>
@@ -2284,20 +2284,20 @@
 			</Barbarian>
 			<Melee>
 				<HeroDamageLevel1>
-					<Item>2.8</Item>
+					<Item>3.0</Item>
 					<Item>2.1</Item>
-					<Item>1.5</Item>
-					<Item>1.0</Item>
+					<Item>1.4</Item>
+					<Item>0.9</Item>
 					<Item>0.6</Item>
 					<Item>0.3</Item>
 					<Item>0.1</Item>
 					<Item>0.01</Item>
 				</HeroDamageLevel1>
 				<HeroDamageLevel30>
+					<Item>50</Item>
 					<Item>28</Item>
-					<Item>21</Item>
-					<Item>15</Item>
-					<Item>10</Item>
+					<Item>14</Item>
+					<Item>9</Item>
 					<Item>6</Item>
 					<Item>3</Item>
 					<Item>1</Item>

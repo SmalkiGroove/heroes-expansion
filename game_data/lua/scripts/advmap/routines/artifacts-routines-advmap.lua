@@ -25,7 +25,7 @@ end
 
 function Routine_ArtifactGreatLich(player, hero)
     print("$ Routine_ArtifactGreatLich")
-    AddHeroCreatureType(player, hero, {CREATURE_LICH,CREATURE_DEMILICH,CREATURE_LICH_MASTER}, 1)
+    AddHeroCreatureType(player, hero, NECROPOLIS, 5, 1)
 end
 
 
@@ -82,8 +82,8 @@ end
 function Routine_ArtfsetEldena(player, hero)
     print("$ Routine_ArtfsetEldena")
     local faction = HEROES[hero].faction
-    AddHeroCreatureType(player, hero, CREATURES_BY_FACTION[faction][4], 4)
-    AddHeroCreatureType(player, hero, CREATURES_BY_FACTION[faction][5], 2)
+    AddHeroCreatureType(player, hero, faction, 4, 4)
+    AddHeroCreatureType(player, hero, faction, 5, 2)
 end
 
 function Routine_ArtfsetEnlighten(player, hero)
