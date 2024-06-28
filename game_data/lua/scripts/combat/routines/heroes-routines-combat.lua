@@ -46,6 +46,14 @@ function Routine_CastPrayer(side, hero)
     HeroCast_Global(hero, SPELL_PRAYER, NO_COST)
 end
 
+function Routine_CastRandomStoneskin(side, hero)
+    -- print("Trigger random Stoneskin !")
+    if CURRENT_UNIT == hero then
+        HeroCast_RandomCreature(hero, SPELL_STONESKIN, FREE_MANA, side)
+        if IsHuman(side) then SetATB_ID(hero, ATB_INSTANT) end
+    end
+end
+
 function Routine_GriffinInstantDive(side, hero)
     -- print("Trigger instant dive !")
     for k,v in ROUTINE_VARS.GriffinDives do
@@ -667,6 +675,7 @@ COMBAT_TURN_HERO_ROUTINES = {
     -- haven
     [H_MAEVE] = Routine_PeasantsMoveNext,
     [H_GABRIELLE] = Routine_GriffinInstantDive,
+    [H_GODRIC] = Routine_CastRandomStoneskin,
     -- preserve
     [H_JENOVA] = Routine_HeroMoveNext,
     [H_TIERU] = Routine_DruidsMoveNext,

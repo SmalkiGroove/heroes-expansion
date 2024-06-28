@@ -194,11 +194,11 @@ end
 
 function Routine_CheckGetWiser(player, hero, mastery)
     print("$ Routine_CheckGetWiser")
-    local value = 2000
-    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_GET_WISER]
+    local value = mastery * (1000 + round(0.05 * GetHeroStat(hero, STAT_EXPERIENCE)))
+    local diff = mastery - HERO_SKILL_BONUSES[hero][SKILLBONUS_GET_WISER]
     if diff ~= 0 then
-        AddHeroStatAmount(player, hero, STAT_EXPERIENCE, diff)
-        HERO_SKILL_BONUSES[hero][SKILLBONUS_GET_WISER] = value
+        AddHeroStatAmount(player, hero, STAT_EXPERIENCE, value)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_GET_WISER] = mastery
     end
 end
 
@@ -474,6 +474,12 @@ function Routine_GetStrongerWeeklyBonus(player, hero, mastery)
     AddHeroStatAmount(player, hero, STAT_DEFENCE, 1)
 end
 
+function Routine_GetWiserWeeklyBonus(player, hero, mastery)
+    print("$ Routine_GetWiserWeeklyBonus")
+    local exp = 1000 + round(0.05 * GetHeroStat(hero, STAT_EXPERIENCE))
+    AddHeroStatAmount(player, hero, STAT_EXPERIENCE, exp)
+end
+
 function Routine_BattleCommanderWeeklyDancers(player, hero, mastery)
     print("$ Routine_BattleCommanderWeeklyDancers")
     local amount = 27 + 12 * WEEKS
@@ -562,12 +568,6 @@ function Routine_TaleTellers(player, hero, mastery, combatIndex)
     end
 end
 
-function Routine_GetWiserBonusExp(player, hero, mastery, combatIndex)
-    print("$ Routine_GetWiserBonusExp")
-    local exp = GetArmyStrength(combatIndex, 0)
-    AddHeroStatAmount(player, hero, STAT_EXPERIENCE, exp)
-end
-
 function Routine_OnslaughtReset(player, hero, mastery, combatIndex)
     print("$ Routine_OnslaughtReset")
     HERO_SKILL_BONUSES[hero][SKILLBONUS_ONSLAUGHT] = 0
@@ -635,6 +635,7 @@ WEEKLY_TRIGGER_SKILLS_ROUTINES = {
     [SKILL_LOGISTICS] = Routine_LogisticsWeeklyProd,
     [SKILL_GOVERNANCE] = Routine_GovernanceWeeklyResources,
     [PERK_GET_STRONGER] = Routine_GetStrongerWeeklyBonus,
+    [PERK_GET_WISER] = Routine_GetWiserWeeklyBonus,
     [PERK_BATTLE_COMMANDER] = Routine_BattleCommanderWeeklyDancers,
     [PERK_HAUNTING] = Routine_HauntingWeeklyGhosts,
     [PERK_DEFEND_US_ALL] = Routine_DefendUsAllWeeklyWarriors,
@@ -653,7 +654,6 @@ LEVELUP_TRIGGER_SKILLS_ROUTINES = {
 AFTER_COMBAT_TRIGGER_SKILLS_ROUTINES = {
     [SKILL_LEADERSHIP] = Routine_LeadershipAfterBattle,
     [PERK_TALETELLERS] = Routine_TaleTellers,
-    [PERK_GET_WISER] = Routine_GetWiserBonusExp,
     [PERK_ONSLAUGHT] = Routine_OnslaughtReset,
     [PERK_STAMINA] = Routine_StaminaBuff,
 }

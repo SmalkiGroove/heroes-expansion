@@ -28,6 +28,12 @@ function Routine_AddRecruitsPeasants(player, hero)
     print("$ Routine_AddRecruitsPeasants")
     local amount = trunc(4.2 * GetHeroLevel(hero))
     AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_1, CREATURE_PEASANT, amount)
+    for _,hut in GetObjectNamesByType("BUILDING_PEASANT_HUT") do
+        if GetObjectOwner(hut) == player then
+            local current = GetObjectDwellingCreatures(hut, CREATURE_PEASANT)
+            SetObjectDwellingCreatures(hut, CREATURE_PEASANT, current + amount)
+        end
+    end
 end
 
 Var_Dougal_TrainCount = 0
@@ -81,9 +87,42 @@ function Routine_GainExpFromTotalGolds(player, hero)
     AddHeroStatAmount(player, hero, STAT_EXPERIENCE, amount)
 end
 
-function Routine_AddHeroZealots(player, hero)
-    print("$ Routine_AddHeroZealots")
-    AddHeroCreaturePerLevel(player, hero, CREATURE_ZEALOT, 0.1)
+function Routine_GainPrimaryStats(player, hero, level)
+    print("$ Routine_GainPrimaryStats")
+    if mod(level, 5) == 0 then
+        ChangeHeroStat(hero, STAT_ATTACK, 1)
+        ChangeHeroStat(hero, STAT_DEFENCE, 1)
+        ChangeHeroStat(hero, STAT_SPELL_POWER, 1)
+        ChangeHeroStat(hero, STAT_KNOWLEDGE, 1)
+    end
+end
+
+function Routine_UpgradeMonastery(player, hero)
+    print("$ Routine_UpgradeMonastery")
+    for town,data in MAP_TOWNS do
+        if IsHeroInTown(hero, town, 1, 1) then
+            if data.faction == HAVEN then
+                UpgradeTownBuilding(town, TOWN_BUILDING_DWELLING_5)
+                sleep()
+                if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_5) == 1 then
+                    SetObjectDwellingCreatures(town, CREATURE_PRIEST, 0)
+                end
+            end
+        end
+    end
+end
+
+function Routine_ConvertPeasantToPriest(player, hero)
+    print("$ Routine_ConvertPeasantToPriest")
+    local peasant = nil
+    if GetHeroCreatures(hero, CREATURE_PEASANT) > 0 then peasant = CREATURE_PEASANT
+    elseif GetHeroCreatures(hero, CREATURE_MILITIAMAN) > 0 then peasant = CREATURE_MILITIAMAN
+    elseif GetHeroCreatures(hero, CREATURE_LANDLORD) > 0 then peasant = CREATURE_LANDLORD
+    end
+    if peasant then
+        RemoveHeroCreatures(hero, peasant, 1)
+        AddHeroCreatureType(player, hero, HAVEN, 5, 1)
+    end
 end
 
 function Routine_AddTwoLuckPoints(player, hero)
@@ -455,7 +494,7 @@ function Routine_AddHeroEaglesPerWeek(player, hero)
     AddHeroCreaturePerLevel(player, hero, CREATURE_SNOW_APE, 0.2)
 end
 
-function Routine_AddHeroEaglePerLevel(player, hero)
+function Routine_AddHeroEaglePerLevel(player, hero, level)
     print("$ Routine_AddHeroEaglePerLevel")
     AddHeroCreaturePerLevel(player, hero, CREATURE_SNOW_APE, 0.2)
 end
@@ -789,6 +828,7 @@ START_TRIGGER_HERO_ROUTINES = {
     -- haven
     [H_LASZLO] = Routine_ActivateArtfsetHaven,
     [H_ISABEL] = Routine_AddTwoLuckPoints,
+    [H_ALARIC] = Routine_UpgradeMonastery,
     -- preserve
     -- fortress
     [H_WULFSTAN] = Routine_GiveArtifactRingOfMachineAffinity,
@@ -812,7 +852,6 @@ START_TRIGGER_HERO_ROUTINES = {
 DAILY_TRIGGER_HERO_ROUTINES = {
     -- haven
     [H_DOUGAL] = Routine_TrainPeasantsToArchersCheck,
-    [H_ALARIC] = Routine_AddHeroZealots,
     [H_MAEVE] = Routine_DoublePeasantTax,
     [H_GABRIELLE] = Routine_MovePointsPerGriffin,
     -- preserve
@@ -875,6 +914,7 @@ WEEKLY_TRIGGER_HERO_ROUTINES = {
 
 LEVEL_UP_HERO_ROUTINES_HERO = {
     -- haven
+    [H_NICOLAI] = Routine_GainPrimaryStats,
     -- preserve
     -- fortress
     -- academy
@@ -890,6 +930,7 @@ LEVEL_UP_HERO_ROUTINES_HERO = {
 
 AFTER_COMBAT_TRIGGER_HERO_ROUTINES = {
     -- haven
+    [H_ALARIC] = Routine_ConvertPeasantToPriest,
     -- preserve
     [H_KYRRE] = Routine_KyrreVictoryCounter,
     [H_FINDAN] = Routine_ReviveHunters,

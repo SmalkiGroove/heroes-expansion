@@ -1,15 +1,17 @@
 
 function Routine_AbilityCommandBallista(side, unit)
     print("$ Routine_AbilityCommandBallista")
-    local x,y = GetUnitPosition(CURRENT_UNIT)
-    local ballista = GetWarMachine(CURRENT_UNIT_SIDE, WAR_MACHINE_BALLISTA)
-    if ballista then
-        if y == 5 or y == 6 then
-            if x == 2 + CURRENT_UNIT_SIDE * 13 then
-                setATB(ballista, ATB_INSTANT) sleep()
-                DefendCombatUnit(CURRENT_UNIT)
+    if GetCreatureNumber(unit) > 10 then
+        local x,y = GetUnitPosition(CURRENT_UNIT)
+        local ballista = GetWarMachine(CURRENT_UNIT_SIDE, WAR_MACHINE_BALLISTA)
+        if ballista then
+            if y == 5 or y == 6 then
+                if x == 2 + CURRENT_UNIT_SIDE * 13 then
+                    setATB(ballista, ATB_INSTANT) sleep()
+                    DefendCombatUnit(CURRENT_UNIT)
+                end
             end
-        end
+        end 
     end
 end
 
