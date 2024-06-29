@@ -23,6 +23,7 @@ ROUTINE_VARS = {
     GriffinDives = {},
     AvatarOfDeath = "none",
     Incendiary = nil,
+    AtbBoosted = {},
     GoblinsTotal = 0,
 }
 

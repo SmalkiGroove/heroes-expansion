@@ -18,6 +18,7 @@ function Routine_ShatterMagic(side, hero, id, mastery)
     if h then
         local max = GetUnitMaxManaPoints(h)
         local cur = GetUnitManaPoints(h)
+        if hero == H_MARBAS then max = 2 * max end
         local burn = min(cur, round(mult * max))
         SetMana(h, cur-burn)
     end

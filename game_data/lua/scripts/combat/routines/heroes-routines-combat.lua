@@ -104,11 +104,17 @@ end
 function Routine_ResetAtbOnKillEnraged(side, hero, unit)
     -- print("Trigger reset enraged atb !")
     if GetUnitSide(unit) ~= GetUnitSide(hero) then
-        SetATB_ID(CURRENT_UNIT, ATB_NEXT)
-        SetATB_CreatureTypes(side, CREATURES_BY_FACTION[PRESERVE][6], ATB_INSTANT)
-        SetATB_CreatureTypes(side, CREATURES_BY_FACTION[PRESERVE][4], ATB_INSTANT)
-        SetATB_CreatureTypes(side, CREATURES_BY_FACTION[PRESERVE][3], ATB_INSTANT)
-        SetATB_CreatureTypes(side, CREATURES_BY_FACTION[PRESERVE][1], ATB_INSTANT)
+        -- SetATB_ID(CURRENT_UNIT, ATB_NEXT)
+        for i,cr in GetUnits(side, CREATURE) do
+            local type = GetCreatureType(cr)
+            if CREATURES[type][1] == PRESERVE and contains({1,3,4,6}, CREATURES[type][2]) then
+                if not ROUTINE_VARS.AtbBoosted[cr] then
+                    SetATB_ID(cr, ATB_INSTANT)
+                    ROUTINE_VARS.AtbBoosted[cr] = not nil
+                    return
+                end
+            end
+        end
     end
 end
 
@@ -492,6 +498,32 @@ function Routine_BallistaShootUnit(side, hero)
     end
 end
 
+function Routine_ResetAtbOnKillHellhounds(side, hero, unit)
+    -- print("Trigger reset hellhounds atb !")
+    if GetUnitSide(unit) ~= GetUnitSide(hero) then
+        -- SetATB_ID(CURRENT_UNIT, ATB_NEXT)
+        for i,cr in GetUnits(side, CREATURE) do
+            local type = GetCreatureType(cr)
+            if type == CREATURE_HELL_HOUND or type == CREATURE_CERBERI or type == CREATURE_FIREBREATHER_HOUND then
+                if not ROUTINE_VARS.AtbBoosted[cr] then
+                    SetATB_ID(cr, ATB_INSTANT)
+                    ROUTINE_VARS.AtbBoosted[cr] = not nil
+                    return
+                end
+            end
+        end
+    end
+end
+
+function Routine_BoostHeroAtbOnDeath(side, hero, unit)
+    -- print("Trigger reset hero atb !")
+    if GetUnitSide(unit) == GetUnitSide(hero) then
+        if IsCreature(unit) then
+            SetATB_ID(hero, ATB_INSTANT)
+        end
+    end
+end
+
 function Routine_DemonicCreatureExplosion(side, hero)
     -- print("Trigger creature explosion !")
     if CURRENT_UNIT_SIDE == side then
@@ -509,9 +541,17 @@ end
 function Routine_CastRandomFireball(side, hero)
     -- print("Trigger random Fireball !")
     if CURRENT_UNIT == hero then
-        local x,y = GetUnitPosition(RandomCreature(1-side, COMBAT_TURN))
-        HeroCast_Area(hero, SPELL_FIREBALL, FREE_MANA, x, y)
-        ROUTINE_VARS.Incendiary = not nil
+        local mana = GetUnitManaPoints(hero)
+        if mana >= 3 then
+            local x,y = GetUnitPosition(RandomCreature(1-side, COMBAT_TURN))
+            HeroCast_Area(hero, SPELL_FIREBALL, FREE_MANA, x, y)
+            SetMana(hero, mana - 3)
+            if GetHeroLevel(side) < 20 then
+                ROUTINE_VARS.Incendiary = not nil
+            else
+                SetATB_ID(hero, ATB_INSTANT)
+            end
+        end
     elseif ROUTINE_VARS.Incendiary then
         ROUTINE_VARS.Incendiary = nil
         SetATB_ID(hero, 0.55)
@@ -523,6 +563,17 @@ function Routine_CastMineFields(side, hero)
     local x = 12 - 9 * side
     HeroCast_Area(hero, SPELL_LAND_MINE, FREE_MANA, x, 9)
     HeroCast_Area(hero, SPELL_LAND_MINE, FREE_MANA, x, 3)
+end
+
+function Routine_SummonEarthElementals(side, hero)
+    -- print("Trigger summon earth elementals !")
+    if CURRENT_UNIT == hero then
+        local nb = 2 + trunc(GetHeroLevel(side) * 0.4)
+        for i = 1,nb do
+            SummonCreature(side, CREATURE_EARTH_ELEMENTAL, 1)
+            sleep(4)
+        end
+    end
 end
 
 function Routine_SummonPitlords(side, hero)
@@ -696,6 +747,7 @@ COMBAT_TURN_HERO_ROUTINES = {
     [H_SHELTEM] = Routine_BallistaShootUnit,
     [H_MALUSTAR] = Routine_DemonicCreatureExplosion,
     [H_AGRAEL] = Routine_CastRandomFireball,
+    [H_DELEB] = Routine_SummonEarthElementals,
     -- stronghold
     [H_KILGHAN] = Routine_SummonGoblinStack,
     [H_ZOULEIKA] = Routine_HealingTentMoveNext,
@@ -716,6 +768,8 @@ UNIT_DIED_HERO_ROUTINES = {
     [H_ARCHILUS] = Routine_AvatarDead,
     [H_SANDRO] = Routine_RaiseUndead,
     -- inferno
+    [H_GRAWL] = Routine_ResetAtbOnKillHellhounds,
+    [H_ASH] = Routine_BoostHeroAtbOnDeath,
     -- stronghold
 }
 

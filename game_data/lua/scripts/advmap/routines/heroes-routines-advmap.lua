@@ -672,15 +672,20 @@ end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 -- INFERNO
 
-function Routine_TransferNightmares(player, hero)
-    print("$ Routine_TransferNightmares")
-    TransferCreatureFromTown(player, hero, TOWN_BUILDING_DWELLING_5, CREATURE_NIGHTMARE, 0.4)
+function Routine_NightmareWeeklyProd(player, hero)
+    print("$ Routine_NightmareWeeklyProd")
+    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_5, CREATURE_NIGHTMARE, 1)
 end
 
 function Routine_AddHeroHellHounds(player, hero)
     print("$ Routine_AddHeroHellHounds")
     local amount = round(0.90 * GetHeroLevel(hero))
     AddHeroCreatureType(player, hero, INFERNO, 3, amount)
+end
+
+function Routine_RestoreManaAfterBattle(player, hero, combatIndex)
+    print("$ Routine_RestoreManaAfterBattle")
+    ChangeHeroStat(hero, STAT_MANA_POINTS, GetHeroLevel(hero))
 end
 
 function Routine_GainAttackPerLevel(player, hero, level)
@@ -696,10 +701,9 @@ function Routine_ActivateArtfsetHunter(player, hero)
     GiveArtifact(hero, 233, 1)
 end
 
-function Routine_ReviveSuccubus(player, hero, combatIndex)
-    print("$ Routine_ReviveSuccubus")
-    local max = 2 + trunc(0.66 * GetHeroLevel(hero))
-    ResurrectCreatureType(player, hero, combatIndex, INFERNO, 4, max)
+function Routine_AddHeroSuccubus(player, hero)
+    print("$ Routine_AddHeroSuccubus")
+    AddHeroCreatureType(player, hero, INFERNO, 4, GetHeroLevel(hero))
 end
 
 function Routine_GainBonusExpAndRes(player, hero, combatIndex)
@@ -904,7 +908,7 @@ WEEKLY_TRIGGER_HERO_ROUTINES = {
     [H_XERXON] = Routine_AddHeroBlackKnights,
     [H_DEIRDRE] = Routine_AddHeroBanshees,
     -- inferno
-    [H_GROK] = Routine_TransferNightmares,
+    [H_GROK] = Routine_NightmareWeeklyProd,
     [H_GRAWL] = Routine_AddHeroHellHounds,
     -- stronghold
     [H_GARUNA] = Routine_AddRecruitsCentaurs,
@@ -925,6 +929,7 @@ LEVEL_UP_HERO_ROUTINES_HERO = {
     -- necropolis
     -- inferno
     [H_ASH] = Routine_GainAttackPerLevel,
+    [H_BIARA] = Routine_AddHeroSuccubus,
     -- stronghold
 }
 
@@ -946,7 +951,7 @@ AFTER_COMBAT_TRIGGER_HERO_ROUTINES = {
     -- necropolis
     [H_XERXON] = Routine_EvolveBlackKnights,
     -- inferno
-    [H_BIARA] = Routine_ReviveSuccubus,
+    [H_SHELTEM] = Routine_RestoreManaAfterBattle,
     [H_ORLANDO] = Routine_GainBonusExpAndRes,
     -- stronghold
     [H_GORSHAK] = Routine_GainAttackDefense,
