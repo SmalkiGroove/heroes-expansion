@@ -165,15 +165,33 @@ function Routine_KyrreVictoryCounter(player, hero, combatIndex)
     Var_Kyrre_BattleWon = Var_Kyrre_BattleWon + 1
 end
 
-function Routine_ReviveHunters(player, hero, combatIndex)
-    print("$ Routine_ReviveHunters")
-    local max = 3 + GetHeroLevel(hero)
-    ResurrectCreatureType(player, hero, combatIndex, PRESERVE, 3, max)
+function Routine_HuntersWeeklyProd(player, hero, combatIndex)
+    print("$ Routine_HuntersWeeklyProd")
+    for town,data in MAP_TOWNS do
+        if data.faction == PRESERVE then
+            if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_3) ~= 0 then
+                local fort = GetTownBuildingLevel(town, TOWN_BUILDING_FORT)
+                local grail = GetTownBuildingLevel(town, TOWN_BUILDING_GRAIL)
+                local multiplier = 1 + 0.5 * grail
+                if fort > 1 then multiplier = multiplier + 0.5 * (fort-1) end
+                local nb = trunc(14 * multiplier)
+                local current = GetObjectDwellingCreatures(town, CREATURE_WOOD_ELF)
+                SetObjectDwellingCreatures(town, CREATURE_WOOD_ELF, current + nb)
+            end
+        end
+    end
 end
 
 function Routine_AddHeroWolves(player, hero)
     print("$ Routine_AddHeroWolves")
     AddHeroCreaturePerLevel(player, hero, CREATURE_WOLF, 2.0)
+end
+
+function Routine_GiveArtifactLegendaryBoots(player, hero, level)
+    print("$ Routine_GiveArtifactLegendaryBoots")
+    if level == 20 then
+        GiveArtifact(hero, ARTIFACT_LEGENDARY_BOOTS)
+    end
 end
 
 Var_Ylthin_BattleWon = 0
@@ -619,7 +637,6 @@ end
 function Routine_HeroCallVampires(player, hero)
     print("$ Routine_HeroCallVampires")
     local amount = trunc(0.7 * GetHeroLevel(hero))
-    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_6, CREATURE_RAKSHASA, 0.2)
     AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_VAMPIRE, amount)
     sleep(10)
     TransferCreatureFromTown(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_NOSFERATU, 1.2)
@@ -890,6 +907,7 @@ WEEKLY_TRIGGER_HERO_ROUTINES = {
     [H_NICOLAI] = Routine_GainExpFromTotalGolds,
     -- preserve
     [H_KYRRE] = Routine_AddHeroExperience,
+    [H_FINDAN] = Routine_HuntersWeeklyProd,
     [H_IVOR] = Routine_AddHeroWolves,
     [H_YLTHIN] = Routine_HeroCallUnicorns,
     -- fortress
@@ -920,6 +938,7 @@ LEVEL_UP_HERO_ROUTINES_HERO = {
     -- haven
     [H_NICOLAI] = Routine_GainPrimaryStats,
     -- preserve
+    [H_VINRAEL] = Routine_GiveArtifactLegendaryBoots,
     -- fortress
     -- academy
     [H_MINASLI] = Routine_AddHeroEaglePerLevel,
@@ -938,7 +957,6 @@ AFTER_COMBAT_TRIGGER_HERO_ROUTINES = {
     [H_ALARIC] = Routine_ConvertPeasantToPriest,
     -- preserve
     [H_KYRRE] = Routine_KyrreVictoryCounter,
-    [H_FINDAN] = Routine_ReviveHunters,
     [H_ELLESHAR] = Routine_AddHeroSpellPower,
     [H_YLTHIN] = Routine_YlthinVictoryCounter,
     -- fortress

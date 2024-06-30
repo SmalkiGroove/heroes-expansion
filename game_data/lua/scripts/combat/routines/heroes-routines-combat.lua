@@ -103,7 +103,7 @@ end
 
 function Routine_ResetAtbOnKillEnraged(side, hero, unit)
     -- print("Trigger reset enraged atb !")
-    if GetUnitSide(unit) ~= GetUnitSide(hero) then
+    if GetUnitSide(unit) ~= GetUnitSide(hero) and IsCreature(unit) then
         -- SetATB_ID(CURRENT_UNIT, ATB_NEXT)
         for i,cr in GetUnits(side, CREATURE) do
             local type = GetCreatureType(cr)
@@ -124,12 +124,88 @@ function Routine_HunterRandomShoot(side, hero)
     SetATB_CreatureTypes(side, {CREATURE_WOOD_ELF,CREATURE_GRAND_ELF,CREATURE_SHARP_SHOOTER}, 0.1)
 end
 
+function Routine_MoveForwardUnits(side, hero)
+    -- print("Trigger move forward units !")
+    for i,cr in GetUnits(side, CREATURE) do
+        local x,y = GetUnitPosition(cr)
+        local x0 = (side == ATTACKER) and GRID_X_MIN or GRID_X_MAX
+        local x1 = (side == ATTACKER) and (x + 3) or (x - 3)
+        if x ~= x0 then MoveCombatUnit(cr, x1, y) end
+    end
+end
+
+function Routine_WolfDeadRevenge(side, hero, unit)
+    -- print("Trigger wolf dead revenge !")
+    if GetUnitSide(unit) == GetUnitSide(hero) and IsCreature(unit) then
+        if GetCreatureType(unit) == CREATURE_WOLF then
+            local x,y = GetUnitPosition(unit)
+            local target = nil
+            local distance = 1000
+            for i,cr in GetUnits(1-side, CREATURE) do
+                local xx,yy = GetUnitPosition(cr)
+                local dx = x-xx
+                local dy = y-yy
+                local d = dx*dx + dy*dy
+                if d < distance then
+                    target = cr
+                    distance = d
+                end
+            end
+            if target then
+                sleep(100)
+                local nb = 0
+                for i,cr in GetUnits(side, CREATURE) do
+                    if GetCreatureType(cr) == CREATURE_WOLF then
+                        AttackCombatUnit(cr, target)
+                        nb = nb + 1
+                        if nb == 2 then return else sleep(250) end
+                    end
+                end
+            end
+        end
+    end
+end
+
 function Routine_CastSummonHive(side, hero)
     -- print("Trigger summon beehives !")
     local x = (side == ATTACKER) and GRID_X_MAX or GRID_X_MIN
-    HeroCast_Area(hero, SPELL_SUMMON_HIVE, FREE_MANA, x, GRID_Y_MIN)
-    HeroCast_Area(hero, SPELL_SUMMON_HIVE, FREE_MANA, x, GRID_Y_MAX)
-    -- TODO retry if tile is taken
+    local y1 = GRID_Y_MIN
+    local y2 = GRID_Y_MAX
+    while y1 ~= GRID_Y_MIN + 4 do
+        HeroCast_Area(hero, SPELL_SUMMON_HIVE, FREE_MANA, x, y1)
+        sleep(5)
+        if length(GetUnits(side, SPELL_SPAWN)) == 1 then y1 = GRID_Y_MIN + 4 else y1 = y1 + 1 end
+    end
+    while y2 ~= GRID_Y_MAX - 4 do
+        HeroCast_Area(hero, SPELL_SUMMON_HIVE, FREE_MANA, x, y2)
+        sleep(5)
+        if length(GetUnits(side, SPELL_SPAWN)) == 2 then y2 = GRID_Y_MAX - 4 else y2 = y2 - 1 end
+    end
+end
+
+function Routine_SpriteManaLink(side, hero)
+    -- print("Trigger sprite mana link !")
+    if CURRENT_UNIT_SIDE == side then
+        if IsCreature(CURRENT_UNIT) then
+            if GetCreatureType(CURRENT_UNIT) == CREATURE_SPRITE then
+                local amount = trunc(0.1 * GetCreatureNumber(CURRENT_UNIT))
+                if amount > 0 then
+                    local cur = GetUnitManaPoints(hero)
+                    local max = GetUnitMaxManaPoints(hero)
+                    SetMana(hero, min(cur+amount, max))
+                end
+            end
+        elseif CURRENT_UNIT == hero then
+            for i,cr in GetUnits(side, CREATURE) do
+                if GetCreatureType(cr) == CREATURE_SPRITE then
+                    local m = 1 + trunc(0.2 * GetHeroLevel(side))
+                    local cur = GetUnitManaPoints(cr)
+                    local max = GetUnitMaxManaPoints(cr)
+                    SetMana(cr, min(cur+m, max))
+                end
+            end
+        end
+    end
 end
 
 function Routine_CastMassHaste(side, hero)
@@ -688,6 +764,7 @@ COMBAT_START_HERO_ROUTINES = {
     [H_FREYDA] = Routine_CastPrayer,
     -- preserve
     [H_FINDAN] = Routine_HunterRandomShoot,
+    [H_WYNGAAL] = Routine_MoveForwardUnits,
     [H_DIRAEL] = Routine_CastSummonHive,
     [H_VINRAEL] = Routine_CastMassHaste,
     [H_TIERU] = Routine_SummonDruidStack,
@@ -729,6 +806,7 @@ COMBAT_TURN_HERO_ROUTINES = {
     [H_GODRIC] = Routine_CastRandomStoneskin,
     -- preserve
     [H_JENOVA] = Routine_HeroMoveNext,
+    [H_DIRAEL] = Routine_SpriteManaLink,
     [H_TIERU] = Routine_DruidsMoveNext,
     -- fortress
     [H_KARLI] = Routine_SpearWielderCoordination,
@@ -760,6 +838,7 @@ UNIT_DIED_HERO_ROUTINES = {
     [H_GABRIELLE] = Routine_GriffinDead,
     -- preserve
     [H_TALANAR] = Routine_ResetAtbOnKillEnraged,
+    [H_IVOR] = Routine_WolfDeadRevenge,
     -- fortress
     -- academy
     -- dungeon

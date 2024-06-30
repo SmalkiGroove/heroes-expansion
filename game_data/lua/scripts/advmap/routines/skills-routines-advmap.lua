@@ -439,7 +439,7 @@ function Routine_LogisticsWeeklyProd(player, hero, mastery)
             local grail = GetTownBuildingLevel(town, TOWN_BUILDING_GRAIL)
             local multiplier = 1 + 0.5 * grail
             if fort > 1 then multiplier = multiplier + 0.5 * (fort-1) end
-            if hero == H_WYNGAAL then multiplier = 2 * multiplier end
+            if hero == H_WYNGAAL then multiplier = multiplier * (1 + 0.05 * GetHeroLevel(hero)) end
             if mastery >= 1 and GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_1) ~= 0 then
                 local creature = CREATURES_BY_FACTION[faction][1][1]
                 local current = GetObjectDwellingCreatures(town, creature)

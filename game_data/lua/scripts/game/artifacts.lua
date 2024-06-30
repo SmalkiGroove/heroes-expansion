@@ -49,7 +49,7 @@ ARTIFACT_STAFF_OF_THE_MAGISTER = 45                 -- negates magic-proof
 ARTIFACT_CROWN_OF_THE_MAGISTER = 46                 -- /
 ARTIFACT_RING_OF_THE_MAGISTER = 47                  -- reduce hero spells cost by half
 ARTIFACT_048 = 48                                   -- immunity to implosion
-ARTIFACT_049 = 49                                   -- immunity to slow
+ARTIFACT_LEGENDARY_BOOTS = 49                       -- immunity to slow
 ARTIFACT_050 = 50                                   -- immunity to blind
 ARTIFACT_HELM_OF_THE_DWARVEN_KINGS = 51             -- immunity to frenzy
 ARTIFACT_MAGIC_SCROLL_OF_SPELL = 52                 -- grants random spell
@@ -135,7 +135,7 @@ ARTIFACT_PLUNDERER_SHOES = 131                      --
 ARTIFACT_BUTCHER_GLAIVE = 132	                    -- 
 ARTIFACT_CELESTIAL_JUSTICAR_SHIELD = 133            -- 
 ARTIFACT_STAFF_OF_THE_SAINT = 134                   -- 
-ARTIFACT_BACKPACK_OF_THE_OPEN_ROAD = 135            -- reset hero movement points on level up
+ARTIFACT_BACKPACK_OF_THE_OPEN_ROAD = 135            -- reset hero movement points on level up **
 ARTIFACT_PHOENIX_FEATHER = 136                      -- 
 ARTIFACT_POTION_OF_MANA = 137	                    -- 
 ARTIFACT_POTION_OF_STAMINA = 138		            -- 
@@ -151,7 +151,7 @@ ARTIFACT_SHADOW_BLADE = 147                         -- /
 ARTIFACT_SHADOWSTEP_SHOES = 148                     -- /
 ARTIFACT_RANGERS_CUIRASS = 149                      -- 
 ARTIFACT_MAGISTERS_SANDALS = 150                    -- 
-ARTIFACT_LEGENDARY_BOOTS = 151                      -- 
+ARTIFACT_151 = 151                                  -- 
 ARTIFACT_COLLAR_OF_PRIMAL_RAGE = 152                -- 
 ARTIFACT_CENTAUR_CROSSBOW = 153                     -- 
 ARTIFACT_DEADWOOD_STAFF = 154                       -- 
@@ -323,7 +323,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_CROWN_OF_THE_MAGISTER]         = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_HEAD, special=0},
     [ARTIFACT_RING_OF_THE_MAGISTER]          = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RING, special=0},
     [ARTIFACT_048]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_BACKPACK, special=1},
-    [ARTIFACT_049]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_BACKPACK, special=1},
+    [ARTIFACT_LEGENDARY_BOOTS]               = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
     [ARTIFACT_050]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_BACKPACK, special=1},
     [ARTIFACT_HELM_OF_THE_DWARVEN_KINGS]     = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_HEAD, special=0},
     [ARTIFACT_MAGIC_SCROLL_OF_SPELL]         = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_LEFTHAND, special=1},
@@ -425,7 +425,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_SHADOWSTEP_SHOES]              = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
     [ARTIFACT_RANGERS_CUIRASS]               = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_BODY, special=0},
     [ARTIFACT_MAGISTERS_SANDALS]             = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
-    [ARTIFACT_LEGENDARY_BOOTS]               = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_LEGS, special=0},
+    [ARTIFACT_151]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_BACKPACK, special=1},
     [ARTIFACT_COLLAR_OF_PRIMAL_RAGE]         = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_NECK, special=0},
     [ARTIFACT_CENTAUR_CROSSBOW]              = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
     [ARTIFACT_DEADWOOD_STAFF]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},

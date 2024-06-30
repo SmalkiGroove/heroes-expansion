@@ -8973,22 +8973,22 @@
 			<ID>HERO_SKILL_BARBARIAN_MENTORING</ID>
 			<obj>
 				<Texture>
-					<Item href=""/>
-					<Item href=""/>
+					<Item href="/Texture/HeroScreen/Specializations/Preserve/Talented_Warrior.xdb#xpointer(/Texture)"/>
+					<Item href="/Texture/HeroScreen/Specializations/Preserve/Talented_Warrior.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
-					<Item href="/Text/Game/Skills/Common/Learning/Mentoring/Name.txt"/>
+					<Item href="/Text/Game/Skills/BarbarianSpec/Learning/Mentoring/Name.txt"/>
 				</NameFileRef>
 				<CommonNameFileRef href=""/>
 				<DescriptionFileRef>
-					<Item href="/Text/Game/Skills/Common/Learning/Mentoring/Description.txt"/>
+					<Item href="/Text/Game/Skills/BarbarianSpec/Learning/Mentoring/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_BARBARIAN_LEARNING</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Haven>
