@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shot ObjectRecordID="1000000">
+	<StartEffect/>
+	<RotateStartEffectToTarget>true</RotateStartEffectToTarget>
+	<MissileShot>
+		<Model/>
+		<Effect href="/Effects/_(Effect)/Characters/Creatures/Preserve/Druid/Charge.xdb#xpointer(/Effect)"/>
+		<Speed>0.05</Speed>
+		<Height>0</Height>
+		<ForwardOffset>0</ForwardOffset>
+		<StartZOffset>1.4</StartZOffset>
+		<RightOffset>0</RightOffset>
+	</MissileShot>
+	<LineShot>
+		<Effects>
+			<Item href="/Effects/_(Effect)/Characters/Creatures/Preserve/Druid/ChargeTrail.xdb#xpointer(/Effect)"/>
+		</Effects>
+		<SkipSegmentsNumber>1</SkipSegmentsNumber>
+		<SegmentLength>2</SegmentLength>
+		<StepDelay>40</StepDelay>
+		<EffectLifeTime>1000</EffectLifeTime>
+	</LineShot>
+	<StrikeDelay>250</StrikeDelay>
+	<StrikeEffectID>SPELL_NONE</StrikeEffectID>
+	<DelayBetweenChains>0</DelayBetweenChains>
+	<StrikeVisualEffect/>
+</Shot>

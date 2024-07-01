@@ -111,6 +111,7 @@ function Routine_ResetAtbOnKillEnraged(side, hero, unit)
                 if not ROUTINE_VARS.AtbBoosted[cr] then
                     SetATB_ID(cr, ATB_INSTANT)
                     ROUTINE_VARS.AtbBoosted[cr] = not nil
+                    HeroCast_Target(hero, SPELL_BLOODLUST, FREE_MANA, cr)
                     return
                 end
             end

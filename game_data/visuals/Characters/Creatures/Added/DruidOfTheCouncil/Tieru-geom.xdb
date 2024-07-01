@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Geometry ObjectRecordID="1003234">
+	<SrcName href="/models/Heroes/Tieru/Tieru_CS.mb"/>
+	<uid>CE8A3758-9373-4F8E-A0F7-214088208F29</uid>
+	<RootMesh/>
+	<RootJoint>Global</RootJoint>
+	<Size>
+		<x>2.30884</x>
+		<y>0.736197</y>
+		<z>2.36578</z>
+	</Size>
+	<Center>
+		<x>-0.186766</x>
+		<y>0.0702886</y>
+		<z>1.18289</z>
+	</Center>
+	<BestFitPoint>
+		<x>-0.905356</x>
+		<y>0.0108064</y>
+		<z>2.21132</z>
+	</BestFitPoint>
+	<Dir>
+		<x>0</x>
+		<y>0</y>
+		<z>0</z>
+		<w>0</w>
+	</Dir>
+	<AIGeometry href="Tieru-geom-AI.xdb#xpointer(/AIGeometry)"/>
+	<NumMeshes>2</NumMeshes>
+	<MaterialQuantities>
+		<Item>2</Item>
+		<Item>1</Item>
+	</MaterialQuantities>
+	<MeshNames>
+		<Item>Druid_meshShape</Item>
+		<Item>Staff_meshShape</Item>
+	</MeshNames>
+	<MeshAnimated/>
+	<MeshWindAffected/>
+</Geometry>

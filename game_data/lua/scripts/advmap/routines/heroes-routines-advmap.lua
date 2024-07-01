@@ -210,11 +210,21 @@ function Routine_HeroCallUnicorns(player, hero)
 end
 
 Var_Elleshar_BattleWon = 0
-function Routine_AddHeroSpellPower(player, hero, combatIndex)
-    print("$ Routine_AddHeroSpellPower")
+function Routine_ElvenSageVictory(player, hero, combatIndex)
+    print("$ Routine_ElvenSageVictory")
     Var_Elleshar_BattleWon = Var_Elleshar_BattleWon + 1
-    if mod(Var_Elleshar_BattleWon, 4) == 0 then
+    if mod(Var_Elleshar_BattleWon, 6) == 0 then
         AddHeroStatAmount(player, hero, STAT_SPELL_POWER, 1)
+        AddHeroStatAmount(player, hero, STAT_KNOWLEDGE, 1)
+        local upgradable = {}
+        for sk = 9,12 do
+            if GetHeroSkillMastery(hero, sk) < 3 then insert(upgradable, sk) end
+        end
+        local n = length(upgradable)
+        if n > 0 then
+            local sk = upgradable[random(1,n,Var_Elleshar_BattleWon)]
+            GiveHeroSkill(hero, sk)
+        end
     end
 end
 
@@ -957,7 +967,7 @@ AFTER_COMBAT_TRIGGER_HERO_ROUTINES = {
     [H_ALARIC] = Routine_ConvertPeasantToPriest,
     -- preserve
     [H_KYRRE] = Routine_KyrreVictoryCounter,
-    [H_ELLESHAR] = Routine_AddHeroSpellPower,
+    [H_ELLESHAR] = Routine_ElvenSageVictory,
     [H_YLTHIN] = Routine_YlthinVictoryCounter,
     -- fortress
     [H_ROLF] = Routine_ReviveBearRiders,
