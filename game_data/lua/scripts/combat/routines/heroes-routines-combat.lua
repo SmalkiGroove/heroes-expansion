@@ -217,14 +217,23 @@ end
 function Routine_SummonDruidStack(side, hero)
     -- print("Trigger elder druids summoning !")
     local n = GetHeroLevel(side)
-    local amount = trunc(0.4 * n * n)
-    SummonCreatureStack_X(side, CREATURE_DRUID_ELDER, amount, 0)
+    local amount = ceil(0.4 * n * n)
+    SummonCreatureStack_X(side, CREATURE_DRUID_OF_THE_COUNCIL, amount, 0)
+    sleep(50)
+    for i,cr in GetUnits(side, CREATURE) do
+        if GetCreatureType(cr) == CREATURE_DRUID_OF_THE_COUNCIL then
+            UseCombatAbility(cr, SPELL_ABILITY_POWER_FEED)
+            if GetUnitManaPoints(hero) < GetUnitMaxManaPoints(hero) then
+                UseCombatAbility(cr, SPELL_ABILITY_MANA_FEED)
+            end
+        end
+    end
 end
 
 function Routine_DruidsMoveNext(side, hero)
     -- print("Trigger druids play next !")
     if CURRENT_UNIT == hero then
-        SetATB_CreatureTypes(side, {CREATURE_DRUID,CREATURE_DRUID_ELDER,CREATURE_HIGH_DRUID}, ATB_NEXT)
+        SetATB_CreatureTypes(side, {CREATURE_DRUID,CREATURE_DRUID_ELDER,CREATURE_HIGH_DRUID,CREATURE_DRUID_OF_THE_COUNCIL}, ATB_NEXT)
     end
 end
 
