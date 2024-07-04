@@ -467,7 +467,7 @@ function Routine_RespawnDjinns(player, hero, combatIndex)
 end
 
 function Routine_UpgradeSilverPavillon(player, hero)
-    print("$ Routine_AddRecruitsRakshasas")
+    print("$ Routine_UpgradeSilverPavillon")
     for town,data in MAP_TOWNS do
         if IsHeroInTown(hero, town, 1, 1) then
             if data.faction == ACADEMY then
@@ -489,15 +489,17 @@ end
 
 function Routine_AddRecruitsMages(player, hero)
     print("$ Routine_AddRecruitsMages")
-    for i,town in GetHeroTowns(player, hero) do
-        if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_4) ~= 0 then
-            local fort = GetTownBuildingLevel(town, TOWN_BUILDING_FORT)
-            local grail = GetTownBuildingLevel(town, TOWN_BUILDING_GRAIL)
-            local multiplier = 1 + 0.5 * grail
-            if fort > 1 then multiplier = multiplier + 0.5 * (fort-1) end
-            local nb = round(10 * multiplier)
-            local current = GetObjectDwellingCreatures(town, CREATURE_MAGI)
-            SetObjectDwellingCreatures(town, CREATURE_MAGI, current + nb)
+    if GetHeroLevel(hero) >= 20 then
+        for i,town in GetHeroTowns(player, hero) do
+            if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_4) ~= 0 then
+                local fort = GetTownBuildingLevel(town, TOWN_BUILDING_FORT)
+                local grail = GetTownBuildingLevel(town, TOWN_BUILDING_GRAIL)
+                local multiplier = 1 + 0.5 * grail
+                if fort > 1 then multiplier = multiplier + 0.5 * (fort-1) end
+                local nb = round(10 * multiplier)
+                local current = GetObjectDwellingCreatures(town, CREATURE_MAGI)
+                SetObjectDwellingCreatures(town, CREATURE_MAGI, current + nb)
+            end
         end
     end
 end

@@ -360,7 +360,7 @@ end
 function Routine_MagesCastMagicFist(side, hero)
     -- print("Trigger mages magic fist !")
     CreatureTypesCast_RandomTarget(side, 1-side, {CREATURE_MAGI,CREATURE_ARCH_MAGI,CREATURE_COMBAT_MAGE}, SPELL_MAGIC_FIST)
-    SetATB_CreatureTypes(side, {CREATURE_MAGI,CREATURE_ARCH_MAGI,CREATURE_COMBAT_MAGE}, 0.25)
+    SetATB_CreatureTypes(side, {CREATURE_MAGI,CREATURE_ARCH_MAGI,CREATURE_COMBAT_MAGE}, 0.1)
 end
 
 function Routine_CastSummonElementals(side, hero)
