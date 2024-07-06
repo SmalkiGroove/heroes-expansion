@@ -1,4 +1,10 @@
 
+function Routine_ArtifactAllSeeingCrown(player, hero)
+    print("$ Routine_ArtifactAllSeeingCrown")
+    local x,y,z = GetObjectPosition(hero)
+    OpenCircleFog(x, y, z, 999, player)
+end
+
 function Routine_ArtifactPouchOfGolds(player, hero)
     print("$ Routine_ArtifactPouchOfGolds")
     local level = GetHeroLevel(hero)
@@ -31,9 +37,54 @@ function Routine_ArtifactCapeOfKings(player, hero)
     end
 end
 
+Var_BootsOfSwiftJourneyCheck = {}
+function Routine_ArtifactBootsOfSwiftJourney(player, hero)
+    print("$ Routine_ArtifactBootsOfSwiftJourney")
+    Var_BootsOfSwiftJourneyCheck[hero] = not nil
+    while IsPlayerCurrent(player) do
+        sleep(100)
+        if HasArtefact(hero, ARTIFACT_BOOTS_OF_THE_SWIFT_JOUNREY, 1) then
+            if Var_BootsOfSwiftJourneyCheck[hero] then
+                if GetHeroStat(hero, STAT_MOVE_POINTS) < 100 then
+                    ChangeHeroStat(hero, STAT_MOVE_POINTS, 1000)
+                    return
+                end
+            else return end
+        else return end
+    end
+end
+
+function Routine_BackpackOfOpenRoad(player, hero, level)
+    print("$ Routine_BackpackOfOpenRoad")
+    ChangeHeroStat(hero, STAT_MOVE_POINTS, 9999)
+end
+
+function Routine_ArtifactBootsOfSwiftJourneyCancel(player, hero, combatIndex)
+    print("$ Routine_ArtifactBootsOfSwiftJourneyCancel")
+    Var_BootsOfSwiftJourneyCheck[hero] = nil
+end
+
 function Routine_ArtifactGreatLich(player, hero)
     print("$ Routine_ArtifactGreatLich")
     AddHeroCreatureType(player, hero, NECROPOLIS, 5, 1)
+end
+
+function Routine_ArtifactSentinelsHelm(player, hero, level)
+    print("$ Routine_ArtifactSentinelsHelm")
+    GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_ATTACK, 2)
+    GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_DEFENCE, 2)
+    GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_MORALE, 2)
+end
+
+function Routine_ArtifactSentinelsBoots(player, hero, combatIndex)
+    print("$ Routine_ArtifactSentinelsBoots")
+    local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, side)
+	for i = 0,stacks-1 do
+        local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, side, i)
+        if died ~= 0 then return end
+    end
+    GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_MORALE, 2)
+    ChangeHeroStat(hero, STAT_MOVE_POINTS, 500)
 end
 
 function Routine_EldenaRedScarf(player, hero)
@@ -112,6 +163,13 @@ end
 
 --------------------------------------------------------------------------------------------------------------------------------
 
+function Routine_ArtfsetWanderer(player, hero)
+    local mastery = GetHeroSkillMastery(hero, SKILL_LOGISTICS)
+    if mastery > 0 then
+        Routine_LogisticsWeeklyProd(player, hero, mastery)
+    end
+end
+
 function Routine_ArtfsetSailor(player, hero)
     print("$ Routine_ArtfsetSailor")
     if IsHeroInBoat(hero) then
@@ -167,22 +225,26 @@ end
 
 
 CONTINUOUS_TRIGGER_ARTIFACTS_ROUTINES = {
+    [ARTIFACT_ALL_SEEING_CROWN] = Routine_ArtifactAllSeeingCrown,
 }
 DAILY_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_ENDLESS_POUCH_OF_GOLD] = Routine_ArtifactPouchOfGolds,
     [ARTIFACT_ENDLESS_SACK_OF_GOLD] = Routine_ArtifactSackOfGolds,
     [ARTIFACT_CAPE_OF_KINGS] = Routine_ArtifactCapeOfKings,
+    [ARTIFACT_BOOTS_OF_THE_SWIFT_JOUNREY] = Routine_ArtifactBootsOfSwiftJourney,
 }
 WEEKLY_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_HORN_OF_PLENTY] = Routine_ArtifactHornOfPlenty,
 }
 LEVELUP_TRIGGER_ARTIFACTS_ROUTINES = {
+    [ARTIFACT_BACKPACK_OF_THE_OPEN_ROAD] = Routine_BackpackOfOpenRoad,
     [ARTIFACT_SANDROS_CLOAK] = Routine_ArtifactGreatLich,
     [ARTIFACT_ELDENAS_RED_SCARF] = Routine_EldenaRedScarf,
     [ARTIFACT_ELDENAS_RED_COAT] = Routine_EldenaRedCoat,
     [ARTIFACT_ELDENAS_CIRCLET] = Routine_EldenaCirclet,
 }
 AFTER_COMBAT_TRIGGER_ARTIFACTS_ROUTINES = {
+    [ARTIFACT_BOOTS_OF_THE_SWIFT_JOUNREY] = Routine_ArtifactBootsOfSwiftJourneyCancel,
     [ARTIFACT_BEGINNER_MAGIC_STICK] = Routine_ArtifactBeginnerMagicStick,
     [ARTIFACT_RUNIC_WAR_AXE] = Routine_ArtifactRunicWar,
     [ARTIFACT_RUNIC_WAR_HARNESS] = Routine_ArtifactRunicWar,
@@ -197,7 +259,7 @@ DAILY_TRIGGER_ARTFSETS_ROUTINES = {
     [ARTFSET_NONE] = NoneRoutine,
 }
 WEEKLY_TRIGGER_ARTFSETS_ROUTINES = {
-    [ARTFSET_NONE] = NoneRoutine,
+    [ARTFSET_WANDERER_2PC] = Routine_ArtfsetWanderer,
 }
 LEVELUP_TRIGGER_ARTFSETS_ROUTINES = {
     [ARTFSET_ELDENA_3PC] = Routine_ArtfsetEldena,

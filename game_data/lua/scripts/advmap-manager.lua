@@ -95,6 +95,7 @@ function WatchPlayer(player, wait)
 				if mvp == 0 then
 					print("Hero "..hero.." has 0 move points")
 					if IsEqualPosition(hero, tracker[hero].x, tracker[hero].y, tracker[hero].z) then
+						Routine_ArtifactBootsOfSwiftJourneyCancel(player, hero, nil)
 						if HasHeroSkill(hero, PERK_MEDITATION) and GetHeroStat(hero, STAT_MANA_POINTS) > tracker[hero].mana then
 							print("Hero "..hero.." has used Meditation")
 							local amount = GetHeroStat(hero, STAT_MANA_POINTS) - tracker[hero].mana

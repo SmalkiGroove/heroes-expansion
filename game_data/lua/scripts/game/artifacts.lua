@@ -12,8 +12,8 @@ ARTIFACT_FOUR_LEAF_CLOVER = 8                       -- /
 ARTIFACT_SHIELD_OF_CRYSTAL_ICE = 9                  -- reduce enemy fire spells
 ARTIFACT_OCEAN_CHARM = 10                           -- more movement on sea
 ARTIFACT_CROWN_OF_COURAGE = 11                      -- /
-ARTIFACT_ALL_SEEING_CROWN = 12                      -- increase vision range
-ARTIFACT_SENTINELS_BREASTPLATE = 13                 -- magic proof
+ARTIFACT_ALL_SEEING_CROWN = 12                      -- increase vision range / reveals the map **
+ARTIFACT_SENTINELS_BREASTPLATE = 13                 -- magic resistance
 ARTIFACT_BREASTPLATE_OF_ELDRICHT_MIGHT = 14         -- /
 ARTIFACT_PEDANT_OF_MASTERY = 15                     -- pendant of mastery
 ARTIFACT_NECKLACE_OF_THE_EAGLE = 16                 -- /
@@ -22,12 +22,12 @@ ARTIFACT_EVERCOLD_ICICLE = 18                       -- ice spells damage
 ARTIFACT_NECKLACE_OF_VICTORY = 19                   -- /
 ARTIFACT_MAGNETIC_RING = 20                         -- reduce enemy lightning spells
 ARTIFACT_WAR_BANNER = 21                            -- creatures have +2 hp
-ARTIFACT_RING_OF_HASTE = 22                         -- creatures have +20% initiative
+ARTIFACT_CELESTIAL_JUSTICAR_SWORD = 22              -- creatures have +20% initiative
 ARTIFACT_RING_OF_THE_BROKEN_WILL = 23               -- enemy creatures have -2 morale
-ARTIFACT_BOOTS_OF_THE_SWIFT_JOUNREY = 24            -- more movement on land
+ARTIFACT_BOOTS_OF_THE_SWIFT_JOUNREY = 24            -- more movement on land / refresh if no battle **
 ARTIFACT_GOLDEN_HORSESHOE = 25                      -- /
 ARTIFACT_BOOTS_OF_THE_OPEN_ROAD = 26                -- no terrain penalties
-ARTIFACT_BOOTS_OF_INTERFERENCE = 27                 -- magic proof
+ARTIFACT_BOOTS_OF_INTERFERENCE = 27                 -- magic resistance
 ARTIFACT_ENDLESS_SACK_OF_GOLD = 28                  -- 1000 golds per day
 ARTIFACT_ENDLESS_POUCH_OF_GOLD = 29                 -- 250 golds per day
 ARTIFACT_ANGEL_WINGS = 30                           -- fly over terrain
@@ -66,14 +66,14 @@ ARTIFACT_CLOAK_OF_SYLANNA = 62                      -- reduce enemy earth spells
 ARTIFACT_CURSED_RING = 63                           -- enemy creatures have -1 luck
 ARTIFACT_TUNIC_OF_CARVED_FLESH = 64                 -- 
 ARTIFACT_RING_OF_CAUTION = 65                       -- creatures have -1 speed
-ARTIFACT_HELM_OF_CHAOS = 66                         -- 
+ARTIFACT_HELM_OF_CHAOS = 66                         -- magic resistance
 ARTIFACT_PENDANT_OF_CONFLUX = 67                    -- absorb half enemy mana spent
 ARTIFACT_SANDALS_OF_THE_BLESSED = 68                -- /
 ARTIFACT_SANDROS_CLOAK = 69                         -- negates immunity to mind control
 ARTIFACT_RING_OF_THE_UNREPENTANT = 70               -- immunity to word of light
 ARTIFACT_AMULET_OF_NECROMANCY = 71                  -- decrease dark flux costs by 10%
 ARTIFACT_FREIDA = 72                                -- FREIDA
-ARTIFACT_RING_OF_THE_SHADOWBRAND = 73               -- SHADOWBRAND
+ARTIFACT_RING_OF_THE_SHADOWBRAND = 73               -- /
 ARTIFACT_CUIRASS_OF_THE_DWARVEN_KINGS = 74          -- creatures have -5% initiative
 ARTIFACT_GREAVES_OF_THE_DWARVEN_KINGS = 75          -- creatures have -5% initiative
 ARTIFACT_TOME_OF_DESTRUCTION = 76                   -- hero learns all destructive spells
@@ -113,16 +113,16 @@ ARTIFACT_RING_OF_LIFE = 109                         --
 ARTIFACT_STEADFAST_SHIELD = 110                     -- creatures have +1 hp
 ARTIFACT_VIKING_SHIELD = 111                        -- gain wood/ore after battles **
 ARTIFACT_FORTUNE_BAND_OF_THE_SAINT = 112            -- 
-ARTIFACT_SENTINELS_BRACER = 113                     -- 
+ARTIFACT_SENTINELS_BRACER = 113                     -- /
 ARTIFACT_ANKH_OF_THE_SAINT = 114                    -- 
 ARTIFACT_CLOAK_OF_THE_SAINT = 115                   -- 
 ARTIFACT_GENJIS_HAT = 116                           -- 
 ARTIFACT_GENJIS_VEST = 117                          -- 
 ARTIFACT_GENJIS_SANDALS = 118                       -- 
 ARTIFACT_GENJIS_SILKSWORD = 119                     -- 
-ARTIFACT_SENTINELS_HELM = 120                       -- 
-ARTIFACT_SENTINELS_BOOTS = 121                      -- 
-ARTIFACT_SENTINELS_SHIELD = 122                     -- 
+ARTIFACT_SENTINELS_HELM = 120                       -- gain battle boost on level up **
+ARTIFACT_SENTINELS_BOOTS = 121                      -- gain movement and morale after battle with no loss **
+ARTIFACT_SENTINELS_SHIELD = 122                     -- /
 ARTIFACT_OBSIDIAN_ARMOR = 123                       -- immunity to armaggeddon
 ARTIFACT_ELRATHS_DIVINE_SHIELD = 124                -- 
 ARTIFACT_ROD_OF_TORMENT = 125                       -- enemy creatures have -2 morale
@@ -144,7 +144,7 @@ ARTIFACT_SYLVAN_AMULET = 140                        -- immunity to curse of the 
 ARTIFACT_SHADOW_MASK = 141                          -- /
 ARTIFACT_BARBARIAN_HELMET = 142                     -- 
 ARTIFACT_SKULL_MASK = 143                           -- 
-ARTIFACT_SENTINELS_BLADE = 144                      -- 
+ARTIFACT_SENTINELS_BLADE = 144                      -- after spawning a blade barrier, ... **
 ARTIFACT_VIZIRS_SCIMITAR = 145                      -- 
 ARTIFACT_BARBARIAN_CAPE = 146                       -- 
 ARTIFACT_SHADOW_BLADE = 147                         -- /
@@ -166,7 +166,7 @@ ARTIFACT_SHANTIRI_EAST = 162                        --
 ARTIFACT_SHANTIRI_MOON_DISC = 163                   -- 
 ARTIFACT_CLOAK_OF_DARKNESS = 164                    -- enemy creatures have -1 luck
 ARTIFACT_SHANTIRI_BREASTPLATE = 165                 -- immunity to earthquake
-ARTIFACT_SHIELD_OF_THE_WOLF = 166                   -- 
+ARTIFACT_SHIELD_OF_THE_WOLF = 166                   -- /
 ARTIFACT_HELM_OF_THE_WARMAGE = 167                  -- 
 ARTIFACT_CELESTIAL_JUSTICAR_HELMET = 168            -- 
 ARTIFACT_RING_OF_STRENGTH = 169                     -- creatures have +3 hp
@@ -174,23 +174,23 @@ ARTIFACT_SPEAR_OF_THE_FROST_LORD = 170              --
 ARTIFACT_STAFF_OF_THE_LYRE = 171                    -- every 5 victories, gain +1 to the lowest stat **
 ARTIFACT_SANCTUARYS_CROWN = 172                     -- immunity to hypnotize
 ARTIFACT_PENDANT_OF_THE_LYRE = 173                  -- every 5 victories, gain mana and experience **
-ARTIFACT_ANCIENT_PROTECTION_CHARM = 174             -- magic proof
+ARTIFACT_ANCIENT_PROTECTION_CHARM = 174             -- magic resistance
 ARTIFACT_SPIRIT_OF_OPPRESSION = 175                 -- enemy creatures have -1 luck and morale
 ARTIFACT_CRIMSON_SCYTHE = 176                       -- enemy creatures have -1 morale
 ARTIFACT_PIRATE_SMASHER = 177                       -- 
-ARTIFACT_ELRATHS_UNITY = 178                        -- 
-ARTIFACT_WILL_OF_URGASH = 179                       -- 
+ARTIFACT_ELRATHS_UNITY = 178                        -- /
+ARTIFACT_WILL_OF_URGASH = 179                       -- /
 ARTIFACT_MOONLIGHT_BAND = 180                       -- 
 ARTIFACT_BLOOD_CRYSTAL = 181                        -- 
 ARTIFACT_RANGERS_CAPE = 182                         -- 
 ARTIFACT_MOON_CHARM = 183                           -- 
-ARTIFACT_FORGOTTEN_RING = 184                       -- magic proof
+ARTIFACT_FORGOTTEN_RING = 184                       -- 
 ARTIFACT_FROZEN_HEART = 185                         -- 
 ARTIFACT_MOONLIGHT_COAT = 186                       -- 
 ARTIFACT_DRAGONSBANE = 187                          -- 
-ARTIFACT_CUIRASS_OF_THE_STAG = 188                  -- 
-ARTIFACT_WRAPS_OF_THE_OWL = 189                     -- 
-ARTIFACT_CELESTIAL_JUSTICAR_ARMOR = 190             -- 
+ARTIFACT_CUIRASS_OF_THE_STAG = 188                  -- /
+ARTIFACT_WRAPS_OF_THE_OWL = 189                     -- /
+ARTIFACT_CELESTIAL_JUSTICAR_ARMOR = 190             -- creatures have +6% hp
 ARTIFACT_VIKING_HATCHET = 191                       -- gain golds after battles **
 ARTIFACT_ORB_OF_AIR = 192                           -- lightning spells damage
 ARTIFACT_ORB_OF_EARTH = 193                         -- earth spells damage
@@ -296,7 +296,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_NECKLACE_OF_VICTORY]           = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_NECK, special=0},
     [ARTIFACT_MAGNETIC_RING]                 = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RING, special=0},
     [ARTIFACT_WAR_BANNER]                    = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
-    [ARTIFACT_RING_OF_HASTE]                 = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RIGHTHAND, special=1},
+    [ARTIFACT_CELESTIAL_JUSTICAR_SWORD]      = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
     [ARTIFACT_RING_OF_THE_BROKEN_WILL]       = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RING, special=0},
     [ARTIFACT_BOOTS_OF_THE_SWIFT_JOUNREY]    = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
     [ARTIFACT_GOLDEN_HORSESHOE]              = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_POCKET, special=0},
@@ -347,7 +347,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_RING_OF_THE_UNREPENTANT]       = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RING, special=0},
     [ARTIFACT_AMULET_OF_NECROMANCY]          = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_NECK, special=0},
     [ARTIFACT_FREIDA]                        = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_BACKPACK, special=1},
-    [ARTIFACT_RING_OF_THE_SHADOWBRAND]       = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RING, special=1},
+    [ARTIFACT_RING_OF_THE_SHADOWBRAND]       = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RING, special=0},
     [ARTIFACT_CUIRASS_OF_THE_DWARVEN_KINGS]  = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_BODY, special=0},
     [ARTIFACT_GREAVES_OF_THE_DWARVEN_KINGS]  = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
     [ARTIFACT_TOME_OF_DESTRUCTION]           = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_LEFTHAND, special=0},
@@ -452,7 +452,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_SPIRIT_OF_OPPRESSION]          = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_NECK, special=0},
     [ARTIFACT_CRIMSON_SCYTHE]                = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
     [ARTIFACT_PIRATE_SMASHER]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
-    [ARTIFACT_ELRATHS_UNITY]                 = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_POCKET, special=0},
+    [ARTIFACT_ELRATHS_UNITY]                 = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_POCKET, special=0},
     [ARTIFACT_WILL_OF_URGASH]                = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
     [ARTIFACT_MOONLIGHT_BAND]                = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RING, special=0},
     [ARTIFACT_BLOOD_CRYSTAL]                 = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_BACKPACK, special=1},
@@ -499,12 +499,13 @@ ARTIFACT_SET_BANDIT = 18
 ARTIFACT_SET_BESTIAL = 19
 ARTIFACT_SET_SAINT = 20
 ARTIFACT_SET_ARCHANGEL = 21
-ARTIFACT_SET_SAILOR = 22
-ARTIFACT_SET_MOON = 23
-ARTIFACT_SET_COUNT = 23
+ARTIFACT_SET_WANDERER = 22
+ARTIFACT_SET_SAILOR = 23
+ARTIFACT_SET_MOON = 24
+ARTIFACT_SET_COUNT = 24
 
 ARTFSET_NONE = 0
-ARTFSET_HAVEN_4PC = 1           -- victories give battle bonus for next battle depending on army strength
+ARTFSET_HAVEN_4PC = 1           -- victories give battle bonus for next battle depending on defeated army strength
 ARTFSET_HAVEN_4PCX = 2          -- ^ angels encourage random ally each turn
 ARTFSET_HAVEN_6PC = 3           -- summons a row of footmen in front of hero's army at start of combat
 ARTFSET_HAVEN_6PCX = 4          -- ^ summons squires instead
@@ -548,12 +549,13 @@ ARTFSET_VIZIR_4PC = 41          -- get a random artifact after battles depending
 ARTFSET_SPIRIT_5PC = 42         -- hero casts sorrow on every enemy creature on combat start
 ARTFSET_WARMAGE_5PC = 43        -- gain +1 spellpower and knowledge and another +1 per magic school at expert level on level up
 ARTFSET_BANDIT_5PC = 44         --
-ARTFSET_BESTIAL_5PC = 45        -- summon a beast stack on combat start
+ARTFSET_BESTIAL_4PC = 45        -- summon a beast stack on combat start
 ARTFSET_SAINT_4PC = 46          -- resurrect half creatures lost after battles
 ARTFSET_SAINT_6PC = 47          -- resurrect all creatures lost after battles
 ARTFSET_ARCHANGEL_5PC = 48      -- +1 to all stats and unlock angel wings
-ARTFSET_SAILOR_3PC = 49         -- infinite movement on water
-ARTFSET_MOON_4PC = 50           -- on level up, gain another level
+ARTFSET_WANDERER_2PC = 49       -- doubles logistics weekly prod bonus
+ARTFSET_SAILOR_3PC = 50         -- infinite movement on water
+ARTFSET_MOON_4PC = 51           -- on level up, gain another level
 ARTFSET_ACTIVABLES_COUNT = 50
 
 ARTIFACT_SETS = {
@@ -575,9 +577,10 @@ ARTIFACT_SETS = {
     [ARTIFACT_SET_SPIRIT] = {ARTIFACT_CURSED_RING, ARTIFACT_TUNIC_OF_CARVED_FLESH, ARTIFACT_SKULL_MASK, ARTIFACT_DEADWOOD_STAFF, ARTIFACT_SPIRIT_OF_OPPRESSION},
     [ARTIFACT_SET_WARMAGE] = {ARTIFACT_RUNIC_WAR_AXE, ARTIFACT_RUNIC_WAR_HARNESS, ARTIFACT_BOOTS_OF_INTERFERENCE, ARTIFACT_PENDANT_OF_CONFLUX, ARTIFACT_HELM_OF_THE_WARMAGE},
     [ARTIFACT_SET_BANDIT] = {ARTIFACT_PLUNDERED_VEST, ARTIFACT_PLUNDERER_SHOES, ARTIFACT_VIKING_HATCHET, ARTIFACT_VIKING_SHIELD, ARTIFACT_BEARHIDE_WRAPS},
-    [ARTIFACT_SET_BESTIAL] = {ARTIFACT_NECKLACE_OF_THE_EAGLE, ARTIFACT_SHIELD_OF_THE_WOLF, ARTIFACT_DRAGONSBANE, ARTIFACT_CUIRASS_OF_THE_STAG, ARTIFACT_WRAPS_OF_THE_OWL},
+    [ARTIFACT_SET_BESTIAL] = {ARTIFACT_NECKLACE_OF_THE_EAGLE, ARTIFACT_SHIELD_OF_THE_WOLF, ARTIFACT_CUIRASS_OF_THE_STAG, ARTIFACT_WRAPS_OF_THE_OWL},
     [ARTIFACT_SET_SAINT] = {ARTIFACT_SANDALS_OF_THE_BLESSED, ARTIFACT_STAFF_OF_THE_SAINT, ARTIFACT_CODEX_OF_THE_SAINT, ARTIFACT_FORTUNE_BAND_OF_THE_SAINT, ARTIFACT_ANKH_OF_THE_SAINT, ARTIFACT_CLOAK_OF_THE_SAINT},
-    [ARTIFACT_SET_ARCHANGEL] = {ARTIFACT_CELESTIAL_JUSTICAR_SHIELD, ARTIFACT_CELESTIAL_JUSTICAR_HELMET, ARTIFACT_CELESTIAL_JUSTICAR_ARMOR, ARTIFACT_RING_OF_HASTE, ARTIFACT_ELRATHS_UNITY},
+    [ARTIFACT_SET_ARCHANGEL] = {ARTIFACT_CELESTIAL_JUSTICAR_SHIELD, ARTIFACT_CELESTIAL_JUSTICAR_HELMET, ARTIFACT_CELESTIAL_JUSTICAR_ARMOR, ARTIFACT_CELESTIAL_JUSTICAR_SWORD, ARTIFACT_ELRATHS_UNITY},
+    [ARTIFACT_SET_WANDERER] = {ARTIFACT_BOOTS_OF_THE_OPEN_ROAD, ARTIFACT_BACKPACK_OF_THE_OPEN_ROAD},
     [ARTIFACT_SET_SAILOR] = {ARTIFACT_OCEAN_CHARM, ARTIFACT_CAPTAINS_HOOK, ARTIFACT_PIRATE_SMASHER},
     [ARTIFACT_SET_MOON] = {ARTIFACT_MOONBLADE, ARTIFACT_MOONLIGHT_BAND, ARTIFACT_MOONLIGHT_COAT, ARTIFACT_MOON_CHARM},
 }

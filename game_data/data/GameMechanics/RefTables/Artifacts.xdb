@@ -114,10 +114,10 @@
 				<AIValue>1</AIValue>
 				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
 				<HeroStatsModif>
-					<Attack>0</Attack>
+					<Attack>1</Attack>
 					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
-					<SpellPower>0</SpellPower>
+					<SpellPower>1</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
@@ -167,7 +167,7 @@
 					<Attack>0</Attack>
 					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
-					<SpellPower>0</SpellPower>
+					<SpellPower>2</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
@@ -269,7 +269,7 @@
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
-					<Luck>0</Luck>
+					<Luck>1</Luck>
 				</HeroStatsModif>
 				<ArtifactShared href="/MapObjects/Artifacts/OceanCharm.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
@@ -340,7 +340,7 @@
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>4</Defence>
+					<Defence>5</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
@@ -562,11 +562,11 @@
 				<Type>ARTF_CLASS_RELIC</Type>
 				<Slot>PRIMARY</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/RingOfHaste.xdb#xpointer(/Texture)"/>
-				<CostOfGold>30000</CostOfGold>
-				<AIValue>32000</AIValue>
-				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
+				<CostOfGold>20000</CostOfGold>
+				<AIValue>30000</AIValue>
+				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
-					<Attack>0</Attack>
+					<Attack>2</Attack>
 					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
@@ -612,12 +612,12 @@
 				<Type>ARTF_CLASS_MAJOR</Type>
 				<Slot>FEET</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/BootsOfTheSwiftJounrey.xdb#xpointer(/Texture)"/>
-				<CostOfGold>5000</CostOfGold>
-				<AIValue>10000</AIValue>
+				<CostOfGold>10000</CostOfGold>
+				<AIValue>1</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>0</Defence>
+					<Defence>1</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
@@ -646,7 +646,7 @@
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
-					<Luck>3</Luck>
+					<Luck>4</Luck>
 				</HeroStatsModif>
 				<ArtifactShared href="/MapObjects/Artifacts/GoldenHorseshoe.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
@@ -1662,7 +1662,7 @@
 				<NameFileRef href="/Text/Game/Artifacts/HelmOfChaos/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/HelmOfChaos/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MAJOR</Type>
+				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>HEAD</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/HelmOfChaos.xdb#xpointer(/Texture)"/>
 				<CostOfGold>5000</CostOfGold>
@@ -1670,9 +1670,9 @@
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>-1</Defence>
+					<Defence>1</Defence>
 					<Knowledge>0</Knowledge>
-					<SpellPower>3</SpellPower>
+					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
@@ -1840,14 +1840,14 @@
 				<Type>ARTF_CLASS_MAJOR</Type>
 				<Slot>FINGER</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/RingOfTheShadowbrand.xdb#xpointer(/Texture)"/>
-				<CostOfGold>24000</CostOfGold>
-				<AIValue>10000</AIValue>
-				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
+				<CostOfGold>10000</CostOfGold>
+				<AIValue>20000</AIValue>
+				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
-					<SpellPower>0</SpellPower>
+					<SpellPower>4</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
@@ -2842,12 +2842,12 @@
 				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>FINGER</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/SentinelsBracer.xdb#xpointer(/Texture)"/>
-				<CostOfGold>12000</CostOfGold>
-				<AIValue>6000</AIValue>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>10000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>0</Defence>
+					<Defence>1</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>1</SpellPower>
 					<Morale>0</Morale>
@@ -3014,17 +3014,17 @@
 				<NameFileRef href="/Text/Game/Artifacts/SentinelsHelm/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/SentinelsHelm/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_RELIC</Type>
+				<Type>ARTF_CLASS_MAJOR</Type>
 				<Slot>HEAD</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/SentinelsHelm.xdb#xpointer(/Texture)"/>
-				<CostOfGold>28000</CostOfGold>
-				<AIValue>14000</AIValue>
+				<CostOfGold>10000</CostOfGold>
+				<AIValue>20000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
-					<Attack>2</Attack>
+					<Attack>0</Attack>
 					<Defence>2</Defence>
-					<Knowledge>2</Knowledge>
-					<SpellPower>2</SpellPower>
+					<Knowledge>1</Knowledge>
+					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
@@ -3039,17 +3039,17 @@
 				<NameFileRef href="/Text/Game/Artifacts/SentinelsBoots/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/SentinelsBoots/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_RELIC</Type>
+				<Type>ARTF_CLASS_MAJOR</Type>
 				<Slot>FEET</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/SentinelsBoots.xdb#xpointer(/Texture)"/>
-				<CostOfGold>28000</CostOfGold>
-				<AIValue>14000</AIValue>
+				<CostOfGold>10000</CostOfGold>
+				<AIValue>20000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>1</Attack>
-					<Defence>1</Defence>
-					<Knowledge>1</Knowledge>
-					<SpellPower>1</SpellPower>
+					<Defence>2</Defence>
+					<Knowledge>0</Knowledge>
+					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
@@ -3064,15 +3064,15 @@
 				<NameFileRef href="/Text/Game/Artifacts/SentinelsShield/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/SentinelsShield/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_RELIC</Type>
+				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>SECONDARY</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/SentinelsShield.xdb#xpointer(/Texture)"/>
-				<CostOfGold>32000</CostOfGold>
-				<AIValue>16000</AIValue>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>10000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>8</Defence>
+					<Defence>2</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
@@ -3097,7 +3097,7 @@
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>5</Defence>
+					<Defence>4</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
@@ -3342,16 +3342,16 @@
 				<Type>ARTF_CLASS_RELIC</Type>
 				<Slot>SECONDARY</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/CelestialJusticarShield.xdb#xpointer(/Texture)"/>
-				<CostOfGold>28000</CostOfGold>
-				<AIValue>14000</AIValue>
+				<CostOfGold>20000</CostOfGold>
+				<AIValue>30000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>2</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
-					<Morale>0</Morale>
-					<Luck>0</Luck>
+					<Morale>1</Morale>
+					<Luck>1</Luck>
 				</HeroStatsModif>
 				<ArtifactShared href="/MapObjects/Artifacts/CelestialJusticarShield.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
@@ -3392,13 +3392,13 @@
 				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>SHOULDERS</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/BackpackOfTheOpenRoad.xdb#xpointer(/Texture)"/>
-				<CostOfGold>0</CostOfGold>
-				<AIValue>0</AIValue>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>10000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
-					<Knowledge>0</Knowledge>
+					<Knowledge>1</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
@@ -3614,14 +3614,14 @@
 				<NameFileRef href="/Text/Game/Artifacts/SentinelsBlade/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/SentinelsBlade/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MINOR</Type>
+				<Type>ARTF_CLASS_RELIC</Type>
 				<Slot>PRIMARY</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/SentinelsBlade.xdb#xpointer(/Texture)"/>
-				<CostOfGold>8000</CostOfGold>
-				<AIValue>4000</AIValue>
+				<CostOfGold>20000</CostOfGold>
+				<AIValue>30000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
-					<Attack>0</Attack>
+					<Attack>5</Attack>
 					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
@@ -4167,15 +4167,15 @@
 				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>SECONDARY</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/ShieldOfTheWolf.xdb#xpointer(/Texture)"/>
-				<CostOfGold>12000</CostOfGold>
-				<AIValue>6000</AIValue>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>10000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>2</Defence>
+					<Defence>1</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
-					<Morale>0</Morale>
+					<Morale>1</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
 				<ArtifactShared href="/MapObjects/Artifacts/ShieldOfTheWolf.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
@@ -4217,14 +4217,14 @@
 				<Type>ARTF_CLASS_RELIC</Type>
 				<Slot>HEAD</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/CelestialJusticarHelmet.xdb#xpointer(/Texture)"/>
-				<CostOfGold>80000</CostOfGold>
-				<AIValue>26000</AIValue>
+				<CostOfGold>20000</CostOfGold>
+				<AIValue>30000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>0</Defence>
-					<Knowledge>12</Knowledge>
-					<SpellPower>0</SpellPower>
+					<Defence>2</Defence>
+					<Knowledge>0</Knowledge>
+					<SpellPower>2</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
@@ -4289,17 +4289,17 @@
 				<NameFileRef href="/Text/Game/Artifacts/StaffOfTheLyre/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/StaffOfTheLyre/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MAJOR</Type>
+				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>PRIMARY</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/StaffOfTheLyre.xdb#xpointer(/Texture)"/>
-				<CostOfGold>20000</CostOfGold>
-				<AIValue>12000</AIValue>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>10000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
-					<SpellPower>5</SpellPower>
+					<SpellPower>1</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
@@ -4342,14 +4342,14 @@
 				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>NECK</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/PendantOfTheLyre.xdb#xpointer(/Texture)"/>
-				<CostOfGold>8000</CostOfGold>
-				<AIValue>4000</AIValue>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>10000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>0</Defence>
+					<Defence>1</Defence>
 					<Knowledge>0</Knowledge>
-					<SpellPower>3</SpellPower>
+					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
@@ -4717,16 +4717,16 @@
 				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>CHEST</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/CuirassOfTheStag.xdb#xpointer(/Texture)"/>
-				<CostOfGold>8000</CostOfGold>
-				<AIValue>4000</AIValue>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>10000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>3</Defence>
+					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
-					<Luck>0</Luck>
+					<Luck>1</Luck>
 				</HeroStatsModif>
 				<ArtifactShared href="/MapObjects/Artifacts/CuirassOfTheStag.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
@@ -4739,19 +4739,19 @@
 				<NameFileRef href="/Text/Game/Artifacts/WrapsOfTheOwl/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/WrapsOfTheOwl/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MAJOR</Type>
+				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>SHOULDERS</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/WrapsOfTheOwl.xdb#xpointer(/Texture)"/>
-				<CostOfGold>20000</CostOfGold>
+				<CostOfGold>5000</CostOfGold>
 				<AIValue>10000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
-					<Knowledge>2</Knowledge>
-					<SpellPower>0</SpellPower>
+					<Knowledge>1</Knowledge>
+					<SpellPower>1</SpellPower>
 					<Morale>0</Morale>
-					<Luck>2</Luck>
+					<Luck>0</Luck>
 				</HeroStatsModif>
 				<ArtifactShared href="/MapObjects/Artifacts/WrapsOfTheOwl.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
@@ -4772,7 +4772,7 @@
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>0</Defence>
+					<Defence>4</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
