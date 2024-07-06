@@ -1,24 +1,24 @@
 
 function Routine_ArtifactAllSeeingCrown(player, hero)
-    print("$ Routine_ArtifactAllSeeingCrown")
+    log("$ Routine_ArtifactAllSeeingCrown")
     local x,y,z = GetObjectPosition(hero)
     OpenCircleFog(x, y, z, 999, player)
 end
 
 function Routine_ArtifactPouchOfGolds(player, hero)
-    print("$ Routine_ArtifactPouchOfGolds")
+    log("$ Routine_ArtifactPouchOfGolds")
     local level = GetHeroLevel(hero)
     AddPlayerResource(player, hero, GOLD, level * 25)
 end
 
 function Routine_ArtifactSackOfGolds(player, hero)
-    print("$ Routine_ArtifactSackOfGolds")
+    log("$ Routine_ArtifactSackOfGolds")
     local level = GetHeroLevel(hero)
     AddPlayerResource(player, hero, GOLD, level * 50)
 end
 
 function Routine_ArtifactHornOfPlenty(player, hero)
-    print("$ Routine_ArtifactHornOfPlenty")
+    log("$ Routine_ArtifactHornOfPlenty")
     AddPlayerResource(player, hero, WOOD, 1)
     AddPlayerResource(player, hero, ORE, 1)
     AddPlayerResource(player, hero, MERCURY, 1)
@@ -28,7 +28,7 @@ function Routine_ArtifactHornOfPlenty(player, hero)
 end
 
 function Routine_ArtifactCapeOfKings(player, hero)
-    print("$ Routine_ArtifactCapeOfKings")
+    log("$ Routine_ArtifactCapeOfKings")
     if GetDate(DAY_OF_WEEK) ~= 1 then
         local mastery = GetHeroSkillMastery(hero, SKILL_GOVERNANCE)
         if mastery > 0 then
@@ -39,7 +39,7 @@ end
 
 Var_BootsOfSwiftJourneyCheck = {}
 function Routine_ArtifactBootsOfSwiftJourney(player, hero)
-    print("$ Routine_ArtifactBootsOfSwiftJourney")
+    log("$ Routine_ArtifactBootsOfSwiftJourney")
     Var_BootsOfSwiftJourneyCheck[hero] = not nil
     while IsPlayerCurrent(player) do
         sleep(100)
@@ -55,29 +55,29 @@ function Routine_ArtifactBootsOfSwiftJourney(player, hero)
 end
 
 function Routine_BackpackOfOpenRoad(player, hero, level)
-    print("$ Routine_BackpackOfOpenRoad")
+    log("$ Routine_BackpackOfOpenRoad")
     ChangeHeroStat(hero, STAT_MOVE_POINTS, 9999)
 end
 
 function Routine_ArtifactBootsOfSwiftJourneyCancel(player, hero, combatIndex)
-    print("$ Routine_ArtifactBootsOfSwiftJourneyCancel")
+    log("$ Routine_ArtifactBootsOfSwiftJourneyCancel")
     Var_BootsOfSwiftJourneyCheck[hero] = nil
 end
 
 function Routine_ArtifactGreatLich(player, hero)
-    print("$ Routine_ArtifactGreatLich")
+    log("$ Routine_ArtifactGreatLich")
     AddHeroCreatureType(player, hero, NECROPOLIS, 5, 1)
 end
 
 function Routine_ArtifactSentinelsHelm(player, hero, level)
-    print("$ Routine_ArtifactSentinelsHelm")
+    log("$ Routine_ArtifactSentinelsHelm")
     GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_ATTACK, 2)
     GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_DEFENCE, 2)
     GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_MORALE, 2)
 end
 
 function Routine_ArtifactSentinelsBoots(player, hero, combatIndex)
-    print("$ Routine_ArtifactSentinelsBoots")
+    log("$ Routine_ArtifactSentinelsBoots")
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, side)
 	for i = 0,stacks-1 do
         local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, side, i)
@@ -88,21 +88,21 @@ function Routine_ArtifactSentinelsBoots(player, hero, combatIndex)
 end
 
 function Routine_EldenaRedScarf(player, hero)
-    print("$ Routine_EldenaRedScarf")
+    log("$ Routine_EldenaRedScarf")
     local nb = 5
     for k = 1,WEEKS,4 do nb = 2 * nb end
     AddHeroCreatureType(player, hero, HEROES[hero].faction, 1, nb)
 end
 
 function Routine_EldenaRedCoat(player, hero)
-    print("$ Routine_EldenaRedCoat")
+    log("$ Routine_EldenaRedCoat")
     local nb = 4
     for k = 1,WEEKS,4 do nb = 2 * nb end
     AddHeroCreatureType(player, hero, HEROES[hero].faction, 2, nb)
 end
 
 function Routine_EldenaCirclet(player, hero)
-    print("$ Routine_EldenaCirclet")
+    log("$ Routine_EldenaCirclet")
     local nb = 3
     for k = 1,WEEKS,4 do nb = 2 * nb end
     AddHeroCreatureType(player, hero, HEROES[hero].faction, 3, nb)
@@ -110,30 +110,30 @@ end
 
 
 function Routine_ArtifactBeginnerMagicStick(player, hero, combatIndex)
-    print("$ Routine_ArtifactBeginnerMagicStick")
+    log("$ Routine_ArtifactBeginnerMagicStick")
     ChangeHeroStat(hero, STAT_MANA_POINTS, 10)
 end
 
 function Routine_ArtifactRunicWar(player, hero, combatIndex)
-    print("$ Routine_ArtifactRunicWar")
+    log("$ Routine_ArtifactRunicWar")
     ChangeHeroStat(hero, STAT_MANA_POINTS, 25)
 end
 
 function Routine_ArtifactVikingHatchet(player, hero, combatIndex)
-    print("$ Routine_ArtifactVikingHatchet")
+    log("$ Routine_ArtifactVikingHatchet")
     local value = GetArmyStrength(combatIndex, 0)
     AddPlayerResource(player, hero, GOLD, round(0.5 * value))
 end
 
 function Routine_ArtifactVikingShield(player, hero, combatIndex)
-    print("$ Routine_ArtifactVikingShield")
+    log("$ Routine_ArtifactVikingShield")
     local value = GetArmyStrength(combatIndex, 0)
     AddPlayerResource(player, hero, WOOD, round(0.05 * value))
 end
 
 Var_StaffLyreVictories = {}
 function Routine_ArtifactStaffOfTheLyre(player, hero, combatIndex)
-    print("$ Routine_ArtifactStaffOfTheLyre")
+    log("$ Routine_ArtifactStaffOfTheLyre")
     if Var_StaffLyreVictories[hero] then
         local nb = Var_StaffLyreVictories[hero] + 1
         Var_StaffLyreVictories[hero] = nb
@@ -147,7 +147,7 @@ end
 
 Var_PendantLyreVictories = {}
 function Routine_ArtifactPendantOfTheLyre(player, hero, combatIndex)
-    print("$ Routine_ArtifactPendantOfTheLyre")
+    log("$ Routine_ArtifactPendantOfTheLyre")
     if Var_PendantLyreVictories[hero] then
         local nb = Var_PendantLyreVictories[hero] + 1
         Var_PendantLyreVictories[hero] = nb
@@ -171,7 +171,7 @@ function Routine_ArtfsetWanderer(player, hero)
 end
 
 function Routine_ArtfsetSailor(player, hero)
-    print("$ Routine_ArtfsetSailor")
+    log("$ Routine_ArtfsetSailor")
     if IsHeroInBoat(hero) then
         ChangeHeroStat(hero, STAT_MOVE_POINTS, 1000)
     end
@@ -179,7 +179,7 @@ end
 
 
 function Routine_ArtfsetEldena(player, hero)
-    print("$ Routine_ArtfsetEldena")
+    log("$ Routine_ArtfsetEldena")
     local faction = HEROES[hero].faction
     local nb4 = 2
     local nb5 = 1
@@ -192,13 +192,13 @@ function Routine_ArtfsetEldena(player, hero)
 end
 
 function Routine_ArtfsetEnlighten(player, hero)
-    print("$ Routine_ArtfsetEnlighten")
+    log("$ Routine_ArtfsetEnlighten")
     AddHeroLowestStat(player, hero, 2)
 end
 
 Var_MoonLevelUp = {}
 function Routine_ArtfsetMoon(player, hero)
-    print("$ Routine_ArtfsetMoon")
+    log("$ Routine_ArtfsetMoon")
     if Var_MoonLevelUp[hero] then
         LevelUpHero(hero)
         Var_MoonLevelUp[hero] = nil
@@ -208,7 +208,7 @@ function Routine_ArtfsetMoon(player, hero)
 end
 
 function Routine_ArtfsetVizir(player, hero, combatIndex)
-    print("$ Routine_ArtfsetVizir")
+    log("$ Routine_ArtfsetVizir")
     local value = GetArmyStrength(combatIndex, 0)
     local class = ARTIFACT_CLASS_MINOR
     if value > 99999 then class = ARTIFACT_CLASS_RELIC
@@ -337,5 +337,5 @@ function DoArtifactsRoutine_AfterCombat(player, hero, index)
 end
 
 
--- print("Loaded artifacts-routines-advmap.lua")
+-- log("Loaded artifacts-routines-advmap.lua")
 ROUTINES_LOADED[12] = 1

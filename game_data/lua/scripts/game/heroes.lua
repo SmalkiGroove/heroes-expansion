@@ -143,5 +143,5 @@ HEROES = {
 }
 
 
--- print("Loaded heroes.lua")
+-- log("Loaded heroes.lua")
 ROUTINES_LOADED[5] = 1

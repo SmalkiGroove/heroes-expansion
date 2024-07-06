@@ -1,6 +1,6 @@
 
 function NoneRoutine()
-    -- print("Nothing happens !")
+    -- log("Nothing happens !")
 end
 
 
@@ -151,7 +151,7 @@ function CheckMainTown(player)
     local main_town = PLAYER_MAIN_TOWN[player]
     if player ~= GetObjectOwner(main_town) then
         PLAYER_MAIN_TOWN[player] = FindMainTown(player)
-        print("Player "..player.." has new main town : "..PLAYER_MAIN_TOWN[player])
+        log("Player "..player.." has new main town : "..PLAYER_MAIN_TOWN[player])
     end
 end
 
@@ -186,15 +186,15 @@ function InitializeMapTowns()
             end if found then break end end
             if found then
                 local data = MAP_TOWNS[town]
-                print("Registered town of faction "..FACTION_TEXT[data.faction].." at coords x="..data.x..",y="..data.y..",z="..data.z.." (entrance)")
+                log("Registered town of faction "..FACTION_TEXT[data.faction].." at coords x="..data.x..",y="..data.y..",z="..data.z.." (entrance)")
             else
-                print("Town "..town.." has no entrance ?? (type is "..type..")")
+                log("Town "..town.." has no entrance ?? (type is "..type..")")
             end
         end
     end
     for player = 1,8 do
         if GetPlayerState(player) == 1 and not PLAYER_MAIN_TOWN[player] then
-            print("Player "..player.." has no main town ??")
+            log("Player "..player.." has no main town ??")
         end
     end
 end
@@ -206,7 +206,7 @@ end
 
 
 function AddPlayerResource(player, hero, resource, amount)
-	print("$ AddPlayerResource")
+	log("$ AddPlayerResource")
 	if amount >= 1 then
 		local curamount = GetPlayerResource(player, resource)
 		local newamount = curamount + amount
@@ -216,7 +216,7 @@ function AddPlayerResource(player, hero, resource, amount)
 end
 
 function RemovePlayerResource(player, resource, amount)
-	print("$ RemovePlayerResource")
+	log("$ RemovePlayerResource")
 	if amount >= 1 then
 		local curamount = GetPlayerResource(player, resource)
 		local newamount = curamount - amount
@@ -225,7 +225,7 @@ function RemovePlayerResource(player, resource, amount)
 end
 
 function AddHeroStatAmount(player, hero, stat, amount)
-	print("$ AddHeroStatAmount")
+	log("$ AddHeroStatAmount")
     if amount ~= 0 then
 		ChangeHeroStat(hero, stat, amount)
 		-- ShowFlyingSign({"/Text/Game/Scripts/Stats/"..ATTRIBUTE_TEXT[stat]..".txt"; num=amount}, hero, player, FLYING_SIGN_TIME)
@@ -233,7 +233,7 @@ function AddHeroStatAmount(player, hero, stat, amount)
 end
 
 function AddHeroLowestStat(player, hero, amount)
-	print("$ AddHeroLowestStat")
+	log("$ AddHeroLowestStat")
     if amount ~= 0 then
 		local stat = 0
 		local value = 9999
@@ -252,7 +252,7 @@ function AddHeroLowestStat(player, hero, amount)
 end
 
 function AddHeroManaUnbound(player, hero, amount)
-	print("$ AddHeroManaUnbound")
+	log("$ AddHeroManaUnbound")
 	local klg = ceil(0.1 * amount)
 	ChangeHeroStat(hero, STAT_KNOWLEDGE, klg) sleep()
 	ChangeHeroStat(hero, STAT_MANA_POINTS, amount) sleep()
@@ -260,7 +260,7 @@ function AddHeroManaUnbound(player, hero, amount)
 end
 
 function TeachHeroRandomSpell(player, hero, school, maxtier)
-	print("$ TeachHeroRandomSpell")
+	log("$ TeachHeroRandomSpell")
 	local spells = {}
 	if school == SPELL_SCHOOL_ANY then
 		for tier = 1,maxtier do
@@ -270,7 +270,7 @@ function TeachHeroRandomSpell(player, hero, school, maxtier)
 		end
 	else
 		local last = 3 * (maxtier - 1)
-		print("Can learn spell up to "..SPELLS_BY_SCHOOL[school][last])
+		log("Can learn spell up to "..SPELLS_BY_SCHOOL[school][last])
 		for i = 1,last do
 			insert(spells, SPELLS_BY_SCHOOL[school][i])
 		end
@@ -289,7 +289,7 @@ function TeachHeroRandomSpell(player, hero, school, maxtier)
 end
 
 function TeachHeroRandomSpellTier(player, hero, school, tier)
-	print("$ TeachHeroRandomSpellTier")
+	log("$ TeachHeroRandomSpellTier")
 	local spells = {}
 	if school == SPELL_SCHOOL_ANY then
 		spells = SPELLS_BY_TIER[tier]
@@ -314,7 +314,7 @@ function TeachHeroRandomSpellTier(player, hero, school, tier)
 end
 
 function AddHeroCreaturePerLevel(player, hero, type, coef)
-	print("AddHeroCreaturePerLevel")
+	log("AddHeroCreaturePerLevel")
 	local level = GetHeroLevel(hero)
 	local nb = round(coef * level)
 	if nb >= 1 then
@@ -324,7 +324,7 @@ function AddHeroCreaturePerLevel(player, hero, type, coef)
 end
 
 function AddHeroCreatureType(player, hero, faction, tier, nb)
-	print("$ AddHeroCreatureType")
+	log("$ AddHeroCreatureType")
 	if nb >= 1 then
 		local army = GetHeroArmy(hero)
 		local b = 0
@@ -341,7 +341,7 @@ function AddHeroCreatureType(player, hero, faction, tier, nb)
 end
 
 function CountHeroCreatureType(player, hero, faction, tier)
-	print("$ CountHeroCreatureType")
+	log("$ CountHeroCreatureType")
 	local count = 0
 	for _,cr in CREATURES_BY_FACTION[faction][tier] do
 		count = count + GetHeroCreatures(hero, cr)
@@ -350,7 +350,7 @@ function CountHeroCreatureType(player, hero, faction, tier)
 end
 
 function AddHeroTownRecruits(player, hero, dwelling, creature, nb)
-	print("AddHeroTownRecruits")
+	log("AddHeroTownRecruits")
 	local towns = GetHeroTowns(player, hero)
 	if nb >= 1 then
 		for i,town in towns do
@@ -364,7 +364,7 @@ function AddHeroTownRecruits(player, hero, dwelling, creature, nb)
 end
 
 function TransferCreatureFromTown(player, hero, dwelling, creature, coef)
-	print("$ TransferCreatureFromTown")
+	log("$ TransferCreatureFromTown")
 	local level = GetHeroLevel(hero)
 	local towns = GetHeroTowns(player, hero)
 	for i,town in towns do
@@ -381,7 +381,7 @@ function TransferCreatureFromTown(player, hero, dwelling, creature, coef)
 end
 
 function TransformTownRecruits(player, hero, dwelling1, creature1, dwelling2, creature2, amount)
-	print("$ TransformTownRecruits")
+	log("$ TransformTownRecruits")
 	local towns = GetHeroTowns(player, hero)
 	for i,town in towns do
 		if GetTownBuildingLevel(town, dwelling1) ~= 0 and GetTownBuildingLevel(town, dwelling2) ~= 0 then
@@ -398,7 +398,7 @@ function TransformTownRecruits(player, hero, dwelling1, creature1, dwelling2, cr
 end
 
 function UpgradeHeroCreatures(player, hero, base, upgrade)
-	print("$ UpgradeHeroCreatures")
+	log("$ UpgradeHeroCreatures")
 	local nb = GetHeroCreatures(hero, base)
 	if nb >= 1 then
 		RemoveHeroCreatures(hero, base, nb)
@@ -408,7 +408,7 @@ function UpgradeHeroCreatures(player, hero, base, upgrade)
 end
 
 function ResurrectCreatureType(player, hero, combatIndex, faction, tier, max)
-	print("$ ResurrectCreatureType")
+	log("$ ResurrectCreatureType")
 	local cap = max
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
     for i = 0,stacks-1 do
@@ -453,9 +453,9 @@ function InitializeRandomSeed()
 		end
 	end
 	RANDOM_SEED = value
-	print("Random seed = "..RANDOM_SEED)
+	log("Random seed = "..RANDOM_SEED)
 end
 
 
--- print("Loaded advmap-utils.lua")
+-- log("Loaded advmap-utils.lua")
 ROUTINES_LOADED[9] = 1

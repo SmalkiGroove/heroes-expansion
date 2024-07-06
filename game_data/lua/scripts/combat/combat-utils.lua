@@ -204,5 +204,5 @@ end
 
 
 
--- print("Loaded combat-utils.lua")
+-- log("Loaded combat-utils.lua")
 ROUTINES_LOADED[9] = 1

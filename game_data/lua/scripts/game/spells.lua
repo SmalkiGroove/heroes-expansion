@@ -373,5 +373,5 @@ SPELLS_BY_SCHOOL = {
 }
 
 
--- print("Loaded spells.lua")
+-- log("Loaded spells.lua")
 ROUTINES_LOADED[2] = 1

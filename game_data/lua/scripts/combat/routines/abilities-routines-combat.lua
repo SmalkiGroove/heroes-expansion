@@ -1,6 +1,6 @@
 
 function Routine_AbilityCommandBallista(side, unit)
-    print("$ Routine_AbilityCommandBallista")
+    log("$ Routine_AbilityCommandBallista")
     if GetCreatureNumber(unit) > 10 then
         local x,y = GetUnitPosition(CURRENT_UNIT)
         local ballista = GetWarMachine(CURRENT_UNIT_SIDE, WAR_MACHINE_BALLISTA)
@@ -16,7 +16,7 @@ function Routine_AbilityCommandBallista(side, unit)
 end
 
 function Routine_AbilityMagneticField(side, unit)
-    print("$ Routine_AbilityMagneticField")
+    log("$ Routine_AbilityMagneticField")
     local x,y = GetUnitPosition(CURRENT_UNIT)
     local unit = "none"
     local distance = 1000
@@ -42,14 +42,14 @@ function Routine_AbilityMagneticField(side, unit)
 end
 
 function Routine_AbilityMineField(side, unit)
-    print("$ Routine_AbilityMineField")
+    log("$ Routine_AbilityMineField")
     local x,y = GetUnitPosition(unit)
     local offset = 2 - 4 * side
     HeroCast_Area(unit, SPELL_LAND_MINE, FREE_MANA, x + offset, y)
 end
 
 function Routine_AbilityRefreshMana(side, unit, amount)
-    print("$ Routine_AbilityRefreshMana")
+    log("$ Routine_AbilityRefreshMana")
     local cur = GetUnitManaPoints(unit)
     local max = GetUnitMaxManaPoints(unit)
     if cur < max then
@@ -105,5 +105,5 @@ function DoAbilitiesRoutine_UnitDied(unit)
 end
 
 
--- print("Loaded abilities-routines-combat.lua")
+-- log("Loaded abilities-routines-combat.lua")
 ROUTINES_LOADED[10] = 1

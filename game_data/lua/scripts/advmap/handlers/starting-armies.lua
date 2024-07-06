@@ -2,7 +2,7 @@
 MULT = (GetDifficulty() == 0) and 1.5 or 1
 
 function ReplaceStartingArmy(hero)
-	-- print("$ ReplaceStartingArmy hero="..hero)
+	-- log("$ ReplaceStartingArmy hero="..hero)
     local army = {}
     if STARTING_ARMIES[hero] then
         army = STARTING_ARMIES[hero]
@@ -108,5 +108,5 @@ function UpdateTavernHeroes()
     end
 end
 
--- print("Loaded starting-armies.lua")
+-- log("Loaded starting-armies.lua")
 ROUTINES_LOADED[21] = 1

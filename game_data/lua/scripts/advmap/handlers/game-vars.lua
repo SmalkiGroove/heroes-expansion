@@ -23,10 +23,10 @@ function StoreData(hero)
 					SetVarString(VarHeroSkillId(hero,SKILL_SHATTER_MAGIC), GetHeroSkillMastery(hero,SKILL_SHATTER_MAGIC))..
 					SetVarString(VarHeroSkillId(hero,PERK_TACTICS), GetHeroSkillMastery(hero,PERK_TACTICS))..
 					SetVarString(VarHeroSkillId(hero,PERK_HOUNDMASTERS), GetHeroSkillMastery(hero,PERK_HOUNDMASTERS))
-    -- print(setvars)
+    -- log(setvars)
 	ExecConsoleCommand("@"..setvars)
 end
 
 
--- print("Loaded game-vars.lua")
+-- log("Loaded game-vars.lua")
 ROUTINES_LOADED[30] = 1

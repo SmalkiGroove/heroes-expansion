@@ -3,22 +3,22 @@ MAP_CONVERTIBLES = {}
 HERO_IN_CONVERTIBLE = {}
 
 function HeroInConvertible(hero, obj, value)
-    -- print("$ HeroInConvertible")
+    -- log("$ HeroInConvertible")
     ControlHeroCustomAbility(hero, CUSTOM_ABILITY_4, value)
     HERO_IN_CONVERTIBLE[hero] = (value == 1) and obj or nil
 end
 
 function EnableTownConversionAbility(hero, obj)
-    print("$ EnableTownConversionAbility")
+    log("$ EnableTownConversionAbility")
     HeroInConvertible(hero, obj, CUSTOM_ABILITY_ENABLED)
     local x,y,z = GetObjectPosition(hero)
     repeat sleep(10) until not IsEqualPosition(hero, x, y, z)
     HeroInConvertible(hero, obj, CUSTOM_ABILITY_DISABLED)
-    print("Hero moved - conversion ability disabled")
+    log("Hero moved - conversion ability disabled")
 end
 
 function CanHeroConvert(hero, obj)
-    -- print("$ CanHeroConvert obj="..obj)
+    -- log("$ CanHeroConvert obj="..obj)
     if IsHeroHuman(hero) then
         if HasHeroSkill(hero, SKILL_GOVERNANCE) then
             if GetObjectOwner(obj) == GetObjectOwner(hero) then
@@ -37,7 +37,7 @@ function SetTriggerConvertible(obj, bool)
 end
 
 function ConvertTown(player, hero, town)
-    -- print("$ ConvertTown")
+    -- log("$ ConvertTown")
     local resource_cost = 20
     local gold_cost = 10000
     if     GetPlayerResource(player, WOOD) < resource_cost then ShowFlyingSign("/Text/Game/Scripts/Resources/xNotEnoughWood.txt", hero, player, 3)
@@ -54,7 +54,7 @@ function ConvertTown(player, hero, town)
 end
 
 function ConvertDwelling(player, hero, dwelling, tier)
-    -- print("$ ConvertDwelling")
+    -- log("$ ConvertDwelling")
     local resource_cost = 3 * tier
     local gold_cost = 1000 * tier
     if     GetPlayerResource(player, WOOD) < resource_cost then ShowFlyingSign("/Text/Game/Scripts/Resources/xNotEnoughWood.txt", hero, player, 3)
@@ -71,9 +71,9 @@ function ConvertDwelling(player, hero, dwelling, tier)
 end
 
 function HeroVisitConvertible(hero, obj)
-    print("$ HeroVisitConvertible")
+    log("$ HeroVisitConvertible")
     if CanHeroConvert(hero, obj) then
-        print("Building can be converted")
+        log("Building can be converted")
         startThread(EnableTownConversionAbility, hero, obj)
     end
     SetTriggerConvertible(obj, nil)
@@ -100,5 +100,5 @@ function InitializeConvertibles()
 end
 
 
--- print("Loaded town-conversion.lua")
+-- log("Loaded town-conversion.lua")
 ROUTINES_LOADED[22] = 1

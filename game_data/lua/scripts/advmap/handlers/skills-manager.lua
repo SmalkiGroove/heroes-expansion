@@ -12,7 +12,7 @@ NB_CARAVAN = 0
 CURRENT_CARAVANS = {}
 
 function CaravanCountdown()
-    print("$ CaravanCountdown")
+    log("$ CaravanCountdown")
     local caravans = {}
     for k,v in CURRENT_CARAVANS do
         if v > 0 then caravans[k] = v-1
@@ -36,7 +36,7 @@ end
 
 
 function CheckForUltimate(player, hero, level)
-    -- print("$ CheckForUltimate")
+    -- log("$ CheckForUltimate")
     if HasHeroSkill(hero, SKILL_ULTIMATE) then return end
     if level > 30 then
         local nb = 0
@@ -62,7 +62,7 @@ end
 
 
 function AddHeroSkill(hero, skill, mastery)
-    print("Hero "..hero.." has learnt skill '"..skill.."' rank "..mastery..".")
+    log("Hero "..hero.." has learnt skill '"..skill.."' rank "..mastery..".")
     local player = GetObjectOwner(hero)
     local level = GetHeroLevel(hero)
     if START_TRIGGER_SKILLS_ROUTINES[skill] then
@@ -72,7 +72,7 @@ function AddHeroSkill(hero, skill, mastery)
     CheckForUltimate(player, hero, level)
 end
 function RemoveHeroSkill(hero, skill, mastery)
-    print("Hero "..hero.." has removed skill '"..skill.."' rank "..mastery..".")
+    log("Hero "..hero.." has removed skill '"..skill.."' rank "..mastery..".")
     local player = GetObjectOwner(hero)
     local level = GetHeroLevel(hero)
     if START_TRIGGER_SKILLS_ROUTINES[skill] then
@@ -91,5 +91,5 @@ function UnbindHeroSkillTrigger(hero)
 end
 
 
--- print("Loaded skills-manager.lua")
+-- log("Loaded skills-manager.lua")
 ROUTINES_LOADED[16] = 1

@@ -1,12 +1,12 @@
 
 function ActivateDigging(player, hero)
-    print("$ ActivateDigging")
+    log("$ ActivateDigging")
 
 end
 
 
 function ActivateKnowYourEnemy(player, hero)
-    print("$ ActivateKnowYourEnemy")
+    log("$ ActivateKnowYourEnemy")
     if GetHeroStat(hero, STAT_MOVE_POINTS) < 100 then
         return
     end
@@ -30,14 +30,14 @@ end
 
 
 function ActivateHeroTimeShift(player, hero)
-    print("$ ActivateHeroTimeShift")
+    log("$ ActivateHeroTimeShift")
     
     ControlHeroCustomAbility(hero, CUSTOM_ABILITY_3, CUSTOM_ABILITY_DISABLED)
 end
 
 
 function ActivateBuildingConversion(player, hero)
-    print("$ ActivateBuildingConversion")
+    log("$ ActivateBuildingConversion")
     local obj = HERO_IN_CONVERTIBLE[hero]
     if not obj then ShowFlyingSign("/Text/Game/Scripts/Abilities/HeroNotInConvertible.txt", hero, player, 3) return end
     local tier = MAP_CONVERTIBLES[obj].tier
@@ -71,5 +71,5 @@ function CustomAbilityHandler(hero, id)
 end
 
 
--- print("Loaded custom-abilities.lua")
+-- log("Loaded custom-abilities.lua")
 ROUTINES_LOADED[23] = 1

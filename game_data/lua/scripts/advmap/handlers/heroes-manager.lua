@@ -16,7 +16,7 @@ end
 function HeroLevelUp(hero)
     local level = GetHeroLevel(hero)
     local player = GetObjectOwner(hero)
-    print("Hero "..hero.." leveled up to level "..level)
+    log("Hero "..hero.." leveled up to level "..level)
     Register(VarHeroLevel(hero), level)
     startThread(DoHeroSpeRoutine_LevelUp, player, hero, level)
     startThread(DoSkillsRoutine_LevelUp, player, hero, level)
@@ -162,5 +162,5 @@ function HeroLostBattle(player, hero, opponent)
 end
 
 
--- print("Loaded heroes-manager.lua")
+-- log("Loaded heroes-manager.lua")
 ROUTINES_LOADED[18] = 1

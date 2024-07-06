@@ -1,4 +1,8 @@
 
+function log(str)
+    print(str)
+end
+
 function trunc(num)
     local n = num - mod(num, 1)
     return n

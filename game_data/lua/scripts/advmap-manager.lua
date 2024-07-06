@@ -27,7 +27,7 @@ ROUTINES_LOADED = {
 }
 
 function LoadScript(path, key)
-	-- print("Loading script "..path)
+	-- log("Loading script "..path)
 	dofile(path)
 	repeat sleep(1) until ROUTINES_LOADED[key] == 1
 end
@@ -93,15 +93,15 @@ function WatchPlayer(player, wait)
 			if tracker[hero].track then
 				local mvp = GetHeroStat(hero, STAT_MOVE_POINTS)
 				if mvp == 0 then
-					print("Hero "..hero.." has 0 move points")
+					log("Hero "..hero.." has 0 move points")
 					if IsEqualPosition(hero, tracker[hero].x, tracker[hero].y, tracker[hero].z) then
 						Routine_ArtifactBootsOfSwiftJourneyCancel(player, hero, nil)
 						if HasHeroSkill(hero, PERK_MEDITATION) and GetHeroStat(hero, STAT_MANA_POINTS) > tracker[hero].mana then
-							print("Hero "..hero.." has used Meditation")
+							log("Hero "..hero.." has used Meditation")
 							local amount = GetHeroStat(hero, STAT_MANA_POINTS) - tracker[hero].mana
 							startThread(Routine_MeditationExp, player, hero, amount)
 						else
-							print("Hero "..hero.." has used digging")
+							log("Hero "..hero.." has used digging")
 							startThread(ActivateDigging, player, hero)
 						end
 						tracker[hero].track = nil
@@ -118,7 +118,7 @@ end
 
 function PlayerDailyHandler(player, newweek)
 	while (not IsPlayerCurrent(player)) do sleep(10) end
-	print("Player "..player.." turn started")
+	log("Player "..player.." turn started")
 	for i,hero in GetPlayerHeroes(player) do
 		if newweek then
 			startThread(DoHeroSpeRoutine_Weekly, player, hero)
@@ -135,7 +135,7 @@ end
 
 function NewDayTrigger()
 	TURN = TURN + 1
-	print("New day ! Turn "..TURN)
+	log("New day ! Turn "..TURN)
 	local newweek = GetDate(DAY_OF_WEEK) == 1
 	if newweek then WEEKS = WEEKS + 1 end
 	UpdateTavernHeroes()
@@ -170,11 +170,11 @@ Trigger(CUSTOM_ABILITY_TRIGGER, "CustomAbilityHandler")
 
 function AddPlayerHero(player, hero)
 	if HEROES[hero].owner then
-		print("Comeback hero "..hero)
+		log("Comeback hero "..hero)
 		startThread(BindHeroLevelUpTrigger, hero)
 		startThread(BindHeroSkillTrigger, hero)
 	else
-		print("Initialize hero "..hero)
+		log("Initialize hero "..hero)
 		-- startThread(ReplaceStartingArmy, hero)
 		startThread(BindHeroLevelUpTrigger, hero)
 		startThread(BindHeroSkillTrigger, hero)
@@ -215,7 +215,7 @@ function InitializeHeroes()
 	for player = 1,8 do
 		if (GetPlayerState(player) == 1) then
 			for i,hero in GetPlayerHeroes(player) do
-				print("Initialize hero "..hero)
+				log("Initialize hero "..hero)
 				startThread(ReplaceStartingArmy, hero)
 				startThread(BindHeroLevelUpTrigger, hero)
 				startThread(BindHeroSkillTrigger, hero)
@@ -237,7 +237,7 @@ for player = 1,8 do
 	end
 end
 
-print("All scripts successfully loaded !")
+log("All scripts successfully loaded !")
 
 -- Initializers
 function Init()
@@ -246,7 +246,7 @@ function Init()
 	InitializeHeroes()
 	InitializeConvertibles()
 	ExecConsoleCommand("@UnblockGame()") UnblockGame()
-	print("Initializers done. The game can start. Have fun !")
+	log("Initializers done. The game can start. Have fun !")
 end
 
 -- Script enabler

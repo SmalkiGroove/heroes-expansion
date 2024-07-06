@@ -1,6 +1,6 @@
 
 function NoneRoutine()
-    -- print("Trigger nothing !")
+    -- log("Trigger nothing !")
 end
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -8,7 +8,7 @@ end
 -- HAVEN
 
 function Routine_BallistaRandomSalvo(side, hero)
-    -- print("Trigger ballista random shoot !")
+    -- log("Trigger ballista random shoot !")
     local n = 1 + trunc(GetHeroLevel(side) * 0.1)
     for i = 1,n do
         RandomShoot_Ballista(side)
@@ -17,20 +17,20 @@ function Routine_BallistaRandomSalvo(side, hero)
 end
 
 function Routine_PeasantsMoveNext(side, hero)
-    -- print("Trigger peasants play next !")
+    -- log("Trigger peasants play next !")
     if CURRENT_UNIT == hero then
         SetATB_CreatureTypes(side, {CREATURE_PEASANT,CREATURE_MILITIAMAN,CREATURE_LANDLORD}, ATB_NEXT)
     end
 end
 
 function Routine_ArchersMoveFirst(side, hero)
-    -- print("Trigger archers atb boost !")
+    -- log("Trigger archers atb boost !")
     SetATB_ID(CURRENT_UNIT, ATB_NEXT)
     SetATB_CreatureTypes(side, {CREATURE_ARCHER,CREATURE_MARKSMAN,CREATURE_LONGBOWMAN}, ATB_INSTANT)
 end
 
 function Routine_InfantryDash(side, hero)
-    -- print("Trigger footmen dash !")
+    -- log("Trigger footmen dash !")
     local creatures = GetUnits(side, CREATURE)
     for i,cr in creatures do
         local type = GetCreatureType(cr)
@@ -42,12 +42,12 @@ function Routine_InfantryDash(side, hero)
 end
 
 function Routine_CastPrayer(side, hero)
-    -- print("Trigger cast Prayer !")
+    -- log("Trigger cast Prayer !")
     HeroCast_Global(hero, SPELL_PRAYER, NO_COST)
 end
 
 function Routine_CastRandomStoneskin(side, hero)
-    -- print("Trigger random Stoneskin !")
+    -- log("Trigger random Stoneskin !")
     if CURRENT_UNIT == hero then
         HeroCast_RandomCreature(hero, SPELL_STONESKIN, FREE_MANA, side)
         if IsHuman(side) then SetATB_ID(hero, ATB_INSTANT) end
@@ -55,7 +55,7 @@ function Routine_CastRandomStoneskin(side, hero)
 end
 
 function Routine_GriffinInstantDive(side, hero)
-    -- print("Trigger instant dive !")
+    -- log("Trigger instant dive !")
     for k,v in ROUTINE_VARS.GriffinDives do
         if v == 1 then
             local found = nil
@@ -79,7 +79,7 @@ function Routine_GriffinInstantDive(side, hero)
 end
 
 function Routine_GriffinDead(side, hero, unit)
-    -- print("Trigger dead griffin unregister !")
+    -- log("Trigger dead griffin unregister !")
     if ROUTINE_VARS.GriffinDives[unit] then
         ROUTINE_VARS.GriffinDives[unit] = 0
     end
@@ -91,7 +91,7 @@ end
 -- PRESERVE
 
 function Routine_HeroMoveNext(side, hero)
-    -- print("Trigger hero play next !")
+    -- log("Trigger hero play next !")
     if CURRENT_UNIT_SIDE ~= GetUnitSide(hero) then
         local n = 15 + trunc(GetHeroLevel(side) * 0.5)
         if n > random(0, 100, COMBAT_TURN) then
@@ -102,7 +102,7 @@ function Routine_HeroMoveNext(side, hero)
 end
 
 function Routine_ResetAtbOnKillEnraged(side, hero, unit)
-    -- print("Trigger reset enraged atb !")
+    -- log("Trigger reset enraged atb !")
     if GetUnitSide(unit) ~= GetUnitSide(hero) and IsCreature(unit) then
         -- SetATB_ID(CURRENT_UNIT, ATB_NEXT)
         for i,cr in GetUnits(side, CREATURE) do
@@ -120,13 +120,13 @@ function Routine_ResetAtbOnKillEnraged(side, hero, unit)
 end
 
 function Routine_HunterRandomShoot(side, hero)
-    -- print("Trigger hunters random shoot !")
+    -- log("Trigger hunters random shoot !")
     RandomShoot_CreatureTypes(side, {CREATURE_WOOD_ELF,CREATURE_GRAND_ELF,CREATURE_SHARP_SHOOTER})
     SetATB_CreatureTypes(side, {CREATURE_WOOD_ELF,CREATURE_GRAND_ELF,CREATURE_SHARP_SHOOTER}, 0.1)
 end
 
 function Routine_MoveForwardUnits(side, hero)
-    -- print("Trigger move forward units !")
+    -- log("Trigger move forward units !")
     for i,cr in GetUnits(side, CREATURE) do
         local x,y = GetUnitPosition(cr)
         local x0 = (side == ATTACKER) and GRID_X_MIN or GRID_X_MAX
@@ -136,7 +136,7 @@ function Routine_MoveForwardUnits(side, hero)
 end
 
 function Routine_WolfDeadRevenge(side, hero, unit)
-    -- print("Trigger wolf dead revenge !")
+    -- log("Trigger wolf dead revenge !")
     if GetUnitSide(unit) == GetUnitSide(hero) and IsCreature(unit) then
         if GetCreatureType(unit) == CREATURE_WOLF then
             local x,y = GetUnitPosition(unit)
@@ -168,7 +168,7 @@ function Routine_WolfDeadRevenge(side, hero, unit)
 end
 
 function Routine_CastSummonHive(side, hero)
-    -- print("Trigger summon beehives !")
+    -- log("Trigger summon beehives !")
     local x = (side == ATTACKER) and GRID_X_MAX or GRID_X_MIN
     local y1 = GRID_Y_MIN
     local y2 = GRID_Y_MAX
@@ -185,7 +185,7 @@ function Routine_CastSummonHive(side, hero)
 end
 
 function Routine_SpriteManaLink(side, hero)
-    -- print("Trigger sprite mana link !")
+    -- log("Trigger sprite mana link !")
     if CURRENT_UNIT_SIDE == side then
         if IsCreature(CURRENT_UNIT) then
             if GetCreatureType(CURRENT_UNIT) == CREATURE_SPRITE then
@@ -210,12 +210,12 @@ function Routine_SpriteManaLink(side, hero)
 end
 
 function Routine_CastMassHaste(side, hero)
-    -- print("Trigger hero cast Mass Haste !")
+    -- log("Trigger hero cast Mass Haste !")
     HeroCast_Global(hero, SPELL_MASS_HASTE, FREE_MANA)
 end
 
 function Routine_SummonDruidStack(side, hero)
-    -- print("Trigger elder druids summoning !")
+    -- log("Trigger elder druids summoning !")
     local n = GetHeroLevel(side)
     local amount = ceil(0.4 * n * n)
     SummonCreatureStack_X(side, CREATURE_DRUID_OF_THE_COUNCIL, amount, 0)
@@ -231,14 +231,14 @@ function Routine_SummonDruidStack(side, hero)
 end
 
 function Routine_DruidsMoveNext(side, hero)
-    -- print("Trigger druids play next !")
+    -- log("Trigger druids play next !")
     if CURRENT_UNIT == hero then
         SetATB_CreatureTypes(side, {CREATURE_DRUID,CREATURE_DRUID_ELDER,CREATURE_HIGH_DRUID,CREATURE_DRUID_OF_THE_COUNCIL}, ATB_NEXT)
     end
 end
 
 function Routine_AllRegeneration(side, hero)
-    -- print("Trigger cast regeneration !")
+    -- log("Trigger cast regeneration !")
     if CURRENT_UNIT == hero then
         local limit = 5 + trunc(0.2 * GetHeroLevel(side))
         ROUTINE_VARS.HeroTurns = ROUTINE_VARS.HeroTurns + 1
@@ -255,13 +255,13 @@ end
 -- FORTRESS
 
 function Routine_BallistaMoveFirst(side, hero)
-    -- print("Trigger ballista play first !")
+    -- log("Trigger ballista play first !")
     SetATB_WarMachineType(side, WAR_MACHINE_BALLISTA, ATB_INSTANT)
     -- ShowFlyingSign("/Text/Game/Scripts/Combat/WorkshopExpert.txt", hero, 9)
 end
 
 function Routine_SpearWielderCoordination(side, hero)
-    -- print("Trigger spearwielders coordination !")
+    -- log("Trigger spearwielders coordination !")
     if CURRENT_UNIT_SIDE == side then
         if IsCreature(CURRENT_UNIT) then
             local type = GetCreatureType(CURRENT_UNIT)
@@ -275,7 +275,7 @@ function Routine_SpearWielderCoordination(side, hero)
 end
 
 function Routine_ThanesAbility(side, hero)
-    -- print("Trigger Thanes ability !")
+    -- log("Trigger Thanes ability !")
     local creatures = GetUnits(side, CREATURE)
     for i,cr in creatures do
         if GetCreatureType(cr) == CREATURE_WARLORD then
@@ -293,7 +293,7 @@ function Routine_ThanesAbility(side, hero)
 end
 
 function Routine_CastFireWalls(side, hero)
-    -- print("Trigger cast Fire walls !")
+    -- log("Trigger cast Fire walls !")
     local m = GetUnitManaPoints(hero)
     local x = 11 - 6 * side
     for _,y in {3,6,9} do
@@ -304,19 +304,19 @@ function Routine_CastFireWalls(side, hero)
 end
 
 function Routine_RunePriestsMoveFirst(side, hero)
-    -- print("Trigger rune priests play first !")
+    -- log("Trigger rune priests play first !")
     SetATB_CreatureTypes(side, {CREATURE_RUNE_MAGE,CREATURE_FLAME_MAGE,CREATURE_FLAME_KEEPER}, ATB_INSTANT)
 end
 
 function Routine_CastEarthquake(side, hero)
-    -- print("Trigger earthquake !")
+    -- log("Trigger earthquake !")
     -- HeroCast_Area(hero, SPELL_UBER_METEOR_SHOWER, FREE_MANA, x, r)
     HeroCast_Global(hero, SPELL_EARTHQUAKE, FREE_MANA)
     sleep(600)
 end
 
 function Routine_DwavenDefendOrder(side, hero)
-    -- print("Trigger defend order !")
+    -- log("Trigger defend order !")
     if CURRENT_UNIT_SIDE == side then
         if IsCreature(CURRENT_UNIT) then
             local type = GetCreatureType(CURRENT_UNIT)
@@ -338,7 +338,7 @@ end
 -- ACADEMY
 
 function Routine_RakshasasAbility(side, hero)
-    -- print("Trigger rakshasas dash !")
+    -- log("Trigger rakshasas dash !")
     local creatures = GetUnits(side, CREATURE)
     for i,cr in creatures do
         local type = GetCreatureType(cr)
@@ -350,14 +350,14 @@ function Routine_RakshasasAbility(side, hero)
 end
 
 function Routine_BallistaMoveNext(side, hero)
-    -- print("Trigger fire ballista ATB boost !")
+    -- log("Trigger fire ballista ATB boost !")
     if CURRENT_UNIT == hero then
         SetATB_WarMachineType(side, WAR_MACHINE_BALLISTA, ATB_NEXT)
     end
 end
 
 function Routine_CastMultipleArcaneCrystals(side, hero)
-    -- print("Trigger random arcane crystals !")
+    -- log("Trigger random arcane crystals !")
     local m = GetUnitManaPoints(hero)
     local n = trunc(0.11 * m)
     local x1 = 15 - 13 * side
@@ -370,18 +370,18 @@ function Routine_CastMultipleArcaneCrystals(side, hero)
 end
 
 function Routine_MagesCastMagicFist(side, hero)
-    -- print("Trigger mages magic fist !")
+    -- log("Trigger mages magic fist !")
     CreatureTypesCast_RandomTarget(side, 1-side, {CREATURE_MAGI,CREATURE_ARCH_MAGI,CREATURE_COMBAT_MAGE}, SPELL_MAGIC_FIST)
     SetATB_CreatureTypes(side, {CREATURE_MAGI,CREATURE_ARCH_MAGI,CREATURE_COMBAT_MAGE}, 0.1)
 end
 
 function Routine_CastSummonElementals(side, hero)
-    -- print("Trigger summon elementals !")
+    -- log("Trigger summon elementals !")
     HeroCast_Global(hero, SPELL_SUMMON_ELEMENTALS, FREE_MANA)
 end
 
 function Routine_TimeShift(side, hero)
-    -- print("Trigger time shift !")
+    -- log("Trigger time shift !")
     if CURRENT_UNIT == hero and COMBAT_TURN > 1 then
         local r = 40 + GetHeroLevel(side)
         if r > random(0, 100, COMBAT_TURN) then
@@ -401,12 +401,12 @@ end
 -- DUNGEON
 
 function Routine_ScoutsMoveFirst(side, hero)
-    -- print("Trigger scouts play first !")
+    -- log("Trigger scouts play first !")
     SetATB_CreatureTypes(side, {CREATURE_SCOUT,CREATURE_ASSASSIN,CREATURE_STALKER}, ATB_INSTANT)
 end
 
 function Routine_CastVampirismOnWitches(side, hero)
-    -- print("Trigger cast Vampirism !")
+    -- log("Trigger cast Vampirism !")
     local w = {}
     for i,cr in GetUnits(side, CREATURE) do
         local type = GetCreatureType(CURRENT_UNIT)
@@ -422,14 +422,14 @@ function Routine_CastVampirismOnWitches(side, hero)
 end
 
 function Routine_MinotaursMoveNext(side, hero)
-    -- print("Trigger minotaurs play next !")
+    -- log("Trigger minotaurs play next !")
     if CURRENT_UNIT == hero then
         SetATB_CreatureTypes(side, {CREATURE_MINOTAUR,CREATURE_MINOTAUR_KING,CREATURE_MINOTAUR_CAPTAIN}, ATB_NEXT)
     end
 end
 
 function Routine_RidersHydraSynergy(side, hero)
-    -- print("Trigger riders boost hydras atb !")
+    -- log("Trigger riders boost hydras atb !")
     if CURRENT_UNIT_SIDE == side then
         if IsCreature(CURRENT_UNIT) then
             local type = GetCreatureType(CURRENT_UNIT)
@@ -444,7 +444,7 @@ function Routine_RidersHydraSynergy(side, hero)
 end
 
 function Routine_HeroCastRage(side, hero)
-    -- print("Trigger hero cast rage")
+    -- log("Trigger hero cast rage")
     local enemies = GetUnits(1-side, CREATURE)
     local v = 1 + trunc(GetHeroLevel(side) * 0.05)
     local n = min(length(enemies), v)
@@ -454,7 +454,7 @@ function Routine_HeroCastRage(side, hero)
 end
 
 function Routine_SummonDeadEnnemyCreature(side, hero, unit)
-    -- print("Trigger revive enemy creature !")
+    -- log("Trigger revive enemy creature !")
     if GetUnitSide(unit) ~= side then
         local type = GetCreatureType(unit)
         local x,y = GetUnitPosition(unit)
@@ -465,7 +465,7 @@ function Routine_SummonDeadEnnemyCreature(side, hero, unit)
 end
 
 function Routine_DragonStrike(side, hero)
-    -- print("Trigger full dragon set !")
+    -- log("Trigger full dragon set !")
     local level = GetHeroLevel(side)
     local amount = 1 + trunc(0.01 * level * level)
     local n = length(GetUnits(side, CREATURE))
@@ -484,7 +484,7 @@ function Routine_DragonStrike(side, hero)
 end
 
 function Routine_RefreshMatronMana(side, hero)
-    -- print("Trigger refresh shadow witches mana !")
+    -- log("Trigger refresh shadow witches mana !")
     if CURRENT_UNIT == hero then
         for i,cr in GetUnits(side, CREATURE) do
             local type = GetCreatureType(cr)
@@ -499,7 +499,7 @@ function Routine_RefreshMatronMana(side, hero)
 end
 
 function Routine_CastRandomDeepFrost(side, hero)
-    -- print("Trigger cast deep frost !")
+    -- log("Trigger cast deep frost !")
     HeroCast_RandomCreature(hero, SPELL_DEEP_FREEZE, FREE_MANA, 1-side)
 end
 
@@ -509,7 +509,7 @@ end
 -- NECROPOLIS
 
 function Routine_SummonAndKillEnnemySkeleton(side, hero)
-    -- print("Trigger summon and kill skeleton !")
+    -- log("Trigger summon and kill skeleton !")
     local n = length(GetUnits(1-side, CREATURE))
     SummonCreatureStack_X(1-side, CREATURE_SKELETON, 1, 6)
     repeat sleep(10) until length(GetUnits(1-side, CREATURE)) == n + 1
@@ -517,7 +517,7 @@ function Routine_SummonAndKillEnnemySkeleton(side, hero)
 end
 
 function Routine_SummonZombieStack(side, hero)
-    -- print("Trigger summon zombies !")
+    -- log("Trigger summon zombies !")
     if CURRENT_UNIT == hero then
         local turns = COMBAT_TURN - ROUTINE_VARS.TurnMarker
         local n = 1 + trunc(1.5 * (GetHeroLevel(side) + turns))
@@ -529,12 +529,12 @@ function Routine_SummonZombieStack(side, hero)
 end
 
 function Routine_HealingTentMoveFirst(side, hero)
-    -- print("Trigger healing tent play first !")
+    -- log("Trigger healing tent play first !")
     SetATB_WarMachineType(side, WAR_MACHINE_FIRST_AID_TENT, ATB_INSTANT)
 end
 
 function Routine_SummonAvatarOfDeath(side, hero)
-    -- print("Trigger summon avatar of death !")
+    -- log("Trigger summon avatar of death !")
     local units = GetUnits(side, CREATURE)
     HeroCast_Global(hero, SPELL_ABILITY_AVATAR_OF_DEATH, FREE_MANA)
     sleep(100)
@@ -542,7 +542,7 @@ function Routine_SummonAvatarOfDeath(side, hero)
 end
 
 function Routine_AvatarDead(side, hero, unit)
-    -- print("Trigger mass Sorrow on Avatar of Death's death !")
+    -- log("Trigger mass Sorrow on Avatar of Death's death !")
     if unit == ROUTINE_VARS.AvatarOfDeath then
         HeroCast_AllCreatures(hero, SPELL_SORROW, FREE_MANA, 1-side)
         sleep(100)
@@ -551,12 +551,12 @@ function Routine_AvatarDead(side, hero, unit)
 end
 
 function Routine_CastMassWeakness(side, hero)
-    -- print("Trigger cast mass weakness !")
+    -- log("Trigger cast mass weakness !")
     HeroCast_Global(hero, SPELL_MASS_CURSE, FREE_MANA)
 end
 
 function Routine_CastRandomIceBolt(side, hero)
-    -- print("Trigger random Ice Bolt !")
+    -- log("Trigger random Ice Bolt !")
     if CURRENT_UNIT == hero then
         HeroCast_RandomCreature(hero, SPELL_ICE_BOLT, 1, 1-side)
         if IsHuman(side) then SetATB_ID(hero, ATB_INSTANT) end
@@ -564,7 +564,7 @@ function Routine_CastRandomIceBolt(side, hero)
 end
 
 function Routine_RaiseUndead(side, hero, unit)
-    -- print("Trigger raise undead equivalent !")
+    -- log("Trigger raise undead equivalent !")
     if GetUnitSide(unit) ~= side then
         local dead = GetCreatureType(unit)
         local type = CreatureToUndead(dead)
@@ -581,7 +581,7 @@ end
 -- INFERNO
 
 function Routine_BallistaShootUnit(side, hero)
-    -- print("Trigger fireball ballista shoot !")
+    -- log("Trigger fireball ballista shoot !")
     if CURRENT_UNIT == UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_BALLISTA' then
         SetATB_ID(CURRENT_UNIT, ATB_ZERO)
     elseif CURRENT_UNIT_SIDE ~= side then
@@ -597,7 +597,7 @@ function Routine_BallistaShootUnit(side, hero)
 end
 
 function Routine_ResetAtbOnKillHellhounds(side, hero, unit)
-    -- print("Trigger reset hellhounds atb !")
+    -- log("Trigger reset hellhounds atb !")
     if GetUnitSide(unit) ~= GetUnitSide(hero) then
         -- SetATB_ID(CURRENT_UNIT, ATB_NEXT)
         for i,cr in GetUnits(side, CREATURE) do
@@ -614,7 +614,7 @@ function Routine_ResetAtbOnKillHellhounds(side, hero, unit)
 end
 
 function Routine_BoostHeroAtbOnDeath(side, hero, unit)
-    -- print("Trigger reset hero atb !")
+    -- log("Trigger reset hero atb !")
     if GetUnitSide(unit) == GetUnitSide(hero) then
         if IsCreature(unit) then
             SetATB_ID(hero, ATB_INSTANT)
@@ -623,7 +623,7 @@ function Routine_BoostHeroAtbOnDeath(side, hero, unit)
 end
 
 function Routine_DemonicCreatureExplosion(side, hero)
-    -- print("Trigger creature explosion !")
+    -- log("Trigger creature explosion !")
     if CURRENT_UNIT_SIDE == side then
         if IsCreature(CURRENT_UNIT) then
             local id = GetCreatureType(CURRENT_UNIT)
@@ -637,7 +637,7 @@ function Routine_DemonicCreatureExplosion(side, hero)
 end
 
 function Routine_CastRandomFireball(side, hero)
-    -- print("Trigger random Fireball !")
+    -- log("Trigger random Fireball !")
     if CURRENT_UNIT == hero then
         local mana = GetUnitManaPoints(hero)
         if mana >= 3 then
@@ -657,14 +657,14 @@ function Routine_CastRandomFireball(side, hero)
 end
 
 function Routine_CastMineFields(side, hero)
-    -- print("Trigger mine fields !")
+    -- log("Trigger mine fields !")
     local x = 12 - 9 * side
     HeroCast_Area(hero, SPELL_LAND_MINE, FREE_MANA, x, 9)
     HeroCast_Area(hero, SPELL_LAND_MINE, FREE_MANA, x, 3)
 end
 
 function Routine_SummonEarthElementals(side, hero)
-    -- print("Trigger summon earth elementals !")
+    -- log("Trigger summon earth elementals !")
     if CURRENT_UNIT == hero then
         local nb = 2 + trunc(GetHeroLevel(side) * 0.4)
         for i = 1,nb do
@@ -675,7 +675,7 @@ function Routine_SummonEarthElementals(side, hero)
 end
 
 function Routine_SummonPitlords(side, hero)
-    -- print("Trigger pit lords summoning !")
+    -- log("Trigger pit lords summoning !")
     local n = 10 + GetHeroLevel(side)
     local amount = trunc(0.02 * n * n)
     -- SummonCreatureStack_X(side, 181, amount, 0)
@@ -688,22 +688,22 @@ end
 -- STRONGHOLD
 
 function Routine_CastRallingCry(side, hero)
-    -- print("Trigger ralling cry !")
+    -- log("Trigger ralling cry !")
     HeroCast_Global(hero, SPELL_WARCRY_RALLING_CRY, FREE_MANA)
 end
 
 function Routine_CastBattlecry(side, hero)
-    -- print("Trigger battlecry !")
+    -- log("Trigger battlecry !")
     HeroCast_Global(hero, SPELL_WARCRY_BATTLECRY, FREE_MANA)
 end
 
 function Routine_CastCallOfBlood(side, hero)
-    -- print("Trigger call of blood !")
+    -- log("Trigger call of blood !")
     HeroCast_TargetCreatureTypes(hero, SPELL_WARCRY_CALL_OF_BLOOD, FREE_MANA, side, {CREATURE_ORC_WARRIOR,CREATURE_ORC_SLAYER,CREATURE_ORC_WARMONGER})
 end
 
 function Routine_CountInitialGoblins(side, hero)
-    -- print("Trigger count goblins")
+    -- log("Trigger count goblins")
     local creatures = GetUnits(side, CREATURE)
     local goblins = 0
     for i,cr in creatures do
@@ -716,14 +716,14 @@ function Routine_CountInitialGoblins(side, hero)
 end
 
 function Routine_SummonGoblinStack(side, hero)
-    -- print("Trigger summon goblins !")
+    -- log("Trigger summon goblins !")
     if CURRENT_UNIT == hero then
         SummonCreatureStack(side, CREATURE_GOBLIN, ROUTINE_VARS.GoblinsTotal)
     end
 end
 
 function Routine_WatchRageLevels(side, hero)
-    -- print("Trigger watch rage levels !")
+    -- log("Trigger watch rage levels !")
     startThread(Routine_WatchRageLevelsThread, side, hero)
 end
 
@@ -748,14 +748,14 @@ function Routine_WatchRageLevelsThread(side, hero)
 end
 
 function Routine_HealingTentMoveNext(side, hero)
-    -- print("Trigger healing tent play next !")
+    -- log("Trigger healing tent play next !")
     if CURRENT_UNIT == hero then
         SetATB_WarMachineType(side, WAR_MACHINE_FIRST_AID_TENT, ATB_NEXT)
     end
 end
 
 function Routine_ShamansManaRegen(side, hero)
-    -- print("Trigger shamans mana !")
+    -- log("Trigger shamans mana !")
     if CURRENT_UNIT_SIDE == side then
         if IsCreature(CURRENT_UNIT) then
             local type = GetCreatureType(CURRENT_UNIT)
@@ -769,7 +769,7 @@ function Routine_ShamansManaRegen(side, hero)
 end
 
 function Routine_CastRandomLightningBolt(side, hero)
-    -- print("Trigger cast lightning bolt !")
+    -- log("Trigger cast lightning bolt !")
     if CURRENT_UNIT == hero then
         HeroCast_RandomCreature(hero, SPELL_LIGHTNING_BOLT, 1, 1-side)
         if IsHuman(side) then SetATB_ID(hero, ATB_INSTANT) end
@@ -895,5 +895,5 @@ function DoHeroSpeRoutine_UnitDied(side, name, id, unit)
 end
 
 
--- print("Loaded heroes-routines-combat.lua")
+-- log("Loaded heroes-routines-combat.lua")
 ROUTINES_LOADED[11] = 1

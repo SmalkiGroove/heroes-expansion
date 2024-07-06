@@ -37,7 +37,7 @@ function CheckEnableScript()
 end
 
 function FetchData(name, id)
-    print("Fetch data for hero "..name)
+    log("Fetch data for hero "..name)
     local level = GetGameVar(VarHeroLevel(name))
     local shattermagic = GetGameVar(VarHeroSkillId(name,SKILL_SHATTER_MAGIC))
     local houndmasters = GetGameVar(VarHeroSkillId(name,PERK_HOUNDMASTERS))
@@ -46,13 +46,13 @@ function FetchData(name, id)
         [SKILL_SHATTER_MAGIC] = 0 + shattermagic,
         [PERK_HOUNDMASTERS] = 0 + houndmasters,
     }
-    print("Lvl "..HERO_DATA[id].Level)
+    log("Lvl "..HERO_DATA[id].Level)
 end
 
 function Wait()
     sleep(1)
     THREAD_FINISHER = THREAD_FINISHER - 1
-    -- print("Thread finisher = "..THREAD_FINISHER)
+    -- log("Thread finisher = "..THREAD_FINISHER)
     if THREAD_FINISHER == 0 then THREAD_STATE = 1 end
 end
 
@@ -60,7 +60,7 @@ end
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 function ManageCombatPrepare()
-    -- print("$ Manage combat prepare")
+    -- log("$ Manage combat prepare")
     -- CheckEnableScript()
     if ENABLE_SCRIPT == 0 then return end
 
@@ -76,7 +76,7 @@ function ManageCombatPrepare()
 end
 
 function ManageCombatStart()
-    -- print("$ Manage combat start")
+    -- log("$ Manage combat start")
     if ENABLE_SCRIPT == 0 then return end
     startThread(GetArmySummary, ATTACKER)
     startThread(GetArmySummary, DEFENDER)
@@ -95,7 +95,7 @@ function ManageCombatStart()
 end
 
 function ManageCombatTurn(unit)
-    -- print("$ Manage combat turn")
+    -- log("$ Manage combat turn")
     if ENABLE_SCRIPT == 0 then return end
 
     if CURRENT_UNIT ~= unit then
@@ -116,7 +116,7 @@ function ManageCombatTurn(unit)
 end
 
 function ManageUnitDeath(unit)
-    -- print("$ Manage unit death")
+    -- log("$ Manage unit death")
     if ENABLE_SCRIPT == 0 then return end
 
     if ATTACKER_HERO ~= "" then
@@ -138,7 +138,7 @@ ROUTINES_LOADED = {
 }
 
 function LoadScript(path, key)
-	-- print("Loading script "..path)
+	-- log("Loading script "..path)
 	dofile(path) sleep()
 	-- repeat sleep() until ROUTINES_LOADED[key] == 1
 end

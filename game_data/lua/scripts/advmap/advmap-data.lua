@@ -64,5 +64,5 @@ SPIRITISM_SCHOOL_AFFINITY = {
 }
 
 
--- print("Loaded advmap-data.lua")
+-- log("Loaded advmap-data.lua")
 ROUTINES_LOADED[8] = 1

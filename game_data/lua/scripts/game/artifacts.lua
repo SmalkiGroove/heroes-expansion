@@ -586,5 +586,5 @@ ARTIFACT_SETS = {
 }
 
 
--- print("Loaded artifacts.lua")
+-- log("Loaded artifacts.lua")
 ROUTINES_LOADED[4] = 1

@@ -28,5 +28,5 @@ ROUTINE_VARS = {
     GoblinsTotal = 0,
 }
 
--- print("Loaded combat-data.lua")
+-- log("Loaded combat-data.lua")
 ROUTINES_LOADED[8] = 1

@@ -1,6 +1,6 @@
 
 function Routine_Houndmasters(side, hero, id, mastery)
-    -- print("Trigger Houndmasters !")
+    -- log("Trigger Houndmasters !")
     local level = GetHeroLevel(side)
     local amount = 10 + 2 * level + random(1, level, 99)
     if hero == H_IVOR then
@@ -12,7 +12,7 @@ end
 
 
 function Routine_ShatterMagic(side, hero, id, mastery)
-    -- print("Trigger Shatter Magic !")
+    -- log("Trigger Shatter Magic !")
     local mult = 0.05 + 0.05 * mastery
     local h = GetHero(1-side)
     if h then
@@ -72,5 +72,5 @@ function DoSkillRoutine_UnitDied(side, name, id, unit)
 end
 
 
--- print("Loaded skills-routines-combat.lua")
+-- log("Loaded skills-routines-combat.lua")
 ROUTINES_LOADED[12] = 1
