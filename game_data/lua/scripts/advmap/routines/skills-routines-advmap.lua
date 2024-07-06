@@ -660,9 +660,9 @@ AFTER_COMBAT_TRIGGER_SKILLS_ROUTINES = {
 
 
 function DoSkillsRoutine_Start(player, hero)
+    log("$ DoSkillsRoutine_Start - "..hero)
     for k,v in START_TRIGGER_SKILLS_ROUTINES do
         if HasHeroSkill(hero, k) then
-            log("Hero "..hero.." has starting skill "..k)
             local mastery = GetHeroSkillMastery(hero, k)
             startThread(v, player, hero, mastery)
         end
@@ -670,6 +670,7 @@ function DoSkillsRoutine_Start(player, hero)
 end
 
 function DoSkillsRoutine_Daily(player, hero)
+    log("$ DoSkillsRoutine_Daily - "..hero)
     for k,v in DAILY_TRIGGER_SKILLS_ROUTINES do
         if HasHeroSkill(hero, k) then
             local mastery = GetHeroSkillMastery(hero, k)
@@ -679,6 +680,7 @@ function DoSkillsRoutine_Daily(player, hero)
 end
 
 function DoSkillsRoutine_Weekly(player, hero)
+    log("$ DoSkillsRoutine_Weekly - "..hero)
     for k,v in WEEKLY_TRIGGER_SKILLS_ROUTINES do
         if HasHeroSkill(hero, k) then
             local mastery = GetHeroSkillMastery(hero, k)
@@ -688,6 +690,7 @@ function DoSkillsRoutine_Weekly(player, hero)
 end
 
 function DoSkillsRoutine_LevelUp(player, hero, level)
+    log("$ DoSkillsRoutine_LevelUp - "..hero)
     for k,v in LEVELUP_TRIGGER_SKILLS_ROUTINES do
         if HasHeroSkill(hero, k) then
             local mastery = GetHeroSkillMastery(hero, k)
@@ -697,6 +700,7 @@ function DoSkillsRoutine_LevelUp(player, hero, level)
 end
 
 function DoSkillsRoutine_AfterCombat(player, hero, index)
+    log("$ DoSkillsRoutine_AfterCombat - "..hero)
     for k,v in AFTER_COMBAT_TRIGGER_SKILLS_ROUTINES do
         if HasHeroSkill(hero, k) then
             local mastery = GetHeroSkillMastery(hero, k)

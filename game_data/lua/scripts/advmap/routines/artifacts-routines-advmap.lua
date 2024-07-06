@@ -272,6 +272,7 @@ AFTER_COMBAT_TRIGGER_ARTFSETS_ROUTINES = {
 
 
 function DoArtifactsRoutine_Continuous(player, hero)
+    log("$ DoArtifactsRoutine_Continuous - "..hero)
     for k,v in CONTINUOUS_TRIGGER_ARTIFACTS_ROUTINES do
         if HasArtefact(hero, k, 1) then
             startThread(v, player, hero)
@@ -285,6 +286,7 @@ function DoArtifactsRoutine_Continuous(player, hero)
 end
 
 function DoArtifactsRoutine_Daily(player, hero)
+    log("$ DoArtifactsRoutine_Daily - "..hero)
     for k,v in DAILY_TRIGGER_ARTIFACTS_ROUTINES do
         if HasArtefact(hero, k, 1) then
             startThread(v, player, hero)
@@ -298,6 +300,7 @@ function DoArtifactsRoutine_Daily(player, hero)
 end
 
 function DoArtifactsRoutine_Weekly(player, hero)
+    log("$ DoArtifactsRoutine_Weekly - "..hero)
     for k,v in WEEKLY_TRIGGER_ARTIFACTS_ROUTINES do
         if HasArtefact(hero, k, 1) then
             startThread(v, player, hero)
@@ -311,6 +314,7 @@ function DoArtifactsRoutine_Weekly(player, hero)
 end
 
 function DoArtifactsRoutine_LevelUp(player, hero, level)
+    log("$ DoArtifactsRoutine_LevelUp - "..hero)
     for k,v in LEVELUP_TRIGGER_ARTIFACTS_ROUTINES do
         if HasArtefact(hero, k, 1) then
             startThread(v, player, hero, level)
@@ -324,6 +328,7 @@ function DoArtifactsRoutine_LevelUp(player, hero, level)
 end
 
 function DoArtifactsRoutine_AfterCombat(player, hero, index)
+    log("$ DoArtifactsRoutine_AfterCombat - "..hero)
     for k,v in AFTER_COMBAT_TRIGGER_ARTIFACTS_ROUTINES do
         if HasArtefact(hero, k, 1) then
             startThread(v, player, hero, index)

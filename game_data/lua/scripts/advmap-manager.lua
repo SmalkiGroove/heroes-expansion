@@ -77,6 +77,7 @@ function WatchPlayer(player, wait)
     if wait then
         while (not IsPlayerCurrent(player)) do sleep(10) end
     end
+	log("$ WatchPlayer "..player)
     local tracker = {}
     for _,hero in GetPlayerHeroes(player) do
 		local x,y,z = GetObjectPosition(hero)
