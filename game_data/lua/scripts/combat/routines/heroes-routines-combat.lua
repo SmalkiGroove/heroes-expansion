@@ -237,6 +237,18 @@ function Routine_DruidsMoveNext(side, hero)
     end
 end
 
+function Routine_AllRegeneration(side, hero)
+    -- print("Trigger cast regeneration !")
+    if CURRENT_UNIT == hero then
+        local limit = 5 + trunc(0.2 * GetHeroLevel(side))
+        ROUTINE_VARS.HeroTurns = ROUTINE_VARS.HeroTurns + 1
+        if ROUTINE_VARS.HeroTurns == limit then
+            HeroCast_AllCreatures(hero, SPELL_REGENERATION, FREE_MANA, side)
+            SetATB_ID(hero, ATB_INSTANT)
+        end
+    end
+end
+
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -818,6 +830,7 @@ COMBAT_TURN_HERO_ROUTINES = {
     [H_JENOVA] = Routine_HeroMoveNext,
     [H_DIRAEL] = Routine_SpriteManaLink,
     [H_TIERU] = Routine_DruidsMoveNext,
+    [H_MELODIA] = Routine_AllRegeneration,
     -- fortress
     [H_KARLI] = Routine_SpearWielderCoordination,
     [H_HEDWIG] = Routine_DwavenDefendOrder,
