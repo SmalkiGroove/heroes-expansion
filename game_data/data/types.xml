@@ -1021,21 +1021,21 @@
 			<EnumEntries>
 				<Item>HERO_CLASS_NONE</Item>
 				<Item>HERO_CLASS_HAVEN_MIGHT</Item>
-				<Item>HERO_CLASS_PRESERVE_MIGHT</Item>
-				<Item>HERO_CLASS_ACADEMY_MAGIC</Item>
-				<Item>HERO_CLASS_INFERNO_MIGHT</Item>
-				<Item>HERO_CLASS_NECROPOLIS_MAGIC</Item>
-				<Item>HERO_CLASS_DUNGEON_MAGIC</Item>
-				<Item>HERO_CLASS_FORTRESS_MAGIC</Item>
-				<Item>HERO_CLASS_STRONGHOLD_MIGHT</Item>
 				<Item>HERO_CLASS_HAVEN_MAGIC</Item>
-				<Item>HERO_CLASS_PRESERVE_MAGIC</Item>
-				<Item>HERO_CLASS_FORTRESS_MIGHT</Item>
-				<Item>HERO_CLASS_ACADEMY_MIGHT</Item>
-				<Item>HERO_CLASS_DUNGEON_MIGHT</Item>
 				<Item>HERO_CLASS_NECROPOLIS_MIGHT</Item>
-				<Item>HERO_CLASS_INFERNO_MAGIC</Item>
+				<Item>HERO_CLASS_INFERNO_MIGHT</Item>
+				<Item>HERO_CLASS_FORTRESS_MIGHT</Item>
+				<Item>HERO_CLASS_FORTRESS_MAGIC</Item>
 				<Item>HERO_CLASS_STRONGHOLD_MAGIC</Item>
+				<Item>HERO_CLASS_STRONGHOLD_MIGHT</Item>
+				<Item>HERO_CLASS_PRESERVE_MIGHT</Item>
+				<Item>HERO_CLASS_PRESERVE_MAGIC</Item>
+				<Item>HERO_CLASS_NECROPOLIS_MAGIC</Item>
+				<Item>HERO_CLASS_INFERNO_MAGIC</Item>
+				<Item>HERO_CLASS_ACADEMY_MIGHT</Item>
+				<Item>HERO_CLASS_ACADEMY_MAGIC</Item>
+				<Item>HERO_CLASS_DUNGEON_MIGHT</Item>
+				<Item>HERO_CLASS_DUNGEON_MAGIC</Item>
 				<Item>HERO_CLASS_OTHER_1</Item>
 				<Item>HERO_CLASS_OTHER_2</Item>
 				<Item>HERO_CLASS_OTHER_3</Item>
@@ -37417,11 +37417,11 @@
 					<Value>1</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_PRESERVE_MIGHT</Name>
+					<Name>HERO_CLASS_HAVEN_MAGIC</Name>
 					<Value>2</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_ACADEMY_MAGIC</Name>
+					<Name>HERO_CLASS_NECROPOLIS_MIGHT</Name>
 					<Value>3</Value>
 				</Item>
 				<Item>
@@ -37429,15 +37429,15 @@
 					<Value>4</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_NECROPOLIS_MAGIC</Name>
+					<Name>HERO_CLASS_FORTRESS_MIGHT</Name>
 					<Value>5</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_DUNGEON_MAGIC</Name>
+					<Name>HERO_CLASS_FORTRESS_MAGIC</Name>
 					<Value>6</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_FORTRESS_MAGIC</Name>
+					<Name>HERO_CLASS_STRONGHOLD_MAGIC</Name>
 					<Value>7</Value>
 				</Item>
 				<Item>
@@ -37445,7 +37445,7 @@
 					<Value>8</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_HAVEN_MAGIC</Name>
+					<Name>HERO_CLASS_PRESERVE_MIGHT</Name>
 					<Value>9</Value>
 				</Item>
 				<Item>
@@ -37453,27 +37453,27 @@
 					<Value>10</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_FORTRESS_MIGHT</Name>
+					<Name>HERO_CLASS_NECROPOLIS_MAGIC</Name>
 					<Value>11</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_ACADEMY_MIGHT</Name>
+					<Name>HERO_CLASS_INFERNO_MAGIC</Name>
 					<Value>12</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_DUNGEON_MIGHT</Name>
+					<Name>HERO_CLASS_ACADEMY_MIGHT</Name>
 					<Value>13</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_NECROPOLIS_MIGHT</Name>
+					<Name>HERO_CLASS_ACADEMY_MAGIC</Name>
 					<Value>14</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_INFERNO_MAGIC</Name>
+					<Name>HERO_CLASS_DUNGEON_MIGHT</Name>
 					<Value>15</Value>
 				</Item>
 				<Item>
-					<Name>HERO_CLASS_STRONGHOLD_MAGIC</Name>
+					<Name>HERO_CLASS_DUNGEON_MAGIC</Name>
 					<Value>16</Value>
 				</Item>
 				<Item>
