@@ -1,7 +1,8 @@
 
 function GetHeroLevel(id) return HERO_DATA[id].Level end
 function GetHeroSkillMastery(id, skill) return HERO_DATA[id].Skills[skill] end
-function HasHeroEquippedArtifact(id, artifact) return HERO_DATA[id].Artifacts
+function HasHeroEquippedArtifact(id, artifact) return HERO_DATA[id].Artifacts[artifact] == 1 end
+function HasHeroActiveArtifactSet(id, artfset) return HERO_DATA[id].ArtfSets[artfset] == 1 end
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------

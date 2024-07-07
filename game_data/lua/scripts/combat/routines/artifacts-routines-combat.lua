@@ -13,41 +13,59 @@ function Routine_ArtifactMoonCharm(side, hero, unit)
 end
 
 
+COMBAT_PREPARE_ARTIFACT_ROUTINES = {
+}
+COMBAT_START_ARTIFACT_ROUTINES = {
+}
+COMBAT_TURN_ARTIFACT_ROUTINES = {
+}
+UNIT_DIED_ARTIFACT_ROUTINES = {
+    [ARTIFACT_MOON_CHARM] = Routine_ArtifactMoonCharm,
+}
+
 COMBAT_PREPARE_ARTFSET_ROUTINES = {
 }
-
 COMBAT_START_ARTFSET_ROUTINES = {
 }
-
 COMBAT_TURN_ARTFSET_ROUTINES = {
 }
-
 UNIT_DIED_ARTFSET_ROUTINES = {
-    [ARTIFACT_MOON_CHARM] = Routine_ArtifactMoonCharm,
 }
 
 
 function DoArtifactRoutine_CombatPrepare(side, name, id)
+    for a,routine in COMBAT_PREPARE_ARTIFACT_ROUTINES do
+        if HasHeroEquippedArtifact(side, a) then routine(side, id) end
+    end
     for a,routine in COMBAT_PREPARE_ARTFSET_ROUTINES do
-        
+        if HasHeroActiveArtifactSet(side, a) then routine(side, id) end
     end
 end
 
 function DoArtifactRoutine_CombatStart(side, name, id)
+    for a,routine in COMBAT_START_ARTIFACT_ROUTINES do
+        if HasHeroEquippedArtifact(side, a) then routine(side, id) end
+    end
     for a,routine in COMBAT_START_ARTFSET_ROUTINES do
-        
+        if HasHeroActiveArtifactSet(side, a) then routine(side, id) end
     end
 end
 
 function DoArtifactRoutine_CombatTurn(side, name, id)
+    for a,routine in COMBAT_TURN_ARTIFACT_ROUTINES do
+        if HasHeroEquippedArtifact(side, a) then routine(side, id) end
+    end
     for a,routine in COMBAT_TURN_ARTFSET_ROUTINES do
-        
+        if HasHeroActiveArtifactSet(side, a) then routine(side, id) end
     end
 end
 
 function DoArtifactRoutine_UnitDied(side, name, id, unit)
+    for a,routine in UNIT_DIED_ARTIFACT_ROUTINES do
+        if HasHeroEquippedArtifact(side, a) then routine(side, id, unit) end
+    end
     for a,routine in UNIT_DIED_ARTFSET_ROUTINES do
-        
+        if HasHeroActiveArtifactSet(side, a) then routine(side, id, unit) end
     end
 end
 
