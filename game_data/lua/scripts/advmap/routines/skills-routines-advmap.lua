@@ -222,7 +222,7 @@ function Routine_GearUp(player, hero, mastery)
                 insert(minors, a)
             end
         end
-        local artifact = minors[random(0, length(minors)-1, TURN)]
+        local artifact = minors[random(1, length(minors), TURN)]
         GiveArtifact(hero, artifact)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_GEAR_UP] = 1
     end
@@ -238,7 +238,7 @@ function Routine_HeroesLegacy(player, hero, mastery)
                 insert(majors, a)
             end
         end
-        local artifact = majors[random(0, length(majors)-1, TURN)]
+        local artifact = majors[random(1, length(majors), TURN)]
         GiveArtifact(hero, artifact)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_HEROES_LEGACY] = 1
     end
@@ -254,7 +254,7 @@ function Routine_Mythology(player, hero, mastery)
                 insert(relics, a)
             end
         end
-        local artifact = relics[random(0, length(relics)-1, TURN)]
+        local artifact = relics[random(1, length(relics), TURN)]
         GiveArtifact(hero, artifact)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_MYTHOLOGY] = 1
     end

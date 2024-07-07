@@ -56,7 +56,7 @@ function contains(array, sample)
 end
 
 function insert(array, sample)
-	local index = length(array)
+	local index = length(array) + 1
 	array[index] = sample
 end
 

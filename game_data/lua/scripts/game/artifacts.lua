@@ -28,8 +28,8 @@ ARTIFACT_BOOTS_OF_THE_SWIFT_JOUNREY = 24            -- more movement on land / r
 ARTIFACT_GOLDEN_HORSESHOE = 25                      -- /
 ARTIFACT_BOOTS_OF_THE_OPEN_ROAD = 26                -- no terrain penalties
 ARTIFACT_BOOTS_OF_INTERFERENCE = 27                 -- magic resistance
-ARTIFACT_ENDLESS_SACK_OF_GOLD = 28                  -- 1000 golds per day
-ARTIFACT_ENDLESS_POUCH_OF_GOLD = 29                 -- 250 golds per day
+ARTIFACT_ENDLESS_SACK_OF_GOLD = 28                  -- 1000 golds per day / + per level **
+ARTIFACT_ENDLESS_POUCH_OF_GOLD = 29                 -- 250 golds per day / + per level **
 ARTIFACT_ANGEL_WINGS = 30                           -- fly over terrain
 ARTIFACT_CAPE_OF_KINGS = 31                         -- governance bonus **
 ARTIFACT_PHOENIX_FEATHER_CAPE = 32                  -- fire spells damage
@@ -55,10 +55,10 @@ ARTIFACT_HELM_OF_THE_DWARVEN_KINGS = 51             -- immunity to frenzy
 ARTIFACT_MAGIC_SCROLL_OF_SPELL = 52                 -- grants random spell
 ARTIFACT_GRAAL = 53                                 -- GRAIL
 ARTIFACT_BOOTS_OF_LEVITATION = 54                   -- hero can walk on water
-ARTIFACT_HELM_OF_THE_LICH = 55                      -- 
+ARTIFACT_HELM_OF_THE_LICH = 55                      -- /
 ARTIFACT_ARMOR_OF_VALOR = 56                        -- /
 ARTIFACT_BOOTS_OF_SWIFTNESS = 57                    -- creatures have +1 speed
-ARTIFACT_MOONBLADE = 58                             -- 
+ARTIFACT_MOONBLADE = 58                             -- /
 ARTIFACT_WAR_HORN = 59                              -- creatures have +10% initiative
 ARTIFACT_BAND_OF_CONJURER = 60                      -- hero learns summon elem and +4 sp
 ARTIFACT_EMERALD_SLIPPERS = 61                      -- earth spells damage
@@ -155,7 +155,7 @@ ARTIFACT_151 = 151                                  --
 ARTIFACT_COLLAR_OF_PRIMAL_RAGE = 152                -- 
 ARTIFACT_CENTAUR_CROSSBOW = 153                     -- 
 ARTIFACT_DEADWOOD_STAFF = 154                       -- 
-ARTIFACT_DEATH_KNIGHT_BOOTS = 155                   -- 
+ARTIFACT_DEATH_KNIGHT_BOOTS = 155                   -- gain experience and movement points after battle **
 ARTIFACT_BARBARIAN_CUIRASS = 156                    -- 
 ARTIFACT_HARPY_BOOTS = 157                          -- 
 ARTIFACT_PALACE_SHOES = 158                         -- 
@@ -167,7 +167,7 @@ ARTIFACT_SHANTIRI_MOON_DISC = 163                   --
 ARTIFACT_CLOAK_OF_DARKNESS = 164                    -- enemy creatures have -1 luck
 ARTIFACT_SHANTIRI_BREASTPLATE = 165                 -- immunity to earthquake
 ARTIFACT_SHIELD_OF_THE_WOLF = 166                   -- /
-ARTIFACT_HELM_OF_THE_WARMAGE = 167                  -- 
+ARTIFACT_HELM_OF_THE_WARMAGE = 167                  -- learn new spell on level up **
 ARTIFACT_CELESTIAL_JUSTICAR_HELMET = 168            -- 
 ARTIFACT_RING_OF_STRENGTH = 169                     -- creatures have +3 hp
 ARTIFACT_SPEAR_OF_THE_FROST_LORD = 170              -- 
@@ -183,10 +183,10 @@ ARTIFACT_WILL_OF_URGASH = 179                       -- /
 ARTIFACT_MOONLIGHT_BAND = 180                       -- 
 ARTIFACT_BLOOD_CRYSTAL = 181                        -- 
 ARTIFACT_RANGERS_CAPE = 182                         -- 
-ARTIFACT_MOON_CHARM = 183                           -- 
+ARTIFACT_MOON_CHARM = 183                           -- the first friendly stack that dies in combat revives **
 ARTIFACT_FORGOTTEN_RING = 184                       -- 
 ARTIFACT_FROZEN_HEART = 185                         -- 
-ARTIFACT_MOONLIGHT_COAT = 186                       -- 
+ARTIFACT_MOONLIGHT_COAT = 186                       -- reduce hero spell cost by 20%
 ARTIFACT_DRAGONSBANE = 187                          -- 
 ARTIFACT_CUIRASS_OF_THE_STAG = 188                  -- /
 ARTIFACT_WRAPS_OF_THE_OWL = 189                     -- /
@@ -441,7 +441,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_CLOAK_OF_DARKNESS]             = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_SHOULDERS, special=0},
     [ARTIFACT_SHANTIRI_BREASTPLATE]          = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_BODY, special=1},
     [ARTIFACT_SHIELD_OF_THE_WOLF]            = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_LEFTHAND, special=0},
-    [ARTIFACT_HELM_OF_THE_WARMAGE]           = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_HEAD, special=0},
+    [ARTIFACT_HELM_OF_THE_WARMAGE]           = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_HEAD, special=0},
     [ARTIFACT_CELESTIAL_JUSTICAR_HELMET]     = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_HEAD, special=0},
     [ARTIFACT_RING_OF_STRENGTH]              = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RING, special=0},
     [ARTIFACT_SPEAR_OF_THE_FROST_LORD]       = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},

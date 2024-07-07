@@ -54,8 +54,8 @@ function Routine_ArtifactBootsOfSwiftJourney(player, hero)
     end
 end
 
-function Routine_BackpackOfOpenRoad(player, hero, level)
-    log("$ Routine_BackpackOfOpenRoad")
+function Routine_ArtifactBackpackOfOpenRoad(player, hero, level)
+    log("$ Routine_ArtifactBackpackOfOpenRoad")
     ChangeHeroStat(hero, STAT_MOVE_POINTS, 9999)
 end
 
@@ -87,22 +87,29 @@ function Routine_ArtifactSentinelsBoots(player, hero, combatIndex)
     ChangeHeroStat(hero, STAT_MOVE_POINTS, 500)
 end
 
-function Routine_EldenaRedScarf(player, hero)
-    log("$ Routine_EldenaRedScarf")
+function Routine_ArtifactDeathknightBoots(player, hero, combatIndex)
+    log("$ Routine_ArtifactDeathknightBoots")
+    local value = trunc(0.1 * GetArmyStrength(combatIndex, 0))
+    ChangeHeroStat(hero, STAT_MOVE_POINTS, value)
+    ChangeHeroStat(hero, STAT_EXPERIENCE, value)
+end
+
+function Routine_ArtifactEldenaRedScarf(player, hero)
+    log("$ Routine_ArtifactEldenaRedScarf")
     local nb = 5
     for k = 1,WEEKS,4 do nb = 2 * nb end
     AddHeroCreatureType(player, hero, HEROES[hero].faction, 1, nb)
 end
 
-function Routine_EldenaRedCoat(player, hero)
-    log("$ Routine_EldenaRedCoat")
+function Routine_ArtifactEldenaRedCoat(player, hero)
+    log("$ Routine_ArtifactEldenaRedCoat")
     local nb = 4
     for k = 1,WEEKS,4 do nb = 2 * nb end
     AddHeroCreatureType(player, hero, HEROES[hero].faction, 2, nb)
 end
 
-function Routine_EldenaCirclet(player, hero)
-    log("$ Routine_EldenaCirclet")
+function Routine_ArtifactEldenaCirclet(player, hero)
+    log("$ Routine_ArtifactEldenaCirclet")
     local nb = 3
     for k = 1,WEEKS,4 do nb = 2 * nb end
     AddHeroCreatureType(player, hero, HEROES[hero].faction, 3, nb)
@@ -117,6 +124,12 @@ end
 function Routine_ArtifactRunicWar(player, hero, combatIndex)
     log("$ Routine_ArtifactRunicWar")
     ChangeHeroStat(hero, STAT_MANA_POINTS, 25)
+end
+
+function Routine_ArtifactHelmOfWarmage(player, hero, level)
+    log("$ Routine_ArtifactHelmOfWarmage")
+    local maxtier = min(2 + trunc(0.2 * level), 5)
+    TeachHeroRandomSpell(player, hero, SPELL_SCHOOL_ANY, maxtier)
 end
 
 function Routine_ArtifactVikingHatchet(player, hero, combatIndex)
@@ -218,7 +231,7 @@ function Routine_ArtfsetVizir(player, hero, combatIndex)
     for artifact,data in ARTIFACTS_DATA do
         if data.special == 0 and data.class == class then insert(pool, a) end
     end
-    local artefact = pool[random(0, length(pool)-1, value)]
+    local artefact = pool[random(1, length(pool), value)]
     GiveArtifact(hero, artefact)
 end
 
@@ -237,17 +250,19 @@ WEEKLY_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_HORN_OF_PLENTY] = Routine_ArtifactHornOfPlenty,
 }
 LEVELUP_TRIGGER_ARTIFACTS_ROUTINES = {
-    [ARTIFACT_BACKPACK_OF_THE_OPEN_ROAD] = Routine_BackpackOfOpenRoad,
+    [ARTIFACT_BACKPACK_OF_THE_OPEN_ROAD] = Routine_ArtifactBackpackOfOpenRoad,
     [ARTIFACT_SANDROS_CLOAK] = Routine_ArtifactGreatLich,
-    [ARTIFACT_ELDENAS_RED_SCARF] = Routine_EldenaRedScarf,
-    [ARTIFACT_ELDENAS_RED_COAT] = Routine_EldenaRedCoat,
-    [ARTIFACT_ELDENAS_CIRCLET] = Routine_EldenaCirclet,
+    [ARTIFACT_HELM_OF_THE_WARMAGE] = Routine_ArtifactHelmOfWarmage,
+    [ARTIFACT_ELDENAS_RED_SCARF] = Routine_ArtifactEldenaRedScarf,
+    [ARTIFACT_ELDENAS_RED_COAT] = Routine_ArtifactEldenaRedCoat,
+    [ARTIFACT_ELDENAS_CIRCLET] = Routine_ArtifactEldenaCirclet,
 }
 AFTER_COMBAT_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_BOOTS_OF_THE_SWIFT_JOUNREY] = Routine_ArtifactBootsOfSwiftJourneyCancel,
     [ARTIFACT_BEGINNER_MAGIC_STICK] = Routine_ArtifactBeginnerMagicStick,
     [ARTIFACT_RUNIC_WAR_AXE] = Routine_ArtifactRunicWar,
     [ARTIFACT_RUNIC_WAR_HARNESS] = Routine_ArtifactRunicWar,
+    [ARTIFACT_DEATH_KNIGHT_BOOTS] = Routine_ArtifactDeathknightBoots,
     [ARTIFACT_VIKING_HATCHET] = Routine_ArtifactVikingHatchet,
     [ARTIFACT_VIKING_SHIELD] = Routine_ArtifactVikingShield,
 }
@@ -272,7 +287,7 @@ AFTER_COMBAT_TRIGGER_ARTFSETS_ROUTINES = {
 
 
 function DoArtifactsRoutine_Continuous(player, hero)
-    log("$ DoArtifactsRoutine_Continuous - "..hero)
+    -- log("$ DoArtifactsRoutine_Continuous - "..hero)
     for k,v in CONTINUOUS_TRIGGER_ARTIFACTS_ROUTINES do
         if HasArtefact(hero, k, 1) then
             startThread(v, player, hero)

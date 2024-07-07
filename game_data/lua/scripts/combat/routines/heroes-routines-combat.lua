@@ -455,7 +455,7 @@ end
 
 function Routine_SummonDeadEnnemyCreature(side, hero, unit)
     -- log("Trigger revive enemy creature !")
-    if GetUnitSide(unit) ~= side then
+    if GetUnitSide(unit) ~= side and ROUTINE_VARS.InitialCounts[unit] then
         local type = GetCreatureType(unit)
         local x,y = GetUnitPosition(unit)
         local p = 10 + GetHeroLevel(side)
@@ -565,7 +565,7 @@ end
 
 function Routine_RaiseUndead(side, hero, unit)
     -- log("Trigger raise undead equivalent !")
-    if GetUnitSide(unit) ~= side then
+    if GetUnitSide(unit) ~= side and ROUTINE_VARS.InitialCounts[unit] then
         local dead = GetCreatureType(unit)
         local type = CreatureToUndead(dead)
         local x,y = GetUnitPosition(unit)

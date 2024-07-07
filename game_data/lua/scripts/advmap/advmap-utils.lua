@@ -265,24 +265,25 @@ function TeachHeroRandomSpell(player, hero, school, maxtier)
 	if school == SPELL_SCHOOL_ANY then
 		for tier = 1,maxtier do
 			for _,spell in SPELLS_BY_TIER[tier] do
-				insert(spells, spell)
+				if not KnowHeroSpell(hero, spell) then insert(spells, spell) end
 			end
 		end
 	else
 		local last = 3 * (maxtier - 1)
-		log("Can learn spell up to "..SPELLS_BY_SCHOOL[school][last])
+		-- log("Can learn spell up to "..SPELLS_BY_SCHOOL[school][last])
 		for i = 1,last do
-			insert(spells, SPELLS_BY_SCHOOL[school][i])
+			local spell = SPELLS_BY_SCHOOL[school][i]
+			if not KnowHeroSpell(hero, spell) then insert(spells, spell) end
 		end
 	end
 	local nb = length(spells)
-	local spell = SPELL_NONE
-	local tries = 5
-	repeat
-		tries = tries - 1
-		spell = spells[random(0, nb-1, TURN-school)]
-	until tries == 0 or not KnowHeroSpell(hero, spell)
-	if tries ~= 0 then
+	if nb == 0 then
+		return
+	elseif nb == 1 then
+		TeachHeroSpell(hero, spells[1])
+		-- ShowFlyingSign("/Text/Game/Scripts/LearnSpell.txt", hero, player, FLYING_SIGN_TIME)
+	else
+		local spell = spells[random(1, nb, TURN-school)]
 		TeachHeroSpell(hero, spell)
 		-- ShowFlyingSign("/Text/Game/Scripts/LearnSpell.txt", hero, player, FLYING_SIGN_TIME)
 	end
@@ -292,22 +293,24 @@ function TeachHeroRandomSpellTier(player, hero, school, tier)
 	log("$ TeachHeroRandomSpellTier")
 	local spells = {}
 	if school == SPELL_SCHOOL_ANY then
-		spells = SPELLS_BY_TIER[tier]
+		for _,spell in SPELLS_BY_TIER[tier] do
+			if not KnowHeroSpell(hero, spell) then insert(spells, spell) end
+		end
 	else
 		for _,spell in SPELLS_BY_TIER[tier] do
 			if contains(SPELLS_BY_SCHOOL[school], spell) then
-				insert(spells, spell)
+				if not KnowHeroSpell(hero, spell) then insert(spells, spell) end
 			end
 		end
 	end
 	local nb = length(spells)
-	local spell = SPELL_NONE
-	local tries = 5
-	repeat
-		tries = tries - 1
-		spell = spells[random(0, nb-1, TURN-school)]
-	until tries == 0 or not KnowHeroSpell(hero, spell)
-	if tries ~= 0 then
+	if nb == 0 then
+		return
+	elseif nb == 1 then
+		TeachHeroSpell(hero, spells[1])
+		-- ShowFlyingSign("/Text/Game/Scripts/LearnSpell.txt", hero, player, FLYING_SIGN_TIME)
+	else
+		local spell = spells[random(1, nb, TURN-school)]
 		TeachHeroSpell(hero, spell)
 		-- ShowFlyingSign("/Text/Game/Scripts/LearnSpell.txt", hero, player, FLYING_SIGN_TIME)
 	end

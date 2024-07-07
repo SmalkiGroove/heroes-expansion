@@ -15,11 +15,13 @@ HERO_DATA = {
     [ATTACKER] = {
         Level = 1,
         Skills = {},
+        Artifacts = {},
         ArtfSets = {},
     },
     [DEFENDER] = {
         Level = 1,
         Skills = {},
+        Artifacts = {},
         ArtfSets = {},
     }
 }

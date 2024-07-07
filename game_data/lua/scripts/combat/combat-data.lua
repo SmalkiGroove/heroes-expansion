@@ -26,6 +26,7 @@ ROUTINE_VARS = {
     Incendiary = nil,
     AtbBoosted = {},
     GoblinsTotal = 0,
+    MoonCharm = nil,
 }
 
 -- log("Loaded combat-data.lua")

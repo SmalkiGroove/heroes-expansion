@@ -78,6 +78,7 @@ function WatchPlayer(player, wait)
         while (not IsPlayerCurrent(player)) do sleep(10) end
     end
 	sleep(10)
+	log("$ WatchPlayer "..player)
     local tracker = {}
     for _,hero in GetPlayerHeroes(player) do
 		local x,y,z = GetObjectPosition(hero)
@@ -90,7 +91,6 @@ function WatchPlayer(player, wait)
     end
     while IsPlayerCurrent(player) do
 		for _,hero in GetPlayerHeroes(player) do
-			log("$ WatchPlayer "..player)
             ScanHeroArtifacts(hero)
 			if tracker[hero].track then
 				local mvp = GetHeroStat(hero, STAT_MOVE_POINTS)
