@@ -40,15 +40,25 @@ end
 
 function FetchData(name, id)
     log("Fetch data for hero "..name)
-    local level = GetGameVar(VarHeroLevel(name))
-    HERO_DATA[id].Level = 0 + level
-    HERO_DATA[id].Skills[SKILL_SHATTER_MAGIC] = 0 + GetGameVar(VarHeroSkillId(name,SKILL_SHATTER_MAGIC))
-    HERO_DATA[id].Skills[PERK_HOUNDMASTERS] = 0 + GetGameVar(VarHeroSkillId(name,PERK_HOUNDMASTERS))
-    HERO_DATA[id].Artifacts[ARTIFACT_SENTINELS_BLADE] = 0 + GetGameVar(VarHeroArtifactId(name,ARTIFACT_SENTINELS_BLADE))
-    HERO_DATA[id].Artifacts[ARTIFACT_MOON_CHARM] = 0 + GetGameVar(VarHeroArtifactId(name,ARTIFACT_MOON_CHARM))
+
+    local temp = GetGameVar(VarHeroLevel(name))
+    HERO_DATA[id].Level = 0 + temp
+
+    temp = GetGameVar(VarHeroSkillId(name,SKILL_SHATTER_MAGIC))
+    HERO_DATA[id].Skills[SKILL_SHATTER_MAGIC] = 0 + temp
+    temp = GetGameVar(VarHeroSkillId(name,PERK_HOUNDMASTERS))
+    HERO_DATA[id].Skills[PERK_HOUNDMASTERS] = 0 + temp
+
+    temp = GetGameVar(VarHeroArtifactId(name,ARTIFACT_SENTINELS_BLADE))
+    HERO_DATA[id].Artifacts[ARTIFACT_SENTINELS_BLADE] = 0 + temp
+    temp = GetGameVar(VarHeroArtifactId(name,ARTIFACT_MOON_CHARM))
+    HERO_DATA[id].Artifacts[ARTIFACT_MOON_CHARM] = 0 + temp
+
     for set = ARTFSET_NONE,ARTFSET_ACTIVABLES_COUNT do
-        HERO_DATA[id].ArtfSets[set] = 0 + GetGameVar(VarHeroArtfsetId(name,set))
+        temp = GetGameVar(VarHeroArtfsetId(name,set))
+        HERO_DATA[id].ArtfSets[set] = 0 + temp
     end
+
     log("Lvl "..HERO_DATA[id].Level)
 end
 

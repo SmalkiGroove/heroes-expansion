@@ -36,7 +36,7 @@ function Routine_InfantryDash(side, hero)
         local type = GetCreatureType(cr)
         if type == CREATURE_FOOTMAN or type == CREATURE_SWORDSMAN or type == CREATURE_VINDICATOR then
             UseCombatAbility(cr, SPELL_ABILITY_DASH)
-            SetATB_ID(cr, ATB_HALF)
+            SetATB_ID(cr, 0.1)
         end
     end
 end
