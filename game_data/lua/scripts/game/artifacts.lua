@@ -101,7 +101,7 @@ ARTIFACT_SACRED_SEED = 97                           --
 ARTIFACT_FORTUNE_PICKAXE = 98                       -- 
 ARTIFACT_CURSED_DICES = 99                          -- enemy creatures have -2 luck
 ARTIFACT_REGAL_ARMOUR = 100                         -- 
-ARTIFACT_CROWN_OF_THE_FROST_LORD = 101              -- 
+ARTIFACT_CROWN_OF_THE_FROST_LORD = 101              -- reduce frost spells mana cost by half
 ARTIFACT_ALTAR_OF_ELEMENTS_SHARD = 102	            -- 
 ARTIFACT_ELDENAS_RED_SCARF = 103                    -- level up grants t1 creatures **
 ARTIFACT_ELDENAS_CIRCLET = 104                      -- level up grants t3 creatures **
@@ -112,10 +112,10 @@ ARTIFACT_ELDENAS_RED_COAT = 108                     -- level up grants t2 creatu
 ARTIFACT_RING_OF_LIFE = 109                         -- 
 ARTIFACT_STEADFAST_SHIELD = 110                     -- creatures have +1 hp
 ARTIFACT_VIKING_SHIELD = 111                        -- gain wood/ore after battles **
-ARTIFACT_FORTUNE_BAND_OF_THE_SAINT = 112            -- 
+ARTIFACT_FORTUNE_BAND_OF_THE_SAINT = 112            -- reduce mana cost by 1
 ARTIFACT_SENTINELS_BRACER = 113                     -- /
 ARTIFACT_ANKH_OF_THE_SAINT = 114                    -- 
-ARTIFACT_CLOAK_OF_THE_SAINT = 115                   -- 
+ARTIFACT_CLOAK_OF_THE_SAINT = 115                   -- immunity to plague
 ARTIFACT_GENJIS_HAT = 116                           -- 
 ARTIFACT_GENJIS_VEST = 117                          -- 
 ARTIFACT_GENJIS_SANDALS = 118                       -- 
@@ -124,7 +124,7 @@ ARTIFACT_SENTINELS_HELM = 120                       -- gain battle boost on leve
 ARTIFACT_SENTINELS_BOOTS = 121                      -- gain movement and morale after battle with no loss **
 ARTIFACT_SENTINELS_SHIELD = 122                     -- /
 ARTIFACT_OBSIDIAN_ARMOR = 123                       -- immunity to armaggeddon
-ARTIFACT_ELRATHS_DIVINE_SHIELD = 124                -- 
+ARTIFACT_ELRATHS_DIVINE_SHIELD = 124                -- reduce magic damage taken from all elements
 ARTIFACT_ROD_OF_TORMENT = 125                       -- enemy creatures have -2 morale
 ARTIFACT_CODEX_OF_THE_SAINT = 126                   -- 
 ARTIFACT_VIZIRS_CAP = 127                           -- 
@@ -140,7 +140,7 @@ ARTIFACT_PHOENIX_FEATHER = 136                      --
 ARTIFACT_POTION_OF_MANA = 137	                    -- 
 ARTIFACT_POTION_OF_STAMINA = 138		            -- 
 ARTIFACT_POTION_OF_EXPERIENCE = 139                 -- 
-ARTIFACT_SYLVAN_AMULET = 140                        -- immunity to curse of the netherworld
+ARTIFACT_SYLVAN_AMULET = 140                        -- reduce mana cost of nature spells
 ARTIFACT_SHADOW_MASK = 141                          -- /
 ARTIFACT_BARBARIAN_HELMET = 142                     -- 
 ARTIFACT_SKULL_MASK = 143                           -- 
@@ -151,7 +151,7 @@ ARTIFACT_SHADOW_BLADE = 147                         -- /
 ARTIFACT_SHADOWSTEP_SHOES = 148                     -- /
 ARTIFACT_RANGERS_CUIRASS = 149                      -- 
 ARTIFACT_MAGISTERS_SANDALS = 150                    -- 
-ARTIFACT_151 = 151                                  -- 
+ARTIFACT_BLAZING_SPELLBOOK = 151                    -- reduce mana cost of fire spells
 ARTIFACT_COLLAR_OF_PRIMAL_RAGE = 152                -- 
 ARTIFACT_CENTAUR_CROSSBOW = 153                     -- 
 ARTIFACT_DEADWOOD_STAFF = 154                       -- 
@@ -180,7 +180,7 @@ ARTIFACT_CRIMSON_SCYTHE = 176                       -- enemy creatures have -1 m
 ARTIFACT_PIRATE_SMASHER = 177                       -- 
 ARTIFACT_ELRATHS_UNITY = 178                        -- /
 ARTIFACT_WILL_OF_URGASH = 179                       -- /
-ARTIFACT_MOONLIGHT_BAND = 180                       -- 
+ARTIFACT_MOONLIGHT_BAND = 180                       -- hero has +2 initiative / immunity to curse of the netherworld
 ARTIFACT_BLOOD_CRYSTAL = 181                        -- 
 ARTIFACT_RANGERS_CAPE = 182                         -- 
 ARTIFACT_MOON_CHARM = 183                           -- the first friendly stack that dies in combat revives **
@@ -425,7 +425,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_SHADOWSTEP_SHOES]              = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
     [ARTIFACT_RANGERS_CUIRASS]               = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_BODY, special=0},
     [ARTIFACT_MAGISTERS_SANDALS]             = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
-    [ARTIFACT_151]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_BACKPACK, special=1},
+    [ARTIFACT_BLAZING_SPELLBOOK]             = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEFTHAND, special=0},
     [ARTIFACT_COLLAR_OF_PRIMAL_RAGE]         = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_NECK, special=0},
     [ARTIFACT_CENTAUR_CROSSBOW]              = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
     [ARTIFACT_DEADWOOD_STAFF]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
