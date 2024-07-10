@@ -1468,7 +1468,7 @@
 				<AIValue>30000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
-					<Attack>5</Attack>
+					<Attack>4</Attack>
 					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
@@ -4523,8 +4523,8 @@
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
-					<Knowledge>1</Knowledge>
-					<SpellPower>1</SpellPower>
+					<Knowledge>2</Knowledge>
+					<SpellPower>2</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
@@ -4592,16 +4592,16 @@
 				<Type>ARTF_CLASS_RELIC</Type>
 				<Slot>NECK</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/MoonCharm.xdb#xpointer(/Texture)"/>
-				<CostOfGold>64000</CostOfGold>
-				<AIValue>21000</AIValue>
+				<CostOfGold>20000</CostOfGold>
+				<AIValue>30000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
-					<Knowledge>6</Knowledge>
+					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
-					<Morale>0</Morale>
-					<Luck>0</Luck>
+					<Morale>1</Morale>
+					<Luck>1</Luck>
 				</HeroStatsModif>
 				<ArtifactShared href="/MapObjects/Artifacts/MoonCharm.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
@@ -4664,15 +4664,15 @@
 				<NameFileRef href="/Text/Game/Artifacts/MoonlightCoat/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/MoonlightCoat/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MINOR</Type>
+				<Type>ARTF_CLASS_RELIC</Type>
 				<Slot>CHEST</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/MoonlightCoat.xdb#xpointer(/Texture)"/>
-				<CostOfGold>8000</CostOfGold>
-				<AIValue>4000</AIValue>
+				<CostOfGold>20000</CostOfGold>
+				<AIValue>30000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>0</Defence>
+					<Defence>3</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
