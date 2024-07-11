@@ -57,7 +57,7 @@ ARTIFACT_GRAAL = 53                                 -- GRAIL
 ARTIFACT_BOOTS_OF_LEVITATION = 54                   -- hero can walk on water
 ARTIFACT_HELM_OF_THE_LICH = 55                      -- /
 ARTIFACT_ARMOR_OF_VALOR = 56                        -- /
-ARTIFACT_BOOTS_OF_SWIFTNESS = 57                    -- creatures have +1 speed
+ARTIFACT_BOOTS_OF_SWIFTNESS = 57                    -- creatures have +2 initiative and speed
 ARTIFACT_MOONBLADE = 58                             -- hero has +1 initiative
 ARTIFACT_WAR_HORN = 59                              -- creatures have +10% initiative
 ARTIFACT_BAND_OF_CONJURER = 60                      -- hero learns summon elem and +4 sp
@@ -65,7 +65,7 @@ ARTIFACT_EMERALD_SLIPPERS = 61                      -- earth spells damage
 ARTIFACT_CLOAK_OF_SYLANNA = 62                      -- reduce enemy earth spells
 ARTIFACT_CURSED_RING = 63                           -- enemy creatures have -1 luck
 ARTIFACT_TUNIC_OF_CARVED_FLESH = 64                 -- 
-ARTIFACT_RING_OF_CAUTION = 65                       -- creatures have -1 speed
+ARTIFACT_RING_OF_CAUTION = 65                       -- hero has -2 initiative
 ARTIFACT_HELM_OF_CHAOS = 66                         -- magic resistance
 ARTIFACT_PENDANT_OF_CONFLUX = 67                    -- absorb half enemy mana spent
 ARTIFACT_SANDALS_OF_THE_BLESSED = 68                -- /
@@ -110,7 +110,7 @@ ARTIFACT_NECKLACE_OF_THE_BLOODY_CLAW = 106          --
 ARTIFACT_RING_OF_CELERITY = 107                     -- hero has +2 initiative
 ARTIFACT_ELDENAS_RED_COAT = 108                     -- level up grants t2 creatures **
 ARTIFACT_RING_OF_LIFE = 109                         -- 
-ARTIFACT_STEADFAST_SHIELD = 110                     -- creatures have +1 hp
+ARTIFACT_STEADFAST_SHIELD = 110                     -- /
 ARTIFACT_VIKING_SHIELD = 111                        -- gain wood/ore after battles **
 ARTIFACT_FORTUNE_BAND_OF_THE_SAINT = 112            -- reduce mana cost by 1
 ARTIFACT_SENTINELS_BRACER = 113                     -- /
@@ -128,10 +128,10 @@ ARTIFACT_ELRATHS_DIVINE_SHIELD = 124                -- reduce magic damage taken
 ARTIFACT_ROD_OF_TORMENT = 125                       -- enemy creatures have -2 morale
 ARTIFACT_CODEX_OF_THE_SAINT = 126                   -- 
 ARTIFACT_VIZIRS_CAP = 127                           -- 
-ARTIFACT_PLUNDERED_VEST = 128                       -- 
+ARTIFACT_PLUNDERED_VEST = 128                       -- creatures have +1 hp
 ARTIFACT_AVENGER_BOW = 129                          -- 
 ARTIFACT_CAPTAINS_HOOK = 130                        -- 
-ARTIFACT_PLUNDERER_SHOES = 131                      -- 
+ARTIFACT_PLUNDERER_SHOES = 131                      -- creatures have +1 initiative
 ARTIFACT_BUTCHER_GLAIVE = 132	                    -- 
 ARTIFACT_CELESTIAL_JUSTICAR_SHIELD = 133            -- 
 ARTIFACT_STAFF_OF_THE_SAINT = 134                   -- 
@@ -157,7 +157,7 @@ ARTIFACT_CENTAUR_CROSSBOW = 153                     --
 ARTIFACT_DEADWOOD_STAFF = 154                       -- 
 ARTIFACT_DEATH_KNIGHT_BOOTS = 155                   -- gain experience and movement points after battle **
 ARTIFACT_BARBARIAN_CUIRASS = 156                    -- 
-ARTIFACT_HARPY_BOOTS = 157                          -- 
+ARTIFACT_HARPY_BOOTS = 157                          -- creatures have +1 initiative and speed
 ARTIFACT_PALACE_SHOES = 158                         -- 
 ARTIFACT_SHANTIRI_NORTH = 159                       -- 
 ARTIFACT_SHANTIRI_WEST = 160                        -- 
@@ -199,7 +199,7 @@ ARTIFACT_ORB_OF_WATER = 195                         -- ice spells damage
 ARTIFACT_OGRE_CLUB = 196                            -- todo 196
 ARTIFACT_OGRE_SHIELD = 197                          -- todo 197
 ARTIFACT_SHIELD_OF_THE_DWARVEN_KINGS = 198          -- creatures have +1 hp
-ARTIFACT_199 = 199                                  -- todo 199
+ARTIFACT_199 = 199                                  -- creatures have -1 speed
 ARTIFACT_200 = 200                                  -- todo 200
 ARTIFACT_201 = 201                                  -- todo 201
 ARTIFACT_202 = 202                                  -- todo 202
@@ -331,7 +331,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_BOOTS_OF_LEVITATION]           = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEGS, special=1},
     [ARTIFACT_HELM_OF_THE_LICH]              = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_HEAD, special=0},
     [ARTIFACT_ARMOR_OF_VALOR]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_BODY, special=0},
-    [ARTIFACT_BOOTS_OF_SWIFTNESS]            = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
+    [ARTIFACT_BOOTS_OF_SWIFTNESS]            = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_LEGS, special=0},
     [ARTIFACT_MOONBLADE]                     = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_LEFTHAND, special=0},
     [ARTIFACT_WAR_HORN]                      = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_POCKET, special=0},
     [ARTIFACT_BAND_OF_CONJURER]              = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RING, special=0},
@@ -339,7 +339,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_CLOAK_OF_SYLANNA]              = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_SHOULDERS, special=0},
     [ARTIFACT_CURSED_RING]                   = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RING, special=0},
     [ARTIFACT_TUNIC_OF_CARVED_FLESH]         = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_BODY, special=0},
-    [ARTIFACT_RING_OF_CAUTION]               = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RING, special=1},
+    [ARTIFACT_RING_OF_CAUTION]               = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RING, special=0},
     [ARTIFACT_HELM_OF_CHAOS]                 = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_HEAD, special=0},
     [ARTIFACT_PENDANT_OF_CONFLUX]            = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_NECK, special=0},
     [ARTIFACT_SANDALS_OF_THE_BLESSED]        = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
@@ -431,7 +431,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_DEADWOOD_STAFF]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
     [ARTIFACT_DEATH_KNIGHT_BOOTS]            = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
     [ARTIFACT_BARBARIAN_CUIRASS]             = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_BODY, special=0},
-    [ARTIFACT_HARPY_BOOTS]                   = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
+    [ARTIFACT_HARPY_BOOTS]                   = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
     [ARTIFACT_PALACE_SHOES]                  = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_LEGS, special=0},
     [ARTIFACT_SHANTIRI_NORTH]                = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_BACKPACK, special=1},
     [ARTIFACT_SHANTIRI_WEST]                 = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_BACKPACK, special=1},
@@ -567,7 +567,7 @@ ARTIFACT_SETS = {
     [ARTIFACT_SET_DUNGEON] = {ARTIFACT_RING_OF_BANISHMENT, ARTIFACT_SHADOW_MASK, ARTIFACT_SHADOW_BLADE, ARTIFACT_SHADOWSTEP_SHOES, ARTIFACT_ALTAR_OF_ELEMENTS_SHARD, ARTIFACT_CLOAK_OF_DARKNESS},
     [ARTIFACT_SET_DWARVEN] = {ARTIFACT_CUIRASS_OF_THE_DWARVEN_KINGS, ARTIFACT_GREAVES_OF_THE_DWARVEN_KINGS, ARTIFACT_HELM_OF_THE_DWARVEN_KINGS, ARTIFACT_SHIELD_OF_THE_DWARVEN_KINGS, ARTIFACT_AXE_OF_THE_MOUNTAIN_LORDS, ARTIFACT_RUNE_OF_FLAME},
     [ARTIFACT_SET_ORCS] = {ARTIFACT_OGRE_CLUB, ARTIFACT_OGRE_SHIELD, ARTIFACT_BARBARIAN_HELMET, ARTIFACT_BARBARIAN_CAPE, ARTIFACT_COLLAR_OF_PRIMAL_RAGE, ARTIFACT_BARBARIAN_CUIRASS},
-    [ARTIFACT_SET_DRAGON]= {ARTIFACT_DRAGON_SCALE_ARMOR, ARTIFACT_DRAGON_SCALE_SHIELD, ARTIFACT_DRAGON_BONE_GRAVES, ARTIFACT_DRAGON_WING_MANTLE, ARTIFACT_DRAGON_TEETH_NECKLACE, ARTIFACT_DRAGON_TALON_CROWN, ARTIFACT_DRAGON_EYE_RING, ARTIFACT_DRAGON_FLAME_TONGUE},
+    [ARTIFACT_SET_DRAGON] = {ARTIFACT_DRAGON_SCALE_ARMOR, ARTIFACT_DRAGON_SCALE_SHIELD, ARTIFACT_DRAGON_BONE_GRAVES, ARTIFACT_DRAGON_WING_MANTLE, ARTIFACT_DRAGON_TEETH_NECKLACE, ARTIFACT_DRAGON_TALON_CROWN, ARTIFACT_DRAGON_EYE_RING, ARTIFACT_DRAGON_FLAME_TONGUE},
     [ARTIFACT_SET_ENLIGHTEN] = {ARTIFACT_TURBAN_OF_ENLIGHTMENT, ARTIFACT_SCALE_MAIL_OF_ENLIGHTMENT, ARTIFACT_STAFF_OF_THE_LYRE, ARTIFACT_PENDANT_OF_THE_LYRE},
     [ARTIFACT_SET_FROST] = {ARTIFACT_EVERCOLD_ICICLE, ARTIFACT_SHIELD_OF_CRYSTAL_ICE, ARTIFACT_CROWN_OF_THE_FROST_LORD, ARTIFACT_FROZEN_HEART, ARTIFACT_SPEAR_OF_THE_FROST_LORD},
     [ARTIFACT_SET_GENJI] = {ARTIFACT_GENJIS_HAT, ARTIFACT_GENJIS_VEST, ARTIFACT_GENJIS_SANDALS, ARTIFACT_GENJIS_SILKSWORD},

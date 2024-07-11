@@ -1436,14 +1436,14 @@
 				<NameFileRef href="/Text/Game/Artifacts/BootsOfSwiftness/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/BootsOfSwiftness/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MAJOR</Type>
+				<Type>ARTF_CLASS_RELIC</Type>
 				<Slot>FEET</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/BootsOfSwiftness.xdb#xpointer(/Texture)"/>
-				<CostOfGold>10000</CostOfGold>
-				<AIValue>20000</AIValue>
+				<CostOfGold>20000</CostOfGold>
+				<AIValue>30000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
-					<Attack>1</Attack>
+					<Attack>0</Attack>
 					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
@@ -1637,17 +1637,17 @@
 				<NameFileRef href="/Text/Game/Artifacts/RingOfCaution/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/RingOfCaution/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MINOR</Type>
+				<Type>ARTF_CLASS_MAJOR</Type>
 				<Slot>FINGER</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/RingOfCaution.xdb#xpointer(/Texture)"/>
-				<CostOfGold>1</CostOfGold>
-				<AIValue>1</AIValue>
-				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
+				<CostOfGold>10000</CostOfGold>
+				<AIValue>20000</AIValue>
+				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
-					<SpellPower>0</SpellPower>
+					<SpellPower>7</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
@@ -2122,10 +2122,10 @@
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>1</Defence>
+					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
-					<Morale>0</Morale>
+					<Morale>1</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
 				<ArtifactShared href="/MapObjects/Artifacts/BearhideWraps.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
@@ -2772,7 +2772,7 @@
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>1</Defence>
+					<Defence>2</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
@@ -2789,15 +2789,15 @@
 				<NameFileRef href="/Text/Game/Artifacts/VikingShield/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/VikingShield/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MAJOR</Type>
+				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>SECONDARY</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/VikingShield.xdb#xpointer(/Texture)"/>
-				<CostOfGold>10000</CostOfGold>
-				<AIValue>20000</AIValue>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>10000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>2</Defence>
+					<Defence>1</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
@@ -3217,12 +3217,12 @@
 				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>CHEST</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/PlunderedVest.xdb#xpointer(/Texture)"/>
-				<CostOfGold>12000</CostOfGold>
-				<AIValue>6000</AIValue>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>10000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
-					<Attack>1</Attack>
-					<Defence>1</Defence>
+					<Attack>0</Attack>
+					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
@@ -3292,8 +3292,8 @@
 				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>FEET</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/PlundererShoes.xdb#xpointer(/Texture)"/>
-				<CostOfGold>12000</CostOfGold>
-				<AIValue>6000</AIValue>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>10000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
@@ -3939,11 +3939,11 @@
 				<NameFileRef href="/Text/Game/Artifacts/HarpyBoots/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/HarpyBoots/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_RELIC</Type>
+				<Type>ARTF_CLASS_MAJOR</Type>
 				<Slot>FEET</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/HarpyBoots.xdb#xpointer(/Texture)"/>
-				<CostOfGold>28000</CostOfGold>
-				<AIValue>14000</AIValue>
+				<CostOfGold>10000</CostOfGold>
+				<AIValue>20000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
@@ -4789,14 +4789,14 @@
 				<NameFileRef href="/Text/Game/Artifacts/VikingHatchet/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/VikingHatchet/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MAJOR</Type>
+				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>PRIMARY</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/VikingHatchet.xdb#xpointer(/Texture)"/>
-				<CostOfGold>10000</CostOfGold>
-				<AIValue>20000</AIValue>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>10000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
-					<Attack>2</Attack>
+					<Attack>1</Attack>
 					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
@@ -4990,7 +4990,7 @@
 				<DescriptionFileRef href="/Text/Game/Artifacts/XXX/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
 				<Type>ARTF_CLASS_MINOR</Type>
-				<Slot>INVENTORY</Slot>
+				<Slot>CHEST</Slot>
 				<Icon href="/Textures/Icons/Blank.xdb#xpointer(/Texture)"/>
 				<CostOfGold>1</CostOfGold>
 				<AIValue>1</AIValue>
