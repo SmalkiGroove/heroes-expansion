@@ -90,6 +90,8 @@ function ManageCombatPrepare()
     if DEFENDER_HERO ~= "" then
         startThread(FetchData, DEFENDER_HERO, DEFENDER)
     end
+    sleep(100)
+    InitializeRandomSeed()
 end
 
 function ManageCombatStart()

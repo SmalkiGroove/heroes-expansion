@@ -13,6 +13,49 @@ function Routine_ArtifactMoonCharm(side, hero, unit)
 end
 
 
+function Routine_ArtfsetFrost(side, hero)
+    log("$ Routine_ArtfsetFrost")
+    repeat sleep() until CURRENT_UNIT == hero
+    HeroCast_AllCreatures(hero, SPELL_DEEP_FREEZE, FREE_MANA, 1-side)
+    SetATB_ID(hero, ATB_INSTANT)
+end
+
+function Routine_ArtfsetSpirit(side, hero)
+    log("$ Routine_ArtfsetSpirit")
+    HeroCast_AllCreatures(hero, SPELL_SORROW, FREE_MANA, 1-side)
+end
+
+function Routine_ArtfsetBestial(side, hero)
+    log("$ Routine_ArtfsetBestial")
+    local beasts = { CREATURE_GRIFFIN, CREATURE_UNICORN, CREATURE_WYVERN, CREATURE_HYDRA, CREATURE_NIGHTMARE, CREATURE_WOLF, CREATURE_MANTICORE, CREATURE_SNOW_APE }
+    local beast = beasts[random(1,8,0)]
+    local tier = CREATURES[beast][2]
+    local amount = 0.5 * ((10-tier) * (10-tier) * (10-tier) + tier)
+    SummonCreatureStack_X(side, beast, amount, 4)
+end
+
+function Routine_ArtfsetGenji1(side, hero, unit)
+    log("$ Routine_ArtfsetGenji1")
+    if GetUnitSide(unit) ~= side then
+        local m = GetUnitManaPoints(hero) + 50
+        SetMana(hero, m)
+        SetATB_ID(hero, ATB_INSTANT)
+    end
+end
+
+function Routine_ArtfsetWarLeader(side, hero, unit)
+    log("$ Routine_ArtfsetWarLeader")
+    if GetUnitSide(unit) ~= side then
+        for i,cr in GetUnits(side, CREATURE) do
+            local tier = CREATURES[creature][2]
+            if tier == 1 or tier == 2 or tier == 3 then
+                SetATB_ID(cr, ATB_NEXT)
+            end
+        end
+    end
+end
+
+
 COMBAT_PREPARE_ARTIFACT_ROUTINES = {
 }
 COMBAT_START_ARTIFACT_ROUTINES = {
@@ -26,10 +69,15 @@ UNIT_DIED_ARTIFACT_ROUTINES = {
 COMBAT_PREPARE_ARTFSET_ROUTINES = {
 }
 COMBAT_START_ARTFSET_ROUTINES = {
+    [ARTFSET_FROST_5PC] = Routine_ArtfsetFrost,
+    [ARTFSET_SPIRIT_5PC] = Routine_ArtfsetSpirit,
+    [ARTFSET_BESTIAL_4PC] = Routine_ArtfsetBestial,
 }
 COMBAT_TURN_ARTFSET_ROUTINES = {
 }
 UNIT_DIED_ARTFSET_ROUTINES = {
+    [ARTFSET_GENJI_4PC] = Routine_ArtfsetGenji1,
+    [ARTFSET_WAR_4PC] = Routine_ArtfsetWarLeader,
 }
 
 

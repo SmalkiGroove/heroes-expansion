@@ -94,6 +94,22 @@ function Routine_ArtifactDeathknightBoots(player, hero, combatIndex)
     ChangeHeroStat(hero, STAT_EXPERIENCE, value)
 end
 
+function Routine_ArtifactRobeOfTheMagister(player, hero)
+    log("$ Routine_ArtifactRobeOfTheMagister")
+    local amount = 75 * GetHeroStat(hero, STAT_KNOWLEDGE)
+    ChangeHeroStat(hero, STAT_EXPERIENCE, 2 * amount)
+    for _,h in GetPlayerHeroes(player) do
+        if h ~= hero then
+            ChangeHeroStat(h, STAT_EXPERIENCE, amount)
+        end
+    end
+end
+
+function Routine_ArtifactMagistersSandals(player, hero)
+    log("$ Routine_ArtifactMagistersSandals")
+    ChangeHeroStat(hero, STAT_KNOWLEDGE, 1)
+end
+
 function Routine_ArtifactEldenaRedScarf(player, hero)
     log("$ Routine_ArtifactEldenaRedScarf")
     local nb = 5
@@ -209,6 +225,18 @@ function Routine_ArtfsetEnlighten(player, hero)
     AddHeroLowestStat(player, hero, 2)
 end
 
+function Routine_ArtfsetWarmage(player, hero)
+    log("$ Routine_ArtfsetWarmage")
+    local gain = 1
+    for s = 9,12 do
+        if GetHeroSkillMastery(hero, s) == 3 then
+            gain = gain + 2
+        end
+    end
+    ChangeHeroStat(hero, STAT_SPELL_POWER, gain)
+    ChangeHeroStat(hero, STAT_KNOWLEDGE, gain)
+end
+
 Var_MoonLevelUp = {}
 function Routine_ArtfsetMoon(player, hero)
     log("$ Routine_ArtfsetMoon")
@@ -235,6 +263,16 @@ function Routine_ArtfsetVizir(player, hero, combatIndex)
     GiveArtifact(hero, artefact)
 end
 
+function Routine_ArtfsetGenji2(player, hero, combatIndex)
+    log("$ Routine_ArtfsetGenji2")
+    local max = 10 * GetHeroStat(hero, STAT_KNOWLEDGE)
+    local diff = GetHeroStat(hero, STAT_MANA_POINTS) - max
+    if diff > 0 then
+        ChangeHeroStat(hero, STAT_MANA_POINTS, -diff)
+        ChangeHeroStat(hero, STAT_EXPERIENCE, 100 * diff)
+    end
+end
+
 
 
 CONTINUOUS_TRIGGER_ARTIFACTS_ROUTINES = {
@@ -245,9 +283,11 @@ DAILY_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_ENDLESS_SACK_OF_GOLD] = Routine_ArtifactSackOfGolds,
     [ARTIFACT_CAPE_OF_KINGS] = Routine_ArtifactCapeOfKings,
     [ARTIFACT_BOOTS_OF_THE_SWIFT_JOUNREY] = Routine_ArtifactBootsOfSwiftJourney,
+    [ARTIFACT_ROBE_OF_THE_MAGISTER] = Routine_ArtifactRobeOfTheMagister,
 }
 WEEKLY_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_HORN_OF_PLENTY] = Routine_ArtifactHornOfPlenty,
+    [ARTIFACT_MAGISTERS_SANDALS] = Routine_ArtifactMagistersSandals,
 }
 LEVELUP_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_BACKPACK_OF_THE_OPEN_ROAD] = Routine_ArtifactBackpackOfOpenRoad,
@@ -279,10 +319,12 @@ WEEKLY_TRIGGER_ARTFSETS_ROUTINES = {
 LEVELUP_TRIGGER_ARTFSETS_ROUTINES = {
     [ARTFSET_ELDENA_3PC] = Routine_ArtfsetEldena,
     [ARTFSET_ENLIGHTEN_4PC] = Routine_ArtfsetEnlighten,
+    [ARTFSET_WARMAGE_5PC] = Routine_ArtfsetWarmage,
     [ARTFSET_MOON_4PC] = Routine_ArtfsetMoon,
 }
 AFTER_COMBAT_TRIGGER_ARTFSETS_ROUTINES = {
     [ARTFSET_VIZIR_4PC] = Routine_ArtfsetVizir,
+    [ARTFSET_GENJI_4PC] = Routine_ArtfsetGenji2,
 }
 
 

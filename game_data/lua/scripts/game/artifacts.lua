@@ -44,10 +44,10 @@ ARTIFACT_DRAGON_TEETH_NECKLACE = 40                 -- caster creatures have +10
 ARTIFACT_DRAGON_TALON_CROWN = 41                    -- war machines have +10% initiative
 ARTIFACT_DRAGON_EYE_RING = 42                       -- ranged creatures have +10% initiative
 ARTIFACT_DRAGON_FLAME_TONGUE = 43                   -- reduce enemy ice spells
-ARTIFACT_ROBE_OF_THE_MAGISTER = 44                  -- /
-ARTIFACT_STAFF_OF_THE_MAGISTER = 45                 -- negates magic-proof
+ARTIFACT_ROBE_OF_THE_MAGISTER = 44                  -- gain exp based on knowledge **
+ARTIFACT_STAFF_OF_THE_MAGISTER = 45                 -- negates magic-resistance
 ARTIFACT_CROWN_OF_THE_MAGISTER = 46                 -- /
-ARTIFACT_RING_OF_THE_MAGISTER = 47                  -- reduce hero spells cost by half
+ARTIFACT_RING_OF_THE_MAGISTER = 47                  -- reduce hero spells cost by 6
 ARTIFACT_048 = 48                                   -- immunity to implosion
 ARTIFACT_LEGENDARY_BOOTS = 49                       -- immunity to slow
 ARTIFACT_050 = 50                                   -- immunity to blind
@@ -64,7 +64,7 @@ ARTIFACT_BAND_OF_CONJURER = 60                      -- hero learns summon elem a
 ARTIFACT_EMERALD_SLIPPERS = 61                      -- earth spells damage
 ARTIFACT_CLOAK_OF_SYLANNA = 62                      -- reduce enemy earth spells
 ARTIFACT_CURSED_RING = 63                           -- enemy creatures have -1 luck
-ARTIFACT_TUNIC_OF_CARVED_FLESH = 64                 -- 
+ARTIFACT_TUNIC_OF_CARVED_FLESH = 64                 -- /
 ARTIFACT_RING_OF_CAUTION = 65                       -- hero has -2 initiative
 ARTIFACT_HELM_OF_CHAOS = 66                         -- magic resistance
 ARTIFACT_PENDANT_OF_CONFLUX = 67                    -- absorb half enemy mana spent
@@ -140,21 +140,21 @@ ARTIFACT_PHOENIX_FEATHER = 136                      --
 ARTIFACT_POTION_OF_MANA = 137	                    -- 
 ARTIFACT_POTION_OF_STAMINA = 138		            -- 
 ARTIFACT_POTION_OF_EXPERIENCE = 139                 -- 
-ARTIFACT_SYLVAN_AMULET = 140                        -- reduce mana cost of nature spells
+ARTIFACT_SYLVAN_AMULET = 140                        -- reduce mana cost of nature spells by 3
 ARTIFACT_SHADOW_MASK = 141                          -- /
 ARTIFACT_BARBARIAN_HELMET = 142                     -- 
-ARTIFACT_SKULL_MASK = 143                           -- 
+ARTIFACT_SKULL_MASK = 143                           -- decrease enemy initiative
 ARTIFACT_SENTINELS_BLADE = 144                      -- after spawning a blade barrier, ... **
 ARTIFACT_VIZIRS_SCIMITAR = 145                      -- 
 ARTIFACT_BARBARIAN_CAPE = 146                       -- 
 ARTIFACT_SHADOW_BLADE = 147                         -- /
 ARTIFACT_SHADOWSTEP_SHOES = 148                     -- /
 ARTIFACT_RANGERS_CUIRASS = 149                      -- 
-ARTIFACT_MAGISTERS_SANDALS = 150                    -- 
-ARTIFACT_BLAZING_SPELLBOOK = 151                    -- reduce mana cost of fire spells
+ARTIFACT_MAGISTERS_SANDALS = 150                    -- gain +1 knowledge per week **
+ARTIFACT_BLAZING_SPELLBOOK = 151                    -- reduce mana cost of fire spells by half
 ARTIFACT_COLLAR_OF_PRIMAL_RAGE = 152                -- 
 ARTIFACT_CENTAUR_CROSSBOW = 153                     -- 
-ARTIFACT_DEADWOOD_STAFF = 154                       -- 
+ARTIFACT_DEADWOOD_STAFF = 154                       -- reduce mana cost of dark spells by 1
 ARTIFACT_DEATH_KNIGHT_BOOTS = 155                   -- gain experience and movement points after battle **
 ARTIFACT_BARBARIAN_CUIRASS = 156                    -- 
 ARTIFACT_HARPY_BOOTS = 157                          -- creatures have +1 initiative and speed
@@ -318,10 +318,10 @@ ARTIFACTS_DATA = {
     [ARTIFACT_DRAGON_TALON_CROWN]            = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_HEAD, special=0},
     [ARTIFACT_DRAGON_EYE_RING]               = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RING, special=0},
     [ARTIFACT_DRAGON_FLAME_TONGUE]           = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
-    [ARTIFACT_ROBE_OF_THE_MAGISTER]          = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_BODY, special=0},
-    [ARTIFACT_STAFF_OF_THE_MAGISTER]         = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
+    [ARTIFACT_ROBE_OF_THE_MAGISTER]          = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_BODY, special=0},
+    [ARTIFACT_STAFF_OF_THE_MAGISTER]         = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
     [ARTIFACT_CROWN_OF_THE_MAGISTER]         = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_HEAD, special=0},
-    [ARTIFACT_RING_OF_THE_MAGISTER]          = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RING, special=0},
+    [ARTIFACT_RING_OF_THE_MAGISTER]          = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RING, special=0},
     [ARTIFACT_048]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_BACKPACK, special=1},
     [ARTIFACT_LEGENDARY_BOOTS]               = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
     [ARTIFACT_050]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_BACKPACK, special=1},
@@ -417,7 +417,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_SYLVAN_AMULET]                 = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_NECK, special=0},
     [ARTIFACT_SHADOW_MASK]                   = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_HEAD, special=0},
     [ARTIFACT_BARBARIAN_HELMET]              = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_HEAD, special=0},
-    [ARTIFACT_SKULL_MASK]                    = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_HEAD, special=0},
+    [ARTIFACT_SKULL_MASK]                    = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_HEAD, special=0},
     [ARTIFACT_SENTINELS_BLADE]               = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
     [ARTIFACT_VIZIRS_SCIMITAR]               = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
     [ARTIFACT_BARBARIAN_CAPE]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_SHOULDERS, special=0},
@@ -428,7 +428,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_BLAZING_SPELLBOOK]             = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEFTHAND, special=0},
     [ARTIFACT_COLLAR_OF_PRIMAL_RAGE]         = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_NECK, special=0},
     [ARTIFACT_CENTAUR_CROSSBOW]              = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
-    [ARTIFACT_DEADWOOD_STAFF]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
+    [ARTIFACT_DEADWOOD_STAFF]                = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
     [ARTIFACT_DEATH_KNIGHT_BOOTS]            = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
     [ARTIFACT_BARBARIAN_CUIRASS]             = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_BODY, special=0},
     [ARTIFACT_HARPY_BOOTS]                   = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
@@ -522,7 +522,7 @@ ARTFSET_DWARVEN_4PCX = 14       --
 ARTFSET_DWARVEN_6PC = 15        --
 ARTFSET_DWARVEN_6PCX = 16       --
 ARTFSET_NECRO_4PC = 17          -- summons a stack of black knights on combat start
-ARTFSET_NECRO_4PCX = 18         -- ^ death knights instead
+ARTFSET_NECRO_4PCX = 18         -- ^ terror knights instead
 ARTFSET_NECRO_6PC = 19          -- summons two stacks of black knights on combat start
 ARTFSET_NECRO_6PCX = 20         -- ^ they start with max atb
 ARTFSET_INFERNO_4PC = 21        -- 
@@ -547,7 +547,7 @@ ARTFSET_ELDENA_3PC = 39         -- level up grants t4 and t5 creatures
 ARTFSET_WAR_4PC = 40            -- when an enemy stack dies, your tier 1-3 units get atb boost
 ARTFSET_VIZIR_4PC = 41          -- get a random artifact after battles depending on army strength
 ARTFSET_SPIRIT_5PC = 42         -- hero casts sorrow on every enemy creature on combat start
-ARTFSET_WARMAGE_5PC = 43        -- gain +1 spellpower and knowledge and another +1 per magic school at expert level on level up
+ARTFSET_WARMAGE_5PC = 43        -- gain +1 spellpower and knowledge and another +2 per magic school at expert level on level up
 ARTFSET_BANDIT_5PC = 44         --
 ARTFSET_BESTIAL_4PC = 45        -- summon a beast stack on combat start
 ARTFSET_SAINT_4PC = 46          -- resurrect half creatures lost after battles

@@ -359,11 +359,11 @@ end
 
 function Routine_CheckInfusion(player, hero, mastery)
     log("$ Routine_CheckInfusion")
-    local value = 2 * mastery
+    local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_INFUSION]
     if diff ~= 0 then
         AddHeroStatAmount(player, hero, STAT_SPELL_POWER, diff)
-        AddHeroManaUnbound(player, hero, 100)
+        AddHeroManaUnbound(player, hero, 50)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_INFUSION] = value
     end
 end
@@ -504,6 +504,11 @@ function Routine_DefendUsAllWeeklyWarriors(player, hero, mastery)
     AddHeroCreatureType(player, hero, STRONGHOLD, 3, amount)
 end
 
+function Routine_InfusionWeeklyMana(player, hero, mastery)
+    log("$ Routine_InfusionWeeklyMana")
+    AddHeroManaUnbound(player, hero, 50)
+end
+
 
 
 function Routine_SpiritismLevelUp(player, hero, mastery, level)
@@ -639,6 +644,7 @@ WEEKLY_TRIGGER_SKILLS_ROUTINES = {
     [PERK_BATTLE_COMMANDER] = Routine_BattleCommanderWeeklyDancers,
     [PERK_HAUNTING] = Routine_HauntingWeeklyGhosts,
     [PERK_DEFEND_US_ALL] = Routine_DefendUsAllWeeklyWarriors,
+    [PERK_INFUSION] = Routine_InfusionWeeklyMana,
 }
 
 LEVELUP_TRIGGER_SKILLS_ROUTINES = {
