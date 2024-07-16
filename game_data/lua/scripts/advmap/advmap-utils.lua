@@ -460,5 +460,13 @@ function InitializeRandomSeed()
 end
 
 
+
+function AddAllArtifacts(hero)
+	for a = 1,199 do
+		if ARTIFACTS_DATA[a].special == 0 then GiveArtifact(hero, a) end
+	end
+end
+
+
 -- log("Loaded advmap-utils.lua")
 ROUTINES_LOADED[9] = 1
