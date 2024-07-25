@@ -2694,7 +2694,7 @@
 				<Icon href="/Textures/HeroScreen/Artifacts/RingOfCelerity.xdb#xpointer(/Texture)"/>
 				<CostOfGold>10000</CostOfGold>
 				<AIValue>20000</AIValue>
-				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
+				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
@@ -3209,14 +3209,14 @@
 			</obj>
 		</Item>	
 		<Item>
-			<ID>ARTIFACT_PLUNDERED_VEST</ID>
+			<ID>ARTIFACT_PLUNDERER_VEST</ID>
 			<obj>
-				<NameFileRef href="/Text/Game/Artifacts/PlunderedVest/Name.txt"/>
-				<DescriptionFileRef href="/Text/Game/Artifacts/PlunderedVest/Description.txt"/>
+				<NameFileRef href="/Text/Game/Artifacts/PlundererVest/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artifacts/PlundererVest/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
 				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>CHEST</Slot>
-				<Icon href="/Textures/HeroScreen/Artifacts/PlunderedVest.xdb#xpointer(/Texture)"/>
+				<Icon href="/Textures/HeroScreen/Artifacts/PlundererVest.xdb#xpointer(/Texture)"/>
 				<CostOfGold>5000</CostOfGold>
 				<AIValue>10000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
@@ -3228,7 +3228,7 @@
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
-				<ArtifactShared href="/MapObjects/Artifacts/PlunderedVest.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
+				<ArtifactShared href="/MapObjects/Artifacts/PlundererVest.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
 				<PresetPrice>0</PresetPrice>
 			</obj>
