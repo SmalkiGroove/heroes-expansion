@@ -90,6 +90,8 @@ function ManageCombatPrepare()
     if DEFENDER_HERO ~= "" then
         startThread(FetchData, DEFENDER_HERO, DEFENDER)
     end
+    sleep(100)
+    InitializeRandomSeed()
 end
 
 function ManageCombatStart()
@@ -103,10 +105,12 @@ function ManageCombatStart()
 	if ATTACKER_HERO ~= "" then
         DoSkillRoutine_CombatStart(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
 		DoHeroSpeRoutine_CombatStart(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
+        DoArtifactRoutine_CombatStart(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
 	end
 	if DEFENDER_HERO ~= "" then
 		DoSkillRoutine_CombatStart(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
 		DoHeroSpeRoutine_CombatStart(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
+		DoArtifactRoutine_CombatStart(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
 	end
     combatSetPause(nil)
 end
@@ -123,9 +127,11 @@ function ManageCombatTurn(unit)
         combatSetPause(1)
         if ATTACKER_HERO ~= "" then
             DoHeroSpeRoutine_CombatTurn(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
+            DoArtifactRoutine_CombatTurn(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
         end
         if DEFENDER_HERO ~= "" then
             DoHeroSpeRoutine_CombatTurn(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
+            DoArtifactRoutine_CombatTurn(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
         end
         DoAbilitiesRoutine_CombatTurn()
         combatSetPause(nil)
@@ -138,9 +144,11 @@ function ManageUnitDeath(unit)
 
     if ATTACKER_HERO ~= "" then
 		DoHeroSpeRoutine_UnitDied(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID, unit)
+        DoArtifactRoutine_UnitDied(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID, unit)
 	end
 	if DEFENDER_HERO ~= "" then
 		DoHeroSpeRoutine_UnitDied(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID, unit)
+		DoArtifactRoutine_UnitDied(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID, unit)
 	end
 end
 

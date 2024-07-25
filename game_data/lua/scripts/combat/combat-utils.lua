@@ -204,6 +204,12 @@ function CreatureToUndead(creature)
 end
 
 
+function InitializeRandomSeed()
+    RANDOM_SEED = RANDOM_SEED + HERO_DATA[0].Level
+    RANDOM_SEED = RANDOM_SEED + HERO_DATA[1].Level
+    print("Combat random seed : "..RANDOM_SEED)
+end
+
 
 
 -- log("Loaded combat-utils.lua")
