@@ -2,16 +2,16 @@
 <WindowMSButton ObjectRecordID="1000123">
 	<ClassTypeID>285694855</ClassTypeID>
 	<Shared href="Button.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
-	<Name>Button7</Name>
-	<TooltipFileRef href="/GameMechanics/RefTables/HeroClass/HeroClassRunemage.txt"/>
+	<Name>TrainingButton</Name>
+	<TooltipFileRef href="Bookmark1.txt"/>
 	<Visible>true</Visible>
-	<Priority>1</Priority>
+	<Priority>0</Priority>
 	<GameMessageReactions/>
 	<Placement>
 		<Position>
 			<First>
-				<x>650</x>
-				<y>337</y>
+				<x>20</x>
+				<y>20</y>
 			</First>
 			<Second>true</Second>
 		</Position>
@@ -57,7 +57,27 @@
 			<MessageOnEnterState/>
 			<CommandsOnEnterState>
 				<Commands>
-					<Item href="Skills7/SkillsShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="TrainingShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+				</Commands>
+				<Reversable>false</Reversable>
+			</CommandsOnEnterState>
+			<CommandsOnRightClick>
+				<Commands/>
+				<Reversable>false</Reversable>
+			</CommandsOnRightClick>
+			<commandsOnLDblKlick>
+				<Commands/>
+				<Reversable>false</Reversable>
+			</commandsOnLDblKlick>
+			<WaitVisual>false</WaitVisual>
+			<ReverseCommands>false</ReverseCommands>
+			<Name/>
+		</Item>
+		<Item>
+			<MessageOnEnterState/>
+			<CommandsOnEnterState>
+				<Commands>
+					<Item href="TrainingHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 				</Commands>
 				<Reversable>false</Reversable>
 			</CommandsOnEnterState>
@@ -75,12 +95,12 @@
 		</Item>
 	</ButtonStates>
 	<ButtonGroupID>0</ButtonGroupID>
-	<AutoChangeState>false</AutoChangeState>
+	<AutoChangeState>true</AutoChangeState>
 	<PushEffect>
 		<Commands/>
 		<Reversable>false</Reversable>
 	</PushEffect>
-	<State>0</State>
+	<State>1</State>
 	<TextFileRef href=""/>
 	<TextFormat/>
 </WindowMSButton>

@@ -47,7 +47,7 @@ function Routine_ArtfsetWarLeader(side, hero, unit)
     log("$ Routine_ArtfsetWarLeader")
     if GetUnitSide(unit) ~= side then
         for i,cr in GetUnits(side, CREATURE) do
-            local tier = CREATURES[creature][2]
+            local tier = CREATURES[cr][2]
             if tier == 1 or tier == 2 or tier == 3 then
                 SetATB_ID(cr, ATB_NEXT)
             end
