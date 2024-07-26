@@ -130,10 +130,61 @@ def generate_skills_doc(ref_data):
 #
 ###############################################################################################################################################################
 
+### ARTIFACTS
+###############################################################################################################################################################
+#
+path_to_artifacts = "../game_data/data/GameMechanics/RefTables/Artifacts.xdb"
+path_to_artfset_texts = "../game_data/texts/Text/Game/Artfsets"
+
+def artifact_doc_line(artifact):
+    name_path = os.path.join(workdir, path_to_texts + artifact['obj']['NameFileRef']['@href'])
+    desc_path = os.path.join(workdir, path_to_texts + artifact['obj']['DescriptionFileRef']['@href'])
+    with open(name_path, 'r', encoding='utf-16') as name_file:
+        name = name_file.read()
+    with open(desc_path, 'r', encoding='utf-16') as desc_file:
+        desc = desc_file.read()
+    return f"- __{name}__ :\n{desc}"
+
+def get_artifact_by_id(artifacts, id):
+    for item in artifacts:
+        if item['ID'] == id:
+            return item
+    print(f"Artifact '{id}' not found")
+    return None
+
+def generate_artifacts_doc(ref_data):
+    out = open(os.path.join(workdir, doc_path, 'ARTIFACTS.md'), 'w')
+    print("# ARTIFACTS DOCUMENTATION", file=out)
+    file_path = os.path.join(workdir, path_to_artifacts)
+    with open(file_path, 'r') as xdb:
+        artifacts = xmltodict.parse(xdb.read())['Table_DBArtifact_ArtifactEffect']['objects']['Item']
+    for artfset in ref_data.keys():
+        if ref_data[artfset]['id'] == 0:
+            set_name = "Neutrals"
+            set_desc = "The following artifact do not belong in a set."
+        else:
+            set_texts = os.path.join(workdir, path_to_artfset_texts, str(ref_data[artfset]['id']))
+            with open(set_texts + '/Name.txt', 'r', encoding='utf-16') as name_file:
+                set_name = name_file.read()
+            with open(set_texts + '/Description.txt', 'r', encoding='utf-16') as desc_file:
+                set_desc = desc_file.read()
+        print("", file=out)
+        print(f"### {set_name}", file=out)
+        print(f"{set_desc}", file=out)
+        print(f"", file=out)
+        for a in ref_data[artfset]['pieces']:
+            artifact = get_artifact_by_id(artifacts, a)
+            if artifact != None:
+                print(artifact_doc_line(artifact), file=out)
+    out.close()
+#
+###############################################################################################################################################################
+
 
 with open(reference_file) as ref:
     data = yaml.safe_load(ref)
 
-generate_creature_doc(data['CREATURES'])
-generate_heroes_doc(data['HEROES'])
-generate_skills_doc(data['SKILLS'])
+# generate_creature_doc(data['CREATURES'])
+# generate_heroes_doc(data['HEROES'])
+# generate_skills_doc(data['SKILLS'])
+generate_artifacts_doc(data['ARTIFACTS'])
