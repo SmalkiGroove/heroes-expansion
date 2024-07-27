@@ -217,9 +217,13 @@ function Routine_GearUp(player, hero, mastery)
     if mastery > HERO_SKILL_BONUSES[hero][SKILLBONUS_GEAR_UP] then
         local faction = HEROES[hero].faction
         local minors = {}
-        for _,a in ARTIFACT_SETS[faction] do
-            if ARTIFACTS_DATA[a].special == 0 and ARTIFACTS_DATA[a].class == ARTIFACT_CLASS_MINOR then
-                insert(minors, a)
+        for set = 1,ARTIFACT_SET_COUNT do
+            if set == faction or set > 9 then
+                for _,a in ARTIFACT_SETS[set] do
+                    if ARTIFACTS_DATA[a].special == 0 and ARTIFACTS_DATA[a].class == ARTIFACT_CLASS_MINOR then
+                        insert(minors, a)
+                    end
+                end
             end
         end
         local artifact = minors[random(1, length(minors), TURN)]
@@ -233,9 +237,13 @@ function Routine_HeroesLegacy(player, hero, mastery)
     if mastery > HERO_SKILL_BONUSES[hero][SKILLBONUS_HEROES_LEGACY] then
         local faction = HEROES[hero].faction
         local majors = {}
-        for _,a in ARTIFACT_SETS[faction] do
-            if ARTIFACTS_DATA[a].special == 0 and ARTIFACTS_DATA[a].class == ARTIFACT_CLASS_MAJOR then
-                insert(majors, a)
+        for set = 1,ARTIFACT_SET_COUNT do
+            if set == faction or set > 9 then
+                for _,a in ARTIFACT_SETS[set] do
+                    if ARTIFACTS_DATA[a].special == 0 and ARTIFACTS_DATA[a].class == ARTIFACT_CLASS_MAJOR then
+                        insert(majors, a)
+                    end
+                end
             end
         end
         local artifact = majors[random(1, length(majors), TURN)]
@@ -249,9 +257,13 @@ function Routine_Mythology(player, hero, mastery)
     if mastery > HERO_SKILL_BONUSES[hero][SKILLBONUS_MYTHOLOGY] then
         local faction = HEROES[hero].faction
         local relics = {}
-        for _,a in ARTIFACT_SETS[faction] do
-            if ARTIFACTS_DATA[a].special == 0 and ARTIFACTS_DATA[a].class == ARTIFACT_CLASS_RELIC then
-                insert(relics, a)
+        for set = 1,ARTIFACT_SET_COUNT do
+            if set == faction or set > 9 then
+                for _,a in ARTIFACT_SETS[set] do
+                    if ARTIFACTS_DATA[a].special == 0 and ARTIFACTS_DATA[a].class == ARTIFACT_CLASS_RELIC then
+                        insert(relics, a)
+                    end
+                end
             end
         end
         local artifact = relics[random(1, length(relics), TURN)]
@@ -390,6 +402,24 @@ function Routine_OnslaughtBuff(player, hero, mastery)
     end
 end
 
+function Routine_IndustryDaily(player, hero, mastery)
+    log("$ Routine_IndustryDaily")
+    local xh,yh,zh = GetObjectPosition(hero)
+    for obj,data in RESOURCE_GENERATING_OBJECTS do
+        for _,building in GetObjectNamesByType(obj) do
+            if GetObjectOwner(building) == player then
+                local x,y,z = GetObjectPosition(building)
+                if z == zh then
+                    local dx = x - xh
+                    local dy = y - yh
+                    local d = dx * dx + dy * dy
+                    if d < 999 then AddPlayerResource(player, hero, data.type, data.amount) end
+                end
+            end
+        end
+    end
+end
+
 function Routine_HeraldOfDeathGolds(player, hero, mastery)
     log("$ Routine_HeraldOfDeathGolds")
     local amount = GetHeroCreatures(hero, CREATURE_SKELETON) + GetHeroCreatures(hero, CREATURE_SKELETON_ARCHER) + GetHeroCreatures(hero, CREATURE_SKELETON_WARRIOR)
@@ -466,6 +496,39 @@ function Routine_GovernanceWeeklyResources(player, hero, mastery)
     local faction = HEROES[hero].faction
     sleep(3) AddPlayerResource(player, hero, GOLD, golds[mastery])
     sleep(3) AddPlayerResource(player, hero, res[faction], mastery)
+end
+
+function Routine_GearUpWeeklyGolds(player, hero, mastery)
+    log("$ Routine_GearUpWeeklyGolds")
+    local count = 0
+    for a,data in ARTIFACTS_DATA do
+        if data.class == ARTIFACT_CLASS_MINOR then
+            if HasArtefact(hero, a, 1) then count = count + 1 end
+        end
+    end
+    AddPlayerResource(player, hero, GOLD, 250 * count)
+end
+
+function Routine_HeroesLegacyWeeklyGolds(player, hero, mastery)
+    log("$ Routine_HeroesLegacyWeeklyGolds")
+    local count = 0
+    for a,data in ARTIFACTS_DATA do
+        if data.class == ARTIFACT_CLASS_MAJOR then
+            if HasArtefact(hero, a, 1) then count = count + 1 end
+        end
+    end
+    AddPlayerResource(player, hero, GOLD, 250 * count)
+end
+
+function Routine_MythologyWeeklyGolds(player, hero, mastery)
+    log("$ Routine_MythologyWeeklyGolds")
+    local count = 0
+    for a,data in ARTIFACTS_DATA do
+        if data.class == ARTIFACT_CLASS_RELIC then
+            if HasArtefact(hero, a, 1) then count = count + 1 end
+        end
+    end
+    AddPlayerResource(player, hero, GOLD, 250 * count)
 end
 
 function Routine_GetStrongerWeeklyBonus(player, hero, mastery)
@@ -628,6 +691,7 @@ START_TRIGGER_SKILLS_ROUTINES = {
 
 DAILY_TRIGGER_SKILLS_ROUTINES = {
     [PERK_ONSLAUGHT] = Routine_OnslaughtBuff,
+    [PERK_INDUSTRY] = Routine_IndustryDaily,
     [PERK_HERALD_OF_DEATH] = Routine_HeraldOfDeathGolds,
     [SKILL_SPIRITISM] = Routine_SpiritismManaRegen,
 }
@@ -639,6 +703,9 @@ WEEKLY_TRIGGER_SKILLS_ROUTINES = {
     [PERK_WARRIORS_OF_THE_MOUNTAIN] = Routine_WarriorsOfTheMountain,
     [SKILL_LOGISTICS] = Routine_LogisticsWeeklyProd,
     [SKILL_GOVERNANCE] = Routine_GovernanceWeeklyResources,
+    [PERK_GEAR_UP] = Routine_GearUpWeeklyGolds,
+    [PERK_HEROES_LEGACY] = Routine_HeroesLegacyWeeklyGolds,
+    [PERK_MYTHOLOGY] = Routine_MythologyWeeklyGolds,
     [PERK_GET_STRONGER] = Routine_GetStrongerWeeklyBonus,
     [PERK_GET_WISER] = Routine_GetWiserWeeklyBonus,
     [PERK_BATTLE_COMMANDER] = Routine_BattleCommanderWeeklyDancers,
