@@ -177,7 +177,6 @@ function AddPlayerHero(player, hero)
 		startThread(BindHeroSkillTrigger, hero)
 	else
 		log("Initialize hero "..hero)
-		-- startThread(ReplaceStartingArmy, hero)
 		startThread(BindHeroLevelUpTrigger, hero)
 		startThread(BindHeroSkillTrigger, hero)
 		startThread(DoSkillsRoutine_Start, player, hero)
@@ -218,7 +217,7 @@ function InitializeHeroes()
 		if (GetPlayerState(player) == 1) then
 			for i,hero in GetPlayerHeroes(player) do
 				log("Initialize hero "..hero)
-				startThread(ReplaceStartingArmy, hero)
+				startThread(InitializeArmy, hero)
 				startThread(BindHeroLevelUpTrigger, hero)
 				startThread(BindHeroSkillTrigger, hero)
 				startThread(DoSkillsRoutine_Start, player, hero) sleep(1)
