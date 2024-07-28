@@ -444,7 +444,7 @@ end
 
 function Routine_RespawnDjinns(player, hero, combatIndex)
     log("$ Routine_RespawnDjinns")
-    AddHeroCreatureType(player, hero, ACADEMY, 5, nb)
+    AddHeroCreatureType(player, hero, ACADEMY, 5, 1)
     local mana = GetHeroStat(hero, STAT_MANA_POINTS)
     local djinns = CountHeroCreatureType(player, hero, ACADEMY, 5)
     local cap = trunc(0.1 * (mana + djinns))

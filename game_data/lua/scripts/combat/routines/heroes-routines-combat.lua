@@ -466,33 +466,38 @@ end
 
 function Routine_DragonStrike(side, hero)
     -- log("Trigger full dragon set !")
-    local level = GetHeroLevel(side)
-    local amount = 1 + trunc(0.01 * level * level)
-    local n = length(GetUnits(side, CREATURE))
-    SummonCreatureStack_X(side, CREATURE_DEEP_DRAGON, amount, 7)
-    sleep(500)
-    local dragon = GetUnits(side, CREATURE)[n]
-    local target = RandomCreature(1-side, n)
-    AttackCombatUnit(dragon, target)
-    combatPlayEmotion(side, 1)
-    if hero then
-        sleep(1000)
-        playAnimation(dragon, "death")
-        sleep(500)
-        RemoveCombatUnit(dragon)
+    if HasHeroActiveArtifactSet(side, ARTFSET_DRAGON_8PC) then
+        local dragon = nil
+        local count = 0
+        for i,cr in GetUnits(side, CREATURE) do
+            local type = GetCreatureType(cr)
+            if type == CREATURE_DEEP_DRAGON or type == CREATURE_BLACK_DRAGON or type == CREATURE_RED_DRAGON then
+                local nb = GetCreatureNumber(cr)
+                if nb > count then
+                    dragon = cr
+                    count = nb
+                end
+            end
+        end
+        if dragon then
+            local target = RandomCreature(1-side, n)
+            AttackCombatUnit(dragon, target)
+            combatPlayEmotion(side, 1)
+        end
     end
 end
 
 function Routine_RefreshMatronMana(side, hero)
     -- log("Trigger refresh shadow witches mana !")
     if CURRENT_UNIT == hero then
+        local prob = 20 + 2 * GetHeroLevel(side)
         for i,cr in GetUnits(side, CREATURE) do
             local type = GetCreatureType(cr)
             if type == CREATURE_MATRON or type == CREATURE_MATRIARCH or type == CREATURE_SHADOW_MISTRESS then
-                local max = GetUnitMaxManaPoints(cr)
-                local cur = GetUnitManaPoints(cr)
-                local m = min(max, cur + 10)
-                SetMana(cr, m)
+                if random(0,100,COMBAT_TURN+i) < prob then
+                    local max = GetUnitMaxManaPoints(cr)
+                    SetMana(cr, max)
+                end
             end
         end
     end
