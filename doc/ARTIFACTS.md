@@ -149,37 +149,35 @@ After every victory, gain an amount of Movement points and Experience depending 
 (x) Set bonuses
 
 - __Book Of Power__ :
-+1 Spellpower and Knowledge per rank of Learning skill.
-Grants the Ability to learn any 4th level spells if the hero has the Magic Insight perk (Sorcery).
++1 Spellpower and Knowledge per rank of Learning skill
+Grants the ability to learn any 4th level spell if the hero has the Magic Insight perk (Sorcery)
+
+<color=purple>Magister Set
 - __Magister's Sandals__ :
-+2 Spellpower<br>
-+2000 Experience<br><br>
-<color=7F38EC>Skill book<color_default><br>The hero needs some time to study this item and permanently gain the knowledge it contains. At the start of next week the item disappears from the backpack and the bonus is applied permanently.
++1 Defense
+Gain +1 Knowledge at the start of each week
+
+<color=purple>Magister Set
 - __Ring of the Magister__ :
--8 Mana cost to all spells (minimum 1)
+-6 Mana cost to all spells (minimum 1)
 
-
+<color=purple>Magister Set
 - __Crown of the Magister__ :
-+5 Knowledge
++3 Spellpower
++3 Knowledge
+
+<color=purple>Magister Set
 - __Staff of the Magister__ :
-+2 Spellpower<br>
--100% Magic Resistance to enemy creatures<br><color_default>
-(does not affect Immunities and Magic proof)<br><br><color=purple>
-Sar-Issus Regalia<color_default><br>
-+100% Spellpower & Mana to friendly creatures (2/4)<br>
-+4 Spellpower (4/4)<br>
-*Set bonus is applied after closing the Inventory screen.<br><br><color=orange>
-Quest<color_default><br>
-Bring all of the 4 Sar-Issus Regalia to an Astrologer and receive a unique reward.
++2 Spellpower
+Negates enemy Magic Disruption
+
+<color=purple>Magister Set
 - __Robe of the Magister__ :
-+6 Spellpower<br>
-+6 Mana per day if equipped uninterrupted<br><br><color=purple>
-Sar-Issus Regalia<color_default><br>
-+100% Spellpower & Mana to friendly creatures (2/4)<br>
-+4 Spellpower (4/4)<br>
-*Set bonus is applied after closing the Inventory screen.<br><br><color=orange>
-Quest<color_default><br>
-Bring all of the 4 Sar-Issus Regalia to an Astrologer and receive a unique reward.
++2 Defense
++2 Knowledge
+Gain Experience every day based on the hero's Knowledge, and half the amount to other heroes
+
+<color=purple>Magister Set
 
 ### Set name
 • Set pieces
@@ -220,22 +218,34 @@ Resources are also gained when the artifact is in the backpack, but functionalit
 - __Rune of Flame__ :
 +2 Spellpower
 Grants dwarven heroes <value=spell_name>.
+
+<color=purple>Dwarven Set
 - __Helm of the Dwarven Kings__ :
 +3 Defense
-Creatures in hero's army are immuned to Frenzy
+Creatures in hero's army are Undisturbed (immunity to Berserk)
+
+<color=purple>Dwarven Set
 - __Shield of the Dwarven Kings__ :
 +3 Defense
 +1 Health to friendly creatures
+
+<color=purple>Dwarven Set
 - __Greaves of the Dwarven Kings__ :
 +3 Attack
 +3 Defense
 -5% Initiative for friendly creatures
+
+<color=purple>Dwarven Set
 - __Cuirass of the Dwarven Kings__ :
 +6 Defense
 -5% Initiative for friendly creatures
+
+<color=purple>Dwarven Set
 - __Great Axe of the Dwarven Kings__ :
 +6 Attack
 +2 Defense
+
+<color=purple>Dwarven Set
 
 ### Set name
 • Set pieces
@@ -243,30 +253,32 @@ Creatures in hero's army are immuned to Frenzy
 (x) Set bonuses
 
 - __Barbarian Cuirass__ :
-One of Malassa's deepest secrets has survived through the ages in spiritual form.<br>
-+2 Spellpower<br>
-+2 Knowledge<br>
-+4000 Experience<br><br>
-<color=7F38EC>Skill book<color_default><br>The hero needs some time to study this item and permanently gain the knowledge it contains. At the start of next week the item disappears from the backpack and the bonus is applied permanently.
+cuirass
+
+<color=purple>Brutalist Set
 - __Barbarian Cape__ :
-+2 Defense<br>
-+2000 Experience<br><br>
-<color=7F38EC>Skill book<color_default><br>The hero needs some time to study this item and permanently gain the knowledge it contains. At the start of next week the item disappears from the backpack and the bonus is applied permanently.
+cape
+
+<color=purple>Brutalist Set
 - __Crag Hack's Helmet__ :
-+2 Attack<br>
-+2000 Experience<br><br>
-<color=7F38EC>Skill book<color_default><br>The hero needs some time to study this item and permanently gain the knowledge it contains. At the start of next week the item disappears from the backpack and the bonus is applied permanently.
+helmet
+
+<color=purple>Brutalist Set
 - __Collar Of Primal Rage__ :
-+1 Knowledge<br>
-+750 Experience<br><br>
-<color=7F38EC>Skill book<color_default><br>The hero needs some time to study this item and permanently gain the knowledge it contains. At the start of next week the item disappears from the backpack and the bonus is applied permanently.
+collar
+
+<color=purple>Brutalist Set
 - __Cuirass of the Dwarven Kings__ :
 +6 Defense
 -5% Initiative for friendly creatures
+
+<color=purple>Dwarven Set
 - __Greaves of the Dwarven Kings__ :
 +3 Attack
 +3 Defense
 -5% Initiative for friendly creatures
+
+<color=purple>Dwarven Set
 
 ### Set name
 • Set pieces
@@ -304,11 +316,12 @@ One of Malassa's deepest secrets has survived through the ages in spiritual form
 (x) Set bonuses
 
 - __Turban of Enlightenment__ :
-+2 Knowledge
++3 Knowledge
 +10% Experience gain
 
 <color=purple>Empowerement
 - __Robe Of Enlightenment__ :
++1 Defense
 +20% Experience gain
 
 <color=purple>Empowerement
@@ -353,7 +366,7 @@ Resources are also gained when the artifact is in the backpack, but functionalit
 • Genji's Sandals
 • Genji's Silksword
 
-(4) When an enemy stack dies during combat, the hero gets an imediate turn and +50 mana. Each mana point above maximum is converted to 100 additional experience at the end of the battle.
+(4) When an enemy stack dies during combat, the hero gets an immediate turn and +50 mana. Each mana point above maximum is converted to 100 additional experience at the end of the battle.
 
 - __Genji's Hat__ :
 +12 Mana per day if equipped uninterrupted<br><br><color=purple>
@@ -473,21 +486,28 @@ Resources are also gained when the artifact is in the backpack, but functionalit
 
 - __Cursed Ring__ :
 -1 Luck to enemy creatures
+
+<color=purple>Afterlife Set
 - __Tunic of the Carved Flesh__ :
-+5 Spellpower<br>
--1 Morale<br><br><color=orange>
-Mummies<color_default><br>Burn this artifact at a Temple and it will summon a stack of Mummies. The size of the stack is equal to 3*amount of weeks passed.
++4 Spellpower
+-1 Morale
+
+<color=purple>Afterlife Set
 - __Skull Mask__ :
-+1 Attack<br>
-+1 Defense<br>
-+1500 Experience<br><br>
-<color=7F38EC>Skill book<color_default><br>The hero needs some time to study this item and permanently gain the knowledge it contains. At the start of next week the item disappears from the backpack and the bonus is applied permanently.
++1 Defense
+-8% Initiative to enemy creatures
+
+<color=purple>Afterlife Set
 - __Deadwood Staff__ :
-+2 Knowledge<br>
-+2000 Experience<br><br>
-<color=7F38EC>Skill book<color_default><br>The hero needs some time to study this item and permanently gain the knowledge it contains. At the start of next week the item disappears from the backpack and the bonus is applied permanently.
++3 Spellpower
+-1 Mana cost to Dark magic spells
+
+<color=purple>Afterlife Set
 - __Spirit of Oppression__ :
--1 Morale and Luck to enemy creatures
+-1 Morale to enemy creatures
+-1 Luck to enemy creatures
+
+<color=purple>Afterlife Set
 
 ### War Mage
 • Runic War Axe
@@ -496,7 +516,7 @@ Mummies<color_default><br>Burn this artifact at a Temple and it will summon a st
 • Pendant of Conflux
 • Helm of the Warmage
 
-(5) When leveling up, the hero gains +1 Spellpower and Knowledge, and an additional +1 for each magic school known at expert level.
+(5) When leveling up, the hero gains +1 Spellpower and Knowledge, and an additional +2 for each magic school known at expert level.
 
 - __Boots of Interference__ :
 +1 Luck
@@ -763,11 +783,11 @@ Hero troops are Unstoppable (immunity to Slow).
 +1 Defense
 +1 Morale
 - __Windstrider Boots__ :
-+2 Initiative to all friendly creatures
-+2 Speed to all friendly creatures
++2 Initiative to friendly creatures
++2 Speed to friendly creatures
 - __Band of the Conjurer__ :
 +4 Spellpower when casting Summon Elementals.
-Grants the Summon Elementals Spell if it wasn't learned already.
+Grants the Summon Elementals spell if it wasn't learned already.
 - __Emerald Slippers__ :
 +20% Damage to Earth Spells<br>
 +2 Mana per day if equipped uninterrupted<br><color_default>
@@ -835,7 +855,7 @@ Archer's Dream<color_default><br>
 Cornucopia<color_default><br>Collect one artifact for every resource type (except gold) and visit an Arcane Library for a unique reward.<br><br><color=yellow>
 Backpack<color_default><br>
 Resources are also gained when the artifact is in the backpack, but functionality is limited to one artifact per resource type per hero.
-- __Cursed Dices__ :
+- __Misfortune Dices__ :
 -1 Morale
 -2 Luck to enemy creatures
 - __Naga Commander's Helm__ :
