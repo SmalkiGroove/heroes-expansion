@@ -108,7 +108,7 @@ function UpdateTavernHeroes()
     for hero,data in HEROES do
         if not IsHeroAlive(hero) then
             if IsArmyEmpty(hero) then
-                SetStartingArmy(hero)
+                startThread(SetStartingArmy, hero)
             end
         end
     end

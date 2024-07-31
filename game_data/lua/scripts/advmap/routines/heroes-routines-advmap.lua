@@ -565,6 +565,17 @@ function Routine_GenerateGoldPerScout(player, hero)
     end
 end
 
+function Routine_BuildRitualPit(player, hero)
+    log("$ Routine_BuildRitualPit")
+    for town,data in MAP_TOWNS do
+        if IsHeroInTown(hero, town, 1, 1) then
+            if data.faction == DUNGEON then
+                UpgradeTownBuilding(town, TOWN_BUILDING_DUNGEON_RITUAL_PIT)
+            end
+        end
+    end
+end
+
 function Routine_AddHeroRiders(player, hero)
     log("$ Routine_AddHeroRiders")
     local amount = round(0.12 * GetHeroLevel(hero))
@@ -871,6 +882,7 @@ START_TRIGGER_HERO_ROUTINES = {
     [H_THEODORUS] = Routine_ActivateArtfsetNecro,
     [H_RISSA] = Routine_RefreshTimeShift,
     -- dungeon
+    [H_YRWANNA] = Routine_BuildRitualPit,
     [H_RANLETH] = Routine_ActivateArtfsetEnlightenment,
     [H_SEPHINROTH] = Routine_ActivateArtfsetDungeon,
     -- necropolis
