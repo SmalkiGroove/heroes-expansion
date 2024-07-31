@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Spell>
+	<NameFileRef href="/Text/Game/Spells/Combat/Brutality/Name.txt"/>
+	<LongDescriptionFileRef href="/Text/Game/Spells/Combat/Brutality/Long_Description.txt"/>
+	<Texture href="/UI/Common/Icons/Spell_Buff_Icons/Poisonous_Attack.(Texture).xdb#xpointer(/Texture)"/>
+	<EffectTexture href="/UI/Common/Icons/Spell_Buff_Icons/Poisonous_Attack.(Texture).xdb#xpointer(/Texture)"/>
+	<SpellBookPredictions/>
+	<CombatLogTexts>
+		<Item href="/Text/CombatLog/Spells/Plague.txt"/>
+	</CombatLogTexts>
+	<Level>0</Level>
+	<MagicSchool>MAGIC_SCHOOL_SPECIAL</MagicSchool>
+	<RequiredHeroLevel>0</RequiredHeroLevel>
+	<IsAimed>true</IsAimed>
+	<TrainedCost>0</TrainedCost>
+	<damage>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+	</damage>
+	<duration>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+	</duration>
+	<sSpellCost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>0</Gold>
+	</sSpellCost>
+	<IsAreaAttack>false</IsAreaAttack>
+	<CanSelectDead>false</CanSelectDead>
+	<Target>TARGET_HOSTILE</Target>
+	<Element>ELEMENT_NONE</Element>
+	<visuals>
+		<Item href="BrutalityEffect.xdb#xpointer(/SpellVisual)"/>
+	</visuals>
+</Spell>
