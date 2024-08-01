@@ -2,10 +2,10 @@
 <Creature>
 	<AttackSkill>2</AttackSkill>
 	<DefenceSkill>1</DefenceSkill>
-	<Shots>0</Shots>
+	<Shots>4</Shots>
 	<MinDamage>1</MinDamage>
 	<MaxDamage>2</MaxDamage>
-	<Speed>5</Speed>
+	<Speed>4</Speed>
 	<Initiative>11</Initiative>
 	<Flying>false</Flying>
 	<Health>5</Health>
@@ -33,7 +33,7 @@
 	<PatternAttack/>
 	<flybySequence/>
 	<Visual href="/GameMechanics/CreatureVisual/Creatures/Orcs/Goblin2.xdb#xpointer(/CreatureVisual)"/>
-	<Range>0</Range>
+	<Range>-2</Range>
 	<BaseCreature>CREATURE_GOBLIN</BaseCreature>
 	<Upgrades/>
 	<Abilities>

@@ -3,8 +3,8 @@
 	<AttackSkill>18</AttackSkill>
 	<DefenceSkill>18</DefenceSkill>
 	<Shots>0</Shots>
-	<MinDamage>18</MinDamage>
-	<MaxDamage>24</MaxDamage>
+	<MinDamage>17</MinDamage>
+	<MaxDamage>23</MaxDamage>
 	<Speed>8</Speed>
 	<Initiative>12</Initiative>
 	<Flying>true</Flying>
@@ -35,9 +35,8 @@
 	<BaseCreature>CREATURE_WYVERN</BaseCreature>
 	<Upgrades/>
 	<Abilities>
+		<Item>ABILITY_STRIKE_AND_RETURN</Item>
 		<Item>ABILITY_REGENERATION</Item>
 		<Item>ABILITY_VENOM</Item>
-		<Item>ABILITY_STRIKE_AND_RETURN</Item>
-		<Item>ABILITY_NO_ENEMY_RETALIATION</Item>
 	</Abilities>
 </Creature>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature ObjectRecordID="73">
-	<AttackSkill>31</AttackSkill>
-	<DefenceSkill>31</DefenceSkill>
+	<AttackSkill>33</AttackSkill>
+	<DefenceSkill>30</DefenceSkill>
 	<Shots>0</Shots>
 	<MinDamage>30</MinDamage>
 	<MaxDamage>90</MaxDamage>
@@ -109,8 +109,8 @@
 	<Upgrades/>
 	<Abilities>
 		<Item>ABILITY_UNDEAD</Item>
-		<Item>ABILITY_AXE_OF_SLAUGHTER</Item>
 		<Item>ABILITY_FEAR</Item>
+		<Item>ABILITY_AXE_OF_SLAUGHTER</Item>
 		<Item>ABILITY_HARM_TOUCH</Item>
 	</Abilities>
 </Creature>
