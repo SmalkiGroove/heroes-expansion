@@ -5,7 +5,7 @@
 	<Shots>0</Shots>
 	<MinDamage>3</MinDamage>
 	<MaxDamage>6</MaxDamage>
-	<Speed>6</Speed>
+	<Speed>7</Speed>
 	<Initiative>14</Initiative>
 	<Flying>false</Flying>
 	<Health>16</Health>
@@ -21,7 +21,7 @@
 	<PairCreature>CREATURE_BLOOD_WITCH</PairCreature>
 	<CreatureTown>TOWN_DUNGEON</CreatureTown>
 	<MagicElement><First>ELEMENT_AIR</First><Second>ELEMENT_NONE</Second></MagicElement>
-	<WeeklyGrowth>25</WeeklyGrowth>
+	<WeeklyGrowth>23</WeeklyGrowth>
 	<Cost>
 		<Gold>40</Gold>
 	</Cost>
@@ -38,7 +38,7 @@
 		<Item>CREATURE_BLOOD_WITCH_2</Item>
 	</Upgrades>
 	<Abilities>
-		<Item>ABILITY_FAST_ATTACK</Item>
 		<Item>ABILITY_STRIKE_AND_RETURN</Item>
+		<Item>ABILITY_FAST_ATTACK</Item>
 	</Abilities>
 </Creature>

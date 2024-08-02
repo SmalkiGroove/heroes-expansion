@@ -23,7 +23,7 @@
 	<PairCreature>CREATURE_UNKNOWN</PairCreature>
 	<CreatureTown>TOWN_NECROMANCY</CreatureTown>
 	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_FIRE</Second></MagicElement>
-	<WeeklyGrowth>41</WeeklyGrowth>
+	<WeeklyGrowth>39</WeeklyGrowth>
 	<Cost>
 		<Gold>50</Gold>
 	</Cost>
@@ -38,9 +38,9 @@
 	<Upgrades/>
 	<Abilities>
 		<Item>ABILITY_UNDEAD</Item>
-		<Item>ABILITY_WEAKENING_AURA</Item>
 		<Item>ABILITY_ENRAGED</Item>
 		<Item>ABILITY_PACK_HUNTER</Item>
+		<Item>ABILITY_WEAKENING_AURA</Item>
 		<Item>ABILITY_SCAVENGER</Item>
 	</Abilities>
 </Creature>

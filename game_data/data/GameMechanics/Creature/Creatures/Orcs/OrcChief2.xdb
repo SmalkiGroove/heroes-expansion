@@ -21,7 +21,7 @@
 	<PairCreature>CREATURE_ORCCHIEF_BUTCHER</PairCreature>
 	<CreatureTown>TOWN_STRONGHOLD</CreatureTown>
 	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_NONE</Second></MagicElement>
-	<WeeklyGrowth>7</WeeklyGrowth>
+	<WeeklyGrowth>6</WeeklyGrowth>
 	<Cost>
 		<Gold>500</Gold>
 	</Cost>
@@ -35,9 +35,8 @@
 	<BaseCreature>CREATURE_ORCCHIEF_BUTCHER</BaseCreature>
 	<Upgrades/>
 	<Abilities>
-		<Item>ABILITY_FRIGHT_AURA</Item>
-		<Item>ABILITY_BRAVERY</Item>
-		<Item>ABILITY_CLEAVE</Item>
 		<Item>ABILITY_DEMON_RAGED</Item>
+		<Item>ABILITY_CLEAVE</Item>
+		<Item>ABILITY_BRAVERY</Item>
 	</Abilities>
 </Creature>
