@@ -41,6 +41,25 @@ function Routine_InfantryDash(side, hero)
     end
 end
 
+function Routine_RetaliationStrike(side, hero)
+    -- log("Trigger cast Retaliation Strike on cavalier !")
+    local cavalier = "none"
+    local max = 0
+    for i,cr in GetUnits(side, CREATURE) do
+        local type = GetCreatureType(cr)
+        if type == CREATURE_CAVALIER or type == CREATURE_PALADIN or type == CREATURE_CHAMPION then
+            local nb = GetCreatureNumber(cr)
+            if nb > max then
+                cavalier = cr
+                max = nb
+            end
+        end
+    end
+    if max > 0 then
+        HeroCast_Target(hero, SPELL_HOLY_CHARGE, NO_COST, cavalier)
+    end
+end
+
 function Routine_CastPrayer(side, hero)
     -- log("Trigger cast Prayer !")
     HeroCast_Global(hero, SPELL_PRAYER, NO_COST)
@@ -788,6 +807,7 @@ COMBAT_START_HERO_ROUTINES = {
     [H_VITTORIO] = Routine_BallistaRandomSalvo,
     [H_DOUGAL] = Routine_ArchersMoveFirst,
     [H_LASZLO] = Routine_InfantryDash,
+    [H_KLAUS] = Routine_RetaliationStrike,
     [H_FREYDA] = Routine_CastPrayer,
     -- preserve
     [H_FINDAN] = Routine_HunterRandomShoot,

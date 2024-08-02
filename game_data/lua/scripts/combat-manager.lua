@@ -1,7 +1,7 @@
 
 dofile("/scripts/combat/handlers/game-vars.lua")
 
-ENABLE_SCRIPT = 1
+ENABLE_SCRIPT = 0
 
 COMBAT_TURN = 0
 CURRENT_UNIT = "none"
@@ -29,13 +29,13 @@ HERO_DATA = {
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
-function EnableScript() ENABLE_SCRIPT = 1 end
+function EnableScript()
+    ENABLE_SCRIPT = 1
+    SetGameVar('h5x_combat_init', 'true')
+end
 
 function CheckEnableScript()
-    consoleCmd("@SetGameVar('h5x_combat_init', 'false')")
-    repeat sleep() until GetGameVar('h5x_combat_init') == 'false'
-    consoleCmd("@if GetGameVar('h5x_combat_init') == 'false' then SetGameVar('h5x_combat_init', 'true') EnableScript() end")
-    repeat sleep() until GetGameVar('h5x_combat_init') == 'true'
+    consoleCmd("@if GetGameVar('h5x_combat_init') == 'true' then SetGameVar('h5x_combat_init', 'false') else EnableScript() end")
 end
 
 function FetchData(name, id)
@@ -43,25 +43,25 @@ function FetchData(name, id)
 
     local temp = GetGameVar(VarHeroLevel(name))
     HERO_DATA[id].Level = 0 + temp
-    log("* fetched level ok")
+    -- log("* fetched level ok")
 
     temp = GetGameVar(VarHeroSkillId(name,SKILL_SHATTER_MAGIC))
     HERO_DATA[id].Skills[SKILL_SHATTER_MAGIC] = 0 + temp
     temp = GetGameVar(VarHeroSkillId(name,PERK_HOUNDMASTERS))
     HERO_DATA[id].Skills[PERK_HOUNDMASTERS] = 0 + temp
-    log("* fetched skills ok")
+    -- log("* fetched skills ok")
 
     temp = GetGameVar(VarHeroArtifactId(name,ARTIFACT_SENTINELS_BLADE))
     HERO_DATA[id].Artifacts[ARTIFACT_SENTINELS_BLADE] = temp == "" and 0 or 0 + temp
     temp = GetGameVar(VarHeroArtifactId(name,ARTIFACT_MOON_CHARM))
     HERO_DATA[id].Artifacts[ARTIFACT_MOON_CHARM] = temp == "" and 0 or 0 + temp
-    log("* fetched artifacts ok")
+    -- log("* fetched artifacts ok")
 
     for set = ARTFSET_NONE,ARTFSET_ACTIVABLES_COUNT do
         temp = GetGameVar(VarHeroArtfsetId(name,set))
         HERO_DATA[id].ArtfSets[set] = temp == "" and 0 or 0 + temp
     end
-    log("* fetched artifact sets ok")
+    -- log("* fetched artifact sets ok")
 
     log("Hero "..name.." : Lvl "..HERO_DATA[id].Level)
 end
@@ -78,7 +78,7 @@ end
 
 function ManageCombatPrepare()
     -- log("$ Manage combat prepare")
-    -- CheckEnableScript()
+    CheckEnableScript()
     if ENABLE_SCRIPT == 0 then return end
 
     combatSetPause(1)
@@ -164,8 +164,8 @@ ROUTINES_LOADED = {
 
 function LoadScript(path, key)
 	-- log("Loading script "..path)
-	dofile(path) sleep()
-	-- repeat sleep() until ROUTINES_LOADED[key] == 1
+	dofile(path)
+	sleep() -- repeat sleep() until ROUTINES_LOADED[key] == 1
 end
 
 LoadScript("/scripts/game/creatures.lua", 1)

@@ -80,6 +80,12 @@ function Routine_TrainPeasantsToArchersConfirm(player, hero, town, amount)
     Var_Dougal_TrainCount = Var_Dougal_TrainCount + amount
 end
 
+function Routine_SuzerainDailyGolds(player, hero)
+    log("$ Routine_SuzerainDailyGolds")
+    local amount = 250 * (GetHeroLevel(hero)-1)
+    AddPlayerResource(player, hero, GOLD, amount)
+end
+
 function Routine_GainExpFromTotalGolds(player, hero)
     log("$ Routine_GainExpFromTotalGolds")
     local amount = trunc(GetPlayerResource(player, GOLD) * GetHeroLevel(hero) * 0.1)
@@ -306,33 +312,15 @@ function Routine_ProductionIncreaseDwarvenWorkers(player, hero)
     end
 end
 
-function Routine_RunePriestDwellingUp(player, hero)
-    log("$ Routine_RunePriestDwellingUp")
-    if PLAYER_BRAIN[player] ~= HUMAN then return end
+function Routine_UpgradeRunicShrine(player, hero)
+    log("$ Routine_UpgradeRunicShrine")
     for town,data in MAP_TOWNS do
-        if data.faction == FORTRESS then
-            if IsHeroInTown(hero, town, 1, 0) then
-                local dw = GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_5)
-                if dw < 2 then
-                    local discount = 1 - 0.05 * GetHeroLevel(hero)
-                    local cost = trunc((10000 + dw * 7500) * discount)
-                    local name_file = {"Name.txt","Upgraded_Name.txt"}
-                    local name = "/Text/Game/TownBuildings/Dwarves/Dwelling_5/"..name_file[dw+1]
-                    QuestionBoxForPlayers(
-                        GetPlayerFilter(player),
-                        {"/Text/Game/Scripts/HeroSpe/RunePriestDwelling.txt"; building=name, golds=cost},
-                        "Routine_RunePriestDwellingUpConfirm('"..player.."','"..hero.."','"..town.."','"..TOWN_BUILDING_DWELLING_5.."','"..cost.."')",
-                        "NoneRoutine"
-                    )
-                end
+        if IsHeroInTown(hero, town, 1, 1) then
+            if data.faction == FORTRESS then
+                UpgradeTownBuilding(town, TOWN_BUILDING_FORTRESS_RUNIC_SHRINE)
             end
         end
     end
-end
-
-function Routine_RunePriestDwellingUpConfirm(player, hero, town, building, cost)
-    UpgradeTownBuilding(town, building)
-    RemovePlayerResource(player, GOLD, 0+cost)
 end
 
 function Routine_AddLuckAndMorale(player, hero)
@@ -876,6 +864,7 @@ START_TRIGGER_HERO_ROUTINES = {
     -- fortress
     [H_WULFSTAN] = Routine_GiveArtifactRingOfMachineAffinity,
     [H_TOLGHAR] = Routine_AddLuckAndMorale,
+    [H_ERLING] = Routine_UpgradeRunicShrine,
     [H_EBBA] = Routine_GiveArtifactRuneOfFlame,
     -- academy
     [H_DAVIUS] = Routine_UpgradeSilverPavillon,
@@ -903,7 +892,6 @@ DAILY_TRIGGER_HERO_ROUTINES = {
     [H_INGVAR] = Routine_AddHeroDefenders,
     [H_ROLF] = Routine_MovePointsPerBear,
     [H_HANGVUL] = Routine_ProductionIncreaseDwarvenWorkers,
-    [H_ERLING] = Routine_RunePriestDwellingUp,
     [H_EBBA] = Routine_GainSpellpowerPerRune,
     -- academy
     [H_HAVEZ] = Routine_AddOtherHeroesGremlins,
