@@ -698,12 +698,18 @@ function Routine_SummonEarthElementals(side, hero)
     end
 end
 
-function Routine_SummonPitlords(side, hero)
-    -- log("Trigger pit lords summoning !")
-    local n = 10 + GetHeroLevel(side)
-    local amount = trunc(0.02 * n * n)
-    -- SummonCreatureStack_X(side, 181, amount, 0)
-    SummonCreatureStack_X(side, CREATURE_BALOR, amount, 0)
+function Routine_InfernoGating(side, hero)
+    -- log("Trigger inferno gating !")
+    local gating_tier = 2 * GetHeroSkillMastery(side, SKILL_GATING)
+    for i,cr in GetUnits(side, CREATURE) do
+        local id = GetCreatureType(cr)
+        if CREATURES[id][1] == INFERNO and CREATURES[id][2] <= gating_tier then
+            local nb = GetCreatureNumber(cr)
+            local x = random(GRID_X_MIN, GRID_X_MAX, nb)
+            local y = random(GRID_Y_MIN, GRID_Y_MAX, id)
+            UnitCastAreaSpell(cr, SPELL_ABILITY_GATING, x, y)
+        end
+    end
 end
 
 
@@ -837,7 +843,7 @@ COMBAT_START_HERO_ROUTINES = {
     [H_ARCHILUS] = Routine_SummonAvatarOfDeath,
     -- inferno
     [H_DELEB] = Routine_CastMineFields,
-    [H_KHABELETH] = Routine_SummonPitlords,
+    [H_KHABELETH] = Routine_InfernoGating,
     -- stronghold
     [H_KRAGH] = Routine_CastRallingCry,
     [H_GOTAI] = Routine_CastBattlecry,

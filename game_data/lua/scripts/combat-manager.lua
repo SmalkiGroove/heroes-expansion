@@ -1,5 +1,5 @@
 
-dofile("/scripts/combat/handlers/game-vars.lua")
+dofile("/scripts/game-vars.lua")
 
 ENABLE_SCRIPT = 0
 
@@ -31,38 +31,34 @@ HERO_DATA = {
 
 function EnableScript()
     ENABLE_SCRIPT = 1
-    SetGameVar('h5x_combat_init', 'true')
+    consoleCmd("@SetGameVar('h5x_combat_init', 'true')")
 end
 
 function CheckEnableScript()
     consoleCmd("@if GetGameVar('h5x_combat_init') == 'true' then SetGameVar('h5x_combat_init', 'false') else EnableScript() end")
+    repeat sleep() until GetGameVar('h5x_combat_init') == 'true'
 end
 
 function FetchData(name, id)
     log("Fetch data for hero "..name)
-
     local temp = GetGameVar(VarHeroLevel(name))
     HERO_DATA[id].Level = 0 + temp
     -- log("* fetched level ok")
-
-    temp = GetGameVar(VarHeroSkillId(name,SKILL_SHATTER_MAGIC))
-    HERO_DATA[id].Skills[SKILL_SHATTER_MAGIC] = 0 + temp
-    temp = GetGameVar(VarHeroSkillId(name,PERK_HOUNDMASTERS))
-    HERO_DATA[id].Skills[PERK_HOUNDMASTERS] = 0 + temp
+    for _,s in COMBAT_EFFECT_SKILLS do
+        temp = GetGameVar(VarHeroSkillId(name,s))
+        HERO_DATA[id].Skills[s] = temp == "" and 0 or 0 + temp
+    end
     -- log("* fetched skills ok")
-
-    temp = GetGameVar(VarHeroArtifactId(name,ARTIFACT_SENTINELS_BLADE))
-    HERO_DATA[id].Artifacts[ARTIFACT_SENTINELS_BLADE] = temp == "" and 0 or 0 + temp
-    temp = GetGameVar(VarHeroArtifactId(name,ARTIFACT_MOON_CHARM))
-    HERO_DATA[id].Artifacts[ARTIFACT_MOON_CHARM] = temp == "" and 0 or 0 + temp
+    for _,a in COMBAT_EFFECT_ARTIFACTS do
+        temp = GetGameVar(VarHeroArtifactId(name,a))
+        HERO_DATA[id].Artifacts[a] = temp == "" and 0 or 0 + temp
+    end
     -- log("* fetched artifacts ok")
-
     for set = ARTFSET_NONE,ARTFSET_ACTIVABLES_COUNT do
         temp = GetGameVar(VarHeroArtfsetId(name,set))
         HERO_DATA[id].ArtfSets[set] = temp == "" and 0 or 0 + temp
     end
     -- log("* fetched artifact sets ok")
-
     log("Hero "..name.." : Lvl "..HERO_DATA[id].Level)
 end
 

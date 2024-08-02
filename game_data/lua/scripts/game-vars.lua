@@ -1,4 +1,9 @@
 
+function Register(var, value)
+    ExecConsoleCommand("@SetGameVar('"..var.."','"..value.."')")
+end
+
+
 function VarHeroLevel(hero)
 	return "h5x_hero_"..hero.."_level"
 end
@@ -14,4 +19,4 @@ end
 
 
 -- log("Loaded game-vars.lua")
-ROUTINES_LOADED[15] = 1
+ROUTINES_LOADED[30] = 1

@@ -734,10 +734,13 @@ AFTER_COMBAT_TRIGGER_SKILLS_ROUTINES = {
 
 function DoSkillsRoutine_Start(player, hero)
     log("$ DoSkillsRoutine_Start - "..hero)
-    for k,v in START_TRIGGER_SKILLS_ROUTINES do
-        if HasHeroSkill(hero, k) then
-            local mastery = GetHeroSkillMastery(hero, k)
-            startThread(v, player, hero, mastery)
+    for skill = 1,207 do
+        if HasHeroSkill(hero, skill) then
+            local mastery = GetHeroSkillMastery(hero, skill)
+            Register(VarHeroSkillId(hero, skill), mastery)
+            if START_TRIGGER_SKILLS_ROUTINES[skill] then
+                startThread(START_TRIGGER_SKILLS_ROUTINES[skill], player, hero, mastery)
+            end
         end
     end
 end

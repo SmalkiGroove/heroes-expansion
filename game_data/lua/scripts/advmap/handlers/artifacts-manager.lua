@@ -1,8 +1,4 @@
 
-REGISTERED_ARTIFACTS = {
-    [ARTIFACT_SENTINELS_BLADE] = {},
-    [ARTIFACT_MOON_CHARM] = {},
-}
 HERO_ARTFSETS_PIECES = {}
 HERO_ARTFSETS_STATUS = {}
 
@@ -45,6 +41,10 @@ ARTIFACT_SETS_ACTIVATIONS = {
     [ARTIFACT_SET_MOON]      = { [4]=ARTFSET_MOON_4PC },
 }
 
+REGISTERED_ARTIFACTS = {
+    [ARTIFACT_SENTINELS_BLADE] = {},
+    [ARTIFACT_MOON_CHARM] = {},
+}
 
 function ScanHeroArtifacts(hero)
     -- log("$ ScanHeroArtifacts : "..hero)

@@ -48,7 +48,7 @@ LoadScript("/scripts/advmap/handlers/heroes-manager.lua", 18)
 LoadScript("/scripts/advmap/handlers/starting-armies.lua", 21)
 LoadScript("/scripts/advmap/handlers/town-conversion.lua", 22)
 LoadScript("/scripts/advmap/handlers/custom-abilities.lua", 23)
-LoadScript("/scripts/advmap/handlers/game-vars.lua", 30)
+LoadScript("/scripts/game-vars.lua", 30)
 
 
 ADD_PLAYER_HERO = {
@@ -150,6 +150,7 @@ function NewDayTrigger()
 end
 
 function CombatResultsHandler(combatIndex)
+	Register('h5x_combat_init', 'false')
 	local hero = GetSavedCombatArmyHero(combatIndex, 1)
 	if hero ~= nil then
 		local player = GetSavedCombatArmyPlayer(combatIndex, 1)
@@ -171,6 +172,7 @@ Trigger(CUSTOM_ABILITY_TRIGGER, "CustomAbilityHandler")
 
 
 function AddPlayerHero(player, hero)
+	Register(VarHeroLevel(hero), GetHeroLevel(hero))
 	if HEROES[hero].owner then
 		log("Comeback hero "..hero)
 		startThread(BindHeroLevelUpTrigger, hero)
@@ -183,7 +185,6 @@ function AddPlayerHero(player, hero)
 		startThread(DoHeroSpeRoutine_Start, player, hero)
 	end
 	HEROES[hero].owner = player
-	startThread(StoreData, hero)
 end
 function AddPlayer1Hero(hero) AddPlayerHero(PLAYER_1, hero) end
 function AddPlayer2Hero(hero) AddPlayerHero(PLAYER_2, hero) end
@@ -217,6 +218,7 @@ function InitializeHeroes()
 		if (GetPlayerState(player) == 1) then
 			for i,hero in GetPlayerHeroes(player) do
 				log("Initialize hero "..hero)
+				Register(VarHeroLevel(hero), GetHeroLevel(hero))
 				startThread(InitializeArmy, hero)
 				startThread(BindHeroLevelUpTrigger, hero)
 				startThread(BindHeroSkillTrigger, hero)
@@ -224,18 +226,10 @@ function InitializeHeroes()
 				startThread(DoHeroSpeRoutine_Start, player, hero) sleep(1)
 				HEROES[hero].owner = player
 			end
+			startThread(WatchPlayer, player, 1)
 		end
 	end
 	UpdateTavernHeroes()
-end
-
-for player = 1,8 do
-	if (GetPlayerState(player) == 1) then
-		for i,hero in GetPlayerHeroes(player) do
-			startThread(StoreData, hero)
-		end
-		startThread(WatchPlayer, player, 1)
-	end
 end
 
 log("All scripts successfully loaded !")
