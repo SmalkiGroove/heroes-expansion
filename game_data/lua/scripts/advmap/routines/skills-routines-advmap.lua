@@ -214,6 +214,18 @@ function Routine_CheckLastStand(player, hero, mastery)
     end
 end
 
+Var_PlayerPathfinders = {0,0,0,0,0,0,0,0,0}
+function Routine_RevealNeutralTowns(player, hero, mastery)
+    if mastery > HERO_SKILL_BONUSES[hero][SKILLBONUS_PATHFINDING] then
+        local radius = 10 + 5 * Var_PlayerPathfinders[player]
+        for town,data in MAP_TOWNS do
+            if GetObjectOwner(town) == PLAYER_NONE then OpenCircleFog(data.x, data.y, data.z, radius, player) end
+        end
+        Var_PlayerPathfinders[player] = Var_PlayerPathfinders[player] + 1
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_PATHFINDING] = 1
+    end
+end
+
 function Routine_GearUp(player, hero, mastery)
     log("$ Routine_GearUp")
     if mastery > HERO_SKILL_BONUSES[hero][SKILLBONUS_GEAR_UP] then
@@ -363,12 +375,16 @@ end
 
 function Routine_StaminaBuff(player, hero, mastery)
     log("$ Routine_StaminaBuff")
-    GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_HITPOINTS, 10)
+    if mastery == 1 then
+        GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_HITPOINTS, 10)
+    end
 end
 
 function Routine_RageAwakening(player, hero, mastery)
     log("$ Routine_RageAwakening")
-    GiveHeroSkill(hero, SKILL_BLOOD_RAGE)
+    if mastery == 1 then
+        GiveHeroSkill(hero, SKILL_BLOOD_RAGE)
+    end
 end
 
 function Routine_CheckInfusion(player, hero, mastery)
@@ -402,6 +418,11 @@ function Routine_OnslaughtBuff(player, hero, mastery)
         GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_SPEED, 1)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_ONSLAUGHT] = 1
     end
+end
+
+function Routine_GeologyOre(player, hero, mastery)
+    log("$ Routine_GeologyOre")
+    AddPlayerResource(player, hero, ORE, 1)
 end
 
 function Routine_IndustryDaily(player, hero, mastery)
@@ -469,23 +490,28 @@ function Routine_LogisticsWeeklyProd(player, hero, mastery)
             local faction = data.faction
             local fort = GetTownBuildingLevel(town, TOWN_BUILDING_FORT)
             local grail = GetTownBuildingLevel(town, TOWN_BUILDING_GRAIL)
-            local multiplier = 1 + 0.5 * grail
-            if fort > 1 then multiplier = multiplier + 0.5 * (fort-1) end
-            if hero == H_WYNGAAL then multiplier = multiplier * (1 + 0.05 * GetHeroLevel(hero)) end
+            local factor = 1 + 0.5 * grail
+            if fort > 1 then factor = factor + 0.5 * (fort-1) end
+            local recr = GetHeroSkillMastery(hero, PERK_RECRUITMENT)
+            local bonus = 1 + recr
+            if hero == H_WYNGAAL then bonus = bonus + 0.05 * GetHeroLevel(hero) end
             if mastery >= 1 and GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_1) ~= 0 then
                 local creature = CREATURES_BY_FACTION[faction][1][1]
                 local current = GetObjectDwellingCreatures(town, creature)
-                SetObjectDwellingCreatures(town, creature, current + 5*multiplier)
+                local amount = current + 5 * factor * bonus - 3 * recr
+                SetObjectDwellingCreatures(town, creature, amount)
             end
             if mastery >= 2 and GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_2) ~= 0 then
                 local creature = CREATURES_BY_FACTION[faction][2][1]
                 local current = GetObjectDwellingCreatures(town, creature)
-                SetObjectDwellingCreatures(town, creature, current + 3*multiplier)
+                local amount = current + 5 * factor * bonus - 2 * recr
+                SetObjectDwellingCreatures(town, creature, amount)
             end
             if mastery >= 3 and GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_3) ~= 0 then
                 local creature = CREATURES_BY_FACTION[faction][3][1]
                 local current = GetObjectDwellingCreatures(town, creature)
-                SetObjectDwellingCreatures(town, creature, current + 2*multiplier)
+                local amount = current + 5 * factor * bonus - recr
+                SetObjectDwellingCreatures(town, creature, amount)
             end
         end
     end
@@ -591,20 +617,20 @@ function Routine_LeadershipAfterBattle(player, hero, mastery, combatIndex)
     log("$ Routine_LeadershipAfterBattle")
     if GetSavedCombatArmyHero(combatIndex, 0) then return end
     local x, y, z = GetObjectPosition(hero)
-    -- local town_data = PLAYER_MAIN_TOWN[player] and MAP_TOWNS[PLAYER_MAIN_TOWN[player]] or nil
-    log("Hero at x="..x..", y="..y)
+    local town_data = PLAYER_MAIN_TOWN[player] and MAP_TOWNS[PLAYER_MAIN_TOWN[player]] or nil
+    -- log("Hero at x="..x..", y="..y)
     local found = nil
     for i = -1,1 do for j = -1,1 do
         objects = GetObjectsFromPath(hero, x+i, y+j, z)
         if length(objects) == 0 then x=x+i; y=y+j; found = not nil; break end
     end if found then break end end
-    if found then log("Spawn caravan at x="..x..", y="..y) else log("No available tile around hero was found"); return end
-    -- local dx = town_data and town_data.x or x
-    -- local dy = town_data and town_data.y or y
-    -- local dz = town_data and town_data.z or z
+    -- if found then log("Spawn caravan at x="..x..", y="..y) else log("No available tile around hero was found"); return end
+    local dx = town_data and town_data.x or x
+    local dy = town_data and town_data.y or y
+    local dz = town_data and town_data.z or z
     local caravan = "Caravan-"..NB_CARAVAN
     NB_CARAVAN = NB_CARAVAN + 1
-    CreateCaravan(caravan, player, z, x, y, z, x, y)
+    CreateCaravan(caravan, player, z, x, y, dz, dx, dy)
     repeat sleep(1) until IsObjectExists(caravan)
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 0)
     for i = 0,stacks-1 do
@@ -623,7 +649,9 @@ function Routine_LeadershipAfterBattle(player, hero, mastery, combatIndex)
         end
         local amount = count * (0.05 + 0.05 * mastery + 0.01 * bonus)
         if HasHeroSkill(hero, PERK_HERALD_OF_DEATH) then creature = CreatureToUndead(creature) end
-        AddObjectCreatures(caravan, creature, trunc(amount))
+        if amount > 0 then
+            AddObjectCreatures(caravan, creature, trunc(amount))
+        end
     end
     CURRENT_CARAVANS[caravan] = 3
 end
@@ -635,6 +663,20 @@ function Routine_TaleTellers(player, hero, mastery, combatIndex)
         if h ~= hero then
             AddHeroStatAmount(player, h, STAT_EXPERIENCE, exp)
         end
+    end
+end
+
+Var_SpoilersVictories = {}
+function Routine_SpoilsOfWarArtifact(player, hero, mastery, combatIndex)
+    log("$ Routine_SpoilsOfWarArtifact")
+    Var_SpoilersVictories[hero] = Var_SpoilersVictories[hero] and Var_SpoilersVictories[hero] + 1 or 1
+    if mod(Var_SpoilersVictories[hero],10) == 0 then
+        local pool = {}
+        for artifact,data in ARTIFACTS_DATA do
+            if data.special == 0 and data.class == ARTIFACT_CLASS_MINOR then insert(pool, a) end
+        end
+        local artefact = pool[random(1, length(pool), TURN)]
+        GiveArtifact(hero, artefact)
     end
 end
 
@@ -673,6 +715,7 @@ START_TRIGGER_SKILLS_ROUTINES = {
     [PERK_GET_WISER] = Routine_CheckGetWiser,
     [PERK_ONSLAUGHT] = Routine_OnslaughtBuff,
     [PERK_LAST_STAND] = Routine_CheckLastStand,
+    [PERK_PATHFINDING] = Routine_RevealNeutralTowns,
     [PERK_GEAR_UP] = Routine_GearUp,
     [PERK_HEROES_LEGACY] = Routine_HeroesLegacy,
     [PERK_MYTHOLOGY] = Routine_Mythology,
@@ -693,6 +736,7 @@ START_TRIGGER_SKILLS_ROUTINES = {
 
 DAILY_TRIGGER_SKILLS_ROUTINES = {
     [PERK_ONSLAUGHT] = Routine_OnslaughtBuff,
+    [PERK_GEOLOGY] = Routine_GeologyOre,
     [PERK_INDUSTRY] = Routine_IndustryDaily,
     [PERK_HERALD_OF_DEATH] = Routine_HeraldOfDeathGolds,
     [SKILL_SPIRITISM] = Routine_SpiritismManaRegen,
@@ -729,6 +773,7 @@ LEVELUP_TRIGGER_SKILLS_ROUTINES = {
 AFTER_COMBAT_TRIGGER_SKILLS_ROUTINES = {
     [SKILL_LEADERSHIP] = Routine_LeadershipAfterBattle,
     [PERK_TALETELLERS] = Routine_TaleTellers,
+    [PERK_SPOILS_OF_WAR] = Routine_SpoilsOfWarArtifact,
     [PERK_ONSLAUGHT] = Routine_OnslaughtReset,
     [PERK_STAMINA] = Routine_StaminaBuff,
 }

@@ -267,6 +267,7 @@ _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_GET_STRONGER        = _skillbonu
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_GET_WISER           = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_ONSLAUGHT           = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_LAST_STAND          = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_PATHFINDING         = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_GEAR_UP             = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_HEROES_LEGACY       = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_MYTHOLOGY           = _skillbonus_id
