@@ -185,7 +185,7 @@ ARTIFACT_BLOOD_CRYSTAL = 181                        --
 ARTIFACT_RANGERS_CAPE = 182                         -- 
 ARTIFACT_MOON_CHARM = 183                           -- the first friendly stack that dies in combat revives **
 ARTIFACT_FORGOTTEN_RING = 184                       -- 
-ARTIFACT_FROZEN_HEART = 185                         -- 
+ARTIFACT_FROZEN_HEART = 185                         -- frost-proof and immunity to fire perks
 ARTIFACT_MOONLIGHT_COAT = 186                       -- reduce hero spell cost by 25%
 ARTIFACT_DRAGONSBANE = 187                          -- 
 ARTIFACT_CUIRASS_OF_THE_STAG = 188                  -- /
@@ -375,7 +375,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_FORTUNE_PICKAXE]               = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
     [ARTIFACT_CURSED_DICES]                  = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_POCKET, special=0},
     [ARTIFACT_REGAL_ARMOUR]                  = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_BODY, special=0},
-    [ARTIFACT_CROWN_OF_THE_FROST_LORD]       = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_HEAD, special=0},
+    [ARTIFACT_CROWN_OF_THE_FROST_LORD]       = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_HEAD, special=0},
     [ARTIFACT_ALTAR_OF_ELEMENTS_SHARD]       = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_NECK, special=0},
     [ARTIFACT_ELDENAS_RED_SCARF]             = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_NECK, special=0},
     [ARTIFACT_ELDENAS_CIRCLET]               = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_HEAD, special=0},
@@ -444,7 +444,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_HELM_OF_THE_WARMAGE]           = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_HEAD, special=0},
     [ARTIFACT_CELESTIAL_JUSTICAR_HELMET]     = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_HEAD, special=0},
     [ARTIFACT_RING_OF_STRENGTH]              = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RING, special=0},
-    [ARTIFACT_SPEAR_OF_THE_FROST_LORD]       = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
+    [ARTIFACT_SPEAR_OF_THE_FROST_LORD]       = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
     [ARTIFACT_STAFF_OF_THE_LYRE]             = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
     [ARTIFACT_SANCTUARYS_CROWN]              = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_HEAD, special=0},
     [ARTIFACT_PENDANT_OF_THE_LYRE]           = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_NECK, special=0},
@@ -459,7 +459,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_RANGERS_CAPE]                  = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_SHOULDERS, special=0},
     [ARTIFACT_MOON_CHARM]                    = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_NECK, special=0},
     [ARTIFACT_FORGOTTEN_RING]                = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RING, special=0},
-    [ARTIFACT_FROZEN_HEART]                  = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_POCKET, special=0},
+    [ARTIFACT_FROZEN_HEART]                  = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_POCKET, special=0},
     [ARTIFACT_MOONLIGHT_COAT]                = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_SHOULDERS, special=0},
     [ARTIFACT_DRAGONSBANE]                   = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
     [ARTIFACT_CUIRASS_OF_THE_STAG]           = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_BODY, special=0},

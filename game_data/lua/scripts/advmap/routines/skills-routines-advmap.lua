@@ -80,9 +80,11 @@ end
 function Routine_CheckSpiritism(player, hero, mastery)
     log("$ Routine_CheckSpiritism")
     local current = HERO_SKILL_BONUSES[hero][SKILLBONUS_SPIRITISM]
+    HERO_SKILL_BONUSES[hero][SKILLBONUS_SPIRITISM] = mastery
     if mastery > current then
         for rank = 1+current,mastery do
             local school = SPIRITISM_SCHOOL_AFFINITY[hero] and SPIRITISM_SCHOOL_AFFINITY[hero] or SPELL_SCHOOL_ANY
+            school = school * mod(GetHeroLevel(hero),2)
             TeachHeroRandomSpellTier(player, hero, school, rank+2)
         end
     end

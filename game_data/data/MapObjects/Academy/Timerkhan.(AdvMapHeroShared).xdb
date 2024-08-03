@@ -30,7 +30,7 @@
 	<Icon128/>
 	<InternalName>Timerkhan</InternalName>
 	<Class>HERO_CLASS_ACADEMY_MIGHT</Class>
-	<Specialization>HERO_SPEC_PRUDENT</Specialization>
+	<Specialization/>
 	<PrimarySkill>
 		<SkillID>HERO_SKILL_INNATES</SkillID>
 		<Mastery>MASTERY_EXPERT</Mastery>
@@ -56,19 +56,15 @@
 		<skills>
 			<Item>
 				<SkillID>HERO_SKILL_ARTIFICIER</SkillID>
-				<Mastery>MASTERY_BASIC</Mastery>
-			</Item>
-			<Item>
-				<SkillID>HERO_SKILL_DARK_MAGIC</SkillID>
-				<Mastery>MASTERY_BASIC</Mastery>
+				<Mastery>MASTERY_EXTRA_EXPERT</Mastery>
 			</Item>
 		</skills>
 		<perkIDs>
 			<Item>HERO_SKILL_INFUSION</Item>
-			<Item>HERO_SKILL_MASTER_OF_CURSES</Item>
+			<Item>HERO_SKILL_CONSUME_ARTIFACT</Item>
 		</perkIDs>
 		<spellIDs>
-			<Item>SPELL_SLOW</Item>
+			<Item>SPELL_MAGIC_ARROW</Item>
 		</spellIDs>
 		<Ballista>false</Ballista>
 		<FirstAidTent>false</FirstAidTent>

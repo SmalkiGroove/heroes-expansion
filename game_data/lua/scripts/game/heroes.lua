@@ -11,13 +11,13 @@ H_FREYDA = 'Axel'                   -- prayer
 H_ISABEL = 'Isabell'                -- bless
 H_GODRIC = 'GodricMP'               -- celestial shield
 H_NICOLAI = 'Nicolai'               -- suzerain
-H_GABRIELLE = 'RedHeavenHero06'     -- ?
+H_GABRIELLE = 'RedHeavenHero06'     -- griffins
 H_ALARIC = 'Alaric'                 -- counterspell
 
 -- sylvan
 H_WYNGAAL = 'Linaas'                -- logistics
 H_KYRRE = 'Kyrre'                   -- experience
-H_TALANAR = 'Nadaur'                -- rage
+H_TALANAR = 'Nadaur'                -- spite
 H_JENOVA = 'Jenova'                 -- offender
 H_FINDAN = 'Heam'                   -- hunters
 H_IVOR = 'Arniel'                   -- wolves
@@ -25,7 +25,7 @@ H_DIRAEL = 'Diraya'                 -- wasps
 H_VINRAEL = 'Vinrael'               -- haste
 H_TIERU = 'Vaniel'                  -- druids
 H_YLTHIN = 'Itil'                   -- unicorns
-H_ELLESHAR = 'Elleshar'             -- spellpower
+H_ELLESHAR = 'Elleshar'             -- magic
 H_MELODIA = 'Melodia'               -- regeneration
 
 -- academy
@@ -33,7 +33,7 @@ H_HAVEZ = 'Havez'                   -- gremlins
 H_RAZZAK = 'Razzak'                 -- golems
 H_DAVIUS = 'Davius'                 -- rakshasas
 H_NATHIR = 'Astral'                 -- bombardier
-H_THEODORUS = 'Timerkhan'           -- exauster
+H_THEODORUS = 'Timerkhan'           -- artificier
 H_GALIB = 'Tan'                     -- magic mirror
 H_NUR = 'Nur'                       -- mana regen
 H_ZEHIR = 'Zehir'                   -- elementals
@@ -51,10 +51,10 @@ H_TAZAR = 'Tazar'                   -- initiative
 H_WULFSTAN = 'Wulfstan'             -- ballista
 H_TOLGHAR = 'KingTolghar'           -- stun rune
 H_ERLING = 'Egil'                   -- rune priests
-H_HEDWIG = 'Vilma'                  -- evasion
+H_HEDWIG = 'Vilma'                  -- evasion def
 H_BRAND = 'Brand'                   -- fireball
-H_EBBA = 'Bersy'                    -- economist
-H_INGA = 'Una'                      -- earth spells
+H_EBBA = 'Bersy'                    -- runes
+H_INGA = 'Una'                      -- earthquake
 
 -- necropolis
 H_VLADIMIR = 'Pelt'                 -- blood drinker
@@ -66,7 +66,7 @@ H_KASPAR = 'Gles'                   -- plague tent
 H_RAVEN = 'Effig'                   -- reanimator
 H_ARCHILUS = 'Archilus'             -- avatar of death
 H_THANT = 'Thant'                   -- curse mummies
-H_SANDRO = 'Sandro'                 -- ?
+H_SANDRO = 'Sandro'                 -- great lich
 H_ORNELLA = 'OrnellaNecro'          -- frost mage
 H_DEIRDRE = 'Nemor'                 -- banshee scream
 
@@ -79,10 +79,10 @@ H_NYMUS = 'Nymus'                   -- gating
 H_MALUSTAR = 'Malustar'             -- explosions
 H_AGRAEL = 'Agrael'                 -- fireball
 H_MARBAS = 'Marder'                 -- confusion
-H_ORLANDO = 'Orlando'               -- ?
+H_ORLANDO = 'Orlando'               -- conqueror
 H_BIARA = 'Biara'                   -- succubus
 H_DELEB = 'Deleb'                   -- fire traps
-H_KHABELETH = 'Sovereign'           -- pit lords
+H_KHABELETH = 'Sovereign'           -- satrting gates
 
 -- dungeon
 H_VAYSHAN = 'Ohtarig'               -- scouts
@@ -108,7 +108,7 @@ H_GORSHAK = 'Hero4'                 -- slayers
 H_KARUKAT = 'Hero6'                 -- wyverns
 H_HAGGASH = 'Hero7'                 -- magic resist
 H_MUKHA = 'Mokka'                   -- lightning
-H_URGHAT = 'Hero2'                  -- ?
+H_URGHAT = 'Hero2'                  -- exhauster
 H_ZOULEIKA = 'Zouleika'             -- healing tent
 H_KUJIN = 'KujinMP'                 -- shamans
 

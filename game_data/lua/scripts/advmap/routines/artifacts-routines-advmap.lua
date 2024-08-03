@@ -64,11 +64,6 @@ function Routine_ArtifactBootsOfSwiftJourneyCancel(player, hero, combatIndex)
     Var_BootsOfSwiftJourneyCheck[hero] = nil
 end
 
-function Routine_ArtifactGreatLich(player, hero)
-    log("$ Routine_ArtifactGreatLich")
-    AddHeroCreatureType(player, hero, NECROPOLIS, 5, 1)
-end
-
 function Routine_ArtifactSentinelsHelm(player, hero, level)
     log("$ Routine_ArtifactSentinelsHelm")
     GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_ATTACK, 2)
@@ -291,7 +286,6 @@ WEEKLY_TRIGGER_ARTIFACTS_ROUTINES = {
 }
 LEVELUP_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_BACKPACK_OF_THE_OPEN_ROAD] = Routine_ArtifactBackpackOfOpenRoad,
-    [ARTIFACT_SANDROS_CLOAK] = Routine_ArtifactGreatLich,
     [ARTIFACT_HELM_OF_THE_WARMAGE] = Routine_ArtifactHelmOfWarmage,
     [ARTIFACT_ELDENAS_RED_SCARF] = Routine_ArtifactEldenaRedScarf,
     [ARTIFACT_ELDENAS_RED_COAT] = Routine_ArtifactEldenaRedCoat,

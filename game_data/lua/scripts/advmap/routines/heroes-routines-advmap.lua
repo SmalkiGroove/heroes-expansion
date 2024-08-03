@@ -468,10 +468,21 @@ function Routine_UpgradeSilverPavillon(player, hero)
     end
 end
 
-function Routine_ActivateArtfsetNecro(player, hero)
-    log("$ Routine_ActivateArtfsetNecro")
-    GiveArtifact(hero, 251, 1)
-    GiveArtifact(hero, 252, 1)
+function Routine_GetCraftingResources(player, hero, level)
+    log("$ Routine_GetCraftingResources")
+    local res = mod(level, 6)
+    AddPlayerResource(player, hero, res, 1)
+end
+
+function Routine_IncreaseKnowledgeTemp(hero, obj)
+    log("$ Routine_IncreaseKnowledgeTemp")
+    if MAP_TOWNS[obj] and MAP_TOWNS[obj].faction == ACADEMY then
+        local value = GetHeroLevel(hero)
+        local x,y,z = GetObjectPosition(hero)
+        ChangeHeroStat(hero, STAT_KNOWLEDGE, value)
+        repeat sleep(10) until not IsEqualPosition(hero, x, y, z)
+        ChangeHeroStat(hero, STAT_KNOWLEDGE, -value)
+    end
 end
 
 function Routine_AddRecruitsMages(player, hero)
@@ -646,10 +657,21 @@ end
 
 function Routine_HeroCallVampires(player, hero)
     log("$ Routine_HeroCallVampires")
-    local amount = trunc(0.7 * GetHeroLevel(hero))
-    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_VAMPIRE, amount)
-    sleep(10)
-    TransferCreatureFromTown(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_NOSFERATU, 1.2)
+    if GetHeroLevel(hero) >= 20 then
+        for i,town in GetHeroTowns(player, hero) do
+            if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_4) ~= 0 then
+                local fort = GetTownBuildingLevel(town, TOWN_BUILDING_FORT)
+                local grail = GetTownBuildingLevel(town, TOWN_BUILDING_GRAIL)
+                local multiplier = 1 + 0.5 * grail
+                if fort > 1 then multiplier = multiplier + 0.5 * (fort-1) end
+                local nb = round(10 * multiplier)
+                local current = GetObjectDwellingCreatures(town, CREATURE_VAMPIRE)
+                SetObjectDwellingCreatures(town, CREATURE_VAMPIRE, current + nb)
+            end
+        end
+    end
+    sleep(1)
+    TransferCreatureFromTown(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_VAMPIRE, 1.2)
 end
 
 function Routine_AddHeroBlackKnights(player, hero)
@@ -692,6 +714,29 @@ end
 function Routine_GiveSandrosCloak(player, hero)
     log("$ Routine_GiveSandrosCloak")
     GiveArtifact(hero, ARTIFACT_SANDROS_CLOAK, 1)
+end
+
+function Routine_AddLichesPerKnowledge(player, hero)
+    log("$ Routine_AddLichesPerKnowledge")
+    local nb = trunc(0.25 * GetHeroStat(hero, STAT_KNOWLEDGE))
+    AddHeroCreatureType(player, hero, NECROPOLIS, 5, nb)
+end
+
+Var_Ornella_BattleWon = 0
+function Routine_FrostLordArtifacts(player, hero, combatIndex)
+    log("$ Routine_FrostLordArtifacts")
+    Var_Ornella_BattleWon = Var_Ornella_BattleWon + 1
+    if Var_Ornella_BattleWon == 7 then
+        GiveArtifact(hero, ARTIFACT_EVERCOLD_ICICLE)
+    elseif Var_Ornella_BattleWon == 15 then
+        GiveArtifact(hero, ARTIFACT_FROZEN_HEART)
+    elseif Var_Ornella_BattleWon == 20 then
+        GiveArtifact(hero, ARTIFACT_SHIELD_OF_CRYSTAL_ICE)
+    elseif Var_Ornella_BattleWon == 30 then
+        GiveArtifact(hero, ARTIFACT_CROWN_OF_THE_FROST_LORD)
+    elseif Var_Ornella_BattleWon == 35 then
+        GiveArtifact(hero, ARTIFACT_SPEAR_OF_THE_FROST_LORD)
+    end
 end
 
 
@@ -838,6 +883,12 @@ function Routine_AddHeroWyverns(player, hero)
     AddHeroCreatureType(player, hero, STRONGHOLD, 6, amount)
 end
 
+function Routine_ActivateArtfsetNecro(player, hero)
+    log("$ Routine_ActivateArtfsetNecro")
+    GiveArtifact(hero, 251, 1)
+    GiveArtifact(hero, 252, 1)
+end
+
 function Routine_ActivateArtfsetSarIssus(player, hero)
     log("$ Routine_ActivateArtfsetSarIssus")
     GiveArtifact(hero, 247, 1)
@@ -868,7 +919,6 @@ START_TRIGGER_HERO_ROUTINES = {
     [H_EBBA] = Routine_GiveArtifactRuneOfFlame,
     -- academy
     [H_DAVIUS] = Routine_UpgradeSilverPavillon,
-    [H_THEODORUS] = Routine_ActivateArtfsetNecro,
     [H_RISSA] = Routine_RefreshTimeShift,
     -- dungeon
     [H_YRWANNA] = Routine_BuildRitualPit,
@@ -879,6 +929,7 @@ START_TRIGGER_HERO_ROUTINES = {
     -- inferno
     [H_BIARA] = Routine_ActivateArtfsetHunter,
     -- stronghold
+    [H_URGHAT] = Routine_ActivateArtfsetNecro,
     [H_KUJIN] = Routine_ActivateArtfsetSarIssus,
 }
 
@@ -952,11 +1003,13 @@ LEVEL_UP_HERO_ROUTINES_HERO = {
     [H_VINRAEL] = Routine_GiveArtifactLegendaryBoots,
     -- fortress
     -- academy
+    [H_THEODORUS] = Routine_GetCraftingResources,
     [H_MINASLI] = Routine_AddHeroEaglePerLevel,
     -- dungeon
     [H_SINITAR] = Routine_ConvertKnowledgeToSpellpower,
     [H_SHADYA] = Routine_AddHeroLevel,
     -- necropolis
+    [H_SANDRO] = Routine_AddLichesPerKnowledge,
     -- inferno
     [H_ASH] = Routine_GainAttackPerLevel,
     [H_BIARA] = Routine_AddHeroSuccubus,
@@ -979,6 +1032,7 @@ AFTER_COMBAT_TRIGGER_HERO_ROUTINES = {
     [H_RAELAG] = Routine_GainDragonArtifacts,
     -- necropolis
     [H_XERXON] = Routine_EvolveBlackKnights,
+    [H_ORNELLA] = Routine_FrostLordArtifacts,
     -- inferno
     [H_SHELTEM] = Routine_RestoreManaAfterBattle,
     [H_ORLANDO] = Routine_GainBonusExpAndRes,
