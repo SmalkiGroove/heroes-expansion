@@ -25,7 +25,6 @@ end
 
 function Routine_ArchersMoveFirst(side, hero)
     -- log("Trigger archers atb boost !")
-    SetATB_ID(CURRENT_UNIT, ATB_NEXT)
     SetATB_CreatureTypes(side, {CREATURE_ARCHER,CREATURE_MARKSMAN,CREATURE_LONGBOWMAN}, ATB_INSTANT)
 end
 
@@ -552,9 +551,28 @@ function Routine_SummonZombieStack(side, hero)
     end
 end
 
-function Routine_HealingTentMoveFirst(side, hero)
-    -- log("Trigger healing tent play first !")
-    SetATB_WarMachineType(side, WAR_MACHINE_FIRST_AID_TENT, ATB_INSTANT)
+function Routine_FirstAidLastAid(side, hero)
+    -- log("Trigger healing tent plague !")
+    if GetHeroSkillMastery(side, PERK_PLAGUE_TENT) == 1 then
+        local tent = GetWarMachine(side, WAR_MACHINE_FIRST_AID_TENT)
+        if tent then
+            for i,cr in GetUnits(1-side, CREATURE) do
+                local x,y = GetUnitPosition(cr)
+                UseCombatAbility(tent, SPELL_EFFECT_FIRST_AID_TENT_PLAGUE, x, y)
+            end
+        end
+    end
+end
+
+function Routine_EmbalmerManaRegen(side, hero)
+    -- log("Trigger regen mana if tent !")
+    if CURRENT_UNIT == hero then
+        if IsCombatUnit(UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_FIRST_AID_TENT') then
+            local m = 1 + GetHeroSkillMastery(side, SKILL_DARK_MAGIC)
+            local value = min(GetUnitManaPoints(hero)+m, GetUnitMaxManaPoints(hero))
+            SetMana(hero, value)
+        end
+    end
 end
 
 function Routine_SummonAvatarOfDeath(side, hero)
@@ -839,6 +857,7 @@ COMBAT_START_HERO_ROUTINES = {
     [H_SHADYA] = Routine_CastRandomDeepFrost,
     -- necropolis
     [H_VLADIMIR] = Routine_SummonAndKillEnnemySkeleton,
+    [H_KASPAR] = Routine_FirstAidLastAid,
     [H_THANT] = Routine_CastMassWeakness,
     [H_ARCHILUS] = Routine_SummonAvatarOfDeath,
     -- inferno

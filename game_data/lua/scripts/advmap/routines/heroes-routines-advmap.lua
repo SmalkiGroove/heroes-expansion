@@ -264,7 +264,7 @@ end
 
 function Routine_ReviveBearRiders(player, hero, combatIndex)
     log("$ Routine_ReviveBearRiders")
-    local max = 2 + trunc(0.66 * GetHeroLevel(hero))
+    local max = 1 + trunc(0.66 * GetHeroLevel(hero))
     ResurrectCreatureType(player, hero, combatIndex, FORTRESS, 4, max)
 end
 
@@ -655,6 +655,16 @@ end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 -- NECROPOLIS
 
+function Routine_GainMovePointsPerLevel(player, hero, level)
+    log("$ Routine_GainMovePointsPerLevel")
+    ChangeHeroStat(hero, STAT_MOVE_POINTS, 50 * level)
+end
+
+function Routine_ReviveZombies(player, hero, combatIndex)
+    log("$ Routine_ReviveZombies")
+    ResurrectCreatureType(player, hero, combatIndex, NECROPOLIS, 2, GetHeroLevel(hero))
+end
+
 function Routine_HeroCallVampires(player, hero)
     log("$ Routine_HeroCallVampires")
     if GetHeroLevel(hero) >= 20 then
@@ -708,7 +718,18 @@ end
 
 function Routine_AddHeroBanshees(player, hero)
     log("$ Routine_AddHeroBanshees")
-    AddHeroCreaturePerLevel(player, hero, CREATURE_BANSHEE, 0.06)
+    AddHeroCreaturePerLevel(player, hero, CREATURE_WIGHT, 0.06)
+end
+
+function Routine_BuildDragonTombstone(player, hero)
+    log("$ Routine_BuildDragonTombstone")
+    for town,data in MAP_TOWNS do
+        if IsHeroInTown(hero, town, 1, 1) then
+            if data.faction == NECROPOLIS then
+                UpgradeTownBuilding(town, TOWN_BUILDING_NECROMANCY_DRAGON_TOMBSTONE)
+            end
+        end
+    end
 end
 
 function Routine_GiveSandrosCloak(player, hero)
@@ -925,6 +946,7 @@ START_TRIGGER_HERO_ROUTINES = {
     [H_RANLETH] = Routine_ActivateArtfsetEnlightenment,
     [H_SEPHINROTH] = Routine_ActivateArtfsetDungeon,
     -- necropolis
+    [H_ARCHILUS] = Routine_BuildDragonTombstone,
     [H_SANDRO] = Routine_GiveSandrosCloak,
     -- inferno
     [H_BIARA] = Routine_ActivateArtfsetHunter,
@@ -1009,6 +1031,7 @@ LEVEL_UP_HERO_ROUTINES_HERO = {
     [H_SINITAR] = Routine_ConvertKnowledgeToSpellpower,
     [H_SHADYA] = Routine_AddHeroLevel,
     -- necropolis
+    [H_VLADIMIR] = Routine_GainMovePointsPerLevel,
     [H_SANDRO] = Routine_AddLichesPerKnowledge,
     -- inferno
     [H_ASH] = Routine_GainAttackPerLevel,
@@ -1031,6 +1054,7 @@ AFTER_COMBAT_TRIGGER_HERO_ROUTINES = {
     -- dungeon
     [H_RAELAG] = Routine_GainDragonArtifacts,
     -- necropolis
+    [H_ORSON] = Routine_ReviveZombies,
     [H_XERXON] = Routine_EvolveBlackKnights,
     [H_ORNELLA] = Routine_FrostLordArtifacts,
     -- inferno

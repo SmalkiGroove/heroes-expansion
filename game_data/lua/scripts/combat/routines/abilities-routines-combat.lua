@@ -7,7 +7,8 @@ function Routine_AbilityCommandBallista(side, unit)
         if ballista then
             if y == 5 or y == 6 then
                 if x == 2 + CURRENT_UNIT_SIDE * 13 then
-                    setATB(ballista, ATB_INSTANT) sleep()
+                    ShowFlyingSign("/Text/Game/Scripts/Combat/BallistaCommander.txt", CURRENT_UNIT, 9)
+                    setATB(ballista, 2*ATB_INSTANT) sleep()
                     DefendCombatUnit(CURRENT_UNIT)
                 end
             end
