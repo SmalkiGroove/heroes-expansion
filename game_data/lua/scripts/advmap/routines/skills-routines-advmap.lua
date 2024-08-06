@@ -579,7 +579,7 @@ end
 
 function Routine_HauntingWeeklyGhosts(player, hero, mastery)
     log("$ Routine_HauntingWeeklyGhosts")
-    local amount = 6 + 3 * WEEKS
+    local amount = 5 + 2 * WEEKS
     for obj,_ in RESOURCE_GENERATING_OBJECTS do
         for _,building in GetObjectNamesByType(obj) do
             if GetObjectOwner(building) == player then

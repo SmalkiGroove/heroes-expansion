@@ -3,14 +3,14 @@
 	<PrototypeCreature>CREATURE_SHADOW_DRAGON</PrototypeCreature>
 	<Health>100</Health>
 	<Health_PerPower>10</Health_PerPower>
-	<Health_PerLevel>20</Health_PerLevel>
-	<Health_PerKnowledge>20</Health_PerKnowledge>
-	<DamageMin>0</DamageMin>
-	<DamageMin_PerPower>7</DamageMin_PerPower>
-	<DamageMin_PerLevel>5</DamageMin_PerLevel>
-	<DamageMax>0</DamageMax>
-	<DamageMax_PerPower>10</DamageMax_PerPower>
-	<DamageMax_PerLevel>7</DamageMax_PerLevel>
+	<Health_PerLevel>10</Health_PerLevel>
+	<Health_PerKnowledge>0</Health_PerKnowledge>
+	<DamageMin>7</DamageMin>
+	<DamageMin_PerPower>2</DamageMin_PerPower>
+	<DamageMin_PerLevel>1</DamageMin_PerLevel>
+	<DamageMax>10</DamageMax>
+	<DamageMax_PerPower>4</DamageMax_PerPower>
+	<DamageMax_PerLevel>1</DamageMax_PerLevel>
 	<Offence>8</Offence>
 	<Offence_PerPower>0</Offence_PerPower>
 	<Offence_PerLevel>2</Offence_PerLevel>
@@ -18,8 +18,8 @@
 	<Defence_PerPower>0</Defence_PerPower>
 	<Defence_PerLevel>2</Defence_PerLevel>
 	<Initiative>10</Initiative>
-	<Initiative_PerPower>0</Initiative_PerPower>
-	<Initiative_PerLevel>0.2</Initiative_PerLevel>
+	<Initiative_PerPower>0.1</Initiative_PerPower>
+	<Initiative_PerLevel>0.1</Initiative_PerLevel>
 	<Speed>7</Speed>
 	<Speed_PerPower>0</Speed_PerPower>
 	<Speed_PerLevel>0.1</Speed_PerLevel>

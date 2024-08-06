@@ -556,10 +556,8 @@ function Routine_FirstAidLastAid(side, hero)
     if GetHeroSkillMastery(side, PERK_PLAGUE_TENT) == 1 then
         local tent = GetWarMachine(side, WAR_MACHINE_FIRST_AID_TENT)
         if tent then
-            for i,cr in GetUnits(1-side, CREATURE) do
-                local x,y = GetUnitPosition(cr)
-                UseCombatAbility(tent, SPELL_EFFECT_FIRST_AID_TENT_PLAGUE, x, y)
-            end
+            local x,y = GetUnitPosition(RandomCreature(1-side, GetHeroLevel(side)))
+            UseCombatAbility(tent, SPELL_EFFECT_FIRST_AID_TENT_PLAGUE, x, y)
         end
     end
 end
@@ -577,10 +575,13 @@ end
 
 function Routine_SummonAvatarOfDeath(side, hero)
     -- log("Trigger summon avatar of death !")
-    local units = GetUnits(side, CREATURE)
-    HeroCast_Global(hero, SPELL_ABILITY_AVATAR_OF_DEATH, FREE_MANA)
-    sleep(100)
-    ROUTINE_VARS.AvatarOfDeath = GetUnits(side, CREATURE)[length(units)]
+    local cost = 4 * GetHeroLevel(side)
+    if GetUnitManaPoints(hero) >= cost then
+        local units = GetUnits(side, CREATURE)
+        HeroCast_Global(hero, SPELL_ABILITY_AVATAR_OF_DEATH, cost)
+        sleep(100)
+        ROUTINE_VARS.AvatarOfDeath = GetUnits(side, CREATURE)[length(units)]
+    end
 end
 
 function Routine_AvatarDead(side, hero, unit)
@@ -588,7 +589,7 @@ function Routine_AvatarDead(side, hero, unit)
     if unit == ROUTINE_VARS.AvatarOfDeath then
         HeroCast_AllCreatures(hero, SPELL_SORROW, FREE_MANA, 1-side)
         sleep(100)
-        SetMana(hero, GetHeroLevel(side))
+        -- SetMana(hero, GetHeroLevel(side))
     end
 end
 

@@ -305,7 +305,7 @@
 				<SorrowStrike_SpellTrained>2</SorrowStrike_SpellTrained>
 				<HorrorOfDeath_MoraleDecrease>1</HorrorOfDeath_MoraleDecrease>
 				<AmmoSteal_CalcDistanceIgnoreObstacles>true</AmmoSteal_CalcDistanceIgnoreObstacles>
-				<AmmoSteal_DistanceDecrease>0</AmmoSteal_DistanceDecrease>
+				<AmmoSteal_DistanceDecrease>-10</AmmoSteal_DistanceDecrease>
 			</Necropolis>
 			<Sylvan>
 				<AuraOfMagicResistance>0.3</AuraOfMagicResistance>
@@ -2294,13 +2294,13 @@
 					<Item>0.01</Item>
 				</HeroDamageLevel1>
 				<HeroDamageLevel30>
-					<Item>50</Item>
-					<Item>28</Item>
-					<Item>14</Item>
-					<Item>9</Item>
-					<Item>6</Item>
-					<Item>3</Item>
-					<Item>1</Item>
+					<Item>36</Item>
+					<Item>21</Item>
+					<Item>13</Item>
+					<Item>6.8</Item>
+					<Item>3.9</Item>
+					<Item>2.1</Item>
+					<Item>0.7</Item>
 					<Item>0.15</Item>
 				</HeroDamageLevel30>
 			</Melee>
@@ -2368,7 +2368,7 @@
 				<Reanimator_SpellpowerBonusLevelDivisor>3</Reanimator_SpellpowerBonusLevelDivisor>
 				<Reanimator_SpellpowerBonusPerLevel>1</Reanimator_SpellpowerBonusPerLevel>
 				<AvatarOfDeath_Creature href="AvatarOfDeath.xdb#xpointer(/RPGCombatUniqueCreatureStats)"/>
-				<AvatarOfDeath_ManaCostPerLevel>1</AvatarOfDeath_ManaCostPerLevel>
+				<AvatarOfDeath_ManaCostPerLevel>4</AvatarOfDeath_ManaCostPerLevel>
 			</Necromancer>
 			<Wizard>
 				<Radiant_MirrorProb>0.4</Radiant_MirrorProb>
