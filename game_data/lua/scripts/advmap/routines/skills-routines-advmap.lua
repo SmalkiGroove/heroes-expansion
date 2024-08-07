@@ -647,10 +647,10 @@ function Routine_LeadershipAfterBattle(player, hero, mastery, combatIndex)
         if HasHeroSkill(hero, PERK_CHARISMA) then
             bonus = bonus + 5 + 5 * mastery
         end
-        local amount = count * (0.05 + 0.05 * mastery + 0.01 * bonus)
+        local amount = trunc(count * (0.05 + 0.05 * mastery + 0.01 * bonus))
         if HasHeroSkill(hero, PERK_HERALD_OF_DEATH) then creature = CreatureToUndead(creature) end
         if amount > 0 then
-            AddObjectCreatures(caravan, creature, trunc(amount))
+            AddObjectCreatures(caravan, creature, amount)
         end
     end
     CURRENT_CARAVANS[caravan] = 3

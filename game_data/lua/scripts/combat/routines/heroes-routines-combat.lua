@@ -557,7 +557,7 @@ function Routine_FirstAidLastAid(side, hero)
         local tent = GetWarMachine(side, WAR_MACHINE_FIRST_AID_TENT)
         if tent then
             local x,y = GetUnitPosition(RandomCreature(1-side, GetHeroLevel(side)))
-            UseCombatAbility(tent, SPELL_EFFECT_FIRST_AID_TENT_PLAGUE, x, y)
+            startThread(UseCombatAbility, tent, SPELL_EFFECT_FIRST_AID_TENT_PLAGUE, x, y)
         end
     end
 end
