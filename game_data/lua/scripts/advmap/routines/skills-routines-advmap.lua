@@ -436,7 +436,7 @@ function Routine_IndustryDaily(player, hero, mastery)
                     local dx = x - xh
                     local dy = y - yh
                     local d = dx * dx + dy * dy
-                    if d < 999 then AddPlayerResource(player, hero, data.type, data.amount) end
+                    if d < 999 then AddPlayerResource(player, hero, data.type or random(0,5,d), data.amount) end
                 end
             end
         end

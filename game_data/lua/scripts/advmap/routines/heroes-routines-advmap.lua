@@ -276,15 +276,11 @@ end
 function Routine_GarnisonDwarvenWorkers(player, hero)
     log("$ Routine_GarnisonDwarvenWorkers")
     local level = GetHeroLevel(hero)
-    local amount1 = 1 + level
-    local amount2 = trunc(0.4 * level)
-    local amount4 = trunc(0.1 * level)
+    local amount = 10 + 2 * level
     for obj,_ in RESOURCE_GENERATING_OBJECTS do
         for _,building in GetObjectNamesByType(obj) do
             if GetObjectOwner(building) == player then
-                if amount1 > 0 then AddObjectCreatures(building, CREATURE_DEFENDER, amount1) end
-                if amount2 > 0 then AddObjectCreatures(building, CREATURE_AXE_FIGHTER, amount2) end
-                if amount4 > 0 then AddObjectCreatures(building, CREATURE_BEAR_RIDER, amount4) end
+                AddObjectCreatures(building, CREATURE_DWARF_WORKER, amount) end
             end
         end
     end
@@ -295,18 +291,9 @@ function Routine_ProductionIncreaseDwarvenWorkers(player, hero)
     for obj,data in RESOURCE_GENERATING_OBJECTS do
         for _,building in GetObjectNamesByType(obj) do
             if GetObjectOwner(building) == player then
-                local work = 0
-                work = work + GetObjectCreatures(building, CREATURE_DEFENDER)
-                work = work + GetObjectCreatures(building, CREATURE_STONE_DEFENDER)
-                work = work + GetObjectCreatures(building, CREATURE_STOUT_DEFENDER)
-                work = work + 2 * GetObjectCreatures(building, CREATURE_AXE_FIGHTER)
-                work = work + 2 * GetObjectCreatures(building, CREATURE_AXE_THROWER)
-                work = work + 2 * GetObjectCreatures(building, CREATURE_HARPOONER)
-                work = work + 5 * GetObjectCreatures(building, CREATURE_BEAR_RIDER)
-                work = work + 5 * GetObjectCreatures(building, CREATURE_BLACKBEAR_RIDER)
-                work = work + 5 * GetObjectCreatures(building, CREATURE_WHITE_BEAR_RIDER)
-                local bonus = trunc(data.amount * work * 0.002)
-                if bonus > 0 then AddPlayerResource(player, hero, data.type, bonus) end
+                local workers = GetObjectCreatures(building, CREATURE_DWARF_WORKER)
+                local bonus = trunc(data.amount * workers * 0.01)
+                if bonus > 0 then AddPlayerResource(player, hero, data.type or random(0,5,workers), bonus) end
             end
         end
     end
@@ -718,7 +705,8 @@ end
 
 function Routine_AddHeroBanshees(player, hero)
     log("$ Routine_AddHeroBanshees")
-    AddHeroCreaturePerLevel(player, hero, CREATURE_WIGHT, 0.06)
+	local nb = round(0.06 * GetHeroLevel(hero))
+    AddHeroCreatureType(player, hero, NECROPOLIS, 7, nb)
 end
 
 function Routine_BuildDragonTombstone(player, hero)

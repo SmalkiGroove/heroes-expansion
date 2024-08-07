@@ -893,6 +893,7 @@ COMBAT_TURN_HERO_ROUTINES = {
     [H_SORGAL] = Routine_RidersHydraSynergy,
     [H_ERUINA] = Routine_RefreshMatronMana,
     -- necropolis
+    [H_KASPAR]= Routine_EmbalmerManaRegen,
     [H_ORSON] = Routine_SummonZombieStack,
     [H_ORNELLA] = Routine_CastRandomIceBolt,
     -- inferno

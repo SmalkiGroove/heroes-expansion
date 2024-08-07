@@ -51,6 +51,7 @@ RESOURCE_GENERATING_OBJECTS = {
     ["BUILDING_GEM_POND"]       = {type=GEM, amount=1},
     ["BUILDING_GOLD_MINE"]      = {type=GOLD, amount=1000},
     ["BUILDING_ABANDONED_MINE"] = {type=GOLD, amount=500},
+    ["BUILDING_DWARVEN_WARREN"] = {type=nil, amount=1},
 }
 
 
