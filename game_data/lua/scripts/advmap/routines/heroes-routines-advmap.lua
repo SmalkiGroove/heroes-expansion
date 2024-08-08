@@ -280,7 +280,7 @@ function Routine_GarnisonDwarvenWorkers(player, hero)
     for obj,_ in RESOURCE_GENERATING_OBJECTS do
         for _,building in GetObjectNamesByType(obj) do
             if GetObjectOwner(building) == player then
-                AddObjectCreatures(building, CREATURE_DWARF_WORKER, amount) end
+                AddObjectCreatures(building, CREATURE_DWARF_WORKER, amount)
             end
         end
     end
@@ -316,34 +316,41 @@ function Routine_AddLuckAndMorale(player, hero)
     ChangeHeroStat(hero, STAT_MORALE, 1)
 end
 
+Var_Ebba_RunicSpells = {}
 function Routine_GiveArtifactRuneOfFlame(player, hero)
     log("$ Routine_GiveArtifactRuneOfFlame")
     GiveArtifact(hero, ARTIFACT_RUNE_OF_FLAME, 1)
+    for rune,_ = RUNIC_SPELLS do
+        Var_Ebba_RunicSpells[rune] = 0
+    end
 end
 
-Var_Ebba_SpellpowerBonus = 0
 function Routine_GainSpellpowerPerRune(player, hero)
     log("$ Routine_GainSpellpowerPerRune")
-    local n = 0
-    for rune = SPELL_RUNE_OF_CHARGE,SPELL_RUNE_OF_DRAGONFORM do
-        if KnowHeroSpell(hero, rune) then n = n+1 end
-    end
-    local diff = n - Var_Ebba_SpellpowerBonus
-    if diff ~= 0 then
-        AddHeroStatAmount(player, hero, STAT_SPELL_POWER, diff)
-        Var_Ebba_SpellpowerBonus = n
+    for rune,tier in RUNIC_SPELLS do
+        if KnowHeroSpell(hero, rune) and Var_Ebba_RunicSpells[rune] == 0 then
+            AddHeroStatAmount(player, hero, STAT_SPELL_POWER, 1)
+            TeachHeroRandomSpellTier(player, hero, SPELL_SCHOOL_ANY, tier)
+            Var_Ebba_RunicSpells[rune] = 1
+        end
     end
 end
 
-function Routine_GenerateCrystalsAndGems(player, hero)
-    log("$ Routine_GenerateCrystalsAndGems")
-    local n = ceil(GetHeroLevel(hero) * 0.1)
-    for rune = SPELL_RUNE_OF_CHARGE,SPELL_RUNE_OF_DRAGONFORM do
-        if KnowHeroSpell(hero, rune) then n = n+1 end
+function Routine_LearnRunicSpell(player, hero)
+    log("$ Routine_LearnRunicSpell")
+	local spells = {}
+    for rune,_ in RUNIC_SPELLS do
+        if not KnowHeroSpell(hero, rune) then insert(spells, rune) end
     end
-    local split = mod(TURN,n)
-    AddPlayerResource(player, hero, CRYSTAL, split)
-    AddPlayerResource(player, hero, GEM, n-split)
+    local nb = length(spells)
+	if nb == 0 then
+	elseif nb == 1 then
+		TeachHeroSpell(hero, spells[1])
+	else
+		local spell = spells[random(1, nb, TURN)]
+		TeachHeroSpell(hero, spell)
+	end
+    -- Routine_GainSpellpowerPerRune(player, hero)
 end
 
 
@@ -984,7 +991,7 @@ WEEKLY_TRIGGER_HERO_ROUTINES = {
     [H_YLTHIN] = Routine_HeroCallUnicorns,
     -- fortress
     [H_HANGVUL] = Routine_GarnisonDwarvenWorkers,
-    [H_EBBA] = Routine_GenerateCrystalsAndGems,
+    [H_EBBA] = Routine_LearnRunicSpell,
     -- academy
     [H_RAZZAK] = Routine_AssembleGargoyles,
     [H_CYRUS] = Routine_AddRecruitsMages,
