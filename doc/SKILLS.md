@@ -52,19 +52,22 @@ All troops under hero's control are blessed with amazing vitality. If enemy crea
 
 ### GOVERNANCE
 - __Estates__ : Hero contributes 250 gold pieces per day to your cause.
-- __Geology__ : The hero finds more gold and resources on the map.
-- __Industry__ : The hero doubles the production of sawmills, ore pits, alchemist labs, sulfur deposits, crystal caverns, gem and any other mines when standing at their entrance at the start of the day.
-- __Gear Up__ : The hero obtains a minor artifact of his or her faction set.
-- __Heroes Legacy__ : The hero obtains a major artifact of his or her faction set.
-- __Mythology__ : The hero obtains a relic artifact of his or her faction set.
+- __Geology__ : The hero finds more gold and resources on the map and gain 1 Ore per day.
+- __Industry__ : Doubles the production of sawmills, ore pits, alchemist labs, sulfur deposits, crystal caverns, gem and any other mines which are in a 30 tiles radius from the hero at the start of the day.
+- __Gear Up__ : The hero obtains a random minor artifact from his or her faction set or a neutral set.
+At the start of each week, gain 250 golds per minor artifact equipped.
+- __Heroes Legacy__ : The hero obtains a random major artifact from his or her faction set or a neutral set.
+At the start of each week, gain 250 golds per major artifact equipped.
+- __Mythology__ : The hero obtains a random relic artifact from his or her faction set or a neutral set.
+At the start of each week, gain 250 golds per relic artifact equipped.
 
 ### LOGISTICS
-- __Pathfinding__ : Reduces penalty for moving through rough terrain by 50%.
-- __Scouting__ : Hero receives +4 to his range of view and gets an ability to see precise number of creatures in neutral troops, in enemy armies, towns and garrisons within his range of view.
+- __Pathfinding__ : Reduce movement penalty for moving through rough terrain by 50%. Neutral towns on the map are revealed. If they are already revealed, increase the vision radius around them.
+- __Scouting__ : Hero receives +6 to his or her vision range and gets an ability to see precise number of creatures in neutral troops, in enemy armies, towns and garrisons within his range of view.
 - __Snatch__ : The hero spends no movement points to pick up resources, access buildings or boats and other similar actions.
-- __Recruitment__ : Increases weekly growth of 1st, 2nd and 3rd level creatures by +3, +2 and +1 respectively. Hero must be stationed within the friendly town on the last day of the week for effect to take place.
-- __Spoils of War__ : After every combat won, the hero earns a certain amount of money and resources, in proportion to the hiring costs of all killed enemy creatures.
-- __Warpath__ : The hero gets additional movement points for every victory on the map.
+- __Recruitment__ : Doubles the Logistics bonus to weekly production of tier 1, 2 and 3 creatures.
+- __Spoils of War__ : After every combat won, the hero earns a certain amount of golds and resources, in proportion to the hiring costs of all killed enemy creatures. Every 10 victories, also gains a random minor artifact.
+- __Warpath__ : The hero gets 750 additional movement points for every victory on the map.
 
 ### WARFARE
 - __Ballistics__ : Allows manual control of the Ballista. Restores the Ballista after the battle if it was destroyed.
@@ -72,7 +75,7 @@ All troops under hero's control are blessed with amazing vitality. If enemy crea
 - __Rapid Fire__ : Ballista gains an extra shot.
 - __Anatomy__ : Allows manual control of the First Aid Tent. Restores the First Aid Tent after the battle if it was destroyed.
 - __Technical Staff__ : Increases initiative of all war machines by +3.
-- __Houndmasters__ : An amount of Wolves are added to the hero's army now and each day, depending on the number of the week.
+- __Houndmasters__ : A stack of Wolves is Added to hero's army at the start of combats. The amount increases with hero level.
 
 ### TRAINING
 - __Toughness__ : Increases hit points of all your creatures by 2.
@@ -85,12 +88,12 @@ All troops under hero's control are blessed with amazing vitality. If enemy crea
 ### COMBAT
 - __Get Wiser__ : Hero gains 1000 + 5% of current experience points.
 Repeat this bonus at the start of each week.
-- __Coordination__ : Links a hero with a selected creature in his army. Every time this creature performs an attack, the hero will assault the same target. The hero's attack is by 3 his levels more powerful than usual and has additional chance to inflict a critical hit.
+- __Coordination__ : Links a hero with a selected creature in his army. Every time this creature performs an attack, the hero will assault the same target. The hero's attack is by 3 his levels more powerful than usual.
 - __Stunning Blow__ : Every standard hero’s attack moves the target back along the ATB bar for 0.2 points.
 - __Get Stronger__ : Hero gains +1 Attack and Defense.
 Repeat this bonus at the start of each week.
 - __Mark of the Damned__ : The hero receives special combat ability to punish the target enemy creature with a powerful strike if that creature is about to attack, retaliate or cast any spell. Once declared, Mark of the Damned is active until the end of combat.
-- __Critical Strike__ : Hero's attacks will always deal double damage to a target.
+- __Critical Strike__ : Hero's attacks will always deal double damage.
 
 ### SHATTER_MAGIC
 - __Back to the Void__ : All creatures led by the hero inflict triple damage to summoned enemies.
@@ -224,7 +227,8 @@ The hero will not be able to learn any new spell.
 - __Familiar Land__ : All creatures in hero's army receive +1 movement speed if the battle is taking place on grass terrain.
 - __Silent Tracker__ : The enemy will see only the strongest creature in hero's army with no number at all. Also this ability allows to see courage of neutral monsters and enlarges hero's field of view by 12 tiles.
 - __Tenacity__ : Enemy Dark Magic spells will be cast with 20% less effective Spellpower.
-- __Infusion__ : The hero gains +2 Spellpower permanently and +100 temporary mana.
+- __Infusion__ : The hero gains +1 Spellpower.
+At the start of each week, gain +50 temporary mana that can go beyond maximum.
 - __Elemental Vision__ : Allows hero to see elements on enemy creatures so that Destructive Magic spells cast by the hero can inflict additional elemental damage.
 - __Eternal Servitude__ : The hero receives an ability to raise some of the fallen undead creatures in his or her army after combat.
 - __Soil Burn__ : Enemy walking creatures will receive damage equal to 8 times hero level when moving.

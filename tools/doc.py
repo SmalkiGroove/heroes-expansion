@@ -229,6 +229,6 @@ with open(reference_file) as ref:
     data = yaml.safe_load(ref)
 
 generate_creature_doc(data['CREATURES'])
-# generate_heroes_doc(data['HEROES'])
-# generate_skills_doc(data['SKILLS'])
-# generate_artifacts_doc(data['ARTIFACTS'])
+generate_heroes_doc(data['HEROES'])
+generate_skills_doc(data['SKILLS'])
+generate_artifacts_doc(data['ARTIFACTS'])

@@ -43,11 +43,9 @@ When you spawn a Blade Barrier during combat,
 (x) Set bonuses
 
 - __Avenger Bow__ :
--1 Morale to enemy creatures<br><br><color=purple>
-Pirate's Apparel<color_default><br>
-+6 Attack (3/6)<br>
-+12 Attack (6/6)<br>
-*Set bonus is applied after closing the Inventory screen.
++1 Luck
+
+<color=purple>Ranger Gears
 - __Ranger's Cape__ :
 +3 Knowledge<br>
 +5% Town Growth when equipped by governor
@@ -63,12 +61,7 @@ Pirate's Apparel<color_default><br>
 +1 Luck<br>
 Grants hero's army immunity to Curse of the Netherworld
 - __Sacred Seed__ :
-+1 Luck if equipped<br>
-+K/2 Wood per week<br><color_default>
-(K=Knowledge of the hero, for example 10 Wood per week for 20 Knowledge)<br><br><color=orange>
-Cornucopia<color_default><br>Collect one artifact for every resource type (except gold) and visit an Arcane Library for a unique reward.<br><br><color=yellow>
-Backpack<color_default><br>
-Resources are also gained when the artifact is in the backpack, but functionality is limited to one artifact per resource type per hero.
+*sacred seed*
 
 ### Set name
 • Set pieces
@@ -191,12 +184,10 @@ Gain Experience every day based on the hero's Knowledge, and half the amount to 
 -50% to HP of enemy summoned Hive, Phoenix & Blade Barrier<br>
 Grants the Banish ability.
 - __Altar of Element's Shard__ :
-+2 Spellpower if equipped<br>
-+K/2 Mercury per week<br><color_default>
-(K=Knowledge of the hero, for example 10 Mercury per week for 20 Knowledge)<br><br><color=orange>
-Cornucopia<color_default><br>Collect one artifact for every resource type (except gold) and visit an Arcane Library for a unique reward.<br><br><color=yellow>
-Backpack<color_default><br>
-Resources are also gained when the artifact is in the backpack, but functionality is limited to one artifact per resource type per hero.
++1 Spellpower
++10% damage to all elemental spells
+
+<color=purple>Shadow Burst
 - __Shadowstep Shoes__ :
 +1 Attack
 +1 Defense
@@ -343,22 +334,23 @@ Every 5 victories, gain 1000 + 1% experience.
 
 - __Evercold Icicle__ :
 +1 Spellpower
-+20% Damage to Frost Spells
++20% damage to Frost spells
 - __Frozen Heart__ :
-Resurrects a quantity of native Tier2 creatures after combat. The amount is equal to 30 + 10*K of all Hit Points lost. The resurrection requires 6 mana.<color_default> K = Knowledge of the hero and the amount is rounded down. Undead, mechanical and elemental creatures cannot be resurrected.<br><br><color=red>Medical<br><color_default>This artifact only works if the hero has the Blood Rituals perk.
+-50% damage taken from frost spells
+Grants hero troops immunity to Blaze Power
+
+
 - __Shield of Crystal Ice__ :
 +1 Defense
 -50% Damage taken from enemy Fire spells
 - __Crown of the Frost Lord__ :
-+1 Knowledge if equipped<br>
-+K/2 Gems per week<br><color_default>
-(K=Knowledge of the hero, for example 10 gems per week for 20 Knowledge)<br><br><color=orange>
-Cornucopia<color_default><br>Collect one artifact for every resource type (except gold) and visit an Arcane Library for a unique reward.<br><br><color=yellow>
-Backpack<color_default><br>
-Resources are also gained when the artifact is in the backpack, but functionality is limited to one artifact per resource type per hero.
++2 Defense
++2 Knowledge
+-50% mana cost to frost spells
+
+
 - __Spear of the Frost Lord__ :
-+7 Spellpower<br>
--3 Mana after every battle
+*spear of the frost lord*
 
 ### Faraway Kingdom Warrior
 • Genji's Hat
@@ -369,32 +361,13 @@ Resources are also gained when the artifact is in the backpack, but functionalit
 (4) When an enemy stack dies during combat, the hero gets an immediate turn and +50 mana. Each mana point above maximum is converted to 100 additional experience at the end of the battle.
 
 - __Genji's Hat__ :
-+12 Mana per day if equipped uninterrupted<br><br><color=purple>
-Tunic of the Prophet<color_default><br>
-+4 Spellpower (3/5)<br>
-+8 Spellpower (5/5)<br>
-*Set bonus is applied after closing the Inventory screen.
+*genji's hat'
 - __Genji's Vest__ :
-+4 Spellpower<br>
-+4 Mana per day if equipped uninterrupted<br><br><color=purple>
-Tunic of the Prophet<color_default><br>
-+4 Spellpower (3/5)<br>
-+8 Spellpower (5/5)<br>
-*Set bonus is applied after closing the Inventory screen.
+*genji's vest*
 - __Genji's Sandals__ :
-+2 Spellpower<br>
--2 Mana Cost to any equipped resurrecting artifacts<br><br><color=purple>
-Tunic of the Prophet<color_default><br>
-+4 Spellpower (3/5)<br>
-+8 Spellpower (5/5)<br>
-*Set bonus is applied after closing the Inventory screen.
+*genji's sandals*
 - __Genji's Silksword__ :
-+3 Attack<br>
-+3 Mana after every battle<br><br><color=purple>
-Tunic of the Prophet<color_default><br>
-+4 Spellpower (3/5)<br>
-+8 Spellpower (5/5)<br>
-*Set bonus is applied after closing the Inventory screen.
+*genji's sword*
 
 ### Red Princess Eldena
 • Eldena's Red Scarf
@@ -458,9 +431,7 @@ Pirate's Apparel<color_default><br>
 +12 Attack (6/6)<br>
 *Set bonus is applied after closing the Inventory screen.
 - __Grand Vizir's Scimitar__ :
-+1 Defense<br>
-+1250 Experience<br><br>
-<color=7F38EC>Skill book<color_default><br>The hero needs some time to study this item and permanently gain the knowledge it contains. At the start of next week the item disappears from the backpack and the bonus is applied permanently.
+*grand vizier's scimitar*
 - __Regal Armour__ :
 +1 Attack if equipped<br>
 +1 Defense if equipped<br>
@@ -748,7 +719,7 @@ The following artifact do not belong in a set.
 Grants the ability to cast spell <value=spell_name> from this wand at Advanced Mastery (unless the Hero’s Mastery level is higher). The wand has a limited number of uses and can be recharged at a Magic Guild (uses <value=charges_cur>/<value=charges_max>)
 - __Trident of the Titans__ :
 +1 Spellpower
-+20% Damage to Lightning spells
++20% damage to Lightning spells
 - __Four Leaf Clover__ :
 +2 Luck
 - __Crown Of Courage__ :
@@ -775,7 +746,7 @@ Generates 250 Golds per day plus an additional 25 per hero level.
 The resources earned by the Governance skill are given every day instead of once a week.
 - __Phoenix Fire Cape__ :
 +1 Spellpower
-+20% Damage to Fire spells
++20% damage to Fire spells
 - __Legendary Boots__ :
 +3 Defense
 Hero troops are Unstoppable (immunity to Slow).
@@ -789,9 +760,8 @@ Hero troops are Unstoppable (immunity to Slow).
 +4 Spellpower when casting Summon Elementals.
 Grants the Summon Elementals spell if it wasn't learned already.
 - __Emerald Slippers__ :
-+20% Damage to Earth Spells<br>
-+2 Mana per day if equipped uninterrupted<br><color_default>
-Damage boost affects Stone Spikes, Meteor Shower, Implosion and Decay
++1 Spellpower
++20% damage to Earth spells
 - __Cloak of Sylanna__ :
 +1 Luck
 -50% Damage taken from enemy Earth spells
@@ -849,12 +819,7 @@ Archer's Dream<color_default><br>
 +1 Luck (2/2)<br>
 *Set bonus is applied after closing the Inventory screen.
 - __Fortune Pickaxe__ :
-+1 Attack if equipped<br>
-+K/2 Ore per week<br><color_default>
-(K=Knowledge of the hero, for example 10 Ore per week for 20 Knowledge)<br><br><color=orange>
-Cornucopia<color_default><br>Collect one artifact for every resource type (except gold) and visit an Arcane Library for a unique reward.<br><br><color=yellow>
-Backpack<color_default><br>
-Resources are also gained when the artifact is in the backpack, but functionality is limited to one artifact per resource type per hero.
+*fortune pickaxe*
 - __Misfortune Dices__ :
 -1 Morale
 -2 Luck to enemy creatures

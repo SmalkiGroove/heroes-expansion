@@ -12,7 +12,7 @@
 | CROSSBOWMAN | 2 | 30 | 10 | 5 | 4 | 2-6 | 4 | 8 | _none_ | Weakpoint, Undisturbed |
 | | | | | | | | | | | |
 | FOOTMAN | 3 | 20 | 20 | 4 | 6 | 4-5 | 4 | 9 | _none_ | Spiteful, Shielded, Bash |
-| SQUIRE | 3 | 20 | 22 | 4 | 10 | 4-5 | 4 | 9 | _none_ | Spiteful, Shielded, Bash, Shield Wall |
+| SQUIRE | 3 | 20 | 22 | 4 | 10 | 4-5 | 4 | 9 | _none_ | Spiteful, Shielded, Bash, Protect Allies |
 | VINDICATOR | 3 | 20 | 21 | 6 | 8 | 4-6 | 5 | 9 | _none_ | Spiteful, Shielded, Cleave |
 | | | | | | | | | | | |
 | GRIFFIN | 4 | 9 | 34 | 11 | 7 | 6-11 | 8 | 15 | _none_ | Unlimited Retaliations, Keen Eye |
@@ -55,7 +55,7 @@
 | PRISTINE UNICORN | 5 | 5 | 70 | 15 | 14 | 11-19 | 7 | 15 | _none_ | Blinding Attack, Child of Light |
 | | | | | | | | | | | |
 | TREANT | 6 | 3 | 177 | 17 | 27 | 7-17 | 5 | 7 | _none_ | Spiteful, Entangling Roots |
-| ANCIENT TREANT | 6 | 3 | 188 | 18 | 28 | 8-18 | 5 | 7 | _none_ | Spiteful, Entangling Roots, Take Roots, Steadiness, Shield Wall |
+| ANCIENT TREANT | 6 | 3 | 188 | 18 | 28 | 8-18 | 5 | 7 | _none_ | Spiteful, Entangling Roots, Take Roots, Steadiness, Protect Allies |
 | SAVAGE TREANT | 6 | 3 | 180 | 23 | 27 | 10-20 | 5 | 8 | _none_ | Spiteful, Entangling Roots, Rage Of The Forest, Unstoppable, Unflagging |
 | | | | | | | | | | | |
 | GREEN DRAGON | 7 | 1 | 220 | 31 | 31 | 40-50 | 9 | 13 | _none_ | Acid Breath, Acid Blood, Regeneration |
@@ -65,9 +65,9 @@
 ### FORTRESS:
 | CREATURE | TIER | NB | HP | ATT | DEF | DMG± | SPD | INIT | SPELLS | ABILITIES |
 |----------|------|----|----|-----|-----|------|-----|------|--------|-----------|
-| DEFENDER | 1 | 48 | 7 | 1 | 4 | 1-2 | 4 | 8 | _none_ | Spiteful, Shielded, Shield Wall |
-| SHIELDGUARD | 1 | 48 | 7 | 2 | 4 | 1-2 | 4 | 8 | _none_ | Spiteful, Shielded, Shield Wall, Stone Defense |
-| MOUNTAIN GUARD | 1 | 48 | 7 | 1 | 5 | 1-2 | 4 | 8 | _none_ | Spiteful, Shielded, Shield Wall, Steadiness, Defensive Stance, Fierce Retaliation |
+| DEFENDER | 1 | 48 | 7 | 1 | 4 | 1-2 | 4 | 8 | _none_ | Spiteful, Shielded, Protect Allies |
+| SHIELDGUARD | 1 | 48 | 7 | 2 | 4 | 1-2 | 4 | 8 | _none_ | Spiteful, Shielded, Protect Allies, Stone Defense |
+| MOUNTAIN GUARD | 1 | 48 | 7 | 1 | 5 | 1-2 | 4 | 8 | _none_ | Spiteful, Shielded, Protect Allies, Steadiness, Defensive Stance, Fierce Retaliation |
 | | | | | | | | | | | |
 | SPEARWIELDER | 2 | 28 | 11 | 3 | 4 | 1-4 | 4 | 10 | _none_ | Melee Potent, Wound |
 | SKIRMISHER | 2 | 28 | 11 | 5 | 4 | 1-5 | 5 | 10 | _none_ | Melee Potent, Wound |
@@ -129,7 +129,7 @@
 |----------|------|----|----|-----|-----|------|-----|------|--------|-----------|
 | SCOUT | 1 | 39 | 9 | 3 | 2 | 2-3 | 5 | 12 | _none_ | Melee Potent, Short Range |
 | ASSASSIN | 1 | 39 | 9 | 4 | 2 | 2-3 | 5 | 13 | _none_ | Melee Potent, Short Range, Poison |
-| STALKER | 1 | 39 | 10 | 4 | 3 | 3-4 | 5 | 12 | _none_ | Poison, Camouflage |
+| STALKER | 1 | 39 | 10 | 4 | 3 | 2-4 | 5 | 12 | _none_ | Poison, Camouflage |
 | | | | | | | | | | | |
 | BLOOD MAIDEN | 2 | 23 | 16 | 5 | 2 | 3-6 | 7 | 14 | _none_ | Strike and Return, Swift Strike |
 | BLOOD FURY | 2 | 23 | 16 | 6 | 2 | 4-7 | 7 | 14 | _none_ | Strike and Return, No Enemy Retaliation |
@@ -151,23 +151,23 @@
 | CHAOS HYDRA | 6 | 3 | 175 | 20 | 20 | 16-25 | 4 | 7 | _none_ | Battle Rage, Circle Attack, Regeneration, Life Drain |
 | FOUL HYDRA | 6 | 3 | 170 | 18 | 26 | 15-23 | 4 | 7 | _none_ | Battle Rage, Circle Attack, Regeneration, Acid Blood |
 | | | | | | | | | | | |
-| CAVE DRAGON | 7 | 1 | 225 | 35 | 30 | 50-80 | 12 | 10 | _none_ | Dragon Breath, Unlimited Retaliations, Fierce Retaliation, Roar |
-| BLACK DRAGON | 7 | 1 | 250 | 35 | 35 | 50-80 | 12 | 10 | _none_ | Dragon Breath, Unlimited Retaliations, Fierce Retaliation, Roar, Chaos Incarnate |
-| RED DRAGON | 7 | 1 | 225 | 39 | 31 | 55-85 | 12 | 11 | _none_ | Dragon Breath, Unlimited Retaliations, Fierce Retaliation, Annihilate, Free Mind |
+| CAVE DRAGON | 7 | 1 | 225 | 35 | 30 | 50-80 | 12 | 10 | _none_ | Dragon Breath, Unlimited Retaliations, Roar |
+| BLACK DRAGON | 7 | 1 | 250 | 35 | 35 | 50-80 | 12 | 10 | _none_ | Dragon Breath, Unlimited Retaliations, Roar, Chaos Incarnate |
+| RED DRAGON | 7 | 1 | 225 | 39 | 31 | 55-85 | 12 | 11 | _none_ | Dragon Breath, Unlimited Retaliations, Annihilate, Free Mind |
 
 ### NECROPOLIS:
 | CREATURE | TIER | NB | HP | ATT | DEF | DMG± | SPD | INIT | SPELLS | ABILITIES |
 |----------|------|----|----|-----|-----|------|-----|------|--------|-----------|
 | SKELETON | 1 | 57 | 4 | 1 | 1 | 1-2 | 5 | 10 | _none_ | Undead |
 | SKELETON ARCHER | 1 | 57 | 4 | 1 | 1 | 1-2 | 4 | 10 | _none_ | Undead |
-| SKELETON WARRIOR | 1 | 57 | 5 | 2 | 2 | 1-2 | 5 | 10 | _none_ | Undead, Shielded, Bash, Shield Wall |
+| SKELETON WARRIOR | 1 | 57 | 5 | 2 | 2 | 1-2 | 5 | 10 | _none_ | Undead, Shielded, Bash, Protect Allies |
 | | | | | | | | | | | |
 | ZOMBIE | 2 | 39 | 14 | 3 | 2 | 2-3 | 3 | 8 | _none_ | Undead, Spiteful, Pack Hunter |
 | PLAGUE ZOMBIE | 2 | 39 | 15 | 3 | 2 | 2-4 | 3 | 8 | _none_ | Undead, Spiteful, Pack Hunter, Infection, Wound |
 | ROT ZOMBIE | 2 | 39 | 16 | 4 | 2 | 2-3 | 3 | 8 | Scavenger (advanced) | Undead, Spiteful, Pack Hunter, Festering Aura, Scavenger |
 | | | | | | | | | | | |
 | GHOST | 3 | 19 | 17 | 4 | 2 | 2-4 | 5 | 11 | _none_ | Undead, Incorporeal |
-| SPECTRE | 3 | 19 | 17 | 4 | 4 | 3-4 | 5 | 11 | _none_ | Undead, Incorporeal, Manavorous |
+| SPECTRE | 3 | 19 | 17 | 4 | 4 | 3-4 | 6 | 11 | _none_ | Undead, Incorporeal, Manavorous |
 | POLTERGEIST | 3 | 19 | 18 | 5 | 3 | 3-5 | 5 | 12 | _none_ | Undead, Incorporeal, Steal Ammunition |
 | | | | | | | | | | | |
 | VAMPIRE | 4 | 10 | 33 | 9 | 7 | 6-10 | 6 | 9 | _none_ | Undead, Life Drain, No Enemy Retaliation |
@@ -221,7 +221,7 @@
 | CREATURE | TIER | NB | HP | ATT | DEF | DMG± | SPD | INIT | SPELLS | ABILITIES |
 |----------|------|----|----|-----|-----|------|-----|------|--------|-----------|
 | GOBLIN | 1 | 55 | 5 | 1 | 1 | 1-2 | 4 | 11 | _none_ | Raging Blood, Cowardice, Treachery |
-| GOBLIN TRAPPER | 1 | 55 | 5 | 2 | 1 | 1-2 | 4 | 11 | Set Snares (advanced) | Raging Blood, Cowardice, Treachery, Set Snares |
+| GOBLIN TRAPPER | 1 | 55 | 5 | 2 | 1 | 1-2 | 4 | 11 | Set Snares (advanced) | Raging Blood, Cowardice, Treachery, Set Snares, Short Range |
 | GOBLIN DEFILER | 1 | 55 | 5 | 1 | 2 | 1-2 | 5 | 12 | _none_ | Raging Blood, Cowardice, Treachery, Defile Magic |
 | | | | | | | | | | | |
 | SUN DAUGHTER | 2 | 28 | 14 | 2 | 2 | 2-3 | 4 | 10 | Sacrifice Goblins (advanced), Haste (basic), Slow (basic) | Raging Blood, Goblin Sacrifice |
