@@ -155,12 +155,17 @@ function CheckMainTown(player)
     end
 end
 
+function SetupTownTavern(town, faction)
+	for i = 1,8 do
+		local enabled = (faction == i) and 1 or 0
+		AllowHeroHiringByRaceInTown(town, FactionToTownType(i), enabled)
+	end
+end
+
 function InitializeMapTowns()
     local map_size = GetTerrainSize() - 1
-	local towns_count = 0
     for faction,type in Towns_Types do
         for _,town in GetObjectNamesByType(type) do
-            towns_count = towns_count + 1
             local owner = GetObjectOwner(town)
             if not PLAYER_MAIN_TOWN[owner] then PLAYER_MAIN_TOWN[owner] = town end
             local x,y,floor = GetObjectPosition(town)
@@ -190,6 +195,7 @@ function InitializeMapTowns()
             else
                 log("Town "..town.." has no entrance ?? (type is "..type..")")
             end
+			SetupTownTavern(town, faction)
         end
     end
     for player = 1,8 do

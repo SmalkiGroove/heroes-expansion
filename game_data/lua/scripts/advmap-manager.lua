@@ -140,7 +140,8 @@ function NewDayTrigger()
 	log("New day ! Turn "..TURN)
 	local newweek = GetDate(DAY_OF_WEEK) == 1
 	if newweek then WEEKS = WEEKS + 1 end
-	UpdateTavernHeroes()
+	startThread(UpdateTavernHeroes)
+	startThread(UpdateTavernFactions)
 	for player = 1,8 do
 		if (GetPlayerState(player) == 1) then
 			startThread(PlayerDailyHandler, player, newweek)
@@ -216,6 +217,7 @@ end
 function InitializeHeroes()
 	for player = 1,8 do
 		if (GetPlayerState(player) == 1) then
+			for i = 1,8 do AllowPlayerTavernRace(player, FactionToTownType(i), 0) end
 			for i,hero in GetPlayerHeroes(player) do
 				log("Initialize hero "..hero)
 				Register(VarHeroLevel(hero), GetHeroLevel(hero))
@@ -225,11 +227,12 @@ function InitializeHeroes()
 				startThread(DoSkillsRoutine_Start, player, hero) sleep(1)
 				startThread(DoHeroSpeRoutine_Start, player, hero) sleep(1)
 				HEROES[hero].owner = player
+				AllowPlayerTavernRace(player, FactionToTownType(HEROES[hero].faction), 1)
 			end
 			startThread(WatchPlayer, player, 1)
 		end
 	end
-	UpdateTavernHeroes()
+	startThread(UpdateTavernHeroes)
 end
 
 log("All scripts successfully loaded !")

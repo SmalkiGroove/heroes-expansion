@@ -589,9 +589,12 @@ end
 function Routine_GainDragonArtifacts(player, hero, combatIndex)
     log("$ Routine_GainDragonArtifacts")
     local level = GetHeroLevel(hero)
+    local value = trunc(0.001 * GetArmyStrength(combatIndex, 0))
+    log("---DEBUG: value = "..value)
     local rnd = random(1,100,level)
-    if (2 * level + 5) > rnd then
-        local i = mod(rnd, 8) + 1
+    if (2 * level + value) > rnd then
+        local r = value > 30 and 1 or 0
+        local i = mod(rnd, 7+r) + 1
         local a = ARTIFACT_SETS[ARTIFACT_SET_DRAGON][i]
         GiveArtifact(hero, a)
     end

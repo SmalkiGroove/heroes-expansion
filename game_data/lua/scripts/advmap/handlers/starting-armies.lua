@@ -118,5 +118,14 @@ function UpdateTavernHeroes()
     end
 end
 
+function UpdateTavernFactions()
+    for town,data in MAP_TOWNS do
+        local owner = GetObjectOwner(town)
+        if owner > 0 then
+            AllowPlayerTavernRace(owner, FactionToTownType(data.faction), 1)
+        end
+    end
+end
+
 -- log("Loaded starting-armies.lua")
 ROUTINES_LOADED[21] = 1

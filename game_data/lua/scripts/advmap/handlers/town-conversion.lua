@@ -49,6 +49,7 @@ function ConvertTown(player, hero, town)
         RemovePlayerResource(player, GOLD, gold_cost)
         local f = HEROES[hero].faction
         TransformTown(town, FactionToTownType(f))
+        SetupTownTavern(town, f)
         MAP_CONVERTIBLES[town] = { faction=f, tier=0 }
     end
 end

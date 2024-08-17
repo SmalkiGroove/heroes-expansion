@@ -3782,25 +3782,27 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_WEAKENING_STRIKE</ID>
+			<ID>HERO_SKILL_VAMPIRISM</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Perks/AgonizingStrike_grey.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Perks/AgonizingStrike.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Specializations/Dungeon/Seducer.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Specializations/Dungeon/Seducer.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
-					<Item href="/Text/Game/Skills/Common/DarkMagic/WeakeningStrike/Name.txt"/>
+					<Item href="/Text/Game/Skills/Unique/Invocation/Vampirism/Name.txt"/>
 				</NameFileRef>
 				<CommonNameFileRef href=""/>
 				<DescriptionFileRef>
-					<Item href="/Text/Game/Skills/Common/DarkMagic/WeakeningStrike/Description.txt"/>
+					<Item href="/Text/Game/Skills/Unique/Invocation/Vampirism/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
-				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_NONE</BasicSkillID>
+				<spellBuffs>
+					<Item>SPELL_VAMPIRISM</Item>
+				</spellBuffs>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Haven>
@@ -8583,25 +8585,27 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_BARBARIAN_WEAKENING_STRIKE</ID>
+			<ID>HERO_SKILL_BARBRIAN_VAMPIRISM</ID>
 			<obj>
 				<Texture>
-					<Item href=""/>
-					<Item href=""/>
+					<Item href="/Textures/HeroScreen/Specializations/Dungeon/Seducer.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Specializations/Dungeon/Seducer.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
-					<Item href="/Text/Game/Skills/Common/DarkMagic/WeakeningStrikeB/Name.txt"/>
+					<Item href="/Text/Game/Skills/Unique/Invocation/Vampirism/Name.txt"/>
 				</NameFileRef>
 				<CommonNameFileRef href=""/>
 				<DescriptionFileRef>
-					<Item href="/Text/Game/Skills/Common/DarkMagic/WeakeningStrikeB/Description.txt"/>
+					<Item href="/Text/Game/Skills/Unique/Invocation/Vampirism/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
-				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_NONE</BasicSkillID>
+				<spellBuffs>
+					<Item>SPELL_VAMPIRISM</Item>
+				</spellBuffs>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Haven>
