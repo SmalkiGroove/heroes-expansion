@@ -886,6 +886,28 @@ function Routine_GenerateSulfur(player, hero)
     AddPlayerResource(player, hero, SULFUR, amount)
 end
 
+function Routine_MultiplyTroops(player, hero)
+    log("$ Routine_MultiplyTroops")
+    local level = GetHeroLevel(hero)
+    local percent = 1 + trunc(0.13 * level)
+    local maxtier = 1 + trunc(0.22 * level)
+    local tracker = {}
+    for i,cr in GetHeroArmy(hero) do
+        if cr and cr ~= 0 then
+            if not tracker[cr] then
+                local faction = CREATRUES[cr][1]
+                local tier = CREATURES[cr][2]
+                if faction == INFERNO and tier <= maxtier then
+                    local nb = GetHeroCreatures(cr)
+                    local add = trunc(0.01 * percent * nb)
+                    AddHeroCreatures(hero, cr, add)
+                    tracker[cr] = 1
+                end
+            end
+        end
+    end
+end
+
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -989,6 +1011,7 @@ DAILY_TRIGGER_HERO_ROUTINES = {
     -- inferno
     [H_ORLANDO] = Routine_TownBuildingUp,
     [H_DELEB] = Routine_GenerateSulfur,
+    [H_KHABELETH] = Routine_MultiplyTroops,
     -- stronghold
 }
 

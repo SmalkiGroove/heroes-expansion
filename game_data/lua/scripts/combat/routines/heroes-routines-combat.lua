@@ -423,22 +423,6 @@ function Routine_ScoutsMoveFirst(side, hero)
     SetATB_CreatureTypes(side, {CREATURE_SCOUT,CREATURE_ASSASSIN,CREATURE_STALKER}, ATB_INSTANT)
 end
 
-function Routine_CastVampirismOnWitches(side, hero)
-    -- log("Trigger cast Vampirism !")
-    local w = {}
-    for i,cr in GetUnits(side, CREATURE) do
-        local type = GetCreatureType(CURRENT_UNIT)
-        if type == CREATURE_WITCH or type == CREATURE_BLOOD_WITCH or type == CREATURE_BLOOD_WITCH_2 then
-            insert(w, cr)
-        end
-    end
-    local m = trunc(GetUnitMaxManaPoints(hero) * 0.01)
-    local n = min(length(w), 1 + m)
-    for i = 1,n do
-        HeroCast_Target(hero, SPELL_VAMPIRISM, FREE_MANA, w[i])
-    end
-end
-
 function Routine_MinotaursMoveNext(side, hero)
     -- log("Trigger minotaurs play next !")
     if CURRENT_UNIT == hero then
