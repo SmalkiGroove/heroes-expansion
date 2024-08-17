@@ -238,6 +238,17 @@ end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 -- FORTRESS
 
+function Routine_LearnWarcries(player, hero, level)
+    log("$ Routine_LearnWarcries")
+    if level == 10 then
+        TeachHeroSpell(hero, SPELL_WARCRY_FEAR_MY_ROAR)
+        TeachHeroSpell(hero, SPELL_WARCRY_WORD_OF_THE_CHIEF)
+    elseif level == 20 then
+        TeachHeroSpell(hero, SPELL_WARCRY_SHOUT_OF_MANY)
+        TeachHeroSpell(hero, SPELL_WARCRY_BATTLECRY)
+    end
+end
+
 function Routine_AddHeroDefenders(player, hero)
     log("$ Routine_AddHeroDefenders")
     local amount = trunc(0.3 * GetHeroLevel(hero))
@@ -320,7 +331,7 @@ Var_Ebba_RunicSpells = {}
 function Routine_GiveArtifactRuneOfFlame(player, hero)
     log("$ Routine_GiveArtifactRuneOfFlame")
     GiveArtifact(hero, ARTIFACT_RUNE_OF_FLAME, 1)
-    for rune,_ = RUNIC_SPELLS do
+    for rune,_ in RUNIC_SPELLS do
         Var_Ebba_RunicSpells[rune] = 0
     end
 end
@@ -1019,6 +1030,7 @@ LEVEL_UP_HERO_ROUTINES_HERO = {
     -- preserve
     [H_VINRAEL] = Routine_GiveArtifactLegendaryBoots,
     -- fortress
+    [H_TAZAR] = Routine_LearnWarcries,
     -- academy
     [H_THEODORUS] = Routine_GetCraftingResources,
     [H_MINASLI] = Routine_AddHeroEaglePerLevel,

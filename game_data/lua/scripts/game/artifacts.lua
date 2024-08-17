@@ -129,7 +129,7 @@ ARTIFACT_ROD_OF_TORMENT = 125                       -- enemy creatures have -2 m
 ARTIFACT_CODEX_OF_THE_SAINT = 126                   -- 
 ARTIFACT_VIZIRS_CAP = 127                           -- 
 ARTIFACT_PLUNDERER_VEST = 128                       -- creatures have +1 hp
-ARTIFACT_AVENGER_BOW = 129                          -- 
+ARTIFACT_AVENGER_BOW = 129                          -- /
 ARTIFACT_CAPTAINS_HOOK = 130                        -- 
 ARTIFACT_PLUNDERER_SHOES = 131                      -- creatures have +1 initiative
 ARTIFACT_BUTCHER_GLAIVE = 132	                    -- 
@@ -181,7 +181,7 @@ ARTIFACT_PIRATE_SMASHER = 177                       --
 ARTIFACT_ELRATHS_UNITY = 178                        -- /
 ARTIFACT_WILL_OF_URGASH = 179                       -- /
 ARTIFACT_MOONLIGHT_BAND = 180                       -- immunity to curse of the netherworld
-ARTIFACT_BLOOD_CRYSTAL = 181                        -- 
+ARTIFACT_BLOOD_CRYSTAL = 181                        -- transforms creatures to your faction
 ARTIFACT_RANGERS_CAPE = 182                         -- 
 ARTIFACT_MOON_CHARM = 183                           -- the first friendly stack that dies in combat revives **
 ARTIFACT_FORGOTTEN_RING = 184                       -- 
@@ -378,8 +378,8 @@ ARTIFACTS_DATA = {
     [ARTIFACT_CROWN_OF_THE_FROST_LORD]       = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_HEAD, special=0},
     [ARTIFACT_ALTAR_OF_ELEMENTS_SHARD]       = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_NECK, special=0},
     [ARTIFACT_ELDENAS_RED_SCARF]             = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_NECK, special=0},
-    [ARTIFACT_ELDENAS_CIRCLET]               = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_HEAD, special=0},
-    [ARTIFACT_NAGA_COMMANDERS_HELMET]        = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_HEAD, special=0},
+    [ARTIFACT_ELDENAS_CIRCLET]               = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_HEAD, special=0},
+    [ARTIFACT_NAGA_COMMANDERS_HELMET]        = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_HEAD, special=1},
     [ARTIFACT_NECKLACE_OF_THE_BLOODY_CLAW]   = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_NECK, special=1},
     [ARTIFACT_RING_OF_CELERITY]              = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RING, special=0},
     [ARTIFACT_ELDENAS_RED_COAT]              = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_SHOULDERS, special=0},
@@ -455,7 +455,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_ELRATHS_UNITY]                 = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_POCKET, special=0},
     [ARTIFACT_WILL_OF_URGASH]                = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
     [ARTIFACT_MOONLIGHT_BAND]                = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RING, special=0},
-    [ARTIFACT_BLOOD_CRYSTAL]                 = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_BACKPACK, special=1},
+    [ARTIFACT_BLOOD_CRYSTAL]                 = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_POCKET, special=0},
     [ARTIFACT_RANGERS_CAPE]                  = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_SHOULDERS, special=0},
     [ARTIFACT_MOON_CHARM]                    = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_NECK, special=0},
     [ARTIFACT_FORGOTTEN_RING]                = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RING, special=0},

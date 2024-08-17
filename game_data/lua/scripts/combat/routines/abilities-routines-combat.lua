@@ -38,7 +38,7 @@ function Routine_AbilityMagneticField(side, unit)
         end
     end
     if unit ~= "none" and distance > 2 then
-        SetCombatPosition(unit, target[1], target[2])
+        MoveCombatUnit(unit, target[1], target[2])
     end
 end
 
@@ -71,7 +71,7 @@ COMBAT_START_ABILITIES_ROUTINES = {
 
 COMBAT_TURN_ABILITIES_ROUTINES = {
     [CREATURE_MARKSMAN] = Routine_AbilityCommandBallista,
-    [CREATURE_OBSIDIAN_GOLEM] = Routine_AbilityMagneticField,
+    -- [CREATURE_OBSIDIAN_GOLEM] = Routine_AbilityMagneticField,
 }
 
 UNIT_DIED_ABILITIES_ROUTINES = {

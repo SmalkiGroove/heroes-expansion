@@ -443,6 +443,14 @@ function CreatureToUndead(creature)
 	return CREATURES_BY_FACTION[NECROPOLIS][tier][1]
 end
 
+function TransformCreatures(obj, creature, faction)
+	local nb = GetObjectCreature(obj, creature)
+	local tier = CREATURES[creature][2]
+	local cr = CREATURES_BY_FACTION[faction][tier][1]
+	RemoveObjectCreatures(obj, creature, nb) sleep()
+	AddObjectCreatures(obj, cr, nb) sleep()
+end
+
 function InitializeRandomSeed()
 	local value = GetTerrainSize() + GetDifficulty()
 	for p = 1,8 do

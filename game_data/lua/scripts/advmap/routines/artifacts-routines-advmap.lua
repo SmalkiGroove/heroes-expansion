@@ -54,14 +54,14 @@ function Routine_ArtifactBootsOfSwiftJourney(player, hero)
     end
 end
 
-function Routine_ArtifactBackpackOfOpenRoad(player, hero, level)
-    log("$ Routine_ArtifactBackpackOfOpenRoad")
-    ChangeHeroStat(hero, STAT_MOVE_POINTS, 9999)
-end
-
 function Routine_ArtifactBootsOfSwiftJourneyCancel(player, hero, combatIndex)
     log("$ Routine_ArtifactBootsOfSwiftJourneyCancel")
     Var_BootsOfSwiftJourneyCheck[hero] = nil
+end
+
+function Routine_ArtifactBackpackOfOpenRoad(player, hero, level)
+    log("$ Routine_ArtifactBackpackOfOpenRoad")
+    ChangeHeroStat(hero, STAT_MOVE_POINTS, 9999)
 end
 
 function Routine_ArtifactSentinelsHelm(player, hero, level)
@@ -185,6 +185,17 @@ function Routine_ArtifactPendantOfTheLyre(player, hero, combatIndex)
     end
 end
 
+function Routine_ArtifactBloodCrystal(player, hero)
+    log("$ Routine_ArtifactBloodCrystal")
+    for i,cr in GetHeroArmy(hero) do
+        if cr and cr ~= 0 then
+            if CREATURES[cr][1] ~= HEROES[hero].faction then
+                TransformCreatures(hero, cr, HEROES[hero].faction)
+            end
+        end
+    end
+end
+
 --------------------------------------------------------------------------------------------------------------------------------
 
 function Routine_ArtfsetWanderer(player, hero)
@@ -272,6 +283,7 @@ end
 
 CONTINUOUS_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_ALL_SEEING_CROWN] = Routine_ArtifactAllSeeingCrown,
+    [ARTIFACT_BLOOD_CRYSTAL] = Routine_ArtifactBloodCrystal,
 }
 DAILY_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_ENDLESS_POUCH_OF_GOLD] = Routine_ArtifactPouchOfGolds,
@@ -286,6 +298,7 @@ WEEKLY_TRIGGER_ARTIFACTS_ROUTINES = {
 }
 LEVELUP_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_BACKPACK_OF_THE_OPEN_ROAD] = Routine_ArtifactBackpackOfOpenRoad,
+    [ARTIFACT_SENTINELS_HELM] = Routine_ArtifactSentinelsHelm,
     [ARTIFACT_HELM_OF_THE_WARMAGE] = Routine_ArtifactHelmOfWarmage,
     [ARTIFACT_ELDENAS_RED_SCARF] = Routine_ArtifactEldenaRedScarf,
     [ARTIFACT_ELDENAS_RED_COAT] = Routine_ArtifactEldenaRedCoat,
@@ -294,11 +307,14 @@ LEVELUP_TRIGGER_ARTIFACTS_ROUTINES = {
 AFTER_COMBAT_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_BOOTS_OF_THE_SWIFT_JOUNREY] = Routine_ArtifactBootsOfSwiftJourneyCancel,
     [ARTIFACT_BEGINNER_MAGIC_STICK] = Routine_ArtifactBeginnerMagicStick,
+    [ARTIFACT_SENTINELS_BOOTS] = Routine_ArtifactSentinelsBoots,
     [ARTIFACT_RUNIC_WAR_AXE] = Routine_ArtifactRunicWar,
     [ARTIFACT_RUNIC_WAR_HARNESS] = Routine_ArtifactRunicWar,
     [ARTIFACT_DEATH_KNIGHT_BOOTS] = Routine_ArtifactDeathknightBoots,
     [ARTIFACT_VIKING_HATCHET] = Routine_ArtifactVikingHatchet,
     [ARTIFACT_VIKING_SHIELD] = Routine_ArtifactVikingShield,
+    [ARTIFACT_PENDANT_OF_THE_LYRE] = Routine_ArtifactPendantOfTheLyre,
+    [ARTIFACT_STAFF_OF_THE_LYRE] = Routine_ArtifactStaffOfTheLyre,
 }
 
 CONTINUOUS_TRIGGER_ARTFSETS_ROUTINES = {
