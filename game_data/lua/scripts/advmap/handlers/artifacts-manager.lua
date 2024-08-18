@@ -44,6 +44,10 @@ ARTIFACT_SETS_ACTIVATIONS = {
 REGISTERED_ARTIFACTS = {
     [ARTIFACT_SENTINELS_BLADE] = {},
     [ARTIFACT_MOON_CHARM] = {},
+    [ARTIFACT_ORB_OF_AIR] = {},
+    [ARTIFACT_ORB_OF_EARTH] = {},
+    [ARTIFACT_ORB_OF_FIRE] = {},
+    [ARTIFACT_ORB_OF_WATER] = {},
 }
 
 function ScanHeroArtifacts(hero)

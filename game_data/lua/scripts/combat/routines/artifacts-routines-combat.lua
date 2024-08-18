@@ -1,4 +1,29 @@
 
+function Routine_SummonElementalsType(side, hero, type)
+    local nb = 10 + trunc(0.2 * GetUnitMaxManaPoints(hero))
+    SummonCreature(side, type, nb)
+end
+
+function Routine_SummonElementalsAir(side, hero)
+    log("$ Routine_SummonElementalsAir")
+    Routine_SummonElementalsType(side, hero, CREATURE_AIR_ELEMENTAL)
+end
+
+function Routine_SummonElementalsEarth(side, hero)
+    log("$ Routine_SummonElementalsEarth")
+    Routine_SummonElementalsType(side, hero, CREATURE_EARTH_ELEMENTAL)
+end
+
+function Routine_SummonElementalsFire(side, hero)
+    log("$ Routine_SummonElementalsFire")
+    Routine_SummonElementalsType(side, hero, CREATURE_FIRE_ELEMENTAL)
+end
+
+function Routine_SummonElementalsWater(side, hero)
+    log("$ Routine_SummonElementalsWater")
+    Routine_SummonElementalsType(side, hero, CREATURE_WATER_ELEMENTAL)
+end
+
 function Routine_ArtifactMoonCharm(side, hero, unit)
     log("$ Routine_ArtifactMoonCharm")
     if not ROUTINE_VARS.MoonCharm then
@@ -59,6 +84,10 @@ end
 COMBAT_PREPARE_ARTIFACT_ROUTINES = {
 }
 COMBAT_START_ARTIFACT_ROUTINES = {
+    [ARTIFACT_ORB_OF_AIR] = Routine_SummonElementalsAir,
+    [ARTIFACT_ORB_OF_EARTH] = Routine_SummonElementalsEarth,
+    [ARTIFACT_ORB_OF_FIRE] = Routine_SummonElementalsFire,
+    [ARTIFACT_ORB_OF_WATER] = Routine_SummonElementalsWater,
 }
 COMBAT_TURN_ARTIFACT_ROUTINES = {
 }

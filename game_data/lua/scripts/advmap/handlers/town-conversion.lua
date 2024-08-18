@@ -73,13 +73,9 @@ end
 
 function HeroVisitConvertible(hero, obj)
     log("$ HeroVisitConvertible")
-    if CanHeroConvert(hero, obj) then
-        log("Building can be converted")
-        startThread(EnableTownConversionAbility, hero, obj)
-    end
-    if hero == H_THEODORUS then
-        startThread(Routine_IncreaseKnowledgeTemp, hero, obj)
-    end
+    if hero == H_THEODORUS then startThread(Routine_IncreaseKnowledgeTemp, hero, obj) end
+    if HasHeroSkill(hero, SKILL_LOGISTICS) then startThread(Routine_LogisticsVisitTown, hero, obj) end
+    if CanHeroConvert(hero, obj) then startThread(EnableTownConversionAbility, hero, obj) end
     SetTriggerConvertible(obj, nil)
     MakeHeroInteractWithObject(hero, obj)
     SetTriggerConvertible(obj, not nil)

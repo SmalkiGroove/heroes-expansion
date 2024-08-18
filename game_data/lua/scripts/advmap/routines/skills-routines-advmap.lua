@@ -420,8 +420,50 @@ function Routine_OnslaughtBuff(player, hero, mastery)
     end
 end
 
-function Routine_GeologyOre(player, hero, mastery)
-    log("$ Routine_GeologyOre")
+function RoutineEstatesDaily(player, hero, mastery)
+    log("$ RoutineEstatesDaily")
+    local total = 0
+    for obj,_ in RESOURCE_GENERATING_OBJECTS do
+        for _,building in GetObjectNamesByType(obj) do
+            if GetObjectOwner(building) == player then
+                total = total + 25
+            end
+        end
+    end
+    for _,obj in Dwellings_T1 do
+        for _,building in GetObjectNamesByType(obj) do
+            if GetObjectOwner(building) == player then
+                total = total + 25
+            end
+        end
+    end
+    for _,obj in Dwellings_T2 do
+        for _,building in GetObjectNamesByType(obj) do
+            if GetObjectOwner(building) == player then
+                total = total + 25
+            end
+        end
+    end
+    for _,obj in Dwellings_T3 do
+        for _,building in GetObjectNamesByType(obj) do
+            if GetObjectOwner(building) == player then
+                total = total + 25
+            end
+        end
+    end
+    for _,obj in Dwellings_MP do
+        for _,building in GetObjectNamesByType(obj) do
+            if GetObjectOwner(building) == player then
+                total = total + 25
+            end
+        end
+    end
+    if HasArtefact(hero, ARTIFACT_CROWN_OF_LEADER, 1) then total = 2 * total end
+    AddPlayerResource(player, hero, GOLD, total)
+end
+
+function Routine_GeologyDaily(player, hero, mastery)
+    log("$ Routine_GeologyDaily")
     AddPlayerResource(player, hero, ORE, 1)
 end
 
@@ -436,7 +478,7 @@ function Routine_IndustryDaily(player, hero, mastery)
                     local dx = x - xh
                     local dy = y - yh
                     local d = dx * dx + dy * dy
-                    if d < 999 then AddPlayerResource(player, hero, data.type or random(0,5,d), data.amount) end
+                    if d < 900 then AddPlayerResource(player, hero, data.type or random(0,5,d), data.amount) end
                 end
             end
         end
@@ -461,58 +503,65 @@ end
 
 function Routine_WarriorsOfTheMagma(player, hero, mastery)
     log("$ Routine_WarriorsOfTheMagma")
-    local amount = 10
+    local amount = 10 + WEEKS
     AddHeroCreatures(hero, CREATURE_FIRE_ELEMENTAL, amount)
 end
 
 function Routine_WarriorsOfTheSea(player, hero, mastery)
     log("$ Routine_WarriorsOfTheSea")
-    local amount = 10
+    local amount = 10 + WEEKS
     AddHeroCreatures(hero, CREATURE_WATER_ELEMENTAL, amount)
 end
 
 function Routine_WarriorsOfTheSky(player, hero, mastery)
     log("$ Routine_WarriorsOfTheSky")
-    local amount = 10
+    local amount = 10 + WEEKS
     AddHeroCreatures(hero, CREATURE_AIR_ELEMENTAL, amount)
 end
 
 function Routine_WarriorsOfTheMountain(player, hero, mastery)
     log("$ Routine_WarriorsOfTheMountain")
-    local amount = 10
+    local amount = 10 + WEEKS
     AddHeroCreatures(hero, CREATURE_EARTH_ELEMENTAL, amount)
+end
+
+Var_LastVisitedTown = {}
+function Routine_LogisticsVisitTown(hero, obj)
+    if MAP_TOWNS[obj] then Var_LastVisitedTown[hero] = obj end
 end
 
 function Routine_LogisticsWeeklyProd(player, hero, mastery)
     log("$ Routine_LogisticsWeeklyProd")
-    for town,data in MAP_TOWNS do
-        if IsHeroInTown(hero, town, 1, 1) then
-            local faction = data.faction
-            local fort = GetTownBuildingLevel(town, TOWN_BUILDING_FORT)
-            local grail = GetTownBuildingLevel(town, TOWN_BUILDING_GRAIL)
-            local factor = 1 + 0.5 * grail
-            if fort > 1 then factor = factor + 0.5 * (fort-1) end
-            local recr = GetHeroSkillMastery(hero, PERK_RECRUITMENT)
-            local bonus = 1 + recr
-            if hero == H_WYNGAAL then bonus = bonus + 0.05 * GetHeroLevel(hero) end
-            if mastery >= 1 and GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_1) ~= 0 then
-                local creature = CREATURES_BY_FACTION[faction][1][1]
-                local current = GetObjectDwellingCreatures(town, creature)
-                local amount = current + 5 * factor * bonus - 3 * recr
-                SetObjectDwellingCreatures(town, creature, amount)
-            end
-            if mastery >= 2 and GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_2) ~= 0 then
-                local creature = CREATURES_BY_FACTION[faction][2][1]
-                local current = GetObjectDwellingCreatures(town, creature)
-                local amount = current + 5 * factor * bonus - 2 * recr
-                SetObjectDwellingCreatures(town, creature, amount)
-            end
-            if mastery >= 3 and GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_3) ~= 0 then
-                local creature = CREATURES_BY_FACTION[faction][3][1]
-                local current = GetObjectDwellingCreatures(town, creature)
-                local amount = current + 5 * factor * bonus - recr
-                SetObjectDwellingCreatures(town, creature, amount)
-            end
+    local town = nil
+    if Var_LastVisitedTown[hero] then town = Var_LastVisitedTown[hero]
+    else town = FindClosestTown(player, hero) end
+    if town then
+        local faction = MAP_TOWNS[town].faction
+        local fort = GetTownBuildingLevel(town, TOWN_BUILDING_FORT)
+        local grail = GetTownBuildingLevel(town, TOWN_BUILDING_GRAIL)
+        local factor = 1 + 0.5 * grail
+        if fort > 1 then factor = factor + 0.5 * (fort-1) end
+        local recr = GetHeroSkillMastery(hero, PERK_RECRUITMENT)
+        if HasArtefact(hero, ARTIFACT_CROWN_OF_LEADER, 1) then recr = 2 * recr end
+        local bonus = 1 + recr
+        if hero == H_WYNGAAL then bonus = bonus + 0.05 * GetHeroLevel(hero) end
+        if mastery >= 1 and GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_1) ~= 0 then
+            local creature = CREATURES_BY_FACTION[faction][1][1]
+            local current = GetObjectDwellingCreatures(town, creature)
+            local amount = current + 5 * factor * bonus
+            SetObjectDwellingCreatures(town, creature, amount)
+        end
+        if mastery >= 2 and GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_2) ~= 0 then
+            local creature = CREATURES_BY_FACTION[faction][2][1]
+            local current = GetObjectDwellingCreatures(town, creature)
+            local amount = current + 5 * factor * bonus
+            SetObjectDwellingCreatures(town, creature, amount)
+        end
+        if mastery >= 3 and GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_3) ~= 0 then
+            local creature = CREATURES_BY_FACTION[faction][3][1]
+            local current = GetObjectDwellingCreatures(town, creature)
+            local amount = current + 5 * factor * bonus
+            SetObjectDwellingCreatures(town, creature, amount)
         end
     end
 end
@@ -556,7 +605,7 @@ function Routine_MythologyWeeklyGolds(player, hero, mastery)
             if HasArtefact(hero, a, 1) then count = count + 1 end
         end
     end
-    AddPlayerResource(player, hero, GOLD, 250 * count)
+    AddPlayerResource(player, hero, GOLD, 500 * count)
 end
 
 function Routine_GetStrongerWeeklyBonus(player, hero, mastery)
@@ -736,7 +785,8 @@ START_TRIGGER_SKILLS_ROUTINES = {
 
 DAILY_TRIGGER_SKILLS_ROUTINES = {
     [PERK_ONSLAUGHT] = Routine_OnslaughtBuff,
-    [PERK_GEOLOGY] = Routine_GeologyOre,
+    [PERK_ESTATES] = RoutineEstatesDaily,
+    [PERK_GEOLOGY] = Routine_GeologyDaily,
     [PERK_INDUSTRY] = Routine_IndustryDaily,
     [PERK_HERALD_OF_DEATH] = Routine_HeraldOfDeathGolds,
     [SKILL_SPIRITISM] = Routine_SpiritismManaRegen,

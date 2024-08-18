@@ -255,4 +255,4 @@ else
 	ExecConsoleCommand("@if GetObjectiveState('H5X', FIRST_PLAYER) == OBJECTIVE_UNKNOWN then SetObjectiveState('H5X', OBJECTIVE_ACTIVE, FIRST_PLAYER) end")
 end
 
-sleep(300) UnblockGame()
+sleep(100) UnblockGame()

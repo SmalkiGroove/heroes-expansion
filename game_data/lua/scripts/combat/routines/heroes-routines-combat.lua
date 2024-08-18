@@ -482,7 +482,7 @@ function Routine_DragonStrike(side, hero)
             end
         end
         if dragon then
-            local target = RandomCreature(1-side, n)
+            local target = RandomCreature(1-side, count)
             AttackCombatUnit(dragon, target)
             combatPlayEmotion(side, 1)
         end

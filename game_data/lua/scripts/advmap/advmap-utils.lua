@@ -155,6 +155,24 @@ function CheckMainTown(player)
     end
 end
 
+function FindClosestTown(player, hero)
+	local x,y,z = GetObjectPosition(hero)
+	local closest = nil
+	local distance = 1000000000
+	for i,town in GetPlayerTowns(player) do
+		local tx,ty,tz = GetObjectPosition(town)
+		local dx = x - tx
+		local dy = y - ty
+		local dz = (z - tz) * 1000
+		local d = dx*dx + dy*dy + dz*dz
+		if d < distance then
+			closest = town
+			distance = d
+		end
+	end
+	return closest
+end
+
 function SetupTownTavern(town, faction)
 	for i = 1,8 do
 		local enabled = (faction == i) and 1 or 0

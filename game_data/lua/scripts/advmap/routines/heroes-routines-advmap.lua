@@ -593,10 +593,12 @@ function Routine_GainDragonArtifacts(player, hero, combatIndex)
     log("---DEBUG: value = "..value)
     local rnd = random(1,100,level)
     if (2 * level + value) > rnd then
-        local r = value > 30 and 1 or 0
+        local r = value > 20 and 1 or 0
         local i = mod(rnd, 7+r) + 1
         local a = ARTIFACT_SETS[ARTIFACT_SET_DRAGON][i]
-        GiveArtifact(hero, a)
+        if not HasArtefact(hero, a, 0) then
+            GiveArtifact(hero, a)
+        end
     end
 end
 
@@ -647,9 +649,9 @@ end
 
 function Routine_UpgradeToWitches(player, hero)
     log("$ Routine_UpgradeToWitches")
-    local max_bloodwitch = GetHeroLevel(hero) * 2
+    local max_bloodwitch = trunc(GetHeroLevel(hero) * 1.25)
     TransformTownRecruits(player, hero, TOWN_BUILDING_DWELLING_1, CREATURE_SCOUT, TOWN_BUILDING_DWELLING_2, CREATURE_WITCH, max_bloodwitch)
-    local max_shadowwitch = trunc(GetHeroLevel(hero) * 0.5)
+    local max_shadowwitch = trunc(GetHeroLevel(hero) * 0.25)
     TransformTownRecruits(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_RIDER, TOWN_BUILDING_DWELLING_5, CREATURE_MATRON, max_shadowwitch)
 end
 
