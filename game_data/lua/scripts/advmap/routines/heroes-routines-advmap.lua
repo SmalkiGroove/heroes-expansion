@@ -897,7 +897,7 @@ function Routine_MultiplyTroops(player, hero)
     for i,cr in GetHeroArmy(hero) do
         if cr and cr ~= 0 then
             if not tracker[cr] then
-                local faction = CREATRUES[cr][1]
+                local faction = CREATURES[cr][1]
                 local tier = CREATURES[cr][2]
                 if faction == INFERNO and tier <= maxtier then
                     local nb = GetHeroCreatures(cr)
@@ -931,6 +931,21 @@ function Routine_GainAttackDefense(player, hero, combatIndex)
     end
 end
 
+function Routine_UpgradeChamberOfWrath(player, hero)
+    log("$ Routine_UpgradeChamberOfWrath")
+    for town,data in MAP_TOWNS do
+        if IsHeroInTown(hero, town, 1, 1) then
+            if data.faction == STRONGHOLD then
+                UpgradeTownBuilding(town, TOWN_BUILDING_DWELLING_5)
+                sleep()
+                if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_5) == 1 then
+                    SetObjectDwellingCreatures(town, CREATURE_ORCCHIEF_BUTCHER, 0)
+                end
+            end
+        end
+    end
+end
+
 function Routine_AddHeroWyverns(player, hero)
     log("$ Routine_AddHeroWyverns")
     local amount = round(0.22 * GetHeroLevel(hero))
@@ -949,12 +964,27 @@ function Routine_ActivateArtfsetSarIssus(player, hero)
     GiveArtifact(hero, 248, 1)
 end
 
-function Routine_AddRecruitsShamans(player, hero)
-    log("$ Routine_AddRecruitsShamans")
-    local amount = trunc(2.3 * GetHeroLevel(hero))
-    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_2, CREATURE_SHAMAN, amount)
+function Routine_SacrificeGoblinDaily(player, hero)
+    log("$ Routine_SacrificeGoblinDaily")
+    for _,goblin in CREATURES_BY_FACTION[STRONGHOLD][1] do
+        if GetHeroCreatures(hero, goblin) > 0 then
+            RemoveHeroCreatures(hero, goblin, 1)
+            AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_2, CREATURE_SHAMAN, 1)
+            if GetHeroLevel(hero) >= 10 do AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_3, CREATURE_ORC_WARRIOR, 1) end
+            return
+        end
+    end
 end
 
+Var_Mokka_BattleWon = 0
+function Routine_MokkaVictoryCounter(player, hero, combatIndex)
+    log("$ Routine_MokkaVictoryCounter")
+    Var_Mokka_BattleWon = Var_Mokka_BattleWon + 1
+    if Var_Mokka_BattleWon == 5 then
+        GiveArtifact(hero, ARTIFACT_TITANS_TRIDENT, 0)
+        -- ShowFlyingSign("/Text/Game/Scripts/HeroSpe/GainUnicornBow.txt", hero, player, FLYING_SIGN_TIME)
+    end
+end
 
 
 
@@ -984,6 +1014,7 @@ START_TRIGGER_HERO_ROUTINES = {
     -- inferno
     [H_BIARA] = Routine_ActivateArtfsetHunter,
     -- stronghold
+    [H_GORSHAK] = Routine_UpgradeChamberOfWrath,
     [H_URGHAT] = Routine_ActivateArtfsetNecro,
     [H_KUJIN] = Routine_ActivateArtfsetSarIssus,
 }
@@ -1049,7 +1080,7 @@ WEEKLY_TRIGGER_HERO_ROUTINES = {
     -- stronghold
     [H_GARUNA] = Routine_AddRecruitsCentaurs,
     [H_KARUKAT] = Routine_AddHeroWyverns,
-    [H_KUJIN] = Routine_AddRecruitsShamans,
+    [H_KUJIN] = Routine_SacrificeGoblinDaily,
 }
 
 LEVEL_UP_HERO_ROUTINES_HERO = {
@@ -1097,6 +1128,7 @@ AFTER_COMBAT_TRIGGER_HERO_ROUTINES = {
     [H_ORLANDO] = Routine_GainBonusExpAndRes,
     -- stronghold
     [H_GORSHAK] = Routine_GainAttackDefense,
+    [H_MUKHA] = Routine_MokkaVictoryCounter,
 }
 
 

@@ -69,6 +69,12 @@ function Wait()
     if THREAD_FINISHER == 0 then THREAD_STATE = 1 end
 end
 
+function PauseTemp()
+    combatSetPause(1)
+    sleep(999)
+    combatSetPause(nil)
+end
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -96,7 +102,7 @@ function ManageCombatStart()
     startThread(GetArmySummary, ATTACKER)
     startThread(GetArmySummary, DEFENDER)
 
-    combatSetPause(1)
+    startThread(PauseTemp)
     DoAbilitiesRoutine_CombatStart()
 	if ATTACKER_HERO ~= "" then
         DoSkillRoutine_CombatStart(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
@@ -116,11 +122,12 @@ function ManageCombatTurn(unit)
     if ENABLE_SCRIPT == 0 then return end
 
     if CURRENT_UNIT ~= unit then
+        startThread(PauseTemp)
+
         COMBAT_TURN = COMBAT_TURN + 1
         CURRENT_UNIT = unit
         CURRENT_UNIT_SIDE = GetUnitSide(unit)
 
-        combatSetPause(1)
         if ATTACKER_HERO ~= "" then
             DoHeroSpeRoutine_CombatTurn(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
             DoArtifactRoutine_CombatTurn(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)

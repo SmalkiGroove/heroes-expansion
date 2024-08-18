@@ -491,6 +491,19 @@ function InitializeRandomSeed()
 	log("Random seed = "..RANDOM_SEED)
 end
 
+function LoadedGame_GameVars()
+	for player = 1,8 do
+		if (GetPlayerState(p) == 1) then
+			for i,hero in GetPlayerHeroes(player) do
+				Register(VarHeroLevel(hero), GetHeroLevel(hero))
+				for skill = 1,220 do
+					Register(VarHeroSkillId(hero, skill), GetHeroSkillMastery(hero, skill))
+				end
+			end
+		end
+	end
+end
+
 
 
 function AddAllArtifacts(hero)

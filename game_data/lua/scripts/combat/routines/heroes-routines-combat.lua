@@ -723,7 +723,10 @@ end
 
 function Routine_CastRallingCry(side, hero)
     -- log("Trigger ralling cry !")
-    HeroCast_Global(hero, SPELL_WARCRY_RALLING_CRY, FREE_MANA)
+    if CURRENT_UNIT == hero then
+        HeroCast_Global(hero, SPELL_WARCRY_RALLING_CRY, FREE_MANA)
+        if IsHuman(side) then SetATB_ID(hero, ATB_INSTANT) end
+    end
 end
 
 function Routine_CastBattlecry(side, hero)
@@ -850,7 +853,6 @@ COMBAT_START_HERO_ROUTINES = {
     [H_DELEB] = Routine_CastMineFields,
     [H_KHABELETH] = Routine_InfernoGating,
     -- stronghold
-    [H_KRAGH] = Routine_CastRallingCry,
     [H_GOTAI] = Routine_CastBattlecry,
     [H_KILGHAN] = Routine_CountInitialGoblins,
     [H_TELSEK] = Routine_CastCallOfBlood,
@@ -887,6 +889,7 @@ COMBAT_TURN_HERO_ROUTINES = {
     [H_AGRAEL] = Routine_CastRandomFireball,
     [H_DELEB] = Routine_SummonEarthElementals,
     -- stronghold
+    [H_KRAGH] = Routine_CastRallingCry,
     [H_KILGHAN] = Routine_SummonGoblinStack,
     [H_ZOULEIKA] = Routine_HealingTentMoveNext,
     [H_KUJIN] = Routine_ShamansManaRegen,

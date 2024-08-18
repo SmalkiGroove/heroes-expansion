@@ -251,8 +251,12 @@ end
 if NB_HUMAN <= 1 then
 	Init()
 else
-	Trigger(OBJECTIVE_STATE_CHANGE_TRIGGER, 'H5X', FIRST_PLAYER, 'Init') sleep()
-	ExecConsoleCommand("@if GetObjectiveState('H5X', FIRST_PLAYER) == OBJECTIVE_UNKNOWN then SetObjectiveState('H5X', OBJECTIVE_ACTIVE, FIRST_PLAYER) end")
+	if GetObjectiveState('H5X',FIRST_PLAYER) == OBJECTIVE_UNKNOWN then
+		Trigger(OBJECTIVE_STATE_CHANGE_TRIGGER, 'H5X', FIRST_PLAYER, 'Init') sleep()
+		ExecConsoleCommand("@if GetObjectiveState('H5X', FIRST_PLAYER) == OBJECTIVE_UNKNOWN then SetObjectiveState('H5X', OBJECTIVE_ACTIVE, FIRST_PLAYER) end")
+	else
+		startThread(LoadedGame_GameVars)
+	end
 end
 
 sleep(100) UnblockGame()

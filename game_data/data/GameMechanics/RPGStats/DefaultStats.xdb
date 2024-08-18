@@ -342,8 +342,8 @@
 				<AssasinPoisonCounter>2</AssasinPoisonCounter>
 				<WhipStrikeSpellPower>10</WhipStrikeSpellPower>
 				<WhipStrike_ProcFactor>2</WhipStrike_ProcFactor>
-				<HydraRegenerationMin>50</HydraRegenerationMin>
-				<HydraRegenerationMax>75</HydraRegenerationMax>
+				<HydraRegenerationMin>35</HydraRegenerationMin>
+				<HydraRegenerationMax>55</HydraRegenerationMax>
 				<RiderCharge_DefenceReducePerPathCell>0.1</RiderCharge_DefenceReducePerPathCell>
 				<AcidicHydraPattern href="/GameMechanics/Creature/Creatures/Dungeon/AcidBlood.xdb#xpointer(/PatternAttack)"/>
 				<AuraOfBraveryMoraleMin>1</AuraOfBraveryMoraleMin>
@@ -2358,8 +2358,8 @@
 				<CallOfTheWasp_ATBReducePerLevel3>0.02</CallOfTheWasp_ATBReducePerLevel3>
 				<ForestGuardian_DamageBonus>0.1</ForestGuardian_DamageBonus>
 				<ForestGuardian_DamageBonusPerHeroLevel>0.02</ForestGuardian_DamageBonusPerHeroLevel>
-				<Waylayer_ATBShift>0.1</Waylayer_ATBShift>
-				<Waylayer_ATBShiftPerLevel>0.02</Waylayer_ATBShiftPerLevel>
+				<Waylayer_ATBShift>0.40</Waylayer_ATBShift>
+				<Waylayer_ATBShiftPerLevel>0.01</Waylayer_ATBShiftPerLevel>
 			</Ranger>
 			<Necromancer>
 				<Soulhunter_ManesSummonedBase>10</Soulhunter_ManesSummonedBase>
