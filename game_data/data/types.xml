@@ -2236,13 +2236,13 @@
 				<Item>HERO_SKILL_FROST_POWER</Item>
 				<Item>HERO_SKILL_BLAZE_POWER</Item>
 				<Item>HERO_SKILL_INNATES</Item>
-				<Item>HERO_SKILL_MASTER_OF_CURSES</Item>
-				<Item>HERO_SKILL_MASTER_OF_MIND</Item>
-				<Item>HERO_SKILL_MASTER_OF_PAIN</Item>
+				<Item>HERO_SKILL_SPREAD_CURSE</Item>
+				<Item>HERO_SKILL_DARKNESS_AFFINITY</Item>
+				<Item>HERO_SKILL_SPREAD_PAIN</Item>
 				<Item>HERO_SKILL_MASTER_OF_BLESSINGS</Item>
-				<Item>HERO_SKILL_MASTER_OF_ABJURATION</Item>
-				<Item>HERO_SKILL_MASTER_OF_WRATH</Item>
-				<Item>HERO_SKILL_MASTER_OF_QUAKES</Item>
+				<Item>HERO_SKILL_AURA_OF_PROTECTION</Item>
+				<Item>HERO_SKILL_AURA_OF_ENERGY</Item>
+				<Item>HERO_SKILL_EARTH_WRATH</Item>
 				<Item>HERO_SKILL_CONJURER</Item>
 				<Item>HERO_SKILL_MASTER_OF_ANIMATION</Item>
 				<Item>HERO_SKILL_RETALIATION_STRIKE</Item>
@@ -2355,7 +2355,7 @@
 				<Item>HERO_SKILL_DISTRACT</Item>
 				<Item>HERO_SKILL_IGNITE</Item>
 				<Item>HERO_SKILL_TENACITY</Item>
-				<Item>HERO_SKILL_ETERNAL_LIGHT</Item>
+				<Item>HERO_SKILL_VENGEFUL_LIGHT</Item>
 				<Item>HERO_SKILL_RUNIC_SHIELD</Item>
 				<Item>HERO_SKILL_BULWARK_RUNE</Item>
 				<Item>HERO_SKILL_SNATCH</Item>
@@ -63367,15 +63367,15 @@
 					<Value>45</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_MASTER_OF_CURSES</Name>
+					<Name>HERO_SKILL_SPREAD_CURSE</Name>
 					<Value>46</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_MASTER_OF_MIND</Name>
+					<Name>HERO_SKILL_DARKNESS_AFFINITY</Name>
 					<Value>47</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_MASTER_OF_PAIN</Name>
+					<Name>HERO_SKILL_SPREAD_PAIN</Name>
 					<Value>48</Value>
 				</Item>
 				<Item>
@@ -63383,15 +63383,15 @@
 					<Value>49</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_MASTER_OF_ABJURATION</Name>
+					<Name>HERO_SKILL_AURA_OF_PROTECTION</Name>
 					<Value>50</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_MASTER_OF_WRATH</Name>
+					<Name>HERO_SKILL_AURA_OF_ENERGY</Name>
 					<Value>51</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_MASTER_OF_QUAKES</Name>
+					<Name>HERO_SKILL_EARTH_WRATH</Name>
 					<Value>52</Value>
 				</Item>
 				<Item>
@@ -63843,7 +63843,7 @@
 					<Value>164</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_ETERNAL_LIGHT</Name>
+					<Name>HERO_SKILL_VENGEFUL_LIGHT</Name>
 					<Value>165</Value>
 				</Item>
 				<Item>

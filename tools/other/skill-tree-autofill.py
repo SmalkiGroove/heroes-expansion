@@ -6,7 +6,7 @@ from jinja2 import Environment, FileSystemLoader
 
 root_data_path = "../../game_data/data"
 skills_xdb_path = "../../game_data/data/GameMechanics/RefTables/Skills.xdb"
-skill_tree_path = "../../game_data/skilltree/UI/Doc/Skills"
+skill_tree_path = "../../game_data/doc/UI/Doc/Skills"
 
 jinja_env = Environment(loader=FileSystemLoader(searchpath="templates"))
 

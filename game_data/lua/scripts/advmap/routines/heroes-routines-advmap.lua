@@ -80,12 +80,6 @@ function Routine_TrainPeasantsToArchersConfirm(player, hero, town, amount)
     Var_Dougal_TrainCount = Var_Dougal_TrainCount + amount
 end
 
-function Routine_SuzerainDailyGolds(player, hero)
-    log("$ Routine_SuzerainDailyGolds")
-    local amount = 250 * (GetHeroLevel(hero)-1)
-    AddPlayerResource(player, hero, GOLD, amount)
-end
-
 function Routine_GainExpFromTotalGolds(player, hero)
     log("$ Routine_GainExpFromTotalGolds")
     local amount = trunc(GetPlayerResource(player, GOLD) * GetHeroLevel(hero) * 0.1)
@@ -970,19 +964,9 @@ function Routine_SacrificeGoblinDaily(player, hero)
         if GetHeroCreatures(hero, goblin) > 0 then
             RemoveHeroCreatures(hero, goblin, 1)
             AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_2, CREATURE_SHAMAN, 1)
-            if GetHeroLevel(hero) >= 10 do AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_3, CREATURE_ORC_WARRIOR, 1) end
+            if GetHeroLevel(hero) >= 10 then AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_3, CREATURE_ORC_WARRIOR, 1) end
             return
         end
-    end
-end
-
-Var_Mokka_BattleWon = 0
-function Routine_MokkaVictoryCounter(player, hero, combatIndex)
-    log("$ Routine_MokkaVictoryCounter")
-    Var_Mokka_BattleWon = Var_Mokka_BattleWon + 1
-    if Var_Mokka_BattleWon == 5 then
-        GiveArtifact(hero, ARTIFACT_TITANS_TRIDENT, 0)
-        -- ShowFlyingSign("/Text/Game/Scripts/HeroSpe/GainUnicornBow.txt", hero, player, FLYING_SIGN_TIME)
     end
 end
 
@@ -1128,7 +1112,6 @@ AFTER_COMBAT_TRIGGER_HERO_ROUTINES = {
     [H_ORLANDO] = Routine_GainBonusExpAndRes,
     -- stronghold
     [H_GORSHAK] = Routine_GainAttackDefense,
-    [H_MUKHA] = Routine_MokkaVictoryCounter,
 }
 
 
