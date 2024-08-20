@@ -10,6 +10,30 @@ function Routine_Houndmasters(side, hero, id, mastery)
     SummonCreatureStack_X(side, CREATURE_WOLF, amount, 1)
 end
 
+function Routine_ElementalBalance(side, hero, id, mastery)
+    -- log("Trigger Elemental Balance !")
+    local creatures = GetUnits(1-side, CREATURE)
+    for i,cr in creatures do
+        local type = GetCreatureType(cr)
+        if type == CREATURE_AIR_ELEMENTAL then
+            local nb = GetCreatureNumber(cr)
+            SummonCreatureStack_X(side, CREATURE_EARTH_ELEMENTAL, nb, 0)
+            sleep(50)
+        elseif type == CREATURE_EARTH_ELEMENTAL then
+            local nb = GetCreatureNumber(cr)
+            SummonCreatureStack_X(side, CREATURE_AIR_ELEMENTAL, nb, 0)
+            sleep(50)
+        elseif type == CREATURE_FIRE_ELEMENTAL then
+            local nb = GetCreatureNumber(cr)
+            SummonCreatureStack_X(side, CREATURE_WATER_ELEMENTAL, nb, 0)
+            sleep(50)
+        elseif type == CREATURE_WATER_ELEMENTAL then
+            local nb = GetCreatureNumber(cr)
+            SummonCreatureStack_X(side, CREATURE_FIRE_ELEMENTAL, nb, 0)
+            sleep(50)
+        end
+    end
+end
 
 function Routine_ShatterMagic(side, hero, id, mastery)
     -- log("Trigger Shatter Magic !")
@@ -21,12 +45,16 @@ function Routine_ShatterMagic(side, hero, id, mastery)
         if hero == H_MARBAS then max = 2 * max end
         local burn = min(cur, round(mult * max))
         SetMana(h, cur-burn)
+        ShowFlyingSign("/Text/Game/Scripts/Combat/ShatterMagic.txt", h, 9)
     end
     local creatures = GetUnits(1-side, CREATURE)
     for i,cr in creatures do
         local m = GetUnitMaxManaPoints(cr)
-        local burn = round(mult * m)
-        SetMana(cr, m-burn)
+        if m > 0 then
+            local burn = round(mult * m)
+            SetMana(cr, m-burn)
+            ShowFlyingSign("/Text/Game/Scripts/Combat/ShatterMagic.txt", cr, 9)
+        end
     end
 end
 
@@ -34,6 +62,7 @@ end
 
 COMBAT_START_SKILL_ROUTINES = {
     [PERK_HOUNDMASTERS] = Routine_Houndmasters,
+    [PERK_ELEMENTAL_BALANCE] = Routine_ElementalBalance,
     [SKILL_SHATTER_MAGIC] = Routine_ShatterMagic,
 }
 

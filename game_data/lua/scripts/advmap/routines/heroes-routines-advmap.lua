@@ -324,7 +324,7 @@ end
 Var_Ebba_RunicSpells = {}
 function Routine_GiveArtifactRuneOfFlame(player, hero)
     log("$ Routine_GiveArtifactRuneOfFlame")
-    GiveArtifact(hero, ARTIFACT_RUNE_OF_FLAME, 1)
+    GiveArtifact(hero, ARTIFACT_RUNE_OF_FLAME)
     for rune,_ in RUNIC_SPELLS do
         Var_Ebba_RunicSpells[rune] = 0
     end
@@ -909,10 +909,42 @@ end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 -- STRONGHOLD
 
+function Routine_GainArmyReinforcement(player, hero, combatIndex)
+    log("$ Routine_GainArmyReinforcement")
+    local mem_tiers = {}
+    local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
+    for i = 0,stacks-1 do
+        local creature, _, _ = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
+        if CREATURES[creature][1] == STRONGHOLD then
+            local tier = CREATURES[creature][2]
+            if not mem_tiers[tier] and tier ~= 6 then
+                local div = tier * (tier + 1)
+                local nb = trunc(1.5 * GetHeroLevel(hero) / div)
+                AddHeroCreatures(hero, creature, nb)
+                mem_tiers[tier] = 1
+            end
+        end
+    end
+end
+
+function Routine_GiveArtifactCentaurCrossbow(player, hero)
+    log("$ Routine_GiveArtifactCentaurCrossbow")
+    GiveArtifact(hero, ARTIFACT_CENTAUR_CROSSBOW)
+end
+
 function Routine_AddRecruitsCentaurs(player, hero)
     log("$ Routine_AddRecruitsCentaurs")
-    local amount = trunc(0.75 * GetHeroLevel(hero))
-    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_CENTAUR, amount)
+    for i,town in GetHeroTowns(player, hero) do
+        if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_4) ~= 0 then
+            local fort = GetTownBuildingLevel(town, TOWN_BUILDING_FORT)
+            local grail = GetTownBuildingLevel(town, TOWN_BUILDING_GRAIL)
+            local multiplier = 1 + 0.5 * grail
+            if fort > 1 then multiplier = multiplier + 0.5 * (fort-1) end
+            local nb = round(2 * multiplier)
+            local current = GetObjectDwellingCreatures(town, CREATURE_CENTAUR)
+            SetObjectDwellingCreatures(town, CREATURE_CENTAUR, current + nb)
+        end
+    end
 end
 
 Var_Gorshak_BattleWon = 0
@@ -998,6 +1030,7 @@ START_TRIGGER_HERO_ROUTINES = {
     -- inferno
     [H_BIARA] = Routine_ActivateArtfsetHunter,
     -- stronghold
+    [H_GARUNA] = Routine_GiveArtifactCentaurCrossbow,
     [H_GORSHAK] = Routine_UpgradeChamberOfWrath,
     [H_URGHAT] = Routine_ActivateArtfsetNecro,
     [H_KUJIN] = Routine_ActivateArtfsetSarIssus,
@@ -1111,6 +1144,7 @@ AFTER_COMBAT_TRIGGER_HERO_ROUTINES = {
     [H_SHELTEM] = Routine_RestoreManaAfterBattle,
     [H_ORLANDO] = Routine_GainBonusExpAndRes,
     -- stronghold
+    [H_KRAGH] = Routine_GainArmyReinforcement,
     [H_GORSHAK] = Routine_GainAttackDefense,
 }
 
