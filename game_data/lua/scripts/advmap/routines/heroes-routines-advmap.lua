@@ -606,11 +606,9 @@ function Routine_ConvertKnowledgeToSpellpower(player, hero, level)
     end
 end
 
-function Routine_AddHeroLevel(player, hero, level)
-    log("$ Routine_AddHeroLevel")
-    if mod(level, 6) == 0 then
-        LevelUpHero(hero)
-    end
+function Routine_AddOneLuckPoint(player, hero)
+    log("$ Routine_AddOneLuckPoint")
+    ChangeHeroStat(hero, STAT_LUCK, 1)
 end
 
 function Routine_ActivateArtfsetEnlightenment(player, hero)
@@ -630,14 +628,22 @@ Var_Sephinroth_Bonus = 0
 function Routine_CheckHallOfIntrigue(player, hero)
     log("$ Routine_CheckHallOfIntrigue")
     local nb_halls = 0
-    for _,town in GetObjectNamesByType("TOWN_DUNGEON") do
+    for _,town in GetHeroTowns(player, hero) do
         if GetTownBuildingLevel(town, TOWN_BUILDING_DUNGEON_HALL_OF_INTRIGUE) > 0 then
             nb_halls = nb_halls + 1
         end
     end
     local diff = nb_halls - Var_Sephinroth_Bonus
     if diff ~= 0 then
-        ChangeHeroStat(hero, STAT_SPELL_POWER, diff)
+        ChangeHeroStat(hero, STAT_SPELL_POWER, 2 * diff)
+        Var_Sephinroth_Bonus = nb_halls
+    end
+end
+
+function Routine_AddHeroLevel(player, hero, level)
+    log("$ Routine_AddHeroLevel")
+    if mod(level, 6) == 0 then
+        LevelUpHero(hero)
     end
 end
 
@@ -790,6 +796,17 @@ function Routine_GainAttackPerLevel(player, hero, level)
     log("$ Routine_GainAttackPerLevel")
     if mod(level, 5) == 0 then
         AddHeroStatAmount(player, hero, STAT_ATTACK, 1)
+    end
+end
+
+Var_AgraelVictoryCounter = 0
+function Routine_AgraelVictoryCounter(player, hero, combatIndex)
+    log("$ Routine_AgraelVictoryCounter")
+    Var_AgraelVictoryCounter = Var_AgraelVictoryCounter + 1
+    if Var_AgraelVictoryCounter == 25 then
+        for _,h in GetPlayerHeroes(player) do
+            TeachHeroSpell(h, SPELL_ARMAGEDDON)
+        end
     end
 end
 
@@ -1022,6 +1039,7 @@ START_TRIGGER_HERO_ROUTINES = {
     [H_RISSA] = Routine_RefreshTimeShift,
     -- dungeon
     [H_YRWANNA] = Routine_BuildRitualPit,
+    [H_ERUINA] = Routine_AddOneLuckPoint,
     [H_RANLETH] = Routine_ActivateArtfsetEnlightenment,
     [H_SEPHINROTH] = Routine_ActivateArtfsetDungeon,
     -- necropolis
@@ -1056,6 +1074,7 @@ DAILY_TRIGGER_HERO_ROUTINES = {
     -- dungeon
     [H_VAYSHAN] = Routine_GenerateGoldPerScout,
     [H_SORGAL] = Routine_AddHeroRiders,
+    [H_SEPHINROTH] = Routine_CheckHallOfIntrigue,
     -- necropolis
     [H_THANT] = Routine_AddHeroMummies,
     -- inferno
@@ -1142,6 +1161,7 @@ AFTER_COMBAT_TRIGGER_HERO_ROUTINES = {
     [H_ORNELLA] = Routine_FrostLordArtifacts,
     -- inferno
     [H_SHELTEM] = Routine_RestoreManaAfterBattle,
+    [H_AGRAEL] = Routine_AgraelVictoryCounter,
     [H_ORLANDO] = Routine_GainBonusExpAndRes,
     -- stronghold
     [H_KRAGH] = Routine_GainArmyReinforcement,

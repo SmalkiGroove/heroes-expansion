@@ -7,9 +7,13 @@ function Routine_AbilityCommandBallista(side, unit)
         if ballista then
             if y == 5 or y == 6 then
                 if x == 2 + CURRENT_UNIT_SIDE * 13 then
-                    ShowFlyingSign("/Text/Game/Scripts/Combat/BallistaCommander.txt", CURRENT_UNIT, 9)
+                    ShowFlyingSign("/Text/Game/Scripts/Combat/BallistaCommander.txt", unit, 9)
                     setATB(ballista, 2*ATB_INSTANT) sleep()
-                    DefendCombatUnit(CURRENT_UNIT)
+                    if GetHero(side) == H_VITTORIO then
+                        ShootCombatUnit(unit, RandomCreature(1-side,x))
+                    else
+                        DefendCombatUnit(unit)
+                    end
                 end
             end
         end 
