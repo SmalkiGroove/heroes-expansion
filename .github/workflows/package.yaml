@@ -22,13 +22,15 @@ jobs:
               - 'game_data/data/**'
       - name: Pack data
         if: steps.check-data.outputs.changed == 'true'
-        run: zip -q -r h5x-data.pak game_data/data/*
+        run: zip -q -r h5x-data.pak *
+        working-directory: game_data/data
       - name: Upload h5x-data.pak
         uses: actions/upload-artifact@v4
         if: steps.check-data.outputs.changed == 'true'
         with:
           name: data
           path: h5x-data.pak
+        working-directory: game_data/data
 
       - name: Check changes in 'texts'
         uses: dorny/paths-filter@v3
@@ -39,13 +41,15 @@ jobs:
               - 'game_data/texts/**'
       - name: Pack texts
         if: steps.check-texts.outputs.changed == 'true'
-        run: zip -q -r h5x-texts.pak game_data/texts/*
+        run: zip -q -r h5x-texts.pak *
+        working-directory: game_data/texts
       - name: Upload h5x-texts.pak
         uses: actions/upload-artifact@v4
         if: steps.check-texts.outputs.changed == 'true'
         with:
           name: texts
           path: h5x-texts.pak
+        working-directory: game_data/texts
 
       - name: Check changes in 'visuals'
         uses: dorny/paths-filter@v3
@@ -56,13 +60,15 @@ jobs:
               - 'game_data/visuals/**'
       - name: Pack visuals
         if: steps.check-visuals.outputs.changed == 'true'
-        run: zip -q -r h5x-visuals.pak game_data/visuals/*
+        run: zip -q -r h5x-visuals.pak *
+        working-directory: game_data/visuals
       - name: Upload h5x-visuals.pak
         uses: actions/upload-artifact@v4
         if: steps.check-visuals.outputs.changed == 'true'
         with:
           name: visuals
           path: h5x-visuals.pak
+        working-directory: game_data/visuals
 
       - name: Check changes in 'lua'
         uses: dorny/paths-filter@v3
@@ -73,13 +79,15 @@ jobs:
               - 'game_data/lua/**'
       - name: Pack lua
         if: steps.check-lua.outputs.changed == 'true'
-        run: zip -q -r h5x-lua.pak game_data/lua/*
+        run: zip -q -r h5x-lua.pak *
+        working-directory: game_data/lua
       - name: Upload h5x-lua.pak
         uses: actions/upload-artifact@v4
         if: steps.check-lua.outputs.changed == 'true'
         with:
           name: lua
           path: h5x-lua.pak
+        working-directory: game_data/lua
 
       - name: Check changes in 'doc'
         uses: dorny/paths-filter@v3
@@ -90,11 +98,13 @@ jobs:
               - 'game_data/doc/**'
       - name: Pack doc
         if: steps.check-doc.outputs.changed == 'true'
-        run: zip -q -r h5x-doc.pak game_data/doc/*
+        run: zip -q -r h5x-doc.pak *
+        working-directory: game_data/doc
       - name: Upload h5x-doc.pak
         uses: actions/upload-artifact@v4
         if: steps.check-doc.outputs.changed == 'true'
         with:
           name: doc
           path: h5x-doc.pak
+        working-directory: game_data/doc
       
