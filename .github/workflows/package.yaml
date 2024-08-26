@@ -21,9 +21,11 @@ jobs:
             changed:
               - 'game_data/data/**'
       - name: Pack data
-        run: zip -q -r h5x-data.pak game_data/data
+        if: steps.check-data.outputs.changed == 'true'
+        run: zip -q -r h5x-data.pak game_data/data/*
       - name: Upload h5x-data.pak
         uses: actions/upload-artifact@v4
+        if: steps.check-data.outputs.changed == 'true'
         with:
           name: data
           path: h5x-data.pak
@@ -36,9 +38,11 @@ jobs:
             changed:
               - 'game_data/texts/**'
       - name: Pack texts
-        run: zip -q -r h5x-texts.pak game_data/texts
+        if: steps.check-texts.outputs.changed == 'true'
+        run: zip -q -r h5x-texts.pak game_data/texts/*
       - name: Upload h5x-texts.pak
         uses: actions/upload-artifact@v4
+        if: steps.check-texts.outputs.changed == 'true'
         with:
           name: texts
           path: h5x-texts.pak
@@ -51,9 +55,11 @@ jobs:
             changed:
               - 'game_data/visuals/**'
       - name: Pack visuals
-        run: zip -q -r h5x-visuals.pak game_data/visuals
+        if: steps.check-visuals.outputs.changed == 'true'
+        run: zip -q -r h5x-visuals.pak game_data/visuals/*
       - name: Upload h5x-visuals.pak
         uses: actions/upload-artifact@v4
+        if: steps.check-visuals.outputs.changed == 'true'
         with:
           name: visuals
           path: h5x-visuals.pak
@@ -66,9 +72,11 @@ jobs:
             changed:
               - 'game_data/lua/**'
       - name: Pack lua
-        run: zip -q -r h5x-lua.pak game_data/lua
+        if: steps.check-lua.outputs.changed == 'true'
+        run: zip -q -r h5x-lua.pak game_data/lua/*
       - name: Upload h5x-lua.pak
         uses: actions/upload-artifact@v4
+        if: steps.check-lua.outputs.changed == 'true'
         with:
           name: lua
           path: h5x-lua.pak
@@ -81,9 +89,11 @@ jobs:
             changed:
               - 'game_data/doc/**'
       - name: Pack doc
-        run: zip -q -r h5x-doc.pak game_data/doc
+        if: steps.check-doc.outputs.changed == 'true'
+        run: zip -q -r h5x-doc.pak game_data/doc/*
       - name: Upload h5x-doc.pak
         uses: actions/upload-artifact@v4
+        if: steps.check-doc.outputs.changed == 'true'
         with:
           name: doc
           path: h5x-doc.pak
