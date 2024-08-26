@@ -483,7 +483,7 @@ function InitializeRandomSeed()
 		if (GetPlayerState(p) == 1) then
 			value = value + p
 			for _,h in GetPlayerHeroes(p) do
-				for s = 0,220 do
+				for s = 1,220 do
 					if HasHeroSkill(h, s) then value = value + s end
 				end
 			end
@@ -499,7 +499,7 @@ function LoadedGame_GameVars()
 			for i,hero in GetPlayerHeroes(player) do
 				Register(VarHeroLevel(hero), GetHeroLevel(hero))
 				for skill = 1,220 do
-					Register(VarHeroSkillId(hero, skill), GetHeroSkillMastery(hero, skill))
+					if HasHeroSkill(hero, skill) then Register(VarHeroSkillId(hero, skill), GetHeroSkillMastery(hero, skill)) end
 				end
 			end
 		end

@@ -240,23 +240,23 @@ log("All scripts successfully loaded !")
 -- Initializers
 function Init()
 	InitializeRandomSeed()
-	InitializeMapTowns()
-	InitializeHeroes()
-	InitializeConvertibles()
-	ExecConsoleCommand("@UnblockGame()") UnblockGame()
-	log("Initializers done. The game can start. Have fun !")
+	if GetDate(DAY) == 1 then
+		InitializeMapTowns()
+		InitializeHeroes()
+		InitializeConvertibles()
+		ExecConsoleCommand("@UnblockGame()") UnblockGame()
+		log("Initializers done. The game can start. Have fun !")
+	else
+		startThread(LoadedGame_GameVars)
+	end
 end
 
 -- Script enabler
 if NB_HUMAN <= 1 then
 	Init()
 else
-	if GetObjectiveState('H5X',FIRST_PLAYER) == OBJECTIVE_UNKNOWN then
-		Trigger(OBJECTIVE_STATE_CHANGE_TRIGGER, 'H5X', FIRST_PLAYER, 'Init') sleep()
-		ExecConsoleCommand("@if GetObjectiveState('H5X', FIRST_PLAYER) == OBJECTIVE_UNKNOWN then SetObjectiveState('H5X', OBJECTIVE_ACTIVE, FIRST_PLAYER) end")
-	else
-		startThread(LoadedGame_GameVars)
-	end
+	Trigger(OBJECTIVE_STATE_CHANGE_TRIGGER, 'H5X', FIRST_PLAYER, 'Init') sleep()
+	ExecConsoleCommand("@if GetObjectiveState('H5X', FIRST_PLAYER) == OBJECTIVE_UNKNOWN then SetObjectiveState('H5X', OBJECTIVE_ACTIVE, FIRST_PLAYER) else LoadedGame_GameVars() end")
 end
 
 sleep(100) UnblockGame()
