@@ -552,12 +552,12 @@ end
 
 function Routine_AddHeroEaglesPerWeek(player, hero)
     log("$ Routine_AddHeroEaglesPerWeek")
-    AddHeroCreaturePerLevel(player, hero, CREATURE_SNOW_APE, 0.2)
+    AddHeroCreaturePerLevel(player, hero, CREATURE_ARCANE_EAGLE, 0.2)
 end
 
 function Routine_AddHeroEaglePerLevel(player, hero, level)
     log("$ Routine_AddHeroEaglePerLevel")
-    AddHeroCreatures(hero, CREATURE_SNOW_APE, 1)
+    AddHeroCreatures(hero, CREATURE_ARCANE_EAGLE, 1)
 end
 
 function Routine_EvolveEagleToPhoenix(player, hero)
@@ -567,12 +567,12 @@ function Routine_EvolveEagleToPhoenix(player, hero)
             if IsHeroInTown(hero, town, 0, 1) then
                 local mana = GetHeroStat(hero, STAT_MANA_POINTS)
                 local crystals = GetPlayerResource(player, CRYSTAL)
-                local eagles = GetHeroCreatures(hero, CREATURE_SNOW_APE)
+                local eagles = GetHeroCreatures(hero, CREATURE_ARCANE_EAGLE)
                 local max = min(trunc(0.02*mana), trunc(0.34*crystals))
                 local amount = min(max, eagles)
                 if amount > 0 then
                     ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
-                    RemoveHeroCreatures(hero, CREATURE_SNOW_APE, amount)
+                    RemoveHeroCreatures(hero, CREATURE_ARCANE_EAGLE, amount)
                     AddHeroCreatures(hero, CREATURE_PHOENIX, amount)
                 end
             end
