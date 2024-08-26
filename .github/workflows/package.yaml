@@ -30,7 +30,7 @@ jobs:
         with:
           name: data
           path: h5x-data.pak
-        working-directory: game_data/data
+          working-directory: game_data/data
 
       - name: Check changes in 'texts'
         uses: dorny/paths-filter@v3
@@ -49,7 +49,7 @@ jobs:
         with:
           name: texts
           path: h5x-texts.pak
-        working-directory: game_data/texts
+          working-directory: game_data/texts
 
       - name: Check changes in 'visuals'
         uses: dorny/paths-filter@v3
@@ -68,7 +68,7 @@ jobs:
         with:
           name: visuals
           path: h5x-visuals.pak
-        working-directory: game_data/visuals
+          working-directory: game_data/visuals
 
       - name: Check changes in 'lua'
         uses: dorny/paths-filter@v3
@@ -87,7 +87,7 @@ jobs:
         with:
           name: lua
           path: h5x-lua.pak
-        working-directory: game_data/lua
+          working-directory: game_data/lua
 
       - name: Check changes in 'doc'
         uses: dorny/paths-filter@v3
@@ -106,5 +106,5 @@ jobs:
         with:
           name: doc
           path: h5x-doc.pak
-        working-directory: game_data/doc
+          working-directory: game_data/doc
       
