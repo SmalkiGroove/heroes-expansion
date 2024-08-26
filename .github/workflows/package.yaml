@@ -29,8 +29,7 @@ jobs:
         if: steps.check-data.outputs.changed == 'true'
         with:
           name: data
-          path: h5x-data.pak
-          working-directory: game_data/data
+          path: game_data/data/h5x-data.pak
 
       - name: Check changes in 'texts'
         uses: dorny/paths-filter@v3
@@ -48,8 +47,7 @@ jobs:
         if: steps.check-texts.outputs.changed == 'true'
         with:
           name: texts
-          path: h5x-texts.pak
-          working-directory: game_data/texts
+          path: game_data/texts/h5x-texts.pak
 
       - name: Check changes in 'visuals'
         uses: dorny/paths-filter@v3
@@ -67,8 +65,7 @@ jobs:
         if: steps.check-visuals.outputs.changed == 'true'
         with:
           name: visuals
-          path: h5x-visuals.pak
-          working-directory: game_data/visuals
+          path: game_data/visuals/h5x-visuals.pak
 
       - name: Check changes in 'lua'
         uses: dorny/paths-filter@v3
@@ -86,8 +83,7 @@ jobs:
         if: steps.check-lua.outputs.changed == 'true'
         with:
           name: lua
-          path: h5x-lua.pak
-          working-directory: game_data/lua
+          path: game_data/lua/h5x-lua.pak
 
       - name: Check changes in 'doc'
         uses: dorny/paths-filter@v3
@@ -105,6 +101,5 @@ jobs:
         if: steps.check-doc.outputs.changed == 'true'
         with:
           name: doc
-          path: h5x-doc.pak
-          working-directory: game_data/doc
+          path: game_data/doc/h5x-doc.pak
       
