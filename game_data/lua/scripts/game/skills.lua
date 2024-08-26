@@ -1,5 +1,4 @@
 
-
 -- Skill type IDs
 --
 SKILL_NONE = 0
