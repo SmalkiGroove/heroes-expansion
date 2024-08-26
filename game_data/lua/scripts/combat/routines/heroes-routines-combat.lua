@@ -355,6 +355,14 @@ end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 -- ACADEMY
 
+function Routine_GremlinRandomShoot(side, hero)
+    -- log("Trigger gremlins random shoot !")
+    if CURRENT_UNIT == hero then
+        RandomShoot_CreatureTypes(side, {CREATURE_GREMLIN,CREATURE_MASTER_GREMLIN,CREATURE_GREMLIN_SABOTEUR})
+        -- SetATB_CreatureTypes(side, {CREATURE_GREMLIN,CREATURE_MASTER_GREMLIN,CREATURE_GREMLIN_SABOTEUR}, 0.1)
+    end
+end
+
 function Routine_RakshasasAbility(side, hero)
     -- log("Trigger rakshasas dash !")
     local creatures = GetUnits(side, CREATURE)
@@ -873,6 +881,7 @@ COMBAT_TURN_HERO_ROUTINES = {
     [H_KARLI] = Routine_SpearWielderCoordination,
     [H_HEDWIG] = Routine_DwavenDefendOrder,
     -- academy
+    [H_HAVEZ] = Routine_GremlinRandomShoot,
     [H_NATHIR] = Routine_BallistaMoveNext,
     [H_RISSA] = Routine_TimeShift,
     -- dungeon

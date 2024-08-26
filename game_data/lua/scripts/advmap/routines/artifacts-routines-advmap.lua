@@ -109,21 +109,21 @@ function Routine_ArtifactEldenaRedScarf(player, hero)
     log("$ Routine_ArtifactEldenaRedScarf")
     local nb = 5
     for k = 1,WEEKS,4 do nb = 2 * nb end
-    AddHeroCreatureType(player, hero, HEROES[hero].faction, 1, nb)
+    AddHeroCreatureType(player, hero, HEROES[hero].faction, 1, nb, 1)
 end
 
 function Routine_ArtifactEldenaRedCoat(player, hero)
     log("$ Routine_ArtifactEldenaRedCoat")
     local nb = 4
     for k = 1,WEEKS,4 do nb = 2 * nb end
-    AddHeroCreatureType(player, hero, HEROES[hero].faction, 2, nb)
+    AddHeroCreatureType(player, hero, HEROES[hero].faction, 2, nb, 1)
 end
 
 function Routine_ArtifactEldenaCirclet(player, hero)
     log("$ Routine_ArtifactEldenaCirclet")
     local nb = 3
     for k = 1,WEEKS,4 do nb = 2 * nb end
-    AddHeroCreatureType(player, hero, HEROES[hero].faction, 3, nb)
+    AddHeroCreatureType(player, hero, HEROES[hero].faction, 3, nb, 1)
 end
 
 
@@ -222,8 +222,8 @@ function Routine_ArtfsetEldena(player, hero)
         nb4 = 2 * nb4
         nb5 = 2 * nb5
     end
-    AddHeroCreatureType(player, hero, faction, 4, nb4)
-    AddHeroCreatureType(player, hero, faction, 5, nb5)
+    AddHeroCreatureType(player, hero, faction, 4, nb4, 1)
+    AddHeroCreatureType(player, hero, faction, 5, nb5, 1)
 end
 
 function Routine_ArtfsetEnlighten(player, hero)

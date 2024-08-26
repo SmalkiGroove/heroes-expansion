@@ -55,12 +55,8 @@
 		<Knowledge>1</Knowledge>
 		<skills>
 			<Item>
-				<SkillID>HERO_SKILL_BLOOD_RAGE</SkillID>
-				<Mastery>MASTERY_EXPERT</Mastery>
-			</Item>
-			<Item>
-				<SkillID>HERO_SKILL_VOICE</SkillID>
-				<Mastery>MASTERY_EXPERT</Mastery>
+				<SkillID>HERO_SKILL_BATTLE_ARDOR</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
 			</Item>
 			<Item>
 				<SkillID>HERO_SKILL_LEADERSHIP</SkillID>
@@ -69,17 +65,9 @@
 		</skills>
 		<perkIDs>
 			<Item>HERO_SKILL_TENACITY</Item>
-			<Item>HERO_SKILL_MEMORY_OF_OUR_BLOOD</Item>
-			<Item>HERO_SKILL_BATTLE_ELATION</Item>
-			<Item>HERO_SKILL_BLOODFIRE</Item>
-			<Item>HERO_SKILL_MIGHT_OVER_MAGIC</Item>
-			<Item>HERO_SKILL_DISTRACT</Item>
-			<Item>HERO_SKILL_PAIN_KILLER</Item>
 			<Item>HERO_SKILL_MOTIVATION</Item>
 		</perkIDs>
-		<spellIDs>
-			<Item>SPELL_WARCRY_RALLING_CRY</Item>
-		</spellIDs>
+		<spellIDs/>
 		<Ballista>false</Ballista>
 		<FirstAidTent>false</FirstAidTent>
 		<AmmoCart>true</AmmoCart>

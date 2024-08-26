@@ -501,28 +501,27 @@ end
 
 
 
+function Routine_WeeklyElementalWarriors(hero, elem)
+    local amount = 10 + WEEKS
+    if hero == H_ZEHIR then amount = 2 * amount end
+    AddHeroCreatures(hero, elem, amount)
+end
+
 function Routine_WarriorsOfTheMagma(player, hero, mastery)
     log("$ Routine_WarriorsOfTheMagma")
-    local amount = 10 + WEEKS
-    AddHeroCreatures(hero, CREATURE_FIRE_ELEMENTAL, amount)
+    Routine_WeeklyElementalWarriors(hero, CREATURE_FIRE_ELEMENTAL)
 end
-
 function Routine_WarriorsOfTheSea(player, hero, mastery)
     log("$ Routine_WarriorsOfTheSea")
-    local amount = 10 + WEEKS
-    AddHeroCreatures(hero, CREATURE_WATER_ELEMENTAL, amount)
+    Routine_WeeklyElementalWarriors(hero, CREATURE_WATER_ELEMENTAL)
 end
-
 function Routine_WarriorsOfTheSky(player, hero, mastery)
     log("$ Routine_WarriorsOfTheSky")
-    local amount = 10 + WEEKS
-    AddHeroCreatures(hero, CREATURE_AIR_ELEMENTAL, amount)
+    Routine_WeeklyElementalWarriors(hero, CREATURE_AIR_ELEMENTAL)
 end
-
 function Routine_WarriorsOfTheMountain(player, hero, mastery)
     log("$ Routine_WarriorsOfTheMountain")
-    local amount = 10 + WEEKS
-    AddHeroCreatures(hero, CREATURE_EARTH_ELEMENTAL, amount)
+    Routine_WeeklyElementalWarriors(hero, CREATURE_EARTH_ELEMENTAL)
 end
 
 Var_LastVisitedTown = {}
@@ -623,7 +622,7 @@ end
 function Routine_BattleCommanderWeeklyDancers(player, hero, mastery)
     log("$ Routine_BattleCommanderWeeklyDancers")
     local amount = 27 + 12 * WEEKS
-    AddHeroCreatureType(player, hero, PRESERVE, 1, amount)
+    AddHeroCreatureType(player, hero, PRESERVE, 1, amount, 2)
 end
 
 function Routine_HauntingWeeklyGhosts(player, hero, mastery)
@@ -641,7 +640,7 @@ end
 function Routine_DefendUsAllWeeklyWarriors(player, hero, mastery)
     log("$ Routine_DefendUsAllWeeklyWarriors")
     local amount = 17 + 7 * WEEKS
-    AddHeroCreatureType(player, hero, STRONGHOLD, 3, amount)
+    AddHeroCreatureType(player, hero, STRONGHOLD, 3, amount, 1)
 end
 
 function Routine_InfusionWeeklyMana(player, hero, mastery)

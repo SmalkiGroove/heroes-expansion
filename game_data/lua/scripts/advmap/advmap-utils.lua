@@ -350,7 +350,7 @@ function AddHeroCreaturePerLevel(player, hero, type, coef)
 	end
 end
 
-function AddHeroCreatureType(player, hero, faction, tier, nb)
+function AddHeroCreatureType(player, hero, faction, tier, nb, default)
 	log("$ AddHeroCreatureType")
 	if nb >= 1 then
 		local army = GetHeroArmy(hero)
@@ -362,8 +362,10 @@ function AddHeroCreatureType(player, hero, faction, tier, nb)
                 return
             end
         end
-		AddHeroCreatures(hero, CREATURES_BY_FACTION[faction][tier][1], nb)
-		-- ShowFlyingSign({"/Text/Game/Scripts/Reinforcements.txt"; num=nb}, hero, player, FLYING_SIGN_TIME)
+		if default ~= 0 then
+			AddHeroCreatures(hero, CREATURES_BY_FACTION[faction][tier][default], nb)
+			-- ShowFlyingSign({"/Text/Game/Scripts/Reinforcements.txt"; num=nb}, hero, player, FLYING_SIGN_TIME)
+		end
 	end
 end
 
@@ -400,7 +402,7 @@ function TransferCreatureFromTown(player, hero, dwelling, creature, coef)
 			local nb = min(trunc(coef * level), recruits)
 			if nb >= 1 then
 				SetObjectDwellingCreatures(town, creature, recruits-nb)
-				AddHeroCreatureType(player, hero, CREATURES[creature][1], CREATURES[creature][2], nb)
+				AddHeroCreatureType(player, hero, CREATURES[creature][1], CREATURES[creature][2], nb, 1)
 				-- ShowFlyingSign({"/Text/Game/Scripts/Reinforcements.txt"; num=nb}, hero, player, FLYING_SIGN_TIME)
 			end
 		end
