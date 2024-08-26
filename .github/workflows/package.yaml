@@ -6,7 +6,7 @@ on: [push]
 
 
 jobs:
-  pak-all:
+  package-mod:
     runs-on: ubuntu-latest
     steps:
 
