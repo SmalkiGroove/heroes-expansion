@@ -1,0 +1,90 @@
+
+name: Package the mod
+run-name: Generate .pak artifacts
+
+on: [push]
+
+
+jobs:
+  pak-all:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check changes in 'data'
+        uses: dorny/paths-filter@v3
+        id: check-data
+        with:
+          filters: |
+            changed:
+              - 'game_data/data/**'
+      - name: Pack data
+        run: zip -q -r h5x-data.pak game_data/data
+      - name: Upload h5x-data.pak
+        uses: actions/upload-artifact@v4
+        with:
+          name: data
+          path: h5x-data.pak
+
+      - name: Check changes in 'texts'
+        uses: dorny/paths-filter@v3
+        id: check-texts
+        with:
+          filters: |
+            changed:
+              - 'game_data/texts/**'
+      - name: Pack texts
+        run: zip -q -r h5x-texts.pak game_data/texts
+      - name: Upload h5x-texts.pak
+        uses: actions/upload-artifact@v4
+        with:
+          name: texts
+          path: h5x-texts.pak
+
+      - name: Check changes in 'visuals'
+        uses: dorny/paths-filter@v3
+        id: check-visuals
+        with:
+          filters: |
+            changed:
+              - 'game_data/visuals/**'
+      - name: Pack visuals
+        run: zip -q -r h5x-visuals.pak game_data/visuals
+      - name: Upload h5x-visuals.pak
+        uses: actions/upload-artifact@v4
+        with:
+          name: visuals
+          path: h5x-visuals.pak
+
+      - name: Check changes in 'lua'
+        uses: dorny/paths-filter@v3
+        id: check-lua
+        with:
+          filters: |
+            changed:
+              - 'game_data/lua/**'
+      - name: Pack lua
+        run: zip -q -r h5x-lua.pak game_data/lua
+      - name: Upload h5x-lua.pak
+        uses: actions/upload-artifact@v4
+        with:
+          name: lua
+          path: h5x-lua.pak
+
+      - name: Check changes in 'doc'
+        uses: dorny/paths-filter@v3
+        id: check-doc
+        with:
+          filters: |
+            changed:
+              - 'game_data/doc/**'
+      - name: Pack doc
+        run: zip -q -r h5x-doc.pak game_data/doc
+      - name: Upload h5x-doc.pak
+        uses: actions/upload-artifact@v4
+        with:
+          name: doc
+          path: h5x-doc.pak
+      
