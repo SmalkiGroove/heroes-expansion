@@ -24,12 +24,6 @@ jobs:
         if: steps.check-data.outputs.changed == 'true'
         run: zip -q -r h5x-data.pak *
         working-directory: game_data/data
-      # - name: Upload h5x-data.pak
-      #   uses: actions/upload-artifact@v4
-      #   if: steps.check-data.outputs.changed == 'true'
-      #   with:
-      #     name: data
-      #     path: game_data/data/h5x-data.pak
 
       - name: Check changes in 'texts'
         uses: dorny/paths-filter@v3
@@ -42,12 +36,6 @@ jobs:
         if: steps.check-texts.outputs.changed == 'true'
         run: zip -q -r h5x-texts.pak *
         working-directory: game_data/texts
-      # - name: Upload h5x-texts.pak
-      #   uses: actions/upload-artifact@v4
-      #   if: steps.check-texts.outputs.changed == 'true'
-      #   with:
-      #     name: texts
-      #     path: game_data/texts/h5x-texts.pak
 
       - name: Check changes in 'visuals'
         uses: dorny/paths-filter@v3
@@ -60,12 +48,6 @@ jobs:
         if: steps.check-visuals.outputs.changed == 'true'
         run: zip -q -r h5x-visuals.pak *
         working-directory: game_data/visuals
-      # - name: Upload h5x-visuals.pak
-      #   uses: actions/upload-artifact@v4
-      #   if: steps.check-visuals.outputs.changed == 'true'
-      #   with:
-      #     name: visuals
-      #     path: game_data/visuals/h5x-visuals.pak
 
       - name: Check changes in 'lua'
         uses: dorny/paths-filter@v3
@@ -78,12 +60,6 @@ jobs:
         if: steps.check-lua.outputs.changed == 'true'
         run: zip -q -r h5x-lua.pak *
         working-directory: game_data/lua
-      # - name: Upload h5x-lua.pak
-      #   uses: actions/upload-artifact@v4
-      #   if: steps.check-lua.outputs.changed == 'true'
-      #   with:
-      #     name: lua
-      #     path: game_data/lua/h5x-lua.pak
 
       - name: Check changes in 'doc'
         uses: dorny/paths-filter@v3
@@ -96,12 +72,6 @@ jobs:
         if: steps.check-doc.outputs.changed == 'true'
         run: zip -q -r h5x-doc.pak *
         working-directory: game_data/doc
-      # - name: Upload h5x-doc.pak
-      #   uses: actions/upload-artifact@v4
-      #   if: steps.check-doc.outputs.changed == 'true'
-      #   with:
-      #     name: doc
-      #     path: game_data/doc/h5x-doc.pak
 
       - name: Upload paks
         uses: actions/upload-artifact@v4
