@@ -264,7 +264,7 @@
 		<DynamicBattle_SpeedCoefAffectsTactics>false</DynamicBattle_SpeedCoefAffectsTactics>
 		<Creatures>
 			<Haven>
-				<PreciseShotRange>4</PreciseShotRange>
+				<PreciseShotRange>5</PreciseShotRange>
 				<Jousting_DamageBonusPerPathCell>0.05</Jousting_DamageBonusPerPathCell>
 				<Bash_ProcFactor>1.5</Bash_ProcFactor>
 				<BattleFrenzyBoostFactor>1.5</BattleFrenzyBoostFactor>
@@ -276,7 +276,7 @@
 			</Haven>
 			<Inferno>
 				<ManaStealPerWeekPopulation>1</ManaStealPerWeekPopulation>
-				<SearingAuraDamageHits>10</SearingAuraDamageHits>
+				<SearingAuraDamageHits>20</SearingAuraDamageHits>
 				<AxeOfSlaughterDamageHits>2</AxeOfSlaughterDamageHits>
 				<SyphonManaCoef>0.5</SyphonManaCoef>
 				<Leap_JumpDistanceMin>5</Leap_JumpDistanceMin>
@@ -293,7 +293,7 @@
 				<ZombieWeakeningStrike>2</ZombieWeakeningStrike>
 				<ChanceToMissToIncorporeal>0.37</ChanceToMissToIncorporeal>
 				<LifeDrainIntensity>0.37</LifeDrainIntensity>
-				<DeathWailRange>4</DeathWailRange>
+				<DeathWailRange>6</DeathWailRange>
 				<DeathWailDamageCoef>2</DeathWailDamageCoef>
 				<DeathWailDamageArgument>2</DeathWailDamageArgument>
 				<DeathWailDamageConst>30</DeathWailDamageConst>
@@ -301,7 +301,7 @@
 				<WeakeningAuraOffenceDec>3</WeakeningAuraOffenceDec>
 				<WeakeningAuraDeffenceDec>3</WeakeningAuraDeffenceDec>
 				<SleepingStrike_Duration>2</SleepingStrike_Duration>
-				<SleepingStrike_ProcFactor>2.5</SleepingStrike_ProcFactor>
+				<SleepingStrike_ProcFactor>2</SleepingStrike_ProcFactor>
 				<SorrowStrike_SpellTrained>2</SorrowStrike_SpellTrained>
 				<HorrorOfDeath_MoraleDecrease>1</HorrorOfDeath_MoraleDecrease>
 				<AmmoSteal_CalcDistanceIgnoreObstacles>true</AmmoSteal_CalcDistanceIgnoreObstacles>
@@ -319,7 +319,7 @@
 				<TreeanUnionCasterHits>4</TreeanUnionCasterHits>
 				<TreeanUnionTargetHits>25</TreeanUnionTargetHits>
 				<TreeanUnionTargetBaseCreature>CREATURE_TREANT</TreeanUnionTargetBaseCreature>
-				<RageOfTheForestInitiativeInc>3</RageOfTheForestInitiativeInc>
+				<RageOfTheForestInitiativeInc>2</RageOfTheForestInitiativeInc>
 				<PowerFeedOnlyRanger>false</PowerFeedOnlyRanger>
 				<BondOfLight_MinDuplicatedEffectMastery>1</BondOfLight_MinDuplicatedEffectMastery>
 				<AgilityDefenceBoostPerCell>2</AgilityDefenceBoostPerCell>
@@ -341,7 +341,7 @@
 				<AssasinPoisonDamagePerPower>1</AssasinPoisonDamagePerPower>
 				<AssasinPoisonCounter>2</AssasinPoisonCounter>
 				<WhipStrikeSpellPower>10</WhipStrikeSpellPower>
-				<WhipStrike_ProcFactor>2</WhipStrike_ProcFactor>
+				<WhipStrike_ProcFactor>2.5</WhipStrike_ProcFactor>
 				<HydraRegenerationMin>35</HydraRegenerationMin>
 				<HydraRegenerationMax>55</HydraRegenerationMax>
 				<RiderCharge_DefenceReducePerPathCell>0.1</RiderCharge_DefenceReducePerPathCell>
@@ -358,7 +358,7 @@
 				<Wound_EffectDurationInRounds>2</Wound_EffectDurationInRounds>
 				<Wound_SpeedDecrease>0.3</Wound_SpeedDecrease>
 				<Wound_InitiativeDecrease>0.3</Wound_InitiativeDecrease>
-				<Wound_ProcFactor>1.5</Wound_ProcFactor>
+				<Wound_ProcFactor>1.3</Wound_ProcFactor>
 				<MarkOfFire_EffectDurationInRounds>3</MarkOfFire_EffectDurationInRounds>
 				<MarkOfFire_FireDamageMultiplier>2</MarkOfFire_FireDamageMultiplier>
 				<MarkOfFire_ProcFactor>1.5</MarkOfFire_ProcFactor>
@@ -373,9 +373,9 @@
 				<BearRoar_ProcFactor>2</BearRoar_ProcFactor>
 				<HarpoonStrike_DamageBonus>0.05</HarpoonStrike_DamageBonus>
 				<HarpoonStrike_WorksOnLargeCreatures>false</HarpoonStrike_WorksOnLargeCreatures>
-				<LiquidFlameBreath_DamagePerCreature>25</LiquidFlameBreath_DamagePerCreature>
-				<LiquidFlameBreath_MinDuration>3</LiquidFlameBreath_MinDuration>
-				<LiquidFlameBreath_MaxDuration>3</LiquidFlameBreath_MaxDuration>
+				<LiquidFlameBreath_DamagePerCreature>50</LiquidFlameBreath_DamagePerCreature>
+				<LiquidFlameBreath_MinDuration>5</LiquidFlameBreath_MinDuration>
+				<LiquidFlameBreath_MaxDuration>5</LiquidFlameBreath_MaxDuration>
 				<PreparedPosition_DefenceBonus>5</PreparedPosition_DefenceBonus>
 				<BattleRage_InitiativeBonus>2</BattleRage_InitiativeBonus>
 				<BattleRage_AttackBonus>4</BattleRage_AttackBonus>
@@ -389,14 +389,14 @@
 			<Neutral>
 				<HowlMaxATBValueAtStart>0.5</HowlMaxATBValueAtStart>
 				<ManticorePoisonDamagePerPower>4</ManticorePoisonDamagePerPower>
-				<ManticorePoisonCounter>10</ManticorePoisonCounter>
+				<ManticorePoisonCounter>8</ManticorePoisonCounter>
 				<HexingAttackSpells>
 					<Item>
-						<Spell>SPELL_CURSE</Spell>
+						<Spell>SPELL_SLOW</Spell>
 						<Mastery>MASTERY_BASIC</Mastery>
 					</Item>
 					<Item>
-						<Spell>SPELL_SLOW</Spell>
+						<Spell>SPELL_CURSE</Spell>
 						<Mastery>MASTERY_BASIC</Mastery>
 					</Item>
 					<Item>
@@ -1976,7 +1976,7 @@
 				<Taunt_ProcFactor>3</Taunt_ProcFactor>
 			</Stronghold>
 			<ConjuredPhoenix href="ConjuredPhoenix.xdb#xpointer(/RPGCombatUniqueCreatureStats)"/>
-			<DefenceBonusOnDefend>0.3</DefenceBonusOnDefend>
+			<DefenceBonusOnDefend>0.5</DefenceBonusOnDefend>
 			<Abilities>
 				<FireShield_Damage_Multiplier>0.2</FireShield_Damage_Multiplier>
 				<MagmaShield_Damage_Multiplier>0.4</MagmaShield_Damage_Multiplier>

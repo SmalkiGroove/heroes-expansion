@@ -10,7 +10,6 @@
 	<Flying>false</Flying>
 	<Health>200</Health>
 	<KnownSpells>
-		<Item><Spell>SPELL_ABILITY_HARM_TOUCH</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
 		<Item><Spell>SPELL_PHANTOM</Spell><Mastery>MASTERY_BASIC</Mastery></Item>
 	</KnownSpells>
 	<SpellPoints>25</SpellPoints>
@@ -110,7 +109,7 @@
 	<Abilities>
 		<Item>ABILITY_UNDEAD</Item>
 		<Item>ABILITY_FEAR</Item>
+		<Item>ABILITY_WHIRLWIND</Item>
 		<Item>ABILITY_AXE_OF_SLAUGHTER</Item>
-		<Item>ABILITY_HARM_TOUCH</Item>
 	</Abilities>
 </Creature>

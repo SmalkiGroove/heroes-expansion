@@ -9,8 +9,11 @@
 	<Initiative>10</Initiative>
 	<Flying>false</Flying>
 	<Health>37</Health>
-	<KnownSpells/>
-	<SpellPoints>0</SpellPoints>
+	<KnownSpells>
+		<Item><Spell>SPELL_WEAKNESS</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+		<Item><Spell>SPELL_ABILITY_HARM_TOUCH</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+	</KnownSpells>
+	<SpellPoints>20</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
 	<SpellPoints2>0</SpellPoints2>
 	<Exp>150</Exp>
@@ -41,5 +44,6 @@
 		<Item>ABILITY_UNDEAD</Item>
 		<Item>ABILITY_DEATH_CLOUD</Item>
 		<Item>ABILITY_MAGIC_PROOF_50</Item>
+		<Item>ABILITY_HARM_TOUCH</Item>
 	</Abilities>
 </Creature>
