@@ -179,15 +179,15 @@
 		<Item>
 			<ID>SHACKLES_OF_WAR</ID>
 			<obj>
-				<NameFileRef href="/Text/Game/Artifacts/ShacklesOfTheLastMan/Name.txt"/>
-				<DescriptionFileRef href="/Text/Game/Artifacts/ShacklesOfTheLastMan/Description.txt"/>
+				<NameFileRef href="/Text/Game/Artifacts/NoRetreat/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artifacts/NoRetreat/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MINOR</Type>
+				<Type>ARTF_CLASS_RELIC</Type>
 				<Slot>MISCSLOT1</Slot>
-				<Icon href="/Textures/HeroScreen/Artifacts/ShacklesOfTheLastMan.xdb#xpointer(/Texture)"/>
-				<CostOfGold>5000</CostOfGold>
+				<Icon href="/Textures/HeroScreen/Artifacts/NoRetreat.xdb#xpointer(/Texture)"/>
+				<CostOfGold>1</CostOfGold>
 				<AIValue>1</AIValue>
-				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
+				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
@@ -196,7 +196,7 @@
 					<Morale>-1</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
-				<ArtifactShared href="/MapObjects/Artifacts/ShacklesOfTheLastMan.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
+				<ArtifactShared href="/MapObjects/Artifacts/NoRetreat.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
 				<PresetPrice>-1</PresetPrice>
 			</obj>
@@ -1230,14 +1230,14 @@
 		</Item>
 		<Item>
 			<ID>DWARVEN_MITHRAL_GREAVES</ID>
-			<!-- <ID>ARTIFACT_LEGENDARY_BOOTS</ID> -->
+			<!-- <ID>ARTIFACT_PLUMED_BOOTS</ID> -->
 			<obj>
-				<NameFileRef href="/Text/Game/Artifacts/LegendaryBoots/Name.txt"/>
-				<DescriptionFileRef href="/Text/Game/Artifacts/LegendaryBoots/Description.txt"/>
+				<NameFileRef href="/Text/Game/Artifacts/PlumedBoots/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artifacts/PlumedBoots/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
 				<Type>ARTF_CLASS_MAJOR</Type>
 				<Slot>FEET</Slot>
-				<Icon href="/Textures/HeroScreen/Artifacts/LegendaryBoots.xdb#xpointer(/Texture)"/>
+				<Icon href="/Textures/HeroScreen/Artifacts/PlumedBoots.xdb#xpointer(/Texture)"/>
 				<CostOfGold>10000</CostOfGold>
 				<AIValue>20000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
@@ -1249,7 +1249,7 @@
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
-				<ArtifactShared href="/MapObjects/Artifacts/LegendaryBoots.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
+				<ArtifactShared href="/MapObjects/Artifacts/PlumedBoots.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
 				<PresetPrice>0</PresetPrice>
 			</obj>
@@ -3984,16 +3984,16 @@
 			</obj>
 		</Item>	
 		<Item>
-			<ID>ARTIFACT_SHANTIRI_NORTH</ID>
+			<ID>ARTIFACT_SHACKLES_OF_WAR_2</ID>
 			<obj>
-				<NameFileRef href="/Text/Game/Artifacts/ShantiriNorth/Name.txt"/>
-				<DescriptionFileRef href="/Text/Game/Artifacts/ShantiriNorth/Description.txt"/>
+				<NameFileRef href="/Text/Game/Artifacts/ShacklesOfTheLastMan/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artifacts/ShacklesOfTheLastMan/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
 				<Type>ARTF_CLASS_MAJOR</Type>
 				<Slot>INVENTORY</Slot>
-				<Icon href="/Textures/HeroScreen/Artifacts/ShantiriNorth.xdb#xpointer(/Texture)"/>
-				<CostOfGold>16000</CostOfGold>
-				<AIValue>8000</AIValue>
+				<Icon href="/Textures/HeroScreen/Artifacts/ShacklesOfTheLastMan.xdb#xpointer(/Texture)"/>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>10000</AIValue>
 				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
@@ -4009,26 +4009,26 @@
 			</obj>
 		</Item>	
 		<Item>
-			<ID>ARTIFACT_SHANTIRI_WEST</ID>
+			<ID>ARTIFACT_LEGENDARY_BOOTS</ID>
 			<obj>
-				<NameFileRef href="/Text/Game/Artifacts/ShantiriWest/Name.txt"/>
-				<DescriptionFileRef href="/Text/Game/Artifacts/ShantiriWest/Description.txt"/>
+				<NameFileRef href="/Text/Game/Artifacts/LegendaryBoots/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artifacts/LegendaryBoots/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
 				<Type>ARTF_CLASS_MAJOR</Type>
-				<Slot>INVENTORY</Slot>
-				<Icon href="/Textures/HeroScreen/Artifacts/ShantiriWest.xdb#xpointer(/Texture)"/>
-				<CostOfGold>16000</CostOfGold>
-				<AIValue>8000</AIValue>
-				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
+				<Slot>FEET</Slot>
+				<Icon href="/Textures/HeroScreen/Artifacts/LegendaryBoots.xdb#xpointer(/Texture)"/>
+				<CostOfGold>10000</CostOfGold>
+				<AIValue>20000</AIValue>
+				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>0</Defence>
+					<Defence>3</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
-				<ArtifactShared href="/MapObjects/Artifacts/ShantiriWest.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
+				<ArtifactShared href="/MapObjects/Artifacts/LegendaryBoots.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
 				<PresetPrice>0</PresetPrice>
 			</obj>

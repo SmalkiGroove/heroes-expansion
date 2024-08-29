@@ -51,7 +51,7 @@ Moreover, if the defending creature has “Unlimited Retaliation” ability, it will
 All troops under hero's control are blessed with amazing vitality. If enemy creatures attack the hero's troops and kill them all, the last of the troops will survive the attack with 1 hit point.
 
 ### GOVERNANCE
-- __Estates__ : Hero contributes 250 gold pieces per day to your cause.
+- __Estates__ : Hero generates 250 + 25 gold pieces per resource production building or dwelling you own per day.
 - __Geology__ : The hero finds more gold and resources on the map and gain 1 Ore per day.
 - __Industry__ : Doubles the production of sawmills, ore pits, alchemist labs, sulfur deposits, crystal caverns, gem and any other mines which are in a 30 tiles radius from the hero at the start of the day.
 - __Gear Up__ : The hero obtains a random minor artifact from his or her faction set or a neutral set.
@@ -59,7 +59,7 @@ At the start of each week, gain 250 golds per minor artifact equipped.
 - __Heroes Legacy__ : The hero obtains a random major artifact from his or her faction set or a neutral set.
 At the start of each week, gain 250 golds per major artifact equipped.
 - __Mythology__ : The hero obtains a random relic artifact from his or her faction set or a neutral set.
-At the start of each week, gain 250 golds per relic artifact equipped.
+At the start of each week, gain 500 golds per relic artifact equipped.
 
 ### LOGISTICS
 - __Pathfinding__ : Reduce movement penalty for moving through rough terrain by 50%. Neutral towns on the map are revealed. If they are already revealed, increase the vision radius around them.
@@ -105,25 +105,25 @@ Repeat this bonus at the start of each week.
 - __Suppress Dark__ : Enemy hero is forced to spend twice more mana to cast Dark Magic spells in combat.
 
 ### LIGHT_MAGIC
-- __Master of Abjuration__ : Grants mass effects to Deflect Missile and Endurance spells, for double the casting cost of these spells.
-- __Eternal Light__ : Hero’s light spells are twice harder to dispel. Opposite spells (like Slow versus Haste) applied by an enemy to Hero’s creatures have 50% chance to fail.
-
-- __Counterspell__ : Special combat ability. Negates all effects of the next spell cast by the enemy, but drains mana equal to 10% more than the original cost of that spell.
-- __Master of Wrath__ : Grants mass effects to Righteous Might and Haste spells, for double the casting cost of these spells. Adds +4 to effective spellpower of Holy Word spell.
+- __Aura of Protection__ : Grants mass effects to Deflect Missile and Endurance spells, for double the casting cost of these spells. Hero’s Light spells are twice harder to dispel, opposite spells (like Slow versus Haste) applied by an enemy to hero’s creatures have 50% chance to fail.
 - __Fire Resistance__ : Creatures under Hero's control receive only 50% damage from all fire spells attacks and are immune to armor damaging effects of Blaze Power ability.
+- __Counterspell__ : Special combat ability. Negates all effects of the next spell cast by the enemy, but drains mana equal to 10% more than the original cost of that spell.
+- __Aura of Energy__ : Grants mass effects to Righteous Might and Haste spells, for double the casting cost of these spells. Adds +4 to effective spellpower of Holy Word spell.
 - __Siphon Grace__ : Hero troops will steal enemy creature's buffs when attacking them.
+- __Vengeful Light__ : When the hero casts a Light Magic spell, Divine Vengeance is automatically cast on a random valid enemy stack.
 
 ### DARK_MAGIC
-- __Master of Curses__ : Grants mass effects to Weakness and Suffering spells, for double the casting cost of these spells.
+- __Spread Curse__ : Grants mass effects to Weakness and Suffering spells, for double the casting cost of these spells. Hero attacks apply Suffering to the target.
 - __Consume Corpse__ : The hero receives special combat ability to consume corpses of fallen creatures to restore mana. Consumed corpses disappear from the battlefield.
 - __Pariah__ : Troops under hero's control suffer -1 penalty to morale, but all Dark Magic spells cast by the hero are now more powerful (effective Spellpower is +5 for casting those spells).
-- __Master of Pain__ : Grants area effects to Decay and Rupture spells, for double the casting cost of these spells. Adds +4 to effective spellpower of Unholy Word spell.
+- __Spread Pain__ : Grants area effects to Decay and Rupture spells, for double the casting cost of these spells. Adds +4 to effective spellpower of Unholy Word spell.
 - __Spirit Link__ : Grants a hero the ability to tie his or her own spirit to the spirits of any creatures on the battlefield until the end of combat. If linked creatures receive any damage the hero will gain some mana, feeding upon those creatures' suffering.
 - __Plague Tent__ : The hero's First Aid Tent receives an ability to damage enemy creatures.
 
 ### NATURAL_MAGIC
 - __Conjurer__ : Makes Conjure Phoenix and Summon Elementals spells more powerful (effective Spellpower is increased by 4 for casting those spells).
-- __Elemental Balance__ : Superb knowledge of summoning magic allows the hero to counterbalance the combat situation when battling against skilled summoners. Each time the enemy uses the Summon Elementals spell, a small group of elementals of opposite aligment is automatically summoned to fight for the hero's cause.
+- __Elemental Balance__ : At the start of combat, for every stack of enemy Air, Earth, Fire or Water Elemental, summon a stack of the opposite elemental type on your side. Also triggers whenever an enemy hero uses the Summon Elementals spell.
+The size of the stack is the same as the enemy stack.
 - __Warriors of the Magma__ : Hero casts of the Summon Elementals spell will always summon Fire Elementals.
 At the start of each week, new Fire Elementals will permanently join hero's army.
 - __Warriors of the Sea__ : Hero casts of the Summon Elementals spell will always summon Water Elementals.

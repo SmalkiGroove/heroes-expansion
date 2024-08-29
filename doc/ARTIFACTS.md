@@ -45,23 +45,29 @@ When you spawn a Blade Barrier during combat,
 - __Avenger Bow__ :
 +1 Luck
 
-<color=purple>Ranger Gears
+<color=purple>Elven Secret
 - __Ranger's Cape__ :
-+3 Knowledge<br>
-+5% Town Growth when equipped by governor
+*ranger cape*
+
+<color=purple>Elven Secret
 - __Ranger's Armor__ :
-+1 Spellpower<br>
-+1250 Experience<br><br>
-<color=7F38EC>Skill book<color_default><br>The hero needs some time to study this item and permanently gain the knowledge it contains. At the start of next week the item disappears from the backpack and the bonus is applied permanently.
-- __Palace Boots__ :
-+1 to all Primary Skills<br>
-+5000 Experience<br><br>
-<color=7F38EC>Skill book<color_default><br>The hero needs some time to study this item and permanently gain the knowledge it contains. At the start of next week the item disappears from the backpack and the bonus is applied permanently.
+*ranger cuirass*
+
+<color=purple>Elven Secret
+- __Plumed Boots__ :
++3 Defense
+Hero troops are Unstoppable (immunity to Slow).
+
+<color=purple>Elven Secret
 - __Sylvan Amulet__ :
-+1 Luck<br>
++1 Luck
 Grants hero's army immunity to Curse of the Netherworld
+
+<color=purple>Elven Secret
 - __Sacred Seed__ :
 *sacred seed*
+
+<color=purple>Elven Secret
 
 ### Set name
 • Set pieces
@@ -69,13 +75,12 @@ Grants hero's army immunity to Curse of the Netherworld
 (x) Set bonuses
 
 - __Shackles of the Last Man__ :
--1 Morale
-Prevents you and your opponent from retreating from combat
+-1 Attack and Defense to enemy creatures
 
 <color=purple>Hell Conquest
 - __Helm Of Chaos__ :
 +1 Defense
-+6% Magic Resistance
++6% Magic Disruption
 
 <color=purple>Hell Conquest
 - __Ring of the Broken Will__ :
@@ -259,17 +264,16 @@ helmet
 collar
 
 <color=purple>Brutalist Set
-- __Cuirass of the Dwarven Kings__ :
-+6 Defense
--5% Initiative for friendly creatures
+- __Ogre Club__ :
++8 Attack
+-1 Defense
 
-<color=purple>Dwarven Set
-- __Greaves of the Dwarven Kings__ :
-+3 Attack
-+3 Defense
--5% Initiative for friendly creatures
+<color=purple>Brutalist Set
+- __Ogre Shield__ :
++8 Defense
+-1 Attack
 
-<color=purple>Dwarven Set
+<color=purple>Brutalist Set
 
 ### Set name
 • Set pieces
@@ -562,7 +566,8 @@ Gain Wood and Ore after battle depending on the strength of the defeated army
 
 <color=purple>Animal Spirit
 - __Stag Majesty Cuirass__ :
-+1 Luck
++1 Attack
++1 Defense
 
 <color=purple>Animal Spirit
 - __Owl Sagacity Wraps__ :
@@ -660,11 +665,8 @@ Restore hero movement points on level up
 +1 Luck
 +25% Movement points on water
 - __Pirate Smasher__ :
--1 Morale<br>
--2 Morale if not equipped<br><br><color=red>
-Cursed Artifact<br><color_default>
-This artifact has a firm grip on the hero.
-
++1 Attack
+Friendly creatures attacks reduce enemy Defense by 1
 - __Captain's Hook__ :
 +1 Attack<br>
 +50% chance to plunder a random resource after every battle<br>
@@ -747,15 +749,16 @@ The resources earned by the Governance skill are given every day instead of once
 - __Phoenix Fire Cape__ :
 +1 Spellpower
 +20% damage to Fire spells
-- __Legendary Boots__ :
+- __Plumed Boots__ :
 +3 Defense
 Hero troops are Unstoppable (immunity to Slow).
+
+<color=purple>Elven Secret
 - __Armor of Valor__ :
 +1 Defense
 +1 Morale
 - __Windstrider Boots__ :
-+2 Initiative to friendly creatures
-+2 Speed to friendly creatures
++2 Speed and Initiative to friendly creatures
 - __Band of the Conjurer__ :
 +4 Spellpower when casting Summon Elementals.
 Grants the Summon Elementals spell if it wasn't learned already.
@@ -860,12 +863,13 @@ Pirate's Apparel<color_default><br>
 +1250 Experience<br><br>
 <color=7F38EC>Skill book<color_default><br>The hero needs some time to study this item and permanently gain the knowledge it contains. At the start of next week the item disappears from the backpack and the bonus is applied permanently.
 - __Harpy Boots__ :
-+1 Initiative to all friendly creatures
-+1 Speed to all friendly creatures
++1 Speed and Initiative to all friendly creatures
 - __Ring of Supernatural Strength__ :
 +3 Attack
 +3 Defense
 +3 Health to friendly creatures
+- __Legendary Boots__ :
+*legendary boots*
 - __Sanctuary's Crown__ :
 +3 Spellpower<br>
 +3 Knowledge<br>
@@ -878,21 +882,21 @@ Grants hero's army imunity to Mind Control
 +5 Attack
 -1 Morale to enemy creatures
 - __Dragonsbane__ :
-+8 Spellpower<br>
++9 Attack
 -1 Luck
 - __Orb of Air Affinity__ :
 +3 Spellpower
 +33% Damage to Lightning spells
-A new Air Elemental joins hero's army after every victory.
+A stack of Air Elementals joins hero's army at the start of combats (scales with Knowledge)
 - __Orb of Earth Affinity__ :
 +3 Spellpower
 +33% Damage to Earth spells
-A new Earth Elemental joins hero's army after every victory.
+A stack of Earth Elementals joins hero's army at the start of combats (scales with Knowledge)
 - __Orb of Fire Affinity__ :
 +3 Spellpower
 +33% Damage to Fire spells
-A new Fire Elemental joins hero's army after every victory.
+A stack of Fire Elementals joins hero's army at the start of combats (scales with Knowledge)
 - __Orb of Water Affinity__ :
 +3 Spellpower
 +33% Damage to Frost spells
-A new Water Elemental joins hero's army after every victory.
+A stack of Water Elementals joins hero's army at the start of combats (scales with Knowledge)
