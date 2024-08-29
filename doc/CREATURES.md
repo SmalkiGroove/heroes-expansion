@@ -50,9 +50,9 @@
 | DRUID ELDER | 4 | 9 | 38 | 7 | 7 | 6-9 | 4 | 8 | Endurance (expert), Stone spikes (basic), Wasp Hive (basic), Mana feed (advanced) | Free Mind, Magic Disruption, Mana Feed |
 | HIGH DRUID | 4 | 9 | 36 | 9 | 9 | 8-9 | 4 | 8 | Endurance (expert), Stone spikes (basic), Regeneration (basic) | Free Mind, Magic Disruption, Channeling |
 | | | | | | | | | | | |
-| UNICORN | 5 | 5 | 70 | 15 | 14 | 9-19 | 7 | 14 | _none_ | Blinding Attack |
-| SILVER UNICORN | 5 | 5 | 77 | 16 | 15 | 10-20 | 7 | 14 | _none_ | Blinding Attack, Rider Charge |
-| PRISTINE UNICORN | 5 | 5 | 70 | 15 | 14 | 11-19 | 7 | 15 | _none_ | Blinding Attack, Child of Light |
+| UNICORN | 5 | 5 | 70 | 15 | 14 | 9-19 | 7 | 14 | _none_ | Blinding Horn |
+| SILVER UNICORN | 5 | 5 | 77 | 16 | 15 | 10-20 | 7 | 14 | _none_ | Blinding Horn, Rider Charge |
+| PRISTINE UNICORN | 5 | 5 | 70 | 15 | 14 | 11-19 | 7 | 15 | _none_ | Blinding Horn, Child of Light |
 | | | | | | | | | | | |
 | TREANT | 6 | 3 | 177 | 17 | 27 | 7-17 | 5 | 7 | _none_ | Spiteful, Entangling Roots |
 | ANCIENT TREANT | 6 | 3 | 188 | 18 | 28 | 8-18 | 5 | 7 | _none_ | Spiteful, Entangling Roots, Take Roots, Steadiness, Protect Allies |
@@ -89,8 +89,8 @@
 | FLAME LORD | 6 | 3 | 115 | 22 | 24 | 12-14 | 8 | 10 | _none_ | Steadiness, Double Attack, Fire Immuned, Flamewave, Flamestrike |
 | THUNDER THANE | 6 | 3 | 110 | 19 | 25 | 11-14 | 8 | 11 | _none_ | Steadiness, Storm Strike, Lightning Immuned, Thunder Shock |
 | | | | | | | | | | | |
-| FIRE DRAGON | 7 | 1 | 300 | 30 | 30 | 44-55 | 5 | 9 | _none_ | Elemental, Fire Immuned, Magic-proof 25%, Dragon Breath, Fire Body |
-| MAGMA DRAGON | 7 | 1 | 300 | 30 | 45 | 44-55 | 5 | 9 | _none_ | Elemental, Fire Immuned, Magic-proof 25%, Dragon Breath, Magma Body, Shielded |
+| FIRE DRAGON | 7 | 1 | 300 | 30 | 30 | 44-55 | 5 | 9 | _none_ | Elemental, Fire Immuned, Magic-proof 25%, Breath Attack, Fire Body |
+| MAGMA DRAGON | 7 | 1 | 300 | 30 | 45 | 44-55 | 5 | 9 | _none_ | Elemental, Fire Immuned, Magic-proof 25%, Breath Attack, Magma Armor, Shielded |
 | LAVA DRAGON | 7 | 1 | 300 | 30 | 35 | 55-66 | 5 | 9 | _none_ | Elemental, Fire Immuned, Magic-proof 25%, Melting Breath, Fire Body, Searing Aura |
 
 ### ACADEMY:
@@ -118,7 +118,7 @@
 | | | | | | | | | | | |
 | RAKSHASA RANI | 6 | 3 | 90 | 20 | 20 | 15-25 | 6 | 12 | _none_ | Bravery, No Enemy Retaliation, Unflagging |
 | RAKSHASA RAJA | 6 | 3 | 120 | 25 | 25 | 20-30 | 6 | 12 | Warm-up (advanced) | Bravery, No Enemy Retaliation, Warm-up, Unflagging, Keen Eye |
-| RAKSHASA KSHATRA | 6 | 3 | 110 | 25 | 20 | 20-30 | 7 | 13 | Warm-up (advanced) | Bravery, Whirlwind, Warm-up, Unflagging, Unstoppable |
+| RAKSHASA KSHATRA | 6 | 3 | 110 | 25 | 20 | 20-30 | 7 | 13 | Warm-up (advanced) | Bravery, Sweeping Strike, Warm-up, Unflagging, Unstoppable |
 | | | | | | | | | | | |
 | GIANT | 7 | 1 | 275 | 38 | 38 | 40-60 | 5 | 10 | _none_ | Free Mind, Stone Defense |
 | TITAN | 7 | 1 | 295 | 40 | 40 | 40-60 | 5 | 10 | Call Lightning (advanced) | Free Mind, Stone Defense, Lightning Immuned, Lightning Bolt, Storm Strike |
@@ -151,9 +151,9 @@
 | CHAOS HYDRA | 6 | 3 | 175 | 20 | 20 | 16-25 | 4 | 7 | _none_ | Battle Rage, Circle Attack, Regeneration, Life Drain |
 | FOUL HYDRA | 6 | 3 | 170 | 18 | 26 | 15-23 | 4 | 7 | _none_ | Battle Rage, Circle Attack, Regeneration, Acid Blood |
 | | | | | | | | | | | |
-| CAVE DRAGON | 7 | 1 | 225 | 35 | 30 | 50-80 | 12 | 10 | _none_ | Dragon Breath, Unlimited Retaliations, Roar |
-| BLACK DRAGON | 7 | 1 | 250 | 35 | 35 | 50-80 | 12 | 10 | _none_ | Dragon Breath, Unlimited Retaliations, Roar, Chaos Incarnate |
-| RED DRAGON | 7 | 1 | 225 | 39 | 31 | 55-85 | 12 | 11 | _none_ | Dragon Breath, Unlimited Retaliations, Annihilate, Free Mind |
+| CAVE DRAGON | 7 | 1 | 225 | 33 | 27 | 45-75 | 12 | 10 | _none_ | Breath Attack, Unlimited Retaliations, Roar |
+| BLACK DRAGON | 7 | 1 | 250 | 33 | 33 | 45-75 | 12 | 10 | _none_ | Breath Attack, Unlimited Retaliations, Roar, Chaos Incarnate |
+| RED DRAGON | 7 | 1 | 225 | 36 | 30 | 55-85 | 12 | 11 | _none_ | Breath Attack, Unlimited Retaliations, Annihilate, Free Mind |
 
 ### NECROPOLIS:
 | CREATURE | TIER | NB | HP | ATT | DEF | DMG± | SPD | INIT | SPELLS | ABILITIES |
@@ -174,17 +174,17 @@
 | VAMPIRE LORD | 4 | 10 | 35 | 10 | 8 | 7-11 | 7 | 9 | _none_ | Undead, Life Drain, No Enemy Retaliation |
 | NOSFERATU | 4 | 10 | 34 | 9 | 9 | 6-10 | 7 | 10 | _none_ | Undead, Life Drain, Torpor |
 | | | | | | | | | | | |
-| LICH | 5 | 5 | 37 | 8 | 12 | 12-17 | 3 | 10 | _none_ | Undead, Death Cloud, Magic-proof 50% |
-| ARCHLICH | 5 | 5 | 40 | 8 | 12 | 13-18 | 3 | 10 | Weakness (advanced), Slow (advanced), Decay (advanced), Suffering (advanced) | Undead, Death Cloud, Magic-proof 50% |
-| LICH MASTER | 5 | 5 | 39 | 10 | 14 | 12-17 | 3 | 10 | Suffering (advanced), Raise Dead (advanced) | Undead, Long Range, Magic-proof 50% |
+| LICH | 5 | 5 | 37 | 8 | 12 | 12-17 | 3 | 10 | Suffering (advanced), Harm Touch (advanced) | Undead, Death Cloud, Magic-proof 50%, Harm Touch |
+| ARCHLICH | 5 | 5 | 40 | 8 | 12 | 13-18 | 3 | 10 | Weakness (advanced), Slow (advanced), Decay (advanced), Suffering (advanced), Harm Touch (advanced) | Undead, Death Cloud, Magic-proof 50%, Harm Touch |
+| LICH MASTER | 5 | 5 | 39 | 10 | 14 | 12-17 | 3 | 10 | Suffering (advanced), Raise Dead (advanced), Harm Touch (advanced) | Undead, Long Range, Magic-proof 50%, Harm Touch |
 | | | | | | | | | | | |
 | BONE DRAGON | 6 | 3 | 120 | 25 | 17 | 13-23 | 7 | 11 | _none_ | Undead |
 | SHADOW DRAGON | 6 | 3 | 125 | 26 | 18 | 15-25 | 7 | 11 | _none_ | Undead, Sorrow Strike, Pressure |
 | SPECTRAL DRAGON | 6 | 3 | 100 | 25 | 17 | 13-23 | 7 | 12 | _none_ | Undead, Incorporeal |
 | | | | | | | | | | | |
-| WIGHT | 7 | 1 | 190 | 31 | 28 | 30-90 | 6 | 9 | _none_ | Undead, Fear |
-| WRAITH | 7 | 1 | 200 | 33 | 30 | 30-90 | 6 | 9 | Harm Touch (advanced), Shadow Image (basic) | Undead, Fear, Blade of Slaughter, Harm Touch |
-| BANSHEE | 7 | 1 | 195 | 39 | 29 | 33-99 | 6 | 9 | Death Wail (advanced), Vampirism (basic) | Undead, Fear, Deadly Strike, Death Wail |
+| WIGHT | 7 | 1 | 190 | 31 | 28 | 30-90 | 6 | 9 | _none_ | Undead, Fear, Sweeping Strike |
+| WRAITH | 7 | 1 | 200 | 33 | 30 | 30-90 | 6 | 9 | Shadow Image (basic) | Undead, Fear, Sweeping Strike, Blade of Slaughter |
+| BANSHEE | 7 | 1 | 195 | 39 | 29 | 33-99 | 6 | 9 | Death Wail (advanced), Vampirism (basic) | Undead, Fear, Sweeping Strike, Death Wail |
 
 ### INFERNO:
 | CREATURE | TIER | NB | HP | ATT | DEF | DMG± | SPD | INIT | SPELLS | ABILITIES |
@@ -199,7 +199,7 @@
 | | | | | | | | | | | |
 | HELLHOUND | 3 | 22 | 15 | 6 | 3 | 3-5 | 6 | 11 | _none_ | Demonic, Fire Resistance, No Enemy Retaliation |
 | CERBERUS | 3 | 22 | 16 | 9 | 3 | 4-5 | 6 | 12 | _none_ | Demonic, Fire Immuned, No Enemy Retaliation, Three-head Attack |
-| FIREHOUND | 3 | 22 | 16 | 7 | 4 | 4-6 | 6 | 11 | _none_ | Demonic, Fire Immuned, No Enemy Retaliation, Dragon Breath |
+| FIREHOUND | 3 | 22 | 16 | 7 | 4 | 4-6 | 6 | 11 | _none_ | Demonic, Fire Immuned, No Enemy Retaliation, Breath Attack |
 | | | | | | | | | | | |
 | SUCCUBUS | 4 | 11 | 26 | 6 | 6 | 6-12 | 4 | 9 | _none_ | Demonic, Fire Resistance, Ranged Retaliation |
 | SUCCUBUS MISTRESS | 4 | 11 | 26 | 9 | 6 | 6-12 | 4 | 9 | _none_ | Demonic, Fire Immuned, Ranged Retaliation, Chain Shot |
@@ -207,15 +207,15 @@
 | | | | | | | | | | | |
 | HELL CHARGER | 5 | 5 | 56 | 15 | 10 | 10-15 | 8 | 15 | _none_ | Demonic, Fire Resistance, Fear |
 | HELL STALLION | 5 | 5 | 56 | 16 | 10 | 10-16 | 8 | 16 | _none_ | Demonic, Fire Immuned, Fear, Searing Aura |
-| NIGHTMARE | 5 | 5 | 60 | 16 | 16 | 11-15 | 8 | 15 | _none_ | Demonic, Fire Immuned, Fear, Frightful |
+| NIGHTMARE | 5 | 5 | 60 | 16 | 16 | 11-15 | 8 | 15 | _none_ | Demonic, Fire Immuned, Fear, Frightful Presence |
 | | | | | | | | | | | |
 | PIT FIEND | 6 | 3 | 106 | 24 | 24 | 20-26 | 5 | 8 | Fireball (expert), Mass Rupture (expert) | Demonic, Fire Resistance, Mark of Fire |
 | PIT LORD | 6 | 3 | 106 | 25 | 25 | 23-29 | 5 | 8 | Empowered Fireball (expert), Mass Rupture (expert) | Demonic, Fire Immuned, Mark of Fire, Vorpal Sword |
 | PIT SPAWN | 6 | 3 | 116 | 26 | 26 | 26-29 | 5 | 9 | _none_ | Demonic, Fire Immuned, Mark of Fire, Blade of Slaughter, Magic-proof 50% |
 | | | | | | | | | | | |
-| DEVIL | 7 | 1 | 236 | 36 | 36 | 44-66 | 9 | 10 | _none_ | Demonic, Fire Resistance, Pressure |
-| ARCHDEVIL | 7 | 1 | 246 | 40 | 36 | 44-88 | 9 | 11 | Pit Lord Summoning (advanced), Berserk (basic) | Demonic, Fire Immuned, Pressure, Call Pit Lord |
-| ARCHDEMON | 7 | 1 | 256 | 36 | 40 | 55-77 | 9 | 10 | Convocation (advanced), Teleport (advanced) | Demonic, Fire Immuned, Pressure, Convocation |
+| DEVIL | 7 | 1 | 236 | 36 | 36 | 44-66 | 9 | 10 | _none_ | Demonic, Fire Resistance, Pressure, Evil Strike |
+| ARCHDEVIL | 7 | 1 | 246 | 40 | 36 | 44-88 | 9 | 11 | Pit Lord Summoning (advanced), Berserk (basic) | Demonic, Fire Immuned, Pressure, Evil Strike, Call Pit Lord |
+| ARCHDEMON | 7 | 1 | 256 | 36 | 40 | 55-77 | 9 | 10 | Convocation (advanced), Teleport (advanced) | Demonic, Fire Immuned, Pressure, Evil Strike, Convocation, Frightful Presence |
 
 ### STRONGHOLD:
 | CREATURE | TIER | NB | HP | ATT | DEF | DMG± | SPD | INIT | SPELLS | ABILITIES |
@@ -238,7 +238,7 @@
 | | | | | | | | | | | |
 | SLAYER | 5 | 6 | 45 | 13 | 8 | 7-12 | 6 | 9 | _none_ | Raging Blood, Cleave |
 | EXECUTIONER | 5 | 6 | 46 | 16 | 8 | 8-14 | 6 | 9 | _none_ | Raging Blood, Cleave, Bravery |
-| CHIEFTAIN | 5 | 7 | 48 | 13 | 13 | 9-16 | 6 | 9 | _none_ | Raging Blood, Frightful, Battle Leader, Order of the Chief |
+| CHIEFTAIN | 5 | 6 | 48 | 13 | 13 | 9-16 | 6 | 9 | _none_ | Raging Blood, Frightful Presence, Battle Leader, Order of the Chief |
 | | | | | | | | | | | |
 | WYVERN | 6 | 3 | 88 | 17 | 17 | 14-18 | 8 | 12 | _none_ | Strike and Return, Regeneration |
 | FOUL WYVERN | 6 | 3 | 93 | 18 | 18 | 17-23 | 8 | 12 | _none_ | Strike and Return, Regeneration, Venom |
@@ -246,4 +246,4 @@
 | | | | | | | | | | | |
 | CYCLOP | 7 | 1 | 280 | 42 | 34 | 25-65 | 5 | 9 | Goblin Snack (advanced) | Raging Blood, Goblin Snack, Goblin Throw, Short Range |
 | UNTAMED CYCLOP | 7 | 1 | 290 | 46 | 36 | 35-75 | 5 | 9 | Goblin Snack (advanced) | Raging Blood, Goblin Snack, Goblin Throw, Short Range, Crushing Blow |
-| BLOODEYE CYCLOP | 7 | 1 | 310 | 42 | 38 | 43-53 | 5 | 9 | Goblin Snack (advanced) | Raging Blood, Goblin Snack, Goblin Throw, Short Range, Evil Eye |
+| BLOODEYE CYCLOP | 7 | 1 | 310 | 42 | 38 | 43-53 | 5 | 9 | Goblin Snack (advanced) | Raging Blood, Goblin Snack, Goblin Throw, Short Range, Evil Strike |

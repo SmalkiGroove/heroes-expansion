@@ -113,7 +113,9 @@ def hero_doc_line(name, path):
     desc_path = os.path.join(workdir, root_text_path + hero['AdvMapHeroShared']['SpecializationNameFileRef']['@href'])
     with open(desc_path, 'r', encoding='utf-16') as desc_file:
         desc = desc_file.read()
-    return re.sub(r'<[^>]+>', '', desc)
+    desc = re.sub(r'<[^>]+>', '', desc)
+    desc = desc.replace('•','-')
+    return desc
 
 def generate_heroes_doc(ref_data):
     out = open(os.path.join(workdir, doc_path, 'HEROES.md'), 'w')

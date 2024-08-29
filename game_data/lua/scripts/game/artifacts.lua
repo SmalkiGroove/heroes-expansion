@@ -7,13 +7,13 @@ ARTIFACT_WAND_OF_SPELL = 3                          -- grants random spell
 ARTIFACT_UNICORN_HORN_BOW = 4                       -- no range penalty
 ARTIFACT_TITANS_TRIDENT = 5                         -- lightning spells damage
 ARTIFACT_STAFF_OF_THE_NETHERWORLD = 6               -- decrease enemy initiative
-ARTIFACT_SHACKLES_OF_THE_LAST_MAN = 7               -- no retreat
+ARTIFACT_NO_RETREAT = 7                             -- no retreat
 ARTIFACT_FOUR_LEAF_CLOVER = 8                       -- /
 ARTIFACT_SHIELD_OF_CRYSTAL_ICE = 9                  -- reduce enemy fire spells
 ARTIFACT_OCEAN_CHARM = 10                           -- more movement on sea
 ARTIFACT_CROWN_OF_COURAGE = 11                      -- /
 ARTIFACT_ALL_SEEING_CROWN = 12                      -- increase vision range / reveals the map **
-ARTIFACT_SENTINELS_BREASTPLATE = 13                 -- magic resistance
+ARTIFACT_SENTINELS_BREASTPLATE = 13                 -- magic proof TODO
 ARTIFACT_BREASTPLATE_OF_ELDRICHT_MIGHT = 14         -- /
 ARTIFACT_PEDANT_OF_MASTERY = 15                     -- pendant of mastery
 ARTIFACT_NECKLACE_OF_THE_EAGLE = 16                 -- /
@@ -49,7 +49,7 @@ ARTIFACT_STAFF_OF_THE_MAGISTER = 45                 -- negates magic-resistance
 ARTIFACT_CROWN_OF_THE_MAGISTER = 46                 -- /
 ARTIFACT_RING_OF_THE_MAGISTER = 47                  -- reduce hero spells cost by 6
 ARTIFACT_048 = 48                                   -- immunity to implosion
-ARTIFACT_LEGENDARY_BOOTS = 49                       -- immunity to slow
+ARTIFACT_PLUMED_BOOTS = 49                          -- immunity to slow
 ARTIFACT_050 = 50                                   -- immunity to blind
 ARTIFACT_HELM_OF_THE_DWARVEN_KINGS = 51             -- immunity to frenzy
 ARTIFACT_MAGIC_SCROLL_OF_SPELL = 52                 -- grants random spell
@@ -115,7 +115,7 @@ ARTIFACT_VIKING_SHIELD = 111                        -- gain wood/ore after battl
 ARTIFACT_FORTUNE_BAND_OF_THE_SAINT = 112            -- reduce mana cost by 1
 ARTIFACT_SENTINELS_BRACER = 113                     -- /
 ARTIFACT_ANKH_OF_THE_SAINT = 114                    -- 
-ARTIFACT_CLOAK_OF_THE_SAINT = 115                   -- immunity to plague
+ARTIFACT_CLOAK_OF_THE_SAINT = 115                   -- immunity to plague TODO
 ARTIFACT_GENJIS_HAT = 116                           -- 
 ARTIFACT_GENJIS_VEST = 117                          -- 
 ARTIFACT_GENJIS_SANDALS = 118                       -- 
@@ -124,7 +124,7 @@ ARTIFACT_SENTINELS_HELM = 120                       -- gain battle boost on leve
 ARTIFACT_SENTINELS_BOOTS = 121                      -- gain movement and morale after battle with no loss **
 ARTIFACT_SENTINELS_SHIELD = 122                     -- /
 ARTIFACT_OBSIDIAN_ARMOR = 123                       -- immunity to armaggeddon
-ARTIFACT_ELRATHS_DIVINE_SHIELD = 124                -- reduce magic damage taken from all elements
+ARTIFACT_ELRATHS_DIVINE_SHIELD = 124                -- reduce magic damage taken from all elements TODO
 ARTIFACT_ROD_OF_TORMENT = 125                       -- enemy creatures have -2 morale
 ARTIFACT_CODEX_OF_THE_SAINT = 126                   -- 
 ARTIFACT_VIZIRS_CAP = 127                           -- 
@@ -151,21 +151,21 @@ ARTIFACT_SHADOW_BLADE = 147                         -- /
 ARTIFACT_SHADOWSTEP_SHOES = 148                     -- /
 ARTIFACT_RANGERS_CUIRASS = 149                      -- 
 ARTIFACT_MAGISTERS_SANDALS = 150                    -- gain +1 knowledge per week **
-ARTIFACT_BLAZING_SPELLBOOK = 151                    -- reduce mana cost of fire spells by half
+ARTIFACT_BLAZING_SPELLBOOK = 151                    -- reduce mana cost of fire spells by 33%
 ARTIFACT_COLLAR_OF_PRIMAL_RAGE = 152                -- 
-ARTIFACT_CENTAUR_CROSSBOW = 153                     -- attacks reduce target's defense
+ARTIFACT_CENTAUR_CROSSBOW = 153                     -- attacks reduce target's defense TODO
 ARTIFACT_DEADWOOD_STAFF = 154                       -- reduce mana cost of dark spells by 1
 ARTIFACT_DEATH_KNIGHT_BOOTS = 155                   -- gain experience and movement points after battle **
 ARTIFACT_BARBARIAN_CUIRASS = 156                    -- 
 ARTIFACT_HARPY_BOOTS = 157                          -- creatures have +1 initiative and speed
 ARTIFACT_PALACE_SHOES = 158                         -- 
-ARTIFACT_SHANTIRI_NORTH = 159                       -- 
-ARTIFACT_SHANTIRI_WEST = 160                        -- 
-ARTIFACT_SHANTIRI_SOUTH = 161                       -- 
-ARTIFACT_SHANTIRI_EAST = 162                        -- 
+ARTIFACT_SHACKLES_OF_THE_LAST_MAN = 159             -- enemy creatures have -1 att and def TODO
+ARTIFACT_LEGENDARY_BOOTS = 160                      -- 
+ARTIFACT_161 = 161                                  -- 
+ARTIFACT_162 = 162                                  -- 
 ARTIFACT_SHANTIRI_MOON_DISC = 163                   -- 
 ARTIFACT_CLOAK_OF_DARKNESS = 164                    -- enemy creatures have -1 luck
-ARTIFACT_SHANTIRI_BREASTPLATE = 165                 -- immunity to earthquake
+ARTIFACT_SHANTIRI_BREASTPLATE = 165                 -- immunity to earthquake TODO
 ARTIFACT_SHIELD_OF_THE_WOLF = 166                   -- /
 ARTIFACT_HELM_OF_THE_WARMAGE = 167                  -- learn new spell on level up **
 ARTIFACT_CELESTIAL_JUSTICAR_HELMET = 168            -- 
@@ -177,7 +177,7 @@ ARTIFACT_PENDANT_OF_THE_LYRE = 173                  -- every 5 victories, gain m
 ARTIFACT_ANCIENT_PROTECTION_CHARM = 174             -- magic resistance
 ARTIFACT_SPIRIT_OF_OPPRESSION = 175                 -- enemy creatures have -1 luck and morale
 ARTIFACT_CRIMSON_SCYTHE = 176                       -- enemy creatures have -1 morale
-ARTIFACT_PIRATE_SMASHER = 177                       -- attacks reduce target's defense
+ARTIFACT_PIRATE_SMASHER = 177                       -- attacks reduce target's defense TODO
 ARTIFACT_ELRATHS_UNITY = 178                        -- /
 ARTIFACT_WILL_OF_URGASH = 179                       -- /
 ARTIFACT_MOONLIGHT_BAND = 180                       -- immunity to curse of the netherworld
@@ -185,7 +185,7 @@ ARTIFACT_BLOOD_CRYSTAL = 181                        -- transforms creatures to y
 ARTIFACT_RANGERS_CAPE = 182                         -- 
 ARTIFACT_MOON_CHARM = 183                           -- the first friendly stack that dies in combat revives **
 ARTIFACT_FORGOTTEN_RING = 184                       -- 
-ARTIFACT_FROZEN_HEART = 185                         -- frost-proof and immunity to fire perks
+ARTIFACT_FROZEN_HEART = 185                         -- frost-proof and immunity to fire perks TODO
 ARTIFACT_MOONLIGHT_COAT = 186                       -- reduce hero spell cost by 25%
 ARTIFACT_DRAGONSBANE = 187                          -- 
 ARTIFACT_CUIRASS_OF_THE_STAG = 188                  -- /
@@ -281,7 +281,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_UNICORN_HORN_BOW]              = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RIGHTHAND, special=1},
     [ARTIFACT_TITANS_TRIDENT]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
     [ARTIFACT_STAFF_OF_THE_NETHERWORLD]      = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
-    [ARTIFACT_SHACKLES_OF_THE_LAST_MAN]      = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_POCKET, special=0},
+    [ARTIFACT_NO_RETREAT]                    = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_HEAD, special=1},
     [ARTIFACT_FOUR_LEAF_CLOVER]              = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_POCKET, special=0},
     [ARTIFACT_SHIELD_OF_CRYSTAL_ICE]         = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEFTHAND, special=0},
     [ARTIFACT_OCEAN_CHARM]                   = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_NECK, special=1},
@@ -323,7 +323,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_CROWN_OF_THE_MAGISTER]         = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_HEAD, special=0},
     [ARTIFACT_RING_OF_THE_MAGISTER]          = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RING, special=0},
     [ARTIFACT_048]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_BACKPACK, special=1},
-    [ARTIFACT_LEGENDARY_BOOTS]               = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
+    [ARTIFACT_PLUMED_BOOTS]                  = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
     [ARTIFACT_050]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_BACKPACK, special=1},
     [ARTIFACT_HELM_OF_THE_DWARVEN_KINGS]     = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_HEAD, special=0},
     [ARTIFACT_MAGIC_SCROLL_OF_SPELL]         = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_LEFTHAND, special=1},
@@ -433,10 +433,10 @@ ARTIFACTS_DATA = {
     [ARTIFACT_BARBARIAN_CUIRASS]             = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_BODY, special=0},
     [ARTIFACT_HARPY_BOOTS]                   = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
     [ARTIFACT_PALACE_SHOES]                  = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_LEGS, special=0},
-    [ARTIFACT_SHANTIRI_NORTH]                = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_BACKPACK, special=1},
-    [ARTIFACT_SHANTIRI_WEST]                 = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_BACKPACK, special=1},
-    [ARTIFACT_SHANTIRI_SOUTH]                = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_BACKPACK, special=1},
-    [ARTIFACT_SHANTIRI_EAST]                 = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_BACKPACK, special=1},
+    [ARTIFACT_SHACKLES_OF_THE_LAST_MAN]      = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_POCKET, special=0},
+    [ARTIFACT_LEGENDARY_BOOTS]               = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_BACKPACK, special=1},
+    [ARTIFACT_161]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_BACKPACK, special=1},
+    [ARTIFACT_162]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_BACKPACK, special=1},
     [ARTIFACT_SHANTIRI_MOON_DISC]            = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_BACKPACK, special=1},
     [ARTIFACT_CLOAK_OF_DARKNESS]             = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_SHOULDERS, special=0},
     [ARTIFACT_SHANTIRI_BREASTPLATE]          = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_BODY, special=1},
@@ -560,7 +560,7 @@ ARTFSET_ACTIVABLES_COUNT = 51
 
 ARTIFACT_SETS = {
     [ARTIFACT_SET_HAVEN] = {ARTIFACT_SENTINELS_BLADE, ARTIFACT_SENTINELS_BREASTPLATE, ARTIFACT_SENTINELS_HELM, ARTIFACT_SENTINELS_BOOTS, ARTIFACT_SENTINELS_SHIELD, ARTIFACT_SENTINELS_BRACER},
-    [ARTIFACT_SET_SYLVAN] = {ARTIFACT_SYLVAN_AMULET, ARTIFACT_PALACE_SHOES, ARTIFACT_RANGERS_CUIRASS, ARTIFACT_RANGERS_CAPE, ARTIFACT_AVENGER_BOW, ARTIFACT_SACRED_SEED},
+    [ARTIFACT_SET_SYLVAN] = {ARTIFACT_SYLVAN_AMULET, ARTIFACT_PLUMED_BOOTS, ARTIFACT_RANGERS_CUIRASS, ARTIFACT_RANGERS_CAPE, ARTIFACT_AVENGER_BOW, ARTIFACT_SACRED_SEED},
     [ARTIFACT_SET_INFERNO] = {ARTIFACT_HELM_OF_CHAOS, ARTIFACT_RING_OF_THE_BROKEN_WILL, ARTIFACT_SHACKLES_OF_THE_LAST_MAN, ARTIFACT_RING_OF_THE_SHADOWBRAND, ARTIFACT_OBSIDIAN_ARMOR, ARTIFACT_WILL_OF_URGASH},
     [ARTIFACT_SET_NECRO] = {ARTIFACT_STAFF_OF_THE_NETHERWORLD, ARTIFACT_CLOAK_OF_DEATHS_SHADOW, ARTIFACT_RING_OF_THE_UNREPENTANT, ARTIFACT_AMULET_OF_NECROMANCY, ARTIFACT_HELM_OF_THE_LICH, ARTIFACT_DEATH_KNIGHT_BOOTS},
     [ARTIFACT_SET_ACADEMY] = {ARTIFACT_ROBE_OF_THE_MAGISTER, ARTIFACT_STAFF_OF_THE_MAGISTER, ARTIFACT_CROWN_OF_THE_MAGISTER, ARTIFACT_RING_OF_THE_MAGISTER, ARTIFACT_BOOK_OF_POWER, ARTIFACT_MAGISTERS_SANDALS},
