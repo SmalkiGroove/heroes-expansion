@@ -293,7 +293,7 @@ end
 
 function Routine_ProductionIncreaseDwarvenWorkers(player, hero)
     log("$ Routine_ProductionIncreaseDwarvenWorkers")
-    local total = {}
+    local total = {[0]=0,[1]=0,[2]=0,[3]=0,[4]=0,[5]=0,[6]=0}
     for obj,data in RESOURCE_GENERATING_OBJECTS do
         for _,building in GetObjectNamesByType(obj) do
             if GetObjectOwner(building) == player then
@@ -442,6 +442,7 @@ function Routine_FixDestroyedGolems(player, hero, combatIndex)
             if creature == CREATURE_IRON_GOLEM or creature == CREATURE_STEEL_GOLEM or creature == CREATURE_OBSIDIAN_GOLEM then
                 local rez = min(GetHeroCreatures(hero, fix_table[creature]), died)
                 total = total + rez
+                RemoveHeroCreatures(hero, fix_table[creature], rez)
                 AddHeroCreatures(hero, creature, rez)
             end
         end
@@ -545,6 +546,12 @@ function Routine_AddOtherHeroesExperience(player, hero)
     end
 end
 
+function Routine_GainKnowledgePerWeek(player, hero)
+    log("$ Routine_GainKnowledgePerWeek")
+    local amount = 1 + trunc(GetHeroLevel(hero) * 0.1)
+    ChangeHeroStat(hero, STAT_KNOWLEDGE, amount)
+end
+
 function Routine_RefreshTimeShift(player, hero)
     log("$ Routine_RefreshTimeShift")
     ControlHeroCustomAbility(hero, CUSTOM_ABILITY_3, CUSTOM_ABILITY_ENABLED)
@@ -552,7 +559,7 @@ end
 
 function Routine_AddHeroEaglesPerWeek(player, hero)
     log("$ Routine_AddHeroEaglesPerWeek")
-    AddHeroCreaturePerLevel(player, hero, CREATURE_ARCANE_EAGLE, 0.2)
+    AddHeroCreaturePerLevel(player, hero, CREATURE_ARCANE_EAGLE, 0.3)
 end
 
 function Routine_AddHeroEaglePerLevel(player, hero, level)
@@ -560,29 +567,9 @@ function Routine_AddHeroEaglePerLevel(player, hero, level)
     AddHeroCreatures(hero, CREATURE_ARCANE_EAGLE, 1)
 end
 
-function Routine_EvolveEagleToPhoenix(player, hero)
-    log("$ Routine_EvolveEagleToPhoenix")
-    for town,data in MAP_TOWNS do
-        if data.faction == ACADEMY then
-            if IsHeroInTown(hero, town, 0, 1) then
-                local mana = GetHeroStat(hero, STAT_MANA_POINTS)
-                local crystals = GetPlayerResource(player, CRYSTAL)
-                local eagles = GetHeroCreatures(hero, CREATURE_ARCANE_EAGLE)
-                local max = min(trunc(0.02*mana), trunc(0.34*crystals))
-                local amount = min(max, eagles)
-                if amount > 0 then
-                    ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
-                    RemoveHeroCreatures(hero, CREATURE_ARCANE_EAGLE, amount)
-                    AddHeroCreatures(hero, CREATURE_PHOENIX, amount)
-                end
-            end
-        end
-    end
-end
-
-function Routine_GainKnowledgePerLevel(player, hero, level)
-    log("$ Routine_GainKnowledgePerLevel")
-    ChangeHeroStat(hero, STAT_KNOWLEDGE, 1)
+function Routine_RebirthEagleToPhoenix(player, hero, combatIndex)
+    log("$ Routine_RebirthEagleToPhoenix")
+    
 end
 
 
@@ -1109,7 +1096,6 @@ DAILY_TRIGGER_HERO_ROUTINES = {
     [H_MAAHIR] = Routine_AddOtherHeroesExperience,
     [H_GALIB] = Routine_GenerateGoldsPerDjinn,
     [H_RISSA] = Routine_RefreshTimeShift,
-    [H_MINASLI] = Routine_EvolveEagleToPhoenix,
     -- dungeon
     [H_VAYSHAN] = Routine_GenerateGoldPerScout,
     [H_SORGAL] = Routine_AddHeroRiders,
@@ -1140,6 +1126,7 @@ WEEKLY_TRIGGER_HERO_ROUTINES = {
     -- academy
     [H_RAZZAK] = Routine_AssembleGargoyles,
     [H_CYRUS] = Routine_AddRecruitsMages,
+    [H_MAAHIR] = Routine_GainKnowledgePerWeek,
     [H_MINASLI] = Routine_AddHeroEaglesPerWeek,
     -- dungeon
     [H_SHADYA] = Routine_UpgradeToWitches,
@@ -1168,7 +1155,6 @@ LEVEL_UP_HERO_ROUTINES_HERO = {
     -- academy
     [H_THEODORUS] = Routine_GetCraftingResources,
     [H_MINASLI] = Routine_AddHeroEaglePerLevel,
-    [H_MAAHIR] = Routine_GainKnowledgePerLevel,
     -- dungeon
     [H_SINITAR] = Routine_ConvertKnowledgeToSpellpower,
     [H_SHADYA] = Routine_AddHeroLevel,
@@ -1195,6 +1181,7 @@ AFTER_COMBAT_TRIGGER_HERO_ROUTINES = {
     [H_RAZZAK] = Routine_FixDestroyedGolems,
     [H_NATHIR] = Routine_GainSulfurPerBattle,
     [H_GALIB] = Routine_RespawnDjinns,
+    [H_MINASLI] = Routine_RebirthEagleToPhoenix,
     -- dungeon
     [H_RAELAG] = Routine_GainDragonArtifacts,
     -- necropolis

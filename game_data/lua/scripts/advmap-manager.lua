@@ -132,6 +132,7 @@ function PlayerDailyHandler(player, newweek)
 		startThread(DoSkillsRoutine_Daily, player, hero)
 		startThread(DoArtifactsRoutine_Daily, player, hero)
 	end
+	startThread(UpdateMagicGuildBonus, player)
 	WatchPlayer(player, nil)
 end
 
@@ -174,16 +175,16 @@ Trigger(CUSTOM_ABILITY_TRIGGER, "CustomAbilityHandler")
 
 function AddPlayerHero(player, hero)
 	Register(VarHeroLevel(hero), GetHeroLevel(hero))
-	if HEROES[hero].owner then
-		log("Comeback hero "..hero)
-		startThread(BindHeroLevelUpTrigger, hero)
-		startThread(BindHeroSkillTrigger, hero)
-	else
+	if HEROES[hero].owner == 0 then
 		log("Initialize hero "..hero)
 		startThread(BindHeroLevelUpTrigger, hero)
 		startThread(BindHeroSkillTrigger, hero)
 		startThread(DoSkillsRoutine_Start, player, hero)
 		startThread(DoHeroSpeRoutine_Start, player, hero)
+	else
+		log("Comeback hero "..hero)
+		startThread(BindHeroLevelUpTrigger, hero)
+		startThread(BindHeroSkillTrigger, hero)
 	end
 	HEROES[hero].owner = player
 end
@@ -226,8 +227,8 @@ function InitializeHeroes()
 				startThread(BindHeroSkillTrigger, hero)
 				startThread(DoSkillsRoutine_Start, player, hero) sleep(1)
 				startThread(DoHeroSpeRoutine_Start, player, hero) sleep(1)
-				HEROES[hero].owner = player
 				AllowPlayerTavernRace(player, FactionToTownType(HEROES[hero].faction), 1)
+				HEROES[hero].owner = player
 			end
 			startThread(WatchPlayer, player, 1)
 		end
@@ -259,4 +260,4 @@ else
 	ExecConsoleCommand("@if GetObjectiveState('H5X', FIRST_PLAYER) == OBJECTIVE_UNKNOWN then SetObjectiveState('H5X', OBJECTIVE_ACTIVE, FIRST_PLAYER) else LoadedGame_GameVars() end")
 end
 
-sleep(100) UnblockGame()
+sleep(60) UnblockGame()

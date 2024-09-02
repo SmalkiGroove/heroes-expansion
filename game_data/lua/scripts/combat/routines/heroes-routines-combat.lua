@@ -139,8 +139,22 @@ end
 
 function Routine_HunterRandomShoot(side, hero)
     -- log("Trigger hunters random shoot !")
-    RandomShoot_CreatureTypes(side, {CREATURE_WOOD_ELF,CREATURE_GRAND_ELF,CREATURE_SHARP_SHOOTER})
-    SetATB_CreatureTypes(side, {CREATURE_WOOD_ELF,CREATURE_GRAND_ELF,CREATURE_SHARP_SHOOTER}, 0.1)
+    local hunter = "none"
+    local largest = 0
+    for i,cr in GetUnits(side,CREATURE) do
+        local type = GetCreatureType(cr)
+        if type == CREATURE_WOOD_ELF or type == CREATURE_GRAND_ELF or type == CREATURE_SHARP_SHOOTER then
+            local nb = GetCreatureNumber(cr)
+            if nb > largest then
+                hunter = cr
+                largest = nb
+            end
+        end
+    end
+    if hunter ~= "none" then
+        local target = RandomCreature(1-side,largest)
+        if target then ShootCombatUnit(cr, target) end
+    end
 end
 
 function Routine_MoveForwardUnits(side, hero)

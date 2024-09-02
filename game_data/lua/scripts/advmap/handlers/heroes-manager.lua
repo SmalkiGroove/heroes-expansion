@@ -161,6 +161,25 @@ function HeroLostBattle(player, hero, opponent)
     end
 end
 
+MAGIC_GUILD_HERO_BONUSES = {}
+function UpdateMagicGuildBonus(player)
+    local bonus = 0
+    for _,town in GetPlayerTowns(player) do
+        bonus = bonus + GetTownBuildingLevel(town, TOWN_BUILDING_MAGIC_GUILD)
+    end
+    for _,hero in GetPlayerHeroes(player) do
+        if MAGIC_GUILD_HERO_BONUSES[hero] then
+            local diff = bonus - MAGIC_GUILD_HERO_BONUSES[hero]
+            if diff ~= 0 then
+                ChangeHeroStat(hero, STAT_SPELL_POWER, diff)
+                MAGIC_GUILD_HERO_BONUSES[hero] = bonus
+            end
+        else
+            ChangeHeroStat(hero, STAT_SPELL_POWER, bonus)
+            MAGIC_GUILD_HERO_BONUSES[hero] = bonus
+        end
+    end
+end
 
 -- log("Loaded heroes-manager.lua")
 ROUTINES_LOADED[18] = 1

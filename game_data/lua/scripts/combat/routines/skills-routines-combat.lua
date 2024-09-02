@@ -37,7 +37,7 @@ end
 
 function Routine_ShatterMagic(side, hero, id, mastery)
     -- log("Trigger Shatter Magic !")
-    local mult = 0.05 + 0.05 * mastery
+    local mult = 0.1 * mastery
     local h = GetHero(1-side)
     if h then
         local max = GetUnitMaxManaPoints(h)

@@ -13,13 +13,13 @@ THREAD_FINISHER = THREAD_LIMIT
 
 HERO_DATA = {
     [ATTACKER] = {
-        Level = 1,
+        Level = 0,
         Skills = {},
         Artifacts = {},
         ArtfSets = {},
     },
     [DEFENDER] = {
-        Level = 1,
+        Level = 0,
         Skills = {},
         Artifacts = {},
         ArtfSets = {},

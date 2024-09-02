@@ -18,9 +18,13 @@ end
 function RandomCreature(side, seed)
     local creatures = GetUnits(side, CREATURE)
     local stacks = length(creatures)
-    local target = 0
-    if stacks >= 2 then target = random(0,stacks-1,seed) end
-    return creatures[target]
+    if stacks >= 2 then
+        return creatures[random(0,stacks-1,seed)]
+    elseif stacks == 1 then
+        return creatures[0]
+    else
+        return nil
+    end
 end
 
 function SetMana(unit,mana)
@@ -55,15 +59,21 @@ function RandomShoot_CreatureTypes(side, types)
     local creatures = GetUnits(side,CREATURE)
     for i,cr in creatures do
         if contains(types, GetCreatureType(cr)) then
-            ShootCombatUnit(cr, RandomCreature(1-side,1+i))
-            sleep(100)
+            local target = RandomCreature(1-side,1+i)
+            if target then
+                ShootCombatUnit(cr, target)
+                sleep(100)
+            end
         end
     end
 end
 
 function RandomShoot_Ballista(side)
     local ballista = UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_BALLISTA'
-    ShootCombatUnit(ballista, RandomCreature(1-side,nil))
+    local target = RandomCreature(1-side,0)
+    if IsCombatUnit(ballista) and target then
+        ShootCombatUnit(ballista, target)
+    end
 end
 
 function TargetShoot_CreatureTypes(side, types, target)
@@ -85,8 +95,11 @@ function CreatureTypesCast_RandomTarget(unit_side, target_side, types, spell)
     local creatures = GetUnits(unit_side, CREATURE)
     for i,cr in creatures do
         if contains(types, GetCreatureType(cr)) then
-            UnitCastAimedSpell(cr, spell, RandomCreature(target_side,i))
-            sleep(100)
+            local target = RandomCreature(target_side,i)
+            if target then
+                UnitCastAimedSpell(cr, spell, target)
+                sleep(100)
+            end
         end
     end
 end

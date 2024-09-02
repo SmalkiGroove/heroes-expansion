@@ -18,7 +18,7 @@ function ActivateKnowYourEnemy(player, hero)
         if faction ~= PRESERVE and faction ~= NEUTRAL then
             local count = amounts[i]
             local tier = CREATURES[creature][2]
-            exp = exp + count * power(2, tier+1)
+            exp = exp + count * power(2, tier+2)
             RemoveHeroCreatures(hero, creature, count)
         end
     end

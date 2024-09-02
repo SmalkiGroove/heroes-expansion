@@ -319,7 +319,7 @@
 				<TreeanUnionCasterHits>4</TreeanUnionCasterHits>
 				<TreeanUnionTargetHits>25</TreeanUnionTargetHits>
 				<TreeanUnionTargetBaseCreature>CREATURE_TREANT</TreeanUnionTargetBaseCreature>
-				<RageOfTheForestInitiativeInc>2</RageOfTheForestInitiativeInc>
+				<RageOfTheForestInitiativeInc>4</RageOfTheForestInitiativeInc>
 				<PowerFeedOnlyRanger>false</PowerFeedOnlyRanger>
 				<BondOfLight_MinDuplicatedEffectMastery>1</BondOfLight_MinDuplicatedEffectMastery>
 				<AgilityDefenceBoostPerCell>2</AgilityDefenceBoostPerCell>
@@ -329,7 +329,7 @@
 				<Dash_InitiativeFactor>1.5</Dash_InitiativeFactor>
 				<Dash_Duration>3</Dash_Duration>
 				<VulnerabilityDamageCoef>1.0</VulnerabilityDamageCoef>
-				<EnchantedObsidian_DamageToHealCoef>0.5</EnchantedObsidian_DamageToHealCoef>
+				<EnchantedObsidian_DamageToHealCoef>1</EnchantedObsidian_DamageToHealCoef>
 				<MagicMagnetism_DamageRedirectPercentPerWeeklyGrowth>10</MagicMagnetism_DamageRedirectPercentPerWeeklyGrowth>
 				<SabotageCoef>10</SabotageCoef>
 				<CallStorm_DamagePerCreature>20</CallStorm_DamagePerCreature>
@@ -2021,8 +2021,8 @@
 						<Item>0.33</Item>
 					</PortionOfSummonedByGatingLevel>
 					<CallerStartATB>0.5</CallerStartATB>
-					<GatedStartATB>0</GatedStartATB>
-					<InitiativeFactor>1</InitiativeFactor>
+					<GatedStartATB>0.5</GatedStartATB>
+					<InitiativeFactor>0.75</InitiativeFactor>
 					<GatingMasteryPortionBonus>0.2</GatingMasteryPortionBonus>
 					<QuickGatingStartATB>0.75</QuickGatingStartATB>
 					<CriticalGatingConstantProb>0.1</CriticalGatingConstantProb>

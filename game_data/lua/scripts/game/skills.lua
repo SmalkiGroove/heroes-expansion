@@ -93,7 +93,7 @@ PERK_WARRIORS_OF_THE_SEA = 88
 PERK_GATE_MASTER = 89
 PERK_SWARMING_GATE = 90
 PERK_BRUTALITY = 91
-PERK_HELLWRATH = 92
+PERK_HELLWRATH = 92 --unused
 PERK_RAGE_AWAKENING = 93
 PERK_SEARING_FIRES = 94
 PERK_VAMPIRISM = 95 --unused
@@ -225,14 +225,14 @@ PERK_BARBARIAN_MENTORING = 220 --unused
 
 
 SKILLS_BY_FACTION = {
-    [HAVEN]      = SKILL_COURAGE,
-    [PRESERVE]   = SKILL_AVENGER,
-    [FORTRESS]   = SKILL_RUNELORE,
-    [ACADEMY]    = SKILL_ARTIFICIER,
-    [DUNGEON]    = SKILL_ARCANISM,
-    [NECROPOLIS] = SKILL_NECROMANCY,
-    [INFERNO]    = SKILL_GATING,
-    [STRONGHOLD] = SKILL_BLOOD_RAGE,
+    [HAVEN]      = { base=SKILL_COURAGE, innate=PERK_FAMILIAR_LAND, ult=PERK_RETRIBUTION },
+    [PRESERVE]   = { base=SKILL_AVENGER, innate=PERK_SILENT_TRACKER, ult=PERK_RAGE_OF_THE_FOREST },
+    [FORTRESS]   = { base=SKILL_RUNELORE, innate=PERK_TENACITY, ult=PERK_BULWARK_RUNE },
+    [ACADEMY]    = { base=SKILL_ARTIFICIER, innate=PERK_INFUSION, ult=PERK_OMNISCIENCE },
+    [DUNGEON]    = { base=SKILL_ARCANISM, innate=PERK_ELEMENTAL_VISION, ult=PERK_RAGE_OF_THE_ELEMENTS },
+    [NECROPOLIS] = { base=SKILL_NECROMANCY, innate=PERK_ETERNAL_SERVITUDE, ult=PERK_DEAD_MANS_CURSE },
+    [INFERNO]    = { base=SKILL_GATING, innate=PERK_BARBARIAN_SOIL_BURN, ult=PERK_URGASHS_CALL },
+    [STRONGHOLD] = { base=SKILL_BLOOD_RAGE, innate=PERK_SIEGE, ult=PERK_ORCISH_FURY },
 }
 
 SKILLS_COMMON = {
@@ -242,7 +242,7 @@ SKILLS_COMMON = {
 }
 
 
--- Skill bonuses ID
+-- Skill bonuses
 --
 _skillbonus_id = 0 
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_OFFENCE             = _skillbonus_id
@@ -251,6 +251,10 @@ _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_LEARNING            = _skillbonu
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_SORCERY             = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_VOICE               = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_COMBAT              = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_LIGHT_MAGIC         = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_DARK_MAGIC          = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_NATURAL_MAGIC       = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_DESTRUCT_MAGIC      = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_COURAGE             = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_AVENGER             = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_SPIRITISM           = _skillbonus_id

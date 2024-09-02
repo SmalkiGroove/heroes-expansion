@@ -20,6 +20,12 @@ function Routine_AbilityCommandBallista(side, unit)
     end
 end
 
+function Routine_AbilityRageOfTheForest(side, unit)
+    log("$ Routine_AbilityRageOfTheForest")
+    UseCombatAbility(unit, SPELL_ABILITY_RAGE_OF_THE_FOREST)
+    SetATB_ID(unit, 0.1)
+end
+
 function Routine_AbilityMagneticField(side, unit)
     log("$ Routine_AbilityMagneticField")
     local x,y = GetUnitPosition(CURRENT_UNIT)
@@ -68,6 +74,7 @@ end
 
 
 COMBAT_START_ABILITIES_ROUTINES = {
+    [CREATURE_ANGER_TREANT] = Routine_AbilityRageOfTheForest,
     [CREATURE_RUNE_MAGE] = Routine_AbilityMineField,
     [CREATURE_FLAME_MAGE] = Routine_AbilityMineField,
     [CREATURE_FLAME_KEEPER] = Routine_AbilityMineField,

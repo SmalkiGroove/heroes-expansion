@@ -38,22 +38,23 @@ end
 function CheckForUltimate(player, hero, level)
     -- log("$ CheckForUltimate")
     if HasHeroSkill(hero, SKILL_ULTIMATE) then return end
-    if level > 30 then
+    if level >= 25 then
         local nb = 0
-        for i,skill in SKILLS_BY_FACTION do
-            if GetHeroSkillMastery(hero, skill) >= 3 then
+        for _,skill in SKILLS_BY_FACTION do
+            if HasHeroSkill(hero, skill.ult) then return end
+            if GetHeroSkillMastery(hero, skill.base) >= 3 then
                 nb = nb + 1
             end
         end
-        for i,skill in SKILLS_COMMON do
-            if GetHeroSkillMastery(hero, skill) >= 1 then
+        for _,skill in SKILLS_COMMON do
+            if HasHeroSkill(hero, skill) then
                 nb = nb + 1
             end
         end
         if nb == 7 then
-            GiveHeroSkill(hero, SKILL_ULTIMATE)
-            GiveHeroSkill(hero, SKILL_ULTIMATE)
-            GiveHeroSkill(hero, SKILL_ULTIMATE)
+            GiveHeroSkill(hero, SKILL_ULTIMATE) sleep()
+            GiveHeroSkill(hero, SKILL_ULTIMATE) sleep()
+            GiveHeroSkill(hero, SKILL_ULTIMATE) sleep()
             ShowFlyingSign("/Text/Game/Scripts/Ultimate.txt", hero, player, FLYING_SIGN_TIME)
         end
     end

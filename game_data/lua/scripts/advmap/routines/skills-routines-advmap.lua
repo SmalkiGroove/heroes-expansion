@@ -101,6 +101,42 @@ function Routine_CheckCombat(player, hero, mastery)
     end
 end
 
+function Routine_LearnLightMagic(player, hero, mastery)
+    log("$ Routine_LearnLightMagic")
+    local diff = mastery - HERO_SKILL_BONUSES[hero][SKILLBONUS_LIGHT_MAGIC]
+    if diff > 0 then
+        TeachHeroRandomSpellTier(player, hero, SPELL_SCHOOL_LIGHT, mastery+2)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_LIGHT_MAGIC] = mastery
+    end
+end
+
+function Routine_LearnDarkMagic(player, hero, mastery)
+    log("$ Routine_LearnDarkMagic")
+    local diff = mastery - HERO_SKILL_BONUSES[hero][SKILLBONUS_DARK_MAGIC]
+    if diff > 0 then
+        TeachHeroRandomSpellTier(player, hero, SPELL_SCHOOL_DARK, mastery+2)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_DARK_MAGIC] = mastery
+    end
+end
+
+function Routine_LearnNaturalMagic(player, hero, mastery)
+    log("$ Routine_LearnNaturalMagic")
+    local diff = mastery - HERO_SKILL_BONUSES[hero][SKILLBONUS_NATURAL_MAGIC]
+    if diff > 0 then
+        TeachHeroRandomSpellTier(player, hero, SPELL_SCHOOL_NATURAL, mastery+2)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_NATURAL_MAGIC] = mastery
+    end
+end
+
+function Routine_LearnDestrMagic(player, hero, mastery)
+    log("$ Routine_LearnDestrMagic")
+    local diff = mastery - HERO_SKILL_BONUSES[hero][SKILLBONUS_DESTRUCT_MAGIC]
+    if diff > 0 then
+        TeachHeroRandomSpellTier(player, hero, SPELL_SCHOOL_DESTRUCT, mastery+2)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_DESTRUCT_MAGIC] = mastery
+    end
+end
+
 function Routine_CheckPrecision(player, hero, mastery)
     log("$ Routine_CheckPrecision")
     local value = mastery
@@ -469,6 +505,7 @@ end
 
 function Routine_IndustryDaily(player, hero, mastery)
     log("$ Routine_IndustryDaily")
+    local total = {[0]=0,[1]=0,[2]=0,[3]=0,[4]=0,[5]=0,[6]=0}
     local xh,yh,zh = GetObjectPosition(hero)
     for obj,data in RESOURCE_GENERATING_OBJECTS do
         for _,building in GetObjectNamesByType(obj) do
@@ -478,10 +515,14 @@ function Routine_IndustryDaily(player, hero, mastery)
                     local dx = x - xh
                     local dy = y - yh
                     local d = dx * dx + dy * dy
-                    if d < 900 then AddPlayerResource(player, hero, data.type or random(0,5,d), data.amount) end
+                    local res = data.type or random(0,5,d)
+                    if d < 100 then total[res] = total[res] + data.amount end
                 end
             end
         end
+    end
+    for res,amount in total do
+        AddPlayerResource(player, hero, res, amount) sleep()
     end
 end
 
@@ -582,7 +623,7 @@ function Routine_GearUpWeeklyGolds(player, hero, mastery)
             if HasArtefact(hero, a, 1) then count = count + 1 end
         end
     end
-    AddPlayerResource(player, hero, GOLD, 250 * count)
+    AddPlayerResource(player, hero, GOLD, 400 * count)
 end
 
 function Routine_HeroesLegacyWeeklyGolds(player, hero, mastery)
@@ -593,7 +634,7 @@ function Routine_HeroesLegacyWeeklyGolds(player, hero, mastery)
             if HasArtefact(hero, a, 1) then count = count + 1 end
         end
     end
-    AddPlayerResource(player, hero, GOLD, 250 * count)
+    AddPlayerResource(player, hero, GOLD, 600 * count)
 end
 
 function Routine_MythologyWeeklyGolds(player, hero, mastery)
@@ -604,7 +645,7 @@ function Routine_MythologyWeeklyGolds(player, hero, mastery)
             if HasArtefact(hero, a, 1) then count = count + 1 end
         end
     end
-    AddPlayerResource(player, hero, GOLD, 500 * count)
+    AddPlayerResource(player, hero, GOLD, 800 * count)
 end
 
 function Routine_GetStrongerWeeklyBonus(player, hero, mastery)
@@ -721,7 +762,7 @@ function Routine_SpoilsOfWarArtifact(player, hero, mastery, combatIndex)
     if mod(Var_SpoilersVictories[hero],10) == 0 then
         local pool = {}
         for artifact,data in ARTIFACTS_DATA do
-            if data.special == 0 and data.class == ARTIFACT_CLASS_MINOR then insert(pool, a) end
+            if data.special == 0 and data.class == ARTIFACT_CLASS_MINOR then insert(pool, artifact) end
         end
         local artefact = pool[random(1, length(pool), TURN)]
         GiveArtifact(hero, artefact)
@@ -748,6 +789,10 @@ START_TRIGGER_SKILLS_ROUTINES = {
     [SKILL_SORCERY] = Routine_CheckSorcery,
     [SKILL_VOICE] = Routine_CheckVoice,
     [SKILL_COMBAT] = Routine_CheckCombat,
+    [SKILL_LIGHT_MAGIC] = Routine_LearnLightMagic,
+    [SKILL_DARK_MAGIC] = Routine_LearnDarkMagic,
+    [SKILL_NATURAL_MAGIC] = Routine_LearnNaturalMagic,
+    [SKILL_DESTRUCTIVE_MAGIC] = Routine_LearnDestrMagic,
     [SKILL_COURAGE] = Routine_CheckCourage,
     [SKILL_AVENGER] = Routine_CheckAvenger,
     [SKILL_SPIRITISM] = Routine_CheckSpiritism,

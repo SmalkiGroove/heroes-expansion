@@ -8932,22 +8932,22 @@
 			<ID>HERO_SKILL_ULTIMATE</ID>
 			<obj>
 				<Texture>
-					<Item href=""/>
-					<Item href="/Textures/Icons/Blank.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/Icons/Blank.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/Icons/Blank.xdb#xpointer(/Texture)"/>
+					<Item/>
+					<Item href="/Textures/HeroScreen/Skills/xUltimate.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Skills/xUltimate.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Skills/xUltimate.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
-					<Item href=""/>
-					<Item href=""/>
-					<Item href=""/>
+					<Item href="/Text/Game/Skills/Ultimate/Name.txt"/>
+					<Item href="/Text/Game/Skills/Ultimate/Name.txt"/>
+					<Item href="/Text/Game/Skills/Ultimate/Name.txt"/>
 				</NameFileRef>
 				<CommonNameFileRef href=""/>
 				<DescriptionFileRef>
-					<Item href=""/>
-					<Item href=""/>
-					<Item href=""/>
+					<Item href="/Text/Game/Skills/Ultimate/Description.txt"/>
+					<Item href="/Text/Game/Skills/Ultimate/Description.txt"/>
+					<Item href="/Text/Game/Skills/Ultimate/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_SKILL</SkillType>
