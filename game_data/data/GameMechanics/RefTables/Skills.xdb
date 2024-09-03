@@ -4622,8 +4622,8 @@
 				<spellBuffs/>
 				<BasicSkillID>HERO_SKILL_AVENGER</BasicSkillID>
 				<SkillPrerequisites>
-					<Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_IMBUE_BALLISTA</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_IMBUE_BALLISTA</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_KNOW_YOUR_ENEMY</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_KNOW_YOUR_ENEMY</Item></dependenciesIDs></Item>
 				</SkillPrerequisites>
 				<AIRacesValues>
 					<Haven><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Haven>
@@ -4710,20 +4710,20 @@
 				<spellBuffs>
 					<Item>SPELL_ABILITY_RAGE_OF_THE_FOREST</Item>
 				</spellBuffs>
-				<BasicSkillID>HERO_SKILL_AVENGER</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites>
-					<Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_KNOW_YOUR_ENEMY</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_KNOW_YOUR_ENEMY</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ULTIMATE</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ULTIMATE</Item></dependenciesIDs></Item>
 				</SkillPrerequisites>
 				<AIRacesValues>
-					<Haven><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Haven>
+					<Haven><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Haven>
 					<Sylvan><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Sylvan>
-					<Academy><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Academy>
-					<Dungeon><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Dungeon>
-					<Necropolis><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Necropolis>
-					<Inferno><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Inferno>
-					<Fortress><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Fortress>
-					<Stronghold><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Stronghold>
+					<Academy><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Academy>
+					<Dungeon><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Dungeon>
+					<Necropolis><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Necropolis>
+					<Inferno><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Inferno>
+					<Fortress><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Fortress>
+					<Stronghold><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Stronghold>
 				</AIRacesValues>
 				<PresetPrice>0</PresetPrice>
 			</obj>
@@ -5019,11 +5019,8 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
-				<SkillPrerequisites>
-					<Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ULTIMATE</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ULTIMATE</Item></dependenciesIDs></Item>
-				</SkillPrerequisites>
+				<BasicSkillID>HERO_SKILL_NONE</BasicSkillID>
+				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Haven>
 					<Sylvan><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Sylvan>
@@ -5802,7 +5799,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_LUCKY_SPELLS</ID>
+			<ID>HERO_SKILL_LUCKY_CASTER</ID>
 			<obj>
 				<Texture>
 					<Item href="/Textures/HeroScreen/Feats/Warlock/Luck_LuckySpells_grey.(Texture).xdb#xpointer(/Texture)"/>
@@ -5820,17 +5817,17 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_ARCANISM</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_AVENGER</BasicSkillID>
 				<SkillPrerequisites>
-					<Item><Class>HERO_CLASS_DUNGEON_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ERRATIC_MANA</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_DUNGEON_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ERRATIC_MANA</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_IMBUE_BALLISTA</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_IMBUE_BALLISTA</Item></dependenciesIDs></Item>
 				</SkillPrerequisites>
 				<AIRacesValues>
 					<Haven><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Haven>
-					<Sylvan><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Sylvan>
+					<Sylvan><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Sylvan>
 					<Academy><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Academy>
-					<Dungeon><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Dungeon>
-					<Necropolis><CommanderValue>0</CommanderValue><CollectorSupplierValue>10000</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Necropolis>
+					<Dungeon><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Dungeon>
+					<Necropolis><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Necropolis>
 					<Inferno><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Inferno>
 					<Fortress><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Fortress>
 					<Stronghold><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Stronghold>
@@ -5910,11 +5907,11 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_ERRATIC_MANA</ID>
+			<ID>HERO_SKILL_CHAOTIC_SPELLS</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Perks/ErraticMana_grey.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Perks/ErraticMana.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Feats/Warlock/Sorcery_ChaoticSpells_grey.(Texture).xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Feats/Warlock/Sorcery_ChaoticSpells.(Texture).xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -6083,11 +6080,11 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_EXORCISM</ID>
+			<ID>HERO_SKILL_OBLITERATION</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Feats/Warlock/SummoningMagic_ElementalOverkill_grey.(Texture).xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Feats/Warlock/SummoningMagic_ElementalOverkill.(Texture).xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Specializations/Dungeon/Power_Bargain.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Specializations/Dungeon/Power_Bargain.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -6101,17 +6098,20 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_NONE</BasicSkillID>
-				<SkillPrerequisites/>
+				<BasicSkillID>HERO_SKILL_ARCANISM</BasicSkillID>
+				<SkillPrerequisites>
+					<Item><Class>HERO_CLASS_DUNGEON_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_CHAOTIC_SPELLS</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_DUNGEON_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_CHAOTIC_SPELLS</Item></dependenciesIDs></Item>
+				</SkillPrerequisites>
 				<AIRacesValues>
-					<Haven><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Haven>
-					<Sylvan><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Sylvan>
-					<Academy><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Academy>
+					<Haven><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Haven>
+					<Sylvan><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Sylvan>
+					<Academy><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Academy>
 					<Dungeon><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Dungeon>
-					<Necropolis><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Necropolis>
-					<Inferno><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Inferno>
-					<Fortress><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Fortress>
-					<Stronghold><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Stronghold>
+					<Necropolis><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Necropolis>
+					<Inferno><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Inferno>
+					<Fortress><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Fortress>
+					<Stronghold><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Stronghold>
 				</AIRacesValues>
 				<PresetPrice>0</PresetPrice>
 			</obj>

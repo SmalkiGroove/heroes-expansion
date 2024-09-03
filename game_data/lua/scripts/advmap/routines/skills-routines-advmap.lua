@@ -90,17 +90,6 @@ function Routine_CheckSpiritism(player, hero, mastery)
     end
 end
 
-function Routine_CheckCombat(player, hero, mastery)
-    log("$ Routine_CheckCombat")
-    local value = mastery
-    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_COMBAT]
-    if diff ~= 0 then
-        AddHeroStatAmount(player, hero, STAT_ATTACK, diff)
-        AddHeroStatAmount(player, hero, STAT_DEFENCE, diff)
-        HERO_SKILL_BONUSES[hero][SKILLBONUS_COMBAT] = value
-    end
-end
-
 function Routine_LearnLightMagic(player, hero, mastery)
     log("$ Routine_LearnLightMagic")
     local diff = mastery - HERO_SKILL_BONUSES[hero][SKILLBONUS_LIGHT_MAGIC]
@@ -365,16 +354,6 @@ function Routine_CheckGreaterRune(player, hero, mastery)
     if diff ~= 0 then
         AddHeroStatAmount(player, hero, STAT_KNOWLEDGE, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_GREATER_RUNE] = value
-    end
-end
-
-function Routine_CheckLuckySpells(player, hero, mastery)
-    log("$ Routine_CheckLuckySpells")
-    local value = mastery
-    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_LUCKYS_PELLS]
-    if diff ~= 0 then
-        AddHeroStatAmount(player, hero, STAT_LUCK, diff)
-        HERO_SKILL_BONUSES[hero][SKILLBONUS_LUCKYS_PELLS] = value
     end
 end
 
@@ -788,7 +767,6 @@ START_TRIGGER_SKILLS_ROUTINES = {
     [SKILL_LEARNING] = Routine_CheckLearning,
     [SKILL_SORCERY] = Routine_CheckSorcery,
     [SKILL_VOICE] = Routine_CheckVoice,
-    [SKILL_COMBAT] = Routine_CheckCombat,
     [SKILL_LIGHT_MAGIC] = Routine_LearnLightMagic,
     [SKILL_DARK_MAGIC] = Routine_LearnDarkMagic,
     [SKILL_NATURAL_MAGIC] = Routine_LearnNaturalMagic,
@@ -817,7 +795,6 @@ START_TRIGGER_SKILLS_ROUTINES = {
     [PERK_FINE_RUNE] = Routine_CheckFineRune,
     [PERK_REFRESH_RUNE] = Routine_CheckRefreshRune,
     [PERK_GREATER_RUNE] = Routine_CheckGreaterRune,
-    [PERK_LUCKY_SPELLS] = Routine_CheckLuckySpells,
     [PERK_LORD_OF_UNDEAD] = Routine_CheckLordOfTheUndead,
     [PERK_DEFEND_US_ALL] = Routine_CheckDefendUsAll,
     [PERK_SHEER_STRENGTH] = Routine_CheckSheerStrength,

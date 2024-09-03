@@ -106,8 +106,8 @@
 			<AngleRotateTo>315</AngleRotateTo>
 		</Item>
 	</Patterns>
-	<RotateToMainTarget>false</RotateToMainTarget>
+	<RotateToMainTarget>true</RotateToMainTarget>
 	<DamageToMainTargetCoefficient>1</DamageToMainTargetCoefficient>
-	<DamageToOtherTargetsCoefficient>0.75</DamageToOtherTargetsCoefficient>
-	<DamageAll>false</DamageAll>
+	<DamageToOtherTargetsCoefficient>1</DamageToOtherTargetsCoefficient>
+	<DamageAll>true</DamageAll>
 </PatternAttack>

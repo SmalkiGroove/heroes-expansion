@@ -65,7 +65,7 @@ PERK_AVENGING_STRIKE = 60
 SKILL_COURAGE = 61
 PERK_ETERNAL_SERVITUDE = 62
 PERK_BANSHEE_HOWL = 63
-PERK_RAIN_OF_ARROWS = 64
+PERK_RAIN_OF_ARROWS = 64 --unused
 PERK_SNIPER = 65
 PERK_IMBUE_ARROW = 66
 PERK_MAGIC_BOND = 67
@@ -96,7 +96,7 @@ PERK_BRUTALITY = 91
 PERK_HELLWRATH = 92 --unused
 PERK_RAGE_AWAKENING = 93
 PERK_SEARING_FIRES = 94
-PERK_VAMPIRISM = 95 --unused
+PERK_VAMPIRISM = 95
 PERK_FIRE_RESISTANCE = 96
 PERK_WARRIORS_OF_THE_MAGMA = 97
 PERK_URGASHS_CALL = 98
@@ -125,7 +125,7 @@ PERK_MANA_BURST = 120
 PERK_SCORCHING_EARTH = 121
 PERK_STORM_WIND = 122
 PERK_FOG_VEIL = 123
-PERK_SUPERNATURAL_LUCK = 124
+PERK_SUPERNATURAL_LUCK = 124 --unused
 PERK_MARCH_OF_THE_GOLEMS = 125
 PERK_REMOTE_CONTROL = 126
 PERK_ACADEMY_AWARD = 127 --unused - +2 spellpower and 1000 golds
@@ -143,14 +143,14 @@ PERK_TELEPORT_ASSAULT = 138
 PERK_WARRIORS_OF_THE_MOUNTAIN = 139
 PERK_GRADUATE = 140
 PERK_SWIFTNESS = 141
-PERK_LUCKY_SPELLS = 142
+PERK_LUCKY_CASTER = 142
 PERK_POWER_OF_HASTE = 143
 PERK_POWER_OF_STONE = 144
-PERK_ERRATIC_MANA = 145
+PERK_CHAOTIC_SPELLS = 145
 PERK_FORBIDDEN_POWER = 146 --unused - +2 knowledge and a damaging spell
 PERK_SECRETS_OF_DESTRUCT = 147
 PERK_ARCANE_BRILLANCE = 148
-PERK_EXORCISM = 149 --unused - destruction spells damage doubled vs summoned
+PERK_OBLITERATION = 149
 PERK_RAGE_OF_THE_ELEMENTS = 150
 SKILL_RUNELORE = 151
 PERK_REFRESH_RUNE = 152
@@ -250,7 +250,6 @@ _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_DEFENSE             = _skillbonu
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_LEARNING            = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_SORCERY             = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_VOICE               = _skillbonus_id
-_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_COMBAT              = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_LIGHT_MAGIC         = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_DARK_MAGIC          = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_NATURAL_MAGIC       = _skillbonus_id
@@ -274,11 +273,12 @@ _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_PATHFINDING         = _skillbonu
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_GEAR_UP             = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_HEROES_LEGACY       = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_MYTHOLOGY           = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_IMBUE_ARROW         = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_IMBUE_BALLISTA      = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_BATTLE_COMMANDER    = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_FINE_RUNE           = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_REFRESH_RUNE        = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_GREATER_RUNE        = _skillbonus_id
-_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_LUCKYS_PELLS        = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_LORD_OF_THE_UNDEAD  = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_DEFEND_US_ALL       = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_SHEER_STRENGTH      = _skillbonus_id

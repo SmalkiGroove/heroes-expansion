@@ -166,6 +166,7 @@ end
 
 function Routine_HuntersWeeklyProd(player, hero, combatIndex)
     log("$ Routine_HuntersWeeklyProd")
+    local base = 0.5 * GetHeroLevel(hero)
     for town,data in MAP_TOWNS do
         if data.faction == PRESERVE then
             if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_3) ~= 0 then
@@ -173,7 +174,7 @@ function Routine_HuntersWeeklyProd(player, hero, combatIndex)
                 local grail = GetTownBuildingLevel(town, TOWN_BUILDING_GRAIL)
                 local multiplier = 1 + 0.5 * grail
                 if fort > 1 then multiplier = multiplier + 0.5 * (fort-1) end
-                local nb = trunc(14 * multiplier)
+                local nb = trunc(base * multiplier)
                 local current = GetObjectDwellingCreatures(town, CREATURE_WOOD_ELF)
                 SetObjectDwellingCreatures(town, CREATURE_WOOD_ELF, current + nb)
             end
