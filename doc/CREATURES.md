@@ -108,9 +108,9 @@
 | STEEL GOLEM | 3 | 18 | 26 | 7 | 7 | 4-6 | 4 | 7 | _none_ | Mechanical, Unstoppable, Magic-proof 50%, Unlimited Retaliations |
 | MAGNETIC GOLEM | 3 | 18 | 22 | 7 | 7 | 4-6 | 4 | 8 | _none_ | Mechanical, Unstoppable, Magic-proof 50%, Magnetic Field |
 | | | | | | | | | | | |
-| MAGE | 4 | 10 | 24 | 6 | 6 | 9-9 | 3 | 9 | Fist of Wrath (basic), Deflect Missile (advanced) | Long Range, Arcane Shot, Arcane Aura |
-| ARCHMAGE | 4 | 10 | 25 | 6 | 6 | 9-9 | 3 | 9 | Fist of Wrath (basic), Deflect Missile (advanced), Immunity (basic) | Long Range, Arcane Shot, Arcane Aura, Energy Channel |
-| BATTLEMAGE | 4 | 10 | 26 | 8 | 8 | 9-9 | 3 | 10 | Fist of Wrath (advanced), Deflect Missile (expert) | Long Range, Arcane Shot, Arcane Aura |
+| MAGE | 4 | 10 | 24 | 6 | 6 | 9-9 | 3 | 9 | Fist of Wrath (advanced), Deflect Missile (advanced) | Long Range, Arcane Shot, Arcane Aura |
+| ARCHMAGE | 4 | 10 | 25 | 6 | 6 | 9-9 | 3 | 9 | Fist of Wrath (advanced), Deflect Missile (advanced), Immunity (basic) | Long Range, Arcane Shot, Arcane Aura, Energy Channel |
+| BATTLEMAGE | 4 | 10 | 26 | 8 | 8 | 9-9 | 3 | 10 | Fist of Wrath (expert), Deflect Missile (expert) | Long Range, Arcane Shot, Arcane Aura |
 | | | | | | | | | | | |
 | DJINN | 5 | 5 | 36 | 12 | 8 | 11-15 | 7 | 13 | Random cast (Dark magic) (advanced) | Elemental, Random Curse, Magic-proof 75% |
 | DJINN SULTAN | 5 | 5 | 42 | 12 | 10 | 12-16 | 7 | 13 | Random cast (Dark or Light magic) (advanced) | Elemental, Random Blessing, Magic-proof 75%, Purge |
@@ -241,8 +241,8 @@
 | CHIEFTAIN | 5 | 6 | 48 | 13 | 13 | 9-16 | 6 | 9 | _none_ | Raging Blood, Frightful Presence, Battle Leader, Order of the Chief |
 | | | | | | | | | | | |
 | WYVERN | 6 | 3 | 88 | 17 | 17 | 14-18 | 8 | 12 | _none_ | Strike and Return, Regeneration |
-| FOUL WYVERN | 6 | 3 | 93 | 18 | 18 | 17-23 | 8 | 12 | _none_ | Strike and Return, Regeneration, Venom |
-| PAO KAI | 6 | 3 | 91 | 19 | 19 | 14-20 | 8 | 12 | Scavenger (advanced) | Strike and Return, Scavenger, Shocking Strike, Keen Eye |
+| FOUL WYVERN | 6 | 3 | 93 | 18 | 18 | 17-22 | 8 | 12 | _none_ | Strike and Return, Regeneration, Venom |
+| PAO KAI | 6 | 3 | 91 | 19 | 19 | 19-21 | 8 | 12 | Scavenger (advanced) | Strike and Return, Scavenger, Shocking Strike, Keen Eye |
 | | | | | | | | | | | |
 | CYCLOP | 7 | 1 | 280 | 42 | 34 | 25-65 | 5 | 9 | Goblin Snack (advanced) | Raging Blood, Goblin Snack, Goblin Throw, Short Range |
 | UNTAMED CYCLOP | 7 | 1 | 290 | 46 | 36 | 35-75 | 5 | 9 | Goblin Snack (advanced) | Raging Blood, Goblin Snack, Goblin Throw, Short Range, Crushing Blow |

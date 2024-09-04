@@ -5,8 +5,8 @@
 - __Tactics__ : Increases the area in which the hero can rearrange creatures before combat.
 - __Swiftness__ : Combat movement speed of all units in hero army is increased by +1.
 - __Archery__ : Increases damage dealt by hero's creatures in ranged combat by 15%.
-- __Fatal Strikes__ : The bonus to damage of critical strikes is increased by 20%.
 - __Precision__ : Gain a permanent +2 Luck, increasing hero troops critical strike chances.
+- __Fatal Strikes__ : The bonus to damage of critical strikes is increased by 20%.
 
 ### DEFENSE
 - __Defensive Formation__ : Defense of creatures in hero's army increased when close to each other on the battlefield.
@@ -53,13 +53,13 @@ All troops under hero's control are blessed with amazing vitality. If enemy crea
 ### GOVERNANCE
 - __Estates__ : Hero generates 250 + 25 gold pieces per resource production building or dwelling you own per day.
 - __Geology__ : The hero finds more gold and resources on the map and gain 1 Ore per day.
-- __Industry__ : Doubles the production of sawmills, ore pits, alchemist labs, sulfur deposits, crystal caverns, gem and any other mines which are in a 30 tiles radius from the hero at the start of the day.
+- __Industry__ : Doubles the production of sawmills, ore pits, alchemist labs, sulfur deposits, crystal caverns, gem and any other mines which are in a 10 tiles radius from the hero at the start of the day.
 - __Gear Up__ : The hero obtains a random minor artifact from his or her faction set or a neutral set.
-At the start of each week, gain 250 golds per minor artifact equipped.
+At the start of each week, gain 400 golds per minor artifact equipped.
 - __Heroes Legacy__ : The hero obtains a random major artifact from his or her faction set or a neutral set.
-At the start of each week, gain 250 golds per major artifact equipped.
+At the start of each week, gain 600 golds per major artifact equipped.
 - __Mythology__ : The hero obtains a random relic artifact from his or her faction set or a neutral set.
-At the start of each week, gain 500 golds per relic artifact equipped.
+At the start of each week, gain 800 golds per relic artifact equipped.
 
 ### LOGISTICS
 - __Pathfinding__ : Reduce movement penalty for moving through rough terrain by 50%. Neutral towns on the map are revealed. If they are already revealed, increase the vision radius around them.
@@ -75,7 +75,7 @@ At the start of each week, gain 500 golds per relic artifact equipped.
 - __Rapid Fire__ : Ballista gains an extra shot.
 - __Anatomy__ : Allows manual control of the First Aid Tent. Restores the First Aid Tent after the battle if it was destroyed.
 - __Technical Staff__ : Increases initiative of all war machines by +3.
-- __Houndmasters__ : A stack of Wolves is Added to hero's army at the start of combats. The amount increases with hero level.
+- __Houndmasters__ : A stack of Wolves is Added to hero's army at the start of combats. The amount is 10 plus between 2 and 3 times hero level.
 
 ### TRAINING
 - __Toughness__ : Increases hit points of all your creatures by 2.
@@ -154,14 +154,16 @@ Should it happen that any magic spell is resisted by target, the hero gains back
 - __Holy Charge__ : Hero's Retaliation Strike ability inflicts triple damage.
 
 ### AVENGER
-- __Imbue Arrow__ : Allows Ranger to enhance his or her arrows with attacking or cursing spells. All Ranger's attacks (Multishot or Deadeye Shot) will now not only inflict damage upon enemy creatures but also will immediately cast an imbued spell, draining Ranger's mana. Imbue Arrow lasts till the end of the fight or untill all Ranger's mana is drained.
+- __Imbue Arrow__ : Allows hero to enhance his or her arrows with attacking or cursing spells. All hero's attacks will now not only inflict damage upon enemy creatures but also will immediately cast an imbued spell while hero has the required mana.
+Also gain +1 Spellpower.
 - __Imbue Ballista__ : Imbue Arrow ability will now affect Ballista as well. All Ballista shots will carry hero's enchantments and therefore drain hero's mana.
-- __Battle Commander__ : Adds +2 to hero's Attack and Defense and +1 to Morale.
-War Dancers join the Ranger's army to fight for his or her cause now and at the start of each week.
+Also gain +1 Spellpower.
+- __Lucky Caster__ : Luck rolls will now be applied to destructive spells cast by the hero, thus allowing a chance for double damage from spells.
 - __Deadeye Shot__ : Grants hero an ability to attack any enemy creatures on battlefield with the power of 3 more levels. If that creature is present in hero's favorite enemy list then the critical strike is fulfilled, the damage is doubled and it always kills at least one creature.
 - __Know Your Enemy__ : The chance of inflicting a critical hit using "Avenger" skill is increased by +10%.
 Non-sylvan creatures in hero's army can be exchanged for experience.
-- __Rage of the Forest__ : All creatures in hero's army are permanently under the effect of Rage of the Forest and gain +1 to maximum damage.
+- __Battle Commander__ : Adds +2 to hero's Attack and Defense and +1 to Morale.
+War Dancers join the Ranger's army to fight for his or her cause now and at the start of each week.
 
 ### RUNELORE
 - __Fine Rune__ : There is a 30% chance of not using up resources on rune activation.
@@ -185,7 +187,7 @@ Gain +1 Knowledge.
 ### ARCANISM
 - __Empowered spells__ : Hero learns an empowered version of Destruction spells. Those spells deal 50% more damage, but the mana cost is doubled.
 - __Erratic Mana__ : Mana cost of spells cast by the hero is randomly reduced by up to 30% (actual reduction is determined while casting is in progress).
-- __Lucky Spells__ : Luck rolls will now be applied to destructive spells cast by the hero, thus allowing a chance for double damage from spells.
+- __Obliteration__ : Destructive Magic spells deal 30% additional damage, and twice more against any summoned targets.
 - __Power of Stone__ : Hero acquires Mass Endurance spell on advanced level.
 - __Power of Speed__ : Hero acquires Mass Haste spell on advanced level.
 - __Teleport Assault__ : Hero acquires Teleportation spell and the ability to cast it with assault effect, increasing the initiative of creature being teleported.
@@ -236,7 +238,7 @@ At the start of each week, gain +50 temporary mana that can go beyond maximum.
 
 ### ULTIMATE
 - __Retribution__ : The troops led by the hero inflict additional melee and ranged damage if their Morale is above zero (+7% for each point of Morale).
-- __Nature's Luck__ : Units in hero army always have luck rolled on attacks.
+- __Rage of the Forest__ : All creatures in hero's army get +1 maximum damage, +2 Initiative and half their Defense is transfered to their Attack.
 - __Absolute Protection__ : Normal attacks against hero's creatures are always unlucky. Lucky attacks are turned to normal. If enemy has Absolute Luck perk, effects of both perks are nullified.
 - __Omniscience__ : All spells that are in existance will be written to hero's spellbook and hero will be able to cast them on expert level.
 - __Rage of the Elements__ : Elemental chain effects inflict double damage.

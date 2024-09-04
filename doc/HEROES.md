@@ -216,8 +216,8 @@ __FINDAN :__
 Master of Archery - Ranger
 
 - All Hunters in hero's army gain +1 to their Attack and Defense for every two levels of the hero.
-- Hunters in hero's army shoot a random enemy when combat starts.
-- Doubles the weekly production of Hunters in Sylvan towns.
+- The largest stack of Hunters in hero's army shoots a random enemy when combat starts.
+- Increase the weekly production of Hunters in Sylvan towns by 10% every 3 levels of the hero.
 
 Starting Skills
 - Avenger
@@ -621,8 +621,8 @@ __MAAHIR :__
 Researcher - Wizard
 
 - All experience that hero gains after battles is increased by 2% per hero level.
-- Every other hero gains daily experience equal to 2% of this hero's total experience.
-- Gain +1 Knowledge per level up.
+- Every other hero gains daily experience equal to 1% of this hero's total experience.
+- Gain +1 Knowledge per 10 levels at the start of each week.
 
 Starting Skills
 - Artificier

@@ -11,7 +11,7 @@
 
 <color=purple>The Sentinel
 - __Sentinel's Shield__ :
-+2 Defense
+-10% damage taken from ranged attacks
 
 <color=purple>The Sentinel
 - __Sentinel's Boots__ :
@@ -249,7 +249,8 @@ Creatures in hero's army are Undisturbed (immunity to Berserk)
 (x) Set bonuses
 
 - __Barbarian Cuirass__ :
-cuirass
++1 Defense
++3% Health to friendly creatures
 
 <color=purple>Brutalist Set
 - __Barbarian Cape__ :
@@ -437,14 +438,7 @@ Pirate's Apparel<color_default><br>
 - __Grand Vizir's Scimitar__ :
 *grand vizier's scimitar*
 - __Regal Armour__ :
-+1 Attack if equipped<br>
-+1 Defense if equipped<br>
-+K/2 Crystals per week<br><color_default>
-(K=Knowledge of the hero, for example 10 crystals per week for 20 Knowledge)<br><br><color=orange>
-Cornucopia<color_default><br>
-Collect one artifact for every resource type (except gold) and visit an Arcane Library for a unique reward.<br><br><color=yellow>
-Backpack<color_default><br>
-Resources are also gained when the artifact is in the backpack, but functionality is limited to one artifact per resource type per hero.
++6% Health to friendly creatures (rounded up)
 - __Palace Boots__ :
 +1 to all Primary Skills<br>
 +5000 Experience<br><br>
@@ -583,9 +577,7 @@ Gain Wood and Ore after battle depending on the strength of the defeated army
 
 - __Celestial Justicar's Shield__ :
 +2 Defense
-+1 Morale
-+1 Luck
-.
+-50% damage taken from ranged attacks
 
 <color=purple>Celestial Justicar
 - __Celestial Justicar's Helm__ :
