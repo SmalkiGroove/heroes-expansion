@@ -4618,69 +4618,51 @@
 				<Effect>ARTFSET_EFFECT_DRAGONISH</Effect>
 				<Artifacts>
 					<Item>
-						<Artifact>DRAGON_SCALE_ARMOR</Artifact>
+						<Artifact>ARTIFACT_222</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 					<Item>
-						<Artifact>DRAGON_SCALE_SHIELD</Artifact>
+						<Artifact>ARTIFACT_223</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 					<Item>
-						<Artifact>DRAGON_BONE_GRAVES</Artifact>
+						<Artifact>ARTIFACT_224</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 					<Item>
-						<Artifact>DRAGON_WING_MANTLE</Artifact>
+						<Artifact>ARTIFACT_225</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 					<Item>
-						<Artifact>DRAGON_TEETH_NECKLACE</Artifact>
+						<Artifact>ARTIFACT_226</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 					<Item>
-						<Artifact>DRAGON_TALON_CROWN</Artifact>
+						<Artifact>ARTIFACT_227</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 					<Item>
-						<Artifact>DRAGON_EYE_RING</Artifact>
+						<Artifact>ARTIFACT_228</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 					<Item>
-						<Artifact>DRAGON_FLAME_TONGUE</Artifact>
+						<Artifact>ARTIFACT_229</Artifact>
 						<CombinesAtPuton>true</CombinesAtPuton>
-						<CombinesAtBackpack>false</CombinesAtBackpack>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
 					</Item>
 				</Artifacts>
 				<NameFileRef/>
 				<DescriptionFileRef/>
-				<CombinedDescriptionsFileRefs>
-					<Item/>
-					<Item/>
-					<Item/>
-					<Item/>
-					<Item/>
-					<Item/>
-					<Item/>
-					<Item/>
-				</CombinedDescriptionsFileRefs>
+				<CombinedDescriptionsFileRefs/>
 				<CombinedHeroClassBonusesDescs/>
-				<CombinedIcons>
-					<Item/>
-					<Item/>
-					<Item/>
-					<Item/>
-					<Item/>
-					<Item/>
-					<Item/>
-					<Item/>
-				</CombinedIcons>
+				<CombinedIcons/>
 			</Item>
 			<Item>
 				<Effect>ARTFSET_EFFECT_DWARVEN</Effect>
@@ -4708,28 +4690,9 @@
 				</Artifacts>
 				<NameFileRef/>
 				<DescriptionFileRef/>
-				<CombinedDescriptionsFileRefs>
-					<Item/>
-					<Item/>
-					<Item/>
-					<Item/>
-				</CombinedDescriptionsFileRefs>
-				<CombinedHeroClassBonusesDescs>
-					<Item>
-						<HeroClass>HERO_CLASS_NONE</HeroClass>
-						<BonusDescFileRef/>
-					</Item>
-					<Item>
-						<HeroClass>HERO_CLASS_NONE</HeroClass>
-						<BonusDescFileRef/>
-					</Item>
-				</CombinedHeroClassBonusesDescs>
-				<CombinedIcons>
-					<Item/>
-					<Item/>
-					<Item/>
-					<Item/>
-				</CombinedIcons>
+				<CombinedDescriptionsFileRefs/>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons/>
 			</Item>
 			<Item>
 				<Effect>ARTFSET_EFFECT_LIONS</Effect>
@@ -4752,26 +4715,9 @@
 				</Artifacts>
 				<NameFileRef/>
 				<DescriptionFileRef/>
-				<CombinedDescriptionsFileRefs>
-					<Item/>
-					<Item/>
-					<Item/>
-				</CombinedDescriptionsFileRefs>
-				<CombinedHeroClassBonusesDescs>
-					<Item>
-						<HeroClass>HERO_CLASS_NONE</HeroClass>
-						<BonusDescFileRef/>
-					</Item>
-					<Item>
-						<HeroClass>HERO_CLASS_NONE</HeroClass>
-						<BonusDescFileRef/>
-					</Item>
-				</CombinedHeroClassBonusesDescs>
-				<CombinedIcons>
-					<Item/>
-					<Item/>
-					<Item/>
-				</CombinedIcons>
+				<CombinedDescriptionsFileRefs/>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons/>
 			</Item>
 			<Item>
 				<Effect>ARTFSET_EFFECT_MAGIS</Effect>
@@ -4799,36 +4745,9 @@
 				</Artifacts>
 				<NameFileRef/>
 				<DescriptionFileRef/>
-				<CombinedDescriptionsFileRefs>
-					<Item/>
-					<Item/>
-					<Item/>
-					<Item/>
-				</CombinedDescriptionsFileRefs>
-				<CombinedHeroClassBonusesDescs>
-					<Item>
-						<HeroClass>HERO_CLASS_NONE</HeroClass>
-						<BonusDescFileRef/>
-					</Item>
-					<Item>
-						<HeroClass>HERO_CLASS_NONE</HeroClass>
-						<BonusDescFileRef/>
-					</Item>
-					<Item>
-						<HeroClass>HERO_CLASS_NONE</HeroClass>
-						<BonusDescFileRef/>
-					</Item>
-					<Item>
-						<HeroClass>HERO_CLASS_NONE</HeroClass>
-						<BonusDescFileRef/>
-					</Item>
-				</CombinedHeroClassBonusesDescs>
-				<CombinedIcons>
-					<Item/>
-					<Item/>
-					<Item/>
-					<Item/>
-				</CombinedIcons>
+				<CombinedDescriptionsFileRefs/>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons/>
 			</Item>
 			<Item>
 				<Effect>ARTFSET_EFFECT_NECROMANCERS</Effect>
@@ -4856,36 +4775,9 @@
 				</Artifacts>
 				<NameFileRef/>
 				<DescriptionFileRef/>
-				<CombinedDescriptionsFileRefs>
-					<Item/>
-					<Item/>
-					<Item/>
-					<Item/>
-				</CombinedDescriptionsFileRefs>
-				<CombinedHeroClassBonusesDescs>
-					<Item>
-						<HeroClass>HERO_CLASS_NONE</HeroClass>
-						<BonusDescFileRef/>
-					</Item>
-					<Item>
-						<HeroClass>HERO_CLASS_NONE</HeroClass>
-						<BonusDescFileRef/>
-					</Item>
-					<Item>
-						<HeroClass>HERO_CLASS_NONE</HeroClass>
-						<BonusDescFileRef/>
-					</Item>
-					<Item>
-						<HeroClass>HERO_CLASS_NONE</HeroClass>
-						<BonusDescFileRef/>
-					</Item>
-				</CombinedHeroClassBonusesDescs>
-				<CombinedIcons>
-					<Item/>
-					<Item/>
-					<Item/>
-					<Item/>
-				</CombinedIcons>
+				<CombinedDescriptionsFileRefs/>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons/>
 			</Item>
 			<Item>
 				<Effect>ARTFSET_EFFECT_EDUCATIONAL</Effect>
@@ -4903,15 +4795,9 @@
 				</Artifacts>
 				<NameFileRef/>
 				<DescriptionFileRef/>
-				<CombinedDescriptionsFileRefs>
-					<Item/>
-					<Item/>
-				</CombinedDescriptionsFileRefs>
+				<CombinedDescriptionsFileRefs/>
 				<CombinedHeroClassBonusesDescs/>
-				<CombinedIcons>
-					<Item/>
-					<Item/>
-				</CombinedIcons>
+				<CombinedIcons/>
 			</Item>
 			<Item>
 				<Effect>ARTFSET_EFFECT_HUNTERS</Effect>
@@ -4929,24 +4815,9 @@
 				</Artifacts>
 				<NameFileRef/>
 				<DescriptionFileRef/>
-				<CombinedDescriptionsFileRefs>
-					<Item/>
-					<Item/>
-				</CombinedDescriptionsFileRefs>
-				<CombinedHeroClassBonusesDescs>
-					<Item>
-						<HeroClass>HERO_CLASS_NONE</HeroClass>
-						<BonusDescFileRef/>
-					</Item>
-					<Item>
-						<HeroClass>HERO_CLASS_NONE</HeroClass>
-						<BonusDescFileRef/>
-					</Item>
-				</CombinedHeroClassBonusesDescs>
-				<CombinedIcons>
-					<Item/>
-					<Item/>
-				</CombinedIcons>
+				<CombinedDescriptionsFileRefs/>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons/>
 			</Item>
 			<Item>
 				<Effect>ARTFSET_EFFECT_OGRES</Effect>
@@ -4964,24 +4835,9 @@
 				</Artifacts>
 				<NameFileRef/>
 				<DescriptionFileRef/>
-				<CombinedDescriptionsFileRefs>
-					<Item/>
-					<Item/>
-				</CombinedDescriptionsFileRefs>
-				<CombinedHeroClassBonusesDescs>
-					<Item>
-						<HeroClass>HERO_CLASS_NONE</HeroClass>
-						<BonusDescFileRef/>
-					</Item>
-					<Item>
-						<HeroClass>HERO_CLASS_NONE</HeroClass>
-						<BonusDescFileRef/>
-					</Item>
-				</CombinedHeroClassBonusesDescs>
-				<CombinedIcons>
-					<Item/>
-					<Item/>
-				</CombinedIcons>
+				<CombinedDescriptionsFileRefs/>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons/>
 			</Item>
 			<Item>
 				<Effect>ARTFSET_EFFECT_RUNIC</Effect>
@@ -4999,24 +4855,9 @@
 				</Artifacts>
 				<NameFileRef/>
 				<DescriptionFileRef/>
-				<CombinedDescriptionsFileRefs>
-					<Item/>
-					<Item/>
-				</CombinedDescriptionsFileRefs>
-				<CombinedHeroClassBonusesDescs>
-					<Item>
-						<HeroClass>HERO_CLASS_NONE</HeroClass>
-						<BonusDescFileRef/>
-					</Item>
-					<Item>
-						<HeroClass>HERO_CLASS_NONE</HeroClass>
-						<BonusDescFileRef/>
-					</Item>
-				</CombinedHeroClassBonusesDescs>
-				<CombinedIcons>
-					<Item/>
-					<Item/>
-				</CombinedIcons>
+				<CombinedDescriptionsFileRefs/>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons/>
 			</Item>
 			<Item>
 				<Effect>ARTFSET_EFFECT_DEMONIC</Effect>
@@ -5034,24 +4875,9 @@
 				</Artifacts>
 				<NameFileRef/>
 				<DescriptionFileRef/>
-				<CombinedDescriptionsFileRefs>
-					<Item/>
-					<Item/>
-				</CombinedDescriptionsFileRefs>
-				<CombinedHeroClassBonusesDescs>
-					<Item>
-						<HeroClass>HERO_CLASS_NONE</HeroClass>
-						<BonusDescFileRef/>
-					</Item>
-					<Item>
-						<HeroClass>HERO_CLASS_NONE</HeroClass>
-						<BonusDescFileRef/>
-					</Item>
-				</CombinedHeroClassBonusesDescs>
-				<CombinedIcons>
-					<Item/>
-					<Item/>
-				</CombinedIcons>
+				<CombinedDescriptionsFileRefs/>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons/>
 			</Item>
 		</Sets>
 	</ArtifactSets>
@@ -5063,13 +4889,13 @@
 		<RegradeCostCoef>0.05</RegradeCostCoef>
 	</UpgradesParams>
 	<ArtifactsSetsEffectsConsts>
-		<Dragonish_2_AllStats>1</Dragonish_2_AllStats>
-		<Dragonish_4_Creature_Tier>7</Dragonish_4_Creature_Tier>
+		<Dragonish_2_AllStats>0</Dragonish_2_AllStats>
+		<Dragonish_4_Creature_Tier>3</Dragonish_4_Creature_Tier>
 		<Dragonish_4_Creature_Attack>5</Dragonish_4_Creature_Attack>
 		<Dragonish_4_Creature_Defence>5</Dragonish_4_Creature_Defence>
-		<Dragonish_4_Creature_HitPoints>20</Dragonish_4_Creature_HitPoints>
-		<Dragonish_6_AllStats>5</Dragonish_6_AllStats>
-		<Dragonish_8_Creature_Tier>7</Dragonish_8_Creature_Tier>
+		<Dragonish_4_Creature_HitPoints>5</Dragonish_4_Creature_HitPoints>
+		<Dragonish_6_AllStats>0</Dragonish_6_AllStats>
+		<Dragonish_8_Creature_Tier>3</Dragonish_8_Creature_Tier>
 		<Dragonish_8_Creature_Count>1</Dragonish_8_Creature_Count>
 		<Dwarven_2_Creature_MagicProofPercents>25</Dwarven_2_Creature_MagicProofPercents>
 		<Dwarven_2Dwarf_SpellpowerPercents>10</Dwarven_2Dwarf_SpellpowerPercents>
@@ -5085,7 +4911,7 @@
 		<Necromancers_4_EnemyCreature_BadMoralePenaltyToAttackDefencePercents>20</Necromancers_4_EnemyCreature_BadMoralePenaltyToAttackDefencePercents>
 		<Necromancers_4Necromancer_NecromancyBonusPercents>20</Necromancers_4Necromancer_NecromancyBonusPercents>
 		<Necromancers_4Necromancer_NecromancyCreatureCostDisountPercents>25</Necromancers_4Necromancer_NecromancyCreatureCostDisountPercents>
-		<Educational_2_GainExperienceBonusPercents>25</Educational_2_GainExperienceBonusPercents>
+		<Educational_2_GainExperienceBonusPercents>15</Educational_2_GainExperienceBonusPercents>
 		<Hunters_2_ShootersATBLessPercents>30</Hunters_2_ShootersATBLessPercents>
 		<Ogres_2_Creature_Attack>0</Ogres_2_Creature_Attack>
 		<Ogres_2_Creature_HitPoints>0</Ogres_2_Creature_HitPoints>
@@ -5096,7 +4922,7 @@
 		<Demonic_2DemonLord_GatingBonusPercents>25</Demonic_2DemonLord_GatingBonusPercents>
 	</ArtifactsSetsEffectsConsts>
 	<SlaveMarketConsts>
-		<BasePercents>90</BasePercents>
+		<BasePercents>75</BasePercents>
 		<BonusPercentsPerMarketplace>5</BonusPercentsPerMarketplace>
 		<AffectResources>false</AffectResources>
 	</SlaveMarketConsts>
