@@ -13,11 +13,11 @@ runs:
   steps:
     - name: Make .pak
       run: |
-        cd game_data/{{ inputs.folder }} 
-        zip -q -r h5x-{{ inputs.folder }}.pak *
+        cd game_data/${{ inputs.folder }}
+        zip -q -r h5x-${{ inputs.folder }}.pak *
       shell: bash
     - name: Upload .pak
       uses: actions/upload-artifact@v4
       with:
-        name: h5x-{{ inputs.folder }}
-        path: game_data/{{ inputs.folder }}/h5x-{{ inputs.folder }}.pak
+        name: h5x-${{ inputs.folder }}
+        path: game_data/${{ inputs.folder }}/h5x-${{ inputs.folder }}.pak
