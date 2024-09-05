@@ -12,21 +12,21 @@ jobs:
       - name: Pack data
         uses: ./.github/workflows/actions/package
         with:
-          directory: data
+          folder: data
       - name: Pack doc
         uses: ./.github/workflows/actions/package
         with:
-          directory: doc
+          folder: doc
       - name: Pack lua
         uses: ./.github/workflows/actions/package
         with:
-          directory: lua
+          folder: lua
       - name: Pack texts
         uses: ./.github/workflows/actions/package
         with:
-          directory: texts
+          folder: texts
       - name: Pack visuals
         uses: ./.github/workflows/actions/package
         with:
-          directory: visuals
+          folder: visuals
   

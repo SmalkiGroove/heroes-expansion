@@ -15,4 +15,4 @@ jobs:
       - name: Pack data
         uses: ./.github/workflows/actions/package
         with:
-          directory: data
+          folder: data

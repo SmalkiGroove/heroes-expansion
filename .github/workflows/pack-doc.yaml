@@ -15,4 +15,4 @@ jobs:
       - name: Pack doc
         uses: ./.github/workflows/actions/package
         with:
-          directory: doc
+          folder: doc

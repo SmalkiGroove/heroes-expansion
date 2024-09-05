@@ -15,4 +15,4 @@ jobs:
       - name: Pack texts
         uses: ./.github/workflows/actions/package
         with:
-          directory: texts
+          folder: texts

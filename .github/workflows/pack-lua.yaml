@@ -15,4 +15,4 @@ jobs:
       - name: Pack lua
         uses: ./.github/workflows/actions/package
         with:
-          directory: lua
+          folder: lua
