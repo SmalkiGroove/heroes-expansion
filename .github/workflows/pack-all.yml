@@ -1,0 +1,30 @@
+name: Package all
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  package-mod:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pack data
+        uses: ./.github/workflows/actions/package
+        with:
+          directory: data
+      - name: Pack doc
+        uses: ./.github/workflows/actions/package
+        with:
+          directory: doc
+      - name: Pack lua
+        uses: ./.github/workflows/actions/package
+        with:
+          directory: lua
+      - name: Pack texts
+        uses: ./.github/workflows/actions/package
+        with:
+          directory: texts
+      - name: Pack visuals
+        uses: ./.github/workflows/actions/package
+        with:
+          directory: visuals
+  

@@ -1,0 +1,16 @@
+
+name: Package visuals
+
+on:
+  push:
+    paths: 
+      - 'game_data/visuals/**'
+
+jobs:
+  package-visuals-folder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pack visuals
+        uses: ./.github/workflows/actions/package
+        with:
+          directory: visuals

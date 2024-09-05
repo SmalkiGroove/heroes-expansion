@@ -1,0 +1,16 @@
+
+name: Package texts
+
+on:
+  push:
+    paths: 
+      - 'game_data/texts/**'
+
+jobs:
+  package-texts-folder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pack texts
+        uses: ./.github/workflows/actions/package
+        with:
+          directory: texts

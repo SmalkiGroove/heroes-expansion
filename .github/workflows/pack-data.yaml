@@ -1,0 +1,16 @@
+
+name: Package data
+
+on:
+  push:
+    paths: 
+      - 'game_data/data/**'
+
+jobs:
+  package-data-folder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pack data
+        uses: ./.github/workflows/actions/package
+        with:
+          directory: data

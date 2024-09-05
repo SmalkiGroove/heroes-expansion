@@ -1,0 +1,16 @@
+
+name: Package doc
+
+on:
+  push:
+    paths: 
+      - 'game_data/doc/**'
+
+jobs:
+  package-doc-folder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pack doc
+        uses: ./.github/workflows/actions/package
+        with:
+          directory: doc

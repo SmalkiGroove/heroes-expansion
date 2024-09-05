@@ -1,0 +1,16 @@
+
+name: Package lua
+
+on:
+  push:
+    paths: 
+      - 'game_data/lua/**'
+
+jobs:
+  package-lua-folder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pack lua
+        uses: ./.github/workflows/actions/package
+        with:
+          directory: lua
