@@ -1,0 +1,32 @@
+name: Package all
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  package-mod:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Pack data
+        uses: ./.github/workflows/actions/package
+        with:
+          folder: data
+      - name: Pack doc
+        uses: ./.github/workflows/actions/package
+        with:
+          folder: doc
+      - name: Pack lua
+        uses: ./.github/workflows/actions/package
+        with:
+          folder: lua
+      - name: Pack texts
+        uses: ./.github/workflows/actions/package
+        with:
+          folder: texts
+      - name: Pack visuals
+        uses: ./.github/workflows/actions/package
+        with:
+          folder: visuals
+  
