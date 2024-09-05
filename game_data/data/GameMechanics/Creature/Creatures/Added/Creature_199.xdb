@@ -1,38 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature>
-	<AttackSkill>1</AttackSkill>
-	<DefenceSkill>1</DefenceSkill>
+	<AttackSkill>50</AttackSkill>
+	<DefenceSkill>40</DefenceSkill>
 	<Shots>0</Shots>
-	<MinDamage>1</MinDamage>
-	<MaxDamage>1</MaxDamage>
-	<Speed>5</Speed>
+	<MinDamage>69</MinDamage>
+	<MaxDamage>99</MaxDamage>
+	<Speed>10</Speed>
 	<Initiative>10</Initiative>
-	<Flying>false</Flying>
-	<Health>10</Health>
+	<Flying>true</Flying>
+	<Health>400</Health>
 	<KnownSpells/>
 	<SpellPoints>0</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
 	<SpellPoints2>0</SpellPoints2>
-	<Exp>10</Exp>
-	<Power>10</Power>
+	<Exp>10000</Exp>
+	<Power>10000</Power>
 	<TimeToCommand>10</TimeToCommand>
-	<CreatureTier>1</CreatureTier>
+	<CreatureTier>8</CreatureTier>
 	<Upgrade>false</Upgrade>
 	<PairCreature>CREATURE_UNKNOWN</PairCreature>
 	<CreatureTown>TOWN_NO_TYPE</CreatureTown>
-	<MagicElement><First>ELEMENT_NONE</First><Second>ELEMENT_NONE</Second></MagicElement>
-	<WeeklyGrowth>10</WeeklyGrowth>
+	<MagicElement><First>ELEMENT_FIRE</First><Second>ELEMENT_AIR</Second></MagicElement>
+	<WeeklyGrowth>1</WeeklyGrowth>
 	<Cost>
-		<Gold>10</Gold>
+		<Gold>1</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>false</SubjectOfRandomGeneration>
-	<MonsterShared/>
-	<CombatSize>1</CombatSize>
-	<PatternAttack/>
+	<MonsterShared href="/MapObjects/Neutral/LegendaryDragon.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>2</CombatSize>
+	<PatternAttack href="/GameMechanics/Creature/Creatures/Dungeon/Deep_Dragon_Pattern.xdb#xpointer(/PatternAttack)"/>
 	<flybySequence/>
-	<Visual href="/GameMechanics/CreatureVisual/Creatures/Neutrals/SnowApe.xdb#xpointer(/CreatureVisual)"/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Added/LegendaryDragon.(CreatureVisual).xdb#xpointer(/CreatureVisual)"/>
 	<Range>0</Range>
 	<BaseCreature>CREATURE_UNKNOWN</BaseCreature>
 	<Upgrades/>
-	<Abilities/>
+	<Abilities>
+		<Item>ABILITY_FIRE_BREATH</Item>
+		<Item>ABILITY_NO_ENEMY_RETALIATION</Item>
+		<Item>ABILITY_AURA_OF_BRAVERY</Item>
+		<Item>ABILITY_MAGIC_PROOF_50</Item>
+		<Item>ABILITY_IMMUNITY_TO_MIND_CONTROL</Item>
+		<Item>ABILITY_IMMUNITY_TO_SLOW</Item>
+		<Item>ABILITY_IMMUNITY_TO_CURSE</Item>
+		<Item>ABILITY_CRYSTAL_SCALES</Item>
+	</Abilities>
 </Creature>
