@@ -10,6 +10,8 @@ jobs:
   package-data-folder:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
       - name: Pack data
         uses: ./.github/workflows/actions/package
         with:

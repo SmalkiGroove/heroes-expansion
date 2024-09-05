@@ -10,6 +10,8 @@ jobs:
   package-texts-folder:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
       - name: Pack texts
         uses: ./.github/workflows/actions/package
         with:
