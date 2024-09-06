@@ -161,7 +161,7 @@ ARTIFACT_HARPY_BOOTS = 157                          -- creatures have +1 initiat
 ARTIFACT_PALACE_SHOES = 158                         -- 
 ARTIFACT_SHACKLES_OF_THE_LAST_MAN = 159             -- enemy creatures have -1 att and def TODO
 ARTIFACT_LEGENDARY_BOOTS = 160                      -- 
-ARTIFACT_161 = 161                                  -- 
+ARTIFACT_GOLDEN_GOOSE = 161                         -- all attacks are lucky
 ARTIFACT_162 = 162                                  -- 
 ARTIFACT_SHANTIRI_MOON_DISC = 163                   -- 
 ARTIFACT_CLOAK_OF_DARKNESS = 164                    -- enemy creatures have -1 luck
@@ -435,8 +435,8 @@ ARTIFACTS_DATA = {
     [ARTIFACT_HARPY_BOOTS]                   = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
     [ARTIFACT_PALACE_SHOES]                  = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_LEGS, special=0},
     [ARTIFACT_SHACKLES_OF_THE_LAST_MAN]      = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_POCKET, special=0},
-    [ARTIFACT_LEGENDARY_BOOTS]               = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_BACKPACK, special=1},
-    [ARTIFACT_161]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_BACKPACK, special=1},
+    [ARTIFACT_LEGENDARY_BOOTS]               = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_LEGS, special=0},
+    [ARTIFACT_GOLDEN_GOOSE]                  = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_POCKET, special=0},
     [ARTIFACT_162]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_BACKPACK, special=1},
     [ARTIFACT_SHANTIRI_MOON_DISC]            = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_BACKPACK, special=1},
     [ARTIFACT_CLOAK_OF_DARKNESS]             = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_SHOULDERS, special=0},

@@ -114,7 +114,7 @@ function WatchPlayer(player, wait)
 			end
 			startThread(DoArtifactsRoutine_Continuous, player, hero)
         end
-		sleep(18)
+		sleep(15)
 	end
 end
 

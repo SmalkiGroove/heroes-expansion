@@ -7,9 +7,7 @@ end
 
 function ActivateKnowYourEnemy(player, hero)
     log("$ ActivateKnowYourEnemy")
-    if GetHeroStat(hero, STAT_MOVE_POINTS) < 100 then
-        return
-    end
+    if GetHeroStat(hero, STAT_MOVE_POINTS) < 100 then return end
     local exp = 0
     local k, units, amounts = GetHeroArmySummary(hero)
     for i = 1,k do

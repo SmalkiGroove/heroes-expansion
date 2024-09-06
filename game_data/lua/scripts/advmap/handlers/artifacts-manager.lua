@@ -98,6 +98,13 @@ function ScanHeroArtifacts(hero)
     end
 end
 
+function GetHeroArtfset(hero)
+    for set, activations in ARTIFACT_SETS_ACTIVATIONS do
+        local count = GetArtifactSetItemsCount(hero, set, 1)
+        log("Hero "..hero.." has "..count.." artifacts from set "..set)
+    end
+end
+
 
 -- log("Loaded artifact-manager.lua")
 ROUTINES_LOADED[17] = 1
