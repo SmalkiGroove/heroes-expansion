@@ -1,25 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowMSButton ObjectRecordID="1000123">
 	<ClassTypeID>285694855</ClassTypeID>
-	<Shared href="ExitButton.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
-	<Name>ExitButton</Name>
-	<TooltipFileRef/>
+	<Shared href="Button.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
+	<Name>SkillWheelButtonLevelUp</Name>
+	<TooltipFileRef href="Button.txt"/>
 	<Visible>true</Visible>
-	<Priority>1</Priority>
-	<GameMessageReactions>
-		<Item>
-			<GameMessage>esc_pressed</GameMessage>
-			<LogicalReaction/>
-			<VisualReaction>
-				<Commands>
-					<Item href="button/SkillsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-				</Commands>
-				<Reversable>false</Reversable>
-			</VisualReaction>
-			<WaitVisual>true</WaitVisual>
-			<Forward>true</Forward>
-		</Item>
-	</GameMessageReactions>
+	<Priority>100</Priority>
+	<GameMessageReactions/>
 	<Placement>
 		<Position>
 			<First>
@@ -70,7 +57,7 @@
 			<MessageOnEnterState/>
 			<CommandsOnEnterState>
 				<Commands>
-					<Item href="button/SkillsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/button/SkillsShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 				</Commands>
 				<Reversable>false</Reversable>
 			</CommandsOnEnterState>
@@ -88,7 +75,7 @@
 		</Item>
 	</ButtonStates>
 	<ButtonGroupID>0</ButtonGroupID>
-	<AutoChangeState>true</AutoChangeState>
+	<AutoChangeState>false</AutoChangeState>
 	<PushEffect>
 		<Commands/>
 		<Reversable>false</Reversable>

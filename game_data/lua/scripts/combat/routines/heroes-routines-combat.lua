@@ -864,7 +864,6 @@ COMBAT_START_HERO_ROUTINES = {
     -- dungeon
     [H_VAYSHAN] = Routine_ScoutsMoveFirst,
     [H_SYLSAI] = Routine_HeroCastRage,
-    [H_RAELAG] = Routine_DragonStrike,
     [H_SHADYA] = Routine_CastRandomDeepFrost,
     -- necropolis
     [H_VLADIMIR] = Routine_SummonAndKillEnnemySkeleton,

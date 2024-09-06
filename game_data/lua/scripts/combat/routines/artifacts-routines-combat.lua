@@ -87,7 +87,9 @@ function Routine_ArtfsetDragon4(side, hero, unit)
         local threshold = 0.5 * (8 - tier) * (9 - tier)
         if ROUTINE_VARS.InitialCounts[unit] and ROUTINE_VARS.InitialCounts[unit] > threshold then
             local amount = GetHeroLevel(side)
-            SummonCreatureStack_X(side, CREATURE_LEGENDARY_DRAGON, amount, 2)
+            if hero == H_RAELAG then amount = 2 * amount end
+            SummonCreatureStack_X(side, CREATURE_LEGENDARY_DRAGON, amount, 3)
+            SetATB_CreatureTypes(side, {CREATURE_LEGENDARY_DRAGON}, ATB_HALF)
         end
     end
 end
@@ -96,14 +98,18 @@ function Routine_ArtfsetDragon6(side, hero, unit)
     log("$ Routine_ArtfsetDragon6")
     if GetUnitSide(unit) ~= side then
         local amount = GetHeroLevel(side)
-        SummonCreatureStack_X(side, CREATURE_LEGENDARY_DRAGON, amount, 2)
+        if hero == H_RAELAG then amount = 2 * amount end
+        SummonCreatureStack_X(side, CREATURE_LEGENDARY_DRAGON, amount, 3)
+        SetATB_CreatureTypes(side, {CREATURE_LEGENDARY_DRAGON}, ATB_HALF)
     end
 end
 
 function Routine_ArtfsetDragon8(side, hero)
     log("$ Routine_ArtfsetDragon8")
     local amount = GetHeroLevel(side)
-    SummonCreatureStack_X(side, CREATURE_LEGENDARY_DRAGON, amount, 2)
+    if hero == H_RAELAG then amount = 2 * amount end
+    SummonCreatureStack_X(side, CREATURE_LEGENDARY_DRAGON, amount, 3)
+    SetATB_CreatureTypes(side, {CREATURE_LEGENDARY_DRAGON}, ATB_NEXT)
 end
 
 
