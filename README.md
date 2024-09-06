@@ -26,5 +26,6 @@ The main changes compared to vanilla are :
 - [Creatures data](doc/CREATURES.md)
 - [Heroes data](doc/HEROES.md)
 - [Skills data](doc/SKILLS.md)
+- [Artifacts data](doc/ARTIFACTS.md)
 
 Coming soon™
