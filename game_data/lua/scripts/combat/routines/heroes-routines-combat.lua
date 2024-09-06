@@ -153,7 +153,7 @@ function Routine_HunterRandomShoot(side, hero)
     end
     if hunter ~= "none" then
         local target = RandomCreature(1-side,largest)
-        if target then ShootCombatUnit(cr, target) end
+        if target then ShootCombatUnit(hunter, target) end
     end
 end
 
