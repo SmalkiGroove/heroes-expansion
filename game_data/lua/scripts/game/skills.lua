@@ -256,6 +256,7 @@ _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_NATURAL_MAGIC       = _skillbonu
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_DESTRUCT_MAGIC      = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_COURAGE             = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_AVENGER             = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_ARTIFICIER          = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_SPIRITISM           = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_PRECISION           = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_HOLD_GROUND         = _skillbonus_id

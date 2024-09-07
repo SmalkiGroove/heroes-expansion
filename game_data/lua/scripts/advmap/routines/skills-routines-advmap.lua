@@ -77,6 +77,18 @@ function Routine_CheckAvenger(player, hero, mastery)
     end
 end
 
+function Routine_CheckArtificier(player, hero, mastery)
+    log("$ Routine_CheckArtificier")
+    local value = mastery
+    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_ARTIFICIER]
+    if diff > 0 then
+        local item = 200 + value
+        if HasArtefact(hero, item-diff) then RemoveArtefact(hero, item-1) sleep(1) end
+        GiveArtifact(hero, item, 1)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_ARTIFICIER] = value
+    end
+end
+
 function Routine_CheckSpiritism(player, hero, mastery)
     log("$ Routine_CheckSpiritism")
     local current = HERO_SKILL_BONUSES[hero][SKILLBONUS_SPIRITISM]
@@ -773,6 +785,7 @@ START_TRIGGER_SKILLS_ROUTINES = {
     [SKILL_DESTRUCTIVE_MAGIC] = Routine_LearnDestrMagic,
     [SKILL_COURAGE] = Routine_CheckCourage,
     [SKILL_AVENGER] = Routine_CheckAvenger,
+    [SKILL_ARTIFICIER] = Routine_CheckArtificier,
     [SKILL_SPIRITISM] = Routine_CheckSpiritism,
     [PERK_PRECISION] = Routine_CheckPrecision,
     [PERK_HOLD_GROUND] = Routine_CheckHoldGround,

@@ -27,6 +27,7 @@ ROUTINE_VARS = {
     AtbBoosted = {},
     GoblinsTotal = 0,
     MoonCharm = nil,
+    Legendragon = {},
 }
 
 COMBAT_EFFECT_SKILLS = {
