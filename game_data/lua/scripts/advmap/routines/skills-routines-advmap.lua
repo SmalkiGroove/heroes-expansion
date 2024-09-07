@@ -79,12 +79,17 @@ end
 
 function Routine_CheckArtificier(player, hero, mastery)
     log("$ Routine_CheckArtificier")
-    local value = mastery
-    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_ARTIFICIER]
-    if diff > 0 then
-        local item = 200 + value
-        if HasArtefact(hero, item-diff) then RemoveArtefact(hero, item-1) sleep(1) end
-        GiveArtifact(hero, item, 1)
+    local value = min(mastery, 3)
+    local prev = HERO_SKILL_BONUSES[hero][SKILLBONUS_ARTIFICIER]
+    if value > prev then
+        local item1 = 200 + prev
+        local item2 = 200 + value
+        if prev == 0 then
+            GiveArtifact(hero, item2, 1)
+        elseif HasArtefact(hero, item1) then
+            RemoveArtefact(hero, item1) sleep(1)
+            GiveArtifact(hero, item2, 1)
+        end
         HERO_SKILL_BONUSES[hero][SKILLBONUS_ARTIFICIER] = value
     end
 end
