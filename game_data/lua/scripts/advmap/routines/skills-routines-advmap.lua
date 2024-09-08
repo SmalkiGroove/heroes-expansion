@@ -56,14 +56,12 @@ function Routine_CheckVoice(player, hero, mastery, level)
     end
 end
 
-function Routine_CheckCourage(player, hero, mastery, level)
+function Routine_CheckCourage(player, hero, mastery)
     log("$ Routine_CheckCourage")
-    local level = level or GetHeroLevel(hero)
-    local value = mastery + trunc(0.1 * level) * mastery
-    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_COURAGE]
+    local diff = mastery - HERO_SKILL_BONUSES[hero][SKILLBONUS_COURAGE]
     if diff ~= 0 then
         AddHeroStatAmount(player, hero, STAT_MORALE, diff)
-        HERO_SKILL_BONUSES[hero][SKILLBONUS_COURAGE] = value
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_COURAGE] = mastery
     end
 end
 
@@ -855,7 +853,6 @@ LEVELUP_TRIGGER_SKILLS_ROUTINES = {
     [SKILL_LEARNING] = Routine_CheckLearning,
     [SKILL_SORCERY] = Routine_CheckSorcery,
     [SKILL_VOICE] = Routine_CheckVoice,
-    [SKILL_COURAGE] = Routine_CheckCourage,
     [SKILL_SPIRITISM] = Routine_SpiritismLevelUp,
 }
 
