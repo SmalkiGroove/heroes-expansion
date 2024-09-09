@@ -177,7 +177,7 @@ function UpdateMagicGuildBonus(player)
             end
         else
             ChangeHeroStat(hero, STAT_SPELL_POWER, bonus)
-            ChangeHeroStat(hero, STAT_KNOWLEDGE, diff)
+            ChangeHeroStat(hero, STAT_KNOWLEDGE, bonus)
             MAGIC_GUILD_HERO_BONUSES[hero] = bonus
         end
     end
