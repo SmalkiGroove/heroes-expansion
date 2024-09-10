@@ -18,7 +18,7 @@
 	<TimeToCommand>10</TimeToCommand>
 	<CreatureTier>7</CreatureTier>
 	<Upgrade>true</Upgrade>
-	<PairCreature>CREATURE_SNOW_APE</PairCreature>
+	<PairCreature>CREATURE_UNKNOWN</PairCreature>
 	<CreatureTown>TOWN_NO_TYPE</CreatureTown>
 	<MagicElement><First>ELEMENT_FIRE</First><Second>ELEMENT_NONE</Second></MagicElement>
 	<WeeklyGrowth>1</WeeklyGrowth>
@@ -38,9 +38,10 @@
 	<flybySequence/>
 	<Visual href="/GameMechanics/CreatureVisual/Creatures/Neutrals/Phoenix.xdb#xpointer(/CreatureVisual)"/>
 	<Range>0</Range>
-	<BaseCreature>CREATURE_SNOW_APE</BaseCreature>
+	<BaseCreature>CREATURE_UNKNOWN</BaseCreature>
 	<Upgrades/>
 	<Abilities>
+		<Item>ABILITY_ELEMENTAL</Item>
 		<Item>ABILITY_IMMUNITY_TO_FIRE</Item>
 		<Item>ABILITY_FIRE_SHIELD</Item>
 		<Item>ABILITY_REBIRTH</Item>

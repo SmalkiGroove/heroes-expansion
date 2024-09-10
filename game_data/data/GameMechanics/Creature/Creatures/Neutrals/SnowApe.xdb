@@ -8,7 +8,7 @@
 	<Speed>8</Speed>
 	<Initiative>14</Initiative>
 	<Flying>true</Flying>
-	<Health>77</Health>
+	<Health>99</Health>
 	<KnownSpells/>
 	<SpellPoints>0</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
@@ -16,12 +16,12 @@
 	<Exp>50</Exp>
 	<Power>671</Power>
 	<TimeToCommand>10</TimeToCommand>
-	<CreatureTier>7</CreatureTier>
+	<CreatureTier>6</CreatureTier>
 	<Upgrade>true</Upgrade>
-	<PairCreature>CREATURE_PHOENIX</PairCreature>
+	<PairCreature>CREATURE_UNKNOWN</PairCreature>
 	<CreatureTown>TOWN_NO_TYPE</CreatureTown>
 	<MagicElement><First>ELEMENT_AIR</First><Second>ELEMENT_NONE</Second></MagicElement>
-	<WeeklyGrowth>1</WeeklyGrowth>
+	<WeeklyGrowth>3</WeeklyGrowth>
 	<Cost>
 		<Wood>0</Wood>
 		<Ore>0</Ore>
@@ -39,9 +39,7 @@
 	<Visual href="/GameMechanics/CreatureVisual/Creatures/Neutrals/SnowApe.xdb#xpointer(/CreatureVisual)"/>
 	<Range>0</Range>
 	<BaseCreature>CREATURE_UNKNOWN</BaseCreature>
-	<Upgrades>
-		<Item>CREATURE_PHOENIX</Item>
-	</Upgrades>
+	<Upgrades/>
 	<Abilities>
 		<Item>ABILITY_REGENERATION</Item>
 	</Abilities>

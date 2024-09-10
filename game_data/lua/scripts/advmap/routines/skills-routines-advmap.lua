@@ -588,13 +588,13 @@ function Routine_LogisticsWeeklyProd(player, hero, mastery)
         if mastery >= 2 and GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_2) ~= 0 then
             local creature = CREATURES_BY_FACTION[faction][2][1]
             local current = GetObjectDwellingCreatures(town, creature)
-            local amount = current + 5 * factor * bonus
+            local amount = current + 3 * factor * bonus
             SetObjectDwellingCreatures(town, creature, amount)
         end
         if mastery >= 3 and GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_3) ~= 0 then
             local creature = CREATURES_BY_FACTION[faction][3][1]
             local current = GetObjectDwellingCreatures(town, creature)
-            local amount = current + 5 * factor * bonus
+            local amount = current + 2 * factor * bonus
             SetObjectDwellingCreatures(town, creature, amount)
         end
     end
