@@ -1,5 +1,5 @@
 
-MULT = (GetDifficulty() == 0) and 1.5 or 1
+MULT = (5 - GetDifficulty()) * 0.25
 
 function SetStartingArmy(hero)
 	-- log("$ SetStartingArmy hero="..hero)

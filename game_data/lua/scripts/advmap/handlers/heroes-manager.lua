@@ -139,24 +139,8 @@ function HeroLevelUp_KujinMP() HeroLevelUp(H_KUJIN) end
 
 function HeroLostBattle(player, hero, opponent)
     if opponent ~= nil then
-        if hero == H_RANLETH then
-            RemoveArtefact(opponent, 230)
-            RemoveArtefact(opponent, 231)
-        elseif hero == H_BIARA then
-            RemoveArtefact(opponent, 232)
-            RemoveArtefact(opponent, 233)
-        elseif hero == H_SEPHINROTH then
-            RemoveArtefact(opponent, 236)
-            RemoveArtefact(opponent, 237)
-        elseif hero == H_LASZLO then
-            RemoveArtefact(opponent, 244)
-            RemoveArtefact(opponent, 245)
-        elseif hero == H_KUJIN then
-            RemoveArtefact(opponent, 247)
-            RemoveArtefact(opponent, 248)
-        elseif hero == H_THEODORUS then
-            RemoveArtefact(opponent, 251)
-            RemoveArtefact(opponent, 252)
+        for a = 200,255 do
+            if HasArtefact(opponent, a) then RemoveArtefact(opponent, a) end
         end
     end
 end
