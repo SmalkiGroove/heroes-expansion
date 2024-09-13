@@ -1,10 +1,4 @@
 
-function Routine_ArtifactAllSeeingCrown(player, hero)
-    log("$ Routine_ArtifactAllSeeingCrown")
-    local x,y,z = GetObjectPosition(hero)
-    OpenCircleFog(x, y, z, 999, player)
-end
-
 function Routine_ArtifactPouchOfGolds(player, hero)
     log("$ Routine_ArtifactPouchOfGolds")
     local level = GetHeroLevel(hero)
@@ -282,7 +276,6 @@ end
 
 
 CONTINUOUS_TRIGGER_ARTIFACTS_ROUTINES = {
-    [ARTIFACT_ALL_SEEING_CROWN] = Routine_ArtifactAllSeeingCrown,
     [ARTIFACT_BLOOD_CRYSTAL] = Routine_ArtifactBloodCrystal,
 }
 DAILY_TRIGGER_ARTIFACTS_ROUTINES = {
