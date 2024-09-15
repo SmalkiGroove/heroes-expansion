@@ -138,11 +138,11 @@ function HeroLevelUp_KujinMP() HeroLevelUp(H_KUJIN) end
 
 
 function HeroLostBattle(player, hero, opponent)
-    if opponent ~= nil then
-        for a = 200,255 do
-            if HasArtefact(opponent, a) then RemoveArtefact(opponent, a) end
-        end
-    end
+    -- if opponent ~= nil then
+    --     for a = 220,255 do
+    --         if HasArtefact(opponent, a) then RemoveArtefact(opponent, a) end
+    --     end
+    -- end
 end
 
 MAGIC_GUILD_HERO_BONUSES = {}

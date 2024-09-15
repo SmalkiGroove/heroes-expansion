@@ -121,13 +121,19 @@
 	ATTRIBUTE_TEXT = {
 		[0] = "Experience",
 		[1] = "Attack",
-		[2] = "Defence",
+		[2] = "Defense",
 		[3] = "Spellpower",
 		[4] = "Knowledge",
 		[5] = "Luck",
 		[6] = "Morale",
 		[7] = "Movement",
 		[8] = "Mana",
+	}
+	ATTRIBUTE_TEXT_ORIGIN = {
+		[1] = "Offence",
+		[2] = "Defence",
+		[3] = "SpellPower",
+		[4] = "Knowledge",
 	}
 	
 	--

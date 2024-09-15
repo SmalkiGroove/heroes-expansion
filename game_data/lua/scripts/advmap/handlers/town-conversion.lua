@@ -81,7 +81,7 @@ function HeroVisitConvertible(hero, obj)
     SetTriggerConvertible(obj, not nil)
 end
 
-function SetupMapObjectType(type, f, t)
+function SetupConvertibleTrigger(type, f, t)
     local names = GetObjectNamesByType(type)
     for _,name in names do
         MAP_CONVERTIBLES[name] = { faction=f, tier=t }
@@ -91,11 +91,11 @@ end
 
 function InitializeConvertibles()
 	for faction = 1,8 do
-		SetupMapObjectType(Towns_Types[faction], faction, 0)
-		SetupMapObjectType(Dwellings_T1[faction], faction, 1)
-		SetupMapObjectType(Dwellings_T2[faction], faction, 2)
-		SetupMapObjectType(Dwellings_T3[faction], faction, 3)
-		SetupMapObjectType(Dwellings_MP[faction], faction, 5)
+		SetupConvertibleTrigger(Towns_Types[faction], faction, 0)
+		SetupConvertibleTrigger(Dwellings_T1[faction], faction, 1)
+		SetupConvertibleTrigger(Dwellings_T2[faction], faction, 2)
+		SetupConvertibleTrigger(Dwellings_T3[faction], faction, 3)
+		SetupConvertibleTrigger(Dwellings_MP[faction], faction, 5)
 	end
 end
 

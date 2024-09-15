@@ -47,7 +47,8 @@ LoadScript("/scripts/advmap/handlers/artifacts-manager.lua", 17)
 LoadScript("/scripts/advmap/handlers/heroes-manager.lua", 18)
 LoadScript("/scripts/advmap/handlers/starting-armies.lua", 21)
 LoadScript("/scripts/advmap/handlers/town-conversion.lua", 22)
-LoadScript("/scripts/advmap/handlers/custom-abilities.lua", 23)
+LoadScript("/scripts/advmap/handlers/mapobjects-triggers.lua", 23)
+LoadScript("/scripts/advmap/handlers/custom-abilities.lua", 25)
 LoadScript("/scripts/game-vars.lua", 30)
 
 
@@ -245,6 +246,7 @@ function Init()
 		InitializeMapTowns()
 		InitializeHeroes()
 		InitializeConvertibles()
+		InitializeMapObjects()
 		ExecConsoleCommand("@UnblockGame()") UnblockGame()
 		log("Initializers done. The game can start. Have fun !")
 	else
@@ -260,4 +262,4 @@ else
 	ExecConsoleCommand("@if GetObjectiveState('H5X', FIRST_PLAYER) == OBJECTIVE_UNKNOWN then SetObjectiveState('H5X', OBJECTIVE_ACTIVE, FIRST_PLAYER) else LoadedGame_GameVars() end")
 end
 
-sleep(60) UnblockGame()
+sleep(30) UnblockGame()

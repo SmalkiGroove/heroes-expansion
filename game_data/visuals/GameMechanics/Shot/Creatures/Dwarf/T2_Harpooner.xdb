@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shot>
+	<StartEffect/>
+	<RotateStartEffectToTarget>false</RotateStartEffectToTarget>
+	<MissileShot>
+		<Model href="T2_Harpooner_pike.xdb#xpointer(/Model)"/>
+		<Effect/>
+		<Speed>0.03</Speed>
+		<Height>0.1</Height>
+		<ForwardOffset>-0.25</ForwardOffset>
+		<StartZOffset>1.564</StartZOffset>
+		<RightOffset>0.186</RightOffset>
+	</MissileShot>
+	<LineShot>
+		<Effects/>
+		<SkipSegmentsNumber>1</SkipSegmentsNumber>
+		<SegmentLength>2</SegmentLength>
+		<StepDelay>0</StepDelay>
+		<EffectLifeTime>1000</EffectLifeTime>
+	</LineShot>
+	<StrikeDelay>0</StrikeDelay>
+	<StrikeEffectID>SPELL_NONE</StrikeEffectID>
+	<DelayBetweenChains>0</DelayBetweenChains>
+	<StrikeVisualEffect/>
+</Shot>

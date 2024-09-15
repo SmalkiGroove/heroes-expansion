@@ -70,4 +70,4 @@ end
 
 
 -- log("Loaded custom-abilities.lua")
-ROUTINES_LOADED[23] = 1
+ROUTINES_LOADED[25] = 1
