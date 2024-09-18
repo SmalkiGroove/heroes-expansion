@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Model ObjectRecordID="1001104">
+	<Materials>
+		<Item href="#n:inline(Material)" id="item_6c39be2f-ece4-41f1-9d1d-d94ae8f88e72">
+			<Material ObjectRecordID="1001912">
+				<Texture href="BloodyWitch-BloodyWitch.(Texture).xdb#xpointer(/Texture)"/>
+				<Bump/>
+				<SpecFactor>0</SpecFactor>
+				<SpecColor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</SpecColor>
+				<Gloss/>
+				<MetalMirror>0</MetalMirror>
+				<DielMirror>0</DielMirror>
+				<Mirror/>
+				<CastShadow>true</CastShadow>
+				<ReceiveShadow>true</ReceiveShadow>
+				<Priority>0</Priority>
+				<TranslucentColor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</TranslucentColor>
+				<FloatParam>0</FloatParam>
+				<DetailTexture/>
+				<DetailScale>5</DetailScale>
+				<ProjectOnTerrain>false</ProjectOnTerrain>
+				<LightingMode>L_NORMAL</LightingMode>
+				<DynamicMode>DM_DONT_CARE</DynamicMode>
+				<Is2Sided>false</Is2Sided>
+				<Effect>M_GENERIC</Effect>
+				<AlphaMode>AM_ALPHA_TEST</AlphaMode>
+				<AffectedByFog>true</AffectedByFog>
+				<AddPlaced>false</AddPlaced>
+				<IgnoreZBuffer>false</IgnoreZBuffer>
+				<BackFaceCastShadow>false</BackFaceCastShadow>
+			</Material>
+		</Item>
+		<Item href="/1.xdb#xpointer(/Material)"/>
+	</Materials>
+	<Skeleton/>
+	<Geometry href="#n:inline(Geometry)" id="item_9112091f-38a8-4739-8e92-46c23b4fa76a">
+		<Geometry ObjectRecordID="1000887">
+			<SrcName href="/models/Creatures/Dungeon/BloodyWitch.mb"/>
+			<uid>E4D3F1C5-1D5D-41E6-9389-4E231AB74E75</uid>
+			<RootMesh/>
+			<RootJoint>Global</RootJoint>
+			<Size>
+				<x>1.65217</x>
+				<y>1.83895</y>
+				<z>1.95185</z>
+			</Size>
+			<Center>
+				<x>-0.023778</x>
+				<y>0.363461</y>
+				<z>0.975923</z>
+			</Center>
+			<BestFitPoint>
+				<x>-0.0109714</x>
+				<y>0.321393</y>
+				<z>1.74957</z>
+			</BestFitPoint>
+			<Dir>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0</w>
+			</Dir>
+			<AIGeometry href="#n:inline(AIGeometry)" id="item_891487cc-fa64-4d3f-beba-91c51ed28750">
+				<AIGeometry ObjectRecordID="1000459">
+					<SrcName href="/models/Creatures/Dungeon/BloodyWitch.mb"/>
+					<RootMesh>AI</RootMesh>
+					<RootJoint/>
+					<Volume>0</Volume>
+					<SolidPart>0</SolidPart>
+					<AABBCenter>
+						<x>0</x>
+						<y>0</y>
+						<z>0.956261</z>
+					</AABBCenter>
+					<AABBHalfSize>
+						<x>0.24832</x>
+						<y>0.24832</y>
+						<z>0.961928</z>
+					</AABBHalfSize>
+					<uid>47C3EEAC-C570-499D-96A5-4DA0D4333132</uid>
+				</AIGeometry>
+			</AIGeometry>
+			<NumMeshes>1</NumMeshes>
+			<MaterialQuantities>
+				<Item>2</Item>
+			</MaterialQuantities>
+			<MeshNames>
+				<Item>BodyShape</Item>
+			</MeshNames>
+			<MeshAnimated/>
+			<MeshWindAffected/>
+		</Geometry>
+	</Geometry>
+	<Animations/>
+	<WindPower>1</WindPower>
+</Model>

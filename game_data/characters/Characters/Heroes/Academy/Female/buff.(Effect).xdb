@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Effect ObjectRecordID="1000495">
+	<Instances>
+		<Item href="/Effects/_(Effect)/Characters/Heroes/Zehir/cast.(ParticleInstance) (2).xdb#xpointer(/ParticleInstance)"/>
+	</Instances>
+	<Lights>
+		<Item href="/Effects/_(Effect)/Characters/Heroes/Zehir/buff.(LightInstance).xdb#xpointer(/LightInstance)"/>
+	</Lights>
+	<Models>
+		<Item href="Body/Body.(ModelInstance).xdb#xpointer(/ModelInstance)"/>
+		<Item href="Body/Body2.(ModelInstance).xdb#xpointer(/ModelInstance)"/>
+		<Item href="Body/Body3.(ModelInstance).xdb#xpointer(/ModelInstance)"/>
+	</Models>
+	<WindAffected>false</WindAffected>
+	<WindPower>1</WindPower>
+	<Duration>2.5</Duration>
+</Effect>

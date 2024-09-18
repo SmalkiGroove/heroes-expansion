@@ -9,27 +9,33 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
       - name: Pack data
-        uses: ./.github/workflows/actions/package
-        with:
-          folder: data
-      - name: Pack doc
-        uses: ./.github/workflows/actions/package
-        with:
-          folder: doc
-      - name: Pack lua
-        uses: ./.github/workflows/actions/package
-        with:
-          folder: lua
+        run: zip -q -r h5x-data.pak *
+        working-directory: game_data/data
+
       - name: Pack texts
-        uses: ./.github/workflows/actions/package
+        run: zip -q -r h5x-texts.pak *
+        working-directory: game_data/texts
+
+      - name: Pack interface
+        run: zip -q -r h5x-interface.pak *
+        working-directory: game_data/interface
+
+      - name: Pack characters
+        run: zip -q -r h5x-characters.pak *
+        working-directory: game_data/characters
+
+      - name: Pack lua
+        run: zip -q -r h5x-lua.pak *
+        working-directory: game_data/lua
+
+      - name: Pack doc
+        run: zip -q -r h5x-doc.pak *
+        working-directory: game_data/doc
+
+      - name: Upload paks
+        uses: actions/upload-artifact@v4
         with:
-          folder: texts
-      - name: Pack visuals
-        uses: ./.github/workflows/actions/package
-        with:
-          folder: visuals
-      - name: Pack maps
-        uses: ./.github/workflows/actions/package
-        with:
-          folder: maps
+          name: pak
+          path: game_data/**/*.pak

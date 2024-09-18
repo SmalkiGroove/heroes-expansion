@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Effect ObjectRecordID="79">
+	<Instances>
+		<Item href="#n:inline(ParticleInstance)" id="item_62e6e74b-55f9-4bec-a40f-d2391a6118a1">
+			<ParticleInstance ObjectRecordID="83">
+				<SrcName/>
+				<Light>L_NORMAL</Light>
+				<Particle href="#n:inline(Particle)" id="item_4c4544f7-757a-4667-9835-b88301c661c3">
+					<Particle ObjectRecordID="36">
+						<SrcName href="/Effects/Characters/Knight/KnightCast.mb"/>
+						<ExportPrefix>Cast</ExportPrefix>
+						<WrapSize>
+							<x>0</x>
+							<y>0</y>
+						</WrapSize>
+						<Bound>407e59bebcff1abf26085640eb060d41ccb59e40b4e5a240d0d2a640</Bound>
+						<PerParticleFog>false</PerParticleFog>
+						<uid>1FCB0ADE-4B69-491C-9A2D-588908CB72CB</uid>
+					</Particle>
+				</Particle>
+				<Position>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Position>
+				<Rotation>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+					<w>1</w>
+				</Rotation>
+				<Scale>1</Scale>
+				<Speed>1</Speed>
+				<Offset>0</Offset>
+				<EndCycle>6.3</EndCycle>
+				<CycleCount>1</CycleCount>
+				<Pivot>
+					<x>0</x>
+					<y>0</y>
+				</Pivot>
+				<Textures>
+					<Item/>
+					<Item href="/Textures/Effects/Spells/Figure01.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/Effects/Spells/Figure02.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/Effects/Spells/Figure03.xdb#xpointer(/Texture)"/>
+					<Item/>
+					<Item/>
+					<Item href="/Textures/Effects/_Various/Glow02.xdb#xpointer(/Texture)"/>
+					<Item/>
+					<Item href="/Textures/Effects/Spells/EnergyRays00.xdb#xpointer(/Texture)"/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item href="/Textures/Effects/_Various/Glow01.xdb#xpointer(/Texture)"/>
+					<Item/>
+					<Item/>
+					<Item/>
+				</Textures>
+				<IsCrown>false</IsCrown>
+				<Static>P_STATIC</Static>
+				<DoesCastShadow>false</DoesCastShadow>
+				<GlueToBone>0</GlueToBone>
+				<GlueToNamedBone/>
+				<LeaveParticlesWhereStarted>false</LeaveParticlesWhereStarted>
+				<Priority>0</Priority>
+			</ParticleInstance>
+		</Item>
+	</Instances>
+	<Lights>
+		<Item href="cast.(LightInstance).xdb#xpointer(/LightInstance)"/>
+	</Lights>
+	<Models>
+		<Item href="Flag.(ModelInstance).xdb#xpointer(/ModelInstance)"/>
+	</Models>
+	<WindAffected>false</WindAffected>
+	<WindPower>1</WindPower>
+	<Duration>2.5</Duration>
+</Effect>

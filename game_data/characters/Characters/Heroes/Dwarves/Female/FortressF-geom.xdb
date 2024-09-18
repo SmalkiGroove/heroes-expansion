@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Geometry>
+	<SrcName href="/H5A1/Models/Heroes/RuneMageHero/RuneMageHero.mb"/>
+	<uid>F41C183A-7E3E-4516-9CCB-CF54C5B44838</uid>
+	<RootMesh/>
+	<RootJoint>Global</RootJoint>
+	<Size>
+		<x>2.54971</x>
+		<y>7.04404</y>
+		<z>3.8178</z>
+	</Size>
+	<Center>
+		<x>-0.293437</x>
+		<y>0.887377</y>
+		<z>1.82123</z>
+	</Center>
+	<BestFitPoint>
+		<x>0</x>
+		<y>0</y>
+		<z>0</z>
+	</BestFitPoint>
+	<Dir>
+		<x>0</x>
+		<y>0</y>
+		<z>0</z>
+		<w>0</w>
+	</Dir>
+	<AIGeometry href="FortressF-geom-AI.xdb#xpointer(/AIGeometry)"/>
+	<NumMeshes>5</NumMeshes>
+	<MaterialQuantities>
+		<Item>1</Item>
+		<Item>2</Item>
+		<Item>2</Item>
+		<Item>2</Item>
+		<Item>2</Item>
+	</MaterialQuantities>
+	<MeshNames>
+		<Item>MaskShape</Item>
+		<Item>MamontShape</Item>
+		<Item>RuneShape</Item>
+		<Item>HammerShape</Item>
+		<Item>flagShape</Item>
+	</MeshNames>
+	<MeshAnimated/>
+	<MeshWindAffected/>
+</Geometry>

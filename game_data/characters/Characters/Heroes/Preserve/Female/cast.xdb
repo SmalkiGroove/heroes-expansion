@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Effect ObjectRecordID="1000062">
+	<Instances>
+		<Item href="#n:inline(ParticleInstance)" id="item_1cc0efea-04f8-4afa-91b1-b4d0c8cc126b">
+			<ParticleInstance ObjectRecordID="1000072">
+				<SrcName/>
+				<Light>L_NORMAL</Light>
+				<Particle href="#n:inline(Particle)" id="item_7d47f046-0ff4-4981-9de3-76bfc68a921e">
+					<Particle ObjectRecordID="1000078">
+						<SrcName href="/Effects/Characters/Ranger/cast.mb"/>
+						<ExportPrefix>FX</ExportPrefix>
+						<WrapSize>
+							<x>0</x>
+							<y>0</y>
+						</WrapSize>
+						<Bound>b4de383f25030fc0f2a69840f8416541e9770341441a0441b9810541</Bound>
+						<PerParticleFog>false</PerParticleFog>
+						<uid>882798F9-E2D6-4B42-BB59-D9AF7B81F796</uid>
+					</Particle>
+				</Particle>
+				<Position>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Position>
+				<Rotation>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+					<w>1</w>
+				</Rotation>
+				<Scale>1</Scale>
+				<Speed>1</Speed>
+				<Offset>0</Offset>
+				<EndCycle>4.1</EndCycle>
+				<CycleCount>1</CycleCount>
+				<Pivot>
+					<x>0</x>
+					<y>0</y>
+				</Pivot>
+				<Textures>
+					<Item href="/Textures/Effects/_Various/Glow05.xdb#xpointer(/Texture)"/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item href="/Textures/Effects/Spells/RaysGold01.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/Effects/Spells/RaysGold02.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/Effects/_Various/glow12.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/Effects/_Various/SparkGreen01.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/Effects/Spells/leaf00.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/Effects/Spells/leaf01.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/Effects/Spells/leaf00.xdb#xpointer(/Texture)"/>
+				</Textures>
+				<IsCrown>false</IsCrown>
+				<Static>P_STATIC</Static>
+				<DoesCastShadow>false</DoesCastShadow>
+				<GlueToBone>0</GlueToBone>
+				<GlueToNamedBone/>
+				<LeaveParticlesWhereStarted>false</LeaveParticlesWhereStarted>
+				<Priority>0</Priority>
+			</ParticleInstance>
+		</Item>
+	</Instances>
+	<Lights>
+		<Item href="#n:inline(LightInstance)" id="item_d0db0433-2cc8-4a51-84c4-e4113c329abf">
+			<LightInstance ObjectRecordID="1000011">
+				<Light href="#n:inline(AnimLight)" id="item_0c8599f7-9cc6-4aab-b96d-eb67ee3c51b9">
+					<AnimLight ObjectRecordID="1000011">
+						<SrcName href="/Effects/Characters/Ranger/cast.mb"/>
+						<SelectNode>CastLight</SelectNode>
+						<uid>09E6A0E8-80D5-4032-A670-3DCD92A18248</uid>
+					</AnimLight>
+				</Light>
+				<Position>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Position>
+				<Rotation>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+					<w>1</w>
+				</Rotation>
+				<Scale>1</Scale>
+				<Speed>1</Speed>
+				<Offset>0</Offset>
+				<EndCycle>0</EndCycle>
+				<CycleCount>1</CycleCount>
+				<GlueToBone>0</GlueToBone>
+			</LightInstance>
+		</Item>
+	</Lights>
+	<Models>
+		<Item href="#n:inline(ModelInstance)" id="item_a490cb26-198b-4a07-a045-64dec995d1db">
+			<ModelInstance ObjectRecordID="1000021">
+				<Model href="/_(Model)/Effects/Characters/Ranger/cast.xdb#xpointer(/Model)"/>
+				<SkelAnim href="/_(BasicSkelAnim)/Effects/Characters/Ranger/cast.xdb#xpointer(/BasicSkelAnim)"/>
+				<Position>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Position>
+				<Rotation>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+					<w>1</w>
+				</Rotation>
+				<Scale>1</Scale>
+				<Offset>0</Offset>
+				<CycleLength>0</CycleLength>
+				<CycleCount>1</CycleCount>
+				<GlueToBone>0</GlueToBone>
+			</ModelInstance>
+		</Item>
+		<Item href="Body/Body.(ModelInstance).xdb#xpointer(/ModelInstance)"/>
+		<Item href="Head/Head.(ModelInstance).xdb#xpointer(/ModelInstance)"/>
+		<Item href="Hands/Hands.(ModelInstance)_cast.xdb#xpointer(/ModelInstance)"/>
+	</Models>
+	<WindAffected>false</WindAffected>
+	<WindPower>1</WindPower>
+	<Duration>2.5</Duration>
+</Effect>

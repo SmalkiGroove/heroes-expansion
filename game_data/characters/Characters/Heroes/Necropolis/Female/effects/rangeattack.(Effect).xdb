@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Effect>
+	<Instances>
+		<Item href="/Effects/_(Effect)/Characters/Heroes/Necromancer/RangeAttack.(ParticleInstance) (2).xdb#xpointer(/ParticleInstance)"/>
+		<Item href="HorseEye1.(ParticleInstance).xdb#xpointer(/ParticleInstance)"/>
+	</Instances>
+	<Lights/>
+	<Models>
+		<Item href="Body/Body.(ModelInstance).xdb#xpointer(/ModelInstance)"/>
+		<Item href="HandL.(ModelInstance).xdb#xpointer(/ModelInstance)"/>
+		<Item href="HandR.(ModelInstance).xdb#xpointer(/ModelInstance)"/>
+		<Item href="Face.(ModelInstance).xdb#xpointer(/ModelInstance)"/>
+	</Models>
+	<WindAffected>false</WindAffected>
+	<WindPower>1</WindPower>
+	<Duration>2.5</Duration>
+</Effect>
