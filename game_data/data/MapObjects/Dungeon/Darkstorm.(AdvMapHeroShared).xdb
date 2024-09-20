@@ -40,11 +40,11 @@
 	<SpecializationIcon href="/Textures/Icons/Heroes/Dungeon/Dungeon_Darkstorm_128x128.(Texture).xdb#xpointer(/Texture)"/>	
 	<FaceTexture href="/Textures/Icons/Heroes/Dungeon/Dungeon_Darkstorm_128x128.(Texture).xdb#xpointer(/Texture)"/>	
 	<FaceTextureSmall/>
-	<HeroCharacterArena href="/Characters/Heroes/Dungeon/Darkstorm/HeroCharacterArena.xdb#xpointer(/Character)" />
-	<HeroCharacterArenaMelee href="/Characters/Heroes/Dungeon/Darkstorm/HeroCharacterArenaMelee.xdb#xpointer(/Character)" />
-	<HeroCharacterAdventure href="/Characters/Heroes/Dungeon/Darkstorm/HeroCharacterAdventure.xdb#xpointer(/Character)" />
-	<HeroIndividualCamera href="/Characters/Heroes/Dungeon/Darkstorm/HeroIndividualCamera.xdb#xpointer(/Camera)" />
-	<CombatVisual href="/Characters/Heroes/Dungeon/Darkstorm/CombatVisual.xdb#xpointer(/CreatureVisual)" />
+	<HeroCharacterArena href="/Characters/Heroes/Warlock.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee/>
+	<HeroCharacterAdventure href="/Characters/Heroes/Warlock_LOD.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Warlock.xdb#xpointer(/CreatureVisual)"/>
 	<TownType>TOWN_DUNGEON</TownType>
 	<Editable>
 		<NameFileRef href="/Text/Game/Heroes/Persons/Dungeon/Darkstorm/Name.txt"/>
