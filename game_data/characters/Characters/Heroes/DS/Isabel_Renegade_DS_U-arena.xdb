@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimSet>
+	<animations>
+		<Item>
+			<Kind>idle00</Kind>
+			<Anim href="Isabel_Renegade_DS_U-arena-idle00.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>idle01</Kind>
+			<Anim href="Isabel_Renegade_DS_U-arena-idle01.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>idle02</Kind>
+			<Anim href="Isabel_Renegade_DS_U-arena-idle02.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>idle03</Kind>
+			<Anim href="Isabel_Renegade_DS_U-arena-idle03.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>move</Kind>
+			<Anim href="Isabel_Renegade_DS_U-arena-move.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>move_sp</Kind>
+			<Anim href="Isabel_Renegade_DS_U-arena-move_sp.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>spbellicose</Kind>
+			<Anim href="Isabel_Renegade_DS_U-arena-spbellicose.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>spmockery</Kind>
+			<Anim href="Isabel_Renegade_DS_U-arena-spmockery.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>spneutral</Kind>
+			<Anim href="Isabel_Renegade_DS_U-arena-spneutral.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>spsad</Kind>
+			<Anim href="Isabel_Renegade_DS_U-arena-spsad.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>stir_love</Kind>
+			<Anim href="Isabel_Renegade_DS_U-arena-stir_love.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+	</animations>
+	<ExpSrcScene href="/H5A1/Models/Heroes/Isabel_Renegade/Isabel_CS.mb"/>
+	<ExpSrcClipFolder href="/H5A1/Animations/Dialogs/Isabel/Isabel_unmounted/Clip/"/>
+	<ExpRootTransform>Global</ExpRootTransform>
+</AnimSet>
