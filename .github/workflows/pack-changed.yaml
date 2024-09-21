@@ -15,6 +15,7 @@ jobs:
         uses: dorny/paths-filter@v3
         id: check-data
         with:
+          base: ${{ github.ref }}
           filters: |
             changed:
               - 'game_data/data/**'
@@ -27,6 +28,7 @@ jobs:
         uses: dorny/paths-filter@v3
         id: check-texts
         with:
+          base: ${{ github.ref }}
           filters: |
             changed:
               - 'game_data/texts/**'
@@ -39,6 +41,7 @@ jobs:
         uses: dorny/paths-filter@v3
         id: check-interface
         with:
+          base: ${{ github.ref }}
           filters: |
             changed:
               - 'game_data/interface/**'
@@ -51,6 +54,7 @@ jobs:
         uses: dorny/paths-filter@v3
         id: check-characters
         with:
+          base: ${{ github.ref }}
           filters: |
             changed:
               - 'game_data/characters/**'
@@ -63,6 +67,7 @@ jobs:
         uses: dorny/paths-filter@v3
         id: check-lua
         with:
+          base: ${{ github.ref }}
           filters: |
             changed:
               - 'game_data/lua/**'
@@ -75,6 +80,7 @@ jobs:
         uses: dorny/paths-filter@v3
         id: check-doc
         with:
+          base: ${{ github.ref }}
           filters: |
             changed:
               - 'game_data/doc/**'

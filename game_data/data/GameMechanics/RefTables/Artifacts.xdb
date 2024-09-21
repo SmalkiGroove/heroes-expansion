@@ -1205,26 +1205,27 @@
 		</Item>
 		<Item>
 			<ID>DWARVEN_MITHRAL_CUIRASS</ID>
+			<!-- <ID>ARTIFACT_SHANTIRI_MOON_DISC</ID> -->
 			<obj>
-				<NameFileRef href="/Text/Game/Artifacts/XXX/Name.txt"/>
-				<DescriptionFileRef href="/Text/Game/Artifacts/XXX/Description.txt"/>
+				<NameFileRef href="/Text/Game/Artifacts/ShantiriMoonDisc/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artifacts/ShantiriMoonDisc/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MINOR</Type>
-				<Slot>INVENTORY</Slot>
-				<Icon href="/Textures/Icons/Blank.xdb#xpointer(/Texture)"/>
-				<CostOfGold>1</CostOfGold>
-				<AIValue>1</AIValue>
-				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
+				<Type>ARTF_CLASS_RELIC</Type>
+				<Slot>NECK</Slot>
+				<Icon href="/Textures/HeroScreen/Artifacts/ShantiriMoonDisc.xdb#xpointer(/Texture)"/>
+				<CostOfGold>20000</CostOfGold>
+				<AIValue>30000</AIValue>
+				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>0</Defence>
+					<Defence>4</Defence>
 					<Knowledge>0</Knowledge>
-					<SpellPower>0</SpellPower>
+					<SpellPower>4</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
-				<ArtifactShared href="/MapObjects/Artifacts/XXX.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
-				<AvailableForPresets>false</AvailableForPresets>
+				<ArtifactShared href="/MapObjects/Artifacts/ShantiriMoonDisc.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
+				<AvailableForPresets>true</AvailableForPresets>
 				<PresetPrice>0</PresetPrice>
 			</obj>
 		</Item>
@@ -4034,7 +4035,7 @@
 			</obj>
 		</Item>	
 		<Item>
-			<ID>ARTIFACT_SHANTIRI_SOUTH</ID>
+			<ID>ARTIFACT_GOLDEN_GOOSE</ID>
 			<obj>
 				<NameFileRef href="/Text/Game/Artifacts/ShantiriSouth/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/ShantiriSouth/Description.txt"/>
@@ -4086,25 +4087,25 @@
 		<Item>
 			<ID>ARTIFACT_SHANTIRI_MOON_DISC</ID>
 			<obj>
-				<NameFileRef href="/Text/Game/Artifacts/ShantiriMoonDisc/Name.txt"/>
-				<DescriptionFileRef href="/Text/Game/Artifacts/ShantiriMoonDisc/Description.txt"/>
+				<NameFileRef href="/Text/Game/Artifacts/XXX/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artifacts/XXX/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_RELIC</Type>
+				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>INVENTORY</Slot>
-				<Icon href="/Textures/HeroScreen/Artifacts/ShantiriMoonDisc.xdb#xpointer(/Texture)"/>
-				<CostOfGold>80000</CostOfGold>
-				<AIValue>26000</AIValue>
+				<Icon href="/Textures/Icons/Blank.xdb#xpointer(/Texture)"/>
+				<CostOfGold>1</CostOfGold>
+				<AIValue>1</AIValue>
 				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
-					<Knowledge>6</Knowledge>
-					<SpellPower>6</SpellPower>
+					<Knowledge>0</Knowledge>
+					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
-				<ArtifactShared href="/MapObjects/Artifacts/ShantiriMoonDisc.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
-				<AvailableForPresets>true</AvailableForPresets>
+				<ArtifactShared href="/MapObjects/Artifacts/XXX.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
+				<AvailableForPresets>false</AvailableForPresets>
 				<PresetPrice>0</PresetPrice>
 			</obj>
 		</Item>	
