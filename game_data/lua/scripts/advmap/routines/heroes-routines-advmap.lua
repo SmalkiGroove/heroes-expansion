@@ -855,11 +855,11 @@ function Routine_GainBonusExpAndRes(player, hero, combatIndex)
     for i = 0,stacks-1 do
         local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 0, i)
         local tier = CREATURES[creature][2]
-        local value = tier + power(2, tier)
+        local value = 2*tier + power(2, tier)
         total = total + count * value
     end
-    AddHeroStatAmount(player, hero, STAT_EXPERIENCE, total)
-    AddPlayerResource(player, hero, GOLD, trunc(0.5*total))
+    AddHeroStatAmount(player, hero, STAT_EXPERIENCE, trunc(1.2*total))
+    AddPlayerResource(player, hero, GOLD, trunc(0.8*total))
 end
 
 function Routine_TownBuildingUp(player, hero)
