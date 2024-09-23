@@ -42,8 +42,9 @@ function GetArmyStrength(combatIndex, side)
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, side)
 	for i = 0,stacks-1 do
         local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, side, i)
-        value = value + count * power(2, CREATURES[creature][2])
+        value = value + died * power(2, CREATURES[creature][2])
     end
+	return value
 end
 
 

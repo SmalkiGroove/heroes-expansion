@@ -878,7 +878,6 @@ function Routine_TownBuildingUp(player, hero)
                     [TOWN_BUILDING_DWELLING_6] = {10000, 20000},
                     [TOWN_BUILDING_DWELLING_7] = {17500, 32500},
                     [TOWN_BUILDING_INFERNO_INFERNAL_LOOM] = {3000},
-                    [TOWN_BUILDING_INFERNO_SACRIFICIAL_PIT] = {5500},
                 }
                 local name_root = "/Text/Game/TownBuildings/Inferno/"
                 local name_file = {

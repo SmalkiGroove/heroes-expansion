@@ -146,7 +146,9 @@ end
 function Routine_ArtifactVikingShield(player, hero, combatIndex)
     log("$ Routine_ArtifactVikingShield")
     local value = GetArmyStrength(combatIndex, 0)
-    AddPlayerResource(player, hero, WOOD, round(0.05 * value))
+    local split = random(0,10,value)
+    AddPlayerResource(player, hero, WOOD, round(0.01 * split * value))
+    AddPlayerResource(player, hero, ORE, round(0.01 * (10-split) * value))
 end
 
 Var_StaffLyreVictories = {}
