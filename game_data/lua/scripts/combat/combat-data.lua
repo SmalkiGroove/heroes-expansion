@@ -24,6 +24,7 @@ ROUTINE_VARS = {
     GriffinDives = {},
     GremlinShot = "none",
     AvatarOfDeath = "none",
+    Darkstorm = "none",
     Incendiary = nil,
     AtbBoosted = {},
     GoblinsTotal = 0,

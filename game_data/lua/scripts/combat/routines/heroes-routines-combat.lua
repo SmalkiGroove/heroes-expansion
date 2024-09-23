@@ -467,11 +467,24 @@ function Routine_ScoutsMoveFirst(side, hero)
     SetATB_CreatureTypes(side, {CREATURE_SCOUT,CREATURE_ASSASSIN,CREATURE_STALKER}, ATB_INSTANT)
 end
 
+function Routine_SummonDarkstorm(side, hero)
+    -- log("Trigger summon darkstorm !")
+    SummonCreatureStack_X(side, CREATURE_DARKSTORM, GetHeroLevel(side), 1)
+    sleep(1)
+    for i,cr in GetUnits(side, CREATURE) do
+        local type = GetCreatureType(cr)
+        if type == CREATURE_DARKSTORM then
+            ROUTINE_VARS.Darkstorm = cr
+            SetATB_ID(cr, ATB_INSTANT)
+        end
+    end
+end
+
 function Routine_MinotaursMoveNext(side, hero)
     -- log("Trigger minotaurs play next !")
-    if CURRENT_UNIT == hero then
-        SetATB_CreatureTypes(side, {CREATURE_MINOTAUR,CREATURE_MINOTAUR_KING,CREATURE_MINOTAUR_CAPTAIN}, ATB_NEXT)
-    end
+    -- if CURRENT_UNIT == hero then
+    --     SetATB_CreatureTypes(side, {CREATURE_MINOTAUR,CREATURE_MINOTAUR_KING,CREATURE_MINOTAUR_CAPTAIN}, ATB_NEXT)
+    -- end
 end
 
 function Routine_RidersHydraSynergy(side, hero)
@@ -888,6 +901,7 @@ COMBAT_START_HERO_ROUTINES = {
     [H_ZEHIR] = Routine_CastSummonElementals,
     -- dungeon
     [H_VAYSHAN] = Routine_ScoutsMoveFirst,
+    [H_DARKSTORM] = Routine_SummonDarkstorm,
     [H_SYLSAI] = Routine_HeroCastRage,
     [H_SHADYA] = Routine_CastRandomDeepFrost,
     -- necropolis
