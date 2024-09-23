@@ -9,10 +9,14 @@ end
 
 function Routine_BallistaRandomSalvo(side, hero)
     -- log("Trigger ballista random shoot !")
-    local n = 1 + trunc(GetHeroLevel(side) * 0.1)
-    for i = 1,n do
-        RandomShoot_Ballista(side)
-        sleep(600)
+    local ballista = UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_BALLISTA'
+    if IsCombatUnit(ballista) then
+        local n = 1 + trunc(GetHeroLevel(side) * 0.1)
+        for i = 1,n do
+            local target = RandomCreature(1-side,i)
+            if target then ShootCombatUnit(ballista, target) end
+            sleep(600)
+        end
     end
 end
 
@@ -151,7 +155,7 @@ function Routine_HunterRandomShoot(side, hero)
             end
         end
     end
-    if hunter ~= "none" then
+    if largest > 0 then
         local target = RandomCreature(1-side,largest)
         if target then ShootCombatUnit(hunter, target) end
     end
@@ -298,7 +302,7 @@ function Routine_SpearWielderCoordination(side, hero)
         if IsCreature(CURRENT_UNIT) then
             local type = GetCreatureType(CURRENT_UNIT)
             if type == CREATURE_AXE_FIGHTER or type == CREATURE_AXE_THROWER or type == CREATURE_HARPOONER then
-                if GetCreatureNumber(CURRENT_UNIT) > 10 then
+                if GetCreatureNumber(CURRENT_UNIT) >= 28 + GetHeroLevel(side) then
                     HeroCast_Target(hero, SPELL_EFFECT_COORDINATION, NO_COST, CURRENT_UNIT)
                 end
             end
@@ -342,7 +346,6 @@ end
 
 function Routine_CastEarthquake(side, hero)
     -- log("Trigger earthquake !")
-    -- HeroCast_Area(hero, SPELL_UBER_METEOR_SHOWER, FREE_MANA, x, r)
     HeroCast_Global(hero, SPELL_EARTHQUAKE, FREE_MANA)
     sleep(600)
 end
@@ -372,8 +375,18 @@ end
 function Routine_GremlinRandomShoot(side, hero)
     -- log("Trigger gremlins random shoot !")
     if CURRENT_UNIT == hero then
-        RandomShoot_CreatureTypes(side, {CREATURE_GREMLIN,CREATURE_MASTER_GREMLIN,CREATURE_GREMLIN_SABOTEUR})
-        -- SetATB_CreatureTypes(side, {CREATURE_GREMLIN,CREATURE_MASTER_GREMLIN,CREATURE_GREMLIN_SABOTEUR}, 0.1)
+        for i,cr in GetUnits(side, CREATURE) do
+            if cr ~= ROUTINE_VARS.GremlinShot then
+                local type = GetCreatureType(cr)
+                if type == CREATURE_GREMLIN or type == CREATURE_MASTER_GREMLIN or type == CREATURE_GREMLIN_SABOTEUR then
+                    local target = RandomCreature(1-side,COMBAT_TURN+i)
+                    ShootCombatUnit(cr, target)
+                    SetATB_ID(cr, ATB_HALF)
+                    ROUTINE_VARS.GremlinShot = cr
+                    return
+                end
+            end
+        end
     end
 end
 
@@ -384,7 +397,7 @@ function Routine_RakshasasAbility(side, hero)
         local type = GetCreatureType(cr)
         if type == CREATURE_RAKSHASA or type == CREATURE_RAKSHASA_RUKH or type == CREATURE_RAKSHASA_KSHATRI then
             UseCombatAbility(cr, SPELL_ABILITY_DASH)
-            SetATB_ID(cr, ATB_HALF)
+            -- SetATB_ID(cr, ATB_HALF)
         end
     end
 end
@@ -399,7 +412,7 @@ end
 function Routine_CastMultipleArcaneCrystals(side, hero)
     -- log("Trigger random arcane crystals !")
     local m = GetUnitManaPoints(hero)
-    local n = trunc(0.11 * m)
+    local n = trunc(0.125 * m)
     local x1 = 15 - 13 * side
     local x2 = 11 - 5 * side
     for i = 1,n do
@@ -411,8 +424,17 @@ end
 
 function Routine_MagesCastMagicFist(side, hero)
     -- log("Trigger mages magic fist !")
-    CreatureTypesCast_RandomTarget(side, 1-side, {CREATURE_MAGI,CREATURE_ARCH_MAGI,CREATURE_COMBAT_MAGE}, SPELL_MAGIC_FIST)
-    SetATB_CreatureTypes(side, {CREATURE_MAGI,CREATURE_ARCH_MAGI,CREATURE_COMBAT_MAGE}, 0.1)
+    local creatures = GetUnits(unit_side, CREATURE)
+    for i,cr in creatures do
+        if type == CREATURE_MAGI or type == CREATURE_ARCH_MAGI or type == CREATURE_COMBAT_MAGE then
+            local target = RandomCreature(1-side,i)
+            if target then
+                UnitCastAimedSpell(cr, SPELL_MAGIC_FIST, target) sleep(100)
+            end
+            UnitCastAimedSpell(cr, SPELL_DEFLECT_ARROWS, cr) sleep(100)
+            SetATB_ID(cr, 0.1)
+        end
+    end
 end
 
 function Routine_CastSummonElementals(side, hero)
@@ -631,13 +653,16 @@ end
 
 function Routine_BallistaShootUnit(side, hero)
     -- log("Trigger fireball ballista shoot !")
-    if CURRENT_UNIT == UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_BALLISTA' then
+    local ballista = UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_BALLISTA'
+    if not IsCombatUnit(ballista) then return end
+
+    if CURRENT_UNIT == ballista then
         SetATB_ID(CURRENT_UNIT, ATB_ZERO)
     elseif CURRENT_UNIT_SIDE ~= side then
         if IsCreature(CURRENT_UNIT) then
             local m = GetUnitManaPoints(hero)
             if m >= 3 then
-                TargetShoot_Ballista(side, CURRENT_UNIT)
+                ShootCombatUnit(ballista, CURRENT_UNIT)
                 SetMana(hero, m-3)
                 ShowFlyingSign("/Text/Game/Scripts/Combat/Bombardier.txt", hero, 9)
             end

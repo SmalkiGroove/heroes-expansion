@@ -7,11 +7,16 @@ function HasHeroActiveArtifactSet(id, artfset) return HERO_DATA[id].ArtfSets[art
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
-function GetArmySummary(side)
-    local creatures = GetUnits(side, CREATURE)
-    for i,cr in creatures do
-        local nb = GetCreatureNumber(cr)
-        ROUTINE_VARS.InitialCounts[cr] = nb
+function GetArmySummary()
+    for side = 1,2 do
+        local creatures = GetUnits(side, CREATURE)
+        for i,cr in creatures do
+            local type = GetCreatureType(cr)
+            local nb = GetCreatureNumber(cr)
+            local x, y = GetUnitPosition(cr)
+            ROUTINE_VARS.InitialCounts[cr] = nb
+            RANDOM_SEED = RANDOM_SEED + type + nb + x + y
+        end
     end
 end
 
@@ -54,55 +59,6 @@ end
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
-
-function RandomShoot_CreatureTypes(side, types)
-    local creatures = GetUnits(side,CREATURE)
-    for i,cr in creatures do
-        if contains(types, GetCreatureType(cr)) then
-            local target = RandomCreature(1-side,1+i)
-            if target then
-                ShootCombatUnit(cr, target)
-                sleep(100)
-            end
-        end
-    end
-end
-
-function RandomShoot_Ballista(side)
-    local ballista = UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_BALLISTA'
-    local target = RandomCreature(1-side,0)
-    if IsCombatUnit(ballista) and target then
-        ShootCombatUnit(ballista, target)
-    end
-end
-
-function TargetShoot_CreatureTypes(side, types, target)
-    local creatures = GetUnits(side,CREATURE)
-    for i,cr in creatures do
-        if contains(types, GetCreatureType(cr)) then
-            ShootCombatUnit(cr, target)
-            sleep(100)
-        end
-    end
-end
-
-function TargetShoot_Ballista(side, target)
-    local ballista = UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_BALLISTA'
-    ShootCombatUnit(ballista, target)
-end
-
-function CreatureTypesCast_RandomTarget(unit_side, target_side, types, spell)
-    local creatures = GetUnits(unit_side, CREATURE)
-    for i,cr in creatures do
-        if contains(types, GetCreatureType(cr)) then
-            local target = RandomCreature(target_side,i)
-            if target then
-                UnitCastAimedSpell(cr, spell, target)
-                sleep(100)
-            end
-        end
-    end
-end
 
 function HeroCast_Target(hero, spell, mana, target)
     local m = GetUnitManaPoints(hero)
@@ -211,7 +167,7 @@ function SetATB_WarMachineType(side, type, value)
 end
 
 function CreatureToUndead(creature)
-	if CREATURES[creature][1] == NECROPOLIS then return creature end
+	if CREATURES[creature][1] == NECROPOLIS or creature == CREATURE_BLACK_KNIGHT or creature == CREATURE_DEATH_KNIGHT or creature == CREATURE_MUMMY then return creature end
 	local tier = CREATURES[creature][2]
 	return CREATURES_BY_FACTION[NECROPOLIS][tier][1]
 end
@@ -220,7 +176,6 @@ end
 function InitializeRandomSeed()
     RANDOM_SEED = RANDOM_SEED + HERO_DATA[0].Level
     RANDOM_SEED = RANDOM_SEED + HERO_DATA[1].Level
-    print("Combat random seed : "..RANDOM_SEED)
 end
 
 

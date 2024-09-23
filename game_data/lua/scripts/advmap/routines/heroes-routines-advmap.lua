@@ -3,15 +3,6 @@
 ---------------------------------------------------------------------------------------------------------------------------------------------
 -- HAVEN
 
-function Routine_DoublePeasantTax(player, hero)
-    log("$ Routine_DoublePeasantTax")
-    local amount = 0
-    amount = amount + GetHeroCreatures(hero, CREATURE_PEASANT)
-    amount = amount + GetHeroCreatures(hero, CREATURE_MILITIAMAN)
-    amount = amount + GetHeroCreatures(hero, CREATURE_LANDLORD)
-    AddPlayerResource(player, hero, GOLD, amount)
-end
-
 function Routine_AddHeroCavaliers(player, hero)
     log("$ Routine_AddHeroCavaliers")
     local amount = round(0.11 * GetHeroLevel(hero))
@@ -34,6 +25,15 @@ function Routine_AddRecruitsPeasants(player, hero)
             SetObjectDwellingCreatures(hut, CREATURE_PEASANT, current + amount)
         end
     end
+end
+
+function Routine_DoublePeasantTax(player, hero)
+    log("$ Routine_DoublePeasantTax")
+    local amount = 0
+    amount = amount + GetHeroCreatures(hero, CREATURE_PEASANT)
+    amount = amount + GetHeroCreatures(hero, CREATURE_MILITIAMAN)
+    amount = amount + GetHeroCreatures(hero, CREATURE_LANDLORD)
+    AddPlayerResource(player, hero, GOLD, amount)
 end
 
 Var_Dougal_TrainCount = 0
@@ -101,10 +101,15 @@ function Routine_UpgradeMonastery(player, hero)
     for town,data in MAP_TOWNS do
         if IsHeroInTown(hero, town, 1, 1) then
             if data.faction == HAVEN then
-                UpgradeTownBuilding(town, TOWN_BUILDING_DWELLING_5)
-                sleep()
-                if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_5) == 1 then
-                    SetObjectDwellingCreatures(town, CREATURE_PRIEST, 0)
+                local monastery = GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_5)
+                if monastery < 2 then
+                    UpgradeTownBuilding(town, TOWN_BUILDING_DWELLING_5) sleep()
+                    if monastery == 0 then
+                        SetObjectDwellingCreatures(town, CREATURE_PRIEST, 0)
+                    end
+                else
+                    local cur = GetObjectDwellingCreatures(town, CREATURE_PRIEST)
+                    SetObjectDwellingCreatures(town, CREATURE_PRIEST, cur + WEEKS)
                 end
             end
         end
@@ -119,8 +124,9 @@ function Routine_ConvertPeasantToPriest(player, hero)
     elseif GetHeroCreatures(hero, CREATURE_LANDLORD) > 0 then peasant = CREATURE_LANDLORD
     end
     if peasant then
-        RemoveHeroCreatures(hero, peasant, 1)
-        AddHeroCreatureType(player, hero, HAVEN, 5, 1, 1)
+        local convert = 1 + trunc(0.01 * GetHeroCreatures(hero, peasant))
+        RemoveHeroCreatures(hero, peasant, convert)
+        AddHeroCreatureType(player, hero, HAVEN, 5, convert, 1)
     end
 end
 
@@ -184,13 +190,13 @@ end
 
 function Routine_AddHeroWolves(player, hero)
     log("$ Routine_AddHeroWolves")
-    AddHeroCreaturePerLevel(player, hero, CREATURE_WOLF, 2.0)
+    AddHeroCreaturePerLevel(player, hero, CREATURE_WOLF, 3.0)
 end
 
-function Routine_GiveArtifactLegendaryBoots(player, hero, level)
-    log("$ Routine_GiveArtifactLegendaryBoots")
+function Routine_GiveArtifactPlumedBoots(player, hero, level)
+    log("$ Routine_GiveArtifactPlumedBoots")
     if level == 20 then
-        GiveArtifact(hero, ARTIFACT_LEGENDARY_BOOTS)
+        GiveArtifact(hero, ARTIFACT_PLUMED_BOOTS)
     end
 end
 
@@ -224,6 +230,10 @@ function Routine_ElvenSageVictory(player, hero, combatIndex)
         if n > 0 then
             local sk = upgradable[random(1,n,Var_Elleshar_BattleWon)]
             GiveHeroSkill(hero, sk)
+        else
+            for _,h in GetPlayerHeroes(player) do
+                if h ~= hero then ChangeHeroStat(h, STAT_KNOWLEDGE, 1) end
+            end
         end
     end
 end
@@ -396,7 +406,6 @@ end
 function Routine_AddOtherHeroesGremlins(player, hero)
     log("$ Routine_AddOtherHeroesGremlins")
     local amount = GetHeroLevel(hero)
-    -- local amount = round(0.50 * GetHeroLevel(hero))
     for _,h in GetPlayerHeroes(player) do
         if h ~= hero and HEROES[h].faction == ACADEMY then
             AddHeroCreatureType(player, h, ACADEMY, 1, amount, 0)
@@ -424,6 +433,7 @@ function Routine_AssembleGargoyles(player, hero)
         end
     end
     if total > 0 then
+        AddPlayerResource(player, hero, ORE, total)
         ShowFlyingSign({"/Text/Game/Scripts/HeroSpe/AssembleGargoyles.txt"; num=total}, hero, player, FLYING_SIGN_TIME)
     end
 end
@@ -449,6 +459,7 @@ function Routine_FixDestroyedGolems(player, hero, combatIndex)
         end
     end
     if total > 0 then
+        AddPlayerResource(player, hero, ORE, total)
         ShowFlyingSign({"/Text/Game/Scripts/HeroSpe/AssembleGargoyles.txt"; num=total}, hero, player, FLYING_SIGN_TIME)
     end
 end
@@ -483,19 +494,27 @@ function Routine_RespawnDjinns(player, hero, combatIndex)
     ChangeHeroStat(hero, STAT_MANA_POINTS, -cost)
 end
 
-function Routine_UpgradeSilverPavillon(player, hero)
+function Routine_UpgradeSilverPavillon(player, hero, level)
     log("$ Routine_UpgradeSilverPavillon")
-    for town,data in MAP_TOWNS do
-        if IsHeroInTown(hero, town, 1, 1) then
-            if data.faction == ACADEMY then
+    if mod(level, 10) == 0 then
+        local amount = 0
+        for _,town in GetHeroTowns(player, hero) do
+            local pavillon = GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_6)
+            if pavillon < 2 then
                 UpgradeTownBuilding(town, TOWN_BUILDING_DWELLING_6)
-                sleep()
-                if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_6) == 1 then
-                    SetObjectDwellingCreatures(town, CREATURE_RAKSHASA, 0)
-                end
+                return
+            else
+                amount = amount + 1
             end
         end
+        AddHeroCreatureType(player, hero, ACADEMY, 6, amount * level, 1)
     end
+end
+
+function Routine_GainExpPerSulfur(player, hero)
+    log("$ Routine_GainExpPerSulfur")
+    local amount = 5 * GetHeroLevel(hero) * GetPlayerResource(player, SULFUR)
+    AddHeroStatAmount(player, hero, STAT_EXPERIENCE, amount)
 end
 
 function Routine_GainSulfurPerBattle(player, hero, combatIndex)
@@ -506,7 +525,7 @@ end
 function Routine_GetCraftingResources(player, hero, level)
     log("$ Routine_GetCraftingResources")
     local res = mod(level, 6)
-    AddPlayerResource(player, hero, res, 1)
+    AddPlayerResource(player, hero, res, 2)
 end
 
 function Routine_IncreaseKnowledgeTemp(hero, obj)
@@ -568,9 +587,33 @@ function Routine_AddHeroEaglePerLevel(player, hero, level)
     AddHeroCreatures(hero, CREATURE_ARCANE_EAGLE, 1)
 end
 
+Var_EaglesReviving = {}
 function Routine_RebirthEagleToPhoenix(player, hero, combatIndex)
     log("$ Routine_RebirthEagleToPhoenix")
-    
+    local dead_eagles = 0
+    local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
+    for i = 0,stacks-1 do
+        local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
+        if creature == CREATURE_ARCANE_EAGLE then
+            dead_eagles = dead_eagles + died
+        end
+    end
+    if dead_eagles > 0 then
+        local date = TURN + 28 - trunc(0.5 * GetHeroLevel(hero))
+        if Var_EaglesReviving[date] then
+            Var_EaglesReviving[date] = Var_EaglesReviving[date] + dead_eagles
+        else
+            Var_EaglesReviving[date] = dead_eagles
+        end
+    end
+end
+
+function Routine_RebirthPhoenixesDaily(player, hero)
+    log("$ Routine_RebirthPhoenixesDaily")
+    if Var_EaglesReviving[TURN] then
+        AddHeroCreatures(hero, CREATURE_PHOENIX, Var_EaglesReviving[TURN])
+        Var_EaglesReviving[TURN] = nil
+    end
 end
 
 
@@ -595,7 +638,12 @@ function Routine_BuildRitualPit(player, hero)
     for town,data in MAP_TOWNS do
         if IsHeroInTown(hero, town, 1, 1) then
             if data.faction == DUNGEON then
-                UpgradeTownBuilding(town, TOWN_BUILDING_DUNGEON_RITUAL_PIT)
+                if GetTownBuildingLevel(town, TOWN_BUILDING_DUNGEON_RITUAL_PIT) == 0 then
+                    UpgradeTownBuilding(town, TOWN_BUILDING_DUNGEON_RITUAL_PIT)
+                else
+                    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_2, CREATURE_WITCH, 23 + WEEKS)
+                    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_3, CREATURE_MINOTAUR, 16 + WEEKS)
+                end
             end
         end
     end
@@ -684,7 +732,7 @@ end
 
 function Routine_AddHeroManticores(player, hero)
     log("$ Routine_AddHeroManticores")
-    AddHeroCreaturePerLevel(player, hero, CREATURE_MANTICORE, 0.3)
+    AddHeroCreaturePerLevel(player, hero, CREATURE_MANTICORE, 0.4)
 end
 
 
@@ -972,7 +1020,7 @@ end
 
 function Routine_GiveArtifactCentaurCrossbow(player, hero)
     log("$ Routine_GiveArtifactCentaurCrossbow")
-    GiveArtifact(hero, ARTIFACT_CENTAUR_CROSSBOW)
+    GiveArtifact(hero, ARTIFACT_CENTAUR_CROSSBOW, 1)
 end
 
 function Routine_AddRecruitsCentaurs(player, hero)
@@ -1005,8 +1053,7 @@ function Routine_UpgradeChamberOfWrath(player, hero)
     for town,data in MAP_TOWNS do
         if IsHeroInTown(hero, town, 1, 1) then
             if data.faction == STRONGHOLD then
-                UpgradeTownBuilding(town, TOWN_BUILDING_DWELLING_5)
-                sleep()
+                UpgradeTownBuilding(town, TOWN_BUILDING_DWELLING_5) sleep()
                 if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_5) == 1 then
                     SetObjectDwellingCreatures(town, CREATURE_ORCCHIEF_BUTCHER, 0)
                 end
@@ -1061,7 +1108,6 @@ START_TRIGGER_HERO_ROUTINES = {
     [H_ERLING] = Routine_UpgradeRunicShrine,
     [H_EBBA] = Routine_GiveArtifactRuneOfFlame,
     -- academy
-    [H_DAVIUS] = Routine_UpgradeSilverPavillon,
     [H_RISSA] = Routine_RefreshTimeShift,
     -- dungeon
     [H_YRWANNA] = Routine_BuildRitualPit,
@@ -1094,8 +1140,10 @@ DAILY_TRIGGER_HERO_ROUTINES = {
     -- academy
     [H_HAVEZ] = Routine_AddOtherHeroesGremlins,
     [H_MAAHIR] = Routine_AddOtherHeroesExperience,
+    [H_NATHIR] = Routine_GainExpPerSulfur,
     [H_GALIB] = Routine_GenerateGoldsPerDjinn,
     [H_RISSA] = Routine_RefreshTimeShift,
+    [H_MINASLI] = Routine_RebirthPhoenixesDaily,
     -- dungeon
     [H_VAYSHAN] = Routine_GenerateGoldPerScout,
     [H_SORGAL] = Routine_AddHeroRiders,
@@ -1149,10 +1197,11 @@ LEVEL_UP_HERO_ROUTINES_HERO = {
     -- haven
     [H_NICOLAI] = Routine_GainPrimaryStats,
     -- preserve
-    [H_VINRAEL] = Routine_GiveArtifactLegendaryBoots,
+    [H_VINRAEL] = Routine_GiveArtifactPlumedBoots,
     -- fortress
     [H_TAZAR] = Routine_LearnWarcries,
     -- academy
+    [H_DAVIUS] = Routine_UpgradeSilverPavillon,
     [H_THEODORUS] = Routine_GetCraftingResources,
     [H_MINASLI] = Routine_AddHeroEaglePerLevel,
     -- dungeon

@@ -99,8 +99,8 @@ end
 function ManageCombatStart()
     -- log("$ Manage combat start")
     if ENABLE_SCRIPT == 0 then return end
-    startThread(GetArmySummary, ATTACKER)
-    startThread(GetArmySummary, DEFENDER)
+    GetArmySummary()
+    print("Combat random seed = "..RANDOM_SEED)
 
     combatSetPause(1) --startThread(PauseTemp)
     DoAbilitiesRoutine_CombatStart()

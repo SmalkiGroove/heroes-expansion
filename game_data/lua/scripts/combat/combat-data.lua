@@ -22,6 +22,7 @@ ROUTINE_VARS = {
     HeroTurns = 0,
     TurnMarker = 0,
     GriffinDives = {},
+    GremlinShot = "none",
     AvatarOfDeath = "none",
     Incendiary = nil,
     AtbBoosted = {},
