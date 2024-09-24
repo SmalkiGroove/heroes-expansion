@@ -8,7 +8,7 @@ function HasHeroActiveArtifactSet(id, artfset) return HERO_DATA[id].ArtfSets[art
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 function GetArmySummary()
-    for side = 1,2 do
+    for side = 0,1 do
         local creatures = GetUnits(side, CREATURE)
         for i,cr in creatures do
             local type = GetCreatureType(cr)

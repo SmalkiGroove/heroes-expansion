@@ -29,7 +29,7 @@
 	<RazedStatic/>
 	<Icon128/>
 	<InternalName>Tazar</InternalName>
-	<Class>HERO_CLASS_STRONGHOLD_MIGHT</Class>
+	<Class>HERO_CLASS_BATTLE_COMMANDER</Class>
 	<Specialization>HERO_SPEC_FURIOUS</Specialization>
 	<PrimarySkill>
 		<SkillID>HERO_SKILL_INNATES</SkillID>
@@ -62,12 +62,16 @@
 		<perkIDs>
 			<Item>HERO_SKILL_TENACITY</Item>
 			<Item>HERO_SKILL_BATTLE_ARDOR</Item>
-			<Item>HERO_SKILL_MOTIVATION</Item>
+			<Item>HERO_SKILL_COMMANDER</Item>
 		</perkIDs>
-		<spellIDs/>
-		<Ballista>false</Ballista>
+		<spellIDs>
+			<Item>SPELL_WARCRY_RALLING_CRY</Item>
+			<Item>SPELL_WARCRY_WORD_OF_THE_CHIEF</Item>
+			<Item>SPELL_WARCRY_SHOUT_OF_MANY</Item>
+		</spellIDs>
+		<Ballista>true</Ballista>
 		<FirstAidTent>false</FirstAidTent>
-		<AmmoCart>true</AmmoCart>
+		<AmmoCart>false</AmmoCart>
 		<FavoriteEnemies/>
 	</Editable>
 	<ArrowButtonState>0</ArrowButtonState>

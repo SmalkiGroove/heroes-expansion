@@ -469,7 +469,7 @@ end
 
 function Routine_SummonDarkstorm(side, hero)
     -- log("Trigger summon darkstorm !")
-    SummonCreatureStack_X(side, CREATURE_DARKSTORM, GetHeroLevel(side), 1)
+    SummonCreatureStack_X(side, CREATURE_DARKSTORM, GetHeroLevel(side), 2)
     sleep(1)
     for i,cr in GetUnits(side, CREATURE) do
         local type = GetCreatureType(cr)
@@ -480,11 +480,11 @@ function Routine_SummonDarkstorm(side, hero)
     end
 end
 
-function Routine_MinotaursMoveNext(side, hero)
-    -- log("Trigger minotaurs play next !")
-    -- if CURRENT_UNIT == hero then
-    --     SetATB_CreatureTypes(side, {CREATURE_MINOTAUR,CREATURE_MINOTAUR_KING,CREATURE_MINOTAUR_CAPTAIN}, ATB_NEXT)
-    -- end
+function Routine_DarkstormLoseIfDead(side, hero, unit)
+    -- log("Trigger lose on darkstorm death !")
+    if unit == ROUTINE_VARS.Darkstorm then
+        Finish(1-side)
+    end
 end
 
 function Routine_RidersHydraSynergy(side, hero)
@@ -502,8 +502,8 @@ function Routine_RidersHydraSynergy(side, hero)
     end
 end
 
-function Routine_HeroCastRage(side, hero)
-    -- log("Trigger hero cast rage")
+function Routine_HeroCastBerserk(side, hero)
+    -- log("Trigger hero cast berserk")
     local enemies = GetUnits(1-side, CREATURE)
     local v = 1 + trunc(GetHeroLevel(side) * 0.05)
     local n = min(length(enemies), v)
@@ -902,7 +902,7 @@ COMBAT_START_HERO_ROUTINES = {
     -- dungeon
     [H_VAYSHAN] = Routine_ScoutsMoveFirst,
     [H_DARKSTORM] = Routine_SummonDarkstorm,
-    [H_SYLSAI] = Routine_HeroCastRage,
+    [H_SYLSAI] = Routine_HeroCastBerserk,
     [H_SHADYA] = Routine_CastRandomDeepFrost,
     -- necropolis
     [H_VLADIMIR] = Routine_SummonAndKillEnnemySkeleton,
@@ -937,7 +937,6 @@ COMBAT_TURN_HERO_ROUTINES = {
     [H_NATHIR] = Routine_BallistaMoveNext,
     [H_RISSA] = Routine_TimeShift,
     -- dungeon
-    [H_DARKSTORM] = Routine_MinotaursMoveNext,
     [H_SORGAL] = Routine_RidersHydraSynergy,
     [H_ERUINA] = Routine_RefreshMatronMana,
     -- necropolis
@@ -966,6 +965,7 @@ UNIT_DIED_HERO_ROUTINES = {
     -- fortress
     -- academy
     -- dungeon
+    [H_DARKSTORM] = Routine_DarkstormLoseIfDead,
     [H_SYLSAI] = Routine_SummonDeadEnnemyCreature,
     -- necropolis
     [H_ARCHILUS] = Routine_AvatarDead,

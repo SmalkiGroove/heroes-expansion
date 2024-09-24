@@ -243,17 +243,6 @@ end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 -- FORTRESS
 
-function Routine_LearnWarcries(player, hero, level)
-    log("$ Routine_LearnWarcries")
-    if level == 10 then
-        TeachHeroSpell(hero, SPELL_WARCRY_FEAR_MY_ROAR)
-        TeachHeroSpell(hero, SPELL_WARCRY_WORD_OF_THE_CHIEF)
-    elseif level == 20 then
-        TeachHeroSpell(hero, SPELL_WARCRY_SHOUT_OF_MANY)
-        TeachHeroSpell(hero, SPELL_WARCRY_BATTLECRY)
-    end
-end
-
 function Routine_AddHeroDefenders(player, hero)
     log("$ Routine_AddHeroDefenders")
     local amount = trunc(0.3 * GetHeroLevel(hero))
@@ -1199,7 +1188,6 @@ LEVEL_UP_HERO_ROUTINES_HERO = {
     -- preserve
     [H_VINRAEL] = Routine_GiveArtifactPlumedBoots,
     -- fortress
-    [H_TAZAR] = Routine_LearnWarcries,
     -- academy
     [H_DAVIUS] = Routine_UpgradeSilverPavillon,
     [H_THEODORUS] = Routine_GetCraftingResources,

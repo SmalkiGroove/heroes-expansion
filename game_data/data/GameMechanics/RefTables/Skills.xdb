@@ -2859,8 +2859,8 @@
 			<ID>HERO_SKILL_FAMILIAR_LAND</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Feats/Knight/Logistics_RoadHome_grey.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Feats/Knight/Logistics_RoadHome.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/FamiliarLand.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/FamiliarLand.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -3675,25 +3675,25 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_HELLWRATH</ID>
+			<ID>HERO_SKILL_COMMANDER</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Feats/Demon_Lord/Demonic_Retaliation_grey.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Feats/Demon_Lord/Demonic_Retaliation.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/Commander.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/Commander.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
-					<Item href="/Text/Game/Skills/Common/Defence/DemonicRetaliation/Name.txt"/>
+					<Item href="/Text/Game/Skills/Unique/DemonicRage/Commander/Name.txt"/>
 				</NameFileRef>
 				<CommonNameFileRef href=""/>
 				<DescriptionFileRef>
-					<Item href="/Text/Game/Skills/Common/Defence/DemonicRetaliation/Description.txt"/>
+					<Item href="/Text/Game/Skills/Unique/DemonicRage/Commander/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_NONE</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Haven>
@@ -3701,7 +3701,7 @@
 					<Academy><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Academy>
 					<Dungeon><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Dungeon>
 					<Necropolis><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Necropolis>
-					<Inferno><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Inferno>
+					<Inferno><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Inferno>
 					<Fortress><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Fortress>
 					<Stronghold><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Stronghold>
 				</AIRacesValues>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature>
-	<AttackSkill>10</AttackSkill>
-	<DefenceSkill>10</DefenceSkill>
+	<AttackSkill>15</AttackSkill>
+	<DefenceSkill>15</DefenceSkill>
 	<Shots>0</Shots>
-	<MinDamage>9</MinDamage>
-	<MaxDamage>14</MaxDamage>
+	<MinDamage>10</MinDamage>
+	<MaxDamage>20</MaxDamage>
 	<Speed>6</Speed>
 	<Initiative>9</Initiative>
 	<Flying>false</Flying>
@@ -39,6 +39,6 @@
 		<Item>ABILITY_NO_ENEMY_RETALIATION</Item>
 		<Item>ABILITY_UNLIMITED_RETALIATION</Item>
 		<Item>ABILITY_BATTLE_FRENZY</Item>
-		<Item>ABILITY_IMMUNITY_TO_MIND_CONTROL</Item>
+		<Item>ABILITY_IMMUNITY_TO_MAGIC</Item>
 	</Abilities>
 </Creature>

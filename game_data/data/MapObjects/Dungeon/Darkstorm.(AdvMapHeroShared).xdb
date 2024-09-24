@@ -29,7 +29,7 @@
 	<RazedStatic/>
 	<Icon128/>
 	<InternalName>Darkstorm</InternalName>
-	<Class>HERO_CLASS_DUNGEON_MIGHT</Class>
+	<Class>HERO_CLASS_BATTLE_COMMANDER</Class>
 	<Specialization>HERO_SPEC_MINOTAURS</Specialization>
 	<PrimarySkill>
 		<SkillID>HERO_SKILL_INNATES</SkillID>
@@ -40,11 +40,11 @@
 	<SpecializationIcon href="/Textures/Icons/Heroes/Dungeon/Dungeon_Darkstorm_128x128.(Texture).xdb#xpointer(/Texture)"/>	
 	<FaceTexture href="/Textures/Icons/Heroes/Dungeon/Dungeon_Darkstorm_128x128.(Texture).xdb#xpointer(/Texture)"/>	
 	<FaceTextureSmall/>
-	<HeroCharacterArena href="/Characters/Heroes/Warlock.(Character).xdb#xpointer(/Character)"/>
-	<HeroCharacterArenaMelee/>
-	<HeroCharacterAdventure href="/Characters/Heroes/Warlock_LOD.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArena href="/Characters/Creatures/Added/Darkstorm/creature.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee href="/Characters/Creatures/Added/Darkstorm/creature.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterAdventure href="/Characters/Creatures/Added/Darkstorm/creature.(Character).xdb#xpointer(/Character)"/>
 	<HeroIndividualCamera/>
-	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Warlock.xdb#xpointer(/CreatureVisual)"/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Creatures/Added/Darkstorm.(CreatureVisual).xdb#xpointer(/CreatureVisual)"/>
 	<TownType>TOWN_DUNGEON</TownType>
 	<Editable>
 		<NameFileRef href="/Text/Game/Heroes/Persons/Dungeon/Darkstorm/Name.txt"/>
@@ -55,7 +55,7 @@
 		<Knowledge>1</Knowledge>
 		<skills>
 			<Item>
-				<SkillID>HERO_SKILL_ARCANISM</SkillID>
+				<SkillID>HERO_SKILL_COMBAT</SkillID>
 				<Mastery>MASTERY_BASIC</Mastery>
 			</Item>
 			<Item>
@@ -64,10 +64,17 @@
 			</Item>
 		</skills>
 		<perkIDs>
-			<Item>HERO_SKILL_ELEMENTAL_VISION</Item>
+			<Item>HERO_SKILL_COMMANDER</Item>
+			<Item>HERO_SKILL_GET_STRONGER</Item>
 			<Item>HERO_SKILL_MOTIVATION</Item>
 		</perkIDs>
-		<spellIDs/>
+		<spellIDs>
+			<Item>SPELL_WARCRY_RALLING_CRY</Item>
+			<Item>SPELL_WARCRY_FEAR_MY_ROAR</Item>
+			<Item>SPELL_WARCRY_WORD_OF_THE_CHIEF</Item>
+			<Item>SPELL_WARCRY_SHOUT_OF_MANY</Item>
+			<Item>SPELL_WARCRY_BATTLECRY</Item>
+		</spellIDs>
 		<Ballista>false</Ballista>
 		<FirstAidTent>true</FirstAidTent>
 		<AmmoCart>false</AmmoCart>
