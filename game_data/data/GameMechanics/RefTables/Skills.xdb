@@ -4381,31 +4381,25 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_SPIRITISM</ID>
+			<ID>HERO_SKILL_TWILIGHT</ID>
 			<obj>
 				<Texture>
-					<Item/>
-					<Item href="/Textures/HeroScreen/Skills/Spiritism_1.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Skills/Spiritism_2.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Skills/Spiritism_3.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Feats/Necromancer/LightMagic_Twilight_grey.(Texture).xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Feats/Necromancer/LightMagic_Twilight.(Texture).xdb#xpointer(/Texture)"/>
 				</Texture>
-				<CommonTexture href="/Textures/HeroScreen/Skills/Spiritism_1.xdb#xpointer(/Texture)"/>
+				<CommonTexture/>
 				<NameFileRef>
-					<Item href="/Text/Game/Skills/Unique/Spiritism/1/Name.txt"/>
-					<Item href="/Text/Game/Skills/Unique/Spiritism/2/Name.txt"/>
-					<Item href="/Text/Game/Skills/Unique/Spiritism/3/Name.txt"/>
+					<Item href="/Text/Game/Skills/Common/LightMagic/Twilight/Name.txt"/>
 				</NameFileRef>
-				<CommonNameFileRef href="/Text/Game/Skills/Unique/Spiritism/Common/name.txt"/>
+				<CommonNameFileRef href=""/>
 				<DescriptionFileRef>
-					<Item href="/Text/Game/Skills/Unique/Spiritism/1/Description.txt"/>
-					<Item href="/Text/Game/Skills/Unique/Spiritism/2/Description.txt"/>
-					<Item href="/Text/Game/Skills/Unique/Spiritism/3/Description.txt"/>
+					<Item href="/Text/Game/Skills/Common/LightMagic/Twilight/Description.txt"/>
 				</DescriptionFileRef>
-				<CommonDescriptionFileRef href="/Text/Game/Skills/Unique/Spiritism/Common/Description.txt"/>
-				<SkillType>SKILLTYPE_SKILL</SkillType>
+				<CommonDescriptionFileRef href=""/>
+				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_NONE</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Haven>
@@ -4415,7 +4409,7 @@
 					<Necropolis><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Necropolis>
 					<Inferno><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Inferno>
 					<Fortress><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Fortress>
-					<Stronghold><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Stronghold>
+					<Stronghold><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Stronghold>
 				</AIRacesValues>
 				<PresetPrice>0</PresetPrice>
 			</obj>
@@ -5001,35 +4995,41 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_SUPERNATURAL_LUCK</ID>
+			<ID>HERO_SKILL_SPIRITISM</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Perks/Avenger_AbsoluteLuck_grey.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Perks/Avenger_AbsoluteLuck.xdb#xpointer(/Texture)"/>
+					<Item/>
+					<Item href="/Textures/HeroScreen/Skills/Spiritism_1.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Skills/Spiritism_2.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Skills/Spiritism_3.xdb#xpointer(/Texture)"/>
 				</Texture>
-				<CommonTexture/>
+				<CommonTexture href="/Textures/HeroScreen/Skills/Spiritism_1.xdb#xpointer(/Texture)"/>
 				<NameFileRef>
-					<Item href="/Text/Game/Skills/Unique/Avenger/AbsoluteLuck/Name.txt"/>
+					<Item href="/Text/Game/Skills/Unique/Spiritism/1/Name.txt"/>
+					<Item href="/Text/Game/Skills/Unique/Spiritism/2/Name.txt"/>
+					<Item href="/Text/Game/Skills/Unique/Spiritism/3/Name.txt"/>
 				</NameFileRef>
-				<CommonNameFileRef href=""/>
+				<CommonNameFileRef href="/Text/Game/Skills/Unique/Spiritism/Common/name.txt"/>
 				<DescriptionFileRef>
-					<Item href="/Text/Game/Skills/Unique/Avenger/AbsoluteLuck/Description.txt"/>
+					<Item href="/Text/Game/Skills/Unique/Spiritism/1/Description.txt"/>
+					<Item href="/Text/Game/Skills/Unique/Spiritism/2/Description.txt"/>
+					<Item href="/Text/Game/Skills/Unique/Spiritism/3/Description.txt"/>
 				</DescriptionFileRef>
-				<CommonDescriptionFileRef href=""/>
-				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
+				<CommonDescriptionFileRef href="/Text/Game/Skills/Unique/Spiritism/Common/Description.txt"/>
+				<SkillType>SKILLTYPE_SKILL</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
 				<BasicSkillID>HERO_SKILL_NONE</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Haven>
-					<Sylvan><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Sylvan>
+					<Sylvan><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Sylvan>
 					<Academy><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Academy>
 					<Dungeon><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Dungeon>
 					<Necropolis><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Necropolis>
 					<Inferno><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Inferno>
 					<Fortress><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Fortress>
-					<Stronghold><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Stronghold>
+					<Stronghold><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Stronghold>
 				</AIRacesValues>
 				<PresetPrice>0</PresetPrice>
 			</obj>
