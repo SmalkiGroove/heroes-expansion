@@ -528,10 +528,8 @@ end
 
 function Routine_SpiritismManaRegen(player, hero, mastery)
     log("$ Routine_SpiritismManaRegen")
-    local max_mana = 10 * GetHeroStat(hero, STAT_KNOWLEDGE)
-    local regen = max_mana * mastery * 0.05
-    local missing = max_mana - GetHeroStat(hero, STAT_MANA_POINTS)
-    ChangeHeroStat(hero, STAT_MANA_POINTS, min(regen, missing))
+    local regen = mastery * 10
+    ChangeHeroStat(hero, STAT_MANA_POINTS, regen)
 end
 
 
