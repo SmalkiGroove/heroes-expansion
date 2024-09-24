@@ -4037,24 +4037,24 @@
 		<Item>
 			<ID>ARTIFACT_GOLDEN_GOOSE</ID>
 			<obj>
-				<NameFileRef href="/Text/Game/Artifacts/ShantiriSouth/Name.txt"/>
-				<DescriptionFileRef href="/Text/Game/Artifacts/ShantiriSouth/Description.txt"/>
+				<NameFileRef href="/Text/Game/Artifacts/GoldenGoose/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artifacts/GoldenGoose/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MAJOR</Type>
-				<Slot>INVENTORY</Slot>
-				<Icon href="/Textures/HeroScreen/Artifacts/ShantiriSouth.xdb#xpointer(/Texture)"/>
-				<CostOfGold>16000</CostOfGold>
-				<AIValue>8000</AIValue>
-				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
+				<Type>ARTF_CLASS_RELIC</Type>
+				<Slot>MISCSLOT1</Slot>
+				<Icon href="/Textures/HeroScreen/Artifacts/GoldenGoose.xdb#xpointer(/Texture)"/>
+				<CostOfGold>20000</CostOfGold>
+				<AIValue>30000</AIValue>
+				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
-					<Attack>0</Attack>
-					<Defence>0</Defence>
-					<Knowledge>0</Knowledge>
-					<SpellPower>0</SpellPower>
+					<Attack>-1</Attack>
+					<Defence>-1</Defence>
+					<Knowledge>-1</Knowledge>
+					<SpellPower>-1</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
-				<ArtifactShared href="/MapObjects/Artifacts/ShantiriSouth.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
+				<ArtifactShared href="/MapObjects/Artifacts/GoldenGoose.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
 				<PresetPrice>0</PresetPrice>
 			</obj>
