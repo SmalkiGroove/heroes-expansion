@@ -8,8 +8,10 @@
 	<Speed>4</Speed>
 	<Initiative>8</Initiative>
 	<Flying>false</Flying>
-	<Health>490</Health>
-	<KnownSpells/>
+	<Health>430</Health>
+	<KnownSpells>
+		<Item><Spell>SPELL_ABILITY_SUMMON_OTHER</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+	</KnownSpells>
 	<SpellPoints>0</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
 	<SpellPoints2>0</SpellPoints2>
@@ -28,11 +30,81 @@
 	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
 	<MonsterShared href="/MapObjects/Neutral/Kraken.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
 	<CombatSize>2</CombatSize>
-	<PatternAttack/>
+	<PatternAttack href="#n:inline(PatternAttack)" id="item_fb3fb69d-cb8f-4bec-afff-308e58dee81c">
+		<PatternAttack ObjectRecordID="1000013">
+			<Patterns>
+				<Item>
+					<cells>
+						<Item>
+							<x>1</x>
+							<y>1</y>
+						</Item>
+						<Item>
+							<x>1</x>
+							<y>0</y>
+						</Item>
+						<Item>
+							<x>1</x>
+							<y>-1</y>
+						</Item>
+						<Item>
+							<x>1</x>
+							<y>-2</y>
+						</Item>
+						<Item>
+							<x>0</x>
+							<y>-2</y>
+						</Item>
+						<Item>
+							<x>-1</x>
+							<y>-2</y>
+						</Item>
+						<Item>
+							<x>-2</x>
+							<y>-2</y>
+						</Item>
+						<Item>
+							<x>-2</x>
+							<y>-1</y>
+						</Item>
+						<Item>
+							<x>-2</x>
+							<y>0</y>
+						</Item>
+						<Item>
+							<x>-2</x>
+							<y>1</y>
+						</Item>
+						<Item>
+							<x>-1</x>
+							<y>1</y>
+						</Item>
+						<Item>
+							<x>0</x>
+							<y>1</y>
+						</Item>
+					</cells>
+					<AngleRotateTo>0</AngleRotateTo>
+				</Item>
+			</Patterns>
+			<RotateToMainTarget>true</RotateToMainTarget>
+			<DamageToMainTargetCoefficient>1</DamageToMainTargetCoefficient>
+			<DamageToOtherTargetsCoefficient>1</DamageToOtherTargetsCoefficient>
+			<DamageAll>false</DamageAll>
+		</PatternAttack>
+	</PatternAttack>
 	<flybySequence/>
 	<Visual href="/GameMechanics/CreatureVisual/Creatures/Added/Kraken.(CreatureVisual).xdb#xpointer(/CreatureVisual)"/>
 	<Range>0</Range>
 	<BaseCreature>CREATURE_UNKNOWN</BaseCreature>
 	<Upgrades/>
-	<Abilities/>
+	<Abilities>
+		<Item>ABILITY_SUMMON_OTHER</Item>
+		<Item>ABILITY_ENTANGLING_ROOTS</Item>
+		<Item>ABILITY_SIX_HEADED_ATTACK</Item>
+		<Item>ABILITY_MAGIC_PROOF_25</Item>
+		<Item>ABILITY_IMMUNITY_TO_BERSERK</Item>
+		<Item>ABILITY_IMMUNITY_TO_HYPNOTIZE</Item>
+		<Item>ABILITY_IMMUNITY_TO_SLOW</Item>
+	</Abilities>
 </Creature>
