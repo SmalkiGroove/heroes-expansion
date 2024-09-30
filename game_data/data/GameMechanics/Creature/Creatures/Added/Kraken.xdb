@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature>
-	<AttackSkill>1</AttackSkill>
-	<DefenceSkill>1</DefenceSkill>
+	<AttackSkill>30</AttackSkill>
+	<DefenceSkill>36</DefenceSkill>
 	<Shots>0</Shots>
-	<MinDamage>1</MinDamage>
-	<MaxDamage>1</MaxDamage>
-	<Speed>5</Speed>
-	<Initiative>10</Initiative>
+	<MinDamage>40</MinDamage>
+	<MaxDamage>60</MaxDamage>
+	<Speed>4</Speed>
+	<Initiative>8</Initiative>
 	<Flying>false</Flying>
-	<Health>10</Health>
+	<Health>490</Health>
 	<KnownSpells/>
 	<SpellPoints>0</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
 	<SpellPoints2>0</SpellPoints2>
-	<Exp>10</Exp>
-	<Power>10</Power>
+	<Exp>1000</Exp>
+	<Power>5656</Power>
 	<TimeToCommand>10</TimeToCommand>
-	<CreatureTier>1</CreatureTier>
+	<CreatureTier>7</CreatureTier>
 	<Upgrade>false</Upgrade>
 	<PairCreature>CREATURE_UNKNOWN</PairCreature>
 	<CreatureTown>TOWN_NO_TYPE</CreatureTown>
-	<MagicElement><First>ELEMENT_NONE</First><Second>ELEMENT_NONE</Second></MagicElement>
-	<WeeklyGrowth>10</WeeklyGrowth>
+	<MagicElement><First>ELEMENT_WATER</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>1</WeeklyGrowth>
 	<Cost>
-		<Gold>10</Gold>
+		<Gold>3000</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
 	<MonsterShared href="/MapObjects/Neutral/Kraken.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
-	<CombatSize>1</CombatSize>
+	<CombatSize>2</CombatSize>
 	<PatternAttack/>
 	<flybySequence/>
-	<Visual href="/GameMechanics/CreatureVisual/Creatures/Neutrals/SnowApe.xdb#xpointer(/CreatureVisual)"/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Added/Kraken.(CreatureVisual).xdb#xpointer(/CreatureVisual)"/>
 	<Range>0</Range>
 	<BaseCreature>CREATURE_UNKNOWN</BaseCreature>
 	<Upgrades/>
