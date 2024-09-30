@@ -182,6 +182,7 @@ function AddPlayerHero(player, hero)
 		startThread(BindHeroSkillTrigger, hero)
 		startThread(DoSkillsRoutine_Start, player, hero)
 		startThread(DoHeroSpeRoutine_Start, player, hero)
+		MakeHeroReturnToTavernAfterDeath(hero, 1, 0)
 	else
 		log("Comeback hero "..hero)
 		startThread(BindHeroLevelUpTrigger, hero)
@@ -229,6 +230,7 @@ function InitializeHeroes()
 				startThread(DoSkillsRoutine_Start, player, hero) sleep(1)
 				startThread(DoHeroSpeRoutine_Start, player, hero) sleep(1)
 				AllowPlayerTavernRace(player, FactionToTownType(HEROES[hero].faction), 1)
+				MakeHeroReturnToTavernAfterDeath(hero, 1, 0)
 				HEROES[hero].owner = player
 			end
 			startThread(WatchPlayer, player, 1)
