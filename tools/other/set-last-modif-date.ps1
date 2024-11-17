@@ -1,3 +1,4 @@
+attrib -r "..\..\game_data\*.*" /s
 
 foreach ($file in Get-ChildItem "..\..\game_data\" -Recurse)
 {
