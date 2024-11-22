@@ -330,6 +330,7 @@ function Routine_UpgradeRunicShrine(player, hero)
         if IsHeroInTown(hero, town, 1, 1) then
             if data.faction == FORTRESS then
                 UpgradeTownBuilding(town, TOWN_BUILDING_FORTRESS_RUNIC_SHRINE)
+                ChangeHeroStat(hero, STAT_SPELL_POWER, GetTownBuildingLevel(town, TOWN_BUILDING_FORTRESS_RUNIC_SHRINE))
             end
         end
     end

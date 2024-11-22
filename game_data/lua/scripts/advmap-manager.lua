@@ -128,7 +128,6 @@ function PlayerDailyHandler(player, newweek)
 			startThread(DoSkillsRoutine_Weekly, player, hero)
 			startThread(DoArtifactsRoutine_Weekly, player, hero)
 			sleep(5)
-			startThread(WitchHuts_reset)
 		end
 		startThread(DoHeroSpeRoutine_Daily, player, hero)
 		startThread(DoSkillsRoutine_Daily, player, hero)
@@ -142,7 +141,10 @@ function NewDayTrigger()
 	TURN = TURN + 1
 	log("New day ! Turn "..TURN)
 	local newweek = GetDate(DAY_OF_WEEK) == 1
-	if newweek then WEEKS = WEEKS + 1 end
+	if newweek then
+		WEEKS = WEEKS + 1
+		startThread(WitchHuts_reset)
+	end
 	startThread(UpdateTavernHeroes)
 	startThread(UpdateTavernFactions)
 	for player = 1,8 do
