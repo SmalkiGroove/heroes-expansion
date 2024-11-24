@@ -380,7 +380,7 @@ function Routine_GremlinRandomShoot(side, hero)
                 local type = GetCreatureType(cr)
                 if type == CREATURE_GREMLIN or type == CREATURE_MASTER_GREMLIN or type == CREATURE_GREMLIN_SABOTEUR then
                     local target = RandomCreature(1-side,COMBAT_TURN+i)
-                    ShootCombatUnit(cr, target)
+                    TryShootTarget(cr, target)
                     SetATB_ID(cr, ATB_HALF)
                     ROUTINE_VARS.GremlinShot = cr
                     return

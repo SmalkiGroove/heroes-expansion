@@ -122,6 +122,12 @@ function HeroCast_Global(hero, spell, mana)
     if mana == FREE_MANA then SetMana(hero, m) end
 end
 
+function TryShootTarget(unit,target)
+    startThread(ShootCombatUnit, unit, target)
+    sleep(1) print("debug tryshoottarget "..unit.." - "..CURRENT_UNIT)
+    return unit ~= CURRENT_UNIT
+end
+
 function SummonCreatureStack(side, type, amount)
     if amount > 0 then
         SummonCreature(side, type, amount)
