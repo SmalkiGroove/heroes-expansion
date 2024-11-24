@@ -144,6 +144,7 @@ function NewDayTrigger()
 	if newweek then
 		WEEKS = WEEKS + 1
 		startThread(WitchHuts_reset)
+		startThread(Temples_reset)
 	end
 	startThread(UpdateTavernHeroes)
 	startThread(UpdateTavernFactions)

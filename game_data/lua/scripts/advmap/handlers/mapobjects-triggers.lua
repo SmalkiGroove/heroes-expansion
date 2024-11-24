@@ -1,10 +1,22 @@
 
 Var_WitchHutVisited = {}
+Var_TempleVisited = {}
 
 function Override_WitchHut(obj)
     Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_WitchHut")
     SetObjectEnabled(obj, nil)
     Var_WitchHutVisited[obj] = 0
+end
+
+function Override_Temple(obj)
+    Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_Temple")
+    SetObjectEnabled(obj, nil)
+    Var_TempleVisited[obj] = 0
+end
+
+function Override_RallyFlag(obj)
+    Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_RallyFlag")
+    SetObjectEnabled(obj, nil)
 end
 
 -----------------------------------------------
@@ -46,17 +58,45 @@ function Trigger_WitchHut_cancel(player, hero, obj)
     MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Game/Scripts/MapObjects/WitchHutRefused.txt", "NoneRoutine")
     Var_WitchHutVisited[obj] = 1
 end
-
 function WitchHuts_reset()
     for obj,_ in Var_WitchHutVisited do
         Var_WitchHutVisited[obj] = 0
     end
 end
 
+
+function Trigger_Temple(hero, obj)
+    log("$ Trigger_Temple")
+    local player = GetObjectOwner(hero)
+    if GetObjectOwner(hero) == 0 then
+        local exp = 10 * (WEEKS+10) * (WEEKS+10)
+        for _,h in GetPlayerHeroes(player) do
+            ChangeHeroStat(h, STAT_EXPERIENCE, exp)
+        end
+        Var_TempleVisited[obj] = 1
+    else
+        ShowFlyingSign("/Text/Game/Scripts/MapObjects/TempleVisited.txt", hero, player, FLYING_SIGN_TIME)
+    end
+end
+function Temples_reset()
+    for obj,_ in Var_TempleVisited do
+        Var_TempleVisited[obj] = 0
+    end
+end
+
+
+function Trigger_RallyFlag(hero, obj)
+    log("$ Trigger_RallyFlag")
+    ChangeHeroStat(hero, STAT_MOVE_POINTS, 9999)
+end
+
+
 -----------------------------------------------
 
 TRIGGER_OVERRIDES = {
     ["BUILDING_WITCH_HUT"] = Override_WitchHut,
+    ["BUILDING_TEMPLE"] = Override_Temple,
+    ["BUILDING_RALLY_FLAG"] = Override_RallyFlag,
 }
 
 function InitializeMapObjects()
