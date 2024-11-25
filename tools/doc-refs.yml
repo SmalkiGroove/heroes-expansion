@@ -680,6 +680,71 @@ CREATURES:
       tier: 7
       upgrade: 2
       path: Orcs/3rd/CyclopBloodeyed.xdb
+  NEUTRAL:
+    - name: WOLF
+      tier: 2
+      upgrade: 0
+      path: Neutrals/Wolf.xdb
+    - name: MANTICORE
+      tier: 5
+      upgrade: 0
+      path: Neutrals/Manticore.xdb
+    - name: ARCANE EAGLE
+      tier: 6
+      upgrade: 0
+      path: Neutrals/SnowApe.xdb
+    - name: PHOENIX
+      tier: 7
+      upgrade: 0
+      path: Neutrals/Phoenix.xdb
+    - name: AIR ELEMENTAL
+      tier: 5
+      upgrade: 0
+      path: Neutrals/Air_Elemental.xdb
+    - name: EARTH ELEMENTAL
+      tier: 5
+      upgrade: 0
+      path: Neutrals/Earth_Elemental.xdb
+    - name: FIRE ELEMENTAL
+      tier: 5
+      upgrade: 0
+      path: Neutrals/Fire_Elemental.xdb
+    - name: WATER ELEMENTAL
+      tier: 5
+      upgrade: 0
+      path: Neutrals/Water_Elemental.xdb
+    - name: BLACK KNIGHT
+      tier: 6
+      upgrade: 0
+      path: Neutrals/Black_Knight.xdb
+    - name: TERROR KNIGHT
+      tier: 6
+      upgrade: 1
+      path: Neutrals/Death_Knight.xdb
+    - name: MUMMY
+      tier: 3
+      upgrade: 0
+      path: Neutrals/Mummy.xdb
+    - name: LIZARDMAN
+      tier: 2
+      upgrade: 0
+      path: Added/Lizardman.xdb
+    - name: BEHEMOTH
+      tier: 7
+      upgrade: 0
+      path: Added/Behemoth.xdb
+    - name: EINHERJAR
+      tier: 7
+      upgrade: 0
+      path: Added/Einherjar.xdb
+    - name: KRAKEN
+      tier: 7
+      upgrade: 0
+      path: Added/Kraken.xdb
+    - name: LEGENDARY DRAGON
+      tier: 8
+      upgrade: 0
+      path: Added/LegendaryDragon.xdb
 
 HEROES:
   HAVEN:

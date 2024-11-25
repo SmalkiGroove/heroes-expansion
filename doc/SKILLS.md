@@ -67,7 +67,7 @@ At the start of each week, gain 800 golds per relic artifact equipped.
 - __Snatch__ : The hero spends no movement points to pick up resources, access buildings or boats and other similar actions.
 - __Recruitment__ : Doubles the Logistics bonus to weekly production of tier 1, 2 and 3 creatures.
 - __Spoils of War__ : After every combat won, the hero earns a certain amount of golds and resources, in proportion to the hiring costs of all killed enemy creatures. Every 10 victories, also gains a random minor artifact.
-- __Warpath__ : The hero gets 750 additional movement points for every victory on the map.
+- __Warpath__ : The hero gets 550 additional movement points for every victory on the map.
 
 ### WARFARE
 - __Ballistics__ : Allows manual control of the Ballista. Restores the Ballista after the battle if it was destroyed.
@@ -221,12 +221,10 @@ Moreover, hero generates 1 Gold per day for each Skeleton it his or her army.
 - __Witchcraft__ : Adds +2 to hero's Spellpower permanently. Hero also receives a new spell in his or her spell book.
 - __Exorcism__ : The hero obtains a combat ability that deals heavy damage to summoned enemy creatures.
 The damage is equal to 50 per hero level.
-- __Rage Awakening__ : The Shaman lays aside the exploration of the powers of magic to access the Blood Rage.
-<color_default>
-The hero will not be able to learn any new spell.
+- __Rage Awakening__ : The Shaman unleashes the raw power of the orc creatures with the Blood Rage skill.
 
 ### INNATES
-- __Familiar Land__ : All creatures in hero's army receive +1 movement speed if the battle is taking place on grass terrain.
+- __Home Land__ : All creatures in hero's army receive +1 movement speed if the battle is taking place on grass terrain.
 - __Silent Tracker__ : The enemy will see only the strongest creature in hero's army with no number at all. Also this ability allows to see courage of neutral monsters and enlarges hero's field of view by 12 tiles.
 - __Tenacity__ : Enemy Dark Magic spells will be cast with 20% less effective Spellpower.
 - __Infusion__ : The hero gains +1 Spellpower.

@@ -110,7 +110,7 @@ Starting Skills
 __GODRIC :__
 Protector of Elrath - Saint
 
-- When the hero casts a light magic spell on a friendly creature, there is a chance that the Celestial Shield spell will be cast freely upon the affected unit. The chance is 20% + 1% per level.
+- When the hero casts a Light Magic spell on a friendly creature, there is a chance that the Celestial Shield spell will be cast freely upon the affected unit. The chance is 20% + 1% per level.
 - Hero casts Endurance on a random friendly creature for free each turn in combat.
 
 Starting Skills
@@ -147,11 +147,11 @@ Starting Skills
 
 ---
 __ALARIC :__
-Arch Bishop - Saint
+ArchBishop - Saint
 
 - When an enemy hero casts any spell, there is a chance that this spell fails and gets blocked for the rest of the combat. The probability increases with hero level.
-- Build or upgrade the Monastery in the town where the hero is recruited.
-- Convert a Peasant in hero's army into a Priest after every victory.
+- Build or upgrade the Monastery in the town where the hero is recruited. If already built and upgraded, add Priests to recruit.
+- Convert 1% of Peasants in hero's army to Priests after every victory (minimum 1).
 
 Starting Skills
 - Courage
@@ -256,7 +256,7 @@ Windwalker - Guardian
 
 - Hero automatically casts Mass Haste for free when combat starts.
 - The effect of Haste spell is increased by 1% per hero level.
-- Gains artifact Legendary Boots (immunity to slow) when reaching level 20.
+- Gains artifact Plumed Boots (immunity to slow) when reaching level 20.
 
 Starting Skills
 - Avenger
@@ -292,7 +292,7 @@ Starting Skills
 __ELLESHAR :__
 Elven Sage - Guardian
 
-- Every 6 battles won, hero gains +1 Spellpower and Knowledge and a skill point in one of the Magic Schools.
+- Every 6 battles won, hero gains +1 Spellpower and Knowledge and a skill point in one of the Magic Schools. If all Magic Schools are already known at expert level, give +1 Knowledge to ther heroes.
 - Hero has a permanent +1 Initiative.
 
 Starting Skills
@@ -333,7 +333,7 @@ Sharp Blade - Mountain Lord
 
 - All Spearwielders in hero's army gain +1 to their Attack and Defense for every two levels of the hero.
 - Hero starts with Advanced Combat skill and the Coordination perk.
-- Each turn of a friendly Spearwielder during combat, the hero uses Coordination on it.
+- Each turn of a friendly Spearwielder during combat, the hero uses Coordination on it (requires an amount of Spearwielder in the stack greater than their weekly growth + hero level).
 
 Starting Skills
 - Runelore
@@ -369,16 +369,17 @@ Starting Skills
 
 ---
 __TAZAR :__
-Imperious - Mountain Lord
+Imperious - Battle Commander
 
-- Hero starts with innate skill Imperious, granting friendly creatures bonus Attack and Speed, but does not have access to Runelore.
+- Hero starts with innate skill Battle Ardor, granting friendly creatures bonus Attack and Speed, but does not have access to Runelore.
+- The hero is a Commander. He can use Warcries but not regular spells. Warcries are nativerly known.
 - The Initiative of all creatures in hero's army is increased by 1% per hero level.
 
 Starting Skills
-- Blood Rage
-- Voice
 - Leadership
-- Motivation
+- Tenacity
+- Battle Ardor
+- Commander
 
 ---
 __WULFSTAN :__
@@ -413,7 +414,7 @@ Grand Patriarch - Runemage
 
 - All Rune Priests in hero's army gain +1 to their Attack and Defense for every two levels of the hero.
 - Rune Priests in hero's army play first in combat.
-- Build or upgrade the Runic Shrine in the town where the hero is recruited.
+- Build or upgrade the Runic Shrine in the town where the hero is recruited and gain Spellpower equal to the building level.
 
 Starting Skills
 - Runelore
@@ -479,7 +480,7 @@ __HAVEZ :__
 Gremlin Master - Artificier
 
 - All Gremlins in hero's army gain +1 to their Attack and Defense for every two levels of the hero.
-- Every hero turn in combat, all Gremlins in his army shoot at a random enemy creature.
+- Every hero turn in combat, a stack of Gremlins in his army shoot at a random enemy creature. Uses only half of the Gremlin's ATB. Each Gremlins stack needs 1 hero turn to recharge this effect (cannot trigger the same stack twice in a row).
 - New Gremlins are provided to all other heroes each day (provided that they have some in their army). The amount is equal to this hero's level.
 
 Starting Skills
@@ -492,8 +493,9 @@ __RAZZAK :__
 Golem Crafter - Artificier
 
 - All Golems in the hero's army gain +1 to their Attack and Defense for every two levels of the hero.
-- At the start of each week, the hero assembles 2 Gargoyles of his army into 1 Golem. Can craft a maximum of 1 Golem per hero level.
+- At the start of each week, the hero assembles 2 Gargoyles of his army into 1 Golem. Can craft a maximum of 1 Golem per hero level at a time.
 - After combat, the hero fixes destroyed Golem in exchange for 1 Gargoyle each.
+- For every Golem crafted, gain 1 Ore.
 
 Starting Skills
 - Artificier
@@ -505,7 +507,7 @@ __DAVIUS :__
 Tawny Trainer - Artificier
 
 - All Rakshasas in hero's army activate their Warm-Up ability at the start of combat.
-- Build or upgrade the Silver Pavillon in the town where the hero is recruited.
+- Every 10 levels, the hero builds or upgrades the Silver Pavillon in a player's Academy town. If there is nothing to build, add Rakshasas in hero's army instead. The amount depends on the hero level and the amount of Academy towns.
 - Hero has access to the Training skill that gives combat bonuses to Rakshasas.
 
 Starting Skills
@@ -520,7 +522,7 @@ Mad Chemist - Artificier
 
 - Ballista's shots under the hero's command have a Fireball effect. The damage of the Fireball increases with hero level.
 - The ballista's turn always comes after the hero's turn in combat.
-- Gain 1 Sulfur after every battle.
+- Every day, gain experience points based on the current amount of Sulfur. Gain 1 Sulfur after every battle.
 
 Starting Skills
 - Artificier
@@ -533,7 +535,7 @@ Arcane Forge Master - Artificier
 
 - Starts with Ultimate Artificier directly, allowing hero to craft creature artifacts for half the cost.
 - When visiting an Academy town, the hero gains Knowledge points equal to his level to increase the power of the creatures artifacts.
-- Gain 1 resource upon leveling up. Cycles between all resources except Golds (equivalent to +1 to all resources every 6 levels).
+- Gain 2 resources upon leveling up. Cycles between all resources except Golds (equivalent to +2 to all resources every 6 levels).
 
 Starting Skills
 - Artificier (4)
@@ -582,7 +584,7 @@ __CYRUS :__
 Mentor - Wizard
 
 - All Mages in hero's army gain +1 to their Attack and Defense for every two levels of the hero.
-- At the start of combat, all Mages cast Fist of Wrath on a random enemy.
+- At the start of combat, all Mages cast Fist of Wrath on a random enemy and Deflect Arrows on themselves.
 - Starting at level 20, doubles the weekly production of Mages in your Academy towns.
 
 Starting Skills
@@ -596,7 +598,7 @@ Nest Watcher - Wizard
 
 - New Arcane Eagles join the hero's army every week depending on her level.
 - Gain an additional Arcane Eagle for every level up.
-- While in an Academy town garnison at the start of a day, the hero will spend her Mana and Crystals to upgrade Arcane Eagles into Phoenixes.
+- Every Arcane Eagle that died in combat will revive as a Phoenix. The time needed for them to revive starts at 1 month and is reduced by 1 day every 2 hero levels.
 
 Starting Skills
 - Artificier
@@ -649,7 +651,7 @@ __YRWANNA :__
 Blood Mistress - Beastmaster
 
 - All Blood Witches in hero's army gain +1 to their Attack and Defense for every two levels of the hero.
-- Build the Sacrificial Pit in the town where the hero is recruited.
+- Build the Sacrificial Pit in the town where the hero is recruited. If it is already built, add Witches and Minotaurs to recruit.
 - Starts with Innate skill Vampirism.
 
 Starting Skills
@@ -660,13 +662,14 @@ Starting Skills
 
 ---
 __DARKSTORM :__
-Minotaur General - Beastmaster
+Minotaur General - Battle Commander
 
+- Darkstorm takes part of combats on the battlefield. But if he is defeated, the combat is lost regardless of the remaining troops.
+- The hero is a Commander. He can use Warcries but not regular spells. Warcries are nativerly known.
 - All Minotaurs in the hero's army gain +1 to their Attack and Defense for every two levels of the hero.
-- Minotaurs in hero's army always act immediatly after hero's turn.
 
 Starting Skills
-- Arcanism
+- Combat
 - Leadership
 - Motivation
 
@@ -699,8 +702,8 @@ Starting Skills
 __RAELAG :__
 Draconic Prophet - Beastmaster
 
-- After every victory, the hero has a chance to drop an artifact of the Dragon set he doesn't already have. Chances depends on hero level and value of the defeated army.
-- When fully equipped with the Dragon artifact set, the largest Dragon stack in hero army directly blasts a random enemy creature at the start of combat.
+- After every victory, the hero has a chance to drop an artifact of the Dragon set he doesn't already have. Chances depends on the hero level and the value of the defeated army.
+- Doubles the amount of Legendary Dragons summoned by the Dragon artifact set effect.
 
 Starting Skills
 - Arcanism
@@ -1048,7 +1051,7 @@ Starting Skills
 __ORLANDO :__
 Conqueror - Warlock
 
-- Victories provide hero bonus Experience and Golds based on the value of defeated army.
+- Victories provide hero a considerable amount of additional experience and golds based on the value of defeated army.
 - When standing in an Inferno town's gate at the start of the day, the hero can complete a building in exchange for Golds. Original Wood and Ore costs are converted to 250 Golds cost each, and other resources to double this value.
 
 Starting Skills
