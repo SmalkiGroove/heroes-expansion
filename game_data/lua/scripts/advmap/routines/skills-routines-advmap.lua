@@ -326,6 +326,26 @@ function Routine_Mythology(player, hero, mastery)
     end
 end
 
+function Routine_CheckImbueArrow(player, hero, mastery)
+    log("$ Routine_CheckImbueArrow")
+    local value = mastery
+    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_IMBUE_ARROW]
+    if diff ~= 0 then
+        AddHeroStatAmount(player, hero, STAT_SPELL_POWER, diff)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_IMBUE_ARROW] = value
+    end
+end
+
+function Routine_CheckImbueBallista(player, hero, mastery)
+    log("$ Routine_CheckImbueBallista")
+    local value = mastery
+    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_IMBUE_BALLISTA]
+    if diff ~= 0 then
+        AddHeroStatAmount(player, hero, STAT_SPELL_POWER, diff)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_IMBUE_BALLISTA] = value
+    end
+end
+
 function Routine_CheckBattleCommander(player, hero, mastery)
     log("$ Routine_CheckBattleCommander")
     local value = mastery
