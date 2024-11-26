@@ -424,7 +424,7 @@ end
 
 function Routine_MagesCastMagicFist(side, hero)
     -- log("Trigger mages magic fist !")
-    local creatures = GetUnits(unit_side, CREATURE)
+    local creatures = GetUnits(side, CREATURE)
     for i,cr in creatures do
         if type == CREATURE_MAGI or type == CREATURE_ARCH_MAGI or type == CREATURE_COMBAT_MAGE then
             local target = RandomCreature(1-side,i)

@@ -50,6 +50,7 @@ function Trigger_WitchHut_confirm(player, hero, obj, givestat)
         ChangeHeroStat(hero, givestat, 2)
         GiveExp(hero, 5000)
         Var_WitchHutVisited[obj] = 1
+        MarkObjectAsVisited(obj, hero)
     else
         Trigger_WitchHut_cancel(player, hero, obj)
     end
@@ -57,6 +58,7 @@ end
 function Trigger_WitchHut_cancel(player, hero, obj)
     MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Game/Scripts/MapObjects/WitchHutRefused.txt", "NoneRoutine")
     Var_WitchHutVisited[obj] = 1
+    MarkObjectAsVisited(obj, hero)
 end
 function WitchHuts_reset()
     for obj,_ in Var_WitchHutVisited do
@@ -72,10 +74,12 @@ function Trigger_Temple(hero, obj)
         local exp = 10 * (WEEKS+10) * (WEEKS+10)
         for _,h in GetPlayerHeroes(player) do
             ChangeHeroStat(h, STAT_EXPERIENCE, exp)
+            MarkObjectAsVisited(obj, h)
         end
         Var_TempleVisited[obj] = 1
     else
         ShowFlyingSign("/Text/Game/Scripts/MapObjects/TempleVisited.txt", hero, player, FLYING_SIGN_TIME)
+        MarkObjectAsVisited(obj, hero)
     end
 end
 function Temples_reset()
@@ -88,6 +92,7 @@ end
 function Trigger_RallyFlag(hero, obj)
     log("$ Trigger_RallyFlag")
     ChangeHeroStat(hero, STAT_MOVE_POINTS, 9999)
+    MarkObjectAsVisited(obj, hero)
 end
 
 
