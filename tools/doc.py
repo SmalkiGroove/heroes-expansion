@@ -60,6 +60,7 @@ def get_abilities_text(abilities):
         return f"{get_ability_name(abilities)}"
 
 def creature_doc_line(tier, upg, name, path):
+    print(f"Creature {name}")
     with open(path, 'r') as xdb:
         creature = xmltodict.parse(xdb.read())
     growth = creature['Creature']['WeeklyGrowth']
@@ -108,6 +109,7 @@ def generate_creature_doc(ref_data):
 path_to_heroes = "../game_data/data/MapObjects"
 
 def hero_doc_line(name, path):
+    print(f"Hero {name}")
     with open(path, 'r') as xdb:
         hero = xmltodict.parse(xdb.read())
     desc_path = os.path.join(workdir, root_text_path + hero['AdvMapHeroShared']['SpecializationNameFileRef']['@href'])
@@ -140,7 +142,8 @@ def generate_heroes_doc(ref_data):
 #
 path_to_skills = "../game_data/data/GameMechanics/RefTables/Skills.xdb"
 
-def skill_doc_line(skill):
+def skill_doc_line(name, skill):
+    print(f"Skill {name}")
     name_path = os.path.join(workdir, root_text_path + skill['obj']['NameFileRef']['Item']['@href'])
     desc_path = os.path.join(workdir, root_text_path + skill['obj']['DescriptionFileRef']['Item']['@href'])
     with open(name_path, 'r', encoding='utf-16') as name_file:
@@ -171,7 +174,7 @@ def generate_skills_doc(ref_data):
             for p in ref_data[s]['perks']:
                 perk = get_skill_by_id(skills, p)
                 if perk != None:
-                    print(skill_doc_line(perk), file=out)
+                    print(skill_doc_line(p, perk), file=out)
     out.close()
 #
 ###############################################################################################################################################################
@@ -182,7 +185,8 @@ def generate_skills_doc(ref_data):
 path_to_artifacts = "../game_data/data/GameMechanics/RefTables/Artifacts.xdb"
 path_to_artfset_texts = "../game_data/texts/Text/Game/Artfsets"
 
-def artifact_doc_line(artifact):
+def artifact_doc_line(name, artifact):
+    print(f"Artifact {name}")
     name_path = os.path.join(workdir, root_text_path + artifact['obj']['NameFileRef']['@href'])
     desc_path = os.path.join(workdir, root_text_path + artifact['obj']['DescriptionFileRef']['@href'])
     with open(name_path, 'r', encoding='utf-16') as name_file:
@@ -221,7 +225,7 @@ def generate_artifacts_doc(ref_data):
         for a in ref_data[artfset]['pieces']:
             artifact = get_artifact_by_id(artifacts, a)
             if artifact != None:
-                print(artifact_doc_line(artifact), file=out)
+                print(artifact_doc_line(a, artifact), file=out)
     out.close()
 #
 ###############################################################################################################################################################

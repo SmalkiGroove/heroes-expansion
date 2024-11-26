@@ -9,33 +9,33 @@
 +1 Defense
 +1 Spellpower
 
-<color=purple>The Sentinel
+<color=FFB730FF>The Sentinel
 - __Sentinel's Shield__ :
 -10% damage taken from ranged attacks
 
-<color=purple>The Sentinel
+<color=FFB730FF>The Sentinel
 - __Sentinel's Boots__ :
 +1 Attack
 +2 Defense
 +2 Morale and +500 Movement points temporarily after each victory with no loss
 
-<color=purple>The Sentinel
+<color=FFB730FF>The Sentinel
 - __Sentinel's Helm__ :
 +2 Defense
 +1 Knowledge
 +2 Attack, Defense and Morale temporarily after leveling up
 
-<color=purple>The Sentinel
+<color=FFB730FF>The Sentinel
 - __Sentinel's Breastplate__ :
 +5 Defense
 +10% Magic Resistance
 
-<color=purple>The Sentinel
+<color=FFB730FF>The Sentinel
 - __Sentinel's Blade__ :
 +5 Attack
 When you spawn a Blade Barrier during combat,
 
-<color=purple>The Sentinel
+<color=FFB730FF>The Sentinel
 
 ### Set name
 • Set pieces
@@ -45,29 +45,29 @@ When you spawn a Blade Barrier during combat,
 - __Avenger Bow__ :
 +1 Luck
 
-<color=purple>Elven Secret
+<color=FFB730FF>Elven Secret
 - __Ranger's Cape__ :
 *ranger cape*
 
-<color=purple>Elven Secret
+<color=FFB730FF>Elven Secret
 - __Ranger's Armor__ :
 *ranger cuirass*
 
-<color=purple>Elven Secret
+<color=FFB730FF>Elven Secret
 - __Plumed Boots__ :
 +3 Defense
 Hero troops are Unstoppable (immunity to Slow).
 
-<color=purple>Elven Secret
+<color=FFB730FF>Elven Secret
 - __Sylvan Amulet__ :
 +1 Luck
 Grants hero's army immunity to Curse of the Netherworld
 
-<color=purple>Elven Secret
+<color=FFB730FF>Elven Secret
 - __Sacred Seed__ :
 *sacred seed*
 
-<color=purple>Elven Secret
+<color=FFB730FF>Elven Secret
 
 ### Set name
 • Set pieces
@@ -77,31 +77,31 @@ Grants hero's army immunity to Curse of the Netherworld
 - __Shackles of the Last Man__ :
 -1 Attack and Defense to enemy creatures
 
-<color=purple>Hell Conquest
+<color=FFB730FF>Hell Conquest
 - __Helm Of Chaos__ :
 +1 Defense
 +6% Magic Disruption
 
-<color=purple>Hell Conquest
+<color=FFB730FF>Hell Conquest
 - __Ring of the Broken Will__ :
 -2 Morale to enemy creatures
 
-<color=purple>Hell Conquest
+<color=FFB730FF>Hell Conquest
 - __Ring of the Shadowbrand__ :
 +4 Spellpower
 
-<color=purple>Hell Conquest
+<color=FFB730FF>Hell Conquest
 - __Obsidian Armor__ :
 +4 Defense
 Creatures in hero's army are immuned to Armageddon
 
-<color=purple>Hell Conquest
+<color=FFB730FF>Hell Conquest
 - __Will of Urgash__ :
 +6 Attack
 +6 Spellpower
 -1 Luck
 
-<color=purple>Hell Conquest
+<color=FFB730FF>Hell Conquest
 
 ### Set name
 • Set pieces
@@ -112,34 +112,34 @@ Creatures in hero's army are immuned to Armageddon
 +1 Spellpower
 -10% Dark Energy costs
 
-<color=purple>Death's Embrace
+<color=FFB730FF>Death's Embrace
 - __Ring of the Unrepentant__ :
 +1 Defense
 Creatures in hero's army are immuned to Word of Light
 
-<color=purple>Death's Embrace
+<color=FFB730FF>Death's Embrace
 - __Helm of the Lich__ :
 +3 Spellpower
 +3 Knowledge
 -1 Morale
 
-<color=purple>Death's Embrace
+<color=FFB730FF>Death's Embrace
 - __Deathknight's Boots__ :
 +1 Attack
 +2 Defense
 After every victory, gain an amount of Movement points and Experience depending on the strength of the defeated army
 
-<color=purple>Death's Embrace
+<color=FFB730FF>Death's Embrace
 - __Staff of the Netherworld__ :
 +2 Spellpower
 -10% Initiative to enemy creatures
 
-<color=purple>Death's Embrace
+<color=FFB730FF>Death's Embrace
 - __Cloak of Death's Shadow__ :
 -2 Morale to enemy creatures
 -2 Luck to enemy creatures
 
-<color=purple>Death's Embrace
+<color=FFB730FF>Death's Embrace
 
 ### Set name
 • Set pieces
@@ -150,32 +150,32 @@ After every victory, gain an amount of Movement points and Experience depending 
 +1 Spellpower and Knowledge per rank of Learning skill
 Grants the ability to learn any 4th level spell if the hero has the Magic Insight perk (Sorcery)
 
-<color=purple>Magister Set
+<color=FFB730FF>Magister Set
 - __Magister's Sandals__ :
 +1 Defense
 Gain +1 Knowledge at the start of each week
 
-<color=purple>Magister Set
+<color=FFB730FF>Magister Set
 - __Ring of the Magister__ :
 -6 Mana cost to all spells (minimum 1)
 
-<color=purple>Magister Set
+<color=FFB730FF>Magister Set
 - __Crown of the Magister__ :
-+3 Spellpower
-+3 Knowledge
++2 Spellpower
++2 Knowledge
 
-<color=purple>Magister Set
+<color=FFB730FF>Magister Set
 - __Staff of the Magister__ :
 +2 Spellpower
 Negates enemy Magic Disruption
 
-<color=purple>Magister Set
+<color=FFB730FF>Magister Set
 - __Robe of the Magister__ :
 +2 Defense
 +2 Knowledge
 Gain Experience every day based on the hero's Knowledge, and half the amount to other heroes
 
-<color=purple>Magister Set
+<color=FFB730FF>Magister Set
 
 ### Set name
 • Set pieces
@@ -192,7 +192,7 @@ Grants the Banish ability.
 +1 Spellpower
 +10% damage to all elemental spells
 
-<color=purple>Shadow Burst
+<color=FFB730FF>Shadow Burst
 - __Shadowstep Shoes__ :
 +1 Attack
 +1 Defense
@@ -215,33 +215,33 @@ Grants the Banish ability.
 +2 Spellpower
 Grants dwarven heroes <value=spell_name>.
 
-<color=purple>Dwarven Set
+<color=FFB730FF>Dwarven Set
 - __Helm of the Dwarven Kings__ :
 +3 Defense
 Creatures in hero's army are Undisturbed (immunity to Berserk)
 
-<color=purple>Dwarven Set
+<color=FFB730FF>Dwarven Set
 - __Shield of the Dwarven Kings__ :
 +3 Defense
 +1 Health to friendly creatures
 
-<color=purple>Dwarven Set
+<color=FFB730FF>Dwarven Set
 - __Greaves of the Dwarven Kings__ :
 +3 Attack
 +3 Defense
 -5% Initiative for friendly creatures
 
-<color=purple>Dwarven Set
+<color=FFB730FF>Dwarven Set
 - __Cuirass of the Dwarven Kings__ :
 +6 Defense
 -5% Initiative for friendly creatures
 
-<color=purple>Dwarven Set
+<color=FFB730FF>Dwarven Set
 - __Great Axe of the Dwarven Kings__ :
 +6 Attack
 +2 Defense
 
-<color=purple>Dwarven Set
+<color=FFB730FF>Dwarven Set (4-6)
 
 ### Set name
 • Set pieces
@@ -252,29 +252,29 @@ Creatures in hero's army are Undisturbed (immunity to Berserk)
 +1 Defense
 +3% Health to friendly creatures
 
-<color=purple>Brutalist Set
+<color=FFB730FF>Brutalist Set
 - __Barbarian Cape__ :
 cape
 
-<color=purple>Brutalist Set
+<color=FFB730FF>Brutalist Set
 - __Crag Hack's Helmet__ :
 helmet
 
-<color=purple>Brutalist Set
+<color=FFB730FF>Brutalist Set
 - __Collar Of Primal Rage__ :
 collar
 
-<color=purple>Brutalist Set
+<color=FFB730FF>Brutalist Set
 - __Ogre Club__ :
 +8 Attack
 -1 Defense
 
-<color=purple>Brutalist Set
+<color=FFB730FF>Brutalist Set
 - __Ogre Shield__ :
 +8 Defense
 -1 Attack
 
-<color=purple>Brutalist Set
+<color=FFB730FF>Brutalist Set
 
 ### Set name
 • Set pieces
@@ -303,7 +303,7 @@ collar
 +2 Spellpower
 +10% Initiative to friendly shooting creatures
 - __Dragon Flame Tongue__ :
-+3 Attack
++4 Attack
 -50% Damage taken from enemy Frost spells
 
 ### Set name
@@ -315,22 +315,22 @@ collar
 +3 Knowledge
 +10% Experience gain
 
-<color=purple>Empowerement
+<color=FFB730FF>Empowerement
 - __Robe Of Enlightenment__ :
 +1 Defense
 +20% Experience gain
 
-<color=purple>Empowerement
+<color=FFB730FF>Empowerement
 - __Staff of Power__ :
 +1 Spellpower
 Every 5 victories, gain +1 of the lowest primary attribute.
 
-<color=purple>Empowerement
+<color=FFB730FF>Empowerement
 - __Pendant of Power__ :
 +1 Defense
 Every 5 victories, gain 1000 + 1% experience.
 
-<color=purple>Empowerement
+<color=FFB730FF>Empowerement
 
 ### Set name
 • Set pieces
@@ -405,17 +405,17 @@ Grants hero troops immunity to Blaze Power
 +1 Morale
 +10% Initiative to friendly creatures
 
-<color=purple>War Leader
+<color=FFB730FF>War Leader
 - __War Drums__ :
 +1 Morale
 +1 Damage to friendly creatures
 
-<color=purple>War Leader
+<color=FFB730FF>War Leader
 - __War Banner__ :
 +1 Morale
 +2 Health to friendly creatures
 
-<color=purple>War Leader
+<color=FFB730FF>War Leader
 - __Necklace of Victory__ :
 +1 to all primary attributes
 +1 Morale
@@ -430,7 +430,7 @@ Grants hero troops immunity to Blaze Power
 
 - __Grand Vizir's Cap__ :
 +7 Knowledge<br>
-+500 Movement points after every sea battle<br><br><color=purple>
++500 Movement points after every sea battle<br><br><color=FFB730FF>
 Pirate's Apparel<color_default><br>
 +6 Attack (3/6)<br>
 +12 Attack (6/6)<br>
@@ -456,27 +456,27 @@ Pirate's Apparel<color_default><br>
 - __Cursed Ring__ :
 -1 Luck to enemy creatures
 
-<color=purple>Afterlife Set
+<color=FFB730FF>Afterlife Set
 - __Tunic of the Carved Flesh__ :
 +4 Spellpower
 -1 Morale
 
-<color=purple>Afterlife Set
+<color=FFB730FF>Afterlife Set
 - __Skull Mask__ :
 +1 Defense
 -8% Initiative to enemy creatures
 
-<color=purple>Afterlife Set
+<color=FFB730FF>Afterlife Set
 - __Deadwood Staff__ :
 +3 Spellpower
 -1 Mana cost to Dark magic spells
 
-<color=purple>Afterlife Set
+<color=FFB730FF>Afterlife Set
 - __Spirit of Oppression__ :
 -1 Morale to enemy creatures
 -1 Luck to enemy creatures
 
-<color=purple>Afterlife Set
+<color=FFB730FF>Afterlife Set
 
 ### War Mage
 • Runic War Axe
@@ -489,31 +489,31 @@ Pirate's Apparel<color_default><br>
 
 - __Boots of Interference__ :
 +1 Luck
-+15% Magic Resistance
++15% Magic Disruption
 
-<color=purple>Warmage
+<color=FFB730FF>Warmage
 - __Pendant of Conflux__ :
 +4 Spellpower
 Gain half the mana spent by enemy hero
 
-<color=purple>Warmage
+<color=FFB730FF>Warmage
 - __Helm of the Warmage__ :
 +4 Knowledge
 Learn a new spell on level up (tier dépends on hero level)
 
-<color=purple>Warmage
+<color=FFB730FF>Warmage
 - __Runic War Axe__ :
 +2 Attack
 +2 Knowledge
 Restore 25 Mana after battle
 
-<color=purple>Warmage
+<color=FFB730FF>Warmage
 - __Runic War Harness__ :
 +2 Defense
 +2 Spellpower
 Restore 25 Mana after battle
 
-<color=purple>Warmage
+<color=FFB730FF>Warmage
 
 ### Set name
 • Set pieces
@@ -523,26 +523,26 @@ Restore 25 Mana after battle
 - __Plunderer Vest__ :
 +1 Health to friendly creatures
 
-<color=purple>Bandit Set
+<color=FFB730FF>Bandit Set
 - __Plunderer Shoes__ :
 +1 Initiative to friendly creatures
 
-<color=purple>Bandit Set
+<color=FFB730FF>Bandit Set
 - __Viking Hatchet__ :
 +1 Attack
 Gain Golds after battle depending on the strength of the defeated army
 
-<color=purple>Bandit Set
+<color=FFB730FF>Bandit Set
 - __Viking Shield__ :
 +1 Defense
 Gain Wood and Ore after battle depending on the strength of the defeated army
 
-<color=purple>Bandit Set
+<color=FFB730FF>Bandit Set
 - __Bearhide Wraps__ :
 +1 Morale
 -25% Damage taken from enemy Frost spells
 
-<color=purple>Bandit Set
+<color=FFB730FF>Bandit Set
 
 ### Set name
 • Set pieces
@@ -553,22 +553,22 @@ Gain Wood and Ore after battle depending on the strength of the defeated army
 +1 Attack
 +1 Morale
 
-<color=purple>Animal Spirit
+<color=FFB730FF>Animal Spirit
 - __Wolf Loyalty Shield__ :
 +1 Defense
 +1 Morale
 
-<color=purple>Animal Spirit
+<color=FFB730FF>Animal Spirit
 - __Stag Majesty Cuirass__ :
 +1 Attack
 +1 Defense
 
-<color=purple>Animal Spirit
+<color=FFB730FF>Animal Spirit
 - __Owl Sagacity Wraps__ :
 +1 Spellpower
 +1 Knowledge
 
-<color=purple>Animal Spirit
+<color=FFB730FF>Animal Spirit
 
 ### Set name
 • Set pieces
@@ -579,29 +579,29 @@ Gain Wood and Ore after battle depending on the strength of the defeated army
 +2 Defense
 -50% damage taken from ranged attacks
 
-<color=purple>Celestial Justicar
+<color=FFB730FF>Celestial Justicar
 - __Celestial Justicar's Helm__ :
 +2 Defense
 +2 Spellpower
 .
 
-<color=purple>Celestial Justicar
+<color=FFB730FF>Celestial Justicar
 - __Celestial Justicar's Armor__ :
 +4 Defense
 +6% Health to all friendly creatures (rounded up)
 
-<color=purple>Celestial Justicar
+<color=FFB730FF>Celestial Justicar
 - __Celestial Justicar's Sword__ :
-+2 Attack
-+20% Initiative to friendly creatures
++3 Attack
++15% Initiative to friendly creatures
 
-<color=purple>Celestial Justicar
+<color=FFB730FF>Celestial Justicar
 - __Elrath's Unity__ :
 +1 to all primary attributes
 +1 Morale
 +1 Luck
 
-<color=purple>Celestial Justicar
+<color=FFB730FF>Celestial Justicar
 
 ### Set name
 • Set pieces
@@ -613,24 +613,24 @@ Gain Wood and Ore after battle depending on the strength of the defeated army
 +1 Luck
 +1 Initiative to the hero
 
-<color=purple>Moon Gleam
+<color=FFB730FF>Moon Gleam
 - __Moon Charm__ :
 +1 Morale
 +1 Luck
 Revive the first friendly creature stack that dies in combat (revived creatures are not lost after the battle).
 
-<color=purple>Moon Gleam
+<color=FFB730FF>Moon Gleam
 - __Moonlight Band__ :
 +2 Spellpower
 +2 Knowledge
 Creatures in hero's army are immuned to Curse of the Netherworld
 
-<color=purple>Moon Gleam
+<color=FFB730FF>Moon Gleam
 - __Moonlight Coat__ :
 +3 Defense
 -25% Mana cost to all spells
 
-<color=purple>Moon Gleam
+<color=FFB730FF>Moon Gleam
 
 ### Set name
 • Set pieces
@@ -641,12 +641,12 @@ Creatures in hero's army are immuned to Curse of the Netherworld
 +1 Defense
 Negates all terrain penalties
 
-<color=purple>Wanderer
+<color=FFB730FF>Wanderer
 - __Backpack of the Open Road__ :
 +1 Knowledge
 Restore hero movement points on level up
 
-<color=purple>Wanderer
+<color=FFB730FF>Wanderer
 
 ### Set name
 • Set pieces
@@ -660,13 +660,7 @@ Restore hero movement points on level up
 +1 Attack
 Friendly creatures attacks reduce enemy Defense by 1
 - __Captain's Hook__ :
-+1 Attack<br>
-+50% chance to plunder a random resource after every battle<br>
-<br><color=purple>
-Pirate's Apparel<color_default><br>
-+6 Attack (3/6)<br>
-+12 Attack (6/6)<br>
-*Set bonus is applied after closing the Inventory screen.
+*captain's hook*
 
 ### Set name
 • Set pieces
@@ -674,26 +668,13 @@ Pirate's Apparel<color_default><br>
 (x) Set bonuses
 
 - __Fortune Band of the Saint__ :
-+1 Knowledge<br><br>
-Resurrects a quantity of native Tier1 creatures after combat. The amount is equal to 30% + 1%*K of all casualties or alternatively 30 + 10*K of all Hit Points lost (whichever results in more resurrected creatures). The resurrection requires 6 mana.<color_default> K = Knowledge of the hero and the amount is rounded down. Undead, mechanical and elemental creatures cannot be resurrected.
-<br><color=purple>Garments of the Saint<color_default><br>
--2 Mana Cost of resurrection per artifact (3/7)
+*fortune band of the saint*
 - __Ankh of the Saint__ :
-+1 Spellpower<br><br>
-Resurrects a quantity of native Tier3 creatures after combat. The amount is equal to 30% + 1%*K of all casualties or alternatively 30 + 10*K of all Hit Points lost (whichever results in more resurrected creatures). The resurrection requires 10 mana.<color_default> K = Knowledge of the hero and the amount is rounded down. Undead, mechanical and elemental creatures cannot be resurrected.
-<br><color=purple>Garments of the Saint<color_default><br>
--2 Mana Cost of resurrection per artifact (3/7)
+*ankh of the saint*
 - __Cloak of the Saint__ :
-+1 Defense<br>
-+1 Knowledge<br><br>
-Resurrects a quantity of native Tier4 creatures after combat. The amount is equal to 30% + 1%*K of all casualties or alternatively 130 + 10*K of all Hit Points lost (whichever results in more resurrected creatures). The resurrection requires 12 mana.<color_default> K = Knowledge of the hero and the amount is rounded down. Undead, mechanical and elemental creatures cannot be resurrected.
-<br><color=purple>Garments of the Saint<color_default><br>
--2 Mana Cost of resurrection per artifact (3/7)
+*cloak of the saint*
 - __Staff of the Saint__ :
-+4 Spellpower<br><br>
-Resurrects a quantity of native Tier7 creatures after combat. The amount is equal to 30% + 1%*K of all casualties or alternatively 300 + 30*K of all Hit Points lost (whichever results in more resurrected creatures). The resurrection requires 18 mana.<color_default> K = Knowledge of the hero and the amount is rounded down. Undead, mechanical and elemental creatures cannot be resurrected.
-<br><color=purple>Garments of the Saint<color_default><br>
--2 Mana Cost of resurrection per artifact (3/7)
+*staff of the saint*
 - __Sandals of the Saint__ :
 +3 Defense
 +1 Luck
@@ -745,7 +726,7 @@ The resources earned by the Governance skill are given every day instead of once
 +3 Defense
 Hero troops are Unstoppable (immunity to Slow).
 
-<color=purple>Elven Secret
+<color=FFB730FF>Elven Secret
 - __Armor of Valor__ :
 +1 Defense
 +1 Morale
@@ -761,7 +742,7 @@ Grants the Summon Elementals spell if it wasn't learned already.
 +1 Luck
 -50% Damage taken from enemy Earth spells
 - __Focus Ring__ :
-+7 Spellpower
++8 Spellpower
 -2 Initiative to the hero
 - __Tome of Destruction__ :
 +3 Spellpower
@@ -785,7 +766,7 @@ Restore 10 Mana after battle
 - __Skull of the Forbidden__ :
 +4 Spellpower<br>
 +4 Knowledge<br>
--1 Morale<br><br><color=purple>
+-1 Morale<br><br><color=FFB730FF>
 Death's Embrace<color_default><br>
 +6 Spellpower (3/6)<br>
 +12 Spellpower (6/6)<br>
@@ -809,7 +790,7 @@ For Necropolis, Inferno, Stronghold, Dungeon :
 - __Horn of Plenty__ :
 Grants some random resource every day and 1 of all resources at the start of each week.
 - __Treeborn Quiver__ :
-+4 Attack and unlimited ammo to all friendly shooting creatures<br><br><color=purple>
++4 Attack and unlimited ammo to all friendly shooting creatures<br><br><color=FFB730FF>
 Archer's Dream<color_default><br>
 +1 Luck (2/2)<br>
 *Set bonus is applied after closing the Inventory screen.
@@ -829,7 +810,7 @@ Reinforcements are also gained when the artifact is unequipped, but not if a hig
 +1 Morale
 +10% Initiative to friendly creatures
 
-<color=purple>War Leader
+<color=FFB730FF>War Leader
 - __Steadfast Shield__ :
 +2 Defense
 
@@ -842,7 +823,7 @@ Reinforcements are also gained when the artifact is unequipped, but not if a hig
 - __Butcher Glaive__ :
 +1 Morale<br>
 +1 Luck<br>
-+250 Movement points after every sea battle<br><br><color=purple>
++250 Movement points after every sea battle<br><br><color=FFB730FF>
 Pirate's Apparel<color_default><br>
 +6 Attack (3/6)<br>
 +12 Attack (6/6)<br>

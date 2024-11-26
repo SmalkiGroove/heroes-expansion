@@ -60,7 +60,7 @@
 | | | | | | | | | | | |
 | GREEN DRAGON | 7 | 1 | 220 | 31 | 31 | 40-50 | 9 | 13 | _none_ | Acid Breath, Acid Blood, Regeneration |
 | GOLDEN DRAGON | 7 | 1 | 230 | 34 | 34 | 45-55 | 9 | 13 | _none_ | Acid Breath, Acid Blood, Regeneration |
-| CRYSTAL DRAGON | 7 | 1 | 225 | 37 | 37 | 50-60 | 9 | 14 | _none_ | Prismatic Breath, Acid Blood, Regeneration, Crystal Scale |
+| CRYSTAL DRAGON | 7 | 1 | 225 | 37 | 37 | 50-60 | 9 | 14 | _none_ | Prismatic Breath, Acid Blood, Regeneration, Mythic |
 
 ### FORTRESS:
 | CREATURE | TIER | NB | HP | ATT | DEF | DMG± | SPD | INIT | SPELLS | ABILITIES |
@@ -96,27 +96,27 @@
 ### ACADEMY:
 | CREATURE | TIER | NB | HP | ATT | DEF | DMG± | SPD | INIT | SPELLS | ABILITIES |
 |----------|------|----|----|-----|-----|------|-----|------|--------|-----------|
-| GREMLIN | 1 | 51 | 6 | 1 | 1 | 1-2 | 3 | 9 | _none_ | Magic-proof 25% |
+| GREMLIN | 1 | 51 | 6 | 1 | 1 | 1-2 | 3 | 10 | _none_ | Magic-proof 25% |
 | MASTER GREMLIN | 1 | 51 | 6 | 1 | 2 | 1-2 | 3 | 11 | Repair (advanced) | Magic-proof 25%, Repair |
 | GREMLIN SABOTEUR | 1 | 51 | 7 | 2 | 2 | 1-2 | 3 | 10 | _none_ | Magic-proof 25%, Sabotage |
 | | | | | | | | | | | |
 | STONE GARGOYLE | 2 | 33 | 15 | 2 | 8 | 2-2 | 6 | 7 | _none_ | Elemental, Taunt |
 | OBSIDIAN GARGOYLE | 2 | 33 | 19 | 2 | 8 | 2-2 | 6 | 7 | _none_ | Elemental, Taunt, Magnetism |
-| GOLDEN GARGOYLE | 2 | 33 | 15 | 2 | 8 | 2-2 | 6 | 9 | _none_ | Elemental, Taunt, Enchanted Metal |
+| GOLDEN GARGOYLE | 2 | 33 | 15 | 4 | 8 | 2-2 | 6 | 8 | _none_ | Elemental, Taunt, Enchanted Metal |
 | | | | | | | | | | | |
-| STONE GOLEM | 3 | 18 | 22 | 7 | 7 | 3-5 | 4 | 7 | _none_ | Mechanical, Unstoppable, Magic-proof 50% |
-| STEEL GOLEM | 3 | 18 | 26 | 7 | 7 | 4-6 | 4 | 7 | _none_ | Mechanical, Unstoppable, Magic-proof 50%, Unlimited Retaliations |
-| MAGNETIC GOLEM | 3 | 18 | 22 | 7 | 7 | 4-6 | 4 | 8 | _none_ | Mechanical, Unstoppable, Magic-proof 50%, Magnetic Field |
+| STONE GOLEM | 3 | 20 | 22 | 7 | 7 | 3-5 | 4 | 8 | _none_ | Mechanical, Unstoppable, Magic-proof 50% |
+| STEEL GOLEM | 3 | 20 | 26 | 7 | 7 | 4-6 | 4 | 8 | _none_ | Mechanical, Unstoppable, Magic-proof 50%, Unlimited Retaliations |
+| MAGNETIC GOLEM | 3 | 20 | 22 | 7 | 7 | 4-6 | 4 | 9 | _none_ | Mechanical, Unstoppable, Magic-proof 50%, Magnetic Field |
 | | | | | | | | | | | |
 | MAGE | 4 | 10 | 24 | 6 | 6 | 9-9 | 3 | 9 | Fist of Wrath (advanced), Deflect Missile (advanced) | Long Range, Arcane Shot, Arcane Aura |
 | ARCHMAGE | 4 | 10 | 25 | 6 | 6 | 9-9 | 3 | 9 | Fist of Wrath (advanced), Deflect Missile (advanced), Immunity (basic) | Long Range, Arcane Shot, Arcane Aura, Energy Channel |
 | BATTLEMAGE | 4 | 10 | 26 | 8 | 8 | 9-9 | 3 | 10 | Fist of Wrath (expert), Deflect Missile (expert) | Long Range, Arcane Shot, Arcane Aura |
 | | | | | | | | | | | |
-| DJINN | 5 | 5 | 36 | 12 | 8 | 11-15 | 7 | 13 | Random cast (Dark magic) (advanced) | Elemental, Random Curse, Magic-proof 75% |
-| DJINN SULTAN | 5 | 5 | 42 | 12 | 10 | 12-16 | 7 | 13 | Random cast (Dark or Light magic) (advanced) | Elemental, Random Blessing, Magic-proof 75%, Purge |
-| DJINN VIZIER | 5 | 5 | 38 | 12 | 8 | 11-15 | 7 | 14 | _none_ | Elemental, Wheel of Fortune, Magic-proof 75%, Manavorous |
+| DJINN | 5 | 5 | 39 | 12 | 8 | 11-15 | 7 | 13 | Random cast (Dark magic) (advanced) | Elemental, Random Curse, Magic-proof 75% |
+| DJINN SULTAN | 5 | 5 | 46 | 12 | 10 | 12-16 | 7 | 13 | Random cast (Dark or Light magic) (advanced) | Elemental, Random Blessing, Magic-proof 75%, Purge |
+| DJINN VIZIER | 5 | 5 | 42 | 12 | 8 | 11-15 | 7 | 15 | _none_ | Elemental, Wheel of Fortune, Magic-proof 75%, Manavorous |
 | | | | | | | | | | | |
-| RAKSHASA RANI | 6 | 3 | 90 | 20 | 20 | 15-25 | 6 | 12 | _none_ | Bravery, No Enemy Retaliation, Unflagging |
+| RAKSHASA RANI | 6 | 3 | 100 | 20 | 20 | 15-25 | 6 | 12 | _none_ | Bravery, No Enemy Retaliation, Unflagging |
 | RAKSHASA RAJA | 6 | 3 | 120 | 25 | 25 | 20-30 | 6 | 12 | Warm-up (advanced) | Bravery, No Enemy Retaliation, Warm-up, Unflagging, Keen Eye |
 | RAKSHASA KSHATRA | 6 | 3 | 110 | 25 | 20 | 20-30 | 7 | 13 | Warm-up (advanced) | Bravery, Sweeping Strike, Warm-up, Unflagging, Unstoppable |
 | | | | | | | | | | | |
@@ -137,15 +137,15 @@
 | | | | | | | | | | | |
 | MINOTAUR | 3 | 16 | 28 | 8 | 6 | 5-8 | 5 | 9 | _none_ | Bravery, Violence |
 | MINOTAUR GUARD | 3 | 16 | 31 | 10 | 6 | 5-8 | 5 | 9 | _none_ | Bravery, Double Attack, Fierce Retaliation |
-| MINOTAUR TASKMASTER | 3 | 16 | 34 | 8 | 8 | 6-9 | 5 | 9 | _none_ | Bravery Aura, Violence, Heavy Armor |
+| MINOTAUR TASKMASTER | 3 | 16 | 34 | 8 | 8 | 6-9 | 5 | 9 | _none_ | Dominant Presence, Violence, Heavy Armor |
 | | | | | | | | | | | |
 | DARK RAIDER | 4 | 9 | 36 | 8 | 8 | 7-10 | 8 | 16 | _none_ | Beat-up, Keen Eye |
 | GRIM RAIDER | 4 | 9 | 40 | 11 | 8 | 7-10 | 8 | 16 | _none_ | Beat-up, Keen Eye, Rider Charge |
 | BRISK RAIDER | 4 | 9 | 42 | 10 | 10 | 7-10 | 8 | 16 | _none_ | Beat-up, Keen Eye, Ride-by Attack |
 | | | | | | | | | | | |
-| SHADOW WITCH | 5 | 5 | 43 | 9 | 9 | 12-15 | 4 | 10 | Slow (expert), Confusion (advanced) | Long Range, Melee Potent, Whip Strike |
-| SHADOW MATRIARCH | 5 | 5 | 46 | 10 | 10 | 14-15 | 4 | 10 | Slow (expert), Confusion (advanced), Arcane Crystal (expert) | Long Range, Melee Potent, Whip Strike |
-| SHADOW MISTRESS | 5 | 5 | 56 | 11 | 11 | 14-17 | 5 | 14 | Slow (expert), Confusion (advanced), Deep Freeze (basic) | Camouflage, Whip Strike |
+| SHADOW WITCH | 5 | 5 | 43 | 9 | 9 | 12-15 | 4 | 10 | Slow (advanced), Confusion (advanced) | Long Range, Melee Potent, Whip Strike |
+| SHADOW MATRIARCH | 5 | 5 | 46 | 10 | 10 | 14-15 | 4 | 10 | Slow (advanced), Confusion (advanced), Arcane Crystal (expert) | Long Range, Melee Potent, Whip Strike |
+| SHADOW MISTRESS | 5 | 5 | 56 | 11 | 11 | 14-17 | 5 | 14 | Slow (advanced), Confusion (advanced), Deep Freeze (basic) | Camouflage, Whip Strike |
 | | | | | | | | | | | |
 | HYDRA | 6 | 3 | 160 | 16 | 19 | 12-22 | 4 | 7 | _none_ | Battle Rage, Three-head Attack, Regeneration |
 | CHAOS HYDRA | 6 | 3 | 175 | 20 | 20 | 16-25 | 4 | 7 | _none_ | Battle Rage, Circle Attack, Regeneration, Life Drain |
@@ -189,21 +189,21 @@
 ### INFERNO:
 | CREATURE | TIER | NB | HP | ATT | DEF | DMG± | SPD | INIT | SPELLS | ABILITIES |
 |----------|------|----|----|-----|-----|------|-----|------|--------|-----------|
-| IMP | 1 | 66 | 5 | 2 | 2 | 1-1 | 5 | 9 | _none_ | Demonic, Fire Resistance, Mana Destroyer |
-| FAMILIAR | 1 | 66 | 5 | 3 | 2 | 1-1 | 5 | 10 | Syphon Mana (advanced) | Demonic, Fire Immuned, Siphon Mana |
-| VERMIN | 1 | 66 | 6 | 2 | 3 | 1-1 | 5 | 9 | _none_ | Demonic, Fire Immuned, Mana Stealer |
+| IMP | 1 | 66 | 5 | 2 | 2 | 1-1 | 5 | 10 | _none_ | Demonic, Fire Resistance, Mana Destroyer, Manavorous |
+| FAMILIAR | 1 | 66 | 5 | 3 | 2 | 1-1 | 5 | 11 | Syphon Mana (advanced) | Demonic, Fire Immuned, Siphon Mana, Manavorous |
+| VERMIN | 1 | 66 | 6 | 2 | 3 | 1-1 | 5 | 10 | _none_ | Demonic, Fire Immuned, Mana Stealer, Manavorous |
 | | | | | | | | | | | |
-| HORNED DEMON | 2 | 36 | 13 | 5 | 3 | 2-3 | 4 | 8 | _none_ | Demonic, Fire Resistance, Spiteful, Fury |
-| HORNED OVERSEER | 2 | 36 | 13 | 6 | 4 | 2-4 | 4 | 9 | Explosion (advanced) | Demonic, Fire Immuned, Spiteful, Fury, Explosion |
-| HORNED GRUNT | 2 | 36 | 14 | 5 | 5 | 2-3 | 4 | 8 | _none_ | Demonic, Fire Immuned, Spiteful, Fury, Leap |
+| HORNED DEMON | 2 | 36 | 14 | 6 | 4 | 2-3 | 4 | 8 | _none_ | Demonic, Fire Resistance, Spiteful, Fury |
+| HORNED OVERSEER | 2 | 36 | 14 | 7 | 5 | 2-4 | 4 | 9 | Explosion (advanced) | Demonic, Fire Immuned, Spiteful, Fury, Explosion |
+| HORNED GRUNT | 2 | 36 | 15 | 6 | 6 | 2-3 | 4 | 8 | _none_ | Demonic, Fire Immuned, Spiteful, Fury, Leap |
 | | | | | | | | | | | |
-| HELLHOUND | 3 | 22 | 15 | 6 | 3 | 3-5 | 6 | 11 | _none_ | Demonic, Fire Resistance, No Enemy Retaliation |
-| CERBERUS | 3 | 22 | 16 | 9 | 3 | 4-5 | 6 | 12 | _none_ | Demonic, Fire Immuned, No Enemy Retaliation, Three-head Attack |
-| FIREHOUND | 3 | 22 | 16 | 7 | 4 | 4-6 | 6 | 11 | _none_ | Demonic, Fire Immuned, No Enemy Retaliation, Breath Attack |
+| HELLHOUND | 3 | 22 | 17 | 6 | 4 | 3-5 | 6 | 11 | _none_ | Demonic, Fire Resistance, No Enemy Retaliation |
+| CERBERUS | 3 | 22 | 18 | 8 | 6 | 4-5 | 6 | 12 | _none_ | Demonic, Fire Immuned, No Enemy Retaliation, Three-head Attack |
+| FIREHOUND | 3 | 22 | 18 | 7 | 5 | 4-6 | 6 | 11 | _none_ | Demonic, Fire Immuned, No Enemy Retaliation, Breath Attack |
 | | | | | | | | | | | |
-| SUCCUBUS | 4 | 11 | 26 | 6 | 6 | 6-12 | 4 | 9 | _none_ | Demonic, Fire Resistance, Ranged Retaliation |
-| SUCCUBUS MISTRESS | 4 | 11 | 26 | 9 | 6 | 6-12 | 4 | 9 | _none_ | Demonic, Fire Immuned, Ranged Retaliation, Chain Shot |
-| SUCCUBUS SEDUCER | 4 | 11 | 29 | 6 | 6 | 9-12 | 4 | 9 | _none_ | Demonic, Fire Immuned, Ranged Retaliation, Seduce |
+| SUCCUBUS | 4 | 11 | 26 | 6 | 6 | 8-14 | 4 | 9 | _none_ | Demonic, Fire Resistance, Ranged Retaliation |
+| SUCCUBUS MISTRESS | 4 | 11 | 28 | 9 | 6 | 8-14 | 4 | 9 | _none_ | Demonic, Fire Immuned, Ranged Retaliation, Chain Shot |
+| SUCCUBUS SEDUCER | 4 | 11 | 27 | 6 | 6 | 11-14 | 4 | 9 | _none_ | Demonic, Fire Immuned, Ranged Retaliation, Seduce |
 | | | | | | | | | | | |
 | HELL CHARGER | 5 | 5 | 56 | 15 | 10 | 10-15 | 8 | 15 | _none_ | Demonic, Fire Resistance, Fear |
 | HELL STALLION | 5 | 5 | 56 | 16 | 10 | 10-16 | 8 | 16 | _none_ | Demonic, Fire Immuned, Fear, Searing Aura |
@@ -247,3 +247,33 @@
 | CYCLOP | 7 | 1 | 280 | 42 | 34 | 25-65 | 5 | 9 | Goblin Snack (advanced) | Raging Blood, Goblin Snack, Goblin Throw, Short Range |
 | UNTAMED CYCLOP | 7 | 1 | 290 | 46 | 36 | 35-75 | 5 | 9 | Goblin Snack (advanced) | Raging Blood, Goblin Snack, Goblin Throw, Short Range, Crushing Blow |
 | BLOODEYE CYCLOP | 7 | 1 | 310 | 42 | 38 | 43-53 | 5 | 9 | Goblin Snack (advanced) | Raging Blood, Goblin Snack, Goblin Throw, Short Range, Evil Strike |
+
+### NEUTRAL:
+| CREATURE | TIER | NB | HP | ATT | DEF | DMG± | SPD | INIT | SPELLS | ABILITIES |
+|----------|------|----|----|-----|-----|------|-----|------|--------|-----------|
+| | | | | | | | | | | |
+| WOLF | 2 | 50 | 15 | 5 | 1 | 3-5 | 6 | 14 | _none_ | Pack Hunter, Howl |
+| | | | | | | | | | | |
+| MANTICORE | 5 | 7 | 70 | 10 | 6 | 10-16 | 6 | 12 | _none_ | Poison |
+| | | | | | | | | | | |
+| ARCANE EAGLE | 6 | 3 | 99 | 15 | 15 | 15-25 | 8 | 14 | _none_ | Regeneration |
+| | | | | | | | | | | |
+| PHOENIX | 7 | 1 | 225 | 25 | 25 | 25-50 | 10 | 18 | _none_ | Elemental, Fire Immuned, Fire Body, Rebirth |
+| | | | | | | | | | | |
+| AIR ELEMENTAL | 5 | 10 | 52 | 8 | 2 | 2-8 | 7 | 15 | _none_ | Elemental, Lightning Immuned, Flying, Incorporeal, No Enemy Retaliation |
+| EARTH ELEMENTAL | 5 | 10 | 111 | 15 | 25 | 13-15 | 4 | 7 | _none_ | Elemental, Earth Immuned, Bash, Unlimited Retaliations, Protect Allies |
+| FIRE ELEMENTAL | 5 | 10 | 60 | 9 | 7 | 9-13 | 3 | 11 | _none_ | Elemental, Fire Immuned, Ranged, Mark of Fire, Fire Body |
+| WATER ELEMENTAL | 5 | 10 | 83 | 4 | 11 | 4-7 | 4 | 9 | Ice Bolt (expert), Polar Ring (expert) | Elemental, Ice Immuned, Purge, Regeneration, Fierce Retaliation |
+| | | | | | | | | | | |
+| BLACK KNIGHT | 6 | 1 | 125 | 15 | 15 | 15-35 | 7 | 8 | _none_ | Undead, Weakening Strike, Shielded |
+| TERROR KNIGHT | 6 | 1 | 150 | 20 | 20 | 25-45 | 7 | 10 | _none_ | Undead, Deadly Strike, Shielded |
+| | | | | | | | | | | |
+| MUMMY | 3 | 20 | 30 | 4 | 7 | 2-4 | 4 | 8 | Confusion (basic), Wasp Swarm (basic) | Undead, Cursed Strike |
+| | | | | | | | | | | |
+| LIZARDMAN | 2 | 25 | 12 | 4 | 2 | 2-4 | 4 | 13 | _none_ | Unlimited Retaliations, Maneuver |
+| | | | | | | | | | | |
+| BEHEMOTH | 7 | 1 | 280 | 36 | 26 | 43-52 | 6 | 9 | _none_ | Battle Rage, Roar, Ice Immuned, Frightful Presence |
+| EINHERJAR | 7 | 1 | 248 | 28 | 28 | 32-44 | 5 | 10 | _none_ | Melee Potent, Long Range, Fire Immuned, Free Mind, Magic-proof 25%, Bravery |
+| KRAKEN | 7 | 1 | 430 | 30 | 36 | 40-60 | 4 | 8 | Convocation (advanced) | Convocation, Entangling Roots, Circle Attack, Magic-proof 25%, Undisturbed, Incorruptible, Unstoppable |
+| | | | | | | | | | | |
+| LEGENDARY DRAGON | 8 | 1 | 400 | 50 | 40 | 69-99 | 10 | 10 | _none_ | Breath Attack, No Enemy Retaliation, Dominant Presence, Magic-proof 50%, Free Mind, Unstoppable, Unflagging, Mythic |
