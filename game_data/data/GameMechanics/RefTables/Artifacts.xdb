@@ -1718,7 +1718,7 @@
 				<Icon href="/Textures/HeroScreen/Artifacts/SandalsOfTheBlessed.xdb#xpointer(/Texture)"/>
 				<CostOfGold>10000</CostOfGold>
 				<AIValue>20000</AIValue>
-				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
+				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>3</Defence>
@@ -2518,12 +2518,12 @@
 				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>CHEST</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/RegalArmour.xdb#xpointer(/Texture)"/>
-				<CostOfGold>12000</CostOfGold>
-				<AIValue>6000</AIValue>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>10000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
-					<Attack>1</Attack>
-					<Defence>1</Defence>
+					<Attack>0</Attack>
+					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
@@ -2818,13 +2818,13 @@
 				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>FINGER</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/FortuneBandOfTheSaint.xdb#xpointer(/Texture)"/>
-				<CostOfGold>8000</CostOfGold>
-				<AIValue>4000</AIValue>
-				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>10000</AIValue>
+				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
-					<Knowledge>1</Knowledge>
+					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
@@ -2868,9 +2868,9 @@
 				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>NECK</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/AnkhOfTheSaint.xdb#xpointer(/Texture)"/>
-				<CostOfGold>12000</CostOfGold>
-				<AIValue>6000</AIValue>
-				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>10000</AIValue>
+				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
@@ -2895,7 +2895,7 @@
 				<Icon href="/Textures/HeroScreen/Artifacts/CloakOfTheSaint.xdb#xpointer(/Texture)"/>
 				<CostOfGold>20000</CostOfGold>
 				<AIValue>10000</AIValue>
-				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
+				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>1</Defence>
@@ -3170,7 +3170,7 @@
 				<Icon href="/Textures/HeroScreen/Artifacts/CodexOfTheSaint.xdb#xpointer(/Texture)"/>
 				<CostOfGold>20000</CostOfGold>
 				<AIValue>30000</AIValue>
-				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
+				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
@@ -3190,16 +3190,16 @@
 				<NameFileRef href="/Text/Game/Artifacts/VizirsCap/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/VizirsCap/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_RELIC</Type>
+				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>HEAD</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/VizirsCap.xdb#xpointer(/Texture)"/>
-				<CostOfGold>28000</CostOfGold>
-				<AIValue>14000</AIValue>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>10000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
-					<Knowledge>7</Knowledge>
+					<Knowledge>1</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
@@ -3268,11 +3268,11 @@
 				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>SECONDARY</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/CaptainsHook.xdb#xpointer(/Texture)"/>
-				<CostOfGold>8000</CostOfGold>
-				<AIValue>4000</AIValue>
-				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>0</AIValue>
+				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
 				<HeroStatsModif>
-					<Attack>1</Attack>
+					<Attack>0</Attack>
 					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
@@ -3368,14 +3368,14 @@
 				<Type>ARTF_CLASS_RELIC</Type>
 				<Slot>PRIMARY</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/StaffOfTheSaint.xdb#xpointer(/Texture)"/>
-				<CostOfGold>32000</CostOfGold>
-				<AIValue>16000</AIValue>
-				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
+				<CostOfGold>1</CostOfGold>
+				<AIValue>1</AIValue>
+				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
-					<SpellPower>4</SpellPower>
+					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
@@ -3965,11 +3965,11 @@
 				<NameFileRef href="/Text/Game/Artifacts/PalaceShoes/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/PalaceShoes/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_RELIC</Type>
+				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>FEET</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/PalaceShoes.xdb#xpointer(/Texture)"/>
-				<CostOfGold>28000</CostOfGold>
-				<AIValue>14000</AIValue>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>10000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
@@ -4443,15 +4443,15 @@
 				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>PRIMARY</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/PirateSmasher.xdb#xpointer(/Texture)"/>
-				<CostOfGold>-26665</CostOfGold>
+				<CostOfGold>5000</CostOfGold>
 				<AIValue>0</AIValue>
-				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
+				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
-					<Morale>1</Morale>
+					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
 				<ArtifactShared href="/MapObjects/Artifacts/PirateSmasher.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>

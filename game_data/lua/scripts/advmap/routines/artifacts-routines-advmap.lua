@@ -99,6 +99,65 @@ function Routine_ArtifactMagistersSandals(player, hero)
     ChangeHeroStat(hero, STAT_KNOWLEDGE, 1)
 end
 
+function Routine_ArtifactVizirsCap(player, hero)
+    log("$ Routine_ArtifactVizirsCap")
+    local total = 0
+    for _,obj in Dwellings_T1 do
+        for _,building in GetObjectNamesByType(obj) do
+            if GetObjectOwner(building) == player then total = total + 500 end
+        end
+    end
+    for _,obj in Dwellings_T2 do
+        for _,building in GetObjectNamesByType(obj) do
+            if GetObjectOwner(building) == player then total = total + 500 end
+        end
+    end
+    for _,obj in Dwellings_T3 do
+        for _,building in GetObjectNamesByType(obj) do
+            if GetObjectOwner(building) == player then total = total + 500 end
+        end
+    end
+    for _,obj in Dwellings_MP do
+        for _,building in GetObjectNamesByType(obj) do
+            if GetObjectOwner(building) == player then total = total + 500 end
+        end
+    end
+    AddPlayerResource(player, hero, GOLD, total)
+end
+
+function Routine_ArtifactVizirsScimitar(player, hero)
+    log("$ Routine_ArtifactVizirsScimitar")
+    local faction = HEROES[hero].faction
+    for _,town in GetHeroTowns(player, hero) do
+        if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_1) ~= 0 then
+            local creature = CREATURES_BY_FACTION[faction][1][1]
+            local current = GetObjectDwellingCreatures(town, creature)
+            SetObjectDwellingCreatures(town, creature, current + 10)
+        end
+        if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_2) ~= 0 then
+            local creature = CREATURES_BY_FACTION[faction][2][1]
+            local current = GetObjectDwellingCreatures(town, creature)
+            SetObjectDwellingCreatures(town, creature, current + 10)
+        end
+    end
+end
+
+function Routine_ArtifactPalaceShoes(player, hero, combatIndex)
+    local bonus_table = {
+        [HERO_BATTLE_BONUS_LUCK] = 1,
+        [HERO_BATTLE_BONUS_MORALE] = 1,
+        [HERO_BATTLE_BONUS_ATTACK] = 3,
+        [HERO_BATTLE_BONUS_DEFENCE] = 3,
+        [HERO_BATTLE_BONUS_HITPOINTS] = 6,
+        [HERO_BATTLE_BONUS_INITIATIVE] = 2,
+        [HERO_BATTLE_BONUS_SPEED] = 1,
+    }
+    local r = random(0,13,0)
+    for k,v in bonus_table do
+        if (mod(r,7) == k) or (mod(2*r,7) == k) then GiveHeroBattleBonus(hero, k, v) end
+    end
+end
+
 function Routine_ArtifactEldenaRedScarf(player, hero)
     log("$ Routine_ArtifactEldenaRedScarf")
     local nb = 5
@@ -290,6 +349,8 @@ DAILY_TRIGGER_ARTIFACTS_ROUTINES = {
 WEEKLY_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_HORN_OF_PLENTY] = Routine_ArtifactHornOfPlenty,
     [ARTIFACT_MAGISTERS_SANDALS] = Routine_ArtifactMagistersSandals,
+    [ARTIFACT_VIZIRS_CAP] = Routine_ArtifactVizirsCap,
+    [ARTIFACT_VIZIRS_SCIMITAR] = Routine_ArtifactVizirsScimitar,
 }
 LEVELUP_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_BACKPACK_OF_THE_OPEN_ROAD] = Routine_ArtifactBackpackOfOpenRoad,
@@ -308,6 +369,7 @@ AFTER_COMBAT_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_DEATH_KNIGHT_BOOTS] = Routine_ArtifactDeathknightBoots,
     [ARTIFACT_VIKING_HATCHET] = Routine_ArtifactVikingHatchet,
     [ARTIFACT_VIKING_SHIELD] = Routine_ArtifactVikingShield,
+    [ARTIFACT_PALACE_SHOES] = Routine_ArtifactPalaceShoes,
     [ARTIFACT_PENDANT_OF_THE_LYRE] = Routine_ArtifactPendantOfTheLyre,
     [ARTIFACT_STAFF_OF_THE_LYRE] = Routine_ArtifactStaffOfTheLyre,
 }

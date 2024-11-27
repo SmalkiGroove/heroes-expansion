@@ -127,7 +127,7 @@ ARTIFACT_OBSIDIAN_ARMOR = 123                       -- immunity to armaggeddon
 ARTIFACT_ELRATHS_DIVINE_SHIELD = 124                -- reduce magic damage taken from all elements TODO
 ARTIFACT_ROD_OF_TORMENT = 125                       -- enemy creatures have -2 morale
 ARTIFACT_CODEX_OF_THE_SAINT = 126                   -- 
-ARTIFACT_VIZIRS_CAP = 127                           -- 
+ARTIFACT_VIZIRS_CAP = 127                           -- gain weekly golds per dwelling **
 ARTIFACT_PLUNDERER_VEST = 128                       -- creatures have +1 hp
 ARTIFACT_AVENGER_BOW = 129                          -- increase ranged damage TODO
 ARTIFACT_CAPTAINS_HOOK = 130                        -- 
@@ -145,7 +145,7 @@ ARTIFACT_SHADOW_MASK = 141                          -- /
 ARTIFACT_BARBARIAN_HELMET = 142                     -- 
 ARTIFACT_SKULL_MASK = 143                           -- decrease enemy initiative
 ARTIFACT_SENTINELS_BLADE = 144                      -- after spawning a blade barrier, ... **
-ARTIFACT_VIZIRS_SCIMITAR = 145                      -- 
+ARTIFACT_VIZIRS_SCIMITAR = 145                      -- increase t1 and t2 weekly prod by 10 **
 ARTIFACT_BARBARIAN_CAPE = 146                       -- 
 ARTIFACT_SHADOW_BLADE = 147                         -- /
 ARTIFACT_SHADOWSTEP_SHOES = 148                     -- /
@@ -158,7 +158,7 @@ ARTIFACT_DEADWOOD_STAFF = 154                       -- reduce mana cost of dark 
 ARTIFACT_DEATH_KNIGHT_BOOTS = 155                   -- gain experience and movement points after battle **
 ARTIFACT_BARBARIAN_CUIRASS = 156                    -- creatures have +3% hp +1
 ARTIFACT_HARPY_BOOTS = 157                          -- creatures have +1 initiative and speed
-ARTIFACT_PALACE_SHOES = 158                         -- 
+ARTIFACT_PALACE_SHOES = 158                         -- gain random battle bonuses after combat **
 ARTIFACT_SHACKLES_OF_THE_LAST_MAN = 159             -- enemy creatures have -1 att and def TODO
 ARTIFACT_LEGENDARY_BOOTS = 160                      -- 
 ARTIFACT_GOLDEN_GOOSE = 161                         -- all attacks are lucky
@@ -343,7 +343,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_RING_OF_CAUTION]               = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RING, special=0},
     [ARTIFACT_HELM_OF_CHAOS]                 = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_HEAD, special=0},
     [ARTIFACT_PENDANT_OF_CONFLUX]            = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_NECK, special=0},
-    [ARTIFACT_SANDALS_OF_THE_BLESSED]        = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
+    [ARTIFACT_SANDALS_OF_THE_BLESSED]        = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEGS, special=1},
     [ARTIFACT_SANDROS_CLOAK]                 = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_SHOULDERS, special=1},
     [ARTIFACT_RING_OF_THE_UNREPENTANT]       = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RING, special=0},
     [ARTIFACT_AMULET_OF_NECROMANCY]          = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_NECK, special=0},
@@ -387,10 +387,10 @@ ARTIFACTS_DATA = {
     [ARTIFACT_RING_OF_LIFE]                  = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_RING, special=1},
     [ARTIFACT_STEADFAST_SHIELD]              = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_LEFTHAND, special=0},
     [ARTIFACT_VIKING_SHIELD]                 = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_LEFTHAND, special=0},
-    [ARTIFACT_FORTUNE_BAND_OF_THE_SAINT]     = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RING, special=0},
+    [ARTIFACT_FORTUNE_BAND_OF_THE_SAINT]     = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RING, special=1},
     [ARTIFACT_SENTINELS_BRACER]              = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RING, special=0},
-    [ARTIFACT_ANKH_OF_THE_SAINT]             = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_NECK, special=0},
-    [ARTIFACT_CLOAK_OF_THE_SAINT]            = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_SHOULDERS, special=0},
+    [ARTIFACT_ANKH_OF_THE_SAINT]             = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_NECK, special=1},
+    [ARTIFACT_CLOAK_OF_THE_SAINT]            = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_SHOULDERS, special=1},
     [ARTIFACT_GENJIS_HAT]                    = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_HEAD, special=0},
     [ARTIFACT_GENJIS_VEST]                   = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_BODY, special=0},
     [ARTIFACT_GENJIS_SANDALS]                = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
@@ -401,15 +401,15 @@ ARTIFACTS_DATA = {
     [ARTIFACT_OBSIDIAN_ARMOR]                = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_BODY, special=0},
     [ARTIFACT_ELRATHS_DIVINE_SHIELD]         = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_LEFTHAND, special=0},
     [ARTIFACT_ROD_OF_TORMENT]                = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
-    [ARTIFACT_CODEX_OF_THE_SAINT]            = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_LEFTHAND, special=0},
+    [ARTIFACT_CODEX_OF_THE_SAINT]            = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_LEFTHAND, special=1},
     [ARTIFACT_VIZIRS_CAP]                    = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_HEAD, special=0},
     [ARTIFACT_PLUNDERER_VEST]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_BODY, special=0},
     [ARTIFACT_AVENGER_BOW]                   = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
-    [ARTIFACT_CAPTAINS_HOOK]                 = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_LEFTHAND, special=0},
+    [ARTIFACT_CAPTAINS_HOOK]                 = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_LEFTHAND, special=1},
     [ARTIFACT_PLUNDERER_SHOES]               = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
     [ARTIFACT_BUTCHER_GLAIVE]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
     [ARTIFACT_CELESTIAL_JUSTICAR_SHIELD]     = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_LEFTHAND, special=0},
-    [ARTIFACT_STAFF_OF_THE_SAINT]            = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
+    [ARTIFACT_STAFF_OF_THE_SAINT]            = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=1},
     [ARTIFACT_BACKPACK_OF_THE_OPEN_ROAD]     = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_SHOULDERS, special=0},
     [ARTIFACT_PHOENIX_FEATHER]               = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_POCKET, special=1},
     [ARTIFACT_POTION_OF_MANA]                = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_POCKET, special=1},
@@ -433,7 +433,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_DEATH_KNIGHT_BOOTS]            = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
     [ARTIFACT_BARBARIAN_CUIRASS]             = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_BODY, special=0},
     [ARTIFACT_HARPY_BOOTS]                   = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
-    [ARTIFACT_PALACE_SHOES]                  = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_LEGS, special=0},
+    [ARTIFACT_PALACE_SHOES]                  = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
     [ARTIFACT_SHACKLES_OF_THE_LAST_MAN]      = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_POCKET, special=0},
     [ARTIFACT_LEGENDARY_BOOTS]               = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_LEGS, special=0},
     [ARTIFACT_GOLDEN_GOOSE]                  = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_POCKET, special=0},
@@ -452,7 +452,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_ANCIENT_PROTECTION_CHARM]      = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_NECK, special=0},
     [ARTIFACT_SPIRIT_OF_OPPRESSION]          = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_NECK, special=0},
     [ARTIFACT_CRIMSON_SCYTHE]                = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
-    [ARTIFACT_PIRATE_SMASHER]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
+    [ARTIFACT_PIRATE_SMASHER]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=1},
     [ARTIFACT_ELRATHS_UNITY]                 = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_POCKET, special=0},
     [ARTIFACT_WILL_OF_URGASH]                = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
     [ARTIFACT_MOONLIGHT_BAND]                = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RING, special=0},
