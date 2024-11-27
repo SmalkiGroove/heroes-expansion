@@ -10,7 +10,11 @@ function Routine_AbilityCommandBallista(side, unit)
                     ShowFlyingSign("/Text/Game/Scripts/Combat/BallistaCommander.txt", unit, 9)
                     setATB(ballista, 2*ATB_INSTANT) sleep()
                     if GetHero(side) and GetHeroName(GetHero(side)) == H_VITTORIO then
-                        TryShootTarget(unit, RandomCreature(1-side,x))
+                        if CanCreatureShoot(unit) then
+                            TryShootTarget(unit, RandomCreature(1-side,x))
+                        else
+                            DefendCombatUnit(unit)
+                        end
                     else
                         DefendCombatUnit(unit)
                     end

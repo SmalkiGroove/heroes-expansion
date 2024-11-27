@@ -172,6 +172,47 @@ function SetATB_WarMachineType(side, type, value)
     end
 end
 
+function IsCreature2x2(unit)
+    local type = GetCreatureType(unit)
+    if CREATURES[type][2] >= 6 then return 1 end
+    if CREATURES[type][2] == 5 then
+        if type == CREATURE_MANTICORE then return 1 end
+        if CREATURES[type][1] == PRESERVE or CREATURES[type][1] == NECROPOLIS or CREATURES[type][1] == INFERNO then return 1 end
+    end
+    if CREATURES[type][2] == 4 then
+        if CREATURES[type][1] == HAVEN or CREATURES[type][1] == FORTRESS or CREATURES[type][1] == DUNGEON or CREATURES[type][1] == STRONGHOLD then return 1 end
+    end
+    return nil
+end
+
+function CreatureAtPosition(x,y)
+    for side = 0,1 do
+        for i,cr in GetUnits(side, CREATURE) do
+            local ux,uy = GetUnitPosition(cr)
+            if IsCreature2x2(cr) then
+                if (x == ux and y == uy) or (x+1 == ux and y == uy) or (x == ux and y+1 == uy) or (x+1 == ux and y+1 == uy) then return side end
+            else
+                if (x == ux and y == uy) then return side end
+        end
+    end
+    return nil
+end
+
+function CanCreatureShoot(unit)
+    local side = GetUnitSide(unit)
+    local x,y = GetUnitPosition(unit)
+    if IsCreature2x2(unit) then
+        return 1 -- todo
+    else
+        for i = -1,1 do for j = -1,1 do
+            if i ~= 0 or j ~= 0 then
+                if CreatureAtPosition(x+i,y+j) == (1-side) then return nil end
+            end
+        end end
+    end
+    return 1
+end
+
 function CreatureToUndead(creature)
 	if CREATURES[creature][1] == NECROPOLIS or creature == CREATURE_BLACK_KNIGHT or creature == CREATURE_DEATH_KNIGHT or creature == CREATURE_MUMMY then return creature end
 	local tier = CREATURES[creature][2]

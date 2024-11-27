@@ -379,11 +379,13 @@ function Routine_GremlinRandomShoot(side, hero)
             if cr ~= ROUTINE_VARS.GremlinShot then
                 local type = GetCreatureType(cr)
                 if type == CREATURE_GREMLIN or type == CREATURE_MASTER_GREMLIN or type == CREATURE_GREMLIN_SABOTEUR then
-                    local target = RandomCreature(1-side,COMBAT_TURN+i)
-                    TryShootTarget(cr, target)
-                    SetATB_ID(cr, ATB_HALF)
-                    ROUTINE_VARS.GremlinShot = cr
-                    return
+                    if CanCreatureShoot(cr) then
+                        local target = RandomCreature(1-side,COMBAT_TURN+i)
+                        TryShootTarget(cr, target)
+                        SetATB_ID(cr, ATB_HALF)
+                        ROUTINE_VARS.GremlinShot = cr
+                        return
+                    end
                 end
             end
         end
@@ -769,9 +771,15 @@ function Routine_InfernoGating(side, hero)
         local id = GetCreatureType(cr)
         if CREATURES[id][1] == INFERNO and CREATURES[id][2] <= gating_tier then
             local nb = GetCreatureNumber(cr)
-            local x = random(GRID_X_MIN, GRID_X_MAX, nb)
+            local x = random(GRID_X_MIN+2, GRID_X_MAX-2, nb)
             local y = random(GRID_Y_MIN, GRID_Y_MAX, id)
-            UnitCastAreaSpell(cr, SPELL_ABILITY_GATING, x, y)
+            if CreatureAtPosition(x,y) then
+                x = random(GRID_X_MIN+2, GRID_X_MAX-2, x)
+                y = random(GRID_Y_MIN, GRID_Y_MAX, y)
+            end
+            if not CreatureAtPosition(x,y) then
+                UnitCastAreaSpell(cr, SPELL_ABILITY_GATING, x, y)
+            end
         end
     end
 end
