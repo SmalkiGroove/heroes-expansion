@@ -124,7 +124,7 @@ end
 
 function TryShootTarget(unit,target)
     startThread(ShootCombatUnit, unit, target)
-    sleep(1) print("debug tryshoottarget "..unit.." - "..CURRENT_UNIT)
+    sleep(1) --print("debug tryshoottarget "..unit.." - "..CURRENT_UNIT)
     return unit ~= CURRENT_UNIT
 end
 
@@ -193,6 +193,7 @@ function CreatureAtPosition(x,y)
                 if (x == ux and y == uy) or (x+1 == ux and y == uy) or (x == ux and y+1 == uy) or (x+1 == ux and y+1 == uy) then return side end
             else
                 if (x == ux and y == uy) then return side end
+            end
         end
     end
     return nil
