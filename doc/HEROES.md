@@ -292,7 +292,7 @@ Starting Skills
 __ELLESHAR :__
 Elven Sage - Guardian
 
-- Every 6 battles won, hero gains +1 Spellpower and Knowledge and a skill point in one of the Magic Schools. If all Magic Schools are already known at expert level, give +1 Knowledge to ther heroes.
+- Every 6 battles won, hero gains +1 Spellpower and Knowledge and a skill point in one of the Magic Schools. If all Magic Schools are already known at expert level, give +1 Knowledge to other heroes.
 - Hero has a permanent +1 Initiative.
 
 Starting Skills
@@ -372,7 +372,7 @@ __TAZAR :__
 Imperious - Battle Commander
 
 - Hero starts with innate skill Battle Ardor, granting friendly creatures bonus Attack and Speed, but does not have access to Runelore.
-- The hero is a Commander. He can use Warcries but not regular spells. Warcries are nativerly known.
+- The hero is a Commander. He can use Warcries but not regular spells. Warcries are natively known.
 - The Initiative of all creatures in hero's army is increased by 1% per hero level.
 
 Starting Skills

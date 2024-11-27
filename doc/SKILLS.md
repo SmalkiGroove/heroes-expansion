@@ -75,7 +75,7 @@ At the start of each week, gain 800 golds per relic artifact equipped.
 - __Rapid Fire__ : Ballista gains an extra shot.
 - __Anatomy__ : Allows manual control of the First Aid Tent. Restores the First Aid Tent after the battle if it was destroyed.
 - __Technical Staff__ : Increases initiative of all war machines by +3.
-- __Houndmasters__ : A stack of Wolves is Added to hero's army at the start of combats. The amount is 10 plus between 2 and 3 times hero level.
+- __Houndmasters__ : A stack of Wolves is added to hero's army at the start of combats. The amount is 10 plus between 2 and 3 times hero level.
 
 ### TRAINING
 - __Toughness__ : Increases hit points of all your creatures by 2.

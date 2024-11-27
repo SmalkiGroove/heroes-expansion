@@ -429,20 +429,23 @@ Grants hero troops immunity to Blaze Power
 (4) Gain a random artifact after battles depending on the strength of the defeated army.
 
 - __Grand Vizir's Cap__ :
-+7 Knowledge<br>
-+500 Movement points after every sea battle<br><br><color=FFB730FF>
-Pirate's Apparel<color_default><br>
-+6 Attack (3/6)<br>
-+12 Attack (6/6)<br>
-*Set bonus is applied after closing the Inventory screen.
++1 Knowledge
++500 Golds per dwelling at the start of each Week
+
+<color=FFB730FF>Vizier's Fortune
 - __Grand Vizir's Scimitar__ :
-*grand vizier's scimitar*
++1 Attack
++10 weekly production of tier 1 and tier 2 in towns
+
+<color=FFB730FF>Vizier's Fortune
 - __Regal Armour__ :
 +6% Health to friendly creatures (rounded up)
+
+<color=FFB730FF>Vizier's Fortune
 - __Palace Boots__ :
-+1 to all Primary Skills<br>
-+5000 Experience<br><br>
-<color=7F38EC>Skill book<color_default><br>The hero needs some time to study this item and permanently gain the knowledge it contains. At the start of next week the item disappears from the backpack and the bonus is applied permanently.
+Gain random temporary battle bonuses after each victory
+
+<color=FFB730FF>Vizier's Fortune
 
 ### Afterlife Bond
 • Cursed Ring
