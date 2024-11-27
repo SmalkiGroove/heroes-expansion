@@ -69,6 +69,26 @@ def find_prerequisites(base_skill, req_id):
         req.append(f"{base_skill:03}001")
         req.append(f"{base_skill:03}002")
         return req
+    
+def find_icon_size(path:str):
+    if path.startswith("/UI/H5A"):
+        if "128x128" in path:
+            return 128
+        elif "/Blood_Rage/" in path:
+            if ("Perk_MightOverMagic" in path) or ("Perk_Memory_of_Our_Blood" in path):
+                return 64
+            else:
+                return 128
+        elif ("/Voice/" in path):
+            if ("Perk_Voice_Training" in path) or ("Perk_Mighty_Voice" in path) or ("Perk_Voice_of_Rage" in path):
+                return 128
+            else:
+                return 64
+        elif ("Shatter_Light_Magic" in path) or ("Bodybuilding" in path) or ("Corrupt_Light" in path) or ("Path_of_War" in path):
+            return 64
+        else:
+            return 128
+    return 64
 
 
 factions = ["Common", "knight", "ranger", "runemage", "wizard", "warlock", "necro", "demon", "barbarian"]
@@ -142,7 +162,7 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
                 write_from_template("windowshared.(WindowSimpleShared).xdb.j2", desc_window_shared_path(id), {'skill_id': id})
                 write_from_template("iconbase.(WindowMSButton).xdb.j2", desc_icon_base_path(id), {'skill_id': id})
                 write_from_template("iconshared.(WindowMSButtonShared).xdb.j2", desc_icon_shared_path(id), {'skill_id': id})
-                write_from_template("icon.(BackgroundSimpleScallingTexture).xdb.j2", desc_icon_path(id), {'icon_path': elements[id]['icon']})
+                write_from_template("icon.(BackgroundSimpleScallingTexture).xdb.j2", desc_icon_path(id), {'icon_path': elements[id]['icon'], 'icon_size': find_icon_size(elements[id]['icon'])})
                 write_from_template("skillname.(WindowTextView).xdb.j2", skill_name_path(id), {'skill_id': id, 'name_path': elements[id]['name']})
                 write_from_template("skilldesc.(WindowTextView).xdb.j2", skill_desc_path(id), {'skill_id': id, 'desc_path': elements[id]['desc']})
                 all_buttons.write(f"<Item href=\"/UI/Doc/Skills/{faction}/{id}.(WindowMSButton).xdb#xpointer(/WindowMSButton)\"/>\n")
