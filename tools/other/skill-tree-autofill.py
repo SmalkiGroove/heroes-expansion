@@ -50,6 +50,26 @@ def write_from_template(tpl_name, output_path, variables):
     with open(output_path, 'w') as out_file:
         out_file.write(rendered)
 
+def get_skill_id_from_name(name):
+    nb = -1
+    for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
+        nb = nb + 1
+        if skill["ID"] == name:
+            return nb
+    print(f"WARN: prerequisite skill with name {name} not found")
+    return 0
+
+def find_prerequisites(base_skill, req_id):
+    skill = skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"][req_id]
+    if skill["obj"]["SkillType"] == "SKILLTYPE_STANDART_PERK":
+        return [f"{base_skill:03}001"]
+    if skill["obj"]["SkillType"] == "SKILLTYPE_SPECIAL_PERK":
+        req_req = get_skill_id_from_name(skill["obj"]["SkillPrerequisites"]["Item"][0]["dependenciesIDs"]["Item"])
+        req = [f"{req_req:03}000"]
+        req.append(f"{base_skill:03}001")
+        req.append(f"{base_skill:03}002")
+        return req
+
 
 factions = ["Common", "knight", "ranger", "runemage", "wizard", "warlock", "necro", "demon", "barbarian"]
 
@@ -57,6 +77,7 @@ counter = -1
 for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
     counter = counter + 1
     elements = {}
+    prerequisites = {}
     if skill["obj"]["SkillType"] == "SKILLTYPE_SKILL":
         if not skill["obj"]["NameFileRef"]:
             continue
@@ -68,6 +89,13 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
                 'name': skill["obj"]["NameFileRef"]["Item"][k-1]["@href"],
                 'desc': skill["obj"]["DescriptionFileRef"]["Item"][k-1]["@href"],
             }
+            prerequisites[id] = []
+            if k > 1:
+                prerequisites[id].append(f"{counter:03}{(k-1):03}")
+            if k > 2:
+                prerequisites[id].append(f"{counter:03}{(k-2):03}")
+            if k > 3:
+                prerequisites[id].append(f"{counter:03}{(k-3):03}")
     else:
         id = f"{counter:03}000"
         elements[id] = {
@@ -75,6 +103,22 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
             'name': skill["obj"]["NameFileRef"]["Item"]["@href"],
             'desc': skill["obj"]["DescriptionFileRef"]["Item"]["@href"],
         }
+        base_skill = get_skill_id_from_name(skill["obj"]["BasicSkillID"])
+        if base_skill == 0 or base_skill == 54:
+            prerequisites[id] = []
+        else:
+            if skill["obj"]["SkillType"] == "SKILLTYPE_STANDART_PERK":
+                prerequisites[id] = [f"{base_skill:03}001"]
+            if skill["obj"]["SkillType"] == "SKILLTYPE_SPECIAL_PERK":
+                if skill["obj"]["SkillPrerequisites"]:
+                    req_perk = get_skill_id_from_name(skill["obj"]["SkillPrerequisites"]["Item"][0]["dependenciesIDs"]["Item"])
+                    prerequisites[id] = find_prerequisites(base_skill, req_perk)
+                    perk_tier = (len(prerequisites[id]) + 3) // 2
+                    prerequisites[id].append(f"{req_perk:03}000")
+                    prerequisites[id].append(f"{base_skill:03}{perk_tier:03}")
+                else:
+                    prerequisites[id] = [f"{base_skill:03}001"]
+    # print(prerequisites)
     for id in elements:
         found = False
         for faction in factions:
@@ -89,7 +133,7 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
                     button_data = xmltodict.parse(button_base_xdb.read())
                     x = button_data["WindowMSButton"]["Placement"]["Position"]["First"]["x"]
                     y = button_data["WindowMSButton"]["Placement"]["Position"]["First"]["y"]
-                write_from_template("buttonshared.(WindowMSButtonShared).xdb.j2", button_shared_path(id, faction), {'skill_id': id})
+                write_from_template("buttonshared.(WindowMSButtonShared).xdb.j2", button_shared_path(id, faction), {'skill_id': id, 'required_skills': prerequisites[id]})
                 write_from_template("selection.(WindowMSButton).xdb.j2", button_selected_path(id), {'skill_id': id, 'pos_x': x, 'pos_y': y})
                 write_from_template("uimessage1.(UISSendUIMessage).xdb.j2", ui_message_up_path(id), {'skill_id': id})
                 write_from_template("uimessage2.(UISSendUIMessage).xdb.j2", ui_message_down_path(id), {'skill_id': id})

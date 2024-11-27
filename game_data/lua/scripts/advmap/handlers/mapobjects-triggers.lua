@@ -24,6 +24,13 @@ end
 function Trigger_WitchHut(hero, obj)
     log("$ Trigger_WitchHut")
     local player = GetObjectOwner(hero)
+    if PLAYER_BRAIN[player] == COMPUTER then
+        Trigger(OBJECT_TOUCH_TRIGGER, obj, nil)
+        SetObjectEnabled(obj, not nil)
+        MakeHeroInteractWithObject(hero, obj)
+        Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_WitchHut")
+        SetObjectEnabled(obj, nil)
+    end
     if Var_WitchHutVisited[obj] == 0 then
         local givestat = random(1,4,TURN)
         QuestionBoxForPlayers(
@@ -70,6 +77,13 @@ end
 function Trigger_Temple(hero, obj)
     log("$ Trigger_Temple")
     local player = GetObjectOwner(hero)
+    if PLAYER_BRAIN[player] == COMPUTER then
+        Trigger(OBJECT_TOUCH_TRIGGER, obj, nil)
+        SetObjectEnabled(obj, not nil)
+        MakeHeroInteractWithObject(hero, obj)
+        Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_Temple")
+        SetObjectEnabled(obj, nil)
+    end
     if GetObjectOwner(hero) == 0 then
         local exp = 10 * (WEEKS+10) * (WEEKS+10)
         for _,h in GetPlayerHeroes(player) do
@@ -91,6 +105,14 @@ end
 
 function Trigger_RallyFlag(hero, obj)
     log("$ Trigger_RallyFlag")
+    local player = GetObjectOwner(hero)
+    if PLAYER_BRAIN[player] == COMPUTER then
+        Trigger(OBJECT_TOUCH_TRIGGER, obj, nil)
+        SetObjectEnabled(obj, not nil)
+        MakeHeroInteractWithObject(hero, obj)
+        Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_RallyFlag")
+        SetObjectEnabled(obj, nil)
+    end
     ChangeHeroStat(hero, STAT_MOVE_POINTS, 9999)
     MarkObjectAsVisited(obj, hero)
 end
