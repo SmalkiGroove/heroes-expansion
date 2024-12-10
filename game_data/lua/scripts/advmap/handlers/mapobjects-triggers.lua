@@ -84,7 +84,7 @@ function Trigger_Temple(hero, obj)
         Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_Temple")
         SetObjectEnabled(obj, nil)
     end
-    if GetObjectOwner(hero) == 0 then
+    if Var_TempleVisited[obj] == 0 then
         local exp = 10 * (WEEKS+10) * (WEEKS+10)
         for _,h in GetPlayerHeroes(player) do
             ChangeHeroStat(h, STAT_EXPERIENCE, exp)
