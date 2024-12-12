@@ -89,6 +89,19 @@ jobs:
         run: zip -q -r h5x-doc.pak *
         working-directory: game_data/doc
 
+      - name: Check changes in 'maps'
+        uses: dorny/paths-filter@v3
+        id: check-maps
+        with:
+          base: ${{ github.ref }}
+          filters: |
+            changed:
+              - 'game_data/maps/**'
+      - name: Pack maps
+        if: steps.check-maps.outputs.changed == 'true'
+        run: zip -q -r h5x-maps.pak *
+        working-directory: game_data/maps
+
       - name: Upload paks
         uses: actions/upload-artifact@v4
         with:
