@@ -8,6 +8,12 @@
 
 - ...
 
+### Broken graphics or animations
+
+- Academy female heroes textures
+- Inferno magic heroes attack animation
+- Fortress magic heroes attack animation
+
 ### Poor language
 
 - ...
@@ -19,3 +25,7 @@
 ### Bugs
 
 - Sometimes a tavern hero might have 1 placeholder creature in the starting army
+
+### Suggestions
+
+- Skill tree accessible from level up window
