@@ -2094,15 +2094,15 @@
 				<Slot>MISCSLOT1</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/SkullOfTheForbidden.xdb#xpointer(/Texture)"/>
 				<CostOfGold>20000</CostOfGold>
-				<AIValue>12000</AIValue>
+				<AIValue>30000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
-					<Knowledge>8</Knowledge>
-					<SpellPower>8</SpellPower>
-					<Morale>-2</Morale>
-					<Luck>0</Luck>
+					<Knowledge>0</Knowledge>
+					<SpellPower>10</SpellPower>
+					<Morale>-1</Morale>
+					<Luck>-1</Luck>
 				</HeroStatsModif>
 				<ArtifactShared href="/MapObjects/Artifacts/SkullOfTheForbidden.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
@@ -4324,8 +4324,8 @@
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
-					<Knowledge>3</Knowledge>
-					<SpellPower>3</SpellPower>
+					<Knowledge>4</Knowledge>
+					<SpellPower>2</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
@@ -4373,11 +4373,11 @@
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>0</Defence>
+					<Defence>1</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
-					<Morale>2</Morale>
-					<Luck>2</Luck>
+					<Morale>0</Morale>
+					<Luck>1</Luck>
 				</HeroStatsModif>
 				<ArtifactShared href="/MapObjects/Artifacts/AncientProtectionCharm.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
