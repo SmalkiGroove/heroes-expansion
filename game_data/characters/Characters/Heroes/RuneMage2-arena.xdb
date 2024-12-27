@@ -2,18 +2,6 @@
 <AnimSet>
 	<animations>
 		<Item>
-			<Kind>move</Kind>
-			<Anim href="RuneMage_LOD-adv-move.xdb#xpointer(/BasicSkelAnim)"/>
-		</Item>
-		<Item>
-			<Kind>strike</Kind>
-			<Anim href="RuneMageHero_Strike-arena-strike.xdb#xpointer(/BasicSkelAnim)"/>
-		</Item>
-		<Item>
-			<Kind>rangeattack</Kind>
-			<Anim href="RuneMage-arena-cast.xdb#xpointer(/BasicSkelAnim)"/>
-		</Item>
-		<Item>
 			<Kind>happy</Kind>
 			<Anim href="RuneMage-arena-happy.xdb#xpointer(/BasicSkelAnim)"/>
 		</Item>
@@ -30,8 +18,12 @@
 			<Anim href="RuneMage-arena-buff.xdb#xpointer(/BasicSkelAnim)"/>
 		</Item>
 		<Item>
-			<Kind>spneutral</Kind>
-			<Anim href="RuneMage-arena-idle00.xdb#xpointer(/BasicSkelAnim)"/>
+			<Kind>strike</Kind>
+			<Anim href="RuneMageHero_Strike-arena-strike.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>rangeattack</Kind>
+			<Anim href="RuneMage-arena-cast.xdb#xpointer(/BasicSkelAnim)"/>
 		</Item>
 	</animations>
 	<ExpSrcScene href="/H5A1/Models/Heroes/RuneMageHero/RuneMageHero.mb"/>
