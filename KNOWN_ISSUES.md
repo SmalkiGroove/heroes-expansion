@@ -2,7 +2,7 @@
 
 ### Game crash
 
-- Sometimes when AI activates a rune
+- Sometimes when AI activates a rune ?
 
 ### Text does not match reality
 
@@ -14,7 +14,7 @@
 - Inferno magic heroes attack animation
 - Fortress magic heroes attack animation
 
-### Poor language
+### Poor choice of words (english)
 
 - ...
 
