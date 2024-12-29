@@ -244,7 +244,8 @@ function Routine_ArtifactBloodCrystal(player, hero)
     log("$ Routine_ArtifactBloodCrystal")
     for i,cr in GetHeroArmy(hero) do
         if cr and cr ~= 0 then
-            if CREATURES[cr][1] ~= HEROES[hero].faction then
+            local f = CREATURES[cr][1]
+            if f ~= HEROES[hero].faction and f ~= NEUTRAL then
                 TransformCreatures(hero, cr, HEROES[hero].faction)
             end
         end
