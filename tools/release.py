@@ -23,6 +23,7 @@ lang_file = f"../h5x-{version}-texts-EN.pak"
 
 game_data_path = "../game_data"
 data_dirs = ["characters","data","doc","interface","lua","maps"]
+text_dirs = ["texts"]
 
 path_prefix = len(os.path.abspath(game_data_path)) + 1
 
@@ -36,4 +37,14 @@ with zipfile.ZipFile(os.path.join(workdir, pak_file), 'w') as pak:
             for file in files:
                     file_path = os.path.join(os.path.abspath(root), file)
                     arcname = file_path[datadir_prefix:]
+                    pak.write(file_path, arcname=arcname)
+
+for textdir in text_dirs:
+    textdir_prefix =path_prefix + len(textdir) + 1
+    with zipfile.ZipFile(os.path.join(workdir, lang_file), 'w') as pak:
+        print(f"> add {textdir} in pak")
+        for root, dirs, files in os.walk(os.path.join(workdir, game_data_path, textdir)):
+            for file in files:
+                    file_path = os.path.join(os.path.abspath(root), file)
+                    arcname = file_path[textdir_prefix:]
                     pak.write(file_path, arcname=arcname)
