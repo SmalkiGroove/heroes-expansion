@@ -1690,6 +1690,50 @@
 								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_VENOM</Item></Abilities></Item>
 							</Bonus3>
 						</Item>
+						<Item><Creature>CREATURE_LIZARDMAN</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>1</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>4</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_BASILISK</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>1</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>4</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_DRUID_OF_THE_COUNCIL</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>1</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>4</IntParam></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_BEHEMOTH</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>1</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>4</IntParam></Item>
+							</Bonus3>
+						</Item>
 
 
 
