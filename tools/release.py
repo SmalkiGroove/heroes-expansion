@@ -28,7 +28,7 @@ text_dirs = ["texts"]
 path_prefix = len(os.path.abspath(game_data_path)) + 1
 
 print("=== CREATE PAK ===")
-with zipfile.ZipFile(os.path.join(workdir, pak_file), 'w') as pak:
+with zipfile.ZipFile(os.path.join(workdir, pak_file), 'w', zipfile.ZIP_DEFLATED) as pak:
     print(f"> root dir : {os.path.abspath(game_data_path)}")
     for datadir in data_dirs:
         datadir_prefix = path_prefix + len(datadir) + 1
@@ -41,7 +41,7 @@ with zipfile.ZipFile(os.path.join(workdir, pak_file), 'w') as pak:
 
 for textdir in text_dirs:
     textdir_prefix =path_prefix + len(textdir) + 1
-    with zipfile.ZipFile(os.path.join(workdir, lang_file), 'w') as pak:
+    with zipfile.ZipFile(os.path.join(workdir, lang_file), 'w', zipfile.ZIP_DEFLATED) as pak:
         print(f"> add {textdir} in pak")
         for root, dirs, files in os.walk(os.path.join(workdir, game_data_path, textdir)):
             for file in files:
