@@ -1,17 +1,22 @@
 import os
 import zipfile
+import semver
 
 workdir = os.path.dirname(os.path.abspath(__file__))
 
 print("=== UPDATE VERSION ===")
 
 path_to_version_file = "../VERSION"
-path_to_version_txt = "../game_data/texts/UI/MainMenu2/Version.txt"
+path_to_version_txt = "../game_data/data/UI/MainMenu2/Version.txt"
 
 with open(os.path.join(workdir, path_to_version_file), 'r') as version_file:
     version = version_file.read()
 
 print(f"> current version : {version}")
+semversion = semver.Version.parse(version)
+semversion.bump_patch()
+print(f"> release version : {str(semversion)}")
+
 version_txt = f"<h3_bright>H5X mod\nVersion {version}"
 
 with open(os.path.join(workdir, path_to_version_txt), 'w') as version_file:
@@ -19,11 +24,10 @@ with open(os.path.join(workdir, path_to_version_txt), 'w') as version_file:
 
 
 pak_file = f"../h5x-{version}.pak"
-lang_file = f"../h5x-{version}-texts-EN.pak"
 
 game_data_path = "../game_data"
 data_dirs = ["characters","data","doc","interface","lua","maps"]
-text_dirs = ["texts"]
+text_dirs = ["texts-EN"]
 
 path_prefix = len(os.path.abspath(game_data_path)) + 1
 
@@ -40,6 +44,7 @@ with zipfile.ZipFile(os.path.join(workdir, pak_file), 'w', zipfile.ZIP_DEFLATED)
                     pak.write(file_path, arcname=arcname)
 
 for textdir in text_dirs:
+    lang_file = f"../h5x-{version}-{textdir}.pak"
     textdir_prefix =path_prefix + len(textdir) + 1
     with zipfile.ZipFile(os.path.join(workdir, lang_file), 'w', zipfile.ZIP_DEFLATED) as pak:
         print(f"> add {textdir} in pak")
