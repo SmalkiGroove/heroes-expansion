@@ -9,7 +9,7 @@
 
 ### Text does not match reality
 
-- Add in Governance description that it unlocks conversion
+
 
 ### Broken graphics or animations
 
@@ -24,9 +24,7 @@
 
 ### Poor choice of words (english)
 
-- Get wiser / Get stronger
-- Technical Staff
-- Vizier Turban specify external dwellings
+
 
 ### Something does not work
 
@@ -35,13 +33,9 @@
 
 ### Bugs
 
-- Kha Beleth initial gating freeze on obstacle
-- Gabrielle refresh nb of griffins
-- Magic Guild wrong icon
 - Leadership spawns caravan even with not enough creature to transfer
 - Leadership caravan doesn't spawn if no other tile available
 - Imprisoned heroes have no starting army
-- Neutral Darkstorms
 - Witch hut popup filter
 
 ### Suggestions
@@ -53,12 +47,10 @@
 - QAI version
 - T7 creatures choice like in H7
 - More custom buildings
-- Give Training bonuses to Lizardman, Basilisk, Behemoth, Druid of the Council
 
 ### Balance
 
 - Limit Earth elems with Deleb
-- Gabrielle move points logarithmic curve
 - Vaults have too many creatures
 - Give AI starting gold, exp and stats
 - Viking shield gives too many resources
@@ -67,4 +59,10 @@
 # FIXED
 
 - Sometimes a tavern hero might have 1 placeholder creature in the starting army
-- 
+- Add in Governance description that it unlocks conversion
+- Kha Beleth initial gating freeze on obstacle
+- Gabrielle refresh nb of griffins
+- Magic Guild wrong icon
+- Neutral Darkstorms spawn on the map
+- Give Training bonuses to Lizardman, Basilisk, Behemoth, Druid of the Council
+- Gabrielle move points logarithmic curve
