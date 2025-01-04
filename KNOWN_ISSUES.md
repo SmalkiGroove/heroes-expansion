@@ -19,10 +19,13 @@
 - Windowed mode croped
 - Kha Beleth attack anim not sync
 - Firehounds should be grey
+- Skills UI skill name darker
+- Lich no Harm Touch animation
 
 ### Poor choice of words (english)
 
 - Get wiser / Get stronger
+- Technical Staff
 - Vizier Turban specify external dwellings
 
 ### Something does not work
