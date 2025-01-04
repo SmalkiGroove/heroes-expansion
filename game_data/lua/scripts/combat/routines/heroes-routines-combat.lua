@@ -711,6 +711,11 @@ function Routine_BoostHeroAtbOnDeath(side, hero, unit)
     end
 end
 
+function Routine_HeroMoveFirst(side, hero)
+    -- log("Trigger hero play first !")
+    SetATB_ID(hero, ATB_INSTANT)
+end
+
 function Routine_DemonicCreatureExplosion(side, hero)
     -- log("Trigger creature explosion !")
     if CURRENT_UNIT_SIDE == side then
@@ -918,6 +923,7 @@ COMBAT_START_HERO_ROUTINES = {
     [H_THANT] = Routine_CastMassWeakness,
     [H_ARCHILUS] = Routine_SummonAvatarOfDeath,
     -- inferno
+    [H_GROK] = Routine_HeroMoveFirst,
     [H_DELEB] = Routine_CastMineFields,
     [H_KHABELETH] = Routine_InfernoGating,
     -- stronghold

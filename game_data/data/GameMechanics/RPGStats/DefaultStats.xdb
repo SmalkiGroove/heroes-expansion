@@ -1692,46 +1692,62 @@
 						</Item>
 						<Item><Creature>CREATURE_LIZARDMAN</Creature>
 							<Bonus1>
-								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>1</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><IntParam>ABILITY_RANGED_RETALIATE</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><IntParam>ABILITY_RANGED_RETALIATE</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><IntParam>ABILITY_POISONOUS_ATTACK</IntParam></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>4</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><IntParam>ABILITY_RANGED_RETALIATE</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><IntParam>ABILITY_POISONOUS_ATTACK</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><IntParam>ABILITY_WARDING_ARROWS</IntParam></Item>
 							</Bonus3>
 						</Item>
 						<Item><Creature>CREATURE_BASILISK</Creature>
 							<Bonus1>
-								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>1</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>1</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>2</IntParam></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>4</IntParam></Item>
-							</Bonus3>
-						</Item>
-						<Item><Creature>CREATURE_DRUID_OF_THE_COUNCIL</Creature>
-							<Bonus1>
-								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>1</IntParam></Item>
-							</Bonus1>
-							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_INITIATIVE</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>2</IntParam></Item>
 								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
-							</Bonus2>
-							<Bonus3>
-								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>4</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>2</IntParam></Item>
 							</Bonus3>
 						</Item>
 						<Item><Creature>CREATURE_BEHEMOTH</Creature>
 							<Bonus1>
-								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>1</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>10</IntParam></Item>
 							</Bonus1>
 							<Bonus2>
-								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>2</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>10</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_UNLIMITED_RETALIATION</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_BATTLE_FRENZY</Item></Abilities></Item>
 							</Bonus2>
 							<Bonus3>
-								<Item><Type>DEMON_RAGE_BONUS_ATTACK</Type><IntParam>4</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_DEFENCE</Type><IntParam>10</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>10</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_UNLIMITED_RETALIATION</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_BATTLE_FRENZY</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_IMMUNITY_TO_BERSERK</Item></Abilities></Item>
+							</Bonus3>
+						</Item>
+						<Item><Creature>CREATURE_DRUID_OF_THE_COUNCIL</Creature>
+							<Bonus1>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>3</IntParam></Item>
+							</Bonus1>
+							<Bonus2>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>3</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_AURA_OF_BRAVERY</Item></Abilities></Item>
+							</Bonus2>
+							<Bonus3>
+								<Item><Type>DEMON_RAGE_BONUS_HEALTH</Type><IntParam>3</IntParam></Item>
+								<Item><Type>DEMON_RAGE_BONUS_ABILITY</Type><Abilities><Item>ABILITY_AURA_OF_BRAVERY</Item></Abilities></Item>
+								<Item><Type>DEMON_RAGE_BONUS_SPELLPOWER_MULT</Type><FloatParam>1.2</FloatParam></Item>
 							</Bonus3>
 						</Item>
 
