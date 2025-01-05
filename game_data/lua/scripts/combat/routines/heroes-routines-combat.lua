@@ -760,11 +760,17 @@ end
 function Routine_SummonEarthElementals(side, hero)
     -- log("Trigger summon earth elementals !")
     if CURRENT_UNIT == hero then
-        local nb = 3 + trunc(GetHeroLevel(side) * 0.1)
-        local amount = 1 + trunc(GetHeroLevel(side) * 0.2)
-        for i = 1,nb do
-            SummonCreature(side, CREATURE_EARTH_ELEMENTAL, amount)
-            sleep(4)
+        local stacks = 0
+        for i,cr in GetUnits(side, CREATURE) do
+            if GetCreatureType(cr) == CREATURE_EARTH_ELEMENTAL then stacks = stacks + 1 end
+        end
+        if stacks < 50 then
+            local nb = 3 + trunc(GetHeroLevel(side) * 0.1)
+            local amount = 1 + trunc(GetHeroLevel(side) * 0.2)
+            for i = 1,nb do
+                SummonCreature(side, CREATURE_EARTH_ELEMENTAL, amount)
+                sleep(4)
+            end
         end
     end
 end

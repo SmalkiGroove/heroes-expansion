@@ -11,7 +11,7 @@ reference_file = os.path.join(workdir, "doc-refs.yml")
 doc_path = "../doc"
 
 root_path_data = "../game_data/data"
-root_text_path = "../game_data/texts"
+root_text_path = "../game_texts/texts-EN"
 
 ### CREATURES
 ###############################################################################################################################################################
@@ -183,7 +183,7 @@ def generate_skills_doc(ref_data):
 ###############################################################################################################################################################
 #
 path_to_artifacts = "../game_data/data/GameMechanics/RefTables/Artifacts.xdb"
-path_to_artfset_texts = "../game_data/texts/Text/Game/Artfsets"
+path_to_artfset_texts = "../game_texts/texts-EN/Text/Game/Artfsets"
 
 def artifact_doc_line(name, artifact):
     print(f"Artifact {name}")

@@ -31,11 +31,11 @@ jobs:
           base: ${{ github.ref }}
           filters: |
             changed:
-              - 'game_data/texts/**'
+              - 'game_texts/texts-EN/**'
       - name: Pack texts
         if: steps.check-texts.outputs.changed == 'true'
         run: zip -q -r h5x-texts.pak *
-        working-directory: game_data/texts
+        working-directory: game_texts/texts-EN
 
       - name: Check changes in 'interface'
         uses: dorny/paths-filter@v3

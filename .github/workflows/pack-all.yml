@@ -16,7 +16,7 @@ jobs:
 
       - name: Pack texts
         run: zip -q -r h5x-texts.pak *
-        working-directory: game_data/texts
+        working-directory: game_texts/texts-EN
 
       - name: Pack interface
         run: zip -q -r h5x-interface.pak *
