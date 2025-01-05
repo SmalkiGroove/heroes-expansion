@@ -716,6 +716,7 @@ end
 
 function Routine_LeadershipAfterBattle(player, hero, mastery, combatIndex)
     log("$ Routine_LeadershipAfterBattle")
+    sleep(1)
     if GetSavedCombatArmyHero(combatIndex, 0) then return end
     local x, y, z = GetObjectPosition(hero)
     local town_data = PLAYER_MAIN_TOWN[player] and MAP_TOWNS[PLAYER_MAIN_TOWN[player]] or nil
@@ -733,6 +734,7 @@ function Routine_LeadershipAfterBattle(player, hero, mastery, combatIndex)
     NB_CARAVAN = NB_CARAVAN + 1
     CreateCaravan(caravan, player, z, x, y, dz, dx, dy)
     repeat sleep(1) until IsObjectExists(caravan)
+    local total = 0
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 0)
     for i = 0,stacks-1 do
         local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 0, i)
@@ -752,9 +754,10 @@ function Routine_LeadershipAfterBattle(player, hero, mastery, combatIndex)
         if HasHeroSkill(hero, PERK_HERALD_OF_DEATH) then creature = CreatureToUndead(creature) end
         if amount > 0 then
             AddObjectCreatures(caravan, creature, amount)
+            total = total + amount
         end
     end
-    CURRENT_CARAVANS[caravan] = 3
+    if total == 0 then RemoveObject(caravan) else CURRENT_CARAVANS[caravan] = 3 end
 end
 
 function Routine_TaleTellers(player, hero, mastery, combatIndex)

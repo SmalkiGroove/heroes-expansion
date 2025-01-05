@@ -12,8 +12,9 @@
 	<KnownSpells>
 		<Item><Spell>SPELL_ABILITY_RESURRECT_ALLIES</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
 		<Item><Spell>SPELL_HOLY_WORD</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+		<Item><Spell>SPELL_MASS_BLESS</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
 	</KnownSpells>
-	<SpellPoints>25</SpellPoints>
+	<SpellPoints>50</SpellPoints>
 	<SpellPoints1>2</SpellPoints1>
 	<SpellPoints2>0</SpellPoints2>
 	<Exp>1000</Exp>
@@ -41,7 +42,7 @@
 	<Abilities>
 		<Item>ABILITY_BOND_OF_LIGHT</Item>
 		<Item>ABILITY_ANTI_GIANT</Item>
-		<Item>ABILITY_RESURRECT_ALLIES</Item>
+		<!-- <Item>ABILITY_RESURRECT_ALLIES</Item> -->
 		<Item>ABILITY_IMMUNITY_TO_MIND_CONTROL</Item>
 	</Abilities>
 </Creature>

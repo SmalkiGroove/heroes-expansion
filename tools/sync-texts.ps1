@@ -1,6 +1,6 @@
 
 $zip = @{
-  Path = "..\game_data\texts\*"
+  Path = "..\game_texts\texts-EN\*"
   CompressionLevel = "Optimal"
   DestinationPath = ".\h5x-texts.zip"
 }

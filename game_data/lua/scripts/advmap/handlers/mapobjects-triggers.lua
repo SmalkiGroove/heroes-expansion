@@ -40,7 +40,7 @@ function Trigger_WitchHut(hero, obj)
             "Trigger_WitchHut_cancel('"..player.."','"..hero.."','"..obj.."')"
         )
     else
-        Trigger_WitchHut_cancel(player, hero, obj)
+        Trigger_WitchHut_visited(player, hero, obj)
     end
 end
 function Trigger_WitchHut_confirm(player, hero, obj, givestat)
@@ -64,7 +64,9 @@ function Trigger_WitchHut_confirm(player, hero, obj, givestat)
 end
 function Trigger_WitchHut_cancel(player, hero, obj)
     MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Game/Scripts/MapObjects/WitchHutRefused.txt", "NoneRoutine")
-    Var_WitchHutVisited[obj] = 1
+end
+function Trigger_WitchHut_visited(player, hero, obj)
+    MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Game/Scripts/MapObjects/WitchHutVisited.txt", "NoneRoutine")
     MarkObjectAsVisited(obj, hero)
 end
 function WitchHuts_reset()
