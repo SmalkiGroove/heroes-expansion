@@ -232,15 +232,15 @@
 				<NameFileRef href="/Text/Game/Artifacts/ShieldOfCrystalIce/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/ShieldOfCrystalIce/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MAJOR</Type>
+				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>SECONDARY</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/ShieldOfCrystalIce.xdb#xpointer(/Texture)"/>
-				<CostOfGold>10000</CostOfGold>
-				<AIValue>20000</AIValue>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>10000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>1</Defence>
+					<Defence>2</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
@@ -508,11 +508,11 @@
 				<NameFileRef href="/Text/Game/Artifacts/MagneticRing/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/MagneticRing/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MAJOR</Type>
+				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>FINGER</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/MagneticRing.xdb#xpointer(/Texture)"/>
-				<CostOfGold>10000</CostOfGold>
-				<AIValue>20000</AIValue>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>10000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
@@ -795,7 +795,7 @@
 					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
-					<Morale>1</Morale>
+					<Morale>2</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
 				<ArtifactShared href="/MapObjects/Artifacts/CapeOfKings.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
@@ -1563,19 +1563,19 @@
 				<NameFileRef href="/Text/Game/Artifacts/CloakOfSylanna/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/CloakOfSylanna/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MAJOR</Type>
+				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>SHOULDERS</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/CloakOfSylanna.xdb#xpointer(/Texture)"/>
-				<CostOfGold>10000</CostOfGold>
-				<AIValue>20000</AIValue>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>10000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>0</Defence>
-					<Knowledge>0</Knowledge>
+					<Defence>1</Defence>
+					<Knowledge>1</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
-					<Luck>1</Luck>
+					<Luck>0</Luck>
 				</HeroStatsModif>
 				<ArtifactShared href="/MapObjects/Artifacts/CloakOfSylanna.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
@@ -2111,13 +2111,14 @@
 		</Item>
 		<Item>
 			<ID>ARTIFACT_BEARHIDE_WRAPS</ID>
+			<!-- <ID>ARTIFACT_FROZEN_HEART</ID> -->
 			<obj>
-				<NameFileRef href="/Text/Game/Artifacts/BearhideWraps/Name.txt"/>
-				<DescriptionFileRef href="/Text/Game/Artifacts/BearhideWraps/Description.txt"/>
+				<NameFileRef href="/Text/Game/Artifacts/FrozenHeart/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artifacts/FrozenHeart/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
 				<Type>ARTF_CLASS_MINOR</Type>
-				<Slot>SHOULDERS</Slot>
-				<Icon href="/Textures/HeroScreen/Artifacts/BearhideWraps.xdb#xpointer(/Texture)"/>
+				<Slot>MISCSLOT1</Slot>
+				<Icon href="/Textures/HeroScreen/Artifacts/FrozenHeart.xdb#xpointer(/Texture)"/>
 				<CostOfGold>5000</CostOfGold>
 				<AIValue>10000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
@@ -2125,11 +2126,11 @@
 					<Attack>0</Attack>
 					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
-					<SpellPower>0</SpellPower>
-					<Morale>1</Morale>
+					<SpellPower>1</SpellPower>
+					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
-				<ArtifactShared href="/MapObjects/Artifacts/BearhideWraps.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
+				<ArtifactShared href="/MapObjects/Artifacts/FrozenHeart.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
 				<PresetPrice>0</PresetPrice>
 			</obj>
@@ -2140,15 +2141,15 @@
 				<NameFileRef href="/Text/Game/Artifacts/DwarvenSmithyHummer/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/DwarvenSmithyHummer/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MINOR</Type>
+				<Type>ARTF_CLASS_MAJOR</Type>
 				<Slot>PRIMARY</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/DwarvenSmithyHummer.xdb#xpointer(/Texture)"/>
-				<CostOfGold>5000</CostOfGold>
-				<AIValue>10000</AIValue>
+				<CostOfGold>10000</CostOfGold>
+				<AIValue>20000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>1</Attack>
-					<Defence>0</Defence>
+					<Defence>1</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
@@ -4635,26 +4636,26 @@
 			</obj>
 		</Item>	
 		<Item>
-			<ID>ARTIFACT_FROZEN_HEART</ID>
+			<ID>ARTIFACT_BEARHIDE_WRAPS_2</ID>
 			<obj>
-				<NameFileRef href="/Text/Game/Artifacts/FrozenHeart/Name.txt"/>
-				<DescriptionFileRef href="/Text/Game/Artifacts/FrozenHeart/Description.txt"/>
+				<NameFileRef href="/Text/Game/Artifacts/BearhideWraps/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artifacts/BearhideWraps/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MAJOR</Type>
-				<Slot>MISCSLOT1</Slot>
-				<Icon href="/Textures/HeroScreen/Artifacts/FrozenHeart.xdb#xpointer(/Texture)"/>
-				<CostOfGold>10000</CostOfGold>
-				<AIValue>20000</AIValue>
+				<Type>ARTF_CLASS_MINOR</Type>
+				<Slot>SHOULDERS</Slot>
+				<Icon href="/Textures/HeroScreen/Artifacts/BearhideWraps.xdb#xpointer(/Texture)"/>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>10000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
-					<Morale>0</Morale>
+					<Morale>1</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
-				<ArtifactShared href="/MapObjects/Artifacts/FrozenHeart.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
+				<ArtifactShared href="/MapObjects/Artifacts/BearhideWraps.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
 				<PresetPrice>0</PresetPrice>
 			</obj>

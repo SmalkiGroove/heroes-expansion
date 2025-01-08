@@ -237,6 +237,8 @@ function InitializeHeroes()
 				MakeHeroReturnToTavernAfterDeath(hero, 1, 0)
 				HEROES[hero].owner = player
 			end
+			sleep(1)
+			startThread(UpdateMagicGuildBonus, player)
 			startThread(WatchPlayer, player, 1)
 		end
 	end

@@ -43,7 +43,7 @@ ARTIFACT_DRAGON_WING_MANTLE = 39                    -- flying creatures have +10
 ARTIFACT_DRAGON_TEETH_NECKLACE = 40                 -- caster creatures have +10% initiative
 ARTIFACT_DRAGON_TALON_CROWN = 41                    -- war machines have +10% initiative
 ARTIFACT_DRAGON_EYE_RING = 42                       -- ranged creatures have +10% initiative
-ARTIFACT_DRAGON_FLAME_TONGUE = 43                   -- reduce enemy ice spells
+ARTIFACT_DRAGON_FLAME_TONGUE = 43                   -- reduce enemy ice spells and immunity to cold death TODO
 ARTIFACT_ROBE_OF_THE_MAGISTER = 44                  -- gain exp based on knowledge **
 ARTIFACT_STAFF_OF_THE_MAGISTER = 45                 -- negates magic-resistance
 ARTIFACT_CROWN_OF_THE_MAGISTER = 46                 -- /
@@ -84,8 +84,8 @@ ARTIFACT_BEGINNER_MAGIC_STICK = 80                  -- restore mana after battle
 ARTIFACT_RUNIC_WAR_AXE = 81                         -- restore mana after battle **
 ARTIFACT_RUNIC_WAR_HARNESS = 82                     -- restore mana after battle **
 ARTIFACT_SKULL_OF_THE_FORBIDDEN = 83                -- 
-ARTIFACT_BEARHIDE_WRAPS = 84                        -- reduce enemy ice spells
-ARTIFACT_DWARVEN_SMITHY_HUMMER = 85                 -- reduce enemy fire spells
+ARTIFACT_FROZEN_HEART = 84                          -- reduce enemy ice spells and immune to blaze power
+ARTIFACT_DWARVEN_SMITHY_HUMMER = 85                 -- reduce enemy fire spells and bonus att/def for first daily battle ** TODO
 ARTIFACT_RUNE_OF_FLAME = 86                         -- grants runic spell
 ARTIFACT_TAROT_DECK = 87                            -- /
 ARTIFACT_CROWN_OF_LEADER = 88                       -- doubles estate, diplomacy and recruitment
@@ -185,7 +185,7 @@ ARTIFACT_BLOOD_CRYSTAL = 181                        -- transforms creatures to y
 ARTIFACT_RANGERS_CAPE = 182                         -- 
 ARTIFACT_MOON_CHARM = 183                           -- the first friendly stack that dies in combat revives **
 ARTIFACT_FORGOTTEN_RING = 184                       -- 
-ARTIFACT_FROZEN_HEART = 185                         -- frost-proof and immunity to fire perks TODO
+ARTIFACT_BEARHIDE_WRAPS = 185                       -- 10% bonus leadership ** TODO
 ARTIFACT_MOONLIGHT_COAT = 186                       -- reduce hero spell cost by 25%
 ARTIFACT_DRAGONSBANE = 187                          -- damage ignore armor TODO
 ARTIFACT_CUIRASS_OF_THE_STAG = 188                  -- /
@@ -284,7 +284,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_STAFF_OF_THE_NETHERWORLD]      = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
     [ARTIFACT_NO_RETREAT]                    = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_HEAD, special=1},
     [ARTIFACT_FOUR_LEAF_CLOVER]              = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_POCKET, special=0},
-    [ARTIFACT_SHIELD_OF_CRYSTAL_ICE]         = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEFTHAND, special=0},
+    [ARTIFACT_SHIELD_OF_CRYSTAL_ICE]         = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_LEFTHAND, special=0},
     [ARTIFACT_OCEAN_CHARM]                   = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_NECK, special=1},
     [ARTIFACT_CROWN_OF_COURAGE]              = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_HEAD, special=0},
     [ARTIFACT_ALL_SEEING_CROWN]              = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_HEAD, special=1},
@@ -295,7 +295,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_WAR_DRUMS]                     = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEFTHAND, special=0},
     [ARTIFACT_EVERCOLD_ICICLE]               = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_NECK, special=0},
     [ARTIFACT_NECKLACE_OF_VICTORY]           = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_NECK, special=0},
-    [ARTIFACT_MAGNETIC_RING]                 = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RING, special=0},
+    [ARTIFACT_MAGNETIC_RING]                 = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RING, special=0},
     [ARTIFACT_WAR_BANNER]                    = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
     [ARTIFACT_CELESTIAL_JUSTICAR_SWORD]      = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
     [ARTIFACT_RING_OF_THE_BROKEN_WILL]       = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RING, special=0},
@@ -337,7 +337,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_WAR_HORN]                      = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_POCKET, special=0},
     [ARTIFACT_BAND_OF_CONJURER]              = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RING, special=0},
     [ARTIFACT_EMERALD_SLIPPERS]              = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
-    [ARTIFACT_CLOAK_OF_SYLANNA]              = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_SHOULDERS, special=0},
+    [ARTIFACT_CLOAK_OF_SYLANNA]              = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_SHOULDERS, special=0},
     [ARTIFACT_CURSED_RING]                   = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RING, special=0},
     [ARTIFACT_TUNIC_OF_CARVED_FLESH]         = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_BODY, special=0},
     [ARTIFACT_RING_OF_CAUTION]               = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RING, special=0},
@@ -359,8 +359,8 @@ ARTIFACTS_DATA = {
     [ARTIFACT_RUNIC_WAR_AXE]                 = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
     [ARTIFACT_RUNIC_WAR_HARNESS]             = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_BODY, special=0},
     [ARTIFACT_SKULL_OF_THE_FORBIDDEN]        = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_POCKET, special=0},
-    [ARTIFACT_BEARHIDE_WRAPS]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_SHOULDERS, special=0},
-    [ARTIFACT_DWARVEN_SMITHY_HUMMER]         = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
+    [ARTIFACT_FROZEN_HEART]                  = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_POCKET, special=0},
+    [ARTIFACT_DWARVEN_SMITHY_HUMMER]         = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
     [ARTIFACT_RUNE_OF_FLAME]                 = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_POCKET, special=0},
     [ARTIFACT_TAROT_DECK]                    = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_POCKET, special=0},
     [ARTIFACT_CROWN_OF_LEADER]               = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_HEAD, special=0},
@@ -460,7 +460,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_RANGERS_CAPE]                  = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_SHOULDERS, special=1}, --disabled
     [ARTIFACT_MOON_CHARM]                    = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_NECK, special=0},
     [ARTIFACT_FORGOTTEN_RING]                = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RING, special=1}, --disabled
-    [ARTIFACT_FROZEN_HEART]                  = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_POCKET, special=0},
+    [ARTIFACT_BEARHIDE_WRAPS]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_SHOULDERS, special=0},
     [ARTIFACT_MOONLIGHT_COAT]                = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_SHOULDERS, special=0},
     [ARTIFACT_DRAGONSBANE]                   = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RIGHTHAND, special=1}, --disabled
     [ARTIFACT_CUIRASS_OF_THE_STAG]           = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_BODY, special=0},
@@ -542,7 +542,7 @@ ARTFSET_DRAGON_4PC = 33         -- summon the legendary dragon when a friendly s
 ARTFSET_DRAGON_6PC = 34         -- summon the legendary dragon when an enemy stack is killed
 ARTFSET_DRAGON_8PC = 35         -- summon the legendary dragon when combat starts
 ARTFSET_ENLIGHTEN_4PC = 36      -- gain a permanent +2 of the lowest primary stat on level up
-ARTFSET_FROST_5PC = 37          -- cast frost spell on every enemy creature on first combat turn of hero
+ARTFSET_FROST_4PC = 37          -- cast deep freeze on every enemy creature on first combat turn of hero
 ARTFSET_GENJI_4PC = 38          -- when an enemy stack dies, your hero gets atb boost and mana, convert mana to exp after combat
 ARTFSET_ELDENA_3PC = 39         -- level up grants t4 and t5 creatures
 ARTFSET_WAR_4PC = 40            -- when an enemy stack dies, your tier 1-3 units get atb boost
@@ -570,7 +570,7 @@ ARTIFACT_SETS = {
     [ARTIFACT_SET_ORCS] = {ARTIFACT_OGRE_CLUB, ARTIFACT_OGRE_SHIELD, ARTIFACT_BARBARIAN_HELMET, ARTIFACT_BARBARIAN_CAPE, ARTIFACT_COLLAR_OF_PRIMAL_RAGE, ARTIFACT_BARBARIAN_CUIRASS},
     [ARTIFACT_SET_DRAGON] = {ARTIFACT_DRAGON_SCALE_ARMOR, ARTIFACT_DRAGON_SCALE_SHIELD, ARTIFACT_DRAGON_BONE_GRAVES, ARTIFACT_DRAGON_WING_MANTLE, ARTIFACT_DRAGON_TEETH_NECKLACE, ARTIFACT_DRAGON_TALON_CROWN, ARTIFACT_DRAGON_EYE_RING, ARTIFACT_DRAGON_FLAME_TONGUE},
     [ARTIFACT_SET_ENLIGHTEN] = {ARTIFACT_TURBAN_OF_ENLIGHTMENT, ARTIFACT_SCALE_MAIL_OF_ENLIGHTMENT, ARTIFACT_STAFF_OF_THE_LYRE, ARTIFACT_PENDANT_OF_THE_LYRE},
-    [ARTIFACT_SET_FROST] = {ARTIFACT_EVERCOLD_ICICLE, ARTIFACT_SHIELD_OF_CRYSTAL_ICE, ARTIFACT_CROWN_OF_THE_FROST_LORD, ARTIFACT_FROZEN_HEART, ARTIFACT_SPEAR_OF_THE_FROST_LORD},
+    [ARTIFACT_SET_FROST] = {ARTIFACT_EVERCOLD_ICICLE, ARTIFACT_CROWN_OF_THE_FROST_LORD, ARTIFACT_FROZEN_HEART, ARTIFACT_SPEAR_OF_THE_FROST_LORD},
     [ARTIFACT_SET_GENJI] = {ARTIFACT_GENJIS_HAT, ARTIFACT_GENJIS_VEST, ARTIFACT_GENJIS_SANDALS, ARTIFACT_GENJIS_SILKSWORD},
     [ARTIFACT_SET_ELDENA] = {ARTIFACT_ELDENAS_RED_SCARF, ARTIFACT_ELDENAS_CIRCLET, ARTIFACT_ELDENAS_RED_COAT},
     [ARTIFACT_SET_WAR] = {ARTIFACT_NECKLACE_OF_VICTORY, ARTIFACT_WAR_DRUMS, ARTIFACT_WAR_HORN, ARTIFACT_WAR_BANNER},

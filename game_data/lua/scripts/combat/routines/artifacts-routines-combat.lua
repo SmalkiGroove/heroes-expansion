@@ -136,7 +136,7 @@ UNIT_DIED_ARTIFACT_ROUTINES = {
 COMBAT_PREPARE_ARTFSET_ROUTINES = {
 }
 COMBAT_START_ARTFSET_ROUTINES = {
-    [ARTFSET_FROST_5PC] = Routine_ArtfsetFrost,
+    [ARTFSET_FROST_4PC] = Routine_ArtfsetFrost,
     [ARTFSET_SPIRIT_5PC] = Routine_ArtfsetSpirit,
     [ARTFSET_BESTIAL_4PC] = Routine_ArtfsetBestial,
     [ARTFSET_DRAGON_8PC] = Routine_ArtfsetDragon8,
