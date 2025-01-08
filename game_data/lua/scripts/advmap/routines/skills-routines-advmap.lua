@@ -743,7 +743,7 @@ function Routine_LeadershipAfterBattle(player, hero, mastery, combatIndex)
             bonus = bonus + GetHeroLevel(hero)
         end
         if hero == H_ARANTIR then
-            if CREATURES[creature][1] == NECROPOLIS or creature == CREATURE_BLACK_KNIGHT or creature == CREATURE_DEATH_KNIGHT or creature == CREATURE_MUMMY then
+            if CREATURES[creature][1] == NECROPOLIS or creature == CREATURE_MUMMY then
                 bonus = bonus + 50
             end
         end

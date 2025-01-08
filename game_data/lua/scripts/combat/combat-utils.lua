@@ -215,7 +215,7 @@ function CanCreatureShoot(unit)
 end
 
 function CreatureToUndead(creature)
-	if CREATURES[creature][1] == NECROPOLIS or creature == CREATURE_BLACK_KNIGHT or creature == CREATURE_DEATH_KNIGHT or creature == CREATURE_MUMMY then return creature end
+	if CREATURES[creature][1] == NECROPOLIS or creature == CREATURE_MUMMY then return creature end
 	local tier = CREATURES[creature][2]
 	return CREATURES_BY_FACTION[NECROPOLIS][tier][1]
 end

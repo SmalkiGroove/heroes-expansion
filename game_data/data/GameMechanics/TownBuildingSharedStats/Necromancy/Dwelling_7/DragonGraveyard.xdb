@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TownBuildingSharedStats ObjectRecordID="1000048">
+<TownBuildingSharedStats ObjectRecordID="1000051">
 	<NameFileRef href="/Text/Game/TownBuildings/Necromancy/Dwelling_7/Name.txt"/>
 	<DescriptionFileRef href="/Text/Game/TownBuildings/Necromancy/Dwelling_7/Description.txt"/>
 	<Type>TB_DWELLING_7</Type>
@@ -13,7 +13,7 @@
 		<Gem>0</Gem>
 		<Gold>10000</Gold>
 	</Cost>
-	<ModObjectName>Hall_of_Darkness</ModObjectName>
+	<ModObjectName>DragonGraveyrd</ModObjectName>
 	<dependencies>
 		<Item href="/GameMechanics/TownBuildingSharedStats/Necromancy/Special_2/unholytemple.xdb#xpointer(/TownBuildingSharedStats)"/>
 	</dependencies>
@@ -21,5 +21,5 @@
 	<DevLevelNeeded>15</DevLevelNeeded>
 	<UIObjectName>Dwelling_7</UIObjectName>
 	<UIStackPosition>0</UIStackPosition>
-	<Icon href="/UI/TownHall/necropolis/128/d6.xdb#xpointer(/Texture)"/>
+	<Icon href="/UI/TownHall/necropolis/128/d7.xdb#xpointer(/Texture)"/>
 </TownBuildingSharedStats>

@@ -18,8 +18,8 @@
 	<TimeToCommand>10</TimeToCommand>
 	<CreatureTier>6</CreatureTier>
 	<Upgrade>false</Upgrade>
-	<PairCreature>CREATURE_DEATH_KNIGHT</PairCreature>
-	<CreatureTown>TOWN_NO_TYPE</CreatureTown>
+	<PairCreature>CREATURE_DREAD_KNIGHT</PairCreature>
+	<CreatureTown>TOWN_NECROMANCY</CreatureTown>
 	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_NONE</Second></MagicElement>
 	<WeeklyGrowth>1</WeeklyGrowth>
 	<Cost>
@@ -34,6 +34,7 @@
 	<Range>0</Range>
 	<BaseCreature>CREATURE_UNKNOWN</BaseCreature>
 	<Upgrades>
+		<Item>CREATURE_DREAD_KNIGHT</Item>
 		<Item>CREATURE_DEATH_KNIGHT</Item>
 	</Upgrades>
 	<Abilities>

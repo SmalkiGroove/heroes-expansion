@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <AdvMapMonsterShared ObjectRecordID="1000056">
-	<Model href="/_(Model)/Creatures/Necropolis/BlackKnight_LOD.(Model).xdb#xpointer(/Model)"/>
-	<AnimSet href="/_(AnimSet)/Creatures/Necropolis/BlackKnight-arena.(AnimSet).xdb#xpointer(/AnimSet)"/>
+	<Model href="/_(Model)/Creatures/Necropolis/DeathKnight_LOD.(Model).xdb#xpointer(/Model)"/>
+	<AnimSet href="/_(AnimSet)/Creatures/Necropolis/DeathKnight-arena.(AnimSet).xdb#xpointer(/AnimSet)"/>
 	<blockedTiles/>
 	<holeTiles/>
 	<activeTiles>
@@ -18,7 +18,7 @@
 	<Effect/>
 	<EffectWhenOwned/>
 	<messagesFileRef>
-		<Item href="/Text/Game/Creatures/Neutrals/Black_Knight.txt"/>
+		<Item href="/Text/Game/Creatures/Neutrals/Death_Knight.txt"/>
 	</messagesFileRef>
 	<WaterBased>false</WaterBased>
 	<ApplyHeroTrace>false</ApplyHeroTrace>
@@ -31,5 +31,5 @@
 	<RazedStatic/>
 	<Icon128/>
 	<Type>MONSTER_SPECIFIC</Type>
-	<Creature>CREATURE_BLACK_KNIGHT</Creature>
+	<Creature>CREATURE_DEATH_KNIGHT</Creature>
 </AdvMapMonsterShared>

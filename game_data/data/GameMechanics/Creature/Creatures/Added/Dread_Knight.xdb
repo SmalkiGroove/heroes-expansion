@@ -17,8 +17,8 @@
 	<Power>3560</Power>
 	<TimeToCommand>10</TimeToCommand>
 	<CreatureTier>6</CreatureTier>
-	<Upgrade>false</Upgrade>
-	<PairCreature>CREATURE_UNKNOWN</PairCreature>
+	<Upgrade>true</Upgrade>
+	<PairCreature>CREATURE_BLACK_KNIGHT</PairCreature>
 	<CreatureTown>TOWN_NECROMANCY</CreatureTown>
 	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_NONE</Second></MagicElement>
 	<WeeklyGrowth>1</WeeklyGrowth>
@@ -26,11 +26,11 @@
 		<Gold>3000</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
-	<MonsterShared href="/MapObjects/Neutral/Death_Knight.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<MonsterShared href="/MapObjects/Neutral/Dread_Knight.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
 	<CombatSize>2</CombatSize>
 	<PatternAttack/>
 	<flybySequence/>
-	<Visual href="/GameMechanics/CreatureVisual/Creatures/Neutrals/Death_Knight.xdb#xpointer(/CreatureVisual)"/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Neutrals/Dread_Knight.xdb#xpointer(/CreatureVisual)"/>
 	<Range>0</Range>
 	<BaseCreature>CREATURE_BLACK_KNIGHT</BaseCreature>
 	<Upgrades/>

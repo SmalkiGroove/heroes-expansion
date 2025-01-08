@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TownBuildingSharedStats ObjectRecordID="1000051">
+<TownBuildingSharedStats ObjectRecordID="1000048">
 	<NameFileRef href="/Text/Game/TownBuildings/Necromancy/Dwelling_6/Name.txt"/>
 	<DescriptionFileRef href="/Text/Game/TownBuildings/Necromancy/Dwelling_6/Description.txt"/>
 	<Type>TB_DWELLING_6</Type>
@@ -13,11 +13,11 @@
 		<Gem>0</Gem>
 		<Gold>5000</Gold>
 	</Cost>
-	<ModObjectName>DragonGraveyrd</ModObjectName>
+	<ModObjectName>Hall_of_Darkness</ModObjectName>
 	<dependencies/>
-	<Creature>CREATURE_BONE_DRAGON</Creature>
+	<Creature>CREATURE_BLACK_KNIGHT</Creature>
 	<DevLevelNeeded>12</DevLevelNeeded>
 	<UIObjectName>Dwelling_6</UIObjectName>
 	<UIStackPosition>0</UIStackPosition>
-	<Icon href="/UI/TownHall/necropolis/128/d7.xdb#xpointer(/Texture)"/>
+	<Icon href="/UI/TownHall/necropolis/128/d6.xdb#xpointer(/Texture)"/>
 </TownBuildingSharedStats>
