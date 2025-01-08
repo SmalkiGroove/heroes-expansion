@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature ObjectRecordID="1000059">
-	<AttackSkill>20</AttackSkill>
-	<DefenceSkill>20</DefenceSkill>
+	<AttackSkill>15</AttackSkill>
+	<DefenceSkill>15</DefenceSkill>
 	<Shots>0</Shots>
-	<MinDamage>25</MinDamage>
-	<MaxDamage>45</MaxDamage>
+	<MinDamage>17</MinDamage>
+	<MaxDamage>22</MaxDamage>
 	<Speed>7</Speed>
 	<Initiative>10</Initiative>
 	<Flying>false</Flying>
-	<Health>150</Health>
+	<Health>120</Health>
 	<KnownSpells/>
 	<SpellPoints>0</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
@@ -21,9 +21,9 @@
 	<PairCreature>CREATURE_UNKNOWN</PairCreature>
 	<CreatureTown>TOWN_NECROMANCY</CreatureTown>
 	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_NONE</Second></MagicElement>
-	<WeeklyGrowth>1</WeeklyGrowth>
+	<WeeklyGrowth>3</WeeklyGrowth>
 	<Cost>
-		<Gold>3000</Gold>
+		<Gold>1500</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
 	<MonsterShared href="/MapObjects/Neutral/Death_Knight.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
@@ -38,5 +38,7 @@
 		<Item>ABILITY_UNDEAD</Item>
 		<Item>ABILITY_DEADLY_STRIKE</Item>
 		<Item>ABILITY_LARGE_SHIELD</Item>
+		<Item>ABILITY_ARMORED</Item>
+		<Item>ABILITY_IMMUNITY_TO_SLOW</Item>
 	</Abilities>
 </Creature>

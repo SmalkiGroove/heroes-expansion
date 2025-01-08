@@ -3,12 +3,12 @@
 	<AttackSkill>20</AttackSkill>
 	<DefenceSkill>20</DefenceSkill>
 	<Shots>0</Shots>
-	<MinDamage>25</MinDamage>
-	<MaxDamage>45</MaxDamage>
+	<MinDamage>16</MinDamage>
+	<MaxDamage>21</MaxDamage>
 	<Speed>7</Speed>
-	<Initiative>10</Initiative>
+	<Initiative>9</Initiative>
 	<Flying>false</Flying>
-	<Health>150</Health>
+	<Health>120</Health>
 	<KnownSpells/>
 	<SpellPoints>0</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
@@ -21,9 +21,9 @@
 	<PairCreature>CREATURE_BLACK_KNIGHT</PairCreature>
 	<CreatureTown>TOWN_NECROMANCY</CreatureTown>
 	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_NONE</Second></MagicElement>
-	<WeeklyGrowth>1</WeeklyGrowth>
+	<WeeklyGrowth>3</WeeklyGrowth>
 	<Cost>
-		<Gold>3000</Gold>
+		<Gold>1500</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
 	<MonsterShared href="/MapObjects/Neutral/Dread_Knight.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
@@ -36,7 +36,10 @@
 	<Upgrades/>
 	<Abilities>
 		<Item>ABILITY_UNDEAD</Item>
-		<Item>ABILITY_DEADLY_STRIKE</Item>
+		<Item>ABILITY_VORPAL_SWORD</Item>
+		<Item>ABILITY_CURSING_ATTACK</Item>
+		<Item>ABILITY_EVIL_EYE</Item>
 		<Item>ABILITY_LARGE_SHIELD</Item>
+		<Item>ABILITY_ARMORED</Item>
 	</Abilities>
 </Creature>
