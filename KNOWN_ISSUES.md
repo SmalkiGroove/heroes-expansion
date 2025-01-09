@@ -10,17 +10,13 @@
 
 - Academy female heroes textures
 - UI incorrect size
-- Brown Behemoths texture and white icon
 - Windowed mode croped
-- Kha Beleth attack anim not sync
 - Skills UI skill name darker
-- Lich no Harm Touch animation
 - Marbas no anim for Consume Corpse
 - Firehounds should be grey
 
 ### Text issues
 
-- War academy in french
 
 ### Something does not work
 
@@ -64,3 +60,13 @@
 - Viking shield gives too many resources
 - Leadership spawns caravan even with not enough creature to transfer
 - Crash when opening spellbook with Archangels
+- Brown Behemoths texture and white icon
+- Lich no Harm Touch animation
+- Kha Beleth attack anim not sync
+- War academy and School of Magic text in french
+- Frozen Heart effects not working
+- Elrath Divine Shield effect not working
+- Arcanism magic penetration does not match description
+- Book of Power effect does not match description
+- Replace Bone Dragons by Black Knights in necro lineup
+
