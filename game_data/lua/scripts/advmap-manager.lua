@@ -42,9 +42,11 @@ LoadScript("/scripts/advmap/advmap-utils.lua", 9)
 LoadScript("/scripts/advmap/routines/skills-routines-advmap.lua", 11)
 LoadScript("/scripts/advmap/routines/artifacts-routines-advmap.lua", 12)
 LoadScript("/scripts/advmap/routines/heroes-routines-advmap.lua", 13)
+LoadScript("/scripts/advmap/routines/towns-routines-advmap.lua", 14)
 LoadScript("/scripts/advmap/handlers/skills-manager.lua", 16)
 LoadScript("/scripts/advmap/handlers/artifacts-manager.lua", 17)
 LoadScript("/scripts/advmap/handlers/heroes-manager.lua", 18)
+LoadScript("/scripts/advmap/handlers/towns-manager.lua", 19)
 LoadScript("/scripts/advmap/handlers/starting-armies.lua", 21)
 LoadScript("/scripts/advmap/handlers/town-conversion.lua", 22)
 LoadScript("/scripts/advmap/handlers/mapobjects-triggers.lua", 23)
@@ -133,7 +135,7 @@ function PlayerDailyHandler(player, newweek)
 		startThread(DoSkillsRoutine_Daily, player, hero)
 		startThread(DoArtifactsRoutine_Daily, player, hero)
 	end
-	startThread(UpdateMagicGuildBonus, player)
+	startThread(Routine_MagicGuildsBonus, player)
 	WatchPlayer(player, nil)
 end
 
@@ -238,7 +240,7 @@ function InitializeHeroes()
 				HEROES[hero].owner = player
 			end
 			sleep(1)
-			startThread(UpdateMagicGuildBonus, player)
+			startThread(Routine_MagicGuildsBonus, player)
 			startThread(WatchPlayer, player, 1)
 		end
 	end

@@ -138,31 +138,10 @@ function HeroLevelUp_KujinMP() HeroLevelUp(H_KUJIN) end
 
 
 function HeroLostBattle(player, hero, opponent)
-    -- if opponent ~= nil then
-    --     for a = 220,255 do
-    --         if HasArtefact(opponent, a) then RemoveArtefact(opponent, a) end
-    --     end
-    -- end
-end
-
-MAGIC_GUILD_HERO_BONUSES = {}
-function UpdateMagicGuildBonus(player)
-    local bonus = 0
-    for _,town in GetPlayerTowns(player) do
-        bonus = bonus + GetTownBuildingLevel(town, TOWN_BUILDING_MAGIC_GUILD)
-    end
-    for _,hero in GetPlayerHeroes(player) do
-        if MAGIC_GUILD_HERO_BONUSES[hero] then
-            local diff = bonus - MAGIC_GUILD_HERO_BONUSES[hero]
-            if diff ~= 0 then
-                ChangeHeroStat(hero, STAT_SPELL_POWER, diff)
-                ChangeHeroStat(hero, STAT_KNOWLEDGE, diff)
-                MAGIC_GUILD_HERO_BONUSES[hero] = bonus
-            end
-        else
-            ChangeHeroStat(hero, STAT_SPELL_POWER, bonus)
-            ChangeHeroStat(hero, STAT_KNOWLEDGE, bonus)
-            MAGIC_GUILD_HERO_BONUSES[hero] = bonus
+    print("$ HeroLostBattle "..hero)
+    if opponent ~= nil then
+        for a = 200,255 do
+            if HasArtefact(opponent, a) then RemoveArtefact(opponent, a) end
         end
     end
 end
