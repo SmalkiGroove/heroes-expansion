@@ -399,7 +399,7 @@ function Routine_RakshasasAbility(side, hero)
         local type = GetCreatureType(cr)
         if type == CREATURE_RAKSHASA or type == CREATURE_RAKSHASA_RUKH or type == CREATURE_RAKSHASA_KSHATRI then
             UseCombatAbility(cr, SPELL_ABILITY_DASH)
-            -- SetATB_ID(cr, ATB_HALF)
+            SetATB_ID(cr, 0.1)
         end
     end
 end
@@ -612,6 +612,18 @@ function Routine_EmbalmerManaRegen(side, hero)
             local m = 1 + GetHeroSkillMastery(side, SKILL_DARK_MAGIC)
             local value = min(GetUnitManaPoints(hero)+m, GetUnitMaxManaPoints(hero))
             SetMana(hero, value)
+        end
+    end
+end
+
+function Routine_BlackKnightsDash(side, hero)
+    -- log("Trigger black knights dash !")
+    local creatures = GetUnits(side, CREATURE)
+    for i,cr in creatures do
+        local type = GetCreatureType(cr)
+        if type == CREATURE_BLACK_KNIGHT or type == CREATURE_DREAD_KNIGHT or type == CREATURE_DEATH_KNIGHT then
+            UseCombatAbility(cr, SPELL_ABILITY_DASH)
+            SetATB_ID(cr, 0.1)
         end
     end
 end
@@ -923,6 +935,7 @@ COMBAT_START_HERO_ROUTINES = {
     -- necropolis
     [H_VLADIMIR] = Routine_SummonAndKillEnnemySkeleton,
     [H_KASPAR] = Routine_FirstAidLastAid,
+    [H_XERXON] = Routine_BlackKnightsDash,
     [H_THANT] = Routine_CastMassWeakness,
     [H_ARCHILUS] = Routine_SummonAvatarOfDeath,
     -- inferno

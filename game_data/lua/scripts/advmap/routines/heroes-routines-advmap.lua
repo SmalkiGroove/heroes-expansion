@@ -766,21 +766,14 @@ function Routine_HeroCallVampires(player, hero)
     TransferCreatureFromTown(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_VAMPIRE, 1.2)
 end
 
-function Routine_AddHeroBlackKnights(player, hero)
-    log("$ Routine_AddHeroBlackKnights")
-    AddHeroCreaturePerLevel(player, hero, CREATURE_BLACK_KNIGHT, 0.25)
+function Routine_AddHeroBlackKnight(player, hero)
+    log("$ Routine_AddHeroBlackKnight")
+    AddHeroCreatureType(player, hero, NECROPOLIS, 6, 1, 1)
 end
 
-function Routine_EvolveBlackKnights(player, hero, combatIndex)
-    log("$ Routine_EvolveBlackKnights")
-    local max = trunc(GetHeroLevel(hero) * 0.15)
-    local bks = GetHeroCreatures(hero, CREATURE_BLACK_KNIGHT)
-    local nb = min(bks, max)
-    if nb > 0 then
-        RemoveHeroCreatures(hero, CREATURE_BLACK_KNIGHT, nb)
-        AddHeroCreatures(hero, CREATURE_DEATH_KNIGHT, nb)
-        ShowFlyingSign({"/Text/Game/Scripts/Evolve.txt"; num=nb}, hero, player, FLYING_SIGN_TIME)
-    end
+function Routine_ResurrectBlackKnight(player, hero, combatIndex)
+    log("$ Routine_ResurrectBlackKnight")
+    ResurrectCreatureType(player, hero, combatIndex, NECROPOLIS, 6, 1)
 end
 
 function Routine_AddRecruitsNecropolis(player, hero)
@@ -798,10 +791,17 @@ function Routine_AddHeroMummies(player, hero)
     AddHeroCreaturePerLevel(player, hero, CREATURE_MUMMY, 0.3)
 end
 
-function Routine_AddHeroBanshees(player, hero)
-    log("$ Routine_AddHeroBanshees")
-	local nb = round(0.06 * GetHeroLevel(hero))
-    AddHeroCreatureType(player, hero, NECROPOLIS, 7, nb, 1)
+Var_Deirdre_BattleWon = 0
+function Routine_BansheeHowlBuffs(player, hero, combatIndex)
+    log("$ Routine_BansheeHowlBuffs")
+    Var_Deirdre_BattleWon = Var_Deirdre_BattleWon + 1
+    if Var_Deirdre_BattleWon == 20 then
+        GiveArtifact(hero, ARTIFACT_251)
+        GiveArtifact(hero, ARTIFACT_252)
+    elseif Var_Deirdre_BattleWon == 30 then
+        GiveArtifact(hero, ARTIFACT_253)
+        GiveArtifact(hero, ARTIFACT_254)
+    end
 end
 
 function Routine_BuildDragonTombstone(player, hero)
@@ -826,20 +826,21 @@ function Routine_AddLichesPerKnowledge(player, hero)
     AddHeroCreatureType(player, hero, NECROPOLIS, 5, nb, 1)
 end
 
-Var_Ornella_BattleWon = 0
-function Routine_FrostLordArtifacts(player, hero, combatIndex)
+Var_Ornella_FrostLordSet = {
+    [ARTIFACT_EVERCOLD_ICICLE]=5,
+    [ARTIFACT_FROZEN_HEART]=5,
+    [ARTIFACT_CROWN_OF_THE_FROST_LORD]=1,
+    [ARTIFACT_SPEAR_OF_THE_FROST_LORD]=1,
+}
+function Routine_FrostLordArtifacts(player, hero)
     log("$ Routine_FrostLordArtifacts")
-    Var_Ornella_BattleWon = Var_Ornella_BattleWon + 1
-    if Var_Ornella_BattleWon == 7 then
-        GiveArtifact(hero, ARTIFACT_EVERCOLD_ICICLE)
-    elseif Var_Ornella_BattleWon == 15 then
-        GiveArtifact(hero, ARTIFACT_FROZEN_HEART)
-    elseif Var_Ornella_BattleWon == 20 then
-        GiveArtifact(hero, ARTIFACT_SHIELD_OF_CRYSTAL_ICE)
-    elseif Var_Ornella_BattleWon == 30 then
-        GiveArtifact(hero, ARTIFACT_CROWN_OF_THE_FROST_LORD)
-    elseif Var_Ornella_BattleWon == 35 then
-        GiveArtifact(hero, ARTIFACT_SPEAR_OF_THE_FROST_LORD)
+    local factor = 1 + 0.05 * GetHeroLevel(hero)
+    for a,p in Var_Ornella_FrostLordSet do
+        if (p * factor) > random(0,100,a) then
+            GiveArtifact(hero, a)
+            Var_Ornella_FrostLordSet[a] = 0
+            return
+        end
     end
 end
 
@@ -1147,6 +1148,7 @@ DAILY_TRIGGER_HERO_ROUTINES = {
     [H_SEPHINROTH] = Routine_CheckHallOfIntrigue,
     -- necropolis
     [H_THANT] = Routine_AddHeroMummies,
+    [H_ORNELLA] = Routine_FrostLordArtifacts,
     -- inferno
     [H_ORLANDO] = Routine_TownBuildingUp,
     [H_DELEB] = Routine_GenerateSulfur,
@@ -1179,8 +1181,7 @@ WEEKLY_TRIGGER_HERO_ROUTINES = {
     -- necropolis
     [H_LUCRETIA] = Routine_HeroCallVampires,
     [H_RAVEN] = Routine_AddRecruitsNecropolis,
-    [H_XERXON] = Routine_AddHeroBlackKnights,
-    [H_DEIRDRE] = Routine_AddHeroBanshees,
+    [H_XERXON] = Routine_AddHeroBlackKnight,
     -- inferno
     [H_GROK] = Routine_NightmareWeeklyProd,
     [H_GRAWL] = Routine_AddHeroHellHounds,
@@ -1231,8 +1232,8 @@ AFTER_COMBAT_TRIGGER_HERO_ROUTINES = {
     [H_RAELAG] = Routine_GainDragonArtifacts,
     -- necropolis
     [H_ORSON] = Routine_ReviveZombies,
-    [H_XERXON] = Routine_EvolveBlackKnights,
-    [H_ORNELLA] = Routine_FrostLordArtifacts,
+    [H_XERXON] = Routine_ResurrectBlackKnight,
+    [H_DEIRDRE] = Routine_BansheeHowlBuffs,
     -- inferno
     [H_SHELTEM] = Routine_RestoreManaAfterBattle,
     [H_AGRAEL] = Routine_AgraelVictoryCounter,
