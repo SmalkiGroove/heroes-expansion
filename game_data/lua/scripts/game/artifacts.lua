@@ -32,7 +32,7 @@ ARTIFACT_ENDLESS_SACK_OF_GOLD = 28                  -- 1000 golds per day / + pe
 ARTIFACT_ENDLESS_POUCH_OF_GOLD = 29                 -- 250 golds per day / + per level **
 ARTIFACT_ANGEL_WINGS = 30                           -- fly over terrain
 ARTIFACT_CAPE_OF_KINGS = 31                         -- governance bonus **
-ARTIFACT_PHOENIX_FEATHER_CAPE = 32                  -- fire spells damage
+ARTIFACT_SOLAR_RING = 32                            -- fire spells damage
 ARTIFACT_CLOAK_OF_DEATHS_SHADOW = 33                -- enemy creatures have -2 luck and morale
 ARTIFACT_TURBAN_OF_ENLIGHTMENT = 34                 -- increase exp gain by 10%
 ARTIFACT_SCALE_MAIL_OF_ENLIGHTMENT = 35             -- increase exp gain by 20%
@@ -85,7 +85,7 @@ ARTIFACT_RUNIC_WAR_AXE = 81                         -- restore mana after battle
 ARTIFACT_RUNIC_WAR_HARNESS = 82                     -- restore mana after battle **
 ARTIFACT_SKULL_OF_THE_FORBIDDEN = 83                -- 
 ARTIFACT_FROZEN_HEART = 84                          -- reduce enemy ice spells and immune to blaze power
-ARTIFACT_DWARVEN_SMITHY_HUMMER = 85                 -- reduce enemy fire spells and bonus att/def for first daily battle ** TODO
+ARTIFACT_PHOENIX_FEATHER_CAPE = 85                  -- reduce enemy fire spells and immune to frost power TODO
 ARTIFACT_RUNE_OF_FLAME = 86                         -- grants runic spell
 ARTIFACT_TAROT_DECK = 87                            -- /
 ARTIFACT_CROWN_OF_LEADER = 88                       -- doubles estate, diplomacy and recruitment
@@ -144,7 +144,7 @@ ARTIFACT_SYLVAN_AMULET = 140                        -- reduce mana cost of natur
 ARTIFACT_SHADOW_MASK = 141                          -- /
 ARTIFACT_BARBARIAN_HELMET = 142                     -- 
 ARTIFACT_SKULL_MASK = 143                           -- decrease enemy initiative
-ARTIFACT_SENTINELS_BLADE = 144                      -- after spawning a blade barrier, ... **
+ARTIFACT_SENTINELS_BLADE = 144                      -- after spawning a blade barrier, ... TODO **
 ARTIFACT_VIZIRS_SCIMITAR = 145                      -- increase t1 and t2 weekly prod by 10 **
 ARTIFACT_BARBARIAN_CAPE = 146                       -- 
 ARTIFACT_SHADOW_BLADE = 147                         -- /
@@ -156,7 +156,7 @@ ARTIFACT_COLLAR_OF_PRIMAL_RAGE = 152                --
 ARTIFACT_CENTAUR_CROSSBOW = 153                     -- attacks reduce target's defense TODO
 ARTIFACT_DEADWOOD_STAFF = 154                       -- reduce mana cost of dark spells by 1
 ARTIFACT_DEATH_KNIGHT_BOOTS = 155                   -- gain experience and movement points after battle **
-ARTIFACT_BARBARIAN_CUIRASS = 156                    -- creatures have +3% hp +1
+ARTIFACT_BARBARIAN_CUIRASS = 156                    -- creatures have +3% hp
 ARTIFACT_HARPY_BOOTS = 157                          -- creatures have +1 initiative and speed
 ARTIFACT_PALACE_SHOES = 158                         -- gain random battle bonuses after combat **
 ARTIFACT_SHACKLES_OF_THE_LAST_MAN = 159             -- enemy creatures have -1 att and def TODO
@@ -181,7 +181,7 @@ ARTIFACT_PIRATE_SMASHER = 177                       -- attacks reduce target's d
 ARTIFACT_ELRATHS_UNITY = 178                        -- /
 ARTIFACT_WILL_OF_URGASH = 179                       -- /
 ARTIFACT_MOONLIGHT_BAND = 180                       -- immunity to curse of the netherworld
-ARTIFACT_BLOOD_CRYSTAL = 181                        -- transforms creatures to your faction
+ARTIFACT_DWARVEN_SMITHY_HAMMER = 181                -- bonus att/def for first daily battle ** TODO
 ARTIFACT_RANGERS_CAPE = 182                         -- 
 ARTIFACT_MOON_CHARM = 183                           -- the first friendly stack that dies in combat revives **
 ARTIFACT_FORGOTTEN_RING = 184                       -- 
@@ -307,7 +307,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_ENDLESS_POUCH_OF_GOLD]         = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_POCKET, special=0},
     [ARTIFACT_ANGEL_WINGS]                   = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_SHOULDERS, special=1},
     [ARTIFACT_CAPE_OF_KINGS]                 = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_SHOULDERS, special=0},
-    [ARTIFACT_PHOENIX_FEATHER_CAPE]          = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_SHOULDERS, special=0},
+    [ARTIFACT_SOLAR_RING]                    = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_SHOULDERS, special=0},
     [ARTIFACT_CLOAK_OF_DEATHS_SHADOW]        = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_SHOULDERS, special=0},
     [ARTIFACT_TURBAN_OF_ENLIGHTMENT]         = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_HEAD, special=0},
     [ARTIFACT_SCALE_MAIL_OF_ENLIGHTMENT]     = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_BODY, special=0},
@@ -360,7 +360,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_RUNIC_WAR_HARNESS]             = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_BODY, special=0},
     [ARTIFACT_SKULL_OF_THE_FORBIDDEN]        = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_POCKET, special=0},
     [ARTIFACT_FROZEN_HEART]                  = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_POCKET, special=0},
-    [ARTIFACT_DWARVEN_SMITHY_HUMMER]         = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
+    [ARTIFACT_PHOENIX_FEATHER_CAPE]          = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
     [ARTIFACT_RUNE_OF_FLAME]                 = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_POCKET, special=0},
     [ARTIFACT_TAROT_DECK]                    = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_POCKET, special=0},
     [ARTIFACT_CROWN_OF_LEADER]               = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_HEAD, special=0},
@@ -370,7 +370,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_HORN_OF_PLENTY]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_POCKET, special=0},
     [ARTIFACT_RING_OF_BANISHMENT]            = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RING, special=0},
     [ARTIFACT_BOOK_OF_POWER]                 = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_LEFTHAND, special=0},
-    [ARTIFACT_TREEBORN_QUIVER]               = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_SHOULDERS, special=0},
+    [ARTIFACT_TREEBORN_QUIVER]               = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_SHOULDERS, special=0},
     [ARTIFACT_PRINCESS]                      = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_BACKPACK, special=1},
     [ARTIFACT_SACRED_SEED]                   = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_POCKET, special=1}, --disabled
     [ARTIFACT_FORTUNE_PICKAXE]               = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=1}, --disabled
@@ -456,7 +456,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_ELRATHS_UNITY]                 = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_POCKET, special=0},
     [ARTIFACT_WILL_OF_URGASH]                = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
     [ARTIFACT_MOONLIGHT_BAND]                = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RING, special=0},
-    [ARTIFACT_BLOOD_CRYSTAL]                 = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_POCKET, special=0},
+    [ARTIFACT_DWARVEN_SMITHY_HAMMER]         = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
     [ARTIFACT_RANGERS_CAPE]                  = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_SHOULDERS, special=1}, --disabled
     [ARTIFACT_MOON_CHARM]                    = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_NECK, special=0},
     [ARTIFACT_FORGOTTEN_RING]                = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RING, special=1}, --disabled

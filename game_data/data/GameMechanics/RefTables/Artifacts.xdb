@@ -805,13 +805,14 @@
 		</Item>
 		<Item>
 			<ID>PHOENIX_FEATHER_CAPE</ID>
+			<!-- <ID>ARTIFACT_SOLAR_RING</ID> -->
 			<obj>
-				<NameFileRef href="/Text/Game/Artifacts/PhoenixFeatherCape/Name.txt"/>
-				<DescriptionFileRef href="/Text/Game/Artifacts/PhoenixFeatherCape/Description.txt"/>
+				<NameFileRef href="/Text/Game/Artifacts/SolarRing/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artifacts/SolarRing/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
 				<Type>ARTF_CLASS_MINOR</Type>
-				<Slot>SHOULDERS</Slot>
-				<Icon href="/Textures/HeroScreen/Artifacts/PhoenixFeatherCape.xdb#xpointer(/Texture)"/>
+				<Slot>FINGER</Slot>
+				<Icon href="/Textures/HeroScreen/Artifacts/SolarRing.xdb#xpointer(/Texture)"/>
 				<CostOfGold>5000</CostOfGold>
 				<AIValue>1</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
@@ -823,7 +824,7 @@
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
-				<ArtifactShared href="/MapObjects/Artifacts/PhoenixFeatherCape.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
+				<ArtifactShared href="/MapObjects/Artifacts/SolarRing.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
 				<PresetPrice>0</PresetPrice>
 			</obj>
@@ -2137,25 +2138,26 @@
 		</Item>
 		<Item>
 			<ID>ARTIFACT_DWARVEN_SMITHY_HUMMER</ID>
+			<!-- <ID>PHOENIX_FEATHER_CAPE</ID> -->
 			<obj>
-				<NameFileRef href="/Text/Game/Artifacts/DwarvenSmithyHummer/Name.txt"/>
-				<DescriptionFileRef href="/Text/Game/Artifacts/DwarvenSmithyHummer/Description.txt"/>
+				<NameFileRef href="/Text/Game/Artifacts/PhoenixFeatherCape/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artifacts/PhoenixFeatherCape/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MAJOR</Type>
-				<Slot>PRIMARY</Slot>
-				<Icon href="/Textures/HeroScreen/Artifacts/DwarvenSmithyHummer.xdb#xpointer(/Texture)"/>
-				<CostOfGold>10000</CostOfGold>
-				<AIValue>20000</AIValue>
+				<Type>ARTF_CLASS_MINOR</Type>
+				<Slot>SHOULDERS</Slot>
+				<Icon href="/Textures/HeroScreen/Artifacts/PhoenixFeatherCape.xdb#xpointer(/Texture)"/>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>10000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
-					<Attack>1</Attack>
-					<Defence>1</Defence>
+					<Attack>0</Attack>
+					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
-					<SpellPower>0</SpellPower>
+					<SpellPower>1</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
-				<ArtifactShared href="/MapObjects/Artifacts/DwarvenSmithyHummer.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
+				<ArtifactShared href="/MapObjects/Artifacts/PhoenixFeatherCape.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
 				<PresetPrice>0</PresetPrice>
 			</obj>
@@ -2391,11 +2393,11 @@
 				<NameFileRef href="/Text/Game/Artifacts/TreebornQuiver/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/TreebornQuiver/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MAJOR</Type>
+				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>SHOULDERS</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/TreebornQuiver.xdb#xpointer(/Texture)"/>
-				<CostOfGold>10000</CostOfGold>
-				<AIValue>20000</AIValue>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>10000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
@@ -3253,7 +3255,7 @@
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
-					<Luck>1</Luck>
+					<Luck>0</Luck>
 				</HeroStatsModif>
 				<ArtifactShared href="/MapObjects/Artifacts/AvengerBow.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
@@ -3516,17 +3518,17 @@
 				<NameFileRef href="/Text/Game/Artifacts/SylvanAmulet/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/SylvanAmulet/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MINOR</Type>
+				<Type>ARTF_CLASS_RELIC</Type>
 				<Slot>NECK</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/SylvanAmulet.xdb#xpointer(/Texture)"/>
-				<CostOfGold>5000</CostOfGold>
-				<AIValue>10000</AIValue>
+				<CostOfGold>20000</CostOfGold>
+				<AIValue>30000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
-					<Knowledge>0</Knowledge>
-					<SpellPower>0</SpellPower>
+					<Knowledge>2</Knowledge>
+					<SpellPower>2</SpellPower>
 					<Morale>0</Morale>
 					<Luck>1</Luck>
 				</HeroStatsModif>
@@ -4536,26 +4538,26 @@
 			</obj>
 		</Item>	
 		<Item>
-			<ID>ARTIFACT_BLOOD_CRYSTAL</ID>
+			<ID>ARTIFACT_DWARVEN_SMITHY_HAMMER</ID>
 			<obj>
-				<NameFileRef href="/Text/Game/Artifacts/BloodCrystal/Name.txt"/>
-				<DescriptionFileRef href="/Text/Game/Artifacts/BloodCrystal/Description.txt"/>
+				<NameFileRef href="/Text/Game/Artifacts/DwarvenSmithyHammer/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artifacts/DwarvenSmithyHammer/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
 				<Type>ARTF_CLASS_MAJOR</Type>
-				<Slot>MISCSLOT1</Slot>
-				<Icon href="/Textures/HeroScreen/Artifacts/BloodCrystal.xdb#xpointer(/Texture)"/>
+				<Slot>PRIMARY</Slot>
+				<Icon href="/Textures/HeroScreen/Artifacts/DwarvenSmithyHammer.xdb#xpointer(/Texture)"/>
 				<CostOfGold>10000</CostOfGold>
-				<AIValue>1</AIValue>
+				<AIValue>20000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
-					<Attack>0</Attack>
-					<Defence>0</Defence>
+					<Attack>1</Attack>
+					<Defence>1</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
-				<ArtifactShared href="/MapObjects/Artifacts/BloodCrystal.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
+				<ArtifactShared href="/MapObjects/Artifacts/DwarvenSmithyHammer.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
 				<PresetPrice>0</PresetPrice>
 			</obj>
