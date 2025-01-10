@@ -14,11 +14,11 @@
 		<x>0</x>
 		<y>0</y>
 	</PossessionMarkerTile>
-	<Effect href="/Effects/_(Effect)/Artefacts/General/Blue.xdb#xpointer(/Effect)"/>
+	<Effect href=""/>
 	<EffectWhenOwned />
 	<messagesFileRef>
-		<Item href="/Text/Game/Artifacts/ButcherGlaive/Name.txt" />
-		<Item href="/Text/Game/Artifacts/ButcherGlaive/Description.txt" />
+		<Item href="/Text/Game/Artifacts/SolarRing/Name.txt" />
+		<Item href="/Text/Game/Artifacts/SolarRing/Description.txt" />
 	</messagesFileRef>
 	<WaterBased>false</WaterBased>
 	<ApplyHeroTrace>false</ApplyHeroTrace>
@@ -31,5 +31,5 @@
 	<RazedStatic />
 	<Icon128 />
 	<Type>ARTF_RANDOM_SPECIFIC</Type>
-	<ArtifactID>ARTIFACT_BUTCHER_GLAIVE</ArtifactID>
+	<ArtifactID>PHOENIX_FEATHER_CAPE</ArtifactID>
 </AdvMapArtifactShared>

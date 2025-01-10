@@ -17,22 +17,32 @@ tmp_dict = {
     'ARTF_CLASS_RELIC': '/Effects/_(Effect)/Artefacts/General/Red.xdb#xpointer(/Effect)',
 }
 
+artifactshared = {
+    'MINOR':{},
+    'MAJOR':{},
+    'RELIC':{},
+}
+
 for artifact in artifacts_data["Table_DBArtifact_ArtifactEffect"]["objects"]["Item"]:
     if artifact["ID"] != "ARTIFACT_NONE":
         mapobj_artifact_path = str(artifact["obj"]["ArtifactShared"]["@href"]).split('#')[0]
-        print(data_path + mapobj_artifact_path)
+        # print(data_path + mapobj_artifact_path)
         for line in fileinput.input(data_path + mapobj_artifact_path, inplace=True):
             if line.find('<Effect href=') > -1:
                 print(f'	<Effect href="{tmp_dict[str(artifact["obj"]["Type"])]}"/>')
             else:
-                print(line)
+                print(line, end='')
 
-        for artifact_class in ['MINOR','MAJOR','RELIC']:
-            print(f"Print {artifact_class} artifacts :")
+        for artifact_class in artifactshared.keys():
             if artifact["obj"]["Type"] == f"ARTF_CLASS_{artifact_class}":
                 mapobject_file = str(artifact["obj"]["ArtifactShared"]["@href"])
-                print(f"	<Item href=\"{mapobject_file}\"/>")
+                artifactshared[artifact_class][artifact["ID"]] = f"    <Item href=\"{mapobject_file}\"/>"
 
         # texture_file = str(artifact["obj"]["Icon"]["@href"])
         # with open(os.path.join(data_path, artifact_file_path), 'w') as advmaplink_file:
         #     advmaplink_file.write()
+
+for artifact_class in artifactshared.keys():
+    print(f"{artifact_class} artifacts :")
+    for line in artifactshared[artifact_class].values():
+        print(line)
