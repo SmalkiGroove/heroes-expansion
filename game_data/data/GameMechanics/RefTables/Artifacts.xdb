@@ -232,15 +232,15 @@
 				<NameFileRef href="/Text/Game/Artifacts/ShieldOfCrystalIce/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/ShieldOfCrystalIce/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MINOR</Type>
+				<Type>ARTF_CLASS_RELIC</Type>
 				<Slot>SECONDARY</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/ShieldOfCrystalIce.xdb#xpointer(/Texture)"/>
-				<CostOfGold>5000</CostOfGold>
-				<AIValue>10000</AIValue>
+				<CostOfGold>20000</CostOfGold>
+				<AIValue>30000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>2</Defence>
+					<Defence>4</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>

@@ -9,7 +9,7 @@ ARTIFACT_TITANS_TRIDENT = 5                         -- lightning spells damage
 ARTIFACT_STAFF_OF_THE_NETHERWORLD = 6               -- decrease enemy initiative
 ARTIFACT_NO_RETREAT = 7                             -- no retreat
 ARTIFACT_FOUR_LEAF_CLOVER = 8                       -- /
-ARTIFACT_SHIELD_OF_CRYSTAL_ICE = 9                  -- reduce enemy fire spells
+ARTIFACT_SHIELD_OF_CRYSTAL_ICE = 9                  -- reduce enemy fire spells and immune to ignite TODO
 ARTIFACT_OCEAN_CHARM = 10                           -- more movement on sea
 ARTIFACT_CROWN_OF_COURAGE = 11                      -- /
 ARTIFACT_ALL_SEEING_CROWN = 12                      -- increase vision range
@@ -43,7 +43,7 @@ ARTIFACT_DRAGON_WING_MANTLE = 39                    -- flying creatures have +10
 ARTIFACT_DRAGON_TEETH_NECKLACE = 40                 -- caster creatures have +10% initiative
 ARTIFACT_DRAGON_TALON_CROWN = 41                    -- war machines have +10% initiative
 ARTIFACT_DRAGON_EYE_RING = 42                       -- ranged creatures have +10% initiative
-ARTIFACT_DRAGON_FLAME_TONGUE = 43                   -- reduce enemy ice spells and immunity to cold death TODO
+ARTIFACT_DRAGON_FLAME_TONGUE = 43                   -- reduce enemy ice spells and immune to cold death TODO
 ARTIFACT_ROBE_OF_THE_MAGISTER = 44                  -- gain exp based on knowledge **
 ARTIFACT_STAFF_OF_THE_MAGISTER = 45                 -- negates magic-resistance
 ARTIFACT_CROWN_OF_THE_MAGISTER = 46                 -- /
@@ -70,7 +70,7 @@ ARTIFACT_HELM_OF_CHAOS = 66                         -- magic resistance
 ARTIFACT_PENDANT_OF_CONFLUX = 67                    -- absorb half enemy mana spent
 ARTIFACT_SANDALS_OF_THE_BLESSED = 68                -- /
 ARTIFACT_SANDROS_CLOAK = 69                         -- negates immunity to mind control
-ARTIFACT_RING_OF_THE_UNREPENTANT = 70               -- immunity to word of light
+ARTIFACT_RING_OF_THE_UNREPENTANT = 70               -- 
 ARTIFACT_AMULET_OF_NECROMANCY = 71                  -- decrease dark flux costs by 10%
 ARTIFACT_FREIDA = 72                                -- FREIDA
 ARTIFACT_RING_OF_THE_SHADOWBRAND = 73               -- /
@@ -124,7 +124,7 @@ ARTIFACT_SENTINELS_HELM = 120                       -- gain battle boost on leve
 ARTIFACT_SENTINELS_BOOTS = 121                      -- gain movement and morale after battle with no loss **
 ARTIFACT_SENTINELS_SHIELD = 122                     -- reduce ranged damage
 ARTIFACT_OBSIDIAN_ARMOR = 123                       -- immunity to armaggeddon
-ARTIFACT_ELRATHS_DIVINE_SHIELD = 124                -- reduce magic damage taken from all elements TODO
+ARTIFACT_ELRATHS_DIVINE_SHIELD = 124                -- reduce magic damage taken from all elements
 ARTIFACT_ROD_OF_TORMENT = 125                       -- enemy creatures have -2 morale
 ARTIFACT_CODEX_OF_THE_SAINT = 126                   -- 
 ARTIFACT_VIZIRS_CAP = 127                           -- gain weekly golds per dwelling **
@@ -181,13 +181,13 @@ ARTIFACT_PIRATE_SMASHER = 177                       -- attacks reduce target's d
 ARTIFACT_ELRATHS_UNITY = 178                        -- /
 ARTIFACT_WILL_OF_URGASH = 179                       -- /
 ARTIFACT_MOONLIGHT_BAND = 180                       -- immunity to curse of the netherworld
-ARTIFACT_DWARVEN_SMITHY_HAMMER = 181                -- bonus att/def for first daily battle ** TODO
+ARTIFACT_DWARVEN_SMITHY_HAMMER = 181                -- bonus att/def for first daily battle **
 ARTIFACT_RANGERS_CAPE = 182                         -- 
 ARTIFACT_MOON_CHARM = 183                           -- the first friendly stack that dies in combat revives **
-ARTIFACT_FORGOTTEN_RING = 184                       -- 
-ARTIFACT_BEARHIDE_WRAPS = 185                       -- 10% bonus leadership ** TODO
+ARTIFACT_FORGOTTEN_RING = 184                       -- immunity to word of light
+ARTIFACT_BEARHIDE_WRAPS = 185                       -- 10% bonus leadership **
 ARTIFACT_MOONLIGHT_COAT = 186                       -- reduce hero spell cost by 25%
-ARTIFACT_DRAGONSBANE = 187                          -- damage ignore armor TODO
+ARTIFACT_DRAGONSBANE = 187                          -- damage ignore defense TODO
 ARTIFACT_CUIRASS_OF_THE_STAG = 188                  -- /
 ARTIFACT_WRAPS_OF_THE_OWL = 189                     -- /
 ARTIFACT_CELESTIAL_JUSTICAR_ARMOR = 190             -- reduce melee damage TODO
@@ -284,7 +284,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_STAFF_OF_THE_NETHERWORLD]      = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
     [ARTIFACT_NO_RETREAT]                    = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_LOCATION_HEAD, special=1},
     [ARTIFACT_FOUR_LEAF_CLOVER]              = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_POCKET, special=0},
-    [ARTIFACT_SHIELD_OF_CRYSTAL_ICE]         = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_LEFTHAND, special=0},
+    [ARTIFACT_SHIELD_OF_CRYSTAL_ICE]         = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_LEFTHAND, special=0},
     [ARTIFACT_OCEAN_CHARM]                   = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_NECK, special=1},
     [ARTIFACT_CROWN_OF_COURAGE]              = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_HEAD, special=0},
     [ARTIFACT_ALL_SEEING_CROWN]              = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_HEAD, special=1},
@@ -522,9 +522,9 @@ ARTFSET_DWARVEN_4PC = 13        --
 ARTFSET_DWARVEN_4PCX = 14       --
 ARTFSET_DWARVEN_6PC = 15        --
 ARTFSET_DWARVEN_6PCX = 16       --
-ARTFSET_NECRO_4PC = 17          -- summons a stack of black knights on combat start
-ARTFSET_NECRO_4PCX = 18         -- ^ terror knights instead
-ARTFSET_NECRO_6PC = 19          -- summons two stacks of black knights on combat start
+ARTFSET_NECRO_4PC = 17          -- summons a stack of bone dragons on combat start
+ARTFSET_NECRO_4PCX = 18         -- ^ spectral dragons instead
+ARTFSET_NECRO_6PC = 19          -- summons two stacks of bone dragons on combat start
 ARTFSET_NECRO_6PCX = 20         -- ^ they start with max atb
 ARTFSET_INFERNO_4PC = 21        -- 
 ARTFSET_INFERNO_4PCX = 22       --

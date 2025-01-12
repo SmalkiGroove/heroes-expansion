@@ -395,6 +395,11 @@ function Routine_LearnRunicSpell(player, hero)
     -- Routine_GainSpellpowerPerRune(player, hero)
 end
 
+function Routine_GiveArtifactShantiriBreastplate(player, hero)
+    log("$ Routine_GiveArtifactShantiriBreastplate")
+    GiveArtifact(hero, ARTIFACT_SHANTIRI_BREASTPLATE)
+end
+
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -1105,6 +1110,7 @@ START_TRIGGER_HERO_ROUTINES = {
     [H_TOLGHAR] = Routine_AddLuckAndMorale,
     [H_ERLING] = Routine_UpgradeRunicShrine,
     [H_EBBA] = Routine_GiveArtifactRuneOfFlame,
+    [H_INGA] = Routine_GiveArtifactShantiriBreastplate,
     -- academy
     [H_RISSA] = Routine_RefreshTimeShift,
     -- dungeon

@@ -94,6 +94,12 @@ function Routine_ArtifactRobeOfTheMagister(player, hero)
     end
 end
 
+function Routine_ArtifactSmithyHammer(player, hero)
+    log("$ Routine_ArtifactSmithyHammer")
+    GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_ATTACK, 3)
+    GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_DEFENCE, 3)
+end
+
 function Routine_ArtifactMagistersSandals(player, hero)
     log("$ Routine_ArtifactMagistersSandals")
     ChangeHeroStat(hero, STAT_KNOWLEDGE, 1)
@@ -345,6 +351,7 @@ DAILY_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_CAPE_OF_KINGS] = Routine_ArtifactCapeOfKings,
     [ARTIFACT_BOOTS_OF_THE_SWIFT_JOUNREY] = Routine_ArtifactBootsOfSwiftJourney,
     [ARTIFACT_ROBE_OF_THE_MAGISTER] = Routine_ArtifactRobeOfTheMagister,
+    [ARTIFACT_DWARVEN_SMITHY_HAMMER] = Routine_ArtifactSmithyHammer,
 }
 WEEKLY_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_HORN_OF_PLENTY] = Routine_ArtifactHornOfPlenty,

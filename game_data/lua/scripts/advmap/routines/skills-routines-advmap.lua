@@ -750,6 +750,9 @@ function Routine_LeadershipAfterBattle(player, hero, mastery, combatIndex)
         if HasHeroSkill(hero, PERK_CHARISMA) then
             bonus = bonus + 5 + 5 * mastery
         end
+        if HasArtefact(hero, ARTIFACT_BEARHIDE_WRAPS, 1) then
+            bonus = bonus + 10
+        end
         local amount = trunc(count * (0.05 + 0.05 * mastery + 0.01 * bonus))
         if HasHeroSkill(hero, PERK_HERALD_OF_DEATH) then creature = CreatureToUndead(creature) end
         if amount > 0 then
