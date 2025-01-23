@@ -13,7 +13,6 @@
 - Windowed mode croped
 - Skills UI skill name darker
 - Marbas no anim for Consume Corpse
-- Firehounds should be grey
 
 ### Text issues
 
@@ -22,7 +21,6 @@
 
 - Thunder Power skill does not apply air damage of creatures attacks
 - World breaker hero gets Shantiri Breastplate
-- Obsidian Armor does not immune to Armaggedon
 
 ### Bugs
 
@@ -69,4 +67,6 @@
 - Arcanism magic penetration does not match description
 - Book of Power effect does not match description
 - Replace Bone Dragons by Black Knights in necro lineup
+- Firehounds should be grey
+- Obsidian Armor does not immune to Armaggedon
 
