@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001252">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Added/Basilisk/name.txt"/>
+	<CreatureAbilitiesFileRef/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Added/Basilisk/description.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/Textures/Creatures/Added/Basilisk/Basilisk.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Added/Basilisk/Basilisk.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="#n:inline(Win3DObj)" id="item_90c6b314-7218-4e3b-8a76-50f028d6aba9">
+		<Win3DObj ObjectRecordID="26">
+			<Model href="/_(Model)/Creatures/Inferno/HellHound.(Model).xdb#xpointer(/Model)"/>
+			<placements>
+				<Item>
+					<SizeDesc href="/GameMechanics/Win3DObjSizeDesc/creatureInfo.xdb#xpointer(/Win3DObjSizeDesc)"/>
+					<Matrix>8804823f54690fbf000000001183403e1fd9e33e8a914e3f9c60343f295c0fbf5038aebeeaf21dbfa3e66b3f000000000000000000000000000000000000803f</Matrix>
+					<Shift>
+						<x>0.188</x>
+						<y>-0.56</y>
+					</Shift>
+					<RollY>0.504</RollY>
+					<RollX>-0.6528</RollX>
+					<Scale>1.16</Scale>
+				</Item>
+			</placements>
+		</Win3DObj>
+	</Win3DView>
+	<MountPoint>
+		<x>0.130778</x>
+		<y>-0.329171</y>
+		<z>0.777831</z>
+	</MountPoint>
+	<MountBone>Neck</MountBone>
+</CreatureVisual>
