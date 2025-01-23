@@ -45,14 +45,13 @@ function Trigger_WitchHut(hero, obj)
 end
 function Trigger_WitchHut_confirm(player, hero, obj, givestat)
     log("$ Trigger_WitchHut_confirm")
-    print("givestat : "..givestat)
-    if GetPlayerResource(player, MERCURY) >= 10 then
+    if GetPlayerResource(player, MERCURY) >= 7 then
         MessageBoxForPlayers(
-            GetPlayerFilter(player),
+            GetPlayerFilter(0+player),
             {"/Text/Game/Scripts/MapObjects/WitchHutAccepted.txt"; stat="/GameMechanics/RefTables/HeroAttribute/"..ATTRIBUTE_TEXT_ORIGIN[givestat]..".txt"},
             "NoneRoutine"
         )
-        RemovePlayerResource(player, MERCURY, 10)
+        RemovePlayerResource(player, MERCURY, 7)
         ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
         ChangeHeroStat(hero, givestat, 2)
         GiveExp(hero, 5000)
@@ -63,10 +62,10 @@ function Trigger_WitchHut_confirm(player, hero, obj, givestat)
     end
 end
 function Trigger_WitchHut_cancel(player, hero, obj)
-    MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Game/Scripts/MapObjects/WitchHutRefused.txt", "NoneRoutine")
+    MessageBoxForPlayers(GetPlayerFilter(0+player), "/Text/Game/Scripts/MapObjects/WitchHutRefused.txt", "NoneRoutine")
 end
 function Trigger_WitchHut_visited(player, hero, obj)
-    MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Game/Scripts/MapObjects/WitchHutVisited.txt", "NoneRoutine")
+    MessageBoxForPlayers(GetPlayerFilter(0+player), "/Text/Game/Scripts/MapObjects/WitchHutVisited.txt", "NoneRoutine")
     MarkObjectAsVisited(obj, hero)
 end
 function WitchHuts_reset()
