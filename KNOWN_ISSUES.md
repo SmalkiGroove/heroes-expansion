@@ -20,7 +20,7 @@
 ### Something does not work
 
 - Thunder Power skill does not apply air damage of creatures attacks
-- World breaker hero gets Shantiri Breastplate
+- Shantiri Breastplate does not immune to Earthquake
 
 ### Bugs
 
@@ -33,7 +33,6 @@
 - Skill tree accessible from level up window
 - Add NCF creatures in editor
 - Darkstorm 1 creature instance per hero level
-- Remove Duel mode from main menu
 - QAI version
 - T7 creatures choice like in H7
 - More custom buildings
@@ -69,4 +68,5 @@
 - Replace Bone Dragons by Black Knights in necro lineup
 - Firehounds should be grey
 - Obsidian Armor does not immune to Armaggedon
+- Remove Duel mode from main menu
 
