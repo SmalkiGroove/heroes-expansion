@@ -28,7 +28,7 @@
 <color=FFB730FF>The Sentinel
 - __Sentinel's Breastplate__ :
 +5 Defense
-+10% Magic Resistance
++10% Magic-proof
 
 <color=FFB730FF>The Sentinel
 - __Sentinel's Blade__ :
@@ -55,13 +55,16 @@ When you spawn a Blade Barrier during combat,
 
 <color=FFB730FF>Elven Secret
 - __Plumed Boots__ :
-+3 Defense
++1 Attack
++1 Defense
 Hero troops are Unstoppable (immunity to Slow).
 
 <color=FFB730FF>Elven Secret
 - __Sylvan Amulet__ :
++2 Spellpower
++2 Knowledge
 +1 Luck
-Grants hero's army immunity to Curse of the Netherworld
+-3 Mana cost for all Nature spells
 
 <color=FFB730FF>Elven Secret
 - __Sacred Seed__ :
@@ -97,8 +100,8 @@ Creatures in hero's army are immuned to Armageddon
 
 <color=FFB730FF>Hell Conquest
 - __Will of Urgash__ :
-+6 Attack
-+6 Spellpower
++5 Attack
++5 Spellpower
 -1 Luck
 
 <color=FFB730FF>Hell Conquest
@@ -115,7 +118,7 @@ Creatures in hero's army are immuned to Armageddon
 <color=FFB730FF>Death's Embrace
 - __Ring of the Unrepentant__ :
 +1 Defense
-Creatures in hero's army are immuned to Word of Light
++1 Mana per creature lost after battle
 
 <color=FFB730FF>Death's Embrace
 - __Helm of the Lich__ :
@@ -132,7 +135,7 @@ After every victory, gain an amount of Movement points and Experience depending 
 <color=FFB730FF>Death's Embrace
 - __Staff of the Netherworld__ :
 +2 Spellpower
--10% Initiative to enemy creatures
+-15% Initiative to enemy creatures
 
 <color=FFB730FF>Death's Embrace
 - __Cloak of Death's Shadow__ :
@@ -163,6 +166,7 @@ Gain +1 Knowledge at the start of each week
 - __Crown of the Magister__ :
 +2 Spellpower
 +2 Knowledge
++1 Morale
 
 <color=FFB730FF>Magister Set
 - __Staff of the Magister__ :
@@ -183,11 +187,11 @@ Gain Experience every day based on the hero's Knowledge, and half the amount to 
 (x) Set bonuses
 
 - __Ring of Banishment__ :
-+2 Spellpower<br>
-+2 Knowledge<br>
--50% to the amount of summoned elementals by enemy heroes<br>
--50% to HP of enemy summoned Hive, Phoenix & Blade Barrier<br>
-Grants the Banish ability.
+-50% to the amount of enemy summoned elementals
+-50% to HP of enemy summoned Hive, Phoenix & Blade Barrier
+Grants the Banish ability
+
+<color=FFB730FF>Shadow Burst
 - __Altar of Element's Shard__ :
 +1 Spellpower
 +10% damage to all elemental spells
@@ -197,14 +201,22 @@ Grants the Banish ability.
 +1 Attack
 +1 Defense
 +1 Luck
+
+<color=FFB730FF>Shadow Burst
 - __Shadow Mask__ :
 +3 Spellpower
-+3 Knowledge
++2 Knowledge
+
+<color=FFB730FF>Shadow Burst
 - __Shadow Blade__ :
 +5 Attack
+
+<color=FFB730FF>Shadow Burst
 - __Cloak of Darkness__ :
-+9 Defense
++6 Defense
 -1 Luck to enemy creatures
+
+<color=FFB730FF>Shadow Burst
 
 ### Set name
 • Set pieces
@@ -213,7 +225,7 @@ Grants the Banish ability.
 
 - __Rune of Flame__ :
 +2 Spellpower
-Grants dwarven heroes <value=spell_name>.
+Grants dwarven heroes <value=spell_name>
 
 <color=FFB730FF>Dwarven Set
 - __Helm of the Dwarven Kings__ :
@@ -223,7 +235,7 @@ Creatures in hero's army are Undisturbed (immunity to Berserk)
 <color=FFB730FF>Dwarven Set
 - __Shield of the Dwarven Kings__ :
 +3 Defense
-+1 Health to friendly creatures
+-30% damage taken from ranged attacks
 
 <color=FFB730FF>Dwarven Set
 - __Greaves of the Dwarven Kings__ :
@@ -266,13 +278,13 @@ collar
 
 <color=FFB730FF>Brutalist Set
 - __Ogre Club__ :
-+8 Attack
--1 Defense
++5 Attack
+-5 Defense to enemy creatures
 
 <color=FFB730FF>Brutalist Set
 - __Ogre Shield__ :
-+8 Defense
--1 Attack
++5 Defense
+-5 Attack to enemy creatures
 
 <color=FFB730FF>Brutalist Set
 
@@ -284,27 +296,44 @@ collar
 - __Dragon Scale Armor__ :
 +2 Defense
 +5% Initiative to friendly large creatures
+
+<color=FFB730FF>Draconic Power
 - __Dragon Scale Shield__ :
 +2 Defense
 +5% Initiative to friendly small creatures
+
+<color=FFB730FF>Draconic Power
 - __Dragon Bone Greaves__ :
 +2 Attack
 +10% Initiative to friendly walking melee creatures
+
+<color=FFB730FF>Draconic Power
 - __Dragon Wing Mantle__ :
 +2 Knowledge
 +10% Initiative to friendly flying creatures
+
+<color=FFB730FF>Draconic Power
 - __Dragon Teeth Necklace__ :
 +2 Spellpower
 +10% Initiative to friendly casting creatures
+
+<color=FFB730FF>Draconic Power
 - __Dragon Talon Crown__ :
 +2 Knowledge
 +10% Initiative to friendly war machines
+
+<color=FFB730FF>Draconic Power
 - __Dragon Eye Ring__ :
 +2 Spellpower
 +10% Initiative to friendly shooting creatures
+
+<color=FFB730FF>Draconic Power
 - __Dragon Flame Tongue__ :
 +4 Attack
--50% Damage taken from enemy Frost spells
+-40% Damage taken from enemy Frost spells
+Creatures in hero's army are immuned to Cold Death
+
+<color=FFB730FF>Draconic Power
 
 ### Set name
 • Set pieces
@@ -323,12 +352,12 @@ collar
 <color=FFB730FF>Empowerement
 - __Staff of Power__ :
 +1 Spellpower
-Every 5 victories, gain +1 of the lowest primary attribute.
+Every 5 victories, gain +1 of the lowest primary attribute
 
 <color=FFB730FF>Empowerement
 - __Pendant of Power__ :
 +1 Defense
-Every 5 victories, gain 1000 + 1% experience.
+Every 5 victories, gain 1000 + 1% experience
 
 <color=FFB730FF>Empowerement
 
@@ -340,22 +369,24 @@ Every 5 victories, gain 1000 + 1% experience.
 - __Evercold Icicle__ :
 +1 Spellpower
 +20% damage to Frost spells
+
+<color=FFB730FF>Frozen Kingdom
 - __Frozen Heart__ :
--50% damage taken from frost spells
-Grants hero troops immunity to Blaze Power
++1 Spellpower
+-33% Damage taken from enemy Frost spells
+Grants hero troops immunity to Blaze Power's defense reduction
 
-
-- __Shield of Crystal Ice__ :
-+1 Defense
--50% Damage taken from enemy Fire spells
+<color=FFB730FF>Frozen Kingdom
 - __Crown of the Frost Lord__ :
 +2 Defense
 +2 Knowledge
 -50% mana cost to frost spells
 
-
+<color=FFB730FF>Frozen Kingdom
 - __Spear of the Frost Lord__ :
 *spear of the frost lord*
+
+<color=FFB730FF>Frozen Kingdom
 
 ### Faraway Kingdom Warrior
 • Genji's Hat
@@ -420,6 +451,8 @@ Grants hero troops immunity to Blaze Power
 +1 to all primary attributes
 +1 Morale
 
+<color=FFB730FF>War Leader
+
 ### First Vizier
 • Regal Armour
 • Vizier's Scimitar
@@ -430,7 +463,7 @@ Grants hero troops immunity to Blaze Power
 
 - __Grand Vizir's Cap__ :
 +1 Knowledge
-+500 Golds per dwelling at the start of each Week
++500 Gold per external dwelling at the start of each week
 
 <color=FFB730FF>Vizier's Fortune
 - __Grand Vizir's Scimitar__ :
@@ -543,7 +576,7 @@ Gain Wood and Ore after battle depending on the strength of the defeated army
 <color=FFB730FF>Bandit Set
 - __Bearhide Wraps__ :
 +1 Morale
--25% Damage taken from enemy Frost spells
++10% creatures transfered to caravans with Leadership
 
 <color=FFB730FF>Bandit Set
 
@@ -591,7 +624,7 @@ Gain Wood and Ore after battle depending on the strength of the defeated army
 <color=FFB730FF>Celestial Justicar
 - __Celestial Justicar's Armor__ :
 +4 Defense
-+6% Health to all friendly creatures (rounded up)
+-25% melee damage taken
 
 <color=FFB730FF>Celestial Justicar
 - __Celestial Justicar's Sword__ :
@@ -675,12 +708,18 @@ Friendly creatures attacks reduce enemy Defense by 1
 - __Ankh of the Saint__ :
 *ankh of the saint*
 - __Cloak of the Saint__ :
-*cloak of the saint*
++2 Defense
++2 Knowledge
+Creatures in hero's army are immuned to Decay
+
+<color=FFB730FF>Saint's Grace
 - __Staff of the Saint__ :
 *staff of the saint*
 - __Sandals of the Saint__ :
 +3 Defense
 +1 Luck
+
+<color=FFB730FF>Saint's Grace
 - __Codex Of The Saint__ :
 +5 Knowledge
 +1 Luck
@@ -698,17 +737,22 @@ Grants the ability to cast spell <value=spell_name> from this wand at Advanced M
 - __Trident of the Titans__ :
 +1 Spellpower
 +20% damage to Lightning spells
+- __Shield of Crystal Ice__ :
++4 Defense
+-40% Damage taken from enemy Fire spells
+Creatures in hero's army are immuned to Ignite
 - __Four Leaf Clover__ :
 +2 Luck
 - __Crown Of Courage__ :
-+2 Morale
++4 Morale
 +2 Luck
 - __Breastplate of Eldritch Might__ :
 +1 Attack
 +1 Spellpower
 - __Magnetic Ring__ :
 +1 Spellpower
--50% Damage taken from enemy Lightning spells
+-33% Damage taken from enemy Lightning spells
+Grants hero troops immunity to Lightning's stun
 - __Boots of the Swift Journey__ :
 +1 Defense
 +15% Movement points over land
@@ -720,16 +764,13 @@ Generates 1000 Golds per day plus an additional 50 per hero level.
 - __Endless Purse of Golds__ :
 Generates 250 Golds per day plus an additional 25 per hero level.
 - __Cape of the Kings__ :
-+1 Morale
-The resources earned by the Governance skill are given every day instead of once a week.
-- __Phoenix Fire Cape__ :
++2 Morale
+Governance skill grants an additional 1000 Gold and 1 special resource.
+Industry perk has no range limit.
+Mythology perk's gold income is daily.
+- __Solar Ring__ :
 +1 Spellpower
 +20% damage to Fire spells
-- __Plumed Boots__ :
-+3 Defense
-Hero troops are Unstoppable (immunity to Slow).
-
-<color=FFB730FF>Elven Secret
 - __Armor of Valor__ :
 +1 Defense
 +1 Morale
@@ -742,8 +783,9 @@ Grants the Summon Elementals spell if it wasn't learned already.
 +1 Spellpower
 +20% damage to Earth spells
 - __Cloak of Sylanna__ :
-+1 Luck
--50% Damage taken from enemy Earth spells
++1 Defense
++1 Knowledge
+-33% Damage taken from enemy Earth spells
 - __Focus Ring__ :
 +8 Spellpower
 -2 Initiative to the hero
@@ -767,48 +809,34 @@ Grants the hero all Natural Magic spells regardless of having any skill in this 
 +1 Spellpower
 Restore 10 Mana after battle
 - __Skull of the Forbidden__ :
-+4 Spellpower<br>
-+4 Knowledge<br>
--1 Morale<br><br><color=FFB730FF>
-Death's Embrace<color_default><br>
-+6 Spellpower (3/6)<br>
-+12 Spellpower (6/6)<br>
-*Set bonus is applied after closing the Inventory screen.
-- __Polar Hammer__ :
-+1 Attack
--25% Damage taken from enemy Fire spells
++10 Spellpower
+-1 Luck
+-1 Morale
+- __Phoenix Fire Cape__ :
++1 Spellpower
+-33% Damage taken from enemy Fire spells
+Grants hero troops immunity to Frost Power's freeze
 - __Tarot Deck__ :
 +1 Luck
 - __Crown of Leadership__ :
 +2 Morale
 Doubles the effects of skills Estate (Governance), Diplomacy (Leadership) and Recruitment (Logistics)
 - __Edge of Balance__ :
-For Haven, Sylvan, Fortress, Academy :
 +2 Attack
-+4 Defense
-
-For Necropolis, Inferno, Stronghold, Dungeon :
-+4 Attack
 +2 Defense
++2 additional Attack for "evil" factions
++2 additional Defense for "good" factions
 - __Horn of Plenty__ :
 Grants some random resource every day and 1 of all resources at the start of each week.
 - __Treeborn Quiver__ :
-+4 Attack and unlimited ammo to all friendly shooting creatures<br><br><color=FFB730FF>
-Archer's Dream<color_default><br>
-+1 Luck (2/2)<br>
-*Set bonus is applied after closing the Inventory screen.
+Ranged creatures get +4 Attack and unlimited ammo
 - __Fortune Pickaxe__ :
 *fortune pickaxe*
 - __Misfortune Dices__ :
 -1 Morale
 -2 Luck to enemy creatures
 - __Naga Commander's Helm__ :
-+1 Defense if equipped<br><br>
-Reinforces the hero's army with native Tier3 creatures at the start of every week, provided some are already present. The amount is equal to the hero's Knowledge/2 (or 1).
-<br><color=orange>Regalia of the Legion<br><color_default>
-Offer all 7 Regalia of the Legion at a Sacrificial Altar for a unique reward.
-<br><color=yellow>Backpack<color_default><br>
-Reinforcements are also gained when the artifact is unequipped, but not if a higher level Regalia is equipped or in the backpack.
+*naga commanders helm*
 - __War Horn__ :
 +1 Morale
 +10% Initiative to friendly creatures
@@ -818,26 +846,19 @@ Reinforcements are also gained when the artifact is unequipped, but not if a hig
 +2 Defense
 
 - __Elrath's Divine Shield__ :
-+12 Defense<br>
-+6 Maximum Hit Points to all friendly creatures
++4 Defense
++40% Magic-proof against all elemental spells
 - __Rod of Torment__ :
 +4 Knowledge
 -2 Morale to enemy creatures
 - __Butcher Glaive__ :
-+1 Morale<br>
-+1 Luck<br>
-+250 Movement points after every sea battle<br><br><color=FFB730FF>
-Pirate's Apparel<color_default><br>
-+6 Attack (3/6)<br>
-+12 Attack (6/6)<br>
-*Set bonus is applied after closing the Inventory screen.
+*butcher glaive*
 - __Blazing Spellbook__ :
 +2 Spellpower
 -33% Mana cost for Fire spells
 - __Centaur Crossbow__ :
-+1 Knowledge<br>
-+1250 Experience<br><br>
-<color=7F38EC>Skill book<color_default><br>The hero needs some time to study this item and permanently gain the knowledge it contains. At the start of next week the item disappears from the backpack and the bonus is applied permanently.
++1 Attack
++10% to hero's attacks damage
 - __Harpy Boots__ :
 +1 Speed and Initiative to all friendly creatures
 - __Ring of Supernatural Strength__ :
@@ -847,16 +868,21 @@ Pirate's Apparel<color_default><br>
 - __Legendary Boots__ :
 *legendary boots*
 - __Sanctuary's Crown__ :
-+3 Spellpower<br>
-+3 Knowledge<br>
++2 Spellpower
++4 Knowledge
 Grants hero's army imunity to Mind Control
 - __Ancient Protection Charm__ :
-+2 Morale<br>
-+2 Luck<br>
-+4% Magic Resistance
++1 Defense
++1 Luck
++10% Magic Disruption
++10% Magic-proof
 - __Crimson Scythe__ :
 +5 Attack
 -1 Morale to enemy creatures
+- __Forgotten Ring__ :
++2 Attack
++2 Defense
+Creatures in hero's army are immuned to Word of Light
 - __Dragonsbane__ :
 +9 Attack
 -1 Luck

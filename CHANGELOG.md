@@ -2,7 +2,13 @@
 
 ## Global view
 
-This list is not exhaustive, all stats and changes regarding skills, artifacts, spells, creatures, etc are available in game and are subject to change.
+This list is not exhaustive, all stats and changes regarding heroes, skills, artifacts, spells, creatures, etc are available in game and are subject to change.
+
+- [Creatures data](doc/CREATURES.md)
+- [Heroes data](doc/HEROES.md)
+- [Skills data](doc/SKILLS.md)
+- [Artifacts data](doc/ARTIFACTS.md)
+
 
 ### Exe patches
 

@@ -202,7 +202,7 @@ Starting Skills
 __JENOVA :__
 Lone Hunter - Ranger
 
-- All hero’s attacks deal +6% damage for every level of the hero.
+- All hero’s attacks deal +4% damage for every level of the hero.
 - Hero can perform an attack right at the beginning of combat.
 - Hero's turn comes faster in combat. Chances of ATB boost is increased by level.
 
@@ -241,7 +241,7 @@ Starting Skills
 __DIRAEL :__
 Swarm Queen - Guardian
 
-- Wasp Swarm spell is more effective depending on hero level. Damage is increased by 5% per hero Level. Reduction of ATB value is increased by 2% every 3 levels.
+- Wasp Swarm spell is more effective depending on hero level. Damage is increased by 5% per level, and reduction of ATB is increased by 2% every 3 levels.
 - Hero spawns 2 Hives nearby enemy positions when combat starts.
 - The hero and Sprites in her army are in symbiosis. Each hero turn in combat regenerates 1 mana every 5 levels (starting at 1) to all Sprites, and on Sprites turn they regenerate hero mana equal to 10% of their amount.
 
@@ -844,10 +844,11 @@ Starting Skills
 
 ---
 __XERXON :__
-Reaver - Deathknight
+Pale Rider - Deathknight
 
-- New Black Knights join the hero's army every week, depending on his level.
-- After each won battle, some Black Knights in hero's army are upgraded to Terror Knights, the amount increases with hero levels.
+- A new Black Knight joins the hero's army every week.
+- One lost Black Knight is resurrected after every battle.
+- Black Knights in hero's army use the Warm-up ability to gain initiative for 3 turns.
 
 Starting Skills
 - Necromancy
@@ -869,7 +870,7 @@ Starting Skills
 
 ---
 __RAVEN :__
-Reanimator - Reaver
+Reanimator - Reaper
 
 - The Raise Dead spell has increased effect. The spellpower of this spell is increased by +1 for every 3 levels of hero.
 - The weekly production of Skeletons, Zombies and Ghosts in your Necropolis towns is increased based on hero level.
@@ -881,7 +882,7 @@ Starting Skills
 
 ---
 __ARCHILUS :__
-Avatar of Death - Reaver
+Avatar of Death - Reaper
 
 - The hero summons a mysterious creature upon the battlefield to fight on his side. The creature's power depends on the hero's level and spellpower.
 - If the creature dies, enemy creatures are sorrowed and hero loses all his mana.
@@ -894,7 +895,7 @@ Starting Skills
 
 ---
 __THANT :__
-Maledictor - Reaver
+Maledictor - Reaper
 
 - The Weakness spell does not only lower creature's damage, but also reduces creature's Defense by -1 for every 3 levels of the hero.
 - The hero casts Mass Weakness at the start of combat.
@@ -907,7 +908,7 @@ Starting Skills
 
 ---
 __SANDRO :__
-Great Lich - Reaver
+Great Lich - Reaper
 
 - Enemy creatures that die during battles are raised as their undead equivalent on hero's side.
 - New Liches join hero's army on level up based on his Knowledge stat (1 Lich per 4 points).
@@ -920,10 +921,10 @@ Starting Skills
 
 ---
 __ORNELLA :__
-Frost Mage - Reaver
+Frost Mage - Reaper
 
 - Hero casts Ice Bolt on a random ennemy creature each turn in combat (requires mana).
-- Hero gets artifacts of the Frost Lord set after reaching certain amounts of victories.
+- Every day, hero has a small chance to obtain an artifact from the Frozen Kingdom set. Chance increases with hero level. You cannot get twice the same artifact.
 
 Starting Skills
 - Necromancy
@@ -932,10 +933,11 @@ Starting Skills
 
 ---
 __DEIRDRE :__
-Banshee - Reaver
+Banshee - Reaper
 
-- The effect of Banshee Howl ability increases as hero gains levels.
-- New Revenants join the hero's army at the start of each week. The amout depends on the hero level.
+- The Banshee Howl ability reduces enemy Morale and Luck by 1 more.
+- After 20 victories, gain an additional buff to Banshee Howl that reduces Morale and Luck by 1 more, Initiative by 10% more, and the hero uses only half of her ATB to use it.
+- After 30 victories, enemy creatures that have a negative Morale check will lose 20% of their Attack and Defense until following turn.
 
 Starting Skills
 - Necromancy
@@ -988,7 +990,7 @@ Starting Skills
 __ASH :__
 Pounder - Demon Lord
 
-- All hero’s attacks deal +6% damage for every level of the hero.
+- All hero’s attacks deal +4% damage for every level of the hero.
 - Hero can perform an attack right at the beginning of combat and every time a friendly creature dies in combat.
 - Hero gains +1 Attack every 5 levels.
 

@@ -74,7 +74,7 @@ At the start of each week, gain 800 golds per relic artifact equipped.
 - __Flaming Arrows__ : Ballista under hero's command negates enemy defense and deals 50 additional elemental fire damage.
 - __Rapid Fire__ : Ballista gains an extra shot.
 - __Anatomy__ : Allows manual control of the First Aid Tent. Restores the First Aid Tent after the battle if it was destroyed.
-- __Technical Staff__ : Increases initiative of all war machines by +3.
+- __Warfare Logistics__ : Increases initiative of all war machines by +3.
 - __Houndmasters__ : A stack of Wolves is added to hero's army at the start of combats. The amount is 10 plus between 2 and 3 times hero level.
 
 ### TRAINING
@@ -86,11 +86,11 @@ At the start of each week, gain 800 golds per relic artifact equipped.
 - __Determination__ : Creatures in hero's army have wice more chance to resist enemy spells.
 
 ### COMBAT
-- __Get Wiser__ : Hero gains 1000 + 5% of current experience points.
+- __Empiricism__ : Hero gains 1000 + 5% of current experience points.
 Repeat this bonus at the start of each week.
 - __Coordination__ : Links a hero with a selected creature in his army. Every time this creature performs an attack, the hero will assault the same target. The hero's attack is by 3 his levels more powerful than usual.
 - __Stunning Blow__ : Every standard hero’s attack moves the target back along the ATB bar for 0.2 points.
-- __Get Stronger__ : Hero gains +1 Attack and Defense.
+- __Reinforcement__ : Hero gains +1 Attack and Defense.
 Repeat this bonus at the start of each week.
 - __Mark of the Damned__ : The hero receives special combat ability to punish the target enemy creature with a powerful strike if that creature is about to attack, retaliate or cast any spell. Once declared, Mark of the Damned is active until the end of combat.
 - __Critical Strike__ : Hero's attacks will always deal double damage.
@@ -236,10 +236,26 @@ At the start of each week, gain +50 temporary mana that can go beyond maximum.
 
 ### ULTIMATE
 - __Retribution__ : The troops led by the hero inflict additional melee and ranged damage if their Morale is above zero (+7% for each point of Morale).
+
+<color_default>This skill can be unlocked by reaching level 25 and filling all skill slots.
 - __Rage of the Forest__ : All creatures in hero's army get +1 maximum damage, +2 Initiative and half their Defense is transfered to their Attack.
-- __Absolute Protection__ : Normal attacks against hero's creatures are always unlucky. Lucky attacks are turned to normal. If enemy has Absolute Luck perk, effects of both perks are nullified.
+
+<color_default>This skill can be unlocked by reaching level 25 and filling all skill slots.
+- __Absolute Protection__ : Normal attacks against hero's creatures are always unlucky. Lucky attacks are turned to normal.
+
+<color_default>This skill can be unlocked by reaching level 25 and filling all skill slots.
 - __Omniscience__ : All spells that are in existance will be written to hero's spellbook and hero will be able to cast them on expert level.
+
+<color_default>This skill can be unlocked by reaching level 25 and filling all skill slots.
 - __Rage of the Elements__ : Elemental chain effects inflict double damage.
+
+<color_default>This skill can be unlocked by reaching level 25 and filling all skill slots.
 - __Dead Man's Curse__ : The Morale and Luck of all enemy troops is decreased by 3.
+
+<color_default>This skill can be unlocked by reaching level 25 and filling all skill slots.
 - __Urgash's Call__ : Gating becomes instant.
+
+<color_default>This skill can be unlocked by reaching level 25 and filling all skill slots.
 - __Orcish Fury__ : All stronghold creatures in hero’s army get additional 500 points of rage at the beginning of combat.
+
+<color_default>This skill can be unlocked by reaching level 25 and filling all skill slots.

@@ -486,18 +486,18 @@ CREATURES:
       tier: 5
       upgrade: 2
       path: Necropolis/3rd/LichMaster.xdb
-    - name: BONE DRAGON
+    - name: BLACK KNIGHT
       tier: 6
       upgrade: 0
-      path: Necropolis/Bone_Dragon.xdb
-    - name: SHADOW DRAGON
+      path: Neutrals/Black_Knight.xdb
+    - name: DREAD KNIGHT
       tier: 6
       upgrade: 1
-      path: Necropolis/Shadow_Dragon.xdb
-    - name: SPECTRAL DRAGON
+      path: Added/Dread_Knight.xdb
+    - name: TERROR KNIGHT
       tier: 6
       upgrade: 2
-      path: Necropolis/3rd/HorrorDragon.xdb
+      path: Neutrals/Death_Knight.xdb
     - name: WIGHT
       tier: 7
       upgrade: 0
@@ -713,22 +713,34 @@ CREATURES:
       tier: 5
       upgrade: 0
       path: Neutrals/Water_Elemental.xdb
-    - name: BLACK KNIGHT
-      tier: 6
-      upgrade: 0
-      path: Neutrals/Black_Knight.xdb
-    - name: TERROR KNIGHT
-      tier: 6
-      upgrade: 1
-      path: Neutrals/Death_Knight.xdb
     - name: MUMMY
       tier: 3
       upgrade: 0
       path: Neutrals/Mummy.xdb
+    - name: BONE DRAGON
+      tier: 6
+      upgrade: 0
+      path: Necropolis/Bone_Dragon.xdb
+    - name: SHADOW DRAGON
+      tier: 6
+      upgrade: 1
+      path: Necropolis/Shadow_Dragon.xdb
+    - name: SPECTRAL DRAGON
+      tier: 6
+      upgrade: 2
+      path: Necropolis/3rd/HorrorDragon.xdb
+    - name: BASILISK
+      tier: 1
+      upgrade: 0
+      path: Added/Basilisk.xdb
     - name: LIZARDMAN
       tier: 2
       upgrade: 0
       path: Added/Lizardman.xdb
+    - name: SPITTING SPIDER
+      tier: 3
+      upgrade: 0
+      path: Added/SpittingSpider.xdb
     - name: BEHEMOTH
       tier: 7
       upgrade: 0
@@ -1266,8 +1278,7 @@ ARTIFACTS:
     id: 37
     pieces:
     - EVERCOLD_ICICLE
-    - ARTIFACT_FROZEN_HEART
-    - ICEBERG_SHIELD
+    - ARTIFACT_BEARHIDE_WRAPS
     - ARTIFACT_CROWN_OF_THE_FROST_LORD
     - ARTIFACT_SPEAR_OF_THE_FROST_LORD
   GENJI:
@@ -1320,7 +1331,7 @@ ARTIFACTS:
     - ARTIFACT_PLUNDERER_SHOES
     - ARTIFACT_VIKING_HATCHET
     - ARTIFACT_VIKING_SHIELD
-    - ARTIFACT_BEARHIDE_WRAPS
+    - ARTIFACT_BEARHIDE_WRAPS_2
   BESTIAL:
     id: 45
     pieces:
@@ -1369,6 +1380,7 @@ ARTIFACTS:
     - SWORD_OF_RUINS
     - WAND_OF_X
     - TITANS_TRIDENT
+    - ICEBERG_SHIELD
     - FOUR_LEAF_CLOVER
     - CROWN_OF_COURAGE
     - BREASTPLATE_OF_PETRIFIED_WOOD
@@ -1379,7 +1391,6 @@ ARTIFACTS:
     - ENDLESS_BAG_OF_GOLD
     - LION_HIDE_CAPE
     - PHOENIX_FEATHER_CAPE
-    - DWARVEN_MITHRAL_GREAVES
     - ARTIFACT_VALORIOUS_ARMOR
     - ARTIFACT_BOOTS_OF_SWIFTNESS
     - ARTIFACT_BAND_OF_CONJURER
@@ -1414,7 +1425,7 @@ ARTIFACTS:
     - ARTIFACT_SANCTUARYS_CROWN
     - ARTIFACT_ANCIENT_PROTECTION_CHARM
     - ARTIFACT_CRIMSON_SCYTHE
-    # - ARTIFACT_FORGOTTEN_RING
+    - ARTIFACT_FORGOTTEN_RING
     - ARTIFACT_DRAGONSBANE
     - ARTIFACT_ORB_OF_AIR
     - ARTIFACT_ORB_OF_EARTH

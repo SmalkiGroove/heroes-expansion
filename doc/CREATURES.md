@@ -23,12 +23,12 @@
 | INQUISITOR | 5 | 5 | 61 | 9 | 14 | 10-12 | 4 | 9 | Strength (expert), Cleansing (expert), Celestial Shield (basic) | Incorruptible, Magic Attack, Purge, Magic Disruption |
 | ZEALOT | 5 | 5 | 59 | 12 | 12 | 9-15 | 4 | 9 | Righteous Might (expert), Blade Barrier (advanced), Blind (basic) | Incorruptible, Magic Attack, Purge, Melee Potent |
 | | | | | | | | | | | |
-| CAVALIER | 6 | 3 | 90 | 15 | 15 | 17-24 | 8 | 12 | _none_ | Jousting, Incorruptible |
-| PALADIN | 6 | 3 | 100 | 15 | 20 | 17-24 | 8 | 12 | Lay Hands (advanced) | Jousting, Incorruptible, Lay Hands, Battle Leader, Shielded |
-| CHAMPION | 6 | 3 | 95 | 20 | 16 | 19-26 | 8 | 13 | _none_ | Jousting, Incorruptible, Champion Charge |
+| CAVALIER | 6 | 3 | 90 | 15 | 15 | 16-23 | 8 | 12 | _none_ | Jousting, Incorruptible |
+| PALADIN | 6 | 3 | 100 | 15 | 20 | 16-23 | 8 | 12 | Lay Hands (advanced) | Jousting, Incorruptible, Lay Hands, Battle Leader, Shielded |
+| CHAMPION | 6 | 3 | 95 | 20 | 16 | 17-25 | 8 | 13 | _none_ | Jousting, Incorruptible, Champion Charge |
 | | | | | | | | | | | |
 | ANGEL | 7 | 1 | 250 | 33 | 33 | 30-60 | 7 | 11 | _none_ | Child of Light, Giant Slayer, Free Mind |
-| ARCHANGEL | 7 | 1 | 270 | 37 | 37 | 50-50 | 7 | 11 | Resurrect Allies (advanced), Holy Word (advanced) | Child of Light, Giant Slayer, Resurrect Allies, Free Mind |
+| ARCHANGEL | 7 | 1 | 270 | 37 | 37 | 50-50 | 7 | 11 | Resurrect Allies (advanced), Holy Word (advanced), Mass Strength (advanced) | Child of Light, Giant Slayer, Resurrect Allies, Free Mind |
 | SERAPH | 7 | 1 | 260 | 37 | 33 | 1-99 | 7 | 11 | Mass Haste (advanced), Divine Vengeance (advanced) | Child of Light, Giant Slayer, Flamewave, Free Mind |
 
 ### PRESERVE:
@@ -178,9 +178,9 @@
 | ARCHLICH | 5 | 5 | 40 | 8 | 12 | 13-18 | 3 | 10 | Weakness (advanced), Slow (advanced), Decay (advanced), Suffering (advanced), Harm Touch (advanced) | Undead, Death Cloud, Magic-proof 50%, Harm Touch |
 | LICH MASTER | 5 | 5 | 39 | 10 | 14 | 12-17 | 3 | 10 | Suffering (advanced), Raise Dead (advanced), Harm Touch (advanced) | Undead, Long Range, Magic-proof 50%, Harm Touch |
 | | | | | | | | | | | |
-| BONE DRAGON | 6 | 3 | 120 | 25 | 17 | 13-23 | 7 | 11 | _none_ | Undead |
-| SHADOW DRAGON | 6 | 3 | 125 | 26 | 18 | 15-25 | 7 | 11 | _none_ | Undead, Sorrow Strike, Pressure |
-| SPECTRAL DRAGON | 6 | 3 | 100 | 25 | 17 | 13-23 | 7 | 12 | _none_ | Undead, Incorporeal |
+| BLACK KNIGHT | 6 | 3 | 115 | 15 | 15 | 15-20 | 7 | 8 | _none_ | Undead, Weakening Strike, Shielded, Heavy Armor |
+| DREAD KNIGHT | 6 | 3 | 120 | 20 | 20 | 16-21 | 7 | 9 | _none_ | Undead, Vorpal Sword, Weakening Strike, Evil Strike, Shielded, Heavy Armor |
+| TERROR KNIGHT | 6 | 3 | 120 | 15 | 15 | 17-22 | 7 | 10 | _none_ | Undead, Deadly Strike, Shielded, Heavy Armor, Unstoppable |
 | | | | | | | | | | | |
 | WIGHT | 7 | 1 | 190 | 31 | 28 | 30-90 | 6 | 9 | _none_ | Undead, Fear, Sweeping Strike |
 | WRAITH | 7 | 1 | 200 | 33 | 30 | 30-90 | 6 | 9 | Shadow Image (basic) | Undead, Fear, Sweeping Strike, Blade of Slaughter |
@@ -265,12 +265,17 @@
 | FIRE ELEMENTAL | 5 | 10 | 60 | 9 | 7 | 9-13 | 3 | 11 | _none_ | Elemental, Fire Immuned, Ranged, Mark of Fire, Fire Body |
 | WATER ELEMENTAL | 5 | 10 | 83 | 4 | 11 | 4-7 | 4 | 9 | Ice Bolt (expert), Polar Ring (expert) | Elemental, Ice Immuned, Purge, Regeneration, Fierce Retaliation |
 | | | | | | | | | | | |
-| BLACK KNIGHT | 6 | 1 | 125 | 15 | 15 | 15-35 | 7 | 8 | _none_ | Undead, Weakening Strike, Shielded |
-| TERROR KNIGHT | 6 | 1 | 150 | 20 | 20 | 25-45 | 7 | 10 | _none_ | Undead, Deadly Strike, Shielded |
-| | | | | | | | | | | |
 | MUMMY | 3 | 20 | 30 | 4 | 7 | 2-4 | 4 | 8 | Confusion (basic), Wasp Swarm (basic) | Undead, Cursed Strike |
 | | | | | | | | | | | |
+| BONE DRAGON | 6 | 3 | 120 | 25 | 17 | 13-23 | 7 | 11 | _none_ | Undead |
+| SHADOW DRAGON | 6 | 3 | 125 | 26 | 18 | 15-25 | 7 | 11 | _none_ | Undead, Sorrow Strike, Pressure |
+| SPECTRAL DRAGON | 6 | 3 | 100 | 25 | 17 | 13-23 | 7 | 12 | _none_ | Undead, Incorporeal |
+| | | | | | | | | | | |
+| BASILISK | 1 | 80 | 10 | 2 | 3 | 1-2 | 6 | 12 | _none_ | Cowardice, Regeneration |
+| | | | | | | | | | | |
 | LIZARDMAN | 2 | 25 | 12 | 4 | 2 | 2-4 | 4 | 13 | _none_ | Unlimited Retaliations, Maneuver |
+| | | | | | | | | | | |
+| SPITTING SPIDER | 3 | 25 | 21 | 5 | 4 | 3-5 | 5 | 11 | _none_ | Melee Potent, Poison, Life Drain |
 | | | | | | | | | | | |
 | BEHEMOTH | 7 | 1 | 280 | 36 | 26 | 43-52 | 6 | 9 | _none_ | Battle Rage, Roar, Ice Immuned, Frightful Presence |
 | EINHERJAR | 7 | 1 | 248 | 28 | 28 | 32-44 | 5 | 10 | _none_ | Melee Potent, Long Range, Fire Immuned, Free Mind, Magic-proof 25%, Bravery |
