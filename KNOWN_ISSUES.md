@@ -25,6 +25,7 @@
 
 - Leadership caravan doesn't spawn if no other tile available
 - Imprisoned heroes have no starting army
+- Maps with Tear of Asha are broken
 
 ### Suggestions
 
@@ -38,6 +39,8 @@
 ### Balance
 
 - Give AI starting gold, exp and stats ?
+- Cape of Kings op
+- Combat and Offender spec multiplicative bonus
 
 
 # FIXED
@@ -68,4 +71,7 @@
 - Remove Duel mode from main menu
 - Witch hut popup player filter
 - Vaults have too many creatures
+- Nearly impossible to get sword with Raelag
+- Raelag doesn't get twice the amount of legendary dragons
+- Draconic set spawns 1 stack of dragons for each stack that dies at the same time
 

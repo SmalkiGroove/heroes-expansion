@@ -32,7 +32,7 @@ This list is not exhaustive, all stats and changes regarding skills, artifacts, 
 
 - Many new artifacts and sets
 - Some additional creatures, either neutral or granted by specific heroes
-- Totally revamped skill tree with 15 branches
+- Totally revamped skill tree with 15 branches and totally new skills
 - Every hero is unique and all heroes are more powerful in general, and there are no trash heroes
 - Scripts are massively used, on the map as well as during combats
 
@@ -41,6 +41,43 @@ This list is not exhaustive, all stats and changes regarding skills, artifacts, 
 
 Using semver naming (major.minor.patch)
 
-### 1.0.0
+### 0.1.0 (31/12/2024)
 
-Initial release
+Initial beta release !
+
+### 0.2.0 (26/01/2025)
+
+#### Added
+
+
+#### Fixed
+
+- Sometimes a tavern hero might have 1 placeholder creature in the starting army
+- Add in Governance description that it unlocks conversion
+- Kha Beleth initial gating freeze on obstacle
+- Gabrielle refresh nb of griffins
+- Magic Guild wrong icon
+- Neutral Darkstorms spawn on the map
+- Give Training bonuses to Lizardman, Basilisk, Behemoth, Druid of the Council
+- Gabrielle move points logarithmic curve
+- Limit Earth elems with Deleb
+- Viking shield gives too many resources
+- Leadership spawns caravan even with not enough creature to transfer
+- Crash when opening spellbook with Archangels
+- Brown Behemoths texture and white icon
+- Lich no Harm Touch animation
+- Kha Beleth attack anim not sync
+- War academy and School of Magic text in french
+- Frozen Heart effects not working
+- Elrath Divine Shield effect not working
+- Arcanism magic penetration does not match description
+- Book of Power effect does not match description
+- Replace Bone Dragons by Black Knights in necro lineup
+- Firehounds should be grey
+- Obsidian Armor does not immune to Armaggedon
+- Remove Duel mode from main menu
+- Witch hut popup player filter
+- Vaults have too many creatures
+- Nearly impossible to get sword with Raelag
+- Raelag doesn't get twice the amount of legendary dragons
+- Draconic set spawns 1 stack of dragons for each stack that dies at the same time

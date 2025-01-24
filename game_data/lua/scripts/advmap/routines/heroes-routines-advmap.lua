@@ -664,11 +664,18 @@ function Routine_GainDragonArtifacts(player, hero, combatIndex)
     log("---DEBUG: value = "..value)
     local rnd = random(1,100,level)
     if (2 * level + value) > rnd then
-        local r = value > 20 and 1 or 0
-        local i = mod(rnd, 7+r) + 1
+        local r = (value+level) > 45 and 1 or 0
+        local i = 1 + mod(rnd, 7+r)
         local a = ARTIFACT_SETS[ARTIFACT_SET_DRAGON][i]
-        if not HasArtefact(hero, a, 0) then
-            GiveArtifact(hero, a)
+        while value > 0 do
+            if HasArtefact(hero, a, 0) then
+                value = value - 2
+                rnd = random(1,100,a)
+                i = 1 + mod(rnd, 7+r)
+                a = ARTIFACT_SETS[ARTIFACT_SET_DRAGON][i]
+            else
+                GiveArtifact(hero, a) return
+            end
         end
     end
 end

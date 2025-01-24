@@ -82,40 +82,42 @@ end
 
 function Routine_ArtfsetDragon4(side, hero, unit)
     log("$ Routine_ArtfsetDragon4")
-    if ROUTINE_VARS.Legendragon[side] then return end
     if GetUnitSide(unit) == side then
+        sleep(random(1,30,GetCreatureNumber(unit)))
+        if ROUTINE_VARS.Legendragon[side] then return end
+        ROUTINE_VARS.Legendragon[side] = 1
         local tier = CREATURES[GetCreatureType(unit)][2]
         local threshold = 0.5 * (8 - tier) * (9 - tier)
         if ROUTINE_VARS.InitialCounts[unit] and ROUTINE_VARS.InitialCounts[unit] > threshold then
             local amount = GetHeroLevel(side)
-            if hero == H_RAELAG then amount = 2 * amount end
+            if GetHeroName(hero) == H_RAELAG then amount = 2 * amount end
             SummonCreatureStack_X(side, CREATURE_LEGENDARY_DRAGON, amount, 3)
             SetATB_CreatureTypes(side, {CREATURE_LEGENDARY_DRAGON}, ATB_HALF)
-            ROUTINE_VARS.Legendragon[side] = 1
         end
     end
 end
 
 function Routine_ArtfsetDragon6(side, hero, unit)
     log("$ Routine_ArtfsetDragon6")
-    if ROUTINE_VARS.Legendragon[side] then return end
     if GetUnitSide(unit) ~= side then
+        sleep(random(1,30,GetCreatureNumber(unit)))
+        if ROUTINE_VARS.Legendragon[side] then return end
+        ROUTINE_VARS.Legendragon[side] = 1
         local amount = GetHeroLevel(side)
-        if hero == H_RAELAG then amount = 2 * amount end
+        if GetHeroName(hero) == H_RAELAG then amount = 2 * amount end
         SummonCreatureStack_X(side, CREATURE_LEGENDARY_DRAGON, amount, 3)
         SetATB_CreatureTypes(side, {CREATURE_LEGENDARY_DRAGON}, ATB_HALF)
-        ROUTINE_VARS.Legendragon[side] = 1
     end
 end
 
 function Routine_ArtfsetDragon8(side, hero)
     log("$ Routine_ArtfsetDragon8")
     if ROUTINE_VARS.Legendragon[side] then return end
+    ROUTINE_VARS.Legendragon[side] = 1
     local amount = GetHeroLevel(side)
-    if hero == H_RAELAG then amount = 2 * amount end
+    if GetHeroName(hero) == H_RAELAG then amount = 2 * amount end
     SummonCreatureStack_X(side, CREATURE_LEGENDARY_DRAGON, amount, 3)
     SetATB_CreatureTypes(side, {CREATURE_LEGENDARY_DRAGON}, ATB_NEXT)
-    ROUTINE_VARS.Legendragon[side] = 1
 end
 
 
