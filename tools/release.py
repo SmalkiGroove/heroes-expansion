@@ -19,7 +19,7 @@ print(f"> release version : {str(semversion)}")
 
 version_txt = f"<h3_bright>H5X mod\nVersion {version}"
 
-with open(os.path.join(workdir, path_to_version_txt), 'w') as version_file:
+with open(os.path.join(workdir, path_to_version_txt), 'w', encoding='utl16-le') as version_file:
     version_file.write(version_txt)
 
 
