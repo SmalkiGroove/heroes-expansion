@@ -148,6 +148,7 @@ function Routine_ArtifactVizirsScimitar(player, hero)
 end
 
 function Routine_ArtifactPalaceShoes(player, hero, combatIndex)
+    log("$ Routine_ArtifactPalaceShoes")
     local bonus_table = {
         [HERO_BATTLE_BONUS_LUCK] = 1,
         [HERO_BATTLE_BONUS_MORALE] = 1,
@@ -160,6 +161,21 @@ function Routine_ArtifactPalaceShoes(player, hero, combatIndex)
     local r = random(0,13,0)
     for k,v in bonus_table do
         if (mod(r,7) == k) or (mod(2*r,7) == k) then GiveHeroBattleBonus(hero, k, v) end
+    end
+end
+
+function Routine_ArtifactRingOfTheUnrepentant(player, hero, combatIndex)
+    log("$ Routine_ArtifactRingOfTheUnrepentant")
+    local total = 0
+    local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
+    for i = 0,stacks-1 do
+        local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
+        if died > 0 then
+            total = total + died
+        end
+    end
+    if total > 0 then
+        ChangeHeroStat(hero, STAT_MANA_POINTS, total)
     end
 end
 
@@ -370,6 +386,7 @@ AFTER_COMBAT_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_BOOTS_OF_THE_SWIFT_JOUNREY] = Routine_ArtifactBootsOfSwiftJourneyCancel,
     [ARTIFACT_BEGINNER_MAGIC_STICK] = Routine_ArtifactBeginnerMagicStick,
     [ARTIFACT_SENTINELS_BOOTS] = Routine_ArtifactSentinelsBoots,
+    [ARTIFACT_RING_OF_THE_UNREPENTANT] = Routine_ArtifactRingOfTheUnrepentant,
     [ARTIFACT_RUNIC_WAR_AXE] = Routine_ArtifactRunicWar,
     [ARTIFACT_RUNIC_WAR_HARNESS] = Routine_ArtifactRunicWar,
     [ARTIFACT_DEATH_KNIGHT_BOOTS] = Routine_ArtifactDeathknightBoots,

@@ -1719,7 +1719,7 @@
 				<Icon href="/Textures/HeroScreen/Artifacts/SandalsOfTheBlessed.xdb#xpointer(/Texture)"/>
 				<CostOfGold>10000</CostOfGold>
 				<AIValue>20000</AIValue>
-				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
+				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>3</Defence>
@@ -1768,7 +1768,7 @@
 				<Slot>FINGER</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/RingOfTheUnrepentant.xdb#xpointer(/Texture)"/>
 				<CostOfGold>5000</CostOfGold>
-				<AIValue>1</AIValue>
+				<AIValue>10000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
@@ -2898,11 +2898,11 @@
 				<Icon href="/Textures/HeroScreen/Artifacts/CloakOfTheSaint.xdb#xpointer(/Texture)"/>
 				<CostOfGold>10000</CostOfGold>
 				<AIValue>20000</AIValue>
-				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
+				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>1</Defence>
-					<Knowledge>1</Knowledge>
+					<Defence>2</Defence>
+					<Knowledge>2</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
@@ -3923,10 +3923,10 @@
 				<Icon href="/Textures/HeroScreen/Artifacts/BarbarianCuirass.xdb#xpointer(/Texture)"/>
 				<CostOfGold>5000</CostOfGold>
 				<AIValue>10000</AIValue>
-				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
+				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>0</Defence>
+					<Defence>1</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
@@ -4623,10 +4623,10 @@
 				<Icon href="/Textures/HeroScreen/Artifacts/ForgottenRing.xdb#xpointer(/Texture)"/>
 				<CostOfGold>20000</CostOfGold>
 				<AIValue>30000</AIValue>
-				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
+				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
-					<Attack>0</Attack>
-					<Defence>0</Defence>
+					<Attack>2</Attack>
+					<Defence>2</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>

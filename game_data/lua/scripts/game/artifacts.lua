@@ -70,7 +70,7 @@ ARTIFACT_HELM_OF_CHAOS = 66                         -- magic resistance
 ARTIFACT_PENDANT_OF_CONFLUX = 67                    -- absorb half enemy mana spent
 ARTIFACT_SANDALS_OF_THE_BLESSED = 68                -- /
 ARTIFACT_SANDROS_CLOAK = 69                         -- negates immunity to mind control
-ARTIFACT_RING_OF_THE_UNREPENTANT = 70               -- 
+ARTIFACT_RING_OF_THE_UNREPENTANT = 70               -- regen mana per dead creature after battle **
 ARTIFACT_AMULET_OF_NECROMANCY = 71                  -- decrease dark flux costs by 10%
 ARTIFACT_FREIDA = 72                                -- FREIDA
 ARTIFACT_RING_OF_THE_SHADOWBRAND = 73               -- /
@@ -115,7 +115,7 @@ ARTIFACT_VIKING_SHIELD = 111                        -- gain wood/ore after battl
 ARTIFACT_FORTUNE_BAND_OF_THE_SAINT = 112            -- reduce mana cost by 1
 ARTIFACT_SENTINELS_BRACER = 113                     -- /
 ARTIFACT_ANKH_OF_THE_SAINT = 114                    -- 
-ARTIFACT_CLOAK_OF_THE_SAINT = 115                   -- immunity to plague TODO
+ARTIFACT_CLOAK_OF_THE_SAINT = 115                   -- immunity to plague
 ARTIFACT_GENJIS_HAT = 116                           -- 
 ARTIFACT_GENJIS_VEST = 117                          -- 
 ARTIFACT_GENJIS_SANDALS = 118                       -- 
@@ -343,7 +343,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_RING_OF_CAUTION]               = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RING, special=0},
     [ARTIFACT_HELM_OF_CHAOS]                 = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_HEAD, special=0},
     [ARTIFACT_PENDANT_OF_CONFLUX]            = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_NECK, special=0},
-    [ARTIFACT_SANDALS_OF_THE_BLESSED]        = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEGS, special=1}, --disabled
+    [ARTIFACT_SANDALS_OF_THE_BLESSED]        = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
     [ARTIFACT_SANDROS_CLOAK]                 = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_SHOULDERS, special=1},
     [ARTIFACT_RING_OF_THE_UNREPENTANT]       = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RING, special=0},
     [ARTIFACT_AMULET_OF_NECROMANCY]          = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_NECK, special=0},
@@ -390,7 +390,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_FORTUNE_BAND_OF_THE_SAINT]     = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RING, special=1}, --disabled
     [ARTIFACT_SENTINELS_BRACER]              = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RING, special=0},
     [ARTIFACT_ANKH_OF_THE_SAINT]             = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_NECK, special=1}, --disabled
-    [ARTIFACT_CLOAK_OF_THE_SAINT]            = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_SHOULDERS, special=1}, --disabled
+    [ARTIFACT_CLOAK_OF_THE_SAINT]            = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_SHOULDERS, special=0},
     [ARTIFACT_GENJIS_HAT]                    = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_HEAD, special=1}, --disabled
     [ARTIFACT_GENJIS_VEST]                   = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_BODY, special=1}, --disabled
     [ARTIFACT_GENJIS_SANDALS]                = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEGS, special=1}, --disabled
@@ -431,7 +431,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_CENTAUR_CROSSBOW]              = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=1}, --disabled
     [ARTIFACT_DEADWOOD_STAFF]                = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
     [ARTIFACT_DEATH_KNIGHT_BOOTS]            = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
-    [ARTIFACT_BARBARIAN_CUIRASS]             = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_BODY, special=1}, --disabled
+    [ARTIFACT_BARBARIAN_CUIRASS]             = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_BODY, special=0},
     [ARTIFACT_HARPY_BOOTS]                   = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
     [ARTIFACT_PALACE_SHOES]                  = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
     [ARTIFACT_SHACKLES_OF_THE_LAST_MAN]      = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_POCKET, special=1}, --disabled
@@ -459,7 +459,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_DWARVEN_SMITHY_HAMMER]         = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
     [ARTIFACT_RANGERS_CAPE]                  = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_LOCATION_SHOULDERS, special=1}, --disabled
     [ARTIFACT_MOON_CHARM]                    = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_NECK, special=0},
-    [ARTIFACT_FORGOTTEN_RING]                = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RING, special=1}, --disabled
+    [ARTIFACT_FORGOTTEN_RING]                = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RING, special=0},
     [ARTIFACT_BEARHIDE_WRAPS]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_SHOULDERS, special=0},
     [ARTIFACT_MOONLIGHT_COAT]                = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_SHOULDERS, special=0},
     [ARTIFACT_DRAGONSBANE]                   = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_RIGHTHAND, special=1}, --disabled

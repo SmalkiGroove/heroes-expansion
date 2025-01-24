@@ -47,10 +47,11 @@ Initial beta release !
 
 ### 0.2.0 (26/01/2025)
 
-#### Added
+#### New
 
+- New artifacts with new effects
 
-#### Fixed
+#### Fixed/Changed
 
 - Sometimes a tavern hero might have 1 placeholder creature in the starting army
 - Add in Governance description that it unlocks conversion
