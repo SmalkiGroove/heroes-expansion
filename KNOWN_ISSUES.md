@@ -40,7 +40,6 @@
 
 - Give AI starting gold, exp and stats ?
 - Cape of Kings op
-- Combat and Offender spec multiplicative bonus
 
 
 # FIXED
@@ -74,4 +73,5 @@
 - Nearly impossible to get sword with Raelag
 - Raelag doesn't get twice the amount of legendary dragons
 - Draconic set spawns 1 stack of dragons for each stack that dies at the same time
+- Offender spec op with multiplicative bonus from combat
 
