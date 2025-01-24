@@ -24,9 +24,8 @@ end
 function Routine_ArtifactCapeOfKings(player, hero)
     log("$ Routine_ArtifactCapeOfKings")
     if GetDate(DAY_OF_WEEK) ~= 1 then
-        local mastery = GetHeroSkillMastery(hero, SKILL_GOVERNANCE)
-        if mastery > 0 then
-            Routine_GovernanceWeeklyResources(player, hero, mastery)
+        if HasHeroSkill(hero, PERK_MYTHOLOGY) then
+            Routine_MythologyWeeklyGolds(player, hero, 1)
         end
     end
 end

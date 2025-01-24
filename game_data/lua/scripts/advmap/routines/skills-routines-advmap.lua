@@ -521,14 +521,18 @@ function Routine_IndustryDaily(player, hero, mastery)
     log("$ Routine_IndustryDaily")
     local total = {[0]=0,[1]=0,[2]=0,[3]=0,[4]=0,[5]=0,[6]=0}
     local xh,yh,zh = GetObjectPosition(hero)
+    local cape = HasArtefact(hero, ARTIFACT_CAPE_OF_KINGS)
     for obj,data in RESOURCE_GENERATING_OBJECTS do
         for _,building in GetObjectNamesByType(obj) do
             if GetObjectOwner(building) == player then
                 local x,y,z = GetObjectPosition(building)
                 if z == zh then
-                    local dx = x - xh
-                    local dy = y - yh
-                    local d = dx * dx + dy * dy
+                    local d = 0
+                    if not cape then
+                        local dx = x - xh
+                        local dy = y - yh
+                        d = dx * dx + dy * dy
+                    end
                     local res = data.type or random(0,5,d)
                     if d < 100 then total[res] = total[res] + data.amount end
                 end
@@ -623,8 +627,9 @@ function Routine_GovernanceWeeklyResources(player, hero, mastery)
     local golds = { [0]=0, [1]=1000, [2]=2500, [3]=5000 }
     local res = { [HAVEN]=CRYSTAL, [PRESERVE]=GEM, [FORTRESS]=CRYSTAL, [ACADEMY]=GEM, [DUNGEON]=SULFUR, [NECROPOLIS]=MERCURY, [INFERNO]=SULFUR, [STRONGHOLD]=MERCURY }
     local faction = HEROES[hero].faction
-    sleep(3) AddPlayerResource(player, hero, GOLD, golds[mastery])
-    sleep(3) AddPlayerResource(player, hero, res[faction], mastery)
+    local bonus = HasArtefact(hero, ARTIFACT_CAPE_OF_KINGS) and 1 or 0
+    sleep(2) AddPlayerResource(player, hero, GOLD, golds[mastery]+1000*bonus)
+    sleep(2) AddPlayerResource(player, hero, res[faction], mastery+bonus)
 end
 
 function Routine_GearUpWeeklyGolds(player, hero, mastery)
