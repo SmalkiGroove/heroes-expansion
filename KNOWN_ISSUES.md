@@ -8,9 +8,8 @@
 
 ### Broken graphics or animations
 
-- Academy female heroes textures
+- Academy and Sylvan female heroes textures
 - UI incorrect size
-- Windowed mode croped
 - Skills UI skill name darker
 - Marbas no anim for Consume Corpse
 
@@ -26,21 +25,19 @@
 
 - Leadership caravan doesn't spawn if no other tile available
 - Imprisoned heroes have no starting army
-- Witch hut popup player filter
 
 ### Suggestions
 
 - Skill tree accessible from level up window
 - Add NCF creatures in editor
 - Darkstorm 1 creature instance per hero level
+- Darkstorm hero totem model
 - QAI version
-- T7 creatures choice like in H7
 - More custom buildings
 
 ### Balance
 
-- Vaults have too many creatures
-- Give AI starting gold, exp and stats
+- Give AI starting gold, exp and stats ?
 
 
 # FIXED
@@ -69,4 +66,6 @@
 - Firehounds should be grey
 - Obsidian Armor does not immune to Armaggedon
 - Remove Duel mode from main menu
+- Witch hut popup player filter
+- Vaults have too many creatures
 
