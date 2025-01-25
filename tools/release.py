@@ -22,12 +22,13 @@ elif BUMP == 'm':
     semversion = semversion.bump_minor()
 elif BUMP == 'p':
     semversion = semversion.bump_patch()
-print(f"> release version : {str(semversion)}")
+version = str(semversion)
+print(f"> release version : {version}")
 
-version_txt = f"<h3_bright>H5X mod\nVersion {str(semversion)}"
+version_txt = f"<h3_bright>H5X mod\nVersion {version}"
 
 with open(os.path.join(workdir, path_to_version_file), 'w') as version_file:
-    version_file.write(str(semversion))
+    version_file.write(version)
 with open(os.path.join(workdir, path_to_version_txt), 'w', encoding='utf-16-LE') as version_file:
     version_file.write(u'\ufeff')
     version_file.write(version_txt)
