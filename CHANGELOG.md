@@ -73,7 +73,6 @@ Initial beta release !
 - Crash when opening spellbook with Archangels
 - Brown Behemoths texture and white icon
 - Lich no Harm Touch animation
-- Kha Beleth attack anim not sync
 - War academy and School of Magic text in french
 - Frozen Heart effects not working
 - Elrath Divine Shield effect not working

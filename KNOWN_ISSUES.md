@@ -5,6 +5,8 @@
 - Rune priests sometimes
 - Sheltem proc after unit moves
 - While generating maps with underground
+- Crash on AI turn on map Rise of Power
+- Crash on autocombat mode
 
 ### Broken graphics or animations
 
@@ -12,6 +14,9 @@
 - UI incorrect size
 - Skills UI skill name darker
 - Marbas no anim for Consume Corpse
+- Kha Beleth attack anim not sync
+- Black Knights no dash anim
+- Attribute building no UI
 
 ### Text issues
 
@@ -20,12 +25,18 @@
 
 - Thunder Power skill does not apply air damage of creatures attacks
 - Shantiri Breastplate does not immune to Earthquake
+- Dragon tombstone does not work
 
 ### Bugs
 
 - Leadership caravan doesn't spawn if no other tile available
 - Imprisoned heroes have no starting army
 - Maps with Tear of Asha are broken
+- Kha Beleth army growth script error
+- Gabrielle infinite movement
+- 2 Meteor shower spells
+- Giving skill can take ultimate's spot
+- Script error when ballista has no ammo
 
 ### Suggestions
 
@@ -35,10 +46,14 @@
 - Darkstorm hero totem model
 - QAI version
 - More custom buildings
+- Add late-game challenge
+- Rework Elleshar spec
 
 ### Balance
 
 - Give AI starting gold, exp and stats ?
+- Nerf Sheltem
+- Ballista HP are a little too low
 
 
 # FIXED
@@ -57,7 +72,6 @@
 - Crash when opening spellbook with Archangels
 - Brown Behemoths texture and white icon
 - Lich no Harm Touch animation
-- Kha Beleth attack anim not sync
 - War academy and School of Magic text in french
 - Frozen Heart effects not working
 - Elrath Divine Shield effect not working
