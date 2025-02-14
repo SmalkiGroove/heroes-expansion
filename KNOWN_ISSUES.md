@@ -7,6 +7,8 @@
 - While generating maps with underground
 - Crash on AI turn on map Rise of Power
 - Crash on autocombat mode
+- Crash on cast firewall
+- Crash when Agrael turn's come in combat
 
 ### Broken graphics or animations
 
@@ -26,6 +28,7 @@
 - Thunder Power skill does not apply air damage of creatures attacks
 - Shantiri Breastplate does not immune to Earthquake
 - Dragon tombstone does not work
+- Magnetic field disabled
 
 ### Bugs
 
@@ -37,6 +40,7 @@
 - 2 Meteor shower spells
 - Giving skill can take ultimate's spot
 - Script error when ballista has no ammo
+- Occultism invalid prerequisites
 
 ### Suggestions
 
@@ -47,13 +51,14 @@
 - QAI version
 - More custom buildings
 - Add late-game challenge
-- Rework Elleshar spec
+- Rework Elleshar spec to not add magic schools
 
 ### Balance
 
 - Give AI starting gold, exp and stats ?
 - Nerf Sheltem
 - Ballista HP are a little too low
+- Inferno and Dungeon sacrificial buildings are bad
 
 
 # FIXED
