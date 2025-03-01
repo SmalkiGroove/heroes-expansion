@@ -88,3 +88,7 @@ Initial beta release !
 - Raelag doesn't get twice the amount of legendary dragons
 - Draconic set spawns 1 stack of dragons for each stack that dies at the same time
 - Offender spec op with multiplicative bonus from combat
+
+### 0.2.1 ()
+
+- Added ability Natural Luck to Gold Dragons

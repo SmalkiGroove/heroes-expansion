@@ -51,13 +51,11 @@
 - QAI version
 - More custom buildings
 - Add late-game challenge
-- Rework Elleshar spec to not add magic schools
 
 ### Balance
 
 - Give AI starting gold, exp and stats ?
 - Nerf Sheltem
-- Ballista HP are a little too low
 - Inferno and Dungeon sacrificial buildings are bad
 
 
@@ -94,3 +92,6 @@
 - Offender spec op with multiplicative bonus from combat
 - Cape of Kings gives too much gold
 
+- Avenger description does not mention luck
+- Rework Elleshar spec to not add magic schools
+- Ballista HP are a little too low
