@@ -26,6 +26,7 @@ ROUTINE_VARS = {
     AvatarOfDeath = "none",
     Darkstorm = "none",
     Incendiary = nil,
+    Bombardier = nil,
     AtbBoosted = {},
     GoblinsTotal = 0,
     MoonCharm = nil,

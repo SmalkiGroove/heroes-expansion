@@ -36,7 +36,6 @@
 - Imprisoned heroes have no starting army
 - Maps with Tear of Asha are broken
 - Kha Beleth army growth script error
-- Gabrielle infinite movement
 - 2 Meteor shower spells
 - Giving skill can take ultimate's spot
 - Script error when ballista has no ammo
@@ -95,3 +94,4 @@
 - Avenger description does not mention luck
 - Rework Elleshar spec to not add magic schools
 - Ballista HP are a little too low
+- Gabrielle infinite movement

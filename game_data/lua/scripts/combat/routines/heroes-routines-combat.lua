@@ -14,7 +14,7 @@ function Routine_BallistaRandomSalvo(side, hero)
         local n = 1 + trunc(GetHeroLevel(side) * 0.1)
         for i = 1,n do
             local target = RandomCreature(1-side,i)
-            if target then ShootCombatUnit(ballista, target) end
+            if target then startThread(ShootCombatUnit, ballista, target) end
             sleep(600)
         end
     end
@@ -292,8 +292,11 @@ end
 
 function Routine_BallistaMoveFirst(side, hero)
     -- log("Trigger ballista play first !")
-    SetATB_WarMachineType(side, WAR_MACHINE_BALLISTA, ATB_INSTANT)
-    -- ShowFlyingSign("/Text/Game/Scripts/Combat/WorkshopExpert.txt", hero, 9)
+    local ballista = UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_BALLISTA'
+    if IsCombatUnit(ballista) then
+        SetATB_ID(ballista, ATB_INSTANT)
+        ShowFlyingSign("/Text/Game/Scripts/Combat/WorkshopExpert.txt", ballista, 9)
+    end
 end
 
 function Routine_SpearWielderCoordination(side, hero)
@@ -681,18 +684,17 @@ end
 function Routine_BallistaShootUnit(side, hero)
     -- log("Trigger fireball ballista shoot !")
     local ballista = UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_BALLISTA'
-    if not IsCombatUnit(ballista) then return end
-
     if CURRENT_UNIT == ballista then
-        SetATB_ID(CURRENT_UNIT, ATB_ZERO)
-    elseif CURRENT_UNIT_SIDE ~= side then
-        if IsCreature(CURRENT_UNIT) then
-            local m = GetUnitManaPoints(hero)
-            if m >= 3 then
-                ShootCombatUnit(ballista, CURRENT_UNIT)
-                SetMana(hero, m-3)
-                ShowFlyingSign("/Text/Game/Scripts/Combat/Bombardier.txt", hero, 9)
+        if ROUTINE_VARS.Bombardier then
+            ROUTINE_VARS.Bombardier = nil
+            for i,cr in GetUnits(1-side, CREATURE) do
+                startThread(ShootCombatUnit, ballista, cr)
+                sleep(600)
             end
+        else
+            ROUTINE_VARS.Bombardier = not nil
+            SetATB_ID(CURRENT_UNIT, ATB_ZERO)
+            ShowFlyingSign("/Text/Game/Scripts/Combat/Bombardier.txt", hero, 9)
         end
     end
 end

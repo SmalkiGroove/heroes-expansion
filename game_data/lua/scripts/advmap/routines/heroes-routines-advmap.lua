@@ -138,25 +138,23 @@ end
 function Routine_MovePointsPerGriffin(player, hero)
     log("$ Routine_MovePointsPerGriffin")
     local movement = GetHeroStat(hero, STAT_MOVE_POINTS)
+    local counter = 0
     local n = 0
     n = n + GetHeroCreatures(hero, CREATURE_GRIFFIN)
     n = n + GetHeroCreatures(hero, CREATURE_ROYAL_GRIFFIN)
     n = n + GetHeroCreatures(hero, CREATURE_BATTLE_GRIFFIN)
-    local n0 = n
-    while n > 0 do
+    while n > counter do
         sleep(2)
         if not IsPlayerCurrent(player) then break end
-        local v = 25 - trunc(0.1 * (n0-n))
+        local v = round(20 * (1 - counter/n))
         local m = GetHeroStat(hero, STAT_MOVE_POINTS) + v
         if m <= movement then
             ChangeHeroStat(hero, STAT_MOVE_POINTS, v)
-            n = n - 1
+            counter = counter + 1
+            n = 0 + GetHeroCreatures(hero, CREATURE_GRIFFIN)
+            n = n + GetHeroCreatures(hero, CREATURE_ROYAL_GRIFFIN)
+            n = n + GetHeroCreatures(hero, CREATURE_BATTLE_GRIFFIN)
         end
-        local nn = 0
-        nn = nn + GetHeroCreatures(hero, CREATURE_GRIFFIN)
-        nn = nn + GetHeroCreatures(hero, CREATURE_ROYAL_GRIFFIN)
-        nn = nn + GetHeroCreatures(hero, CREATURE_BATTLE_GRIFFIN)
-        n = n + nn - n0
     end
 end
 
@@ -999,7 +997,7 @@ function Routine_MultiplyTroops(player, hero)
                 local faction = CREATURES[cr][1]
                 local tier = CREATURES[cr][2]
                 if faction == INFERNO and tier <= maxtier then
-                    local nb = GetHeroCreatures(cr)
+                    local nb = GetHeroCreatures(hero, cr)
                     local add = trunc(0.01 * percent * nb)
                     AddHeroCreatures(hero, cr, add)
                     tracker[cr] = 1
