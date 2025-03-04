@@ -27,7 +27,6 @@
 
 - Thunder Power skill does not apply air damage of creatures attacks
 - Shantiri Breastplate does not immune to Earthquake
-- Dragon tombstone does not work
 - Magnetic field disabled
 
 ### Bugs
@@ -35,10 +34,6 @@
 - Leadership caravan doesn't spawn if no other tile available
 - Imprisoned heroes have no starting army
 - Maps with Tear of Asha are broken
-- Kha Beleth army growth script error
-- 2 Meteor shower spells
-- Giving skill can take ultimate's spot
-- Script error when ballista has no ammo
 - Occultism invalid prerequisites
 
 ### Suggestions
@@ -54,7 +49,6 @@
 ### Balance
 
 - Give AI starting gold, exp and stats ?
-- Nerf Sheltem
 - Inferno and Dungeon sacrificial buildings are bad
 
 
@@ -95,3 +89,9 @@
 - Rework Elleshar spec to not add magic schools
 - Ballista HP are a little too low
 - Gabrielle infinite movement
+- Script error when ballista has no ammo
+- Nerf Sheltem
+- Kha Beleth army growth script error
+- Giving skill can take ultimate's spot
+- 2 Meteor shower spells in natural magic school
+- Dragon tombstone does not work

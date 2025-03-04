@@ -121,22 +121,27 @@ function WatchPlayer(player, wait)
 	end
 end
 
-function PlayerDailyHandler(player, newweek)
-	while (not IsPlayerCurrent(player)) do sleep(10) end
-	log("Player "..player.." turn started")
+function PlayerDailyHandler(player)
+	while (not IsPlayerCurrent(player)) do sleep(5) end
+	log("Player "..player.." turn "..TURN.." started")
 	for i,hero in GetPlayerHeroes(player) do
-		if newweek then
-			startThread(DoHeroSpeRoutine_Weekly, player, hero)
-			startThread(DoSkillsRoutine_Weekly, player, hero)
-			startThread(DoArtifactsRoutine_Weekly, player, hero)
-			sleep(5)
-		end
 		startThread(DoHeroSpeRoutine_Daily, player, hero)
 		startThread(DoSkillsRoutine_Daily, player, hero)
 		startThread(DoArtifactsRoutine_Daily, player, hero)
 	end
-	startThread(Routine_MagicGuildsBonus, player)
+	startThread(DoTownsRoutine_Daily, player)
 	WatchPlayer(player, nil)
+end
+
+function PlayerWeeklyHandler(player)
+	while (not IsPlayerCurrent(player)) do sleep(5) end
+	log("Player "..player.." week "..WEEKS.." started")
+	for i,hero in GetPlayerHeroes(player) do
+		startThread(DoHeroSpeRoutine_Weekly, player, hero)
+		startThread(DoSkillsRoutine_Weekly, player, hero)
+		startThread(DoArtifactsRoutine_Weekly, player, hero)
+	end
+	startThread(DoTownsRoutine_Weekly, player)
 end
 
 function NewDayTrigger()
@@ -152,7 +157,8 @@ function NewDayTrigger()
 	startThread(UpdateTavernFactions)
 	for player = 1,8 do
 		if (GetPlayerState(player) == 1) then
-			startThread(PlayerDailyHandler, player, newweek)
+			if newweek then startThread(PlayerWeeklyHandler, player) sleep(3) end
+			startThread(PlayerDailyHandler, player)
 		end
 	end
 	CaravanCountdown()
