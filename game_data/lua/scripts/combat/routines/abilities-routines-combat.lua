@@ -32,27 +32,29 @@ end
 
 function Routine_AbilityMagneticField(side, unit)
     log("$ Routine_AbilityMagneticField")
+    local nb = GetCreatureNumber(CURRENT_UNIT)
     local x,y = GetUnitPosition(CURRENT_UNIT)
-    local unit = "none"
+    local enemy = "none"
     local distance = 1000
-    local target = {0,0}
+    local target = {x=0,y=0}
     for i,cr in GetUnits(1-CURRENT_UNIT_SIDE, CREATURE) do
         local type = GetCreatureType(cr)
-        if CREATURES[type][2] <= 3 then
+        local tier = CREATURES[type][2]
+        if tier <= 3 then
             local xx,yy = GetUnitPosition(cr)
             local dx = x-xx
             local dy = y-yy
             local d = dx*dx + dy*dy
-            if d < distance then
-                unit = cr
+            if d > 2 and d < distance then
+                enemy = cr
                 distance = d
-                if 2*dx*dx >= dy*dy then target[1] = xx+sign(dx) else target[1] = xx end
-                if 2*dy*dy >= dx*dx then target[2] = yy+sign(dy) else target[2] = yy end
+                if 2*dx*dx >= dy*dy then target.x = xx+sign(dx) else target.x = xx end
+                if 2*dy*dy >= dx*dx then target.y = yy+sign(dy) else target.y = yy end
             end
         end
     end
-    if unit ~= "none" and distance > 2 then
-        MoveCombatUnit(unit, target[1], target[2])
+    if enemy ~= "none" then
+        startThread(MoveCombatUnit, enemy, target.x, target.y)
     end
 end
 
@@ -86,7 +88,7 @@ COMBAT_START_ABILITIES_ROUTINES = {
 
 COMBAT_TURN_ABILITIES_ROUTINES = {
     [CREATURE_MARKSMAN] = Routine_AbilityCommandBallista,
-    -- [CREATURE_OBSIDIAN_GOLEM] = Routine_AbilityMagneticField,
+    [CREATURE_OBSIDIAN_GOLEM] = Routine_AbilityMagneticField,
 }
 
 UNIT_DIED_ABILITIES_ROUTINES = {

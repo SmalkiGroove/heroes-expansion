@@ -27,7 +27,6 @@
 
 - Thunder Power skill does not apply air damage of creatures attacks
 - Shantiri Breastplate does not immune to Earthquake
-- Magnetic field disabled
 
 ### Bugs
 
@@ -95,3 +94,4 @@
 - Giving skill can take ultimate's spot
 - 2 Meteor shower spells in natural magic school
 - Dragon tombstone does not work
+- Magnetic field disabled

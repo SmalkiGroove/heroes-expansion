@@ -241,7 +241,7 @@ function Routine_ElvenSageVictory(player, hero, combatIndex)
             GiveHeroSkill(hero, upgradable[random(1,n,Var_Elleshar_BattleWon)])
         end
         local skill_to_attribute = {[9]=3,[10]=1,[11]=2,[12]=4}
-        for sk in maxed do
+        for _,sk in maxed do
             ChangeHeroStat(hero,skill_to_attribute[sk], 1)
         end
     end

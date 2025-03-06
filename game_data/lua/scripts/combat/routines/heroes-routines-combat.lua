@@ -167,7 +167,9 @@ function Routine_MoveForwardUnits(side, hero)
         local x,y = GetUnitPosition(cr)
         local x0 = (side == ATTACKER) and GRID_X_MIN or GRID_X_MAX
         local x1 = (side == ATTACKER) and (x + 3) or (x - 3)
-        if x ~= x0 then MoveCombatUnit(cr, x1, y) end
+        if x ~= x0 then
+            startThread(MoveCombatUnit, cr, x1, y)
+        end
     end
 end
 
