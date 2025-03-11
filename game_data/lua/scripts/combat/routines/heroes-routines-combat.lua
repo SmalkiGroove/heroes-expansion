@@ -16,6 +16,7 @@ function Routine_BallistaRandomSalvo(side, hero)
             local target = RandomCreature(1-side,i)
             if target then startThread(ShootCombatUnit, ballista, target) end
             sleep(600)
+            if not IsCombatUnit(ballista) then return end
         end
     end
 end

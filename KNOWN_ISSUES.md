@@ -3,12 +3,8 @@
 ### Game crash
 
 - Rune priests sometimes
-- Sheltem proc after unit moves
 - While generating maps with underground
-- Crash on AI turn on map Rise of Power
 - Crash on autocombat mode
-- Crash on cast firewall
-- Crash when Agrael turn's come in combat
 
 ### Broken graphics or animations
 
@@ -17,7 +13,6 @@
 - Skills UI skill name darker
 - Marbas no anim for Consume Corpse
 - Kha Beleth attack anim not sync
-- Black Knights no dash anim
 - Attribute building no UI
 
 ### Text issues
@@ -34,6 +29,7 @@
 - Imprisoned heroes have no starting army
 - Maps with Tear of Asha are broken
 - Occultism invalid prerequisites
+- Shantiri Moon Disc blocks all light magic
 
 ### Suggestions
 
@@ -90,8 +86,13 @@
 - Gabrielle infinite movement
 - Script error when ballista has no ammo
 - Nerf Sheltem
+- Sheltem proc after unit moves
 - Kha Beleth army growth script error
 - Giving skill can take ultimate's spot
 - 2 Meteor shower spells in natural magic school
 - Dragon tombstone does not work
 - Magnetic field disabled
+- Black Knights no dash anim
+- Crash when Agrael turn's come in combat
+- Crash on cast firewall
+- Sentinels boots effect not working
