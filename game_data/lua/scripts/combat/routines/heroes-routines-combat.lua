@@ -687,17 +687,18 @@ end
 function Routine_BallistaShootUnit(side, hero)
     -- log("Trigger fireball ballista shoot !")
     local ballista = UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_BALLISTA'
-    if CURRENT_UNIT == ballista then
-        if ROUTINE_VARS.Bombardier then
-            ROUTINE_VARS.Bombardier = nil
+    if IsCombatUnit(ballista) then
+        if CURRENT_UNIT == hero then
+            ShowFlyingSign("/Text/Game/Scripts/Combat/Bombardier.txt", hero, 9)
             for i,cr in GetUnits(1-side, CREATURE) do
-                startThread(ShootCombatUnit, ballista, cr)
-                sleep(600)
+                local x,y = GetUnitPosition(cr)
+                local target = cr.."-"..(10*COMBAT_TURN+i)
+                AddCreature(1-side, 180, 1, x, y, nil, target)
+                repeat sleep() until IsCombatUnit(target)
+                TryShootTarget(ballista, target, 360)
             end
         else
-            ROUTINE_VARS.Bombardier = not nil
-            SetATB_ID(CURRENT_UNIT, ATB_ZERO)
-            ShowFlyingSign("/Text/Game/Scripts/Combat/Bombardier.txt", hero, 9)
+            SetATB_ID(ballista, ATB_ZERO)
         end
     end
 end

@@ -7,11 +7,11 @@
 	<Icon32/>
 	<Icon64/>
 	<Icon128 href="/Textures/Icons/Blank.xdb#xpointer(/Texture)"/>
-	<AnimCharacter href="/Characters/Creatures/Preserve/Firebird.(Character).xdb#xpointer(/Character)"/>
-	<DeadCharacter/>
+	<AnimCharacter href="/Characters/invisible_creature.xdb#xpointer(/Character)"/>
+	<DeadCharacter href=""/>
 	<AnimShot/>
-	<SummoningEffect/>
-	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<SummoningEffect href=""/>
+	<DamageEffect href=""/>
 	<TeleportingMove>
 		<Use>false</Use>
 		<StartEffect/>
