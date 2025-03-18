@@ -10,7 +10,6 @@
 
 - Academy and Sylvan female heroes textures
 - UI incorrect size
-- Skills UI skill name darker
 - Marbas no anim for Consume Corpse
 - Kha Beleth attack anim not sync
 - Attribute building no UI
@@ -37,14 +36,20 @@
 - Add NCF creatures in editor
 - Darkstorm 1 creature instance per hero level
 - Darkstorm hero totem model
-- QAI version
-- More custom buildings
-- Add late-game challenge
+- Add ARMG templates
 
 ### Balance
 
 - Give AI starting gold, exp and stats ?
 - Inferno and Dungeon sacrificial buildings are bad
+
+### Massive work required
+
+- QAI version
+- New battlefields
+- Better vaults
+- In-game doc for heroes, artifacts and training bonuses
+- More custom buildings and late-game challenge
 
 
 # FIXED
