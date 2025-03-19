@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature>
+	<AttackSkill>16</AttackSkill>
+	<DefenceSkill>16</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>25</MinDamage>
+	<MaxDamage>30</MaxDamage>
+	<Speed>6</Speed>
+	<Initiative>9</Initiative>
+	<Flying>false</Flying>
+	<Health>450</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>2500</Exp>
+	<Power>444</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>8</CreatureTier>
+	<Upgrade>false</Upgrade>
+	<PairCreature>CREATURE_UNKNOWN</PairCreature>
+	<CreatureTown>TOWN_NO_TYPE</CreatureTown>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>1</WeeklyGrowth>
+	<Cost>
+		<Gold>1</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>false</SubjectOfRandomGeneration>
+	<MonsterShared/>
+	<CombatSize>2</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Added/Darkstorm.(CreatureVisual).xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_UNKNOWN</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_AURA_OF_BRAVERY</Item>
+		<Item>ABILITY_NO_ENEMY_RETALIATION</Item>
+		<Item>ABILITY_UNLIMITED_RETALIATION</Item>
+		<Item>ABILITY_BATTLE_FRENZY</Item>
+		<Item>ABILITY_IMMUNITY_TO_MAGIC</Item>
+		<Item>ABILITY_CRYSTAL_SCALES</Item>
+	</Abilities>
+</Creature>

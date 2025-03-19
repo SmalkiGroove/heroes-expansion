@@ -34,7 +34,6 @@
 
 - Skill tree accessible from level up window
 - Add NCF creatures in editor
-- Darkstorm 1 creature instance per hero level
 - Darkstorm hero totem model
 - Add ARMG templates
 
@@ -101,3 +100,4 @@
 - Crash when Agrael turn's come in combat
 - Crash on cast firewall
 - Sentinels boots effect not working
+- Darkstorm 1 creature instance per hero level

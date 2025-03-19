@@ -477,15 +477,14 @@ end
 
 function Routine_SummonDarkstorm(side, hero)
     -- log("Trigger summon darkstorm !")
-    SummonCreatureStack_X(side, CREATURE_DARKSTORM, GetHeroLevel(side), 2)
+    local type = 900 + GetHeroLevel(side)
+    local name = "DARKSTORM-creature"
+    local x = (side == ATTACKER) and (GRID_X_MIN+2) or (GRID_X_MAX-1)
+    local y = GRID_Y_MAX - 1
+    CREATURES[type] = {DUNGEON,8}
+    AddCreature(side, type, 1, x, y, nil, name)
     sleep(1)
-    for i,cr in GetUnits(side, CREATURE) do
-        local type = GetCreatureType(cr)
-        if type == CREATURE_DARKSTORM then
-            ROUTINE_VARS.Darkstorm = cr
-            SetATB_ID(cr, ATB_INSTANT)
-        end
-    end
+    ROUTINE_VARS.Darkstorm = name
 end
 
 function Routine_DarkstormLoseIfDead(side, hero, unit)
