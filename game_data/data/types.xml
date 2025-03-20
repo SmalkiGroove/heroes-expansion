@@ -3014,7 +3014,7 @@
 				<Item>HERO_SKILL_ANATOMY</Item>
 				<Item>HERO_SKILL_BALLISTICS</Item>
 				<Item>HERO_SKILL_HOUNDMASTERS</Item>
-				<Item>HERO_SKILL_INTELLIGENCE</Item>
+				<Item>HERO_SKILL_25</Item>
 				<Item>HERO_SKILL_SCHOLAR</Item>
 				<Item>HERO_SKILL_INTUITION</Item>
 				<Item>HERO_SKILL_RECRUITMENT</Item>
@@ -3085,7 +3085,7 @@
 				<Item>HERO_SKILL_RAGE_AWAKENING</Item>
 				<Item>HERO_SKILL_SEARING_FIRES</Item>
 				<Item>HERO_SKILL_VAMPIRISM</Item>
-				<Item>HERO_SKILL_FIRE_RESISTANCE</Item>
+				<Item>HERO_SKILL_BURNING_BLOOD</Item>
 				<Item>HERO_SKILL_WARRIORS_OF_THE_MAGMA</Item>
 				<Item>HERO_SKILL_URGASHS_CALL</Item>
 				<Item>HERO_SKILL_SIEGE</Item>
@@ -3109,8 +3109,8 @@
 				<Item>HERO_SKILL_RAGE_OF_THE_FOREST</Item>
 				<Item>HERO_SKILL_LAST_STAND</Item>
 				<Item>HERO_SKILL_WITCHCRAFT</Item>
-				<Item>HERO_SKILL_MANA_BURST</Item>
-				<Item>HERO_SKILL_SCORCHING_EARTH</Item>
+				<Item>HERO_SKILL_OVERHEAT</Item>
+				<Item>HERO_SKILL_SOIL_BURN</Item>
 				<Item>HERO_SKILL_STORM_WIND</Item>
 				<Item>HERO_SKILL_FOG_VEIL</Item>
 				<Item>HERO_SKILL_SPIRITISM</Item>
@@ -3129,7 +3129,7 @@
 				<Item>HERO_SKILL_OMNISCIENCE</Item>
 				<Item>HERO_SKILL_TELEPORT_ASSAULT</Item>
 				<Item>HERO_SKILL_WARRIORS_OF_THE_MOUNTAIN</Item>
-				<Item>HERO_SKILL_GRADUATE</Item>
+				<Item>HERO_SKILL_ULTIMATE</Item>
 				<Item>HERO_SKILL_SWIFTNESS</Item>
 				<Item>HERO_SKILL_LUCKY_CASTER</Item>
 				<Item>HERO_SKILL_POWER_OF_HASTE</Item>
@@ -3199,17 +3199,17 @@
 				<Item>HERO_SKILL_BACK_TO_THE_VOID</Item>
 				<Item>HERO_SKILL_BARBARIAN_ANCIENT_SMITHY</Item>
 				<Item>HERO_SKILL_BARBARIAN_VAMPIRISM</Item>
-				<Item>HERO_SKILL_BARBARIAN_SOIL_BURN</Item>
+				<Item>HERO_SKILL_SCORCHING_EARTH</Item>
 				<Item>HERO_SKILL_BARBARIAN_FOG_VEIL</Item>
-				<Item>HERO_SKILL_BARBARIAN_INTELLIGENCE</Item>
+				<Item>HERO_SKILL_INTELLIGENCE</Item>
 				<Item>HERO_SKILL_BARBARIAN_MYSTICISM</Item>
 				<Item>HERO_SKILL_BARBARIAN_ELITE_CASTERS</Item>
 				<Item>HERO_SKILL_BARBARIAN_STORM_WIND</Item>
-				<Item>HERO_SKILL_BARBARIAN_FIRE_PROTECTION</Item>
-				<Item>HERO_SKILL_BARBARIAN_SUN_FIRE</Item>
+				<Item>HERO_SKILL_FIRE_RESISTANCE</Item>
+				<Item>HERO_SKILL_MANA_BURST</Item>
 				<Item>HERO_SKILL_BARBARIAN_DISTRACT</Item>
-				<Item>HERO_SKILL_ULTIMATE</Item>
-				<Item>HERO_SKILL_BARBARIAN_MENTORING</Item>
+				<Item>HERO_SKILL_GRADUATE</Item>
+				<Item>HERO_SKILL_TALENTED_WARRIOR</Item>
 			</EnumEntries>
 		</Item>
 		<Item>
@@ -67278,7 +67278,7 @@
 					<Value>24</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_INTELLIGENCE</Name>
+					<Name>HERO_SKILL_25</Name>
 					<Value>25</Value>
 				</Item>
 				<Item>
@@ -67562,7 +67562,7 @@
 					<Value>95</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_FIRE_RESISTANCE</Name>
+					<Name>HERO_SKILL_BURNING_BLOOD</Name>
 					<Value>96</Value>
 				</Item>
 				<Item>
@@ -67658,11 +67658,11 @@
 					<Value>119</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_MANA_BURST</Name>
+					<Name>HERO_SKILL_OVERHEAT</Name>
 					<Value>120</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_SCORCHING_EARTH</Name>
+					<Name>HERO_SKILL_SOIL_BURN</Name>
 					<Value>121</Value>
 				</Item>
 				<Item>
@@ -67738,7 +67738,7 @@
 					<Value>139</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_GRADUATE</Name>
+					<Name>HERO_SKILL_ULTIMATE</Name>
 					<Value>140</Value>
 				</Item>
 				<Item>
@@ -68018,7 +68018,7 @@
 					<Value>209</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_BARBARIAN_SOIL_BURN</Name>
+					<Name>HERO_SKILL_SCORCHING_EARTH</Name>
 					<Value>210</Value>
 				</Item>
 				<Item>
@@ -68026,7 +68026,7 @@
 					<Value>211</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_BARBARIAN_INTELLIGENCE</Name>
+					<Name>HERO_SKILL_INTELLIGENCE</Name>
 					<Value>212</Value>
 				</Item>
 				<Item>
@@ -68042,11 +68042,11 @@
 					<Value>215</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_BARBARIAN_FIRE_PROTECTION</Name>
+					<Name>HERO_SKILL_FIRE_RESISTANCE</Name>
 					<Value>216</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_BARBARIAN_SUN_FIRE</Name>
+					<Name>HERO_SKILL_MANA_BURST</Name>
 					<Value>217</Value>
 				</Item>
 				<Item>
@@ -68054,11 +68054,11 @@
 					<Value>218</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_ULTIMATE</Name>
+					<Name>HERO_SKILL_GRADUATE</Name>
 					<Value>219</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_BARBARIAN_MENTORING</Name>
+					<Name>HERO_SKILL_TALENTED_WARRIOR</Name>
 					<Value>220</Value>
 				</Item>
 			</Entries>

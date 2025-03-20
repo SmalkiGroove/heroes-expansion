@@ -854,7 +854,7 @@ START_TRIGGER_SKILLS_ROUTINES = {
     [PERK_STAMINA] = Routine_StaminaBuff,
     [PERK_RAGE_AWAKENING] = Routine_RageAwakening,
     [PERK_INFUSION] = Routine_CheckInfusion,
-    [PERK_ENLIGHTENED] = Routine_CheckEnlightened,
+    [SPEC_ENLIGHTENED] = Routine_CheckEnlightened,
 }
 
 DAILY_TRIGGER_SKILLS_ROUTINES = {

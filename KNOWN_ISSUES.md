@@ -10,7 +10,7 @@
 
 - Academy and Sylvan female heroes textures
 - UI incorrect size
-- Marbas no anim for Consume Corpse
+- Consume Corpse camera glitch
 - Kha Beleth attack anim not sync
 - Attribute building no UI
 
@@ -46,7 +46,7 @@
 
 - QAI version
 - New battlefields
-- Better vaults
+- Better vault battles with siege
 - In-game doc for heroes, artifacts and training bonuses
 - More custom buildings and late-game challenge
 

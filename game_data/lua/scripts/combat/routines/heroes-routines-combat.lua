@@ -479,8 +479,8 @@ function Routine_SummonDarkstorm(side, hero)
     -- log("Trigger summon darkstorm !")
     local type = 900 + GetHeroLevel(side)
     local name = "DARKSTORM-creature"
-    local x = (side == ATTACKER) and (GRID_X_MIN+2) or (GRID_X_MAX-1)
-    local y = GRID_Y_MAX - 1
+    local x = (side == ATTACKER) and (GRID_X_MIN+1) or (GRID_X_MAX)
+    local y = GRID_Y_MAX
     CREATURES[type] = {DUNGEON,8}
     AddCreature(side, type, 1, x, y, nil, name)
     sleep(1)
