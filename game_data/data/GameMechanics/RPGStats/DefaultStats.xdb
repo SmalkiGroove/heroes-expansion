@@ -2080,11 +2080,11 @@
 						<Item>0.25</Item>
 						<Item>0.30</Item>
 					</PortionOfSummonedByGatingLevel>
-					<CallerStartATB>0.5</CallerStartATB>
+					<CallerStartATB>0.0</CallerStartATB>
 					<GatedStartATB>1.0</GatedStartATB>
 					<InitiativeFactor>0.75</InitiativeFactor>
 					<GatingMasteryPortionBonus>0.2</GatingMasteryPortionBonus>
-					<QuickGatingStartATB>0.75</QuickGatingStartATB>
+					<QuickGatingStartATB>0.50</QuickGatingStartATB>
 					<CriticalGatingConstantProb>0.1</CriticalGatingConstantProb>
 					<CriticalGatingPerLuckPointProb>0.1</CriticalGatingPerLuckPointProb>
 					<CriticalGatingPortionBonus>1</CriticalGatingPortionBonus>
@@ -3944,7 +3944,6 @@
 							<MaxCount1>15</MaxCount1>
 							<MinCount2>0</MinCount2>
 							<MaxCount2>0</MaxCount2>
-						</Item>
 						</Item>
 					</Creatures>
 					<RewardMin>

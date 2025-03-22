@@ -999,7 +999,7 @@ function Routine_MultiplyTroops(player, hero)
                 if faction == INFERNO and tier <= maxtier then
                     local nb = GetHeroCreatures(hero, cr)
                     local add = trunc(0.01 * percent * nb)
-                    AddHeroCreatures(hero, cr, add)
+                    if add > 0 then AddHeroCreatures(hero, cr, add) end
                     tracker[cr] = 1
                 end
             end

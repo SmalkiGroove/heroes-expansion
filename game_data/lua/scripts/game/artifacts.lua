@@ -404,7 +404,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_CODEX_OF_THE_SAINT]            = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_LOCATION_LEFTHAND, special=1}, --disabled
     [ARTIFACT_VIZIRS_CAP]                    = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_HEAD, special=0},
     [ARTIFACT_PLUNDERER_VEST]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_BODY, special=0},
-    [ARTIFACT_AVENGER_BOW]                   = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=0},
+    [ARTIFACT_AVENGER_BOW]                   = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=1}, --disabled
     [ARTIFACT_CAPTAINS_HOOK]                 = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_LEFTHAND, special=1},
     [ARTIFACT_PLUNDERER_SHOES]               = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_LEGS, special=0},
     [ARTIFACT_BUTCHER_GLAIVE]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_LOCATION_RIGHTHAND, special=1}, --disabled

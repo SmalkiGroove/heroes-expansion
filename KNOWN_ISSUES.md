@@ -11,8 +11,6 @@
 - Academy and Sylvan female heroes textures
 - UI incorrect size
 - Consume Corpse camera glitch
-- Kha Beleth attack anim not sync
-- Attribute building no UI
 
 ### Text issues
 
@@ -27,7 +25,6 @@
 - Leadership caravan doesn't spawn if no other tile available
 - Imprisoned heroes have no starting army
 - Maps with Tear of Asha are broken
-- Occultism invalid prerequisites
 - Shantiri Moon Disc blocks all light magic
 
 ### Suggestions
@@ -101,3 +98,6 @@
 - Crash on cast firewall
 - Sentinels boots effect not working
 - Darkstorm 1 creature instance per hero level
+- Attribute building no UI
+- Kha Beleth attack anim not sync
+- Occultism invalid prerequisites
