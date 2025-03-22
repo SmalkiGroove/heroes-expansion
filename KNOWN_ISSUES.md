@@ -80,7 +80,6 @@
 - Draconic set spawns 1 stack of dragons for each stack that dies at the same time
 - Offender spec op with multiplicative bonus from combat
 - Cape of Kings gives too much gold
-
 - Avenger description does not mention luck
 - Rework Elleshar spec to not add magic schools
 - Ballista HP are a little too low

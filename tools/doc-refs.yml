@@ -489,15 +489,15 @@ CREATURES:
     - name: BLACK KNIGHT
       tier: 6
       upgrade: 0
-      path: Neutrals/Black_Knight.xdb
+      path: Necropolis/Black_Knight.xdb
     - name: DREAD KNIGHT
       tier: 6
       upgrade: 1
-      path: Added/Dread_Knight.xdb
+      path: Necropolis/Dread_Knight.xdb
     - name: TERROR KNIGHT
       tier: 6
       upgrade: 2
-      path: Neutrals/Death_Knight.xdb
+      path: Necropolis/3rd/Death_Knight.xdb
     - name: WIGHT
       tier: 7
       upgrade: 0
@@ -720,43 +720,43 @@ CREATURES:
     - name: BONE DRAGON
       tier: 6
       upgrade: 0
-      path: Necropolis/Bone_Dragon.xdb
+      path: Neutrals/Bone_Dragon.xdb
     - name: SHADOW DRAGON
       tier: 6
       upgrade: 1
-      path: Necropolis/Shadow_Dragon.xdb
+      path: Neutrals/Shadow_Dragon.xdb
     - name: SPECTRAL DRAGON
       tier: 6
       upgrade: 2
-      path: Necropolis/3rd/HorrorDragon.xdb
+      path: Neutrals/HorrorDragon.xdb
     - name: BASILISK
       tier: 1
       upgrade: 0
-      path: Added/Basilisk.xdb
+      path: Neutrals/Basilisk.xdb
     - name: LIZARDMAN
       tier: 2
       upgrade: 0
-      path: Added/Lizardman.xdb
+      path: Neutrals/Lizardman.xdb
     - name: SPITTING SPIDER
       tier: 3
       upgrade: 0
-      path: Added/SpittingSpider.xdb
+      path: Neutrals/SpittingSpider.xdb
     - name: BEHEMOTH
       tier: 7
       upgrade: 0
-      path: Added/Behemoth.xdb
+      path: Neutrals/Behemoth.xdb
     - name: EINHERJAR
       tier: 7
       upgrade: 0
-      path: Added/Einherjar.xdb
+      path: Neutrals/Einherjar.xdb
     - name: KRAKEN
       tier: 7
       upgrade: 0
-      path: Added/Kraken.xdb
+      path: Neutrals/Kraken.xdb
     - name: LEGENDARY DRAGON
       tier: 8
       upgrade: 0
-      path: Added/LegendaryDragon.xdb
+      path: Neutrals/LegendaryDragon.xdb
 
 HEROES:
   HAVEN:
@@ -1170,7 +1170,7 @@ SKILLS:
       - INFUSION
       - ELEMENTAL_VISION
       - ETERNAL_SERVITUDE
-      - BARBARIAN_SOIL_BURN
+      - SOIL_BURN
       - SIEGE
   ULTIMATE:
     perks:

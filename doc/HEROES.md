@@ -122,7 +122,7 @@ Starting Skills
 __NICOLAI :__
 Suzerain - Saint
 
-- Hero contributes 250 golds per level in kingdom treasury per day.
+- Hero contributes 250 golds in kingdom treasury per day.
 - Training costs are reduced by 1% per hero level.
 - Hero gains experience at the start of the week depending on the stock of golds.
 - Gain +1 to all primary stats every 5 levels.
@@ -292,7 +292,7 @@ Starting Skills
 __ELLESHAR :__
 Elven Sage - Guardian
 
-- Every 6 battles won, hero gains +1 Spellpower and Knowledge and a skill point in one of the Magic Schools. If all Magic Schools are already known at expert level, give +1 Knowledge to other heroes.
+- Every 6 battles won, hero gains a skill point in one of the known Magic Schools. If the hero has already mastered a Magic School, he gains +1 to an attribute instead. Light Magic grants Defense, Dark Magic grants Attack, Destructive Magic grants Spellpower and Natural Magic grants Knowledge.
 - Hero has a permanent +1 Initiative.
 
 Starting Skills
@@ -965,8 +965,7 @@ __SHELTEM :__
 Bombardier - Demon Lord
 
 - Ballista's shots under the hero's command have a Fireball effect. The damage of the Fireball increases with hero level.
-- At the turn of each enemy creature in combat, the ballista uses 3 mana of the hero to attack it. The ballista cannot be controlled.
-- Restore mana equal to hero level after every victory.
+- The ballista cannot be controlled and cannot fire at enemy creatures. Instead, at each hero turn, it fires at random tiles adjacent to every enemy creature, dealing only Fireball damages to surrounding units.
 
 Starting Skills
 - Gating

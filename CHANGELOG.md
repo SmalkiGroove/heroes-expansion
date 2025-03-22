@@ -91,4 +91,29 @@ Initial beta release !
 
 ### 0.2.1 ()
 
+#### New
+
 - Added ability Natural Luck to Gold Dragons
+
+#### Fixed/Changed
+
+- Avenger description does not mention luck
+- Rework Elleshar spec to not add magic schools
+- Ballista HP are a little too low
+- Gabrielle infinite movement
+- Script error when ballista has no ammo
+- Nerf Sheltem
+- Sheltem proc after unit moves
+- Kha Beleth army growth script error
+- Giving skill can take ultimate's spot
+- 2 Meteor shower spells in natural magic school
+- Dragon tombstone does not work
+- Magnetic field disabled
+- Black Knights no dash anim
+- Crash when Agrael turn's come in combat
+- Crash on cast firewall
+- Sentinels boots effect not working
+- Darkstorm 1 creature instance per hero level
+- Attribute building no UI
+- Kha Beleth attack anim not sync
+- Occultism invalid prerequisites

@@ -202,7 +202,7 @@ Moreover, hero generates 1 Gold per day for each Skeleton it his or her army.
 - __Lord of the Undead__ : The Necromancer receives +3 to Spellpower and Knowledge due to his or her intimate understanding of Death. The Necromancy skill is also increased by 10%.
 
 ### GATING
-- __Swift Gating__ : Demonic creatures spend only 25% of their combat initiative to perform Gating.
+- __Swift Gating__ : Demonic creatures spend only 50% of their combat initiative to perform Gating.
 - __Gate Master__ : Gating ability becomes more potent, bringing 20% more reinforcements than normal.
 - __Swarming Gate__ : There's a 15-30% chance that the gated stack will summon twice as many reinforcements as normal (requires positive Luck).
 - __Hellfire__ : Creatures under hero's control are granted a 30% chance to deal additional fire damage on attack. Hellfire drains the hero's mana.
