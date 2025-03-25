@@ -3783,26 +3783,24 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_VAMPIRISM</ID>
+			<ID>HERO_SKILL_95</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Specializations/Dungeon/Seducer.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Specializations/Dungeon/Seducer.xdb#xpointer(/Texture)"/>
+					<Item href=""/>
+					<Item href=""/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
-					<Item href="/Text/Game/Skills/Unique/Invocation/Vampirism/Name.txt"/>
+					<Item href=""/>
 				</NameFileRef>
 				<CommonNameFileRef href=""/>
 				<DescriptionFileRef>
-					<Item href="/Text/Game/Skills/Unique/Invocation/Vampirism/Description.txt"/>
+					<Item href=""/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
-				<spellBuffs>
-					<Item>SPELL_VAMPIRISM</Item>
-				</spellBuffs>
+				<spellBuffs/>
 				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
@@ -8542,7 +8540,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_BARBRIAN_VAMPIRISM</ID>
+			<ID>HERO_SKILL_VAMPIRISM</ID>
 			<obj>
 				<Texture>
 					<Item href="/Textures/HeroScreen/Specializations/Dungeon/Seducer.xdb#xpointer(/Texture)"/>

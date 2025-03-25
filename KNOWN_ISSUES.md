@@ -26,6 +26,7 @@
 - Imprisoned heroes have no starting army
 - Maps with Tear of Asha are broken
 - Shantiri Moon Disc blocks all light magic
+- Graduate unlocks ultimate skill
 
 ### Suggestions
 

@@ -89,7 +89,7 @@ Initial beta release !
 - Draconic set spawns 1 stack of dragons for each stack that dies at the same time
 - Offender spec op with multiplicative bonus from combat
 
-### 0.2.1 ()
+### 0.2.1 (22/03/2025)
 
 #### New
 
