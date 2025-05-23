@@ -27,6 +27,7 @@
 - Maps with Tear of Asha are broken
 - Shantiri Moon Disc blocks all light magic
 - Graduate unlocks ultimate skill
+- Darkstorm creature should not stay in army after battle
 
 ### Suggestions
 

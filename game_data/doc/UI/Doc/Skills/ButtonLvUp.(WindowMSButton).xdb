@@ -2,7 +2,7 @@
 <WindowMSButton ObjectRecordID="1000123">
 	<ClassTypeID>285694855</ClassTypeID>
 	<Shared href="Button.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
-	<Name>SkillWheelButton</Name>
+	<Name>SkillWheelButtonLvUp</Name>
 	<TooltipFileRef href="Button.txt"/>
 	<Visible>true</Visible>
 	<Priority>100</Priority>
@@ -10,18 +10,18 @@
 	<Placement>
 		<Position>
 			<First>
-				<x>100</x>
+				<x>20</x>
 				<y>40</y>
 			</First>
 			<Second>true</Second>
 		</Position>
 		<VerAllign>
 			<First>EPA_LOW_END</First>
-			<Second>false</Second>
+			<Second>true</Second>
 		</VerAllign>
 		<HorAllign>
 			<First>EPA_LOW_END</First>
-			<Second>false</Second>
+			<Second>true</Second>
 		</HorAllign>
 		<Size>
 			<First>
@@ -57,7 +57,7 @@
 			<MessageOnEnterState/>
 			<CommandsOnEnterState>
 				<Commands>
-					<Item href="button/SkillsShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="button/SkillsShowLvUp.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 				</Commands>
 				<Reversable>false</Reversable>
 			</CommandsOnEnterState>
