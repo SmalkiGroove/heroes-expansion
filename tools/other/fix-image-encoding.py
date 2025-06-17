@@ -1,9 +1,12 @@
 from wand.image import Image
+from wand import image
 import os
 
 def fix_image_encoding(image_path):
     with Image(filename=image_path) as img:
-        img.options['dds:mipmaps'] = '0'
+        # img.options['dds:mipmaps'] = '0'
+        # img.compression = 'dxt3'
+        image.library.MagickSetOption(img.wand, b'dds:mipmaps', b'0')
         img.save(filename=image_path)
 
 interface_path = "../../game_data/interface/UI/pwlscreen"
