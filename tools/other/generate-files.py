@@ -30,6 +30,8 @@ for artifact in artifacts_data["Table_DBArtifact_ArtifactEffect"]["objects"]["It
         for line in fileinput.input(data_path + mapobj_artifact_path, inplace=True):
             if line.find('<Effect href=') > -1:
                 print(f'	<Effect href="{tmp_dict[str(artifact["obj"]["Type"])]}"/>')
+            elif line.find('<ArtifactID>') > -1:
+                print(f'	<ArtifactID>{str(artifact["ID"])}</ArtifactID>')
             else:
                 print(line, end='')
 

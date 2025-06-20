@@ -433,7 +433,13 @@ end
 function Routine_RageAwakening(player, hero, mastery)
     log("$ Routine_RageAwakening")
     if mastery == 1 then
-        GiveHeroSkill(hero, SKILL_BLOOD_RAGE)
+        local nb_skills = 0
+        for _,sk in SKILLS_COMMON do
+            if HasHeroSkill(hero, sk) then nb_skills = nb_skills + 1 end
+        end
+        if nb_skills < 7 then
+            GiveHeroSkill(hero, SKILL_BLOOD_RAGE)
+        end
     end
 end
 
@@ -848,7 +854,7 @@ START_TRIGGER_SKILLS_ROUTINES = {
     [PERK_STAMINA] = Routine_StaminaBuff,
     [PERK_RAGE_AWAKENING] = Routine_RageAwakening,
     [PERK_INFUSION] = Routine_CheckInfusion,
-    [PERK_ENLIGHTENED] = Routine_CheckEnlightened,
+    [SPEC_ENLIGHTENED] = Routine_CheckEnlightened,
 }
 
 DAILY_TRIGGER_SKILLS_ROUTINES = {

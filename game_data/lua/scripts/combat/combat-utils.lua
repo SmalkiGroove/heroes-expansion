@@ -122,9 +122,9 @@ function HeroCast_Global(hero, spell, mana)
     if mana == FREE_MANA then SetMana(hero, m) end
 end
 
-function TryShootTarget(unit,target)
+function TryShootTarget(unit, target, delay)
     startThread(ShootCombatUnit, unit, target)
-    sleep(1) --print("debug tryshoottarget "..unit.." - "..CURRENT_UNIT)
+    sleep(delay or 1)
     return unit ~= CURRENT_UNIT
 end
 

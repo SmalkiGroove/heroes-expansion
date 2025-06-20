@@ -59,7 +59,7 @@
 | SAVAGE TREANT | 6 | 3 | 180 | 23 | 27 | 10-20 | 5 | 8 | _none_ | Spiteful, Entangling Roots, Rage Of The Forest, Unstoppable, Unflagging |
 | | | | | | | | | | | |
 | GREEN DRAGON | 7 | 1 | 220 | 31 | 31 | 40-50 | 9 | 13 | _none_ | Acid Breath, Acid Blood, Regeneration |
-| GOLDEN DRAGON | 7 | 1 | 230 | 34 | 34 | 45-55 | 9 | 13 | _none_ | Acid Breath, Acid Blood, Regeneration |
+| GOLDEN DRAGON | 7 | 1 | 230 | 34 | 34 | 45-55 | 9 | 13 | _none_ | Acid Breath, Acid Blood, Regeneration, Natural Luck |
 | CRYSTAL DRAGON | 7 | 1 | 225 | 37 | 37 | 50-60 | 9 | 14 | _none_ | Prismatic Breath, Acid Blood, Regeneration, Mythic |
 
 ### FORTRESS:

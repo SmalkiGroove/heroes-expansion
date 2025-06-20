@@ -14,8 +14,9 @@ function Routine_BallistaRandomSalvo(side, hero)
         local n = 1 + trunc(GetHeroLevel(side) * 0.1)
         for i = 1,n do
             local target = RandomCreature(1-side,i)
-            if target then ShootCombatUnit(ballista, target) end
+            if target then startThread(ShootCombatUnit, ballista, target) end
             sleep(600)
+            if not IsCombatUnit(ballista) then return end
         end
     end
 end
@@ -167,7 +168,9 @@ function Routine_MoveForwardUnits(side, hero)
         local x,y = GetUnitPosition(cr)
         local x0 = (side == ATTACKER) and GRID_X_MIN or GRID_X_MAX
         local x1 = (side == ATTACKER) and (x + 3) or (x - 3)
-        if x ~= x0 then MoveCombatUnit(cr, x1, y) end
+        if x ~= x0 then
+            startThread(MoveCombatUnit, cr, x1, y)
+        end
     end
 end
 
@@ -292,8 +295,11 @@ end
 
 function Routine_BallistaMoveFirst(side, hero)
     -- log("Trigger ballista play first !")
-    SetATB_WarMachineType(side, WAR_MACHINE_BALLISTA, ATB_INSTANT)
-    -- ShowFlyingSign("/Text/Game/Scripts/Combat/WorkshopExpert.txt", hero, 9)
+    local ballista = UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_BALLISTA'
+    if IsCombatUnit(ballista) then
+        SetATB_ID(ballista, ATB_INSTANT)
+        ShowFlyingSign("/Text/Game/Scripts/Combat/WorkshopExpert.txt", ballista, 9)
+    end
 end
 
 function Routine_SpearWielderCoordination(side, hero)
@@ -471,15 +477,14 @@ end
 
 function Routine_SummonDarkstorm(side, hero)
     -- log("Trigger summon darkstorm !")
-    SummonCreatureStack_X(side, CREATURE_DARKSTORM, GetHeroLevel(side), 2)
+    local type = 900 + GetHeroLevel(side)
+    local name = "DARKSTORM-creature"
+    local x = (side == ATTACKER) and (GRID_X_MIN+1) or (GRID_X_MAX)
+    local y = GRID_Y_MAX
+    CREATURES[type] = {DUNGEON,8}
+    AddCreature(side, type, 1, x, y, nil, name)
     sleep(1)
-    for i,cr in GetUnits(side, CREATURE) do
-        local type = GetCreatureType(cr)
-        if type == CREATURE_DARKSTORM then
-            ROUTINE_VARS.Darkstorm = cr
-            SetATB_ID(cr, ATB_INSTANT)
-        end
-    end
+    ROUTINE_VARS.Darkstorm = name
 end
 
 function Routine_DarkstormLoseIfDead(side, hero, unit)
@@ -681,18 +686,18 @@ end
 function Routine_BallistaShootUnit(side, hero)
     -- log("Trigger fireball ballista shoot !")
     local ballista = UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_BALLISTA'
-    if not IsCombatUnit(ballista) then return end
-
-    if CURRENT_UNIT == ballista then
-        SetATB_ID(CURRENT_UNIT, ATB_ZERO)
-    elseif CURRENT_UNIT_SIDE ~= side then
-        if IsCreature(CURRENT_UNIT) then
-            local m = GetUnitManaPoints(hero)
-            if m >= 3 then
-                ShootCombatUnit(ballista, CURRENT_UNIT)
-                SetMana(hero, m-3)
-                ShowFlyingSign("/Text/Game/Scripts/Combat/Bombardier.txt", hero, 9)
+    if IsCombatUnit(ballista) then
+        if CURRENT_UNIT == hero then
+            ShowFlyingSign("/Text/Game/Scripts/Combat/Bombardier.txt", hero, 9)
+            for i,cr in GetUnits(1-side, CREATURE) do
+                local x,y = GetUnitPosition(cr)
+                local target = cr.."-"..(10*COMBAT_TURN+i)
+                AddCreature(1-side, 180, 1, x, y, nil, target)
+                repeat sleep() until IsCombatUnit(target)
+                TryShootTarget(ballista, target, 360)
             end
+        else
+            SetATB_ID(ballista, ATB_ZERO)
         end
     end
 end

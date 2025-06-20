@@ -138,25 +138,23 @@ end
 function Routine_MovePointsPerGriffin(player, hero)
     log("$ Routine_MovePointsPerGriffin")
     local movement = GetHeroStat(hero, STAT_MOVE_POINTS)
+    local counter = 0
     local n = 0
     n = n + GetHeroCreatures(hero, CREATURE_GRIFFIN)
     n = n + GetHeroCreatures(hero, CREATURE_ROYAL_GRIFFIN)
     n = n + GetHeroCreatures(hero, CREATURE_BATTLE_GRIFFIN)
-    local n0 = n
-    while n > 0 do
+    while n > counter do
         sleep(2)
         if not IsPlayerCurrent(player) then break end
-        local v = 25 - trunc(0.1 * (n0-n))
+        local v = round(20 * (1 - counter/n))
         local m = GetHeroStat(hero, STAT_MOVE_POINTS) + v
         if m <= movement then
             ChangeHeroStat(hero, STAT_MOVE_POINTS, v)
-            n = n - 1
+            counter = counter + 1
+            n = 0 + GetHeroCreatures(hero, CREATURE_GRIFFIN)
+            n = n + GetHeroCreatures(hero, CREATURE_ROYAL_GRIFFIN)
+            n = n + GetHeroCreatures(hero, CREATURE_BATTLE_GRIFFIN)
         end
-        local nn = 0
-        nn = nn + GetHeroCreatures(hero, CREATURE_GRIFFIN)
-        nn = nn + GetHeroCreatures(hero, CREATURE_ROYAL_GRIFFIN)
-        nn = nn + GetHeroCreatures(hero, CREATURE_BATTLE_GRIFFIN)
-        n = n + nn - n0
     end
 end
 
@@ -227,20 +225,24 @@ function Routine_ElvenSageVictory(player, hero, combatIndex)
     log("$ Routine_ElvenSageVictory")
     Var_Elleshar_BattleWon = Var_Elleshar_BattleWon + 1
     if mod(Var_Elleshar_BattleWon, 6) == 0 then
-        AddHeroStatAmount(player, hero, STAT_SPELL_POWER, 1)
-        AddHeroStatAmount(player, hero, STAT_KNOWLEDGE, 1)
         local upgradable = {}
+        local maxed = {}
         for sk = 9,12 do
-            if GetHeroSkillMastery(hero, sk) < 3 then insert(upgradable, sk) end
+            local m = GetHeroSkillMastery(hero, sk)
+            if m == 1 or m == 2 then insert(upgradable, sk) end
+            if m >= 3 then insert(maxed, sk) end
         end
         local n = length(upgradable)
-        if n > 0 then
-            local sk = upgradable[random(1,n,Var_Elleshar_BattleWon)]
-            GiveHeroSkill(hero, sk)
+        if n == 0 then
+            -- no skill to upgrade
+        elseif n == 1 then
+            GiveHeroSkill(hero, upgradable[1])
         else
-            for _,h in GetPlayerHeroes(player) do
-                if h ~= hero then ChangeHeroStat(h, STAT_KNOWLEDGE, 1) end
-            end
+            GiveHeroSkill(hero, upgradable[random(1,n,Var_Elleshar_BattleWon)])
+        end
+        local skill_to_attribute = {[9]=3,[10]=1,[11]=2,[12]=4}
+        for _,sk in maxed do
+            ChangeHeroStat(hero,skill_to_attribute[sk], 1)
         end
     end
 end
@@ -995,9 +997,9 @@ function Routine_MultiplyTroops(player, hero)
                 local faction = CREATURES[cr][1]
                 local tier = CREATURES[cr][2]
                 if faction == INFERNO and tier <= maxtier then
-                    local nb = GetHeroCreatures(cr)
+                    local nb = GetHeroCreatures(hero, cr)
                     local add = trunc(0.01 * percent * nb)
-                    AddHeroCreatures(hero, cr, add)
+                    if add > 0 then AddHeroCreatures(hero, cr, add) end
                     tracker[cr] = 1
                 end
             end

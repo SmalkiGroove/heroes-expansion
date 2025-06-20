@@ -66,9 +66,9 @@ end
 
 function Routine_ArtifactSentinelsBoots(player, hero, combatIndex)
     log("$ Routine_ArtifactSentinelsBoots")
-    local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, side)
+    local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
 	for i = 0,stacks-1 do
-        local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, side, i)
+        local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
         if died ~= 0 then return end
     end
     GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_MORALE, 2)
@@ -226,9 +226,9 @@ end
 function Routine_ArtifactVikingShield(player, hero, combatIndex)
     log("$ Routine_ArtifactVikingShield")
     local value = GetArmyStrength(combatIndex, 0)
-    local split = random(0,10,value)
+    local split = random(0,4,value)
     AddPlayerResource(player, hero, WOOD, round(0.001 * split * value))
-    AddPlayerResource(player, hero, ORE, round(0.001 * (10-split) * value))
+    AddPlayerResource(player, hero, ORE, round(0.001 * (4-split) * value))
 end
 
 Var_StaffLyreVictories = {}

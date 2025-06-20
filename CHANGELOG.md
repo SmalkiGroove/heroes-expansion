@@ -88,3 +88,32 @@ Initial beta release !
 - Raelag doesn't get twice the amount of legendary dragons
 - Draconic set spawns 1 stack of dragons for each stack that dies at the same time
 - Offender spec op with multiplicative bonus from combat
+
+### 0.2.1 (22/03/2025)
+
+#### New
+
+- Added ability Natural Luck to Gold Dragons
+
+#### Fixed/Changed
+
+- Avenger description does not mention luck
+- Rework Elleshar spec to not add magic schools
+- Ballista HP are a little too low
+- Gabrielle infinite movement
+- Script error when ballista has no ammo
+- Nerf Sheltem
+- Sheltem proc after unit moves
+- Kha Beleth army growth script error
+- Giving skill can take ultimate's spot
+- 2 Meteor shower spells in natural magic school
+- Dragon tombstone does not work
+- Magnetic field disabled
+- Black Knights no dash anim
+- Crash when Agrael turn's come in combat
+- Crash on cast firewall
+- Sentinels boots effect not working
+- Darkstorm 1 creature instance per hero level
+- Attribute building no UI
+- Kha Beleth attack anim not sync
+- Occultism invalid prerequisites
