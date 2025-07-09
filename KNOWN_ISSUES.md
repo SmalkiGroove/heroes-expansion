@@ -9,7 +9,6 @@
 ### Broken graphics or animations
 
 - Academy and Sylvan female heroes textures
-- UI incorrect size
 - Consume Corpse camera glitch
 
 ### Text issues
@@ -31,7 +30,6 @@
 
 ### Suggestions
 
-- Skill tree accessible from level up window
 - Add NCF creatures in editor
 - Darkstorm hero totem model
 - Add ARMG templates
@@ -102,3 +100,5 @@
 - Attribute building no UI
 - Kha Beleth attack anim not sync
 - Occultism invalid prerequisites
+- Skill tree accessible from level up window
+- UI incorrect size
