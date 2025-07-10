@@ -3,7 +3,7 @@ import os
 import xmltodict
 from jinja2 import Environment, FileSystemLoader
 
-
+root_text_path = "../../game_texts/texts-EN"
 root_data_path = "../../game_data/data"
 skills_xdb_path = "../../game_data/data/GameMechanics/RefTables/Skills.xdb"
 skill_tree_path = "../../game_data/doc/UI/Doc/Skills"
@@ -18,33 +18,37 @@ all_selected = open("out_selected.xml", 'w')
 all_windows = open("out_windows.xml", 'w')
 
 def button_base_path(id, faction):
-    return os.path.join(skill_tree_path, faction, f"{id}.(WindowMSButton).xdb")
+    return os.path.join(skill_tree_path, faction, id, f"{id}.(WindowMSButton).xdb")
 def button_shared_path(id, faction):
-    return os.path.join(skill_tree_path, faction, f"{id}.(WindowMSButtonShared).xdb")
+    return os.path.join(skill_tree_path, faction, id, f"{id}.(WindowMSButtonShared).xdb")
+def button_bgwindow_path(id, faction):
+    return os.path.join(skill_tree_path, faction, id, f"{id}_icon.(WindowSimple).xdb")
+def button_bgshared_path(id, faction):
+    return os.path.join(skill_tree_path, faction, id, f"{id}_icon.(WindowSimpleShared).xdb")
 def button_background_path(id, faction):
-    return os.path.join(skill_tree_path, faction, f"{id}.(BackgroundSimpleScallingTexture).xdb")
+    return os.path.join(skill_tree_path, faction, id, f"{id}.(BackgroundSimpleScallingTexture).xdb")
 def button_selected_path(id):
-    return os.path.join(skill_tree_path, "Selection", f"{id}_select.(WindowMSButton).xdb")
+    return os.path.join(skill_tree_path, "Selection", id, f"{id}_select.(WindowMSButton).xdb")
 def ui_message_up_path(id):
-    return os.path.join(skill_tree_path, "Selection", f"{id}_up.(UISSendUIMessage).xdb")
+    return os.path.join(skill_tree_path, "Selection", id, f"{id}_up.(UISSendUIMessage).xdb")
 def ui_message_down_path(id):
-    return os.path.join(skill_tree_path, "Selection", f"{id}_down.(UISSendUIMessage).xdb")
+    return os.path.join(skill_tree_path, "Selection", id, f"{id}_down.(UISSendUIMessage).xdb")
 def desc_ui_message_path(id):
-    return os.path.join(skill_tree_path, "Description", f"{id}.(UISSendUIMessage).xdb")
+    return os.path.join(skill_tree_path, "Description", id, f"{id}.(UISSendUIMessage).xdb")
 def desc_window_base_path(id):
-    return os.path.join(skill_tree_path, "Description", f"{id}_window.(WindowSimple).xdb")
+    return os.path.join(skill_tree_path, "Description", id, f"{id}_window.(WindowSimple).xdb")
 def desc_window_shared_path(id):
-    return os.path.join(skill_tree_path, "Description", f"{id}_window.(WindowSimpleShared).xdb")
+    return os.path.join(skill_tree_path, "Description", id, f"{id}_window.(WindowSimpleShared).xdb")
 def desc_icon_base_path(id):
-    return os.path.join(skill_tree_path, "Description", f"{id}_icon.(WindowMSButton).xdb")
+    return os.path.join(skill_tree_path, "Description", id, f"{id}_icon.(WindowMSButton).xdb")
 def desc_icon_shared_path(id):
-    return os.path.join(skill_tree_path, "Description", f"{id}_icon.(WindowMSButtonShared).xdb")
+    return os.path.join(skill_tree_path, "Description", id, f"{id}_icon.(WindowMSButtonShared).xdb")
 def desc_icon_path(id):
-    return os.path.join(skill_tree_path, "Description", f"{id}_icon.(BackgroundSimpleScallingTexture).xdb")
+    return os.path.join(skill_tree_path, "Description", id, f"{id}_icon.(BackgroundSimpleScallingTexture).xdb")
 def skill_name_path(id):
-    return os.path.join(skill_tree_path, "Description", f"{id}_name.(WindowTextView).xdb")
+    return os.path.join(skill_tree_path, "Description", id, f"{id}_name.(WindowTextView).xdb")
 def skill_desc_path(id):
-    return os.path.join(skill_tree_path, "Description", f"{id}_desc.(WindowTextView).xdb")
+    return os.path.join(skill_tree_path, "Description", id, f"{id}_desc.(WindowTextView).xdb")
 
 def write_from_template(tpl_name, output_path, variables):
     tpl = jinja_env.get_template(tpl_name)
@@ -155,8 +159,15 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
                     button_data = xmltodict.parse(button_base_xdb.read())
                     x = button_data["WindowMSButton"]["Placement"]["Position"]["First"]["x"]
                     y = button_data["WindowMSButton"]["Placement"]["Position"]["First"]["y"]
-                write_from_template("buttonshared.(WindowMSButtonShared).xdb.j2", button_shared_path(id, faction), {'skill_id': id, 'required_skills': prerequisites[id]})
-                write_from_template("icon.(BackgroundSimpleScallingTexture).xdb.j2", button_background_path(id, faction), {'icon_path': elements[id]['icon'], 'icon_size': 32})
+                icon_size = find_icon_size(elements[id]['icon'])
+                directories = {os.path.join(skill_tree_path, faction, id), os.path.join(skill_tree_path, "Selection", id), os.path.join(skill_tree_path, "Description", id)}
+                for targetDir in directories:
+                    if not os.path.exists(targetDir):
+                        os.makedirs(targetDir)
+                write_from_template("buttonshared.(WindowMSButtonShared).xdb.j2", button_shared_path(id, faction), {'skill_id': id, 'required_skills': prerequisites[id], 'icon_path': elements[id]['icon']})
+                write_from_template("skillicon.(WindowSimple).xdb.j2", button_bgwindow_path(id, faction), {'skill_id': id})
+                write_from_template("skillicon.(WindowSimpleShared).xdb.j2", button_bgshared_path(id, faction), {'skill_id': id})
+                write_from_template("icon.(BackgroundSimpleScallingTexture).xdb.j2", button_background_path(id, faction), {'icon_path': elements[id]['icon'], 'icon_size': icon_size})
                 write_from_template("selection.(WindowMSButton).xdb.j2", button_selected_path(id), {'skill_id': id, 'pos_x': x, 'pos_y': y})
                 write_from_template("uimessage1.(UISSendUIMessage).xdb.j2", ui_message_up_path(id), {'skill_id': id})
                 write_from_template("uimessage2.(UISSendUIMessage).xdb.j2", ui_message_down_path(id), {'skill_id': id})
@@ -165,14 +176,18 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
                 write_from_template("windowshared.(WindowSimpleShared).xdb.j2", desc_window_shared_path(id), {'skill_id': id})
                 write_from_template("iconbase.(WindowMSButton).xdb.j2", desc_icon_base_path(id), {'skill_id': id})
                 write_from_template("iconshared.(WindowMSButtonShared).xdb.j2", desc_icon_shared_path(id), {'skill_id': id})
-                write_from_template("icon.(BackgroundSimpleScallingTexture).xdb.j2", desc_icon_path(id), {'icon_path': elements[id]['icon'], 'icon_size': find_icon_size(elements[id]['icon'])})
+                write_from_template("icon.(BackgroundSimpleScallingTexture).xdb.j2", desc_icon_path(id), {'icon_path': elements[id]['icon'], 'icon_size': icon_size})
                 write_from_template("skillname.(WindowTextView).xdb.j2", skill_name_path(id), {'skill_id': id, 'name_path': elements[id]['name']})
                 write_from_template("skilldesc.(WindowTextView).xdb.j2", skill_desc_path(id), {'skill_id': id, 'desc_path': elements[id]['desc']})
-                all_buttons.write(f"<Item href=\"/UI/Doc/Skills/{faction}/{id}.(WindowMSButton).xdb#xpointer(/WindowMSButton)\"/>\n")
-                all_selected.write(f"<Item href=\"{id}_select.(WindowMSButton).xdb#xpointer(/WindowMSButton)\"/>\n")
-                all_windows.write(f"<Item href=\"{id}_window.(WindowSimple).xdb#xpointer(/WindowSimple)\"/>\n")
+                all_buttons.write(f"<Item href=\"/UI/Doc/Skills/{faction}/{id}/{id}.(WindowMSButton).xdb#xpointer(/WindowMSButton)\"/>\n")
+                all_selected.write(f"<Item href=\"{id}/{id}_select.(WindowMSButton).xdb#xpointer(/WindowMSButton)\"/>\n")
+                all_windows.write(f"<Item href=\"{id}/{id}_window.(WindowSimple).xdb#xpointer(/WindowSimple)\"/>\n")
         if not found:
-            print(f"WARN: missing button file for ID {id} ~({elements[id]['name']})")
+            skill_name = skill['ID']
+            if elements[id]['name'] != "":
+                with open(os.path.join(root_text_path, elements[id]['name'][1:]), 'r', encoding="utf-16") as skill_name_txt:
+                    skill_name = skill_name_txt.read().strip()
+            print(f"WARN: missing button file for ID {id} ({skill_name})")
 
 all_buttons.close()
 all_selected.close()

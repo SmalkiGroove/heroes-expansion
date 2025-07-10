@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowMSButtonShared ObjectRecordID="1000064">
 	<Crap>false</Crap>
-	<Children/>
-	<Background href="{{ skill_id }}.(BackgroundSimpleScallingTexture).xdb"/>
+	<Children>
+	    <Item href="{{ skill_id }}_icon.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+	</Children>
+	<Background/>
 	<Foreground/>
 	<Flags>
 		<Transparent>false</Transparent>
@@ -67,10 +69,10 @@
 				<OnEnterSubState>
 					<Commands>
 						{%- for req_id in required_skills %}
-						<Item href="/UI/Doc/Skills/Selection/{{ req_id }}_up.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+						<Item href="/UI/Doc/Skills/Selection/{{ req_id }}/{{ req_id }}_up.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 						{%- endfor %}
-						<Item href="/UI/Doc/Skills/Selection/{{ skill_id }}_up.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-						<Item href="/UI/Doc/Skills/Description/{{ skill_id }}.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+						<Item href="/UI/Doc/Skills/Selection/{{ skill_id }}/{{ skill_id }}_up.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+						<Item href="/UI/Doc/Skills/Description/{{ skill_id }}/{{ skill_id }}.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					</Commands>
 					<Reversable>true</Reversable>
 				</OnEnterSubState>
