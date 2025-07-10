@@ -21,6 +21,8 @@ def button_base_path(id, faction):
     return os.path.join(skill_tree_path, faction, f"{id}.(WindowMSButton).xdb")
 def button_shared_path(id, faction):
     return os.path.join(skill_tree_path, faction, f"{id}.(WindowMSButtonShared).xdb")
+def button_background_path(id, faction):
+    return os.path.join(skill_tree_path, faction, f"{id}.(BackgroundSimpleScallingTexture).xdb")
 def button_selected_path(id):
     return os.path.join(skill_tree_path, "Selection", f"{id}_select.(WindowMSButton).xdb")
 def ui_message_up_path(id):
@@ -91,7 +93,7 @@ def find_icon_size(path:str):
     return 64
 
 
-factions = ["Common", "knight", "ranger", "runemage", "wizard", "warlock", "necro", "demon", "barbarian"]
+factions = ["Common", "Haven", "Preserve", "Fortress", "Academy", "Dungeon", "Necro", "Inferno", "Stronghold"]
 
 counter = -1
 for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
@@ -154,6 +156,7 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
                     x = button_data["WindowMSButton"]["Placement"]["Position"]["First"]["x"]
                     y = button_data["WindowMSButton"]["Placement"]["Position"]["First"]["y"]
                 write_from_template("buttonshared.(WindowMSButtonShared).xdb.j2", button_shared_path(id, faction), {'skill_id': id, 'required_skills': prerequisites[id]})
+                write_from_template("icon.(BackgroundSimpleScallingTexture).xdb.j2", button_background_path(id, faction), {'icon_path': elements[id]['icon'], 'icon_size': 32})
                 write_from_template("selection.(WindowMSButton).xdb.j2", button_selected_path(id), {'skill_id': id, 'pos_x': x, 'pos_y': y})
                 write_from_template("uimessage1.(UISSendUIMessage).xdb.j2", ui_message_up_path(id), {'skill_id': id})
                 write_from_template("uimessage2.(UISSendUIMessage).xdb.j2", ui_message_down_path(id), {'skill_id': id})
@@ -169,7 +172,7 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
                 all_selected.write(f"<Item href=\"{id}_select.(WindowMSButton).xdb#xpointer(/WindowMSButton)\"/>\n")
                 all_windows.write(f"<Item href=\"{id}_window.(WindowSimple).xdb#xpointer(/WindowSimple)\"/>\n")
         if not found:
-            print(f"WARN: missing button file for ID {id}")
+            print(f"WARN: missing button file for ID {id} ~({elements[id]['name']})")
 
 all_buttons.close()
 all_selected.close()
