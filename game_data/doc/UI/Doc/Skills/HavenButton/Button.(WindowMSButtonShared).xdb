@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowMSButtonShared ObjectRecordID="1000064">
 	<Crap>false</Crap>
-	<Children>
-	    <Item href="Icon.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-	</Children>
-	<Background/>
+	<Children/>
+	<Children/>
+	<Background href="Background.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 	<Foreground/>
 	<Flags>
 		<Transparent>false</Transparent>
@@ -27,8 +26,8 @@
 		</HorAllign>
 		<Size>
 			<First>
-				<x>55</x>
-				<y>55</y>
+				<x>61</x>
+				<y>61</y>
 			</First>
 			<Second>false</Second>
 		</Size>
@@ -49,7 +48,7 @@
 	</Placement>
 	<ActiveArea/>
 	<IgnoreDblClick>false</IgnoreDblClick>
-	<ActiveMask/>
+	<ActiveMask href="Background.xdb#xpointer(/Texture)"/>
 	<VisualStates>
 		<Item>
 			<Normal>
@@ -63,7 +62,7 @@
 				<TextFormat/>
 			</Normal>
 			<MouseOver>
-				<Background/>
+				<Background href="Background.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 				<Foreground href="/UI/Doc/Skills/Highlight.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
 				<TextString/>
 				<OnEnterSubState>
@@ -113,7 +112,7 @@
 		</Item>
 		<Item>
 			<Normal>
-				<Background/>
+				<Background href="Background.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 				<Foreground href="/UI/Doc/Skills/Select.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
 				<TextString/>
 				<OnEnterSubState>
@@ -123,7 +122,7 @@
 				<TextFormat/>
 			</Normal>
 			<MouseOver>
-				<Background/>
+				<Background href="Background.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 				<Foreground href="/UI/Doc/Skills/Highlight.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
 				<TextString/>
 				<OnEnterSubState>
