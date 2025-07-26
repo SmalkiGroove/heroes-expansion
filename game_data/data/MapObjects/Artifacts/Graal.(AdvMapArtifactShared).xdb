@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <AdvMapArtifactShared ObjectRecordID="68">
-	<Model href="/_(Model)/Artefacts/Tank.(Model).xdb#xpointer(/Model)" />
+	<Model href="/_(Model)/Artefacts/Graal.xdb#xpointer(/Model)"/>
 	<AnimSet href="/_(AnimSet)/Artefacts/General.(AnimSet).xdb#xpointer(/AnimSet)"/>
 	<blockedTiles/>
 	<holeTiles/>
@@ -10,3 +10,22 @@
 		<x>0</x>
 		<y>0</y>
 	</PossessionMarkerTile>
+	<Effect href="/Effects/_(Effect)/Artefacts/General/Gold.xdb#xpointer(/Effect)"/>
+	<EffectWhenOwned/>
+	<messagesFileRef>
+		<Item href="/Text/Game/Artifacts/Graal/Name.txt"/>
+		<Item href="/Text/Game/Artifacts/Graal/Description.txt"/>
+	</messagesFileRef>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect/>
+	<flybyMessageFileRef href=""/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Arefacts.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>true</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128/>
+	<Type>ARTF_RANDOM_SPECIFIC</Type>
+	<ArtifactID>GRAAL</ArtifactID>
+</AdvMapArtifactShared>

@@ -23,7 +23,6 @@
 
 - Leadership caravan doesn't spawn if no other tile available
 - Imprisoned heroes have no starting army
-- Maps with Tear of Asha are broken
 - Shantiri Moon Disc blocks all light magic
 - Graduate unlocks ultimate skill
 - Darkstorm creature should not stay in army after battle
@@ -102,3 +101,4 @@
 - Occultism invalid prerequisites
 - Skill tree accessible from level up window
 - UI incorrect size
+- Maps with Tear of Asha are broken
