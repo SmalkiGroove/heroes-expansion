@@ -161,6 +161,20 @@ function Routine_CheckHoldGround(player, hero, mastery)
     end
 end
 
+function Routine_CheckBallistics(player, hero, mastery)
+    log("$ Routine_CheckBallistics")
+    if mastery == 1 then
+        GiveHeroWarMachine(hero, WAR_MACHINE_BALLISTA)
+    end
+end
+
+function Routine_CheckAnatomy(player, hero, mastery)
+    log("$ Routine_CheckAnatomy")
+    if mastery == 1 then
+        GiveHeroWarMachine(hero, WAR_MACHINE_FIRST_AID_TENT)
+    end
+end
+
 function Routine_CheckIntelligence(player, hero, mastery)
     log("$ Routine_CheckIntelligence")
     local value = 4 * mastery
@@ -827,6 +841,8 @@ START_TRIGGER_SKILLS_ROUTINES = {
     [SKILL_SPIRITISM] = Routine_CheckSpiritism,
     [PERK_PRECISION] = Routine_CheckPrecision,
     [PERK_HOLD_GROUND] = Routine_CheckHoldGround,
+    [PERK_BALLISTICS] = Routine_CheckBallistics,
+    [PERK_ANATOMY] = Routine_CheckAnatomy,
     [PERK_INTELLIGENCE] = Routine_CheckIntelligence,
     [PERK_EXALTATION] = Routine_CheckExaltation,
     [PERK_ARCANE_EXCELLENCE] = Routine_CheckArcaneExcellence,

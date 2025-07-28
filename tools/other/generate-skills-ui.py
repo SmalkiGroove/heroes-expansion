@@ -16,6 +16,9 @@ with open(skills_xdb_path, 'r') as skills_xdb:
 all_buttons = open("out_buttons.xml", 'w')
 all_selected = open("out_selected.xml", 'w')
 all_windows = open("out_windows.xml", 'w')
+coordinates = open("out_coordinates.py", 'w')
+
+coordinates.write("coordinates = {\n")
 
 def button_base_path(id, faction):
     return os.path.join(skill_tree_path, faction, id, f"{id}.(WindowMSButton).xdb")
@@ -28,27 +31,27 @@ def button_bgshared_path(id, faction):
 def button_background_path(id, faction):
     return os.path.join(skill_tree_path, faction, id, f"{id}.(BackgroundSimpleScallingTexture).xdb")
 def button_selected_path(id):
-    return os.path.join(skill_tree_path, "Selection", id, f"{id}_select.(WindowMSButton).xdb")
+    return os.path.join(skill_tree_path, faction, "selection", id, f"{id}_select.(WindowMSButton).xdb")
 def ui_message_up_path(id):
-    return os.path.join(skill_tree_path, "Selection", id, f"{id}_up.(UISSendUIMessage).xdb")
+    return os.path.join(skill_tree_path, faction, "selection", id, f"{id}_up.(UISSendUIMessage).xdb")
 def ui_message_down_path(id):
-    return os.path.join(skill_tree_path, "Selection", id, f"{id}_down.(UISSendUIMessage).xdb")
+    return os.path.join(skill_tree_path, faction, "selection", id, f"{id}_down.(UISSendUIMessage).xdb")
 def desc_ui_message_path(id):
-    return os.path.join(skill_tree_path, "Description", id, f"{id}.(UISSendUIMessage).xdb")
+    return os.path.join(skill_tree_path, "_Description", id, f"{id}.(UISSendUIMessage).xdb")
 def desc_window_base_path(id):
-    return os.path.join(skill_tree_path, "Description", id, f"{id}_window.(WindowSimple).xdb")
+    return os.path.join(skill_tree_path, "_Description", id, f"{id}_window.(WindowSimple).xdb")
 def desc_window_shared_path(id):
-    return os.path.join(skill_tree_path, "Description", id, f"{id}_window.(WindowSimpleShared).xdb")
+    return os.path.join(skill_tree_path, "_Description", id, f"{id}_window.(WindowSimpleShared).xdb")
 def desc_icon_base_path(id):
-    return os.path.join(skill_tree_path, "Description", id, f"{id}_icon.(WindowMSButton).xdb")
+    return os.path.join(skill_tree_path, "_Description", id, f"{id}_icon.(WindowMSButton).xdb")
 def desc_icon_shared_path(id):
-    return os.path.join(skill_tree_path, "Description", id, f"{id}_icon.(WindowMSButtonShared).xdb")
+    return os.path.join(skill_tree_path, "_Description", id, f"{id}_icon.(WindowMSButtonShared).xdb")
 def desc_icon_path(id):
-    return os.path.join(skill_tree_path, "Description", id, f"{id}_icon.(BackgroundSimpleScallingTexture).xdb")
+    return os.path.join(skill_tree_path, "_Description", id, f"{id}_icon.(BackgroundSimpleScallingTexture).xdb")
 def skill_name_path(id):
-    return os.path.join(skill_tree_path, "Description", id, f"{id}_name.(WindowTextView).xdb")
+    return os.path.join(skill_tree_path, "_Description", id, f"{id}_name.(WindowTextView).xdb")
 def skill_desc_path(id):
-    return os.path.join(skill_tree_path, "Description", id, f"{id}_desc.(WindowTextView).xdb")
+    return os.path.join(skill_tree_path, "_Description", id, f"{id}_desc.(WindowTextView).xdb")
 
 def write_from_template(tpl_name, output_path, variables):
     tpl = jinja_env.get_template(tpl_name)
@@ -164,6 +167,7 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
                 for targetDir in directories:
                     if not os.path.exists(targetDir):
                         os.makedirs(targetDir)
+                write_from_template("button.(WindowMSButton).xdb.j2", button_base_path(id, faction), {'skill_id': id, 'pos_x': x, 'pos_y': y})
                 write_from_template("buttonshared.(WindowMSButtonShared).xdb.j2", button_shared_path(id, faction), {'skill_id': id, 'required_skills': prerequisites[id], 'icon_path': elements[id]['icon']})
                 write_from_template("skillicon.(WindowSimple).xdb.j2", button_bgwindow_path(id, faction), {'skill_id': id})
                 write_from_template("skillicon.(WindowSimpleShared).xdb.j2", button_bgshared_path(id, faction), {'skill_id': id})
@@ -182,6 +186,7 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
                 all_buttons.write(f"<Item href=\"/UI/Doc/Skills/{faction}/{id}/{id}.(WindowMSButton).xdb#xpointer(/WindowMSButton)\"/>\n")
                 all_selected.write(f"<Item href=\"{id}/{id}_select.(WindowMSButton).xdb#xpointer(/WindowMSButton)\"/>\n")
                 all_windows.write(f"<Item href=\"{id}/{id}_window.(WindowSimple).xdb#xpointer(/WindowSimple)\"/>\n")
+                coordinates.write(f"  {id}: [{x}, {y}],\n")
         if not found:
             skill_name = skill['ID']
             if elements[id]['name'] != "":
@@ -192,3 +197,6 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
 all_buttons.close()
 all_selected.close()
 all_windows.close()
+
+coordinates.write("}")
+coordinates.close()
