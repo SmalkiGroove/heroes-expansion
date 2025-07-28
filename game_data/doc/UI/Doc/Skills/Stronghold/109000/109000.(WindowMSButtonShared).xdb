@@ -2,7 +2,7 @@
 <WindowMSButtonShared ObjectRecordID="1000064">
 	<Crap>false</Crap>
 	<Children>
-	    <Item href="099000_icon.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+	    <Item href="109000_icon.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
 	</Children>
 	<Background/>
 	<Foreground/>
@@ -68,8 +68,8 @@
 				<TextString/>
 				<OnEnterSubState>
 					<Commands>
-						<Item href="/UI/Doc/Skills/Selection/099000/099000_up.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-						<Item href="/UI/Doc/Skills/Description/099000/099000.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+						<Item href="/UI/Doc/Skills/Selection/109000/109000_up.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+						<Item href="/UI/Doc/Skills/Description/109000/109000.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					</Commands>
 					<Reversable>true</Reversable>
 				</OnEnterSubState>

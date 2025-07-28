@@ -47,11 +47,11 @@
 	</Placement>
 	<ActiveArea/>
 	<IgnoreDblClick>false</IgnoreDblClick>
-	<ActiveMask href="Background.xdb#xpointer(/Texture)"/>
+	<ActiveMask href="/UI/Doc/Common/Fortress.xdb#xpointer(/Texture)"/>
 	<VisualStates>
 		<Item>
 			<Normal>
-				<Background href="Background.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
+				<Background href="/UI/Doc/Common/Fortress.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 				<Foreground/>
 				<TextString/>
 				<OnEnterSubState>
@@ -61,7 +61,7 @@
 				<TextFormat/>
 			</Normal>
 			<MouseOver>
-				<Background href="Background.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
+				<Background href="/UI/Doc/Common/Fortress.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 				<Foreground href="/UI/Doc/Skills/Highlight.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
 				<TextString/>
 				<OnEnterSubState>
@@ -111,7 +111,7 @@
 		</Item>
 		<Item>
 			<Normal>
-				<Background href="Background.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
+				<Background href="/UI/Doc/Common/Fortress.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 				<Foreground href="/UI/Doc/Skills/Select.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
 				<TextString/>
 				<OnEnterSubState>
@@ -121,7 +121,7 @@
 				<TextFormat/>
 			</Normal>
 			<MouseOver>
-				<Background href="Background.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
+				<Background href="/UI/Doc/Common/Fortress.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 				<Foreground href="/UI/Doc/Skills/Highlight.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
 				<TextString/>
 				<OnEnterSubState>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<WindowSimple ObjectRecordID="1000406">
-	<ClassTypeID>285700801</ClassTypeID>
-	<Shared href="099000_icon.(WindowSimpleShared).xdb#xpointer(/WindowSimpleShared)"/>
-	<Name>Window099000Icon</Name>
+<WindowTextView ObjectRecordID="1000429">
+	<ClassTypeID>285694860</ClassTypeID>
+	<Shared href="SkillName.(WindowTextViewShared).xdb#xpointer(/WindowTextViewShared)"/>
+	<Name>Name109000</Name>
 	<TooltipFileRef href=""/>
 	<Visible>true</Visible>
-	<Priority>100</Priority>
+	<Priority>0</Priority>
 	<GameMessageReactions/>
 	<Placement>
 		<Position>
 			<First>
-				<x>3</x>
-				<y>3</y>
+				<x>0</x>
+				<y>90</y>
 			</First>
 			<Second>true</Second>
 		</Position>
@@ -25,8 +25,8 @@
 		</HorAllign>
 		<Size>
 			<First>
-				<x>28</x>
-				<y>28</y>
+				<x>200</x>
+				<y>30</y>
 			</First>
 			<Second>true</Second>
 		</Size>
@@ -52,4 +52,8 @@
 	<Flags>
 		<SuperActive>false</SuperActive>
 	</Flags>
-</WindowSimple>
+	<TextFileRef href="/Text/Game/Skills/Common/LightMagic/Twilight/Name.txt"/>
+	<ResizeOnTextSet>false</ResizeOnTextSet>
+	<ResizeWidthOnTextSet>false</ResizeWidthOnTextSet>
+	<TextFormat href="/UI/Doc/Skills/Description/Name.(TextFormat).xdb#xpointer(/TextFormat)"/>
+</WindowTextView>
