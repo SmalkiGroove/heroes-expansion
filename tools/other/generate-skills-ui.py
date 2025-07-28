@@ -163,7 +163,7 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
                     x = button_data["WindowMSButton"]["Placement"]["Position"]["First"]["x"]
                     y = button_data["WindowMSButton"]["Placement"]["Position"]["First"]["y"]
                 icon_size = find_icon_size(elements[id]['icon'])
-                directories = {os.path.join(skill_tree_path, faction, id), os.path.join(skill_tree_path, "Selection", id), os.path.join(skill_tree_path, "Description", id)}
+                directories = {os.path.join(skill_tree_path, faction, "selection")}
                 for targetDir in directories:
                     if not os.path.exists(targetDir):
                         os.makedirs(targetDir)
