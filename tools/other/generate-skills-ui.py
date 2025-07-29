@@ -355,7 +355,7 @@ def find_icon_size(path:str):
     return 64
 
 
-factions = ["Common", "Haven", "Preserve", "Fortress", "Academy", "Dungeon", "Necro", "Inferno", "Stronghold"]
+factions = ["Common", "Haven", "Preserve", "Fortress", "Academy", "Dungeon", "Necro", "Inferno", "Stronghold", "Neutral"]
 
 counter = -1
 for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
@@ -416,7 +416,10 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
                 x = coordinates[id][0]
                 y = coordinates[id][1]
                 icon_size = find_icon_size(elements[id]['icon'])
-                directories = {os.path.join(skill_tree_path, faction, id, "selection")}
+                directories = {
+                    os.path.join(skill_tree_path, faction, id, "selection"),
+                    os.path.join(skill_tree_path, "_Description", id),
+                }
                 for targetDir in directories:
                     if not os.path.exists(targetDir):
                         os.makedirs(targetDir)
