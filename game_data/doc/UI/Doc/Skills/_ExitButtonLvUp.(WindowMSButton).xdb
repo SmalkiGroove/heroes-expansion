@@ -2,10 +2,10 @@
 <WindowMSButton ObjectRecordID="1000123">
 	<ClassTypeID>285694855</ClassTypeID>
 	<Shared href="_ExitButton.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
-	<Name>ExitButton</Name>
+	<Name>ExitButtonLvUp</Name>
 	<TooltipFileRef/>
 	<Visible>true</Visible>
-	<Priority>1</Priority>
+	<Priority>101</Priority>
 	<GameMessageReactions>
 		<Item>
 			<GameMessage>esc_pressed</GameMessage>
