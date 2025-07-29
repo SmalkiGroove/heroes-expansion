@@ -286,11 +286,11 @@ def button_bgshared_path(id, faction):
 def button_background_path(id, faction):
     return os.path.join(skill_tree_path, faction, id, f"{id}.(BackgroundSimpleScallingTexture).xdb")
 def button_selected_path(id):
-    return os.path.join(skill_tree_path, faction, id, "selection", f"{id}_select.(WindowMSButton).xdb")
+    return os.path.join(skill_tree_path, "_Selection", id, f"{id}_select.(WindowMSButton).xdb")
 def ui_message_up_path(id):
-    return os.path.join(skill_tree_path, faction, id, "selection", f"{id}_up.(UISSendUIMessage).xdb")
+    return os.path.join(skill_tree_path, "_Selection", id, f"{id}_up.(UISSendUIMessage).xdb")
 def ui_message_down_path(id):
-    return os.path.join(skill_tree_path, faction, id, "selection", f"{id}_down.(UISSendUIMessage).xdb")
+    return os.path.join(skill_tree_path, "_Selection", id, f"{id}_down.(UISSendUIMessage).xdb")
 def desc_ui_message_path(id):
     return os.path.join(skill_tree_path, "_Description", id, f"{id}.(UISSendUIMessage).xdb")
 def desc_window_base_path(id):
@@ -417,12 +417,17 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
                 y = coordinates[id][1]
                 icon_size = find_icon_size(elements[id]['icon'])
                 directories = {
-                    os.path.join(skill_tree_path, faction, id, "selection"),
+                    os.path.join(skill_tree_path, "_Selection", id),
                     os.path.join(skill_tree_path, "_Description", id),
                 }
                 for targetDir in directories:
                     if not os.path.exists(targetDir):
                         os.makedirs(targetDir)
+                dirrm = os.path.join(skill_tree_path, faction, id, "selection")
+                if os.path.exists(dirrm):
+                    for file in os.listdir(dirrm):
+                        os.remove(os.path.join(dirrm, file))
+                    os.rmdir(dirrm)
                 write_from_template("button.(WindowMSButton).xdb.j2", button_base_path(id, faction), {'skill_id': id, 'pos_x': x, 'pos_y': y})
                 write_from_template("buttonshared.(WindowMSButtonShared).xdb.j2", button_shared_path(id, faction), {'skill_id': id, 'required_skills': prerequisites[id], 'icon_path': elements[id]['icon']})
                 write_from_template("skillicon.(WindowSimple).xdb.j2", button_bgwindow_path(id, faction), {'skill_id': id})
