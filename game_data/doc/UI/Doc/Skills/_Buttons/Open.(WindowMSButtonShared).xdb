@@ -51,7 +51,7 @@
 	<VisualStates>
 		<Item>
 			<Normal>
-				<Background href="_Button/Passive.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Background href="Passive.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
 				<Foreground/>
 				<TextString/>
 				<OnEnterSubState>
@@ -61,7 +61,7 @@
 				<TextFormat/>
 			</Normal>
 			<MouseOver>
-				<Background href="_Button/Active.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Background href="Active.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
 				<Foreground/>
 				<TextString/>
 				<OnEnterSubState>
@@ -71,7 +71,7 @@
 				<TextFormat/>
 			</MouseOver>
 			<Pushed>
-				<Background href="_Button/Pushed.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Background href="Pushed.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
 				<Foreground/>
 				<TextString/>
 				<OnEnterSubState>

@@ -16,7 +16,7 @@
 		<Item href="SkillsLabel.(WindowStaticText).xdb#xpointer(/WindowStaticText)"/>
 
 		<Item href="/UI/Doc/Skills/SkillsLvUp.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="/UI/Doc/Skills/_ButtonLvUp.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="/UI/Doc/Skills/_Buttons/OpenLvUp.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
 	</Children>
 	<Background href="/UI/LevelUpBox______3396/LevelUpBox.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
 	<Foreground/>
@@ -32,17 +32,17 @@
 			<Second>false</Second>
 		</Position>
 		<VerAllign>
-			<First>EPA_LOW_END</First>
+			<First>ERA_CENTER</First>
 			<Second>true</Second>
 		</VerAllign>
 		<HorAllign>
-			<First>EPA_LOW_END</First>
+			<First>ERA_CENTER</First>
 			<Second>true</Second>
 		</HorAllign>
 		<Size>
 			<First>
 				<x>1024</x>
-				<y>768</y>
+				<y>668</y>
 			</First>
 			<Second>true</Second>
 		</Size>

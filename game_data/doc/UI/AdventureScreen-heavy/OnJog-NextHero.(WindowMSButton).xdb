@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<WindowMSButton ObjectRecordID="1000123">
+<WindowMSButton ObjectRecordID="384">
 	<ClassTypeID>285694855</ClassTypeID>
-	<Shared href="_Button.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
-	<Name>SkillWheelButton</Name>
-	<TooltipFileRef href="_Button.txt"/>
+	<Shared href="/UI/AdventureScreen-FPP-2/OnJog-NextHero.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
+	<Name>OnJog-NextHero</Name>
+	<TooltipFileRef href="/Text/Tooltips/AdventureScreen/Buttons/NextHero.txt"/>
 	<Visible>true</Visible>
-	<Priority>100</Priority>
+	<Priority>1</Priority>
 	<GameMessageReactions/>
 	<Placement>
 		<Position>
 			<First>
-				<x>100</x>
-				<y>40</y>
+				<x>835</x>
+				<y>561</y>
 			</First>
 			<Second>true</Second>
 		</Position>
@@ -57,7 +57,27 @@
 			<MessageOnEnterState/>
 			<CommandsOnEnterState>
 				<Commands>
-					<Item href="_Button/SkillsShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Button/SkillsShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+				</Commands>
+				<Reversable>false</Reversable>
+			</CommandsOnEnterState>
+			<CommandsOnRightClick>
+				<Commands/>
+				<Reversable>false</Reversable>
+			</CommandsOnRightClick>
+			<commandsOnLDblKlick>
+				<Commands/>
+				<Reversable>false</Reversable>
+			</commandsOnLDblKlick>
+			<WaitVisual>false</WaitVisual>
+			<ReverseCommands>false</ReverseCommands>
+			<Name/>
+		</Item>
+		<Item>
+			<MessageOnEnterState/>
+			<CommandsOnEnterState>
+				<Commands>
+					<Item href="/UI/Doc/Skills/_Button/SkillsShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 				</Commands>
 				<Reversable>false</Reversable>
 			</CommandsOnEnterState>

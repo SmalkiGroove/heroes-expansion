@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<WindowScreenShared ObjectRecordID="1000050">
-	<Crap>false</Crap>
-	<Children>
-		<Item href="CustomGameWait/Main.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		
-		<Item href="Doc/Skills/Skills.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="Doc/Skills/_Buttons/Open.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
-	</Children>
-	<Background/>
-	<Foreground/>
-	<Flags>
-		<Transparent>false</Transparent>
-	</Flags>
+<WindowStaticText ObjectRecordID="144">
+	<ClassTypeID>554818304</ClassTypeID>
+	<Shared href="/UI/LevelUPBox/Who.(WindowStaticTextShared).xdb#xpointer(/WindowStaticTextShared)"/>
+	<Name>Who</Name>
+	<TooltipFileRef href=""/>
+	<Visible>true</Visible>
+	<Priority>2</Priority>
+	<GameMessageReactions/>
 	<Placement>
 		<Position>
 			<First>
-				<x>0</x>
-				<y>0</y>
+				<x>195</x>
+				<y>95</y>
 			</First>
-			<Second>false</Second>
+			<Second>true</Second>
 		</Position>
 		<VerAllign>
 			<First>EPA_LOW_END</First>
@@ -50,7 +45,11 @@
 			<Second>false</Second>
 		</UpperMargin>
 	</Placement>
-	<ActiveArea/>
-	<IgnoreDblClick>false</IgnoreDblClick>
-	<ActiveMask/>
-</WindowScreenShared>
+	<Enabled>true</Enabled>
+	<TextString/>
+	<relatedTexts/>
+	<relatedTextures/>
+	<Flags>
+		<SuperActive>false</SuperActive>
+	</Flags>
+</WindowStaticText>
