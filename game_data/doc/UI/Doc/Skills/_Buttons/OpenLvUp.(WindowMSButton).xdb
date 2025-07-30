@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowMSButton ObjectRecordID="1000123">
 	<ClassTypeID>285694855</ClassTypeID>
-	<Shared href="Open.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
+	<Shared href="Open2.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
 	<Name>SkillWheelOpenLvUp</Name>
 	<TooltipFileRef href="Tooltip.txt"/>
 	<Visible>true</Visible>
@@ -58,6 +58,7 @@
 			<CommandsOnEnterState>
 				<Commands>
 					<Item href="SkillsShowLvUp.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/NeutralButton/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/HavenButton/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/InfernoButton/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/NecroButton/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>

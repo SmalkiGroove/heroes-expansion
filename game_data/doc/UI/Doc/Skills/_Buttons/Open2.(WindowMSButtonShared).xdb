@@ -17,18 +17,18 @@
 		</Position>
 		<VerAllign>
 			<First>EPA_LOW_END</First>
-			<Second>true</Second>
+			<Second>false</Second>
 		</VerAllign>
 		<HorAllign>
 			<First>EPA_LOW_END</First>
-			<Second>true</Second>
+			<Second>false</Second>
 		</HorAllign>
 		<Size>
 			<First>
-				<x>57</x>
-				<y>57</y>
+				<x>32</x>
+				<y>32</y>
 			</First>
-			<Second>true</Second>
+			<Second>false</Second>
 		</Size>
 		<LowerMargin>
 			<First>
@@ -51,7 +51,7 @@
 	<VisualStates>
 		<Item>
 			<Normal>
-				<Background href="/UI/AdventureScreen-FPP-2/OnJog-NextHero/OnJog-NextHero_0/Normal.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Background href="Passive.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
 				<Foreground/>
 				<TextString/>
 				<OnEnterSubState>
@@ -61,7 +61,7 @@
 				<TextFormat/>
 			</Normal>
 			<MouseOver>
-				<Background/>
+				<Background href="Active.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
 				<Foreground/>
 				<TextString/>
 				<OnEnterSubState>
@@ -71,7 +71,7 @@
 				<TextFormat/>
 			</MouseOver>
 			<Pushed>
-				<Background href="/UI/AdventureScreen-FPP-2/OnJog-NextHero/OnJog-NextHero_0/Pushed.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Background href="Pushed.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
 				<Foreground/>
 				<TextString/>
 				<OnEnterSubState>
