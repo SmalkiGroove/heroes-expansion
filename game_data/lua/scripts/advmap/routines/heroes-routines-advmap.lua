@@ -918,13 +918,14 @@ function Routine_GainBonusExpAndRes(player, hero, combatIndex)
         local value = 2*tier + power(2, tier)
         total = total + count * value
     end
-    AddHeroStatAmount(player, hero, STAT_EXPERIENCE, trunc(1.2*total))
-    AddPlayerResource(player, hero, GOLD, trunc(0.8*total))
+    AddHeroStatAmount(player, hero, STAT_EXPERIENCE, trunc(1.5*total))
+    AddPlayerResource(player, hero, GOLD, total)
 end
 
 function Routine_TownBuildingUp(player, hero)
     log("$ Routine_TownBuildingUp")
     if PLAYER_BRAIN[player] ~= HUMAN then return end
+    local level = GetHeroLevel(hero)
     for town,data in MAP_TOWNS do
         if data.faction == INFERNO then
             if IsHeroInTown(hero, town, 1, 0) then
@@ -950,13 +951,12 @@ function Routine_TownBuildingUp(player, hero)
                     [TOWN_BUILDING_DWELLING_6] = {"Dwelling_6/Name.txt", "Dwelling_6/Upgraded_Name.txt"},
                     [TOWN_BUILDING_DWELLING_7] = {"Dwelling_7/Name.txt", "Dwelling_7/Upgraded_Name.txt"},
                     [TOWN_BUILDING_INFERNO_INFERNAL_LOOM] = {"Special_1/Name.txt"},
-                    [TOWN_BUILDING_INFERNO_SACRIFICIAL_PIT] = {"Special_5/Name.txt"},
                 }
                 for k,v in buildings do
                     local cur = GetTownBuildingLevel(town, k)
                     if cur < length(v) then
                         local cost = v[cur+1]
-                        if (750 * GetHeroLevel(hero) >= cost) and (GetPlayerResource(player, GOLD) >= cost) then
+                        if (750 * level >= cost) and (GetPlayerResource(player, GOLD) >= cost) then
                             local name = name_root..name_file[k][cur+1]
                             QuestionBoxForPlayers(
                                 GetPlayerFilter(player),

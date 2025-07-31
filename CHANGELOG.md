@@ -34,7 +34,11 @@ This list is not exhaustive, all stats and changes regarding heroes, skills, art
 - Magic school summoning replaced by natural, which includes more diverse spells
 - Lower tier creatures have higher weekly growth, and high tier creatures are considerably stronger
 
-### Bonus
+### Quality of Life
+
+- In-game documentation
+
+### Gameplay
 
 - Many new artifacts and sets
 - Some additional creatures, either neutral or granted by specific heroes
@@ -117,3 +121,14 @@ Initial beta release !
 - Attribute building no UI
 - Kha Beleth attack anim not sync
 - Occultism invalid prerequisites
+
+### 0.2.2 (0/08/2025)
+
+#### New
+
+- 
+
+#### Fixed/Changed
+
+- Skill tree UI revamped
+

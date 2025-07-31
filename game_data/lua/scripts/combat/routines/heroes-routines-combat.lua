@@ -483,7 +483,7 @@ function Routine_SummonDarkstorm(side, hero)
     local x = (side == ATTACKER) and (GRID_X_MIN+1) or (GRID_X_MAX)
     local y = GRID_Y_MAX
     CREATURES[type] = {DUNGEON,8}
-    AddCreature(side, type, 1, x, y, nil, name)
+    AddCreature(side, type, 1, x, y, 1, name)
     sleep(1)
     ROUTINE_VARS.Darkstorm = name
 end

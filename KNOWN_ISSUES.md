@@ -25,7 +25,6 @@
 - Imprisoned heroes have no starting army
 - Shantiri Moon Disc blocks all light magic
 - Graduate unlocks ultimate skill
-- Darkstorm creature should not stay in army after battle
 
 ### Suggestions
 
@@ -102,3 +101,4 @@
 - Skill tree accessible from level up window
 - UI incorrect size
 - Maps with Tear of Asha are broken
+- Darkstorm creature should not stay in army after battle
