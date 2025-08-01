@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowMSButton ObjectRecordID="1000123">
 	<ClassTypeID>285694855</ClassTypeID>
-	<Shared href="Button.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
-	<Name>TrainingButton</Name>
+	<Shared href="/UI/HeroScreen3/Bookmark1.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
+	<Name>DocTabTraining</Name>
 	<TooltipFileRef href="Bookmark1.txt"/>
 	<Visible>true</Visible>
 	<Priority>0</Priority>
@@ -10,8 +10,8 @@
 	<Placement>
 		<Position>
 			<First>
-				<x>20</x>
-				<y>100</y>
+				<x>0</x>
+				<y>0</y>
 			</First>
 			<Second>true</Second>
 		</Position>
@@ -56,9 +56,7 @@
 		<Item>
 			<MessageOnEnterState/>
 			<CommandsOnEnterState>
-				<Commands>
-					<Item href="TrainingShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-				</Commands>
+				<Commands/>
 				<Reversable>false</Reversable>
 			</CommandsOnEnterState>
 			<CommandsOnRightClick>
@@ -77,7 +75,7 @@
 			<MessageOnEnterState/>
 			<CommandsOnEnterState>
 				<Commands>
-					<Item href="TrainingHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href=""/>
 				</Commands>
 				<Reversable>false</Reversable>
 			</CommandsOnEnterState>
@@ -95,12 +93,12 @@
 		</Item>
 	</ButtonStates>
 	<ButtonGroupID>0</ButtonGroupID>
-	<AutoChangeState>true</AutoChangeState>
+	<AutoChangeState>false</AutoChangeState>
 	<PushEffect>
 		<Commands/>
 		<Reversable>false</Reversable>
 	</PushEffect>
-	<State>1</State>
+	<State>0</State>
 	<TextFileRef href=""/>
 	<TextFormat/>
 </WindowMSButton>

@@ -2,48 +2,51 @@
 
 ### Game crash
 
-- Rune priests sometimes
-- While generating maps with underground
-- Crash on autocombat mode
+- [EXE] Crash when engaging fight with rune priests sometimes
+- [EXE] Crash hile generating maps with underground
+- [EXE] Crash on autocombat mode
+- [EXE] Crash when loading games somtimes
 
 ### Broken graphics or animations
 
-- Academy and Sylvan female heroes textures
-- Consume Corpse camera glitch
+- [XDB] Academy and Sylvan female heroes textures
+- [EXE] Consume Corpse camera glitch
 
 ### Text issues
 
 
 ### Something does not work
 
-- Thunder Power skill does not apply air damage of creatures attacks
-- Shantiri Breastplate does not immune to Earthquake
+- [EXE] Thunder Power skill does not apply air damage of creatures attacks
+- [EXE] Shantiri Breastplate does not immune to Earthquake
+- [EXE] Hero class specific vanilla artifact sets do not match the new hero classes
 
 ### Bugs
 
-- Leadership caravan doesn't spawn if no other tile available
-- Imprisoned heroes have no starting army
-- Shantiri Moon Disc blocks all light magic
-- Graduate unlocks ultimate skill
+- [LUA] Leadership caravan doesn't spawn if no other tile available
+- [LUA] Imprisoned heroes have no starting army
+- [EXE] Shantiri Moon Disc blocks all light magic
+- [XDB] Graduate unlocks ultimate skill
+- [EXE] Hall of Intrigue gives bonus to wrong hero class
 
 ### Suggestions
 
-- Add NCF creatures in editor
-- Darkstorm hero totem model
-- Add ARMG templates
+- [?] Add NCF creatures in editor
+- [XDB] Darkstorm hero totem model
+- [XDB] Add ARMG templates
 
 ### Balance
 
-- Give AI starting gold, exp and stats ?
-- Inferno and Dungeon sacrificial buildings are bad
+- [LUA] Give AI starting gold, exp and stats ?
+- [EXE] Inferno and Dungeon sacrificial buildings are bad
 
 ### Massive work required
 
-- QAI version
-- New battlefields
-- Better vault battles with siege
-- In-game doc for heroes, artifacts and training bonuses
-- More custom buildings and late-game challenge
+- [EXE] QAI version
+- [XDB] New battlefields
+- [XDB/LUA] Better vault battles with siege
+- [XDB] In-game doc for heroes, artifacts and training bonuses
+- [XDB/LUA] More custom buildings and late-game challenge
 
 
 # FIXED
@@ -102,3 +105,4 @@
 - UI incorrect size
 - Maps with Tear of Asha are broken
 - Darkstorm creature should not stay in army after battle
+- Commander heroes cannot not special perks
