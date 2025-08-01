@@ -25,8 +25,8 @@
 		</HorAllign>
 		<Size>
 			<First>
-				<x>61</x>
-				<y>61</y>
+				<x>87</x>
+				<y>73</y>
 			</First>
 			<Second>false</Second>
 		</Size>
@@ -47,11 +47,11 @@
 	</Placement>
 	<ActiveArea/>
 	<IgnoreDblClick>false</IgnoreDblClick>
-	<ActiveMask href="/UI/Doc/Common/Fortress.xdb#xpointer(/Texture)"/>
+	<ActiveMask/>
 	<VisualStates>
 		<Item>
 			<Normal>
-				<Background href="/UI/Doc/Common/Fortress.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
+				<Background href="/UI/HeroScreen3/Bookmarks/Bookmark3_Passive.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
 				<Foreground/>
 				<TextString/>
 				<OnEnterSubState>
@@ -61,8 +61,8 @@
 				<TextFormat/>
 			</Normal>
 			<MouseOver>
-				<Background href="/UI/Doc/Common/Fortress.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
-				<Foreground href="/UI/Doc/Skills/Highlight.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Background href="/UI/HeroScreen3/Bookmarks/Bookmark3_Passive.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Foreground href="/UI/HeroScreen3/Bookmarks/HeroSingle_Hilight.(BackgroundTiledTexture).xdb#xpointer(/BackgroundTiledTexture)"/>
 				<TextString/>
 				<OnEnterSubState>
 					<Commands/>
@@ -71,7 +71,7 @@
 				<TextFormat/>
 			</MouseOver>
 			<Pushed>
-				<Background/>
+				<Background href="/UI/HeroScreen3/Bookmarks/Bookmark3_Pushed.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
 				<Foreground/>
 				<TextString/>
 				<OnEnterSubState>
@@ -103,15 +103,15 @@
 			<DefaultSubState>BST_NORMAL</DefaultSubState>
 			<VisualOnEnterState>
 				<Commands>
-					<Item href="SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="Skills/_Buttons/SkillsShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 				</Commands>
 				<Reversable>false</Reversable>
 			</VisualOnEnterState>
 		</Item>
 		<Item>
 			<Normal>
-				<Background href="/UI/Doc/Common/Fortress.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
-				<Foreground href="/UI/Doc/Skills/Select.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Background href="/UI/HeroScreen3/Bookmarks/Bookmark3_Passive.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Foreground/>
 				<TextString/>
 				<OnEnterSubState>
 					<Commands/>
@@ -120,8 +120,8 @@
 				<TextFormat/>
 			</Normal>
 			<MouseOver>
-				<Background href="/UI/Doc/Common/Fortress.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
-				<Foreground href="/UI/Doc/Skills/Highlight.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Background href="/UI/HeroScreen3/Bookmarks/Bookmark3_Passive.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Foreground href="/UI/HeroScreen3/Bookmarks/HeroSingle_Hilight.(BackgroundTiledTexture).xdb#xpointer(/BackgroundTiledTexture)"/>
 				<TextString/>
 				<OnEnterSubState>
 					<Commands/>
@@ -130,7 +130,7 @@
 				<TextFormat/>
 			</MouseOver>
 			<Pushed>
-				<Background/>
+				<Background href="/UI/HeroScreen3/Bookmarks/Bookmark3_Pushed.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
 				<Foreground/>
 				<TextString/>
 				<OnEnterSubState>
@@ -162,11 +162,11 @@
 			<DefaultSubState>BST_NORMAL</DefaultSubState>
 			<VisualOnEnterState>
 				<Commands>
-					<Item href="SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="Skills/_Buttons/SkillsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 				</Commands>
 				<Reversable>false</Reversable>
 			</VisualOnEnterState>
 		</Item>
 	</VisualStates>
-	<TriggerMode>BCST_ON_PUSH</TriggerMode>
+	<TriggerMode>BCST_ON_RELEASE</TriggerMode>
 </WindowMSButtonShared>

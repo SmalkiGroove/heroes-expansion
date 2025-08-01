@@ -1,40 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowMSButton ObjectRecordID="1000123">
 	<ClassTypeID>285694855</ClassTypeID>
-	<Shared href="Exit.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
-	<Name>SkillWheelExitLvUp</Name>
+	<Shared href="Close.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
+	<Name>DocClose</Name>
 	<TooltipFileRef/>
 	<Visible>true</Visible>
-	<Priority>1000</Priority>
-	<GameMessageReactions>
-		<Item>
-			<GameMessage>esc_pressed</GameMessage>
-			<LogicalReaction/>
-			<VisualReaction>
-				<Commands>
-					<Item href="SkillsHideLvUp.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-				</Commands>
-				<Reversable>false</Reversable>
-			</VisualReaction>
-			<WaitVisual>true</WaitVisual>
-			<Forward>true</Forward>
-		</Item>
-	</GameMessageReactions>
+	<Priority>10000</Priority>
+	<GameMessageReactions/>
 	<Placement>
 		<Position>
 			<First>
-				<x>700</x>
-				<y>100</y>
+				<x>990</x>
+				<y>60</y>
 			</First>
 			<Second>true</Second>
 		</Position>
 		<VerAllign>
 			<First>EPA_LOW_END</First>
-			<Second>false</Second>
+			<Second>true</Second>
 		</VerAllign>
 		<HorAllign>
 			<First>EPA_LOW_END</First>
-			<Second>false</Second>
+			<Second>true</Second>
 		</HorAllign>
 		<Size>
 			<First>
@@ -70,7 +57,7 @@
 			<MessageOnEnterState/>
 			<CommandsOnEnterState>
 				<Commands>
-					<Item href="SkillsHideLvUp.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="zDocClose.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 				</Commands>
 				<Reversable>false</Reversable>
 			</CommandsOnEnterState>
@@ -88,7 +75,7 @@
 		</Item>
 	</ButtonStates>
 	<ButtonGroupID>0</ButtonGroupID>
-	<AutoChangeState>true</AutoChangeState>
+	<AutoChangeState>false</AutoChangeState>
 	<PushEffect>
 		<Commands/>
 		<Reversable>false</Reversable>

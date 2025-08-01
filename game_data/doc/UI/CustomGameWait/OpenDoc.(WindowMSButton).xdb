@@ -1,40 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowMSButton ObjectRecordID="1000123">
 	<ClassTypeID>285694855</ClassTypeID>
-	<Shared href="Exit.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
-	<Name>SkillWheelExit</Name>
-	<TooltipFileRef/>
+	<Shared href="/UI/Doc/Open.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
+	<Name>DocOpen</Name>
+	<TooltipFileRef href="/UI/Doc/Tooltip.txt"/>
 	<Visible>true</Visible>
-	<Priority>1000</Priority>
-	<GameMessageReactions>
-		<Item>
-			<GameMessage>esc_pressed</GameMessage>
-			<LogicalReaction/>
-			<VisualReaction>
-				<Commands>
-					<Item href="SkillsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-				</Commands>
-				<Reversable>false</Reversable>
-			</VisualReaction>
-			<WaitVisual>true</WaitVisual>
-			<Forward>true</Forward>
-		</Item>
-	</GameMessageReactions>
+	<Priority>100</Priority>
+	<GameMessageReactions/>
 	<Placement>
 		<Position>
 			<First>
-				<x>900</x>
-				<y>100</y>
+				<x>50</x>
+				<y>-100</y>
 			</First>
 			<Second>true</Second>
 		</Position>
 		<VerAllign>
-			<First>EPA_LOW_END</First>
-			<Second>false</Second>
+			<First>EPA_HIGH_END</First>
+			<Second>true</Second>
 		</VerAllign>
 		<HorAllign>
 			<First>EPA_LOW_END</First>
-			<Second>false</Second>
+			<Second>true</Second>
 		</HorAllign>
 		<Size>
 			<First>
@@ -70,7 +57,7 @@
 			<MessageOnEnterState/>
 			<CommandsOnEnterState>
 				<Commands>
-					<Item href="SkillsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/zDocOpen.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 				</Commands>
 				<Reversable>false</Reversable>
 			</CommandsOnEnterState>
@@ -88,7 +75,7 @@
 		</Item>
 	</ButtonStates>
 	<ButtonGroupID>0</ButtonGroupID>
-	<AutoChangeState>true</AutoChangeState>
+	<AutoChangeState>false</AutoChangeState>
 	<PushEffect>
 		<Commands/>
 		<Reversable>false</Reversable>

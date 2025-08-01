@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<WindowScreenShared ObjectRecordID="1000060">
+<WindowSimpleShared ObjectRecordID="1000860">
 	<Crap>false</Crap>
 	<Children>
-		<Item href="HotSeatWait/Background.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="HotSeatWait/Header.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
-		<Item href="HotSeatWait/PlayersList.(WindowScrollableContainer).xdb#xpointer(/WindowScrollableContainer)"/>
-		<Item href="HotSeatWait/Options.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="HotSeatWait/Menu.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="Doc/Root.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="CustomGameWait/OpenDoc.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="DocTabSkills.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="DocTabTraining.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<!-- <Item href="DocTabArtifacts.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/> -->
+		<!-- <Item href="DocTabHeroes.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/> -->
+		
+		<Item href="Skills/Skills.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+
+		<Item href="Close.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
 	</Children>
 	<Background/>
 	<Foreground/>
@@ -33,10 +34,10 @@
 		</HorAllign>
 		<Size>
 			<First>
-				<x>1024</x>
-				<y>768</y>
+				<x>1280</x>
+				<y>1024</y>
 			</First>
-			<Second>false</Second>
+			<Second>true</Second>
 		</Size>
 		<LowerMargin>
 			<First>
@@ -56,4 +57,4 @@
 	<ActiveArea/>
 	<IgnoreDblClick>false</IgnoreDblClick>
 	<ActiveMask/>
-</WindowScreenShared>
+</WindowSimpleShared>

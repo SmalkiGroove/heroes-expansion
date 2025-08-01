@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowMSButton ObjectRecordID="1000123">
 	<ClassTypeID>285694855</ClassTypeID>
-	<Shared href="Open2.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
-	<Name>SkillWheelOpenLobby</Name>
+	<Shared href="Open.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
+	<Name>DocOpen</Name>
 	<TooltipFileRef href="Tooltip.txt"/>
 	<Visible>true</Visible>
 	<Priority>100</Priority>
@@ -10,17 +10,17 @@
 	<Placement>
 		<Position>
 			<First>
-				<x>50</x>
-				<y>50</y>
+				<x>-131</x>
+				<y>-151</y>
 			</First>
 			<Second>true</Second>
 		</Position>
 		<VerAllign>
-			<First>EPA_LOW_END</First>
+			<First>EPA_HIGH_END</First>
 			<Second>true</Second>
 		</VerAllign>
 		<HorAllign>
-			<First>EPA_LOW_END</First>
+			<First>EPA_HIGH_END</First>
 			<Second>true</Second>
 		</HorAllign>
 		<Size>
@@ -57,7 +57,7 @@
 			<MessageOnEnterState/>
 			<CommandsOnEnterState>
 				<Commands>
-					<Item href="SkillsShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="zDocOpen.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 				</Commands>
 				<Reversable>false</Reversable>
 			</CommandsOnEnterState>

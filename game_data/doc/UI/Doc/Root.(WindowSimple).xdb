@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowSimple ObjectRecordID="1000598">
 	<ClassTypeID>285700801</ClassTypeID>
-	<Shared href="Skills.(WindowSimpleShared).xdb#xpointer(/WindowSimpleShared)"/>
-	<Name>SkillWheel</Name>
+	<Shared href="Root.(WindowSimpleShared).xdb#xpointer(/WindowSimpleShared)"/>
+	<Name>DocRootWindow</Name>
 	<TooltipFileRef href=""/>
-	<Visible>true</Visible>
+	<Visible>false</Visible>
 	<Priority>1000</Priority>
 	<GameMessageReactions/>
 	<Placement>
 		<Position>
 			<First>
-				<x>103</x>
-				<y>0</y>
+				<x>50</x>
+				<y>50</y>
 			</First>
 			<Second>true</Second>
 		</Position>
 		<VerAllign>
 			<First>EPA_LOW_END</First>
-			<Second>true</Second>
+			<Second>false</Second>
 		</VerAllign>
 		<HorAllign>
 			<First>EPA_LOW_END</First>
-			<Second>true</Second>
+			<Second>false</Second>
 		</HorAllign>
 		<Size>
 			<First>
-				<x>1024</x>
-				<y>1024</y>
+				<x>0</x>
+				<y>0</y>
 			</First>
-			<Second>true</Second>
+			<Second>false</Second>
 		</Size>
 		<LowerMargin>
 			<First>

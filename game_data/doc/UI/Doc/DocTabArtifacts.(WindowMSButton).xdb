@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowMSButton ObjectRecordID="1000124">
 	<ClassTypeID>285694855</ClassTypeID>
-	<Shared href="/UI/HeroScreen3/Bookmark2.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
+	<Shared href="DocTabArtifacts.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
 	<Name>DocTabArtifacts</Name>
-	<TooltipFileRef href="Bookmark2.txt"/>
+	<TooltipFileRef href="DocTabArtifacts.txt"/>
 	<Visible>true</Visible>
-	<Priority>0</Priority>
+	<Priority>999</Priority>
 	<GameMessageReactions/>
 	<Placement>
 		<Position>
 			<First>
-				<x>0</x>
-				<y>75</y>
+				<x>40</x>
+				<y>450</y>
 			</First>
 			<Second>true</Second>
 		</Position>

@@ -2,7 +2,7 @@
 <WindowMSButtonShared ObjectRecordID="1000064">
 	<Crap>false</Crap>
 	<Children/>
-	<Background href="/UI/Doc/Common/Dungeon.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
+	<Background/>
 	<Foreground/>
 	<Flags>
 		<Transparent>false</Transparent>
@@ -104,7 +104,6 @@
 			<VisualOnEnterState>
 				<Commands>
 					<Item href="SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="HeroclassHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 				</Commands>
 				<Reversable>false</Reversable>
 			</VisualOnEnterState>
@@ -164,7 +163,6 @@
 			<VisualOnEnterState>
 				<Commands>
 					<Item href="SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="HeroclassShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 				</Commands>
 				<Reversable>false</Reversable>
 			</VisualOnEnterState>

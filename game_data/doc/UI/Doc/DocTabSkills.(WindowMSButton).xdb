@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowMSButton ObjectRecordID="1000125">
 	<ClassTypeID>285694855</ClassTypeID>
-	<Shared href="/UI/HeroScreen3/Bookmark3.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
+	<Shared href="DocTabSkills.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
 	<Name>DocTabSkills</Name>
-	<TooltipFileRef href="Bookmark3.txt"/>
+	<TooltipFileRef href="DocTabSkills.txt"/>
 	<Visible>true</Visible>
-	<Priority>0</Priority>
+	<Priority>999</Priority>
 	<GameMessageReactions/>
 	<Placement>
 		<Position>
 			<First>
-				<x>0</x>
+				<x>40</x>
 				<y>150</y>
 			</First>
 			<Second>true</Second>
@@ -74,9 +74,7 @@
 		<Item>
 			<MessageOnEnterState/>
 			<CommandsOnEnterState>
-				<Commands>
-					<Item href="Skills/_Buttons/SkillsShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-				</Commands>
+				<Commands/>
 				<Reversable>false</Reversable>
 			</CommandsOnEnterState>
 			<CommandsOnRightClick>

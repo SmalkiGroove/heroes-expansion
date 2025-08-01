@@ -2,11 +2,11 @@
 <WindowSimpleShared ObjectRecordID="1000860">
 	<Crap>false</Crap>
 	<Children>
-		<Item href="/UI/Doc/DocTabSkills.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
 		<Item href="NeutralButton/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
 		<Item href="HavenButton/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
 		<Item href="InfernoButton/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
 		<Item href="NecroButton/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="PreserveButton/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
 		<Item href="DungeonButton/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
 		<Item href="AcademyButton/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
 		<Item href="FortressButton/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
@@ -25,9 +25,8 @@
 		<Item href="_Selection/000000.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
 		<Item href="_Description/000000.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
 		<Item href="_Description/DescriptionBack.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="_Buttons/Exit.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
 	</Children>
-	<Background href="Background.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
+	<Background href="/UI/Doc/Common/Background.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 	<Foreground/>
 	<Flags>
 		<Transparent>false</Transparent>

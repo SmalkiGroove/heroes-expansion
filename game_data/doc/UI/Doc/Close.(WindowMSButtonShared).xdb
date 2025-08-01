@@ -17,18 +17,18 @@
 		</Position>
 		<VerAllign>
 			<First>EPA_LOW_END</First>
-			<Second>false</Second>
+			<Second>true</Second>
 		</VerAllign>
 		<HorAllign>
 			<First>EPA_LOW_END</First>
-			<Second>false</Second>
+			<Second>true</Second>
 		</HorAllign>
 		<Size>
 			<First>
-				<x>32</x>
-				<y>32</y>
+				<x>51</x>
+				<y>52</y>
 			</First>
-			<Second>false</Second>
+			<Second>true</Second>
 		</Size>
 		<LowerMargin>
 			<First>
@@ -51,7 +51,7 @@
 	<VisualStates>
 		<Item>
 			<Normal>
-				<Background href="Passive.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Background href="/UI/Doc/Common/ExitNorm.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
 				<Foreground/>
 				<TextString/>
 				<OnEnterSubState>
@@ -61,7 +61,7 @@
 				<TextFormat/>
 			</Normal>
 			<MouseOver>
-				<Background href="Active.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Background href="/UI/Doc/Common/ExitOver.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
 				<Foreground/>
 				<TextString/>
 				<OnEnterSubState>
@@ -71,7 +71,7 @@
 				<TextFormat/>
 			</MouseOver>
 			<Pushed>
-				<Background href="Pushed.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Background href="/UI/Doc/Common/ExitPressed.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
 				<Foreground/>
 				<TextString/>
 				<OnEnterSubState>
