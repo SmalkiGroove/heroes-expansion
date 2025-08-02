@@ -2,12 +2,17 @@
 <WindowSimpleShared ObjectRecordID="1000860">
 	<Crap>false</Crap>
 	<Children>
+		<Item href="DocTabSummary.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="DocTabHeroes.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
 		<Item href="DocTabSkills.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
-		<Item href="DocTabTraining.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
-		<!-- <Item href="DocTabArtifacts.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/> -->
-		<!-- <Item href="DocTabHeroes.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/> -->
+		<Item href="DocTabArtifacts.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="DocTabCreatures.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
 		
+		<Item href="Summary/Summary.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="Heroes/Heroes.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
 		<Item href="Skills/Skills.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="Artifacts/Artifacts.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="Creatures/Creatures.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
 
 		<Item href="Close.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
 	</Children>

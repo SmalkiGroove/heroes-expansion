@@ -102,9 +102,9 @@
 			</RightButtonDown>
 			<DefaultSubState>BST_NORMAL</DefaultSubState>
 			<VisualOnEnterState>
-				<!-- <Commands>
-					<Item href="Skills/_Buttons/SkillsShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-				</Commands> -->
+				<Commands>
+					<Item href="Skills/_Buttons/SkillsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+				</Commands>
 				<Reversable>false</Reversable>
 			</VisualOnEnterState>
 		</Item>
@@ -162,7 +162,7 @@
 			<DefaultSubState>BST_NORMAL</DefaultSubState>
 			<VisualOnEnterState>
 				<Commands>
-					<Item href="Skills/_Buttons/SkillsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<!-- <Item href="Skills/_Buttons/SkillsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/> -->
 				</Commands>
 				<Reversable>false</Reversable>
 			</VisualOnEnterState>

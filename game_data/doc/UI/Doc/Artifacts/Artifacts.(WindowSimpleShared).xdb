@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<WindowSimple ObjectRecordID="1000406">
-	<ClassTypeID>285700801</ClassTypeID>
-	<Shared href="Training.(WindowSimpleShared).xdb#xpointer(/WindowSimpleShared)"/>
-	<Name>TrainingWindow</Name>
-	<TooltipFileRef href=""/>
-	<Visible>false</Visible>
-	<Priority>5</Priority>
-	<GameMessageReactions/>
+<WindowSimpleShared ObjectRecordID="1000860">
+	<Crap>false</Crap>
+	<Children>
+		<!-- <Item href="About.(WindowStaticText).xdb#xpointer(/WindowStaticText)"/> -->
+	</Children>
+	<Background href="/UI/Doc/Common/Background.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
+	<Foreground/>
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
 	<Placement>
 		<Position>
 			<First>
-				<x>100</x>
-				<y>45</y>
+				<x>0</x>
+				<y>0</y>
 			</First>
-			<Second>true</Second>
+			<Second>false</Second>
 		</Position>
 		<VerAllign>
 			<First>EPA_LOW_END</First>
@@ -45,11 +47,7 @@
 			<Second>false</Second>
 		</UpperMargin>
 	</Placement>
-	<Enabled>true</Enabled>
-	<TextString/>
-	<relatedTexts/>
-	<relatedTextures/>
-	<Flags>
-		<SuperActive>false</SuperActive>
-	</Flags>
-</WindowSimple>
+	<ActiveArea/>
+	<IgnoreDblClick>false</IgnoreDblClick>
+	<ActiveMask/>
+</WindowSimpleShared>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<WindowMSButton ObjectRecordID="1000124">
+<WindowMSButton ObjectRecordID="1000123">
 	<ClassTypeID>285694855</ClassTypeID>
-	<Shared href="DocTabArtifacts.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
-	<Name>DocTabArtifacts</Name>
-	<TooltipFileRef href="DocTabArtifacts.txt"/>
+	<Shared href="DocTabTraining.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
+	<Name>DocTabTraining</Name>
+	<TooltipFileRef href="DocTabTraining.txt"/>
 	<Visible>true</Visible>
 	<Priority>999</Priority>
 	<GameMessageReactions/>
@@ -11,7 +11,7 @@
 		<Position>
 			<First>
 				<x>40</x>
-				<y>340</y>
+				<y>420</y>
 			</First>
 			<Second>true</Second>
 		</Position>
@@ -74,9 +74,7 @@
 		<Item>
 			<MessageOnEnterState/>
 			<CommandsOnEnterState>
-				<Commands>
-					<Item href=""/>
-				</Commands>
+				<Commands/>
 				<Reversable>false</Reversable>
 			</CommandsOnEnterState>
 			<CommandsOnRightClick>
