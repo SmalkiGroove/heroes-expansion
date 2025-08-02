@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<WindowSimpleShared ObjectRecordID="1000860">
+<WindowTextViewShared ObjectRecordID="1000263">
 	<Crap>false</Crap>
-	<Children>
-		<Item href="Title/Title.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="Summary/Summary.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-	</Children>
-	<Background href="/UI/Doc/Common/Background.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
+	<Children/>
+	<Background/>
 	<Foreground/>
 	<Flags>
 		<Transparent>false</Transparent>
@@ -51,4 +48,8 @@
 	<ActiveArea/>
 	<IgnoreDblClick>false</IgnoreDblClick>
 	<ActiveMask/>
-</WindowSimpleShared>
+	<Color>0</Color>
+	<Format>0</Format>
+	<FontName/>
+	<RedLineSpace>0</RedLineSpace>
+</WindowTextViewShared>

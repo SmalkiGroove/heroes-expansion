@@ -2,10 +2,9 @@
 <WindowSimpleShared ObjectRecordID="1000860">
 	<Crap>false</Crap>
 	<Children>
-		<Item href="Title/Title.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="Summary/Summary.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="Title.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
 	</Children>
-	<Background href="/UI/Doc/Common/Background.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
+	<Background href="Title.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 	<Foreground/>
 	<Flags>
 		<Transparent>false</Transparent>
@@ -28,10 +27,10 @@
 		</HorAllign>
 		<Size>
 			<First>
-				<x>0</x>
-				<y>0</y>
+				<x>512</x>
+				<y>128</y>
 			</First>
-			<Second>false</Second>
+			<Second>true</Second>
 		</Size>
 		<LowerMargin>
 			<First>
