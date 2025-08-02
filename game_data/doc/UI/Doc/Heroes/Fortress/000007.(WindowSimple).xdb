@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<WindowTextView ObjectRecordID="1000429">
-	<ClassTypeID>285694860</ClassTypeID>
-	<Shared href="Title.(WindowTextViewShared).xdb#xpointer(/WindowTextViewShared)"/>
-	<Name>SummaryTitle</Name>
+<WindowSimple ObjectRecordID="1000406">
+	<ClassTypeID>285700801</ClassTypeID>
+	<Shared href="000007.(WindowSimpleShared).xdb#xpointer(/WindowSimpleShared)"/>
+	<Name>DocHeroesFortress</Name>
 	<TooltipFileRef href=""/>
 	<Visible>true</Visible>
-	<Priority>0</Priority>
+	<Priority>1</Priority>
 	<GameMessageReactions/>
 	<Placement>
 		<Position>
 			<First>
-				<x>0</x>
-				<y>20</y>
+				<x>50</x>
+				<y>150</y>
 			</First>
 			<Second>true</Second>
 		</Position>
 		<VerAllign>
-			<First>ERA_CENTER</First>
-			<Second>true</Second>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
 		</VerAllign>
 		<HorAllign>
-			<First>ERA_CENTER</First>
-			<Second>true</Second>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
 		</HorAllign>
 		<Size>
 			<First>
-				<x>400</x>
-				<y>100</y>
+				<x>721</x>
+				<y>61</y>
 			</First>
 			<Second>true</Second>
 		</Size>
@@ -52,8 +52,4 @@
 	<Flags>
 		<SuperActive>false</SuperActive>
 	</Flags>
-	<TextFileRef href="Title.txt"/>
-	<ResizeOnTextSet>false</ResizeOnTextSet>
-	<ResizeWidthOnTextSet>false</ResizeWidthOnTextSet>
-	<TextFormat href="Title.(TextFormat).xdb#xpointer(/TextFormat)"/>
-</WindowTextView>
+</WindowSimple>
