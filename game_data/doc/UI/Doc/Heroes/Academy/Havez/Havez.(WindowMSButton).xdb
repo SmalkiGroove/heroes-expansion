@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowMSButton ObjectRecordID="1000123">
 	<ClassTypeID>285694855</ClassTypeID>
-	<Shared href="Button.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
-	<Name>Button9</Name>
-	<TooltipFileRef href="/Text/Game/Skills/Innates/Name.txt"/>
+	<Shared href="Havez.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
+	<Name>ButtonHavez</Name>
+	<TooltipFileRef/>
 	<Visible>true</Visible>
-	<Priority>1</Priority>
+	<Priority>0</Priority>
 	<GameMessageReactions/>
 	<Placement>
 		<Position>
 			<First>
-				<x>80</x>
-				<y>60</y>
+				<x>0</x>
+				<y>0</y>
 			</First>
 			<Second>true</Second>
 		</Position>
@@ -25,10 +25,10 @@
 		</HorAllign>
 		<Size>
 			<First>
-				<x>0</x>
-				<y>0</y>
+				<x>64</x>
+				<y>64</y>
 			</First>
-			<Second>false</Second>
+			<Second>true</Second>
 		</Size>
 		<LowerMargin>
 			<First>
@@ -57,25 +57,7 @@
 			<MessageOnEnterState/>
 			<CommandsOnEnterState>
 				<Commands/>
-				<Reversable>true</Reversable>
-			</CommandsOnEnterState>
-			<CommandsOnRightClick>
-				<Commands/>
 				<Reversable>false</Reversable>
-			</CommandsOnRightClick>
-			<commandsOnLDblKlick>
-				<Commands/>
-				<Reversable>false</Reversable>
-			</commandsOnLDblKlick>
-			<WaitVisual>false</WaitVisual>
-			<ReverseCommands>false</ReverseCommands>
-			<Name/>
-		</Item>
-		<Item>
-			<MessageOnEnterState/>
-			<CommandsOnEnterState>
-				<Commands/>
-				<Reversable>true</Reversable>
 			</CommandsOnEnterState>
 			<CommandsOnRightClick>
 				<Commands/>
@@ -90,7 +72,7 @@
 			<Name/>
 		</Item>
 	</ButtonStates>
-	<ButtonGroupID>1</ButtonGroupID>
+	<ButtonGroupID>0</ButtonGroupID>
 	<AutoChangeState>true</AutoChangeState>
 	<PushEffect>
 		<Commands/>

@@ -4,11 +4,10 @@ import xmltodict
 from jinja2 import Environment, FileSystemLoader
 
 root_text_path = "../../game_texts/texts-EN"
-root_data_path = "../../game_data/data"
 skills_xdb_path = "../../game_data/data/GameMechanics/RefTables/Skills.xdb"
-skill_tree_path = "../../game_data/doc/UI/Doc/Skills"
+skills_pedia_path = "../../game_data/doc/UI/Doc/Skills"
 
-jinja_env = Environment(loader=FileSystemLoader(searchpath="templates"))
+jinja_env = Environment(loader=FileSystemLoader(searchpath="templates-skills"))
 
 with open(skills_xdb_path, 'r') as skills_xdb:
     skills_data = xmltodict.parse(skills_xdb.read())
@@ -289,37 +288,37 @@ coordinates = {
 }
 
 def button_base_path(id, faction):
-    return os.path.join(skill_tree_path, faction, id, f"{id}.(WindowMSButton).xdb")
+    return os.path.join(skills_pedia_path, faction, id, f"{id}.(WindowMSButton).xdb")
 def button_shared_path(id, faction):
-    return os.path.join(skill_tree_path, faction, id, f"{id}.(WindowMSButtonShared).xdb")
+    return os.path.join(skills_pedia_path, faction, id, f"{id}.(WindowMSButtonShared).xdb")
 def button_bgwindow_path(id, faction):
-    return os.path.join(skill_tree_path, faction, id, f"{id}_icon.(WindowSimple).xdb")
+    return os.path.join(skills_pedia_path, faction, id, f"{id}_icon.(WindowSimple).xdb")
 def button_bgshared_path(id, faction):
-    return os.path.join(skill_tree_path, faction, id, f"{id}_icon.(WindowSimpleShared).xdb")
+    return os.path.join(skills_pedia_path, faction, id, f"{id}_icon.(WindowSimpleShared).xdb")
 def button_background_path(id, faction):
-    return os.path.join(skill_tree_path, faction, id, f"{id}.(BackgroundSimpleScallingTexture).xdb")
+    return os.path.join(skills_pedia_path, faction, id, f"{id}.(BackgroundSimpleScallingTexture).xdb")
 def button_selected_path(id):
-    return os.path.join(skill_tree_path, "_Selection", id, f"{id}_select.(WindowMSButton).xdb")
+    return os.path.join(skills_pedia_path, "_Selection", id, f"{id}_select.(WindowMSButton).xdb")
 def ui_message_up_path(id):
-    return os.path.join(skill_tree_path, "_Selection", id, f"{id}_up.(UISSendUIMessage).xdb")
+    return os.path.join(skills_pedia_path, "_Selection", id, f"{id}_up.(UISSendUIMessage).xdb")
 def ui_message_down_path(id):
-    return os.path.join(skill_tree_path, "_Selection", id, f"{id}_down.(UISSendUIMessage).xdb")
+    return os.path.join(skills_pedia_path, "_Selection", id, f"{id}_down.(UISSendUIMessage).xdb")
 def desc_ui_message_path(id):
-    return os.path.join(skill_tree_path, "_Description", id, f"{id}.(UISSendUIMessage).xdb")
+    return os.path.join(skills_pedia_path, "_Description", id, f"{id}.(UISSendUIMessage).xdb")
 def desc_window_base_path(id):
-    return os.path.join(skill_tree_path, "_Description", id, f"{id}_window.(WindowSimple).xdb")
+    return os.path.join(skills_pedia_path, "_Description", id, f"{id}_window.(WindowSimple).xdb")
 def desc_window_shared_path(id):
-    return os.path.join(skill_tree_path, "_Description", id, f"{id}_window.(WindowSimpleShared).xdb")
+    return os.path.join(skills_pedia_path, "_Description", id, f"{id}_window.(WindowSimpleShared).xdb")
 def desc_icon_base_path(id):
-    return os.path.join(skill_tree_path, "_Description", id, f"{id}_icon.(WindowMSButton).xdb")
+    return os.path.join(skills_pedia_path, "_Description", id, f"{id}_icon.(WindowMSButton).xdb")
 def desc_icon_shared_path(id):
-    return os.path.join(skill_tree_path, "_Description", id, f"{id}_icon.(WindowMSButtonShared).xdb")
+    return os.path.join(skills_pedia_path, "_Description", id, f"{id}_icon.(WindowMSButtonShared).xdb")
 def desc_icon_path(id):
-    return os.path.join(skill_tree_path, "_Description", id, f"{id}_icon.(BackgroundSimpleScallingTexture).xdb")
+    return os.path.join(skills_pedia_path, "_Description", id, f"{id}_icon.(BackgroundSimpleScallingTexture).xdb")
 def skill_name_path(id):
-    return os.path.join(skill_tree_path, "_Description", id, f"{id}_name.(WindowTextView).xdb")
+    return os.path.join(skills_pedia_path, "_Description", id, f"{id}_name.(WindowTextView).xdb")
 def skill_desc_path(id):
-    return os.path.join(skill_tree_path, "_Description", id, f"{id}_desc.(WindowTextView).xdb")
+    return os.path.join(skills_pedia_path, "_Description", id, f"{id}_desc.(WindowTextView).xdb")
 
 def write_from_template(tpl_name, output_path, variables):
     tpl = jinja_env.get_template(tpl_name)
@@ -430,13 +429,13 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
                 y = coordinates[id][1]
                 icon_size = find_icon_size(elements[id]['icon'])
                 directories = {
-                    os.path.join(skill_tree_path, "_Selection", id),
-                    os.path.join(skill_tree_path, "_Description", id),
+                    os.path.join(skills_pedia_path, "_Selection", id),
+                    os.path.join(skills_pedia_path, "_Description", id),
                 }
                 for targetDir in directories:
                     if not os.path.exists(targetDir):
                         os.makedirs(targetDir)
-                dirrm = os.path.join(skill_tree_path, faction, id, "selection")
+                dirrm = os.path.join(skills_pedia_path, faction, id, "selection")
                 if os.path.exists(dirrm):
                     for file in os.listdir(dirrm):
                         os.remove(os.path.join(dirrm, file))
