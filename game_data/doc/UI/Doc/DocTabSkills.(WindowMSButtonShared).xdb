@@ -103,6 +103,10 @@
 			<DefaultSubState>BST_NORMAL</DefaultSubState>
 			<VisualOnEnterState>
 				<Commands>
+					<Item href="Summary/_Buttons/SummaryHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="Heroes/_Buttons/HeroesHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="Artifacts/_Buttons/ArtifactsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="Creatures/_Buttons/CreaturesHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="Skills/_Buttons/SkillsShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 				</Commands>
 				<Reversable>false</Reversable>
