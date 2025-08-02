@@ -441,7 +441,7 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
                     for file in os.listdir(dirrm):
                         os.remove(os.path.join(dirrm, file))
                     os.rmdir(dirrm)
-                write_from_template("button.(WindowMSButton).xdb.j2", button_base_path(id, faction), {'skill_id': id, 'pos_x': x, 'pos_y': y})
+                write_from_template("button.(WindowMSButton).xdb.j2", button_base_path(id, faction), {'skill_id': id, 'skill_name': skill['ID'], 'pos_x': x, 'pos_y': y})
                 write_from_template("buttonshared.(WindowMSButtonShared).xdb.j2", button_shared_path(id, faction), {'skill_id': id, 'required_skills': prerequisites[id], 'icon_path': elements[id]['icon']})
                 write_from_template("skillicon.(WindowSimple).xdb.j2", button_bgwindow_path(id, faction), {'skill_id': id})
                 write_from_template("skillicon.(WindowSimpleShared).xdb.j2", button_bgshared_path(id, faction), {'skill_id': id})
