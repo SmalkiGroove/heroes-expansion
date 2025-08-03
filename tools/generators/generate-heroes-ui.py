@@ -6,6 +6,7 @@ from jinja2 import Environment, FileSystemLoader
 root_text_path = "../../game_texts/texts-EN"
 heroes_xdb_path = "../../game_data/data/MapObjects"
 skills_xdb_path = "../../game_data/data/GameMechanics/RefTables/Skills.xdb"
+spells_xdb_path = "../../game_data/data/GameMechanics/RefTables/UndividedSpells.xdb"
 creatures_xdb_path = "../../game_data/data/GameMechanics/RefTables/Creatures.xdb"
 heroes_pedia_path = "../../game_data/doc/UI/Doc/Heroes"
 
@@ -80,6 +81,8 @@ STARTING_ARMIES = {
 
 with open(skills_xdb_path, 'r') as skills_xdb:
     skills_data = xmltodict.parse(skills_xdb.read())
+with open(spells_xdb_path, 'r') as spells_xdb:
+    spells_data = xmltodict.parse(spells_xdb.read())
 with open(creatures_xdb_path, 'r') as creatures_xdb:
     creatures_data = xmltodict.parse(creatures_xdb.read())
 
@@ -89,12 +92,31 @@ def button_shared_path(name, faction):
     return os.path.join(heroes_pedia_path, faction, name, f"{name}.(WindowMSButtonShared).xdb")
 def button_background_path(name, faction):
     return os.path.join(heroes_pedia_path, faction, name, f"{name}.(BackgroundSimpleScallingTexture).xdb")
+def skill_windowshared_path(skill):
+    return os.path.join(heroes_pedia_path, "_Skills", f"{skill}.(WindowSimpleShared).xdb")
+def skill_background_path(skill):
+    return os.path.join(heroes_pedia_path, "_Skills", f"{skill}.(BackgroundSimpleScallingTexture).xdb")
+def creature_windowshared_path(creature):
+    return os.path.join(heroes_pedia_path, "_Creatures", f"{creature}.(WindowSimpleShared).xdb")
+def creature_background_path(creature):
+    return os.path.join(heroes_pedia_path, "_Creatures", f"{creature}.(BackgroundSimpleScallingTexture).xdb")
+def spell_windowshared_path(spell):
+    return os.path.join(heroes_pedia_path, "_Spells", f"{spell}.(WindowSimpleShared).xdb")
+def spell_background_path(spell):
+    return os.path.join(heroes_pedia_path, "_Spells", f"{spell}.(BackgroundSimpleScallingTexture).xdb")
 
 def write_from_template(tpl_name, output_path, variables):
     tpl = jinja_env.get_template(tpl_name)
     rendered = tpl.render(variables)
     with open(output_path, 'w') as out_file:
         out_file.write(rendered)
+
+def get_skill_data(skill_id):
+    for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
+        if skill["ID"] == skill_id:
+            return skill["obj"]
+    print(f"WARN: skill with name {skill_id} not found")
+    return None
 
 factions = {
     "Haven": "Haven",
@@ -108,6 +130,15 @@ factions = {
     "Neutral": "Neutral"
 }
 
+masteries = {
+    "MASTERY_NONE": 0,
+    "MASTERY_BASIC": 1,
+    "MASTERY_ADVANCED": 2,
+    "MASTERY_EXPERT": 3,
+}
+
+icon_pos = [0, 100, 170, 240, 310, 380]
+
 for folder,faction in factions.items():
     for file in os.listdir(os.path.join(heroes_xdb_path, folder)):
         with open(os.path.join(heroes_xdb_path, folder, file), 'r') as xdb_file:
@@ -120,3 +151,12 @@ for folder,faction in factions.items():
             hero_skills = hero_data['AdvMapHeroShared']['Editable']['skills']['Item']
             hero_perks = hero_data['AdvMapHeroShared']['Editable']['perkIDs']['Item']
             hero_spells = hero_data['AdvMapHeroShared']['Editable']['spellIDs']['Item']
+            for skill in hero_skills:
+                skill_mastery = masteries[skill['Mastery']]
+                skill_id = f"{skill['SkillID']}_{skill_mastery}"
+                skill_data = get_skill_data(skill_id)
+                skill_name_file = skill_data['NameFileRef']['Item'][skill_mastery-1]['@href']
+                skill_texture_path = skill_data['Texture']['Item'][skill_mastery]['@href']
+                write_from_template("windowshared.(WindowSimpleShared).xdb.j2", skill_windowshared_path(skill_id), {'id': skill_id})
+                write_from_template("windowbg.(BackgroundSimpleScallingTexture).xdb.j2", skill_background_path(skill_id), {'path': skill_texture_path, 'size': 64})
+

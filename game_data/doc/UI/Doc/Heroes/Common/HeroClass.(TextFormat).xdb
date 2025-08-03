@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ForegroundTextStringShared ObjectRecordID="1000074">
-	<TextStringFileRef href=""/>
-	<Position>
+<TextFormat ObjectRecordID="1000030">
+	<ClassTypeID>387292225</ClassTypeID>
+	<Placement>
 		<Position>
 			<First>
 				<x>0</x>
@@ -10,12 +10,12 @@
 			<Second>false</Second>
 		</Position>
 		<VerAllign>
-			<First>ERA_CENTER</First>
-			<Second>true</Second>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
 		</VerAllign>
 		<HorAllign>
-			<First>ERA_CENTER</First>
-			<Second>true</Second>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
 		</HorAllign>
 		<Size>
 			<First>
@@ -38,6 +38,6 @@
 			</First>
 			<Second>false</Second>
 		</UpperMargin>
-	</Position>
-	<FormatStringFileRef href=""/>
-</ForegroundTextStringShared>
+	</Placement>
+	<FormatStringFileRef href="HeroClass.txt"/>
+</TextFormat>

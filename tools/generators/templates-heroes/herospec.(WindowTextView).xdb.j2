@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<WindowSimple ObjectRecordID="1000406">
-	<ClassTypeID>285700801</ClassTypeID>
-	<Shared href="Havez_class.(WindowSimpleShared).xdb#xpointer(/WindowSimpleShared)"/>
-	<Name>WindowHavezClass</Name>
+<WindowTextView ObjectRecordID="1000429">
+	<ClassTypeID>285694860</ClassTypeID>
+	<Shared href="/UI/Doc/Heroes/Common/HeroSpec.(WindowTextViewShared).xdb#xpointer(/WindowTextViewShared)"/>
+	<Name>Text{{ hero }}Spec</Name>
 	<TooltipFileRef href=""/>
 	<Visible>true</Visible>
 	<Priority>100</Priority>
@@ -10,8 +10,8 @@
 	<Placement>
 		<Position>
 			<First>
-				<x>164</x>
-				<y>4</y>
+				<x>10</x>
+				<y>20</y>
 			</First>
 			<Second>true</Second>
 		</Position>
@@ -25,17 +25,17 @@
 		</HorAllign>
 		<Size>
 			<First>
-				<x>368</x>
-				<y>32</y>
+				<x>340</x>
+				<y>728</y>
 			</First>
-			<Second>false</Second>
+			<Second>true</Second>
 		</Size>
 		<LowerMargin>
 			<First>
 				<x>0</x>
 				<y>0</y>
 			</First>
-			<Second>true</Second>
+			<Second>false</Second>
 		</LowerMargin>
 		<UpperMargin>
 			<First>
@@ -52,4 +52,8 @@
 	<Flags>
 		<SuperActive>false</SuperActive>
 	</Flags>
-</WindowSimple>
+	<TextFileRef href="{{ spec_ref }}"/>
+	<ResizeOnTextSet>false</ResizeOnTextSet>
+	<ResizeWidthOnTextSet>false</ResizeWidthOnTextSet>
+	<TextFormat href="/UI/Doc/Heroes/Common/HeroSpec.(TextFormat).xdb#xpointer(/TextFormat)"/>
+</WindowTextView>

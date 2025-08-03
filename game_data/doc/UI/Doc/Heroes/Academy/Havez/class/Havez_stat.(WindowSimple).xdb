@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowSimple ObjectRecordID="1000406">
 	<ClassTypeID>285700801</ClassTypeID>
-	<Shared href="Havez_class.(WindowSimpleShared).xdb#xpointer(/WindowSimpleShared)"/>
-	<Name>WindowHavezClass</Name>
+	<Shared href="Havez_stat.(WindowSimpleShared).xdb#xpointer(/WindowSimpleShared)"/>
+	<Name>WindowHavezStat</Name>
 	<TooltipFileRef href=""/>
 	<Visible>true</Visible>
 	<Priority>100</Priority>
@@ -11,7 +11,7 @@
 		<Position>
 			<First>
 				<x>164</x>
-				<y>4</y>
+				<y>120</y>
 			</First>
 			<Second>true</Second>
 		</Position>

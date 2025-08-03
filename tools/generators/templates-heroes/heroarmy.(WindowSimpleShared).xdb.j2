@@ -2,11 +2,10 @@
 <WindowSimpleShared ObjectRecordID="1000326">
 	<Crap>false</Crap>
 	<Children>
-		<Item href="Havez_face.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="Havez_cr1.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="Havez_cr2.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="Havez_cr3.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="Havez_cr4.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="{{ hero }}_face.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		{%- for i in range(1, nb) %}
+		<Item href="{{ hero }}_cr{{ i }}.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		{%- endfor %}
 	</Children>
 	<Background href="/UI/Doc/Heroes/Common/HeroArmy.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
 	<Foreground/>
