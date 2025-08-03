@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowSimple ObjectRecordID="1001263">
 	<ClassTypeID>285700801</ClassTypeID>
-	<Shared href="/UI/Doc/Heroes/_Skills/HERO_SKILL_INNATES_3.(WindowSimpleShared).xdb#xpointer(/WindowSimpleShared)"/>
+	<Shared href="HeroSkill.(WindowSimpleShared).xdb#xpointer(/WindowSimpleShared)"/>
 	<Name>WindowHeroSkill</Name>
-	<TooltipFileRef href=""/>
+	<TooltipFileRef href="HeroSkill.txt"/>
 	<Visible>true</Visible>
 	<Priority>1</Priority>
 	<GameMessageReactions/>
 	<Placement>
 		<Position>
 			<First>
-				<x>0</x>
-				<y>0</y>
+				<x>14</x>
+				<y>14</y>
 			</First>
 			<Second>true</Second>
 		</Position>
