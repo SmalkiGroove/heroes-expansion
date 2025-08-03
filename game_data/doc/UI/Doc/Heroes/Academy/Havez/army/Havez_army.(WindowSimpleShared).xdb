@@ -3,8 +3,14 @@
 	<Crap>false</Crap>
 	<Children>
 		<Item href="Havez_face.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="Havez_cr1.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="Havez_cr2.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="Havez_cr3.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="Havez_cr1.(ForegroundTextString).xdb#xpointer(/ForegroundTextString)"/>
+		<Item href="Havez_cr2.(ForegroundTextString).xdb#xpointer(/ForegroundTextString)"/>
+		<Item href="Havez_cr3.(ForegroundTextString).xdb#xpointer(/ForegroundTextString)"/>
 	</Children>
-	<Background href="/UI/CombatArena-Heavy/PlacementBar.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
+	<Background href="/UI/Doc/Heroes/Common/HeroArmy.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
 	<Foreground/>
 	<Flags>
 		<Transparent>false</Transparent>
@@ -30,7 +36,7 @@
 				<x>600</x>
 				<y>165</y>
 			</First>
-			<Second>false</Second>
+			<Second>true</Second>
 		</Size>
 		<LowerMargin>
 			<First>
@@ -49,5 +55,5 @@
 	</Placement>
 	<ActiveArea/>
 	<IgnoreDblClick>false</IgnoreDblClick>
-	<ActiveMask href="/UI/CombatArena-Heavy/PlacementBar.(Texture).xdb#xpointer(/Texture)"/>
+	<ActiveMask href="/UI/Doc/Heroes/Common/HeroArmy.(Texture).xdb#xpointer(/Texture)"/>
 </WindowSimpleShared>

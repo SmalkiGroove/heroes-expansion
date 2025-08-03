@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<WindowSimple ObjectRecordID="1000406">
+<WindowSimple ObjectRecordID="1001263">
 	<ClassTypeID>285700801</ClassTypeID>
-	<Shared href="000006.(WindowSimpleShared).xdb#xpointer(/WindowSimpleShared)"/>
-	<Name>DocHeroesAcademy</Name>
+	<Shared href="/UI/Doc/Heroes/_Creatures/CREATURE_GREMLIN.(WindowSimpleShared).xdb#xpointer(/WindowSimpleShared)"/>
+	<Name>WindowHavezCr1</Name>
 	<TooltipFileRef href=""/>
-	<Visible>false</Visible>
-	<Priority>1</Priority>
+	<Visible>true</Visible>
+	<Priority>0</Priority>
 	<GameMessageReactions/>
 	<Placement>
 		<Position>
 			<First>
-				<x>50</x>
-				<y>150</y>
+				<x>163</x>
+				<y>53</y>
 			</First>
 			<Second>true</Second>
 		</Position>
@@ -25,10 +25,10 @@
 		</HorAllign>
 		<Size>
 			<First>
-				<x>1024</x>
-				<y>1024</y>
+				<x>0</x>
+				<y>0</y>
 			</First>
-			<Second>true</Second>
+			<Second>false</Second>
 		</Size>
 		<LowerMargin>
 			<First>
@@ -46,7 +46,7 @@
 		</UpperMargin>
 	</Placement>
 	<Enabled>true</Enabled>
-	<TextString/>
+	<TextString href="Havez_cr1.(ForegroundTextString).xdb#xpointer(/ForegroundTextString)"/>
 	<relatedTexts/>
 	<relatedTextures/>
 	<Flags>

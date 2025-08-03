@@ -2,12 +2,10 @@
 <WindowSimpleShared ObjectRecordID="1000326">
 	<Crap>false</Crap>
 	<Children>
-		<Item href="army/Havez_army.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="skills/Havez_skills.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="spec/Havez_spec.(WindowSimple).xdb#xpointer(/WindowSimple))"/>
-		<Item href="spec/Havez_spec.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="Havez/Havez.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="Davius/Davius.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
 	</Children>
-	<Background/>
+	<Background href="/UI/Doc/Heroes/Common/HeroFaces.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 	<Foreground/>
 	<Flags>
 		<Transparent>false</Transparent>
@@ -30,10 +28,10 @@
 		</HorAllign>
 		<Size>
 			<First>
-				<x>1024</x>
-				<y>512</y>
+				<x>0</x>
+				<y>0</y>
 			</First>
-			<Second>true</Second>
+			<Second>false</Second>
 		</Size>
 		<LowerMargin>
 			<First>

@@ -5,13 +5,13 @@
 	<Name>WindowHavez</Name>
 	<TooltipFileRef href=""/>
 	<Visible>false</Visible>
-	<Priority>1</Priority>
+	<Priority>1000</Priority>
 	<GameMessageReactions/>
 	<Placement>
 		<Position>
 			<First>
-				<x>50</x>
-				<y>250</y>
+				<x>0</x>
+				<y>85</y>
 			</First>
 			<Second>true</Second>
 		</Position>
@@ -25,10 +25,10 @@
 		</HorAllign>
 		<Size>
 			<First>
-				<x>0</x>
-				<y>0</y>
+				<x>1024</x>
+				<y>512</y>
 			</First>
-			<Second>false</Second>
+			<Second>true</Second>
 		</Size>
 		<LowerMargin>
 			<First>
