@@ -275,9 +275,10 @@ for folder,faction in factions.items():
                             creature_id = "CREATURE_SNOW_APE"
                         log(creature_id)
                         creature_data = get_creature_data(creature_id)
-                        write_from_template("heroarmyx.(WindowSimple).xdb.j2", hero_armycrxwindow_path(hero_id, faction, i//2), {'hero': hero_id, 'creature': creature_id, 'x': hero_army[i+1], 'pos': creature_pos[i//2], 'name_ref': creature_data['CreatureNameFileRef']['@href']})
-                        write_from_template("heroarmyx.(ForegroundTextString).xdb.j2", hero_armycrxcounttext_path(hero_id, faction, i//2), {'value': hero_army[i+1]})
-                        write_from_template("windowshared.(WindowSimpleShared).xdb.j2", creature_windowshared_path(creature_id), {'id': creature_id})
+                        creature_index = 1 + i//2
+                        write_from_template("heroarmyx.(WindowSimple).xdb.j2", hero_armycrxwindow_path(hero_id, faction, creature_index), {'hero': hero_id, 'creature': creature_id, 'x': creature_index, 'pos': creature_pos[i//2], 'name_ref': creature_data['CreatureNameFileRef']['@href']})
+                        write_from_template("heroarmyx.(ForegroundTextString).xdb.j2", hero_armycrxcounttext_path(hero_id, faction, creature_index), {'value': hero_army[i+1]})
+                        write_from_template("windowshared.(WindowSimpleShared).xdb.j2", creature_windowshared_path(creature_id), {'id': creature_id, 'size': 55})
                         write_from_template("windowbg.(BackgroundSimpleScallingTexture).xdb.j2", creature_background_path(creature_id), {'path': creature_data['Icon128']['@href'], 'size': 128})
             write_from_template("heroface.(WindowSimple).xdb.j2", hero_armyfacewindow_path(hero_id, faction), {'hero': hero_id})
             write_from_template("heroface.(WindowSimpleShared).xdb.j2", hero_armyfacewindowshared_path(hero_id, faction), {'hero': hero_id, 'faction': faction})
@@ -301,7 +302,7 @@ for folder,faction in factions.items():
                 log(skill_name_file)
                 log(skill_texture_path)
                 write_from_template("heroskillx.(WindowSimple).xdb.j2", hero_skillxwindow_path(hero_id, faction, counter), {'hero': hero_id, 'skill': skill_uid, 'x': counter, 'pos': icon_pos[counter], 'name_ref': skill_name_file})
-                write_from_template("windowshared.(WindowSimpleShared).xdb.j2", skill_windowshared_path(skill_uid), {'id': skill_uid})
+                write_from_template("windowshared.(WindowSimpleShared).xdb.j2", skill_windowshared_path(skill_uid), {'id': skill_uid, 'size': 64})
                 write_from_template("windowbg.(BackgroundSimpleScallingTexture).xdb.j2", skill_background_path(skill_uid), {'path': skill_texture_path, 'size': 64})
             for perk in hero_perks:
                 counter += 1
@@ -312,7 +313,7 @@ for folder,faction in factions.items():
                 log(perk_name_file)
                 log(perk_texture_path)
                 write_from_template("heroskillx.(WindowSimple).xdb.j2", hero_skillxwindow_path(hero_id, faction, counter), {'hero': hero_id, 'skill': perk, 'x': counter, 'pos': icon_pos[counter], 'name_ref': perk_name_file})
-                write_from_template("windowshared.(WindowSimpleShared).xdb.j2", skill_windowshared_path(perk), {'id': perk})
+                write_from_template("windowshared.(WindowSimpleShared).xdb.j2", skill_windowshared_path(perk), {'id': perk, 'size': 64})
                 write_from_template("windowbg.(BackgroundSimpleScallingTexture).xdb.j2", skill_background_path(perk), {'path': perk_texture_path, 'size': 64})
 
             write_from_template("herospells.(WindowSimple).xdb.j2", hero_spellswindow_path(hero_id, faction), {'hero': hero_id})
@@ -327,7 +328,7 @@ for folder,faction in factions.items():
                 log(spell_name_file)
                 log(spell_texture_path)
                 write_from_template("herospellx.(WindowSimple).xdb.j2", hero_spellxwindow_path(hero_id, faction, counter), {'hero': hero_id, 'spell': spell, 'x': counter, 'pos': icon_pos[counter], 'line': icon_line[counter], 'name_ref': spell_name_file})
-                write_from_template("windowshared.(WindowSimpleShared).xdb.j2", spell_windowshared_path(spell), {'id': spell})
+                write_from_template("windowshared.(WindowSimpleShared).xdb.j2", spell_windowshared_path(spell), {'id': spell, 'size': 64})
                 write_from_template("windowbg.(BackgroundSimpleScallingTexture).xdb.j2", spell_background_path(spell), {'path': spell_texture_path, 'size': 128})
 
             print("Done")
