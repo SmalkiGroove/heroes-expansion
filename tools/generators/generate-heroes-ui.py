@@ -284,13 +284,13 @@ for folder,faction in factions.items():
                         write_from_template("heroarmyx.(ForegroundTextString).xdb.j2", hero_armycrxcounttext_path(hero_id, faction, counter), {'value': hero_army[i+1]})
                         write_from_template("windowshared.(WindowSimpleShared).xdb.j2", creature_windowshared_path(creature_id), {'id': creature_id, 'size': 55})
                         write_from_template("windowbg.(BackgroundSimpleScallingTexture).xdb.j2", creature_background_path(creature_id), {'path': creature_data['Icon128']['@href'], 'size': 128})
-            if hero_data['AdvMapHeroShared']['Editable']['Ballista']:
+            if hero_data['AdvMapHeroShared']['Editable']['Ballista'] == "true":
                 counter += 1
                 write_from_template("heroarmyx.(WindowSimple).xdb.j2", hero_armycrxwindow_path(hero_id, faction, counter), {'hero': hero_id, 'creature': 'WAR_MACHINE_BALLISTA', 'x': counter, 'pos': creature_pos[counter], 'name_ref': "/Text/Game/Creatures/WarMachines/Ballista.txt"})
-            if hero_data['AdvMapHeroShared']['Editable']['FirstAidTent']:
+            if hero_data['AdvMapHeroShared']['Editable']['FirstAidTent'] == "true":
                 counter += 1
                 write_from_template("heroarmyx.(WindowSimple).xdb.j2", hero_armycrxwindow_path(hero_id, faction, counter), {'hero': hero_id, 'creature': 'WAR_MACHINE_FIRST_AID_TENT', 'x': counter, 'pos': creature_pos[counter], 'name_ref': "/Text/Game/Creatures/WarMachines/FirstAidTent.txt"})
-            if hero_data['AdvMapHeroShared']['Editable']['AmmoCart']:
+            if hero_data['AdvMapHeroShared']['Editable']['AmmoCart'] == "true":
                 counter += 1
                 write_from_template("heroarmyx.(WindowSimple).xdb.j2", hero_armycrxwindow_path(hero_id, faction, counter), {'hero': hero_id, 'creature': 'WAR_MACHINE_AMMO_CART', 'x': counter, 'pos': creature_pos[counter], 'name_ref': "/Text/Game/Creatures/WarMachines/AmmoCart.txt"})
             write_from_template("heroface.(WindowSimple).xdb.j2", hero_armyfacewindow_path(hero_id, faction), {'hero': hero_id})
