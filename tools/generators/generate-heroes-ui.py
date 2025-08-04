@@ -277,7 +277,7 @@ for folder,faction in factions.items():
                         log(creature_id)
                         creature_data = get_creature_data(creature_id)
                         creature_index = 1 + i//2
-                        write_from_template("heroarmyx.(WindowSimple).xdb.j2", hero_armycrxwindow_path(hero_id, faction, creature_index), {'hero': hero_id, 'creature': creature_id, 'x': creature_index, 'pos': creature_pos[i//2], 'name_ref': creature_data['CreatureNameFileRef']['@href']})
+                        write_from_template("heroarmyx.(WindowSimple).xdb.j2", hero_armycrxwindow_path(hero_id, faction, creature_index), {'hero': hero_id, 'creature': creature_id, 'x': creature_index, 'pos': creature_pos[creature_index], 'name_ref': creature_data['CreatureNameFileRef']['@href']})
                         write_from_template("heroarmyx.(ForegroundTextString).xdb.j2", hero_armycrxcounttext_path(hero_id, faction, creature_index), {'value': hero_army[i+1]})
                         write_from_template("windowshared.(WindowSimpleShared).xdb.j2", creature_windowshared_path(creature_id), {'id': creature_id, 'size': 55})
                         write_from_template("windowbg.(BackgroundSimpleScallingTexture).xdb.j2", creature_background_path(creature_id), {'path': creature_data['Icon128']['@href'], 'size': 128})
