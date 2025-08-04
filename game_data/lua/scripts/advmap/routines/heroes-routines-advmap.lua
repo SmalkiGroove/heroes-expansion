@@ -88,7 +88,7 @@ end
 
 function Routine_GainPrimaryStats(player, hero, level)
     log("$ Routine_GainPrimaryStats")
-    if mod(level, 5) == 0 then
+    if mod(level, 10) == 0 then
         ChangeHeroStat(hero, STAT_ATTACK, 1)
         ChangeHeroStat(hero, STAT_DEFENCE, 1)
         ChangeHeroStat(hero, STAT_SPELL_POWER, 1)
@@ -109,7 +109,7 @@ function Routine_UpgradeMonastery(player, hero)
                     end
                 else
                     local cur = GetObjectDwellingCreatures(town, CREATURE_PRIEST)
-                    SetObjectDwellingCreatures(town, CREATURE_PRIEST, cur + WEEKS)
+                    SetObjectDwellingCreatures(town, CREATURE_PRIEST, cur + 2*WEEKS)
                 end
             end
         end
