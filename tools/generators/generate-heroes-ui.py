@@ -4,8 +4,8 @@ import xmltodict
 import re
 from jinja2 import Environment, FileSystemLoader
 
-debug = True
-dry_run = True
+debug = False
+dry_run = False
 
 root_text_path = "../../game_texts/texts-EN"
 heroes_xdb_path = "../../game_data/data/MapObjects"
@@ -187,6 +187,7 @@ masteries = {
     "MASTERY_EXTRA_EXPERT": 4
 }
 
+button_pos = [0, 2, 62, 122, 182, 242, 302, 362, 422, 482, 542, 602, 662]
 creature_pos = [0, 163, 224, 285, 346, 407]
 icon_pos = [0, 100, 170, 240, 310, 380, 100, 170, 240, 310, 380]
 icon_line = [0, 14, 14, 14, 14, 14, 84, 84, 84, 84, 84]
@@ -198,6 +199,7 @@ stats = {
     "Klg": {"name": "Knowledge", "pos": 240, "prob": "KnowledgeProb"},
 }
 counter = 0
+hero_counter = 0
 
 for folder,faction in factions.items():
     for file in os.listdir(os.path.join(heroes_xdb_path, folder)):
@@ -209,6 +211,7 @@ for folder,faction in factions.items():
             hero_data = xmltodict.parse(xdb_file.read())
         
         if 'AdvMapHeroShared' in hero_data:
+            hero_counter += 1
             hero_id = hero_data['AdvMapHeroShared']['InternalName']
             hero_class = hero_data['AdvMapHeroShared']['Class']
             hero_name_file = hero_data['AdvMapHeroShared']['Editable']['NameFileRef']['@href']
@@ -237,7 +240,7 @@ for folder,faction in factions.items():
             for subf in subfolders:
                 os.makedirs(os.path.join(hero_doc_path, subf), exist_ok=True)
 
-            write_from_template("herobutton.(WindowMSButton).xdb.j2", button_base_path(hero_id, faction), {'hero': hero_id, 'name_ref': hero_name_file})
+            write_from_template("herobutton.(WindowMSButton).xdb.j2", button_base_path(hero_id, faction), {'hero': hero_id, 'pos': button_pos[hero_counter], 'name_ref': hero_name_file})
             write_from_template("herobutton.(WindowMSButtonShared).xdb.j2", button_shared_path(hero_id, faction), {'hero': hero_id})
             write_from_template("windowbg.(BackgroundSimpleScallingTexture).xdb.j2", button_background_path(hero_id, faction), {'path': hero_face_file, 'size': 128})
             write_from_template("switch.(UISSendUIMessage).xdb.j2", hero_switchon_path(hero_id, faction), {'hero': hero_id, 'open': 1, 'close': 0})

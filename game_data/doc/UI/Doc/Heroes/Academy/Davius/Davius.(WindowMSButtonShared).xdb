@@ -102,7 +102,9 @@
 			</RightButtonDown>
 			<DefaultSubState>BST_NORMAL</DefaultSubState>
 			<VisualOnEnterState>
-				<Commands/>
+				<Commands>
+					<Item href="SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+				</Commands>
 				<Reversable>false</Reversable>
 			</VisualOnEnterState>
 		</Item>
@@ -159,7 +161,9 @@
 			</RightButtonDown>
 			<DefaultSubState>BST_NORMAL</DefaultSubState>
 			<VisualOnEnterState>
-				<Commands/>
+				<Commands>
+					<Item href="SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+				</Commands>
 				<Reversable>false</Reversable>
 			</VisualOnEnterState>
 		</Item>
