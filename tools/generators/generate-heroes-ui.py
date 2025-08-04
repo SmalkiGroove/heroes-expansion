@@ -10,8 +10,8 @@ reftable_xdb_path = "../../game_data/data/GameMechanics/RefTables"
 armies_lua_path = "../../game_data/lua/scripts"
 heroes_pedia_path = "../../game_data/doc/UI/Doc/Heroes"
 hero_lua_regex = r"(H_[A-Z0-9_]+) = '([A-Za-z0-9]+)'"
-army1_lua_regex = r"\[(H_[A-Z0-9_]+)\] = \{(.*)\},"
-army2_lua_regex = r"\[(\"[A-Z0-9_]+\")\] = \{(.*)\},"
+army1_lua_regex = r".*\[(H_[A-Z0-9_]+)\] = \{(.*)\},"
+army2_lua_regex = r".*\[(\"[A-Z0-9_]+\")\] = \{(.*)\},"
 
 jinja_env = Environment(loader=FileSystemLoader(searchpath="templates-heroes"))
 
@@ -127,9 +127,9 @@ def get_hero_starting_army(hero_id, faction):
     print(f"WARN: army for {hero_id} or {faction} not found")
     return None
 def get_class_data(class_id):
-    for class_ in class_data["Table_HeroClassDesc_HeroClass"]["objects"]["Item"]:
-        if class_["ID"] == class_id:
-            return class_["obj"]
+    for heroclass in class_data["Table_HeroClassDesc_HeroClass"]["objects"]["Item"]:
+        if heroclass["ID"] == class_id:
+            return heroclass["obj"]
     print(f"WARN: class with name {class_id} not found")
     return None
 def get_skill_data(skill_id):
@@ -141,7 +141,8 @@ def get_skill_data(skill_id):
 def get_spell_data(spell_id):
     for spell in spells_data["Table_Spell_SpellID"]["objects"]["Item"]:
         if spell["ID"] == spell_id:
-            with open(os.path.join("../../gale_data/data", spell["Obj"]["@href"]), 'r') as spell_xdb:
+            spell_path = spell["Obj"]["@href"][1:-17]
+            with open(os.path.join("../../game_data/data", spell_path), 'r') as spell_xdb:
                 return xmltodict.parse(spell_xdb.read())["Spell"]
     print(f"WARN: spell with name {spell_id} not found")
     return None
@@ -163,6 +164,7 @@ masteries = {
     "MASTERY_BASIC": 1,
     "MASTERY_ADVANCED": 2,
     "MASTERY_EXPERT": 3,
+    "MASTERY_EXTRA_EXPERT": 4
 }
 
 icon_pos = [0, 100, 170, 240, 310, 380, 100, 170, 240, 310, 380]
@@ -178,8 +180,10 @@ counter = 0
 
 for folder,faction in factions.items():
     for file in os.listdir(os.path.join(heroes_xdb_path, folder)):
-        print("==========================================================")
+        print("\n")
+        print("===============================================")
         print(file)
+        print("===============================================")
         with open(os.path.join(heroes_xdb_path, folder, file), 'r') as xdb_file:
             hero_data = xmltodict.parse(xdb_file.read())
         
@@ -187,10 +191,16 @@ for folder,faction in factions.items():
             hero_id = hero_data['AdvMapHeroShared']['InternalName']
             hero_class = hero_data['AdvMapHeroShared']['Class']
             hero_name_file = hero_data['AdvMapHeroShared']['Editable']['NameFileRef']['@href']
-            hero_face_file = hero_data['AdvMapHeroShared']['FaceTexture']
+            hero_face_file = hero_data['AdvMapHeroShared']['FaceTexture']['@href']
             hero_skills = hero_data['AdvMapHeroShared']['Editable']['skills']['Item']
+            if not isinstance(hero_skills, list):
+                hero_skills = [hero_skills]
             hero_perks = hero_data['AdvMapHeroShared']['Editable']['perkIDs']['Item']
-            hero_spells = hero_data['AdvMapHeroShared']['Editable']['spellIDs']['Item']
+            if not isinstance(hero_perks, list):
+                hero_perks = [hero_perks]
+            hero_spells = hero_data['AdvMapHeroShared']['Editable']['spellIDs']['Item'] if hero_data['AdvMapHeroShared']['Editable']['spellIDs'] else []
+            if not isinstance(hero_spells, list):
+                hero_spells = [hero_spells]
 
             print(hero_id)
             print(hero_class)
@@ -216,8 +226,8 @@ for folder,faction in factions.items():
 
             # write_from_template("heroclass.(WindowSimple).xdb.j2", hero_classwindow_path(hero_id, faction), {'hero': hero_id})
             # write_from_template("heroclass.(WindowSimpleShared).xdb.j2", hero_classwindowshared_path(hero_id, faction), {'hero': hero_id})
-            class_data = get_class_data(hero_class)
-            class_name_ref = os.path.join("/GameMechanics/RefTables", class_data['NameFileRef']['@href'])
+            heroclass_data = get_class_data(hero_class)
+            class_name_ref = os.path.join("/GameMechanics/RefTables", heroclass_data['NameFileRef']['@href'])
             # write_from_template("heroclass.(WindowTextView).xdb.j2", hero_classwindowtext_path(hero_id, faction), {'hero': hero_id, 'class_ref': class_name_ref})
             # write_from_template("herostat.(WindowSimple).xdb.j2", hero_statwindow_path(hero_id, faction), {'hero': hero_id})
             # write_from_template("herostat.(WindowSimpleShared).xdb.j2", hero_statwindowshared_path(hero_id, faction), {'hero': hero_id})
@@ -240,22 +250,23 @@ for folder,faction in factions.items():
             for skill in hero_skills:
                 counter += 1
                 skill_mastery = masteries[skill['Mastery']]
-                skill_id = f"{skill['SkillID']}_{skill_mastery}"
+                skill_id = skill['SkillID']
+                skill_uid = f"{skill_id}_{skill_mastery}"
+                print(skill_id)
                 skill_data = get_skill_data(skill_id)
                 skill_name_file = skill_data['NameFileRef']['Item'][skill_mastery-1]['@href']
                 skill_texture_path = skill_data['Texture']['Item'][skill_mastery]['@href']
-                print(skill_id)
                 print(skill_name_file)
                 print(skill_texture_path)
-                # write_from_template("heroskillx.(WindowSimple).xdb.j2", hero_skillxwindow_path(hero_id, faction, counter), {'hero': hero_id, 'skill': skill_id, 'x': counter, 'pos': icon_pos[counter], 'name_ref': skill_name_file})
-                # write_from_template("windowshared.(WindowSimpleShared).xdb.j2", skill_windowshared_path(skill_id), {'id': skill_id})
-                # write_from_template("windowbg.(BackgroundSimpleScallingTexture).xdb.j2", skill_background_path(skill_id), {'path': skill_texture_path, 'size': 64})
+                # write_from_template("heroskillx.(WindowSimple).xdb.j2", hero_skillxwindow_path(hero_id, faction, counter), {'hero': hero_id, 'skill': skill_uid, 'x': counter, 'pos': icon_pos[counter], 'name_ref': skill_name_file})
+                # write_from_template("windowshared.(WindowSimpleShared).xdb.j2", skill_windowshared_path(skill_uid), {'id': skill_uid})
+                # write_from_template("windowbg.(BackgroundSimpleScallingTexture).xdb.j2", skill_background_path(skill_uid), {'path': skill_texture_path, 'size': 64})
             for perk in hero_perks:
                 counter += 1
-                perk_data = get_skill_data(perk)
-                perk_name_file = perk_data['NameFileRef']['Item'][0]['@href']
-                perk_texture_path = perk_data['Texture']['Item'][1]['@href']
                 print(perk)
+                perk_data = get_skill_data(perk)
+                perk_name_file = perk_data['NameFileRef']['Item']['@href']
+                perk_texture_path = perk_data['Texture']['Item'][1]['@href']
                 print(perk_name_file)
                 print(perk_texture_path)
                 # write_from_template("heroskillx.(WindowSimple).xdb.j2", hero_skillxwindow_path(hero_id, faction, counter), {'hero': hero_id, 'skill': perk, 'x': counter, 'pos': icon_pos[counter], 'name_ref': perk_name_file})
@@ -267,10 +278,10 @@ for folder,faction in factions.items():
             counter = 0
             for spell in hero_spells:
                 counter += 1
+                print(spell)
                 spell_data = get_spell_data(spell)
                 spell_name_file = spell_data['NameFileRef']['@href']
                 spell_texture_path = spell_data['Texture']['@href']
-                print(spell)
                 print(spell_name_file)
                 print(spell_texture_path)
                 # write_from_template("herospellx.(WindowSimple).xdb.j2", hero_spellxwindow_path(hero_id, faction, counter), {'hero': hero_id, 'spell': spell, 'x': counter, 'pos': icon_pos[counter], 'line': icon_line[counter], 'name_ref': spell_name_file})
