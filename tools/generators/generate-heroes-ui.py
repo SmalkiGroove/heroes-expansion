@@ -1,97 +1,89 @@
 
 import os
 import xmltodict
+import re
 from jinja2 import Environment, FileSystemLoader
 
 root_text_path = "../../game_texts/texts-EN"
 heroes_xdb_path = "../../game_data/data/MapObjects"
-skills_xdb_path = "../../game_data/data/GameMechanics/RefTables/Skills.xdb"
-spells_xdb_path = "../../game_data/data/GameMechanics/RefTables/UndividedSpells.xdb"
-creatures_xdb_path = "../../game_data/data/GameMechanics/RefTables/Creatures.xdb"
+reftable_xdb_path = "../../game_data/data/GameMechanics/RefTables"
+armies_lua_path = "../../game_data/lua/scripts"
 heroes_pedia_path = "../../game_data/doc/UI/Doc/Heroes"
+hero_lua_regex = r"(H_[A-Z0-9_]+) = '([A-Za-z0-9]+)'"
+army1_lua_regex = r"\[(H_[A-Z0-9_]+)\] = \{(.*)\},"
+army2_lua_regex = r"\[(\"[A-Z0-9_]+\")\] = \{(.*)\},"
 
 jinja_env = Environment(loader=FileSystemLoader(searchpath="templates-heroes"))
 
-STARTING_ARMIES = {
-    # haven
-    "Haven": { {CREATURE_PEASANT,90}, {CREATURE_ARCHER,40}, {CREATURE_FOOTMAN,22} },
-    "H_MAEVE": { {CREATURE_PEASANT,75}, {CREATURE_PEASANT,75} },
-    "H_DOUGAL": { {CREATURE_ARCHER,30}, {CREATURE_ARCHER,30}, {CREATURE_FOOTMAN,30} },
-    "H_LASZLO": { {CREATURE_FOOTMAN,20}, {CREATURE_FOOTMAN,20} },
-    "H_KLAUS": { {CREATURE_ARCHER,30}, {CREATURE_FOOTMAN,20}, {CREATURE_CAVALIER,1} },
-    "H_ALARIC": { {CREATURE_PEASANT,100}, {CREATURE_PRIEST,2} },
-    "H_GABRIELLE": { {CREATURE_GRIFFIN,11} },
-    # preserve
-    "Preserve": { {CREATURE_BLADE_JUGGLER,57}, {CREATURE_PIXIE,29}, {CREATURE_WOOD_ELF,18} },
-    "H_IVOR": { {CREATURE_WOLF,20}, {CREATURE_WOLF,20} },
-    "H_TALANAR": { {CREATURE_BLADE_JUGGLER,57}, {CREATURE_WOOD_ELF,18}, {CREATURE_DRUID,4} },
-    "H_FINDAN": { {CREATURE_WOOD_ELF,14}, {CREATURE_WOOD_ELF,14} },
-    "H_DIRAEL": { {CREATURE_BLADE_JUGGLER,45}, {CREATURE_SPRITE,35} },
-    "H_TIERU": { {CREATURE_BLADE_JUGGLER,38}, {CREATURE_PIXIE,22}, {CREATURE_DRUID,8} },
-    "H_YLTHIN": { {CREATURE_PIXIE,22}, {CREATURE_WOOD_ELF,14}, {CREATURE_UNICORN,3} },
-    # academy
-    "Academy": { {CREATURE_GREMLIN,76}, {CREATURE_STONE_GARGOYLE,42}, {CREATURE_IRON_GOLEM,22} },
-    "H_HAVEZ": { {CREATURE_GREMLIN,51}, {CREATURE_GREMLIN,51} },
-    "H_RAZZAK": { {CREATURE_STONE_GARGOYLE,50}, {CREATURE_IRON_GOLEM,30} },
-    "H_GALIB": { {CREATURE_STONE_GARGOYLE,33}, {CREATURE_IRON_GOLEM,20}, {CREATURE_GENIE,2} },
-    "H_DAVIUS": { {CREATURE_GREMLIN,89}, {CREATURE_RAKSHASA,1} },
-    "H_CYRUS": { {CREATURE_GREMLIN,51}, {CREATURE_IRON_GOLEM,20}, {CREATURE_MAGI,8} },
-    "H_MINASLI": { {CREATURE_GREMLIN,51}, {CREATURE_STONE_GARGOYLE,33}, {CREATURE_ARCANE_EAGLE,1} },
-    # fortress
-    "Fortress": { {CREATURE_DEFENDER,72}, {CREATURE_AXE_FIGHTER,38}, {CREATURE_BROWLER,21} },
-    "H_INGVAR": { {CREATURE_DEFENDER,60}, {CREATURE_DEFENDER,60} },
-    "H_KARLI": { {CREATURE_DEFENDER,48}, {CREATURE_AXE_FIGHTER,48} },
-    "H_ROLF": { {CREATURE_BEAR_RIDER,6}, {CREATURE_BEAR_RIDER,6} },
-    "H_TAZAR": { {CREATURE_AXE_FIGHTER,28}, {CREATURE_BROWLER,19}, {CREATURE_BEAR_RIDER,4} },
-    "H_HANGVUL": { {CREATURE_BROWLER,29}, {CREATURE_THUNDER_THANE,1} },
-    "H_ERLING": { {CREATURE_DEFENDER,48}, {CREATURE_BROWLER,19}, {CREATURE_RUNE_MAGE,3} },
-    # necropolis
-    "Necro": { {CREATURE_SKELETON,85}, {CREATURE_WALKING_DEAD,45}, {CREATURE_MANES,21} },
-    "H_ORSON": { {CREATURE_WALKING_DEAD,19}, {CREATURE_WALKING_DEAD,19}, {CREATURE_WALKING_DEAD,19} },
-    "H_LUCRETIA": { {CREATURE_WALKING_DEAD,39}, {CREATURE_MANES,19}, {CREATURE_VAMPIRE,5} },
-    "H_XERXON": { {CREATURE_SKELETON,78}, {CREATURE_MANES,18}, {CREATURE_BLACK_KNIGHT,1} },
-    "H_THANT": { {CREATURE_SKELETON,57}, {CREATURE_WALKING_DEAD,39}, {CREATURE_MUMMY,19} },
-    "H_SANDRO": { {CREATURE_SKELETON,63}, {CREATURE_MANES,23}, {CREATURE_LICH,3} },
-    "H_ORNELLA": { {CREATURE_SKELETON,70}, {CREATURE_MANES,22}, {CREATURE_VAMPIRE,2} },
-    # inferno
-    "Inferno": { {CREATURE_FAMILIAR,99}, {CREATURE_DEMON,44}, {CREATURE_HELL_HOUND,22} },
-    "H_GRAWL": { {CREATURE_HELL_HOUND,13}, {CREATURE_HELL_HOUND,13}, {CREATURE_HELL_HOUND,13} },
-    "H_GROK": { {CREATURE_FAMILIAR,70}, {CREATURE_HELL_HOUND,30}, {CREATURE_NIGHTMARE,2} },
-    "H_BIARA": { {CREATURE_FAMILIAR,66}, {CREATURE_DEMON,36}, {CREATURE_SUCCUBUS,9} },
-    "H_ORLANDO": { {CREATURE_DEMON,55}, {CREATURE_HELL_HOUND,25} },
-    "H_KHABELETH": { {CREATURE_FAMILIAR,111}, {CREATURE_DEMON,55} },
-    # dungeon
-    "Dungeon": { {CREATURE_SCOUT,58}, {CREATURE_WITCH,32}, {CREATURE_MINOTAUR,18} },
-    "H_VAYSHAN": { {CREATURE_SCOUT,39}, {CREATURE_SCOUT,39} },
-    "H_YRWANNA": { {CREATURE_WITCH,23}, {CREATURE_WITCH,23} },
-    "H_DARKSTORM": { {CREATURE_MINOTAUR,16}, {CREATURE_MINOTAUR,16} },
-    "H_SORGAL": { {CREATURE_SCOUT,45}, {CREATURE_MINOTAUR,19}, {CREATURE_RIDER,5} },
-    "H_ERUINA": { {CREATURE_SCOUT,45}, {CREATURE_MINOTAUR,19}, {CREATURE_MATRON,2} },
-    "H_SHADYA": { {CREATURE_WITCH,36}, {CREATURE_SHADOW_MISTRESS,2} },
-    "H_LETHOS": { {CREATURE_SCOUT,39}, {CREATURE_WITCH,23}, {CREATURE_MANTICORE,3} },
-    # stronghold
-    "Stronghold": { {CREATURE_GOBLIN,82}, {CREATURE_SHAMAN,38}, {CREATURE_ORC_WARRIOR,23} },
-    "H_KILGHAN": { {CREATURE_GOBLIN,80}, {CREATURE_GOBLIN,80} },
-    "H_TELSEK": { {CREATURE_ORC_WARRIOR,20}, {CREATURE_ORC_WARRIOR,20} },
-    "H_GARUNA": { {CREATURE_GOBLIN,69}, {CREATURE_ORC_WARRIOR,21}, {CREATURE_CENTAUR,5} },
-    "H_GORSHAK": { {CREATURE_SHAMAN,38}, {CREATURE_ORC_WARRIOR,23}, {CREATURE_ORCCHIEF_BUTCHER,3} },
-    "H_KARUKAT": { {CREATURE_GOBLIN,69}, {CREATURE_SHAMAN,33}, {CREATURE_WYVERN,1} },
-    "H_KUJIN": { {CREATURE_GOBLIN,55}, {CREATURE_SHAMAN_WITCH,23}, {CREATURE_SHAMAN_WITCH,23} },
-}
-
-with open(skills_xdb_path, 'r') as skills_xdb:
+with open(os.path.join(reftable_xdb_path, "HeroClass.xdb"), 'r') as class_xdb:
+    class_data = xmltodict.parse(class_xdb.read())
+with open(os.path.join(reftable_xdb_path, "Skills.xdb"), 'r') as skills_xdb:
     skills_data = xmltodict.parse(skills_xdb.read())
-with open(spells_xdb_path, 'r') as spells_xdb:
+with open(os.path.join(reftable_xdb_path, "UndividedSpells.xdb"), 'r') as spells_xdb:
     spells_data = xmltodict.parse(spells_xdb.read())
-with open(creatures_xdb_path, 'r') as creatures_xdb:
+with open(os.path.join(reftable_xdb_path, "Creatures.xdb"), 'r') as creatures_xdb:
     creatures_data = xmltodict.parse(creatures_xdb.read())
 
+def hero_base_path(name, faction):
+    return os.path.join(heroes_pedia_path, faction, name)
 def button_base_path(name, faction):
     return os.path.join(heroes_pedia_path, faction, name, f"{name}.(WindowMSButton).xdb")
 def button_shared_path(name, faction):
     return os.path.join(heroes_pedia_path, faction, name, f"{name}.(WindowMSButtonShared).xdb")
 def button_background_path(name, faction):
     return os.path.join(heroes_pedia_path, faction, name, f"{name}.(BackgroundSimpleScallingTexture).xdb")
+def hero_mainwindow_path(name, faction):
+    return os.path.join(heroes_pedia_path, faction, name, f"{name}.(WindowSimple).xdb")
+def hero_mainwindowshared_path(name, faction):
+    return os.path.join(heroes_pedia_path, faction, name, f"{name}.(WindowSimpleShared).xdb")
+def hero_switchon_path(name, faction):
+    return os.path.join(heroes_pedia_path, faction, name, f"SwitchOn.(UISSendUIMessage).xdb")
+def hero_switchoff_path(name, faction):
+    return os.path.join(heroes_pedia_path, faction, name, f"SwitchOff.(UISSendUIMessage).xdb")
+def hero_classwindow_path(name, faction):
+    return os.path.join(heroes_pedia_path, faction, name, "class", f"{name}_class.(WindowSimple).xdb")
+def hero_classwindowshared_path(name, faction):
+    return os.path.join(heroes_pedia_path, faction, name, "class", f"{name}_class.(WindowSimpleShared).xdb")
+def hero_classtext_path(name, faction):
+    return os.path.join(heroes_pedia_path, faction, name, "class", f"{name}_class.(WindowTextView).xdb")
+def hero_statwindow_path(name, faction):
+    return os.path.join(heroes_pedia_path, faction, name, "class", f"{name}_stat.(WindowSimple).xdb")
+def hero_statwindowshared_path(name, faction):
+    return os.path.join(heroes_pedia_path, faction, name, "class", f"{name}_stat.(WindowSimpleShared).xdb")
+def hero_statxwindow_path(name, faction, stat):
+    return os.path.join(heroes_pedia_path, faction, name, "class", f"{name}_stat{stat}.(WindowSimple).xdb")
+def hero_statxtext_path(name, faction, stat):
+    return os.path.join(heroes_pedia_path, faction, name, "class", f"{name}_stat{stat}.(WindowTextView).xdb")
+def hero_armywindow_path(name, faction):
+    return os.path.join(heroes_pedia_path, faction, name, "army", f"{name}_army.(WindowSimple).xdb")
+def hero_armywindowshared_path(name, faction):
+    return os.path.join(heroes_pedia_path, faction, name, "army", f"{name}_army.(WindowSimpleShared).xdb")
+def hero_armyfacewindow_path(name, faction):
+    return os.path.join(heroes_pedia_path, faction, name, "army", f"{name}_face.(WindowSimple).xdb")
+def hero_armyfacewindowshared_path(name, faction):
+    return os.path.join(heroes_pedia_path, faction, name, "army", f"{name}_face.(WindowSimpleShared).xdb")
+def hero_armycrxwindow_path(name, faction, n):
+    return os.path.join(heroes_pedia_path, faction, name, "army", f"{name}_cr{n}.(WindowSimple).xdb")
+def hero_armycrxcounttext_path(name, faction, n):
+    return os.path.join(heroes_pedia_path, faction, name, "army", f"{name}_cr{n}.(ForegroundTextString).xdb")
+def hero_specwindow_path(name, faction):
+    return os.path.join(heroes_pedia_path, faction, name, "spec", f"{name}_spec.(WindowSimple).xdb")
+def hero_specwindowshared_path(name, faction):
+    return os.path.join(heroes_pedia_path, faction, name, "spec", f"{name}_spec.(WindowSimpleShared).xdb")
+def hero_spectext_path(name, faction):
+    return os.path.join(heroes_pedia_path, faction, name, "spec", f"{name}_spec.(WindowTextView).xdb")
+def hero_skillswindow_path(name, faction):
+    return os.path.join(heroes_pedia_path, faction, name, "skills", f"{name}_skills.(WindowSimple).xdb")
+def hero_skillswindowshared_path(name, faction):
+    return os.path.join(heroes_pedia_path, faction, name, "skills", f"{name}_skills.(WindowSimpleShared).xdb")
+def hero_skillxwindow_path(name, faction, n):
+    return os.path.join(heroes_pedia_path, faction, name, "skills", f"{name}_sk{n}.(WindowSimple).xdb")
+def hero_spellswindow_path(name, faction):
+    return os.path.join(heroes_pedia_path, faction, name, "spells", f"{name}_spells.(WindowSimple).xdb")
+def hero_spellswindowshared_path(name, faction):
+    return os.path.join(heroes_pedia_path, faction, name, "spells", f"{name}_spells.(WindowSimpleShared).xdb")
+def hero_spellxwindow_path(name, faction, n):
+    return os.path.join(heroes_pedia_path, faction, name, "spells", f"{name}_sp{n}.(WindowSimple).xdb")
 def skill_windowshared_path(skill):
     return os.path.join(heroes_pedia_path, "_Skills", f"{skill}.(WindowSimpleShared).xdb")
 def skill_background_path(skill):
@@ -111,11 +103,47 @@ def write_from_template(tpl_name, output_path, variables):
     with open(output_path, 'w') as out_file:
         out_file.write(rendered)
 
+def get_hero_lua_name(hero_id):
+    with open(os.path.join(armies_lua_path, "game", "heroes.lua"), 'r') as heroes_lua:
+        for line in heroes_lua.readlines():
+            regmatch = re.match(hero_lua_regex, line)
+            if regmatch and len(regmatch.groups()) == 2:
+                if regmatch.group(2) == hero_id:
+                    return regmatch.group(1)
+    print(f"WARN: hero with name {hero_id} not found")
+    return None
+def get_hero_starting_army(hero_id, faction):
+    with open(os.path.join(armies_lua_path, "advmap", "handlers", "starting-armies.lua"), 'r') as armies_lua:
+        for line in armies_lua.readlines():
+            regmatch = re.match(army1_lua_regex, line)
+            if regmatch and len(regmatch.groups()) == 2:
+                if regmatch.group(1) == hero_id:
+                    return regmatch.group(2)
+        for line in armies_lua.readlines():
+            regmatch = re.match(army2_lua_regex, line)
+            if regmatch and len(regmatch.groups()) == 2:
+                if regmatch.group(1) == faction:
+                    return regmatch.group(2)
+    print(f"WARN: army for {hero_id} or {faction} not found")
+    return None
+def get_class_data(class_id):
+    for class_ in class_data["Table_HeroClassDesc_HeroClass"]["objects"]["Item"]:
+        if class_["ID"] == class_id:
+            return class_["obj"]
+    print(f"WARN: class with name {class_id} not found")
+    return None
 def get_skill_data(skill_id):
     for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
         if skill["ID"] == skill_id:
             return skill["obj"]
     print(f"WARN: skill with name {skill_id} not found")
+    return None
+def get_spell_data(spell_id):
+    for spell in spells_data["Table_Spell_SpellID"]["objects"]["Item"]:
+        if spell["ID"] == spell_id:
+            with open(os.path.join("../../gale_data/data", spell["Obj"]["@href"]), 'r') as spell_xdb:
+                return xmltodict.parse(spell_xdb.read())["Spell"]
+    print(f"WARN: spell with name {spell_id} not found")
     return None
 
 factions = {
@@ -137,12 +165,24 @@ masteries = {
     "MASTERY_EXPERT": 3,
 }
 
-icon_pos = [0, 100, 170, 240, 310, 380]
+icon_pos = [0, 100, 170, 240, 310, 380, 100, 170, 240, 310, 380]
+icon_line = [0, 14, 14, 14, 14, 14, 84, 84, 84, 84, 84]
+subfolders = ["class", "army", "spec", "skills", "spells"]
+stats = {
+    "Att": {"name": "Offence", "pos": 0},
+    "Def": {"name": "Defence", "pos": 80},
+    "Spp": {"name": "SpellPower", "pos": 160},
+    "Klg": {"name": "Knowledge", "pos": 240},
+}
+counter = 0
 
 for folder,faction in factions.items():
     for file in os.listdir(os.path.join(heroes_xdb_path, folder)):
+        print("==========================================================")
+        print(file)
         with open(os.path.join(heroes_xdb_path, folder, file), 'r') as xdb_file:
             hero_data = xmltodict.parse(xdb_file.read())
+        
         if 'AdvMapHeroShared' in hero_data:
             hero_id = hero_data['AdvMapHeroShared']['InternalName']
             hero_class = hero_data['AdvMapHeroShared']['Class']
@@ -151,12 +191,88 @@ for folder,faction in factions.items():
             hero_skills = hero_data['AdvMapHeroShared']['Editable']['skills']['Item']
             hero_perks = hero_data['AdvMapHeroShared']['Editable']['perkIDs']['Item']
             hero_spells = hero_data['AdvMapHeroShared']['Editable']['spellIDs']['Item']
+
+            print(hero_id)
+            print(hero_class)
+            print(hero_name_file)
+            print(hero_face_file)
+            print(hero_skills)
+            print(hero_perks)
+            print(hero_spells)
+
+            hero_doc_path = hero_base_path(hero_id, faction)
+            os.makedirs(hero_doc_path, exist_ok=True)
+            for subf in subfolders:
+                os.makedirs(os.path.join(hero_doc_path, subf), exist_ok=True)
+
+            # write_from_template("herobutton.(WindowMSButton).xdb.j2", button_base_path(hero_id, faction), {'hero': hero_id, 'name_ref': hero_name_file})
+            # write_from_template("herobutton.(WindowMSButtonShared).xdb.j2", button_shared_path(hero_id, faction), {'hero': hero_id})
+            # write_from_template("windowbg.(BackgroundSimpleScallingTexture).xdb.j2", button_background_path(hero_id, faction), {'path': hero_face_file, 'size': 128})
+            # write_from_template("switch.(UISSendUIMessage).xdb.j2", button_switchon_path(hero_id, faction), {'hero': hero_id, 'open': 1, 'close': 0})
+            # write_from_template("switch.(UISSendUIMessage).xdb.j2", button_switchoff_path(hero_id, faction), {'hero': hero_id, 'open': 0, 'close': 1})
+            
+            # write_from_template("herowindow.(WindowSimple).xdb.j2", hero_mainwindow_path(hero_id, faction), {'hero': hero_id})
+            # write_from_template("herowindow.(WindowSimpleShared).xdb.j2", hero_mainwindowshared_path(hero_id, faction), {'hero': hero_id})
+
+            # write_from_template("heroclass.(WindowSimple).xdb.j2", hero_classwindow_path(hero_id, faction), {'hero': hero_id})
+            # write_from_template("heroclass.(WindowSimpleShared).xdb.j2", hero_classwindowshared_path(hero_id, faction), {'hero': hero_id})
+            class_data = get_class_data(hero_class)
+            class_name_ref = os.path.join("/GameMechanics/RefTables", class_data['NameFileRef']['@href'])
+            # write_from_template("heroclass.(WindowTextView).xdb.j2", hero_classwindowtext_path(hero_id, faction), {'hero': hero_id, 'class_ref': class_name_ref})
+            # write_from_template("herostat.(WindowSimple).xdb.j2", hero_statwindow_path(hero_id, faction), {'hero': hero_id})
+            # write_from_template("herostat.(WindowSimpleShared).xdb.j2", hero_statwindowshared_path(hero_id, faction), {'hero': hero_id})
+            # for stat,stat_data in stats.items():
+            #     write_from_template("herostatx.(WindowSimple).xdb.j2", hero_statxwindow_path(hero_id, faction, stat), {'hero': hero_id, 'stat': stat, 'name': stat_data['name'], 'pos': stat_data['pos']})
+            #     write_from_template("herostatx.(WindowTextView).xdb.j2", hero_statxtext_path(hero_id, faction, stat), {'hero': hero_id, 'stat': stat, 'pos': 36+stat_data['pos']})
+
+            # write_from_template("heroarmy.(WindowSimple).xdb.j2", hero_armywindow_path(hero_id, faction), {'hero': hero_id})
+            hero_var = get_hero_lua_name(hero_id)
+            if hero_var:
+                hero_army = get_hero_starting_army(hero_var, faction)
+                if hero_army:
+                    hero_army = hero_army.replace('{','').replace('}','').replace(' ','').split(',')
+                    print(hero_army)
+                    # write_from_template("heroarmy.(WindowSimpleShared).xdb.j2", hero_armywindowshared_path(hero_id, faction), {'hero': hero_id, 'nb': 3})
+
+            # write_from_template("heroskills.(WindowSimple).xdb.j2", hero_skillswindow_path(hero_id, faction), {'hero': hero_id})
+            # write_from_template("heroskills.(WindowSimpleShared).xdb.j2", hero_skillswindowshared_path(hero_id, faction), {'hero': hero_id, 'nb': len(hero_skills)+len(hero_perks)})
+            counter = 0
             for skill in hero_skills:
+                counter += 1
                 skill_mastery = masteries[skill['Mastery']]
                 skill_id = f"{skill['SkillID']}_{skill_mastery}"
                 skill_data = get_skill_data(skill_id)
                 skill_name_file = skill_data['NameFileRef']['Item'][skill_mastery-1]['@href']
                 skill_texture_path = skill_data['Texture']['Item'][skill_mastery]['@href']
-                write_from_template("windowshared.(WindowSimpleShared).xdb.j2", skill_windowshared_path(skill_id), {'id': skill_id})
-                write_from_template("windowbg.(BackgroundSimpleScallingTexture).xdb.j2", skill_background_path(skill_id), {'path': skill_texture_path, 'size': 64})
+                print(skill_id)
+                print(skill_name_file)
+                print(skill_texture_path)
+                # write_from_template("heroskillx.(WindowSimple).xdb.j2", hero_skillxwindow_path(hero_id, faction, counter), {'hero': hero_id, 'skill': skill_id, 'x': counter, 'pos': icon_pos[counter], 'name_ref': skill_name_file})
+                # write_from_template("windowshared.(WindowSimpleShared).xdb.j2", skill_windowshared_path(skill_id), {'id': skill_id})
+                # write_from_template("windowbg.(BackgroundSimpleScallingTexture).xdb.j2", skill_background_path(skill_id), {'path': skill_texture_path, 'size': 64})
+            for perk in hero_perks:
+                counter += 1
+                perk_data = get_skill_data(perk)
+                perk_name_file = perk_data['NameFileRef']['Item'][0]['@href']
+                perk_texture_path = perk_data['Texture']['Item'][1]['@href']
+                print(perk)
+                print(perk_name_file)
+                print(perk_texture_path)
+                # write_from_template("heroskillx.(WindowSimple).xdb.j2", hero_skillxwindow_path(hero_id, faction, counter), {'hero': hero_id, 'skill': perk, 'x': counter, 'pos': icon_pos[counter], 'name_ref': perk_name_file})
+                # write_from_template("windowshared.(WindowSimpleShared).xdb.j2", skill_windowshared_path(perk), {'id': perk})
+                # write_from_template("windowbg.(BackgroundSimpleScallingTexture).xdb.j2", skill_background_path(perk), {'path': perk_texture_path, 'size': 64})
 
+            # write_from_template("herospells.(WindowSimple).xdb.j2", hero_spellswindow_path(hero_id, faction), {'hero': hero_id})
+            # write_from_template("herospells.(WindowSimpleShared).xdb.j2", hero_spellswindowshared_path(hero_id, faction), {'hero': hero_id, 'nb': len(hero_spells)})
+            counter = 0
+            for spell in hero_spells:
+                counter += 1
+                spell_data = get_spell_data(spell)
+                spell_name_file = spell_data['NameFileRef']['@href']
+                spell_texture_path = spell_data['Texture']['@href']
+                print(spell)
+                print(spell_name_file)
+                print(spell_texture_path)
+                # write_from_template("herospellx.(WindowSimple).xdb.j2", hero_spellxwindow_path(hero_id, faction, counter), {'hero': hero_id, 'spell': spell, 'x': counter, 'pos': icon_pos[counter], 'line': icon_line[counter], 'name_ref': spell_name_file})
+                # write_from_template("windowshared.(WindowSimpleShared).xdb.j2", spell_windowshared_path(spell), {'id': spell})
+                # write_from_template("windowbg.(BackgroundSimpleScallingTexture).xdb.j2", spell_background_path(spell), {'path': spell_texture_path, 'size': 128})

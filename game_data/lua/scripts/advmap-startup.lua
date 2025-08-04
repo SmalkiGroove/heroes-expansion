@@ -161,9 +161,9 @@
 	FACTION_TEXT = {
 		[0] = "Neutral",
 		[1] = "Haven",
-		[2] = "Sylvan",
+		[2] = "Preserve",
 		[3] = "Inferno",
-		[4] = "Necropolis",
+		[4] = "Necro",
 		[5] = "Academy",
 		[6] = "Dungeon",
 		[7] = "Fortress",
