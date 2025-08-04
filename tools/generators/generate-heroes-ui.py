@@ -202,6 +202,7 @@ counter = 0
 hero_counter = 0
 
 for folder,faction in factions.items():
+    hero_counter = 0
     for file in os.listdir(os.path.join(heroes_xdb_path, folder)):
         print("\n")
         print("===============================================")

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowSimple ObjectRecordID="1001263">
 	<ClassTypeID>285700801</ClassTypeID>
-	<Shared href="/UI/Doc/Heroes/_Creatures/CREATURE_SPRITE.(WindowSimpleShared).xdb#xpointer(/WindowSimpleShared)"/>
-	<Name>WindowDirayaCr35</Name>
-	<TooltipFileRef href="/Text/Game/Creatures/Preserve/Sprite.txt"/>
+	<Shared href="/UI/Doc/Heroes/_Creatures/CREATURE_BLADE_JUGGLER.(WindowSimpleShared).xdb#xpointer(/WindowSimpleShared)"/>
+	<Name>WindowDirayaCr1</Name>
+	<TooltipFileRef href="/Text/Game/Creatures/Preserve/Blade_Juggler.txt"/>
 	<Visible>true</Visible>
 	<Priority>0</Priority>
 	<GameMessageReactions/>
 	<Placement>
 		<Position>
 			<First>
-				<x>163</x>
+				<x>0</x>
 				<y>53</y>
 			</First>
 			<Second>true</Second>
@@ -46,7 +46,7 @@
 		</UpperMargin>
 	</Placement>
 	<Enabled>true</Enabled>
-	<TextString href="Diraya_cr35.(ForegroundTextString).xdb#xpointer(/ForegroundTextString)"/>
+	<TextString href="Diraya_cr1.(ForegroundTextString).xdb#xpointer(/ForegroundTextString)"/>
 	<relatedTexts/>
 	<relatedTextures/>
 	<Flags>
