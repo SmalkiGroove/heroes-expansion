@@ -263,6 +263,7 @@ for folder,faction in factions.items():
                 write_from_template("herostatx.(WindowTextView).xdb.j2", hero_statxtext_path(hero_id, faction, stat), {'hero': hero_id, 'stat': stat, 'pos': 36+stat_data['pos'], 'value': statprob})
 
             write_from_template("heroarmy.(WindowSimple).xdb.j2", hero_armywindow_path(hero_id, faction), {'hero': hero_id})
+            counter = 0
             hero_var = get_hero_lua_name(hero_id)
             if hero_var:
                 hero_army = get_hero_starting_army(hero_var, faction)
@@ -271,16 +272,27 @@ for folder,faction in factions.items():
                     log(hero_army)
                     write_from_template("heroarmy.(WindowSimpleShared).xdb.j2", hero_armywindowshared_path(hero_id, faction), {'hero': hero_id, 'nb': len(hero_army)})
                     for i in range(0, len(hero_army), 2):
+                        counter += 1
                         creature_id = hero_army[i]
                         if creature_id == "CREATURE_ARCANE_EAGLE":
                             creature_id = "CREATURE_SNOW_APE"
                         log(creature_id)
                         creature_data = get_creature_data(creature_id)
-                        creature_index = 1 + i//2
-                        write_from_template("heroarmyx.(WindowSimple).xdb.j2", hero_armycrxwindow_path(hero_id, faction, creature_index), {'hero': hero_id, 'creature': creature_id, 'x': creature_index, 'pos': creature_pos[creature_index], 'name_ref': creature_data['CreatureNameFileRef']['@href']})
-                        write_from_template("heroarmyx.(ForegroundTextString).xdb.j2", hero_armycrxcounttext_path(hero_id, faction, creature_index), {'value': hero_army[i+1]})
+                        with open(os.path.join(heroes_pedia_path, 'Common', 'CreatureCount', f'{hero_army[i+1]}.txt'), 'w', encoding='utf-16') as creature_count_file:
+                            creature_count_file.write(hero_army[i+1])
+                        write_from_template("heroarmyx.(WindowSimple).xdb.j2", hero_armycrxwindow_path(hero_id, faction, counter), {'hero': hero_id, 'creature': creature_id, 'x': counter, 'pos': creature_pos[counter], 'name_ref': creature_data['CreatureNameFileRef']['@href']})
+                        write_from_template("heroarmyx.(ForegroundTextString).xdb.j2", hero_armycrxcounttext_path(hero_id, faction, counter), {'value': hero_army[i+1]})
                         write_from_template("windowshared.(WindowSimpleShared).xdb.j2", creature_windowshared_path(creature_id), {'id': creature_id, 'size': 55})
                         write_from_template("windowbg.(BackgroundSimpleScallingTexture).xdb.j2", creature_background_path(creature_id), {'path': creature_data['Icon128']['@href'], 'size': 128})
+            if hero_data['AdvMapHeroShared']['Editable']['Ballista']:
+                counter += 1
+                write_from_template("heroarmyx.(WindowSimple).xdb.j2", hero_armycrxwindow_path(hero_id, faction, counter), {'hero': hero_id, 'creature': 'WAR_MACHINE_BALLISTA', 'x': counter, 'pos': creature_pos[counter], 'name_ref': "/Text/Game/Creatures/WarMachines/Ballista.txt"})
+            if hero_data['AdvMapHeroShared']['Editable']['FirstAidTent']:
+                counter += 1
+                write_from_template("heroarmyx.(WindowSimple).xdb.j2", hero_armycrxwindow_path(hero_id, faction, counter), {'hero': hero_id, 'creature': 'WAR_MACHINE_FIRST_AID_TENT', 'x': counter, 'pos': creature_pos[counter], 'name_ref': "/Text/Game/Creatures/WarMachines/FirstAidTent.txt"})
+            if hero_data['AdvMapHeroShared']['Editable']['AmmoCart']:
+                counter += 1
+                write_from_template("heroarmyx.(WindowSimple).xdb.j2", hero_armycrxwindow_path(hero_id, faction, counter), {'hero': hero_id, 'creature': 'WAR_MACHINE_AMMO_CART', 'x': counter, 'pos': creature_pos[counter], 'name_ref': "/Text/Game/Creatures/WarMachines/AmmoCart.txt"})
             write_from_template("heroface.(WindowSimple).xdb.j2", hero_armyfacewindow_path(hero_id, faction), {'hero': hero_id})
             write_from_template("heroface.(WindowSimpleShared).xdb.j2", hero_armyfacewindowshared_path(hero_id, faction), {'hero': hero_id, 'faction': faction})
 

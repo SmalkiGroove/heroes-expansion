@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001259">
+	<CreatureNameFileRef href="/Text/Game/Creatures/WarMachines/FirstAidTent.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/WarMachines/FirstAidTentAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/WarMachines/FirstAidTentDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/WarMachines/ico_FirstAidTent.xdb#xpointer(/Texture)"/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/WarMachines/ico_FirstAidTent_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/WarMachines/FirstAidTent.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="#n:inline(CreatureDamage)" id="item_aca9380d-96f9-43eb-9d9c-eb6d55320b15">
+		<CreatureDamage ObjectRecordID="2">
+			<Effects>
+				<Item href="/Effects/_(Effect)/Characters/WarMachines/FirstAidTentHit.xdb#xpointer(/Effect)"/>
+			</Effects>
+		</CreatureDamage>
+	</DamageEffect>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="#n:inline(Win3DObj)" id="item_0886d97c-6d20-440a-9b8d-a3d67dd5799f">
+		<Win3DObj ObjectRecordID="47">
+			<Model href="/_(Model)/Creatures/WarMachines/FirstAidTent.(Model).xdb#xpointer(/Model)"/>
+			<placements>
+				<Item>
+					<SizeDesc href="/GameMechanics/Win3DObjSizeDesc/creatureInfo.xdb#xpointer(/Win3DObjSizeDesc)"/>
+					<Matrix>3ea6b33e50eca4bd000000000000000047426d3ddb38813efa0b803e128340bebc2465bdaa9a79beeb94843e000000000000000000000000000000000000803f</Matrix>
+					<Shift>
+						<x>0</x>
+						<y>-0.188</y>
+					</Shift>
+					<RollY>0.2256</RollY>
+					<RollX>-0.768</RollX>
+					<Scale>0.36</Scale>
+				</Item>
+			</placements>
+		</Win3DObj>
+	</Win3DView>
+	<MountPoint>
+		<x>0</x>
+		<y>0</y>
+		<z>2.6</z>
+	</MountPoint>
+	<MountBone>Roof</MountBone>
+</CreatureVisual>

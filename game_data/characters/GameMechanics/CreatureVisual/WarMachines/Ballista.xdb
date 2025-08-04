@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001200">
+	<CreatureNameFileRef href="/Text/Game/Creatures/WarMachines/Ballista.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/WarMachines/BallistaAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/WarMachines/BallistaDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/WarMachines/ico_Ballista.xdb#xpointer(/Texture)"/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/WarMachines/ico_Ballista_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/WarMachines/Ballista.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter href="/Characters/Creatures/WarMachines/Ballista_death.(Character).xdb#xpointer(/Character)"/>
+	<AnimShot href="/GameMechanics/Shot/Creatures/WarMachines/Ballista.xdb#xpointer(/Shot)"/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/War_Machine.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="#n:inline(Win3DObj)" id="item_3aa9300f-3961-4480-ab89-87aeb40928d7">
+		<Win3DObj ObjectRecordID="45">
+			<Model href="/_(Model)/Creatures/WarMachines/Ballista.(Model).xdb#xpointer(/Model)"/>
+			<placements>
+				<Item>
+					<SizeDesc href="/GameMechanics/Win3DObjSizeDesc/creatureInfo.xdb#xpointer(/Win3DObjSizeDesc)"/>
+					<Matrix>08877b3f42933ebe000000b200000000c0368f3db604bd3ed43d6d3f653bdfbe5c9c30bec21869bf2261c03e000000000000000000000000000000000000803f</Matrix>
+					<Shift>
+						<x>0</x>
+						<y>-0.436</y>
+					</Shift>
+					<RollY>0.1872</RollY>
+					<RollX>-1.1856</RollX>
+					<Scale>1</Scale>
+				</Item>
+			</placements>
+		</Win3DObj>
+	</Win3DView>
+	<MountPoint>
+		<x>0</x>
+		<y>0.759</y>
+		<z>0.685</z>
+	</MountPoint>
+	<MountBone>hitPoint</MountBone>
+</CreatureVisual>
