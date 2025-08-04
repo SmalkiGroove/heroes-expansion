@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001204">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Inferno/PitFiend.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Inferno/PitFiendAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Inferno/PitFiendDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Inferno/ico_PitFiend.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Inferno/ico_PitFiend_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Inferno/ico_PitFiend_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Inferno/ico_PitFiend_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Inferno/Pitfiend.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="#n:inline(Win3DObj)" id="item_24126e39-3fcc-43e6-9adb-d5d7f5e79cd3">
+		<Win3DObj ObjectRecordID="29">
+			<Model href="/_(Model)/Creatures/Inferno/Pitfiend.(Model).xdb#xpointer(/Model)"/>
+			<placements>
+				<Item>
+					<SizeDesc href="/GameMechanics/Win3DObjSizeDesc/creatureInfo.xdb#xpointer(/Win3DObjSizeDesc)"/>
+					<Matrix>30d4273fcfec38be000000006c12833dd88a663c753a513d018d2d3f759398bfe25c38be925127bf8905593d000000000000000000000000000000000000803f</Matrix>
+					<Shift>
+						<x>0.064</x>
+						<y>-1.192</y>
+					</Shift>
+					<RollY>0.2688</RollY>
+					<RollX>-1.4928</RollX>
+					<Scale>0.68</Scale>
+				</Item>
+			</placements>
+		</Win3DObj>
+	</Win3DView>
+	<MountPoint>
+		<x>-0.294872</x>
+		<y>-0.572936</y>
+		<z>1.35475</z>
+	</MountPoint>
+	<MountBone>Neck</MountBone>
+</CreatureVisual>

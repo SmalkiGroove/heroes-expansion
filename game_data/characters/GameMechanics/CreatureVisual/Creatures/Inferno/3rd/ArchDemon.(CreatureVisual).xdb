@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Inferno/3rd/ArchDemon_Name.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Inferno/3rd/ArchDemon_Abils.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Inferno/3rd/ArchDemon_Desc.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/UI/H5A2/Icons/Creatures/Inferno_second_upd/Arch_Demon.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Inferno/AlternativeUpgrade/T7_Arch_Demon.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>true</Use>
+		<StartEffect href="/Effects/_(Effect)/Characters/Creatures/Inferno/Devil/Teleport.xdb#xpointer(/Effect)"/>
+		<FinishEffect href="/Effects/_(Effect)/Characters/Creatures/Inferno/Devil/Teleport.xdb#xpointer(/Effect)"/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.0182372</x>
+		<y>0.140032</y>
+		<z>2.27116</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

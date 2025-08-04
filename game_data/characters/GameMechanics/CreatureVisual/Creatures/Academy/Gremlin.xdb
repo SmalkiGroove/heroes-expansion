@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001176">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Academy/Gremlin.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Academy/GremlinAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Academy/GremlinDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Academy/ico_gremlin.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Academy/ico_gremlin_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Academy/ico_gremlin_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Academy/ico_gremlin_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Academy/Gremlin.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot href="/GameMechanics/Shot/Creatures/Academy/Gremlin.xdb#xpointer(/Shot)"/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.00177432</x>
+		<y>0.111489</y>
+		<z>0.945846</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

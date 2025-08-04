@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001165">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Academy/Magi.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Academy/MagiAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Academy/MagiDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Academy/ico_Magi.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Academy/ico_magi_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Academy/ico_magi_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Academy/ico_magi_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Academy/Magi.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot href="/GameMechanics/Shot/Creatures/Academy/Magi.xdb#xpointer(/Shot)"/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>0</x>
+		<y>0.0284883</y>
+		<z>1.12069</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

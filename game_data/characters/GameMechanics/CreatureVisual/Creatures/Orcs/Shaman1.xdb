@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Orcs/Shaman1.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Orcs/Shaman1_Abils.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Orcs/Shaman1_Desc.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/UI/H5A2/Icons/Creatures/Orcs/Shaman.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Orcs/T4_Orc/T4a_Shaman.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot href="/GameMechanics/Shot/Creatures/Inferno/Succubus_First_Stike.xdb#xpointer(/Shot)"/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="#n:inline(Win3DObj)" id="item_6ecfc6e5-1509-487c-8785-efc63eeb0d84">
+		<Win3DObj ObjectRecordID="30">
+			<Model href="/_(Model)/Creatures/Inferno/Succubus.(Model).xdb#xpointer(/Model)"/>
+			<placements>
+				<Item>
+					<SizeDesc href="/GameMechanics/Win3DObjSizeDesc/creatureInfo.xdb#xpointer(/Win3DObjSizeDesc)"/>
+					<Matrix>b81a7c3f61ef1c3fe17a14336e12033e5e0413befa2b6c3ebc59903f621098bf0892183fca1775bfa8188b3e000000000000000000000000000000000000803f</Matrix>
+					<Shift>
+						<x>0.128</x>
+						<y>-1.188</y>
+					</Shift>
+					<RollY>-0.5568</RollY>
+					<RollX>-1.3344</RollX>
+					<Scale>1.16</Scale>
+				</Item>
+			</placements>
+		</Win3DObj>
+	</Win3DView>
+	<MountPoint>
+		<x>-0.0329606</x>
+		<y>-0.0802899</y>
+		<z>1.22961</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Preserve/3rd/Dryad_Name.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Preserve/3rd/Dryad_Abils.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Preserve/3rd/Dryad_Desc.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/UI/H5A2/Icons/Creatures/Sylvan_second_upg/Dryad.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Rampart/AlternativeUpgrades/T1_Dryad.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>0.0491579</x>
+		<y>-0.0461631</y>
+		<z>1.29853</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

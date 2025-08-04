@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001163">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Academy/Rakshasa.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Academy/RakshasaAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Academy/RakshasaDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Academy/ico_Rakshasa.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Academy/ico_rakshasa_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Academy/ico_rakshasa_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Academy/ico_rakshasa_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Academy/Rakshasa.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.0360465</x>
+		<y>-0.0449497</y>
+		<z>1.58555</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

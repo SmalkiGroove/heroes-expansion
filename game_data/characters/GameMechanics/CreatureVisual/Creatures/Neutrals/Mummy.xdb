@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Neutrals/Mummy/name.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Neutrals/Mummy/abilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Neutrals/Mummy/description.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/UI/H5A1/Icons/Creatures/Neutral/128x128/Mummy.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Neutral/H5A1/Mummy.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits2.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.0678486</x>
+		<y>0.0939208</y>
+		<z>1.04205</z>
+	</MountPoint>
+	<MountBone>Joint_Spine</MountBone>
+</CreatureVisual>

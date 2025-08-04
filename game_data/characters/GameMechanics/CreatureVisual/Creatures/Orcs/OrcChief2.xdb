@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Orcs/OrcChief2.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Orcs/OrcChief2_Abils.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Orcs/OrcChief2_Desc.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/UI/H5A2/Icons/Creatures/Orcs/Executioner.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Orcs/T5_Orc/T5b_Executioner.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="#n:inline(Win3DObj)" id="item_0d92ed27-13b9-4983-b46f-231efc0df1c5">
+		<Win3DObj ObjectRecordID="10">
+			<Model href="/_(Model)/Creatures/Haven/Footman.(Model).xdb#xpointer(/Model)"/>
+			<placements>
+				<Item>
+					<SizeDesc href="/GameMechanics/Win3DObjSizeDesc/creatureInfo.xdb#xpointer(/Win3DObjSizeDesc)"/>
+					<Matrix>a608a53f54d9903ec2f528b20000000042dd583c921577bd64c6a83fd8a370bfb9b0903e63daa4bf5ff67cbd000000000000000000000000000000000000803f</Matrix>
+					<Shift>
+						<x>0</x>
+						<y>-0.94</y>
+					</Shift>
+					<RollY>-0.216</RollY>
+					<RollX>-1.6176</RollX>
+					<Scale>1.32</Scale>
+				</Item>
+			</placements>
+		</Win3DObj>
+	</Win3DView>
+	<MountPoint>
+		<x>-0.11775</x>
+		<y>0.0750276</y>
+		<z>1.56985</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

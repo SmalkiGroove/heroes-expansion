@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001250">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Haven/Cleric.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Haven/ClericAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Haven/ClericDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Heaven/ico_Cleric.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Heaven/ico_Cleric_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Heaven/ico_Cleric_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Heaven/ico_Cleric_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Haven/Cleric.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot href="/GameMechanics/Shot/Creatures/Haven/Cleric.xdb#xpointer(/Shot)"/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="#n:inline(Win3DObj)" id="item_b260c6d7-9ed0-42e2-bde4-4330b59066e2">
+		<Win3DObj ObjectRecordID="9">
+			<Model href="/_(Model)/Creatures/Haven/Cleric.(Model).xdb#xpointer(/Model)"/>
+			<placements>
+				<Item>
+					<SizeDesc href="/GameMechanics/Win3DObjSizeDesc/creatureInfo.xdb#xpointer(/Win3DObjSizeDesc)"/>
+					<Matrix>6618943fb6e6aa3d000000000000000023c8adbb6797963d0a2e943fdcf97ebf468eaa3dc1cb93bf86fb963d000000000000000000000000000000000000803f</Matrix>
+					<Shift>
+						<x>0</x>
+						<y>-0.996</y>
+					</Shift>
+					<RollY>-0.072</RollY>
+					<RollX>-1.5072</RollX>
+					<Scale>1.16</Scale>
+				</Item>
+			</placements>
+		</Win3DObj>
+	</Win3DView>
+	<MountPoint>
+		<x>0.0175458</x>
+		<y>-0.0639013</y>
+		<z>1.16347</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

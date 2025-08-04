@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Inferno/3rd/HornedLeaper_Name.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Inferno/3rd/HornedLeaper_Abils.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Inferno/3rd/HornedLeaper_Desc.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/UI/H5A2/Icons/Creatures/Inferno_second_upd/Horned_Leaper.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Inferno/AlternativeUpgrade/T2_Horned_Leaper.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>0.108936</x>
+		<y>0.241612</y>
+		<z>0.958353</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

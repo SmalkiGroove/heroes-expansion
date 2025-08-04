@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Orcs/Centaur2.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Orcs/Centaur2_Abils.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Orcs/Centaur2_Desc.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/UI/H5A2/Icons/Creatures/Orcs/Centaur_Nomad.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Orcs/T2_Orc/T2b_CentaurNomad.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot href="/GameMechanics/Shot/Creatures/Orcs/Centaur.xdb#xpointer(/Shot)"/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="#n:inline(Win3DObj)" id="item_2541feb9-a44c-4cd5-8d7f-179071f7e809">
+		<Win3DObj ObjectRecordID="8">
+			<Model href="/_(Model)/Creatures/Haven/Cavalier.(Model).xdb#xpointer(/Model)"/>
+			<placements>
+				<Item>
+					<SizeDesc href="/GameMechanics/Win3DObjSizeDesc/creatureInfo.xdb#xpointer(/Win3DObjSizeDesc)"/>
+					<Matrix>99822c3f999bbabd7c14ae310000000046edf63ba245643dd27b2d3f3cdf8fbff4f7b9bd50eb2bbf7059663d000000000000000000000000000000000000803f</Matrix>
+					<Shift>
+						<x>0</x>
+						<y>-1.124</y>
+					</Shift>
+					<RollY>0.1344</RollY>
+					<RollX>-1.488</RollX>
+					<Scale>0.68</Scale>
+				</Item>
+			</placements>
+		</Win3DObj>
+	</Win3DView>
+	<MountPoint>
+		<x>-0.00853769</x>
+		<y>-0.615091</y>
+		<z>1.40238</z>
+	</MountPoint>
+	<MountBone>Spine</MountBone>
+</CreatureVisual>

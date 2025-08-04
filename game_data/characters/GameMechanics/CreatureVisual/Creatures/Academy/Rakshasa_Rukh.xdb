@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001172">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Academy/Rakshasa_Rukh.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Academy/Rakshasa_RukhAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Academy/Rakshasa_RukhDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Academy/ico_Rakshasarukh.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Academy/ico_Rakshasarukh_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Academy/ico_Rakshasarukh_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Academy/ico_Rakshasarukh_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Academy/RakshasaRukh.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.0176687</x>
+		<y>0.163724</y>
+		<z>1.82213</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

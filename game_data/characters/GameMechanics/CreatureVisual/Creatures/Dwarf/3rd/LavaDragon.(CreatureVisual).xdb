@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Dwarf/3rd/LavaDragon_Name.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Dwarf/3rd/LavaDragon_Abils.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Dwarf/3rd/LavaDragon_Desc.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/UI/H5A2/Icons/Creatures/Dwarf_second_upg/Lava_Dragon.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Dwarves/AlternativeUpgrade/T7_LavaDragon/T6_LavaDragon.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>0.156453</x>
+		<y>-0.508944</y>
+		<z>2.28194</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Academy/3rd/StormLord_Name.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Academy/3rd/StormLord_Abils.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Academy/3rd/StormLord_Desc.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/UI/H5A2/Icons/Creatures/Academy_second_upg/Storm_Lord.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Academy/Alternative Upgrade/T7_Storm_Lord.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot href="/GameMechanics/Shot/Creatures/Academy/StormLord.xdb#xpointer(/Shot)"/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Steel_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.227313</x>
+		<y>-0.330737</y>
+		<z>3.09476</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

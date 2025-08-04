@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001232">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Dungeon/Hydra.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Dungeon/HydraAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Dungeon/HydraDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Hydra.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Hydra_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Hydra_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Hydra_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Dungeon/Hydra.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>0.0027591</x>
+		<y>-1.22948</y>
+		<z>1.72379</z>
+	</MountPoint>
+	<MountBone>M_Neck</MountBone>
+</CreatureVisual>

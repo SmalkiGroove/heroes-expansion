@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Dwarf/Thane.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Dwarf/ThaneAbilites.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Dwarf/ThaneDiscription.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64 href="/UI/H5A1/Icons/Creatures/Dwarven/64x64/Thane.(Texture).xdb#xpointer(/Texture)"/>
+	<Icon128 href="/UI/H5A1/Icons/Creatures/Dwarven/128x128/Thane.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Dwarves/T6_Dwarf/Thane.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>true</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.04448</x>
+		<y>0.00713571</y>
+		<z>1.71465</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001224">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Dungeon/Ravager.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Dungeon/RavagerAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Dungeon/RavagerDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Marauder.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Marauder_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Marauder_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Marauder_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Dungeon/Maradeur.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>0</x>
+		<y>0.0872517</y>
+		<z>1.65989</z>
+	</MountPoint>
+	<MountBone>Spine</MountBone>
+</CreatureVisual>

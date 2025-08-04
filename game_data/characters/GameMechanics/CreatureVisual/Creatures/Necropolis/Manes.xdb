@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001261">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Necropolis/Manes.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Necropolis/Manes_abilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Necropolis/Manes_desc.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Necropolis/ico_Manes.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Necropolis/ico_Manes_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Necropolis/ico_Manes_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Necropolis/ico_Manes_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Necropolis/manes.(character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits2.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>0.0442407</x>
+		<y>-0.283827</y>
+		<z>1.39059</z>
+	</MountPoint>
+	<MountBone>G2_Chest</MountBone>
+</CreatureVisual>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001192">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Inferno/HornedDemon.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Inferno/HornedDemonAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Inferno/HornedDemonDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Inferno/ico_HornedDemon.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Inferno/ico_HornedDemon_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Inferno/ico_HornedDemon_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Inferno/ico_HornedDemon_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Inferno/HornedDemon.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="#n:inline(Win3DObj)" id="item_8051e722-1a6f-4757-ae0f-d2bca63a89b3">
+		<Win3DObj ObjectRecordID="27">
+			<Model href="/_(Model)/Creatures/Inferno/HornedDemon.(Model).xdb#xpointer(/Model)"/>
+			<placements>
+				<Item>
+					<SizeDesc href="/GameMechanics/Win3DObjSizeDesc/creatureInfo.xdb#xpointer(/Win3DObjSizeDesc)"/>
+					<Matrix>3872d13f6589e1bd84eb513100008032df23763d6894643f7ee9af3f4e6210bfb3ffbcbdda83afbfc718653f000000000000000000000000000000000000803f</Matrix>
+					<Shift>
+						<x>1.49012e-008</x>
+						<y>-0.564</y>
+					</Shift>
+					<RollY>0.0672002</RollY>
+					<RollX>-0.9936</RollX>
+					<Scale>1.64</Scale>
+				</Item>
+			</placements>
+		</Win3DObj>
+	</Win3DView>
+	<MountPoint>
+		<x>-0.252967</x>
+		<y>-0.43201</y>
+		<z>0.956327</z>
+	</MountPoint>
+	<MountBone>Head</MountBone>
+</CreatureVisual>

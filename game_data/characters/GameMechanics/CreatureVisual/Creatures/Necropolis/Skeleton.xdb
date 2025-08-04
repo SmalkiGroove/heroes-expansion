@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001194">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Necropolis/Skeleton.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Necropolis/Skeleton_Abilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Necropolis/Skeleton_desc.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Necropolis/ico_Sceleton.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Necropolis/ico_Sceleton_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Necropolis/ico_Sceleton_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Necropolis/ico_Sceleton_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Necropolis/SkeletonWarrior.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter href="/Characters/Creatures/Necropolis/SkeletonWarrior_Death.(Character).xdb#xpointer(/Character)"/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Steel_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="#n:inline(Win3DObj)" id="item_6a40fc73-9a87-426b-8506-32b7217a393c">
+		<Win3DObj ObjectRecordID="36">
+			<Model href="/_(Model)/Creatures/Necropolis/SkeletonWarrior.(Model).xdb#xpointer(/Model)"/>
+			<placements>
+				<Item>
+					<SizeDesc href="/GameMechanics/Win3DObjSizeDesc/creatureInfo.xdb#xpointer(/Win3DObjSizeDesc)"/>
+					<Matrix>0c4a903fb3d12fbfc2f5a8b2000000008a5f753ebe5ec93eb1579e3f000080bf49c524bfdc3887bff0cceb3e000000000000000000000000000000000000803f</Matrix>
+					<Shift>
+						<x>0</x>
+						<y>-1</y>
+					</Shift>
+					<RollY>0.5472</RollY>
+					<RollX>-1.2144</RollX>
+					<Scale>1.32</Scale>
+				</Item>
+			</placements>
+		</Win3DObj>
+	</Win3DView>
+	<MountPoint>
+		<x>-0.0296668</x>
+		<y>0.188853</y>
+		<z>1.01607</z>
+	</MountPoint>
+	<MountBone>Spine</MountBone>
+</CreatureVisual>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001166">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Haven/Angel.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Haven/AngelAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Haven/AngelDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Heaven/ico_Angel.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Heaven/ico_Angel_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Heaven/ico_Angel_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Heaven/ico_Angel_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Haven/Angel.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="#n:inline(Win3DObj)" id="item_b21fe559-b2b0-4a9a-873c-6fb2735698ab">
+		<Win3DObj ObjectRecordID="5">
+			<Model href="/_(Model)/Creatures/Haven/Angel.(Model).xdb#xpointer(/Model)"/>
+			<placements>
+				<Item>
+					<SizeDesc href="/GameMechanics/Win3DObjSizeDesc/creatureInfo.xdb#xpointer(/Win3DObjSizeDesc)"/>
+					<Matrix>8904573f562d463c3e0ad7af00000000795b143ad5f620bdf4cd563f13aec7bfc8f5453c40c856bf08fb20bd000000000000000000000000000000000000803f</Matrix>
+					<Shift>
+						<x>0</x>
+						<y>-1.56</y>
+					</Shift>
+					<RollY>-0.0144002</RollY>
+					<RollX>-1.6176</RollX>
+					<Scale>0.84</Scale>
+				</Item>
+			</placements>
+		</Win3DObj>
+	</Win3DView>
+	<MountPoint>
+		<x>-0.00568152</x>
+		<y>-0.0591572</y>
+		<z>2.19119</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

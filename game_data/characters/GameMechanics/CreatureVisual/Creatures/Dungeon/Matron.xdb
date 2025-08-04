@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001178">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Dungeon/Matron.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Dungeon/MatronAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Dungeon/MatronDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Priestess.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Priestess_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Priestess_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Priestess_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Dungeon/Priestess.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot href="/GameMechanics/Shot/Creatures/Dungeon/Matron.xdb#xpointer(/Shot)"/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.0890813</x>
+		<y>-0.151538</y>
+		<z>1.26018</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

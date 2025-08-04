@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001237">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Haven/Marksman.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Haven/MarksmanAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Haven/MarksmanDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Heaven/ico_Marksman.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Heaven/ico_Marksman_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Heaven/ico_Marksman_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Heaven/ico_Marksman_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Haven/Marksman.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot href="/GameMechanics/Shot/Creatures/Haven/Marksman.xdb#xpointer(/Shot)"/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="#n:inline(Win3DObj)" id="item_2c79f6bf-661c-4490-bd09-5b584851ca89">
+		<Win3DObj ObjectRecordID="12">
+			<Model href="/_(Model)/Creatures/Haven/Marksman.(Model).xdb#xpointer(/Model)"/>
+			<placements>
+				<Item>
+					<SizeDesc href="/GameMechanics/Win3DObjSizeDesc/creatureInfo.xdb#xpointer(/Win3DObjSizeDesc)"/>
+					<Matrix>c9eda83ff29acf3cc2f5a8b000000000dc5a09bb3988df3d9561a83f138380bfe2e4ce3ca359a8bfc992df3d000000000000000000000000000000000000803f</Matrix>
+					<Shift>
+						<x>0</x>
+						<y>-1.004</y>
+					</Shift>
+					<RollY>-0.0192</RollY>
+					<RollX>-1.488</RollX>
+					<Scale>1.32</Scale>
+				</Item>
+			</placements>
+		</Win3DObj>
+	</Win3DView>
+	<MountPoint>
+		<x>-0.00672894</x>
+		<y>0.0347245</y>
+		<z>1.00874</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Dungeon/3rd/ShadowMistress_Name.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Dungeon/3rd/ShadowMistress_Abils.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Dungeon/3rd/ShadowMistress_Desc.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/UI/H5A2/Icons/Creatures/Dungeon_second_upd/Shadow_Mistress.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Dungeon/AlternativeUpgrade/T6_ShadowMistress/T6_ShadowMistress.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.0890813</x>
+		<y>-0.151538</y>
+		<z>1.26018</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

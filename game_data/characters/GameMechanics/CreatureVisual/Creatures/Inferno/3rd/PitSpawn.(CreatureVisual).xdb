@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Inferno/3rd/PitSpawn_Name.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Inferno/3rd/PitSpawn_Abils.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Inferno/3rd/PitSpawn_Desc.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/UI/H5A2/Icons/Creatures/Inferno_second_upd/Pit_Spawn.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Inferno/AlternativeUpgrade/T6_Pit_Spawn.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.419628</x>
+		<y>-0.733445</y>
+		<z>1.39203</z>
+	</MountPoint>
+	<MountBone>Head</MountBone>
+</CreatureVisual>

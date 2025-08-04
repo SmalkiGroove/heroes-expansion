@@ -4,7 +4,7 @@ import xmltodict
 import re
 from jinja2 import Environment, FileSystemLoader
 
-debug = True
+debug = False
 dry_run = True
 
 root_text_path = "../../game_texts/texts-EN"
@@ -13,8 +13,9 @@ reftable_xdb_path = "../../game_data/data/GameMechanics/RefTables"
 armies_lua_path = "../../game_data/lua/scripts"
 heroes_pedia_path = "../../game_data/doc/UI/Doc/Heroes"
 hero_lua_regex = r"(H_[A-Z0-9_]+) = '([A-Za-z0-9]+)'"
-army1_lua_regex = r".*\[(H_[A-Z0-9_]+)\] = \{(.*)\},"
-army2_lua_regex = r".*\[(\"[A-Z0-9_]+\")\] = \{(.*)\},"
+army_lua_regex = r".* = {(.*)},"
+army1_lua_regex = r'.*\[(H_[A-Z0-9_]+)\] = \{(.*)\},'
+army2_lua_regex = r'.*\["([A-Za-z]+)"\] = \{(.*)\},'
 
 jinja_env = Environment(loader=FileSystemLoader(searchpath="templates-heroes"))
 
@@ -121,19 +122,30 @@ def get_hero_lua_name(hero_id):
     print(f"WARN: hero with name {hero_id} not found")
     return None
 def get_hero_starting_army(hero_id, faction):
+    army = None
     with open(os.path.join(armies_lua_path, "advmap", "handlers", "starting-armies.lua"), 'r') as armies_lua:
         for line in armies_lua.readlines():
-            regmatch = re.match(army1_lua_regex, line)
-            if regmatch and len(regmatch.groups()) == 2:
-                if regmatch.group(1) == hero_id:
-                    return regmatch.group(2)
-        for line in armies_lua.readlines():
-            regmatch = re.match(army2_lua_regex, line)
-            if regmatch and len(regmatch.groups()) == 2:
-                if regmatch.group(1) == faction:
-                    return regmatch.group(2)
-    print(f"WARN: army for {hero_id} or {faction} not found")
+            if faction in line:
+                regmatch = re.match(army_lua_regex, line)
+                if regmatch:
+                    army = regmatch.group(1)
+            if hero_id in line:
+                regmatch = re.match(army_lua_regex, line)
+                if regmatch:
+                    army = regmatch.group(1)
+    if army:
+        return army
+    else:
+        print(f"WARN: army for {hero_id} or {faction} not found")
     return None
+def get_creature_data(creature_id):
+    for creature in creatures_data["Table_Creature_CreatureType"]["objects"]["Item"]:
+        if creature["ID"] == creature_id:
+            creature_path = creature["Obj"]["@href"][1:-20]
+            with open(os.path.join("../../game_data/data", creature_path), 'r') as creature_xdb:
+                creaturevisual_path = xmltodict.parse(creature_xdb.read())["Creature"]["Visual"]["@href"][1:-26]
+                with open(os.path.join("../../game_data/data", creaturevisual_path), 'r') as creature_visual_xdb:
+                    return xmltodict.parse(creature_visual_xdb.read())["CreatureVisual"]
 def get_class_data(class_id):
     for heroclass in class_data["Table_HeroClassDesc_HeroClass"]["objects"]["Item"]:
         if heroclass["ID"] == class_id:
@@ -175,6 +187,7 @@ masteries = {
     "MASTERY_EXTRA_EXPERT": 4
 }
 
+creature_pos = [0, 163, 224, 285, 346, 407]
 icon_pos = [0, 100, 170, 240, 310, 380, 100, 170, 240, 310, 380]
 icon_line = [0, 14, 14, 14, 14, 14, 84, 84, 84, 84, 84]
 subfolders = ["class", "army", "spec", "skills", "spells"]
@@ -251,7 +264,10 @@ for folder,faction in factions.items():
                 if hero_army:
                     hero_army = hero_army.replace('{','').replace('}','').replace(' ','').split(',')
                     log(hero_army)
-                    write_from_template("heroarmy.(WindowSimpleShared).xdb.j2", hero_armywindowshared_path(hero_id, faction), {'hero': hero_id, 'nb': 3})
+                    write_from_template("heroarmy.(WindowSimpleShared).xdb.j2", hero_armywindowshared_path(hero_id, faction), {'hero': hero_id, 'nb': len(hero_army)})
+                    for i in hero_army[::2]:
+                        creature_data = get_creature_data(hero_army[i])
+                        write_from_template("heroarmyx.(WindowSimple).xdb.j2", hero_armyxwindow_path(hero_id, faction, i), {'hero': hero_id, 'creature': hero_army[i], 'x': hero_army[i+1], 'pos': creature_pos[i//2], 'name_ref': creature_name_file})
 
             write_from_template("heroskills.(WindowSimple).xdb.j2", hero_skillswindow_path(hero_id, faction), {'hero': hero_id})
             write_from_template("heroskills.(WindowSimpleShared).xdb.j2", hero_skillswindowshared_path(hero_id, faction), {'hero': hero_id, 'nb': len(hero_skills)+len(hero_perks)})
@@ -296,3 +312,7 @@ for folder,faction in factions.items():
                 write_from_template("herospellx.(WindowSimple).xdb.j2", hero_spellxwindow_path(hero_id, faction, counter), {'hero': hero_id, 'spell': spell, 'x': counter, 'pos': icon_pos[counter], 'line': icon_line[counter], 'name_ref': spell_name_file})
                 write_from_template("windowshared.(WindowSimpleShared).xdb.j2", spell_windowshared_path(spell), {'id': spell})
                 write_from_template("windowbg.(BackgroundSimpleScallingTexture).xdb.j2", spell_background_path(spell), {'path': spell_texture_path, 'size': 128})
+
+            print("Done")
+        else:
+            print("Not a hero. Next")

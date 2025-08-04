@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Dwarf/Bear_Raider.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Dwarf/Bear_RaiderAbilites.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Dwarf/Bear_RaiderDiscription.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64 href="/UI/H5A1/Icons/Creatures/Dwarven/64x64/Bear_Rider.(Texture).xdb#xpointer(/Texture)"/>
+	<Icon128 href="/UI/H5A1/Icons/Creatures/Dwarven/128x128/Bear_Raider.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Dwarves/T3_Dwarf/Bear_Raider.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>0.0760245</x>
+		<y>-0.275122</y>
+		<z>2.13437</z>
+	</MountPoint>
+	<MountBone>C_Beard_2</MountBone>
+</CreatureVisual>

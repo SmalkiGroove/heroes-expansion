@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001198">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Preserve/Treant_Guardian.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Preserve/Treant_Guardian_Abilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Preserve/Treant_Guardian_desc.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Preseve/ico_dendroidsoldier.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Preseve/ico_dendroidsoldier_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Preseve/ico_dendroidsoldier_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Preseve/ico_dendroidsoldier_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Preserve/DendroidSolder.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="#n:inline(CreatureDamage)" id="item_23e51815-c33f-47a6-8fb2-442034924721">
+		<CreatureDamage ObjectRecordID="1000000">
+			<Effects>
+				<Item href="/Effects/_(Effect)/Characters/hits/dendroidsoldier_hit.xdb#xpointer(/Effect)"/>
+			</Effects>
+		</CreatureDamage>
+	</DamageEffect>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="/GameMechanics/Win3DObj/Creatures/Haven/Peasant.xdb#xpointer(/Win3DObj)"/>
+	<MountPoint>
+		<x>-0.0910861</x>
+		<y>0.594646</y>
+		<z>2.55769</z>
+	</MountPoint>
+	<MountBone>Spine</MountBone>
+</CreatureVisual>

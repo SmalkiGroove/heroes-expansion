@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Orcs/3rd/ShamanHag_Name.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Orcs/3rd/ShamanHag_Abils.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Orcs/3rd/ShamanHag_Desc.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/UI/H5A2/Icons/Creatures/Orcs/Witch.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Orcs/T4_Orc/T4b_Witch.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.0329606</x>
+		<y>-0.0802899</y>
+		<z>1.22961</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

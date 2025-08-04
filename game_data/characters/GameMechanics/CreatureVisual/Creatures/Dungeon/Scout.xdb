@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001158">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Dungeon/Scout.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Dungeon/ScoutAbilites.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Dungeon/ScoutDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Darkwarrior.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Darkwarrior_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Darkwarrior_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Darkwarrior_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Dungeon/DarkWarrior.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot href="/GameMechanics/Shot/Creatures/Dungeon/Scout.xdb#xpointer(/Shot)"/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.0448848</x>
+		<y>0.212223</y>
+		<z>1.01897</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Academy/3rd/GremlinSaboteur_Name.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Academy/3rd/GremlinSaboteur_Abils.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Academy/3rd/GremlinSaboteur_Desc.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/UI/H5A2/Icons/Creatures/Academy_second_upg/Gremlin_Saboteur.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Academy/Alternative Upgrade/T1_Gremlin_Saboteur.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot href="/GameMechanics/Shot/Creatures/Academy/GremlinSaboteur.xdb#xpointer(/Shot)"/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.00177432</x>
+		<y>0.111489</y>
+		<z>0.945846</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

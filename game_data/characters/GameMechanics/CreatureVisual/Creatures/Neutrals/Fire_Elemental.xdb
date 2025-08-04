@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001197">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Neutrals/Fire_Elemental.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Neutrals/Fire_ElementalAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Neutrals/Fire_ElementalDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Neutral/ico_Fire_Elemental.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Neutral/ico_Fire_Elemental_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Neutral/ico_Fire_Elemental_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Neutral/ico_Fire_Elemental_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Neutral/FireElemental.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot href="/GameMechanics/Shot/Creatures/Neutrals/Fire_Elemental.xdb#xpointer(/Shot)"/>
+	<SummoningEffect href="/GameMechanics/Spell/SpellLikeEffects/SummonElementals/SummonElementals_Fire.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="#n:inline(Win3DObj)" id="item_b7b618a4-0022-45c1-ba68-4b14313dadd1">
+		<Win3DObj ObjectRecordID="1000014">
+			<Model href="/_(Model)/Creatures/Neutral/FireElemental.(Model).xdb#xpointer(/Model)"/>
+			<placements>
+				<Item>
+					<SizeDesc href="/GameMechanics/Win3DObjSizeDesc/creatureInfo.xdb#xpointer(/Win3DObjSizeDesc)"/>
+					<Matrix>51505e3f59e1443f000000000000000018667dbe14118f3e69958c3f00000000ef683a3fa77d52bfac1abf3e000000000000000000000000000000000000803f</Matrix>
+					<Shift>
+						<x>0</x>
+						<y>0</y>
+					</Shift>
+					<RollY>-0.7248</RollY>
+					<RollX>-1.2432</RollX>
+					<Scale>1.16</Scale>
+				</Item>
+			</placements>
+		</Win3DObj>
+	</Win3DView>
+	<MountPoint>
+		<x>-0.000836646</x>
+		<y>-0.38036</y>
+		<z>1.07965</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

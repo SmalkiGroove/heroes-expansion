@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001235">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Necropolis/Shadow_Dragon.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Necropolis/Shadow_Dragon_Abilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Necropolis/Shadow_Dragon_desc.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Necropolis/ico_ShadowDragon.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Necropolis/ico_ShadowDragon_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Necropolis/ico_ShadowDragon_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Necropolis/ico_ShadowDragon_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Necropolis/ShadowDragon.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits2.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.324112</x>
+		<y>-0.0439671</y>
+		<z>1.19451</z>
+	</MountPoint>
+	<MountBone>Neck_1</MountBone>
+</CreatureVisual>

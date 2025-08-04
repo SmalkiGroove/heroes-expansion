@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Haven/Vindicator.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Haven/VindicatorAbilites.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Haven/VindicatorDescription.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64 href="/UI/H5A1/Icons/Creatures/Regenerats/64x64/Vindicator.(Texture).xdb#xpointer(/Texture)"/>
+	<Icon128 href="/UI/H5A1/Icons/Creatures/Regenerats/128x128/Vindicator.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Renegades/Swordsman.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>0.0676684</x>
+		<y>0.122622</y>
+		<z>1.07079</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>
