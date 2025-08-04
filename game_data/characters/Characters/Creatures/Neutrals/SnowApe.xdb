@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Neutrals/SnowApe/name.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Neutrals/SnowApe/abilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Neutrals/SnowApe/description.txt"/>
+	<Icon href="/Textures/Test/NoPicture.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Test/NoPicture.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Test/NoPicture.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Test/NoPicture.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Neutral/H5A1/Wolf.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.115055</x>
+		<y>-0.192879</y>
+		<z>0.606045</z>
+	</MountPoint>
+	<MountBone>Neck_1</MountBone>
+</CreatureVisual>

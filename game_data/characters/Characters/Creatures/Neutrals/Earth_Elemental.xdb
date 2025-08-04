@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001190">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Neutrals/Earth_Elemental.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Neutrals/Earth_ElementalAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Neutrals/Earth_ElementalDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Neutral/ico_Earth_Elemental.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Neutral/ico_Earth_Elemental_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Neutral/ico_Earth_Elemental_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Neutral/ico_Earth_Elemental_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Neutral/EarthElemental.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter href="/Characters/Creatures/Neutral/EarthElemental_Death.(Character).xdb#xpointer(/Character)"/>
+	<AnimShot/>
+	<SummoningEffect href="/GameMechanics/Spell/SpellLikeEffects/SummonElementals/SummonElementals_Earth.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Steel_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="#n:inline(Win3DObj)" id="item_7b00a907-2b6b-48e6-85b4-50922815a531">
+		<Win3DObj ObjectRecordID="1000016">
+			<Model href="/_(Model)/Creatures/Neutral/EarthElemental_LOD.(Model).xdb#xpointer(/Model)"/>
+			<placements>
+				<Item>
+					<SizeDesc href="/GameMechanics/Win3DObjSizeDesc/creatureInfo.xdb#xpointer(/Win3DObjSizeDesc)"/>
+					<Matrix>aeffa43f4f263a3fa370bdb200000000b08d4bbddb6cb43d3effbc3f00000000e3b6393fea9ca4bfc126cf3d000000000000000000000000000000000000803f</Matrix>
+					<Shift>
+						<x>0</x>
+						<y>0</y>
+					</Shift>
+					<RollY>-0.5136</RollY>
+					<RollX>-1.5024</RollX>
+					<Scale>1.48</Scale>
+				</Item>
+			</placements>
+		</Win3DObj>
+	</Win3DView>
+	<MountPoint>
+		<x>-0.0464232</x>
+		<y>-0.0367348</y>
+		<z>1.19245</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

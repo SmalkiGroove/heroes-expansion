@@ -4,7 +4,7 @@ import xmltodict
 import re
 from jinja2 import Environment, FileSystemLoader
 
-debug = False
+debug = True
 dry_run = True
 
 root_text_path = "../../game_texts/texts-EN"
@@ -144,7 +144,7 @@ def get_creature_data(creature_id):
             creature_path = creature["Obj"]["@href"][1:-20]
             with open(os.path.join("../../game_data/data", creature_path), 'r') as creature_xdb:
                 creaturevisual_path = xmltodict.parse(creature_xdb.read())["Creature"]["Visual"]["@href"][1:-26]
-                with open(os.path.join("../../game_data/data", creaturevisual_path), 'r') as creature_visual_xdb:
+                with open(os.path.join("../../game_data/characters", creaturevisual_path), 'r') as creature_visual_xdb:
                     return xmltodict.parse(creature_visual_xdb.read())["CreatureVisual"]
 def get_class_data(class_id):
     for heroclass in class_data["Table_HeroClassDesc_HeroClass"]["objects"]["Item"]:
@@ -212,6 +212,7 @@ for folder,faction in factions.items():
             hero_id = hero_data['AdvMapHeroShared']['InternalName']
             hero_class = hero_data['AdvMapHeroShared']['Class']
             hero_name_file = hero_data['AdvMapHeroShared']['Editable']['NameFileRef']['@href']
+            hero_spec_file = hero_data['AdvMapHeroShared']['SpecializationDescFileRef']['@href']
             hero_face_file = hero_data['AdvMapHeroShared']['FaceTexture']['@href']
             hero_skills = hero_data['AdvMapHeroShared']['Editable']['skills']['Item']
             if not isinstance(hero_skills, list):
@@ -265,9 +266,22 @@ for folder,faction in factions.items():
                     hero_army = hero_army.replace('{','').replace('}','').replace(' ','').split(',')
                     log(hero_army)
                     write_from_template("heroarmy.(WindowSimpleShared).xdb.j2", hero_armywindowshared_path(hero_id, faction), {'hero': hero_id, 'nb': len(hero_army)})
-                    for i in hero_army[::2]:
-                        creature_data = get_creature_data(hero_army[i])
-                        write_from_template("heroarmyx.(WindowSimple).xdb.j2", hero_armyxwindow_path(hero_id, faction, i), {'hero': hero_id, 'creature': hero_army[i], 'x': hero_army[i+1], 'pos': creature_pos[i//2], 'name_ref': creature_name_file})
+                    for i in range(0, len(hero_army), 2):
+                        creature_id = hero_army[i]
+                        if creature_id == "CREATURE_ARCANE_EAGLE":
+                            creature_id = "CREATURE_SNOW_APE"
+                        log(creature_id)
+                        creature_data = get_creature_data(creature_id)
+                        write_from_template("heroarmyx.(WindowSimple).xdb.j2", hero_armycrxwindow_path(hero_id, faction, i//2), {'hero': hero_id, 'creature': creature_id, 'x': hero_army[i+1], 'pos': creature_pos[i//2], 'name_ref': creature_data['CreatureNameFileRef']['@href']})
+                        write_from_template("heroarmyx.(ForegroundTextString).xdb.j2", hero_armycrxcounttext_path(hero_id, faction, i//2), {'value': hero_army[i+1]})
+                        write_from_template("windowshared.(WindowSimpleShared).xdb.j2", creature_windowshared_path(creature_id), {'id': creature_id})
+                        write_from_template("windowbg.(BackgroundSimpleScallingTexture).xdb.j2", creature_background_path(creature_id), {'path': creature_data['Icon128']['@href'], 'size': 128})
+            write_from_template("heroface.(WindowSimple).xdb.j2", hero_armyfacewindow_path(hero_id, faction), {'hero': hero_id})
+            write_from_template("heroface.(WindowSimpleShared).xdb.j2", hero_armyfacewindowshared_path(hero_id, faction), {'hero': hero_id, 'faction': faction})
+
+            write_from_template("herospec.(WindowSimple).xdb.j2", hero_specwindow_path(hero_id, faction), {'hero': hero_id})
+            write_from_template("herospec.(WindowSimpleShared).xdb.j2", hero_specwindowshared_path(hero_id, faction), {'hero': hero_id})
+            write_from_template("herospec.(WindowTextView).xdb.j2", hero_spectext_path(hero_id, faction), {'hero': hero_id, 'spec_ref': hero_spec_file})
 
             write_from_template("heroskills.(WindowSimple).xdb.j2", hero_skillswindow_path(hero_id, faction), {'hero': hero_id})
             write_from_template("heroskills.(WindowSimpleShared).xdb.j2", hero_skillswindowshared_path(hero_id, faction), {'hero': hero_id, 'nb': len(hero_skills)+len(hero_perks)})
