@@ -752,19 +752,21 @@ function Routine_CastRandomFireball(side, hero)
     -- log("Trigger random Fireball !")
     if CURRENT_UNIT == hero then
         local mana = GetUnitManaPoints(hero)
-        if mana >= 3 then
+        if mana > 0 then
             local x,y = GetUnitPosition(RandomCreature(1-side, COMBAT_TURN))
             HeroCast_Area(hero, SPELL_FIREBALL, FREE_MANA, x, y)
-            SetMana(hero, mana - 3)
-            if GetHeroLevel(side) < 20 then
-                ROUTINE_VARS.Incendiary = not nil
-            else
-                SetATB_ID(hero, ATB_INSTANT)
-            end
+            SetMana(hero, mana - 1)
+            local atb = 0.15 + 0.05 * GetHeroLevel(side)
+            SetATB_ID(hero, atb)
+            -- if GetHeroLevel(side) < 20 then
+            --     ROUTINE_VARS.Incendiary = not nil
+            -- else
+            --     SetATB_ID(hero, ATB_INSTANT)
+            -- end
         end
-    elseif ROUTINE_VARS.Incendiary then
-        ROUTINE_VARS.Incendiary = nil
-        SetATB_ID(hero, 0.55)
+    -- elseif ROUTINE_VARS.Incendiary then
+    --     ROUTINE_VARS.Incendiary = nil
+    --     SetATB_ID(hero, 0.55)
     end
 end
 
