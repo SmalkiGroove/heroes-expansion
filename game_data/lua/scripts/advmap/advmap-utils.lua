@@ -10,16 +10,36 @@ end
 -- PLAYER MISC
 
 function StartingBonus(player)
+	log("$ StartingBonus for player "..player)
 	local gold = GetPlayerResource(player, GOLD)
 	local diff = mod(gold, 1000)
-	if diff > 1 then
-		SetPlayerResource(player, GOLD, gold - diff + 10000)
+	if diff > 1 then -- bonus resources chosen
+		log("Bonus resources chosen")
+		SetPlayerResource(player, WOOD, GetPlayerResource(player, WOOD) + 10)
+		SetPlayerResource(player, ORE, GetPlayerResource(player, ORE) + 10)
+		SetPlayerResource(player, MERCURY, GetPlayerResource(player, MERCURY) + 5)
+		SetPlayerResource(player, CRYSTAL, GetPlayerResource(player, CRYSTAL) + 5)
+		SetPlayerResource(player, SULFUR, GetPlayerResource(player, SULFUR) + 5)
+		SetPlayerResource(player, GEM, GetPlayerResource(player, GEM) + 5)
+		SetPlayerResource(player, GOLD, gold - diff + 1000)
 		return
 	end
 	for res = 0,5 do
-		if mod(GetPlayerResource(player, res), 10) ~= 0 then
-			PLAYER_MULTIPLIER[player] = 2
-			return
+		local amount = GetPlayerResource(player, res)
+		diff = mod(amount, 10)
+		if diff ~= 0 then -- bonus army chosen
+			PLAYER_ARMY_BONUS[player] = 1
+			SetPlayerResource(player, res, amount - diff)
+		end
+	end
+	if PLAYER_ARMY_BONUS[player] then
+		log("Bonus army chosen")
+	else -- bonus artifact chosen
+		log("Bonus artifact chosen")
+		local hero = GetPlayerHeroes(player)[0]
+		if hero then
+			for a = 1,199 do if HasArtefact(hero, a) then RemoveArtefact(hero, a) end end
+			GiveHeroRandomArtifact(player, hero, ARTIFACT_CLASS_MAJOR, HEROES[hero].faction)
 		end
 	end
 end
@@ -221,6 +241,31 @@ function TeachHeroRandomSpellTier(player, hero, school, tier)
 		local spell = spells[random(1, nb, TURN-school)]
 		TeachHeroSpell(hero, spell)
 		-- ShowFlyingSign("/Text/Game/Scripts/LearnSpell.txt", hero, player, FLYING_SIGN_TIME)
+	end
+end
+
+function GiveHeroRandomArtifact(player, hero, tier, set)
+	log("$ GiveHeroRandomArtifact hero="..hero.." tier="..tier.." set="..set)
+	tier = tier or 0
+	set = set or 0
+	local artefacts = {}
+	for a,data in ARTIFACTS_DATA do
+		if data.special == 0 then
+			if tier == 0 or data.class == tier then
+				if set == 0 or data.set == set then
+					insert(artefacts, a)
+				end
+			end
+		end
+	end
+	local nb = length(artefacts)
+	if nb == 0 then
+		return
+	elseif nb == 1 then
+		GiveArtifact(hero, artefacts[1])
+	else
+		local artefact = artefacts[random(1, nb, TURN+tier)]
+		GiveArtifact(hero, artefact)
 	end
 end
 

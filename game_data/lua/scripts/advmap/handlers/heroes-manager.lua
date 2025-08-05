@@ -171,13 +171,7 @@ function AIRecruitBonus(player, hero)
     if PLAYER_BRAIN[player] == COMPUTER then
         print("$ AIRecruitBonus for "..hero)
         GiveExp(hero, 10000)
-        local pool = {}
-        for artifact,data in ARTIFACTS_DATA do
-            if data.special == 0 and data.class == ARTIFACT_CLASS_MAJOR then insert(pool, artifact) end
-        end
-        local x,y,z = GetObjectPosition(hero)
-        local artefact = pool[random(1, length(pool), x+y+z)]
-        GiveArtifact(hero, artefact)
+        GiveHeroRandomArtifact(player, hero, ARTIFACT_CLASS_RELIC)
     end
 end
 

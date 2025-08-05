@@ -811,12 +811,7 @@ function Routine_SpoilsOfWarArtifact(player, hero, mastery, combatIndex)
     log("$ Routine_SpoilsOfWarArtifact")
     Var_SpoilersVictories[hero] = Var_SpoilersVictories[hero] and Var_SpoilersVictories[hero] + 1 or 1
     if mod(Var_SpoilersVictories[hero],10) == 0 then
-        local pool = {}
-        for artifact,data in ARTIFACTS_DATA do
-            if data.special == 0 and data.class == ARTIFACT_CLASS_MINOR then insert(pool, artifact) end
-        end
-        local artefact = pool[random(1, length(pool), TURN)]
-        GiveArtifact(hero, artefact)
+        GiveHeroRandomArtifact(player, hero, ARTIFACT_CLASS_MINOR)
     end
 end
 

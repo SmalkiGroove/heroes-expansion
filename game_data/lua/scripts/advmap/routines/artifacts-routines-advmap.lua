@@ -338,12 +338,7 @@ function Routine_ArtfsetVizir(player, hero, combatIndex)
     if value > 99999 then class = ARTIFACT_CLASS_RELIC
     elseif value > 9999 then class = ARTIFACT_CLASS_MAJOR
     end
-    local pool = {}
-    for artifact,data in ARTIFACTS_DATA do
-        if data.special == 0 and data.class == class then insert(pool, a) end
-    end
-    local artefact = pool[random(1, length(pool), value)]
-    GiveArtifact(hero, artefact)
+    GiveHeroRandomArtifact(player, hero, class)
 end
 
 function Routine_ArtfsetGenji2(player, hero, combatIndex)

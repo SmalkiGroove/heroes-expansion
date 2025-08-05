@@ -1,22 +1,28 @@
 
-PLAYER_MULTIPLIER = {[0]=1,[1]=1,[2]=1,[3]=1,[4]=1,[5]=1,[6]=1,[7]=1,[8]=1}
+PLAYER_ARMY_BONUS = {}
 DIFFICULTY_MULTIPLIER = (5 - GetDifficulty()) * 0.25
 
 function SetStartingArmy(hero)
 	-- log("$ SetStartingArmy hero="..hero)
-    local player = GetObjectOwner(hero)
+    local faction = HEROES[hero].faction
     local army = {}
     if STARTING_ARMIES[hero] then
         army = STARTING_ARMIES[hero]
     else
-        local faction = FACTION_TEXT[HEROES[hero].faction]
-        army = STARTING_ARMIES[faction]
+        local faction_text = FACTION_TEXT[faction]
+        army = STARTING_ARMIES[faction_text]
+    end
+    local player = IsObjectExists(hero) and GetObjectOwner(hero) or 0
+    if PLAYER_ARMY_BONUS[player] then
+        for i = 1,6 do
+            AddHeroCreatures(hero, CREATURES_BY_FACTION[faction][i][1], power(2, 6-i))
+        end
     end
     for i = 1,7 do
         if army[i] then
             local creature = army[i][1]
-            local nb = round(army[i][2] * PLAYER_MULTIPLIER[player] * DIFFICULTY_MULTIPLIER)
-            AddHeroCreatures(hero, creature, nb, i-1)
+            local nb = round(army[i][2] * DIFFICULTY_MULTIPLIER)
+            AddHeroCreatures(hero, creature, nb, PLAYER_ARMY_BONUS[player] and -1 or i-1)
         end
     end
     sleep(3)
