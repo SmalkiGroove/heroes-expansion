@@ -128,6 +128,7 @@ function PlayerDailyHandler(player)
 		startThread(DoHeroSpeRoutine_Daily, player, hero)
 		startThread(DoSkillsRoutine_Daily, player, hero)
 		startThread(DoArtifactsRoutine_Daily, player, hero)
+		startThread(AIDailyBonus, player, hero)
 	end
 	startThread(DoTownsRoutine_Daily, player)
 	WatchPlayer(player, nil)
@@ -140,6 +141,7 @@ function PlayerWeeklyHandler(player)
 		startThread(DoHeroSpeRoutine_Weekly, player, hero)
 		startThread(DoSkillsRoutine_Weekly, player, hero)
 		startThread(DoArtifactsRoutine_Weekly, player, hero)
+		startThread(AIWeeklyBonus, player, hero)
 	end
 	startThread(DoTownsRoutine_Weekly, player)
 end
@@ -194,6 +196,7 @@ function AddPlayerHero(player, hero)
 		startThread(BindHeroSkillTrigger, hero)
 		startThread(DoSkillsRoutine_Start, player, hero)
 		startThread(DoHeroSpeRoutine_Start, player, hero)
+		startThread(AIRecruitBonus, player, hero)
 		MakeHeroReturnToTavernAfterDeath(hero, 1, 0)
 	else
 		log("Comeback hero "..hero)
@@ -274,8 +277,17 @@ end
 if NB_HUMAN <= 1 then
 	Init()
 else
-	Trigger(OBJECTIVE_STATE_CHANGE_TRIGGER, 'H5X', FIRST_PLAYER, 'Init') sleep()
-	ExecConsoleCommand("@if GetObjectiveState('H5X', FIRST_PLAYER) == OBJECTIVE_UNKNOWN then SetObjectiveState('H5X', OBJECTIVE_ACTIVE, FIRST_PLAYER) else LoadedGame_GameVars() end")
+	OBJECTIVE_CHECK = 0
+	startThread(function()
+		GetObjectiveState('H5X', FIRST_PLAYER)
+		OBJECTIVE_CHECK = 1
+	end) sleep(1)
+	if OBJECTIVE_CHECK == 1 then
+		Trigger(OBJECTIVE_STATE_CHANGE_TRIGGER, 'H5X', FIRST_PLAYER, 'Init') sleep()
+		ExecConsoleCommand("@if GetObjectiveState('H5X', FIRST_PLAYER) == OBJECTIVE_UNKNOWN then SetObjectiveState('H5X', OBJECTIVE_ACTIVE, FIRST_PLAYER) else LoadedGame_GameVars() end")
+	else
+		MessageBoxForPlayers(GetPlayerFilter(FIRST_PLAYER), "/Text/Game/Scripts/InitFail.txt")
+	end
 end
 
 sleep(30) UnblockGame()

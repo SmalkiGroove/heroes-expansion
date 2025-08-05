@@ -199,7 +199,6 @@ function AddHeroCreatureType(player, hero, faction, tier, nb, default)
 	log("$ AddHeroCreatureType")
 	if nb >= 1 then
 		local army = GetHeroArmy(hero)
-		local b = 0
 		for i = 1,7 do
             if contains(CREATURES_BY_FACTION[faction][tier], army[i]) then
                 AddHeroCreatures(hero, army[i], nb)

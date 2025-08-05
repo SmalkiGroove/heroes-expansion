@@ -645,8 +645,8 @@ function Routine_BuildRitualPit(player, hero)
                 if GetTownBuildingLevel(town, TOWN_BUILDING_DUNGEON_RITUAL_PIT) == 0 then
                     UpgradeTownBuilding(town, TOWN_BUILDING_DUNGEON_RITUAL_PIT)
                 else
-                    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_2, CREATURE_WITCH, 23 + WEEKS)
-                    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_3, CREATURE_MINOTAUR, 16 + WEEKS)
+                    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_2, CREATURE_WITCH, 23 + 4 * WEEKS)
+                    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_3, CREATURE_MINOTAUR, 16 + 4 * WEEKS)
                 end
             end
         end

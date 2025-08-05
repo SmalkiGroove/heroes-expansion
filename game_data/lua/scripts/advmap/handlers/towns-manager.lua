@@ -130,7 +130,10 @@ function InitializeMapTowns()
     for faction,type in Towns_Types do
         for _,town in GetObjectNamesByType(type) do
             local owner = GetObjectOwner(town)
-            if not PLAYER_MAIN_TOWN[owner] then PLAYER_MAIN_TOWN[owner] = town end
+            if not PLAYER_MAIN_TOWN[owner] then
+                PLAYER_MAIN_TOWN[owner] = town
+                if GetDifficulty() > 1 and PLAYER_BRAIN[owner] == COMPUTER then UpgradeTownBuilding(town, TOWN_BUILDING_GRAIL) end
+            end
             local x,y,floor = GetObjectPosition(town)
             local dx = TOWN_TYPES_CENTER_TILE[type][1]
             local dy = TOWN_TYPES_CENTER_TILE[type][2]
@@ -163,7 +166,7 @@ function InitializeMapTowns()
     end
     for player = 1,8 do
         if GetPlayerState(player) == 1 and not PLAYER_MAIN_TOWN[player] then
-            log("Player "..player.." has no main town ??")
+            log("WARNING: Player "..player.." has no main town ??")
         end
     end
 end

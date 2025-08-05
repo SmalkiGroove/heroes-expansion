@@ -146,5 +146,40 @@ function HeroLostBattle(player, hero, opponent)
     end
 end
 
+function AIDailyBonus(player, hero)
+    if PLAYER_BRAIN[player] == COMPUTER then
+        print("$ AIDailyBonus for "..hero)
+        local amount = 125 * TURN * GetDifficulty()
+        GiveExp(hero, amount)
+    end
+end
+
+function AIWeeklyBonus(player, hero)
+    if PLAYER_BRAIN[player] == COMPUTER then
+        print("$ AIWeeklyBonus for "..hero)
+        local faction = HEROES[hero].faction
+        local n = min(WEEKS,7)
+        for i = 1,n do
+            local amount = WEEKS * (8-i) * GetDifficulty()
+            AddHeroCreatureType(player, hero, faction, i, amount, 0)
+            sleep(1)
+        end
+    end
+end
+
+function AIRecruitBonus(player, hero)
+    if PLAYER_BRAIN[player] == COMPUTER then
+        print("$ AIRecruitBonus for "..hero)
+        GiveExp(hero, 10000)
+        local pool = {}
+        for artifact,data in ARTIFACTS_DATA do
+            if data.special == 0 and data.class == ARTIFACT_CLASS_MAJOR then insert(pool, artifact) end
+        end
+        local x,y,z = GetObjectPosition(hero)
+        local artefact = pool[random(1, length(pool), x+y+z)]
+        GiveArtifact(hero, artefact)
+    end
+end
+
 -- log("Loaded heroes-manager.lua")
 ROUTINES_LOADED[18] = 1

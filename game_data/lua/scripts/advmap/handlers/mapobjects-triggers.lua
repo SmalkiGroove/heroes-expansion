@@ -30,8 +30,7 @@ function Trigger_WitchHut(hero, obj)
         MakeHeroInteractWithObject(hero, obj)
         Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_WitchHut")
         SetObjectEnabled(obj, nil)
-    end
-    if Var_WitchHutVisited[obj] == 0 then
+    elseif Var_WitchHutVisited[obj] == 0 then
         local givestat = random(1,4,TURN)
         QuestionBoxForPlayers(
             GetPlayerFilter(player),
@@ -84,9 +83,9 @@ function Trigger_Temple(hero, obj)
         MakeHeroInteractWithObject(hero, obj)
         Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_Temple")
         SetObjectEnabled(obj, nil)
-    end
-    if Var_TempleVisited[obj] == 0 then
+    elseif Var_TempleVisited[obj] == 0 then
         local exp = 10 * (WEEKS+10) * (WEEKS+10)
+        ShowFlyingSign({"/Text/Game/Scripts/MapObjects/Temple.txt"; amount=exp}, hero, player, FLYING_SIGN_TIME)
         for _,h in GetPlayerHeroes(player) do
             ChangeHeroStat(h, STAT_EXPERIENCE, exp)
             MarkObjectAsVisited(obj, h)
@@ -113,9 +112,10 @@ function Trigger_RallyFlag(hero, obj)
         MakeHeroInteractWithObject(hero, obj)
         Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_RallyFlag")
         SetObjectEnabled(obj, nil)
+    else
+        ShowFlyingSign("/Text/Game/Scripts/MapObjects/RallyFlag.txt", hero, player, FLYING_SIGN_TIME)
+        ChangeHeroStat(hero, STAT_MOVE_POINTS, 9999)
     end
-    ChangeHeroStat(hero, STAT_MOVE_POINTS, 9999)
-    MarkObjectAsVisited(obj, hero)
 end
 
 
