@@ -338,7 +338,7 @@ function Routine_UpgradeRunicShrine(player, hero)
     for town,data in MAP_TOWNS do
         if IsHeroInTown(hero, town, 1, 1) then
             if data.faction == FORTRESS then
-                UpgradeTownBuilding(town, TOWN_BUILDING_FORTRESS_RUNIC_SHRINE)
+                UpgradeTownBuilding(town, TOWN_BUILDING_FORTRESS_RUNIC_SHRINE) sleep(1)
                 ChangeHeroStat(hero, STAT_SPELL_POWER, GetTownBuildingLevel(town, TOWN_BUILDING_FORTRESS_RUNIC_SHRINE))
             end
         end
@@ -1308,7 +1308,7 @@ function DoHeroSpeRoutine_AfterCombat(player, hero, index)
 end
 
 function DoHeroSpeRoutine_Continuous(player, hero)
-    log("$ DoHeroSpeRoutine_Continuous - "..hero)
+    -- log("$ DoHeroSpeRoutine_Continuous - "..hero)
     if CONTINUOUS_TRIGGER_HERO_ROUTINES[hero] then
         startThread(CONTINUOUS_TRIGGER_HERO_ROUTINES[hero], player, hero)
     end

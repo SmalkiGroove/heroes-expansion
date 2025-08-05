@@ -1,8 +1,10 @@
 
-MULT = (5 - GetDifficulty()) * 0.25
+PLAYER_MULTIPLIER = {[0]=1,[1]=1,[2]=1,[3]=1,[4]=1,[5]=1,[6]=1,[7]=1,[8]=1}
+DIFFICULTY_MULTIPLIER = (5 - GetDifficulty()) * 0.25
 
 function SetStartingArmy(hero)
 	-- log("$ SetStartingArmy hero="..hero)
+    local player = GetObjectOwner(hero)
     local army = {}
     if STARTING_ARMIES[hero] then
         army = STARTING_ARMIES[hero]
@@ -13,7 +15,7 @@ function SetStartingArmy(hero)
     for i = 1,7 do
         if army[i] then
             local creature = army[i][1]
-            local nb = round(MULT * army[i][2])
+            local nb = round(army[i][2] * PLAYER_MULTIPLIER[player] * DIFFICULTY_MULTIPLIER)
             AddHeroCreatures(hero, creature, nb, i-1)
         end
     end
@@ -106,25 +108,6 @@ end
 function InitializeArmy(hero)
     if IsArmyEmpty(hero) then
         SetStartingArmy(hero)
-    end
-end
-
-function UpdateTavernHeroes()
-    for hero,data in HEROES do
-        if not IsHeroAlive(hero) then
-            if IsArmyEmpty(hero) then
-                startThread(SetStartingArmy, hero)
-            end
-        end
-    end
-end
-
-function UpdateTavernFactions()
-    for town,data in MAP_TOWNS do
-        local owner = GetObjectOwner(town)
-        if owner > 0 then
-            AllowPlayerTavernRace(owner, FactionToTownType(data.faction), 1)
-        end
     end
 end
 

@@ -19,6 +19,11 @@ function Override_RallyFlag(obj)
     SetObjectEnabled(obj, nil)
 end
 
+function Trigger_OverrideMonster(obj)
+    Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_Monster")
+    SetObjectEnabled(obj, nil)
+end
+
 -----------------------------------------------
 
 function Trigger_WitchHut(hero, obj)

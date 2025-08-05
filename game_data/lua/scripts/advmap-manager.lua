@@ -236,6 +236,7 @@ end
 function InitializeHeroes()
 	for player = 1,8 do
 		if (GetPlayerState(player) == 1) then
+			startThread(StartingBonus, player)
 			for i = 1,8 do AllowPlayerTavernRace(player, FactionToTownType(i), 0) end
 			for i,hero in GetPlayerHeroes(player) do
 				log("Initialize hero "..hero)

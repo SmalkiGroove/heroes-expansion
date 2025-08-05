@@ -747,18 +747,26 @@ function Routine_LeadershipAfterBattle(player, hero, mastery, combatIndex)
     local town_data = PLAYER_MAIN_TOWN[player] and MAP_TOWNS[PLAYER_MAIN_TOWN[player]] or nil
     -- log("Hero at x="..x..", y="..y)
     local found = nil
+    local objects = {}
     for i = -1,1 do for j = -1,1 do
         objects = GetObjectsFromPath(hero, x+i, y+j, z)
         if length(objects) == 0 then x=x+i; y=y+j; found = not nil; break end
     end if found then break end end
-    -- if found then log("Spawn caravan at x="..x..", y="..y) else log("No available tile around hero was found"); return end
+    if found then log("Spawn caravan at x="..x..", y="..y) else log("No available tile around "..hero.." was found"); return end
     local dx = town_data and town_data.x or x
     local dy = town_data and town_data.y or y
     local dz = town_data and town_data.z or z
-    local caravan = "Caravan-"..NB_CARAVAN
+    local caravan = "Caravan-"..hero.."-"..NB_CARAVAN
     NB_CARAVAN = NB_CARAVAN + 1
     CreateCaravan(caravan, player, z, x, y, dz, dx, dy)
-    repeat sleep(1) until IsObjectExists(caravan)
+    local err_counter = 0
+    while not IsObjectExists(caravan) do
+        sleep(1)
+        if err_counter == 10 then
+            log("Failed to create caravan") return
+        end
+        err_counter = err_counter + 1
+    end
     local total = 0
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 0)
     for i = 0,stacks-1 do
@@ -785,7 +793,7 @@ function Routine_LeadershipAfterBattle(player, hero, mastery, combatIndex)
             total = total + amount
         end
     end
-    if total == 0 then RemoveObject(caravan) else CURRENT_CARAVANS[caravan] = 3 end
+    if total == 0 then RemoveObject(caravan) else CURRENT_CARAVANS[caravan] = 7 end
 end
 
 function Routine_TaleTellers(player, hero, mastery, combatIndex)

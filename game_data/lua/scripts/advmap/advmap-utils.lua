@@ -4,6 +4,45 @@ function NoneRoutine()
 end
 
 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+-- PLAYER MISC
+
+function StartingBonus(player)
+	local gold = GetPlayerResource(player, GOLD)
+	local diff = mod(gold, 1000)
+	if diff > 1 then
+		SetPlayerResource(player, GOLD, gold - diff + 10000)
+		return
+	end
+	for res = 0,5 do
+		if mod(GetPlayerResource(player, res), 10) ~= 0 then
+			PLAYER_MULTIPLIER[player] = 2
+			return
+		end
+	end
+end
+
+function UpdateTavernHeroes()
+    for hero,data in HEROES do
+        if not IsHeroAlive(hero) then
+            if IsArmyEmpty(hero) then
+                startThread(SetStartingArmy, hero)
+            end
+        end
+    end
+end
+
+function UpdateTavernFactions()
+    for town,data in MAP_TOWNS do
+        local owner = GetObjectOwner(town)
+        if owner > 0 then
+            AllowPlayerTavernRace(owner, FactionToTownType(data.faction), 1)
+        end
+    end
+end
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -- HERO MISC

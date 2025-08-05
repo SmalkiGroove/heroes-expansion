@@ -53,6 +53,8 @@ SPIRITISM_SCHOOL_AFFINITY = {
     [H_KUJIN] = SPELL_SCHOOL_ANY,
 }
 
+ONGOING_BATTLES = {}
+
 
 -- log("Loaded advmap-data.lua")
 ROUTINES_LOADED[8] = 1
