@@ -369,11 +369,14 @@ function Routine_GiveArtifactRuneOfFlame(player, hero)
     end
 end
 
-function Routine_GainSpellpowerPerRune(player, hero)
-    log("$ Routine_GainSpellpowerPerRune")
+function Routine_GainStatsPerRune(player, hero)
+    log("$ Routine_GainStatsPerRune")
     for rune,tier in RUNIC_SPELLS do
         if KnowHeroSpell(hero, rune) and Var_Ebba_RunicSpells[rune] == 0 then
+            AddHeroStatAmount(player, hero, STAT_ATTACK, 1)
+            AddHeroStatAmount(player, hero, STAT_DEFENCE, 1)
             AddHeroStatAmount(player, hero, STAT_SPELL_POWER, 1)
+            AddHeroStatAmount(player, hero, STAT_KNOWLEDGE, 1)
             TeachHeroRandomSpellTier(player, hero, SPELL_SCHOOL_ANY, tier)
             Var_Ebba_RunicSpells[rune] = 1
         end
@@ -394,7 +397,6 @@ function Routine_LearnRunicSpell(player, hero)
 		local spell = spells[random(1, nb, TURN)]
 		TeachHeroSpell(hero, spell)
 	end
-    -- Routine_GainSpellpowerPerRune(player, hero)
 end
 
 function Routine_GiveArtifactShantiriBreastplate(player, hero)
@@ -1149,7 +1151,6 @@ DAILY_TRIGGER_HERO_ROUTINES = {
     [H_INGVAR] = Routine_AddHeroDefenders,
     [H_ROLF] = Routine_MovePointsPerBear,
     [H_HANGVUL] = Routine_ProductionIncreaseDwarvenWorkers,
-    [H_EBBA] = Routine_GainSpellpowerPerRune,
     -- academy
     [H_HAVEZ] = Routine_AddOtherHeroesGremlins,
     [H_MAAHIR] = Routine_AddOtherHeroesExperience,
@@ -1258,6 +1259,18 @@ AFTER_COMBAT_TRIGGER_HERO_ROUTINES = {
     [H_GORSHAK] = Routine_GainAttackDefense,
 }
 
+CONTINUOUS_TRIGGER_HERO_ROUTINES = {
+    -- haven
+    -- preserve
+    -- fortress
+    [H_EBBA] = Routine_GainStatsPerRune,
+    -- academy
+    -- dungeon
+    -- necropolis
+    -- inferno
+    -- stronghold
+}
+
 
 function DoHeroSpeRoutine_Start(player, hero)
     log("$ DoHeroSpeRoutine_Start - "..hero)
@@ -1291,6 +1304,13 @@ function DoHeroSpeRoutine_AfterCombat(player, hero, index)
     log("$ DoHeroSpeRoutine_AfterCombat - "..hero)
     if AFTER_COMBAT_TRIGGER_HERO_ROUTINES[hero] then
         startThread(AFTER_COMBAT_TRIGGER_HERO_ROUTINES[hero], player, hero, index)
+    end
+end
+
+function DoHeroSpeRoutine_Continuous(player, hero)
+    log("$ DoHeroSpeRoutine_Continuous - "..hero)
+    if CONTINUOUS_TRIGGER_HERO_ROUTINES[hero] then
+        startThread(CONTINUOUS_TRIGGER_HERO_ROUTINES[hero], player, hero)
     end
 end
 

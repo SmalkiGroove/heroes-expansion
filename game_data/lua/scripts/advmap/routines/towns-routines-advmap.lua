@@ -23,13 +23,17 @@ end
 
 function Routine_DragonTombstone(player, town)
     log("$ Routine_DragonTombstone")
-    if GetObjectCreatures(town, CREATURE_SKELETON) >= 50 then
-        for i,cr in GetObjectCreaturesTypes(town) do
-            if not cr or cr == 0 then
-                RemoveObjectCreatures(town, CREATURE_SKELETON, 50)
-                AddObjectCreatures(town, GetObjectCreatures(town, CREATURE_MANES) >= 5 and CREATURE_HORROR_DRAGON or CREATURE_BONE_DRAGON, 1)
-                return
-            end
+    local prob = 200 + 10 * WEEKS
+    prob = prob + GetObjectDwellingCreatures(town, CREATURE_SKELETON)
+    local rand = random(0, 999, TURN)
+    if rand < prob then
+        local prob2 = 100 + WEEKS
+        prob2 = prob2 + GetObjectDwellingCreatures(town, CREATURE_MANES)
+        rand = random(0, 999, WEEKS)
+        if rand < prob2 then
+            AddObjectCreatures(town, CREATURE_HORROR_DRAGON, 1)
+        else
+            AddObjectCreatures(town, CREATURE_BONE_DRAGON, 1)
         end
     end
 end

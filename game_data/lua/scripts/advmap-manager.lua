@@ -115,6 +115,7 @@ function WatchPlayer(player, wait)
 					tracker[hero].track = nil
 				end
 			end
+			startThread(DoHeroSpeRoutine_Continuous, player, hero)
 			startThread(DoArtifactsRoutine_Continuous, player, hero)
         end
 		sleep(15)
