@@ -15,13 +15,8 @@ function StartingBonus(player)
 	local diff = mod(gold, 1000)
 	if diff > 1 then -- bonus resources chosen
 		log("Bonus resources chosen")
-		SetPlayerResource(player, WOOD, GetPlayerResource(player, WOOD) + 10)
-		SetPlayerResource(player, ORE, GetPlayerResource(player, ORE) + 10)
-		SetPlayerResource(player, MERCURY, GetPlayerResource(player, MERCURY) + 5)
-		SetPlayerResource(player, CRYSTAL, GetPlayerResource(player, CRYSTAL) + 5)
-		SetPlayerResource(player, SULFUR, GetPlayerResource(player, SULFUR) + 5)
-		SetPlayerResource(player, GEM, GetPlayerResource(player, GEM) + 5)
-		SetPlayerResource(player, GOLD, gold - diff + 1000)
+		for res = 0,5 do SetPlayerResource(player, res, GetPlayerResource(player, res) + 5) end
+		SetPlayerResource(player, GOLD, gold - diff + 2500)
 		return
 	end
 	for res = 0,5 do
