@@ -166,6 +166,25 @@ def get_spell_data(spell_id):
                 return xmltodict.parse(spell_xdb.read())["Spell"]
     print(f"WARN: spell with name {spell_id} not found")
     return None
+def find_icon_size(path:str):
+    if path.startswith("/UI/H5A"):
+        if "128x128" in path:
+            return 128
+        elif "/Blood_Rage/" in path:
+            if ("Perk_MightOverMagic" in path) or ("Perk_Memory_of_Our_Blood" in path):
+                return 64
+            else:
+                return 128
+        elif ("/Voice/" in path):
+            if ("Perk_Voice_Training" in path) or ("Perk_Mighty_Voice" in path) or ("Perk_Voice_of_Rage" in path):
+                return 128
+            else:
+                return 64
+        elif ("Shatter_Light_Magic" in path) or ("Bodybuilding" in path) or ("Corrupt_Light" in path) or ("Path_of_War" in path):
+            return 64
+        else:
+            return 128
+    return 64
 
 factions = {
     "Haven": "Haven",
@@ -312,22 +331,24 @@ for folder,faction in factions.items():
                 skill_data = get_skill_data(skill_id)
                 skill_name_file = skill_data['NameFileRef']['Item'][skill_mastery-1]['@href']
                 skill_texture_path = skill_data['Texture']['Item'][skill_mastery]['@href']
+                skill_icon_size = find_icon_size(skill_texture_path)
                 log(skill_name_file)
                 log(skill_texture_path)
                 write_from_template("heroskillx.(WindowSimple).xdb.j2", hero_skillxwindow_path(hero_id, faction, counter), {'hero': hero_id, 'skill': skill_uid, 'x': counter, 'pos': icon_pos[counter], 'name_ref': skill_name_file})
-                write_from_template("windowshared.(WindowSimpleShared).xdb.j2", skill_windowshared_path(skill_uid), {'id': skill_uid, 'size': 64})
-                write_from_template("windowbg.(BackgroundSimpleScallingTexture).xdb.j2", skill_background_path(skill_uid), {'path': skill_texture_path, 'size': 64})
+                write_from_template("windowshared.(WindowSimpleShared).xdb.j2", skill_windowshared_path(skill_uid), {'id': skill_uid, 'size': skill_icon_size})
+                write_from_template("windowbg.(BackgroundSimpleScallingTexture).xdb.j2", skill_background_path(skill_uid), {'path': skill_texture_path, 'size': skill_icon_size})
             for perk in hero_perks:
                 counter += 1
                 log(perk)
                 perk_data = get_skill_data(perk)
                 perk_name_file = perk_data['NameFileRef']['Item']['@href']
                 perk_texture_path = perk_data['Texture']['Item'][1]['@href']
+                perk_icon_size = find_icon_size(perk_texture_path)
                 log(perk_name_file)
                 log(perk_texture_path)
                 write_from_template("heroskillx.(WindowSimple).xdb.j2", hero_skillxwindow_path(hero_id, faction, counter), {'hero': hero_id, 'skill': perk, 'x': counter, 'pos': icon_pos[counter], 'name_ref': perk_name_file})
-                write_from_template("windowshared.(WindowSimpleShared).xdb.j2", skill_windowshared_path(perk), {'id': perk, 'size': 64})
-                write_from_template("windowbg.(BackgroundSimpleScallingTexture).xdb.j2", skill_background_path(perk), {'path': perk_texture_path, 'size': 64})
+                write_from_template("windowshared.(WindowSimpleShared).xdb.j2", skill_windowshared_path(perk), {'id': perk, 'size': perk_icon_size})
+                write_from_template("windowbg.(BackgroundSimpleScallingTexture).xdb.j2", skill_background_path(perk), {'path': perk_texture_path, 'size': perk_icon_size})
 
             write_from_template("herospells.(WindowSimple).xdb.j2", hero_spellswindow_path(hero_id, faction), {'hero': hero_id})
             write_from_template("herospells.(WindowSimpleShared).xdb.j2", hero_spellswindowshared_path(hero_id, faction), {'hero': hero_id, 'nb': len(hero_spells)})
