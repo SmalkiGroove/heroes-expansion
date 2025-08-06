@@ -1100,7 +1100,9 @@ function Routine_SacrificeGoblinDaily(player, hero)
         if GetHeroCreatures(hero, goblin) > 0 then
             RemoveHeroCreatures(hero, goblin, 1)
             AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_2, CREATURE_SHAMAN, 1)
-            if GetHeroLevel(hero) >= 10 then AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_3, CREATURE_ORC_WARRIOR, 1) end
+            if GetHeroLevel(hero) >= 10 then
+                AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_3, CREATURE_ORC_WARRIOR, 1)
+            end
             return
         end
     end

@@ -115,7 +115,7 @@ end
 
 function Routine_HeroMoveNext(side, hero)
     -- log("Trigger hero play next !")
-    if CURRENT_UNIT_SIDE ~= GetUnitSide(hero) then
+    if CURRENT_UNIT_SIDE ~= GetUnitSide(hero) and IsCreature(CURRENT_UNIT) then
         local n = 15 + trunc(GetHeroLevel(side) * 0.5)
         if n > random(0, 100, COMBAT_TURN) then
             SetATB_ID(hero, ATB_NEXT)

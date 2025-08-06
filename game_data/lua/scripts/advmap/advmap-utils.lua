@@ -16,7 +16,7 @@ function StartingBonus(player)
 	if diff > 1 then -- bonus resources chosen
 		log("Bonus resources chosen")
 		for res = 0,5 do SetPlayerResource(player, res, GetPlayerResource(player, res) + 5) end
-		SetPlayerResource(player, GOLD, gold - diff + 2500)
+		SetPlayerResource(player, GOLD, gold - diff + 5000)
 		return
 	end
 	for res = 0,5 do
