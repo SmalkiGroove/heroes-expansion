@@ -2,6 +2,11 @@
 Var_WitchHutVisited = {}
 Var_TempleVisited = {}
 
+function Override_Monsters(obj)
+    Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_Monsters")
+    SetObjectEnabled(obj, nil)
+end
+
 function Override_WitchHut(obj)
     Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_WitchHut")
     SetObjectEnabled(obj, nil)
@@ -19,12 +24,30 @@ function Override_RallyFlag(obj)
     SetObjectEnabled(obj, nil)
 end
 
-function Trigger_OverrideMonster(obj)
-    Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_Monster")
+-----------------------------------------------
+
+function Trigger_Monsters(hero, obj)
+    log("$ Trigger_Monsters")
+    local x, y, z = GetObjectPosition(hero)
+    ONGOING_BATTLES[hero] = obj
+    startThread(Trigger_Monsters_Ongoing, hero, obj)
+    Trigger(OBJECT_TOUCH_TRIGGER, obj, nil)
+    SetObjectEnabled(obj, not nil)
+    MakeHeroInteractWithObject(hero, obj)
+    Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_Monsters")
     SetObjectEnabled(obj, nil)
 end
 
------------------------------------------------
+function Trigger_Monsters_Ongoing(hero, obj)
+    while IsObjectExists(hero) do
+        print("Hero "..hero.." is fighting monsters...")
+        sleep(3)
+        if not IsObjectExists(obj) then return end
+        local xx, yy, zz = GetObjectPosition(hero)
+        if x ~= xx or y ~= yy then break end
+    end
+    ONGOING_BATTLES[hero] = nil
+end
 
 function Trigger_WitchHut(hero, obj)
     log("$ Trigger_WitchHut")
@@ -127,6 +150,7 @@ end
 -----------------------------------------------
 
 TRIGGER_OVERRIDES = {
+    ["CREATURE"] = Override_Monsters,
     ["BUILDING_WITCH_HUT"] = Override_WitchHut,
     ["BUILDING_TEMPLE"] = Override_Temple,
     ["BUILDING_RALLY_FLAG"] = Override_RallyFlag,
