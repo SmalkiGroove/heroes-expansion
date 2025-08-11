@@ -728,23 +728,14 @@ function Routine_ReviveZombies(player, hero, combatIndex)
     ResurrectCreatureType(player, hero, combatIndex, NECROPOLIS, 2, GetHeroLevel(hero))
 end
 
-function Routine_HeroCallVampires(player, hero)
-    log("$ Routine_HeroCallVampires")
-    if GetHeroLevel(hero) >= 20 then
-        for i,town in GetHeroTowns(player, hero) do
-            if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_4) ~= 0 then
-                local fort = GetTownBuildingLevel(town, TOWN_BUILDING_FORT)
-                local grail = GetTownBuildingLevel(town, TOWN_BUILDING_GRAIL)
-                local multiplier = 1 + 0.5 * grail
-                if fort > 1 then multiplier = multiplier + 0.5 * (fort-1) end
-                local nb = round(10 * multiplier)
-                local current = GetObjectDwellingCreatures(town, CREATURE_VAMPIRE)
-                SetObjectDwellingCreatures(town, CREATURE_VAMPIRE, current + nb)
-            end
-        end
+Var_Lucretia_BattleWon = 0
+function Routine_LearnDarkMagic(player, hero, combatIndex)
+    log("$ Routine_LearnDarkMagic")
+    Var_Lucretia_BattleWon = Var_Lucretia_BattleWon + 1
+    if Var_Lucretia_BattleWon == 13 then
+        GiveHeroSkill(hero, SKILL_DARK_MAGIC)
+        ShowFlyingSign("/Text/Game/Scripts/HeroSpe/LearnDarkMagic.txt", hero, player, FLYING_SIGN_TIME)
     end
-    sleep(1)
-    TransferCreatureFromTown(player, hero, TOWN_BUILDING_DWELLING_4, CREATURE_VAMPIRE, 1.2)
 end
 
 function Routine_AddHeroBlackKnight(player, hero)
@@ -772,14 +763,12 @@ function Routine_AddHeroMummies(player, hero)
     AddHeroCreaturePerLevel(player, hero, CREATURE_MUMMY, 0.3)
 end
 
-Var_Deirdre_BattleWon = 0
-function Routine_BansheeHowlBuffs(player, hero, combatIndex)
+function Routine_BansheeHowlBuffs(player, hero, level)
     log("$ Routine_BansheeHowlBuffs")
-    Var_Deirdre_BattleWon = Var_Deirdre_BattleWon + 1
-    if Var_Deirdre_BattleWon == 20 then
+    if level == 15 then
         GiveArtifact(hero, ARTIFACT_251)
         GiveArtifact(hero, ARTIFACT_252)
-    elseif Var_Deirdre_BattleWon == 30 then
+    elseif level == 25 then
         GiveArtifact(hero, ARTIFACT_253)
         GiveArtifact(hero, ARTIFACT_254)
     end
@@ -1041,12 +1030,6 @@ function Routine_AddHeroWyverns(player, hero)
     AddHeroCreatureType(player, hero, STRONGHOLD, 6, amount, 1)
 end
 
-function Routine_ActivateArtfsetNecro(player, hero)
-    log("$ Routine_ActivateArtfsetNecro")
-    GiveArtifact(hero, 251, 1)
-    GiveArtifact(hero, 252, 1)
-end
-
 function Routine_SacrificeGoblinDaily(player, hero)
     log("$ Routine_SacrificeGoblinDaily")
     for _,goblin in CREATURES_BY_FACTION[STRONGHOLD][1] do
@@ -1087,7 +1070,6 @@ START_TRIGGER_HERO_ROUTINES = {
     -- stronghold
     [H_GARUNA] = Routine_GiveArtifactCentaurCrossbow,
     [H_GORSHAK] = Routine_UpgradeChamberOfWrath,
-    [H_URGHAT] = Routine_ActivateArtfsetNecro,
 }
 
 DAILY_TRIGGER_HERO_ROUTINES = {
@@ -1144,7 +1126,6 @@ WEEKLY_TRIGGER_HERO_ROUTINES = {
     [H_LETHOS] = Routine_AddHeroManticores,
     [H_SEPHINROTH] = Routine_GainWeeklySpellpower,
     -- necropolis
-    [H_LUCRETIA] = Routine_HeroCallVampires,
     [H_RAVEN] = Routine_AddRecruitsNecropolis,
     [H_XERXON] = Routine_AddHeroBlackKnight,
     -- inferno
@@ -1172,6 +1153,7 @@ LEVEL_UP_HERO_ROUTINES_HERO = {
     -- necropolis
     [H_VLADIMIR] = Routine_GainMovePointsPerLevel,
     [H_SANDRO] = Routine_AddLichesPerKnowledge,
+    [H_DEIRDRE] = Routine_BansheeHowlBuffs,
     -- inferno
     [H_ASH] = Routine_GainAttackPerLevel,
     [H_BIARA] = Routine_AddHeroSuccubus,
@@ -1198,7 +1180,7 @@ AFTER_COMBAT_TRIGGER_HERO_ROUTINES = {
     -- necropolis
     [H_ORSON] = Routine_ReviveZombies,
     [H_XERXON] = Routine_ResurrectBlackKnight,
-    [H_DEIRDRE] = Routine_BansheeHowlBuffs,
+    [H_LUCRETIA] = Routine_LearnDarkMagic,
     -- inferno
     [H_SHELTEM] = Routine_RestoreManaAfterBattle,
     [H_AGRAEL] = Routine_AgraelVictoryCounter,

@@ -3804,24 +3804,26 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_95</ID>
+			<ID>HERO_SKILL_VAMPIRISM</ID>
 			<obj>
 				<Texture>
-					<Item href=""/>
-					<Item href=""/>
+					<Item href="/Textures/HeroScreen/Specializations/Necropolis/Vampire_Princess.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Specializations/Necropolis/Vampire_Princess.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
-					<Item href=""/>
+					<Item href="/Text/Game/Skills/Unique/Necromancy/Vampirism/Name.txt"/>
 				</NameFileRef>
 				<CommonNameFileRef href=""/>
 				<DescriptionFileRef>
-					<Item href=""/>
+					<Item href="/Text/Game/Skills/Unique/Necromancy/Vampirism/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
-				<spellBuffs/>
+				<spellBuffs>
+					<Item>SPELL_VAMPIRISM</Item>
+				</spellBuffs>
 				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
@@ -8619,19 +8621,19 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_VAMPIRISM</ID>
+			<ID>HERO_SKILL_VAMPIRISM_2</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Specializations/Dungeon/Seducer.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Specializations/Dungeon/Seducer.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Specializations/Necropolis/Vampire_Princess.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Specializations/Necropolis/Vampire_Princess.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
-					<Item href="/Text/Game/Skills/Unique/Invocation/Vampirism/Name.txt"/>
+					<Item href="/Text/Game/Skills/Unique/Necromancy/Vampirism/Name.txt"/>
 				</NameFileRef>
 				<CommonNameFileRef href=""/>
 				<DescriptionFileRef>
-					<Item href="/Text/Game/Skills/Unique/Invocation/Vampirism/Description.txt"/>
+					<Item href="/Text/Game/Skills/Unique/Necromancy/Vampirism/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>

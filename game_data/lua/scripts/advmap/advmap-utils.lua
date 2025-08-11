@@ -134,7 +134,6 @@ function AddPlayerResource(player, hero, resource, amount)
 		local newamount = curamount + amount
 		SetPlayerResource(player, resource, newamount, hero)
 		-- repeat SetPlayerResource(player, resource, newamount, hero) until GetPlayerResource(player, resource) == newamount
-		-- ShowFlyingSign({"/Text/Game/Scripts/Resources/"..RESOURCE_TEXT[resource]..".txt"; num=amount}, hero, player, FLYING_SIGN_TIME)
 	end
 end
 
@@ -151,7 +150,6 @@ function AddHeroStatAmount(player, hero, stat, amount)
 	log("$ AddHeroStatAmount")
     if amount ~= 0 then
 		ChangeHeroStat(hero, stat, amount)
-		-- ShowFlyingSign({"/Text/Game/Scripts/Stats/"..ATTRIBUTE_TEXT[stat]..".txt"; num=amount}, hero, player, FLYING_SIGN_TIME)
 	end
 end
 
@@ -169,7 +167,6 @@ function AddHeroLowestStat(player, hero, amount)
 		end
 		if stat ~= 0 then
 			ChangeHeroStat(hero, stat, amount)
-			-- ShowFlyingSign({"/Text/Game/Scripts/Stats/"..ATTRIBUTE_TEXT[stat]..".txt"; num=amount}, hero, player, FLYING_SIGN_TIME)
 		end
 	end
 end
@@ -193,7 +190,6 @@ function TeachHeroRandomSpell(player, hero, school, maxtier)
 		end
 	else
 		local last = 3 * (maxtier - 1)
-		-- log("Can learn spell up to "..SPELLS_BY_SCHOOL[school][last])
 		for i = 1,last do
 			local spell = SPELLS_BY_SCHOOL[school][i]
 			if not KnowHeroSpell(hero, spell) then insert(spells, spell) end
@@ -204,11 +200,9 @@ function TeachHeroRandomSpell(player, hero, school, maxtier)
 		return
 	elseif nb == 1 then
 		TeachHeroSpell(hero, spells[1])
-		-- ShowFlyingSign("/Text/Game/Scripts/LearnSpell.txt", hero, player, FLYING_SIGN_TIME)
 	else
 		local spell = spells[random(1, nb, TURN-school)]
 		TeachHeroSpell(hero, spell)
-		-- ShowFlyingSign("/Text/Game/Scripts/LearnSpell.txt", hero, player, FLYING_SIGN_TIME)
 	end
 end
 
@@ -231,11 +225,9 @@ function TeachHeroRandomSpellTier(player, hero, school, tier)
 		return
 	elseif nb == 1 then
 		TeachHeroSpell(hero, spells[1])
-		-- ShowFlyingSign("/Text/Game/Scripts/LearnSpell.txt", hero, player, FLYING_SIGN_TIME)
 	else
 		local spell = spells[random(1, nb, TURN-school)]
 		TeachHeroSpell(hero, spell)
-		-- ShowFlyingSign("/Text/Game/Scripts/LearnSpell.txt", hero, player, FLYING_SIGN_TIME)
 	end
 end
 
@@ -270,7 +262,6 @@ function AddHeroCreaturePerLevel(player, hero, type, coef)
 	local nb = round(coef * level)
 	if nb >= 1 then
 		AddHeroCreatures(hero, type, nb)
-		-- ShowFlyingSign({"/Text/Game/Scripts/Reinforcements.txt"; num=nb}, hero, player, FLYING_SIGN_TIME)
 	end
 end
 
@@ -281,13 +272,11 @@ function AddHeroCreatureType(player, hero, faction, tier, nb, default)
 		for i = 1,7 do
             if contains(CREATURES_BY_FACTION[faction][tier], army[i]) then
                 AddHeroCreatures(hero, army[i], nb)
-                -- ShowFlyingSign({"/Text/Game/Scripts/Reinforcements.txt"; num=nb}, hero, player, FLYING_SIGN_TIME)
                 return
             end
         end
 		if default ~= 0 then
 			AddHeroCreatures(hero, CREATURES_BY_FACTION[faction][tier][default], nb)
-			-- ShowFlyingSign({"/Text/Game/Scripts/Reinforcements.txt"; num=nb}, hero, player, FLYING_SIGN_TIME)
 		end
 	end
 end
@@ -309,7 +298,6 @@ function AddHeroTownRecruits(player, hero, dwelling, creature, nb)
 			if GetTownBuildingLevel(town, dwelling) ~= 0 then
                 local current = GetObjectDwellingCreatures(town, creature)
 				SetObjectDwellingCreatures(town, creature, current + nb)
-				-- ShowFlyingSign({"/Text/Game/Scripts/Recruits.txt"; num=nb}, hero, player, FLYING_SIGN_TIME)
 			end
 		end
 	end
@@ -326,7 +314,6 @@ function TransferCreatureFromTown(player, hero, dwelling, creature, coef)
 			if nb >= 1 then
 				SetObjectDwellingCreatures(town, creature, recruits-nb)
 				AddHeroCreatureType(player, hero, CREATURES[creature][1], CREATURES[creature][2], nb, 1)
-				-- ShowFlyingSign({"/Text/Game/Scripts/Reinforcements.txt"; num=nb}, hero, player, FLYING_SIGN_TIME)
 			end
 		end
 	end
@@ -343,7 +330,6 @@ function TransformTownRecruits(player, hero, dwelling1, creature1, dwelling2, cr
 			if nb >= 1 then
 				SetObjectDwellingCreatures(town, creature1, recruits1 - nb)
 				SetObjectDwellingCreatures(town, creature2, recruits2 + nb)
-				-- ShowFlyingSign({"/Text/Game/Scripts/Recruits.txt"; num=nb}, hero, player, FLYING_SIGN_TIME)
 			end
 		end
 	end
@@ -355,7 +341,6 @@ function UpgradeHeroCreatures(player, hero, base, upgrade)
 	if nb >= 1 then
 		RemoveHeroCreatures(hero, base, nb)
 		AddHeroCreatures(hero, upgrade, nb)
-		-- ShowFlyingSign({"/Text/Game/Scripts/Evolve.txt"; num=nb}, hero, player, FLYING_SIGN_TIME)
 	end
 end
 

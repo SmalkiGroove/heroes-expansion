@@ -29,7 +29,7 @@
 	<RazedStatic/>
 	<Icon128/>
 	<InternalName>Tamika</InternalName>
-	<Class>HERO_CLASS_NECROPOLIS_MIGHT</Class>
+	<Class>HERO_CLASS_OTHER_2</Class>
 	<Specialization>HERO_SPEC_VAMPIRES</Specialization>
 	<PrimarySkill>
 		<SkillID>HERO_SKILL_INNATES</SkillID>
@@ -66,10 +66,11 @@
 		<perkIDs>
 			<Item>HERO_SKILL_ETERNAL_SERVITUDE</Item>
 			<Item>HERO_SKILL_CHILLING_BONES</Item>
+			<Item>HERO_SKILL_VAMPIRISM</Item>
 		</perkIDs>
 		<spellIDs/>
 		<Ballista>false</Ballista>
-		<FirstAidTent>true</FirstAidTent>
+		<FirstAidTent>false</FirstAidTent>
 		<AmmoCart>false</AmmoCart>
 		<FavoriteEnemies/>
 	</Editable>

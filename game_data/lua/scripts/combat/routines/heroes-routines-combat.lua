@@ -668,6 +668,14 @@ function Routine_RaiseUndead(side, hero, unit)
     end
 end
 
+function Routine_CastBansheeHowl(side, hero)
+    -- log("Trigger cast banshee howl !")
+    local p = 2 * GetHeroLevel(side)
+    if random(0,100) < p then
+        HeroCast_Global(hero, SPELL_BANSHEE_HOWL, 0)
+    end
+end
+
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -939,6 +947,7 @@ COMBAT_START_HERO_ROUTINES = {
     [H_XERXON] = Routine_BlackKnightsDash,
     [H_THANT] = Routine_CastMassWeakness,
     [H_ARCHILUS] = Routine_SummonAvatarOfDeath,
+    [H_DEIRDRE] = Routine_CastBansheeHowl,
     -- inferno
     [H_GROK] = Routine_HeroMoveFirst,
     [H_DELEB] = Routine_CastMineFields,
