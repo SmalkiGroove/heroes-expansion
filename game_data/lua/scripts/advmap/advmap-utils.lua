@@ -12,7 +12,7 @@ end
 function StartingBonus(player)
 	log("$ StartingBonus for player "..player)
 	local gold = GetPlayerResource(player, GOLD)
-	local diff = mod(gold, 1000)
+	local diff = mod(gold, 10000)
 	if diff > 1 then -- bonus resources chosen
 		log("Bonus resources chosen")
 		for res = 0,5 do SetPlayerResource(player, res, GetPlayerResource(player, res) + 5) end

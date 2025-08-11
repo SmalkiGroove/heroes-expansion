@@ -9,12 +9,6 @@ function Routine_AddHeroCavaliers(player, hero)
     AddHeroCreatureType(player, hero, HAVEN, 6, amount, 1)
 end
 
-function Routine_ActivateArtfsetHaven(player, hero)
-    log("$ Routine_ActivateArtfsetHaven")
-    GiveArtifact(hero, 244, 1)
-    GiveArtifact(hero, 245, 1)
-end
-
 function Routine_AddRecruitsPeasants(player, hero)
     log("$ Routine_AddRecruitsPeasants")
     local amount = trunc(4.2 * GetHeroLevel(hero))
@@ -639,16 +633,16 @@ function Routine_GenerateGoldPerScout(player, hero)
     end
 end
 
-function Routine_BuildRitualPit(player, hero)
-    log("$ Routine_BuildRitualPit")
+function Routine_BuildHallOfIntrigue(player, hero)
+    log("$ Routine_BuildHallOfIntrigue")
+    ChangeHeroStat(hero, STAT_LUCK, 1)
     for town,data in MAP_TOWNS do
         if IsHeroInTown(hero, town, 1, 1) then
             if data.faction == DUNGEON then
-                if GetTownBuildingLevel(town, TOWN_BUILDING_DUNGEON_RITUAL_PIT) == 0 then
-                    UpgradeTownBuilding(town, TOWN_BUILDING_DUNGEON_RITUAL_PIT)
+                if GetTownBuildingLevel(town, TOWN_BUILDING_DUNGEON_HALL_OF_INTRIGUE) == 0 then
+                    UpgradeTownBuilding(town, TOWN_BUILDING_DUNGEON_HALL_OF_INTRIGUE)
                 else
-                    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_2, CREATURE_WITCH, 23 + 4 * WEEKS)
-                    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_3, CREATURE_MINOTAUR, 16 + 4 * WEEKS)
+                    ChangeHeroStat(hero, STAT_KNOWLEDGE, 3)
                 end
             end
         end
@@ -694,38 +688,9 @@ function Routine_ConvertKnowledgeToSpellpower(player, hero, level)
     end
 end
 
-function Routine_AddOneLuckPoint(player, hero)
-    log("$ Routine_AddOneLuckPoint")
-    ChangeHeroStat(hero, STAT_LUCK, 1)
-end
-
-function Routine_ActivateArtfsetEnlightenment(player, hero)
-    log("$ Routine_ActivateArtfsetEnlightenment")
-    GiveArtifact(hero, 230, 1)
-    GiveArtifact(hero, 231, 1)
-end
-
-function Routine_ActivateArtfsetDungeon(player, hero)
-    log("$ Routine_ActivateArtfsetDungeon")
-    GiveArtifact(hero, 236, 1)
-    GiveArtifact(hero, 237, 1)
-    TeachHeroRandomSpell(player, hero, SPELL_SCHOOL_DESTRUCT, 5)
-end
-
-Var_Sephinroth_Bonus = 0
-function Routine_CheckHallOfIntrigue(player, hero)
-    log("$ Routine_CheckHallOfIntrigue")
-    local nb_halls = 0
-    for _,town in GetHeroTowns(player, hero) do
-        if GetTownBuildingLevel(town, TOWN_BUILDING_DUNGEON_HALL_OF_INTRIGUE) > 0 then
-            nb_halls = nb_halls + 1
-        end
-    end
-    local diff = nb_halls - Var_Sephinroth_Bonus
-    if diff ~= 0 then
-        ChangeHeroStat(hero, STAT_SPELL_POWER, 2 * diff)
-        Var_Sephinroth_Bonus = nb_halls
-    end
+function Routine_GainWeeklySpellpower(player, hero)
+    log("$ Routine_GainWeeklySpellpower")
+    ChangeHeroStat(hero, STAT_SPELL_POWER, 1)
 end
 
 function Routine_AddHeroLevel(player, hero, level)
@@ -897,12 +862,6 @@ function Routine_AgraelVictoryCounter(player, hero, combatIndex)
             TeachHeroSpell(h, SPELL_ARMAGEDDON)
         end
     end
-end
-
-function Routine_ActivateArtfsetHunter(player, hero)
-    log("$ Routine_ActivateArtfsetHunter")
-    GiveArtifact(hero, 232, 1)
-    GiveArtifact(hero, 233, 1)
 end
 
 function Routine_AddHeroSuccubus(player, hero)
@@ -1088,12 +1047,6 @@ function Routine_ActivateArtfsetNecro(player, hero)
     GiveArtifact(hero, 252, 1)
 end
 
-function Routine_ActivateArtfsetSarIssus(player, hero)
-    log("$ Routine_ActivateArtfsetSarIssus")
-    GiveArtifact(hero, 247, 1)
-    GiveArtifact(hero, 248, 1)
-end
-
 function Routine_SacrificeGoblinDaily(player, hero)
     log("$ Routine_SacrificeGoblinDaily")
     for _,goblin in CREATURES_BY_FACTION[STRONGHOLD][1] do
@@ -1114,7 +1067,6 @@ end
 
 START_TRIGGER_HERO_ROUTINES = {
     -- haven
-    [H_LASZLO] = Routine_ActivateArtfsetHaven,
     [H_ISABEL] = Routine_AddTwoLuckPoints,
     [H_ALARIC] = Routine_UpgradeMonastery,
     -- preserve
@@ -1127,20 +1079,15 @@ START_TRIGGER_HERO_ROUTINES = {
     -- academy
     [H_RISSA] = Routine_RefreshTimeShift,
     -- dungeon
-    [H_YRWANNA] = Routine_BuildRitualPit,
-    [H_ERUINA] = Routine_AddOneLuckPoint,
-    [H_RANLETH] = Routine_ActivateArtfsetEnlightenment,
-    [H_SEPHINROTH] = Routine_ActivateArtfsetDungeon,
+    [H_ERUINA] = Routine_BuildHallOfIntrigue,
     -- necropolis
     [H_ARCHILUS] = Routine_BuildDragonTombstone,
     [H_SANDRO] = Routine_GiveSandrosCloak,
     -- inferno
-    [H_BIARA] = Routine_ActivateArtfsetHunter,
     -- stronghold
     [H_GARUNA] = Routine_GiveArtifactCentaurCrossbow,
     [H_GORSHAK] = Routine_UpgradeChamberOfWrath,
     [H_URGHAT] = Routine_ActivateArtfsetNecro,
-    [H_KUJIN] = Routine_ActivateArtfsetSarIssus,
 }
 
 DAILY_TRIGGER_HERO_ROUTINES = {
@@ -1163,7 +1110,6 @@ DAILY_TRIGGER_HERO_ROUTINES = {
     -- dungeon
     [H_VAYSHAN] = Routine_GenerateGoldPerScout,
     [H_SORGAL] = Routine_AddHeroRiders,
-    [H_SEPHINROTH] = Routine_CheckHallOfIntrigue,
     -- necropolis
     [H_THANT] = Routine_AddHeroMummies,
     [H_ORNELLA] = Routine_FrostLordArtifacts,
@@ -1196,6 +1142,7 @@ WEEKLY_TRIGGER_HERO_ROUTINES = {
     -- dungeon
     [H_SHADYA] = Routine_UpgradeToWitches,
     [H_LETHOS] = Routine_AddHeroManticores,
+    [H_SEPHINROTH] = Routine_GainWeeklySpellpower,
     -- necropolis
     [H_LUCRETIA] = Routine_HeroCallVampires,
     [H_RAVEN] = Routine_AddRecruitsNecropolis,

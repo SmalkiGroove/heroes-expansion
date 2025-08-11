@@ -51,7 +51,7 @@
 		<BiographyFileRef href="/Text/Game/Heroes/Persons/Dungeon/Sephinroth/Bio.txt"/>
 		<Offence>1</Offence>
 		<Defence>1</Defence>
-		<Spellpower>1</Spellpower>
+		<Spellpower>2</Spellpower>
 		<Knowledge>1</Knowledge>
 		<skills>
 			<Item>
@@ -65,11 +65,16 @@
 		</skills>
 		<perkIDs>
 			<Item>HERO_SKILL_ELEMENTAL_VISION</Item>
-			<Item>HERO_SKILL_BLAZE_POWER</Item>
+			<Item>HERO_SKILL_EMPOWERED_SPELLS</Item>
 			<Item>HERO_SKILL_FORBIDDEN_POWER</Item>
 		</perkIDs>
 		<spellIDs>
+			<Item>SPELL_MAGIC_ARROW</Item>
+			<Item>SPELL_LIGHTNING_BOLT</Item>
+			<Item>SPELL_ICE_BOLT</Item>
+			<Item>SPELL_STONE_SPIKES</Item>
 			<Item>SPELL_FIREBALL</Item>
+			<Item>SPELL_FROST_RING</Item>
 		</spellIDs>
 		<Ballista>false</Ballista>
 		<FirstAidTent>false</FirstAidTent>

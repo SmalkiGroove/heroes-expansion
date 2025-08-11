@@ -113,17 +113,6 @@ end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 -- PRESERVE
 
-function Routine_HeroMoveNext(side, hero)
-    -- log("Trigger hero play next !")
-    if CURRENT_UNIT_SIDE ~= GetUnitSide(hero) and IsCreature(CURRENT_UNIT) then
-        local n = 15 + trunc(GetHeroLevel(side) * 0.5)
-        if n > random(0, 100, COMBAT_TURN) then
-            SetATB_ID(hero, ATB_NEXT)
-            ShowFlyingSign("/Text/Game/Scripts/Combat/LoneHunter.txt", hero, 9)
-        end
-    end
-end
-
 function Routine_ResetAtbOnKillEnraged(side, hero, unit)
     -- log("Trigger reset enraged atb !")
     if GetUnitSide(unit) ~= GetUnitSide(hero) and IsCreature(unit) then
@@ -897,6 +886,10 @@ function Routine_ShamansManaRegen(side, hero)
                 local m = GetUnitManaPoints(CURRENT_UNIT)
                 SetMana(CURRENT_UNIT, m + n)
             end
+        elseif IsHero(CURRENT_UNIT) then
+            local m = GetUnitManaPoints(hero)
+            local n = 1 + trunc(GetHeroLevel(side) * 0.25)
+            SetMana(hero, m + n)
         end
     end
 end
@@ -963,7 +956,6 @@ COMBAT_TURN_HERO_ROUTINES = {
     [H_GABRIELLE] = Routine_GriffinInstantDive,
     [H_GODRIC] = Routine_CastRandomStoneskin,
     -- preserve
-    [H_JENOVA] = Routine_HeroMoveNext,
     [H_DIRAEL] = Routine_SpriteManaLink,
     [H_TIERU] = Routine_DruidsMoveNext,
     [H_MELODIA] = Routine_AllRegeneration,

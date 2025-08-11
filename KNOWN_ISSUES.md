@@ -19,15 +19,12 @@
 
 - [EXE] Thunder Power skill does not apply air damage of creatures attacks
 - [EXE] Shantiri Breastplate does not immune to Earthquake
-- [EXE] Hero class specific vanilla artifact sets do not match the new hero classes
 
 ### Bugs
 
 - [LUA] Leadership caravan doesn't spawn if no other tile available
 - [LUA] Imprisoned heroes have no starting army
 - [EXE] Shantiri Moon Disc blocks all light magic
-- [XDB] Graduate unlocks ultimate skill
-- [EXE] Hall of Intrigue gives bonus to wrong hero class
 
 ### Suggestions
 
@@ -38,7 +35,6 @@
 
 ### Balance
 
-- [LUA] Give AI starting gold, exp and stats ?
 - [EXE] Inferno and Dungeon sacrificial buildings are bad
 
 ### Massive work required
@@ -46,7 +42,6 @@
 - [EXE] QAI version
 - [XDB] New battlefields
 - [XDB/LUA] Better vault battles with siege
-- [XDB] In-game doc for heroes, artifacts and training bonuses
 - [XDB/LUA] More custom buildings and late-game challenge
 
 
@@ -107,3 +102,7 @@
 - Maps with Tear of Asha are broken
 - Darkstorm creature should not stay in army after battle
 - Commander heroes cannot not special perks
+- Graduate unlocks ultimate skill
+- Give AI more bonuses
+- Hero class specific vanilla artifact sets do not match the new hero classes
+- Hall of Intrigue gives bonus to wrong hero class

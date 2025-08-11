@@ -2541,8 +2541,8 @@
 			<ID>HERO_SKILL_RAIN_OF_ARROWS</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Perks/Avenger_Multishot_grey.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Perks/Avenger_Multishot.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Specializations/Preserve/Elven_Volley.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Specializations/Preserve/Elven_Volley.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -2556,7 +2556,7 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_NONE</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Haven>
