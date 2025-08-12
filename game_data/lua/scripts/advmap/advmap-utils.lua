@@ -371,9 +371,11 @@ function IsEqualPosition(object, x, y, z)
     return (x == xx and y == yy and z == zz)
 end
 
-function CreatureToUndead(creature)
-	if CREATURES[creature][1] == NECROPOLIS or creature == CREATURE_MUMMY then return creature end
-	local tier = CREATURES[creature][2]
+function CreatureToUndead(cr)
+	if CREATURES[cr][1] == NECROPOLIS or cr == CREATURE_MUMMY or cr == CREATURE_BONE_DRAGON or cr == CREATURE_SHADOW_DRAGON or cr == CREATURE_HORROR_DRAGON then
+		return cr
+	end
+	local tier = CREATURES[cr][2]
 	return CREATURES_BY_FACTION[NECROPOLIS][tier][1]
 end
 

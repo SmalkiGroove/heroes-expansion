@@ -175,6 +175,7 @@ function CombatResultsHandler(combatIndex)
 		startThread(DoHeroSpeRoutine_AfterCombat, player, hero, combatIndex)
 		startThread(DoSkillsRoutine_AfterCombat, player, hero, combatIndex)
 		startThread(DoArtifactsRoutine_AfterCombat, player, hero, combatIndex)
+		sleep(10) ONGOING_BATTLES[hero] = nil
 	end
 	local loser = GetSavedCombatArmyHero(combatIndex, 0)
 	if loser ~= nil then

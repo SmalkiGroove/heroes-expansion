@@ -741,18 +741,11 @@ end
 
 function Routine_LeadershipAfterBattle(player, hero, mastery, combatIndex)
     log("$ Routine_LeadershipAfterBattle")
+    local obj = ONGOING_BATTLES[hero]
+    if not obj then return end
     sleep(1)
-    if GetSavedCombatArmyHero(combatIndex, 0) then return end
-    local x, y, z = GetObjectPosition(hero)
+    local x, y, z = obj.x, obj.y, obj.z
     local town_data = PLAYER_MAIN_TOWN[player] and MAP_TOWNS[PLAYER_MAIN_TOWN[player]] or nil
-    -- log("Hero at x="..x..", y="..y)
-    local found = nil
-    local objects = {}
-    for i = -1,1 do for j = -1,1 do
-        objects = GetObjectsFromPath(hero, x+i, y+j, z)
-        if length(objects) == 0 then x=x+i; y=y+j; found = not nil; break end
-    end if found then break end end
-    if found then log("Spawn caravan at x="..x..", y="..y) else log("No available tile around "..hero.." was found"); return end
     local dx = town_data and town_data.x or x
     local dy = town_data and town_data.y or y
     local dz = town_data and town_data.z or z
@@ -761,31 +754,18 @@ function Routine_LeadershipAfterBattle(player, hero, mastery, combatIndex)
     CreateCaravan(caravan, player, z, x, y, dz, dx, dy)
     local err_counter = 0
     while not IsObjectExists(caravan) do
-        sleep(1)
-        if err_counter == 10 then
-            log("Failed to create caravan") return
-        end
-        err_counter = err_counter + 1
+        sleep(1) err_counter = err_counter + 1
+        if err_counter == 10 then log("Failed to create caravan") return end
     end
     local total = 0
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 0)
     for i = 0,stacks-1 do
         local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 0, i)
         local bonus = 0
-        if hero == H_DUNCAN then
-            bonus = bonus + GetHeroLevel(hero)
-        end
-        if hero == H_ARANTIR then
-            if CREATURES[creature][1] == NECROPOLIS or creature == CREATURE_MUMMY then
-                bonus = bonus + 50
-            end
-        end
-        if HasHeroSkill(hero, PERK_CHARISMA) then
-            bonus = bonus + 5 + 5 * mastery
-        end
-        if HasArtefact(hero, ARTIFACT_BEARHIDE_WRAPS, 1) then
-            bonus = bonus + 10
-        end
+        if hero == H_DUNCAN then bonus = bonus + GetHeroLevel(hero) end
+        if hero == H_ARANTIR then if CreatureToUndead(creature) == creature then bonus = bonus + 50 end end
+        if HasHeroSkill(hero, PERK_CHARISMA) then bonus = bonus + 5 + 5 * mastery end
+        if HasArtefact(hero, ARTIFACT_BEARHIDE_WRAPS, 1) then bonus = bonus + 10 end
         local amount = trunc(count * (0.05 + 0.05 * mastery + 0.01 * bonus))
         if HasHeroSkill(hero, PERK_HERALD_OF_DEATH) then creature = CreatureToUndead(creature) end
         if amount > 0 then

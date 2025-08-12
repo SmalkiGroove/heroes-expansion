@@ -28,8 +28,8 @@ end
 
 function Trigger_Monsters(hero, obj)
     log("$ Trigger_Monsters")
-    local x, y, z = GetObjectPosition(hero)
-    ONGOING_BATTLES[hero] = obj
+    local x, y, z = GetObjectPosition(obj)
+    ONGOING_BATTLES[hero] = {x=x, y=y, z=z}
     startThread(Trigger_Monsters_Ongoing, hero, obj)
     Trigger(OBJECT_TOUCH_TRIGGER, obj, nil)
     SetObjectEnabled(obj, not nil)
@@ -39,9 +39,10 @@ function Trigger_Monsters(hero, obj)
 end
 
 function Trigger_Monsters_Ongoing(hero, obj)
+    local x, y, z = GetObjectPosition(hero)
     while IsObjectExists(hero) do
         print("Hero "..hero.." is fighting monsters...")
-        sleep(3)
+        sleep(5)
         if not IsObjectExists(obj) then return end
         local xx, yy, zz = GetObjectPosition(hero)
         if x ~= xx or y ~= yy then break end
@@ -150,7 +151,7 @@ end
 -----------------------------------------------
 
 TRIGGER_OVERRIDES = {
-    -- ["CREATURE"] = Override_Monsters,
+    ["CREATURE"] = Override_Monsters,
     ["BUILDING_WITCH_HUT"] = Override_WitchHut,
     ["BUILDING_TEMPLE"] = Override_Temple,
     ["BUILDING_RALLY_FLAG"] = Override_RallyFlag,

@@ -5013,16 +5013,16 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ARTIFACT_200</ID>
+			<ID>ARTIFACT_BLOOD_CRYSTAL</ID>
 			<obj>
-				<NameFileRef href="/Text/Game/Artifacts/XXX/Name.txt"/>
-				<DescriptionFileRef href="/Text/Game/Artifacts/XXX/Description.txt"/>
+				<NameFileRef href="/Text/Game/Artifacts/BloodCrystal/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artifacts/BloodCrystal/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
 				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>INVENTORY</Slot>
-				<Icon href="/Textures/Icons/Blank.xdb#xpointer(/Texture)"/>
-				<CostOfGold>1</CostOfGold>
-				<AIValue>1</AIValue>
+				<Icon href="/Textures/HeroScreen/Artifacts/BloodCrystal.xdb#xpointer(/Texture)"/>
+				<CostOfGold>0</CostOfGold>
+				<AIValue>100000</AIValue>
 				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
@@ -5032,7 +5032,7 @@
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
-				<ArtifactShared href="/MapObjects/Artifacts/XXX.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
+				<ArtifactShared href="/MapObjects/Artifacts/BloodCrystal.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>false</AvailableForPresets>
 				<PresetPrice>0</PresetPrice>
 			</obj>

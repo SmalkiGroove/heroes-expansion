@@ -634,19 +634,13 @@ function Routine_GenerateGoldPerScout(player, hero)
 end
 
 Var_Yrwanna_Corpses = 0
-function Routine_RitualCorpses(player, hero, combatIndex)
-    log("$ Routine_RitualCorpses")
-    -- Var_Yrwanna_Corpses = Var_Yrwanna_Corpses + GetArmyStrength(combatIndex, 0)
-    -- local n = trunc(0.1 * GetArmyStrength(combatIndex, 0))
-
-end
-
-function Routine_RitualWeeklyProd(player, hero)
-    log("$ Routine_RitualWeeklyProd")
-    local n2 = trunc(0.0006 * Var_Yrwanna_Corpses)
-    local n3 = trunc(0.0001 * Var_Yrwanna_Corpses)
-    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_2, CREATURE_WITCH, n2)
-    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_3, CREATURE_MINOTAUR, n3)
+function Routine_GainBloodCrystals(player, hero, combatIndex)
+    log("$ Routine_GainBloodCrystals")
+    Var_Yrwanna_Corpses = Var_Yrwanna_Corpses + GetArmyStrength(combatIndex, 0)
+    while Var_Yrwanna_Corpses >= 1000 do
+        GiveArtifact(hero, ARTIFACT_BLOOD_CRYSTAL) sleep()
+        Var_Yrwanna_Corpses = Var_Yrwanna_Corpses - 1000
+    end
 end
 
 function Routine_BuildHallOfIntrigue(player, hero)
@@ -1138,7 +1132,6 @@ WEEKLY_TRIGGER_HERO_ROUTINES = {
     [H_MAAHIR] = Routine_GainKnowledgePerWeek,
     [H_MINASLI] = Routine_AddHeroEaglesPerWeek,
     -- dungeon
-    -- [H_YRWANNA] = Routine_RitualWeeklyProd,
     [H_SHADYA] = Routine_UpgradeToWitches,
     [H_LETHOS] = Routine_AddHeroManticores,
     [H_SEPHINROTH] = Routine_GainWeeklySpellpower,
@@ -1193,7 +1186,7 @@ AFTER_COMBAT_TRIGGER_HERO_ROUTINES = {
     [H_GALIB] = Routine_RespawnDjinns,
     [H_MINASLI] = Routine_RebirthEagleToPhoenix,
     -- dungeon
-    [H_YRWANNA] = Routine_RitualCorpses,
+    [H_YRWANNA] = Routine_GainBloodCrystals,
     [H_RAELAG] = Routine_GainDragonArtifacts,
     -- necropolis
     [H_ORSON] = Routine_ReviveZombies,
