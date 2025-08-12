@@ -261,31 +261,18 @@ function Routine_ArtifactPendantOfTheLyre(player, hero, combatIndex)
     end
 end
 
-function Routine_ArtifactBloodCrystalCount(hero)
-    local nb = 0
-    repeat
-        nb = nb + 1
-        RemoveArtefact(hero, ARTIFACT_BLOOD_CRYSTAL) sleep()
-    until not HasArtefact(hero, ARTIFACT_BLOOD_CRYSTAL, 0)
-    for i = 1,nb do GiveArtifact(hero, ARTIFACT_BLOOD_CRYSTAL) end
-    return nb
-end
-
-function Routine_ArtifactBloodCrystalExp(player, hero)
+function Routine_ArtifactBloodCrystalExp(player, hero, nb)
     log("$ Routine_ArtifactBloodCrystalExp")
-    local nb = Routine_ArtifactBloodCrystalCount(hero)
     AddHeroStatAmount(player, hero, STAT_EXPERIENCE, nb * 250)
 end
 
-function Routine_ArtifactBloodCrystalWitches(player, hero)
+function Routine_ArtifactBloodCrystalWitches(player, hero, nb)
     log("$ Routine_ArtifactBloodCrystalWitches")
-    local nb = Routine_ArtifactBloodCrystalCount(hero)
     AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_2, CREATURE_WITCH, nb)
 end
 
-function Routine_ArtifactBloodCrystalStat(player, hero, level)
+function Routine_ArtifactBloodCrystalStat(player, hero, nb)
     log("$ Routine_ArtifactBloodCrystalStat")
-    local nb = Routine_ArtifactBloodCrystalCount(hero)
     ChangeHeroStat(hero, STAT_MOVE_POINTS, nb * 250)
     AddHeroManaUnbound(player, hero, nb * 10)
 end
@@ -456,7 +443,8 @@ function DoArtifactsRoutine_Daily(player, hero)
             startThread(v, player, hero)
         end
     end
-    if HasArtefact(hero, ARTIFACT_BLOOD_CRYSTAL, 0) then startThread(Routine_ArtifactBloodCrystalExp, player, hero) end
+    local nb = GetHeroArtifactsCount(hero, ARTIFACT_BLOOD_CRYSTAL)
+    if nb > 0 then startThread(Routine_ArtifactBloodCrystalExp, player, hero, nb) end
 end
 
 function DoArtifactsRoutine_Weekly(player, hero)
@@ -471,7 +459,8 @@ function DoArtifactsRoutine_Weekly(player, hero)
             startThread(v, player, hero)
         end
     end
-    if HasArtefact(hero, ARTIFACT_BLOOD_CRYSTAL, 0) then startThread(Routine_ArtifactBloodCrystalWitches, player, hero) end
+    local nb = GetHeroArtifactsCount(hero, ARTIFACT_BLOOD_CRYSTAL)
+    if nb > 0 then startThread(Routine_ArtifactBloodCrystalWitches, player, hero, nb) end
 end
 
 function DoArtifactsRoutine_LevelUp(player, hero, level)
@@ -486,7 +475,8 @@ function DoArtifactsRoutine_LevelUp(player, hero, level)
             startThread(v, player, hero, level)
         end
     end
-    if HasArtefact(hero, ARTIFACT_BLOOD_CRYSTAL, 0) then startThread(Routine_ArtifactBloodCrystalStat, player, hero) end
+    local nb = GetHeroArtifactsCount(hero, ARTIFACT_BLOOD_CRYSTAL)
+    if nb > 0 then startThread(Routine_ArtifactBloodCrystalStat, player, hero, nb) end
 end
 
 function DoArtifactsRoutine_AfterCombat(player, hero, index)

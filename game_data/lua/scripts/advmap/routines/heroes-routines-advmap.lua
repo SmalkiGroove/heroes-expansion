@@ -634,12 +634,14 @@ function Routine_GenerateGoldPerScout(player, hero)
 end
 
 Var_Yrwanna_Corpses = 0
+Var_BloodCrystal_Corpses = 1000
 function Routine_GainBloodCrystals(player, hero, combatIndex)
     log("$ Routine_GainBloodCrystals")
     Var_Yrwanna_Corpses = Var_Yrwanna_Corpses + GetArmyStrength(combatIndex, 0)
-    while Var_Yrwanna_Corpses >= 1000 do
+    while Var_Yrwanna_Corpses >= Var_BloodCrystal_Corpses do
         GiveArtifact(hero, ARTIFACT_BLOOD_CRYSTAL) sleep()
-        Var_Yrwanna_Corpses = Var_Yrwanna_Corpses - 1000
+        Var_Yrwanna_Corpses = Var_Yrwanna_Corpses - Var_BloodCrystal_Corpses
+        Var_BloodCrystal_Corpses = trunc(Var_BloodCrystal_Corpses * 1.1)
     end
 end
 
