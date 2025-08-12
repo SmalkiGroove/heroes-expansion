@@ -422,6 +422,14 @@ function AddAllArtifacts(hero)
 	end
 end
 
+function RevealMap()
+	for player = 1,8 do
+		if PLAYER_BRAIN[player] == HUMAN then
+			OpenCircleFog(1, 1, 0, 9999, player)
+		end
+	end
+end
+
 
 -- log("Loaded advmap-utils.lua")
 ROUTINES_LOADED[9] = 1

@@ -106,3 +106,4 @@
 - Give AI more bonuses
 - Hero class specific vanilla artifact sets do not match the new hero classes
 - Hall of Intrigue gives bonus to wrong hero class
+- Doc button not in LAN interface

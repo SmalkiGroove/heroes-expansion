@@ -150,7 +150,7 @@ end
 -----------------------------------------------
 
 TRIGGER_OVERRIDES = {
-    ["CREATURE"] = Override_Monsters,
+    -- ["CREATURE"] = Override_Monsters,
     ["BUILDING_WITCH_HUT"] = Override_WitchHut,
     ["BUILDING_TEMPLE"] = Override_Temple,
     ["BUILDING_RALLY_FLAG"] = Override_RallyFlag,

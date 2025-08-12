@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<WindowSimpleShared ObjectRecordID="1000744">
+<WindowScreenShared ObjectRecordID="1000040">
 	<Crap>false</Crap>
 	<Children>
-		<Item href="Background.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="PlayersPanel.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="/UI/MPWait/MapDescription.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="MenuPanel.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="ScreenHeader.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
-		<!-- <Item href="/UI/Doc/Root.(WindowSimple).xdb#xpointer(/WindowSimple)"/> -->
-		<!-- <Item href="OpenDoc.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/> -->
+		<Item href="MPWait/PlayersList.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="MPWait/Header.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="MPWait/MapDescription.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="MPWait/Menu.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="MPWait/ChatSender.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="MPWait/ChatLog.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="MPWait/Background.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="Doc/Root.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="CustomGameWait/OpenDoc.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
 	</Children>
 	<Background/>
 	<Foreground/>
@@ -33,8 +35,8 @@
 		</HorAllign>
 		<Size>
 			<First>
-				<x>0</x>
-				<y>0</y>
+				<x>1024</x>
+				<y>768</y>
 			</First>
 			<Second>false</Second>
 		</Size>
@@ -56,4 +58,4 @@
 	<ActiveArea/>
 	<IgnoreDblClick>false</IgnoreDblClick>
 	<ActiveMask/>
-</WindowSimpleShared>
+</WindowScreenShared>

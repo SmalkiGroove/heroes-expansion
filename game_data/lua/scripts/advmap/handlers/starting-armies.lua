@@ -1,6 +1,6 @@
 
 PLAYER_ARMY_BONUS = {}
-DIFFICULTY_MULTIPLIER = (5 - GetDifficulty()) * 0.25
+DIFFICULTY_MULTIPLIER = {[0]=1}
 
 function SetStartingArmy(hero)
 	-- log("$ SetStartingArmy hero="..hero)
@@ -16,7 +16,7 @@ function SetStartingArmy(hero)
     for i = 1,7 do
         if army[i] then
             local creature = army[i][1]
-            local nb = round(army[i][2] * DIFFICULTY_MULTIPLIER)
+            local nb = round(army[i][2] * DIFFICULTY_MULTIPLIER[player])
             AddHeroCreatures(hero, creature, nb, PLAYER_ARMY_BONUS[player] and -1 or i-1)
         end
     end
@@ -24,11 +24,11 @@ function SetStartingArmy(hero)
     if PLAYER_ARMY_BONUS[player] then
         for i = 1,5 do
             local nb = power(2, 5-i) + 5 - i
-            AddHeroCreatureType(player, hero, faction, i, nb, 1)
+            AddHeroCreatureType(player, hero, faction, i, nb * DIFFICULTY_MULTIPLIER[player], 1)
         end
     end
     sleep(2)
-    while GetHeroCreatures(hero, 180) > 0 do RemoveHeroCreatures(hero, 180, 1) sleep() end
+    while GetHeroCreatures(hero, 180) > 0 do RemoveHeroCreatures(hero, 180, 1) sleep(2) end
 end
 
 
