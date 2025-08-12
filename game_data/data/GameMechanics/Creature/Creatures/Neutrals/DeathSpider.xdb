@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature ObjectRecordID="72">
-	<AttackSkill>2</AttackSkill>
-	<DefenceSkill>1</DefenceSkill>
+	<AttackSkill>9</AttackSkill>
+	<DefenceSkill>7</DefenceSkill>
 	<Shots>0</Shots>
-	<MinDamage>2</MinDamage>
-	<MaxDamage>4</MaxDamage>
+	<MinDamage>9</MinDamage>
+	<MaxDamage>11</MaxDamage>
 	<Speed>5</Speed>
-	<Initiative>9</Initiative>
+	<Initiative>15</Initiative>
 	<Flying>false</Flying>
-	<Health>22</Health>
+	<Health>24</Health>
 	<KnownSpells/>
 	<SpellPoints>0</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
 	<SpellPoints2>0</SpellPoints2>
-	<Exp>15</Exp>
+	<Exp>120</Exp>
 	<Power>155</Power>
 	<TimeToCommand>10</TimeToCommand>
-	<CreatureTier>3</CreatureTier>
+	<CreatureTier>4</CreatureTier>
 	<Upgrade>true</Upgrade>
 	<PairCreature>CREATURE_CAVE_SPIDER</PairCreature>
 	<CreatureTown>TOWN_NO_TYPE</CreatureTown>
 	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_FIRE</Second></MagicElement>
-	<WeeklyGrowth>25</WeeklyGrowth>
+	<WeeklyGrowth>17</WeeklyGrowth>
 	<Cost>
-		<Gold>75</Gold>
+		<Gold>120</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
 	<MonsterShared href="/MapObjects/Neutral/DeathSpider.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
@@ -36,5 +36,7 @@
 	<Upgrades/>
 	<Abilities>
 		<Item>ABILITY_VENOM</Item>
+		<Item>ABILITY_FAST_ATTACK</Item>
+		<Item>ABILITY_HEXING_ATTACK</Item>
 	</Abilities>
 </Creature>
