@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<WindowSimpleShared ObjectRecordID="1000326">
+<WindowSimpleShared ObjectRecordID="1000806">
 	<Crap>false</Crap>
-	<Children>
-		<Item href="/UI/Doc/Heroes/Common/HeroSkill.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="/UI/Doc/Heroes/Common/HeroSkillBack.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="Hero2_sk1.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="Hero2_sk2.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="Hero2_sk3.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="Hero2_sk4.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="Hero2_sk5.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-	</Children>
-	<Background/>
+	<Children/>
+	<Background href="HERO_SKILL_EXHAUST.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 	<Foreground/>
 	<Flags>
 		<Transparent>false</Transparent>
@@ -33,10 +25,10 @@
 		</HorAllign>
 		<Size>
 			<First>
-				<x>512</x>
-				<y>92</y>
+				<x>128</x>
+				<y>128</y>
 			</First>
-			<Second>true</Second>
+			<Second>false</Second>
 		</Size>
 		<LowerMargin>
 			<First>
