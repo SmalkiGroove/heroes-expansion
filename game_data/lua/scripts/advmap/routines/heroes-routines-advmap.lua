@@ -690,16 +690,6 @@ function Routine_GainDragonArtifacts(player, hero, combatIndex)
     end
 end
 
-function Routine_ConvertKnowledgeToSpellpower(player, hero, level)
-    log("$ Routine_ConvertKnowledgeToSpellpower")
-    local diff = GetHeroStat(hero, STAT_KNOWLEDGE) - level
-    if diff > 0 then
-        ChangeHeroStat(hero, STAT_KNOWLEDGE, -diff)
-        ChangeHeroStat(hero, STAT_SPELL_POWER, diff)
-        ShowFlyingSign({"/Text/Game/Scripts/Stats/Spellpower.txt"; num=diff}, hero, player, FLYING_SIGN_TIME)
-    end
-end
-
 function Routine_GainWeeklySpellpower(player, hero)
     log("$ Routine_GainWeeklySpellpower")
     ChangeHeroStat(hero, STAT_SPELL_POWER, 1)
@@ -1160,7 +1150,6 @@ LEVEL_UP_HERO_ROUTINES_HERO = {
     [H_THEODORUS] = Routine_GetCraftingResources,
     [H_MINASLI] = Routine_AddHeroEaglePerLevel,
     -- dungeon
-    [H_SINITAR] = Routine_ConvertKnowledgeToSpellpower,
     [H_SHADYA] = Routine_AddHeroLevel,
     -- necropolis
     [H_VLADIMIR] = Routine_GainMovePointsPerLevel,

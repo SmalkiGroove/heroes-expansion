@@ -32,6 +32,7 @@
 - [XDB] Darkstorm hero totem model
 - [XDB] Add ARMG templates
 - [XDB] Add might/magic toggle in skills pedia
+- [XDB] One hero per faction with ultimate racial skill
 
 ### Balance
 
