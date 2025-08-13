@@ -14,41 +14,41 @@
 	<Level>4</Level>
 	<MagicSchool>MAGIC_SCHOOL_SUMMONING</MagicSchool>
 	<RequiredHeroLevel>0</RequiredHeroLevel>
-	<TrainedCost>18</TrainedCost>
+	<TrainedCost>25</TrainedCost>
 	<damage>
 		<Item>
-			<Base>250</Base>
-			<PerPower>0</PerPower>
+			<Base>110</Base>
+			<PerPower>10</PerPower>
 		</Item>
 		<Item>
-			<Base>300</Base>
-			<PerPower>0</PerPower>
+			<Base>140</Base>
+			<PerPower>15</PerPower>
 		</Item>
 		<Item>
-			<Base>350</Base>
-			<PerPower>0</PerPower>
+			<Base>170</Base>
+			<PerPower>20</PerPower>
 		</Item>
 		<Item>
-			<Base>400</Base>
-			<PerPower>0</PerPower>
+			<Base>200</Base>
+			<PerPower>25</PerPower>
 		</Item>
 	</damage>
 	<duration>
 		<Item>
-			<Base>50</Base>
-			<PerPower>1</PerPower>
+			<Base>55</Base>
+			<PerPower>6</PerPower>
+		</Item>
+		<Item>
+			<Base>70</Base>
+			<PerPower>9</PerPower>
+		</Item>
+		<Item>
+			<Base>85</Base>
+			<PerPower>12</PerPower>
 		</Item>
 		<Item>
 			<Base>100</Base>
-			<PerPower>1</PerPower>
-		</Item>
-		<Item>
-			<Base>100</Base>
-			<PerPower>1</PerPower>
-		</Item>
-		<Item>
-			<Base>100</Base>
-			<PerPower>1</PerPower>
+			<PerPower>15</PerPower>
 		</Item>
 	</duration>
 	<sSpellCost>
@@ -63,7 +63,7 @@
 	<IsAimed>false</IsAimed>
 	<IsAreaAttack>false</IsAreaAttack>
 	<CanSelectDead>false</CanSelectDead>
-	<Target>TARGET_HOSTILE</Target>
+	<Target>TARGET_NEUTRAL</Target>
 	<Element>ELEMENT_EARTH</Element>
 	<DamageIsElemental>true</DamageIsElemental>
 	<visuals>

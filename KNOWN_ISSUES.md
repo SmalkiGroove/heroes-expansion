@@ -5,7 +5,7 @@
 - [EXE] Crash when engaging fight with rune priests sometimes
 - [EXE] Crash hile generating maps with underground
 - [EXE] Crash on autocombat mode
-- [EXE] Crash when loading games somtimes
+- [EXE] Crash when loading games sometimes
 
 ### Broken graphics or animations
 
@@ -32,10 +32,10 @@
 - [XDB] Darkstorm hero totem model
 - [XDB] Add ARMG templates
 - [XDB] Add might/magic toggle in skills pedia
-- [XDB] One hero per faction with ultimate racial skill
 
 ### Balance
 
+- [EXE] Market change rate are total scam
 - [EXE] Inferno and Dungeon sacrificial buildings are bad
 
 ### Massive work required
@@ -108,3 +108,4 @@
 - Hero class specific vanilla artifact sets do not match the new hero classes
 - Hall of Intrigue gives bonus to wrong hero class
 - Doc button not in LAN interface
+- One hero per faction with ultimate racial skill

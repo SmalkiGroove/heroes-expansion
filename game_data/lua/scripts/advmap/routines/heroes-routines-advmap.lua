@@ -393,11 +393,6 @@ function Routine_LearnRunicSpell(player, hero)
 	end
 end
 
-function Routine_GiveArtifactShantiriBreastplate(player, hero)
-    log("$ Routine_GiveArtifactShantiriBreastplate")
-    GiveArtifact(hero, ARTIFACT_SHANTIRI_BREASTPLATE)
-end
-
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -1046,6 +1041,21 @@ function Routine_SacrificeGoblinDaily(player, hero)
     end
 end
 
+function Routine_SpiritArtifacts(player, hero, level)
+    log("$ Routine_SpiritArtifacts")
+    if level == 7 then
+        GiveArtifact(hero, ARTIFACT_TUNIC_OF_CARVED_FLESH)
+    elseif level == 11 then
+        GiveArtifact(hero, ARTIFACT_CURSED_RING)
+    elseif level == 19 then
+        GiveArtifact(hero, ARTIFACT_SPIRIT_OF_OPPRESSION)
+    elseif level == 23 then
+        GiveArtifact(hero, ARTIFACT_DEADWOOD_STAFF)
+    elseif level == 29 then
+        GiveArtifact(hero, ARTIFACT_SKULL_MASK)
+    end
+end
+
 
 
 
@@ -1060,7 +1070,6 @@ START_TRIGGER_HERO_ROUTINES = {
     [H_TOLGHAR] = Routine_AddLuckAndMorale,
     [H_ERLING] = Routine_UpgradeRunicShrine,
     [H_EBBA] = Routine_GiveArtifactRuneOfFlame,
-    [H_INGA] = Routine_GiveArtifactShantiriBreastplate,
     -- academy
     [H_RISSA] = Routine_RefreshTimeShift,
     -- dungeon
@@ -1159,6 +1168,7 @@ LEVEL_UP_HERO_ROUTINES_HERO = {
     [H_ASH] = Routine_GainAttackPerLevel,
     [H_BIARA] = Routine_AddHeroSuccubus,
     -- stronghold
+    [H_URGHAT] = Routine_SpiritArtifacts,
 }
 
 AFTER_COMBAT_TRIGGER_HERO_ROUTINES = {
