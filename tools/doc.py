@@ -112,7 +112,7 @@ def hero_doc_line(name, path):
     print(f"Hero {name}")
     with open(path, 'r') as xdb:
         hero = xmltodict.parse(xdb.read())
-    desc_path = os.path.join(workdir, root_text_path + hero['AdvMapHeroShared']['SpecializationNameFileRef']['@href'])
+    desc_path = os.path.join(workdir, root_text_path + hero['AdvMapHeroShared']['SpecializationDescFileRef']['@href'])
     with open(desc_path, 'r', encoding='utf-16') as desc_file:
         desc = desc_file.read()
     desc = re.sub(r'<[^>]+>', '', desc)

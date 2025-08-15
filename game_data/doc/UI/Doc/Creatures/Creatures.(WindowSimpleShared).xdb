@@ -2,7 +2,27 @@
 <WindowSimpleShared ObjectRecordID="1000860">
 	<Crap>false</Crap>
 	<Children>
-		<!-- <Item href="About.(WindowStaticText).xdb#xpointer(/WindowStaticText)"/> -->
+		<!-- <Item href="NeutralButton/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/> -->
+		<!-- <Item href="HavenButton/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/> -->
+		<!-- <Item href="InfernoButton/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/> -->
+		<!-- <Item href="NecroButton/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/> -->
+		<!-- <Item href="PreserveButton/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/> -->
+		<!-- <Item href="DungeonButton/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/> -->
+		<!-- <Item href="AcademyButton/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/> -->
+		<!-- <Item href="FortressButton/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/> -->
+		<!-- <Item href="StrongholdButton/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/> -->
+
+		<!-- <Item href="Haven/000001.(WindowSimple).xdb#xpointer(/WindowSimple)"/> -->
+		<!-- <Item href="Inferno/000002.(WindowSimple).xdb#xpointer(/WindowSimple)"/> -->
+		<!-- <Item href="Necro/000003.(WindowSimple).xdb#xpointer(/Window²Simple)"/> -->
+		<!-- <Item href="Preserve/000004.(WindowSimple).xdb#xpointer(/WindowSimple)"/> -->
+		<!-- <Item href="Dungeon/000005.(WindowSimple).xdb#xpointer(/WindowSimple)"/> -->
+		<!-- <Item href="Academy/000006.(WindowSimple).xdb#xpointer(/WindowSimple)"/> -->
+		<!-- <Item href="Fortress/000007.(WindowSimple).xdb#xpointer(/WindowSimple)"/> -->
+		<!-- <Item href="Stronghold/000008.(WindowSimple).xdb#xpointer(/WindowSimple)"/> -->
+		<!-- <Item href="Neutral/000009.(WindowSimple).xdb#xpointer(/WindowSimple)"/> -->
+
+		<Item href="Common/Stats/Health.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
 	</Children>
 	<Background href="/UI/Doc/Common/Background.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 	<Foreground/>

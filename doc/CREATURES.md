@@ -19,9 +19,9 @@
 | IMPERIAL GRIFFIN | 4 | 9 | 36 | 12 | 10 | 7-11 | 8 | 15 | Battle Dive (advanced) | Unlimited Retaliations, Keen Eye, Battle Dive |
 | BATTLE GRIFFIN | 4 | 9 | 40 | 12 | 12 | 6-11 | 7 | 13 | _none_ | Unlimited Retaliations, Keen Eye, Rush Dive, Battle Frenzy |
 | | | | | | | | | | | |
-| PRIEST | 5 | 5 | 57 | 9 | 9 | 9-12 | 4 | 9 | Strength (expert), Righteous Might (expert) | Incorruptible, Magic Attack, Purge |
-| INQUISITOR | 5 | 5 | 61 | 9 | 14 | 10-12 | 4 | 9 | Strength (expert), Cleansing (expert), Celestial Shield (basic) | Incorruptible, Magic Attack, Purge, Magic Disruption |
-| ZEALOT | 5 | 5 | 59 | 12 | 12 | 9-15 | 4 | 9 | Righteous Might (expert), Blade Barrier (advanced), Blind (basic) | Incorruptible, Magic Attack, Purge, Melee Potent |
+| PRIEST | 5 | 5 | 57 | 9 | 9 | 9-12 | 4 | 9 | Strength (expert), Righteous Might (expert) | Incorruptible, Area Attack, Purge |
+| INQUISITOR | 5 | 5 | 61 | 9 | 14 | 10-12 | 4 | 9 | Strength (expert), Cleansing (expert), Celestial Shield (basic) | Incorruptible, Area Attack, Purge, Magic Disruption |
+| ZEALOT | 5 | 5 | 59 | 12 | 12 | 9-15 | 4 | 9 | Righteous Might (expert), Blade Barrier (advanced), Blind (basic) | Incorruptible, Area Attack, Purge, Melee Potent |
 | | | | | | | | | | | |
 | CAVALIER | 6 | 3 | 90 | 15 | 15 | 16-23 | 8 | 12 | _none_ | Jousting, Incorruptible |
 | PALADIN | 6 | 3 | 100 | 15 | 20 | 16-23 | 8 | 12 | Lay Hands (advanced) | Jousting, Incorruptible, Lay Hands, Battle Leader, Shielded |
@@ -51,7 +51,7 @@
 | HIGH DRUID | 4 | 9 | 36 | 9 | 9 | 8-9 | 4 | 8 | Endurance (expert), Stone spikes (basic), Regeneration (basic) | Free Mind, Magic Disruption, Channeling |
 | | | | | | | | | | | |
 | UNICORN | 5 | 5 | 70 | 15 | 14 | 9-19 | 7 | 14 | _none_ | Blinding Horn |
-| SILVER UNICORN | 5 | 5 | 77 | 16 | 15 | 10-20 | 7 | 14 | _none_ | Blinding Horn, Rider Charge |
+| SILVER UNICORN | 5 | 5 | 77 | 16 | 15 | 10-20 | 7 | 14 | _none_ | Blinding Horn, Charge Attack |
 | PRISTINE UNICORN | 5 | 5 | 70 | 15 | 14 | 11-19 | 7 | 15 | _none_ | Blinding Horn, Child of Light |
 | | | | | | | | | | | |
 | TREANT | 6 | 3 | 177 | 17 | 27 | 7-17 | 5 | 7 | _none_ | Spiteful, Entangling Roots |
@@ -82,7 +82,7 @@
 | WHITEBEAR RIDER | 4 | 10 | 50 | 9 | 9 | 6-8 | 6 | 10 | _none_ | Spiteful, Roar |
 | | | | | | | | | | | |
 | RUNE PRIEST | 5 | 5 | 60 | 8 | 8 | 12-16 | 3 | 9 | Mass Cleansing (basic), Magic Arrow (advanced) | Fire Resistance, Mark of Fire, Mine Field |
-| RUNE PATRIARCH | 5 | 5 | 64 | 8 | 8 | 12-16 | 3 | 9 | Mass Cleansing (basic), Firewall (advanced) | Fire Resistance, Mark of Fire, Mine Field, Magic Attack |
+| RUNE PATRIARCH | 5 | 5 | 64 | 8 | 8 | 12-16 | 3 | 9 | Mass Cleansing (basic), Firewall (advanced) | Fire Resistance, Mark of Fire, Mine Field, Area Attack |
 | RUNE KEEPER | 5 | 5 | 60 | 8 | 8 | 14-18 | 3 | 9 | Mass Cleansing (basic), Fireball (advanced) | Fire Resistance, Mark of Fire, Mine Field, Mana Feed, Channeling |
 | | | | | | | | | | | |
 | THANE | 6 | 3 | 105 | 18 | 24 | 11-13 | 8 | 10 | _none_ | Steadiness, Double Attack |
@@ -140,7 +140,7 @@
 | MINOTAUR TASKMASTER | 3 | 16 | 34 | 8 | 8 | 6-9 | 5 | 9 | _none_ | Dominant Presence, Violence, Heavy Armor |
 | | | | | | | | | | | |
 | DARK RAIDER | 4 | 9 | 36 | 8 | 8 | 7-10 | 8 | 16 | _none_ | Beat-up, Keen Eye |
-| GRIM RAIDER | 4 | 9 | 40 | 11 | 8 | 7-10 | 8 | 16 | _none_ | Beat-up, Keen Eye, Rider Charge |
+| GRIM RAIDER | 4 | 9 | 40 | 11 | 8 | 7-10 | 8 | 16 | _none_ | Beat-up, Keen Eye, Charge Attack |
 | BRISK RAIDER | 4 | 9 | 42 | 10 | 10 | 7-10 | 8 | 16 | _none_ | Beat-up, Keen Eye, Ride-by Attack |
 | | | | | | | | | | | |
 | SHADOW WITCH | 5 | 5 | 43 | 9 | 9 | 12-15 | 4 | 10 | Slow (advanced), Confusion (advanced) | Long Range, Melee Potent, Whip Strike |
@@ -252,9 +252,9 @@
 | CREATURE | TIER | NB | HP | ATT | DEF | DMG± | SPD | INIT | SPELLS | ABILITIES |
 |----------|------|----|----|-----|-----|------|-----|------|--------|-----------|
 | | | | | | | | | | | |
-| WOLF | 2 | 50 | 15 | 5 | 1 | 3-5 | 6 | 14 | _none_ | Pack Hunter, Howl |
+| WOLF | 2 | 50 | 15 | 5 | 1 | 3-5 | 6 | 13 | _none_ | Pack Hunter, Howl |
 | | | | | | | | | | | |
-| MANTICORE | 5 | 7 | 70 | 10 | 6 | 10-16 | 6 | 12 | _none_ | Poison |
+| MANTICORE | 5 | 8 | 70 | 10 | 6 | 10-16 | 6 | 12 | _none_ | Poison |
 | | | | | | | | | | | |
 | ARCANE EAGLE | 6 | 3 | 99 | 15 | 15 | 15-25 | 8 | 14 | _none_ | Regeneration |
 | | | | | | | | | | | |
@@ -276,6 +276,9 @@
 | LIZARDMAN | 2 | 25 | 12 | 4 | 2 | 2-4 | 4 | 13 | _none_ | Unlimited Retaliations, Maneuver |
 | | | | | | | | | | | |
 | SPITTING SPIDER | 3 | 25 | 21 | 5 | 4 | 3-5 | 5 | 11 | _none_ | Melee Potent, Poison, Life Drain |
+| | | | | | | | | | | |
+| CAVE SPIDER | 4 | 17 | 22 | 8 | 4 | 5-10 | 5 | 15 | _none_ | Venom, Swift Strike |
+| DEATH SPIDER | 4 | 17 | 24 | 9 | 7 | 9-11 | 5 | 15 | _none_ | Venom, Swift Strike, Cursed Strike |
 | | | | | | | | | | | |
 | BEHEMOTH | 7 | 1 | 280 | 36 | 26 | 43-52 | 6 | 9 | _none_ | Battle Rage, Roar, Ice Immuned, Frightful Presence |
 | EINHERJAR | 7 | 1 | 248 | 28 | 28 | 32-44 | 5 | 10 | _none_ | Melee Potent, Long Range, Fire Immuned, Free Mind, Magic-proof 25%, Bravery |

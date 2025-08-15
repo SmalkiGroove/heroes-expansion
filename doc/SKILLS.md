@@ -70,10 +70,10 @@ At the start of each week, gain 800 golds per relic artifact equipped.
 - __Warpath__ : The hero gets 550 additional movement points for every victory on the map.
 
 ### WARFARE
-- __Ballistics__ : Allows manual control of the Ballista. Restores the Ballista after the battle if it was destroyed.
+- __Ballistics__ : Allows manual control of the Ballista. Grants hero a free Ballista and restores it after battles if it was destroyed.
 - __Flaming Arrows__ : Ballista under hero's command negates enemy defense and deals 50 additional elemental fire damage.
 - __Rapid Fire__ : Ballista gains an extra shot.
-- __Anatomy__ : Allows manual control of the First Aid Tent. Restores the First Aid Tent after the battle if it was destroyed.
+- __Anatomy__ : Allows manual control of the First Aid Tent. Grants hero a free First Aid Tent and restores it after battles if it was destroyed.
 - __Warfare Logistics__ : Increases initiative of all war machines by +3.
 - __Houndmasters__ : A stack of Wolves is added to hero's army at the start of combats. The amount is 10 plus between 2 and 3 times hero level.
 
@@ -83,7 +83,7 @@ At the start of each week, gain 800 golds per relic artifact equipped.
 - __Onslaught__ : Creatures in hero's army have bonus speed and initiative for the first combat of each day.
 - __Expertise__ : Combat abilities of creatures in hero's army (like Bash or Blinding Attack) have twice more chance to trigger.
 - __Magic Resistance__ : Increases magic resistance of all creatures in hero's army by 15%. Creatures are more likely to avoid enemy magic.
-- __Determination__ : Creatures in hero's army have wice more chance to resist enemy spells.
+- __Determination__ : Creatures in hero's army have a second chance to resist enemy spells.
 
 ### COMBAT
 - __Empiricism__ : Hero gains 1000 + 5% of current experience points.
@@ -115,7 +115,7 @@ Repeat this bonus at the start of each week.
 ### DARK_MAGIC
 - __Spread Curse__ : Grants mass effects to Weakness and Suffering spells, for double the casting cost of these spells. Hero attacks apply Suffering to the target.
 - __Consume Corpse__ : The hero receives special combat ability to consume corpses of fallen creatures to restore mana. Consumed corpses disappear from the battlefield.
-- __Pariah__ : Troops under hero's control suffer -1 penalty to morale, but all Dark Magic spells cast by the hero are now more powerful (effective Spellpower is +5 for casting those spells).
+- __Pariah__ : Troops under hero's control suffer -1 penalty to morale, but all Dark Magic spells cast by the hero are now more powerful (effective Spellpower is +6 for casting those spells).
 - __Spread Pain__ : Grants area effects to Decay and Rupture spells, for double the casting cost of these spells. Adds +4 to effective spellpower of Unholy Word spell.
 - __Spirit Link__ : Grants a hero the ability to tie his or her own spirit to the spirits of any creatures on the battlefield until the end of combat. If linked creatures receive any damage the hero will gain some mana, feeding upon those creatures' suffering.
 - __Plague Tent__ : The hero's First Aid Tent receives an ability to damage enemy creatures.
@@ -232,7 +232,8 @@ At the start of each week, gain +50 temporary mana that can go beyond maximum.
 - __Elemental Vision__ : Allows hero to see elements on enemy creatures so that Destructive Magic spells cast by the hero can inflict additional elemental damage.
 - __Eternal Servitude__ : The hero receives an ability to raise some of the fallen undead creatures in his or her army after combat.
 - __Soil Burn__ : Enemy walking creatures will receive damage equal to 8 times hero level when moving.
-- __Siege__ : All hero's troops gain +3 speed during the siege of an enemy castle, and the Catapult gains an extra shot.
+- __Commander__ : Hero can use Warcries but not regular spells. Visiting a spell shrine grants experience points (500 per spell level).
+- __Twilight__ : All Dark and Light magic spells are cast with +4 Spellpower
 
 ### ULTIMATE
 - __Retribution__ : The troops led by the hero inflict additional melee and ranged damage if their Morale is above zero (+7% for each point of Morale).

@@ -741,6 +741,14 @@ CREATURES:
       tier: 3
       upgrade: 0
       path: Neutrals/SpittingSpider.xdb
+    - name: CAVE SPIDER
+      tier: 4
+      path: Neutrals/CaveSpider.xdb
+      upgrade: 0
+    - name: DEATH SPIDER
+      tier: 4
+      path: Neutrals/DeathSpider.xdb
+      upgrade: 1
     - name: BEHEMOTH
       tier: 7
       upgrade: 0
@@ -1171,7 +1179,8 @@ SKILLS:
       - ELEMENTAL_VISION
       - ETERNAL_SERVITUDE
       - SOIL_BURN
-      - SIEGE
+      - COMMANDER
+      - TWILIGHT
   ULTIMATE:
     perks:
       - RETRIBUTION

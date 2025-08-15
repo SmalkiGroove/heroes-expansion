@@ -3,7 +3,7 @@
 ### Game crash
 
 - [EXE] Crash when engaging fight with rune priests sometimes
-- [EXE] Crash hile generating maps with underground
+- [EXE] Crash while generating maps with underground
 - [EXE] Crash on autocombat mode
 - [EXE] Crash when loading games sometimes
 
@@ -22,8 +22,6 @@
 
 ### Bugs
 
-- [LUA] Leadership caravan doesn't spawn if no other tile available
-- [LUA] Imprisoned heroes have no starting army
 - [EXE] Shantiri Moon Disc blocks all light magic
 
 ### Suggestions
@@ -109,3 +107,4 @@
 - Hall of Intrigue gives bonus to wrong hero class
 - Doc button not in LAN interface
 - One hero per faction with ultimate racial skill
+- Leadership caravan doesn't spawn if no other tile available
