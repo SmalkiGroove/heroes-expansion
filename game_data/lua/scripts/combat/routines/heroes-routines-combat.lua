@@ -61,6 +61,7 @@ function Routine_RetaliationStrike(side, hero)
     end
     if max > 0 then
         HeroCast_Target(hero, SPELL_HOLY_CHARGE, NO_COST, cavalier)
+        sleep() SetATB_ID(hero, 0)
     end
 end
 

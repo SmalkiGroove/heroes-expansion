@@ -1,26 +1,30 @@
 
 function Routine_AbilityCommandBallista(side, unit)
     log("$ Routine_AbilityCommandBallista")
-    if GetCreatureNumber(unit) > 10 then
-        local x,y = GetUnitPosition(CURRENT_UNIT)
-        local ballista = GetWarMachine(CURRENT_UNIT_SIDE, WAR_MACHINE_BALLISTA)
-        if ballista then
-            if y == 5 or y == 6 then
-                if x == 2 + CURRENT_UNIT_SIDE * 13 then
-                    ShowFlyingSign("/Text/Game/Scripts/Combat/BallistaCommander.txt", unit, 9)
-                    setATB(ballista, 2*ATB_INSTANT) sleep()
-                    if GetHero(side) and GetHeroName(GetHero(side)) == H_VITTORIO then
-                        if CanCreatureShoot(unit) then
-                            TryShootTarget(unit, RandomCreature(1-side,x))
-                        else
-                            DefendCombatUnit(unit)
-                        end
-                    else
-                        DefendCombatUnit(unit)
+    local growth = {[CREATURE_MARKSMAN] = 30}
+    if not ROUTINE_VARS.BallistaCommanders[unit] then
+        ROUTINE_VARS.BallistaCommanders[unit] = 1
+    end
+    local ballista = GetWarMachine(side, WAR_MACHINE_BALLISTA)
+    if ballista then
+        local x,y = GetUnitPosition(unit)
+        if y == 5 or y == 6 then
+            if x == 2 + side * 13 then
+                local type = GetCreatureType(unit)
+                local nb = GetCreatureNumber(unit)
+                if nb >= growth[type] then
+                    if ROUTINE_VARS.BallistaCommanders[unit] == 1 then
+                        local value = 10 * growth[type]
+                        value = nb / value
+                        value = min(ATB_NEXT, value)
+                        ShowFlyingSign("/Text/Game/Scripts/Combat/BallistaCommander.txt", unit, 9)
+                        setATB(ballista, 2*ATB_INSTANT) sleep()
+                        setATB(unit, value)
                     end
+                    ROUTINE_VARS.BallistaCommanders[unit] = 1 - ROUTINE_VARS.BallistaCommanders[unit]
                 end
             end
-        end 
+        end
     end
 end
 
@@ -32,12 +36,12 @@ end
 
 function Routine_AbilityMagneticField(side, unit)
     log("$ Routine_AbilityMagneticField")
-    local nb = GetCreatureNumber(CURRENT_UNIT)
-    local x,y = GetUnitPosition(CURRENT_UNIT)
+    local nb = GetCreatureNumber(unit)
+    local x,y = GetUnitPosition(unit)
     local enemy = "none"
     local distance = 1000
     local target = {x=0,y=0}
-    for i,cr in GetUnits(1-CURRENT_UNIT_SIDE, CREATURE) do
+    for i,cr in GetUnits(1-side, CREATURE) do
         local type = GetCreatureType(cr)
         local tier = CREATURES[type][2]
         if tier <= 3 then

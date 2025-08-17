@@ -108,3 +108,4 @@
 - Doc button not in LAN interface
 - One hero per faction with ultimate racial skill
 - Leadership caravan doesn't spawn if no other tile available
+- Vittorio too easy

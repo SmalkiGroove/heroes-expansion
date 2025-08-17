@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Creature ObjectRecordID="77">
-	<AttackSkill>26</AttackSkill>
-	<DefenceSkill>18</DefenceSkill>
+	<AttackSkill>30</AttackSkill>
+	<DefenceSkill>26</DefenceSkill>
 	<Shots>0</Shots>
-	<MinDamage>15</MinDamage>
-	<MaxDamage>25</MaxDamage>
+	<MinDamage>35</MinDamage>
+	<MaxDamage>60</MaxDamage>
 	<Speed>7</Speed>
 	<Initiative>11</Initiative>
 	<Flying>true</Flying>
-	<Health>125</Health>
+	<Health>199</Health>
 	<KnownSpells/>
 	<SpellPoints>0</SpellPoints>
 	<SpellPoints1>0</SpellPoints1>
 	<SpellPoints2>0</SpellPoints2>
-	<Exp>500</Exp>
-	<Power>2750</Power>
+	<Exp>1000</Exp>
+	<Power>5500</Power>
 	<TimeToCommand>10</TimeToCommand>
-	<CreatureTier>6</CreatureTier>
+	<CreatureTier>7</CreatureTier>
 	<Upgrade>true</Upgrade>
 	<PairCreature>CREATURE_BONE_DRAGON</PairCreature>
-	<CreatureTown>TOWN_NECROMANCY</CreatureTown>
+	<CreatureTown>TOWN_NO_TYPE</CreatureTown>
 	<MagicElement><First>ELEMENT_AIR</First><Second>ELEMENT_WATER</Second></MagicElement>
-	<WeeklyGrowth>3</WeeklyGrowth>
+	<WeeklyGrowth>1</WeeklyGrowth>
 	<Cost>
-		<Gold>1500</Gold>
+		<Gold>3500</Gold>
 	</Cost>
 	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
 	<MonsterShared href="/MapObjects/Necropolis/Shadow_Dragon.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
@@ -36,6 +36,7 @@
 	<Upgrades/>
 	<Abilities>
 		<Item>ABILITY_UNDEAD</Item>
+		<Item>ABILITY_WEAKENING_AURA</Item>
 		<Item>ABILITY_SORROW_STRIKE</Item>
 		<Item>ABILITY_HORROR_OF_THE_DEATH</Item>
 	</Abilities>

@@ -4,7 +4,7 @@
 	<DefenceSkill>4</DefenceSkill>
 	<Shots>10</Shots>
 	<MinDamage>2</MinDamage>
-	<MaxDamage>6</MaxDamage>
+	<MaxDamage>5</MaxDamage>
 	<Speed>4</Speed>
 	<Initiative>8</Initiative>
 	<Flying>false</Flying>
@@ -36,6 +36,7 @@
 	<Upgrades/>
 	<Abilities>
 		<Item>ABILITY_PRECISE_SHOT</Item>
+		<Item>ABILITY_MANEURE</Item>
 		<Item>ABILITY_IMMUNITY_TO_BERSERK</Item>
 	</Abilities>
 </Creature>

@@ -30,6 +30,7 @@ ROUTINE_VARS = {
     GoblinsTotal = 0,
     MoonCharm = nil,
     Legendragon = {},
+    BallistaCommanders = {},
 }
 
 COMBAT_EFFECT_SKILLS = {
