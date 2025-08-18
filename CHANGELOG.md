@@ -122,13 +122,29 @@ Initial beta release !
 - Kha Beleth attack anim not sync
 - Occultism invalid prerequisites
 
-### 0.2.2 (0/08/2025)
+### 0.3.0 (18/08/2025)
 
 #### New
 
-- 
+- In-game UI for documentations (heroes and skills)
+- More impactful starting bonuses
 
 #### Fixed/Changed
 
-- Skill tree UI revamped
+- Skill tree accessible from level up window
+- UI incorrect size
+- Maps with Tear of Asha are broken
+- Darkstorm creature should not stay in army after battle
+- Commander heroes cannot learn special perks
+- Graduate unlocks ultimate skill
+- Dragon Tombstone building script error
+- Give AI more bonuses
+- Hero class specific vanilla artifact sets do not match the new hero classes
+- Hall of Intrigue gives bonus to wrong hero class
+- Doc button not in LAN interface
+- One hero per faction with ultimate racial skill
+- Leadership caravan doesn't spawn if no other tile available
+- Vittorio too easy
+- Ballista commander reworked
+- Multiple heroes and creatures tweaked
 

@@ -100,7 +100,7 @@
 - UI incorrect size
 - Maps with Tear of Asha are broken
 - Darkstorm creature should not stay in army after battle
-- Commander heroes cannot not special perks
+- Commander heroes cannot learn special perks
 - Graduate unlocks ultimate skill
 - Give AI more bonuses
 - Hero class specific vanilla artifact sets do not match the new hero classes
