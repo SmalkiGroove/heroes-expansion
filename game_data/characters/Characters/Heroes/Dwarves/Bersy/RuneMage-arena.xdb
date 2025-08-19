@@ -10,10 +10,6 @@
 			<Anim href="RuneMageHero_Strike-arena-strike.xdb#xpointer(/BasicSkelAnim)"/>
 		</Item>
 		<Item>
-			<Kind>rangeattack</Kind>
-			<Anim href="RuneMage-arena-cast.xdb#xpointer(/BasicSkelAnim)"/>
-		</Item>
-		<Item>
 			<Kind>happy</Kind>
 			<Anim href="RuneMage-arena-happy.xdb#xpointer(/BasicSkelAnim)"/>
 		</Item>
@@ -23,6 +19,10 @@
 		</Item>
 		<Item>
 			<Kind>cast</Kind>
+			<Anim href="RuneMage-arena-cast.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>rangeattack</Kind>
 			<Anim href="RuneMage-arena-cast.xdb#xpointer(/BasicSkelAnim)"/>
 		</Item>
 		<Item>

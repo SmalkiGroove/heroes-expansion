@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimSet>
+	<animations>
+		<Item>
+			<Kind>strike</Kind>
+			<Anim href="RuneMageHero_Strike-arena-strike.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+	</animations>
+	<ExpSrcScene href="/H5A1/Models/Heroes/RuneMageHero/RuneMageHero.mb"/>
+	<ExpSrcClipFolder href="/H5A1/Animations/Heroes/RuneMageHero/Clip_strike/"/>
+	<ExpRootTransform>Global</ExpRootTransform>
+</AnimSet>
