@@ -30,6 +30,7 @@
 - [XDB] Darkstorm hero totem model
 - [XDB] Add ARMG templates
 - [XDB] Add might/magic toggle in skills pedia
+- [XDB] Hero name in hero pedia
 
 ### Balance
 
