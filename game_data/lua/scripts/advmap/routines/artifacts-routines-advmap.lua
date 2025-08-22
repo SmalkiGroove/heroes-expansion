@@ -261,6 +261,11 @@ function Routine_ArtifactPendantOfTheLyre(player, hero, combatIndex)
     end
 end
 
+function Routine_ArtifactAnkhOfTheSaint(player, hero, combatIndex)
+    log("$ Routine_ArtifactAnkhOfTheSaint")
+    
+end
+
 function Routine_ArtifactBloodCrystalExp(player, hero, nb)
     log("$ Routine_ArtifactBloodCrystalExp")
     AddHeroStatAmount(player, hero, STAT_EXPERIENCE, nb * 250)
@@ -394,6 +399,7 @@ AFTER_COMBAT_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_PALACE_SHOES] = Routine_ArtifactPalaceShoes,
     [ARTIFACT_PENDANT_OF_THE_LYRE] = Routine_ArtifactPendantOfTheLyre,
     [ARTIFACT_STAFF_OF_THE_LYRE] = Routine_ArtifactStaffOfTheLyre,
+    [ARTIFACT_ANKH_OF_THE_SAINT] = Routine_ArtifactAnkhOfTheSaint,
 }
 
 CONTINUOUS_TRIGGER_ARTFSETS_ROUTINES = {

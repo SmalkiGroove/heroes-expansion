@@ -9,11 +9,11 @@
 
 ### Broken graphics or animations
 
-- [XDB] Academy and Sylvan female heroes textures
 - [EXE] Consume Corpse camera glitch
 
 ### Text issues
 
+- [TXT] Motivation description typo
 
 ### Something does not work
 
@@ -23,6 +23,8 @@
 ### Bugs
 
 - [EXE] Shantiri Moon Disc blocks all light magic
+- [LUA] Talanar loses turns when casting righteous might
+- [LUA] Double script activation sometimes
 
 ### Suggestions
 
@@ -110,3 +112,5 @@
 - One hero per faction with ultimate racial skill
 - Leadership caravan doesn't spawn if no other tile available
 - Vittorio too easy
+
+- Academy and Sylvan female heroes textures glitched

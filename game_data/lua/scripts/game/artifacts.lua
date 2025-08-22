@@ -101,7 +101,7 @@ ARTIFACT_TOME_OF_NATURE = 79                        -- hero learns all natural s
 ARTIFACT_BEGINNER_MAGIC_STICK = 80                  -- restore mana after battle **
 ARTIFACT_RUNIC_WAR_AXE = 81                         -- restore mana after battle **
 ARTIFACT_RUNIC_WAR_HARNESS = 82                     -- restore mana after battle **
-ARTIFACT_SKULL_OF_THE_FORBIDDEN = 83                -- 
+ARTIFACT_SKULL_OF_THE_FORBIDDEN = 83                -- /
 ARTIFACT_FROZEN_HEART = 84                          -- reduce enemy ice spells and immune to blaze power
 ARTIFACT_PHOENIX_FEATHER_CAPE = 85                  -- reduce enemy fire spells and immune to frost power TODO
 ARTIFACT_RUNE_OF_FLAME = 86                         -- grants runic spell
@@ -130,21 +130,21 @@ ARTIFACT_ELDENAS_RED_COAT = 108                     -- level up grants t2 creatu
 ARTIFACT_RING_OF_LIFE = 109                         -- 
 ARTIFACT_STEADFAST_SHIELD = 110                     -- /
 ARTIFACT_VIKING_SHIELD = 111                        -- gain wood/ore after battles **
-ARTIFACT_FORTUNE_BAND_OF_THE_SAINT = 112            -- reduce mana cost by 1
+ARTIFACT_FORTUNE_BAND_OF_THE_SAINT = 112            -- gain permanent luck after victories ** TODO
 ARTIFACT_SENTINELS_BRACER = 113                     -- /
 ARTIFACT_ANKH_OF_THE_SAINT = 114                    -- 
 ARTIFACT_CLOAK_OF_THE_SAINT = 115                   -- immunity to plague
-ARTIFACT_GENJIS_HAT = 116                           -- 
+ARTIFACT_GENJIS_HAT = 116                           -- reduce mana cost by 1
 ARTIFACT_GENJIS_VEST = 117                          -- 
 ARTIFACT_GENJIS_SANDALS = 118                       -- 
-ARTIFACT_GENJIS_SILKSWORD = 119                     -- 
+ARTIFACT_GENJIS_SILKSWORD = 119                     -- creatures deal 10% additional ice damage TODO
 ARTIFACT_SENTINELS_HELM = 120                       -- gain battle boost on level up **
 ARTIFACT_SENTINELS_BOOTS = 121                      -- gain movement and morale after battle with no loss **
 ARTIFACT_SENTINELS_SHIELD = 122                     -- reduce ranged damage
 ARTIFACT_OBSIDIAN_ARMOR = 123                       -- immunity to armaggeddon
 ARTIFACT_ELRATHS_DIVINE_SHIELD = 124                -- reduce magic damage taken from all elements
 ARTIFACT_ROD_OF_TORMENT = 125                       -- enemy creatures have -2 morale
-ARTIFACT_CODEX_OF_THE_SAINT = 126                   -- 
+ARTIFACT_CODEX_OF_THE_SAINT = 126                   -- casting spells use less atb TODO
 ARTIFACT_VIZIRS_CAP = 127                           -- gain weekly golds per dwelling **
 ARTIFACT_PLUNDERER_VEST = 128                       -- creatures have +1 hp
 ARTIFACT_AVENGER_BOW = 129                          -- increase ranged damage TODO
@@ -152,7 +152,7 @@ ARTIFACT_CAPTAINS_HOOK = 130                        --
 ARTIFACT_PLUNDERER_SHOES = 131                      -- creatures have +1 initiative
 ARTIFACT_BUTCHER_GLAIVE = 132	                    -- increase melee damage TODO
 ARTIFACT_CELESTIAL_JUSTICAR_SHIELD = 133            -- reduce ranged damage
-ARTIFACT_STAFF_OF_THE_SAINT = 134                   -- 
+ARTIFACT_STAFF_OF_THE_SAINT = 134                   -- gain spellpower for light magic spells TODO
 ARTIFACT_BACKPACK_OF_THE_OPEN_ROAD = 135            -- reset hero movement points on level up **
 ARTIFACT_PHOENIX_FEATHER = 136                      -- 
 ARTIFACT_POTION_OF_MANA = 137	                    -- 
@@ -475,7 +475,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_FORTUNE_BAND_OF_THE_SAINT]     = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_SAINT, special=1}, --disabled
     [ARTIFACT_SENTINELS_BRACER]              = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_HAVEN, special=0},
     [ARTIFACT_ANKH_OF_THE_SAINT]             = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_NECK, set=ARTIFACT_SET_SAINT, special=1}, --disabled
-    [ARTIFACT_CLOAK_OF_THE_SAINT]            = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_SAINT, special=0},
+    [ARTIFACT_CLOAK_OF_THE_SAINT]            = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_SAINT, special=0},
     [ARTIFACT_GENJIS_HAT]                    = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_GENJI, special=1}, --disabled
     [ARTIFACT_GENJIS_VEST]                   = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_BODY, set=ARTIFACT_SET_GENJI, special=1}, --disabled
     [ARTIFACT_GENJIS_SANDALS]                = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_GENJI, special=1}, --disabled
