@@ -48,6 +48,8 @@ def hero_classwindow_path(name, faction):
     return os.path.join(heroes_pedia_path, faction, name, "class", f"{name}_class.(WindowSimple).xdb")
 def hero_classwindowshared_path(name, faction):
     return os.path.join(heroes_pedia_path, faction, name, "class", f"{name}_class.(WindowSimpleShared).xdb")
+def hero_nametext_path(name, faction):
+    return os.path.join(heroes_pedia_path, faction, name, "class", f"{name}_name.(WindowTextView).xdb")
 def hero_classtext_path(name, faction):
     return os.path.join(heroes_pedia_path, faction, name, "class", f"{name}_class.(WindowTextView).xdb")
 def hero_statwindow_path(name, faction):
@@ -271,6 +273,7 @@ for folder,faction in factions.items():
 
             write_from_template("heroclass.(WindowSimple).xdb.j2", hero_classwindow_path(hero_id, faction), {'hero': hero_id})
             write_from_template("heroclass.(WindowSimpleShared).xdb.j2", hero_classwindowshared_path(hero_id, faction), {'hero': hero_id})
+            write_from_template("heroname.(WindowTextView).xdb.j2", hero_nametext_path(hero_id, faction), {'hero': hero_id, 'name_ref': hero_name_file})
             heroclass_data = get_class_data(hero_class)
             class_name_ref = os.path.join("/GameMechanics/RefTables", heroclass_data['NameFileRef']['@href'])
             write_from_template("heroclass.(WindowTextView).xdb.j2", hero_classtext_path(hero_id, faction), {'hero': hero_id, 'class_ref': class_name_ref})
