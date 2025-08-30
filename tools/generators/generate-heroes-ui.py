@@ -11,7 +11,7 @@ root_text_path = "../../game_texts/texts-EN"
 heroes_xdb_path = "../../game_data/data/MapObjects"
 reftable_xdb_path = "../../game_data/data/GameMechanics/RefTables"
 armies_lua_path = "../../game_data/lua/scripts"
-heroes_pedia_path = "../../game_data/doc/UI/Doc/Heroes"
+heroes_pedia_path = "../../game_data/doc-heroes/UI/Doc/Heroes"
 hero_lua_regex = r"(H_[A-Z0-9_]+) = '([A-Za-z0-9]+)'"
 army_lua_regex = r".* = {(.*)},"
 army1_lua_regex = r'.*\[(H_[A-Z0-9_]+)\] = \{(.*)\},'
