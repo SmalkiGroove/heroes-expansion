@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowSimple ObjectRecordID="1001263">
 	<ClassTypeID>285700801</ClassTypeID>
-	<Shared href="Defense.(WindowSimpleShared).xdb#xpointer(/WindowSimpleShared)"/>
-	<Name>WindowHavenStatsDefense</Name>
+	<Shared href="Abilities.(WindowSimpleShared).xdb#xpointer(/WindowSimpleShared)"/>
+	<Name>WindowHavenStatsAbilities</Name>
 	<TooltipFileRef/>
 	<Visible>true</Visible>
 	<Priority>0</Priority>
@@ -11,7 +11,7 @@
 		<Position>
 			<First>
 				<x>148</x>
-				<y>120</y>
+				<y>260</y>
 			</First>
 			<Second>true</Second>
 		</Position>

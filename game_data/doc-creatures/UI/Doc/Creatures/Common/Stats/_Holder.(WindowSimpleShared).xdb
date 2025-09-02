@@ -2,12 +2,19 @@
 <WindowSimpleShared ObjectRecordID="1000806">
 	<Crap>false</Crap>
 	<Children>
+		<Item href="Tier.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="Growth.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="Cost.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
 		<Item href="Health.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
 		<Item href="Attack.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
 		<Item href="Defense.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
 		<Item href="Damages.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
 		<Item href="Speed.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
 		<Item href="Initiative.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="Range.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="Mana.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="Spells.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="Abilities.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
 	</Children>
 	<Background href="_Holder.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 	<Foreground/>
@@ -32,8 +39,8 @@
 		</HorAllign>
 		<Size>
 			<First>
-				<x>34</x>
-				<y>160</y>
+				<x>512</x>
+				<y>512</y>
 			</First>
 			<Second>false</Second>
 		</Size>
