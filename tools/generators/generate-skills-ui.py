@@ -12,9 +12,9 @@ jinja_env = Environment(loader=FileSystemLoader(searchpath="templates-skills"))
 with open(skills_xdb_path, 'r') as skills_xdb:
     skills_data = xmltodict.parse(skills_xdb.read())
 
-all_buttons = open("out_buttons.xml", 'w')
-all_selected = open("out_selected.xml", 'w')
-all_windows = open("out_windows.xml", 'w')
+all_buttons = open("outputs/skills_skillbuttons.xml", 'w')
+all_selected = open("outputs/skills_selectionhighlights.xml", 'w')
+all_windows = open("outputs/skills_descriptionviews.xml", 'w')
 
 coordinates = {
   '001001': [238, 468],
