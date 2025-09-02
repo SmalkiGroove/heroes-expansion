@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowSimple ObjectRecordID="1001263">
 	<ClassTypeID>285700801</ClassTypeID>
-	<Shared href="/UI/Doc/Creatures/Common/Stats/Health.(WindowSimpleShared).xdb#xpointer(/WindowSimpleShared)"/>
+	<Shared href="Health.(WindowSimpleShared).xdb#xpointer(/WindowSimpleShared)"/>
 	<Name>WindowHavenStatsHealth</Name>
 	<TooltipFileRef/>
 	<Visible>true</Visible>
@@ -10,8 +10,8 @@
 	<Placement>
 		<Position>
 			<First>
-				<x>450</x>
-				<y>250</y>
+				<x>10</x>
+				<y>10</y>
 			</First>
 			<Second>true</Second>
 		</Position>
