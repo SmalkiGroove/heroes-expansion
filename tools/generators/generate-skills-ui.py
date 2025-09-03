@@ -374,7 +374,7 @@ def find_icon_size(path:str):
 branches = ["Innates",
             "Courage", "Avenger", "Runelore", "Artificier", "Arcanism", "Necromancy", "Gating", "BloodRage",
             "Offence", "Defense", "Learning", "Sorcery", "LightMagic", "DarkMagic", "DestructiveMagic", "NaturalMagic",
-            "Combat", "Leadership", "Logistics", "Warfare", "ShaterMagic", "Governance", "Training"]
+            "Combat", "Leadership", "Logistics", "Warfare", "ShatterMagic", "Governance", "Training"]
 
 counter = -1
 for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
@@ -442,16 +442,16 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
                 for targetDir in directories:
                     if not os.path.exists(targetDir):
                         os.makedirs(targetDir)
-                # dirrm = os.path.join(skills_pedia_path, faction, id, "selection")
+                # dirrm = os.path.join(skills_pedia_path, branch, id, "selection")
                 # if os.path.exists(dirrm):
                 #     for file in os.listdir(dirrm):
                 #         os.remove(os.path.join(dirrm, file))
                 #     os.rmdir(dirrm)
-                write_from_template("button.(WindowMSButton).xdb.j2", button_base_path(id, faction), {'skill_id': id, 'skill_name': skill['ID'], 'pos_x': x, 'pos_y': y})
-                write_from_template("buttonshared.(WindowMSButtonShared).xdb.j2", button_shared_path(id, faction), {'skill_id': id, 'required_skills': prerequisites[id], 'icon_path': elements[id]['icon']})
-                write_from_template("skillicon.(WindowSimple).xdb.j2", button_bgwindow_path(id, faction), {'skill_id': id})
-                write_from_template("skillicon.(WindowSimpleShared).xdb.j2", button_bgshared_path(id, faction), {'skill_id': id})
-                write_from_template("icon.(BackgroundSimpleScallingTexture).xdb.j2", button_background_path(id, faction), {'icon_path': elements[id]['icon'], 'icon_size': icon_size})
+                write_from_template("button.(WindowMSButton).xdb.j2", button_base_path(id, branch), {'skill_id': id, 'skill_name': skill['ID'], 'pos_x': x, 'pos_y': y})
+                write_from_template("buttonshared.(WindowMSButtonShared).xdb.j2", button_shared_path(id, branch), {'skill_id': id, 'required_skills': prerequisites[id], 'icon_path': elements[id]['icon']})
+                write_from_template("skillicon.(WindowSimple).xdb.j2", button_bgwindow_path(id, branch), {'skill_id': id})
+                write_from_template("skillicon.(WindowSimpleShared).xdb.j2", button_bgshared_path(id, branch), {'skill_id': id})
+                write_from_template("icon.(BackgroundSimpleScallingTexture).xdb.j2", button_background_path(id, branch), {'icon_path': elements[id]['icon'], 'icon_size': icon_size})
                 write_from_template("selection.(WindowMSButton).xdb.j2", button_selected_path(id), {'skill_id': id, 'pos_x': x, 'pos_y': y})
                 write_from_template("uimessage1.(UISSendUIMessage).xdb.j2", ui_message_up_path(id), {'skill_id': id})
                 write_from_template("uimessage2.(UISSendUIMessage).xdb.j2", ui_message_down_path(id), {'skill_id': id})
@@ -463,7 +463,7 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
                 write_from_template("icon.(BackgroundSimpleScallingTexture).xdb.j2", desc_icon_path(id), {'icon_path': elements[id]['icon'], 'icon_size': icon_size})
                 write_from_template("skillname.(WindowTextView).xdb.j2", skill_name_path(id), {'skill_id': id, 'name_path': elements[id]['name']})
                 write_from_template("skilldesc.(WindowTextView).xdb.j2", skill_desc_path(id), {'skill_id': id, 'desc_path': elements[id]['desc']})
-                all_buttons.write(f"<Item href=\"/UI/Doc/Skills/{faction}/{id}/{id}.(WindowMSButton).xdb#xpointer(/WindowMSButton)\"/>\n")
+                all_buttons.write(f"<Item href=\"{id}/{id}.(WindowMSButton).xdb#xpointer(/WindowMSButton)\"/>\n")
                 all_selected.write(f"<Item href=\"{id}/{id}_select.(WindowMSButton).xdb#xpointer(/WindowMSButton)\"/>\n")
                 all_windows.write(f"<Item href=\"{id}/{id}_window.(WindowSimple).xdb#xpointer(/WindowSimple)\"/>\n")
         if not found:
