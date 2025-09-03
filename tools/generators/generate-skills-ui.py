@@ -289,16 +289,18 @@ coordinates = {
   '220000': [314, 26],
 }
 
-def button_base_path(id, faction):
-    return os.path.join(skills_pedia_path, faction, id, f"{id}.(WindowMSButton).xdb")
-def button_shared_path(id, faction):
-    return os.path.join(skills_pedia_path, faction, id, f"{id}.(WindowMSButtonShared).xdb")
-def button_bgwindow_path(id, faction):
-    return os.path.join(skills_pedia_path, faction, id, f"{id}_icon.(WindowSimple).xdb")
-def button_bgshared_path(id, faction):
-    return os.path.join(skills_pedia_path, faction, id, f"{id}_icon.(WindowSimpleShared).xdb")
-def button_background_path(id, faction):
-    return os.path.join(skills_pedia_path, faction, id, f"{id}.(BackgroundSimpleScallingTexture).xdb")
+def window_branchshared_path(branch):
+    return os.path.join(skills_pedia_path, "_Skills", branch, f"{branch}.(WindowSimpleShared).xdb")
+def button_base_path(id, branch):
+    return os.path.join(skills_pedia_path, "_Skills", branch, id, f"{id}.(WindowMSButton).xdb")
+def button_shared_path(id, branch):
+    return os.path.join(skills_pedia_path, "_Skills", branch, id, f"{id}.(WindowMSButtonShared).xdb")
+def button_bgwindow_path(id, branch):
+    return os.path.join(skills_pedia_path, "_Skills", branch, id, f"{id}_icon.(WindowSimple).xdb")
+def button_bgshared_path(id, branch):
+    return os.path.join(skills_pedia_path, "_Skills", branch, id, f"{id}_icon.(WindowSimpleShared).xdb")
+def button_background_path(id, branch):
+    return os.path.join(skills_pedia_path, "_Skills", branch, id, f"{id}.(BackgroundSimpleScallingTexture).xdb")
 def button_selected_path(id):
     return os.path.join(skills_pedia_path, "_Selection", id, f"{id}_select.(WindowMSButton).xdb")
 def ui_message_up_path(id):
@@ -369,7 +371,10 @@ def find_icon_size(path:str):
     return 64
 
 
-factions = ["Common", "Haven", "Preserve", "Fortress", "Academy", "Dungeon", "Necro", "Inferno", "Stronghold", "Neutral"]
+branches = ["Innates",
+            "Courage", "Avenger", "Runelore", "Artificier", "Arcanism", "Necromancy", "Gating", "BloodRage",
+            "Offence", "Defense", "Learning", "Sorcery", "LightMagic", "DarkMagic", "DestructiveMagic", "NaturalMagic",
+            "Combat", "Leadership", "Logistics", "Warfare", "ShaterMagic", "Governance", "Training"]
 
 counter = -1
 for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
@@ -419,8 +424,8 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
     # print(prerequisites)
     for id in elements:
         found = False
-        for faction in factions:
-            if os.path.isfile(button_base_path(id, faction)):
+        for branch in branches:
+            if os.path.isfile(button_base_path(id, branch)):
                 print(f"Processing ID {id}...")
                 if found:
                     print(f"WARN: found duplicate button file for ID {id}")
@@ -437,11 +442,11 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
                 for targetDir in directories:
                     if not os.path.exists(targetDir):
                         os.makedirs(targetDir)
-                dirrm = os.path.join(skills_pedia_path, faction, id, "selection")
-                if os.path.exists(dirrm):
-                    for file in os.listdir(dirrm):
-                        os.remove(os.path.join(dirrm, file))
-                    os.rmdir(dirrm)
+                # dirrm = os.path.join(skills_pedia_path, faction, id, "selection")
+                # if os.path.exists(dirrm):
+                #     for file in os.listdir(dirrm):
+                #         os.remove(os.path.join(dirrm, file))
+                #     os.rmdir(dirrm)
                 write_from_template("button.(WindowMSButton).xdb.j2", button_base_path(id, faction), {'skill_id': id, 'skill_name': skill['ID'], 'pos_x': x, 'pos_y': y})
                 write_from_template("buttonshared.(WindowMSButtonShared).xdb.j2", button_shared_path(id, faction), {'skill_id': id, 'required_skills': prerequisites[id], 'icon_path': elements[id]['icon']})
                 write_from_template("skillicon.(WindowSimple).xdb.j2", button_bgwindow_path(id, faction), {'skill_id': id})
