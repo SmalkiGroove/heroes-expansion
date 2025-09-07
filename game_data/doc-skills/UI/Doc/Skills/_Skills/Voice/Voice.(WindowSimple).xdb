@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowSimple ObjectRecordID="1000406">
 	<ClassTypeID>285700801</ClassTypeID>
-	<Shared href="000000.(WindowSimpleShared).xdb#xpointer(/WindowSimpleShared)"/>
-	<Name>Window000000</Name>
+	<Shared href="Voice.(WindowSimpleShared).xdb#xpointer(/WindowSimpleShared)"/>
+	<Name>DocSkillsVoice</Name>
 	<TooltipFileRef href=""/>
 	<Visible>true</Visible>
-	<Priority>800</Priority>
+	<Priority>1</Priority>
 	<GameMessageReactions/>
 	<Placement>
 		<Position>
 			<First>
-				<x>80</x>
-				<y>120</y>
+				<x>380</x>
+				<y>380</y>
 			</First>
 			<Second>true</Second>
 		</Position>
@@ -25,8 +25,8 @@
 		</HorAllign>
 		<Size>
 			<First>
-				<x>768</x>
-				<y>768</y>
+				<x>180</x>
+				<y>80</y>
 			</First>
 			<Second>true</Second>
 		</Size>
