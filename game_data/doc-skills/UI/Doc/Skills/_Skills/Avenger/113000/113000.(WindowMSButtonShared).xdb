@@ -64,14 +64,14 @@
 			</Normal>
 			<MouseOver>
 				<Background/>
-				<Foreground href="/UI/Doc/Skills/_Skills/Highlight.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Foreground href="/UI/Doc/Skills/Common/Highlight.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
 				<TextString/>
 				<OnEnterSubState>
 					<Commands>
-						<Item href="/UI/Doc/Skills/_Selection/016001/016001_up.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-						<Item href="/UI/Doc/Skills/_Selection/066000/066000_up.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-						<Item href="/UI/Doc/Skills/_Selection/016002/016002_up.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-						<Item href="/UI/Doc/Skills/_Selection/113000/113000_up.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+						<Item href="/UI/Doc/Skills/_Skills/Avenger/016001/highlight/016001_on.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+						<Item href="/UI/Doc/Skills/_Skills/Avenger/066000/highlight/066000_on.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+						<Item href="/UI/Doc/Skills/_Skills/Avenger/016002/highlight/016002_on.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+						<Item href="/UI/Doc/Skills/_Skills/Avenger/113000/highlight/113000_on.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 						<Item href="/UI/Doc/Skills/_Description/113000/113000.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					</Commands>
 					<Reversable>true</Reversable>
@@ -80,7 +80,7 @@
 			</MouseOver>
 			<Pushed>
 				<Background/>
-				<Foreground href="/UI/Doc/Skills/_Skills/Highlight.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Foreground href="/UI/Doc/Skills/Common/Highlight.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
 				<TextString/>
 				<OnEnterSubState>
 					<Commands/>
@@ -100,7 +100,7 @@
 			</Disabled>
 			<RightButtonDown>
 				<Background/>
-				<Foreground href="/UI/Doc/Skills/_Skills/Highlight.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Foreground href="/UI/Doc/Skills/Common/Highlight.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
 				<TextString/>
 				<OnEnterSubState>
 					<Commands/>
