@@ -172,7 +172,7 @@ coordinates_skills = {
   '105000': [295, 68],
   '106000': [327, 68],
   '107000': [125, 45],
-  '108000': [30, 45],
+  '108000': [125, 45],
   '109000': [135, 26],
   '110000': [211, 68],
   '111000': [224, 68],
@@ -231,7 +231,7 @@ coordinates_skills = {
   '160000': [5, 45],
   '161000': [5, 45],
   '162000': [314, 89],
-  '163000': [55, 45],
+  '163000': [30, 45],
   '164000': [104, 26],
   '165000': [150, 45],
   '166000': [352, 68],
@@ -442,8 +442,8 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
                     continue
                 else:
                     found = True
-                x = coordinates[id][0]
-                y = coordinates[id][1]
+                x = coordinates_skills[id][0]
+                y = coordinates_skills[id][1]
                 icon_size = find_icon_size(elements[id]['icon'])
                 directories = {
                     os.path.join(skills_pedia_path, "_Selection", id),
