@@ -311,12 +311,12 @@ def button_bgshared_path(id, branch):
     return os.path.join(skills_pedia_path, "_Skills", branch, id, f"{id}_icon.(WindowSimpleShared).xdb")
 def button_background_path(id, branch):
     return os.path.join(skills_pedia_path, "_Skills", branch, id, f"{id}.(BackgroundSimpleScallingTexture).xdb")
-def button_selected_path(id):
-    return os.path.join(skills_pedia_path, "_Selection", id, f"{id}_select.(WindowMSButton).xdb")
-def ui_message_up_path(id):
-    return os.path.join(skills_pedia_path, "_Selection", id, f"{id}_up.(UISSendUIMessage).xdb")
-def ui_message_down_path(id):
-    return os.path.join(skills_pedia_path, "_Selection", id, f"{id}_down.(UISSendUIMessage).xdb")
+def button_selected_path(id, branch):
+    return os.path.join(skills_pedia_path, "_Skills", branch, id, "highlight", f"{id}_highlight.(WindowMSButton).xdb")
+def ui_message_up_path(id, branch):
+    return os.path.join(skills_pedia_path, "_Skills", branch, id, "highlight", f"{id}_on.(UISSendUIMessage).xdb")
+def ui_message_down_path(id, branch):
+    return os.path.join(skills_pedia_path, "_Skills", branch, id, "highlight", f"{id}_off.(UISSendUIMessage).xdb")
 def desc_ui_message_path(id):
     return os.path.join(skills_pedia_path, "_Description", id, f"{id}.(UISSendUIMessage).xdb")
 def desc_window_base_path(id):
@@ -458,7 +458,7 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
                 #         os.remove(os.path.join(dirrm, file))
                 #     os.rmdir(dirrm)
                 write_from_template("button.(WindowMSButton).xdb.j2", button_base_path(id, branch), {'skill_id': id, 'skill_name': skill['ID'], 'pos_x': x, 'pos_y': y})
-                write_from_template("buttonshared.(WindowMSButtonShared).xdb.j2", button_shared_path(id, branch), {'skill_id': id, 'required_skills': prerequisites[id], 'icon_path': elements[id]['icon']})
+                write_from_template("buttonshared.(WindowMSButtonShared).xdb.j2", button_shared_path(id, branch), {'branch': branch, 'skill_id': id, 'required_skills': prerequisites[id]})
                 write_from_template("skillicon.(WindowSimple).xdb.j2", button_bgwindow_path(id, branch), {'skill_id': id})
                 write_from_template("skillicon.(WindowSimpleShared).xdb.j2", button_bgshared_path(id, branch), {'skill_id': id})
                 write_from_template("icon.(BackgroundSimpleScallingTexture).xdb.j2", button_background_path(id, branch), {'icon_path': elements[id]['icon'], 'icon_size': icon_size})
