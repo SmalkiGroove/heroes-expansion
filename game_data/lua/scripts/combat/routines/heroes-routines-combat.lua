@@ -612,18 +612,6 @@ function Routine_EmbalmerManaRegen(side, hero)
     end
 end
 
-function Routine_BlackKnightsDash(side, hero)
-    -- log("Trigger black knights dash !")
-    local creatures = GetUnits(side, CREATURE)
-    for i,cr in creatures do
-        local type = GetCreatureType(cr)
-        if type == CREATURE_BLACK_KNIGHT or type == CREATURE_DREAD_KNIGHT or type == CREATURE_DEATH_KNIGHT then
-            UseCombatAbility(cr, SPELL_ABILITY_DASH)
-            SetATB_ID(cr, 0.1)
-        end
-    end
-end
-
 function Routine_SummonAvatarOfDeath(side, hero)
     -- log("Trigger summon avatar of death !")
     local cost = 4 * GetHeroLevel(side)
@@ -748,23 +736,11 @@ end
 
 function Routine_CastRandomFireball(side, hero)
     -- log("Trigger random Fireball !")
-    if CURRENT_UNIT == hero then
-        local mana = GetUnitManaPoints(hero)
-        if mana > 0 then
-            local x,y = GetUnitPosition(RandomCreature(1-side, COMBAT_TURN))
-            HeroCast_Area(hero, SPELL_FIREBALL, FREE_MANA, x, y)
-            SetMana(hero, mana - 1)
-            local atb = 0.15 + 0.05 * GetHeroLevel(side)
-            SetATB_ID(hero, atb)
-            -- if GetHeroLevel(side) < 20 then
-            --     ROUTINE_VARS.Incendiary = not nil
-            -- else
-            --     SetATB_ID(hero, ATB_INSTANT)
-            -- end
-        end
-    -- elseif ROUTINE_VARS.Incendiary then
-    --     ROUTINE_VARS.Incendiary = nil
-    --     SetATB_ID(hero, 0.55)
+    if CURRENT_UNIT == hero and ROUTINE_VARS.Incendiary > 0 then
+        local x,y = GetUnitPosition(RandomCreature(1-side, COMBAT_TURN))
+        HeroCast_Area(hero, SPELL_FIREBALL, FREE_MANA, x, y)
+        SetATB_ID(hero, 0.4)
+        ROUTINE_VARS.Incendiary = ROUTINE_VARS.Incendiary - 1
     end
 end
 
@@ -945,7 +921,6 @@ COMBAT_START_HERO_ROUTINES = {
     -- necropolis
     [H_VLADIMIR] = Routine_SummonAndKillEnnemySkeleton,
     [H_KASPAR] = Routine_FirstAidLastAid,
-    [H_XERXON] = Routine_BlackKnightsDash,
     [H_THANT] = Routine_CastMassWeakness,
     [H_ARCHILUS] = Routine_SummonAvatarOfDeath,
     [H_DEIRDRE] = Routine_CastBansheeHowl,

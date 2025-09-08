@@ -31,7 +31,6 @@ end
 function Routine_AbilityRageOfTheForest(side, unit)
     log("$ Routine_AbilityRageOfTheForest")
     UseCombatAbility(unit, SPELL_ABILITY_RAGE_OF_THE_FOREST)
-    SetATB_ID(unit, 0.1)
 end
 
 function Routine_AbilityMagneticField(side, unit)
@@ -78,21 +77,21 @@ function Routine_AbilityRefreshMana(side, unit, amount)
     end
 end
 
-function Routine_AbilityRefreshMana5(side, unit)
-    Routine_AbilityRefreshMana(side, unit, 5)
+function Routine_AbilityRefreshMana4(side, unit)
+    Routine_AbilityRefreshMana(side, unit, 4)
 end
 
 
 COMBAT_START_ABILITIES_ROUTINES = {
     [CREATURE_ANGER_TREANT] = Routine_AbilityRageOfTheForest,
-    [CREATURE_RUNE_MAGE] = Routine_AbilityMineField,
-    [CREATURE_FLAME_MAGE] = Routine_AbilityMineField,
-    [CREATURE_FLAME_KEEPER] = Routine_AbilityMineField,
 }
 
 COMBAT_TURN_ABILITIES_ROUTINES = {
     [CREATURE_MARKSMAN] = Routine_AbilityCommandBallista,
     [CREATURE_OBSIDIAN_GOLEM] = Routine_AbilityMagneticField,
+    [CREATURE_RUNE_MAGE] = Routine_AbilityRefreshMana4,
+    [CREATURE_FLAME_MAGE] = Routine_AbilityRefreshMana4,
+    [CREATURE_FLAME_KEEPER] = Routine_AbilityRefreshMana4,
 }
 
 UNIT_DIED_ABILITIES_ROUTINES = {

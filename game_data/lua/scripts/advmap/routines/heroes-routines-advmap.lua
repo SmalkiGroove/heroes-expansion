@@ -742,7 +742,18 @@ end
 
 function Routine_ResurrectBlackKnight(player, hero, combatIndex)
     log("$ Routine_ResurrectBlackKnight")
-    ResurrectCreatureType(player, hero, combatIndex, NECROPOLIS, 6, 1)
+    local level = GetHeroLevel(hero)
+    local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
+    for i = 0,stacks-1 do
+        local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
+        if died > 0 then
+            if CREATURES[creature][1] == NECROPOLIS and CREATURES[creature][2] == 6 then
+                local rez = ceil(0.01 * level * count)
+                rez = min(rez, died)
+                AddHeroCreatures(hero, creature, rez)
+            end
+        end
+    end
 end
 
 function Routine_AddRecruitsNecropolis(player, hero)
@@ -789,7 +800,7 @@ end
 
 function Routine_AddLichesPerKnowledge(player, hero)
     log("$ Routine_AddLichesPerKnowledge")
-    local nb = trunc(0.25 * GetHeroStat(hero, STAT_KNOWLEDGE))
+    local nb = trunc(0.2 * GetHeroStat(hero, STAT_KNOWLEDGE))
     AddHeroCreatureType(player, hero, NECROPOLIS, 5, nb, 1)
 end
 
