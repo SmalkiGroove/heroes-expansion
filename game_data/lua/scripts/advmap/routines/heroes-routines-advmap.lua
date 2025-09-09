@@ -192,10 +192,16 @@ function Routine_AddHeroWolves(player, hero)
     AddHeroCreaturePerLevel(player, hero, CREATURE_WOLF, 3.0)
 end
 
-function Routine_GiveArtifactPlumedBoots(player, hero, level)
-    log("$ Routine_GiveArtifactPlumedBoots")
-    if level == 20 then
-        GiveArtifact(hero, ARTIFACT_PLUMED_BOOTS)
+function Routine_UpgradeDragonAltar(player, hero, level)
+    log("$ Routine_UpgradeDragonAltar")
+    if level == 20 or level == 30 then
+        for _,town in GetHeroTowns(player, hero) do
+            local altar = GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_7)
+            if altar < 2 then
+                UpgradeTownBuilding(town, TOWN_BUILDING_DWELLING_7)
+                return
+            end
+        end
     end
 end
 
@@ -1163,7 +1169,7 @@ LEVEL_UP_HERO_ROUTINES_HERO = {
     -- haven
     [H_NICOLAI] = Routine_GainPrimaryStats,
     -- preserve
-    [H_VINRAEL] = Routine_GiveArtifactPlumedBoots,
+    [H_VINRAEL] = Routine_UpgradeDragonAltar,
     -- fortress
     -- academy
     [H_DAVIUS] = Routine_UpgradeSilverPavillon,

@@ -246,7 +246,7 @@ end
 function Routine_SummonDruidStack(side, hero)
     -- log("Trigger elder druids summoning !")
     local n = GetHeroLevel(side)
-    local amount = ceil(0.4 * n * n)
+    local amount = ceil(0.2 * n * n)
     SummonCreatureStack_X(side, CREATURE_DRUID_OF_THE_COUNCIL, amount, 0)
     sleep(50)
     for i,cr in GetUnits(side, CREATURE) do
