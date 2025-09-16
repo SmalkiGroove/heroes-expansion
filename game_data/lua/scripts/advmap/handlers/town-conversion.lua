@@ -19,7 +19,8 @@ end
 
 function CanHeroConvert(hero, obj)
     -- log("$ CanHeroConvert obj="..obj)
-    if IsHeroHuman(hero) then
+    local player = GetObjectOwner(hero)
+    if IsHumanPlayer(player) then
         if HasHeroSkill(hero, SKILL_GOVERNANCE) then
             if GetObjectOwner(obj) == GetObjectOwner(hero) then
                 local fh = HEROES[hero].faction

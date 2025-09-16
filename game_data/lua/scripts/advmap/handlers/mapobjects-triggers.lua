@@ -34,8 +34,11 @@ function Trigger_Monsters(hero, obj)
     Trigger(OBJECT_TOUCH_TRIGGER, obj, nil)
     SetObjectEnabled(obj, not nil)
     MakeHeroInteractWithObject(hero, obj)
-    Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_Monsters")
-    SetObjectEnabled(obj, nil)
+    sleep(1)
+    if IsObjectExists(obj) then
+        Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_Monsters")
+        SetObjectEnabled(obj, nil)
+    end
 end
 
 function Trigger_Monsters_Ongoing(hero, obj)
@@ -53,7 +56,7 @@ end
 function Trigger_WitchHut(hero, obj)
     log("$ Trigger_WitchHut")
     local player = GetObjectOwner(hero)
-    if PLAYER_BRAIN[player] == COMPUTER then
+    if IsAIPlayer(player) then
         Trigger(OBJECT_TOUCH_TRIGGER, obj, nil)
         SetObjectEnabled(obj, not nil)
         MakeHeroInteractWithObject(hero, obj)
@@ -106,7 +109,7 @@ end
 function Trigger_Temple(hero, obj)
     log("$ Trigger_Temple")
     local player = GetObjectOwner(hero)
-    if PLAYER_BRAIN[player] == COMPUTER then
+    if IsAIPlayer(player) then
         Trigger(OBJECT_TOUCH_TRIGGER, obj, nil)
         SetObjectEnabled(obj, not nil)
         MakeHeroInteractWithObject(hero, obj)
@@ -135,7 +138,7 @@ end
 function Trigger_RallyFlag(hero, obj)
     log("$ Trigger_RallyFlag")
     local player = GetObjectOwner(hero)
-    if PLAYER_BRAIN[player] == COMPUTER then
+    if IsAIPlayer(player) then
         Trigger(OBJECT_TOUCH_TRIGGER, obj, nil)
         SetObjectEnabled(obj, not nil)
         MakeHeroInteractWithObject(hero, obj)

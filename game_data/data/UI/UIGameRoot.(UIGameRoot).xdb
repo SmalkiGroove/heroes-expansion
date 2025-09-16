@@ -999,6 +999,10 @@
 			<ID>ICON_BLOOD_RAGE</ID>
 			<Texture href="/Textures/Interface/Icons/BloodRage.xdb#xpointer(/Texture)"/>
 		</Item>
+		<Item>
+			<ID>EE_NO_TEXTURE</ID>
+			<Texture href="noTexture.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+		</Item>	
 	</textures>
 	<texts>
 		<Item>
@@ -2845,6 +2849,7 @@
 			<Camera href="/Cameras/Interface/HireCreatures/Phoenix.xdb#xpointer(/Camera)"/>
 			<creatures>
 				<Item>CREATURE_PHOENIX</Item>
+				<Item>CREATURE_SNOW_APE</Item>
 			</creatures>
 		</Item>
 		<Item>
@@ -3938,29 +3943,39 @@
 		</Ranks>
 		<MapSizes>
 			<Item>
-				<Size>E_MAP_SMALL_SIZE</Size>
-				<ShortNameFileRef href="MainMenu2/HallOfFame/Params/MapSizes/Small.txt"/>
+				<Size>E_MAP_TINY_SIZE</Size>
+				<ShortNameFileRef href="MainMenu2/HallOfFame/Params/MapSizes/Tiny.txt"/>
 				<PointFactor>1</PointFactor>
 			</Item>
 			<Item>
-				<Size>E_MAP_TINY_SIZE</Size>
-				<ShortNameFileRef href="MainMenu2/HallOfFame/Params/MapSizes/Normal.txt"/>
+				<Size>E_MAP_SMALL_SIZE</Size>
+				<ShortNameFileRef href="MainMenu2/HallOfFame/Params/MapSizes/Small.txt"/>
 				<PointFactor>1.9</PointFactor>
 			</Item>
 			<Item>
-				<Size>E_MAP_TINY_SIZE</Size>
-				<ShortNameFileRef href="MainMenu2/HallOfFame/Params/MapSizes/Big.txt"/>
+				<Size>E_MAP_MEDIUM_SIZE</Size>
+				<ShortNameFileRef href="MainMenu2/HallOfFame/Params/MapSizes/Normal.txt"/>
 				<PointFactor>2.8</PointFactor>
 			</Item>
 			<Item>
-				<Size>E_MAP_TINY_SIZE</Size>
-				<ShortNameFileRef href="MainMenu2/HallOfFame/Params/MapSizes/VeryBig.txt"/>
+				<Size>E_MAP_LARGE_SIZE</Size>
+				<ShortNameFileRef href="MainMenu2/HallOfFame/Params/MapSizes/Big.txt"/>
 				<PointFactor>3.7</PointFactor>
 			</Item>
 			<Item>
-				<Size>E_MAP_TINY_SIZE</Size>
+				<Size>E_MAP_EXTRALARGE_SIZE</Size>
+				<ShortNameFileRef href="MainMenu2/HallOfFame/Params/MapSizes/VeryBig.txt"/>
+				<PointFactor>4.6</PointFactor>
+			</Item>
+			<Item>
+				<Size>E_MAP_HUGE_SIZE</Size>
 				<ShortNameFileRef href="MainMenu2/HallOfFame/Params/MapSizes/UndesirableBig.txt"/>
-				<PointFactor>3.7</PointFactor>
+				<PointFactor>5.5</PointFactor>
+			</Item>
+			<Item>
+				<Size>E_MAP_IMPOSSIBLE_SIZE</Size>
+				<ShortNameFileRef href="MainMenu2/HallOfFame/Params/MapSizes/Impossible.txt"/>
+				<PointFactor>6.3</PointFactor>
 			</Item>
 		</MapSizes>
 		<uiDifficulties>
@@ -4065,6 +4080,14 @@
 						<TextFileRef href="RMGScreen/TemplateInfo/MonsterLevel/Item03.txt"/>
 						<InternalTextFileRef href="RMGScreen/TemplateInfo/MonsterLevel/ItemInternal03.txt"/>
 					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/MonsterLevel/Item04.txt"/>
+						<InternalTextFileRef href="RMGScreen/TemplateInfo/MonsterLevel/ItemInternal04.txt"/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/MonsterLevel/ItemInternal05.txt"/>
+						<InternalTextFileRef href="RMGScreen/TemplateInfo/MonsterLevel/ItemInternal05_.txt"/>
+					</Item>
 				</Items>
 			</Item>
 			<Item>
@@ -4078,10 +4101,6 @@
 				<Items>
 					<Item>
 						<TextFileRef href="RMGScreen/TemplateInfo/AmountOfWater/Item01.txt"/>
-						<InternalTextFileRef href="RMGScreen/TemplateInfo/AmountOfWater/ItemFake.txt"/>
-					</Item>
-					<Item>
-						<TextFileRef href="RMGScreen/TemplateInfo/AmountOfWater/Item02.txt"/>
 						<InternalTextFileRef href="RMGScreen/TemplateInfo/AmountOfWater/ItemFake.txt"/>
 					</Item>
 					<Item>
@@ -4168,6 +4187,474 @@
 				<LeftLabelFileRef href=""/>
 				<RightLabelFileRef href=""/>
 				<Items/>
+			</Item>
+			<Item>
+				<Param>EP_NONE</Param>
+				<ControlType>ECT_DIVIDER</ControlType>
+				<NameFileRef href=""/>
+				<CheckBoxTooltipFileRef href=""/>
+				<MainTooltipFileRef href=""/>
+				<LeftLabelFileRef href=""/>
+				<RightLabelFileRef href=""/>
+				<Items/>
+			</Item>
+			<Item>
+				<Param>EP_RESOURCE_LEVEL</Param>
+				<ControlType>ECT_COMBO</ControlType>
+				<NameFileRef href="RMGScreen/TemplateInfo/ResourceLevel/Name.txt"/>
+				<CheckBoxTooltipFileRef href="RMGScreen/TemplateInfo/MapSize/TTCheckBox.txt"/>
+				<MainTooltipFileRef href="RMGScreen/TemplateInfo/ResourceLevel/Tooltip.txt"/>
+				<LeftLabelFileRef href=""/>
+				<RightLabelFileRef href=""/>
+				<Items>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/ResourceLevel/Name-0.txt"/>
+						<InternalTextFileRef href="RMGScreen/TemplateInfo/ResourceLevel/InternalName-0.txt"/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/ResourceLevel/Name-1.txt"/>
+						<InternalTextFileRef href="RMGScreen/TemplateInfo/ResourceLevel/InternalName-1.txt"/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/ResourceLevel/Name-2.txt"/>
+						<InternalTextFileRef href="RMGScreen/TemplateInfo/ResourceLevel/InternalName-2.txt"/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/ResourceLevel/Name-3.txt"/>
+						<InternalTextFileRef href="RMGScreen/TemplateInfo/ResourceLevel/InternalName-3.txt"/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/ResourceLevel/Name-4.txt"/>
+						<InternalTextFileRef href="RMGScreen/TemplateInfo/ResourceLevel/InternalName-4.txt"/>
+					</Item>
+				</Items>
+			</Item>
+			<Item>
+				<Param>EP_EXP_LEVEL</Param>
+				<ControlType>ECT_COMBO</ControlType>
+				<NameFileRef href="RMGScreen/TemplateInfo/ExpLevel/Name.txt"/>
+				<CheckBoxTooltipFileRef href="RMGScreen/TemplateInfo/MapSize/TTCheckBox.txt"/>
+				<MainTooltipFileRef href="RMGScreen/TemplateInfo/ExpLevel/Tooltip.txt"/>
+				<LeftLabelFileRef href=""/>
+				<RightLabelFileRef href=""/>
+				<Items>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/ExpLevel/Name-0.txt"/>
+						<InternalTextFileRef href="RMGScreen/TemplateInfo/ExpLevel/InternalName-0.txt"/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/ExpLevel/Name-1.txt"/>
+						<InternalTextFileRef href="RMGScreen/TemplateInfo/ExpLevel/InternalName-1.txt"/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/ExpLevel/Name-2.txt"/>
+						<InternalTextFileRef href="RMGScreen/TemplateInfo/ExpLevel/InternalName-2.txt"/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/ExpLevel/Name-3.txt"/>
+						<InternalTextFileRef href="RMGScreen/TemplateInfo/ExpLevel/InternalName-3.txt"/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/ExpLevel/Name-4.txt"/>
+						<InternalTextFileRef href="RMGScreen/TemplateInfo/ExpLevel/InternalName-4.txt"/>
+					</Item>
+				</Items>
+			</Item>
+			<Item>
+				<Param>EP_GRAAL_ON_MAP</Param>
+				<ControlType>ECT_CHECKBOX</ControlType>
+				<NameFileRef href="RMGScreen/TemplateInfo/Grail/Name.txt"/>
+				<CheckBoxTooltipFileRef href=""/>
+				<MainTooltipFileRef href="RMGScreen/TemplateInfo/Graal/Tooltip.txt"/>
+				<LeftLabelFileRef href=""/>
+				<RightLabelFileRef href=""/>
+				<Items/>
+			</Item>
+			<Item>
+				<Param>EP_NONE</Param>
+				<ControlType>ECT_DIVIDER</ControlType>
+				<NameFileRef href=""/>
+				<CheckBoxTooltipFileRef href=""/>
+				<MainTooltipFileRef href=""/>
+				<LeftLabelFileRef href=""/>
+				<RightLabelFileRef href=""/>
+				<Items/>
+			</Item>
+			<Item>
+				<Param>EP_RACE_PLAYER_1</Param>
+				<ControlType>ECT_COMBO</ControlType>
+				<NameFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name1.txt"/>
+				<CheckBoxTooltipFileRef href="RMGScreen/TemplateInfo/MapSize/TTCheckBox.txt"/>
+				<MainTooltipFileRef href="RMGScreen/TemplateInfo/PlayerRace/Tooltip.txt"/>
+				<LeftLabelFileRef href=""/>
+				<RightLabelFileRef href=""/>
+				<Items>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Random.txt"/>
+						<InternalTextFileRef href="RMGScreen/TemplateInfo/PlayerRace/InternalName_Random.txt"/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Heaven.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Preserve.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Academy.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Dungeon.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Necropolis.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Inferno.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Fortress.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Stronghold.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+				</Items>
+			</Item>
+			<Item>
+				<Param>EP_RACE_PLAYER_2</Param>
+				<ControlType>ECT_COMBO</ControlType>
+				<NameFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name2.txt"/>
+				<CheckBoxTooltipFileRef href="RMGScreen/TemplateInfo/MapSize/TTCheckBox.txt"/>
+				<MainTooltipFileRef href="RMGScreen/TemplateInfo/PlayerRace/Tooltip.txt"/>
+				<LeftLabelFileRef href=""/>
+				<RightLabelFileRef href=""/>
+				<Items>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Random.txt"/>
+						<InternalTextFileRef href="RMGScreen/TemplateInfo/PlayerRace/InternalName_Random.txt"/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Heaven.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Preserve.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Academy.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Dungeon.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Necropolis.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Inferno.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Fortress.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Stronghold.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+				</Items>
+			</Item>
+			<Item>
+				<Param>EP_RACE_PLAYER_3</Param>
+				<ControlType>ECT_COMBO</ControlType>
+				<NameFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name3.txt"/>
+				<CheckBoxTooltipFileRef href="RMGScreen/TemplateInfo/MapSize/TTCheckBox.txt"/>
+				<MainTooltipFileRef href="RMGScreen/TemplateInfo/PlayerRace/Tooltip.txt"/>
+				<LeftLabelFileRef href=""/>
+				<RightLabelFileRef href=""/>
+				<Items>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Random.txt"/>
+						<InternalTextFileRef href="RMGScreen/TemplateInfo/PlayerRace/InternalName_Random.txt"/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Heaven.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Preserve.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Academy.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Dungeon.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Necropolis.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Inferno.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Fortress.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Stronghold.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+				</Items>
+			</Item>
+			<Item>
+				<Param>EP_RACE_PLAYER_4</Param>
+				<ControlType>ECT_COMBO</ControlType>
+				<NameFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name4.txt"/>
+				<CheckBoxTooltipFileRef href="RMGScreen/TemplateInfo/MapSize/TTCheckBox.txt"/>
+				<MainTooltipFileRef href="RMGScreen/TemplateInfo/PlayerRace/Tooltip.txt"/>
+				<LeftLabelFileRef href=""/>
+				<RightLabelFileRef href=""/>
+				<Items>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Random.txt"/>
+						<InternalTextFileRef href="RMGScreen/TemplateInfo/PlayerRace/InternalName_Random.txt"/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Heaven.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Preserve.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Academy.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Dungeon.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Necropolis.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Inferno.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Fortress.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Stronghold.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+				</Items>
+			</Item>
+			<Item>
+				<Param>EP_RACE_PLAYER_5</Param>
+				<ControlType>ECT_COMBO</ControlType>
+				<NameFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name5.txt"/>
+				<CheckBoxTooltipFileRef href="RMGScreen/TemplateInfo/MapSize/TTCheckBox.txt"/>
+				<MainTooltipFileRef href="RMGScreen/TemplateInfo/PlayerRace/Tooltip.txt"/>
+				<LeftLabelFileRef href=""/>
+				<RightLabelFileRef href=""/>
+				<Items>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Random.txt"/>
+						<InternalTextFileRef href="RMGScreen/TemplateInfo/PlayerRace/InternalName_Random.txt"/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Heaven.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Preserve.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Academy.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Dungeon.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Necropolis.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Inferno.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Fortress.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Stronghold.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+				</Items>
+			</Item>
+			<Item>
+				<Param>EP_RACE_PLAYER_6</Param>
+				<ControlType>ECT_COMBO</ControlType>
+				<NameFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name6.txt"/>
+				<CheckBoxTooltipFileRef href="RMGScreen/TemplateInfo/MapSize/TTCheckBox.txt"/>
+				<MainTooltipFileRef href="RMGScreen/TemplateInfo/PlayerRace/Tooltip.txt"/>
+				<LeftLabelFileRef href=""/>
+				<RightLabelFileRef href=""/>
+				<Items>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Random.txt"/>
+						<InternalTextFileRef href="RMGScreen/TemplateInfo/PlayerRace/InternalName_Random.txt"/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Heaven.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Preserve.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Academy.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Dungeon.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Necropolis.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Inferno.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Fortress.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Stronghold.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+				</Items>
+			</Item>
+			<Item>
+				<Param>EP_RACE_PLAYER_7</Param>
+				<ControlType>ECT_COMBO</ControlType>
+				<NameFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name7.txt"/>
+				<CheckBoxTooltipFileRef href="RMGScreen/TemplateInfo/MapSize/TTCheckBox.txt"/>
+				<MainTooltipFileRef href="RMGScreen/TemplateInfo/PlayerRace/Tooltip.txt"/>
+				<LeftLabelFileRef href=""/>
+				<RightLabelFileRef href=""/>
+				<Items>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Random.txt"/>
+						<InternalTextFileRef href="RMGScreen/TemplateInfo/PlayerRace/InternalName_Random.txt"/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Heaven.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Preserve.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Academy.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Dungeon.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Necropolis.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Inferno.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Fortress.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Stronghold.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+				</Items>
+			</Item>
+			<Item>
+				<Param>EP_RACE_PLAYER_8</Param>
+				<ControlType>ECT_COMBO</ControlType>
+				<NameFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name8.txt"/>
+				<CheckBoxTooltipFileRef href="RMGScreen/TemplateInfo/MapSize/TTCheckBox.txt"/>
+				<MainTooltipFileRef href="RMGScreen/TemplateInfo/PlayerRace/Tooltip.txt"/>
+				<LeftLabelFileRef href=""/>
+				<RightLabelFileRef href=""/>
+				<Items>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Random.txt"/>
+						<InternalTextFileRef href="RMGScreen/TemplateInfo/PlayerRace/InternalName_Random.txt"/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Heaven.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Preserve.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Academy.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Dungeon.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Necropolis.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Inferno.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Fortress.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+					<Item>
+						<TextFileRef href="RMGScreen/TemplateInfo/PlayerRace/Name_Stronghold.txt"/>
+						<InternalTextFileRef href=""/>
+					</Item>
+				</Items>
 			</Item>
 		</Controls>
 		<MapNamePatternFileRef href="RMGScreen/TemplateInfo/MapNamePattern.txt"/>

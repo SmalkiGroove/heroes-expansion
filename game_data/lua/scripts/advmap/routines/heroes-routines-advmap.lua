@@ -38,7 +38,7 @@ end
 
 function Routine_TrainPeasantsToArchersCheck(player, hero)
     log("$ Routine_TrainPeasantsToArchersCheck")
-    if PLAYER_BRAIN[player] ~= HUMAN then return end
+    if IsAIPlayer(player) then return end
     for town,data in MAP_TOWNS do
         if data.faction == HAVEN then
             if IsHeroInTown(hero, town, 1, 0) then
@@ -888,7 +888,7 @@ end
 
 function Routine_TownBuildingUp(player, hero)
     log("$ Routine_TownBuildingUp")
-    if PLAYER_BRAIN[player] ~= HUMAN then return end
+    if IsAIPlayer(player) then return end
     local level = GetHeroLevel(hero)
     for town,data in MAP_TOWNS do
         if data.faction == INFERNO then

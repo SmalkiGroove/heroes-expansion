@@ -63,11 +63,6 @@ end
 -- HERO MISC
 
 
-function IsHeroHuman(hero)
-	local player = GetObjectOwner(hero)
-	return PLAYER_BRAIN[player] == HUMAN
-end
-
 function GetHeroArmy(hero)
 	local type = {}
 	type[1], type[2], type[3], type[4], type[5], type[6], type[7] = GetHeroCreaturesTypes(hero)
@@ -426,7 +421,7 @@ end
 
 function RevealMap()
 	for player = 1,8 do
-		if PLAYER_BRAIN[player] == HUMAN then
+		if IsHumanPlayer(player) then
 			OpenCircleFog(1, 1, 0, 9999, player)
 		end
 	end

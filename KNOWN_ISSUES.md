@@ -13,7 +13,6 @@
 
 ### Text issues
 
-- [TXT] Motivation description typo
 
 ### Something does not work
 
@@ -31,8 +30,7 @@
 - [?] Add NCF creatures in editor
 - [XDB] Darkstorm hero totem model
 - [XDB] Add ARMG templates
-- [XDB] Add might/magic toggle in skills pedia
-- [XDB] Hero name in hero pedia
+- [XDB] Change Fortress building order
 
 ### Balance
 
@@ -114,3 +112,6 @@
 - Vittorio too easy
 
 - Academy and Sylvan female heroes textures glitched
+- Motivation description typo
+- Hero name in hero pedia
+- Add might/magic toggle in skills pedia

@@ -2,23 +2,12 @@ ExecConsoleCommand("@BlockGame()")
 
 NB_HUMAN = 0
 FIRST_PLAYER = 0
-PLAYER_BRAIN = {
-	[1] = OBSERVER,
-	[2] = OBSERVER,
-	[3] = OBSERVER,
-	[4] = OBSERVER,
-	[5] = OBSERVER,
-	[6] = OBSERVER,
-	[7] = OBSERVER,
-	[8] = OBSERVER,
-}
-
 for i = 1,8 do
-	PLAYER_BRAIN[i] = GetPlayerBrain(i)
-	if FIRST_PLAYER == 0 and GetPlayerState(i) == PLAYER_ACTIVE then FIRST_PLAYER = i end
-	if PLAYER_BRAIN[i] == HUMAN then NB_HUMAN = NB_HUMAN + 1 end
+	if IsHumanPlayer(i) then
+		if FIRST_PLAYER == 0 then FIRST_PLAYER = i end
+	    NB_HUMAN = NB_HUMAN + 1
+	end
 end
-
 
 ROUTINES_LOADED = {
 	[1] = 0, [2] = 0, [3] = 0, [4] = 0, [5] = 0, [6] = 0, [7] = 0, [8] = 0, [9] = 0, [10]= 0,
@@ -238,7 +227,7 @@ function InitializeHeroes()
 	for player = 1,8 do
 		if (GetPlayerState(player) == 1) then
 			startThread(StartingBonus, player)
-			DIFFICULTY_MULTIPLIER[player] = PLAYER_BRAIN[player] == COMPUTER and (1+0.5*GetDifficulty()) or 1
+			DIFFICULTY_MULTIPLIER[player] = IsAIPlayer(player) and (1+0.5*GetDifficulty()) or 1
 			for i = 1,8 do AllowPlayerTavernRace(player, FactionToTownType(i), 0) end
 			for i,hero in GetPlayerHeroes(player) do
 				log("Initialize hero "..hero)
@@ -264,8 +253,8 @@ log("All scripts successfully loaded !")
 
 -- Initializers
 function Init()
-	InitializeRandomSeed()
 	if GetDate(DAY) == 1 then
+		InitializeRandomSeed()
 		InitializeMapTowns()
 		InitializeHeroes()
 		InitializeConvertibles()
@@ -279,12 +268,14 @@ end
 
 -- Script enabler
 if NB_HUMAN <= 1 then
+	log("Single player game detected. Initializing...")
 	Init()
 else
+	log("Multi player game detected. Check state...")
 	OBJECTIVE_CHECK = 0
 	startThread(function()
 		GetObjectiveState('H5X', FIRST_PLAYER)
-		OBJECTIVE_CHECK = 1
+		OBJECTIVE_CHECK = 1 -- than means the objective exists in the map
 	end) sleep(1)
 	if OBJECTIVE_CHECK == 1 then
 		Trigger(OBJECTIVE_STATE_CHANGE_TRIGGER, 'H5X', FIRST_PLAYER, 'Init') sleep()

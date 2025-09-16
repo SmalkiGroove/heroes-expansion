@@ -147,7 +147,7 @@ function HeroLostBattle(player, hero, opponent)
 end
 
 function AIDailyBonus(player, hero)
-    if PLAYER_BRAIN[player] == COMPUTER then
+    if IsAIPlayer(player) then
         print("$ AIDailyBonus for "..hero)
         local amount = 125 * TURN * GetDifficulty()
         GiveExp(hero, amount)
@@ -155,7 +155,7 @@ function AIDailyBonus(player, hero)
 end
 
 function AIWeeklyBonus(player, hero)
-    if PLAYER_BRAIN[player] == COMPUTER then
+    if IsAIPlayer(player) then
         print("$ AIWeeklyBonus for "..hero)
         local faction = HEROES[hero].faction
         local n = min(WEEKS,7)
@@ -168,7 +168,7 @@ function AIWeeklyBonus(player, hero)
 end
 
 function AIRecruitBonus(player, hero)
-    if PLAYER_BRAIN[player] == COMPUTER then
+    if IsAIPlayer(player) then
         print("$ AIRecruitBonus for "..hero)
         GiveExp(hero, 10000)
         GiveHeroRandomArtifact(player, hero, ARTIFACT_CLASS_RELIC)

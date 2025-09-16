@@ -132,7 +132,7 @@ function InitializeMapTowns()
             local owner = GetObjectOwner(town)
             if not PLAYER_MAIN_TOWN[owner] then
                 PLAYER_MAIN_TOWN[owner] = town
-                if GetDifficulty() > 1 and PLAYER_BRAIN[owner] == COMPUTER then UpgradeTownBuilding(town, TOWN_BUILDING_GRAIL) end
+                if GetDifficulty() > 1 and IsAIPlayer(owner) then UpgradeTownBuilding(town, TOWN_BUILDING_GRAIL) end
             end
             local x,y,floor = GetObjectPosition(town)
             local dx = TOWN_TYPES_CENTER_TILE[type][1]
