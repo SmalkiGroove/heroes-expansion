@@ -28,4 +28,4 @@ The main changes compared to vanilla are :
 - [Skills data](doc/SKILLS.md)
 - [Artifacts data](doc/ARTIFACTS.md)
 
-Coming soon™
+ModDB page here : https://www.moddb.com/mods/h5x
