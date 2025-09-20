@@ -12,6 +12,7 @@ heroes_xdb_path = "../../game_data/data/MapObjects"
 reftable_xdb_path = "../../game_data/data/GameMechanics/RefTables"
 armies_lua_path = "../../game_data/lua/scripts"
 heroes_pedia_path = "../../game_data/doc-heroes/UI/Doc/Heroes"
+numbers_txt_path = "../../game_data/doc/UI/Doc/Common/N"
 hero_lua_regex = r"(H_[A-Z0-9_]+) = '([A-Za-z0-9]+)'"
 army_lua_regex = r".* = {(.*)},"
 army1_lua_regex = r'.*\[(H_[A-Z0-9_]+)\] = \{(.*)\},'
@@ -300,7 +301,7 @@ for folder,faction in factions.items():
                             creature_id = "CREATURE_SNOW_APE"
                         log(creature_id)
                         creature_data = get_creature_data(creature_id)
-                        with open(os.path.join(heroes_pedia_path, 'Common', 'CreatureCount', f'{hero_army[i+1]}.txt'), 'w', encoding='utf-16') as creature_count_file:
+                        with open(os.path.join(numbers_txt_path, f'{hero_army[i+1]}.txt'), 'w', encoding='utf-16') as creature_count_file:
                             creature_count_file.write(hero_army[i+1])
                         write_from_template("heroarmyx.(WindowSimple).xdb.j2", hero_armycrxwindow_path(hero_id, faction, counter), {'hero': hero_id, 'creature': creature_id, 'x': counter, 'pos': creature_pos[counter], 'name_ref': creature_data['CreatureNameFileRef']['@href']})
                         write_from_template("heroarmyx.(ForegroundTextString).xdb.j2", hero_armycrxcounttext_path(hero_id, faction, counter), {'value': hero_army[i+1]})
