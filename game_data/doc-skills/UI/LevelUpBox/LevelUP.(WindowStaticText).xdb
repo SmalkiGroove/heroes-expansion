@@ -2,7 +2,7 @@
 <WindowStaticText ObjectRecordID="445">
 	<ClassTypeID>554818304</ClassTypeID>
 	<Shared href="LevelUP.(WindowStaticTextShared).xdb#xpointer(/WindowStaticTextShared)"/>
-	<Name>level_up_header</Name>
+	<Name/>
 	<TooltipFileRef href="TTLevelUpHeader.txt"/>
 	<Visible>true</Visible>
 	<Priority>2</Priority>
@@ -10,18 +10,18 @@
 	<Placement>
 		<Position>
 			<First>
-				<x>48</x>
-				<y>45</y>
+				<x>0</x>
+				<y>-243</y>
 			</First>
 			<Second>true</Second>
 		</Position>
 		<VerAllign>
-			<First>EPA_LOW_END</First>
-			<Second>false</Second>
+			<First>ERA_CENTER</First>
+			<Second>true</Second>
 		</VerAllign>
 		<HorAllign>
-			<First>EPA_LOW_END</First>
-			<Second>false</Second>
+			<First>ERA_CENTER</First>
+			<Second>true</Second>
 		</HorAllign>
 		<Size>
 			<First>

@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<WindowMSButton ObjectRecordID="607">
+<WindowMSButton ObjectRecordID="1000123">
 	<ClassTypeID>285694855</ClassTypeID>
-	<Shared href="ButtonSkill.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
-	<Name>Skill3</Name>
-	<TooltipFileRef href=""/>
+	<Shared href="Button.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
+	<Name>SkillWheelOpenBis</Name>
+	<TooltipFileRef href="Tooltip.txt"/>
 	<Visible>true</Visible>
-	<Priority>2</Priority>
+	<Priority>100</Priority>
 	<GameMessageReactions/>
 	<Placement>
 		<Position>
 			<First>
-				<x>106</x>
-				<y>76</y>
+				<x>54</x>
+				<y>542</y>
 			</First>
 			<Second>true</Second>
 		</Position>
 		<VerAllign>
-			<First>ERA_CENTER</First>
+			<First>EPA_LOW_END</First>
 			<Second>true</Second>
 		</VerAllign>
 		<HorAllign>
-			<First>ERA_CENTER</First>
+			<First>EPA_LOW_END</First>
 			<Second>true</Second>
 		</HorAllign>
 		<Size>
@@ -57,7 +57,7 @@
 			<MessageOnEnterState/>
 			<CommandsOnEnterState>
 				<Commands>
-					<Item href="/UI/LevelUp/Skill3.(UISDirectRunReaction).xdb#xpointer(/UISDirectRunReaction)"/>
+					<Item href="SkillsShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 				</Commands>
 				<Reversable>false</Reversable>
 			</CommandsOnEnterState>
@@ -66,29 +66,7 @@
 				<Reversable>false</Reversable>
 			</CommandsOnRightClick>
 			<commandsOnLDblKlick>
-				<Commands>
-					<Item href="/UI/LevelUp/Skill3Force.(UISDirectRunReaction).xdb#xpointer(/UISDirectRunReaction)"/>
-				</Commands>
-				<Reversable>false</Reversable>
-			</commandsOnLDblKlick>
-			<WaitVisual>false</WaitVisual>
-			<ReverseCommands>false</ReverseCommands>
-			<Name/>
-		</Item>
-		<Item>
-			<MessageOnEnterState/>
-			<CommandsOnEnterState>
 				<Commands/>
-				<Reversable>false</Reversable>
-			</CommandsOnEnterState>
-			<CommandsOnRightClick>
-				<Commands/>
-				<Reversable>false</Reversable>
-			</CommandsOnRightClick>
-			<commandsOnLDblKlick>
-				<Commands>
-					<Item href="/UI/LevelUp/Skill3Force.(UISDirectRunReaction).xdb#xpointer(/UISDirectRunReaction)"/>
-				</Commands>
 				<Reversable>false</Reversable>
 			</commandsOnLDblKlick>
 			<WaitVisual>false</WaitVisual>

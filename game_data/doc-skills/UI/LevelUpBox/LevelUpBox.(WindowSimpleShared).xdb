@@ -14,11 +14,12 @@
 		<Item href="LevelUP.(WindowStaticText).xdb#xpointer(/WindowStaticText)"/>
 		<Item href="PerksLabel.(WindowStaticText).xdb#xpointer(/WindowStaticText)"/>
 		<Item href="SkillsLabel.(WindowStaticText).xdb#xpointer(/WindowStaticText)"/>
-
-		<Item href="/UI/Doc/Skills/SkillsLvUp.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="/UI/Doc/Skills/_Buttons/OpenLvUp.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="LevelUpBoxBg.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Skills/Skills.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Skills/_Buttons/Open.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
 	</Children>
-	<Background href="/UI/LevelUpBox______3396/LevelUpBox.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+	<!-- <Background href="/UI/LevelUpBox______3396/LevelUpBox.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/> -->
+	<Background/>
 	<Foreground/>
 	<Flags>
 		<Transparent>false</Transparent>
@@ -32,17 +33,17 @@
 			<Second>false</Second>
 		</Position>
 		<VerAllign>
-			<First>ERA_CENTER</First>
+			<First>EPA_LOW_END</First>
 			<Second>true</Second>
 		</VerAllign>
 		<HorAllign>
-			<First>ERA_CENTER</First>
+			<First>EPA_LOW_END</First>
 			<Second>true</Second>
 		</HorAllign>
 		<Size>
 			<First>
 				<x>1024</x>
-				<y>668</y>
+				<y>1024</y>
 			</First>
 			<Second>true</Second>
 		</Size>

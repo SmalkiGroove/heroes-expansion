@@ -6,6 +6,7 @@
 - [EXE] Crash while generating maps with underground
 - [EXE] Crash on autocombat mode
 - [EXE] Crash when loading games sometimes
+- [EXE] Rissa quick battle crash
 
 ### Broken graphics or animations
 

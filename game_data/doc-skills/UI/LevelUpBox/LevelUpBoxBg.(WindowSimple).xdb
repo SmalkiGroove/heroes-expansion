@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<WindowStaticText ObjectRecordID="446">
-	<ClassTypeID>554818304</ClassTypeID>
-	<Shared href="GroupLabel.(WindowStaticTextShared).xdb#xpointer(/WindowStaticTextShared)"/>
+<WindowSimple ObjectRecordID="764">
+	<ClassTypeID>285700801</ClassTypeID>
+	<Shared href="LevelUpBoxBg.(WindowSimpleShared).xdb#xpointer(/WindowSimpleShared)"/>
 	<Name/>
-	<TooltipFileRef href="TTSkillsHeader.txt"/>
+	<TooltipFileRef href=""/>
 	<Visible>true</Visible>
-	<Priority>2</Priority>
+	<Priority>-100</Priority>
 	<GameMessageReactions/>
 	<Placement>
 		<Position>
 			<First>
-				<x>-108</x>
-				<y>19</y>
+				<x>-263</x>
+				<y>-315</y>
 			</First>
-			<Second>true</Second>
+			<Second>false</Second>
 		</Position>
 		<VerAllign>
 			<First>ERA_CENTER</First>
@@ -46,10 +46,10 @@
 		</UpperMargin>
 	</Placement>
 	<Enabled>true</Enabled>
-	<TextString href="/UI/LevelUPBox_____19629/Skills.(ForegroundTextString).xdb#xpointer(/ForegroundTextString)"/>
+	<TextString/>
 	<relatedTexts/>
 	<relatedTextures/>
 	<Flags>
 		<SuperActive>false</SuperActive>
 	</Flags>
-</WindowStaticText>
+</WindowSimple>
