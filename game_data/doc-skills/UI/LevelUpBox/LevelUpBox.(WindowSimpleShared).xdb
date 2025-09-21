@@ -15,8 +15,8 @@
 		<Item href="PerksLabel.(WindowStaticText).xdb#xpointer(/WindowStaticText)"/>
 		<Item href="SkillsLabel.(WindowStaticText).xdb#xpointer(/WindowStaticText)"/>
 		<Item href="LevelUpBoxBg.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="/UI/Doc/Skills/Skills.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="/UI/Doc/Skills/_Buttons/Open.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="/UI/Doc/Skills/SkillsLvUp.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Skills/_Buttons/OpenLvUp.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
 	</Children>
 	<!-- <Background href="/UI/LevelUpBox______3396/LevelUpBox.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/> -->
 	<Background/>
@@ -43,7 +43,7 @@
 		<Size>
 			<First>
 				<x>1024</x>
-				<y>1024</y>
+				<y>768</y>
 			</First>
 			<Second>true</Second>
 		</Size>

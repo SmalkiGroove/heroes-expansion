@@ -10,17 +10,17 @@
 	<Placement>
 		<Position>
 			<First>
-				<x>54</x>
-				<y>542</y>
+				<x>-193</x>
+				<y>243</y>
 			</First>
 			<Second>true</Second>
 		</Position>
 		<VerAllign>
-			<First>EPA_LOW_END</First>
+			<First>ERA_CENTER</First>
 			<Second>true</Second>
 		</VerAllign>
 		<HorAllign>
-			<First>EPA_LOW_END</First>
+			<First>ERA_CENTER</First>
 			<Second>true</Second>
 		</HorAllign>
 		<Size>
@@ -57,7 +57,6 @@
 			<MessageOnEnterState/>
 			<CommandsOnEnterState>
 				<Commands>
-					<!-- <Item href="SkillsShowLvUp.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/> -->
 					<!-- <Item href="/UI/Doc/Skills/NeutralButton/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/HavenButton/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/InfernoButton/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
@@ -67,6 +66,7 @@
 					<Item href="/UI/Doc/Skills/AcademyButton/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/FortressButton/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/StrongholdButton/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/> -->
+					<Item href="SkillsShowLvUp.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 				</Commands>
 				<Reversable>false</Reversable>
 			</CommandsOnEnterState>
