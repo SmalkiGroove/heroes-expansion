@@ -14,7 +14,9 @@
 		<Gold>5000</Gold>
 	</Cost>
 	<ModObjectName>TreantArches</ModObjectName>
-	<dependencies/>
+	<dependencies>
+		<Item href="/GameMechanics/TownBuildingSharedStats/Preserve/Special_4/BloomingGrove.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
 	<Creature>CREATURE_TREANT</Creature>
 	<DevLevelNeeded>12</DevLevelNeeded>
 	<UIObjectName>Dwelling_6</UIObjectName>

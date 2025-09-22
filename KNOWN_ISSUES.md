@@ -25,6 +25,7 @@
 - [EXE] Shantiri Moon Disc blocks all light magic
 - [LUA] Talanar loses turns when casting righteous might
 - [LUA] Double script activation sometimes
+- [LUA] Kujin sacrifice goblins weekly instead of daily
 
 ### Suggestions
 
@@ -37,6 +38,7 @@
 
 - [EXE] Market change rate are total scam
 - [EXE] Inferno and Dungeon sacrificial buildings are bad
+- [XDB/LUA] Hero that start with Absolute faction skill should get it later
 
 ### Massive work required
 

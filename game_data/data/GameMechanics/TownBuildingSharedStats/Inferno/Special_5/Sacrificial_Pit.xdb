@@ -5,20 +5,20 @@
 	<Type>TB_SPECIAL_5</Type>
 	<Upgrade>BLD_UPG_1</Upgrade>
 	<Cost>
-		<Wood>2</Wood>
-		<Ore>8</Ore>
+		<Wood>0</Wood>
+		<Ore>3</Ore>
 		<Mercury>0</Mercury>
-		<Crystal>2</Crystal>
+		<Crystal>3</Crystal>
 		<Sulfur>0</Sulfur>
 		<Gem>0</Gem>
-		<Gold>2000</Gold>
+		<Gold>1000</Gold>
 	</Cost>
 	<ModObjectName>sacrificialpit</ModObjectName>
 	<dependencies>
-		<Item href="/GameMechanics/TownBuildingSharedStats/Inferno/Fort/Citadel.xdb#xpointer(/TownBuildingSharedStats)"/>
+		<Item href="/GameMechanics/TownBuildingSharedStats/Inferno/TownHall/Town_Hall.xdb#xpointer(/TownBuildingSharedStats)"/>
 	</dependencies>
 	<Creature>CREATURE_UNKNOWN</Creature>
-	<DevLevelNeeded>12</DevLevelNeeded>
+	<DevLevelNeeded>6</DevLevelNeeded>
 	<UIObjectName>Special_4</UIObjectName>
 	<UIStackPosition>0</UIStackPosition>
 	<Icon href="/UI/TownHall/inferno/128/s4.xdb#xpointer(/Texture)"/>

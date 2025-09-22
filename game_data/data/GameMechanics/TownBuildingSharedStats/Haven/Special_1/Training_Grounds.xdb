@@ -5,16 +5,18 @@
 	<Type>TB_SPECIAL_1</Type>
 	<Upgrade>BLD_UPG_1</Upgrade>
 	<Cost>
-		<Wood>5</Wood>
+		<Wood>0</Wood>
 		<Ore>5</Ore>
 		<Mercury>0</Mercury>
 		<Crystal>0</Crystal>
 		<Sulfur>0</Sulfur>
 		<Gem>0</Gem>
-		<Gold>3000</Gold>
+		<Gold>750</Gold>
 	</Cost>
 	<ModObjectName>TrainingGround</ModObjectName>
-	<dependencies/>
+	<dependencies>
+		<Item href="/GameMechanics/TownBuildingSharedStats/Haven/Town_Hall/Town_Hall.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
 	<Creature>CREATURE_UNKNOWN</Creature>
 	<DevLevelNeeded>6</DevLevelNeeded>
 	<UIObjectName>Special_1</UIObjectName>

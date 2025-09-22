@@ -14,7 +14,9 @@
 		<Gold>2500</Gold>
 	</Cost>
 	<ModObjectName>UnicornGlade</ModObjectName>
-	<dependencies/>
+	<dependencies>
+		<Item href="/GameMechanics/TownBuildingSharedStats/Preserve/Special_3/SparklingFountain.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
 	<Creature>CREATURE_UNICORN</Creature>
 	<DevLevelNeeded>9</DevLevelNeeded>
 	<UIObjectName>Dwelling_5</UIObjectName>
