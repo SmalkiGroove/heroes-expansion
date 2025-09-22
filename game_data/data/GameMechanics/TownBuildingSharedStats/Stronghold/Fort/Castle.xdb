@@ -15,11 +15,11 @@
 	</Cost>
 	<ModObjectName>Fort</ModObjectName>
 	<dependencies>
-		<Item href="/GameMechanics/TownBuildingSharedStats/Stronghold/Special_4/PileOfOurFoes.xdb#xpointer(/TownBuildingSharedStats)"/>
+		<Item href="Citadel.xdb#xpointer(/TownBuildingSharedStats)"/>
 	</dependencies>
 	<Creature>CREATURE_UNKNOWN</Creature>
 	<Creature2>CREATURE_UNKNOWN</Creature2>
-	<DevLevelNeeded>15</DevLevelNeeded>
+	<DevLevelNeeded>12</DevLevelNeeded>
 	<UIObjectName>Castle</UIObjectName>
 	<UIStackPosition>2</UIStackPosition>
 	<Icon href="/UI/H5A2/Icons/City_Buildings/Castle.(Texture).xdb#xpointer(/Texture)"/>

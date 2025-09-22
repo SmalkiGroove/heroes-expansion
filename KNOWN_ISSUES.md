@@ -14,6 +14,7 @@
 
 ### Text issues
 
+- [TXT] Hall of intrigue description
 
 ### Something does not work
 

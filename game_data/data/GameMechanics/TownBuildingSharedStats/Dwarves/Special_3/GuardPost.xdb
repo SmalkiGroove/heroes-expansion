@@ -14,9 +14,11 @@
 		<Gold>300</Gold>
 	</Cost>
 	<ModObjectName>Special_3</ModObjectName>
-	<dependencies/>
+	<dependencies>
+		<Item href="/GameMechanics/TownBuildingSharedStats/Dwarves/Fort/Citadel.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
 	<Creature>CREATURE_UNKNOWN</Creature>
-	<DevLevelNeeded>0</DevLevelNeeded>
+	<DevLevelNeeded>12</DevLevelNeeded>
 	<UIObjectName>Special_3</UIObjectName>
 	<UIStackPosition>0</UIStackPosition>
 	<Icon href="/UI/H5A1/Icons/Buildings/Towns/Fortress/Building_Mode_Icon/128x128/GuardPost.(Texture).xdb#xpointer(/Texture)"/>

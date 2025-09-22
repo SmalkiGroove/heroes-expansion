@@ -14,7 +14,9 @@
 		<Gold>500</Gold>
 	</Cost>
 	<ModObjectName>Fort</ModObjectName>
-	<dependencies/>
+	<dependencies>
+		<Item href="/GameMechanics/TownBuildingSharedStats/Academy/Dwelling_2/StoneParapet.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
 	<Creature>CREATURE_UNKNOWN</Creature>
 	<DevLevelNeeded>6</DevLevelNeeded>
 	<UIObjectName>Fort</UIObjectName>

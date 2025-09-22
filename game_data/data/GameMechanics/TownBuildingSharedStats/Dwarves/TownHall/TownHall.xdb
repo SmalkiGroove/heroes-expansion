@@ -15,10 +15,10 @@
 	</Cost>
 	<ModObjectName>Townhall</ModObjectName>
 	<dependencies>
-		<Item href="/GameMechanics/TownBuildingSharedStats/Dwarves/Blacksmith/Blacksmith.xdb#xpointer(/TownBuildingSharedStats)"/>
+		<Item href="VillageHall.xdb#xpointer(/TownBuildingSharedStats)"/>
 	</dependencies>
 	<Creature>CREATURE_UNKNOWN</Creature>
-	<DevLevelNeeded>6</DevLevelNeeded>
+	<DevLevelNeeded>3</DevLevelNeeded>
 	<UIObjectName>TownHall</UIObjectName>
 	<UIStackPosition>0</UIStackPosition>
 	<Icon href="/UI/H5A1/Icons/Buildings/Towns/Fortress/Building_Mode_Icon/128x128/Town_Hall.(Texture).xdb#xpointer(/Texture)"/>

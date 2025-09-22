@@ -14,7 +14,9 @@
 		<Gold>750</Gold>
 	</Cost>
 	<ModObjectName>Dwelling_2</ModObjectName>
-	<dependencies/>
+	<dependencies>
+		<Item href="/GameMechanics/TownBuildingSharedStats/Dwarves/Blacksmith/Blacksmith.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
 	<Creature>CREATURE_AXE_FIGHTER</Creature>
 	<Creature2>CREATURE_UNKNOWN</Creature2>
 	<DevLevelNeeded>3</DevLevelNeeded>
