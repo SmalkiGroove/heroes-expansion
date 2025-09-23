@@ -11,10 +11,12 @@
 		<Crystal>0</Crystal>
 		<Sulfur>0</Sulfur>
 		<Gem>0</Gem>
-		<Gold>1000</Gold>
+		<Gold>500</Gold>
 	</Cost>
 	<ModObjectName>blacksmith</ModObjectName>
-	<dependencies/>
+	<dependencies>
+		<Item href="/GameMechanics/TownBuildingSharedStats/Dungeon/Dwelling_1/BattleSchool.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
 	<Creature>CREATURE_UNKNOWN</Creature>
 	<DevLevelNeeded>3</DevLevelNeeded>
 	<UIObjectName>Blacksmith</UIObjectName>
