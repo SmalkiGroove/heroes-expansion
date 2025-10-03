@@ -33,6 +33,18 @@ ROUTINE_VARS = {
     BallistaCommanders = {},
 }
 
+RANGED_CREATURES = {
+    3, 4, 107, 9, 10, 110,
+    21, 22, 134,
+    30, 37, 38, 156,
+    47, 48, 147, 49, 50, 148, 190,
+    57, 58, 159, 63, 64, 162, 165,
+    71, 72, 81, 82,
+    94, 95, 167, 100, 101, 170,
+    118, 119, 120, 174,
+    85, 181, 187, 188,
+}
+
 COMBAT_EFFECT_SKILLS = {
     SKILL_GATING,
     SKILL_DARK_MAGIC,

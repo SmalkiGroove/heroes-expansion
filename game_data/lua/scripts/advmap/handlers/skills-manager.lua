@@ -61,6 +61,7 @@ function CheckForUltimate(player, hero, level)
 end
 
 
+ABSOLUTE_MASTERIES = {H_ISABEL=0, H_TALANAR=0, H_EBBA=0, H_THEODORUS=0, H_SINITAR=0, H_RAVEN=0, H_NYMUS=0, H_TELSEK=0}
 
 function AddHeroSkill(hero, skill, mastery)
     log("Hero "..hero.." has learnt skill '"..skill.."' rank "..mastery..".")
@@ -68,6 +69,18 @@ function AddHeroSkill(hero, skill, mastery)
     local level = GetHeroLevel(hero)
     if START_TRIGGER_SKILLS_ROUTINES[skill] then
         START_TRIGGER_SKILLS_ROUTINES[skill](player, hero, mastery, level)
+    end
+    if ABSOLUTE_MASTERIES[hero] then
+        if ABSOLUTE_MASTERIES[hero] == 0 then
+            local f = HEROES[hero].faction
+            local n = 0
+            n = n + GetHeroSkillMastery(hero, SKILLS_BY_FACTION[f].base)
+            for _,sk in SKILLS_BY_FACTION[f].perks do n = n + GetHeroSkillMastery(hero, sk) end
+            if n == 6 then
+                GiveHeroSkill(hero, SKILLS_BY_FACTION[f].base)
+                ABSOLUTE_MASTERIES[hero] = 1
+            end
+        end
     end
     Register(VarHeroSkillId(hero, skill), mastery)
     CheckForUltimate(player, hero, level)

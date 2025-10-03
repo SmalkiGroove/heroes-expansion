@@ -327,7 +327,7 @@ end
 function Routine_CastFireWalls(side, hero)
     -- log("Trigger cast Fire walls !")
     local m = GetUnitManaPoints(hero)
-    local x = 11 - 6 * side
+    local x = 12 - 7 * side
     for _,y in {3,6,9} do
         HeroCast_Area(hero, SPELL_FIREWALL, FREE_MANA, x, y)
         sleep(10)
@@ -560,9 +560,26 @@ function Routine_RefreshMatronMana(side, hero)
     end
 end
 
-function Routine_CastRandomDeepFrost(side, hero)
-    -- log("Trigger cast deep frost !")
-    HeroCast_RandomCreature(hero, SPELL_DEEP_FREEZE, FREE_MANA, 1-side)
+function Routine_CastSlowOrConfusion(side, hero)
+    -- log("Trigger cast slow or confusion !")
+    local melee_creatures = {}
+    local range_creatures = {}
+    for i,cr in GetUnits(1-side, CREATURE) do
+        local type = GetCreatureType(cr)
+        if contains(RANGED_CREATURES, type) then
+            insert(range_creatures, cr)
+        else
+            insert(melee_creatures, cr)
+        end
+    end
+    if length(melee_creatures) > 0 then
+        local target = melee_creatures[random(1, length(melee_creatures))]
+        HeroCast_Target(hero, SPELL_SLOW, FREE_MANA, target)
+    end
+    if length(range_creatures) > 0 then
+        local target = range_creatures[random(1, length(range_creatures))]
+        HeroCast_Target(hero, SPELL_FORGETFULNESS, FREE_MANA, target)
+    end
 end
 
 
@@ -825,7 +842,10 @@ end
 function Routine_SummonGoblinStack(side, hero)
     -- log("Trigger summon goblins !")
     if CURRENT_UNIT == hero then
-        SummonCreatureStack(side, CREATURE_GOBLIN, ROUTINE_VARS.GoblinsTotal)
+        local goblin = "GoblinSpawn-"..COMBAT_TURN
+        SummonCreature(side, CREATURE_GOBLIN, ROUTINE_VARS.GoblinsTotal, -1, -1, 1, goblin)
+        repeat sleep(1) until IsCombatUnit(goblin)
+        SetATB_ID(goblin, ATB_HALF)
     end
 end
 
@@ -917,7 +937,7 @@ COMBAT_START_HERO_ROUTINES = {
     [H_VAYSHAN] = Routine_ScoutsMoveFirst,
     [H_DARKSTORM] = Routine_SummonDarkstorm,
     [H_SYLSAI] = Routine_HeroCastBerserk,
-    [H_SHADYA] = Routine_CastRandomDeepFrost,
+    [H_SHADYA] = Routine_CastSlowOrConfusion,
     -- necropolis
     [H_VLADIMIR] = Routine_SummonAndKillEnnemySkeleton,
     [H_KASPAR] = Routine_FirstAidLastAid,

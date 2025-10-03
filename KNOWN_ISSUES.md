@@ -32,12 +32,18 @@
 - [?] Add NCF creatures in editor
 - [XDB] Darkstorm hero totem model
 - [XDB] Add ARMG templates
+- [LUA] Tavern mapobject has town portal effect
 
 ### Balance
 
 - [EXE] Market change rate are total scam
 - [EXE] Inferno and Dungeon sacrificial buildings are bad
 - [XDB/LUA] Hero that start with Absolute faction skill should get it later
+- [LUA] Nerf viking shield
+- [XDB] Nerf War path
+- [XDB] Buff conjure phoenix
+- [XDB] Lower damage diff between magic levels
+- [EXE] Immunity should clean everything
 
 ### Massive work required
 
@@ -119,3 +125,5 @@
 - Add might/magic toggle in skills pedia
 - Hall of intrigue description
 - Change towns building order
+- Arcane Brillance creature mana cost reduction from 50% to 25%
+- Kilghan goblin summon with atb
