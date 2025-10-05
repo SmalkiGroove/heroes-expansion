@@ -36,9 +36,6 @@
 - [EXE] Market change rate are total scam
 - [EXE] Inferno and Dungeon sacrificial buildings are bad
 - [XDB/LUA] Hero that start with Absolute faction skill should get it later
-- [XDB] Buff conjure phoenix
-- [XDB] Lower damage diff between magic levels
-- [EXE] Immunity should clean everything
 
 ### Massive work required
 
@@ -126,3 +123,6 @@
 - Kujin sacrifice goblins rework
 - Nerf War path
 - Nerf viking shield
+- Immunity should clean everything
+- Lower damage diff between magic levels
+- Buff conjure phoenix

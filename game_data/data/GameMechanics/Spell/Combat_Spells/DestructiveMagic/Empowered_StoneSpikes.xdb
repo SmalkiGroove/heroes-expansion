@@ -10,23 +10,23 @@
 	<MagicSchool>MAGIC_SCHOOL_DESTRUCTIVE</MagicSchool>
 	<RequiredHeroLevel>0</RequiredHeroLevel>
 	<IsAimed>true</IsAimed>
-	<TrainedCost>18</TrainedCost>
+	<TrainedCost>22</TrainedCost>
 	<damage>
 		<Item>
-			<Base>24</Base>
-			<PerPower>8</PerPower>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
 		</Item>
 		<Item>
-			<Base>32</Base>
-			<PerPower>8</PerPower>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
 		</Item>
 		<Item>
-			<Base>40</Base>
-			<PerPower>8</PerPower>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
 		</Item>
 		<Item>
-			<Base>48</Base>
-			<PerPower>8</PerPower>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
 		</Item>
 	</damage>
 	<duration/>
@@ -42,6 +42,6 @@
 	<IsAreaAttack>true</IsAreaAttack>
 	<CanSelectDead>false</CanSelectDead>
 	<Target>TARGET_HOSTILE</Target>
-	<Element>ELEMENT_NONE</Element>
+	<Element>ELEMENT_EARTH</Element>
 	<visuals/>
 </Spell>

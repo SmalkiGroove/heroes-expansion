@@ -2654,11 +2654,11 @@
 					<PerDividedLevel>0</PerDividedLevel>
 				</Battlecry_SpeedBonus>
 				<Battlecry_OffenceBonus>
-					<Base>1</Base>
-					<LevelDivisor>5</LevelDivisor>
+					<Base>5</Base>
+					<LevelDivisor>255</LevelDivisor>
 					<PerDividedLevel>1</PerDividedLevel>
 				</Battlecry_OffenceBonus>
-				<ShoutOfMany_DamagePerCreatureInArmy>1</ShoutOfMany_DamagePerCreatureInArmy>
+				<ShoutOfMany_DamagePerCreatureInArmy>0.5</ShoutOfMany_DamagePerCreatureInArmy>
 				<ShoutOfMany_ShockwaveMoveTime>0.5</ShoutOfMany_ShockwaveMoveTime>
 			</Warcries>
 		</Spells>
