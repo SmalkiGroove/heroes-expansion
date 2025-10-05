@@ -887,7 +887,7 @@ function Routine_ShamansManaRegen(side, hero)
         if IsCreature(CURRENT_UNIT) then
             local type = GetCreatureType(CURRENT_UNIT)
             if type == CREATURE_SHAMAN or type == CREATURE_SHAMAN_WITCH or type == CREATURE_SHAMAN_HAG then
-                local n = 1 + trunc(GetHeroLevel(side) * 0.1)
+                local n = 1 + trunc(GetHeroLevel(side) * 0.125)
                 local m = GetUnitManaPoints(CURRENT_UNIT)
                 SetMana(CURRENT_UNIT, m + n)
             end

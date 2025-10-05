@@ -4,8 +4,6 @@
 
 - [EXE] Crash when engaging fight with rune priests sometimes
 - [EXE] Crash while generating maps with underground
-- [EXE] Crash on autocombat mode
-- [EXE] Crash when loading games sometimes
 - [EXE] Rissa quick battle crash
 
 ### Broken graphics or animations
@@ -25,7 +23,6 @@
 - [EXE] Shantiri Moon Disc blocks all light magic
 - [LUA] Talanar loses turns when casting righteous might
 - [LUA] Double script activation sometimes
-- [LUA] Kujin sacrifice goblins weekly instead of daily
 
 ### Suggestions
 
@@ -39,8 +36,6 @@
 - [EXE] Market change rate are total scam
 - [EXE] Inferno and Dungeon sacrificial buildings are bad
 - [XDB/LUA] Hero that start with Absolute faction skill should get it later
-- [LUA] Nerf viking shield
-- [XDB] Nerf War path
 - [XDB] Buff conjure phoenix
 - [XDB] Lower damage diff between magic levels
 - [EXE] Immunity should clean everything
@@ -127,3 +122,7 @@
 - Change towns building order
 - Arcane Brillance creature mana cost reduction from 50% to 25%
 - Kilghan goblin summon with atb
+- Crash when loading games sometimes
+- Kujin sacrifice goblins rework
+- Nerf War path
+- Nerf viking shield

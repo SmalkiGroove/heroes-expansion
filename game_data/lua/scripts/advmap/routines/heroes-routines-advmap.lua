@@ -1044,16 +1044,20 @@ function Routine_AddHeroWyverns(player, hero)
     AddHeroCreatureType(player, hero, STRONGHOLD, 6, amount, 1)
 end
 
-function Routine_SacrificeGoblinDaily(player, hero)
-    log("$ Routine_SacrificeGoblinDaily")
-    for _,goblin in CREATURES_BY_FACTION[STRONGHOLD][1] do
-        if GetHeroCreatures(hero, goblin) > 0 then
-            RemoveHeroCreatures(hero, goblin, 1)
-            AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_2, CREATURE_SHAMAN, 1)
-            if GetHeroLevel(hero) >= 10 then
-                AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_3, CREATURE_ORC_WARRIOR, 1)
+function Routine_SacrificeGoblinCorpses(player, hero, combatIndex)
+    log("$ Routine_SacrificeGoblinCorpses")
+    local limit = 1 + trunc(0.5 * GetHeroLevel(hero))
+    local total = 0
+    local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
+    for i = 0,stacks-1 do
+        local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
+        if died > 0 then
+            if creature == CREATURE_GOBLIN or creature == CREATURE_GOBLIN_TRAPPER or creature == CREATURE_GOBLIN_DEFILER then
+                local nb = min(died, limit-total)
+                AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_2, CREATURE_SHAMAN, nb)
+                total = total + nb
+                if total == limit then return end
             end
-            return
         end
     end
 end
@@ -1162,7 +1166,6 @@ WEEKLY_TRIGGER_HERO_ROUTINES = {
     -- stronghold
     [H_GARUNA] = Routine_AddRecruitsCentaurs,
     [H_KARUKAT] = Routine_AddHeroWyverns,
-    [H_KUJIN] = Routine_SacrificeGoblinDaily,
 }
 
 LEVEL_UP_HERO_ROUTINES_HERO = {
@@ -1217,6 +1220,7 @@ AFTER_COMBAT_TRIGGER_HERO_ROUTINES = {
     -- stronghold
     [H_KRAGH] = Routine_GainArmyReinforcement,
     [H_GORSHAK] = Routine_GainAttackDefense,
+    [H_KUJIN] = Routine_SacrificeGoblinCorpses,
 }
 
 CONTINUOUS_TRIGGER_HERO_ROUTINES = {

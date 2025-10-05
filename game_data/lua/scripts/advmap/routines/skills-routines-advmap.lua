@@ -105,6 +105,15 @@ function Routine_CheckSpiritism(player, hero, mastery)
     end
 end
 
+function Routine_SpiritismLevelUp(player, hero, mastery, level)
+    log("$ Routine_SpiritismLevelUp")
+    if mod(level, 2) == 0 then
+        local school = SPIRITISM_SCHOOL_AFFINITY[hero] and SPIRITISM_SCHOOL_AFFINITY[hero] or SPELL_SCHOOL_ANY
+        school = school * mod(level, 4)
+        TeachHeroRandomSpell(player, hero, school, mastery+2)
+    end
+end
+
 function Routine_LearnLightMagic(player, hero, mastery)
     log("$ Routine_LearnLightMagic")
     local diff = mastery - HERO_SKILL_BONUSES[hero][SKILLBONUS_LIGHT_MAGIC]
@@ -148,16 +157,6 @@ function Routine_CheckPrecision(player, hero, mastery)
     if diff ~= 0 then
         AddHeroStatAmount(player, hero, STAT_LUCK, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_PRECISION] = value
-    end
-end
-
-function Routine_CheckHoldGround(player, hero, mastery)
-    log("$ Routine_CheckHoldGround")
-    local value = 2 * mastery
-    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_HOLD_GROUND]
-    if diff ~= 0 then
-        AddHeroStatAmount(player, hero, STAT_DEFENCE, diff)
-        HERO_SKILL_BONUSES[hero][SKILLBONUS_HOLD_GROUND] = value
     end
 end
 
@@ -237,24 +236,24 @@ function Routine_CheckSecretsOfDestruct(player, hero, mastery)
     end
 end
 
-function Routine_CheckGetStronger(player, hero, mastery)
-    log("$ Routine_CheckGetStronger")
+function Routine_CheckReinforcement(player, hero, mastery)
+    log("$ Routine_CheckReinforcement")
     local value = mastery
-    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_GET_STRONGER]
+    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_REINFORCEMENT]
     if diff ~= 0 then
         AddHeroStatAmount(player, hero, STAT_ATTACK, diff)
         AddHeroStatAmount(player, hero, STAT_DEFENCE, diff)
-        HERO_SKILL_BONUSES[hero][SKILLBONUS_GET_STRONGER] = value
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_REINFORCEMENT] = value
     end
 end
 
-function Routine_CheckGetWiser(player, hero, mastery)
-    log("$ Routine_CheckGetWiser")
-    local value = mastery * (1000 + round(0.05 * GetHeroStat(hero, STAT_EXPERIENCE)))
-    local diff = mastery - HERO_SKILL_BONUSES[hero][SKILLBONUS_GET_WISER]
+function Routine_CheckEmpiricism(player, hero, mastery)
+    log("$ Routine_CheckEmpiricism")
+    local diff = mastery - HERO_SKILL_BONUSES[hero][SKILLBONUS_EMPIRICISM]
     if diff ~= 0 then
+        local value = mastery * (500 + round(0.05 * GetHeroStat(hero, STAT_EXPERIENCE)))
         AddHeroStatAmount(player, hero, STAT_EXPERIENCE, value)
-        HERO_SKILL_BONUSES[hero][SKILLBONUS_GET_WISER] = mastery
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_EMPIRICISM] = mastery
     end
 end
 
@@ -350,16 +349,6 @@ function Routine_CheckImbueArrow(player, hero, mastery)
     end
 end
 
-function Routine_CheckImbueBallista(player, hero, mastery)
-    log("$ Routine_CheckImbueBallista")
-    local value = mastery
-    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_IMBUE_BALLISTA]
-    if diff ~= 0 then
-        AddHeroStatAmount(player, hero, STAT_SPELL_POWER, diff)
-        HERO_SKILL_BONUSES[hero][SKILLBONUS_IMBUE_BALLISTA] = value
-    end
-end
-
 function Routine_CheckBattleCommander(player, hero, mastery)
     log("$ Routine_CheckBattleCommander")
     local value = mastery
@@ -446,14 +435,8 @@ end
 
 function Routine_RageAwakening(player, hero, mastery)
     log("$ Routine_RageAwakening")
-    if mastery == 1 then
-        local nb_skills = 0
-        for _,sk in SKILLS_COMMON do
-            if HasHeroSkill(hero, sk) then nb_skills = nb_skills + 1 end
-        end
-        if nb_skills < 7 then
-            GiveHeroSkill(hero, SKILL_BLOOD_RAGE)
-        end
+    if not HasHeroSkill(SKILL_BLOOD_RAGE) then
+        GiveHeroSkill(hero, SKILL_BLOOD_RAGE)
     end
 end
 
@@ -475,11 +458,20 @@ function Routine_CheckEnlightened(player, hero, mastery)
     if diff ~= 0 then
         AddHeroStatAmount(player, hero, STAT_KNOWLEDGE, diff)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_ENLIGHTENED] = value
-        ChangeHeroStat(hero, STAT_EXPERIENCE, 1000)
+        ChangeHeroStat(hero, STAT_EXPERIENCE, 1500)
     end
 end
 
 
+
+function Routine_WarPathInit(player, hero, mastery)
+    log("$ Routine_WarPathInit")
+    if HERO_SKILL_BONUSES[hero][SKILLBONUS_WAR_PATH] == 0 then
+        GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_ATTACK, 2)
+        GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_DEFENCE, 2)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_WAR_PATH] = 1
+    end
+end
 
 function Routine_OnslaughtBuff(player, hero, mastery)
     log("$ Routine_OnslaughtBuff")
@@ -572,8 +564,7 @@ end
 
 function Routine_SpiritismManaRegen(player, hero, mastery)
     log("$ Routine_SpiritismManaRegen")
-    local regen = mastery * 10
-    ChangeHeroStat(hero, STAT_MANA_POINTS, regen)
+    ChangeHeroStat(hero, STAT_MANA_POINTS, mastery * 10)
 end
 
 
@@ -685,15 +676,15 @@ function Routine_MythologyWeeklyGolds(player, hero, mastery)
     AddPlayerResource(player, hero, GOLD, 800 * count)
 end
 
-function Routine_GetStrongerWeeklyBonus(player, hero, mastery)
-    log("$ Routine_GetStrongerWeeklyBonus")
+function Routine_ReinforcementWeeklyBonus(player, hero, mastery)
+    log("$ Routine_ReinforcementWeeklyBonus")
     AddHeroStatAmount(player, hero, STAT_ATTACK, 1)
     AddHeroStatAmount(player, hero, STAT_DEFENCE, 1)
 end
 
-function Routine_GetWiserWeeklyBonus(player, hero, mastery)
-    log("$ Routine_GetWiserWeeklyBonus")
-    local exp = 1000 + round(0.05 * GetHeroStat(hero, STAT_EXPERIENCE))
+function Routine_EmpiricismWeeklyBonus(player, hero, mastery)
+    log("$ Routine_EmpiricismWeeklyBonus")
+    local exp = 500 + round(0.05 * GetHeroStat(hero, STAT_EXPERIENCE))
     AddHeroStatAmount(player, hero, STAT_EXPERIENCE, exp)
 end
 
@@ -727,15 +718,6 @@ function Routine_InfusionWeeklyMana(player, hero, mastery)
 end
 
 
-
-function Routine_SpiritismLevelUp(player, hero, mastery, level)
-    log("$ Routine_SpiritismLevelUp")
-    if not HasHeroSkill(hero, SKILL_BLOOD_RAGE) then
-        if mod(level, 2) == 0 then
-            TeachHeroRandomSpell(player, hero, SPELL_SCHOOL_ANY, mastery+2)
-        end
-    end
-end
 
 
 
@@ -795,6 +777,14 @@ function Routine_SpoilsOfWarArtifact(player, hero, mastery, combatIndex)
     end
 end
 
+function Routine_WarPathAfterBattle(player, hero, mastery, combatIndex)
+    log("$ Routine_WarPathAfterBattle")
+    if HERO_SKILL_BONUSES[hero][SKILLBONUS_WAR_PATH] == 1 then
+        ChangeHeroStat(hero, STAT_MOVE_POINTS, 500)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_WAR_PATH] = 0
+    end
+end
+
 function Routine_OnslaughtReset(player, hero, mastery, combatIndex)
     log("$ Routine_OnslaughtReset")
     HERO_SKILL_BONUSES[hero][SKILLBONUS_ONSLAUGHT] = 0
@@ -832,8 +822,8 @@ START_TRIGGER_SKILLS_ROUTINES = {
     [PERK_GRADUATE] = Routine_CheckGraduate,
     [PERK_OCCULTISM] = Routine_CheckOccultism,
     [PERK_SECRETS_OF_DESTRUCT] = Routine_CheckSecretsOfDestruct,
-    [PERK_GET_STRONGER] = Routine_CheckGetStronger,
-    [PERK_GET_WISER] = Routine_CheckGetWiser,
+    [PERK_REINFORCEMENT] = Routine_CheckReinforcement,
+    [PERK_EMPIRICISM] = Routine_CheckEmpiricism,
     [PERK_ONSLAUGHT] = Routine_OnslaughtBuff,
     [PERK_LAST_STAND] = Routine_CheckLastStand,
     [PERK_PATHFINDING] = Routine_RevealNeutralTowns,
@@ -857,6 +847,7 @@ START_TRIGGER_SKILLS_ROUTINES = {
 }
 
 DAILY_TRIGGER_SKILLS_ROUTINES = {
+    [PERK_WAR_PATH] = Routine_WarPathInit,
     [PERK_ONSLAUGHT] = Routine_OnslaughtBuff,
     [PERK_ESTATES] = RoutineEstatesDaily,
     [PERK_GEOLOGY] = Routine_GeologyDaily,
@@ -875,8 +866,8 @@ WEEKLY_TRIGGER_SKILLS_ROUTINES = {
     [PERK_GEAR_UP] = Routine_GearUpWeeklyGolds,
     [PERK_HEROES_LEGACY] = Routine_HeroesLegacyWeeklyGolds,
     [PERK_MYTHOLOGY] = Routine_MythologyWeeklyGolds,
-    [PERK_GET_STRONGER] = Routine_GetStrongerWeeklyBonus,
-    [PERK_GET_WISER] = Routine_GetWiserWeeklyBonus,
+    [PERK_REINFORCEMENT] = Routine_ReinforcementWeeklyBonus,
+    [PERK_EMPIRICISM] = Routine_EmpiricismWeeklyBonus,
     [PERK_BATTLE_COMMANDER] = Routine_BattleCommanderWeeklyDancers,
     [PERK_HAUNTING] = Routine_HauntingWeeklyGhosts,
     [PERK_DEFEND_US_ALL] = Routine_DefendUsAllWeeklyWarriors,
@@ -896,6 +887,7 @@ AFTER_COMBAT_TRIGGER_SKILLS_ROUTINES = {
     [SKILL_LEADERSHIP] = Routine_LeadershipAfterBattle,
     [PERK_TALETELLERS] = Routine_TaleTellers,
     [PERK_SPOILS_OF_WAR] = Routine_SpoilsOfWarArtifact,
+    [PERK_WAR_PATH] = Routine_WarPathAfterBattle,
     [PERK_ONSLAUGHT] = Routine_OnslaughtReset,
     [PERK_STAMINA] = Routine_StaminaBuff,
 }

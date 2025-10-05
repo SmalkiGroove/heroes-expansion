@@ -2003,10 +2003,10 @@
 					</Bonuses>
 					<DamageAbsorbtionPerHeroSkill>
 						<Item>0</Item>
+						<Item>30</Item>
 						<Item>40</Item>
 						<Item>50</Item>
 						<Item>60</Item>
-						<Item>80</Item>
 					</DamageAbsorbtionPerHeroSkill>
 					<HealthToRageTransferCoef>1500</HealthToRageTransferCoef>
 				</DemonRage>
@@ -2069,7 +2069,7 @@
 				<Prayer_DefenceBonus>1</Prayer_DefenceBonus>
 				<Prayer_InitiativeBonus>0.1</Prayer_InitiativeBonus>
 				<WhiteKnight_PrayerMultiplier>2</WhiteKnight_PrayerMultiplier>
-				<Encourage_ATBIncrease>0.3</Encourage_ATBIncrease>
+				<Encourage_ATBIncrease>0.4</Encourage_ATBIncrease>
 				<Retribution_DamageBonusPerMorale>0.07</Retribution_DamageBonusPerMorale>
 			</Knight>
 			<DemonLord>
@@ -2311,7 +2311,7 @@
 				<SetAfire_DamageMultiplier>0.25</SetAfire_DamageMultiplier>
 				<SetAfire_DamageDurationInRounds>2</SetAfire_DamageDurationInRounds>
 				<ShrugDarkness_EnemySpellpowerMultiplier>0.8</ShrugDarkness_EnemySpellpowerMultiplier>
-				<RunicArmor_SpellpowerBonus>5</RunicArmor_SpellpowerBonus>
+				<RunicArmor_SpellpowerBonus>6</RunicArmor_SpellpowerBonus>
 				<RunicMachines_InitiativeBonus>3</RunicMachines_InitiativeBonus>
 				<Mentoring_ExpPecentToGiveToVisitor>0.3</Mentoring_ExpPecentToGiveToVisitor>
 				<Empathy_ATBAffectionOnMorale>0.1</Empathy_ATBAffectionOnMorale>
@@ -2319,7 +2319,7 @@
 			</Runemage>
 			<Barbarian>
 				<PowerfullBlow_ChanceToCritical>0</PowerfullBlow_ChanceToCritical>
-				<PathOfWar_MovePointsBonus>550</PathOfWar_MovePointsBonus>
+				<PathOfWar_MovePointsBonus>250</PathOfWar_MovePointsBonus>
 				<LuckOfTheBarbarian_MagicProofPerLuck>0.10</LuckOfTheBarbarian_MagicProofPerLuck>
 				<StunningBlow_ATBDrop>0.20</StunningBlow_ATBDrop>
 				<DefendUsAll_CreatureToCount>CREATURE_ORC_SLAYER</DefendUsAll_CreatureToCount>

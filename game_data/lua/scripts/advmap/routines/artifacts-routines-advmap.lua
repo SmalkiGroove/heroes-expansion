@@ -220,15 +220,15 @@ end
 function Routine_ArtifactVikingHatchet(player, hero, combatIndex)
     log("$ Routine_ArtifactVikingHatchet")
     local value = GetArmyStrength(combatIndex, 0)
-    AddPlayerResource(player, hero, GOLD, round(0.3 * value))
+    AddPlayerResource(player, hero, GOLD, round(0.04 * value))
 end
 
 function Routine_ArtifactVikingShield(player, hero, combatIndex)
     log("$ Routine_ArtifactVikingShield")
     local value = GetArmyStrength(combatIndex, 0)
     local split = random(0,4,value)
-    AddPlayerResource(player, hero, WOOD, round(0.001 * split * value))
-    AddPlayerResource(player, hero, ORE, round(0.001 * (4-split) * value))
+    AddPlayerResource(player, hero, WOOD, ceil(0.0004 * split * value))
+    AddPlayerResource(player, hero, ORE, ceil(0.0004 * (4-split) * value))
 end
 
 Var_StaffLyreVictories = {}
@@ -237,7 +237,7 @@ function Routine_ArtifactStaffOfTheLyre(player, hero, combatIndex)
     if Var_StaffLyreVictories[hero] then
         local nb = Var_StaffLyreVictories[hero] + 1
         Var_StaffLyreVictories[hero] = nb
-        if mod(nb, 5) == 0 then
+        if mod(nb, 4) == 0 then
             AddHeroLowestStat(player, hero, 1)
         end
     else
@@ -251,7 +251,7 @@ function Routine_ArtifactPendantOfTheLyre(player, hero, combatIndex)
     if Var_PendantLyreVictories[hero] then
         local nb = Var_PendantLyreVictories[hero] + 1
         Var_PendantLyreVictories[hero] = nb
-        if mod(nb, 5) == 0 then
+        if mod(nb, 4) == 0 then
             local exp = 1000 + trunc(0.01 * GetHeroStat(hero, STAT_EXPERIENCE))
             AddHeroStatAmount(player, hero, STAT_EXPERIENCE, exp)
             -- AddHeroManaUnbound(player, hero, 100)

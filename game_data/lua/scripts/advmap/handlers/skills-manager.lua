@@ -35,41 +35,9 @@ function StatPerLevelDivisor(level, base, divisor)
 end
 
 
-function CheckForUltimate(player, hero, level)
-    -- log("$ CheckForUltimate")
-    if HasHeroSkill(hero, SKILL_ULTIMATE) then return end
-    if level >= 25 then
-        local nb = 0
-        for _,skill in SKILLS_BY_FACTION do
-            if HasHeroSkill(hero, skill.ult) then return end
-            if GetHeroSkillMastery(hero, skill.base) >= 3 then
-                nb = nb + 1
-            end
-        end
-        for _,skill in SKILLS_COMMON do
-            if HasHeroSkill(hero, skill) then
-                nb = nb + 1
-            end
-        end
-        if nb == 7 then
-            GiveHeroSkill(hero, SKILL_ULTIMATE) sleep()
-            GiveHeroSkill(hero, SKILL_ULTIMATE) sleep()
-            GiveHeroSkill(hero, SKILL_ULTIMATE) sleep()
-            ShowFlyingSign("/Text/Game/Scripts/Ultimate.txt", hero, player, FLYING_SIGN_TIME)
-        end
-    end
-end
-
-
 ABSOLUTE_MASTERIES = {H_ISABEL=0, H_TALANAR=0, H_EBBA=0, H_THEODORUS=0, H_SINITAR=0, H_RAVEN=0, H_NYMUS=0, H_TELSEK=0}
-
-function AddHeroSkill(hero, skill, mastery)
-    log("Hero "..hero.." has learnt skill '"..skill.."' rank "..mastery..".")
-    local player = GetObjectOwner(hero)
-    local level = GetHeroLevel(hero)
-    if START_TRIGGER_SKILLS_ROUTINES[skill] then
-        START_TRIGGER_SKILLS_ROUTINES[skill](player, hero, mastery, level)
-    end
+function CheckForAbsolute(player, hero)
+    -- log("$ CheckForAbsolute")
     if ABSOLUTE_MASTERIES[hero] then
         if ABSOLUTE_MASTERIES[hero] == 0 then
             local f = HEROES[hero].faction
@@ -78,12 +46,47 @@ function AddHeroSkill(hero, skill, mastery)
             for _,sk in SKILLS_BY_FACTION[f].perks do n = n + GetHeroSkillMastery(hero, sk) end
             if n == 6 then
                 GiveHeroSkill(hero, SKILLS_BY_FACTION[f].base)
+                ShowFlyingSign("/Text/Game/Scripts/Skills/Absolute.txt", hero, player, FLYING_SIGN_TIME)
                 ABSOLUTE_MASTERIES[hero] = 1
             end
         end
     end
+end
+function CheckForUltimate(player, hero)
+    -- log("$ CheckForUltimate")
+    local f = HEROES[hero].faction
+    local ult = SKILLS_BY_FACTION[f].ult
+    if HasHeroSkill(hero, ult) then return end
+
+    local n = 0
+    for _,sk in SKILLS_BY_FACTION[f].perks do n = n + GetHeroSkillMastery(hero, sk) end
+    if n < 3 then return end
+
+    local t = 0
+    for sk,perks in SKILLS_COMMON do
+        if HasHeroSkill(hero, sk) then
+            n = 0
+            for _,perk in perks do n = n + GetHeroSkillMastery(hero, perk) end
+            if n == 3 then t = t + 1 end
+        end
+    end
+    if t >= 4 then
+        GiveHeroSkill(hero, ult)
+        ShowFlyingSign("/Text/Game/Scripts/Skills/Ultimate.txt", hero, player, FLYING_SIGN_TIME)
+    end
+end
+
+
+function AddHeroSkill(hero, skill, mastery)
+    log("Hero "..hero.." has learnt skill '"..skill.."' rank "..mastery..".")
+    local player = GetObjectOwner(hero)
+    local level = GetHeroLevel(hero)
+    if START_TRIGGER_SKILLS_ROUTINES[skill] then
+        START_TRIGGER_SKILLS_ROUTINES[skill](player, hero, mastery, level)
+    end
     Register(VarHeroSkillId(hero, skill), mastery)
-    CheckForUltimate(player, hero, level)
+    CheckForAbsolute(player, hero)
+    CheckForUltimate(player, hero)
 end
 function RemoveHeroSkill(hero, skill, mastery)
     log("Hero "..hero.." has removed skill '"..skill.."' rank "..mastery..".")

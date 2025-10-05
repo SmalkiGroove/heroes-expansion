@@ -58,6 +58,16 @@ function Routine_ShatterMagic(side, hero, id, mastery)
     end
 end
 
+function Routine_ImbueBallista(side, hero, id, mastery)
+    -- log("Trigger Imbue Ballista !")
+    if CURRENT_UNIT == hero then
+        local ballista = UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_BALLISTA'
+        if IsCombatUnit(ballista) then
+            setATB(ballista, ATB_NEXT)
+        end
+    end
+end
+
 
 
 COMBAT_START_SKILL_ROUTINES = {
@@ -67,6 +77,7 @@ COMBAT_START_SKILL_ROUTINES = {
 }
 
 COMBAT_TURN_SKILL_ROUTINES = {
+    [PERK_IMBUE_BALLISTA] = Routine_ImbueBallista,
 }
 
 UNIT_DIED_SKILL_ROUTINES = {
