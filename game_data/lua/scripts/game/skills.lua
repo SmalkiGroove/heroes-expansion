@@ -318,7 +318,6 @@ _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_FINE_RUNE           = _skillbonu
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_REFRESH_RUNE        = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_GREATER_RUNE        = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_LORD_OF_THE_UNDEAD  = _skillbonus_id
-_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_DEFEND_US_ALL       = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_SHEER_STRENGTH      = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_INFUSION            = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_ENLIGHTENED         = _skillbonus_id

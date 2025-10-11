@@ -114,6 +114,16 @@ end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 -- PRESERVE
 
+function Routine_EnragedRighteousMight(side, hero)
+    -- log("Trigger enraged righteous might !")
+    for i,cr in GetUnits(side, CREATURE) do
+        local type = GetCreatureType(cr)
+        if CREATURES[type][1] == PRESERVE and contains({1,3,4,6}, CREATURES[type][2]) then
+            HeroCast_Target(hero, SPELL_BLOODLUST, FREE_MANA, cr)
+        end
+    end
+end
+
 function Routine_ResetAtbOnKillEnraged(side, hero, unit)
     -- log("Trigger reset enraged atb !")
     if GetUnitSide(unit) ~= GetUnitSide(hero) and IsCreature(unit) then
@@ -124,7 +134,6 @@ function Routine_ResetAtbOnKillEnraged(side, hero, unit)
                 if not ROUTINE_VARS.AtbBoosted[cr] then
                     SetATB_ID(cr, ATB_INSTANT)
                     ROUTINE_VARS.AtbBoosted[cr] = not nil
-                    HeroCast_Target(hero, SPELL_BLOODLUST, FREE_MANA, cr)
                     return
                 end
             end
@@ -917,6 +926,7 @@ COMBAT_START_HERO_ROUTINES = {
     [H_KLAUS] = Routine_RetaliationStrike,
     [H_FREYDA] = Routine_CastPrayer,
     -- preserve
+    [H_TALANAR] = Routine_EnragedRighteousMight,
     [H_FINDAN] = Routine_HunterRandomShoot,
     [H_WYNGAAL] = Routine_MoveForwardUnits,
     [H_DIRAEL] = Routine_CastSummonHive,

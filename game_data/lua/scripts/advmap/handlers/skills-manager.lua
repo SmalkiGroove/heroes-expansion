@@ -35,7 +35,16 @@ function StatPerLevelDivisor(level, base, divisor)
 end
 
 
-ABSOLUTE_MASTERIES = {H_ISABEL=0, H_TALANAR=0, H_EBBA=0, H_THEODORUS=0, H_SINITAR=0, H_RAVEN=0, H_NYMUS=0, H_TELSEK=0}
+ABSOLUTE_MASTERIES = {
+    H_DUNCAN=0, H_ISABEL=0,
+    H_TALANAR=0, H_MELODIA=0,
+    H_INGVAR=0, H_EBBA=0,
+    H_THEODORUS=0,
+    H_RAELAG=0, H_SINITAR=0,
+    H_XERXON=0, H_RAVEN=0,
+    H_NYMUS=0, H_ORLANDO=0,
+    H_TELSEK=0,
+}
 function CheckForAbsolute(player, hero)
     -- log("$ CheckForAbsolute")
     if ABSOLUTE_MASTERIES[hero] then

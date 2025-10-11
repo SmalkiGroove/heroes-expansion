@@ -2003,10 +2003,10 @@
 					</Bonuses>
 					<DamageAbsorbtionPerHeroSkill>
 						<Item>0</Item>
+						<Item>25</Item>
 						<Item>30</Item>
+						<Item>35</Item>
 						<Item>40</Item>
-						<Item>50</Item>
-						<Item>60</Item>
 					</DamageAbsorbtionPerHeroSkill>
 					<HealthToRageTransferCoef>1500</HealthToRageTransferCoef>
 				</DemonRage>
@@ -2017,9 +2017,9 @@
 				<SacrificeGoblin_ManaRestorePerHP>2</SacrificeGoblin_ManaRestorePerHP>
 				<SacrificeGoblinMaxTimesStacked>5</SacrificeGoblinMaxTimesStacked>
 				<ThrowerRange>1</ThrowerRange>
-				<ShamanAttackIncrease>1</ShamanAttackIncrease>
-				<ShamanDefenceIncrease>1</ShamanDefenceIncrease>
-				<ShamanMoraleIncrease>1</ShamanMoraleIncrease>
+				<ShamanAttackIncrease>2</ShamanAttackIncrease>
+				<ShamanDefenceIncrease>2</ShamanDefenceIncrease>
+				<ShamanMoraleIncrease>2</ShamanMoraleIncrease>
 				<Treachery>30</Treachery>
 				<PresenceOfCommanderInitiativeInc>1</PresenceOfCommanderInitiativeInc>
 				<FierceRetaliationCoef>2</FierceRetaliationCoef>
@@ -2322,8 +2322,8 @@
 				<PathOfWar_MovePointsBonus>250</PathOfWar_MovePointsBonus>
 				<LuckOfTheBarbarian_MagicProofPerLuck>0.10</LuckOfTheBarbarian_MagicProofPerLuck>
 				<StunningBlow_ATBDrop>0.20</StunningBlow_ATBDrop>
-				<DefendUsAll_CreatureToCount>CREATURE_ORC_SLAYER</DefendUsAll_CreatureToCount>
-				<DefendUsAll_CreatureCountMultiplier>10</DefendUsAll_CreatureCountMultiplier>
+				<DefendUsAll_CreatureToCount>CREATURE_180</DefendUsAll_CreatureToCount>
+				<DefendUsAll_CreatureCountMultiplier>0</DefendUsAll_CreatureCountMultiplier>
 				<GoblinSupport_GoblinsIncomePerDay>3</GoblinSupport_GoblinsIncomePerDay>
 				<Bodybuilding_HPBonusPercent>0</Bodybuilding_HPBonusPercent>
 				<VoiceTraining_WarcryCostDiscount>0.2</VoiceTraining_WarcryCostDiscount>
@@ -2655,8 +2655,8 @@
 				</Battlecry_SpeedBonus>
 				<Battlecry_OffenceBonus>
 					<Base>5</Base>
-					<LevelDivisor>255</LevelDivisor>
-					<PerDividedLevel>1</PerDividedLevel>
+					<LevelDivisor>1</LevelDivisor>
+					<PerDividedLevel>0</PerDividedLevel>
 				</Battlecry_OffenceBonus>
 				<ShoutOfMany_DamagePerCreatureInArmy>0.5</ShoutOfMany_DamagePerCreatureInArmy>
 				<ShoutOfMany_ShockwaveMoveTime>0.5</ShoutOfMany_ShockwaveMoveTime>

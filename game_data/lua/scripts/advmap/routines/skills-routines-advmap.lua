@@ -406,16 +406,6 @@ function Routine_CheckLordOfTheUndead(player, hero, mastery)
     end
 end
 
-function Routine_CheckDefendUsAll(player, hero, mastery)
-    log("$ Routine_CheckDefendUsAll")
-    local value = 2 * mastery
-    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_DEFEND_US_ALL]
-    if diff ~= 0 then
-        AddHeroStatAmount(player, hero, STAT_ATTACK, diff)
-        HERO_SKILL_BONUSES[hero][SKILLBONUS_DEFEND_US_ALL] = value
-    end
-end
-
 function Routine_CheckSheerStrength(player, hero, mastery)
     log("$ Routine_CheckSheerStrength")
     local value = 2 * mastery
@@ -690,7 +680,7 @@ end
 
 function Routine_BattleCommanderWeeklyDancers(player, hero, mastery)
     log("$ Routine_BattleCommanderWeeklyDancers")
-    local amount = 27 + 12 * WEEKS
+    local amount = 19 + WEEKS
     AddHeroCreatureType(player, hero, PRESERVE, 1, amount, 2)
 end
 
@@ -706,10 +696,15 @@ function Routine_HauntingWeeklyGhosts(player, hero, mastery)
     end
 end
 
-function Routine_DefendUsAllWeeklyWarriors(player, hero, mastery)
-    log("$ Routine_DefendUsAllWeeklyWarriors")
-    local amount = 17 + 7 * WEEKS
-    AddHeroCreatureType(player, hero, STRONGHOLD, 3, amount, 1)
+function Routine_DefendUsAllWeekly(player, hero, mastery)
+    log("$ Routine_DefendUsAllWeekly")
+    for _,goblin in CREATURES_BY_FACTION[STRONGHOLD][1] do
+        if GetHeroCreatures(hero, goblin) > 0 then
+            RemoveHeroCreatures(hero, goblin, 1)
+            AddHeroCreatureType(player, hero, STRONGHOLD, 3, 10, 1)
+            AddHeroCreatureType(player, hero, STRONGHOLD, 5, 1, 1)
+        end
+    end
 end
 
 function Routine_InfusionWeeklyMana(player, hero, mastery)
@@ -813,7 +808,6 @@ START_TRIGGER_SKILLS_ROUTINES = {
     [SKILL_ARTIFICIER] = Routine_CheckArtificier,
     [SKILL_SPIRITISM] = Routine_CheckSpiritism,
     [PERK_PRECISION] = Routine_CheckPrecision,
-    [PERK_HOLD_GROUND] = Routine_CheckHoldGround,
     [PERK_BALLISTICS] = Routine_CheckBallistics,
     [PERK_ANATOMY] = Routine_CheckAnatomy,
     [PERK_INTELLIGENCE] = Routine_CheckIntelligence,
@@ -831,14 +825,12 @@ START_TRIGGER_SKILLS_ROUTINES = {
     [PERK_HEROES_LEGACY] = Routine_HeroesLegacy,
     [PERK_MYTHOLOGY] = Routine_Mythology,
     [PERK_IMBUE_ARROW] = Routine_CheckImbueArrow,
-    [PERK_IMBUE_BALLISTA] = Routine_CheckImbueBallista,
     [PERK_BATTLE_COMMANDER] = Routine_CheckBattleCommander,
     [PERK_KNOW_YOUR_ENEMY] = Routine_CheckKnowYourEnemy,
     [PERK_FINE_RUNE] = Routine_CheckFineRune,
     [PERK_REFRESH_RUNE] = Routine_CheckRefreshRune,
     [PERK_GREATER_RUNE] = Routine_CheckGreaterRune,
     [PERK_LORD_OF_UNDEAD] = Routine_CheckLordOfTheUndead,
-    [PERK_DEFEND_US_ALL] = Routine_CheckDefendUsAll,
     [PERK_SHEER_STRENGTH] = Routine_CheckSheerStrength,
     [PERK_STAMINA] = Routine_StaminaBuff,
     [PERK_RAGE_AWAKENING] = Routine_RageAwakening,
@@ -870,7 +862,7 @@ WEEKLY_TRIGGER_SKILLS_ROUTINES = {
     [PERK_EMPIRICISM] = Routine_EmpiricismWeeklyBonus,
     [PERK_BATTLE_COMMANDER] = Routine_BattleCommanderWeeklyDancers,
     [PERK_HAUNTING] = Routine_HauntingWeeklyGhosts,
-    [PERK_DEFEND_US_ALL] = Routine_DefendUsAllWeeklyWarriors,
+    [PERK_DEFEND_US_ALL] = Routine_DefendUsAllWeekly,
     [PERK_INFUSION] = Routine_InfusionWeeklyMana,
 }
 

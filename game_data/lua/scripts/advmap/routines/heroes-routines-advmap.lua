@@ -234,7 +234,7 @@ function Routine_ElvenSageVictory(player, hero, combatIndex)
         end
         local n = length(upgradable)
         if n == 0 then
-            -- no skill to upgrade
+            GiveExp(hero, 1000)
         elseif n == 1 then
             GiveHeroSkill(hero, upgradable[1])
         else

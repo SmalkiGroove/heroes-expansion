@@ -21,15 +21,15 @@
 ### Bugs
 
 - [EXE] Shantiri Moon Disc blocks all light magic
-- [LUA] Talanar loses turns when casting righteous might
 - [LUA] Double script activation sometimes
+- [XDB] Magic Filter incorrectly immunes to spells
 
 ### Suggestions
 
 - [?] Add NCF creatures in editor
 - [XDB] Darkstorm hero totem model
 - [XDB] Add ARMG templates
-- [LUA] Tavern mapobject has town portal effect
+- [LUA] Give Tavern mapobject the town portal effect
 
 ### Balance
 
@@ -121,8 +121,6 @@
 - Kilghan goblin summon with atb
 - Crash when loading games sometimes
 - Kujin sacrifice goblins rework
-- Nerf War path
-- Nerf viking shield
 - Immunity should clean everything
 - Lower damage diff between magic levels
-- Buff conjure phoenix
+- Talanar loses turns when casting righteous might
