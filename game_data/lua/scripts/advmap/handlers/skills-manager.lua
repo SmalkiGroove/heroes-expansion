@@ -54,7 +54,7 @@ function CheckForAbsolute(player, hero)
             n = n + GetHeroSkillMastery(hero, SKILLS_BY_FACTION[f].base)
             for _,sk in SKILLS_BY_FACTION[f].perks do n = n + GetHeroSkillMastery(hero, sk) end
             if n == 6 then
-                GiveHeroSkill(hero, SKILLS_BY_FACTION[f].base)
+                GiveHeroSkill(hero, PERK_ABSOLUTE_MASTERY)
                 ShowFlyingSign("/Text/Game/Scripts/Skills/Absolute.txt", hero, player, FLYING_SIGN_TIME)
                 ABSOLUTE_MASTERIES[hero] = 1
             end
