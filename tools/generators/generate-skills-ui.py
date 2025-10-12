@@ -88,6 +88,7 @@ coordinates_skills = {
   '022000': [100, 45],
   '023000': [5, 45],
   '024000': [150, 45],
+  '025000': [100, 45],
   '026000': [30, 45],
   '027000': [5, 45],
   '028000': [100, 45],
@@ -184,7 +185,7 @@ coordinates_skills = {
   '117000': [104, 68],
   '118000': [150, 45],
   '119000': [430, 68],
-  '120000': [224, 26],
+  '217000': [30, 45],
   '121000': [104, 26],
   '122000': [55, 45],
   '123000': [30, 45],
@@ -254,9 +255,7 @@ coordinates_skills = {
   '180000': [55, 45],
   '181000': [320, 68],
   '182000': [289, 68],
-  '183001': [0, 0],
-  '183002': [0, 0],
-  '183003': [0, 0],
+  '183000': [0, 0],
   '184000': [240, 68],
   '185001': [45, 10],
   '185002': [75, 10],
@@ -290,7 +289,6 @@ coordinates_skills = {
   '206000': [55, 45],
   '207000': [5, 45],
   '210000': [5, 45],
-  '212000': [100, 45],
   '216000': [30, 45],
   '217000': [30, 45],
   '218000': [374, 26],
@@ -384,7 +382,7 @@ def find_icon_size(path:str):
 branches = ["Innates",
             "Courage", "Avenger", "Runelore", "Artificier", "Arcanism", "Necromancy", "Gating", "BloodRage",
             "Offence", "Defense", "Learning", "Sorcery", "LightMagic", "DarkMagic", "DestructiveMagic", "NaturalMagic",
-            "Combat", "Leadership", "Logistics", "Warfare", "ShatterMagic", "Governance", "Training"]
+            "Combat", "Leadership", "Logistics", "Warfare", "ShatterMagic", "Governance", "Training", "Voice", "Spiritism"]
 
 counter = -1
 for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:

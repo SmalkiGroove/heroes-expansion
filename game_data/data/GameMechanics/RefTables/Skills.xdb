@@ -4399,6 +4399,7 @@
 				<spellBuffs/>
 				<BasicSkillID>HERO_SKILL_SPIRITISM</BasicSkillID>
 				<SkillPrerequisites>
+					<Item><Class>HERO_CLASS_STRONGHOLD_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_WITCHCRAFT</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_STRONGHOLD_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_WITCHCRAFT</Item></dependenciesIDs></Item>
 				</SkillPrerequisites>
 				<AIRacesValues>
@@ -7060,7 +7061,7 @@
 					<Item href="/UI/H5A2/Icons/Heroes_Skills/Blood_Rage/Basic_Blood_Rage.(Texture).xdb#xpointer(/Texture)"/>
 					<Item href="/UI/H5A2/Icons/Heroes_Skills/Blood_Rage/Advanced_Blood_Rage.(Texture).xdb#xpointer(/Texture)"/>
 					<Item href="/UI/H5A2/Icons/Heroes_Skills/Blood_Rage/Expert_Blood_Rage.(Texture).xdb#xpointer(/Texture)"/>
-					<Item href="/UI/H5A2/Icons/Heroes_Skills/Blood_Rage/Ultimate_Blood_Rage.(Texture).xdb#xpointer(/Texture)"/>
+					<Item href="/UI/H5A2/Icons/Heroes_Skills/Blood_Rage/Ultimate_Perk_Absolute_Rage.(Texture).xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture href="/UI/H5A2/Icons/Heroes_Skills/Blood_Rage/Basic_Blood_Rage.(Texture).xdb#xpointer(/Texture)"/>
 				<NameFileRef>
@@ -7220,7 +7221,7 @@
 			<obj>
 				<Texture>
 					<Item/>
-					<Item href="/UI/H5A2/Icons/Heroes_Skills/Blood_Rage/Ultimate_Perk_Absolute_Rage.(Texture).xdb#xpointer(/Texture)"/>
+					<Item href="/UI/H5A2/Icons/Heroes_Skills/Blood_Rage/Ultimate_Blood_Rage.(Texture).xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -8911,6 +8912,7 @@
 				<spellBuffs/>
 				<BasicSkillID>HERO_SKILL_SPIRITISM</BasicSkillID>
 				<SkillPrerequisites>
+					<Item><Class>HERO_CLASS_STRONGHOLD_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_RAGE_AWAKENING</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_STRONGHOLD_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_RAGE_AWAKENING</Item></dependenciesIDs></Item>
 				</SkillPrerequisites>
 				<AIRacesValues>
