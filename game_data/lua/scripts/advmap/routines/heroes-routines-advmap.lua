@@ -3,10 +3,24 @@
 ---------------------------------------------------------------------------------------------------------------------------------------------
 -- HAVEN
 
-function Routine_AddHeroCavaliers(player, hero)
-    log("$ Routine_AddHeroCavaliers")
-    local amount = round(0.11 * GetHeroLevel(hero))
-    AddHeroCreatureType(player, hero, HAVEN, 6, amount, 1)
+function Routine_BuildAndRevealStables(player, hero)
+    log("$ Routine_BuildAndRevealStables")
+    for town,data in MAP_TOWNS do
+        if IsHeroInTown(hero, town, 1, 1) then
+            if data.faction == HAVEN then
+                local stables = GetTownBuildingLevel(town, TOWN_BUILDING_HAVEN_STABLE)
+                if stables == 0 then
+                    UpgradeTownBuilding(town, TOWN_BUILDING_HAVEN_STABLE)
+                else
+                    AddHeroCreatureType(player, hero, HAVEN, 6, 1, 1)
+                end
+            end
+        end
+    end
+    for _,obj in GetObjectNamesByType("BUILDING_STABLES") do
+        local x,y,z = GetObjectPosition(obj)
+        OpenCircleFog(x, y, z, 5, player)
+    end
 end
 
 function Routine_AddRecruitsPeasants(player, hero)
@@ -21,8 +35,8 @@ function Routine_AddRecruitsPeasants(player, hero)
     end
 end
 
-function Routine_DoublePeasantTax(player, hero)
-    log("$ Routine_DoublePeasantTax")
+function Routine_PeasantTaxLevel(player, hero, level)
+    log("$ Routine_PeasantTaxLevel")
     local amount = 0
     amount = amount + GetHeroCreatures(hero, CREATURE_PEASANT)
     amount = amount + GetHeroCreatures(hero, CREATURE_MILITIAMAN)
@@ -839,15 +853,25 @@ function Routine_AddHeroHellHounds(player, hero)
     AddHeroCreatureType(player, hero, INFERNO, 3, amount, 1)
 end
 
-function Routine_RestoreManaAfterBattle(player, hero, combatIndex)
-    log("$ Routine_RestoreManaAfterBattle")
-    ChangeHeroStat(hero, STAT_MANA_POINTS, GetHeroLevel(hero))
-end
-
 function Routine_GainAttackPerLevel(player, hero, level)
     log("$ Routine_GainAttackPerLevel")
     if mod(level, 5) == 0 then
         AddHeroStatAmount(player, hero, STAT_ATTACK, 1)
+    end
+end
+
+function Routine_BuildInfernalLoom(player, hero)
+    log("$ Routine_BuildInfernalLoom")
+    for town,data in MAP_TOWNS do
+        if IsHeroInTown(hero, town, 1, 1) then
+            if data.faction == INFERNO then
+                if GetTownBuildingLevel(town, TOWN_BUILDING_INFERNO_INFERNAL_LOOM) == 0 then
+                    UpgradeTownBuilding(town, TOWN_BUILDING_INFERNO_INFERNAL_LOOM)
+                else
+                    ChangeHeroStat(hero, STAT_EXPERIENCE, 5000)
+                end
+            end
+        end
     end
 end
 
@@ -862,9 +886,10 @@ function Routine_AgraelVictoryCounter(player, hero, combatIndex)
     end
 end
 
-function Routine_AddHeroSuccubus(player, hero)
+function Routine_AddHeroSuccubus(player, hero, level)
     log("$ Routine_AddHeroSuccubus")
-    AddHeroCreatureType(player, hero, INFERNO, 4, GetHeroLevel(hero), 1)
+    local nb = 1 + trunc(0.34 * level)
+    AddHeroCreatureType(player, hero, INFERNO, 4, nb, 1)
 end
 
 function Routine_GainBonusExpAndRes(player, hero, combatIndex)
@@ -884,38 +909,34 @@ end
 function Routine_TownBuildingUp(player, hero)
     log("$ Routine_TownBuildingUp")
     if IsAIPlayer(player) then return end
-    local level = GetHeroLevel(hero)
+    local mult = 1 - 0.01 * GetHeroLevel(hero)
+    local buildings = {
+        [TOWN_BUILDING_DWELLING_1] = {round(1500 * mult), round(3500 * mult)},
+        [TOWN_BUILDING_DWELLING_2] = {round(2250 * mult), round(5250 * mult)},
+        [TOWN_BUILDING_DWELLING_3] = {round(3000 * mult), round(7000 * mult)},
+        [TOWN_BUILDING_DWELLING_4] = {round(4500 * mult), round(10500 * mult)},
+        [TOWN_BUILDING_DWELLING_5] = {round(6500 * mult), round(14500 * mult)},
+        [TOWN_BUILDING_DWELLING_6] = {round(10000 * mult), round(20000 * mult)},
+        [TOWN_BUILDING_DWELLING_7] = {round(17500 * mult), round(32500 * mult)},
+    }
+    local name_root = "/Text/Game/TownBuildings/Inferno/"
+    local name_file = {
+        [TOWN_BUILDING_DWELLING_1] = {"Dwelling_1/Name.txt", "Dwelling_1/Upgraded_Name.txt"},
+        [TOWN_BUILDING_DWELLING_2] = {"Dwelling_2/Name.txt", "Dwelling_2/Upgraded_Name.txt"},
+        [TOWN_BUILDING_DWELLING_3] = {"Dwelling_3/Name.txt", "Dwelling_3/Upgraded_Name.txt"},
+        [TOWN_BUILDING_DWELLING_4] = {"Dwelling_4/Name.txt", "Dwelling_4/Upgraded_Name.txt"},
+        [TOWN_BUILDING_DWELLING_5] = {"Dwelling_5/Name.txt", "Dwelling_5/Upgraded_Name.txt"},
+        [TOWN_BUILDING_DWELLING_6] = {"Dwelling_6/Name.txt", "Dwelling_6/Upgraded_Name.txt"},
+        [TOWN_BUILDING_DWELLING_7] = {"Dwelling_7/Name.txt", "Dwelling_7/Upgraded_Name.txt"},
+    }
     for town,data in MAP_TOWNS do
         if data.faction == INFERNO then
             if IsHeroInTown(hero, town, 1, 0) then
-                local buildings = {
-                    [TOWN_BUILDING_MARKETPLACE] = {500, 4500},
-                    [TOWN_BUILDING_DWELLING_1] = {1500, 3500},
-                    [TOWN_BUILDING_DWELLING_2] = {2250, 5250},
-                    [TOWN_BUILDING_DWELLING_3] = {3000, 7000},
-                    [TOWN_BUILDING_DWELLING_4] = {4500, 10500},
-                    [TOWN_BUILDING_DWELLING_5] = {6500, 14500},
-                    [TOWN_BUILDING_DWELLING_6] = {10000, 20000},
-                    [TOWN_BUILDING_DWELLING_7] = {17500, 32500},
-                    [TOWN_BUILDING_INFERNO_INFERNAL_LOOM] = {3000},
-                }
-                local name_root = "/Text/Game/TownBuildings/Inferno/"
-                local name_file = {
-                    [TOWN_BUILDING_MARKETPLACE] = {"Marketplace/Name.txt", "Marketplace/Resource_Silo_Name.txt"},
-                    [TOWN_BUILDING_DWELLING_1] = {"Dwelling_1/Name.txt", "Dwelling_1/Upgraded_Name.txt"},
-                    [TOWN_BUILDING_DWELLING_2] = {"Dwelling_2/Name.txt", "Dwelling_2/Upgraded_Name.txt"},
-                    [TOWN_BUILDING_DWELLING_3] = {"Dwelling_3/Name.txt", "Dwelling_3/Upgraded_Name.txt"},
-                    [TOWN_BUILDING_DWELLING_4] = {"Dwelling_4/Name.txt", "Dwelling_4/Upgraded_Name.txt"},
-                    [TOWN_BUILDING_DWELLING_5] = {"Dwelling_5/Name.txt", "Dwelling_5/Upgraded_Name.txt"},
-                    [TOWN_BUILDING_DWELLING_6] = {"Dwelling_6/Name.txt", "Dwelling_6/Upgraded_Name.txt"},
-                    [TOWN_BUILDING_DWELLING_7] = {"Dwelling_7/Name.txt", "Dwelling_7/Upgraded_Name.txt"},
-                    [TOWN_BUILDING_INFERNO_INFERNAL_LOOM] = {"Special_1/Name.txt"},
-                }
                 for k,v in buildings do
                     local cur = GetTownBuildingLevel(town, k)
                     if cur < length(v) then
                         local cost = v[cur+1]
-                        if (750 * level >= cost) and (GetPlayerResource(player, GOLD) >= cost) then
+                        if GetPlayerResource(player, GOLD) >= cost then
                             local name = name_root..name_file[k][cur+1]
                             QuestionBoxForPlayers(
                                 GetPlayerFilter(player),
@@ -1080,6 +1101,7 @@ START_TRIGGER_HERO_ROUTINES = {
     -- haven
     [H_ISABEL] = Routine_AddTwoLuckPoints,
     [H_ALARIC] = Routine_UpgradeMonastery,
+    [H_KLAUS] = Routine_BuildAndRevealStables,
     -- preserve
     -- fortress
     [H_WULFSTAN] = Routine_GiveArtifactRingOfMachineAffinity,
@@ -1094,6 +1116,7 @@ START_TRIGGER_HERO_ROUTINES = {
     [H_ARCHILUS] = Routine_BuildDragonTombstone,
     [H_SANDRO] = Routine_GiveSandrosCloak,
     -- inferno
+    [H_NYMUS] = Routine_BuildInfernalLoom,
     -- stronghold
     [H_GARUNA] = Routine_GiveArtifactCentaurCrossbow,
     [H_GORSHAK] = Routine_UpgradeChamberOfWrath,
@@ -1102,7 +1125,6 @@ START_TRIGGER_HERO_ROUTINES = {
 DAILY_TRIGGER_HERO_ROUTINES = {
     -- haven
     [H_DOUGAL] = Routine_TrainPeasantsToArchersCheck,
-    [H_MAEVE] = Routine_DoublePeasantTax,
     [H_GABRIELLE] = Routine_MovePointsPerGriffin,
     -- preserve
     -- fortress
@@ -1133,7 +1155,6 @@ WEEKLY_TRIGGER_HERO_ROUTINES = {
     -- haven
     [H_DOUGAL] = Routine_EnableTrainPeasantsToArchers,
     [H_MAEVE] = Routine_AddRecruitsPeasants,
-    [H_KLAUS] = Routine_AddHeroCavaliers,
     [H_NICOLAI] = Routine_GainExpFromTotalGolds,
     -- preserve
     [H_KYRRE] = Routine_AddHeroExperience,
@@ -1164,6 +1185,7 @@ WEEKLY_TRIGGER_HERO_ROUTINES = {
 
 LEVEL_UP_HERO_ROUTINES_HERO = {
     -- haven
+    [H_MAEVE] = Routine_PeasantTaxLevel,
     [H_NICOLAI] = Routine_GainPrimaryStats,
     -- preserve
     [H_VINRAEL] = Routine_UpgradeDragonAltar,
@@ -1208,7 +1230,6 @@ AFTER_COMBAT_TRIGGER_HERO_ROUTINES = {
     [H_XERXON] = Routine_ResurrectBlackKnight,
     [H_LUCRETIA] = Routine_LearnDarkMagic,
     -- inferno
-    [H_SHELTEM] = Routine_RestoreManaAfterBattle,
     [H_AGRAEL] = Routine_AgraelVictoryCounter,
     [H_ORLANDO] = Routine_GainBonusExpAndRes,
     -- stronghold

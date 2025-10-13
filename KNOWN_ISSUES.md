@@ -30,6 +30,7 @@
 - [XDB] Darkstorm hero totem model
 - [XDB] Add ARMG templates
 - [LUA] Give Tavern mapobject the town portal effect
+- [EXE] Malustar add ice-proof
 
 ### Balance
 
