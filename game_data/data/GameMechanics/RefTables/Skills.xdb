@@ -3730,22 +3730,22 @@
 			<ID>HERO_SKILL_ABSOLUTE_MASTERY</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Skills/xUltimate.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Skills/xUltimate.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Feats/Warlock/Learning_DarkRevelation_grey.(Texture).xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Feats/Warlock/Learning_DarkRevelation.(Texture).xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
-					<Item href="/Text/Game/Skills/Unique/Spiritism/RageAwakening/Name.txt"/>
+					<Item href="/Text/Game/Skills/Innates/Absolute/Name.txt"/>
 				</NameFileRef>
 				<CommonNameFileRef href=""/>
 				<DescriptionFileRef>
-					<Item href="/Text/Game/Skills/Unique/Spiritism/RageAwakening/Description.txt"/>
+					<Item href="/Text/Game/Skills/Innates/Absolute/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_NONE</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Haven>
@@ -8102,7 +8102,7 @@
 				<spellBuffs>
 					<Item>SPELL_REGENERATION</Item>
 				</spellBuffs>
-				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
+				<BasicSkillID>HERO_SKILL_AVENGER</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Haven>
@@ -8812,11 +8812,11 @@
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
-					<Item href="/Text/Game/Skills/Common/LightMagic/StormWind/Name.txt"/>
+					<Item href="/Text/Game/Skills/Unique/Gating/InfernalPortals/Name.txt"/>
 				</NameFileRef>
 				<CommonNameFileRef href=""/>
 				<DescriptionFileRef>
-					<Item href="/Text/Game/Skills/Common/LightMagic/StormWind/Description.txt"/>
+					<Item href="/Text/Game/Skills/Unique/Gating/InfernalPortals/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
@@ -8900,11 +8900,11 @@
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
-					<Item href="/Text/Game/Skills/Unique/DemonicRage/2/Name.txt"/>
+					<Item href="/Text/Game/Skills/Unique/Spiritism/AdvancedBloodRage/Name.txt"/>
 				</NameFileRef>
 				<CommonNameFileRef href=""/>
 				<DescriptionFileRef>
-					<Item href="/Text/Game/Skills/Unique/DemonicRage/2/Description.txt"/>
+					<Item href="/Text/Game/Skills/Unique/Spiritism/AdvancedBloodRage/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>

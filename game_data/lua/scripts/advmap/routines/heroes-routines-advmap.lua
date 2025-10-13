@@ -833,11 +833,6 @@ end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 -- INFERNO
 
-function Routine_NightmareWeeklyProd(player, hero)
-    log("$ Routine_NightmareWeeklyProd")
-    AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_5, CREATURE_NIGHTMARE, 1)
-end
-
 function Routine_AddHeroHellHounds(player, hero)
     log("$ Routine_AddHeroHellHounds")
     local amount = round(0.90 * GetHeroLevel(hero))
@@ -1161,7 +1156,6 @@ WEEKLY_TRIGGER_HERO_ROUTINES = {
     [H_RAVEN] = Routine_AddRecruitsNecropolis,
     [H_XERXON] = Routine_AddHeroBlackKnight,
     -- inferno
-    [H_GROK] = Routine_NightmareWeeklyProd,
     [H_GRAWL] = Routine_AddHeroHellHounds,
     -- stronghold
     [H_GARUNA] = Routine_AddRecruitsCentaurs,
