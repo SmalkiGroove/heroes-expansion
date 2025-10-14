@@ -33,6 +33,8 @@ ROUTINE_VARS = {
     BallistaCommanders = {},
 }
 
+SUMMON_ID = 0
+
 RANGED_CREATURES = {
     3, 4, 107, 9, 10, 110,
     21, 22, 134,

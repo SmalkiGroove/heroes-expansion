@@ -9,6 +9,7 @@
 ### Broken graphics or animations
 
 - [EXE] Consume Corpse camera glitch
+- [XDB] Swaped town dwellings wrong model
 
 ### Text issues
 

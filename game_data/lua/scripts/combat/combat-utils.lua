@@ -128,26 +128,16 @@ function TryShootTarget(unit, target, delay)
     return unit ~= CURRENT_UNIT
 end
 
-function SummonCreatureStack(side, type, amount)
+function SummonCreatureSideOffset(side, type, amount, offset, name)
     if amount > 0 then
-        SummonCreature(side, type, amount)
-        sleep(1)
-    end
-end
-
-function SummonCreatureStack_X(side, type, amount, offset)
-    if amount > 0 then
+        SUMMON_ID = SUMMON_ID + 1
+        if not name then name = "side-"..side.."_creature-"..type.."_"..SUMMON_ID end
         local x = (side == ATTACKER) and (GRID_X_MIN + offset) or (GRID_X_MAX - offset)
-        SummonCreature(side, type, amount, x)
-        sleep(1)
+        SummonCreature(side, type, amount, x, -1, 1, name)
+        repeat sleep() until exist(name)
+        return name
     end
-end
-
-function SummonCreatureStack_XY(side, type, amount, x, y)
-    if amount > 0 then
-        SummonCreature(side, type, amount, x, y)
-        sleep(1)
-    end
+    return nil
 end
 
 function SetATB_ID(id, value)
@@ -170,6 +160,23 @@ function SetATB_WarMachineType(side, type, value)
             setATB(wm, value)
         end
     end
+end
+
+function IncreaseCreatureStack(side, types, amount)
+    local creatures = GetUnits(side, CREATURE)
+    for i,cr in creatures do
+        local type = GetCreatureType(cr)
+        if contains(types, type) then
+            local nb = GetCreatureNumber(cr) + amount
+            local x,y = GetUnitPosition(cr)
+            RemoveCombatUnit(cr)
+            repeat sleep() until not exist(cr)
+            AddCreature(side, type, nb, x, y, nil, cr)
+            repeat sleep() until exist(cr)
+            return cr
+        end
+    end
+    return nil
 end
 
 function IsCreature2x2(unit)
@@ -224,6 +231,14 @@ end
 function InitializeRandomSeed()
     RANDOM_SEED = RANDOM_SEED + HERO_DATA[0].Level
     RANDOM_SEED = RANDOM_SEED + HERO_DATA[1].Level
+end
+
+function Win()
+    for side = 0,1 do
+        if GetHost(side) == COMPUTER then
+            Finish(1-side)
+        end
+    end
 end
 
 

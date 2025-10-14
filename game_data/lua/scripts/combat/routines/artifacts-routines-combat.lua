@@ -56,7 +56,7 @@ function Routine_ArtfsetBestial(side, hero)
     local beast = beasts[random(1,8,0)]
     local tier = CREATURES[beast][2]
     local amount = 0.5 * ((10-tier) * (10-tier) * (10-tier) + tier)
-    SummonCreatureStack_X(side, beast, amount, 4)
+    SummonCreatureSideOffset(side, beast, amount, 4)
 end
 
 function Routine_ArtfsetGenji1(side, hero, unit)
@@ -85,14 +85,25 @@ function Routine_ArtfsetDragon4(side, hero, unit)
     if GetUnitSide(unit) == side then
         sleep(random(1,30,GetCreatureNumber(unit)))
         if ROUTINE_VARS.Legendragon[side] then return end
-        ROUTINE_VARS.Legendragon[side] = 1
         local tier = CREATURES[GetCreatureType(unit)][2]
         local threshold = 0.5 * (8 - tier) * (9 - tier)
         if ROUTINE_VARS.InitialCounts[unit] and ROUTINE_VARS.InitialCounts[unit] > threshold then
+            ROUTINE_VARS.Legendragon[side] = 1
+            local name = "creature_DRAGON-SET_"..side
             local amount = GetHeroLevel(side)
-            if GetHeroName(hero) == H_RAELAG then amount = 2 * amount end
-            SummonCreatureStack_X(side, CREATURE_LEGENDARY_DRAGON, amount, 3)
-            SetATB_CreatureTypes(side, {CREATURE_LEGENDARY_DRAGON}, ATB_HALF)
+            if GetHeroName(hero) == H_RAELAG then
+                local cr = IncreaseCreatureStack(side, CREATURES_BY_FACTION[DUNGEON][7], 1)
+                if cr then
+                    SetATB_ID(cr, ATB_NEXT)
+                    startThread(playAnimation, cr, "happy", ONESHOT)
+                else
+                    SummonCreatureSideOffset(side, CREATURE_DEEP_DRAGON, amount, 3, name)
+                    SetATB_ID(name, ATB_HALF)
+                end
+            else
+                SummonCreatureSideOffset(side, CREATURE_LEGENDARY_DRAGON, amount, 3, name)
+                SetATB_ID(name, ATB_HALF)
+            end
         end
     end
 end
@@ -103,10 +114,21 @@ function Routine_ArtfsetDragon6(side, hero, unit)
         sleep(random(1,30,GetCreatureNumber(unit)))
         if ROUTINE_VARS.Legendragon[side] then return end
         ROUTINE_VARS.Legendragon[side] = 1
+        local name = "creature_DRAGON-SET_"..side
         local amount = GetHeroLevel(side)
-        if GetHeroName(hero) == H_RAELAG then amount = 2 * amount end
-        SummonCreatureStack_X(side, CREATURE_LEGENDARY_DRAGON, amount, 3)
-        SetATB_CreatureTypes(side, {CREATURE_LEGENDARY_DRAGON}, ATB_HALF)
+        if GetHeroName(hero) == H_RAELAG then
+            local cr = IncreaseCreatureStack(side, CREATURES_BY_FACTION[DUNGEON][7], 1)
+            if cr then
+                SetATB_ID(cr, ATB_NEXT)
+                startThread(playAnimation, cr, "happy", ONESHOT)
+            else
+                SummonCreatureSideOffset(side, CREATURE_DEEP_DRAGON, amount, 3, name)
+                SetATB_ID(name, ATB_HALF)
+            end
+        else
+            SummonCreatureSideOffset(side, CREATURE_LEGENDARY_DRAGON, amount, 3, name)
+            SetATB_ID(name, ATB_HALF)
+        end
     end
 end
 
@@ -114,10 +136,21 @@ function Routine_ArtfsetDragon8(side, hero)
     log("$ Routine_ArtfsetDragon8")
     if ROUTINE_VARS.Legendragon[side] then return end
     ROUTINE_VARS.Legendragon[side] = 1
+    local name = "creature_DRAGON-SET_"..side
     local amount = GetHeroLevel(side)
-    if GetHeroName(hero) == H_RAELAG then amount = 2 * amount end
-    SummonCreatureStack_X(side, CREATURE_LEGENDARY_DRAGON, amount, 3)
-    SetATB_CreatureTypes(side, {CREATURE_LEGENDARY_DRAGON}, ATB_NEXT)
+    if GetHeroName(hero) == H_RAELAG then
+        local cr = IncreaseCreatureStack(side, CREATURES_BY_FACTION[DUNGEON][7], 1)
+        if cr then
+            SetATB_ID(cr, ATB_NEXT)
+            startThread(playAnimation, cr, "happy", ONESHOT)
+        else
+            SummonCreatureSideOffset(side, CREATURE_DEEP_DRAGON, amount, 3, name)
+            SetATB_ID(name, ATB_NEXT)
+        end
+    else
+        SummonCreatureSideOffset(side, CREATURE_LEGENDARY_DRAGON, amount, 3, name)
+        SetATB_ID(name, ATB_NEXT)
+    end
 end
 
 

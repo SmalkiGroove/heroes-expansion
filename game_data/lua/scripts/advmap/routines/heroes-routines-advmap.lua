@@ -183,6 +183,22 @@ function Routine_KyrreVictoryCounter(player, hero, combatIndex)
     Var_Kyrre_BattleWon = Var_Kyrre_BattleWon + 1
 end
 
+function Routine_UpgradeAvengersGuild(player, hero)
+    log("$ Routine_UpgradeAvengersGuild")
+    for town,data in MAP_TOWNS do
+        if IsHeroInTown(hero, town, 1, 1) then
+            if data.faction == PRESERVE then
+                if GetTownBuildingLevel(town, TOWN_BUILDING_PRESERVE_AVENGERS_BROTHERHOOD) < 2 then
+                    UpgradeTownBuilding(town, TOWN_BUILDING_PRESERVE_AVENGERS_BROTHERHOOD)
+                else
+                    AddHeroStatAmount(player, hero, STAT_ATTACK, 1)
+                    AddHeroStatAmount(player, hero, STAT_KNOWLEDGE, 1)
+                end
+            end
+        end
+    end
+end 
+
 function Routine_HuntersWeeklyProd(player, hero, combatIndex)
     log("$ Routine_HuntersWeeklyProd")
     local base = 0.5 * GetHeroLevel(hero)
@@ -203,19 +219,40 @@ end
 
 function Routine_AddHeroWolves(player, hero)
     log("$ Routine_AddHeroWolves")
-    AddHeroCreaturePerLevel(player, hero, CREATURE_WOLF, 3.0)
+    AddHeroCreatures(hero, CREATURE_WOLF, 1)
+    if GetDate(DAY_OF_WEEK) == 1 then
+        AddHeroCreatures(hero, CREATURE_WOLF, GetHeroLevel(hero))
+    end
 end
 
-function Routine_UpgradeDragonAltar(player, hero, level)
-    log("$ Routine_UpgradeDragonAltar")
-    if level == 20 or level == 30 then
-        for _,town in GetHeroTowns(player, hero) do
-            local altar = GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_7)
-            if altar < 2 then
-                UpgradeTownBuilding(town, TOWN_BUILDING_DWELLING_7)
-                return
+function Routine_GainAirElementals(player, hero, level)
+    log("$ Routine_GainAirElementals")
+    if mod(level, 4) == 0 then
+        local nb = GetHeroStat(hero, STAT_KNOWLEDGE)
+        AddHeroCreatures(hero, CREATURE_AIR_ELEMENTAL, nb)
+    end
+end
+
+function Routine_UpgradeMagicGuild(player, hero)
+    log("$ Routine_UpgradeMagicGuild")
+    for town,data in MAP_TOWNS do
+        if IsHeroInTown(hero, town, 1, 1) then
+            if data.faction == PRESERVE then
+                local guild = GetTownBuildingLevel(town, TOWN_BUILDING_MAGIC_GUILD)
+                if guild < 5 then UpgradeTownBuilding(town, TOWN_BUILDING_MAGIC_GUILD) end
+                local nb = power(2, guild) - 1
+                AddHeroCreatures(hero, CREATURE_DRUID, nb)
             end
         end
+    end
+end
+
+function Routine_RollbackDruids(player, hero, combatIndex)
+    log("$ Routine_RollbackDruids")
+    local nb = GetHeroCreatures(hero, CREATURE_DRUID_OF_THE_COUNCIL)
+    if nb > 0 then
+        RemoveHeroCreatures(hero, CREATURE_DRUID_OF_THE_COUNCIL, nb) sleep(1)
+        AddHeroCreatures(hero, CREATURE_DRUID, nb)
     end
 end
 
@@ -296,9 +333,21 @@ function Routine_ReviveBearRiders(player, hero, combatIndex)
     ResurrectCreatureType(player, hero, combatIndex, FORTRESS, 4, max)
 end
 
-function Routine_GiveArtifactRingOfMachineAffinity(player, hero)
-    log("$ Routine_GiveArtifactRingOfMachineAffinity")
+function Routine_WorkshopExpertStart(player, hero)
+    log("$ Routine_WorkshopExpertStart")
     GiveArtifact(hero, ARTIFACT_RING_OF_MACHINE_AFFINITY, 1)
+    for town,data in MAP_TOWNS do
+        if IsHeroInTown(hero, town, 1, 1) then
+            if data.faction == FORTRESS then
+                if GetTownBuildingLevel(town, TOWN_BUILDING_BLACKSMITH) == 0 then
+                    UpgradeTownBuilding(town, TOWN_BUILDING_BLACKSMITH)
+                else
+                    GiveHeroWarMachine(hero, WAR_MACHINE_FIRST_AID_TENT)
+                    GiveHeroWarMachine(hero, WAR_MACHINE_AMMO_CART)
+                end
+            end
+        end
+    end
 end
 
 function Routine_GarnisonDwarvenWorkers(player, hero)
@@ -374,14 +423,15 @@ function Routine_GiveArtifactBlazingSpellbook(player, hero, combatIndex)
     end
 end
 
-Var_Ebba_RunicSpells = {}
-function Routine_GiveArtifactRuneOfFlame(player, hero)
+function Routine_GiveArtifactRuneOfFlame(player, hero, level)
     log("$ Routine_GiveArtifactRuneOfFlame")
-    GiveArtifact(hero, ARTIFACT_RUNE_OF_FLAME)
-    for rune,_ in RUNIC_SPELLS do
-        Var_Ebba_RunicSpells[rune] = 0
+    if mod(level, 8) == 0 then
+        GiveArtifact(hero, ARTIFACT_RUNE_OF_FLAME)
     end
 end
+
+Var_Ebba_RunicSpells = {}
+for rune,_ in RUNIC_SPELLS do Var_Ebba_RunicSpells[rune] = 0 end
 
 function Routine_GainStatsPerRune(player, hero)
     log("$ Routine_GainStatsPerRune")
@@ -539,8 +589,16 @@ end
 
 function Routine_GetCraftingResources(player, hero, level)
     log("$ Routine_GetCraftingResources")
-    local res = mod(level, 6)
-    AddPlayerResource(player, hero, res, 2)
+    local max = 1 + trunc(0.5 * level)
+    local res = random(0, max, TURN)
+    if res > 0 then
+        local generated = {[WOOD]=0, [ORE]=0, [MERCURY]=0, [CRYSTAL]=0, [SULFUR]=0, [GEM]=0}
+        for i = 1,res do
+            local r = random(0, 5, level)
+            generated[r] = generated[r] + 1
+        end
+        for r,v in generated do AddPlayerResource(player, hero, r, v) end
+    end
 end
 
 function Routine_IncreaseKnowledgeTemp(hero, obj)
@@ -738,6 +796,22 @@ end
 function Routine_GainMovePointsPerLevel(player, hero, level)
     log("$ Routine_GainMovePointsPerLevel")
     ChangeHeroStat(hero, STAT_MOVE_POINTS, 50 * level)
+end
+
+function Routine_UpgradeCrypt(player, hero)
+    log("$ Routine_UpgradeCrypt")
+    for town,data in MAP_TOWNS do
+        if IsHeroInTown(hero, town, 1, 1) then
+            if data.faction == NECROPOLIS then
+                local crypt = GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_2)
+                if crypt < 2 then
+                    UpgradeTownBuilding(town, TOWN_BUILDING_DWELLING_2)
+                else
+                    AddHeroStatAmount(player, hero, STAT_SPELL_POWER, 3)
+                end
+            end
+        end
+    end
 end
 
 function Routine_ReviveZombies(player, hero, combatIndex)
@@ -1054,10 +1128,36 @@ function Routine_UpgradeChamberOfWrath(player, hero)
     end
 end
 
+function Routine_BuildStrongholdFort(player, hero)
+    log("$ Routine_BuildStrongholdFort")
+    for town,data in MAP_TOWNS do
+        if IsHeroInTown(hero, town, 1, 1) then
+            if data.faction == STRONGHOLD then
+                local fort = GetTownBuildingLevel(town, TOWN_BUILDING_FORT)
+                if fort == 0 then
+                    UpgradeTownBuilding(town, TOWN_BUILDING_FORT)
+                else
+                    AddHeroCreatureType(player, hero, STRONGHOLD, 6, 1, 1)
+                end
+            end
+        end
+    end
+end
+
+Var_ShakKarukat_LastWyvernDay = 1
 function Routine_AddHeroWyverns(player, hero)
     log("$ Routine_AddHeroWyverns")
-    local amount = round(0.22 * GetHeroLevel(hero))
-    AddHeroCreatureType(player, hero, STRONGHOLD, 6, amount, 1)
+    local lvl_reduction = trunc(0.34 * GetHeroLevel(hero))
+    local max_fort = 0
+    for _,town in GetHeroTowns(player, hero) do
+        local fort = GetTownBuildingLevel(town, TOWN_BUILDING_FORT)
+        if fort > max_fort then max_fort = fort end
+    end
+    local delay = 21 - lvl_reduction - 3 * max_fort
+    if TURN >= Var_ShakKarukat_LastWyvernDay + delay then
+        AddHeroCreatureType(player, hero, STRONGHOLD, 6, 1, 1)
+        Var_ShakKarukat_LastWyvernDay = TURN
+    end
 end
 
 function Routine_SacrificeGoblinCorpses(player, hero, combatIndex)
@@ -1103,16 +1203,18 @@ START_TRIGGER_HERO_ROUTINES = {
     [H_ALARIC] = Routine_UpgradeMonastery,
     [H_KLAUS] = Routine_BuildAndRevealStables,
     -- preserve
+    [H_FINDAN] = Routine_UpgradeAvengersGuild,
+    [H_TIERU] = Routine_UpgradeMagicGuild,
     -- fortress
-    [H_WULFSTAN] = Routine_GiveArtifactRingOfMachineAffinity,
+    [H_WULFSTAN] = Routine_WorkshopExpertStart,
     [H_TOLGHAR] = Routine_AddLuckAndMorale,
     [H_ERLING] = Routine_UpgradeRunicShrine,
-    [H_EBBA] = Routine_GiveArtifactRuneOfFlame,
     -- academy
     [H_RISSA] = Routine_RefreshTimeShift,
     -- dungeon
     [H_ERUINA] = Routine_BuildHallOfIntrigue,
     -- necropolis
+    [H_ORSON] = Routine_UpgradeCrypt,
     [H_ARCHILUS] = Routine_BuildDragonTombstone,
     [H_SANDRO] = Routine_GiveSandrosCloak,
     -- inferno
@@ -1120,6 +1222,7 @@ START_TRIGGER_HERO_ROUTINES = {
     -- stronghold
     [H_GARUNA] = Routine_GiveArtifactCentaurCrossbow,
     [H_GORSHAK] = Routine_UpgradeChamberOfWrath,
+    [H_KARUKAT] = Routine_BuildStrongholdFort,
 }
 
 DAILY_TRIGGER_HERO_ROUTINES = {
@@ -1127,6 +1230,7 @@ DAILY_TRIGGER_HERO_ROUTINES = {
     [H_DOUGAL] = Routine_TrainPeasantsToArchersCheck,
     [H_GABRIELLE] = Routine_MovePointsPerGriffin,
     -- preserve
+    [H_IVOR] = Routine_AddHeroWolves,
     -- fortress
     [H_INGVAR] = Routine_AddHeroDefenders,
     [H_ROLF] = Routine_MovePointsPerBear,
@@ -1149,6 +1253,7 @@ DAILY_TRIGGER_HERO_ROUTINES = {
     [H_DELEB] = Routine_GenerateSulfur,
     [H_KHABELETH] = Routine_MultiplyTroops,
     -- stronghold
+    [H_KARUKAT] = Routine_AddHeroWyverns,
 }
 
 WEEKLY_TRIGGER_HERO_ROUTINES = {
@@ -1159,7 +1264,6 @@ WEEKLY_TRIGGER_HERO_ROUTINES = {
     -- preserve
     [H_KYRRE] = Routine_AddHeroExperience,
     [H_FINDAN] = Routine_HuntersWeeklyProd,
-    [H_IVOR] = Routine_AddHeroWolves,
     [H_YLTHIN] = Routine_HeroCallUnicorns,
     -- fortress
     [H_HANGVUL] = Routine_GarnisonDwarvenWorkers,
@@ -1180,7 +1284,6 @@ WEEKLY_TRIGGER_HERO_ROUTINES = {
     [H_GRAWL] = Routine_AddHeroHellHounds,
     -- stronghold
     [H_GARUNA] = Routine_AddRecruitsCentaurs,
-    [H_KARUKAT] = Routine_AddHeroWyverns,
 }
 
 LEVEL_UP_HERO_ROUTINES_HERO = {
@@ -1188,8 +1291,9 @@ LEVEL_UP_HERO_ROUTINES_HERO = {
     [H_MAEVE] = Routine_PeasantTaxLevel,
     [H_NICOLAI] = Routine_GainPrimaryStats,
     -- preserve
-    [H_VINRAEL] = Routine_UpgradeDragonAltar,
+    [H_VINRAEL] = Routine_GainAirElementals,
     -- fortress
+    [H_EBBA] = Routine_GiveArtifactRuneOfFlame,
     -- academy
     [H_DAVIUS] = Routine_UpgradeSilverPavillon,
     [H_THEODORUS] = Routine_GetCraftingResources,
@@ -1212,6 +1316,7 @@ AFTER_COMBAT_TRIGGER_HERO_ROUTINES = {
     [H_ALARIC] = Routine_ConvertPeasantToPriest,
     -- preserve
     [H_KYRRE] = Routine_KyrreVictoryCounter,
+    [H_TIERU] = Routine_RollbackDruids,
     [H_ELLESHAR] = Routine_ElvenSageVictory,
     [H_YLTHIN] = Routine_YlthinVictoryCounter,
     -- fortress

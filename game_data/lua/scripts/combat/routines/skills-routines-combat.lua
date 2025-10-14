@@ -4,12 +4,12 @@ function Routine_Houndmasters(side, hero, id, mastery)
     local level = GetHeroLevel(side)
     local amount = 10 + 2 * level + random(1, level, 99)
     if hero == H_IVOR then
-        SummonCreatureStack_X(side, CREATURE_WOLF, amount, 1) sleep(10)
+        SummonCreatureSideOffset(side, CREATURE_WOLF, amount, 1)
     end
     if hero == H_GRAWL then
-        SummonCreatureStack_X(side, CREATURE_HELL_HOUND, amount+level, 1)
+        SummonCreatureSideOffset(side, CREATURE_HELL_HOUND, amount+level, 1)
     else
-        SummonCreatureStack_X(side, CREATURE_WOLF, amount, 1)
+        SummonCreatureSideOffset(side, CREATURE_WOLF, amount, 1)
     end
 end
 
@@ -20,20 +20,16 @@ function Routine_ElementalBalance(side, hero, id, mastery)
         local type = GetCreatureType(cr)
         if type == CREATURE_AIR_ELEMENTAL then
             local nb = GetCreatureNumber(cr)
-            SummonCreatureStack_X(side, CREATURE_EARTH_ELEMENTAL, nb, 0)
-            sleep(50)
+            SummonCreatureSideOffset(side, CREATURE_EARTH_ELEMENTAL, nb, 0)
         elseif type == CREATURE_EARTH_ELEMENTAL then
             local nb = GetCreatureNumber(cr)
-            SummonCreatureStack_X(side, CREATURE_AIR_ELEMENTAL, nb, 0)
-            sleep(50)
+            SummonCreatureSideOffset(side, CREATURE_AIR_ELEMENTAL, nb, 0)
         elseif type == CREATURE_FIRE_ELEMENTAL then
             local nb = GetCreatureNumber(cr)
-            SummonCreatureStack_X(side, CREATURE_WATER_ELEMENTAL, nb, 0)
-            sleep(50)
+            SummonCreatureSideOffset(side, CREATURE_WATER_ELEMENTAL, nb, 0)
         elseif type == CREATURE_WATER_ELEMENTAL then
             local nb = GetCreatureNumber(cr)
-            SummonCreatureStack_X(side, CREATURE_FIRE_ELEMENTAL, nb, 0)
-            sleep(50)
+            SummonCreatureSideOffset(side, CREATURE_FIRE_ELEMENTAL, nb, 0)
         end
     end
 end

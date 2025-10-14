@@ -254,16 +254,26 @@ end
 
 function Routine_SummonDruidStack(side, hero)
     -- log("Trigger elder druids summoning !")
-    local n = GetHeroLevel(side)
-    local amount = ceil(0.2 * n * n)
-    SummonCreatureStack_X(side, CREATURE_DRUID_OF_THE_COUNCIL, amount, 0)
-    sleep(50)
+    local druid = "none"
+    local number = 0
     for i,cr in GetUnits(side, CREATURE) do
-        if GetCreatureType(cr) == CREATURE_DRUID_OF_THE_COUNCIL then
-            UseCombatAbility(cr, SPELL_ABILITY_POWER_FEED)
-            if GetUnitManaPoints(hero) < GetUnitMaxManaPoints(hero) then
-                UseCombatAbility(cr, SPELL_ABILITY_MANA_FEED)
+        if GetCreatureType(cr) == CREATURE_DRUID then
+            local amount = GetCreatureNumber(cr)
+            if number == 0 or amount < number then
+                druid = cr
+                number = amount
             end
+        end
+    end
+    if druid ~= "none" then
+        local x,y = GetUnitPosition(druid)
+        RemoveCombatUnit(druid)
+        repeat sleep() until not exist(druid)
+        SummonCreature(side, CREATURE_DRUID_OF_THE_COUNCIL, number, x, y, nil, druid)
+        repeat sleep() until exist(druid)
+        UseCombatAbility(druid, SPELL_ABILITY_POWER_FEED)
+        if GetUnitManaPoints(hero) < GetUnitMaxManaPoints(hero) then
+            UseCombatAbility(druid, SPELL_ABILITY_MANA_FEED)
         end
     end
 end
@@ -525,8 +535,8 @@ function Routine_SummonDeadEnnemyCreature(side, hero, unit)
         local type = GetCreatureType(unit)
         local x,y = GetUnitPosition(unit)
         local p = 10 + GetHeroLevel(side)
-        local amount = trunc(ROUTINE_VARS.InitialCounts[unit] * p * 0.01)
-        SummonCreatureStack_XY(side, type, amount, x, y)
+        local amount = ceil(ROUTINE_VARS.InitialCounts[unit] * p * 0.01)
+        SummonCreature(side, type, amount, x, y)
     end
 end
 
@@ -599,9 +609,8 @@ end
 function Routine_SummonAndKillEnnemySkeleton(side, hero)
     -- log("Trigger summon and kill skeleton !")
     local n = length(GetUnits(1-side, CREATURE))
-    SummonCreatureStack_X(1-side, CREATURE_SKELETON, 1, 6)
-    repeat sleep(10) until length(GetUnits(1-side, CREATURE)) == n + 1
-    HeroCast_Target(hero, SPELL_MAGIC_FIST, FREE_MANA, GetUnits(1-side, CREATURE)[n])
+    local cr = SummonCreatureSideOffset(1-side, CREATURE_SKELETON, 1, 6)
+    if cr then HeroCast_Target(hero, SPELL_MAGIC_FIST, FREE_MANA, cr) end
 end
 
 function Routine_SummonZombieStack(side, hero)
@@ -611,7 +620,7 @@ function Routine_SummonZombieStack(side, hero)
         local n = 1 + trunc(1.5 * (GetHeroLevel(side) + turns))
         local type = random(1, 3, COMBAT_TURN)
         local id = CREATURES_BY_FACTION[NECROPOLIS][2][type]
-        SummonCreatureStack(side, id, n)
+        SummonCreature(side, id, n)
         ROUTINE_VARS.TurnMarker = COMBAT_TURN
     end
 end
@@ -678,8 +687,8 @@ function Routine_RaiseUndead(side, hero, unit)
         local type = CreatureToUndead(dead)
         local x,y = GetUnitPosition(unit)
         local p = 10 + GetHeroLevel(side)
-        local amount = trunc(ROUTINE_VARS.InitialCounts[unit] * p * 0.01)
-        SummonCreatureStack_XY(side, type, amount, x, y)
+        local amount = ceil(ROUTINE_VARS.InitialCounts[unit] * p * 0.01)
+        SummonCreature(side, type, amount, x, y)
     end
 end
 
@@ -795,6 +804,11 @@ function Routine_SummonEarthElementals(side, hero)
     end
 end
 
+function TryGating(unit, x, y, table)
+    UnitCastAreaSpell(unit, SPELL_ABILITY_GATING, x, y)
+    table[unit] = 1
+end
+
 function Routine_InfernoGating(side, hero)
     -- log("Trigger inferno gating !")
     local gated_creatures = {}
@@ -807,10 +821,7 @@ function Routine_InfernoGating(side, hero)
             while gated_creatures[cr] == 0 do
                 local x = random(GRID_X_MIN+2, GRID_X_MAX-2, nb)
                 local y = random(GRID_Y_MIN, GRID_Y_MAX, id)
-                startThread(function()
-                    UnitCastAreaSpell(cr, SPELL_ABILITY_GATING, x, y)
-                    gated_creatures[cr] = 1
-                end)
+                startThread(TryGating, cr, x, y, gated_creatures)
                 sleep(7)
             end
         end
@@ -856,9 +867,9 @@ end
 function Routine_SummonGoblinStack(side, hero)
     -- log("Trigger summon goblins !")
     if CURRENT_UNIT == hero then
-        local goblin = "GoblinSpawn-"..COMBAT_TURN
+        local goblin = "Kilghan-GoblinSpawn_"..COMBAT_TURN
         SummonCreature(side, CREATURE_GOBLIN, ROUTINE_VARS.GoblinsTotal, -1, -1, 1, goblin)
-        repeat sleep(1) until IsCombatUnit(goblin)
+        repeat sleep() until exist(goblin)
         SetATB_ID(goblin, ATB_HALF)
     end
 end
@@ -870,8 +881,9 @@ end
 
 function Routine_WatchRageLevelsThread(side, hero)
     local RageLevels = {}
+    local up = nil
     while 1 do
-        local up = nil
+        up = nil
         for i,cr in GetUnits(side, CREATURE) do
             local type = GetCreatureType(cr)
             if CREATURES[type][1] == STRONGHOLD and CREATURES[type][2] ~= 6 then
@@ -883,7 +895,7 @@ function Routine_WatchRageLevelsThread(side, hero)
                 end
             end
         end
-        if up then SetATB_ID(hero, 1) end
+        if up then SetATB_ID(hero, ATB_INSTANT) end
         sleep(100)
     end
 end
