@@ -29,7 +29,17 @@ end
 
 function ActivateHeroTimeShift(player, hero)
     log("$ ActivateHeroTimeShift")
-    
+    local points = GetHeroStat(hero, STAT_MOVE_POINTS)
+    local cost = round(0.001 * points * (51 - GetHeroLevel(hero)))
+    if GetHeroStat(hero, STAT_MANA_POINTS) < cost then
+        ShowFlyingSign("/Text/Game/Scripts/Abilities/InsufficientMana.txt", hero, player, 9)
+        return
+    end
+    ChangeHeroStat(hero, STAT_MANA_POINTS, -cost)
+    ChangeHeroStat(hero, STAT_MOVE_POINTS, -points)
+    for _,h in GetPlayerHeroes(player) do
+        if h ~= hero then ChangeHeroStat(h, STAT_MOVE_POINTS, points) end
+    end
     ControlHeroCustomAbility(hero, CUSTOM_ABILITY_3, CUSTOM_ABILITY_DISABLED)
 end
 

@@ -462,15 +462,23 @@ end
 
 function Routine_TimeShift(side, hero)
     -- log("Trigger time shift !")
-    if CURRENT_UNIT == hero and COMBAT_TURN > 1 then
-        local r = 40 + GetHeroLevel(side)
-        if r > random(0, 100, COMBAT_TURN) then
-            local friendly = RandomCreature(side, COMBAT_TURN)
-            local enemy = RandomCreature(1-side, COMBAT_TURN)
-            SetATB_ID(friendly, ATB_NEXT)
-            ShowFlyingSign("/Text/Game/Scripts/Combat/TimeShift.txt", friendly, 9)
-            SetATB_ID(enemy, ATB_ZERO)
-            ShowFlyingSign("/Text/Game/Scripts/Combat/TimeShift.txt", enemy, 9)
+    if CURRENT_UNIT == hero then
+        if ROUTINE_VARS.TimeShifter then
+            local min = {[0]=0, [1]=0}
+            local max = {[0]=99, [1]=99}
+            min[side] = GetHeroLevel(side)
+            max[1-side] = 99 - GetHeroLevel(side)
+            for team = 0,1 do
+                for i,cr in GetUnits(team, CREATURE) do
+                    local atb = random(min[team], max[team], GetCreatureType(cr))
+                    SetATB_ID(cr, 0.01*atb)
+                end
+            end
+            ShowFlyingSign("/Text/Game/Scripts/Combat/TimeShift.txt", hero, 9)
+            ROUTINE_VARS.TimeShifter = nil
+        else
+            ROUTINE_VARS.TimeShifter = not nil
+            SetATB_ID(hero, ATB_ZERO)
         end
     end
 end

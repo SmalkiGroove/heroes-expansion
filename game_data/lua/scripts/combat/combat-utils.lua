@@ -7,6 +7,11 @@ function HasHeroActiveArtifactSet(id, artfset) return HERO_DATA[id].ArtfSets[art
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
+function InitializeRandomSeed()
+    RANDOM_SEED = RANDOM_SEED + HERO_DATA[0].Level
+    RANDOM_SEED = RANDOM_SEED + HERO_DATA[1].Level
+end
+
 function GetArmySummary()
     for side = 0,1 do
         local creatures = GetUnits(side, CREATURE)
@@ -15,7 +20,7 @@ function GetArmySummary()
             local nb = GetCreatureNumber(cr)
             local x, y = GetUnitPosition(cr)
             ROUTINE_VARS.InitialCounts[cr] = nb
-            RANDOM_SEED = RANDOM_SEED + type + nb + x + y
+            RANDOM_SEED = RANDOM_SEED + side + type + nb + x + y
         end
     end
 end
@@ -227,11 +232,6 @@ function CreatureToUndead(creature)
 	return CREATURES_BY_FACTION[NECROPOLIS][tier][1]
 end
 
-
-function InitializeRandomSeed()
-    RANDOM_SEED = RANDOM_SEED + HERO_DATA[0].Level
-    RANDOM_SEED = RANDOM_SEED + HERO_DATA[1].Level
-end
 
 function Win()
     for side = 0,1 do
