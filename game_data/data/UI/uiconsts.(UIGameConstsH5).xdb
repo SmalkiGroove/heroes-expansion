@@ -750,28 +750,6 @@
 						<TooltipFileRef href="Consts/GameOptions/PageGameCombatTooltip.txt"/>
 						<Options>
 							<Item>
-								<ID>autosave_combat</ID>
-								<Type>OPTION_CHECK_BOX</Type>
-								<NameFileRef href="Consts/GameOptions/GameCombatSaveBeforeCombat/Name.txt"/>
-								<TooltipFileRef href="Consts/GameOptions/GameCombatSaveBeforeCombat/Tooltip.txt"/>
-								<Items/>
-								<ItemsGlobalVar/>
-								<UseItemNameAsValue>false</UseItemNameAsValue>
-								<GlobalVar1>save_before_combat</GlobalVar1>
-								<GlobalVar2/>
-								<DefaultValue1>0</DefaultValue1>
-								<DefaultValue2>0</DefaultValue2>
-								<OptionToDisableID/>
-								<OptionDisableByValue1>0</OptionDisableByValue1>
-								<OptionToDisableValue1>0</OptionToDisableValue1>
-								<DisableByCodeGlobalVar>disable_options_by_multiplayer</DisableByCodeGlobalVar>
-								<LabelsFileRef/>
-								<Hide>false</Hide>
-								<Global>false</Global>
-								<Group/>
-								<Preview>false</Preview>
-							</Item>
-							<Item>
 								<ID>combat_show_grid</ID>
 								<Type>OPTION_CHECK_BOX</Type>
 								<NameFileRef href="Consts/GameOptions/GameCombatShowGrid/Name.txt"/>
@@ -780,28 +758,6 @@
 								<ItemsGlobalVar/>
 								<UseItemNameAsValue>false</UseItemNameAsValue>
 								<GlobalVar1>combat_show_grid</GlobalVar1>
-								<GlobalVar2/>
-								<DefaultValue1>0</DefaultValue1>
-								<DefaultValue2>0</DefaultValue2>
-								<OptionToDisableID/>
-								<OptionDisableByValue1>0</OptionDisableByValue1>
-								<OptionToDisableValue1>0</OptionToDisableValue1>
-								<DisableByCodeGlobalVar/>
-								<LabelsFileRef/>
-								<Hide>false</Hide>
-								<Global>false</Global>
-								<Group/>
-								<Preview>false</Preview>
-							</Item>
-							<Item>
-								<ID>show_atb_value</ID>
-								<Type>OPTION_CHECK_BOX</Type>
-								<NameFileRef href="Consts/GameOptions/GameCombatShowAtbValue/Name.txt"/>
-								<TooltipFileRef href="Consts/GameOptions/GameCombatShowAtbValue/Tooltip.txt"/>
-								<Items/>
-								<ItemsGlobalVar/>
-								<UseItemNameAsValue>false</UseItemNameAsValue>
-								<GlobalVar1>show_atb_value</GlobalVar1>
 								<GlobalVar2/>
 								<DefaultValue1>0</DefaultValue1>
 								<DefaultValue2>0</DefaultValue2>
@@ -981,23 +937,23 @@
 								<Items>
 									<Item>
 										<NameFileRef href="Consts/GameOptions/GameCombatTimeFactor/Item00.txt"/>
-										<Value>1.1</Value>
+										<Value>1</Value>
 									</Item>
 									<Item>
 										<NameFileRef href="Consts/GameOptions/GameCombatTimeFactor/Item01.txt"/>
-										<Value>1.5</Value>
+										<Value>1.25</Value>
 									</Item>
 									<Item>
 										<NameFileRef href="Consts/GameOptions/GameCombatTimeFactor/Item02.txt"/>
-										<Value>2</Value>
+										<Value>1.5</Value>
 									</Item>
 									<Item>
 										<NameFileRef href="Consts/GameOptions/GameCombatTimeFactor/Item03.txt"/>
-										<Value>3</Value>
+										<Value>1.75</Value>
 									</Item>
 									<Item>
 										<NameFileRef href="Consts/GameOptions/GameCombatTimeFactor/Item04.txt"/>
-										<Value>5</Value>
+										<Value>2</Value>
 									</Item>
 								</Items>
 								<ItemsGlobalVar/>
