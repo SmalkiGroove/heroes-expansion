@@ -24,6 +24,7 @@
 - [EXE] Shantiri Moon Disc blocks all light magic
 - [LUA] Double script activation sometimes
 - [XDB] Magic Filter incorrectly immunes to spells
+- [XDB] Lucretia class prerequisites
 
 ### Suggestions
 

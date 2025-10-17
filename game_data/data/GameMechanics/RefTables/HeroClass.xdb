@@ -20,22 +20,22 @@
 			<obj>
 				<NameFileRef href="HeroClass/HeroClassHavenMight.txt"/>
 				<SkillsProbs>
-					<Item><SkillID>HERO_SKILL_COURAGE</SkillID><Prob>1</Prob></Item>
-					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>9</Prob></Item>
-					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>9</Prob></Item>
-					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>4</Prob></Item>
-					<Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>0</Prob></Item>
-					<Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>9</Prob></Item>
-					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>4</Prob></Item>
-					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>9</Prob></Item>
-					<Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>0</Prob></Item>
-					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>0</Prob></Item>
-					<Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>0</Prob></Item>
-					<Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>14</Prob></Item>
-					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>9</Prob></Item>
+					<Item><SkillID>HERO_SKILL_COURAGE</SkillID><Prob>22</Prob></Item>
+					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>6</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>7</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>3</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>5</Prob></Item>
+					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>2</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>8</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<!-- <Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>12</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>10</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>9</Prob></Item>
-					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>9</Prob></Item>
-					<Item><SkillID>HERO_SKILL_WARFARE</SkillID><Prob>14</Prob></Item>
+					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>4</Prob></Item>
+					<Item><SkillID>HERO_SKILL_WARFARE</SkillID><Prob>11</Prob></Item>
 				</SkillsProbs>
 				<AttributeProbs>
 					<OffenceProb>30</OffenceProb>
@@ -51,22 +51,22 @@
 			<obj>
 				<NameFileRef href="HeroClass/HeroClassHavenMagic.txt"/>
 				<SkillsProbs>
-					<Item><SkillID>HERO_SKILL_COURAGE</SkillID><Prob>1</Prob></Item>
-					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>4</Prob></Item>
-					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>4</Prob></Item>
-					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>9</Prob></Item>
-					<Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>9</Prob></Item>
-					<Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>0</Prob></Item>
-					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>9</Prob></Item>
-					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>14</Prob></Item>
-					<Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>0</Prob></Item>
-					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>4</Prob></Item>
-					<Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>4</Prob></Item>
-					<Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>9</Prob></Item>
-					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>9</Prob></Item>
+					<Item><SkillID>HERO_SKILL_COURAGE</SkillID><Prob>22</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>3</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>7</Prob></Item>
+					<Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>4</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>12</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>5</Prob></Item>
+					<Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>6</Prob></Item>
+					<Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>10</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>8</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>9</Prob></Item>
-					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>9</Prob></Item>
-					<Item><SkillID>HERO_SKILL_WARFARE</SkillID><Prob>4</Prob></Item>
+					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>11</Prob></Item>
+					<Item><SkillID>HERO_SKILL_WARFARE</SkillID><Prob>2</Prob></Item>
 				</SkillsProbs>
 				<AttributeProbs>
 					<OffenceProb>15</OffenceProb>
@@ -82,16 +82,16 @@
 			<obj>
 				<NameFileRef href="HeroClass/HeroClassPreserveMight.txt"/>
 				<SkillsProbs>
-					<Item><SkillID>HERO_SKILL_AVENGER</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_AVENGER</SkillID><Prob>22</Prob></Item>
 					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>4</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>9</Prob></Item>
-					<Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>4</Prob></Item>
-					<Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>0</Prob></Item>
-					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>4</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<!-- <Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>9</Prob></Item>
@@ -113,15 +113,15 @@
 			<obj>
 				<NameFileRef href="HeroClass/HeroClassPreserveMagic.txt"/>
 				<SkillsProbs>
-					<Item><SkillID>HERO_SKILL_AVENGER</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_AVENGER</SkillID><Prob>22</Prob></Item>
 					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>4</Prob></Item>
-					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>4</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>14</Prob></Item>
 					<Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>9</Prob></Item>
-					<Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>4</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>9</Prob></Item>
-					<Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>14</Prob></Item>
 					<Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>4</Prob></Item>
@@ -144,17 +144,17 @@
 			<obj>
 				<NameFileRef href="HeroClass/HeroClassFortressMight.txt"/>
 				<SkillsProbs>
-					<Item><SkillID>HERO_SKILL_RUNELORE</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_RUNELORE</SkillID><Prob>22</Prob></Item>
 					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>14</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>4</Prob></Item>
-					<Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>4</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>4</Prob></Item>
-					<Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>4</Prob></Item>
-					<Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>9</Prob></Item>
@@ -175,15 +175,15 @@
 			<obj>
 				<NameFileRef href="HeroClass/HeroClassFortressMagic.txt"/>
 				<SkillsProbs>
-					<Item><SkillID>HERO_SKILL_RUNELORE</SkillID><Prob>1</Prob></Item>
-					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>4</Prob></Item>
+					<Item><SkillID>HERO_SKILL_RUNELORE</SkillID><Prob>22</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>4</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>4</Prob></Item>
-					<Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>4</Prob></Item>
-					<Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>14</Prob></Item>
 					<Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>4</Prob></Item>
@@ -206,18 +206,18 @@
 			<obj>
 				<NameFileRef href="HeroClass/HeroClassAcademyMight.txt"/>
 				<SkillsProbs>
-					<Item><SkillID>HERO_SKILL_ARTIFICIER</SkillID><Prob>1</Prob></Item>
-					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>9</Prob></Item>
+					<Item><SkillID>HERO_SKILL_ARTIFICIER</SkillID><Prob>22</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>9</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>4</Prob></Item>
-					<Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>4</Prob></Item>
 					<Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>4</Prob></Item>
 					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>4</Prob></Item>
 					<Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>4</Prob></Item>
-					<Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>9</Prob></Item>
@@ -237,18 +237,18 @@
 			<obj>
 				<NameFileRef href="HeroClass/HeroClassAcademyMagic.txt"/>
 				<SkillsProbs>
-					<Item><SkillID>HERO_SKILL_ARTIFICIER</SkillID><Prob>1</Prob></Item>
-					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>0</Prob></Item>
+					<Item><SkillID>HERO_SKILL_ARTIFICIER</SkillID><Prob>22</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>0</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>14</Prob></Item>
 					<Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>14</Prob></Item>
-					<Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>9</Prob></Item>
-					<Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>4</Prob></Item>
 					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>9</Prob></Item>
@@ -268,17 +268,17 @@
 			<obj>
 				<NameFileRef href="HeroClass/HeroClassDungeonMight.txt"/>
 				<SkillsProbs>
-					<Item><SkillID>HERO_SKILL_ARCANISM</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_ARCANISM</SkillID><Prob>22</Prob></Item>
 					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>14</Prob></Item>
 					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>4</Prob></Item>
-					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>4</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>4</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>4</Prob></Item>
 					<Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>4</Prob></Item>
-					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>4</Prob></Item>
-					<Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>9</Prob></Item>
@@ -299,12 +299,12 @@
 			<obj>
 				<NameFileRef href="HeroClass/HeroClassDungeonMagic.txt"/>
 				<SkillsProbs>
-					<Item><SkillID>HERO_SKILL_ARCANISM</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_ARCANISM</SkillID><Prob>22</Prob></Item>
 					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>9</Prob></Item>
-					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>4</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>4</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>4</Prob></Item>
 					<Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>14</Prob></Item>
-					<Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>4</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>4</Prob></Item>
 					<Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>9</Prob></Item>
@@ -314,7 +314,7 @@
 					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>9</Prob></Item>
-					<Item><SkillID>HERO_SKILL_WARFARE</SkillID><Prob>4</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_WARFARE</SkillID><Prob>4</Prob></Item> -->
 				</SkillsProbs>
 				<AttributeProbs>
 					<OffenceProb>20</OffenceProb>
@@ -330,18 +330,18 @@
 			<obj>
 				<NameFileRef href="HeroClass/HeroClassNecropolisMight.txt"/>
 				<SkillsProbs>
-					<Item><SkillID>HERO_SKILL_NECROMANCY</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_NECROMANCY</SkillID><Prob>22</Prob></Item>
 					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>14</Prob></Item>
 					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>4</Prob></Item>
-					<Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>4</Prob></Item>
-					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>14</Prob></Item>
 					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>0</Prob></Item>
-					<Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>0</Prob></Item>
-					<Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<!-- <Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>9</Prob></Item>
@@ -361,18 +361,18 @@
 			<obj>
 				<NameFileRef href="HeroClass/HeroClassNecropolisMagic.txt"/>
 				<SkillsProbs>
-					<Item><SkillID>HERO_SKILL_NECROMANCY</SkillID><Prob>1</Prob></Item>
-					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>4</Prob></Item>
+					<Item><SkillID>HERO_SKILL_NECROMANCY</SkillID><Prob>22</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>4</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>4</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>9</Prob></Item>
-					<Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>4</Prob></Item>
-					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>14</Prob></Item>
 					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>4</Prob></Item>
 					<Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>4</Prob></Item>
-					<Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>9</Prob></Item>
@@ -392,18 +392,18 @@
 			<obj>
 				<NameFileRef href="HeroClass/HeroClassInfernoMight.txt"/>
 				<SkillsProbs>
-					<Item><SkillID>HERO_SKILL_GATING</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_GATING</SkillID><Prob>22</Prob></Item>
 					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>14</Prob></Item>
 					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>9</Prob></Item>
-					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>0</Prob></Item>
-					<Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>0</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>1</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>14</Prob></Item>
 					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>9</Prob></Item>
-					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>9</Prob></Item>
-					<Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>0</Prob></Item>
-					<Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<!-- <Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>9</Prob></Item>
@@ -423,18 +423,18 @@
 			<obj>
 				<NameFileRef href="HeroClass/HeroClassInfernoMagic.txt"/>
 				<SkillsProbs>
-					<Item><SkillID>HERO_SKILL_GATING</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_GATING</SkillID><Prob>22</Prob></Item>
 					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>4</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>4</Prob></Item>
 					<Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>9</Prob></Item>
-					<Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>9</Prob></Item>
-					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>14</Prob></Item>
 					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>14</Prob></Item>
-					<Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>0</Prob></Item>
-					<Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<!-- <Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>9</Prob></Item>
@@ -454,19 +454,18 @@
 			<obj>
 				<NameFileRef href="HeroClass/HeroClassStrongholdMight.txt"/>
 				<SkillsProbs>
-					<Item><SkillID>HERO_SKILL_BLOOD_RAGE</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_BLOOD_RAGE</SkillID><Prob>22</Prob></Item>
 					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>14</Prob></Item>
 					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>14</Prob></Item>
-					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>0</Prob></Item>
-					<Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>0</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_VOICE</SkillID><Prob>14</Prob></Item>
 					<Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>14</Prob></Item>
 					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>4</Prob></Item>
-					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>0</Prob></Item>
-					<Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>0</Prob></Item>
-					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>0</Prob></Item>
-					<Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>0</Prob></Item>
-					<Item><SkillID>HERO_SKILL_VOICE</SkillID><Prob>14</Prob></Item>
-					<Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<!-- <Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<!-- <Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<!-- <Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<!-- <Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>9</Prob></Item>
@@ -486,18 +485,18 @@
 			<obj>
 				<NameFileRef href="HeroClass/HeroClassStrongholdMagic.txt"/>
 				<SkillsProbs>
-					<Item><SkillID>HERO_SKILL_SPIRITISM</SkillID><Prob>1</Prob></Item>
-					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>4</Prob></Item>
+					<Item><SkillID>HERO_SKILL_SPIRITISM</SkillID><Prob>22</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>4</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>9</Prob></Item>
-					<Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>9</Prob></Item>
-					<Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>4</Prob></Item>
 					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>9</Prob></Item>
@@ -542,18 +541,18 @@
 			<obj>
 				<NameFileRef href="HeroClass/HeroClassOther2.txt"/>
 				<SkillsProbs>
-					<Item><SkillID>HERO_SKILL_NECROMANCY</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_NECROMANCY</SkillID><Prob>22</Prob></Item>
 					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>14</Prob></Item>
 					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>4</Prob></Item>
-					<Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>4</Prob></Item>
-					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>0</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>0</Prob></Item>
-					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>0</Prob></Item>
-					<Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>0</Prob></Item>
-					<Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>0</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>1</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<!-- <Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>0</Prob></Item> -->
 					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>9</Prob></Item>
 					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>9</Prob></Item>
