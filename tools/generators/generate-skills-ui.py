@@ -16,47 +16,64 @@ all_buttons = open("outputs/skills_skillbuttons.xml", 'w')
 all_selected = open("outputs/skills_selectionhighlights.xml", 'w')
 all_windows = open("outputs/skills_descriptionviews.xml", 'w')
 
+branches = ["Innates",
+            "Courage", "Avenger", "Runelore", "Artificier", "Arcanism", "Necromancy", "Gating", "BloodRage", "Spiritism",
+            "Offence", "Defense", "Learning", "Sorcery", "LightMagic", "DarkMagic", "DestructiveMagic", "NaturalMagic",
+            "Combat", "Leadership", "Logistics", "Warfare", "ShatterMagic", "Governance", "Training", "Voice"]
+
 coordinates_branch = {
-    "HERO_SKILL_LOGISTICS": [0, 140], "HERO_SKILL_SHATTER_MAGIC": [190, 140], "HERO_SKILL_COMBAT": [380, 140],
-    "HERO_SKILL_WARFARE": [0, 220], "HERO_SKILL_LIGHT_MAGIC": [190, 220], "HERO_SKILL_OFFENCE": [380, 220],
-    "HERO_SKILL_GOVERNANCE": [0, 300], "HERO_SKILL_DARK_MAGIC": [190, 220], "HERO_SKILL_DEFENSE": [380, 220],
-    "HERO_SKILL_LEADERSHIP": [0, 380], "HERO_SKILL_NATURAL_MAGIC": [190, 380], "HERO_SKILL_LEARNING": [380, 380],
-    "HERO_SKILL_TRAINING": [0, 460], "HERO_SKILL_DESTRUCTIVE_MAGIC": [190, 460], "HERO_SKILL_SORCERY": [380, 460],
-    "HERO_SKILL_VOICE": [380, 460],
+    "Logistics": [0, 140], "ShatterMagic": [190, 140], "Combat": [380, 140],
+    "Warfare": [0, 220], "LightMagic": [190, 220], "Offence": [380, 220],
+    "Governance": [0, 300], "DarkMagic": [190, 300], "Defense": [380, 300],
+    "Leadership": [0, 380], "NaturalMagic": [190, 380], "Learning": [380, 380],
+    "Training": [0, 460], "DestructiveMagic": [190, 460], "Sorcery": [380, 460],
+    "Voice": [380, 460], "Innates": [104, 0], "Racial": [180, 0],
+}
+coordinates_relative = {
+    "Logistics": [0, 0], "ShatterMagic": [0, 0], "Combat": [0, 0],
+    "Warfare": [0, 0], "LightMagic": [0, 0], "Offence": [0, 0],
+    "Governance": [0, 0], "DarkMagic": [0, 0], "Defense": [0, 0],
+    "Leadership": [0, 0], "NaturalMagic": [0, 0], "Learning": [0, 0],
+    "Training": [0, 0], "DestructiveMagic": [0, 0], "Sorcery": [0, 0],
+    "Voice": [0, 0], "Innates": [104, 0], "Racial": [180, 0],
 }
 
-logistics_x = coordinates_branch["HERO_SKILL_LOGISTICS"][0]
-logistics_y = coordinates_branch["HERO_SKILL_LOGISTICS"][1]
-shatter_x = coordinates_branch["HERO_SKILL_SHATTER_MAGIC"][0]
-shatter_y = coordinates_branch["HERO_SKILL_SHATTER_MAGIC"][1]
-combat_x = coordinates_branch["HERO_SKILL_COMBAT"][0]
-combat_y = coordinates_branch["HERO_SKILL_COMBAT"][1]
-warfare_x = coordinates_branch["HERO_SKILL_WARFARE"][0]
-warfare_y = coordinates_branch["HERO_SKILL_WARFARE"][1]
-light_x = coordinates_branch["HERO_SKILL_LIGHT_MAGIC"][0]
-light_y = coordinates_branch["HERO_SKILL_LIGHT_MAGIC"][1]
-offence_x = coordinates_branch["HERO_SKILL_OFFENCE"][0]
-offence_y = coordinates_branch["HERO_SKILL_OFFENCE"][1]
-governance_x = coordinates_branch["HERO_SKILL_GOVERNANCE"][0]
-governance_y = coordinates_branch["HERO_SKILL_GOVERNANCE"][1]
-dark_x = coordinates_branch["HERO_SKILL_DARK_MAGIC"][0]
-dark_y = coordinates_branch["HERO_SKILL_DARK_MAGIC"][1]
-defense_x = coordinates_branch["HERO_SKILL_DEFENSE"][0]
-defense_y = coordinates_branch["HERO_SKILL_DEFENSE"][1]
-leadership_x = coordinates_branch["HERO_SKILL_LEADERSHIP"][0]
-leadership_y = coordinates_branch["HERO_SKILL_LEADERSHIP"][1]
-natural_x = coordinates_branch["HERO_SKILL_NATURAL_MAGIC"][0]
-natural_y = coordinates_branch["HERO_SKILL_NATURAL_MAGIC"][1]
-learning_x = coordinates_branch["HERO_SKILL_LEARNING"][0]
-learning_y = coordinates_branch["HERO_SKILL_LEARNING"][1]
-training_x = coordinates_branch["HERO_SKILL_TRAINING"][0]
-training_y = coordinates_branch["HERO_SKILL_TRAINING"][1]
-destructive_x = coordinates_branch["HERO_SKILL_DESTRUCTIVE_MAGIC"][0]
-destructive_y = coordinates_branch["HERO_SKILL_DESTRUCTIVE_MAGIC"][1]
-sorcery_x = coordinates_branch["HERO_SKILL_SORCERY"][0]
-sorcery_y = coordinates_branch["HERO_SKILL_SORCERY"][1]
-voice_x = coordinates_branch["HERO_SKILL_VOICE"][0]
-voice_y = coordinates_branch["HERO_SKILL_VOICE"][1]
+logistics_x = coordinates_relative["Logistics"][0]
+logistics_y = coordinates_relative["Logistics"][1]
+shatter_x = coordinates_relative["ShatterMagic"][0]
+shatter_y = coordinates_relative["ShatterMagic"][1]
+combat_x = coordinates_relative["Combat"][0]
+combat_y = coordinates_relative["Combat"][1]
+warfare_x = coordinates_relative["Warfare"][0]
+warfare_y = coordinates_relative["Warfare"][1]
+light_x = coordinates_relative["LightMagic"][0]
+light_y = coordinates_relative["LightMagic"][1]
+offence_x = coordinates_relative["Offence"][0]
+offence_y = coordinates_relative["Offence"][1]
+governance_x = coordinates_relative["Governance"][0]
+governance_y = coordinates_relative["Governance"][1]
+dark_x = coordinates_relative["DarkMagic"][0]
+dark_y = coordinates_relative["DarkMagic"][1]
+defense_x = coordinates_relative["Defense"][0]
+defense_y = coordinates_relative["Defense"][1]
+leadership_x = coordinates_relative["Leadership"][0]
+leadership_y = coordinates_relative["Leadership"][1]
+natural_x = coordinates_relative["NaturalMagic"][0]
+natural_y = coordinates_relative["NaturalMagic"][1]
+learning_x = coordinates_relative["Learning"][0]
+learning_y = coordinates_relative["Learning"][1]
+training_x = coordinates_relative["Training"][0]
+training_y = coordinates_relative["Training"][1]
+destructive_x = coordinates_relative["DestructiveMagic"][0]
+destructive_y = coordinates_relative["DestructiveMagic"][1]
+sorcery_x = coordinates_relative["Sorcery"][0]
+sorcery_y = coordinates_relative["Sorcery"][1]
+voice_x = coordinates_relative["Voice"][0]
+voice_y = coordinates_relative["Voice"][1]
+innates_x = coordinates_relative["Innates"][0]
+innates_y = coordinates_relative["Innates"][1]
+racial_x = coordinates_relative["Racial"][0]
+racial_y = coordinates_relative["Racial"][1]
 
 coordinates_skills = {
   '001001': [logistics_x+45, logistics_y+10],
@@ -94,26 +111,26 @@ coordinates_skills = {
   '013001': [combat_x+45, combat_y+10],
   '013002': [combat_x+75, combat_y+10],
   '013003': [combat_x+105, combat_y+10],
-  '014001': [220, 26],
-  '014002': [250, 26],
-  '014003': [280, 26],
-  '014004': [310, 26],
-  '015001': [220, 26],
-  '015002': [250, 26],
-  '015003': [280, 26],
-  '015004': [310, 26],
-  '016001': [220, 26],
-  '016002': [250, 26],
-  '016003': [280, 26],
-  '016004': [310, 26],
-  '017001': [220, 26],
-  '017002': [250, 26],
-  '017003': [280, 26],
-  '017004': [310, 26],
-  '018001': [220, 26],
-  '018002': [250, 26],
-  '018003': [280, 26],
-  '018004': [310, 26],
+  '014001': [racial_x+40, racial_y+26],
+  '014002': [racial_x+70, racial_y+26],
+  '014003': [racial_x+100, racial_y+26],
+  '014004': [racial_x+130, racial_y+26],
+  '015001': [racial_x+40, racial_y+26],
+  '015002': [racial_x+70, racial_y+26],
+  '015003': [racial_x+100, racial_y+26],
+  '015004': [racial_x+130, racial_y+26],
+  '016001': [racial_x+40, racial_y+26],
+  '016002': [racial_x+70, racial_y+26],
+  '016003': [racial_x+100, racial_y+26],
+  '016004': [racial_x+130, racial_y+26],
+  '017001': [racial_x+40, racial_y+26],
+  '017002': [racial_x+70, racial_y+26],
+  '017003': [racial_x+100, racial_y+26],
+  '017004': [racial_x+130, racial_y+26],
+  '018001': [racial_x+40, racial_y+26],
+  '018002': [racial_x+70, racial_y+26],
+  '018003': [racial_x+100, racial_y+26],
+  '018004': [racial_x+130, racial_y+26],
   '019000': [logistics_x+5, logistics_y+45],
   '020000': [logistics_x+30, logistics_y+45],
   '021001': [governance_x+45, governance_y+10],
@@ -157,11 +174,11 @@ coordinates_skills = {
   '058000': [dark_x+30, dark_y+45],
   '059000': [294, 68],
   '060000': [combat_x+125, combat_y+45],
-  '061001': [220, 26],
-  '061002': [250, 26],
-  '061003': [280, 26],
-  '061004': [310, 26],
-  '062000': [104, 26],
+  '061001': [racial_x+40, racial_y+26],
+  '061002': [racial_x+70, racial_y+26],
+  '061003': [racial_x+100, racial_y+26],
+  '061004': [racial_x+130, racial_y+26],
+  '062000': [innates_x+0, innates_y+26],
   '063000': [181, 68],
   '064000': [374, 68],
   '065000': [286, 68],
@@ -171,16 +188,16 @@ coordinates_skills = {
   '069000': [240, 68],
   '070000': [183, 68],
   '071000': [learning_x+150, learning_y+45],
-  '072000': [104, 26],
-  '073000': [104, 26],
+  '072000': [innates_x+0, innates_y+26],
+  '073000': [innates_x+0, innates_y+26],
   '074000': [warfare_x+55, warfare_y+45],
   '075000': [leadership_x+125, leadership_y+45],
-  '076000': [104, 68],
+  '076000': [innates_x+0, innates_y+68],
   '077000': [defense_x+30, defense_y+45],
   '078000': [240, 68],
   '079000': [344, 68],
   '080000': [governance_x+55, governance_y+45],
-  '081000': [104, 26],
+  '081000': [innates_x+0, innates_y+26],
   '082000': [354, 68],
   '083000': [dark_x+55, dark_y+45],
   '084000': [natural_x+125, natural_y+45],
@@ -191,17 +208,17 @@ coordinates_skills = {
   '089000': [211, 68],
   '090000': [241, 68],
   '091000': [combat_x+150, combat_y+45],
-  '092000': [104, 26],
+  '092000': [innates_x+0, innates_y+26],
   '094000': [324, 68],
   '095000': [284, 68],
   '096000': [164, 68],
   '097000': [natural_x+150, natural_y+60],
-  '098000': [104, 68],
+  '098000': [innates_x+0, innates_y+68],
   '099000': [194, 68],
   '100000': [dark_x+150, dark_y+45],
   '101000': [243, 68],
   '102000': [357, 68],
-  '103000': [104, 68],
+  '103000': [innates_x+0, innates_y+68],
   '104000': [destructive_x+150, destructive_y+45],
   '105000': [295, 68],
   '106000': [327, 68],
@@ -210,16 +227,16 @@ coordinates_skills = {
   '109000': [245, 68],
   '110000': [211, 68],
   '111000': [224, 68],
-  '112000': [104, 26],
+  '112000': [innates_x+0, innates_y+26],
   '113000': [211, 68],
   '114000': [315, 68],
   '115000': [347, 68],
   '116000': [offence_x+150, offence_y+45],
-  '117000': [104, 68],
+  '117000': [innates_x+0, innates_y+68],
   '118000': [leadership_x+150, leadership_y+45],
   '119000': [220, 68],
   '120000': [shatter_x+30, shatter_y+45],
-  '121000': [104, 26],
+  '121000': [innates_x+0, innates_y+26],
   '122000': [natural_x+55, natural_y+45],
   '123000': [natural_x+30, natural_y+45],
   '124001': [235, 26],
@@ -235,8 +252,8 @@ coordinates_skills = {
   '133000': [shatter_x+125, shatter_y+45],
   '134000': [shatter_x+150, shatter_y+35],
   '135000': [shatter_x+150, shatter_y+55],
-  '136000': [104, 26],
-  '137000': [104, 68],
+  '136000': [innates_x+0, innates_y+26],
+  '137000': [innates_x+0, innates_y+68],
   '138000': [352, 68],
   '139000': [natural_x+150, natural_y+20],
   '140000': [sorcery_x+125, sorcery_y+45],
@@ -249,11 +266,11 @@ coordinates_skills = {
   '147000': [destructive_x+55, destructive_y+45],
   '148000': [sorcery_x+30, sorcery_y+45],
   '149000': [244, 68],
-  '150000': [104, 68],
-  '151001': [220, 26],
-  '151002': [250, 26],
-  '151003': [280, 26],
-  '151004': [310, 26],
+  '150000': [innates_x+0, innates_y+68],
+  '151001': [racial_x+40, racial_y+26],
+  '151002': [racial_x+70, racial_y+26],
+  '151003': [racial_x+100, racial_y+26],
+  '151004': [racial_x+130, racial_y+26],
   '152000': [212, 68],
   '153000': [242, 68],
   '154000': [183, 68],
@@ -266,22 +283,22 @@ coordinates_skills = {
   '161000': [defense_x+5, defense_y+45],
   '162000': [voice_x+314, voice_y+89],
   '163000': [destructive_x+30, destructive_y+45],
-  '164000': [104, 26],
+  '164000': [innates_x+0, innates_y+26],
   '165000': [light_x+150, light_y+45],
   '166000': [352, 68],
-  '167000': [104, 68],
+  '167000': [innates_x+0, innates_y+68],
   '168000': [logistics_x+55, logistics_y+45],
   '169000': [learning_x+55, learning_y+45],
   '170000': [211, 68],
   '171000': [defense_x+55, defense_y+45],
-  '172001': [220, 26],
-  '172002': [250, 26],
-  '172003': [280, 26],
-  '172004': [310, 26],
+  '172001': [racial_x+40, racial_y+26],
+  '172002': [racial_x+70, racial_y+26],
+  '172003': [racial_x+100, racial_y+26],
+  '172004': [racial_x+130, racial_y+26],
   '173000': [voice_x+286, voice_y+45],
   '174000': [183, 68],
   '175000': [combat_x+30, combat_y+45],
-  '176000': [104, 68],
+  '176000': [innates_x+0, innates_y+68],
   '177000': [logistics_x+150, logistics_y+45],
   '178000': [211, 68],
   '179000': [voice_x+341, voice_y+45],
@@ -413,10 +430,11 @@ def find_icon_size(path:str):
     return 64
 
 
-branches = ["Innates",
-            "Courage", "Avenger", "Runelore", "Artificier", "Arcanism", "Necromancy", "Gating", "BloodRage",
-            "Offence", "Defense", "Learning", "Sorcery", "LightMagic", "DarkMagic", "DestructiveMagic", "NaturalMagic",
-            "Combat", "Leadership", "Logistics", "Warfare", "ShatterMagic", "Governance", "Training", "Voice", "Spiritism"]
+for branch in branches[10:]:
+    x = coordinates_branch[branch][0]
+    y = coordinates_branch[branch][1]
+    write_from_template("branch.(WindowSimple).xdb.j2", window_branch_path(branch), {'skill_name': branch, 'pos_x': x, 'pos_y': y})
+
 
 counter = -1
 for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
