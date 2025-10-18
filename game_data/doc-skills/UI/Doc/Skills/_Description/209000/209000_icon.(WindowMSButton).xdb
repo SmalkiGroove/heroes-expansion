@@ -1,30 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowMSButton ObjectRecordID="1000123">
 	<ClassTypeID>285694855</ClassTypeID>
-	<Shared href="/UI/Doc/Skills/Common/Highlight.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
-	<Name>DocSkillsSelection120000</Name>
-	<TooltipFileRef/>
+	<Shared href="209000_icon.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
+	<Name>Icon209000</Name>
+	<TooltipFileRef href=""/>
 	<Visible>true</Visible>
 	<Priority>0</Priority>
-	<GameMessageReactions>
-		<Item>
-			<GameMessage>DocSkillsHideAll</GameMessage>
-			<LogicalReaction/>
-			<VisualReaction>
-				<Commands>
-					<Item href="120000_off.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-				</Commands>
-				<Reversable>false</Reversable>
-			</VisualReaction>
-			<WaitVisual>false</WaitVisual>
-			<Forward>true</Forward>
-		</Item>
-	</GameMessageReactions>
+	<GameMessageReactions/>
 	<Placement>
 		<Position>
 			<First>
-				<x>30</x>
-				<y>45</y>
+				<x>0</x>
+				<y>0</y>
 			</First>
 			<Second>true</Second>
 		</Position>
@@ -33,13 +20,13 @@
 			<Second>false</Second>
 		</VerAllign>
 		<HorAllign>
-			<First>EPA_LOW_END</First>
-			<Second>false</Second>
+			<First>ERA_CENTER</First>
+			<Second>true</Second>
 		</HorAllign>
 		<Size>
 			<First>
-				<x>34</x>
-				<y>34</y>
+				<x>64</x>
+				<y>64</y>
 			</First>
 			<Second>true</Second>
 		</Size>

@@ -2,7 +2,7 @@
 <WindowMSButtonShared ObjectRecordID="1000064">
 	<Crap>false</Crap>
 	<Children>
-	    <Item href="120000_icon.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+	    <Item href="209000_icon.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
 	</Children>
 	<Background/>
 	<Foreground/>
@@ -68,11 +68,13 @@
 				<TextString/>
 				<OnEnterSubState>
 					<Commands>
-						<Item href="/UI/Doc/Skills/_Skills/ShatterMagic/199001/highlight/199001_on.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 						<Item href="/UI/Doc/Skills/_Skills/ShatterMagic/207000/highlight/207000_on.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+						<Item href="/UI/Doc/Skills/_Skills/ShatterMagic/199001/highlight/199001_on.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 						<Item href="/UI/Doc/Skills/_Skills/ShatterMagic/199002/highlight/199002_on.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-						<Item href="/UI/Doc/Skills/_Skills/ShatterMagic/120000/highlight/120000_on.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-						<Item href="/UI/Doc/Skills/_Description/120000/120000.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+						<Item href="/UI/Doc/Skills/_Skills/ShatterMagic/135000/highlight/135000_on.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+						<Item href="/UI/Doc/Skills/_Skills/ShatterMagic/199003/highlight/199003_on.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+						<Item href="/UI/Doc/Skills/_Skills/ShatterMagic/209000/highlight/209000_on.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+						<Item href="/UI/Doc/Skills/_Description/209000/209000.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					</Commands>
 					<Reversable>true</Reversable>
 				</OnEnterSubState>
