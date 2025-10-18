@@ -1,2 +1,2 @@
 
-LOG_LEVEL = 2
+LOG_LEVEL = 1

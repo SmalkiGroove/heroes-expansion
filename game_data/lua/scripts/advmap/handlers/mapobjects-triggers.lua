@@ -24,6 +24,11 @@ function Override_RallyFlag(obj)
     SetObjectEnabled(obj, nil)
 end
 
+function Override_Tavern(obj)
+    Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_Tavern")
+    SetObjectEnabled(obj, nil)
+end
+
 -----------------------------------------------
 
 function Trigger_Monsters(hero, obj)
@@ -151,6 +156,23 @@ function Trigger_RallyFlag(hero, obj)
 end
 
 
+function Trigger_Tavern(hero, obj)
+    log(DEBUG, "$ Trigger_Tavern")
+    local player = GetObjectOwner(hero)
+    QuestionBoxForPlayers(
+        GetPlayerFilter(player),
+        "/Text/Game/Scripts/MapObjects/Tavern.txt",
+        "Trigger_Tavern_confirm('"..player.."','"..hero.."')",
+        "NoneRoutine"
+    )
+end
+function Trigger_Tavern_confirm(player, hero)
+    local town = FindClosestTown(player, hero)
+    ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
+    SetObjectPosition(hero, MAP_TOWNS[town].x, MAP_TOWNS[town].y, MAP_TOWNS[town].z, 4)
+end
+
+
 -----------------------------------------------
 
 TRIGGER_OVERRIDES = {
@@ -158,6 +180,7 @@ TRIGGER_OVERRIDES = {
     ["BUILDING_WITCH_HUT"] = Override_WitchHut,
     ["BUILDING_TEMPLE"] = Override_Temple,
     ["BUILDING_RALLY_FLAG"] = Override_RallyFlag,
+    ["BUILDING_TAVERN"] = Override_Tavern,
 }
 
 function InitializeMapObjects()

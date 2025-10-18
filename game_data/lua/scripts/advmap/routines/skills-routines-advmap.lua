@@ -423,13 +423,6 @@ function Routine_StaminaBuff(player, hero, mastery)
     end
 end
 
-function Routine_RageAwakening(player, hero, mastery)
-    log(DEBUG, "$ Routine_RageAwakening")
-    if not HasHeroSkill(SKILL_BLOOD_RAGE) then
-        GiveHeroSkill(hero, SKILL_BLOOD_RAGE)
-    end
-end
-
 function Routine_CheckInfusion(player, hero, mastery)
     log(DEBUG, "$ Routine_CheckInfusion")
     local value = mastery
@@ -900,7 +893,6 @@ START_TRIGGER_SKILLS_ROUTINES = {
     [PERK_LORD_OF_UNDEAD] = Routine_CheckLordOfTheUndead,
     [PERK_SHEER_STRENGTH] = Routine_CheckSheerStrength,
     [PERK_STAMINA] = Routine_StaminaBuff,
-    [PERK_RAGE_AWAKENING] = Routine_RageAwakening,
     [PERK_INFUSION] = Routine_CheckInfusion,
     [SPEC_ENLIGHTENED] = Routine_CheckEnlightened,
 }

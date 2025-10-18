@@ -101,17 +101,18 @@ function FindClosestTown(player, hero)
 	local x,y,z = GetObjectPosition(hero)
 	local closest = nil
 	local distance = 1000000000
-	for i,town in GetPlayerTowns(player) do
-		local tx,ty,tz = GetObjectPosition(town)
-		local dx = x - tx
-		local dy = y - ty
-		local dz = (z - tz) * 1000
-		local d = dx*dx + dy*dy + dz*dz
-		if d < distance then
-			closest = town
-			distance = d
-		end
-	end
+	for town,data in MAP_TOWNS do
+        if data.owner == player then
+            local dx = x - data.x
+            local dy = y - data.y
+            local dz = (z - data.z) * 1000
+            local d = dx*dx + dy*dy + dz*dz
+            if d < distance then
+                closest = town
+                distance = d
+            end
+        end
+    end
 	return closest
 end
 

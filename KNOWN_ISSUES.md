@@ -8,7 +8,6 @@
 ### Broken graphics or animations
 
 - [EXE] Consume Corpse camera glitch
-- [XDB] Swaped town dwellings wrong model
 
 ### Text issues
 
@@ -25,7 +24,7 @@
 
 ### Suggestions
 
-- [?] Add NCF creatures in editor
+- [???] Add NCF creatures in editor
 - [XDB] Darkstorm hero totem model
 - [XDB] Add ARMG templates
 - [LUA] Give Tavern mapobject the town portal effect
@@ -35,7 +34,6 @@
 
 - [EXE] Market change rate are total scam
 - [EXE] Inferno and Dungeon sacrificial buildings are bad
-- [XDB/LUA] Hero that start with Absolute faction skill should get it later
 
 ### Massive work required
 
@@ -128,3 +126,5 @@
 - Talanar loses turns when casting righteous might
 - Magic Filter incorrectly immunes to spells
 - Rissa spec quick battle crash
+- Hero that start with Absolute faction skill should get it later
+- Swaped town dwellings wrong model

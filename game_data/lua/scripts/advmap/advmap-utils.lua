@@ -121,7 +121,7 @@ end
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -- COMMON
 
-
+--ChangeResource(res, amount, hero)
 function AddPlayerResource(player, hero, resource, amount)
 	-- log(DEBUG, "$ AddPlayerResource")
 	if amount >= 1 then
@@ -434,7 +434,7 @@ end
 function RevealMap()
 	for player = 1,8 do
 		if IsHumanPlayer(player) then
-			OpenCircleFog(1, 1, 0, 9999, player)
+			for z = 0,GetMaxFloor() do OpenCircleFog(1, 1, z, 9999, player) end
 		end
 	end
 end
