@@ -1,27 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowMSButton ObjectRecordID="1000123">
 	<ClassTypeID>285694855</ClassTypeID>
-	<Shared href="DungeonOpen.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
-	<Name>SkillWheelOpenLvUpDungeon</Name>
+	<Shared href="/UI/Doc/Close.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
+	<Name>SkillWheelExit</Name>
 	<TooltipFileRef/>
 	<Visible>true</Visible>
-	<Priority>100</Priority>
-	<GameMessageReactions/>
+	<Priority>1000</Priority>
+	<GameMessageReactions>
+		<Item>
+			<GameMessage>esc_pressed</GameMessage>
+			<LogicalReaction/>
+			<VisualReaction>
+				<Commands>
+					<Item href="SkillsHideLvUp.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+				</Commands>
+				<Reversable>false</Reversable>
+			</VisualReaction>
+			<WaitVisual>true</WaitVisual>
+			<Forward>true</Forward>
+		</Item>
+	</GameMessageReactions>
 	<Placement>
 		<Position>
 			<First>
-				<x>-33</x>
-				<y>243</y>
+				<x>890</x>
+				<y>60</y>
 			</First>
 			<Second>true</Second>
 		</Position>
 		<VerAllign>
-			<First>ERA_CENTER</First>
-			<Second>true</Second>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
 		</VerAllign>
 		<HorAllign>
-			<First>ERA_CENTER</First>
-			<Second>true</Second>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
 		</HorAllign>
 		<Size>
 			<First>
@@ -57,9 +70,7 @@
 			<MessageOnEnterState/>
 			<CommandsOnEnterState>
 				<Commands>
-					<Item href="DungeonSkillsShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/_Skills/CommonLvUpShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/_Description/DescriptionLvUpShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="SkillsHideLvUp.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 				</Commands>
 				<Reversable>false</Reversable>
 			</CommandsOnEnterState>
@@ -77,7 +88,7 @@
 		</Item>
 	</ButtonStates>
 	<ButtonGroupID>0</ButtonGroupID>
-	<AutoChangeState>false</AutoChangeState>
+	<AutoChangeState>true</AutoChangeState>
 	<PushEffect>
 		<Commands/>
 		<Reversable>false</Reversable>

@@ -2,15 +2,15 @@
 <WindowSimple ObjectRecordID="1000406">
 	<ClassTypeID>285700801</ClassTypeID>
 	<Shared href="Common.(WindowSimpleShared).xdb#xpointer(/WindowSimpleShared)"/>
-	<Name>WindowCommonSkills</Name>
+	<Name>WindowCommonSkillsLvUp</Name>
 	<TooltipFileRef href=""/>
-	<Visible>true</Visible>
-	<Priority>0</Priority>
+	<Visible>false</Visible>
+	<Priority>2000</Priority>
 	<GameMessageReactions/>
 	<Placement>
 		<Position>
 			<First>
-				<x>80</x>
+				<x>181</x>
 				<y>260</y>
 			</First>
 			<Second>true</Second>

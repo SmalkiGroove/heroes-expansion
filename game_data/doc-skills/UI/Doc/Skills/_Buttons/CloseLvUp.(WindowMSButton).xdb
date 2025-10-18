@@ -13,6 +13,15 @@
 			<VisualReaction>
 				<Commands>
 					<Item href="/UI/LevelUpBox/Buttons/HavenSkillsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/LevelUpBox/Buttons/InfernoSkillsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/LevelUpBox/Buttons/NecroSkillsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/LevelUpBox/Buttons/PreserveSkillsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/LevelUpBox/Buttons/DungeonSkillsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/LevelUpBox/Buttons/AcademySkillsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/LevelUpBox/Buttons/FortressSkillsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/LevelUpBox/Buttons/StrongholdSkillsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/CommonLvUpHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Description/DescriptionLvUpHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 				</Commands>
 				<Reversable>false</Reversable>
 			</VisualReaction>
@@ -78,6 +87,8 @@
 					<Item href="/UI/LevelUpBox/Buttons/AcademySkillsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/LevelUpBox/Buttons/FortressSkillsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/LevelUpBox/Buttons/StrongholdSkillsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/CommonLvUpHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Description/DescriptionLvUpHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 				</Commands>
 				<Reversable>false</Reversable>
 			</CommandsOnEnterState>

@@ -46,6 +46,7 @@
 - [XDB] New battlefields
 - [XDB/LUA] Better vault battles with siege
 - [XDB/LUA] More custom buildings and late-game challenge
+- [EXE/XDB] Luck and Morale 1 point = 1%, no cap
 
 
 # FIXED

@@ -4,9 +4,10 @@ The new Heroes 5 experience !
 
 ## Context
 
-This mod was greatly inspired by Heroes 5.5 - thanks to Magnomagnus and Dredknight for their amazing ideas and realization.  
-But this mod is made with a different spirit, it is not focused of perfect PvP balance but on "coolness" and fun, but still kind of balanced.  
-Heroes Expansion is a mix of the things we enjoy from vanilla H5 and H5.5, spiced with my own creations and edits.  
+This mod was greatly inspired by the work of Magnomagnus and Dredknight on Heroes 5.5.
+
+But this mod is made with a different spirit, it is not focused of perfect PvP balance but on enjoyment, replayability, uniqueness, but still trying to keep it balanced.
+
 Have fun !
 
 ## Mod Content
@@ -16,9 +17,10 @@ Have fun !
 The main changes compared to vanilla are :
 - *2 hero classes per faction : one might and one magic*
 - *all hero specializations are more powerful and unique*
-- *revamped and unique skill tree*
+- *totally revamped and unique skill tree*
 - *rebalancing of all creatures with a different power curve*
 - *reworked and expanded artifacts and sets*
+- *complete in-game documentation UI*
 - *and many more little things...*
 
 ### Detailed documentation
@@ -28,4 +30,6 @@ The main changes compared to vanilla are :
 - [Skills data](doc/SKILLS.md)
 - [Artifacts data](doc/ARTIFACTS.md)
 
-ModDB page here : https://www.moddb.com/mods/h5x
+## Download
+
+**Beta available now on [ModDB](https://www.moddb.com/mods/h5x) !**

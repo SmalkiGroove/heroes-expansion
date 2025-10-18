@@ -22,12 +22,12 @@ branches = ["Innates",
             "Combat", "Leadership", "Logistics", "Warfare", "ShatterMagic", "Governance", "Training", "Voice"]
 
 coordinates_branch = {
-    "Logistics": [0, 140], "ShatterMagic": [190, 140], "Combat": [380, 140],
-    "Warfare": [0, 220], "LightMagic": [190, 220], "Offence": [380, 220],
-    "Governance": [0, 300], "DarkMagic": [190, 300], "Defense": [380, 300],
-    "Leadership": [0, 380], "NaturalMagic": [190, 380], "Learning": [380, 380],
-    "Training": [0, 460], "DestructiveMagic": [190, 460], "Sorcery": [380, 460],
-    "Voice": [380, 460], "Innates": [104, 0], "Racial": [180, 0],
+    "Logistics": [0, 0], "ShatterMagic": [190, 0], "Combat": [380, 0],
+    "Warfare": [0, 80], "LightMagic": [190, 80], "Offence": [380, 80],
+    "Governance": [0, 160], "DarkMagic": [190, 160], "Defense": [380, 160],
+    "Leadership": [0, 240], "NaturalMagic": [190, 240], "Learning": [380, 240],
+    "Training": [0, 320], "DestructiveMagic": [190, 320], "Sorcery": [380, 320],
+    "Voice": [380, 320], "Innates": [104, 0], "Racial": [180, 0],
 }
 coordinates_relative = {
     "Logistics": [0, 0], "ShatterMagic": [0, 0], "Combat": [0, 0],

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowSimple ObjectRecordID="1000406">
 	<ClassTypeID>285700801</ClassTypeID>
-	<Shared href="Common.(WindowSimpleShared).xdb#xpointer(/WindowSimpleShared)"/>
-	<Name>WindowCommonSkills</Name>
+	<Shared href="000000.(WindowSimpleShared).xdb#xpointer(/WindowSimpleShared)"/>
+	<Name>WindowDescriptionLvUp</Name>
 	<TooltipFileRef href=""/>
-	<Visible>true</Visible>
-	<Priority>0</Priority>
+	<Visible>false</Visible>
+	<Priority>2000</Priority>
 	<GameMessageReactions/>
 	<Placement>
 		<Position>
 			<First>
-				<x>80</x>
-				<y>260</y>
+				<x>791</x>
+				<y>310</y>
 			</First>
 			<Second>true</Second>
 		</Position>
@@ -25,8 +25,8 @@
 		</HorAllign>
 		<Size>
 			<First>
-				<x>560</x>
-				<y>560</y>
+				<x>200</x>
+				<y>400</y>
 			</First>
 			<Second>true</Second>
 		</Size>
