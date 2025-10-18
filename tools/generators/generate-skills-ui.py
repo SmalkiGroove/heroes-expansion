@@ -19,7 +19,7 @@ all_windows = open("outputs/skills_descriptionviews.xml", 'w')
 branches = ["Innates",
             "Courage", "Avenger", "Runelore", "Artificier", "Arcanism", "Necromancy", "Gating", "BloodRage", "Spiritism",
             "Offence", "Defense", "Learning", "Sorcery", "LightMagic", "DarkMagic", "DestructiveMagic", "NaturalMagic",
-            "Combat", "Leadership", "Logistics", "Warfare", "ShatterMagic", "Governance", "Training", "Voice"]
+            "Combat", "Leadership", "Logistics", "Warfare", "ShatterMagic", "Governance", "Training", "Despotism", "Voice"]
 
 coordinates_branch = {
     "Logistics": [0, 0], "ShatterMagic": [190, 0], "Combat": [380, 0],
@@ -27,7 +27,8 @@ coordinates_branch = {
     "Governance": [0, 160], "DarkMagic": [190, 160], "Defense": [380, 160],
     "Leadership": [0, 240], "NaturalMagic": [190, 240], "Learning": [380, 240],
     "Training": [0, 320], "DestructiveMagic": [190, 320], "Sorcery": [380, 320],
-    "Voice": [380, 320], "Innates": [104, 0], "Racial": [180, 0],
+    "Voice": [380, 320], "Despotism": [0, 320],
+    "Innates": [104, 0], "Racial": [180, 0],
 }
 coordinates_relative = {
     "Logistics": [0, 0], "ShatterMagic": [0, 0], "Combat": [0, 0],
@@ -35,7 +36,8 @@ coordinates_relative = {
     "Governance": [0, 0], "DarkMagic": [0, 0], "Defense": [0, 0],
     "Leadership": [0, 0], "NaturalMagic": [0, 0], "Learning": [0, 0],
     "Training": [0, 0], "DestructiveMagic": [0, 0], "Sorcery": [0, 0],
-    "Voice": [0, 0], "Innates": [104, 0], "Racial": [180, 0],
+    "Voice": [0, 0], "Despotism": [0, 0], 
+    "Innates": [104, 0], "Racial": [180, 0],
 }
 
 logistics_x = coordinates_relative["Logistics"][0]
@@ -68,6 +70,8 @@ destructive_x = coordinates_relative["DestructiveMagic"][0]
 destructive_y = coordinates_relative["DestructiveMagic"][1]
 sorcery_x = coordinates_relative["Sorcery"][0]
 sorcery_y = coordinates_relative["Sorcery"][1]
+despotism_x = coordinates_relative["Despotism"][0]
+despotism_y = coordinates_relative["Despotism"][1]
 voice_x = coordinates_relative["Voice"][0]
 voice_y = coordinates_relative["Voice"][1]
 innates_x = coordinates_relative["Innates"][0]
@@ -339,7 +343,13 @@ coordinates_skills = {
   '206000': [shatter_x+55, shatter_y+45],
   '207000': [shatter_x+5, shatter_y+45],
   '210000': [natural_x+5, natural_y+45],
-  '215000': [374, 26],
+  '211001': [despotism_x+45, despotism_y+10],
+  '211002': [despotism_x+75, despotism_y+10],
+  '211003': [despotism_x+105, despotism_y+10],
+  '212000': [despotism_x+5, despotism_y+45],
+  '213000': [despotism_x+30, despotism_y+45],
+  '214000': [despotism_x+55, despotism_y+45],
+  '215000': [224, 26],
   '216000': [light_x+30, light_y+45],
   '217000': [racial_x+150, racial_y+68],
   '218000': [374, 26],
