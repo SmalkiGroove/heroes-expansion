@@ -3,7 +3,7 @@ PLAYER_ARMY_BONUS = {}
 DIFFICULTY_MULTIPLIER = {[0]=1}
 
 function SetStartingArmy(hero)
-	-- log("$ SetStartingArmy hero="..hero)
+	-- log(DEBUG, "$ SetStartingArmy hero="..hero)
     local faction = HEROES[hero].faction
     local army = {}
     if STARTING_ARMIES[hero] then
@@ -119,5 +119,5 @@ function InitializeArmy(hero)
     end
 end
 
--- log("Loaded starting-armies.lua")
+-- log(DEBUG, "Loaded starting-armies.lua")
 ROUTINES_LOADED[21] = 1

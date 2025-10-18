@@ -27,7 +27,7 @@ end
 -----------------------------------------------
 
 function Trigger_Monsters(hero, obj)
-    log("$ Trigger_Monsters")
+    log(DEBUG, "$ Trigger_Monsters")
     local x, y, z = GetObjectPosition(obj)
     ONGOING_BATTLES[hero] = {x=x, y=y, z=z}
     startThread(Trigger_Monsters_Ongoing, hero, obj)
@@ -44,7 +44,7 @@ end
 function Trigger_Monsters_Ongoing(hero, obj)
     local x, y, z = GetObjectPosition(hero)
     while IsObjectExists(hero) do
-        print("Hero "..hero.." is fighting monsters...")
+        log(DEBUG, "Hero "..hero.." is fighting monsters...")
         sleep(5)
         if not IsObjectExists(obj) then return end
         local xx, yy, zz = GetObjectPosition(hero)
@@ -54,7 +54,7 @@ function Trigger_Monsters_Ongoing(hero, obj)
 end
 
 function Trigger_WitchHut(hero, obj)
-    log("$ Trigger_WitchHut")
+    log(DEBUG, "$ Trigger_WitchHut")
     local player = GetObjectOwner(hero)
     if IsAIPlayer(player) then
         Trigger(OBJECT_TOUCH_TRIGGER, obj, nil)
@@ -75,7 +75,7 @@ function Trigger_WitchHut(hero, obj)
     end
 end
 function Trigger_WitchHut_confirm(player, hero, obj, givestat)
-    log("$ Trigger_WitchHut_confirm")
+    log(DEBUG, "$ Trigger_WitchHut_confirm")
     if GetPlayerResource(player, MERCURY) >= 7 then
         MessageBoxForPlayers(
             GetPlayerFilter(0+player),
@@ -107,7 +107,7 @@ end
 
 
 function Trigger_Temple(hero, obj)
-    log("$ Trigger_Temple")
+    log(DEBUG, "$ Trigger_Temple")
     local player = GetObjectOwner(hero)
     if IsAIPlayer(player) then
         Trigger(OBJECT_TOUCH_TRIGGER, obj, nil)
@@ -136,7 +136,7 @@ end
 
 
 function Trigger_RallyFlag(hero, obj)
-    log("$ Trigger_RallyFlag")
+    log(DEBUG, "$ Trigger_RallyFlag")
     local player = GetObjectOwner(hero)
     if IsAIPlayer(player) then
         Trigger(OBJECT_TOUCH_TRIGGER, obj, nil)
@@ -168,5 +168,5 @@ function InitializeMapObjects()
     end
 end
 
--- log("Loaded mapobjects-triggers.lua")
+-- log(DEBUG, "Loaded mapobjects-triggers.lua")
 ROUTINES_LOADED[23] = 1

@@ -3,22 +3,22 @@ MAP_CONVERTIBLES = {}
 HERO_IN_CONVERTIBLE = {}
 
 function HeroInConvertible(hero, obj, value)
-    -- log("$ HeroInConvertible")
+    -- log(DEBUG, "$ HeroInConvertible")
     ControlHeroCustomAbility(hero, CUSTOM_ABILITY_4, value)
     HERO_IN_CONVERTIBLE[hero] = (value == 1) and obj or nil
 end
 
 function EnableTownConversionAbility(hero, obj)
-    log("$ EnableTownConversionAbility")
+    log(DEBUG, "$ EnableTownConversionAbility")
     HeroInConvertible(hero, obj, CUSTOM_ABILITY_ENABLED)
     local x,y,z = GetObjectPosition(hero)
     repeat sleep(10) until not IsEqualPosition(hero, x, y, z)
     HeroInConvertible(hero, obj, CUSTOM_ABILITY_DISABLED)
-    log("Hero moved - conversion ability disabled")
+    log(DEBUG, "Hero moved - conversion ability disabled")
 end
 
 function CanHeroConvert(hero, obj)
-    -- log("$ CanHeroConvert obj="..obj)
+    -- log(DEBUG, "$ CanHeroConvert obj="..obj)
     local player = GetObjectOwner(hero)
     if IsHumanPlayer(player) then
         if HasHeroSkill(hero, SKILL_GOVERNANCE) then
@@ -38,7 +38,7 @@ function SetTriggerConvertible(obj, bool)
 end
 
 function ConvertTown(player, hero, town)
-    -- log("$ ConvertTown")
+    -- log(DEBUG, "$ ConvertTown")
     local resource_cost = 20
     local gold_cost = 10000
     if     GetPlayerResource(player, WOOD) < resource_cost then ShowFlyingSign("/Text/Game/Scripts/Resources/xNotEnoughWood.txt", hero, player, 3)
@@ -56,7 +56,7 @@ function ConvertTown(player, hero, town)
 end
 
 function ConvertDwelling(player, hero, dwelling, tier)
-    -- log("$ ConvertDwelling")
+    -- log(DEBUG, "$ ConvertDwelling")
     local resource_cost = 3 * tier
     local gold_cost = 1000 * tier
     if     GetPlayerResource(player, WOOD) < resource_cost then ShowFlyingSign("/Text/Game/Scripts/Resources/xNotEnoughWood.txt", hero, player, 3)
@@ -73,7 +73,7 @@ function ConvertDwelling(player, hero, dwelling, tier)
 end
 
 function HeroVisitConvertible(hero, obj)
-    log("$ HeroVisitConvertible")
+    log(DEBUG, "$ HeroVisitConvertible")
     if hero == H_THEODORUS then startThread(Routine_IncreaseKnowledgeTemp, hero, obj) end
     if HasHeroSkill(hero, SKILL_LOGISTICS) then startThread(Routine_LogisticsVisitTown, hero, obj) end
     if CanHeroConvert(hero, obj) then startThread(EnableTownConversionAbility, hero, obj) end
@@ -101,5 +101,5 @@ function InitializeConvertibles()
 end
 
 
--- log("Loaded town-conversion.lua")
+-- log(DEBUG, "Loaded town-conversion.lua")
 ROUTINES_LOADED[22] = 1

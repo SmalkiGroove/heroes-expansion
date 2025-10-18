@@ -16,7 +16,7 @@ end
 function HeroLevelUp(hero)
     local level = GetHeroLevel(hero)
     local player = GetObjectOwner(hero)
-    log("Hero "..hero.." leveled up to level "..level)
+    log(DEBUG, "Hero "..hero.." leveled up to level "..level)
     Register(VarHeroLevel(hero), level)
     startThread(DoHeroSpeRoutine_LevelUp, player, hero, level)
     startThread(DoSkillsRoutine_LevelUp, player, hero, level)
@@ -138,7 +138,7 @@ function HeroLevelUp_KujinMP() HeroLevelUp(H_KUJIN) end
 
 
 function HeroLostBattle(player, hero, opponent)
-    print("$ HeroLostBattle "..hero)
+    log(DEBUG, "$ HeroLostBattle "..hero)
     if opponent ~= nil then
         for a = 200,255 do
             if HasArtefact(opponent, a) then RemoveArtefact(opponent, a) end
@@ -148,7 +148,7 @@ end
 
 function AIDailyBonus(player, hero)
     if IsAIPlayer(player) then
-        print("$ AIDailyBonus for "..hero)
+        log(DEBUG, "$ AIDailyBonus for "..hero)
         local amount = 125 * TURN * GetDifficulty()
         GiveExp(hero, amount)
     end
@@ -156,7 +156,7 @@ end
 
 function AIWeeklyBonus(player, hero)
     if IsAIPlayer(player) then
-        print("$ AIWeeklyBonus for "..hero)
+        log(DEBUG, "$ AIWeeklyBonus for "..hero)
         local faction = HEROES[hero].faction
         local n = min(WEEKS,7)
         for i = 1,n do
@@ -169,11 +169,11 @@ end
 
 function AIRecruitBonus(player, hero)
     if IsAIPlayer(player) then
-        print("$ AIRecruitBonus for "..hero)
+        log(DEBUG, "$ AIRecruitBonus for "..hero)
         GiveExp(hero, 10000)
         GiveHeroRandomArtifact(player, hero, ARTIFACT_CLASS_RELIC)
     end
 end
 
--- log("Loaded heroes-manager.lua")
+-- log(DEBUG, "Loaded heroes-manager.lua")
 ROUTINES_LOADED[18] = 1

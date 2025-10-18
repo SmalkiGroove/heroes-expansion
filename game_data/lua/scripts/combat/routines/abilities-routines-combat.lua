@@ -1,6 +1,6 @@
 
 function Routine_AbilityCommandBallista(side, unit)
-    log("$ Routine_AbilityCommandBallista")
+    log(DEBUG, "$ Routine_AbilityCommandBallista")
     local growth = {[CREATURE_MARKSMAN] = 30}
     if not ROUTINE_VARS.BallistaCommanders[unit] then
         ROUTINE_VARS.BallistaCommanders[unit] = 1
@@ -29,12 +29,12 @@ function Routine_AbilityCommandBallista(side, unit)
 end
 
 function Routine_AbilityRageOfTheForest(side, unit)
-    log("$ Routine_AbilityRageOfTheForest")
+    log(DEBUG, "$ Routine_AbilityRageOfTheForest")
     UseCombatAbility(unit, SPELL_ABILITY_RAGE_OF_THE_FOREST)
 end
 
 function Routine_AbilityMagneticField(side, unit)
-    log("$ Routine_AbilityMagneticField")
+    log(DEBUG, "$ Routine_AbilityMagneticField")
     local nb = GetCreatureNumber(unit)
     local x,y = GetUnitPosition(unit)
     local enemy = "none"
@@ -62,14 +62,14 @@ function Routine_AbilityMagneticField(side, unit)
 end
 
 function Routine_AbilityMineField(side, unit)
-    log("$ Routine_AbilityMineField")
+    log(DEBUG, "$ Routine_AbilityMineField")
     local x,y = GetUnitPosition(unit)
     local offset = 2 - 4 * side
     HeroCast_Area(unit, SPELL_LAND_MINE, FREE_MANA, x + offset, y)
 end
 
 function Routine_AbilityRefreshMana(side, unit, amount)
-    log("$ Routine_AbilityRefreshMana")
+    log(DEBUG, "$ Routine_AbilityRefreshMana")
     local cur = GetUnitManaPoints(unit)
     local max = GetUnitMaxManaPoints(unit)
     if cur < max then
@@ -126,5 +126,5 @@ function DoAbilitiesRoutine_UnitDied(unit)
 end
 
 
--- log("Loaded abilities-routines-combat.lua")
+-- log(DEBUG, "Loaded abilities-routines-combat.lua")
 ROUTINES_LOADED[10] = 1

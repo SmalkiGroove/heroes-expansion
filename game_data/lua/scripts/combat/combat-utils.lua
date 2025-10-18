@@ -243,5 +243,5 @@ end
 
 
 
--- log("Loaded combat-utils.lua")
+-- log(DEBUG, "Loaded combat-utils.lua")
 ROUTINES_LOADED[9] = 1

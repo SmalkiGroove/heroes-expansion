@@ -1,6 +1,6 @@
 
 function Routine_Houndmasters(side, hero, id, mastery)
-    -- log("Trigger Houndmasters !")
+    -- log(DEBUG, "Trigger Houndmasters !")
     local level = GetHeroLevel(side)
     local amount = 10 + 2 * level + random(1, level, 99)
     if hero == H_IVOR then
@@ -14,7 +14,7 @@ function Routine_Houndmasters(side, hero, id, mastery)
 end
 
 function Routine_ElementalBalance(side, hero, id, mastery)
-    -- log("Trigger Elemental Balance !")
+    -- log(DEBUG, "Trigger Elemental Balance !")
     local creatures = GetUnits(1-side, CREATURE)
     for i,cr in creatures do
         local type = GetCreatureType(cr)
@@ -35,7 +35,7 @@ function Routine_ElementalBalance(side, hero, id, mastery)
 end
 
 function Routine_ShatterMagic(side, hero, id, mastery)
-    -- log("Trigger Shatter Magic !")
+    -- log(DEBUG, "Trigger Shatter Magic !")
     local mult = 0.1 * mastery
     local h = GetHero(1-side)
     if h then
@@ -58,7 +58,7 @@ function Routine_ShatterMagic(side, hero, id, mastery)
 end
 
 function Routine_ImbueBallista(side, hero, id, mastery)
-    -- log("Trigger Imbue Ballista !")
+    -- log(DEBUG, "Trigger Imbue Ballista !")
     if CURRENT_UNIT == hero then
         local ballista = UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_BALLISTA'
         if IsCombatUnit(ballista) then
@@ -111,5 +111,5 @@ function DoSkillRoutine_UnitDied(side, name, id, unit)
 end
 
 
--- log("Loaded skills-routines-combat.lua")
+-- log(DEBUG, "Loaded skills-routines-combat.lua")
 ROUTINES_LOADED[12] = 1

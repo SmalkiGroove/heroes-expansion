@@ -574,5 +574,5 @@ for artefact,data in ARTIFACTS_DATA do
 end
 
 
--- log("Loaded artifacts.lua")
+-- log(DEBUG, "Loaded artifacts.lua")
 ROUTINES_LOADED[4] = 1

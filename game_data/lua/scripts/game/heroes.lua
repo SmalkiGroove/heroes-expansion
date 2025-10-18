@@ -143,5 +143,5 @@ HEROES = {
 }
 
 
--- log("Loaded heroes.lua")
+-- log(DEBUG, "Loaded heroes.lua")
 ROUTINES_LOADED[5] = 1

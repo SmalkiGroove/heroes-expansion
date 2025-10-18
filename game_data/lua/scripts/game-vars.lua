@@ -18,5 +18,5 @@ function VarHeroArtfsetId(hero, artfset)
 end
 
 
--- log("Loaded game-vars.lua")
+-- log(DEBUG, "Loaded game-vars.lua")
 ROUTINES_LOADED[30] = 1

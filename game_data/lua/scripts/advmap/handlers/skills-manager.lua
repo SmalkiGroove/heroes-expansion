@@ -12,7 +12,7 @@ NB_CARAVAN = 0
 CURRENT_CARAVANS = {}
 
 function CaravanCountdown()
-    log("$ CaravanCountdown")
+    log(DEBUG, "$ CaravanCountdown")
     local caravans = {}
     for k,v in CURRENT_CARAVANS do
         if v > 0 then caravans[k] = v-1
@@ -36,26 +36,26 @@ end
 
 
 ABSOLUTE_MASTERIES = {
-    H_DUNCAN=0, H_ISABEL=0,
-    H_TALANAR=0, H_MELODIA=0,
-    H_INGVAR=0, H_EBBA=0,
-    H_THEODORUS=0,
-    H_RAELAG=0, H_SINITAR=0,
-    H_XERXON=0, H_RAVEN=0,
-    H_NYMUS=0, H_ORLANDO=0,
-    H_TELSEK=0,
+    [H_DUNCAN]=0, [H_ISABEL]=0,
+    [H_TALANAR]=0, [H_MELODIA]=0,
+    [H_INGVAR]=0, [H_EBBA]=0,
+    [H_THEODORUS]=0,
+    [H_RAELAG]=0, [H_SINITAR]=0,
+    [H_XERXON]=0, [H_RAVEN]=0,
+    [H_NYMUS]=0, [H_ORLANDO]=0,
+    [H_TELSEK]=0,
 }
 function CheckForAbsolute(player, hero)
-    -- log("$ CheckForAbsolute")
+    -- log(DEBUG, "$ CheckForAbsolute")
     if ABSOLUTE_MASTERIES[hero] then
         if ABSOLUTE_MASTERIES[hero] == 0 then
-            log("Hero "..hero.." is checking for absolute mastery.")
+            log(DEBUG, "Hero "..hero.." is checking for absolute mastery.")
             local f = HEROES[hero].faction
             local n = 0
             n = n + GetHeroSkillMastery(hero, SKILLS_BY_FACTION[f].base)
             for _,sk in SKILLS_BY_FACTION[f].perks do n = n + GetHeroSkillMastery(hero, sk) end
             if n == 6 then
-                log("Hero "..hero.." is eligible for absolute mastery.")
+                log(DEBUG, "Hero "..hero.." is eligible for absolute mastery.")
                 GiveHeroSkill(hero, PERK_ABSOLUTE_MASTERY)
                 ShowFlyingSign("/Text/Game/Scripts/Skills/Absolute.txt", hero, player, FLYING_SIGN_TIME)
                 ABSOLUTE_MASTERIES[hero] = 1
@@ -64,12 +64,12 @@ function CheckForAbsolute(player, hero)
     end
 end
 function CheckForUltimate(player, hero)
-    -- log("$ CheckForUltimate")
+    -- log(DEBUG, "$ CheckForUltimate")
     local f = HEROES[hero].faction
     local ult = SKILLS_BY_FACTION[f].ult
     if HasHeroSkill(hero, ult) then return end
 
-    log("Hero "..hero.." is checking for ultimate.")
+    log(DEBUG, "Hero "..hero.." is checking for ultimate.")
     local n = 0
     for _,sk in SKILLS_BY_FACTION[f].perks do n = n + GetHeroSkillMastery(hero, sk) end
     if n < 3 then return end
@@ -83,7 +83,7 @@ function CheckForUltimate(player, hero)
         end
     end
     if t >= 4 then
-        log("Hero "..hero.." is eligible for ultimate.")
+        log(DEBUG, "Hero "..hero.." is eligible for ultimate.")
         GiveHeroSkill(hero, ult)
         ShowFlyingSign("/Text/Game/Scripts/Skills/Ultimate.txt", hero, player, FLYING_SIGN_TIME)
     end
@@ -91,7 +91,7 @@ end
 
 
 function AddHeroSkill(hero, skill, mastery)
-    log("Hero "..hero.." has learnt skill '"..skill.."' rank "..mastery..".")
+    log(DEBUG, "Hero "..hero.." has learnt skill '"..skill.."' rank "..mastery..".")
     local player = GetObjectOwner(hero)
     local level = GetHeroLevel(hero)
     if START_TRIGGER_SKILLS_ROUTINES[skill] then
@@ -102,7 +102,7 @@ function AddHeroSkill(hero, skill, mastery)
     CheckForUltimate(player, hero)
 end
 function RemoveHeroSkill(hero, skill, mastery)
-    log("Hero "..hero.." has removed skill '"..skill.."' rank "..mastery..".")
+    log(DEBUG, "Hero "..hero.." has removed skill '"..skill.."' rank "..mastery..".")
     local player = GetObjectOwner(hero)
     local level = GetHeroLevel(hero)
     if START_TRIGGER_SKILLS_ROUTINES[skill] then
@@ -121,5 +121,5 @@ function UnbindHeroSkillTrigger(hero)
 end
 
 
--- log("Loaded skills-manager.lua")
+-- log(DEBUG, "Loaded skills-manager.lua")
 ROUTINES_LOADED[16] = 1

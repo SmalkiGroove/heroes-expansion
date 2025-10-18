@@ -1,6 +1,6 @@
 
 function Routine_CheckOffence(player, hero, mastery, level)
-    log("$ Routine_CheckOffence")
+    log(DEBUG, "$ Routine_CheckOffence")
     local level = level or GetHeroLevel(hero)
     local value = StatPerLevelDivisor(level, 0, 8 - mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_OFFENCE]
@@ -11,7 +11,7 @@ function Routine_CheckOffence(player, hero, mastery, level)
 end
 
 function Routine_CheckDefense(player, hero, mastery, level)
-    log("$ Routine_CheckDefense")
+    log(DEBUG, "$ Routine_CheckDefense")
     local level = level or GetHeroLevel(hero)
     local value = StatPerLevelDivisor(level, 0, 8 - mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_DEFENSE]
@@ -23,7 +23,7 @@ function Routine_CheckDefense(player, hero, mastery, level)
 end
 
 function Routine_CheckLearning(player, hero, mastery, level)
-    log("$ Routine_CheckLearning")
+    log(DEBUG, "$ Routine_CheckLearning")
     local level = level or GetHeroLevel(hero)
     local value = StatPerLevelDivisor(level, 0, 8 - mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_LEARNING]
@@ -35,7 +35,7 @@ function Routine_CheckLearning(player, hero, mastery, level)
 end
 
 function Routine_CheckSorcery(player, hero, mastery, level)
-    log("$ Routine_CheckSorcery")
+    log(DEBUG, "$ Routine_CheckSorcery")
     local level = level or GetHeroLevel(hero)
     local value = StatPerLevelDivisor(level, 0, 8 - mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_SORCERY]
@@ -46,7 +46,7 @@ function Routine_CheckSorcery(player, hero, mastery, level)
 end
 
 function Routine_CheckVoice(player, hero, mastery, level)
-    log("$ Routine_CheckVoice")
+    log(DEBUG, "$ Routine_CheckVoice")
     local level = level or GetHeroLevel(hero)
     local value = StatPerLevelDivisor(level, 0, 8 - mastery)
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_VOICE]
@@ -57,7 +57,7 @@ function Routine_CheckVoice(player, hero, mastery, level)
 end
 
 function Routine_CheckCourage(player, hero, mastery)
-    log("$ Routine_CheckCourage")
+    log(DEBUG, "$ Routine_CheckCourage")
     local diff = mastery - HERO_SKILL_BONUSES[hero][SKILLBONUS_COURAGE]
     if diff ~= 0 then
         AddHeroStatAmount(player, hero, STAT_MORALE, diff)
@@ -66,7 +66,7 @@ function Routine_CheckCourage(player, hero, mastery)
 end
 
 function Routine_CheckAvenger(player, hero, mastery)
-    log("$ Routine_CheckAvenger")
+    log(DEBUG, "$ Routine_CheckAvenger")
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_AVENGER]
     if diff ~= 0 then
@@ -76,7 +76,7 @@ function Routine_CheckAvenger(player, hero, mastery)
 end
 
 function Routine_CheckArtificier(player, hero, mastery)
-    log("$ Routine_CheckArtificier")
+    log(DEBUG, "$ Routine_CheckArtificier")
     local value = min(mastery, 3)
     local prev = HERO_SKILL_BONUSES[hero][SKILLBONUS_ARTIFICIER]
     if value > prev then
@@ -93,7 +93,7 @@ function Routine_CheckArtificier(player, hero, mastery)
 end
 
 function Routine_CheckSpiritism(player, hero, mastery)
-    log("$ Routine_CheckSpiritism")
+    log(DEBUG, "$ Routine_CheckSpiritism")
     local current = HERO_SKILL_BONUSES[hero][SKILLBONUS_SPIRITISM]
     HERO_SKILL_BONUSES[hero][SKILLBONUS_SPIRITISM] = mastery
     if mastery > current then
@@ -106,7 +106,7 @@ function Routine_CheckSpiritism(player, hero, mastery)
 end
 
 function Routine_SpiritismLevelUp(player, hero, mastery, level)
-    log("$ Routine_SpiritismLevelUp")
+    log(DEBUG, "$ Routine_SpiritismLevelUp")
     if mod(level, 2) == 0 then
         local school = SPIRITISM_SCHOOL_AFFINITY[hero] and SPIRITISM_SCHOOL_AFFINITY[hero] or SPELL_SCHOOL_ANY
         school = school * mod(level, 4)
@@ -115,7 +115,7 @@ function Routine_SpiritismLevelUp(player, hero, mastery, level)
 end
 
 function Routine_LearnLightMagic(player, hero, mastery)
-    log("$ Routine_LearnLightMagic")
+    log(DEBUG, "$ Routine_LearnLightMagic")
     local diff = mastery - HERO_SKILL_BONUSES[hero][SKILLBONUS_LIGHT_MAGIC]
     if diff > 0 then
         TeachHeroRandomSpellTier(player, hero, SPELL_SCHOOL_LIGHT, mastery+2)
@@ -124,7 +124,7 @@ function Routine_LearnLightMagic(player, hero, mastery)
 end
 
 function Routine_LearnDarkMagic(player, hero, mastery)
-    log("$ Routine_LearnDarkMagic")
+    log(DEBUG, "$ Routine_LearnDarkMagic")
     local diff = mastery - HERO_SKILL_BONUSES[hero][SKILLBONUS_DARK_MAGIC]
     if diff > 0 then
         TeachHeroRandomSpellTier(player, hero, SPELL_SCHOOL_DARK, mastery+2)
@@ -133,7 +133,7 @@ function Routine_LearnDarkMagic(player, hero, mastery)
 end
 
 function Routine_LearnNaturalMagic(player, hero, mastery)
-    log("$ Routine_LearnNaturalMagic")
+    log(DEBUG, "$ Routine_LearnNaturalMagic")
     local diff = mastery - HERO_SKILL_BONUSES[hero][SKILLBONUS_NATURAL_MAGIC]
     if diff > 0 then
         TeachHeroRandomSpellTier(player, hero, SPELL_SCHOOL_NATURAL, mastery+2)
@@ -142,7 +142,7 @@ function Routine_LearnNaturalMagic(player, hero, mastery)
 end
 
 function Routine_LearnDestrMagic(player, hero, mastery)
-    log("$ Routine_LearnDestrMagic")
+    log(DEBUG, "$ Routine_LearnDestrMagic")
     local diff = mastery - HERO_SKILL_BONUSES[hero][SKILLBONUS_DESTRUCT_MAGIC]
     if diff > 0 then
         TeachHeroRandomSpellTier(player, hero, SPELL_SCHOOL_DESTRUCT, mastery+2)
@@ -151,7 +151,7 @@ function Routine_LearnDestrMagic(player, hero, mastery)
 end
 
 function Routine_CheckPrecision(player, hero, mastery)
-    log("$ Routine_CheckPrecision")
+    log(DEBUG, "$ Routine_CheckPrecision")
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_PRECISION]
     if diff ~= 0 then
@@ -161,21 +161,21 @@ function Routine_CheckPrecision(player, hero, mastery)
 end
 
 function Routine_CheckBallistics(player, hero, mastery)
-    log("$ Routine_CheckBallistics")
+    log(DEBUG, "$ Routine_CheckBallistics")
     if mastery == 1 then
         GiveHeroWarMachine(hero, WAR_MACHINE_BALLISTA)
     end
 end
 
 function Routine_CheckAnatomy(player, hero, mastery)
-    log("$ Routine_CheckAnatomy")
+    log(DEBUG, "$ Routine_CheckAnatomy")
     if mastery == 1 then
         GiveHeroWarMachine(hero, WAR_MACHINE_FIRST_AID_TENT)
     end
 end
 
 function Routine_CheckIntelligence(player, hero, mastery)
-    log("$ Routine_CheckIntelligence")
+    log(DEBUG, "$ Routine_CheckIntelligence")
     local value = 4 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_INTELLIGENCE]
     if diff ~= 0 then
@@ -186,7 +186,7 @@ function Routine_CheckIntelligence(player, hero, mastery)
 end
 
 function Routine_CheckExaltation(player, hero, mastery)
-    log("$ Routine_CheckExaltation")
+    log(DEBUG, "$ Routine_CheckExaltation")
     local value = 2 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_EXALTATION]
     if diff ~= 0 then
@@ -197,7 +197,7 @@ function Routine_CheckExaltation(player, hero, mastery)
 end
 
 function Routine_CheckArcaneExcellence(player, hero, mastery)
-    log("$ Routine_CheckArcaneExcellence")
+    log(DEBUG, "$ Routine_CheckArcaneExcellence")
     local value = 3 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_ARCANE_EXCELLENCE]
     if diff ~= 0 then
@@ -207,7 +207,7 @@ function Routine_CheckArcaneExcellence(player, hero, mastery)
 end
 
 function Routine_CheckGraduate(player, hero, mastery)
-    log("$ Routine_CheckGraduate")
+    log(DEBUG, "$ Routine_CheckGraduate")
     local value = 2 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_GRADUATE]
     if diff ~= 0 then
@@ -217,7 +217,7 @@ function Routine_CheckGraduate(player, hero, mastery)
 end
 
 function Routine_CheckOccultism(player, hero, mastery)
-    log("$ Routine_CheckOccultism")
+    log(DEBUG, "$ Routine_CheckOccultism")
     local value = 5 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_OCCULTISM]
     if diff ~= 0 then
@@ -227,7 +227,7 @@ function Routine_CheckOccultism(player, hero, mastery)
 end
 
 function Routine_CheckSecretsOfDestruct(player, hero, mastery)
-    log("$ Routine_CheckSecretsOfDestruct")
+    log(DEBUG, "$ Routine_CheckSecretsOfDestruct")
     local value = 4 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_SECRETS_OF_DESTRUCT]
     if diff ~= 0 then
@@ -237,7 +237,7 @@ function Routine_CheckSecretsOfDestruct(player, hero, mastery)
 end
 
 function Routine_CheckReinforcement(player, hero, mastery)
-    log("$ Routine_CheckReinforcement")
+    log(DEBUG, "$ Routine_CheckReinforcement")
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_REINFORCEMENT]
     if diff ~= 0 then
@@ -248,7 +248,7 @@ function Routine_CheckReinforcement(player, hero, mastery)
 end
 
 function Routine_CheckEmpiricism(player, hero, mastery)
-    log("$ Routine_CheckEmpiricism")
+    log(DEBUG, "$ Routine_CheckEmpiricism")
     local diff = mastery - HERO_SKILL_BONUSES[hero][SKILLBONUS_EMPIRICISM]
     if diff ~= 0 then
         local value = mastery * (500 + round(0.05 * GetHeroStat(hero, STAT_EXPERIENCE)))
@@ -258,7 +258,7 @@ function Routine_CheckEmpiricism(player, hero, mastery)
 end
 
 function Routine_CheckLastStand(player, hero, mastery)
-    log("$ Routine_CheckLastStand")
+    log(DEBUG, "$ Routine_CheckLastStand")
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_LAST_STAND]
     if diff ~= 0 then
@@ -280,7 +280,7 @@ function Routine_RevealNeutralTowns(player, hero, mastery)
 end
 
 function Routine_GearUp(player, hero, mastery)
-    log("$ Routine_GearUp")
+    log(DEBUG, "$ Routine_GearUp")
     if mastery > HERO_SKILL_BONUSES[hero][SKILLBONUS_GEAR_UP] then
         local faction = HEROES[hero].faction
         local minors = {}
@@ -300,7 +300,7 @@ function Routine_GearUp(player, hero, mastery)
 end
 
 function Routine_HeroesLegacy(player, hero, mastery)
-    log("$ Routine_HeroesLegacy")
+    log(DEBUG, "$ Routine_HeroesLegacy")
     if mastery > HERO_SKILL_BONUSES[hero][SKILLBONUS_HEROES_LEGACY] then
         local faction = HEROES[hero].faction
         local majors = {}
@@ -320,7 +320,7 @@ function Routine_HeroesLegacy(player, hero, mastery)
 end
 
 function Routine_Mythology(player, hero, mastery)
-    log("$ Routine_Mythology")
+    log(DEBUG, "$ Routine_Mythology")
     if mastery > HERO_SKILL_BONUSES[hero][SKILLBONUS_MYTHOLOGY] then
         local faction = HEROES[hero].faction
         local relics = {}
@@ -340,7 +340,7 @@ function Routine_Mythology(player, hero, mastery)
 end
 
 function Routine_CheckImbueArrow(player, hero, mastery)
-    log("$ Routine_CheckImbueArrow")
+    log(DEBUG, "$ Routine_CheckImbueArrow")
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_IMBUE_ARROW]
     if diff ~= 0 then
@@ -350,7 +350,7 @@ function Routine_CheckImbueArrow(player, hero, mastery)
 end
 
 function Routine_CheckBattleCommander(player, hero, mastery)
-    log("$ Routine_CheckBattleCommander")
+    log(DEBUG, "$ Routine_CheckBattleCommander")
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_BATTLE_COMMANDER]
     if diff ~= 0 then
@@ -361,12 +361,12 @@ function Routine_CheckBattleCommander(player, hero, mastery)
 end
 
 function Routine_CheckKnowYourEnemy(player, hero, mastery)
-    log("$ Routine_CheckKnowYourEnemy")
+    log(DEBUG, "$ Routine_CheckKnowYourEnemy")
     ControlHeroCustomAbility(hero, CUSTOM_ABILITY_2, mastery)
 end
 
 function Routine_CheckFineRune(player, hero, mastery)
-    log("$ Routine_CheckFineRune")
+    log(DEBUG, "$ Routine_CheckFineRune")
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_FINE_RUNE]
     if diff ~= 0 then
@@ -376,7 +376,7 @@ function Routine_CheckFineRune(player, hero, mastery)
 end
 
 function Routine_CheckRefreshRune(player, hero, mastery)
-    log("$ Routine_CheckRefreshRune")
+    log(DEBUG, "$ Routine_CheckRefreshRune")
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_REFRESH_RUNE]
     if diff ~= 0 then
@@ -386,7 +386,7 @@ function Routine_CheckRefreshRune(player, hero, mastery)
 end
 
 function Routine_CheckGreaterRune(player, hero, mastery)
-    log("$ Routine_CheckGreaterRune")
+    log(DEBUG, "$ Routine_CheckGreaterRune")
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_GREATER_RUNE]
     if diff ~= 0 then
@@ -396,7 +396,7 @@ function Routine_CheckGreaterRune(player, hero, mastery)
 end
 
 function Routine_CheckLordOfTheUndead(player, hero, mastery)
-    log("$ Routine_CheckLordOfTheUndead")
+    log(DEBUG, "$ Routine_CheckLordOfTheUndead")
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_LORD_OF_THE_UNDEAD]
     if diff ~= 0 then
@@ -407,7 +407,7 @@ function Routine_CheckLordOfTheUndead(player, hero, mastery)
 end
 
 function Routine_CheckSheerStrength(player, hero, mastery)
-    log("$ Routine_CheckSheerStrength")
+    log(DEBUG, "$ Routine_CheckSheerStrength")
     local value = 2 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_SHEER_STRENGTH]
     if diff ~= 0 then
@@ -417,21 +417,21 @@ function Routine_CheckSheerStrength(player, hero, mastery)
 end
 
 function Routine_StaminaBuff(player, hero, mastery)
-    log("$ Routine_StaminaBuff")
+    log(DEBUG, "$ Routine_StaminaBuff")
     if mastery == 1 then
         GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_HITPOINTS, 10)
     end
 end
 
 function Routine_RageAwakening(player, hero, mastery)
-    log("$ Routine_RageAwakening")
+    log(DEBUG, "$ Routine_RageAwakening")
     if not HasHeroSkill(SKILL_BLOOD_RAGE) then
         GiveHeroSkill(hero, SKILL_BLOOD_RAGE)
     end
 end
 
 function Routine_CheckInfusion(player, hero, mastery)
-    log("$ Routine_CheckInfusion")
+    log(DEBUG, "$ Routine_CheckInfusion")
     local value = mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_INFUSION]
     if diff ~= 0 then
@@ -442,7 +442,7 @@ function Routine_CheckInfusion(player, hero, mastery)
 end
 
 function Routine_CheckEnlightened(player, hero, mastery)
-    log("$ Routine_CheckEnlightened")
+    log(DEBUG, "$ Routine_CheckEnlightened")
     local value = 2 * mastery
     local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_ENLIGHTENED]
     if diff ~= 0 then
@@ -455,7 +455,7 @@ end
 
 
 function Routine_WarPathInit(player, hero, mastery)
-    log("$ Routine_WarPathInit")
+    log(DEBUG, "$ Routine_WarPathInit")
     if HERO_SKILL_BONUSES[hero][SKILLBONUS_WAR_PATH] == 0 then
         GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_ATTACK, 2)
         GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_DEFENCE, 2)
@@ -464,7 +464,7 @@ function Routine_WarPathInit(player, hero, mastery)
 end
 
 function Routine_OnslaughtBuff(player, hero, mastery)
-    log("$ Routine_OnslaughtBuff")
+    log(DEBUG, "$ Routine_OnslaughtBuff")
     if HERO_SKILL_BONUSES[hero][SKILLBONUS_ONSLAUGHT] == 0 then
         GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_INITIATIVE, 2)
         GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_SPEED, 1)
@@ -473,7 +473,7 @@ function Routine_OnslaughtBuff(player, hero, mastery)
 end
 
 function RoutineEstatesDaily(player, hero, mastery)
-    log("$ RoutineEstatesDaily")
+    log(DEBUG, "$ RoutineEstatesDaily")
     local total = 0
     for obj,_ in RESOURCE_GENERATING_OBJECTS do
         for _,building in GetObjectNamesByType(obj) do
@@ -515,12 +515,12 @@ function RoutineEstatesDaily(player, hero, mastery)
 end
 
 function Routine_GeologyDaily(player, hero, mastery)
-    log("$ Routine_GeologyDaily")
+    log(DEBUG, "$ Routine_GeologyDaily")
     AddPlayerResource(player, hero, ORE, 1)
 end
 
 function Routine_IndustryDaily(player, hero, mastery)
-    log("$ Routine_IndustryDaily")
+    log(DEBUG, "$ Routine_IndustryDaily")
     local total = {[0]=0,[1]=0,[2]=0,[3]=0,[4]=0,[5]=0,[6]=0}
     local xh,yh,zh = GetObjectPosition(hero)
     local cape = HasArtefact(hero, ARTIFACT_CAPE_OF_KINGS)
@@ -547,13 +547,13 @@ function Routine_IndustryDaily(player, hero, mastery)
 end
 
 function Routine_HeraldOfDeathGolds(player, hero, mastery)
-    log("$ Routine_HeraldOfDeathGolds")
+    log(DEBUG, "$ Routine_HeraldOfDeathGolds")
     local amount = GetHeroCreatures(hero, CREATURE_SKELETON) + GetHeroCreatures(hero, CREATURE_SKELETON_ARCHER) + GetHeroCreatures(hero, CREATURE_SKELETON_WARRIOR)
     AddPlayerResource(player, hero, GOLD, amount)
 end
 
 function Routine_SpiritismManaRegen(player, hero, mastery)
-    log("$ Routine_SpiritismManaRegen")
+    log(DEBUG, "$ Routine_SpiritismManaRegen")
     ChangeHeroStat(hero, STAT_MANA_POINTS, mastery * 10)
 end
 
@@ -566,19 +566,19 @@ function Routine_WeeklyElementalWarriors(hero, elem)
 end
 
 function Routine_WarriorsOfTheMagma(player, hero, mastery)
-    log("$ Routine_WarriorsOfTheMagma")
+    log(DEBUG, "$ Routine_WarriorsOfTheMagma")
     Routine_WeeklyElementalWarriors(hero, CREATURE_FIRE_ELEMENTAL)
 end
 function Routine_WarriorsOfTheSea(player, hero, mastery)
-    log("$ Routine_WarriorsOfTheSea")
+    log(DEBUG, "$ Routine_WarriorsOfTheSea")
     Routine_WeeklyElementalWarriors(hero, CREATURE_WATER_ELEMENTAL)
 end
 function Routine_WarriorsOfTheSky(player, hero, mastery)
-    log("$ Routine_WarriorsOfTheSky")
+    log(DEBUG, "$ Routine_WarriorsOfTheSky")
     Routine_WeeklyElementalWarriors(hero, CREATURE_AIR_ELEMENTAL)
 end
 function Routine_WarriorsOfTheMountain(player, hero, mastery)
-    log("$ Routine_WarriorsOfTheMountain")
+    log(DEBUG, "$ Routine_WarriorsOfTheMountain")
     Routine_WeeklyElementalWarriors(hero, CREATURE_EARTH_ELEMENTAL)
 end
 
@@ -588,7 +588,7 @@ function Routine_LogisticsVisitTown(hero, obj)
 end
 
 function Routine_LogisticsWeeklyProd(player, hero, mastery)
-    log("$ Routine_LogisticsWeeklyProd")
+    log(DEBUG, "$ Routine_LogisticsWeeklyProd")
     local town = nil
     if Var_LastVisitedTown[hero] then town = Var_LastVisitedTown[hero]
     else town = FindClosestTown(player, hero) end
@@ -624,7 +624,7 @@ function Routine_LogisticsWeeklyProd(player, hero, mastery)
 end
 
 function Routine_GovernanceWeeklyResources(player, hero, mastery)
-    log("$ Routine_GovernanceWeeklyResources")
+    log(DEBUG, "$ Routine_GovernanceWeeklyResources")
     local golds = { [0]=0, [1]=1000, [2]=2500, [3]=5000 }
     local res = { [HAVEN]=CRYSTAL, [PRESERVE]=GEM, [FORTRESS]=CRYSTAL, [ACADEMY]=GEM, [DUNGEON]=SULFUR, [NECROPOLIS]=MERCURY, [INFERNO]=SULFUR, [STRONGHOLD]=MERCURY }
     local faction = HEROES[hero].faction
@@ -634,7 +634,7 @@ function Routine_GovernanceWeeklyResources(player, hero, mastery)
 end
 
 function Routine_GearUpWeeklyGolds(player, hero, mastery)
-    log("$ Routine_GearUpWeeklyGolds")
+    log(DEBUG, "$ Routine_GearUpWeeklyGolds")
     local count = 0
     for a,data in ARTIFACTS_DATA do
         if data.class == ARTIFACT_CLASS_MINOR then
@@ -645,7 +645,7 @@ function Routine_GearUpWeeklyGolds(player, hero, mastery)
 end
 
 function Routine_HeroesLegacyWeeklyGolds(player, hero, mastery)
-    log("$ Routine_HeroesLegacyWeeklyGolds")
+    log(DEBUG, "$ Routine_HeroesLegacyWeeklyGolds")
     local count = 0
     for a,data in ARTIFACTS_DATA do
         if data.class == ARTIFACT_CLASS_MAJOR then
@@ -656,7 +656,7 @@ function Routine_HeroesLegacyWeeklyGolds(player, hero, mastery)
 end
 
 function Routine_MythologyWeeklyGolds(player, hero, mastery)
-    log("$ Routine_MythologyWeeklyGolds")
+    log(DEBUG, "$ Routine_MythologyWeeklyGolds")
     local count = 0
     for a,data in ARTIFACTS_DATA do
         if data.class == ARTIFACT_CLASS_RELIC then
@@ -667,25 +667,25 @@ function Routine_MythologyWeeklyGolds(player, hero, mastery)
 end
 
 function Routine_ReinforcementWeeklyBonus(player, hero, mastery)
-    log("$ Routine_ReinforcementWeeklyBonus")
+    log(DEBUG, "$ Routine_ReinforcementWeeklyBonus")
     AddHeroStatAmount(player, hero, STAT_ATTACK, 1)
     AddHeroStatAmount(player, hero, STAT_DEFENCE, 1)
 end
 
 function Routine_EmpiricismWeeklyBonus(player, hero, mastery)
-    log("$ Routine_EmpiricismWeeklyBonus")
+    log(DEBUG, "$ Routine_EmpiricismWeeklyBonus")
     local exp = 500 + round(0.05 * GetHeroStat(hero, STAT_EXPERIENCE))
     AddHeroStatAmount(player, hero, STAT_EXPERIENCE, exp)
 end
 
 function Routine_BattleCommanderWeeklyDancers(player, hero, mastery)
-    log("$ Routine_BattleCommanderWeeklyDancers")
+    log(DEBUG, "$ Routine_BattleCommanderWeeklyDancers")
     local amount = 19 + WEEKS
     AddHeroCreatureType(player, hero, PRESERVE, 1, amount, 2)
 end
 
 function Routine_HauntingWeeklyGhosts(player, hero, mastery)
-    log("$ Routine_HauntingWeeklyGhosts")
+    log(DEBUG, "$ Routine_HauntingWeeklyGhosts")
     local amount = 5 + 2 * WEEKS
     for obj,_ in RESOURCE_GENERATING_OBJECTS do
         for _,building in GetObjectNamesByType(obj) do
@@ -697,7 +697,7 @@ function Routine_HauntingWeeklyGhosts(player, hero, mastery)
 end
 
 function Routine_DefendUsAllWeekly(player, hero, mastery)
-    log("$ Routine_DefendUsAllWeekly")
+    log(DEBUG, "$ Routine_DefendUsAllWeekly")
     for _,goblin in CREATURES_BY_FACTION[STRONGHOLD][1] do
         if GetHeroCreatures(hero, goblin) > 0 then
             RemoveHeroCreatures(hero, goblin, 1)
@@ -708,7 +708,7 @@ function Routine_DefendUsAllWeekly(player, hero, mastery)
 end
 
 function Routine_InfusionWeeklyMana(player, hero, mastery)
-    log("$ Routine_InfusionWeeklyMana")
+    log(DEBUG, "$ Routine_InfusionWeeklyMana")
     AddHeroManaUnbound(player, hero, 50)
 end
 
@@ -717,7 +717,7 @@ end
 
 
 function Routine_LeadershipAfterBattle(player, hero, mastery, combatIndex)
-    log("$ Routine_LeadershipAfterBattle")
+    log(DEBUG, "$ Routine_LeadershipAfterBattle")
     local obj = ONGOING_BATTLES[hero]
     if not obj then return end
     sleep(1)
@@ -732,7 +732,7 @@ function Routine_LeadershipAfterBattle(player, hero, mastery, combatIndex)
     local err_counter = 0
     while not IsObjectExists(caravan) do
         sleep(1) err_counter = err_counter + 1
-        if err_counter == 10 then log("Failed to create caravan") return end
+        if err_counter == 10 then log(DEBUG, "Failed to create caravan") return end
     end
     local total = 0
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 0)
@@ -755,7 +755,7 @@ end
 
 Var_DespotismBonus = {}
 function Routine_DespotismAfterBattle(player, hero, mastery, combatIndex)
-    log("$ Routine_DespotismAfterBattle")
+    log(DEBUG, "$ Routine_DespotismAfterBattle")
     if not Var_DespotismBonus[hero] then Var_DespotismBonus[hero] = {attribute=0, value=0} end
     local total = 0
     for i,cr in GetHeroArmy(hero) do
@@ -781,13 +781,13 @@ function Routine_DespotismAfterBattle(player, hero, mastery, combatIndex)
 end
 
 function Routine_DevotionAfterBattle(player, hero, mastery, combatIndex)
-    log("$ Routine_DevotionAfterBattle")
+    log(DEBUG, "$ Routine_DevotionAfterBattle")
     local value = GetArmyStrength(combatIndex, 1)
     AddHeroStatAmount(player, hero, STAT_EXPERIENCE, value*value)
 end
 
 function Routine_BattleWrathAfterBattle(player, hero, mastery, combatIndex)
-    log("$ Routine_BattleWrathAfterBattle")
+    log(DEBUG, "$ Routine_BattleWrathAfterBattle")
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
     for i = 0,stacks-1 do
         local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
@@ -800,7 +800,7 @@ function Routine_BattleWrathAfterBattle(player, hero, mastery, combatIndex)
 end
 
 function Routine_WarPolicyAfterBattle(player, hero, mastery, combatIndex)
-    log("$ Routine_WarPolicyAfterBattle")
+    log(DEBUG, "$ Routine_WarPolicyAfterBattle")
     local faction = HEROES[hero].faction
     local losses = {}
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
@@ -821,7 +821,7 @@ function Routine_WarPolicyAfterBattle(player, hero, mastery, combatIndex)
 end
 
 function Routine_TaleTellers(player, hero, mastery, combatIndex)
-    log("$ Routine_TaleTellers")
+    log(DEBUG, "$ Routine_TaleTellers")
     local exp = trunc(0.67 * GetArmyStrength(combatIndex, 0))
     for _,h in GetPlayerHeroes(player) do
         if h ~= hero then
@@ -832,7 +832,7 @@ end
 
 Var_SpoilersVictories = {}
 function Routine_SpoilsOfWarArtifact(player, hero, mastery, combatIndex)
-    log("$ Routine_SpoilsOfWarArtifact")
+    log(DEBUG, "$ Routine_SpoilsOfWarArtifact")
     Var_SpoilersVictories[hero] = Var_SpoilersVictories[hero] and Var_SpoilersVictories[hero] + 1 or 1
     if mod(Var_SpoilersVictories[hero],10) == 0 then
         GiveHeroRandomArtifact(player, hero, ARTIFACT_CLASS_MINOR)
@@ -840,7 +840,7 @@ function Routine_SpoilsOfWarArtifact(player, hero, mastery, combatIndex)
 end
 
 function Routine_WarPathAfterBattle(player, hero, mastery, combatIndex)
-    log("$ Routine_WarPathAfterBattle")
+    log(DEBUG, "$ Routine_WarPathAfterBattle")
     if HERO_SKILL_BONUSES[hero][SKILLBONUS_WAR_PATH] == 1 then
         ChangeHeroStat(hero, STAT_MOVE_POINTS, 500)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_WAR_PATH] = 0
@@ -848,14 +848,14 @@ function Routine_WarPathAfterBattle(player, hero, mastery, combatIndex)
 end
 
 function Routine_OnslaughtReset(player, hero, mastery, combatIndex)
-    log("$ Routine_OnslaughtReset")
+    log(DEBUG, "$ Routine_OnslaughtReset")
     HERO_SKILL_BONUSES[hero][SKILLBONUS_ONSLAUGHT] = 0
 end
 
 
 
 function Routine_MeditationExp(player, hero, amount)
-    log("$ Routine_MeditationExp")
+    log(DEBUG, "$ Routine_MeditationExp")
     AddHeroStatAmount(player, hero, STAT_EXPERIENCE, 50 * amount)
 end
 
@@ -957,7 +957,7 @@ AFTER_COMBAT_TRIGGER_SKILLS_ROUTINES = {
 
 
 function DoSkillsRoutine_Start(player, hero)
-    log("$ DoSkillsRoutine_Start - "..hero)
+    log(DEBUG, "$ DoSkillsRoutine_Start - "..hero)
     for skill = 1,207 do
         if HasHeroSkill(hero, skill) then
             local mastery = GetHeroSkillMastery(hero, skill)
@@ -970,7 +970,7 @@ function DoSkillsRoutine_Start(player, hero)
 end
 
 function DoSkillsRoutine_Daily(player, hero)
-    log("$ DoSkillsRoutine_Daily - "..hero)
+    log(DEBUG, "$ DoSkillsRoutine_Daily - "..hero)
     for k,v in DAILY_TRIGGER_SKILLS_ROUTINES do
         if HasHeroSkill(hero, k) then
             local mastery = GetHeroSkillMastery(hero, k)
@@ -980,7 +980,7 @@ function DoSkillsRoutine_Daily(player, hero)
 end
 
 function DoSkillsRoutine_Weekly(player, hero)
-    log("$ DoSkillsRoutine_Weekly - "..hero)
+    log(DEBUG, "$ DoSkillsRoutine_Weekly - "..hero)
     for k,v in WEEKLY_TRIGGER_SKILLS_ROUTINES do
         if HasHeroSkill(hero, k) then
             local mastery = GetHeroSkillMastery(hero, k)
@@ -990,7 +990,7 @@ function DoSkillsRoutine_Weekly(player, hero)
 end
 
 function DoSkillsRoutine_LevelUp(player, hero, level)
-    log("$ DoSkillsRoutine_LevelUp - "..hero)
+    log(DEBUG, "$ DoSkillsRoutine_LevelUp - "..hero)
     for k,v in LEVELUP_TRIGGER_SKILLS_ROUTINES do
         if HasHeroSkill(hero, k) then
             local mastery = GetHeroSkillMastery(hero, k)
@@ -1000,7 +1000,7 @@ function DoSkillsRoutine_LevelUp(player, hero, level)
 end
 
 function DoSkillsRoutine_AfterCombat(player, hero, index)
-    log("$ DoSkillsRoutine_AfterCombat - "..hero)
+    log(DEBUG, "$ DoSkillsRoutine_AfterCombat - "..hero)
     for k,v in AFTER_COMBAT_TRIGGER_SKILLS_ROUTINES do
         if HasHeroSkill(hero, k) then
             local mastery = GetHeroSkillMastery(hero, k)
@@ -1010,5 +1010,5 @@ function DoSkillsRoutine_AfterCombat(player, hero, index)
 end
 
 
--- log("Loaded skills-routines-advmap.lua")
+-- log(DEBUG, "Loaded skills-routines-advmap.lua")
 ROUTINES_LOADED[11] = 1

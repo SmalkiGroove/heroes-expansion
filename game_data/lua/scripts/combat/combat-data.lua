@@ -69,5 +69,5 @@ COMBAT_EFFECT_ARTIFACTS = {
 }
 
 
--- log("Loaded combat-data.lua")
+-- log(DEBUG, "Loaded combat-data.lua")
 ROUTINES_LOADED[8] = 1

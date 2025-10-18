@@ -2,10 +2,11 @@
 	dofile = doFile
 
 	dofile('/scripts/events.lua')
+	dofile('/scripts/config.lua')
 	dofile("/scripts/common.lua")
 
 	-- BlockGame()
-	consoleCmd('console_size 1000')
+	consoleCmd('console_size 9999')
 	consoleCmd('game_writelog 1')
 
 	--

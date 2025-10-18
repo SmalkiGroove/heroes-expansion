@@ -324,5 +324,5 @@ _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_INFUSION            = _skillbonu
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_ENLIGHTENED         = _skillbonus_id
 
 
--- log("Loaded skills.lua")
+-- log(DEBUG, "Loaded skills.lua")
 ROUTINES_LOADED[3] = 1

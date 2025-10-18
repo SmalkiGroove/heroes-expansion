@@ -5,27 +5,27 @@ function Routine_SummonElementalsType(side, hero, type)
 end
 
 function Routine_SummonElementalsAir(side, hero)
-    log("$ Routine_SummonElementalsAir")
+    log(DEBUG, "$ Routine_SummonElementalsAir")
     Routine_SummonElementalsType(side, hero, CREATURE_AIR_ELEMENTAL)
 end
 
 function Routine_SummonElementalsEarth(side, hero)
-    log("$ Routine_SummonElementalsEarth")
+    log(DEBUG, "$ Routine_SummonElementalsEarth")
     Routine_SummonElementalsType(side, hero, CREATURE_EARTH_ELEMENTAL)
 end
 
 function Routine_SummonElementalsFire(side, hero)
-    log("$ Routine_SummonElementalsFire")
+    log(DEBUG, "$ Routine_SummonElementalsFire")
     Routine_SummonElementalsType(side, hero, CREATURE_FIRE_ELEMENTAL)
 end
 
 function Routine_SummonElementalsWater(side, hero)
-    log("$ Routine_SummonElementalsWater")
+    log(DEBUG, "$ Routine_SummonElementalsWater")
     Routine_SummonElementalsType(side, hero, CREATURE_WATER_ELEMENTAL)
 end
 
 function Routine_ArtifactMoonCharm(side, hero, unit)
-    log("$ Routine_ArtifactMoonCharm")
+    log(DEBUG, "$ Routine_ArtifactMoonCharm")
     if not ROUTINE_VARS.MoonCharm then
         if GetUnitSide(unit) == side and ROUTINE_VARS.InitialCounts[unit] then
             local type = GetCreatureType(unit)
@@ -39,19 +39,19 @@ end
 
 
 function Routine_ArtfsetFrost(side, hero)
-    log("$ Routine_ArtfsetFrost")
+    log(DEBUG, "$ Routine_ArtfsetFrost")
     repeat sleep() until CURRENT_UNIT == hero
     HeroCast_AllCreatures(hero, SPELL_DEEP_FREEZE, FREE_MANA, 1-side)
     SetATB_ID(hero, ATB_INSTANT)
 end
 
 function Routine_ArtfsetSpirit(side, hero)
-    log("$ Routine_ArtfsetSpirit")
+    log(DEBUG, "$ Routine_ArtfsetSpirit")
     HeroCast_AllCreatures(hero, SPELL_SORROW, FREE_MANA, 1-side)
 end
 
 function Routine_ArtfsetBestial(side, hero)
-    log("$ Routine_ArtfsetBestial")
+    log(DEBUG, "$ Routine_ArtfsetBestial")
     local beasts = { CREATURE_GRIFFIN, CREATURE_UNICORN, CREATURE_WYVERN, CREATURE_HYDRA, CREATURE_NIGHTMARE, CREATURE_WOLF, CREATURE_MANTICORE, CREATURE_ARCANE_EAGLE }
     local beast = beasts[random(1,8,0)]
     local tier = CREATURES[beast][2]
@@ -60,7 +60,7 @@ function Routine_ArtfsetBestial(side, hero)
 end
 
 function Routine_ArtfsetGenji1(side, hero, unit)
-    log("$ Routine_ArtfsetGenji1")
+    log(DEBUG, "$ Routine_ArtfsetGenji1")
     if GetUnitSide(unit) ~= side then
         local m = GetUnitManaPoints(hero) + 50
         SetMana(hero, m)
@@ -69,7 +69,7 @@ function Routine_ArtfsetGenji1(side, hero, unit)
 end
 
 function Routine_ArtfsetWarLeader(side, hero, unit)
-    log("$ Routine_ArtfsetWarLeader")
+    log(DEBUG, "$ Routine_ArtfsetWarLeader")
     if GetUnitSide(unit) ~= side then
         for i,cr in GetUnits(side, CREATURE) do
             local tier = CREATURES[cr][2]
@@ -81,7 +81,7 @@ function Routine_ArtfsetWarLeader(side, hero, unit)
 end
 
 function Routine_ArtfsetDragon4(side, hero, unit)
-    log("$ Routine_ArtfsetDragon4")
+    log(DEBUG, "$ Routine_ArtfsetDragon4")
     if GetUnitSide(unit) == side then
         sleep(random(1,30,GetCreatureNumber(unit)))
         if ROUTINE_VARS.Legendragon[side] then return end
@@ -109,7 +109,7 @@ function Routine_ArtfsetDragon4(side, hero, unit)
 end
 
 function Routine_ArtfsetDragon6(side, hero, unit)
-    log("$ Routine_ArtfsetDragon6")
+    log(DEBUG, "$ Routine_ArtfsetDragon6")
     if GetUnitSide(unit) ~= side then
         sleep(random(1,30,GetCreatureNumber(unit)))
         if ROUTINE_VARS.Legendragon[side] then return end
@@ -133,7 +133,7 @@ function Routine_ArtfsetDragon6(side, hero, unit)
 end
 
 function Routine_ArtfsetDragon8(side, hero)
-    log("$ Routine_ArtfsetDragon8")
+    log(DEBUG, "$ Routine_ArtfsetDragon8")
     if ROUTINE_VARS.Legendragon[side] then return end
     ROUTINE_VARS.Legendragon[side] = 1
     local name = "creature_DRAGON-SET_"..side
@@ -223,5 +223,5 @@ function DoArtifactRoutine_UnitDied(side, name, id, unit)
 end
 
 
--- log("Loaded artifacts-routines-combat.lua")
+-- log(DEBUG, "Loaded artifacts-routines-combat.lua")
 ROUTINES_LOADED[13] = 1

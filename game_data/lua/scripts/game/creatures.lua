@@ -343,5 +343,5 @@ CREATURES_BY_FACTION = {
 }
 
 
--- log("Loaded creatures.lua")
+-- log(DEBUG, "Loaded creatures.lua")
 ROUTINES_LOADED[1] = 1

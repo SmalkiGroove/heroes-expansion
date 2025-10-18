@@ -153,6 +153,7 @@ function createTutorialAliases()
     HideTutorialMessage = clearMessage
 end
 
+dofile('/scripts/config.lua') sleep()
 dofile("/scripts/common.lua") sleep()
 dofile("/scripts/combat-manager.lua") sleep()
 

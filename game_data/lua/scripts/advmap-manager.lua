@@ -16,7 +16,7 @@ ROUTINES_LOADED = {
 }
 
 function LoadScript(path, key)
-	-- log("Loading script "..path)
+	log(TRACE, "Loading script "..path)
 	dofile(path)
 	repeat sleep(1) until ROUTINES_LOADED[key] == 1
 end
@@ -70,7 +70,7 @@ function WatchPlayer(player, wait)
         while (not IsPlayerCurrent(player)) do sleep(10) end
     end
 	sleep(10)
-	log("$ WatchPlayer "..player)
+	log(DEBUG, "$ WatchPlayer "..player)
     local tracker = {}
     for _,hero in GetPlayerHeroes(player) do
 		local x,y,z = GetObjectPosition(hero)
@@ -87,15 +87,15 @@ function WatchPlayer(player, wait)
 			if tracker[hero].track then
 				local mvp = GetHeroStat(hero, STAT_MOVE_POINTS)
 				if mvp == 0 then
-					log("Hero "..hero.." has 0 move points")
+					log(DEBUG, "Hero "..hero.." has 0 move points")
 					if IsEqualPosition(hero, tracker[hero].x, tracker[hero].y, tracker[hero].z) then
 						Routine_ArtifactBootsOfSwiftJourneyCancel(player, hero, nil)
 						if HasHeroSkill(hero, PERK_MEDITATION) and GetHeroStat(hero, STAT_MANA_POINTS) > tracker[hero].mana then
-							log("Hero "..hero.." has used Meditation")
+							log(DEBUG, "Hero "..hero.." has used Meditation")
 							local amount = GetHeroStat(hero, STAT_MANA_POINTS) - tracker[hero].mana
 							startThread(Routine_MeditationExp, player, hero, amount)
 						else
-							log("Hero "..hero.." has used digging")
+							log(DEBUG, "Hero "..hero.." has used digging")
 							startThread(ActivateDigging, player, hero)
 						end
 						tracker[hero].track = nil
@@ -113,7 +113,7 @@ end
 
 function PlayerDailyHandler(player)
 	while (not IsPlayerCurrent(player)) do sleep(5) end
-	log("Player "..player.." turn "..TURN.." started")
+	log(INFO, "Player "..player.." turn "..TURN.." started")
 	for i,hero in GetPlayerHeroes(player) do
 		startThread(DoHeroSpeRoutine_Daily, player, hero)
 		startThread(DoSkillsRoutine_Daily, player, hero)
@@ -126,7 +126,7 @@ end
 
 function PlayerWeeklyHandler(player)
 	while (not IsPlayerCurrent(player)) do sleep(5) end
-	log("Player "..player.." week "..WEEKS.." started")
+	log(INFO, "Player "..player.." week "..WEEKS.." started")
 	for i,hero in GetPlayerHeroes(player) do
 		startThread(DoHeroSpeRoutine_Weekly, player, hero)
 		startThread(DoSkillsRoutine_Weekly, player, hero)
@@ -138,7 +138,7 @@ end
 
 function NewDayTrigger()
 	TURN = TURN + 1
-	log("New day ! Turn "..TURN)
+	log(INFO, "New day ! Turn "..TURN)
 	local newweek = GetDate(DAY_OF_WEEK) == 1
 	if newweek then
 		WEEKS = WEEKS + 1
@@ -182,7 +182,7 @@ Trigger(CUSTOM_ABILITY_TRIGGER, "CustomAbilityHandler")
 function AddPlayerHero(player, hero)
 	Register(VarHeroLevel(hero), GetHeroLevel(hero))
 	if HEROES[hero].owner == 0 then
-		log("Initialize hero "..hero)
+		log(DEBUG, "Initialize hero "..hero)
 		startThread(BindHeroLevelUpTrigger, hero)
 		startThread(BindHeroSkillTrigger, hero)
 		startThread(DoSkillsRoutine_Start, player, hero)
@@ -190,7 +190,7 @@ function AddPlayerHero(player, hero)
 		startThread(AIRecruitBonus, player, hero)
 		MakeHeroReturnToTavernAfterDeath(hero, 1, 0)
 	else
-		log("Comeback hero "..hero)
+		log(DEBUG, "Comeback hero "..hero)
 		startThread(BindHeroLevelUpTrigger, hero)
 		startThread(BindHeroSkillTrigger, hero)
 	end
@@ -230,7 +230,7 @@ function InitializeHeroes()
 			DIFFICULTY_MULTIPLIER[player] = IsAIPlayer(player) and (1+0.5*GetDifficulty()) or 1
 			for i = 1,8 do AllowPlayerTavernRace(player, FactionToTownType(i), 0) end
 			for i,hero in GetPlayerHeroes(player) do
-				log("Initialize hero "..hero)
+				log(DEBUG, "Initialize hero "..hero)
 				Register(VarHeroLevel(hero), GetHeroLevel(hero))
 				startThread(InitializeArmy, hero)
 				startThread(BindHeroLevelUpTrigger, hero)
@@ -249,7 +249,7 @@ function InitializeHeroes()
 	startThread(UpdateTavernHeroes)
 end
 
-log("All scripts successfully loaded !")
+log(INFO, "All scripts successfully loaded !")
 
 -- Initializers
 function Init()
@@ -260,7 +260,7 @@ function Init()
 		InitializeConvertibles()
 		InitializeMapObjects()
 		ExecConsoleCommand("@UnblockGame()") UnblockGame()
-		log("Initializers done. The game can start. Have fun !")
+		log(INFO, "Initializers done. The game can start. Have fun !")
 	else
 		startThread(LoadedGame_GameVars)
 	end
@@ -268,10 +268,10 @@ end
 
 -- Script enabler
 if NB_HUMAN <= 1 then
-	log("Single player game detected. Initializing...")
+	log(DEBUG, "Single player game detected. Initializing...")
 	Init()
 else
-	log("Multi player game detected. Check state...")
+	log(DEBUG, "Multi player game detected. Check state...")
 	OBJECTIVE_CHECK = 0
 	startThread(function()
 		GetObjectiveState('H5X', FIRST_PLAYER)

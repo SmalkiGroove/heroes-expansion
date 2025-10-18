@@ -1,12 +1,12 @@
 
 function ActivateDigging(player, hero)
-    log("$ ActivateDigging")
+    log(DEBUG, "$ ActivateDigging")
 
 end
 
 
 function ActivateKnowYourEnemy(player, hero)
-    log("$ ActivateKnowYourEnemy")
+    log(DEBUG, "$ ActivateKnowYourEnemy")
     if GetHeroStat(hero, STAT_MOVE_POINTS) < 100 then return end
     local exp = 0
     local k, units, amounts = GetHeroArmySummary(hero)
@@ -28,7 +28,7 @@ end
 
 
 function ActivateHeroTimeShift(player, hero)
-    log("$ ActivateHeroTimeShift")
+    log(DEBUG, "$ ActivateHeroTimeShift")
     local points = GetHeroStat(hero, STAT_MOVE_POINTS)
     local cost = round(0.001 * points * (51 - GetHeroLevel(hero)))
     if GetHeroStat(hero, STAT_MANA_POINTS) < cost then
@@ -45,7 +45,7 @@ end
 
 
 function ActivateBuildingConversion(player, hero)
-    log("$ ActivateBuildingConversion")
+    log(DEBUG, "$ ActivateBuildingConversion")
     local obj = HERO_IN_CONVERTIBLE[hero]
     if not obj then ShowFlyingSign("/Text/Game/Scripts/Abilities/HeroNotInConvertible.txt", hero, player, 3) return end
     local tier = MAP_CONVERTIBLES[obj].tier
@@ -79,5 +79,5 @@ function CustomAbilityHandler(hero, id)
 end
 
 
--- log("Loaded custom-abilities.lua")
+-- log(DEBUG, "Loaded custom-abilities.lua")
 ROUTINES_LOADED[25] = 1
