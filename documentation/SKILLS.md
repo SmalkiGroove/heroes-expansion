@@ -10,7 +10,7 @@
 
 ### DEFENSE
 - __Defensive Formation__ : Defense of creatures in hero's army increased when close to each other on the battlefield.
-- __Hold Ground__ : Troops under hero's control get an aditional +30% bonus to their defense carrying out the Defend command.
+- __Hold Ground__ : Troops under hero's control get twice as much defense carrying out the Defend command.
 - __Preparation__ : All the creatures, while discharging the Defend command, will retaliate any enemy, which assaults them, first, even if the enemy has “No retaliation” ability. 
 Moreover, if the defending creature has “Unlimited Retaliation” ability, it will attack the enemy twice: Before and after it’s assault.
 - __Evasion__ : Decreases damage dealt to your creatures by ranged attacks by 15%.
@@ -27,7 +27,7 @@ Moreover, if the defending creature has “Unlimited Retaliation” ability, it will
 
 ### SORCERY
 - __Arcane Initiation__ : Reduces casting costs of all spells by 20%.
-- __Arcane Brillance__ : Casters in hero army will spend only half the required mana cost to cast spells.
+- __Arcane Brillance__ : Casters in hero army will spend 25% less mana to cast their spells.
 - __Arcane Excellence__ : Hero gains a permanent +3 Spellpower, and has +25% bonus to Initiative at start of combat.
 - __Magic Insight__ : Allows a hero to learn magic spells of the third circle regardless of actual skills in the respective schools of magic.
 - __Graduate__ : Hero gains a permanent +2 Knowledge and qualifies for additional level up.
@@ -45,7 +45,7 @@ Moreover, if the defending creature has “Unlimited Retaliation” ability, it will
 - __Diplomacy__ : Allows hero to effectively negotiate with hostile creatures. Increases chances and reduces costs of creatures that wish to join your army.
 - __Tale Tellers__ : Hero victories are related around the kingdom. Allied heroes gain experience from these.
 - __Charismatic__ : Doubles the amount of creatures that join player's side from the Leadership skill after battles.
-- __Motivation__ : Hero pactices his or her speeches skills to improve the Morale of his or her troops in combat by +1.
+- __Motivation__ : Hero practices his or her speeches skills to improve the Morale of his or her troops in combat by +1.
 - __Encourage__ : The hero receives the special combat ability to encourage his troops on a battlefield, making their turns come faster.
 - __Last Stand__ : Hero gains +1 Morale.
 All troops under hero's control are blessed with amazing vitality. If enemy creatures attack the hero's troops and kill them all, the last of the troops will survive the attack with 1 hit point.
@@ -67,7 +67,7 @@ At the start of each week, gain 800 golds per relic artifact equipped.
 - __Snatch__ : The hero spends no movement points to pick up resources, access buildings or boats and other similar actions.
 - __Recruitment__ : Doubles the Logistics bonus to weekly production of tier 1, 2 and 3 creatures.
 - __Spoils of War__ : After every combat won, the hero earns a certain amount of golds and resources, in proportion to the hiring costs of all killed enemy creatures. Every 10 victories, also gains a random minor artifact.
-- __Warpath__ : The hero gets 550 additional movement points for every victory on the map.
+- __War Path__ : The hero gets 250 additional movement points for every victory on the map. Hero troops gain +2 Attack and Defense for the first battle of each day, and gain an additional 500 movement points after winning it.
 
 ### WARFARE
 - __Ballistics__ : Allows manual control of the Ballista. Grants hero a free Ballista and restores it after battles if it was destroyed.
@@ -86,12 +86,8 @@ At the start of each week, gain 800 golds per relic artifact equipped.
 - __Determination__ : Creatures in hero's army have a second chance to resist enemy spells.
 
 ### COMBAT
-- __Empiricism__ : Hero gains 1000 + 5% of current experience points.
-Repeat this bonus at the start of each week.
 - __Coordination__ : Links a hero with a selected creature in his army. Every time this creature performs an attack, the hero will assault the same target. The hero's attack is by 3 his levels more powerful than usual.
 - __Stunning Blow__ : Every standard hero’s attack moves the target back along the ATB bar for 0.2 points.
-- __Reinforcement__ : Hero gains +1 Attack and Defense.
-Repeat this bonus at the start of each week.
 - __Mark of the Damned__ : The hero receives special combat ability to punish the target enemy creature with a powerful strike if that creature is about to attack, retaliate or cast any spell. Once declared, Mark of the Damned is active until the end of combat.
 - __Critical Strike__ : Hero's attacks will always deal double damage.
 
@@ -154,10 +150,8 @@ Should it happen that any magic spell is resisted by target, the hero gains back
 - __Holy Charge__ : Hero's Retaliation Strike ability inflicts triple damage.
 
 ### AVENGER
-- __Imbue Arrow__ : Allows hero to enhance his or her arrows with attacking or cursing spells. All hero's attacks will now not only inflict damage upon enemy creatures but also will immediately cast an imbued spell while hero has the required mana.
-Also gain +1 Spellpower.
-- __Imbue Ballista__ : Imbue Arrow ability will now affect Ballista as well. All Ballista shots will carry hero's enchantments and therefore drain hero's mana.
-Also gain +1 Spellpower.
+- __Imbue Arrow__ : Hero gets +1 Spellpower, and allows to enhance his or her arrows with attacking or cursing spells. All hero's attacks will now not only inflict damage upon enemy creatures but also will immediately cast an imbued spell while hero has the required mana.
+- __Imbue Ballista__ : Imbue Arrow ability will now affect Ballista as well. All Ballista shots will carry hero's enchantments and therefore drain hero's mana. Moreover, each hero turn during combat resets the Ballista's ATB to 100%.
 - __Lucky Caster__ : Luck rolls will now be applied to destructive spells cast by the hero, thus allowing a chance for double damage from spells.
 - __Deadeye Shot__ : Grants hero an ability to attack any enemy creatures on battlefield with the power of 3 more levels. If that creature is present in hero's favorite enemy list then the critical strike is fulfilled, the damage is doubled and it always kills at least one creature.
 - __Know Your Enemy__ : The chance of inflicting a critical hit using "Avenger" skill is increased by +10%.
@@ -166,15 +160,12 @@ Non-sylvan creatures in hero's army can be exchanged for experience.
 War Dancers join the Ranger's army to fight for his or her cause now and at the start of each week.
 
 ### RUNELORE
-- __Fine Rune__ : There is a 30% chance of not using up resources on rune activation.
-Gain +1 Knowledge.
-- __Refresh Rune__ : Allows a previously placed rune (random if many) to be refreshed on selected creature prolonging its effect, wasting only 50% of current Initiative on this action.
-Gain +1 Knowledge.
-- __Greater Rune__ : Allows the same rune to be activated for the second time for triple resource cost.
-Gain +1 Knowledge.
+- __Fine Rune__ : Hero gets +1 Knowledge, and grants a 30% chance to not consume resources on rune activation.
+- __Refresh Rune__ : Hero gets +1 Knowledge, and allows a previously placed rune (random if many) to be refreshed on selected creature prolonging its effect, wasting only 50% of current Initiative on this action.
+- __Greater Rune__ : Hero gets +1 Knowledge, and allows troops to activate runes a second time for double the resource cost.
 - __Tap Runes__ : Regains some mana (depending on Knowledge) each time any rune is used.
 - __Runic Attunement__ : Increases creature morale by +2 for two turns after rune casting.
-- __Runic Shield__ : Hero receives Celestial Shield spell and +5 effective Spellpower when casting it.
+- __Runic Shield__ : Hero receives Celestial Shield spell and +6 effective Spellpower when casting it.
 
 ### ARTIFICIER
 - __March of the Golems__ : All golems under hero's command have their speed and initiative increased by +2.
@@ -214,14 +205,14 @@ Moreover, hero generates 1 Gold per day for each Skeleton it his or her army.
 - __Battle Elation__ : Every time when a Morale effect is triggered with a creature in the hero’s army, it gains 50 Rage points.
 - __Bloodfire__ : Every time when a creature in the hero’s army gets Rage, it gets 50% more than usual. But if a creature loses Rage, it loses 1.5 of the usual amount, too.
 - __Goblin Support__ : If there is an Ammo Cart in the hero’s army, there will be 3 Goblins joining his army every day.
-- __Defend Us All__ : Increases the hero’s Attack and Defense by +2 and grants him a reinforcement of Goblins depending on the amount of Warriors in the army. Moreover new Warriors will join the hero's army at the start of each week.
+- __Defend Us All__ : Increases the hero’s Defense by +2. At the start of each week, remove a Goblin from your army to gain 10 Warriors and 1 Slayer.
 - __Sheer Strength__ : The hero gains +2 Attack and Defense and creatures in his army gain 20% bonus health.
 
 ### SPIRITISM
 - __Witchcraft__ : Adds +2 to hero's Spellpower permanently. Hero also receives a new spell in his or her spell book.
 - __Exorcism__ : The hero obtains a combat ability that deals heavy damage to summoned enemy creatures.
 The damage is equal to 50 per hero level.
-- __Rage Awakening__ : The Shaman unleashes the raw power of the orc creatures with the Blood Rage skill.
+- __Rage Awakening__ : The Shaman unleashes the raw power of the orc creatures, allowing them to reach the first level of blood rage.
 
 ### INNATES
 - __Home Land__ : All creatures in hero's army receive +1 movement speed if the battle is taking place on grass terrain.
@@ -234,29 +225,3 @@ At the start of each week, gain +50 temporary mana that can go beyond maximum.
 - __Soil Burn__ : Enemy walking creatures will receive damage equal to 8 times hero level when moving.
 - __Commander__ : Hero can use Warcries but not regular spells. Visiting a spell shrine grants experience points (500 per spell level).
 - __Twilight__ : All Dark and Light magic spells are cast with +4 Spellpower
-
-### ULTIMATE
-- __Retribution__ : The troops led by the hero inflict additional melee and ranged damage if their Morale is above zero (+7% for each point of Morale).
-
-<color_default>This skill can be unlocked by reaching level 25 and filling all skill slots.
-- __Rage of the Forest__ : All creatures in hero's army get +1 maximum damage, +2 Initiative and half their Defense is transfered to their Attack.
-
-<color_default>This skill can be unlocked by reaching level 25 and filling all skill slots.
-- __Absolute Protection__ : Normal attacks against hero's creatures are always unlucky. Lucky attacks are turned to normal.
-
-<color_default>This skill can be unlocked by reaching level 25 and filling all skill slots.
-- __Omniscience__ : All spells that are in existance will be written to hero's spellbook and hero will be able to cast them on expert level.
-
-<color_default>This skill can be unlocked by reaching level 25 and filling all skill slots.
-- __Rage of the Elements__ : Elemental chain effects inflict double damage.
-
-<color_default>This skill can be unlocked by reaching level 25 and filling all skill slots.
-- __Dead Man's Curse__ : The Morale and Luck of all enemy troops is decreased by 3.
-
-<color_default>This skill can be unlocked by reaching level 25 and filling all skill slots.
-- __Urgash's Call__ : Gating becomes instant.
-
-<color_default>This skill can be unlocked by reaching level 25 and filling all skill slots.
-- __Orcish Fury__ : All stronghold creatures in hero’s army get additional 500 points of rage at the beginning of combat.
-
-<color_default>This skill can be unlocked by reaching level 25 and filling all skill slots.

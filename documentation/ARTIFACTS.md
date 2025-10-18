@@ -335,10 +335,13 @@ Creatures in hero's army are immuned to Cold Death
 
 <color=FFB730FF>Draconic Power
 
-### Set name
-• Set pieces
+### Empowerement
+• Turban Of Enlightenment
+• Robe Of Enlightenment
+• Pendant Of Power
+• Staff Of Power
 
-(x) Set bonuses
+(4) Hero gains +2 of its lowest primary attribute on level up.
 
 - __Turban of Enlightenment__ :
 +3 Knowledge
@@ -352,12 +355,12 @@ Creatures in hero's army are immuned to Cold Death
 <color=FFB730FF>Empowerement
 - __Staff of Power__ :
 +1 Spellpower
-Every 5 victories, gain +1 of the lowest primary attribute
+Every 4 victories, gain +1 of the lowest primary attribute
 
 <color=FFB730FF>Empowerement
 - __Pendant of Power__ :
 +1 Defense
-Every 5 victories, gain 1000 + 1% experience
+Every 4 victories, gain 1000 + 1% experience
 
 <color=FFB730FF>Empowerement
 
@@ -704,9 +707,13 @@ Friendly creatures attacks reduce enemy Defense by 1
 (x) Set bonuses
 
 - __Fortune Band of the Saint__ :
-*fortune band of the saint*
++1 Luck permanently every 20 victories with this item equipped
+
+<color=FFB730FF>Saint's Grace
 - __Ankh of the Saint__ :
 *ankh of the saint*
+
+<color=FFB730FF>Saint's Grace
 - __Cloak of the Saint__ :
 +2 Defense
 +2 Knowledge
@@ -714,7 +721,9 @@ Creatures in hero's army are immuned to Decay
 
 <color=FFB730FF>Saint's Grace
 - __Staff of the Saint__ :
-*staff of the saint*
++7 Spellpower when casting Light Magic spells
+
+<color=FFB730FF>Saint's Grace
 - __Sandals of the Saint__ :
 +3 Defense
 +1 Luck
@@ -722,8 +731,9 @@ Creatures in hero's army are immuned to Decay
 <color=FFB730FF>Saint's Grace
 - __Codex Of The Saint__ :
 +5 Knowledge
-+1 Luck
-Restore 50 Mana points after battle
++10% ATB after casting a spell
+
+<color=FFB730FF>Saint's Grace
 
 ### Neutrals
 The following artifact do not belong in a set.

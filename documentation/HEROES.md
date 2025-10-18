@@ -13,6 +13,8 @@ Demagogue
 
 - Gains Gold and resources after battles, scaling with the strength of the defeated army.
 
+- After learning 3 perks in the Courage skill, upgrades the Courage skill to absolute mastery, that increases Morale and grants 4% reduced damages taken per morale point.
+
 ---
 __VITTORIO :__
 Siege Engineer
@@ -21,8 +23,6 @@ Siege Engineer
 - Ballista receive +1 to its Attack for every level of the hero.
 
 - Ballista fire a salvo at random enemies at the start of combat. The amount of shots increases by 1 every 10 levels of the hero.
-
-- Creatures with Ballista Commander ability shoot a random enemy creature instead of defending when they give their turn to the Ballista.
 
 ---
 __DOUGAL :__
@@ -66,7 +66,9 @@ Cavalry Commander
 
 - Hero uses Retaliation Strike on the largest stack of Cavalier in his army at the start of combat. The damages of the ability are increased by +5% per hero level.
 
-- Every week, new Cavaliers will join the heroes army depending on his level. The amount is 0.11 * Level (rounded).
+- Build the Stables in the town where the hero is recruited. If already built, gain 1 Cavalier.
+
+- Reveal all stables on the map.
 
 ---
 __FREYDA :__
@@ -74,7 +76,7 @@ White Knight
 
 
 - At the start of combat, the hero casts Prayer.
-The bonus to Defense and Initiative given is doubled.
+The bonus to Morale, Defense and Initiative given is doubled.
 
 - All Light Magic spells cost 1 less mana to cast.
 
@@ -89,7 +91,7 @@ Chosen by Gods
 
 - Hero has a permanent +2 Luck.
 
-- Starts with Ultimate Courage directly, granting 4% reduced damages taken per morale point.
+- After learning 3 perks in the Courage skill, upgrades the Courage skill to absolute mastery, that increases Morale and grants 4% reduced damages taken per morale point.
 
 ---
 __GODRIC :__
@@ -120,7 +122,7 @@ Beloved of the People
 
 - Peasants in hero's army always act immediatly after hero's turn in combat.
 
-- Peasants Tax Payer ability is doubled if they are in hero's army.
+- Peasants in hero's army contribute 1 Gold every time the hero levels up.
 
 - A bonus amount of Peasants is available for recruitment in your Haven towns and Peasant Huts each week. The amount is 4.2 * Level (rounded).
 
@@ -166,9 +168,11 @@ Elven Fury
 
 - Blade Dancers, Hunters, and Druids (and their upgrades) get the Spiteful ability. They gain attack for every friendly stack that died during combat.
 
-- When an enemy creature is killed in combat, one of the sylvan creatures with the Spiteful ability gets 100% ATB hero casts Righteous Might on it. Each creature in hero's army can only get this boost once per combat.
+- Hero casts Righteous Might on all sylvan creatures with Spiteful ability at the start of combat, without consuming mana.
 
-- Starts with Ultimate Avenger, granting 4 Luck and allowing to choose 4 favoured enemies.
+- When an enemy creature is killed in combat, one of the sylvan creatures with the Spiteful ability gets 100% ATB. Each creature in hero's army can only get this boost once per combat.
+
+- After learning 3 perks in the Avenger skill, upgrades the Avenger skill to absolute mastery, that increases Luck and allows to select a 4th favoured enemy.
 
 ---
 __JENOVA :__
@@ -194,12 +198,14 @@ Master of Archery
 
 - Increase the weekly production of Hunters in Sylvan towns by 10% every 3 levels of the hero.
 
+- Build or upgrade the Avenger's Guild in the town where the hero is recruited. If already built and upgraded, gain +1 Attack and Knowledge instead.
+
 ---
 __IVOR :__
 Wolf Tamer
 
 
-- New Wolves are added to hero's army every week depending on his level. The amount is 3 * Level.
+- Hero gains one Wolf every day, and an additional amount of Wolves at the start of each week, equal to hero's level.
 
 - When friendly Wolves dies in combat, up to 2 other Wolf stacks immediatly attack the enemy closest to the dead Wolves position.
 
@@ -218,25 +224,27 @@ Swarm Queen
 
 ---
 __VINRAEL :__
-Windwalker
+Avatar of Wind
 
 
 - Hero automatically casts Mass Haste for free when combat starts.
 
 - The effect of Haste spell is increased by 1% per hero level.
 
-- Gains artifact Plumed Boots (immunity to slow) when reaching level 20.
+- Every 4 levels, new Air Elementals join hero's army. Their number is equal to the hero's Knowledge attribute.
 
 ---
 __TIERU :__
 Ring Leader
 
 
-- A group of Druids of the Council joins hero's side at the start of combats. The amount is equal to 0.4 * Level² (rounded up).
+- At the start of combats, the smallest stack of unupgraded Druids in hero's army is upgraded to Druids of the Council.
 
-- Druids of the Council cast Channeling (give their Spellpower to the hero) and Mana Feed (give their mana to the hero if the hero has missing mana) they they arrive.
+- Druids of the Council cast Channeling (give their Spellpower to the hero) and Mana Feed (give their mana to the hero if the hero has missing mana) when they arrive.
 
 - All Druids in the hero's army get 100% ATB after each turn of the hero during combat.
+
+- Build or upgrade the Magic Guild in the town where the hero is recruited, and gain an amount of Druids equal to 2 to the power of the Magic Guild's level before hero upgrades it, minus one.
 
 ---
 __YLTHIN :__
@@ -254,7 +262,7 @@ __ELLESHAR :__
 Elven Sage
 
 
-- Every 6 battles won, hero gains a skill point in one of the known Magic Schools. If the hero has already mastered a Magic School, he gains +1 to one of the primary attribute instead. Light Magic grants Defense, Dark Magic grants Attack, Destructive Magic grants Spellpower and Natural Magic grants Knowledge.
+- Every 6 battles won, hero gains a skill point in one of the known Magic Schools. If none of the Magic Shools is known, then gain 1000 experience points instead. If the hero has already mastered a Magic School at expert level, he gains +1 to one of the primary attributes. Light Magic grants Defense, Dark Magic grants Attack, Destructive Magic grants Spellpower and Natural Magic grants Knowledge.
 
 - Hero has a permanent +1 Initiative.
 
@@ -266,6 +274,8 @@ Lady of the forest
 - Creature's in hero's army start battles with the effect of the Regeneration spell. After a few hero turns in combat, she casts Regeneration on all friendly creatures, replacing the prior permanent Regeneration effect by a temporary one. The amount of turns is 5 + 1 every 5 hero levels.
 
 - Sylvan creatures inflict 10% + 2% per level bonus damage to favoured enemies.
+
+- After learning 3 perks in the Avenger skill, upgrades the Avenger skill to absolute mastery, that increases Luck and allows to select a 4th favoured enemy.
 
 ### FORTRESS:
 
@@ -279,6 +289,8 @@ Fortress Protector
 - Defenders in hero's army gain +1 HP for every 10 levels of the hero.
 
 - New Defenders join the hero's army every day. The amount is half hero level.
+
+- After learning 3 perks in the Runelore skill, upgrades the Runelore skill to absolute mastery, that removes Wood and Ore cost for activating runes.
 
 ---
 __KARLI :__
@@ -308,7 +320,7 @@ Governor of the Mines
 
 - Flame Lords and Thunder Thanes cast their special ability on random enemy creatures at the start of combat.
 
-- Every new week, Dwarven Workers are added in garnison of player's resource production buildings. The amount is 10 + 2 * Level in each building.
+- Every new week, Dwarven Workers are added in garnison of player's resource generating buildings. The amount is 10 + 2 * Level in each building.
 
 - Dwarven Workers increase the daily production of resources by 1% per worker in the building (rounded down). When garnisoned in a town, they increase the daily Gold imcome by 1 per unit and the weekly production of Thanes by 1 per 100 units.
 
@@ -321,7 +333,7 @@ Imperious
 
 - The hero is a Commander. He can use Warcries but not regular spells. Warcries are natively known.
 
-- Hero starts with innate skill Battle Ardor, granting friendly creatures bonus Attack (scaling with hero level) and +1 Speed, but does not have access to Runelore.
+- Hero starts with innate skill Battle Ardor, granting friendly creatures +5 Attack and +1 Speed, but does not have access to Runelore.
 
 ---
 __WULFSTAN :__
@@ -333,6 +345,8 @@ Workshop Expert
 - Ballista start combats with 100% ATB.
 
 - Hero wears the Ring of Machine Affinity that improves War Machines efficiency. The Ballista gains 1 additional shot, the First Aid Tent heal is doubled, and the Ammo Cart increases shooters Attack by +4.
+
+- Build the Blacksmith in the town where the hero is recruited. If already built, get all war machines for free instead.
 
 ---
 __TOLGHAR :__
@@ -387,7 +401,9 @@ Rune Artist
 
 - Learn a new Runic spell every week, and for all Runic spells learnt, the hero gains +1 to all primary attributes and learns a random spell of the same tier.
 
-- Starts with artifact Rune of Flame, giving +2 Spellpower and a random Runic spell.
+- Every 8 levels, obtain the artifact Rune of Flame, that gives +2 Spellpower and a random Runic spell.
+
+- After learning 3 perks in the Runelore skill, upgrades the Runelore skill to absolute mastery, that removes Wood and Ore cost for activating runes.
 
 ---
 __INGA :__
@@ -454,11 +470,11 @@ __THEODORUS :__
 Arcane Forge Master
 
 
-- Starts with Ultimate Artificier directly, allowing hero to craft creature artifacts for half the cost.
-
 - When visiting an Academy town, the hero gains Knowledge points equal to his level, increasing the power of the Arcane Forge artifacts created. The bonus Knowledge is removed as soon as the hero leaves the town.
 
-- Gain 2 resources upon leveling up. Starts with Wood and cycles between all resources except Gold.
+- Randomly generate resources upon leveling up. The total amount of resources gained is between 0 and 1 + Level/2, randomly split among all resources except for Gold.
+
+- After learning 3 perks in the Artificier skill, upgrades the Artificier skill to absolute mastery, that reduces by half the cost of creature's artifacts.
 
 ---
 __GALIB :__
@@ -518,11 +534,11 @@ __RISSA :__
 Time Shifter
 
 
-- At the start of combat, hero can use the Time Shift ability, increasing ATB of friendly units and reducing ATB of enemy units. The ATB shift intensity is 5% + 1% per hero level.
+- Hero has a permanent +1 Initiative.
 
-- Every hero turn in combat, there is a chance that a random friendly creature gets 100% ATB and a random enemy creature gets 0% ATB. The probability of this effect happening is 40% + 1% per hero level.
+- When hero turn comes in combat, the ATB of all creatures is randomized between 0% and 99%. For each hero level, increase by 1% the minimum ATB given to friendly creatures and decrease by 1% the maximum ATB given to enemy creatures. The hero will skip her next turn.
 
-- Hero has an adventure ability that restores movement points of all your other heroes. The ability costs 25 mana and gives up to 500 + 50 * Level movement points.
+- Hero has an adventure ability that transfers its remaining movement points to other heroes. The ability drains mana equal to (5% - 0.1% per hero level) of the movement points transfered.
 
 ---
 __MAAHIR :__
@@ -597,7 +613,11 @@ Draconic Prophet
 
 - After every victory, the hero has a chance to drop an artifact of the Dragon set he doesn't already have. Chances are based on the value of the defeated army and increased by 2% per hero level.
 
-- The amount of Legendary Dragons summoned by the Dragon artifact set activation is doubled, from 1 per hero level to 2 per hero level. 
+- Instead of summoning Legendary Dragons, the effect of the Dragon set adds a permanent Dungeon dragon if the hero has at least one in his army, otherwise summons a temporary stack of Cave Dragons.
+
+- Build or upgrade the Dragon Spire in one on your Dungeon towns after gathering all artifacts of the Dragon set except Dragon Flame Tongue.
+
+- After learning 3 perks in the Arcanism skill, upgrades the Arcanism skill to absolute mastery, that increases elemental chain damages and ignoring 100% of enemy magic-proof.
 
 ---
 __SINITAR :__
@@ -606,7 +626,7 @@ Catalyst
 
 - Empowered spells mana cost is reduced by 5% + 1% per hero level.
 
-- Starts with Ultimate Arcanism directly, ignoring all enemy magic-proof.
+- After learning 3 perks in the Arcanism skill, upgrades the Arcanism skill to absolute mastery, that increases elemental chain damages and ignoring 100% of enemy magic-proof.
 
 ---
 __RANLETH :__
@@ -628,7 +648,7 @@ Coven Mistress
 
 - Every hero turn in combat, there is a chance that Shadow Witches in her army fully refresh their mana. The probability is 20% + 2% per hero level.
 
-- Builds the Hall of Intrigue in the town where the hero is recruited. If it is already built, gain +3 Knowledge instead.
+- Builds the Chamber of Arcanes in the town where the hero is recruited. If it is already built, gain +3 Knowledge instead.
 
 - Hero has +1 permanent Luck and reduce enemy creatures Luck by 1.
 
@@ -637,7 +657,7 @@ __SHADYA :__
 Witch Queen
 
 
-- At the start of combat, the hero casts Deep Freeze on a random ennemy creature for free.
+- At the start of combat, the hero casts Slow on a random enemy melee creature, and Confusion to a random enemy ranged creature, for free.
 
 - Gains an additionnal level up every 5 levels.
 
@@ -650,7 +670,7 @@ Poisoner
 
 - Hero has a chance to cast Decay on enemy creatures at the start of combat. The probabiliy is 40% + 2% per level for each enemy unit.
 
-- The damages of the Plague spell is increased by 5% per hero level.
+- The damages of the Decay spell is increased by 5% per hero level.
 
 - Manticores join the hero's army each week. The amount is 0.4 * Level (rounded).
 
@@ -663,7 +683,7 @@ Elementalist
 
 - Knows all destructive spells from the 1st, 2nd and 3rd circle.
 
-- Hero starts with innate skill Forbidden Power, granting +1 Spellpower and 1 more per week.
+- Hero starts with innate skill Forbidden Power, granting +1 Spellpower at the start of each week.
 
 ### NECROPOLIS:
 
@@ -700,6 +720,8 @@ Zombie Alpha
 
 - Revive lost Zombies after battles. The maximum amount is equal to hero level.
 
+- Build or upgrade the Crypt in the town where the hero is recruited. If already built and upgraded, gain +3 Spellpower instead.
+
 ---
 __LUCRETIA :__
 Vampire Princess
@@ -716,11 +738,13 @@ __XERXON :__
 Pale Rider
 
 
+- All Black Knights in hero's army gain +1 to their Attack and Defense for every two levels of the hero.
+
 - A new Black Knight joins the hero's army every week.
 
-- One lost Black Knight is resurrected after every battle.
+- The hero resurrects Black Knights that died in combat. The maximum amount is 1% of the original stack size per hero level (rounded up).
 
-- Black Knights in hero's army use the Warm-up ability to gain +50% initiative for 3 turns.
+- After learning 3 perks in the Necromancy skill, upgrades the Necromancy skill to absolute mastery, that grants more dark energy and raises more creatures after battles.
 
 ---
 __KASPAR :__
@@ -745,7 +769,7 @@ Skeletons: 2.5 * Level
 Zombies: 1.3 * Level
 Ghosts: 0.5 * Level
 
-- Starts with Ultimate Necromancy, granting more dark energy and raising more living creatures after battles.
+- After learning 3 perks in the Necromancy skill, upgrades the Necromancy skill to absolute mastery, that grants more dark energy and raises more creatures after battles.
 
 ---
 __ARCHILUS :__
@@ -783,7 +807,7 @@ Great Lich
 
 - Enemy creatures that die during battles are raised as their undead equivalent on hero's side. The amount of creature raised is 10% + 1% per level of the original stack count.
 
-- New Liches join hero's army on level up based on his Knowledge stat (1 Lich per 4 points).
+- New Liches join hero's army on level up based on his Knowledge stat (1 Lich per 5 points).
 
 - Start with unique artifact Sandro's Cloak, that gives +4 Knowledge and removes immunities to mind afflictions, and tier 5 spell Mind Control.
 
@@ -818,11 +842,9 @@ Rusher
 
 - Hero's movement points are increased by 5% + 1% every two levels.
 
-- Starts combats with 100% ATB.
+- The Teleport spell has its cost reduced by half, and an additional effect of increasing the teleported creature's ATB.
 
-- The cost of the Teleport spell is reduced by half.
-
-- The weekly production of Nightmares in Inferno towns is increased by 1.
+- Hero starts combats with 100% ATB.
 
 ---
 __SHELTEM :__
@@ -841,6 +863,8 @@ Hound Master
 - All Hell Hounds in hero's army gain +1 to their Attack and Defense for every two levels of the hero.
 
 - When an enemy creature dies in combat, a Hell Hounds stack in hero's army gets 100% ATB, once per stack per combat.
+
+- The Houndmasters skill summons Hell Hounds instead of Wolves. Their number is increased by 1 per hero level.
 
 - New Hell Hounds will join the hero's army at the start of every week. The amount is equal to 0.9 * Level (rounded).
 
@@ -864,7 +888,9 @@ Master of Gating
 
 - The number of creatures called through the Gating increases by 1% per hero level.
 
-- Starts with Ultimate Gating directly, allowing to gate all demonic creatures.
+- Build the Infernal Loom in the town where the hero is recruited. If already built, gain 5000 experience points instead.
+
+- After learning 3 perks in the Gating skill, upgrades the Gating skill to absolute mastery, that increases the amount of gated creature and allows to gate Devils.
 
 ---
 __MALUSTAR :__
@@ -884,7 +910,7 @@ Incendiary
 
 - Effective spellpower of the hero is increased when casting the Fireball spell. The increase is equal to 3 + Level/3.
 
-- The hero always casts Fireball for 1 mana at a random enemy when his turn comes in combat. Then he gain 15% ATB + 5% per level. This means the hero cannot be controlled before level 17.
+- The hero casts Fireball at a random enemy creature on his first 3 turns in combat. These casts do not cost mana and consume only half of the hero's ATB.
 
 - After 25 victories, learn and teach Armaggedon to all other heroes.
 
@@ -906,7 +932,9 @@ Conqueror
 
 - Victories provide hero a considerable amount of additional experience and Gold based on the value of defeated army.
 
-- When standing in an Inferno town's gate at the start of the day, the hero can complete a building in exchange for Gold. Building's Wood and Ore costs are converted to 250 Gold cost each, and other resources to 500 Gold. If the Gold cost is higher that 750 * Level, it cannot be built.
+- When standing in an Inferno town's gate at the start of the day, the hero can complete a creature building in exchange for Gold. The cost conversion is 250 Gold per Wood or Ore, and 500 Gold for special resources. The total cost is reduced by 1% per hero level.
+
+- After learning 3 perks in the Gating skill, upgrades the Gating skill to absolute mastery, that increases the amount of gated creature and allows to gate Devils.
 
 ---
 __BIARA :__
@@ -917,7 +945,7 @@ Temptress
 
 - Succubi recover 30% of their ATB after shooting during combat.
 
-- New Succubi join hero's army after every level up. The amount is equal to hero level.
+- New Succubi join hero's army after every level up. The amount is equal to 1 + Level/3 (rounded down).
 
 ---
 __DELEB :__
@@ -965,7 +993,7 @@ The New Khan
 
 - Warcries have their costs decreased by 1 every 4 levels and grant an additional amount of rage points equal to the hero’s level.
 
-- Shouts a Battlecry at the start of combat, granting +1 movement to your creatures and bonus Attack equal to Level/2.
+- Shouts a Battlecry at the start of combat, granting +1 movement to your creatures and +5 bonus Attack.
 
 ---
 __KILGHAN :__
@@ -974,7 +1002,9 @@ Goblin King
 
 - At the start of each week, additional Goblins or upgrades will join the hero's army. The amount is equal to 10 * Level.
 
-- New Goblins will join the combat each turn of the hero. Their amount is equal to 10% of the total amount of Goblins in hero's army.
+- New Goblins will join the combat each turn of the hero. Their amount is equal to 10% of the total amount of Goblins present in hero's army at the start of combat.
+
+- Goblins do not betray the hero (Treachery ability disabled).
 
 ---
 __TELSEK :__
@@ -985,7 +1015,7 @@ Fist of the Khan
 
 - Hero boosts the rage of all Orc Warriors in his army with Call of Blood when combat starts.
 
-- Starts with Ultimate Blood Rage, decreasing the amount of rage points needed to reach rage levels by 25%.
+- After learning 3 perks in the Blood Rage skill, upgrades the Blood Rage skill to absolute mastery, that decreases the amount of rage points needed to reach rage levels by 25%.
 
 ---
 __GARUNA :__
@@ -1016,7 +1046,9 @@ Wyvern Tamer
 
 - Wyverns in hero's army gain +3 to their Hit Points for every level of the hero.
 
-- Every week, new Wyverns will join the hero's army depending on his level. The amount is equal to 0.22 * Level (rounded).
+- Build the Fort in the town where the hero is recruited. If already built, gain an additional Wyvern.
+
+- A new Wyvern will join the hero's army every 21 days. The number of days is reduced by 3 per Fort level in the most developed Stronghold town, and by 1 every 3 hero levels.
 
 ---
 __HAGGASH :__
@@ -1067,6 +1099,6 @@ Shaman Matriarch
 
 - Shamans in hero's army have double Spellpower and Mana.
 
-- The hero and Shamans in her army regenerate mana during battles. Hero gains 1 + Level/4 mana per turn, and Shamans gain 1 + Level/10 mana per turn. The mana can regenerate above maximum.
+- The hero and Shamans in her army regenerate mana during battles. Hero gains 1 + Level/4 mana per turn, and Shamans gain 1 + Level/8 mana per turn. The mana can regenerate above maximum.
 
-- Every day, the hero sacrifices a Goblin in her army to add a Shaman recruit in your Stronghold towns. After level 10, also add an Orc Warrior recruit.
+- Goblins that die during combat are consumed to add Shaman recruits in your Stronghold towns. One dead Goblins equals one additional Shaman available for recruitment in town, and the maximum amount of Goblins consumed per combat is equal to 1 + Level/2.

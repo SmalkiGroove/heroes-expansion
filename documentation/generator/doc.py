@@ -8,17 +8,17 @@ import xmltodict
 
 workdir = os.path.dirname(os.path.abspath(__file__))
 reference_file = os.path.join(workdir, "doc-refs.yml")
-doc_path = "../doc"
+doc_path = ".."
 
-root_path_data = "../game_data/data"
-root_text_path = "../game_texts/texts-EN"
+root_path_data = "../../game_data/data"
+root_text_path = "../../game_texts/texts-EN"
 
 ### CREATURES
 ###############################################################################################################################################################
 #
-path_to_creatures = "../game_data/data/GameMechanics/Creature/Creatures"
-path_to_allspells = "../game_data/data/GameMechanics/RefTables/UndividedSpells.xdb"
-path_to_abilities = "../game_data/data/GameMechanics/RefTables/CombatAbilities.xdb"
+path_to_creatures = "../../game_data/data/GameMechanics/Creature/Creatures"
+path_to_allspells = "../../game_data/data/GameMechanics/RefTables/UndividedSpells.xdb"
+path_to_abilities = "../../game_data/data/GameMechanics/RefTables/CombatAbilities.xdb"
 
 def get_spell_name(id):
     with open(os.path.join(workdir, path_to_allspells), 'r') as xdb:
@@ -106,7 +106,7 @@ def generate_creature_doc(ref_data):
 ### HEROES
 ###############################################################################################################################################################
 #
-path_to_heroes = "../game_data/data/MapObjects"
+path_to_heroes = "../../game_data/data/MapObjects"
 
 def hero_doc_line(name, path):
     print(f"Hero {name}")
@@ -140,7 +140,7 @@ def generate_heroes_doc(ref_data):
 ### SKILLS
 ###############################################################################################################################################################
 #
-path_to_skills = "../game_data/data/GameMechanics/RefTables/Skills.xdb"
+path_to_skills = "../../game_data/data/GameMechanics/RefTables/Skills.xdb"
 
 def skill_doc_line(name, skill):
     print(f"Skill {name}")
@@ -182,8 +182,8 @@ def generate_skills_doc(ref_data):
 ### ARTIFACTS
 ###############################################################################################################################################################
 #
-path_to_artifacts = "../game_data/data/GameMechanics/RefTables/Artifacts.xdb"
-path_to_artfset_texts = "../game_texts/texts-EN/Text/Game/Artfsets"
+path_to_artifacts = "../../game_data/data/GameMechanics/RefTables/Artifacts.xdb"
+path_to_artfset_texts = "../../game_texts/texts-EN/Text/Game/Artfsets"
 
 def artifact_doc_line(name, artifact):
     print(f"Artifact {name}")

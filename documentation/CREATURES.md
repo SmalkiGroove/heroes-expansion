@@ -8,8 +8,8 @@
 | MILITIA | 1 | 60 | 6 | 3 | 1 | 1-2 | 4 | 8 | _none_ | Taxpayer, Violence |
 | | | | | | | | | | | |
 | ARCHER | 2 | 30 | 9 | 3 | 3 | 2-4 | 4 | 8 | Scatter Shot (advanced) | Scatter Shot |
-| MARKSMAN | 2 | 30 | 9 | 4 | 5 | 3-5 | 4 | 8 | _none_ | Ballista Commander, Defensive Stance |
-| CROSSBOWMAN | 2 | 30 | 10 | 5 | 4 | 2-6 | 4 | 8 | _none_ | Weakpoint, Undisturbed |
+| MARKSMAN | 2 | 30 | 9 | 4 | 4 | 3-4 | 4 | 8 | _none_ | Ballista Commander, Defensive Stance |
+| CROSSBOWMAN | 2 | 30 | 10 | 5 | 4 | 2-5 | 4 | 8 | _none_ | Weakpoint, Maneuver, Undisturbed |
 | | | | | | | | | | | |
 | FOOTMAN | 3 | 20 | 20 | 4 | 6 | 4-5 | 4 | 9 | _none_ | Spiteful, Shielded, Bash |
 | SQUIRE | 3 | 20 | 22 | 4 | 10 | 4-5 | 4 | 9 | _none_ | Spiteful, Shielded, Bash, Protect Allies |
@@ -81,9 +81,9 @@
 | BLACKBEAR RIDER | 4 | 10 | 45 | 8 | 12 | 6-7 | 6 | 10 | _none_ | Spiteful, Heavy Armor, Paw Strike |
 | WHITEBEAR RIDER | 4 | 10 | 50 | 9 | 9 | 6-8 | 6 | 10 | _none_ | Spiteful, Roar |
 | | | | | | | | | | | |
-| RUNE PRIEST | 5 | 5 | 60 | 8 | 8 | 12-16 | 3 | 9 | Mass Cleansing (basic), Magic Arrow (advanced) | Fire Resistance, Mark of Fire, Mine Field |
-| RUNE PATRIARCH | 5 | 5 | 64 | 8 | 8 | 12-16 | 3 | 9 | Mass Cleansing (basic), Firewall (advanced) | Fire Resistance, Mark of Fire, Mine Field, Area Attack |
-| RUNE KEEPER | 5 | 5 | 60 | 8 | 8 | 14-18 | 3 | 9 | Mass Cleansing (basic), Fireball (advanced) | Fire Resistance, Mark of Fire, Mine Field, Mana Feed, Channeling |
+| RUNE PRIEST | 5 | 5 | 60 | 8 | 8 | 12-16 | 3 | 9 | Mass Cleansing (basic), Magic Arrow (advanced) | Fire Resistance, Mark of Fire, Refresh Mana |
+| RUNE PATRIARCH | 5 | 5 | 64 | 8 | 8 | 12-16 | 3 | 9 | Mass Cleansing (basic), Firewall (advanced) | Fire Resistance, Mark of Fire, Refresh Mana, Area Attack |
+| RUNE KEEPER | 5 | 5 | 60 | 8 | 8 | 14-18 | 3 | 9 | Mass Cleansing (basic), Fireball (advanced) | Fire Resistance, Mark of Fire, Refresh Mana, Mana Feed, Channeling |
 | | | | | | | | | | | |
 | THANE | 6 | 3 | 105 | 18 | 24 | 11-13 | 8 | 10 | _none_ | Steadiness, Double Attack |
 | FLAME LORD | 6 | 3 | 115 | 22 | 24 | 12-14 | 8 | 10 | _none_ | Steadiness, Double Attack, Fire Immuned, Flamewave, Flamestrike |
@@ -224,9 +224,9 @@
 | GOBLIN TRAPPER | 1 | 55 | 5 | 2 | 1 | 1-2 | 4 | 11 | Set Snares (advanced) | Raging Blood, Cowardice, Treachery, Set Snares, Short Range |
 | GOBLIN DEFILER | 1 | 55 | 5 | 1 | 2 | 1-2 | 5 | 12 | _none_ | Raging Blood, Cowardice, Treachery, Defile Magic |
 | | | | | | | | | | | |
-| SUN DAUGHTER | 2 | 28 | 14 | 2 | 2 | 2-3 | 4 | 10 | Sacrifice Goblins (advanced), Haste (basic), Slow (basic) | Raging Blood, Goblin Sacrifice |
-| SKY DAUGHTER | 2 | 28 | 15 | 3 | 3 | 2-4 | 4 | 11 | Sacrifice Goblins (advanced), Haste (basic), Empowered Lightning Bolt (basic), Discharge (advanced) | Raging Blood, Goblin Sacrifice |
-| EARTH DAUGHTER | 2 | 28 | 16 | 4 | 4 | 3-4 | 5 | 11 | Sacrifice Goblins (advanced), Haste (advanced), Slow (advanced), Mass Slow (advanced) | Raging Blood, Goblin Sacrifice, Weakening Strike, Swift Strike |
+| SUN DAUGHTER | 2 | 28 | 14 | 2 | 2 | 2-3 | 4 | 10 | Sacrifice Goblin (advanced), Haste (basic), Slow (basic) | Raging Blood, Goblin Sacrifice |
+| SKY DAUGHTER | 2 | 28 | 15 | 3 | 3 | 2-4 | 4 | 11 | Sacrifice Goblin (advanced), Haste (basic), Empowered Lightning Bolt (basic), Discharge (advanced) | Raging Blood, Goblin Sacrifice |
+| EARTH DAUGHTER | 2 | 28 | 16 | 4 | 4 | 3-4 | 5 | 11 | Sacrifice Goblin (advanced), Haste (advanced), Slow (advanced), Mass Slow (advanced) | Raging Blood, Goblin Sacrifice, Weakening Strike, Swift Strike |
 | | | | | | | | | | | |
 | WARRIOR | 3 | 21 | 23 | 5 | 3 | 2-5 | 4 | 10 | _none_ | Raging Blood, Spiteful |
 | MAULER | 3 | 21 | 23 | 6 | 3 | 2-6 | 5 | 10 | _none_ | Raging Blood, Spiteful, Violence |
@@ -267,9 +267,9 @@
 | | | | | | | | | | | |
 | MUMMY | 3 | 20 | 30 | 4 | 7 | 2-4 | 4 | 8 | Confusion (basic), Wasp Swarm (basic) | Undead, Cursed Strike |
 | | | | | | | | | | | |
-| BONE DRAGON | 6 | 3 | 120 | 25 | 17 | 13-23 | 7 | 11 | _none_ | Undead |
-| SHADOW DRAGON | 6 | 3 | 125 | 26 | 18 | 15-25 | 7 | 11 | _none_ | Undead, Sorrow Strike, Pressure |
-| SPECTRAL DRAGON | 6 | 3 | 100 | 25 | 17 | 13-23 | 7 | 12 | _none_ | Undead, Incorporeal |
+| BONE DRAGON | 6 | 1 | 180 | 29 | 22 | 33-55 | 7 | 11 | _none_ | Undead, Festering Aura |
+| SHADOW DRAGON | 6 | 1 | 199 | 30 | 26 | 35-60 | 7 | 11 | _none_ | Undead, Festering Aura, Sorrow Strike, Pressure |
+| SPECTRAL DRAGON | 6 | 1 | 180 | 32 | 22 | 33-55 | 7 | 11 | _none_ | Undead, Festering Aura, Incorporeal, Camouflage |
 | | | | | | | | | | | |
 | BASILISK | 1 | 80 | 10 | 2 | 3 | 1-2 | 6 | 12 | _none_ | Cowardice, Regeneration |
 | | | | | | | | | | | |
