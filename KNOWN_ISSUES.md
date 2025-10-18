@@ -4,7 +4,6 @@
 
 - [EXE] Crash when engaging fight with rune priests sometimes
 - [EXE] Crash while generating maps with underground
-- [EXE] Rissa quick battle crash
 
 ### Broken graphics or animations
 
@@ -23,8 +22,6 @@
 
 - [EXE] Shantiri Moon Disc blocks all light magic
 - [LUA] Double script activation sometimes
-- [XDB] Magic Filter incorrectly immunes to spells
-- [XDB] Lucretia class prerequisites
 
 ### Suggestions
 
@@ -47,6 +44,7 @@
 - [XDB/LUA] Better vault battles with siege
 - [XDB/LUA] More custom buildings and late-game challenge
 - [EXE/XDB] Luck and Morale 1 point = 1%, no cap
+- [XDB/LUA] Add neutral heroes and bosses
 
 
 # FIXED
@@ -128,3 +126,5 @@
 - Immunity should clean everything
 - Lower damage diff between magic levels
 - Talanar loses turns when casting righteous might
+- Magic Filter incorrectly immunes to spells
+- Rissa spec quick battle crash

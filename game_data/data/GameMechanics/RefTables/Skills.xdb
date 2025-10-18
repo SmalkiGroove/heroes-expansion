@@ -2388,8 +2388,8 @@
 			<ID>HERO_SKILL_MARK_OF_THE_DAMNED</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Perks/Gating_DemonicStrike_grey.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Perks/Gating_DemonicStrike.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/AgonizingStrike_grey.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/AgonizingStrike.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -2405,24 +2405,24 @@
 				<spellBuffs/>
 				<BasicSkillID>HERO_SKILL_COMBAT</BasicSkillID>
 				<SkillPrerequisites>
-					<Item><Class>HERO_CLASS_HAVEN_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_GET_STRONGER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_HAVEN_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_GET_STRONGER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_GET_STRONGER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_GET_STRONGER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_FORTRESS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_GET_STRONGER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_FORTRESS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_GET_STRONGER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_ACADEMY_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_GET_STRONGER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_ACADEMY_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_GET_STRONGER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_DUNGEON_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_GET_STRONGER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_DUNGEON_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_GET_STRONGER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_NECROPOLIS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_GET_STRONGER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_NECROPOLIS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_GET_STRONGER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_INFERNO_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_GET_STRONGER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_INFERNO_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_GET_STRONGER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_STRONGHOLD_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_GET_STRONGER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_STRONGHOLD_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_GET_STRONGER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_COMMANDER</Class><dependenciesIDs><Item>HERO_SKILL_GET_STRONGER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_VAMPIRE_PRINCESS</Class><dependenciesIDs><Item>HERO_SKILL_GET_STRONGER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_HAVEN_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_REINFORCEMENT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_HAVEN_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_REINFORCEMENT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_REINFORCEMENT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_REINFORCEMENT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_FORTRESS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_REINFORCEMENT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_FORTRESS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_REINFORCEMENT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_ACADEMY_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_REINFORCEMENT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_ACADEMY_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_REINFORCEMENT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_DUNGEON_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_REINFORCEMENT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_DUNGEON_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_REINFORCEMENT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_NECROPOLIS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_REINFORCEMENT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_NECROPOLIS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_REINFORCEMENT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_INFERNO_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_REINFORCEMENT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_INFERNO_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_REINFORCEMENT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_STRONGHOLD_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_REINFORCEMENT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_STRONGHOLD_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_REINFORCEMENT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_COMMANDER</Class><dependenciesIDs><Item>HERO_SKILL_REINFORCEMENT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_VAMPIRE_PRINCESS</Class><dependenciesIDs><Item>HERO_SKILL_REINFORCEMENT</Item></dependenciesIDs></Item>
 				</SkillPrerequisites>
 				<AIRacesValues>
 					<Haven><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Haven>
@@ -3664,7 +3664,7 @@
 			<ID>HERO_SKILL_BRUTALITY</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Feats/Demon_Lord/Demonic_CriticalStrike_grey.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/Demon_Lord/Demonic_CriticalStrike_grey.xdb#xpointer(/Texture)"/>
 					<Item href="/Textures/HeroScreen/Feats/Demon_Lord/Demonic_CriticalStrike.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
@@ -4858,27 +4858,8 @@
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_SHATTER_MAGIC</BasicSkillID>
-				<SkillPrerequisites>
-					<Item><Class>HERO_CLASS_HAVEN_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_HAVEN_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_FORTRESS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_FORTRESS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_ACADEMY_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_ACADEMY_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_DUNGEON_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_DUNGEON_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_NECROPOLIS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_NECROPOLIS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_INFERNO_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_INFERNO_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_STRONGHOLD_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_STRONGHOLD_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_COMMANDER</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_VAMPIRE_PRINCESS</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
-				</SkillPrerequisites>
+				<BasicSkillID>HERO_SKILL_NONE</BasicSkillID>
+				<SkillPrerequisites/>
 				<AIRacesValues>
 					<Haven><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Haven>
 					<Sylvan><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Sylvan>
@@ -5502,24 +5483,24 @@
 				<spellBuffs/>
 				<BasicSkillID>HERO_SKILL_SHATTER_MAGIC</BasicSkillID>
 				<SkillPrerequisites>
-					<Item><Class>HERO_CLASS_HAVEN_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_HAVEN_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_FORTRESS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_FORTRESS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_ACADEMY_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_ACADEMY_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_DUNGEON_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_DUNGEON_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_NECROPOLIS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_NECROPOLIS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_INFERNO_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_INFERNO_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_STRONGHOLD_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_STRONGHOLD_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_COMMANDER</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_VAMPIRE_PRINCESS</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_HAVEN_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_HAVEN_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_FORTRESS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_FORTRESS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_ACADEMY_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_ACADEMY_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_DUNGEON_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_DUNGEON_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_NECROPOLIS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_NECROPOLIS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_INFERNO_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_INFERNO_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_STRONGHOLD_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_STRONGHOLD_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_COMMANDER</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_VAMPIRE_PRINCESS</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
 				</SkillPrerequisites>
 				<AIRacesValues>
 					<Haven><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Haven>
@@ -5555,24 +5536,24 @@
 				<spellBuffs/>
 				<BasicSkillID>HERO_SKILL_SHATTER_MAGIC</BasicSkillID>
 				<SkillPrerequisites>
-					<Item><Class>HERO_CLASS_HAVEN_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_HAVEN_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_FORTRESS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_FORTRESS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_ACADEMY_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_ACADEMY_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_DUNGEON_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_DUNGEON_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_NECROPOLIS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_NECROPOLIS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_INFERNO_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_INFERNO_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_STRONGHOLD_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_STRONGHOLD_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_COMMANDER</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_VAMPIRE_PRINCESS</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_HAVEN_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_HAVEN_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_FORTRESS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_FORTRESS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_ACADEMY_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_ACADEMY_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_DUNGEON_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_DUNGEON_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_NECROPOLIS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_NECROPOLIS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_INFERNO_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_INFERNO_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_STRONGHOLD_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_STRONGHOLD_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_COMMANDER</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_VAMPIRE_PRINCESS</Class><dependenciesIDs><Item>HERO_SKILL_BACK_TO_THE_VOID</Item></dependenciesIDs></Item>
 				</SkillPrerequisites>
 				<AIRacesValues>
 					<Haven><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Haven>
@@ -7240,24 +7221,24 @@
 				<spellBuffs/>
 				<BasicSkillID>HERO_SKILL_COMBAT</BasicSkillID>
 				<SkillPrerequisites>
-					<Item><Class>HERO_CLASS_HAVEN_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_GET_WISER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_HAVEN_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_GET_WISER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_GET_WISER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_GET_WISER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_FORTRESS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_GET_WISER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_FORTRESS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_GET_WISER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_ACADEMY_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_GET_WISER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_ACADEMY_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_GET_WISER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_DUNGEON_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_GET_WISER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_DUNGEON_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_GET_WISER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_NECROPOLIS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_GET_WISER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_NECROPOLIS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_GET_WISER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_INFERNO_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_GET_WISER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_INFERNO_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_GET_WISER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_STRONGHOLD_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_GET_WISER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_STRONGHOLD_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_GET_WISER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_COMMANDER</Class><dependenciesIDs><Item>HERO_SKILL_GET_WISER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_VAMPIRE_PRINCESS</Class><dependenciesIDs><Item>HERO_SKILL_GET_WISER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_HAVEN_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_EMPIRICISM</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_HAVEN_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_EMPIRICISM</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_EMPIRICISM</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_EMPIRICISM</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_FORTRESS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_EMPIRICISM</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_FORTRESS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_EMPIRICISM</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_ACADEMY_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_EMPIRICISM</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_ACADEMY_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_EMPIRICISM</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_DUNGEON_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_EMPIRICISM</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_DUNGEON_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_EMPIRICISM</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_NECROPOLIS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_EMPIRICISM</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_NECROPOLIS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_EMPIRICISM</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_INFERNO_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_EMPIRICISM</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_INFERNO_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_EMPIRICISM</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_STRONGHOLD_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_EMPIRICISM</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_STRONGHOLD_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_EMPIRICISM</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_COMMANDER</Class><dependenciesIDs><Item>HERO_SKILL_EMPIRICISM</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_VAMPIRE_PRINCESS</Class><dependenciesIDs><Item>HERO_SKILL_EMPIRICISM</Item></dependenciesIDs></Item>
 				</SkillPrerequisites>
 				<AIRacesValues>
 					<Haven><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Haven>
@@ -8076,7 +8057,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_GET_STRONGER</ID>
+			<ID>HERO_SKILL_REINFORCEMENT</ID>
 			<obj>
 				<Texture>
 					<Item href="/Textures/HeroScreen/Perks/GetStronger_grey.xdb#xpointer(/Texture)"/>
@@ -8110,7 +8091,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_GET_WISER</ID>
+			<ID>HERO_SKILL_EMPIRICISM</ID>
 			<obj>
 				<Texture>
 					<Item href="/Textures/HeroScreen/Perks/GetWiser_grey.xdb#xpointer(/Texture)"/>
@@ -8559,29 +8540,27 @@
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
-				<spellBuffs>
-					<Item>SPELL_RUNE_OF_ELEMENTAL_IMMUNITY</Item>
-				</spellBuffs>
+				<spellBuffs/>
 				<BasicSkillID>HERO_SKILL_SHATTER_MAGIC</BasicSkillID>
 				<SkillPrerequisites>
-					<Item><Class>HERO_CLASS_HAVEN_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_MANA_BURST</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_HAVEN_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_MANA_BURST</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_MANA_BURST</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_MANA_BURST</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_FORTRESS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_MANA_BURST</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_FORTRESS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_MANA_BURST</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_ACADEMY_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_MANA_BURST</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_ACADEMY_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_MANA_BURST</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_DUNGEON_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_MANA_BURST</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_DUNGEON_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_MANA_BURST</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_NECROPOLIS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_MANA_BURST</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_NECROPOLIS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_MANA_BURST</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_INFERNO_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_MANA_BURST</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_INFERNO_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_MANA_BURST</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_STRONGHOLD_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_MANA_BURST</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_STRONGHOLD_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_MANA_BURST</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_COMMANDER</Class><dependenciesIDs><Item>HERO_SKILL_MANA_BURST</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_VAMPIRE_PRINCESS</Class><dependenciesIDs><Item>HERO_SKILL_MANA_BURST</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_HAVEN_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_HAVEN_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_FORTRESS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_FORTRESS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_ACADEMY_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_ACADEMY_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_DUNGEON_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_DUNGEON_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_NECROPOLIS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_NECROPOLIS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_INFERNO_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_INFERNO_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_STRONGHOLD_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_STRONGHOLD_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_COMMANDER</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_VAMPIRE_PRINCESS</Class><dependenciesIDs><Item>HERO_SKILL_SAP_MAGIC</Item></dependenciesIDs></Item>
 				</SkillPrerequisites>
 				<AIRacesValues>
 					<Haven><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Haven>
@@ -8633,69 +8612,107 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_208</ID>
+			<ID>HERO_SKILL_BLOCK_CORRUPTION</ID>
 			<obj>
 				<Texture>
-					<Item href=""/>
-					<Item href=""/>
+					<Item href="/Textures/HeroScreen/Perks/BlockCorruption_grey.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/BlockCorruption.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
-					<Item href="/Text/Game/Skills/Common/DestructiveMagic/AncientSmithy/Name.txt"/>
+					<Item href="/Text/Game/Skills/Common/ShatterMagic/BlockCorruption/Name.txt"/>
 				</NameFileRef>
 				<CommonNameFileRef href=""/>
 				<DescriptionFileRef>
-					<Item href="/Text/Game/Skills/Common/DestructiveMagic/AncientSmithy/Description.txt"/>
+					<Item href="/Text/Game/Skills/Common/ShatterMagic/BlockCorruption/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_NONE</BasicSkillID>
-				<SkillPrerequisites/>
+				<BasicSkillID>HERO_SKILL_SHATTER_MAGIC</BasicSkillID>
+				<SkillPrerequisites>
+					<Item><Class>HERO_CLASS_HAVEN_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_DARK</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_HAVEN_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_DARK</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_DARK</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_DARK</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_FORTRESS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_DARK</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_FORTRESS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_DARK</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_ACADEMY_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_DARK</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_ACADEMY_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_DARK</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_DUNGEON_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_DARK</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_DUNGEON_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_DARK</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_NECROPOLIS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_DARK</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_NECROPOLIS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_DARK</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_INFERNO_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_DARK</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_INFERNO_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_DARK</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_STRONGHOLD_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_DARK</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_STRONGHOLD_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_DARK</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_COMMANDER</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_DARK</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_VAMPIRE_PRINCESS</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_DARK</Item></dependenciesIDs></Item>
+				</SkillPrerequisites>
 				<AIRacesValues>
-					<Haven><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Haven>
-					<Sylvan><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Sylvan>
-					<Academy><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Academy>
-					<Dungeon><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Dungeon>
-					<Necropolis><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Necropolis>
-					<Inferno><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Inferno>
-					<Fortress><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Fortress>
-					<Stronghold><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Stronghold>
+					<Haven><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Haven>
+					<Sylvan><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Sylvan>
+					<Academy><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Academy>
+					<Dungeon><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Dungeon>
+					<Necropolis><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Necropolis>
+					<Inferno><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Inferno>
+					<Fortress><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Fortress>
+					<Stronghold><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Stronghold>
 				</AIRacesValues>
 				<PresetPrice>0</PresetPrice>
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_209</ID>
+			<ID>HERO_SKILL_DISRUPT_MAGIC</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Specializations/Necropolis/Vampire_Princess.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Specializations/Necropolis/Vampire_Princess.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/DisruptMagic_grey.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/DisruptMagic.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
-					<Item href="/Text/Game/Skills/Unique/Necromancy/Vampirism/Name.txt"/>
+					<Item href="/Text/Game/Skills/Common/ShatterMagic/DisruptMagic/Name.txt"/>
 				</NameFileRef>
 				<CommonNameFileRef href=""/>
 				<DescriptionFileRef>
-					<Item href="/Text/Game/Skills/Unique/Necromancy/Vampirism/Description.txt"/>
+					<Item href="/Text/Game/Skills/Common/ShatterMagic/DisruptMagic/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_INNATES</BasicSkillID>
-				<SkillPrerequisites/>
+				<BasicSkillID>HERO_SKILL_SHATTER_MAGIC</BasicSkillID>
+				<SkillPrerequisites>
+					<Item><Class>HERO_CLASS_HAVEN_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_LIGHT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_HAVEN_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_LIGHT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_LIGHT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_LIGHT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_FORTRESS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_LIGHT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_FORTRESS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_LIGHT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_ACADEMY_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_LIGHT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_ACADEMY_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_LIGHT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_DUNGEON_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_LIGHT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_DUNGEON_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_LIGHT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_NECROPOLIS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_LIGHT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_NECROPOLIS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_LIGHT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_INFERNO_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_LIGHT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_INFERNO_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_LIGHT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_STRONGHOLD_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_LIGHT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_STRONGHOLD_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_LIGHT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_COMMANDER</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_LIGHT</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_VAMPIRE_PRINCESS</Class><dependenciesIDs><Item>HERO_SKILL_SUPRESS_LIGHT</Item></dependenciesIDs></Item>
+				</SkillPrerequisites>
 				<AIRacesValues>
-					<Haven><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Haven>
-					<Sylvan><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Sylvan>
-					<Academy><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Academy>
-					<Dungeon><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Dungeon>
-					<Necropolis><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Necropolis>
-					<Inferno><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Inferno>
-					<Fortress><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Fortress>
-					<Stronghold><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Stronghold>
+					<Haven><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Haven>
+					<Sylvan><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Sylvan>
+					<Academy><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Academy>
+					<Dungeon><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Dungeon>
+					<Necropolis><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Necropolis>
+					<Inferno><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Inferno>
+					<Fortress><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Fortress>
+					<Stronghold><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Stronghold>
 				</AIRacesValues>
 				<PresetPrice>0</PresetPrice>
 			</obj>
