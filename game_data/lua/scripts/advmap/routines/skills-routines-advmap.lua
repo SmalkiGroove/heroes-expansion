@@ -753,6 +753,73 @@ function Routine_LeadershipAfterBattle(player, hero, mastery, combatIndex)
     if total == 0 then RemoveObject(caravan) else CURRENT_CARAVANS[caravan] = 7 end
 end
 
+Var_DespotismBonus = {}
+function Routine_DespotismAfterBattle(player, hero, mastery, combatIndex)
+    log("$ Routine_DespotismAfterBattle")
+    if not Var_DespotismBonus[hero] then Var_DespotismBonus[hero] = {attribute=0, value=0} end
+    local total = 0
+    for i,cr in GetHeroArmy(hero) do
+        if cr and cr ~= 0 then
+            total = total + GetHeroCreatures(hero, cr)
+        end
+    end
+    local bonus = mastery
+    local threshold = 1200 - mastery * 200
+    while total > threshold do
+        bonus = bonus + 1
+        total = total - threshold
+    end
+    local stat = GetHeroHighestStat(hero)
+    if stat == Var_DespotismBonus[hero].attribute then
+        local diff = Var_DespotismBonus[hero].value - bonus
+        if diff ~= 0 then ChangeHeroStat(hero, stat, diff) end
+    else
+        ChangeHeroStat(hero, Var_DespotismBonus[hero].attribute, -Var_DespotismBonus[hero].value)
+        ChangeHeroStat(hero, stat, bonus)
+    end
+    Var_DespotismBonus[hero] = {attribute=stat, value=bonus}
+end
+
+function Routine_DevotionAfterBattle(player, hero, mastery, combatIndex)
+    log("$ Routine_DevotionAfterBattle")
+    local value = GetArmyStrength(combatIndex, 1)
+    AddHeroStatAmount(player, hero, STAT_EXPERIENCE, value*value)
+end
+
+function Routine_BattleWrathAfterBattle(player, hero, mastery, combatIndex)
+    log("$ Routine_BattleWrathAfterBattle")
+    local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
+    for i = 0,stacks-1 do
+        local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
+        if died > 0 then
+            GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_ATTACK, 2)
+            GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_INITIATIVE, 2)
+            return
+        end
+    end
+end
+
+function Routine_WarPolicyAfterBattle(player, hero, mastery, combatIndex)
+    log("$ Routine_WarPolicyAfterBattle")
+    local faction = HEROES[hero].faction
+    local losses = {}
+    local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
+    for i = 0,stacks-1 do
+        local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
+        if died > 0 then
+            if CREATURES[creature][1] == faction then
+                local tier = CREATURES[creature][2]
+                if not losses[tier] then losses[tier] = died else losses[tier] = losses[tier] + died end
+            end
+        end
+    end
+    for tier,amount in losses do
+        local creature = CREATURES_BY_FACTION[faction][tier][1]
+        local dwelling = 6 + tier
+        AddHeroTownRecruits(player, hero, dwelling, creature, trunc(0.2*amount))
+    end
+end
+
 function Routine_TaleTellers(player, hero, mastery, combatIndex)
     log("$ Routine_TaleTellers")
     local exp = trunc(0.67 * GetArmyStrength(combatIndex, 0))
@@ -877,6 +944,10 @@ LEVELUP_TRIGGER_SKILLS_ROUTINES = {
 
 AFTER_COMBAT_TRIGGER_SKILLS_ROUTINES = {
     [SKILL_LEADERSHIP] = Routine_LeadershipAfterBattle,
+    [SKILL_DESPOTISM] = Routine_DespotismAfterBattle,
+    [PERK_DEVOTION] = Routine_DevotionAfterBattle,
+    [PERK_BATTLE_WRATH] = Routine_BattleWrathAfterBattle,
+    [PERK_WAR_POLICY] = Routine_WarPolicyAfterBattle,
     [PERK_TALETELLERS] = Routine_TaleTellers,
     [PERK_SPOILS_OF_WAR] = Routine_SpoilsOfWarArtifact,
     [PERK_WAR_PATH] = Routine_WarPathAfterBattle,

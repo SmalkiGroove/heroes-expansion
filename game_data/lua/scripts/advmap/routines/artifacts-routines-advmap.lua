@@ -238,7 +238,8 @@ function Routine_ArtifactStaffOfTheLyre(player, hero, combatIndex)
         local nb = Var_StaffLyreVictories[hero] + 1
         Var_StaffLyreVictories[hero] = nb
         if mod(nb, 4) == 0 then
-            AddHeroLowestStat(player, hero, 1)
+            local low = GetHeroLowestStat(hero)
+            ChangeHeroStat(hero, low, 1)
         end
     else
         Var_StaffLyreVictories[hero] = 1
@@ -314,7 +315,8 @@ end
 
 function Routine_ArtfsetEnlighten(player, hero)
     log("$ Routine_ArtfsetEnlighten")
-    AddHeroLowestStat(player, hero, 2)
+    local low = GetHeroLowestStat(hero)
+    ChangeHeroStat(hero, low, 2)
 end
 
 function Routine_ArtfsetWarmage(player, hero)

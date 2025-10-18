@@ -148,22 +148,32 @@ function AddHeroStatAmount(player, hero, stat, amount)
 	end
 end
 
-function AddHeroLowestStat(player, hero, amount)
-	-- log("$ AddHeroLowestStat")
-    if amount ~= 0 then
-		local stat = 0
-		local value = 9999
-		for s = 1,4 do
-			local v = GetHeroStat(hero, s)
-			if v < value then
+function GetHeroLowestStat(hero)
+	-- log("$ GetHeroLowestStat")
+	local stat = 0
+	local value = 9999
+	for s = 1,4 do
+		local v = GetHeroStat(hero, s)
+		if v < value then
+			stat = s
+			value = v
+		end
+	end
+	return stat
+end
+
+function GetHeroHighestStat(hero)
+	-- log("$ GetHeroHighestStat")
+	local stat = 0
+	local value = 0
+	for s = 1,4 do
+		local v = GetHeroStat(hero, s)
+			if v > value then
 				stat = s
 				value = v
 			end
 		end
-		if stat ~= 0 then
-			ChangeHeroStat(hero, stat, amount)
-		end
-	end
+	return stat
 end
 
 function AddHeroManaUnbound(player, hero, amount)
