@@ -90,7 +90,10 @@ end
 
 function Routine_GainExpFromTotalGolds(player, hero)
     log(DEBUG, "$ Routine_GainExpFromTotalGolds")
-    local amount = trunc(GetPlayerResource(player, GOLD) * GetHeroLevel(hero) * 0.1)
+    local level = GetHeroLevel(hero)
+    local golds = GetPlayerResource(player, GOLD)
+    local ratio = 0.1 + 0.01 * level
+    local amount = trunc(golds * ratio)
     AddHeroStatAmount(player, hero, STAT_EXPERIENCE, amount)
 end
 

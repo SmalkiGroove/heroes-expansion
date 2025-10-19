@@ -425,18 +425,29 @@ end
 
 
 
-function AddAllArtifacts(hero)
-	for a = 1,199 do
-		if ARTIFACTS_DATA[a].special == 0 then GiveArtifact(hero, a) end
-	end
+function CheckEnableCheat()
+	if not ENABLE_CHEAT then log(ERROR, "!!! Cheating is disabled !!!") end
+	return ENABLE_CHEAT
 end
 
 function RevealMap()
+	if not CheckEnableCheat() then return end
 	for player = 1,8 do
 		if IsHumanPlayer(player) then
 			for z = 0,GetMaxFloor() do OpenCircleFog(1, 1, z, 9999, player) end
 		end
 	end
+end
+function AddAllArtifacts(hero)
+	if not CheckEnableCheat() then return end
+	for a = 1,199 do
+		if ARTIFACTS_DATA[a].special == 0 then GiveArtifact(hero, a) end
+	end
+end
+function Lv25(hero)
+	if not CheckEnableCheat() then return end
+	if not hero then hero = GetPlayerHeroes(GetCurrentPlayer())[0] end
+	ChangeHeroStat(hero, STAT_EXPERIENCE, 200000)
 end
 
 
