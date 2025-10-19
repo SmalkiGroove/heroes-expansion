@@ -52,7 +52,8 @@ end
 
 function Routine_ArtfsetBestial(side, hero)
     log(DEBUG, "$ Routine_ArtfsetBestial")
-    local beasts = { CREATURE_GRIFFIN, CREATURE_UNICORN, CREATURE_WYVERN, CREATURE_HYDRA, CREATURE_NIGHTMARE, CREATURE_WOLF, CREATURE_MANTICORE, CREATURE_ARCANE_EAGLE }
+    local beasts = { CREATURE_GRIFFIN, CREATURE_UNICORN, CREATURE_WYVERN, CREATURE_HYDRA, CREATURE_NIGHTMARE,
+                     CREATURE_WOLF, CREATURE_MANTICORE, CREATURE_ARCANE_EAGLE, CREATURE_CAVE_SPIDER }
     local beast = beasts[random(1,8,0)]
     local tier = CREATURES[beast][2]
     local amount = 0.5 * ((10-tier) * (10-tier) * (10-tier) + tier)

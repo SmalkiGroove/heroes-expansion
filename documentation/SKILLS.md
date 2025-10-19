@@ -85,20 +85,32 @@ At the start of each week, gain 800 golds per relic artifact equipped.
 - __Magic Resistance__ : Increases magic resistance of all creatures in hero's army by 15%. Creatures are more likely to avoid enemy magic.
 - __Determination__ : Creatures in hero's army have a second chance to resist enemy spells.
 
+### DESPOTISM
+- __Devotion__ : Hero troops do not fear to die for their hero.
+Gain experience points from your losses after won battles.
+- __Battle Wrath__ : After losing creatures in a battle, hero's army gains +2 to their Attack and Initiative for the next battle.
+- __War Policy__ : 20% of creatures lost after a victory are added for recruitment in your towns.
+Only applies to creatures of the same faction as the hero.
+
 ### COMBAT
+- __Empiricism__ : Hero gains 500 + 5% of current experience points.
+Repeat this bonus at the start of each week.
 - __Coordination__ : Links a hero with a selected creature in his army. Every time this creature performs an attack, the hero will assault the same target. The hero's attack is by 3 his levels more powerful than usual.
 - __Stunning Blow__ : Every standard hero’s attack moves the target back along the ATB bar for 0.2 points.
+- __Reinforcement__ : Hero gains +1 Attack and Defense.
+Repeat this bonus at the start of each week.
 - __Mark of the Damned__ : The hero receives special combat ability to punish the target enemy creature with a powerful strike if that creature is about to attack, retaliate or cast any spell. Once declared, Mark of the Damned is active until the end of combat.
 - __Critical Strike__ : Hero's attacks will always deal double damage.
 
 ### SHATTER_MAGIC
-- __Back to the Void__ : All creatures led by the hero inflict triple damage to summoned enemies.
-- __Mana Burst__ : The hero calls upon the forces of fire to affect enemy casters. Any time an enemy creature casts a spell it will receive damage equal to 12 per hero level.
-- __Magic Filter__ : Creatures in hero's army are immuned to 2 random elements during battles.
 - __Protection__ : Decreases damage dealt to your creatures by magic attacks by 15%.
 - __Sap Magic__ : Damage dealt by enemy spells is reduced by 20%.
+- __Magic Filter__ : Creatures in hero's army are immuned to 2 random elements during battles.
+- __Back to the Void__ : All creatures led by the hero inflict triple damage to summoned enemies.
 - __Suppress Light__ : Enemy hero is forced to spend twice more mana to cast Light Magic spells in combat.
 - __Suppress Dark__ : Enemy hero is forced to spend twice more mana to cast Dark Magic spells in combat.
+- __Disrupt Magic__ : Creatures in hero's army are granted 30% Magic Disruption.
+- __Block Corruption__ : Creatures in hero's army are immuned to mind afflictions.
 
 ### LIGHT_MAGIC
 - __Aura of Protection__ : Grants mass effects to Deflect Missile and Endurance spells, for double the casting cost of these spells. Hero’s Light spells are twice harder to dispel, opposite spells (like Slow versus Haste) applied by an enemy to hero’s creatures have 50% chance to fail.
@@ -210,9 +222,9 @@ Moreover, hero generates 1 Gold per day for each Skeleton it his or her army.
 
 ### SPIRITISM
 - __Witchcraft__ : Adds +2 to hero's Spellpower permanently. Hero also receives a new spell in his or her spell book.
-- __Exorcism__ : The hero obtains a combat ability that deals heavy damage to summoned enemy creatures.
-The damage is equal to 50 per hero level.
+- __Twilight__ : All Dark and Light magic spells are cast with +4 Spellpower
 - __Rage Awakening__ : The Shaman unleashes the raw power of the orc creatures, allowing them to reach the first level of blood rage.
+- __Advanced Blood Rage__ : Orcs in hero's army can now reach the second level of blood rage.
 
 ### INNATES
 - __Home Land__ : All creatures in hero's army receive +1 movement speed if the battle is taking place on grass terrain.
@@ -224,4 +236,31 @@ At the start of each week, gain +50 temporary mana that can go beyond maximum.
 - __Eternal Servitude__ : The hero receives an ability to raise some of the fallen undead creatures in his or her army after combat.
 - __Soil Burn__ : Enemy walking creatures will receive damage equal to 8 times hero level when moving.
 - __Commander__ : Hero can use Warcries but not regular spells. Visiting a spell shrine grants experience points (500 per spell level).
-- __Twilight__ : All Dark and Light magic spells are cast with +4 Spellpower
+- __Exorcism__ : The hero obtains a combat ability that deals heavy damage to summoned enemy creatures.
+The damage is equal to 50 per hero level.
+
+### NONE
+- __Retribution__ : The troops led by the hero inflict additional melee and ranged damage if their Morale is above zero (+7% for each point of Morale).
+
+<color_default>This skill is learnt by having 3 perks in Courage and in four other common skills.
+- __Rage of the Forest__ : All creatures in hero's army get +1 maximum damage, +2 Initiative and half their Defense is transfered to their Attack.
+
+<color_default>This skill is learnt by having 3 perks in Avenger and in four other common skills.
+- __Absolute Protection__ : Normal attacks against hero's creatures are always unlucky. Lucky attacks are turned to normal.
+
+<color_default>This skill is learnt by having 3 perks in Runelore and in four other common skills.
+- __Omniscience__ : All spells that are in existance will be written to hero's spellbook and hero will be able to cast them on expert level.
+
+<color_default>This skill is learnt by having 3 perks in Artificier and in four other common skills.
+- __Rage of the Elements__ : Elemental chain effects inflict quadruple damage.
+
+<color_default>This skill is learnt by having 3 perks in Arcanism and in four other common skills.
+- __Dead Man's Curse__ : The Morale and Luck of all enemy troops is decreased by 3.
+
+<color_default>This skill is learnt by having 3 perks in Necromancy and in four other common skills.
+- __Urgash's Call__ : Gating becomes instant.
+
+<color_default>This skill is learnt by having 3 perks in Gating and in four other common skills.
+- __Orcish Fury__ : All stronghold creatures in hero’s army get additional 500 points of rage at the beginning of combat.
+
+<color_default>This skill is learnt by having 3 perks in Blood Rage and in four other common skills.

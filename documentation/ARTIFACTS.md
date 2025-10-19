@@ -1,9 +1,21 @@
 # ARTIFACTS DOCUMENTATION
 
-### Set name
-• Set pieces
+### The Sentinel
+• Sentinel's Helm
+• Sentinel's Breastplate
+• Sentinel's Blade
+• Sentinel's Shield
+• Sentinel's Boots
+• Sentinel's Bracer
 
-(x) Set bonuses
+<color=blue>
+(4) Victories grant bonuses to hero troops for the next battle. The stronger the defeated monsters are, the stronger the bonuses are.
+(6) Summons a row of Footmen in front of hero's army at the start of combats.
+
+<color_default>
+For Haven Heroes:
+(4) Angels in hero's army Encourage a random ally each turn.
+(6) Summons a row of Squires instead of Footmen.
 
 - __Sentinel's Bracer__ :
 +1 Defense
@@ -37,10 +49,22 @@ When you spawn a Blade Barrier during combat,
 
 <color=FFB730FF>The Sentinel
 
-### Set name
-• Set pieces
+### Elven Secret
+• Avenger Bow
+• Sylvan Amulet
+• Ranger's Cuirass
+• Ranger's Cape
+• Plumed Boots
+• Sacred Seed
 
-(x) Set bonuses
+<color=blue>
+(4) TODO
+(6) TODO
+ 
+<color_default>
+For Sylvan Heroes:
+(4) TODO
+(6) TODO
 
 - __Avenger Bow__ :
 +1 Luck
@@ -72,10 +96,22 @@ Hero troops are Unstoppable (immunity to Slow).
 
 <color=FFB730FF>Elven Secret
 
-### Set name
-• Set pieces
+### Hell Conquest
+• Helm of Chaos
+• Shackles of the Last Man
+• Ring of Broken Will
+• Ring of Shadowbrand
+• Obsidian Armor
+• Will of Urgash
 
-(x) Set bonuses
+<color=blue>
+(4) TODO
+(6) TODO
+ 
+<color_default>
+For Inferno Heroes:
+(4) TODO
+(6) TODO
 
 - __Shackles of the Last Man__ :
 -1 Attack and Defense to enemy creatures
@@ -106,10 +142,22 @@ Creatures in hero's army are immuned to Armageddon
 
 <color=FFB730FF>Hell Conquest
 
-### Set name
-• Set pieces
+### Death's Embrace
+• Staff of the Netherworld
+• Cloak of Death's Shadow
+• Ring of the Unrepentant
+• Helm of the Lich
+• Amulet of Necromancy
+• Deathknight Boots
 
-(x) Set bonuses
+<color=blue>
+(4) Summons a stack of Bone Dragons when combat starts.
+(6) Summons 2 stacks of Bone Dragons instead.
+ 
+<color_default>
+For Necropolis Heroes:
+(4) Summons Spectral Dragons instead.
+(6) Summoned Spectral Dragons start with 100% ATB.
 
 - __Amulet of Necromancy__ :
 +1 Spellpower
@@ -144,10 +192,22 @@ After every victory, gain an amount of Movement points and Experience depending 
 
 <color=FFB730FF>Death's Embrace
 
-### Set name
-• Set pieces
+### Magister Set
+• Staff of the Magister
+• Ring of the Magister
+• Crown of the Magister
+• Robe of the Magister
+• Magister's Sandals
+• Book of Power
 
-(x) Set bonuses
+<color=blue>
+(4) Casters in hero's army regenerate mana during combat.
+(6) Casters in hero's army start with 100% ATB.
+ 
+<color_default>
+For Academy Heroes:
+(4) Mages in hero's army start with double mana.
+(6) The largest stack of Mages in hero's army uses Power Feed at the start of combat.
 
 - __Book Of Power__ :
 +1 Spellpower and Knowledge per rank of Learning skill
@@ -181,10 +241,22 @@ Gain Experience every day based on the hero's Knowledge, and half the amount to 
 
 <color=FFB730FF>Magister Set
 
-### Set name
-• Set pieces
+### Shadow Burst
+• Altar of Elements' Shard
+• Shadow Blade
+• Shadow Mask
+• Shadowstep Shoes
+• Cloak of Darkness
+• Ring of Banishment
 
-(x) Set bonuses
+<color=blue>
+(4) TODO
+(6) TODO
+ 
+<color_default>
+For Dungeon Heroes:
+(4) TODO
+(6) TODO
 
 - __Ring of Banishment__ :
 -50% to the amount of enemy summoned elementals
@@ -218,10 +290,22 @@ Grants the Banish ability
 
 <color=FFB730FF>Shadow Burst
 
-### Set name
-• Set pieces
+### Dwarven Set
+• Axe of the Mountain Lords
+• Helm of the Dwarven Kings
+• Cuirass of the Dwarven Kings
+• Shield of the Dwarven Kings
+• Greaves of the Dwarven Kings
+• Rune of Flame
 
-(x) Set bonuses
+<color=blue>
+(4) TODO
+(6) TODO
+ 
+<color_default>
+For Fortress Heroes:
+(4) TODO
+(6) TODO
 
 - __Rune of Flame__ :
 +2 Spellpower
@@ -255,10 +339,22 @@ Creatures in hero's army are Undisturbed (immunity to Berserk)
 
 <color=FFB730FF>Dwarven Set (4-6)
 
-### Set name
-• Set pieces
+### Brutalist Set
+• Ogre Club
+• Ogre Shield
+• Barbarian Cuirass
+• Barbarian Helmet
+• Barbarian Cape
+• Collar of Primal Rage
 
-(x) Set bonuses
+<color=blue>
+(4) TODO
+(6) TODO
+ 
+<color_default>
+For Stronghold Heroes:
+(4) TODO
+(6) TODO
 
 - __Barbarian Cuirass__ :
 +1 Defense
@@ -288,10 +384,20 @@ collar
 
 <color=FFB730FF>Brutalist Set
 
-### Set name
-• Set pieces
+### Draconic Power
+• Dragon Scale Armor
+• Dragon Scale Shield
+• Dragon Bone Greaves
+• Dragon Talon Crown
+• Dragon Teeth Necklace
+• Dragon Wing Mantle
+• Dragon Eye Ring
+• Dragon Flame Tongue
 
-(x) Set bonuses
+<color=blue>
+(4) Summon the Legendary Dragon when a friendly stack of creatures is killed.
+(6) Summon the Legendary Dragon when an enemy stack of creatures is killed.
+(8) Summon the Legendary Dragon when combat starts.
 
 - __Dragon Scale Armor__ :
 +2 Defense
@@ -336,12 +442,13 @@ Creatures in hero's army are immuned to Cold Death
 <color=FFB730FF>Draconic Power
 
 ### Empowerement
-• Turban Of Enlightenment
-• Robe Of Enlightenment
-• Pendant Of Power
-• Staff Of Power
+• Pendant of Power
+• Staff of Power
+• Turban of Enlightenment
+• Scale Mail of Enlightenment
 
-(4) Hero gains +2 of its lowest primary attribute on level up.
+<color=blue>
+(4) Hero gains +2 to his or her lowest primary attribute on every level up.
 
 - __Turban of Enlightenment__ :
 +3 Knowledge
@@ -364,10 +471,14 @@ Every 4 victories, gain 1000 + 1% experience
 
 <color=FFB730FF>Empowerement
 
-### Set name
-• Set pieces
+### Frozen Kingdom
+• Frozen Heart
+• Crown of the Frost Lord
+• Spear of the Frost Lord
+• Evercold Icicle
 
-(x) Set bonuses
+<color=blue>
+(4) Hero learns Deep Freeze and casts it on all enemy creatures on 3rd combat turn.
 
 - __Evercold Icicle__ :
 +1 Spellpower
@@ -391,13 +502,14 @@ Grants hero troops immunity to Blaze Power's defense reduction
 
 <color=FFB730FF>Frozen Kingdom
 
-### Faraway Kingdom Warrior
+### Faraway Kingdom
 • Genji's Hat
 • Genji's Vest
 • Genji's Sandals
 • Genji's Silksword
 
-(4) When an enemy stack dies during combat, the hero gets an immediate turn and +50 mana. Each mana point above maximum is converted to 100 additional experience at the end of the battle.
+<color=blue>
+(4) When an enemy stack is killed, the hero gains 100% ATB and mana. The mana can increase above limit, and exceeding mana is converted to experience after battles.
 
 - __Genji's Hat__ :
 *genji's hat'
@@ -408,32 +520,40 @@ Grants hero troops immunity to Blaze Power's defense reduction
 - __Genji's Silksword__ :
 *genji's sword*
 
-### Red Princess Eldena
+### Eldena's Pride
 • Eldena's Red Scarf
 • Eldena's Red Coat
 • Eldena's Circlet
 
-(3) +4 Tier 4 and +2 Tier 5 creatures of your faction on level up (doubles every month)
+<color=blue>
+(3) New Tier 4 and Tier 5 creatures of hero's faction add added to the army for every level up.
 
 - __Eldena's Red Scarf__ :
 +1 Knowledge
 +10 Tier 1 creatures of your faction on level up (doubles every month)
+
+<color=FFB730FF>Eldena's Pride
 - __Eldena's Red Coat__ :
 +1 Defense
 +8 Tier 2 creatures of your faction on level up (doubles every month)
+
+<color=FFB730FF>Eldena's Pride
 - __Eldena's Circlet__ :
 +1 Defense
 +1 Spellpower
 +1 Knowledge
 +6 Tier 3 creatures of your faction on level up (doubles every month)
 
+<color=FFB730FF>Eldena's Pride
+
 ### War Leader
-• Necklace of Victory
+• War Banner
 • War Drums
 • War Horn
-• War Banner
+• Necklace of Victory
 
-(4) Your creatures of tier 1, 2 and 3 get a boost to their ATB when an enemy stack dies.
+<color=blue>
+(4) Creatures of tier 1, 2 and 3 geain 100% ATB when an enemy stack is killed during combat.
 
 - __War Horn__ :
 +1 Morale
@@ -456,13 +576,14 @@ Grants hero troops immunity to Blaze Power's defense reduction
 
 <color=FFB730FF>War Leader
 
-### First Vizier
-• Regal Armour
+### Vizier's Fortune
 • Vizier's Scimitar
 • Vizier's Cap
 • Palace Shoes
+• Regal Armour
 
-(4) Gain a random artifact after battles depending on the strength of the defeated army.
+<color=blue>
+(4) After defeating a neutral army, gain an artifact whose value depends on the defeated army strength.
 
 - __Grand Vizir's Cap__ :
 +1 Knowledge
@@ -483,14 +604,15 @@ Gain random temporary battle bonuses after each victory
 
 <color=FFB730FF>Vizier's Fortune
 
-### Afterlife Bond
-• Cursed Ring
-• Tunic of Carved Flesh
+### Afterlife Set
 • Skull Mask
-• Deadwood Staff
+• Cursed Ring
 • Spirit of Oppression
+• Tunic of Carved Flesh
+• Deadwood Staff
 
-(5) Hero casts the Sorrow spell on every enemy creature at the start of combat.
+<color=blue>
+(5) Hero learns Sorrow and casts it on all enemy creatures at the start of combat.
 
 - __Cursed Ring__ :
 -1 Luck to enemy creatures
@@ -517,14 +639,15 @@ Gain random temporary battle bonuses after each victory
 
 <color=FFB730FF>Afterlife Set
 
-### War Mage
-• Runic War Axe
-• Runic War Harness
-• Boots of Interference
-• Pendant of Conflux
+### Warmage
 • Helm of the Warmage
+• Pendant of Conflux
+• Runic War Harness
+• Runic War Axe
+• Boots of Interference
 
-(5) When leveling up, the hero gains +1 Spellpower and Knowledge, and an additional +2 for each magic school known at expert level.
+<color=blue>
+(5) When hero level's up, gain +1 Spellpower and Knowledge, and an additional +1 to all primary attributes for each Magic School mastered at expert level.
 
 - __Boots of Interference__ :
 +1 Luck
@@ -554,10 +677,15 @@ Restore 25 Mana after battle
 
 <color=FFB730FF>Warmage
 
-### Set name
-• Set pieces
+### Bandit Set
+• Viking Hatchet
+• Viking Shield
+• Plunderer Vest
+• Plunderer Shoes
+• Bearhide Wraps
 
-(x) Set bonuses
+<color=blue>
+(5) TODO
 
 - __Plunderer Vest__ :
 +1 Health to friendly creatures
@@ -583,10 +711,14 @@ Gain Wood and Ore after battle depending on the strength of the defeated army
 
 <color=FFB730FF>Bandit Set
 
-### Set name
-• Set pieces
+### Animal Spirit
+• Necklace of the Eagle
+• Wraps of the Owl
+• Cuirass of the Stag
+• Shield of the Wolf
 
-(x) Set bonuses
+<color=blue>
+(4) At the start of combats, call for a random beast (Wolf, Griffin, Unicorn, Wyvern, Hydra, Hell Charger, Arcane Eagle, Manticore, Spider).
 
 - __Eagle Bravery Necklace__ :
 +1 Attack
@@ -609,102 +741,17 @@ Gain Wood and Ore after battle depending on the strength of the defeated army
 
 <color=FFB730FF>Animal Spirit
 
-### Set name
-• Set pieces
+### Saint's Grace
+• Codex of the Saint
+• Staff of the Saint
+• Cloak of the Saint
+• Ankh of the Saint
+• Fortune Band of the Saint
+• Sandals of the Blessed
 
-(x) Set bonuses
-
-- __Celestial Justicar's Shield__ :
-+2 Defense
--50% damage taken from ranged attacks
-
-<color=FFB730FF>Celestial Justicar
-- __Celestial Justicar's Helm__ :
-+2 Defense
-+2 Spellpower
-.
-
-<color=FFB730FF>Celestial Justicar
-- __Celestial Justicar's Armor__ :
-+4 Defense
--25% melee damage taken
-
-<color=FFB730FF>Celestial Justicar
-- __Celestial Justicar's Sword__ :
-+3 Attack
-+15% Initiative to friendly creatures
-
-<color=FFB730FF>Celestial Justicar
-- __Elrath's Unity__ :
-+1 to all primary attributes
-+1 Morale
-+1 Luck
-
-<color=FFB730FF>Celestial Justicar
-
-### Set name
-• Set pieces
-
-(x) Set bonuses
-
-- __Moonblade__ :
-+4 Attack
-+1 Luck
-+1 Initiative to the hero
-
-<color=FFB730FF>Moon Gleam
-- __Moon Charm__ :
-+1 Morale
-+1 Luck
-Revive the first friendly creature stack that dies in combat (revived creatures are not lost after the battle).
-
-<color=FFB730FF>Moon Gleam
-- __Moonlight Band__ :
-+2 Spellpower
-+2 Knowledge
-Creatures in hero's army are immuned to Curse of the Netherworld
-
-<color=FFB730FF>Moon Gleam
-- __Moonlight Coat__ :
-+3 Defense
--25% Mana cost to all spells
-
-<color=FFB730FF>Moon Gleam
-
-### Set name
-• Set pieces
-
-(x) Set bonuses
-
-- __Boots of the Open Road__ :
-+1 Defense
-Negates all terrain penalties
-
-<color=FFB730FF>Wanderer
-- __Backpack of the Open Road__ :
-+1 Knowledge
-Restore hero movement points on level up
-
-<color=FFB730FF>Wanderer
-
-### Set name
-• Set pieces
-
-(x) Set bonuses
-
-- __Ocean Charm__ :
-+1 Luck
-+25% Movement points on water
-- __Pirate Smasher__ :
-+1 Attack
-Friendly creatures attacks reduce enemy Defense by 1
-- __Captain's Hook__ :
-*captain's hook*
-
-### Set name
-• Set pieces
-
-(x) Set bonuses
+<color=blue>
+(4) Resurrects half of the creatures lost at the end of battles.
+(6) Resurrects all the creatures lost at the end of battles.
 
 - __Fortune Band of the Saint__ :
 +1 Luck permanently every 20 victories with this item equipped
@@ -734,6 +781,115 @@ Creatures in hero's army are immuned to Decay
 +10% ATB after casting a spell
 
 <color=FFB730FF>Saint's Grace
+
+### Celestial Justicar
+• Celestial Justicar's Sword
+• Celestial Justicar's Shield
+• Celestial Justicar's Armor
+• Celestial Justicar's Helmet
+• Elrath's Unity
+
+<color=blue>
+(5) Gain Angel Wings, that gives +10 to all attributes, including Luck and morale, and allows to move hero above obstacles.
+
+- __Celestial Justicar's Shield__ :
++2 Defense
+-50% damage taken from ranged attacks
+
+<color=FFB730FF>Celestial Justicar
+- __Celestial Justicar's Helm__ :
++2 Defense
++2 Spellpower
+.
+
+<color=FFB730FF>Celestial Justicar
+- __Celestial Justicar's Armor__ :
++4 Defense
+-25% melee damage taken
+
+<color=FFB730FF>Celestial Justicar
+- __Celestial Justicar's Sword__ :
++3 Attack
++15% Initiative to friendly creatures
+
+<color=FFB730FF>Celestial Justicar
+- __Elrath's Unity__ :
++1 to all primary attributes
++1 Morale
++1 Luck
+
+<color=FFB730FF>Celestial Justicar
+
+### Wanderer
+• Boots of the Open Road
+• Backpack of the Open Road
+
+<color=blue>
+(2) Doubles the weekly production bonus of the Logistics skill.
+
+- __Boots of the Open Road__ :
++1 Defense
+Negates all terrain penalties
+
+<color=FFB730FF>Wanderer
+- __Backpack of the Open Road__ :
++1 Knowledge
+Restore hero movement points on level up
+
+<color=FFB730FF>Wanderer
+
+### Sailor Set
+• Set pieces
+
+(x) Set bonuses
+
+- __Ocean Charm__ :
++1 Luck
++25% Movement points on water
+
+<color=FFB730FF>Sailor Set
+- __Pirate Smasher__ :
++1 Attack
+Friendly creatures attacks reduce enemy Defense by 1
+
+<color=FFB730FF>Sailor Set
+- __Captain's Hook__ :
+*captain's hook*
+
+<color=FFB730FF>Sailor Set
+
+### Moon Gleam
+• Moonblade
+• Moon Charm
+• Moonlight Band
+• Moonlight Coat
+
+<color=blue>
+(4) Gain an additional free level every time hero levels up.
+
+- __Moonblade__ :
++4 Attack
++1 Luck
++1 Initiative to the hero
+
+<color=FFB730FF>Moon Gleam
+- __Moon Charm__ :
++1 Morale
++1 Luck
+Revive the first friendly creature stack that dies in combat (revived creatures are not lost after the battle).
+
+<color=FFB730FF>Moon Gleam
+- __Moonlight Band__ :
++2 Spellpower
++2 Knowledge
+Creatures in hero's army are immuned to Curse of the Netherworld
+
+<color=FFB730FF>Moon Gleam
+- __Moonlight Coat__ :
++3 Defense
+-25% Mana cost to all spells
+
+<color=FFB730FF>Moon Gleam
 
 ### Neutrals
 The following artifact do not belong in a set.
