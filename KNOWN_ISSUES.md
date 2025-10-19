@@ -29,6 +29,7 @@
 - [XDB] Add ARMG templates
 - [LUA] Give Tavern mapobject the town portal effect
 - [EXE] Malustar add ice-proof
+- [LUA] Improve Dougal peasant upgrade mechanic
 
 ### Balance
 
