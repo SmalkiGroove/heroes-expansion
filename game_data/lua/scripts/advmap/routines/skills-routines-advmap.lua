@@ -56,25 +56,6 @@ function Routine_CheckVoice(player, hero, mastery, level)
     end
 end
 
-function Routine_CheckCourage(player, hero, mastery)
-    log(DEBUG, "$ Routine_CheckCourage")
-    local diff = mastery - HERO_SKILL_BONUSES[hero][SKILLBONUS_COURAGE]
-    if diff ~= 0 then
-        AddHeroStatAmount(player, hero, STAT_MORALE, diff)
-        HERO_SKILL_BONUSES[hero][SKILLBONUS_COURAGE] = mastery
-    end
-end
-
-function Routine_CheckAvenger(player, hero, mastery)
-    log(DEBUG, "$ Routine_CheckAvenger")
-    local value = mastery
-    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_AVENGER]
-    if diff ~= 0 then
-        AddHeroStatAmount(player, hero, STAT_LUCK, diff)
-        HERO_SKILL_BONUSES[hero][SKILLBONUS_AVENGER] = value
-    end
-end
-
 function Routine_CheckArtificier(player, hero, mastery)
     log(DEBUG, "$ Routine_CheckArtificier")
     local value = min(mastery, 3)
@@ -147,16 +128,6 @@ function Routine_LearnDestrMagic(player, hero, mastery)
     if diff > 0 then
         TeachHeroRandomSpellTier(player, hero, SPELL_SCHOOL_DESTRUCT, mastery+2)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_DESTRUCT_MAGIC] = mastery
-    end
-end
-
-function Routine_CheckPrecision(player, hero, mastery)
-    log(DEBUG, "$ Routine_CheckPrecision")
-    local value = mastery
-    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_PRECISION]
-    if diff ~= 0 then
-        AddHeroStatAmount(player, hero, STAT_LUCK, diff)
-        HERO_SKILL_BONUSES[hero][SKILLBONUS_PRECISION] = value
     end
 end
 
@@ -257,17 +228,7 @@ function Routine_CheckEmpiricism(player, hero, mastery)
     end
 end
 
-function Routine_CheckLastStand(player, hero, mastery)
-    log(DEBUG, "$ Routine_CheckLastStand")
-    local value = mastery
-    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_LAST_STAND]
-    if diff ~= 0 then
-        AddHeroStatAmount(player, hero, STAT_MORALE, diff)
-        HERO_SKILL_BONUSES[hero][SKILLBONUS_LAST_STAND] = value
-    end
-end
-
-Var_PlayerPathfinders = {0,0,0,0,0,0,0,0,0}
+Var_PlayerPathfinders = {0,0,0,0,0,0,0,0}
 function Routine_RevealNeutralTowns(player, hero, mastery)
     if mastery > HERO_SKILL_BONUSES[hero][SKILLBONUS_PATHFINDING] then
         local radius = 10 + 5 * Var_PlayerPathfinders[player]
@@ -863,11 +824,8 @@ START_TRIGGER_SKILLS_ROUTINES = {
     [SKILL_DARK_MAGIC] = Routine_LearnDarkMagic,
     [SKILL_NATURAL_MAGIC] = Routine_LearnNaturalMagic,
     [SKILL_DESTRUCTIVE_MAGIC] = Routine_LearnDestrMagic,
-    [SKILL_COURAGE] = Routine_CheckCourage,
-    [SKILL_AVENGER] = Routine_CheckAvenger,
     [SKILL_ARTIFICIER] = Routine_CheckArtificier,
     [SKILL_SPIRITISM] = Routine_CheckSpiritism,
-    [PERK_PRECISION] = Routine_CheckPrecision,
     [PERK_BALLISTICS] = Routine_CheckBallistics,
     [PERK_ANATOMY] = Routine_CheckAnatomy,
     [PERK_INTELLIGENCE] = Routine_CheckIntelligence,
@@ -879,7 +837,6 @@ START_TRIGGER_SKILLS_ROUTINES = {
     [PERK_REINFORCEMENT] = Routine_CheckReinforcement,
     [PERK_EMPIRICISM] = Routine_CheckEmpiricism,
     [PERK_ONSLAUGHT] = Routine_OnslaughtBuff,
-    [PERK_LAST_STAND] = Routine_CheckLastStand,
     [PERK_PATHFINDING] = Routine_RevealNeutralTowns,
     [PERK_GEAR_UP] = Routine_GearUp,
     [PERK_HEROES_LEGACY] = Routine_HeroesLegacy,

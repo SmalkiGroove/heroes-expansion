@@ -2993,7 +2993,7 @@
 				<Item>HERO_SKILL_LOGISTICS</Item>
 				<Item>HERO_SKILL_WARFARE</Item>
 				<Item>HERO_SKILL_LEARNING</Item>
-				<Item>HERO_SKILL_MOTIVATION</Item>
+				<Item>HERO_SKILL_COURAGE</Item>
 				<Item>HERO_SKILL_PRECISION</Item>
 				<Item>HERO_SKILL_OFFENCE</Item>
 				<Item>HERO_SKILL_DEFENSE</Item>
@@ -3020,7 +3020,7 @@
 				<Item>HERO_SKILL_RECRUITMENT</Item>
 				<Item>HERO_SKILL_ESTATES</Item>
 				<Item>HERO_SKILL_DIPLOMACY</Item>
-				<Item>HERO_SKILL_MAGIC_RESISTANCE</Item>
+				<Item>HERO_SKILL_DISRUPT_MAGIC</Item>
 				<Item>HERO_SKILL_EXPERTISE</Item>
 				<Item>HERO_SKILL_GEOLOGY</Item>
 				<Item>HERO_SKILL_TACTICS</Item>
@@ -3050,7 +3050,7 @@
 				<Item>HERO_SKILL_CONSUME_CORPSE</Item>
 				<Item>HERO_SKILL_HELLFIRE</Item>
 				<Item>HERO_SKILL_MARK_OF_THE_DAMNED</Item>
-				<Item>HERO_SKILL_COURAGE</Item>
+				<Item>HERO_SKILL_MOTIVATION</Item>
 				<Item>HERO_SKILL_ETERNAL_SERVITUDE</Item>
 				<Item>HERO_SKILL_BANSHEE_HOWL</Item>
 				<Item>HERO_SKILL_RAIN_OF_ARROWS</Item>
@@ -3123,8 +3123,8 @@
 				<Item>HERO_SKILL_SEAL_OF_PROTECTION</Item>
 				<Item>HERO_SKILL_COUNTERSPELL</Item>
 				<Item>HERO_SKILL_SAP_MAGIC</Item>
-				<Item>HERO_SKILL_SUPRESS_DARK</Item>
-				<Item>HERO_SKILL_SUPRESS_LIGHT</Item>
+				<Item>HERO_SKILL_STUN_TRAINING</Item>
+				<Item>HERO_SKILL_ASSAULT_TRAINING</Item>
 				<Item>HERO_SKILL_BANISH</Item>
 				<Item>HERO_SKILL_OMNISCIENCE</Item>
 				<Item>HERO_SKILL_TELEPORT_ASSAULT</Item>
@@ -3148,10 +3148,10 @@
 				<Item>HERO_SKILL_TECHNICAL_STAFF</Item>
 				<Item>HERO_SKILL_TAP_RUNES</Item>
 				<Item>HERO_SKILL_RUNIC_ATTUNEMENT</Item>
-				<Item>HERO_SKILL_DETERMINATION</Item>
+				<Item>HERO_SKILL_SPELLBREAKER</Item>
 				<Item>HERO_SKILL_OFFENSIVE_FORMATION</Item>
 				<Item>HERO_SKILL_DEFENSIVE_FORMATION</Item>
-				<Item>HERO_SKILL_DISTRACT</Item>
+				<Item>HERO_SKILL_INTIMIDATING_VOICE</Item>
 				<Item>HERO_SKILL_IGNITE</Item>
 				<Item>HERO_SKILL_TENACITY</Item>
 				<Item>HERO_SKILL_VENGEFUL_LIGHT</Item>
@@ -3162,13 +3162,13 @@
 				<Item>HERO_SKILL_EMPATHY</Item>
 				<Item>HERO_SKILL_PREPARATION</Item>
 				<Item>HERO_SKILL_BLOOD_RAGE</Item>
-				<Item>HERO_SKILL_MIGHT_OVER_MAGIC</Item>
+				<Item>HERO_SKILL_DOMINANT_SHOUT</Item>
 				<Item>HERO_SKILL_MEMORY_OF_OUR_BLOOD</Item>
 				<Item>HERO_SKILL_COORDINATION</Item>
 				<Item>HERO_SKILL_ORCISH_FURY</Item>
 				<Item>HERO_SKILL_WAR_PATH</Item>
 				<Item>HERO_SKILL_BATTLE_ELATION</Item>
-				<Item>HERO_SKILL_PAIN_KILLER</Item>
+				<Item>HERO_SKILL_LUNG_WORKOUT</Item>
 				<Item>HERO_SKILL_STUNNING_BLOW</Item>
 				<Item>HERO_SKILL_DEFEND_US_ALL</Item>
 				<Item>HERO_SKILL_GOBLIN_SUPPORT</Item>
@@ -3198,7 +3198,7 @@
 				<Item>HERO_SKILL_MAGIC_FILTER</Item>
 				<Item>HERO_SKILL_BACK_TO_THE_VOID</Item>
 				<Item>HERO_SKILL_BLOCK_CORRUPTION</Item>
-				<Item>HERO_SKILL_DISRUPT_MAGIC</Item>
+				<Item>HERO_SKILL_ARMOR_PROTECTION</Item>
 				<Item>HERO_SKILL_SCORCHING_EARTH</Item>
 				<Item>HERO_SKILL_DESPOTISM</Item>
 				<Item>HERO_SKILL_DEVOTION</Item>
@@ -3208,7 +3208,7 @@
 				<Item>HERO_SKILL_FIRE_RESISTANCE</Item>
 				<Item>HERO_SKILL_ADVANCED_BLOOD_RAGE</Item>
 				<Item>HERO_SKILL_EXHAUST</Item>
-				<Item>HERO_SKILL_SPELLBREAKER</Item>
+				<Item>HERO_SKILL_219</Item>
 				<Item>HERO_SKILL_TALENTED_WARRIOR</Item>
 			</EnumEntries>
 		</Item>
@@ -67194,7 +67194,7 @@
 					<Value>3</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_MOTIVATION</Name>
+					<Name>HERO_SKILL_COURAGE</Name>
 					<Value>4</Value>
 				</Item>
 				<Item>
@@ -67302,7 +67302,7 @@
 					<Value>30</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_MAGIC_RESISTANCE</Name>
+					<Name>HERO_SKILL_DISRUPT_MAGIC</Name>
 					<Value>31</Value>
 				</Item>
 				<Item>
@@ -67422,7 +67422,7 @@
 					<Value>60</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_COURAGE</Name>
+					<Name>HERO_SKILL_MOTIVATION</Name>
 					<Value>61</Value>
 				</Item>
 				<Item>
@@ -67714,11 +67714,11 @@
 					<Value>133</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_SUPRESS_DARK</Name>
+					<Name>HERO_SKILL_STUN_TRAINING</Name>
 					<Value>134</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_SUPRESS_LIGHT</Name>
+					<Name>HERO_SKILL_ASSAULT_TRAINING</Name>
 					<Value>135</Value>
 				</Item>
 				<Item>
@@ -67814,7 +67814,7 @@
 					<Value>158</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_DETERMINATION</Name>
+					<Name>HERO_SKILL_SPELLBREAKER</Name>
 					<Value>159</Value>
 				</Item>
 				<Item>
@@ -67826,7 +67826,7 @@
 					<Value>161</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_DISTRACT</Name>
+					<Name>HERO_SKILL_INTIMIDATING_VOICE</Name>
 					<Value>162</Value>
 				</Item>
 				<Item>
@@ -67870,7 +67870,7 @@
 					<Value>172</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_MIGHT_OVER_MAGIC</Name>
+					<Name>HERO_SKILL_DOMINANT_SHOUT</Name>
 					<Value>173</Value>
 				</Item>
 				<Item>
@@ -67894,7 +67894,7 @@
 					<Value>178</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_PAIN_KILLER</Name>
+					<Name>HERO_SKILL_LUNG_WORKOUT</Name>
 					<Value>179</Value>
 				</Item>
 				<Item>
@@ -68014,7 +68014,7 @@
 					<Value>208</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_DISRUPT_MAGIC</Name>
+					<Name>HERO_SKILL_ARMOR_PROTECTION</Name>
 					<Value>209</Value>
 				</Item>
 				<Item>
@@ -68054,7 +68054,7 @@
 					<Value>218</Value>
 				</Item>
 				<Item>
-					<Name>HERO_SKILL_SPELLBREAKER</Name>
+					<Name>HERO_SKILL_219</Name>
 					<Value>219</Value>
 				</Item>
 				<Item>
