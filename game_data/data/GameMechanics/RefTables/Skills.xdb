@@ -1271,11 +1271,11 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_DISRUPT_MAGIC</ID>
+			<ID>HERO_SKILL_SPELLBREAKER</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Perks/DisruptMagic_grey.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Perks/DisruptMagic.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/Spellbreaker_grey.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/Spellbreaker.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -6517,11 +6517,11 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_SPELLBREAKER</ID>
+			<ID>HERO_SKILL_COUNTER_MAGIC</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Perks/Spellbreaker_grey.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Perks/Spellbreaker.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/DisruptMagic_grey.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/DisruptMagic.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -6539,24 +6539,24 @@
 				</spellBuffs>
 				<BasicSkillID>HERO_SKILL_SHATTER_MAGIC</BasicSkillID>
 				<SkillPrerequisites>
-					<Item><Class>HERO_CLASS_HAVEN_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_DISRUPT_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_HAVEN_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_DISRUPT_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_DISRUPT_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_DISRUPT_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_FORTRESS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_DISRUPT_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_FORTRESS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_DISRUPT_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_ACADEMY_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_DISRUPT_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_ACADEMY_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_DISRUPT_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_DUNGEON_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_DISRUPT_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_DUNGEON_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_DISRUPT_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_NECROPOLIS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_DISRUPT_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_NECROPOLIS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_DISRUPT_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_INFERNO_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_DISRUPT_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_INFERNO_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_DISRUPT_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_STRONGHOLD_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_DISRUPT_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_STRONGHOLD_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_DISRUPT_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_COMMANDER</Class><dependenciesIDs><Item>HERO_SKILL_DISRUPT_MAGIC</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_VAMPIRE_PRINCESS</Class><dependenciesIDs><Item>HERO_SKILL_DISRUPT_MAGIC</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_HAVEN_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SPELLBREAKER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_HAVEN_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SPELLBREAKER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SPELLBREAKER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SPELLBREAKER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_FORTRESS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SPELLBREAKER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_FORTRESS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SPELLBREAKER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_ACADEMY_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SPELLBREAKER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_ACADEMY_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SPELLBREAKER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_DUNGEON_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SPELLBREAKER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_DUNGEON_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SPELLBREAKER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_NECROPOLIS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SPELLBREAKER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_NECROPOLIS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SPELLBREAKER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_INFERNO_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SPELLBREAKER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_INFERNO_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SPELLBREAKER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_STRONGHOLD_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_SPELLBREAKER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_STRONGHOLD_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_SPELLBREAKER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_COMMANDER</Class><dependenciesIDs><Item>HERO_SKILL_SPELLBREAKER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_VAMPIRE_PRINCESS</Class><dependenciesIDs><Item>HERO_SKILL_SPELLBREAKER</Item></dependenciesIDs></Item>
 				</SkillPrerequisites>
 				<AIRacesValues>
 					<Haven><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Haven>
@@ -6824,8 +6824,8 @@
 			<ID>HERO_SKILL_RUNIC_SHIELD</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Perks/RunicShield_grey.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Perks/RunicShield.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/RunicArmor_grey.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/RunicArmor.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -8610,7 +8610,7 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_BLOCK_CORRUPTION</ID>
+			<ID>HERO_SKILL_CORRUPTION_IMMUNE</ID>
 			<obj>
 				<Texture>
 					<Item href="/Textures/HeroScreen/Perks/BlockCorruption_grey.xdb#xpointer(/Texture)"/>
@@ -9059,8 +9059,8 @@
 			<ID>HERO_SKILL_EXHAUST</ID>
 			<obj>
 				<Texture>
-					<Item href="/UI/H5A1/Icons/Abilites/Heroes_Abillites/128x128/Mountain_King.(Texture).xdb#xpointer(/Texture)"/>
-					<Item href="/UI/H5A1/Icons/Abilites/Heroes_Abillites/128x128/Mountain_King.(Texture).xdb#xpointer(/Texture)"/>
+					<Item href=""/>
+					<Item href=""/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -9093,16 +9093,16 @@
 			<ID>HERO_SKILL_219</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Perks/Spellbreaker.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Perks/Spellbreaker.xdb#xpointer(/Texture)"/>
+					<Item href=""/>
+					<Item href=""/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
-					<Item href="/Text/Game/Skills/Common/Luck/Resistance/Name.txt"/>
+					<Item href="/Text/Game/Skills/Innates/NotAvailable.txt"/>
 				</NameFileRef>
 				<CommonNameFileRef href=""/>
 				<DescriptionFileRef>
-					<Item href="/Text/Game/Skills/Common/Luck/Resistance/Description.txt"/>
+					<Item href="/Text/Game/Skills/Innates/NotAvailable.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
