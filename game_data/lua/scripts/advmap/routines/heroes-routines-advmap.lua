@@ -50,42 +50,38 @@ function Routine_EnableTrainPeasantsToArchers(player, hero)
     Var_Dougal_TrainCount = 0
 end
 
-function Routine_TrainPeasantsToArchersCheck(player, hero)
-    log(DEBUG, "$ Routine_TrainPeasantsToArchersCheck")
-    if IsAIPlayer(player) then return end
-    for town,data in MAP_TOWNS do
-        if data.faction == HAVEN then
-            if IsHeroInTown(hero, town, 1, 0) then
-                if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_1) > 0 and GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_2) > 0 then
-                    if GetTownBuildingLevel(town, TOWN_BUILDING_HAVEN_TRAINING_GROUNDS) > 0 then
-                        local max = GetObjectDwellingCreatures(town, CREATURE_PEASANT)
-                        local n = 7 - Var_Dougal_TrainCount
-                        if GetTownBuildingLevel(town, TOWN_BUILDING_HAVEN_MONUMENT_TO_FALLEN_HEROES) > 0 then
-                            n = n + 13
-                        end
-                        n = min(n, max)
-                        if n > 0 then
-                            QuestionBoxForPlayers(
-                                GetPlayerFilter(player),
-                                {"/Text/Game/Scripts/HeroSpe/TrainArchers.txt"; num=n},
-                                "Routine_TrainPeasantsToArchersConfirm('"..player.."','"..hero.."','"..town.."','"..n.."')",
-                                "NoneRoutine"
-                            )
-                        end
-                    end
+Var_Dougal_TrainPeasantLock = 0
+function Routine_TrainPeasantsToArchers(hero, town)
+    log(DEBUG, "$ Routine_TrainPeasantsToArchers")
+    if MAP_TOWNS[town] and MAP_TOWNS[town].faction == HAVEN then
+        if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_1) > 0 and GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_2) > 0 then
+            if GetTownBuildingLevel(town, TOWN_BUILDING_HAVEN_TRAINING_GROUNDS) > 0 then
+                local peasants = GetHeroCreatures(hero, CREATURE_PEASANT)
+                local n = 7 - Var_Dougal_TrainCount
+                if GetTownBuildingLevel(town, TOWN_BUILDING_HAVEN_MONUMENT_TO_FALLEN_HEROES) > 0 then n = n + 13 end
+                n = min(n, peasants)
+                if n > 0 then
+                    Var_Dougal_TrainPeasantLock = 1
+                    local player = GetObjectOwner(hero)
+                    QuestionBoxForPlayers(
+                        GetPlayerFilter(player),
+                        {"/Text/Game/Scripts/HeroSpe/TrainArchers.txt"; num=n},
+                        "Routine_TrainPeasantsToArchersConfirm("..player..",'"..hero.."',"..n..")",
+                        "Routine_TrainPeasantsToArcherCancel()"
+                    )
                 end
             end
         end
     end
 end
-
-function Routine_TrainPeasantsToArchersConfirm(player, hero, town, amount)
-    log(DEBUG, "Train "..amount.." peasants to archers in town "..town)
-    local peasants = GetObjectDwellingCreatures(town, CREATURE_PEASANT)
-    local archers = GetObjectDwellingCreatures(town, CREATURE_ARCHER)
-    SetObjectDwellingCreatures(town, CREATURE_PEASANT, peasants - amount)
-    SetObjectDwellingCreatures(town, CREATURE_ARCHER, archers + amount)
+function Routine_TrainPeasantsToArchersConfirm(player, hero, amount)
+    RemoveHeroCreatures(hero, CREATURE_PEASANT, amount) sleep(1)
+    AddHeroCreatures(hero, CREATURE_ARCHER, amount) sleep(1)
     Var_Dougal_TrainCount = Var_Dougal_TrainCount + amount
+    Var_Dougal_TrainPeasantLock = 0
+end
+function Routine_TrainPeasantsToArcherCancel()
+    Var_Dougal_TrainPeasantLock = 0
 end
 
 function Routine_GainExpFromTotalGolds(player, hero)
@@ -1204,6 +1200,7 @@ START_TRIGGER_HERO_ROUTINES = {
     -- haven
     [H_ISABEL] = Routine_AddTwoLuckPoints,
     [H_ALARIC] = Routine_UpgradeMonastery,
+    [H_DOUGAL] = Routine_EnableTrainPeasantsToArchers,
     [H_KLAUS] = Routine_BuildAndRevealStables,
     -- preserve
     [H_FINDAN] = Routine_UpgradeAvengersGuild,
@@ -1230,7 +1227,6 @@ START_TRIGGER_HERO_ROUTINES = {
 
 DAILY_TRIGGER_HERO_ROUTINES = {
     -- haven
-    [H_DOUGAL] = Routine_TrainPeasantsToArchersCheck,
     [H_GABRIELLE] = Routine_MovePointsPerGriffin,
     -- preserve
     [H_IVOR] = Routine_AddHeroWolves,

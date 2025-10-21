@@ -27,9 +27,7 @@
 - [???] Add NCF creatures in editor
 - [XDB] Darkstorm hero totem model
 - [XDB] Add ARMG templates
-- [LUA] Give Tavern mapobject the town portal effect
 - [EXE] Malustar add ice-proof
-- [LUA] Improve Dougal peasant upgrade mechanic
 
 ### Balance
 
@@ -130,3 +128,5 @@
 - Rissa spec quick battle crash
 - Hero that start with Absolute faction skill should get it later
 - Swaped town dwellings wrong model
+- Give Tavern mapobject the town portal effect
+- Improve Dougal peasant upgrade mechanic
