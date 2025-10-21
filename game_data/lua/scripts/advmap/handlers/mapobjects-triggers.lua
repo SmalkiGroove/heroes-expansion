@@ -72,8 +72,8 @@ function Trigger_WitchHut(hero, obj)
         QuestionBoxForPlayers(
             GetPlayerFilter(player),
             {"/Text/Game/Scripts/MapObjects/WitchHut.txt"; stat="/GameMechanics/RefTables/HeroAttribute/"..ATTRIBUTE_TEXT_ORIGIN[givestat]..".txt"},
-            "Trigger_WitchHut_confirm('"..player.."','"..hero.."','"..obj.."',"..givestat..")",
-            "Trigger_WitchHut_cancel('"..player.."','"..hero.."','"..obj.."')"
+            "Trigger_WitchHut_confirm("..player..",'"..hero.."','"..obj.."',"..givestat..")",
+            "Trigger_WitchHut_cancel("..player..",'"..hero.."','"..obj.."')"
         )
     else
         Trigger_WitchHut_visited(player, hero, obj)
@@ -81,33 +81,38 @@ function Trigger_WitchHut(hero, obj)
 end
 function Trigger_WitchHut_confirm(player, hero, obj, givestat)
     log(DEBUG, "$ Trigger_WitchHut_confirm")
-    if GetPlayerResource(player, MERCURY) >= 7 then
+    if GetPlayerResource(player, MERCURY) >= 3 then
         MessageBoxForPlayers(
-            GetPlayerFilter(0+player),
+            GetPlayerFilter(player),
             {"/Text/Game/Scripts/MapObjects/WitchHutAccepted.txt"; stat="/GameMechanics/RefTables/HeroAttribute/"..ATTRIBUTE_TEXT_ORIGIN[givestat]..".txt"},
             "NoneRoutine"
         )
-        RemovePlayerResource(player, MERCURY, 7)
+        RemovePlayerResource(player, MERCURY, 3)
         ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
         ChangeHeroStat(hero, givestat, 2)
         GiveExp(hero, 5000)
         Var_WitchHutVisited[obj] = 1
-        MarkObjectAsVisited(obj, hero)
+        for _,h in GetPlayerHeroes(player) do MarkObjectAsVisited(obj, h) end
     else
         Trigger_WitchHut_cancel(player, hero, obj)
     end
 end
 function Trigger_WitchHut_cancel(player, hero, obj)
-    MessageBoxForPlayers(GetPlayerFilter(0+player), "/Text/Game/Scripts/MapObjects/WitchHutRefused.txt", "NoneRoutine")
+    MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Game/Scripts/MapObjects/WitchHutRefused.txt", "NoneRoutine")
 end
 function Trigger_WitchHut_visited(player, hero, obj)
-    MessageBoxForPlayers(GetPlayerFilter(0+player), "/Text/Game/Scripts/MapObjects/WitchHutVisited.txt", "NoneRoutine")
-    MarkObjectAsVisited(obj, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Game/Scripts/MapObjects/WitchHutVisited.txt", "NoneRoutine")
+    for _,h in GetPlayerHeroes(player) do MarkObjectAsVisited(obj, h) end
 end
 function WitchHuts_reset()
     for obj,_ in Var_WitchHutVisited do
         Var_WitchHutVisited[obj] = 0
     end
+    -- for player = 1,8 do
+    --     if (GetPlayerState(player) == 1) then
+    --         for _,h in GetPlayerHeroes(player) do MarkObjectAsVisited(obj, h) end
+    --     end
+    -- end
 end
 
 
@@ -125,12 +130,12 @@ function Trigger_Temple(hero, obj)
         ShowFlyingSign({"/Text/Game/Scripts/MapObjects/Temple.txt"; amount=exp}, hero, player, FLYING_SIGN_TIME)
         for _,h in GetPlayerHeroes(player) do
             ChangeHeroStat(h, STAT_EXPERIENCE, exp)
-            MarkObjectAsVisited(obj, h)
+            for _,h in GetPlayerHeroes(player) do MarkObjectAsVisited(obj, h) end
         end
         Var_TempleVisited[obj] = 1
     else
         ShowFlyingSign("/Text/Game/Scripts/MapObjects/TempleVisited.txt", hero, player, FLYING_SIGN_TIME)
-        MarkObjectAsVisited(obj, hero)
+        for _,h in GetPlayerHeroes(player) do MarkObjectAsVisited(obj, h) end
     end
 end
 function Temples_reset()
@@ -162,14 +167,21 @@ function Trigger_Tavern(hero, obj)
     QuestionBoxForPlayers(
         GetPlayerFilter(player),
         "/Text/Game/Scripts/MapObjects/Tavern.txt",
-        "Trigger_Tavern_confirm('"..player.."','"..hero.."')",
+        "Trigger_Tavern_confirm("..player..",'"..hero.."')",
         "NoneRoutine"
     )
 end
 function Trigger_Tavern_confirm(player, hero)
     local town = FindClosestTown(player, hero)
-    ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
-    SetObjectPosition(hero, MAP_TOWNS[town].x, MAP_TOWNS[town].y, MAP_TOWNS[town].z, 4)
+    log(INFO, "Nearest town: "..town)
+    if town then
+        ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
+        local x = MAP_TOWNS[town].x
+        local y = MAP_TOWNS[town].y
+        local z = MAP_TOWNS[town].z
+        log(INFO, "Town position: "..x..", "..y..", "..z)
+        SetObjectPosition(hero, x, y, z, 4)
+    end
 end
 
 

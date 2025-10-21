@@ -500,6 +500,12 @@ function Routine_IndustryDaily(player, hero, mastery)
     end
 end
 
+function Routine_LungWorkout(player, hero, mastery)
+    log(DEBUG, "$ Routine_LungWorkout")
+    local level = GetHeroLevel(hero)
+    ChangeHeroStat(hero, STAT_MANA_POINTS, level)
+end
+
 function Routine_HeraldOfDeathGolds(player, hero, mastery)
     log(DEBUG, "$ Routine_HeraldOfDeathGolds")
     local amount = GetHeroCreatures(hero, CREATURE_SKELETON) + GetHeroCreatures(hero, CREATURE_SKELETON_ARCHER) + GetHeroCreatures(hero, CREATURE_SKELETON_WARRIOR)
@@ -860,6 +866,7 @@ DAILY_TRIGGER_SKILLS_ROUTINES = {
     [PERK_ESTATES] = RoutineEstatesDaily,
     [PERK_GEOLOGY] = Routine_GeologyDaily,
     [PERK_INDUSTRY] = Routine_IndustryDaily,
+    [PERK_LUNG_WORKOUT] = Routine_LungWorkout,
     [PERK_HERALD_OF_DEATH] = Routine_HeraldOfDeathGolds,
     [SKILL_SPIRITISM] = Routine_SpiritismManaRegen,
 }

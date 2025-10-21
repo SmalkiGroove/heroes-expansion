@@ -35,6 +35,7 @@
 
 - [EXE] Market change rate are total scam
 - [EXE] Inferno and Dungeon sacrificial buildings are bad
+- Add another effect to Guardian angel perk
 
 ### Massive work required
 
