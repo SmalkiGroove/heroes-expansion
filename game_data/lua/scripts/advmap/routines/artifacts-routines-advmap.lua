@@ -255,16 +255,24 @@ function Routine_ArtifactPendantOfTheLyre(player, hero, combatIndex)
         if mod(nb, 4) == 0 then
             local exp = 1000 + trunc(0.01 * GetHeroStat(hero, STAT_EXPERIENCE))
             AddHeroStatAmount(player, hero, STAT_EXPERIENCE, exp)
-            -- AddHeroManaUnbound(player, hero, 100)
         end
     else
         Var_PendantLyreVictories[hero] = 1
     end
 end
 
-function Routine_ArtifactAnkhOfTheSaint(player, hero, combatIndex)
-    log(DEBUG, "$ Routine_ArtifactAnkhOfTheSaint")
-    
+Var_FortuneBandOfTheSaint_Victories = {}
+function Routine_ArtifactFortuneBandOfTheSaint(player, hero, combatIndex)
+    log(DEBUG, "$ Routine_ArtifactFortuneBandOfTheSaint")
+    if Var_FortuneBandOfTheSaint_Victories[hero] then
+        local nb = Var_FortuneBandOfTheSaint_Victories[hero] + 1
+        Var_FortuneBandOfTheSaint_Victories[hero] = nb
+        if mod(nb, 20) == 0 then
+            AddHeroStatAmount(player, hero, STAT_LUCK, 1)
+        end
+    else
+        Var_FortuneBandOfTheSaint_Victories[hero] = 1
+    end
 end
 
 function Routine_ArtifactBloodCrystalExp(player, hero, nb)
@@ -401,7 +409,7 @@ AFTER_COMBAT_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_PALACE_SHOES] = Routine_ArtifactPalaceShoes,
     [ARTIFACT_PENDANT_OF_THE_LYRE] = Routine_ArtifactPendantOfTheLyre,
     [ARTIFACT_STAFF_OF_THE_LYRE] = Routine_ArtifactStaffOfTheLyre,
-    [ARTIFACT_ANKH_OF_THE_SAINT] = Routine_ArtifactAnkhOfTheSaint,
+    [ARTIFACT_FORTUNE_BAND_OF_THE_SAINT] = Routine_ArtifactFortuneBandOfTheSaint,
 }
 
 CONTINUOUS_TRIGGER_ARTFSETS_ROUTINES = {

@@ -130,14 +130,14 @@ ARTIFACT_ELDENAS_RED_COAT = 108                     -- level up grants t2 creatu
 ARTIFACT_RING_OF_LIFE = 109                         -- 
 ARTIFACT_STEADFAST_SHIELD = 110                     -- /
 ARTIFACT_VIKING_SHIELD = 111                        -- gain wood/ore after battles **
-ARTIFACT_FORTUNE_BAND_OF_THE_SAINT = 112            -- gain permanent luck after victories ** TODO
+ARTIFACT_FORTUNE_BAND_OF_THE_SAINT = 112            -- gain permanent luck after victories **
 ARTIFACT_SENTINELS_BRACER = 113                     -- /
 ARTIFACT_ANKH_OF_THE_SAINT = 114                    -- 
 ARTIFACT_CLOAK_OF_THE_SAINT = 115                   -- immunity to plague
 ARTIFACT_GENJIS_HAT = 116                           -- reduce mana cost by 1
 ARTIFACT_GENJIS_VEST = 117                          -- 
 ARTIFACT_GENJIS_SANDALS = 118                       -- 
-ARTIFACT_GENJIS_SILKSWORD = 119                     -- creatures deal 10% additional ice damage TODO
+ARTIFACT_GENJIS_SILKSWORD = 119                     -- 
 ARTIFACT_SENTINELS_HELM = 120                       -- gain battle boost on level up **
 ARTIFACT_SENTINELS_BOOTS = 121                      -- gain movement and morale after battle with no loss **
 ARTIFACT_SENTINELS_SHIELD = 122                     -- reduce ranged damage
@@ -160,7 +160,7 @@ ARTIFACT_POTION_OF_STAMINA = 138		            --
 ARTIFACT_POTION_OF_EXPERIENCE = 139                 -- 
 ARTIFACT_SYLVAN_AMULET = 140                        -- reduce mana cost of nature spells by 3
 ARTIFACT_SHADOW_MASK = 141                          -- /
-ARTIFACT_BARBARIAN_HELMET = 142                     -- 
+ARTIFACT_BARBARIAN_HELMET = 142                     -- creatures get battle rage ability
 ARTIFACT_SKULL_MASK = 143                           -- decrease enemy initiative
 ARTIFACT_SENTINELS_BLADE = 144                      -- after spawning a blade barrier, ... TODO **
 ARTIFACT_VIZIRS_SCIMITAR = 145                      -- increase t1 and t2 weekly prod by 10 **
@@ -170,7 +170,7 @@ ARTIFACT_SHADOWSTEP_SHOES = 148                     -- /
 ARTIFACT_RANGERS_CUIRASS = 149                      -- 
 ARTIFACT_MAGISTERS_SANDALS = 150                    -- gain +1 knowledge per week **
 ARTIFACT_BLAZING_SPELLBOOK = 151                    -- reduce mana cost of fire spells by 33%
-ARTIFACT_COLLAR_OF_PRIMAL_RAGE = 152                -- 
+ARTIFACT_COLLAR_OF_PRIMAL_RAGE = 152                -- gain rage points when combat starts TODO
 ARTIFACT_CENTAUR_CROSSBOW = 153                     -- attacks reduce target's defense TODO
 ARTIFACT_DEADWOOD_STAFF = 154                       -- reduce mana cost of dark spells by 1
 ARTIFACT_DEATH_KNIGHT_BOOTS = 155                   -- gain experience and movement points after battle **
@@ -178,20 +178,20 @@ ARTIFACT_BARBARIAN_CUIRASS = 156                    -- creatures have +3% hp
 ARTIFACT_HARPY_BOOTS = 157                          -- creatures have +1 initiative and speed
 ARTIFACT_PALACE_SHOES = 158                         -- gain random battle bonuses after combat **
 ARTIFACT_SHACKLES_OF_THE_LAST_MAN = 159             -- enemy creatures have -1 att and def TODO
-ARTIFACT_LEGENDARY_BOOTS = 160                      -- 
+ARTIFACT_LEGENDARY_BOOTS = 160                      -- creatures get rider charge ability
 ARTIFACT_GOLDEN_GOOSE = 161                         -- all attacks are lucky
-ARTIFACT_162 = 162                                  -- 
-ARTIFACT_163 = 163                                  -- 
+ARTIFACT_162 = 162                                  -- creatures get child of light ability
+ARTIFACT_163 = 163                                  -- creatures get flame wave ability
 ARTIFACT_CLOAK_OF_DARKNESS = 164                    -- enemy creatures have -1 luck
 ARTIFACT_SHANTIRI_BREASTPLATE = 165                 -- immunity to earthquake TODO
 ARTIFACT_SHIELD_OF_THE_WOLF = 166                   -- /
 ARTIFACT_HELM_OF_THE_WARMAGE = 167                  -- learn new spell on level up **
 ARTIFACT_CELESTIAL_JUSTICAR_HELMET = 168            -- 
 ARTIFACT_RING_OF_STRENGTH = 169                     -- creatures have +3 hp
-ARTIFACT_SPEAR_OF_THE_FROST_LORD = 170              -- 
-ARTIFACT_STAFF_OF_THE_LYRE = 171                    -- every 5 victories, gain +1 to the lowest stat **
+ARTIFACT_SPEAR_OF_THE_FROST_LORD = 170              -- creatures deal 20% additional ice damage TODO
+ARTIFACT_STAFF_OF_THE_LYRE = 171                    -- every 4 victories, gain +1 to the lowest stat **
 ARTIFACT_SANCTUARYS_CROWN = 172                     -- immunity to hypnotize
-ARTIFACT_PENDANT_OF_THE_LYRE = 173                  -- every 5 victories, gain mana and experience **
+ARTIFACT_PENDANT_OF_THE_LYRE = 173                  -- every 4 victories, gain mana and experience **
 ARTIFACT_ANCIENT_PROTECTION_CHARM = 174             -- magic resistance
 ARTIFACT_SPIRIT_OF_OPPRESSION = 175                 -- enemy creatures have -1 luck and morale
 ARTIFACT_CRIMSON_SCYTHE = 176                       -- enemy creatures have -1 morale
@@ -200,7 +200,7 @@ ARTIFACT_ELRATHS_UNITY = 178                        -- /
 ARTIFACT_WILL_OF_URGASH = 179                       -- /
 ARTIFACT_MOONLIGHT_BAND = 180                       -- immunity to curse of the netherworld
 ARTIFACT_DWARVEN_SMITHY_HAMMER = 181                -- bonus att/def for first daily battle **
-ARTIFACT_RANGERS_CAPE = 182                         -- 
+ARTIFACT_RANGERS_CAPE = 182                         -- creatures get agility ability
 ARTIFACT_MOON_CHARM = 183                           -- the first friendly stack that dies in combat revives **
 ARTIFACT_FORGOTTEN_RING = 184                       -- immunity to word of light
 ARTIFACT_BEARHIDE_WRAPS = 185                       -- 10% bonus leadership **
@@ -472,7 +472,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_RING_OF_LIFE]                  = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_NONE, special=1},
     [ARTIFACT_STEADFAST_SHIELD]              = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_VIKING_SHIELD]                 = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_BANDIT, special=0},
-    [ARTIFACT_FORTUNE_BAND_OF_THE_SAINT]     = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_SAINT, special=1}, --disabled
+    [ARTIFACT_FORTUNE_BAND_OF_THE_SAINT]     = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_SAINT, special=0},
     [ARTIFACT_SENTINELS_BRACER]              = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_HAVEN, special=0},
     [ARTIFACT_ANKH_OF_THE_SAINT]             = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_NECK, set=ARTIFACT_SET_SAINT, special=1}, --disabled
     [ARTIFACT_CLOAK_OF_THE_SAINT]            = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_SAINT, special=0},
@@ -502,21 +502,21 @@ ARTIFACTS_DATA = {
     [ARTIFACT_POTION_OF_EXPERIENCE]          = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=1},
     [ARTIFACT_SYLVAN_AMULET]                 = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_NECK, set=ARTIFACT_SET_SYLVAN, special=0},
     [ARTIFACT_SHADOW_MASK]                   = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_DUNGEON, special=0},
-    [ARTIFACT_BARBARIAN_HELMET]              = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_ORCS, special=1}, --disabled
+    [ARTIFACT_BARBARIAN_HELMET]              = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_ORCS, special=0},
     [ARTIFACT_SKULL_MASK]                    = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_SPIRIT, special=0},
     [ARTIFACT_SENTINELS_BLADE]               = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_HAVEN, special=1}, --disabled
     [ARTIFACT_VIZIRS_SCIMITAR]               = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_VIZIR, special=0},
-    [ARTIFACT_BARBARIAN_CAPE]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_ORCS, special=1}, --disabled
+    [ARTIFACT_BARBARIAN_CAPE]                = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_ORCS, special=1}, --disabled
     [ARTIFACT_SHADOW_BLADE]                  = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_DUNGEON, special=0},
     [ARTIFACT_SHADOWSTEP_SHOES]              = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_DUNGEON, special=0},
     [ARTIFACT_RANGERS_CUIRASS]               = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_BODY, set=ARTIFACT_SET_SYLVAN, special=1}, --disabled
     [ARTIFACT_MAGISTERS_SANDALS]             = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_ACADEMY, special=0},
     [ARTIFACT_BLAZING_SPELLBOOK]             = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_NONE, special=0},
-    [ARTIFACT_COLLAR_OF_PRIMAL_RAGE]         = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_NECK, set=ARTIFACT_SET_ORCS, special=1}, --disabled
+    [ARTIFACT_COLLAR_OF_PRIMAL_RAGE]         = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_NECK, set=ARTIFACT_SET_ORCS, special=1}, --disabled
     [ARTIFACT_CENTAUR_CROSSBOW]              = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_NONE, special=1}, --disabled
     [ARTIFACT_DEADWOOD_STAFF]                = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_SPIRIT, special=0},
     [ARTIFACT_DEATH_KNIGHT_BOOTS]            = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_NECRO, special=0},
-    [ARTIFACT_BARBARIAN_CUIRASS]             = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_BODY, set=ARTIFACT_SET_ORCS, special=0},
+    [ARTIFACT_BARBARIAN_CUIRASS]             = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_BODY, set=ARTIFACT_SET_ORCS, special=0},
     [ARTIFACT_HARPY_BOOTS]                   = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_PALACE_SHOES]                  = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_VIZIR, special=0},
     [ARTIFACT_SHACKLES_OF_THE_LAST_MAN]      = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_INFERNO, special=1}, --disabled
@@ -556,8 +556,8 @@ ARTIFACTS_DATA = {
     [ARTIFACT_ORB_OF_EARTH]                  = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_ORB_OF_FIRE]                   = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_ORB_OF_WATER]                  = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=0},
-    [ARTIFACT_OGRE_CLUB]                     = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_ORCS, special=1}, --disabled
-    [ARTIFACT_OGRE_SHIELD]                   = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_ORCS, special=1}, --disabled
+    [ARTIFACT_OGRE_CLUB]                     = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_ORCS, special=1}, --disabled
+    [ARTIFACT_OGRE_SHIELD]                   = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_ORCS, special=1}, --disabled
     [ARTIFACT_SHIELD_OF_THE_DWARVEN_KINGS]   = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_DWARVEN, special=0},
     [ARTIFACT_199]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_BACKPACK, set=ARTIFACT_SET_NONE, special=1},
 }

@@ -2823,7 +2823,7 @@
 				<Icon href="/Textures/HeroScreen/Artifacts/FortuneBandOfTheSaint.xdb#xpointer(/Texture)"/>
 				<CostOfGold>5000</CostOfGold>
 				<AIValue>10000</AIValue>
-				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
+				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
@@ -3573,10 +3573,10 @@
 				<Icon href="/Textures/HeroScreen/Artifacts/BarbarianHelmet.xdb#xpointer(/Texture)"/>
 				<CostOfGold>10000</CostOfGold>
 				<AIValue>20000</AIValue>
-				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
+				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>0</Defence>
+					<Defence>1</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
@@ -3668,11 +3668,11 @@
 				<NameFileRef href="/Text/Game/Artifacts/BarbarianCape/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/BarbarianCape/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MINOR</Type>
+				<Type>ARTF_CLASS_MAJOR</Type>
 				<Slot>SHOULDERS</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/BarbarianCape.xdb#xpointer(/Texture)"/>
-				<CostOfGold>5000</CostOfGold>
-				<AIValue>10000</AIValue>
+				<CostOfGold>10000</CostOfGold>
+				<AIValue>20000</AIValue>
 				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
@@ -3918,15 +3918,15 @@
 				<NameFileRef href="/Text/Game/Artifacts/BarbarianCuirass/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/BarbarianCuirass/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MINOR</Type>
+				<Type>ARTF_CLASS_MAJOR</Type>
 				<Slot>CHEST</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/BarbarianCuirass.xdb#xpointer(/Texture)"/>
-				<CostOfGold>5000</CostOfGold>
-				<AIValue>10000</AIValue>
+				<CostOfGold>10000</CostOfGold>
+				<AIValue>20000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>1</Defence>
+					<Defence>3</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
@@ -4069,7 +4069,7 @@
 				<DescriptionFileRef href="/Text/Game/Artifacts/ShantiriEast/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
 				<Type>ARTF_CLASS_MAJOR</Type>
-				<Slot>INVENTORY</Slot>
+				<Slot>MISCSLOT1</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/ShantiriEast.xdb#xpointer(/Texture)"/>
 				<CostOfGold>16000</CostOfGold>
 				<AIValue>8000</AIValue>
@@ -4094,7 +4094,7 @@
 				<DescriptionFileRef href="/Text/Game/Artifacts/XXX/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
 				<Type>ARTF_CLASS_MINOR</Type>
-				<Slot>INVENTORY</Slot>
+				<Slot>PRIMARY</Slot>
 				<Icon href="/Textures/Icons/Blank.xdb#xpointer(/Texture)"/>
 				<CostOfGold>1</CostOfGold>
 				<AIValue>1</AIValue>
