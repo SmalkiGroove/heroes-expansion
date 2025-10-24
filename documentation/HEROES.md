@@ -33,7 +33,7 @@ Archer Commander
 
 - Archers start combats with 100% ATB.
 
-- Hero can train Peasants into Archers for free when standing in the entrance of a Haven town at the start of the day. The amount is equal to the town's Training Grounds capacity per week.
+- Hero can train Peasants into Archers for free when visiting a Haven town. The Peasants to train must be in hero's army and be unupgraded. The amount is equal to the town's Training Grounds capacity per week.
 
 ---
 __LASZLO :__
@@ -144,7 +144,7 @@ __WYNGAAL :__
 Tracker
 
 
-- Increases the number of hero’s movement points by 1% for every 3 levels and reduces movement penalty from foreign terrain by 2% per hero level.
+- Increases the number of heroâ€™s movement points by 1% for every 3 levels and reduces movement penalty from foreign terrain by 2% per hero level.
 
 - The weekly production bonus of the Logistics skill is increased by 5% per hero level.
 
@@ -179,7 +179,7 @@ __JENOVA :__
 Lone Hunter
 
 
-- All hero’s attacks deal +4% damage for every level of the hero.
+- All heroâ€™s attacks deal +4% damage for every level of the hero.
 
 - Hero can perform an attack right before the combat begins.
 
@@ -353,7 +353,7 @@ __TOLGHAR :__
 King of the Stone Halls
 
 
-- All creatures in hero’s army have Rune of Thunderclap effect permanently active (chance to stun enemy when attacking).
+- All creatures in heroâ€™s army have Rune of Thunderclap effect permanently active (chance to stun enemy when attacking).
 
 - Hero has permanent +1 Morale and Luck.
 
@@ -751,7 +751,7 @@ __KASPAR :__
 Embalmer
 
 
-- The First Aid Tent will heal more hit points per hero level. The bonus amount is equal to (Level + 4)². The damage of Plague Tent ability is also increased by the same value.
+- The First Aid Tent will heal more hit points per hero level. The bonus amount is equal to (Level + 4)Â². The damage of Plague Tent ability is also increased by the same value.
 
 - If the hero has the skill Plague Tent, the tent will cast it on a random enemy creature at the start of combat.
 
@@ -873,7 +873,7 @@ __ASH :__
 Pounder
 
 
-- All hero’s attacks deal +4% damage for every level of the hero.
+- All heroâ€™s attacks deal +4% damage for every level of the hero.
 
 - Hero can perform an attack right before the combat begins.
 
@@ -901,7 +901,9 @@ Overheater
 
 - Hero's attacks explode in a Fireball effect. The effective spellpower of the Fireball is equal to 3 + Level/3.
 
-- The Consume Corpse ability has an explosion effect, dealing a few Fire damages to adjacent units.
+- The Consume Corpse ability also has an explosion effect, dealing a few Fire damages to adjacent units.
+
+- Reduce the damages of enemy Ice spells by 1% per hero level.
 
 ---
 __AGRAEL :__
@@ -991,7 +993,7 @@ The New Khan
 
 - Hero knows all 6 Warcries.
 
-- Warcries have their costs decreased by 1 every 4 levels and grant an additional amount of rage points equal to the hero’s level.
+- Warcries have their costs decreased by 1 every 4 levels and grant an additional amount of rage points equal to the heroâ€™s level.
 
 - Shouts a Battlecry at the start of combat, granting +1 movement to your creatures and +5 bonus Attack.
 
@@ -1088,7 +1090,7 @@ __ZOULEIKA :__
 Potion Brewer
 
 
-- The First Aid Tent will heal more hit points per hero level. The bonus amount is equal to (Level + 4)². The damage of Plague Tent ability is also increased by the same value.
+- The First Aid Tent will heal more hit points per hero level. The bonus amount is equal to (Level + 4)Â². The damage of Plague Tent ability is also increased by the same value.
 
 - The First Aid Tent gets 100% ATB after each hero turn during combat.
 

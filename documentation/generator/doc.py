@@ -144,13 +144,23 @@ path_to_skills = "../../game_data/data/GameMechanics/RefTables/Skills.xdb"
 
 def skill_doc_line(name, skill):
     print(f"Skill {name}")
-    name_path = os.path.join(workdir, root_text_path + skill['obj']['NameFileRef']['Item']['@href'])
-    desc_path = os.path.join(workdir, root_text_path + skill['obj']['DescriptionFileRef']['Item']['@href'])
+    if name == "NONE":
+        return "Ultimate skills"
+    skill_type = skill['obj']['SkillType']
+    if skill_type == "SKILLTYPE_SKILL":
+        name_path = os.path.join(workdir, root_text_path + skill['obj']['CommonNameFileRef']['@href'])
+        desc_path = os.path.join(workdir, root_text_path + skill['obj']['CommonDescriptionFileRef']['@href'])
+    else:
+        name_path = os.path.join(workdir, root_text_path + skill['obj']['NameFileRef']['Item']['@href'])
+        desc_path = os.path.join(workdir, root_text_path + skill['obj']['DescriptionFileRef']['Item']['@href'])
     with open(name_path, 'r', encoding='utf-16') as name_file:
         name = name_file.read()
     with open(desc_path, 'r', encoding='utf-16') as desc_file:
         desc = desc_file.read()
-    return f"- __{name}__ : {desc}"
+    if skill_type == "SKILLTYPE_SKILL":
+        return f"### {name}\n{desc}"
+    else:
+        return f"- __{name}__ : {desc}"
 
 def get_skill_by_id(skills, id):
     id = 'HERO_SKILL_' + id
@@ -170,7 +180,7 @@ def generate_skills_doc(ref_data):
         base = get_skill_by_id(skills, s)
         if base != None:
             print("", file=out)
-            print(f"### {s}", file=out)
+            print(skill_doc_line(s, base), file=out)
             for p in ref_data[s]['perks']:
                 perk = get_skill_by_id(skills, p)
                 if perk != None:
@@ -193,6 +203,7 @@ def artifact_doc_line(name, artifact):
         name = name_file.read()
     with open(desc_path, 'r', encoding='utf-16') as desc_file:
         desc = desc_file.read()
+        desc = re.sub(r'<[^>]+>[A-Za-z\' ]*', '', desc)
     return f"- __{name}__ :\n{desc}"
 
 def get_artifact_by_id(artifacts, id):
@@ -218,7 +229,9 @@ def generate_artifacts_doc(ref_data):
                 set_name = name_file.read()
             with open(set_texts + '/Description.txt', 'r', encoding='utf-16') as desc_file:
                 set_desc = desc_file.read()
+                set_desc = re.sub(r'<[^>]+>', '', set_desc)
         print("", file=out)
+        print("---", file=out)
         print(f"### {set_name}", file=out)
         print(f"{set_desc}", file=out)
         print(f"", file=out)

@@ -121,7 +121,7 @@ CREATURES:
     - name: SHARPSHOOTER
       tier: 3
       upgrade: 2
-      path: Preserve/3rd/Sharpshooter.xdb
+      path: Preserve/3rd/SharpShooter.xdb
     - name: DRUID
       tier: 4
       upgrade: 0
@@ -1003,12 +1003,12 @@ SKILLS:
       - OCCULTISM
   VOICE:
     perks:
+      - MIGHTY_SHOUT
       - VOICE_TRAINING
       - BLOODLUST
-      - MIGHTY_SHOUT
-      - MIGHT_OVER_MAGIC
-      - DISTRACT
-      - PAIN_KILLER
+      - DOMINANT_SHOUT
+      - LUNG_WORKOUT
+      - INTIMIDATING_VOICE
   LEADERSHIP:
     perks:
       - DIPLOMACY
@@ -1047,8 +1047,8 @@ SKILLS:
       - BATTLE_FRENZY
       - ONSLAUGHT
       - EXPERTISE
-      - MAGIC_RESISTANCE
-      - DETERMINATION
+      - ASSAULT_TRAINING
+      - STUN_TRAINING
   DESPOTISM:
     perks:
       - DEVOTION
@@ -1068,10 +1068,10 @@ SKILLS:
       - SAP_MAGIC
       - MAGIC_FILTER
       - BACK_TO_THE_VOID
-      - SUPRESS_LIGHT
-      - SUPRESS_DARK
-      - DISRUPT_MAGIC
-      - BLOCK_CORRUPTION
+      - SPELLBREAKER
+      - COUNTER_MAGIC
+      - ARMOR_PROTECTION
+      - CORRUPTION_IMMUNE
   LIGHT_MAGIC:
     perks:
       - AURA_OF_PROTECTION
