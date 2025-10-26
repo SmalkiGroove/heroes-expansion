@@ -2,12 +2,12 @@
 
 ---
 ### The Sentinel
-â€¢ Sentinel's Helm
-â€¢ Sentinel's Breastplate
-â€¢ Sentinel's Blade
-â€¢ Sentinel's Shield
-â€¢ Sentinel's Boots
-â€¢ Sentinel's Bracer
+• Sentinel's Helm
+• Sentinel's Breastplate
+• Sentinel's Blade
+• Sentinel's Shield
+• Sentinel's Boots
+• Sentinel's Bracer
 
 
 (4) Victories grant bonuses to hero troops for the next battle. The stronger the defeated monsters are, the stronger the bonuses are.
@@ -52,12 +52,12 @@ When you spawn a Blade Barrier during combat,
 
 ---
 ### Elven Secret
-â€¢ Avenger Bow
-â€¢ Sylvan Amulet
-â€¢ Ranger's Cuirass
-â€¢ Ranger's Cape
-â€¢ Plumed Boots
-â€¢ Sacred Seed
+• Avenger Bow
+• Sylvan Amulet
+• Ranger's Cuirass
+• Ranger's Cape
+• Plumed Boots
+• Sacred Seed
 
 
 (4) TODO
@@ -100,12 +100,12 @@ Hero troops are Unstoppable (immunity to Slow).
 
 ---
 ### Hell Conquest
-â€¢ Helm of Chaos
-â€¢ Shackles of the Last Man
-â€¢ Ring of Broken Will
-â€¢ Ring of Shadowbrand
-â€¢ Obsidian Armor
-â€¢ Will of Urgash
+• Helm of Chaos
+• Shackles of the Last Man
+• Ring of Broken Will
+• Ring of Shadowbrand
+• Obsidian Armor
+• Will of Urgash
 
 
 (4) TODO
@@ -147,12 +147,12 @@ Creatures in hero's army are immuned to Armageddon
 
 ---
 ### Death's Embrace
-â€¢ Staff of the Netherworld
-â€¢ Cloak of Death's Shadow
-â€¢ Ring of the Unrepentant
-â€¢ Helm of the Lich
-â€¢ Amulet of Necromancy
-â€¢ Deathknight Boots
+• Staff of the Netherworld
+• Cloak of Death's Shadow
+• Ring of the Unrepentant
+• Helm of the Lich
+• Amulet of Necromancy
+• Deathknight Boots
 
 
 (4) Summons a stack of Bone Dragons when combat starts.
@@ -198,12 +198,12 @@ After every victory, gain an amount of Movement points and Experience depending 
 
 ---
 ### Magister Set
-â€¢ Staff of the Magister
-â€¢ Ring of the Magister
-â€¢ Crown of the Magister
-â€¢ Robe of the Magister
-â€¢ Magister's Sandals
-â€¢ Book of Power
+• Staff of the Magister
+• Ring of the Magister
+• Crown of the Magister
+• Robe of the Magister
+• Magister's Sandals
+• Book of Power
 
 
 (4) Casters in hero's army regenerate mana during combat.
@@ -248,12 +248,12 @@ Gain Experience every day based on the hero's Knowledge, and half the amount to 
 
 ---
 ### Shadow Burst
-â€¢ Altar of Elements' Shard
-â€¢ Shadow Blade
-â€¢ Shadow Mask
-â€¢ Shadowstep Shoes
-â€¢ Cloak of Darkness
-â€¢ Ring of Banishment
+• Altar of Elements' Shard
+• Shadow Blade
+• Shadow Mask
+• Shadowstep Shoes
+• Cloak of Darkness
+• Ring of Banishment
 
 
 (4) TODO
@@ -298,12 +298,12 @@ Grants the Banish ability
 
 ---
 ### Dwarven Set
-â€¢ Axe of the Mountain Lords
-â€¢ Helm of the Dwarven Kings
-â€¢ Cuirass of the Dwarven Kings
-â€¢ Shield of the Dwarven Kings
-â€¢ Greaves of the Dwarven Kings
-â€¢ Rune of Flame
+• Axe of the Mountain Lords
+• Helm of the Dwarven Kings
+• Cuirass of the Dwarven Kings
+• Shield of the Dwarven Kings
+• Greaves of the Dwarven Kings
+• Rune of Flame
 
 
 (4) TODO
@@ -349,12 +349,12 @@ Creatures in hero's army are Undisturbed (immunity to Berserk)
 
 ---
 ### Brutalist Set
-â€¢ Ogre Club
-â€¢ Ogre Shield
-â€¢ Barbarian Cuirass
-â€¢ Barbarian Helmet
-â€¢ Barbarian Cape
-â€¢ Collar of Primal Rage
+• Ogre Club
+• Ogre Shield
+• Barbarian Cuirass
+• Barbarian Helmet
+• Barbarian Cape
+• Collar of Primal Rage
 
 
 (4) TODO
@@ -399,14 +399,14 @@ Hero troops gain the Battle Rage ability
 
 ---
 ### Draconic Power
-â€¢ Dragon Scale Armor
-â€¢ Dragon Scale Shield
-â€¢ Dragon Bone Greaves
-â€¢ Dragon Talon Crown
-â€¢ Dragon Teeth Necklace
-â€¢ Dragon Wing Mantle
-â€¢ Dragon Eye Ring
-â€¢ Dragon Flame Tongue
+• Dragon Scale Armor
+• Dragon Scale Shield
+• Dragon Bone Greaves
+• Dragon Talon Crown
+• Dragon Teeth Necklace
+• Dragon Wing Mantle
+• Dragon Eye Ring
+• Dragon Flame Tongue
 
 
 (4) Summon the Legendary Dragon when a friendly stack of creatures is killed.
@@ -457,10 +457,10 @@ Creatures in hero's army are immuned to Cold Death
 
 ---
 ### Empowerement
-â€¢ Pendant of Power
-â€¢ Staff of Power
-â€¢ Turban of Enlightenment
-â€¢ Scale Mail of Enlightenment
+• Pendant of Power
+• Staff of Power
+• Turban of Enlightenment
+• Scale Mail of Enlightenment
 
 
 (4) Hero gains +2 to his or her lowest primary attribute on every level up.
@@ -488,10 +488,10 @@ Every 4 victories, gain 1000 + 1% experience
 
 ---
 ### Frozen Kingdom
-â€¢ Frozen Heart
-â€¢ Crown of the Frost Lord
-â€¢ Spear of the Frost Lord
-â€¢ Evercold Icicle
+• Frozen Heart
+• Crown of the Frost Lord
+• Spear of the Frost Lord
+• Evercold Icicle
 
 
 (4) Hero learns Deep Freeze and casts it on all enemy creatures on 3rd combat turn.
@@ -520,10 +520,10 @@ Grants hero troops immunity to Blaze Power's defense reduction
 
 ---
 ### Faraway Kingdom
-â€¢ Genji's Hat
-â€¢ Genji's Vest
-â€¢ Genji's Sandals
-â€¢ Genji's Silksword
+• Genji's Hat
+• Genji's Vest
+• Genji's Sandals
+• Genji's Silksword
 
 
 (4) When an enemy stack is killed, the hero gains 100% ATB and mana. The mana can increase above limit, and exceeding mana is converted to experience after battles.
@@ -540,9 +540,9 @@ Grants hero troops immunity to Blaze Power's defense reduction
 
 ---
 ### Eldena's Pride
-â€¢ Eldena's Red Scarf
-â€¢ Eldena's Red Coat
-â€¢ Eldena's Circlet
+• Eldena's Red Scarf
+• Eldena's Red Coat
+• Eldena's Circlet
 
 
 (3) New Tier 4 and Tier 5 creatures of hero's faction add added to the army for every level up.
@@ -567,10 +567,10 @@ Grants hero troops immunity to Blaze Power's defense reduction
 
 ---
 ### War Leader
-â€¢ War Banner
-â€¢ War Drums
-â€¢ War Horn
-â€¢ Necklace of Victory
+• War Banner
+• War Drums
+• War Horn
+• Necklace of Victory
 
 
 (4) Creatures of tier 1, 2 and 3 geain 100% ATB when an enemy stack is killed during combat.
@@ -598,10 +598,10 @@ Grants hero troops immunity to Blaze Power's defense reduction
 
 ---
 ### Vizier's Fortune
-â€¢ Vizier's Scimitar
-â€¢ Vizier's Cap
-â€¢ Palace Shoes
-â€¢ Regal Armour
+• Vizier's Scimitar
+• Vizier's Cap
+• Palace Shoes
+• Regal Armour
 
 
 (4) After defeating a neutral army, gain an artifact whose value depends on the defeated army strength.
@@ -627,11 +627,11 @@ Gain random temporary battle bonuses after each victory
 
 ---
 ### Afterlife Set
-â€¢ Skull Mask
-â€¢ Cursed Ring
-â€¢ Spirit of Oppression
-â€¢ Tunic of Carved Flesh
-â€¢ Deadwood Staff
+• Skull Mask
+• Cursed Ring
+• Spirit of Oppression
+• Tunic of Carved Flesh
+• Deadwood Staff
 
 
 (5) Hero learns Sorrow and casts it on all enemy creatures at the start of combat.
@@ -663,11 +663,11 @@ Gain random temporary battle bonuses after each victory
 
 ---
 ### Warmage
-â€¢ Helm of the Warmage
-â€¢ Pendant of Conflux
-â€¢ Runic War Harness
-â€¢ Runic War Axe
-â€¢ Boots of Interference
+• Helm of the Warmage
+• Pendant of Conflux
+• Runic War Harness
+• Runic War Axe
+• Boots of Interference
 
 
 (5) When hero level's up, gain +1 Spellpower and Knowledge, and an additional +1 to all primary attributes for each Magic School mastered at expert level.
@@ -684,7 +684,7 @@ Gain half the mana spent by enemy hero
 
 - __Helm of the Warmage__ :
 +4 Knowledge
-Learn a new spell on level up (tier dÃ©pends on hero level)
+Learn a new spell on level up (tier dépends on hero level)
 
 
 - __Runic War Axe__ :
@@ -702,11 +702,11 @@ Restore 25 Mana after battle
 
 ---
 ### Bandit Set
-â€¢ Viking Hatchet
-â€¢ Viking Shield
-â€¢ Plunderer Vest
-â€¢ Plunderer Shoes
-â€¢ Bearhide Wraps
+• Viking Hatchet
+• Viking Shield
+• Plunderer Vest
+• Plunderer Shoes
+• Bearhide Wraps
 
 
 (5) TODO
@@ -737,10 +737,10 @@ Gain Wood and Ore after battle depending on the strength of the defeated army
 
 ---
 ### Animal Spirit
-â€¢ Necklace of the Eagle
-â€¢ Wraps of the Owl
-â€¢ Cuirass of the Stag
-â€¢ Shield of the Wolf
+• Necklace of the Eagle
+• Wraps of the Owl
+• Cuirass of the Stag
+• Shield of the Wolf
 
 
 (4) At the start of combats, call for a random beast (Wolf, Griffin, Unicorn, Wyvern, Hydra, Hell Charger, Arcane Eagle, Manticore, Spider).
@@ -768,12 +768,12 @@ Gain Wood and Ore after battle depending on the strength of the defeated army
 
 ---
 ### Saint's Grace
-â€¢ Codex of the Saint
-â€¢ Staff of the Saint
-â€¢ Cloak of the Saint
-â€¢ Ankh of the Saint
-â€¢ Fortune Band of the Saint
-â€¢ Sandals of the Blessed
+• Codex of the Saint
+• Staff of the Saint
+• Cloak of the Saint
+• Ankh of the Saint
+• Fortune Band of the Saint
+• Sandals of the Blessed
 
 
 (4) Resurrects half of the creatures lost at the end of battles.
@@ -810,11 +810,11 @@ Creatures in hero's army are immuned to Decay
 
 ---
 ### Celestial Justicar
-â€¢ Celestial Justicar's Sword
-â€¢ Celestial Justicar's Shield
-â€¢ Celestial Justicar's Armor
-â€¢ Celestial Justicar's Helmet
-â€¢ Elrath's Unity
+• Celestial Justicar's Sword
+• Celestial Justicar's Shield
+• Celestial Justicar's Armor
+• Celestial Justicar's Helmet
+• Elrath's Unity
 
 
 (5) Gain Angel Wings, that gives +10 to all attributes, including Luck and morale, and allows to move hero above obstacles.
@@ -849,8 +849,8 @@ Creatures in hero's army are immuned to Decay
 
 ---
 ### Wanderer
-â€¢ Boots of the Open Road
-â€¢ Backpack of the Open Road
+• Boots of the Open Road
+• Backpack of the Open Road
 
 
 (2) Doubles the weekly production bonus of the Logistics skill.
@@ -868,7 +868,7 @@ Restore hero movement points on level up
 
 ---
 ### Sailor Set
-â€¢ Set pieces
+• Set pieces
 
 (x) Set bonuses
 
@@ -889,10 +889,10 @@ Friendly creatures attacks reduce enemy Defense by 1
 
 ---
 ### Moon Gleam
-â€¢ Moonblade
-â€¢ Moon Charm
-â€¢ Moonlight Band
-â€¢ Moonlight Coat
+• Moonblade
+• Moon Charm
+• Moonlight Band
+• Moonlight Coat
 
 
 (4) Gain an additional free level every time hero levels up.
@@ -930,7 +930,7 @@ The following artifact do not belong in a set.
 +1 Defense
 - __Wand of <value=spell_name>__ :
 +1 Spellpower
-Grants the ability to cast spell (unless the Heroâ€™s Mastery level is higher). The wand has a limited number of uses and can be recharged at a Magic Guild (uses /)
+Grants the ability to cast spell (unless the Hero’s Mastery level is higher). The wand has a limited number of uses and can be recharged at a Magic Guild (uses /)
 - __Trident of the Titans__ :
 +1 Spellpower
 +20% damage to Lightning spells
@@ -1002,7 +1002,7 @@ Grants the hero all Dark Magic spells regardless of having any skill in this sch
 +3 Spellpower
 +3 Knowledge
 Grants the hero all Natural Magic spells regardless of having any skill in this school.
-- __Beginnerâ€™s Magic Wand__ :
+- __Beginner’s Magic Wand__ :
 +1 Spellpower
 Restore 10 Mana after battle
 - __Skull of the Forbidden__ :

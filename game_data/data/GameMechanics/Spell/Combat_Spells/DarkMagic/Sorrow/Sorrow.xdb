@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Spell>
-	<NameFileRef href="SorrowName.txt"/>
-	<LongDescriptionFileRef href="SorrowDesc.txt"/>
+	<NameFileRef href="/Text/Game/Spells/Combat/Sorrow/Name.txt"/>
+	<LongDescriptionFileRef href="/Text/Game/Spells/Combat/Sorrow/Long_Description.txt"/>
 	<Texture href="/UI/H5A2/Icons/Spells/Sorrow.(Texture).xdb#xpointer(/Texture)"/>
 	<EffectTexture/>
 	<SpellBookPredictions>
-		<Item href="SpellBookPrediction.txt"/>
+		<Item href="/Text/Game/Spells/Combat/Sorrow/SpellBookPrediction.txt"/>
 	</SpellBookPredictions>
 	<CombatLogTexts/>
 	<Level>3</Level>

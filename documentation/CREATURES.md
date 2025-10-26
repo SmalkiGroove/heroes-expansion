@@ -1,7 +1,7 @@
 # CREATURES DOCUMENTATION
 
 ### HAVEN:
-| CREATURE | TIER | NB | HP | ATT | DEF | DMGÂ± | SPD | INIT | SPELLS | ABILITIES |
+| CREATURE | TIER | NB | HP | ATT | DEF | DMG± | SPD | INIT | SPELLS | ABILITIES |
 |----------|------|----|----|-----|-----|------|-----|------|--------|-----------|
 | PEASANT | 1 | 60 | 5 | 2 | 1 | 1-2 | 4 | 8 | _none_ | Taxpayer |
 | CONSCRIPT | 1 | 60 | 6 | 2 | 2 | 1-2 | 4 | 8 | _none_ | Taxpayer, Bash |
@@ -32,7 +32,7 @@
 | SERAPH | 7 | 1 | 260 | 37 | 33 | 1-99 | 7 | 11 | Mass Haste (advanced), Divine Vengeance (advanced) | Child of Light, Giant Slayer, Flamewave, Free Mind |
 
 ### PRESERVE:
-| CREATURE | TIER | NB | HP | ATT | DEF | DMGÂ± | SPD | INIT | SPELLS | ABILITIES |
+| CREATURE | TIER | NB | HP | ATT | DEF | DMG± | SPD | INIT | SPELLS | ABILITIES |
 |----------|------|----|----|-----|-----|------|-----|------|--------|-----------|
 | BLADE DANCER | 1 | 38 | 9 | 3 | 2 | 2-2 | 5 | 12 | _none_ | _none_ |
 | WAR DANCER | 1 | 38 | 10 | 4 | 3 | 2-2 | 5 | 12 | _none_ | War Dance |
@@ -63,7 +63,7 @@
 | CRYSTAL DRAGON | 7 | 1 | 225 | 37 | 37 | 50-60 | 9 | 14 | _none_ | Prismatic Breath, Acid Blood, Regeneration, Mythic |
 
 ### FORTRESS:
-| CREATURE | TIER | NB | HP | ATT | DEF | DMGÂ± | SPD | INIT | SPELLS | ABILITIES |
+| CREATURE | TIER | NB | HP | ATT | DEF | DMG± | SPD | INIT | SPELLS | ABILITIES |
 |----------|------|----|----|-----|-----|------|-----|------|--------|-----------|
 | DEFENDER | 1 | 48 | 7 | 1 | 4 | 1-2 | 4 | 8 | _none_ | Spiteful, Shielded, Protect Allies |
 | SHIELDGUARD | 1 | 48 | 7 | 2 | 4 | 1-2 | 4 | 8 | _none_ | Spiteful, Shielded, Protect Allies, Stone Defense |
@@ -94,7 +94,7 @@
 | LAVA DRAGON | 7 | 1 | 300 | 30 | 35 | 55-66 | 5 | 9 | _none_ | Elemental, Fire Immuned, Magic-proof 25%, Melting Breath, Fire Body, Searing Aura |
 
 ### ACADEMY:
-| CREATURE | TIER | NB | HP | ATT | DEF | DMGÂ± | SPD | INIT | SPELLS | ABILITIES |
+| CREATURE | TIER | NB | HP | ATT | DEF | DMG± | SPD | INIT | SPELLS | ABILITIES |
 |----------|------|----|----|-----|-----|------|-----|------|--------|-----------|
 | GREMLIN | 1 | 51 | 6 | 1 | 1 | 1-2 | 3 | 10 | _none_ | Magic-proof 25% |
 | MASTER GREMLIN | 1 | 51 | 6 | 1 | 2 | 1-2 | 3 | 11 | Repair (advanced) | Magic-proof 25%, Repair |
@@ -125,7 +125,7 @@
 | COLOSSUS | 7 | 1 | 285 | 39 | 39 | 55-85 | 5 | 9 | _none_ | Free Mind, Stone Defense, Lightning Immuned, Stormcaller, Shocking Strike, Melee Potent, Ranged Retaliation |
 
 ### DUNGEON:
-| CREATURE | TIER | NB | HP | ATT | DEF | DMGÂ± | SPD | INIT | SPELLS | ABILITIES |
+| CREATURE | TIER | NB | HP | ATT | DEF | DMG± | SPD | INIT | SPELLS | ABILITIES |
 |----------|------|----|----|-----|-----|------|-----|------|--------|-----------|
 | SCOUT | 1 | 39 | 9 | 3 | 2 | 2-3 | 5 | 12 | _none_ | Melee Potent, Short Range |
 | ASSASSIN | 1 | 39 | 9 | 4 | 2 | 2-3 | 5 | 13 | _none_ | Melee Potent, Short Range, Poison |
@@ -156,7 +156,7 @@
 | RED DRAGON | 7 | 1 | 225 | 36 | 30 | 55-85 | 12 | 11 | _none_ | Breath Attack, Unlimited Retaliations, Annihilate, Free Mind |
 
 ### NECROPOLIS:
-| CREATURE | TIER | NB | HP | ATT | DEF | DMGÂ± | SPD | INIT | SPELLS | ABILITIES |
+| CREATURE | TIER | NB | HP | ATT | DEF | DMG± | SPD | INIT | SPELLS | ABILITIES |
 |----------|------|----|----|-----|-----|------|-----|------|--------|-----------|
 | SKELETON | 1 | 57 | 4 | 1 | 1 | 1-2 | 5 | 10 | _none_ | Undead |
 | SKELETON ARCHER | 1 | 57 | 4 | 1 | 1 | 1-2 | 4 | 10 | _none_ | Undead |
@@ -187,7 +187,7 @@
 | BANSHEE | 7 | 1 | 195 | 39 | 29 | 33-99 | 6 | 9 | Death Wail (advanced), Vampirism (basic) | Undead, Fear, Sweeping Strike, Death Wail |
 
 ### INFERNO:
-| CREATURE | TIER | NB | HP | ATT | DEF | DMGÂ± | SPD | INIT | SPELLS | ABILITIES |
+| CREATURE | TIER | NB | HP | ATT | DEF | DMG± | SPD | INIT | SPELLS | ABILITIES |
 |----------|------|----|----|-----|-----|------|-----|------|--------|-----------|
 | IMP | 1 | 66 | 5 | 2 | 2 | 1-1 | 5 | 10 | _none_ | Demonic, Fire Resistance, Mana Destroyer, Manavorous |
 | FAMILIAR | 1 | 66 | 5 | 3 | 2 | 1-1 | 5 | 11 | Syphon Mana (advanced) | Demonic, Fire Immuned, Siphon Mana, Manavorous |
@@ -218,7 +218,7 @@
 | ARCHDEMON | 7 | 1 | 256 | 36 | 40 | 55-77 | 9 | 10 | Convocation (advanced), Teleport (advanced) | Demonic, Fire Immuned, Pressure, Evil Strike, Convocation, Frightful Presence |
 
 ### STRONGHOLD:
-| CREATURE | TIER | NB | HP | ATT | DEF | DMGÂ± | SPD | INIT | SPELLS | ABILITIES |
+| CREATURE | TIER | NB | HP | ATT | DEF | DMG± | SPD | INIT | SPELLS | ABILITIES |
 |----------|------|----|----|-----|-----|------|-----|------|--------|-----------|
 | GOBLIN | 1 | 55 | 5 | 1 | 1 | 1-2 | 4 | 11 | _none_ | Raging Blood, Cowardice, Treachery |
 | GOBLIN TRAPPER | 1 | 55 | 5 | 2 | 1 | 1-2 | 4 | 11 | Set Snares (advanced) | Raging Blood, Cowardice, Treachery, Set Snares, Short Range |
@@ -249,7 +249,7 @@
 | BLOODEYE CYCLOP | 7 | 1 | 310 | 42 | 38 | 43-53 | 5 | 9 | Goblin Snack (advanced) | Raging Blood, Goblin Snack, Goblin Throw, Short Range, Evil Strike |
 
 ### NEUTRAL:
-| CREATURE | TIER | NB | HP | ATT | DEF | DMGÂ± | SPD | INIT | SPELLS | ABILITIES |
+| CREATURE | TIER | NB | HP | ATT | DEF | DMG± | SPD | INIT | SPELLS | ABILITIES |
 |----------|------|----|----|-----|-----|------|-----|------|--------|-----------|
 | | | | | | | | | | | |
 | WOLF | 2 | 50 | 15 | 5 | 1 | 3-5 | 6 | 13 | _none_ | Pack Hunter, Howl |

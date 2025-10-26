@@ -19,8 +19,8 @@ Decreases damage dealt to your creatures in melee combat by 10/15/20%.
 
 - __Defensive Formation__ : Defense of creatures in hero's army increased when close to each other on the battlefield.
 - __Hold Ground__ : Troops under hero's control get twice as much defense carrying out the Defend command.
-- __Preparation__ : All the creatures under the Defend command will retaliate any enemy which assaults them, first and even if the enemy has ‚ÄúNo retaliation‚Äù ability. 
-<color_default>If the defending creature has ‚ÄúUnlimited Retaliation‚Äù ability, it will retaliate twice: before and after it‚Äôs assault.
+- __Preparation__ : All the creatures under the Defend command will retaliate any enemy which assaults them, first and even if the enemy has ìNo retaliationî ability. 
+<color_default>If the defending creature has ìUnlimited Retaliationî ability, it will retaliate twice: before and after itís assault.
 - __Evasion__ : Decreases damage dealt to your creatures by ranged attacks by 15%.
 - __Seal of Protection__ : Hero gains +2 defense. Creatures in his or her army have doubled Attack and Defense and 50% Magic-proof until first action in combats.
 - __Stamina__ : Creatures in hero's army have 10% more HP permanently.
@@ -32,7 +32,7 @@ Hero receives 5/10/15% bonus to the experience gained from all sources.
 
 - __Intuition__ : Allows hero to learn an unknown spell used by an enemy hero or creature in combat (hero must be able to learn the spell with regards to school, level, etc.) and to see the contents of the enemy inventory.
 - __Scholar__ : Allows hero to teach other heroes and learn from them, effectively trading spells between spell books.
-- __Mentoring__ : When this hero meets another friendly hero, the latter gains as much experience as needed to have total experience points equal to 30% of that of the mentor‚Äôs.
+- __Mentoring__ : When this hero meets another friendly hero, the latter gains as much experience as needed to have total experience points equal to 30% of that of the mentorís.
 - __Intelligence__ : Grants the hero +4 Knowledge permanently.
 - __Exaltation__ : Delving deep into the secrets of spellcraft, hero gains +4 Spellpower permanently.
 - __Meditation__ : Special adventure ability. Hero spends entire day to meditate, grating experience and full mana. Can only be used at the beginning of the day.
@@ -52,9 +52,9 @@ Speeds up hero's casting in combat. Interval between two consecutive spell casts
 ### Voice
 
 Gain +1 Spellpower every 7/6/5 levels of the hero.
-The use of an activated ability from the Battlecry category delays the hero‚Äôs next turn less by 5/10/15%.
+The use of an activated ability from the Battlecry category delays the heroís next turn less by 5/10/15%.
 
-- __Mighty Shout__ : When the effect from the Warcry is calculated, the Barbarian hero‚Äôs level is considered as being greater by 5 than its actual value.
+- __Mighty Shout__ : When the effect from the Warcry is calculated, the Barbarian heroís level is considered as being greater by 5 than its actual value.
 - __Voice Training__ : All Warcries cost 20% less mana.
 - __Bloodlust__ : The troops gain 50% more Rage points from Warcries used by the hero (except 25% more for the Call of Blood Warcry).
 - __Dominant Shout__ : Decreases enemy hero's Spellpower in combat by half of your Spellpower.
@@ -144,7 +144,7 @@ Increase by 20/40/60% the damages of the hero's attacks and his or her troops' r
 - __Empiricism__ : Hero gains 500 + 5% of current experience points.
 Repeat this bonus at the start of each week.
 - __Coordination__ : Links a hero with a selected creature in his army. Every time this creature performs an attack, the hero will assault the same target. The hero's attack is by 3 his levels more powerful than usual.
-- __Stunning Blow__ : Every standard hero‚Äôs attack moves the target back along the ATB bar for 0.2 points.
+- __Stunning Blow__ : Every standard heroís attack moves the target back along the ATB bar for 0.2 points.
 - __Reinforcement__ : Hero gains +1 Attack and Defense.
 Repeat this bonus at the start of each week.
 - __Mark of the Damned__ : The hero receives special combat ability to punish the target enemy creature with a powerful strike if that creature is about to attack, retaliate or cast any spell. Once declared, Mark of the Damned is active until the end of combat.
@@ -172,7 +172,7 @@ Burn 10/20/30% of enemy casters' total mana at the start of combats, including e
 Allows hero to learn Light Magic spells of the third/fourth/fifth circle and learns a random one instantly.
 Increases Light Magic spells efficiency, damages, duration etc.
 
-- __Aura of Protection__ : Grants mass effects to Deflect Missile and Endurance spells, for double the casting cost of these spells. Hero‚Äôs Light spells are twice harder to dispel, opposite spells (like Slow versus Haste) applied by an enemy to hero‚Äôs creatures have 50% chance to fail.
+- __Aura of Protection__ : Grants mass effects to Deflect Missile and Endurance spells, for double the casting cost of these spells. Heroís Light spells are twice harder to dispel, opposite spells (like Slow versus Haste) applied by an enemy to heroís creatures have 50% chance to fail.
 - __Fire Resistance__ : Creatures under Hero's control receive only 50% damage from all fire spells attacks and are immune to armor damaging effects of Blaze Power ability.
 - __Counterspell__ : Special combat ability. Negates all effects of the next spell cast by the enemy, but drains mana equal to 10% more than the original cost of that spell.
 - __Aura of Energy__ : Grants mass effects to Righteous Might and Haste spells, for double the casting cost of these spells. Adds +4 to effective spellpower of Holy Word spell.
@@ -217,7 +217,7 @@ Allows hero to learn Destructive Magic spells of the third/fourth/fifth circle a
 Increases Destructive Magic spells efficiency, damages, duration etc.
 
 - __Frost Power__ : Grants freezing effect to Ice Bolt, Circle of Winter and Deep Freeze spells, delaying target creature's turn by 1 turn.
-- __Deadly Cold__ : Makes Hero‚Äôs casting of the spells Ice Bolt, Circle of Winter and Deep Freeze more powerful. Those spells will deal additional damage to kill one creature in the target stack (if that creature has no Immunity to Cold).
+- __Deadly Cold__ : Makes Heroís casting of the spells Ice Bolt, Circle of Winter and Deep Freeze more powerful. Those spells will deal additional damage to kill one creature in the target stack (if that creature has no Immunity to Cold).
 - __Cold Steel__ : The hero enhances weapons of all troops in his or her army to strike with 10% additional ice damages.
 - __Blaze Power__ : Grants armor-damaging effect to Fireball, Firewall and Armageddon spells. Creatures affected by these spells suffer additional -50% defence penalty.
 - __Ignite__ : Fire spells casted by the hero in combat will ignite enemies, inflicting 50% of current spell damage to the target during next 2 rounds.
@@ -229,8 +229,8 @@ Should it happen that any spell is disrupted by a target, the hero gains back al
 Unique Haven skill. Hero's troops take 1/2/3% reduced damage from non-magical attacks per Morale point. Gain +1/2/3 Morale.
 
 - __Prayer__ : The hero receives special combat ability to temporarily raise the morale, initiative, attack and defense of his troops (doesn't work on undead and mechanical).
-- __Empathy__ : Each time when the Morale effect is triggered with any of the creatures in the hero‚Äôs army, the hero moves 10% forward along the ATB bar. Accordingly, when a negative Morale effect is triggered, the hero moves 10% back.
-- __Guardian Angel__ : When all the knight‚Äôs troops fall dead in combat, an Angel, summoned on a field of battle, resurrects the most powerful group of dead creatures and disappears.
+- __Empathy__ : Each time when the Morale effect is triggered with any of the creatures in the heroís army, the hero moves 10% forward along the ATB bar. Accordingly, when a negative Morale effect is triggered, the hero moves 10% back.
+- __Guardian Angel__ : When all the knightís troops fall dead in combat, an Angel, summoned on a field of battle, resurrects the most powerful group of dead creatures and disappears.
 - __Expert Trainer__ : Troop training in Haven towns costs 35% less than normal. Hero must be stationed within the town with Training Grounds built for this effect to take place.
 - __Retaliation Strike__ : The hero receives special combat ability to guard any selected creature in his army until the end of combat by inflicting direct damage to every enemy that is attacking this guarded creature.
 - __Holy Charge__ : Hero's Retaliation Strike ability inflicts triple damage.
@@ -308,13 +308,13 @@ Unique Inferno skill. Tier 1,2/3,4/5,6 demonic creatures are granted an ability 
 
 ### Blood Rage
 
-Unique Stronghold skill. Allows Stronghold creatures in hero‚Äôs army to achieve a first/second/third level of rage while fighting. The resulting Blood Rage grants them appropriate combat bonuses.
+Unique Stronghold skill. Allows Stronghold creatures in heroís army to achieve a first/second/third level of rage while fighting. The resulting Blood Rage grants them appropriate combat bonuses.
 
 - __Memory Of Our Blood__ : All Stronghold creatures in the hero's army get from 50 up to 100 rage points (randomly) at the beginning of combat.
-- __Battle Elation__ : Every time when a Morale effect is triggered with a creature in the hero‚Äôs army, it gains 50 Rage points.
-- __Bloodfire__ : Every time when a creature in the hero‚Äôs army gets Rage, it gets 50% more than usual. But if a creature loses Rage, it loses 1.5 of the usual amount, too.
-- __Goblin Support__ : If there is an Ammo Cart in the hero‚Äôs army, there will be 3 Goblins joining his army every day.
-- __Defend Us All__ : Increases the hero‚Äôs Defense by +2. At the start of each week, remove a Goblin from your army to gain 10 Warriors and 1 Slayer.
+- __Battle Elation__ : Every time when a Morale effect is triggered with a creature in the heroís army, it gains 50 Rage points.
+- __Bloodfire__ : Every time when a creature in the heroís army gets Rage, it gets 50% more than usual. But if a creature loses Rage, it loses 1.5 of the usual amount, too.
+- __Goblin Support__ : If there is an Ammo Cart in the heroís army, there will be 3 Goblins joining his army every day.
+- __Defend Us All__ : Increases the heroís Defense by +2. At the start of each week, remove a Goblin from your army to gain 10 Warriors and 1 Slayer.
 - __Sheer Strength__ : The hero gains +2 Attack and Defense and creatures in his army gain 20% bonus health.
 
 ### Spiritism
@@ -363,6 +363,6 @@ Ultimate skills
 - __Urgash's Call__ : Gating becomes instant.
 
 <color_default>This skill is learnt by having 3 perks in Gating and in four other common skills.
-- __Orcish Fury__ : All stronghold creatures in hero‚Äôs army get additional 500 points of rage at the beginning of combat.
+- __Orcish Fury__ : All stronghold creatures in heroís army get additional 500 points of rage at the beginning of combat.
 
 <color_default>This skill is learnt by having 3 perks in Blood Rage and in four other common skills.

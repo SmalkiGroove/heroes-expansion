@@ -246,7 +246,65 @@ def generate_artifacts_doc(ref_data):
 #
 spells_by_school = {'LIGHT': [], 'DARK': [], 'DESTRUCTIVE': [], 'NATURAL': [], 'WARCRY': []}
 spells_by_tier = {1: [], 2: [], 3: [], 4: [], 5: []}
+spells_school_mapping = {
+    'MAGIC_SCHOOL_LIGHT': 'Light Magic',
+    'MAGIC_SCHOOL_DARK': 'Dark Magic',
+    'MAGIC_SCHOOL_DESTRUCTIVE': 'Destructive Magic',
+    'MAGIC_SCHOOL_SUMMONING': 'Natural Magic',
+    'MAGIC_SCHOOL_WARCRIES': 'Warcries'
+}
 
+def get_spell_by_id(id, allspells):
+    print(f"Get spell {id} data")
+    for item in allspells:
+        if item['ID'] == id:
+            spell_path = os.path.join(workdir, root_path_data + item['Obj']['@href']).replace('#xpointer(/Spell)','')
+            with open(spell_path, 'r') as xdb:
+                spell_data = xmltodict.parse(xdb.read())['Spell']
+            return spell_data
+    print(f"Spell '{id}' not found")
+    return None
+
+def get_spell_name_2(id, allspells):
+    spell = get_spell_by_id(id, allspells)
+    if spell != None:
+        name_path = os.path.join(workdir, root_text_path + spell['NameFileRef']['@href'])
+        with open(name_path, 'r', encoding='utf-16') as name_file:
+            name = name_file.read()
+        return name
+    return ""
+
+def get_spell_link(name):
+    return f"[{name}](#{name.lower().replace(' ', '-')})"
+
+def spells_doc_line(tier, allspells):
+    number = min(tier, 3)
+    s_light = list(map(lambda s: get_spell_name_2(s, allspells), set(spells_by_tier[tier]).intersection(spells_by_school['LIGHT'])))
+    s_dark = list(map(lambda s: get_spell_name_2(s, allspells), set(spells_by_tier[tier]).intersection(spells_by_school['DARK'])))
+    s_destructive = list(map(lambda s: get_spell_name_2(s, allspells), set(spells_by_tier[tier]).intersection(spells_by_school['DESTRUCTIVE'])))
+    s_natural = list(map(lambda s: get_spell_name_2(s, allspells), set(spells_by_tier[tier]).intersection(spells_by_school['NATURAL'])))
+    line = "| | | | | |"
+    for i in range(number):
+        line = f"| {tier} | {get_spell_link(s_light[i])} | {get_spell_link(s_dark[i])} | {get_spell_link(s_destructive[i])} | {get_spell_link(s_natural[i])} |\n" + line
+    return line
+
+def spell_doc_line(id, allspells):
+    spell_data = get_spell_by_id(id, allspells)
+    if spell_data != None:
+        name_path = os.path.join(workdir, root_text_path + spell_data['NameFileRef']['@href'])
+        desc_path = os.path.join(workdir, root_text_path + spell_data['LongDescriptionFileRef']['@href'])
+        with open(name_path, 'r', encoding='utf-16') as name_file:
+            name = name_file.read()
+        with open(desc_path, 'r', encoding='utf-16') as desc_file:
+            desc = desc_file.read()
+        tier = spell_data['Level']
+        school = spell_data['MagicSchool']
+        mana = spell_data['TrainedCost']
+        damage = yaml.dump(spell_data['damage']['Item']) if spell_data['damage'] is not None else "N/A"
+        duration = yaml.dump(spell_data['duration']['Item']) if spell_data['duration'] is not None else "N/A"
+        return f"\n#### {name}\n>Tier {tier} {spells_school_mapping[school]}  ({mana} Mana)\n\n{desc}\n\nDamage :\n{damage}\nDuration :\n{duration}"
+    return ""
+        
 def generate_spells_doc(ref_data):
     out = open(os.path.join(workdir, doc_path, 'SPELLS.md'), 'w')
     print("# SPELLS DOCUMENTATION", file=out)
@@ -254,9 +312,17 @@ def generate_spells_doc(ref_data):
     for spell in ref_data:
         spells_by_school[spell['school']].append(spell['id'])
         spells_by_tier[spell['tier']].append(spell['id'])
+    with open(os.path.join(workdir, path_to_allspells), 'r') as xdb:
+        allspells = xmltodict.parse(xdb.read())['Table_Spell_SpellID']['objects']['Item']
     print("## Classification", file=out)
-    print("| LIGHT | DARK | DESTRUCTIVE | NATURAL |", file=out)
-    print("|-------|------|-------------|---------|", file=out)
+    print("| Tier | LIGHT | DARK | DESTRUCTIVE | NATURAL |", file=out)
+    print("|------|-------|------|-------------|---------|", file=out)
+    for tier in range(1,6):
+        print(spells_doc_line(tier, allspells), file=out)
+    print("\n", file=out)
+    print("## Spells data", file=out)
+    for spell in ref_data:
+        print(spell_doc_line(spell['id'], allspells), file=out)
     out.close()
 #
 ###############################################################################################################################################################
@@ -264,8 +330,8 @@ def generate_spells_doc(ref_data):
 with open(reference_file) as ref:
     data = yaml.safe_load(ref)
 
-# generate_creature_doc(data['CREATURES'])
-# generate_heroes_doc(data['HEROES'])
-# generate_skills_doc(data['SKILLS'])
-# generate_artifacts_doc(data['ARTIFACTS'])
+generate_creature_doc(data['CREATURES'])
+generate_heroes_doc(data['HEROES'])
+generate_skills_doc(data['SKILLS'])
+generate_artifacts_doc(data['ARTIFACTS'])
 generate_spells_doc(data['SPELLS'])

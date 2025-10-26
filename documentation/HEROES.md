@@ -144,7 +144,7 @@ __WYNGAAL :__
 Tracker
 
 
-- Increases the number of heroâ€™s movement points by 1% for every 3 levels and reduces movement penalty from foreign terrain by 2% per hero level.
+- Increases the number of hero’s movement points by 1% for every 3 levels and reduces movement penalty from foreign terrain by 2% per hero level.
 
 - The weekly production bonus of the Logistics skill is increased by 5% per hero level.
 
@@ -179,7 +179,7 @@ __JENOVA :__
 Lone Hunter
 
 
-- All heroâ€™s attacks deal +4% damage for every level of the hero.
+- All hero’s attacks deal +4% damage for every level of the hero.
 
 - Hero can perform an attack right before the combat begins.
 
@@ -353,7 +353,7 @@ __TOLGHAR :__
 King of the Stone Halls
 
 
-- All creatures in heroâ€™s army have Rune of Thunderclap effect permanently active (chance to stun enemy when attacking).
+- All creatures in hero’s army have Rune of Thunderclap effect permanently active (chance to stun enemy when attacking).
 
 - Hero has permanent +1 Morale and Luck.
 
@@ -751,7 +751,7 @@ __KASPAR :__
 Embalmer
 
 
-- The First Aid Tent will heal more hit points per hero level. The bonus amount is equal to (Level + 4)Â². The damage of Plague Tent ability is also increased by the same value.
+- The First Aid Tent will heal more hit points per hero level. The bonus amount is equal to (Level + 4)². The damage of Plague Tent ability is also increased by the same value.
 
 - If the hero has the skill Plague Tent, the tent will cast it on a random enemy creature at the start of combat.
 
@@ -873,7 +873,7 @@ __ASH :__
 Pounder
 
 
-- All heroâ€™s attacks deal +4% damage for every level of the hero.
+- All hero’s attacks deal +4% damage for every level of the hero.
 
 - Hero can perform an attack right before the combat begins.
 
@@ -993,7 +993,7 @@ The New Khan
 
 - Hero knows all 6 Warcries.
 
-- Warcries have their costs decreased by 1 every 4 levels and grant an additional amount of rage points equal to the heroâ€™s level.
+- Warcries have their costs decreased by 1 every 4 levels and grant an additional amount of rage points equal to the hero’s level.
 
 - Shouts a Battlecry at the start of combat, granting +1 movement to your creatures and +5 bonus Attack.
 
@@ -1090,7 +1090,7 @@ __ZOULEIKA :__
 Potion Brewer
 
 
-- The First Aid Tent will heal more hit points per hero level. The bonus amount is equal to (Level + 4)Â². The damage of Plague Tent ability is also increased by the same value.
+- The First Aid Tent will heal more hit points per hero level. The bonus amount is equal to (Level + 4)². The damage of Plague Tent ability is also increased by the same value.
 
 - The First Aid Tent gets 100% ATB after each hero turn during combat.
 
