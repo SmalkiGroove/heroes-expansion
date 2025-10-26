@@ -1447,3 +1447,167 @@ ARTIFACTS:
     - ARTIFACT_ORB_OF_EARTH
     - ARTIFACT_ORB_OF_FIRE
     - ARTIFACT_ORB_OF_WATER
+
+SPELLS:
+  - id: SPELL_MAGIC_ARROW
+    school: DESTRUCTIVE
+    tier: 1
+  - id: SPELL_MAGIC_FIST
+    school: DESTRUCTIVE
+    tier: 4
+  - id: SPELL_LIGHTNING_BOLT
+    school: DESTRUCTIVE
+    tier: 2
+  - id: SPELL_ICE_BOLT
+    school: DESTRUCTIVE
+    tier: 2
+  - id: SPELL_FIREBALL
+    school: DESTRUCTIVE
+    tier: 3
+  - id: SPELL_FROST_RING
+    school: DESTRUCTIVE
+    tier: 3
+  - id: SPELL_CHAIN_LIGHTNING
+    school: DESTRUCTIVE
+    tier: 4
+  - id: SPELL_METEOR_SHOWER
+    school: NATURAL
+    tier: 5
+  - id: SPELL_IMPLOSION
+    school: DESTRUCTIVE
+    tier: 5
+  - id: SPELL_ARMAGEDDON
+    school: DESTRUCTIVE
+    tier: 5
+  - id: SPELL_CURSE
+    school: DARK
+    tier: 1
+  - id: SPELL_SLOW
+    school: DARK
+    tier: 2
+  - id: SPELL_DISRUPTING_RAY
+    school: DARK
+    tier: 2
+  - id: SPELL_PLAGUE
+    school: DARK
+    tier: 3
+  - id: SPELL_WEAKNESS
+    school: DARK
+    tier: 3
+  - id: SPELL_FORGETFULNESS
+    school: NATURAL
+    tier: 3
+  - id: SPELL_BERSERK
+    school: DARK
+    tier: 5
+  - id: SPELL_BLIND
+    school: LIGHT
+    tier: 4
+  - id: SPELL_HYPNOTIZE
+    school: NATURAL
+    tier: 5
+  - id: SPELL_UNHOLY_WORD
+    school: DARK
+    tier: 5
+  - id: SPELL_BLESS
+    school: LIGHT
+    tier: 1
+  - id: SPELL_HASTE
+    school: LIGHT
+    tier: 2
+  - id: SPELL_STONESKIN
+    school: LIGHT
+    tier: 2
+  - id: SPELL_DISPEL
+    school: LIGHT
+    tier: 3
+  - id: SPELL_BLOODLUST
+    school: LIGHT
+    tier: 3
+  - id: SPELL_DEFLECT_ARROWS
+    school: LIGHT
+    tier: 3
+  - id: SPELL_ANTI_MAGIC
+    school: NATURAL
+    tier: 4
+  - id: SPELL_TELEPORT
+    school: DARK
+    tier: 4
+  - id: SPELL_CELESTIAL_SHIELD
+    school: LIGHT
+    tier: 5
+  - id: SPELL_HOLY_WORD
+    school: LIGHT
+    tier: 5
+  - id: SPELL_LAND_MINE
+    school: NATURAL
+    tier: 2
+  - id: SPELL_WASP_SWARM
+    school: NATURAL
+    tier: 1
+  - id: SPELL_PHANTOM
+    school: DARK
+    tier: 5
+  - id: SPELL_EARTHQUAKE
+    school: NATURAL
+    tier: 4
+  - id: SPELL_ANIMATE_DEAD
+    school: DARK
+    tier: 3
+  - id: SPELL_SUMMON_ELEMENTALS
+    school: NATURAL
+    tier: 3
+  - id: SPELL_RESURRECT
+    school: LIGHT
+    tier: 5
+  - id: SPELL_CONJURE_PHOENIX
+    school: NATURAL
+    tier: 5
+  - id: SPELL_FIREWALL
+    school: DESTRUCTIVE
+    tier: 4
+  - id: SPELL_STONE_SPIKES
+    school: DESTRUCTIVE
+    tier: 3
+  - id: SPELL_SORROW
+    school: DARK
+    tier: 3
+  - id: SPELL_VAMPIRISM
+    school: DARK
+    tier: 4
+  - id: SPELL_DEEP_FREEZE
+    school: DESTRUCTIVE
+    tier: 5
+  - id: SPELL_REGENERATION
+    school: NATURAL
+    tier: 3
+  - id: SPELL_DIVINE_VENGEANCE
+    school: LIGHT
+    tier: 4
+  - id: SPELL_ARCANE_CRYSTAL
+    school: NATURAL
+    tier: 2
+  - id: SPELL_SUMMON_HIVE
+    school: NATURAL
+    tier: 4
+  - id: SPELL_BLADE_BARRIER
+    school: LIGHT
+    tier: 4
+  - id: SPELL_WARCRY_RALLING_CRY
+    school: WARCRY
+    tier: 1
+  - id: SPELL_WARCRY_CALL_OF_BLOOD
+    school: WARCRY
+    tier: 2
+  - id: SPELL_WARCRY_WORD_OF_THE_CHIEF
+    school: WARCRY
+    tier: 1
+  - id: SPELL_WARCRY_FEAR_MY_ROAR
+    school: WARCRY
+    tier: 2
+  - id: SPELL_WARCRY_BATTLECRY
+    school: WARCRY
+    tier: 3
+  - id: SPELL_WARCRY_SHOUT_OF_MANY
+    school: WARCRY
+    tier: 3

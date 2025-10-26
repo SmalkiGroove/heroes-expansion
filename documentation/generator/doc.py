@@ -27,8 +27,6 @@ def get_spell_name(id):
         if item['ID'] == id:
             spell_path = os.path.join(workdir, root_path_data + item['Obj']['@href'].replace('#xpointer(/Spell)',''))
             with open(spell_path, 'r', encoding='utf-8-sig') as spell_file:
-                # print(spell_path)
-                # print(spell_file.readline())
                 spl = xmltodict.parse(spell_file.read())
             name_path = os.path.join(workdir, root_text_path + spl['Spell']['NameFileRef']['@href'])
             with open(name_path, 'r', encoding='utf-16') as name_file:
@@ -243,11 +241,31 @@ def generate_artifacts_doc(ref_data):
 #
 ###############################################################################################################################################################
 
+### SPELLS
+###############################################################################################################################################################
+#
+spells_by_school = {'LIGHT': [], 'DARK': [], 'DESTRUCTIVE': [], 'NATURAL': [], 'WARCRY': []}
+spells_by_tier = {1: [], 2: [], 3: [], 4: [], 5: []}
+
+def generate_spells_doc(ref_data):
+    out = open(os.path.join(workdir, doc_path, 'SPELLS.md'), 'w')
+    print("# SPELLS DOCUMENTATION", file=out)
+    print("", file=out)
+    for spell in ref_data:
+        spells_by_school[spell['school']].append(spell['id'])
+        spells_by_tier[spell['tier']].append(spell['id'])
+    print("## Classification", file=out)
+    print("| LIGHT | DARK | DESTRUCTIVE | NATURAL |", file=out)
+    print("|-------|------|-------------|---------|", file=out)
+    out.close()
+#
+###############################################################################################################################################################
 
 with open(reference_file) as ref:
     data = yaml.safe_load(ref)
 
-generate_creature_doc(data['CREATURES'])
-generate_heroes_doc(data['HEROES'])
-generate_skills_doc(data['SKILLS'])
-generate_artifacts_doc(data['ARTIFACTS'])
+# generate_creature_doc(data['CREATURES'])
+# generate_heroes_doc(data['HEROES'])
+# generate_skills_doc(data['SKILLS'])
+# generate_artifacts_doc(data['ARTIFACTS'])
+generate_spells_doc(data['SPELLS'])
