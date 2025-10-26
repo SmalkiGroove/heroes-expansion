@@ -24,19 +24,6 @@ jobs:
         run: zip -q -r h5x-data.pak *
         working-directory: game_data/data
 
-      - name: Check changes in 'texts'
-        uses: dorny/paths-filter@v3
-        id: check-texts
-        with:
-          base: ${{ github.ref }}
-          filters: |
-            changed:
-              - 'game_texts/texts-EN/**'
-      - name: Pack texts
-        if: steps.check-texts.outputs.changed == 'true'
-        run: zip -q -r h5x-texts.pak *
-        working-directory: game_texts/texts-EN
-
       - name: Check changes in 'interface'
         uses: dorny/paths-filter@v3
         id: check-interface
@@ -89,6 +76,19 @@ jobs:
         run: zip -q -r h5x-doc.pak *
         working-directory: game_data/doc
 
+      - name: Check changes in 'battlefields'
+        uses: dorny/paths-filter@v3
+        id: check-battlefields
+        with:
+          base: ${{ github.ref }}
+          filters: |
+            changed:
+              - 'game_data/battlefields/**'
+      - name: Pack battlefields
+        if: steps.check-battlefields.outputs.changed == 'true'
+        run: zip -q -r h5x-battlefields.pak *
+        working-directory: game_data/battlefields
+
       - name: Check changes in 'maps'
         uses: dorny/paths-filter@v3
         id: check-maps
@@ -101,6 +101,19 @@ jobs:
         if: steps.check-maps.outputs.changed == 'true'
         run: zip -q -r h5x-maps.pak *
         working-directory: game_data/maps
+
+      - name: Check changes in 'texts'
+        uses: dorny/paths-filter@v3
+        id: check-texts
+        with:
+          base: ${{ github.ref }}
+          filters: |
+            changed:
+              - 'game_texts/texts-EN/**'
+      - name: Pack texts
+        if: steps.check-texts.outputs.changed == 'true'
+        run: zip -q -r h5x-texts.pak *
+        working-directory: game_texts/texts-EN
 
       - name: Upload paks
         uses: actions/upload-artifact@v4
