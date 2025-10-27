@@ -99,6 +99,34 @@ function Routine_ArtifactSmithyHammer(player, hero)
     GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_DEFENCE, 3)
 end
 
+function Routine_ArtifactPotionOfMana(player, hero)
+    log(DEBUG, "$ Routine_ArtifactPotionOfMana")
+    local value = 30 + GetHeroStat(hero, STAT_KNOWLEDGE)
+    AddHeroManaUnbound(player, hero, value)
+    RemoveArtefact(hero, ARTIFACT_POTION_OF_MANA)
+end
+
+function Routine_ArtifactPotionOfStamina(player, hero)
+    log(DEBUG, "$ Routine_ArtifactPotionOfStamina")
+    local value = 1000
+    while value > 0 do
+        if not IsPlayerCurrent(player) then break end
+        if GetHeroStat(hero, STAT_MOVE_POINTS) < 1000 then
+            ChangeHeroStat(hero, STAT_MOVE_POINTS, 50)
+            value = value - 50
+        end
+        sleep(2)
+    end
+    RemoveArtefact(hero, ARTIFACT_POTION_OF_STAMINA)
+end
+
+function Routine_ArtifactPotionOfExperience(player, hero)
+    log(DEBUG, "$ Routine_ArtifactPotionOfExperience")
+    local value = 1000 + round(0.02 * GetHeroStat(hero, STAT_EXPERIENCE))
+    GiveExp(hero, value)
+    RemoveArtefact(hero, ARTIFACT_POTION_OF_EXPERIENCE)
+end
+
 function Routine_ArtifactMagistersSandals(player, hero)
     log(DEBUG, "$ Routine_ArtifactMagistersSandals")
     ChangeHeroStat(hero, STAT_KNOWLEDGE, 1)
@@ -381,6 +409,9 @@ DAILY_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_BOOTS_OF_THE_SWIFT_JOUNREY] = Routine_ArtifactBootsOfSwiftJourney,
     [ARTIFACT_ROBE_OF_THE_MAGISTER] = Routine_ArtifactRobeOfTheMagister,
     [ARTIFACT_DWARVEN_SMITHY_HAMMER] = Routine_ArtifactSmithyHammer,
+    [ARTIFACT_POTION_OF_MANA] = Routine_ArtifactPotionOfMana,
+    [ARTIFACT_POTION_OF_STAMINA] = Routine_ArtifactPotionOfStamina,
+    [ARTIFACT_POTION_OF_EXPERIENCE] = Routine_ArtifactPotionOfExperience,
 }
 WEEKLY_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_HORN_OF_PLENTY] = Routine_ArtifactHornOfPlenty,
