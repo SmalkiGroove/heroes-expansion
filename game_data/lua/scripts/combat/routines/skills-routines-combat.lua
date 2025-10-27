@@ -4,10 +4,10 @@ function Routine_Houndmasters(side, hero, id, mastery)
     local level = GetHeroLevel(side)
     local amount = 10 + 2 * level + random(1, level, 99)
     if hero == H_IVOR then
-        SummonCreatureSideOffset(side, CREATURE_WOLF, amount, 1)
+        SummonCreatureSideOffset(side, CREATURE_WOLF, amount, 1) sleep()
     end
     if hero == H_GRAWL then
-        SummonCreatureSideOffset(side, CREATURE_HELL_HOUND, amount+level, 1)
+        SummonCreatureSideOffset(side, CREATURE_HELL_HOUND, amount+level, 1) sleep()
     else
         SummonCreatureSideOffset(side, CREATURE_WOLF, amount, 1)
     end
@@ -59,10 +59,41 @@ end
 
 function Routine_ImbueBallista(side, hero, id, mastery)
     -- log(DEBUG, "Trigger Imbue Ballista !")
-    if CURRENT_UNIT == hero then
+    if CURRENT_UNIT == id then
         local ballista = UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_BALLISTA'
         if IsCombatUnit(ballista) then
             setATB(ballista, ATB_NEXT)
+        end
+    end
+end
+
+function Routine_GuardianAngelInit(side, hero, id, mastery)
+    -- log(DEBUG, "Init Guardian Angel !")
+    EnableAutoFinish(nil)
+end
+
+function Routine_GuardianAngelRez(side, hero, id, mastery, unit)
+    -- log(DEBUG, "Trigger Guardian Angel Rez !")
+    if GetUnitSide(unit) ~= side then
+        for _,cr in GetUnits(1-side, CREATURE) do return end
+        combatSetPause(1)
+        local rez_stack = "none"
+        local rez_power = 0
+        for cr,nb in STARTING_ARMY[side] do
+            local lost = nb - GetCreatureNumber(cr)
+            local type = GetCreatureType(cr)
+            local tier = CREATURES[type][2]
+            local rez_power_cr = lost * power(2, tier)
+            if rez_power_cr > rez_power then
+                rez_stack = cr
+                rez_power = rez_power_cr
+            end
+        end
+        if rez_power > 0 then
+            local angel = "creature_ARCHANGEL-GUARDIAN_ANGEL"
+            SummonCreatureSideOffset(side, CREATURE_ARCHANGEL, 1, 1, angel)
+            UnitCastAimedSpell(angel, SPELL_ABILITY_RESURRECT_ALLIES, rez_stack)
+            Finish(side)
         end
     end
 end
@@ -73,6 +104,7 @@ COMBAT_START_SKILL_ROUTINES = {
     [PERK_HOUNDMASTERS] = Routine_Houndmasters,
     [PERK_ELEMENTAL_BALANCE] = Routine_ElementalBalance,
     [SKILL_SHATTER_MAGIC] = Routine_ShatterMagic,
+    [PERK_GUARDIAN_ANGEL] = Routine_GuardianAngelInit,
 }
 
 COMBAT_TURN_SKILL_ROUTINES = {
@@ -80,6 +112,7 @@ COMBAT_TURN_SKILL_ROUTINES = {
 }
 
 UNIT_DIED_SKILL_ROUTINES = {
+    [PERK_GUARDIAN_ANGEL] = Routine_GuardianAngelRez,
 }
 
 

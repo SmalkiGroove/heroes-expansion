@@ -27,10 +27,10 @@ end
 function Routine_ArtifactMoonCharm(side, hero, unit)
     log(DEBUG, "$ Routine_ArtifactMoonCharm")
     if not ROUTINE_VARS.MoonCharm then
-        if GetUnitSide(unit) == side and ROUTINE_VARS.InitialCounts[unit] then
+        if STARTING_ARMY[side][unit] then
             local type = GetCreatureType(unit)
             local x,y = GetUnitPosition(unit)
-            local amount = ROUTINE_VARS.InitialCounts[unit]
+            local amount = STARTING_ARMY[side][unit]
             AddCreature(side, type, amount, x, y)
             ROUTINE_VARS.MoonCharm = not nil
         end
@@ -83,12 +83,12 @@ end
 
 function Routine_ArtfsetDragon4(side, hero, unit)
     log(DEBUG, "$ Routine_ArtfsetDragon4")
-    if GetUnitSide(unit) == side then
+    if STARTING_ARMY[side][unit] then
         sleep(random(1,30,GetCreatureNumber(unit)))
         if ROUTINE_VARS.Legendragon[side] then return end
         local tier = CREATURES[GetCreatureType(unit)][2]
         local threshold = 0.5 * (8 - tier) * (9 - tier)
-        if ROUTINE_VARS.InitialCounts[unit] and ROUTINE_VARS.InitialCounts[unit] > threshold then
+        if STARTING_ARMY[side][unit] > threshold then
             ROUTINE_VARS.Legendragon[side] = 1
             local name = "creature_DRAGON-SET_"..side
             local amount = GetHeroLevel(side)

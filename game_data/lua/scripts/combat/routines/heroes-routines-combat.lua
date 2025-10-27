@@ -539,11 +539,11 @@ end
 
 function Routine_SummonDeadEnnemyCreature(side, hero, unit)
     -- log(DEBUG, "Trigger revive enemy creature !")
-    if GetUnitSide(unit) ~= side and ROUTINE_VARS.InitialCounts[unit] then
+    if STARTING_ARMY[1-side][unit] then
         local type = GetCreatureType(unit)
         local x,y = GetUnitPosition(unit)
         local p = 10 + GetHeroLevel(side)
-        local amount = ceil(ROUTINE_VARS.InitialCounts[unit] * p * 0.01)
+        local amount = ceil(STARTING_ARMY[1-side][unit] * p * 0.01)
         SummonCreature(side, type, amount, x, y)
     end
 end
@@ -690,12 +690,12 @@ end
 
 function Routine_RaiseUndead(side, hero, unit)
     -- log(DEBUG, "Trigger raise undead equivalent !")
-    if GetUnitSide(unit) ~= side and ROUTINE_VARS.InitialCounts[unit] then
+    if STARTING_ARMY[1-side][unit] then
         local dead = GetCreatureType(unit)
         local type = CreatureToUndead(dead)
         local x,y = GetUnitPosition(unit)
         local p = 10 + GetHeroLevel(side)
-        local amount = ceil(ROUTINE_VARS.InitialCounts[unit] * p * 0.01)
+        local amount = ceil(STARTING_ARMY[1-side][unit] * p * 0.01)
         SummonCreature(side, type, amount, x, y)
     end
 end

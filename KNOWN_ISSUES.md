@@ -32,7 +32,6 @@
 
 - [EXE] Market change rate are total scam
 - [EXE] Inferno and Dungeon sacrificial buildings are bad
-- [???] Add another effect to Guardian angel perk
 
 ### Massive work required
 
@@ -61,3 +60,4 @@
 - Swaped town dwellings wrong model
 - Give Tavern mapobject the town portal effect
 - Improve Dougal peasant upgrade mechanic
+- Guardian Angel now also rez units on victories

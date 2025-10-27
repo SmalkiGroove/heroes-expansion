@@ -263,3 +263,5 @@ function UnitDeath(unitName)
 		DefenderUnitDeath(unitName)
 	end
 end
+
+EnableCinematicCamera(nil)
