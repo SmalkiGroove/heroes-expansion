@@ -46,8 +46,8 @@ ARTIFACT_BOOTS_OF_THE_SWIFT_JOUNREY = 24            -- more movement on land / r
 ARTIFACT_GOLDEN_HORSESHOE = 25                      -- /
 ARTIFACT_BOOTS_OF_THE_OPEN_ROAD = 26                -- no terrain penalties
 ARTIFACT_BOOTS_OF_INTERFERENCE = 27                 -- magic resistance
-ARTIFACT_ENDLESS_SACK_OF_GOLD = 28                  -- 1000 golds per day / + per level **
-ARTIFACT_ENDLESS_POUCH_OF_GOLD = 29                 -- 250 golds per day / + per level **
+ARTIFACT_ENDLESS_SACK_OF_GOLD = 28                  -- 1000 golds per day
+ARTIFACT_ENDLESS_POUCH_OF_GOLD = 29                 -- 250 golds per day / merge to sack **
 ARTIFACT_ANGEL_WINGS = 30                           -- fly over terrain
 ARTIFACT_CAPE_OF_KINGS = 31                         -- governance bonus **
 ARTIFACT_SOLAR_RING = 32                            -- fire spells damage
@@ -115,8 +115,8 @@ ARTIFACT_RING_OF_BANISHMENT = 93                    -- reduce enemy natural spel
 ARTIFACT_BOOK_OF_POWER = 94                         -- gives bonus sp and kg for enlightenment skill mastery and improve magic insight
 ARTIFACT_TREEBORN_QUIVER = 95                       -- ranged creatures have +4 att and infinite ammo
 ARTIFACT_PRINCESS = 96                              -- PRINCESS
-ARTIFACT_SACRED_SEED = 97                           -- 
-ARTIFACT_FORTUNE_PICKAXE = 98                       -- 
+ARTIFACT_SACRED_SEED = 97                           -- generate wood per day **
+ARTIFACT_FORTUNE_PICKAXE = 98                       -- generate ore per day **
 ARTIFACT_CURSED_DICES = 99                          -- enemy creatures have -2 luck
 ARTIFACT_REGAL_ARMOUR = 100                         -- creatures have +6% hp
 ARTIFACT_CROWN_OF_THE_FROST_LORD = 101              -- reduce frost spells mana cost by half
@@ -124,7 +124,7 @@ ARTIFACT_ALTAR_OF_ELEMENTS_SHARD = 102	            -- increase elemental spell d
 ARTIFACT_ELDENAS_RED_SCARF = 103                    -- level up grants t1 creatures **
 ARTIFACT_ELDENAS_CIRCLET = 104                      -- level up grants t3 creatures **
 ARTIFACT_NAGA_COMMANDERS_HELMET = 105               -- 
-ARTIFACT_NECKLACE_OF_THE_BLOODY_CLAW = 106          -- creatures have +50% max damage
+ARTIFACT_NECKLACE_OF_THE_BLOODY_CLAW = 106          -- creatures have +50% max damage TODO
 ARTIFACT_RING_OF_CELERITY = 107                     -- hero has +2 initiative
 ARTIFACT_ELDENAS_RED_COAT = 108                     -- level up grants t2 creatures **
 ARTIFACT_RING_OF_LIFE = 109                         -- 
@@ -135,8 +135,8 @@ ARTIFACT_SENTINELS_BRACER = 113                     -- /
 ARTIFACT_ANKH_OF_THE_SAINT = 114                    -- 
 ARTIFACT_CLOAK_OF_THE_SAINT = 115                   -- immunity to plague
 ARTIFACT_GENJIS_HAT = 116                           -- reduce mana cost by 1
-ARTIFACT_GENJIS_VEST = 117                          -- 
-ARTIFACT_GENJIS_SANDALS = 118                       -- 
+ARTIFACT_GENJIS_VEST = 117                          -- magic proof TODO
+ARTIFACT_GENJIS_SANDALS = 118                       -- hero has +1 initiative TODO
 ARTIFACT_GENJIS_SILKSWORD = 119                     -- 
 ARTIFACT_SENTINELS_HELM = 120                       -- gain battle boost on level up **
 ARTIFACT_SENTINELS_BOOTS = 121                      -- gain movement and morale after battle with no loss **
@@ -410,7 +410,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_RING_OF_THE_MAGISTER]          = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_ACADEMY, special=0},
     [ARTIFACT_SHANTIRI_MOON_DISC]            = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_NECK, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_PLUMED_BOOTS]                  = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_SYLVAN, special=0},
-    [ARTIFACT_050]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_BACKPACK, set=ARTIFACT_SET_NONE, special=1},
+    [ARTIFACT_050]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_BACKPACK, set=ARTIFACT_SET_NONE, special=1}, -- tbd
     [ARTIFACT_HELM_OF_THE_DWARVEN_KINGS]     = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_DWARVEN, special=0},
     [ARTIFACT_MAGIC_SCROLL_OF_SPELL]         = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_NONE, special=1},
     [ARTIFACT_GRAAL]                         = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_BACKPACK, set=ARTIFACT_SET_NONE, special=1},
@@ -457,8 +457,8 @@ ARTIFACTS_DATA = {
     [ARTIFACT_BOOK_OF_POWER]                 = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_ACADEMY, special=0},
     [ARTIFACT_TREEBORN_QUIVER]               = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_PRINCESS]                      = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_BACKPACK, set=ARTIFACT_SET_NONE, special=1},
-    [ARTIFACT_SACRED_SEED]                   = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_SYLVAN, special=1}, --disabled
-    [ARTIFACT_FORTUNE_PICKAXE]               = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_NONE, special=1}, --disabled
+    [ARTIFACT_SACRED_SEED]                   = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_SYLVAN, special=0},
+    [ARTIFACT_FORTUNE_PICKAXE]               = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_CURSED_DICES]                  = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_REGAL_ARMOUR]                  = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_BODY, set=ARTIFACT_SET_VIZIR, special=0},
     [ARTIFACT_CROWN_OF_THE_FROST_LORD]       = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_FROST, special=0},
