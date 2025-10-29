@@ -43,29 +43,29 @@ function FetchData(name, id)
     log(DEBUG, "Fetch data for hero "..name)
     local temp = GetGameVar(VarHeroLevel(name))
     HERO_DATA[id].Level = 0 + temp
-    -- log(DEBUG, "* fetched level ok")
+    -- log(TRACE, "* fetched level ok")
     for _,s in COMBAT_EFFECT_SKILLS do
         temp = GetGameVar(VarHeroSkillId(name,s))
         HERO_DATA[id].Skills[s] = temp == "" and 0 or 0 + temp
     end
-    -- log(DEBUG, "* fetched skills ok")
+    -- log(TRACE, "* fetched skills ok")
     for _,a in COMBAT_EFFECT_ARTIFACTS do
         temp = GetGameVar(VarHeroArtifactId(name,a))
         HERO_DATA[id].Artifacts[a] = temp == "" and 0 or 0 + temp
     end
-    -- log(DEBUG, "* fetched artifacts ok")
+    -- log(TRACE, "* fetched artifacts ok")
     for set = ARTFSET_NONE,ARTFSET_ACTIVABLES_COUNT do
         temp = GetGameVar(VarHeroArtfsetId(name,set))
         HERO_DATA[id].ArtfSets[set] = temp == "" and 0 or 0 + temp
     end
-    -- log(DEBUG, "* fetched artifact sets ok")
+    -- log(TRACE, "* fetched artifact sets ok")
     log(DEBUG, "Hero "..name.." : Lvl "..HERO_DATA[id].Level)
 end
 
 function Wait()
     sleep(1)
     THREAD_FINISHER = THREAD_FINISHER - 1
-    -- log(DEBUG, "Thread finisher = "..THREAD_FINISHER)
+    -- log(TRACE, "Thread finisher = "..THREAD_FINISHER)
     if THREAD_FINISHER == 0 then THREAD_STATE = 1 end
 end
 
@@ -79,7 +79,7 @@ end
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 function ManageCombatPrepare()
-    -- log(DEBUG, "$ Manage combat prepare")
+    -- log(TRACE, "$ Manage combat prepare")
     if ENABLE_SCRIPT == 0 then return end
 
     combatSetPause(1)
@@ -96,7 +96,7 @@ function ManageCombatPrepare()
 end
 
 function ManageCombatStart()
-    -- log(DEBUG, "$ Manage combat start")
+    -- log(TRACE, "$ Manage combat start")
     if ENABLE_SCRIPT == 0 then return end
     GetArmySummary()
     log(DEBUG, "Combat random seed = "..RANDOM_SEED)
@@ -117,7 +117,7 @@ function ManageCombatStart()
 end
 
 function ManageCombatTurn(unit)
-    -- log(DEBUG, "$ Manage combat turn")
+    -- log(TRACE, "$ Manage combat turn")
     if ENABLE_SCRIPT == 0 then return end
 
     if CURRENT_UNIT ~= unit then
@@ -141,7 +141,7 @@ function ManageCombatTurn(unit)
 end
 
 function ManageUnitDeath(unit)
-    -- log(DEBUG, "$ Manage unit death")
+    -- log(TRACE, "$ Manage unit death")
     if ENABLE_SCRIPT == 0 then return end
 
     if ATTACKER_HERO ~= "" then
@@ -166,7 +166,7 @@ ROUTINES_LOADED = {
 }
 
 function LoadScript(path, key)
-	-- log(DEBUG, "Loading script "..path)
+	-- log(TRACE, "Loading script "..path)
 	dofile(path)
 	sleep() -- repeat sleep() until ROUTINES_LOADED[key] == 1
 end

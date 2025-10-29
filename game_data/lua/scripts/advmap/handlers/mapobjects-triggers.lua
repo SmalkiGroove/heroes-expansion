@@ -203,5 +203,5 @@ function InitializeMapObjects()
     end
 end
 
--- log(DEBUG, "Loaded mapobjects-triggers.lua")
+-- log(TRACE, "Loaded mapobjects-triggers.lua")
 ROUTINES_LOADED[23] = 1

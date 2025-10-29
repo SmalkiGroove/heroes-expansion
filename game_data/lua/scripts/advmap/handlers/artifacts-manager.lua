@@ -106,5 +106,5 @@ function GetHeroArtfset(hero)
 end
 
 
--- log(DEBUG, "Loaded artifact-manager.lua")
+-- log(TRACE, "Loaded artifact-manager.lua")
 ROUTINES_LOADED[17] = 1

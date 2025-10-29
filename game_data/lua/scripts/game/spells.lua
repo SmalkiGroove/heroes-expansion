@@ -386,5 +386,5 @@ RUNIC_SPELLS = {
 }
 
 
--- log(DEBUG, "Loaded spells.lua")
+-- log(TRACE, "Loaded spells.lua")
 ROUTINES_LOADED[2] = 1

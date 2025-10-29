@@ -121,5 +121,5 @@ function UnbindHeroSkillTrigger(hero)
 end
 
 
--- log(DEBUG, "Loaded skills-manager.lua")
+-- log(TRACE, "Loaded skills-manager.lua")
 ROUTINES_LOADED[16] = 1

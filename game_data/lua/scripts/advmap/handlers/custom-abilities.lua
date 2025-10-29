@@ -79,5 +79,5 @@ function CustomAbilityHandler(hero, id)
 end
 
 
--- log(DEBUG, "Loaded custom-abilities.lua")
+-- log(TRACE, "Loaded custom-abilities.lua")
 ROUTINES_LOADED[25] = 1

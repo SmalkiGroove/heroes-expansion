@@ -126,5 +126,5 @@ function DoAbilitiesRoutine_UnitDied(unit)
 end
 
 
--- log(DEBUG, "Loaded abilities-routines-combat.lua")
+-- log(TRACE, "Loaded abilities-routines-combat.lua")
 ROUTINES_LOADED[10] = 1

@@ -175,5 +175,5 @@ function AIRecruitBonus(player, hero)
     end
 end
 
--- log(DEBUG, "Loaded heroes-manager.lua")
+-- log(TRACE, "Loaded heroes-manager.lua")
 ROUTINES_LOADED[18] = 1

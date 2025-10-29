@@ -966,5 +966,5 @@ function DoSkillsRoutine_AfterCombat(player, hero, index)
 end
 
 
--- log(DEBUG, "Loaded skills-routines-advmap.lua")
+-- log(TRACE, "Loaded skills-routines-advmap.lua")
 ROUTINES_LOADED[11] = 1

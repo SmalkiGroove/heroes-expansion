@@ -1,6 +1,6 @@
 
 function NoneRoutine()
-    -- log(DEBUG, "Nothing happens !")
+    -- Nothing happens
 end
 
 
@@ -451,5 +451,5 @@ function Lv25(hero)
 end
 
 
--- log(DEBUG, "Loaded advmap-utils.lua")
+-- log(TRACE, "Loaded advmap-utils.lua")
 ROUTINES_LOADED[9] = 1

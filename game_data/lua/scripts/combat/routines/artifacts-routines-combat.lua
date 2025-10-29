@@ -224,5 +224,5 @@ function DoArtifactRoutine_UnitDied(side, name, id, unit)
 end
 
 
--- log(DEBUG, "Loaded artifacts-routines-combat.lua")
+-- log(TRACE, "Loaded artifacts-routines-combat.lua")
 ROUTINES_LOADED[13] = 1

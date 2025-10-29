@@ -1,6 +1,6 @@
 
 function Routine_Houndmasters(side, hero, id, mastery)
-    -- log(DEBUG, "Trigger Houndmasters !")
+    log(DEBUG, "Trigger Houndmasters !")
     local level = GetHeroLevel(side)
     local amount = 10 + 2 * level + random(1, level, 99)
     if hero == H_IVOR then
@@ -14,7 +14,7 @@ function Routine_Houndmasters(side, hero, id, mastery)
 end
 
 function Routine_ElementalBalance(side, hero, id, mastery)
-    -- log(DEBUG, "Trigger Elemental Balance !")
+    log(DEBUG, "Trigger Elemental Balance !")
     local creatures = GetUnits(1-side, CREATURE)
     for i,cr in creatures do
         local type = GetCreatureType(cr)
@@ -35,7 +35,7 @@ function Routine_ElementalBalance(side, hero, id, mastery)
 end
 
 function Routine_ShatterMagic(side, hero, id, mastery)
-    -- log(DEBUG, "Trigger Shatter Magic !")
+    log(DEBUG, "Trigger Shatter Magic !")
     local mult = 0.1 * mastery
     local h = GetHero(1-side)
     if h then
@@ -58,7 +58,7 @@ function Routine_ShatterMagic(side, hero, id, mastery)
 end
 
 function Routine_ImbueBallista(side, hero, id, mastery)
-    -- log(DEBUG, "Trigger Imbue Ballista !")
+    log(DEBUG, "Trigger Imbue Ballista !")
     if CURRENT_UNIT == id then
         local ballista = UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_BALLISTA'
         if IsCombatUnit(ballista) then
@@ -68,12 +68,12 @@ function Routine_ImbueBallista(side, hero, id, mastery)
 end
 
 function Routine_GuardianAngelInit(side, hero, id, mastery)
-    -- log(DEBUG, "Init Guardian Angel !")
+    log(DEBUG, "Init Guardian Angel !")
     EnableAutoFinish(nil)
 end
 
 function Routine_GuardianAngelRez(side, hero, id, mastery, unit)
-    -- log(DEBUG, "Trigger Guardian Angel Rez !")
+    log(DEBUG, "Trigger Guardian Angel Rez !")
     if GetUnitSide(unit) ~= side then
         for _,cr in GetUnits(1-side, CREATURE) do return end
         combatSetPause(1)
@@ -144,5 +144,5 @@ function DoSkillRoutine_UnitDied(side, name, id, unit)
 end
 
 
--- log(DEBUG, "Loaded skills-routines-combat.lua")
+-- log(TRACE, "Loaded skills-routines-combat.lua")
 ROUTINES_LOADED[12] = 1

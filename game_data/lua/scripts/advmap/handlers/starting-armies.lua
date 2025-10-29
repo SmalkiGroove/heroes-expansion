@@ -119,5 +119,5 @@ function InitializeArmy(hero)
     end
 end
 
--- log(DEBUG, "Loaded starting-armies.lua")
+-- log(TRACE, "Loaded starting-armies.lua")
 ROUTINES_LOADED[21] = 1
