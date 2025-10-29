@@ -1192,6 +1192,12 @@ function Routine_SpiritArtifacts(player, hero, level)
     end
 end
 
+function Routine_GainPotionLevelUp(player, hero, level)
+    log(DEBUG, "$ Routine_GainPotionLevelUp")
+    local potion = random(137, 139, level)
+    GiveArtifact(hero, potion)
+end
+
 
 
 
@@ -1308,6 +1314,7 @@ LEVEL_UP_HERO_ROUTINES_HERO = {
     [H_BIARA] = Routine_AddHeroSuccubus,
     -- stronghold
     [H_URGHAT] = Routine_SpiritArtifacts,
+    [H_ZOULEIKA] = Routine_GainPotionLevelUp,
 }
 
 AFTER_COMBAT_TRIGGER_HERO_ROUTINES = {

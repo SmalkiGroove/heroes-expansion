@@ -19,7 +19,7 @@ function GetArmySummary()
             local type = GetCreatureType(cr)
             local nb = GetCreatureNumber(cr)
             local x, y = GetUnitPosition(cr)
-            ROUTINE_VARS.InitialCounts[cr] = nb
+            STARTING_ARMY[side][cr] = nb
             RANDOM_SEED = RANDOM_SEED + side + type + nb + x + y
         end
     end

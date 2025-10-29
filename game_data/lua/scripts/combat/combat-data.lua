@@ -17,8 +17,12 @@ UNIT_SIDE_PREFIX = {
     [1] = "defender"
 }
 
+STARTING_ARMY = {
+    [0] = {},
+    [1] = {},
+}
+
 ROUTINE_VARS = {
-    InitialCounts = {},
     HeroTurns = 0,
     TurnMarker = 0,
     GriffinDives = {},

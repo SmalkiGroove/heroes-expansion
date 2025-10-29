@@ -1,24 +1,39 @@
 
 function Routine_ArtifactPouchOfGolds(player, hero)
     log(DEBUG, "$ Routine_ArtifactPouchOfGolds")
-    local level = GetHeroLevel(hero)
-    AddPlayerResource(player, hero, GOLD, level * 25)
+    if GetHeroArtifactsCount(hero, ARTIFACT_ENDLESS_POUCH_OF_GOLD) >= 2 then
+        RemoveArtefact(hero, ARTIFACT_ENDLESS_POUCH_OF_GOLD) sleep(1)
+        RemoveArtefact(hero, ARTIFACT_ENDLESS_POUCH_OF_GOLD) sleep(1)
+        GiveArtefact(hero, ARTIFACT_ENDLESS_SACK_OF_GOLD)
+    end
 end
 
-function Routine_ArtifactSackOfGolds(player, hero)
-    log(DEBUG, "$ Routine_ArtifactSackOfGolds")
-    local level = GetHeroLevel(hero)
-    AddPlayerResource(player, hero, GOLD, level * 50)
+function Routine_ArtifactSacredSeed(player, hero)
+    log(DEBUG, "$ Routine_ArtifactSacredSeed")
+    local amount = random(0,3,TURN)
+    ChangeResource(WOOD, amount, hero)
+    if mod(RANDOM_SEED, 5) == 0 then
+        GiveExp(hero, 1000)
+    end
+end
+
+function Routine_ArtifactFortunePickaxe(player, hero)
+    log(DEBUG, "$ Routine_ArtifactFortunePickaxe")
+    local amount = random(0,3,TURN)
+    ChangeResource(ORE, amount, hero)
+    if mod(RANDOM_SEED, 4) == 0 then
+        ChangeResource(mod(TURN, 2) == 0 and GEM or CRYSTAL, 1, hero)
+    end
 end
 
 function Routine_ArtifactHornOfPlenty(player, hero)
     log(DEBUG, "$ Routine_ArtifactHornOfPlenty")
-    AddPlayerResource(player, hero, WOOD, 1)
-    AddPlayerResource(player, hero, ORE, 1)
-    AddPlayerResource(player, hero, MERCURY, 1)
-    AddPlayerResource(player, hero, CRYSTAL, 1)
-    AddPlayerResource(player, hero, SULFUR, 1)
-    AddPlayerResource(player, hero, GEM, 1)
+    if random(0,10,TURN) == 0 then
+        for res = 0,5 do
+            local amount = random(0,10,res)
+            ChangeResource(res, amount, hero)
+        end
+    end
 end
 
 function Routine_ArtifactCapeOfKings(player, hero)
@@ -97,6 +112,34 @@ function Routine_ArtifactSmithyHammer(player, hero)
     log(DEBUG, "$ Routine_ArtifactSmithyHammer")
     GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_ATTACK, 3)
     GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_DEFENCE, 3)
+end
+
+function Routine_ArtifactPotionOfMana(player, hero)
+    log(DEBUG, "$ Routine_ArtifactPotionOfMana")
+    local value = 30 + GetHeroStat(hero, STAT_KNOWLEDGE)
+    AddHeroManaUnbound(player, hero, value)
+    RemoveArtefact(hero, ARTIFACT_POTION_OF_MANA)
+end
+
+function Routine_ArtifactPotionOfStamina(player, hero)
+    log(DEBUG, "$ Routine_ArtifactPotionOfStamina")
+    local value = 1000
+    while value > 0 do
+        if not IsPlayerCurrent(player) then break end
+        if GetHeroStat(hero, STAT_MOVE_POINTS) < 1000 then
+            ChangeHeroStat(hero, STAT_MOVE_POINTS, 50)
+            value = value - 50
+        end
+        sleep(2)
+    end
+    RemoveArtefact(hero, ARTIFACT_POTION_OF_STAMINA)
+end
+
+function Routine_ArtifactPotionOfExperience(player, hero)
+    log(DEBUG, "$ Routine_ArtifactPotionOfExperience")
+    local value = 1000 + round(0.02 * GetHeroStat(hero, STAT_EXPERIENCE))
+    GiveExp(hero, value)
+    RemoveArtefact(hero, ARTIFACT_POTION_OF_EXPERIENCE)
 end
 
 function Routine_ArtifactMagistersSandals(player, hero)
@@ -376,14 +419,18 @@ CONTINUOUS_TRIGGER_ARTIFACTS_ROUTINES = {
 }
 DAILY_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_ENDLESS_POUCH_OF_GOLD] = Routine_ArtifactPouchOfGolds,
-    [ARTIFACT_ENDLESS_SACK_OF_GOLD] = Routine_ArtifactSackOfGolds,
+    [ARTIFACT_SACRED_SEED] = Routine_ArtifactSacredSeed,
+    [ARTIFACT_FORTUNE_PICKAXE] = Routine_ArtifactFortunePickaxe,
+    [ARTIFACT_HORN_OF_PLENTY] = Routine_ArtifactHornOfPlenty,
     [ARTIFACT_CAPE_OF_KINGS] = Routine_ArtifactCapeOfKings,
     [ARTIFACT_BOOTS_OF_THE_SWIFT_JOUNREY] = Routine_ArtifactBootsOfSwiftJourney,
     [ARTIFACT_ROBE_OF_THE_MAGISTER] = Routine_ArtifactRobeOfTheMagister,
     [ARTIFACT_DWARVEN_SMITHY_HAMMER] = Routine_ArtifactSmithyHammer,
+    [ARTIFACT_POTION_OF_MANA] = Routine_ArtifactPotionOfMana,
+    [ARTIFACT_POTION_OF_STAMINA] = Routine_ArtifactPotionOfStamina,
+    [ARTIFACT_POTION_OF_EXPERIENCE] = Routine_ArtifactPotionOfExperience,
 }
 WEEKLY_TRIGGER_ARTIFACTS_ROUTINES = {
-    [ARTIFACT_HORN_OF_PLENTY] = Routine_ArtifactHornOfPlenty,
     [ARTIFACT_MAGISTERS_SANDALS] = Routine_ArtifactMagistersSandals,
     [ARTIFACT_VIZIRS_CAP] = Routine_ArtifactVizirsCap,
     [ARTIFACT_VIZIRS_SCIMITAR] = Routine_ArtifactVizirsScimitar,
