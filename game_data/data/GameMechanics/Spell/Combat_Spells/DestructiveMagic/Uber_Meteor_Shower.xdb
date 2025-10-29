@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Spell>
-	<NameFileRef href="/Text/Game/Spells/Combat/Meteor_Shower/Name.txt"/>
-	<LongDescriptionFileRef href="/Text/Game/Spells/Combat/Meteor_Shower/Long_Description.txt"/>
+	<NameFileRef href="/Text/Game/Spells/Combat/Uber_Meteor_Shower/Name.txt"/>
+	<LongDescriptionFileRef href="/Text/Game/Spells/Combat/Uber_Meteor_Shower/Long_Description.txt"/>
 	<Texture href="/Textures/SpellBook______2618/Spells/Spell_MeteorShower.xdb#xpointer(/Texture)"/>
 	<EffectTexture href="/UI/Common/Icons/Spell_Buff_Icons/MeteorShower.(Texture).xdb#xpointer(/Texture)"/>
 	<SpellBookPredictions>
@@ -11,23 +11,23 @@
 	<Level>5</Level>
 	<MagicSchool>MAGIC_SCHOOL_SPECIAL</MagicSchool>
 	<RequiredHeroLevel>0</RequiredHeroLevel>
-	<TrainedCost>30</TrainedCost>
+	<TrainedCost>0</TrainedCost>
 	<damage>
 		<Item>
-			<Base>100</Base>
-			<PerPower>20</PerPower>
+			<Base>5</Base>
+			<PerPower>25</PerPower>
 		</Item>
 		<Item>
-			<Base>110</Base>
-			<PerPower>30</PerPower>
+			<Base>35</Base>
+			<PerPower>25</PerPower>
 		</Item>
 		<Item>
-			<Base>130</Base>
-			<PerPower>40</PerPower>
+			<Base>65</Base>
+			<PerPower>25</PerPower>
 		</Item>
 		<Item>
-			<Base>150</Base>
-			<PerPower>50</PerPower>
+			<Base>95</Base>
+			<PerPower>25</PerPower>
 		</Item>
 	</damage>
 	<duration>
@@ -62,6 +62,7 @@
 	<CanSelectDead>false</CanSelectDead>
 	<Target>TARGET_HOSTILE</Target>
 	<Element>ELEMENT_EARTH</Element>
+	<DamageIsElemental>true</DamageIsElemental>
 	<visuals>
 		<Item href="Uber_MeteorShower.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
 	</visuals>

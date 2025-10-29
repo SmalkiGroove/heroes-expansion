@@ -359,10 +359,13 @@ function Routine_RunePriestsMoveFirst(side, hero)
     SetATB_CreatureTypes(side, {CREATURE_RUNE_MAGE,CREATURE_FLAME_MAGE,CREATURE_FLAME_KEEPER}, ATB_INSTANT)
 end
 
-function Routine_CastEarthquake(side, hero)
+function Routine_CastStarfall(side, hero)
     -- log(DEBUG, "Trigger earthquake !")
-    HeroCast_Global(hero, SPELL_EARTHQUAKE, FREE_MANA)
-    sleep(600)
+    local x = random(GRID_X_MIN, GRID_X_MAX)
+    local y = random(GRID_Y_MIN, GRID_Y_MAX)
+    local n = 1 + trunc(0.1 * GetHeroLevel(side))
+    for i=1,n do HeroCast_Area(hero, SPELL_STARFALL, 0, x, y) sleep(10) end
+    SetATB_ID(hero, ATB_INSTANT)
 end
 
 function Routine_DwavenDefendOrder(side, hero)
@@ -962,7 +965,7 @@ COMBAT_START_HERO_ROUTINES = {
     [H_HANGVUL] = Routine_ThanesAbility,
     [H_BRAND] = Routine_CastFireWalls,
     [H_ERLING] = Routine_RunePriestsMoveFirst,
-    [H_INGA] = Routine_CastEarthquake,
+    [H_INGA] = Routine_CastStarfall,
     -- academy
     [H_DAVIUS] = Routine_RakshasasAbility,
     [H_NUR] = Routine_CastMultipleArcaneCrystals,
@@ -1002,6 +1005,7 @@ COMBAT_TURN_HERO_ROUTINES = {
     -- fortress
     [H_KARLI] = Routine_SpearWielderCoordination,
     [H_HEDWIG] = Routine_DwavenDefendOrder,
+    [H_INGA] = Routine_CastStarfall,
     -- academy
     [H_HAVEZ] = Routine_GremlinRandomShoot,
     [H_NATHIR] = Routine_BallistaMoveNext,
