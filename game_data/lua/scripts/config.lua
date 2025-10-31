@@ -1,5 +1,5 @@
 
-LOG_LEVEL = 1
+LOG_LEVEL = 2
 
 -- 1 enable
 -- nil disable

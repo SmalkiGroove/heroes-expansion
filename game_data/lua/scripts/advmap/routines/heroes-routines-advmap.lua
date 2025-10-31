@@ -380,11 +380,13 @@ function Routine_ProductionIncreaseDwarvenWorkers(player, hero)
             if GetObjectOwner(town) == player then
                 local workers = GetObjectCreatures(town, CREATURE_DWARF_WORKER)
                 total[GOLD] = total[GOLD] + workers
-                if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_6) > 0 then
-                    local bonus = trunc(workers * 0.01)
-                    if bonus > 0 then
-                        local cur = GetObjectDwellingCreatures(town, CREATURE_THANE)
-                        SetObjectDwellingCreatures(town, CREATURE_THANE, cur + bonus)
+                if GetDate(DAY_OF_WEEK) == 1 then
+                    if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_6) > 0 then
+                        local bonus = trunc(workers * 0.01)
+                        if bonus > 0 then
+                            local cur = GetObjectDwellingCreatures(town, CREATURE_THANE)
+                            SetObjectDwellingCreatures(town, CREATURE_THANE, cur + bonus)
+                        end
                     end
                 end
             end
