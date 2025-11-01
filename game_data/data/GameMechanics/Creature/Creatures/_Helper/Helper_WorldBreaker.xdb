@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature>
+	<AttackSkill>1</AttackSkill>
+	<DefenceSkill>1</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>1</MinDamage>
+	<MaxDamage>1</MaxDamage>
+	<Speed>1</Speed>
+	<Initiative>1</Initiative>
+	<Flying>false</Flying>
+	<Health>10</Health>
+	<KnownSpells>
+		<Item><Spell>SPELL_UBER_METEOR_SHOWER</Spell><Mastery>MASTERY_BASIC</Mastery></Item>
+	</KnownSpells>
+	<SpellPoints>99</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>1</Exp>
+	<Power>1</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>1</CreatureTier>
+	<Upgrade>false</Upgrade>
+	<PairCreature>CREATURE_UNKNOWN</PairCreature>
+	<CreatureTown>TOWN_NO_TYPE</CreatureTown>
+	<MagicElement><First>ELEMENT_NONE</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>1</WeeklyGrowth>
+	<Cost>
+		<Gold>1</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>false</SubjectOfRandomGeneration>
+	<MonsterShared/>
+	<CombatSize>1</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Added/_Helper.xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_UNKNOWN</BaseCreature>
+	<Upgrades/>
+	<Abilities/>
+</Creature>

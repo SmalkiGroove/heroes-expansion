@@ -359,18 +359,27 @@ function Routine_RunePriestsMoveFirst(side, hero)
     SetATB_CreatureTypes(side, {CREATURE_RUNE_MAGE,CREATURE_FLAME_MAGE,CREATURE_FLAME_KEEPER}, ATB_INSTANT)
 end
 
-function Routine_CastStarfall(side, hero)
-    if COMBAT_TURN == 0 or CURRENT_UNIT == hero then
-        log(DEBUG, "$ Routine_CastStarfall")
+function Routine_ApocalypseHelper(side, n, x, y)
+    local name = "HELPER_WORLDBREAKER-"..COMBAT_TURN.."-"..x.."-"..y
+    AddCreature(side, CREATURE_HELPER_WORLDBREAKER, n, -1, -1, nil, name)
+    repeat sleep() until exist(name)
+    startThread(playAnimation, GetHero(side), "cast", ONESHOT)
+    UnitCastAreaSpell(hero, SPELL_APOCALYPSE, x, y)
+    repeat sleep() RemoveCombatUnit(name) until not exist(name)
+end
+
+function Routine_Apocalypse(side, hero)
+    if CURRENT_UNIT == hero then
+        log(DEBUG, "$ Routine_Apocalypse")
+        local spellpower = GetHeroLevel(side)
         local x, y = 0, 0
         local n = 1 + trunc(0.1 * GetHeroLevel(side))
         for i = 1,n do
             x = random(GRID_X_MIN, GRID_X_MAX, COMBAT_TURN+i)
             y = random(GRID_Y_MIN, GRID_Y_MAX, COMBAT_TURN-i)
-            UnitCastAreaSpell(hero, SPELL_STARFALL, x, y)
-            sleep(2000)
+            startThread(Routine_ApocalypseHelper, side, spellpower, x, y)
         end
-        SetATB_ID(hero, COMBAT_TURN)
+        SetATB_ID(hero, ATB_INSTANT)
     end
 end
 
@@ -504,7 +513,7 @@ end
 
 function Routine_SummonDarkstorm(side, hero)
     log(DEBUG, "$ Routine_SummonDarkstorm")
-    local type = 900 + GetHeroLevel(side)
+    local type = CREATURE_DARKSTORM + GetHeroLevel(side)
     local name = "DARKSTORM-creature"
     local x = (side == ATTACKER) and (GRID_X_MIN+1) or (GRID_X_MAX)
     local y = GRID_Y_MAX
@@ -982,7 +991,6 @@ COMBAT_START_HERO_ROUTINES = {
     [H_HANGVUL] = Routine_ThanesAbility,
     [H_BRAND] = Routine_CastFireWalls,
     [H_ERLING] = Routine_RunePriestsMoveFirst,
-    [H_INGA] = Routine_CastStarfall,
     -- academy
     [H_DAVIUS] = Routine_RakshasasAbility,
     [H_NUR] = Routine_CastMultipleArcaneCrystals,
@@ -1023,7 +1031,7 @@ COMBAT_TURN_HERO_ROUTINES = {
     -- fortress
     [H_KARLI] = Routine_SpearWielderCoordination,
     [H_HEDWIG] = Routine_DwavenDefendOrder,
-    [H_INGA] = Routine_CastStarfall,
+    [H_INGA] = Routine_Apocalypse,
     -- academy
     [H_HAVEZ] = Routine_GremlinRandomShoot,
     [H_NATHIR] = Routine_BallistaMoveNext,
