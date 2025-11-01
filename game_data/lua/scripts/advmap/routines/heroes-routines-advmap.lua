@@ -41,7 +41,7 @@ function Routine_PeasantTaxLevel(player, hero, level)
     amount = amount + GetHeroCreatures(hero, CREATURE_PEASANT)
     amount = amount + GetHeroCreatures(hero, CREATURE_MILITIAMAN)
     amount = amount + GetHeroCreatures(hero, CREATURE_LANDLORD)
-    AddPlayerResource(player, hero, GOLD, amount)
+    GiveResources(player, GOLD, amount, 1)
 end
 
 Var_Dougal_TrainCount = 0
@@ -369,6 +369,7 @@ function Routine_ProductionIncreaseDwarvenWorkers(player, hero)
         for _,building in GetObjectNamesByType(obj) do
             if GetObjectOwner(building) == player then
                 local workers = GetObjectCreatures(building, CREATURE_DWARF_WORKER)
+                workers = min(workers, 400)
                 local bonus = trunc(data.amount * workers * 0.01)
                 local res = data.type or random(0,5,workers)
                 total[res] = total[res] + bonus
@@ -379,7 +380,7 @@ function Routine_ProductionIncreaseDwarvenWorkers(player, hero)
         if data.faction == FORTRESS then
             if GetObjectOwner(town) == player then
                 local workers = GetObjectCreatures(town, CREATURE_DWARF_WORKER)
-                total[GOLD] = total[GOLD] + workers
+                total[GOLD] = total[GOLD] + 2 * workers
                 if GetDate(DAY_OF_WEEK) == 1 then
                     if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_6) > 0 then
                         local bonus = trunc(workers * 0.01)
@@ -393,7 +394,7 @@ function Routine_ProductionIncreaseDwarvenWorkers(player, hero)
         end
     end
     for res,amount in total do
-        AddPlayerResource(player, hero, res, amount)
+        GiveResources(player, res, amount)
     end
 end
 
@@ -481,6 +482,7 @@ end
 
 function Routine_AssembleGargoyles(player, hero)
     log(DEBUG, "$ Routine_AssembleGargoyles")
+    local total = 0
     local max = 2 * GetHeroLevel(hero)
     local assemble_table = {
         [CREATURE_STONE_GARGOYLE] = CREATURE_IRON_GOLEM,
@@ -499,7 +501,7 @@ function Routine_AssembleGargoyles(player, hero)
         end
     end
     if total > 0 then
-        AddPlayerResource(player, hero, ORE, total)
+        GiveResources(player, ORE, total)
         ShowFlyingSign({"/Text/Game/Scripts/HeroSpe/AssembleGargoyles.txt"; num=total}, hero, player, FLYING_SIGN_TIME)
     end
 end
@@ -525,7 +527,7 @@ function Routine_FixDestroyedGolems(player, hero, combatIndex)
         end
     end
     if total > 0 then
-        AddPlayerResource(player, hero, ORE, total)
+        GiveResources(player, ORE, total, 1)
         ShowFlyingSign({"/Text/Game/Scripts/HeroSpe/AssembleGargoyles.txt"; num=total}, hero, player, FLYING_SIGN_TIME)
     end
 end
@@ -534,7 +536,7 @@ function Routine_GenerateGoldsPerDjinn(player, hero)
     log(DEBUG, "$ Routine_GenerateGoldsPerDjinn")
     local djinns = CountHeroCreatureType(player, hero, ACADEMY, 5)
     local amount = GetHeroLevel(hero) * djinns
-    AddPlayerResource(player, hero, GOLD, amount)
+    GiveResources(player, GOLD, amount)
 end
 
 function Routine_RespawnDjinns(player, hero, combatIndex)
@@ -585,7 +587,7 @@ end
 
 function Routine_GainSulfurPerBattle(player, hero, combatIndex)
     log(DEBUG, "$ Routine_GainSulfurPerBattle")
-    AddPlayerResource(player, hero, SULFUR, 1)
+    GiveResources(player, SULFUR, 1, 1)
 end
 
 function Routine_GetCraftingResources(player, hero, level)
@@ -598,7 +600,7 @@ function Routine_GetCraftingResources(player, hero, level)
             local r = random(0, 5, level)
             generated[r] = generated[r] + 1
         end
-        for r,v in generated do AddPlayerResource(player, hero, r, v) end
+        for r,v in generated do GiveResources(player, r, v, 1) end
     end
 end
 
@@ -703,7 +705,7 @@ function Routine_GenerateGoldPerScout(player, hero)
         amount = amount + GetHeroCreatures(hero, CREATURE_SCOUT)
         amount = amount + GetHeroCreatures(hero, CREATURE_ASSASSIN)
         amount = amount + GetHeroCreatures(hero, CREATURE_STALKER)
-        AddPlayerResource(player, hero, GOLD, amount * mult)
+        GiveResources(player, GOLD, amount * mult)
     end
 end
 
@@ -978,7 +980,7 @@ function Routine_GainBonusExpAndRes(player, hero, combatIndex)
         total = total + count * value
     end
     AddHeroStatAmount(player, hero, STAT_EXPERIENCE, trunc(1.5*total))
-    AddPlayerResource(player, hero, GOLD, total)
+    GiveResources(player, GOLD, total, 1)
 end
 
 function Routine_TownBuildingUp(player, hero)
@@ -1037,7 +1039,7 @@ end
 function Routine_GenerateSulfur(player, hero)
     log(DEBUG, "$ Routine_GenerateSulfur")
     local amount = trunc(0.2 * GetHeroLevel(hero))
-    AddPlayerResource(player, hero, SULFUR, amount)
+    GiveResources(player, SULFUR, amount)
 end
 
 function Routine_MultiplyTroops(player, hero)

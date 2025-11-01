@@ -55,6 +55,8 @@ SPIRITISM_SCHOOL_AFFINITY = {
 
 ONGOING_BATTLES = {}
 
+DAILY_RESOURCES = {}
+
 
 -- log(TRACE, "Loaded advmap-data.lua")
 ROUTINES_LOADED[8] = 1

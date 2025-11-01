@@ -8,6 +8,7 @@
 ### Broken graphics or animations
 
 - [EXE] Consume Corpse camera glitch
+- [XDB] Behemoth no roar anim
 
 ### Text issues
 

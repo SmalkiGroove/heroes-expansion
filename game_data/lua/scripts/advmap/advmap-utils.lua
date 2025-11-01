@@ -121,23 +121,24 @@ end
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -- COMMON
 
---ChangeResource(res, amount, hero)
-function AddPlayerResource(player, hero, resource, amount)
-	-- log(DEBUG, "$ AddPlayerResource")
-	if amount >= 1 then
-		local curamount = GetPlayerResource(player, resource)
+function PlayerDailyResources(player)
+	for res,amount in DAILY_RESOURCES[player] do
+		local curamount = GetPlayerResource(player, res)
 		local newamount = curamount + amount
-		SetPlayerResource(player, resource, newamount, hero)
-		-- repeat SetPlayerResource(player, resource, newamount, hero) until GetPlayerResource(player, resource) == newamount
+		SetPlayerResource(player, res, newamount)
 	end
 end
 
-function RemovePlayerResource(player, resource, amount)
-	-- log(DEBUG, "$ RemovePlayerResource")
+function GiveResources(player, resource, amount, now)
+	-- log(DEBUG, "$ GiveResources")
 	if amount >= 1 then
-		local curamount = GetPlayerResource(player, resource)
-		local newamount = curamount - amount
-		SetPlayerResource(player, resource, newamount)
+		if now then
+			local curamount = GetPlayerResource(player, res)
+			local newamount = curamount + amount
+			SetPlayerResource(player, res, newamount)
+		else
+			DAILY_RESOURCES[player][resource] = DAILY_RESOURCES[player][resource] + amount
+		end
 	end
 end
 

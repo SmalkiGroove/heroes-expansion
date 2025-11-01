@@ -81,6 +81,7 @@ function WatchPlayer(player, wait)
 			mana = GetHeroStat(hero, STAT_MANA_POINTS),
 		}
     end
+	PlayerDailyResources(player)
     while IsPlayerCurrent(player) do
 		for _,hero in GetPlayerHeroes(player) do
             ScanHeroArtifacts(hero)
@@ -149,6 +150,7 @@ function NewDayTrigger()
 	startThread(UpdateTavernFactions)
 	for player = 1,8 do
 		if (GetPlayerState(player) == 1) then
+			DAILY_RESOURCES[player] = {[0]=0,[1]=0,[2]=0,[3]=0,[4]=0,[5]=0,[6]=0}
 			if newweek then startThread(PlayerWeeklyHandler, player) sleep(3) end
 			startThread(PlayerDailyHandler, player)
 		end

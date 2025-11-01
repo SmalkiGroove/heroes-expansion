@@ -465,12 +465,12 @@ function RoutineEstatesDaily(player, hero, mastery)
         end
     end
     if HasArtefact(hero, ARTIFACT_CROWN_OF_LEADER, 1) then total = 2 * total end
-    AddPlayerResource(player, hero, GOLD, total)
+    GiveResources(player, GOLD, total)
 end
 
 function Routine_GeologyDaily(player, hero, mastery)
     log(DEBUG, "$ Routine_GeologyDaily")
-    AddPlayerResource(player, hero, ORE, 1)
+    GiveResources(player, ORE, 1)
 end
 
 function Routine_IndustryDaily(player, hero, mastery)
@@ -496,7 +496,7 @@ function Routine_IndustryDaily(player, hero, mastery)
         end
     end
     for res,amount in total do
-        AddPlayerResource(player, hero, res, amount) sleep()
+        GiveResources(player, res, amount)
     end
 end
 
@@ -509,7 +509,7 @@ end
 function Routine_HeraldOfDeathGolds(player, hero, mastery)
     log(DEBUG, "$ Routine_HeraldOfDeathGolds")
     local amount = GetHeroCreatures(hero, CREATURE_SKELETON) + GetHeroCreatures(hero, CREATURE_SKELETON_ARCHER) + GetHeroCreatures(hero, CREATURE_SKELETON_WARRIOR)
-    AddPlayerResource(player, hero, GOLD, amount)
+    GiveResources(player, GOLD, amount)
 end
 
 function Routine_SpiritismManaRegen(player, hero, mastery)
@@ -589,8 +589,8 @@ function Routine_GovernanceWeeklyResources(player, hero, mastery)
     local res = { [HAVEN]=CRYSTAL, [PRESERVE]=GEM, [FORTRESS]=CRYSTAL, [ACADEMY]=GEM, [DUNGEON]=SULFUR, [NECROPOLIS]=MERCURY, [INFERNO]=SULFUR, [STRONGHOLD]=MERCURY }
     local faction = HEROES[hero].faction
     local bonus = HasArtefact(hero, ARTIFACT_CAPE_OF_KINGS) and 1 or 0
-    sleep(2) AddPlayerResource(player, hero, GOLD, golds[mastery]+1000*bonus)
-    sleep(2) AddPlayerResource(player, hero, res[faction], mastery+bonus)
+    GiveResources(player, GOLD, golds[mastery]+1000*bonus)
+    GiveResources(player, res[faction], mastery+bonus)
 end
 
 function Routine_GearUpWeeklyGolds(player, hero, mastery)
@@ -601,7 +601,7 @@ function Routine_GearUpWeeklyGolds(player, hero, mastery)
             if HasArtefact(hero, a, 1) then count = count + 1 end
         end
     end
-    AddPlayerResource(player, hero, GOLD, 400 * count)
+    GiveResources(player, GOLD, 400 * count)
 end
 
 function Routine_HeroesLegacyWeeklyGolds(player, hero, mastery)
@@ -612,7 +612,7 @@ function Routine_HeroesLegacyWeeklyGolds(player, hero, mastery)
             if HasArtefact(hero, a, 1) then count = count + 1 end
         end
     end
-    AddPlayerResource(player, hero, GOLD, 600 * count)
+    GiveResources(player, GOLD, 600 * count)
 end
 
 function Routine_MythologyWeeklyGolds(player, hero, mastery)
@@ -623,7 +623,7 @@ function Routine_MythologyWeeklyGolds(player, hero, mastery)
             if HasArtefact(hero, a, 1) then count = count + 1 end
         end
     end
-    AddPlayerResource(player, hero, GOLD, 800 * count)
+    GiveResources(player, GOLD, 800 * count)
 end
 
 function Routine_ReinforcementWeeklyBonus(player, hero, mastery)

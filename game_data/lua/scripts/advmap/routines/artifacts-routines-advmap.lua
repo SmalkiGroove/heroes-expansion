@@ -11,7 +11,7 @@ end
 function Routine_ArtifactSacredSeed(player, hero)
     log(DEBUG, "$ Routine_ArtifactSacredSeed")
     local amount = random(0,3,TURN)
-    ChangeResource(WOOD, amount, hero)
+    GiveResources(player, WOOD, amount)
     if mod(RANDOM_SEED, 5) == 0 then
         GiveExp(hero, 1000)
     end
@@ -20,9 +20,9 @@ end
 function Routine_ArtifactFortunePickaxe(player, hero)
     log(DEBUG, "$ Routine_ArtifactFortunePickaxe")
     local amount = random(0,3,TURN)
-    ChangeResource(ORE, amount, hero)
+    GiveResources(player, ORE, amount)
     if mod(RANDOM_SEED, 4) == 0 then
-        ChangeResource(mod(TURN, 2) == 0 and GEM or CRYSTAL, 1, hero)
+        GiveResources(player, mod(TURN, 2) == 0 and GEM or CRYSTAL, 1)
     end
 end
 
@@ -31,7 +31,7 @@ function Routine_ArtifactHornOfPlenty(player, hero)
     if random(0,10,TURN) == 0 then
         for res = 0,5 do
             local amount = random(0,10,res)
-            ChangeResource(res, amount, hero)
+            GiveResources(player, res, amount)
         end
     end
 end
@@ -170,7 +170,7 @@ function Routine_ArtifactVizirsCap(player, hero)
             if GetObjectOwner(building) == player then total = total + 500 end
         end
     end
-    AddPlayerResource(player, hero, GOLD, total)
+    GiveResources(player, GOLD, total)
 end
 
 function Routine_ArtifactVizirsScimitar(player, hero)
@@ -263,15 +263,15 @@ end
 function Routine_ArtifactVikingHatchet(player, hero, combatIndex)
     log(DEBUG, "$ Routine_ArtifactVikingHatchet")
     local value = GetArmyStrength(combatIndex, 0)
-    AddPlayerResource(player, hero, GOLD, round(0.04 * value))
+    GiveResources(player, GOLD, round(0.04 * value), 1)
 end
 
 function Routine_ArtifactVikingShield(player, hero, combatIndex)
     log(DEBUG, "$ Routine_ArtifactVikingShield")
     local value = GetArmyStrength(combatIndex, 0)
     local split = random(0,4,value)
-    AddPlayerResource(player, hero, WOOD, ceil(0.0004 * split * value))
-    AddPlayerResource(player, hero, ORE, ceil(0.0004 * (4-split) * value))
+    GiveResources(player, WOOD, ceil(0.0004 * split * value), 1)
+    GiveResources(player, ORE, ceil(0.0004 * (4-split) * value), 1)
 end
 
 Var_StaffLyreVictories = {}
