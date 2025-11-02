@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowMSButtonShared ObjectRecordID="1000064">
 	<Crap>false</Crap>
-	<Children>
-	    <Item href="218000_icon.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-	</Children>
+	<Children/>
 	<Background/>
 	<Foreground/>
 	<Flags>
@@ -53,7 +51,7 @@
 	<VisualStates>
 		<Item>
 			<Normal>
-				<Background/>
+				<Background href="219000_icon.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 				<Foreground/>
 				<TextString/>
 				<OnEnterSubState>
@@ -64,20 +62,17 @@
 			</Normal>
 			<MouseOver>
 				<Background/>
-				<Foreground href="/UI/Doc/Skills/Common/Highlight.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Foreground/>
 				<TextString/>
 				<OnEnterSubState>
-					<Commands>
-						<Item href="/UI/Doc/Skills/_Skills/Innates/218000/highlight/218000_on.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-						<Item href="/UI/Doc/Skills/_Description/218000/218000.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					</Commands>
-					<Reversable>true</Reversable>
+					<Commands/>
+					<Reversable>false</Reversable>
 				</OnEnterSubState>
 				<TextFormat/>
 			</MouseOver>
 			<Pushed>
 				<Background/>
-				<Foreground href="/UI/Doc/Skills/Common/Highlight.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Foreground/>
 				<TextString/>
 				<OnEnterSubState>
 					<Commands/>
@@ -97,7 +92,7 @@
 			</Disabled>
 			<RightButtonDown>
 				<Background/>
-				<Foreground href="/UI/Doc/Skills/Common/Highlight.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Foreground/>
 				<TextString/>
 				<OnEnterSubState>
 					<Commands/>

@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- HERO_SKILL_STUNNING_BLOW -->
 <WindowMSButton ObjectRecordID="1000123">
 	<ClassTypeID>285694855</ClassTypeID>
-	<Shared href="180000.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
-	<Name>Button180000</Name>
-	<TooltipFileRef/>
+	<Shared href="219000_icon.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
+	<Name>Icon219000</Name>
+	<TooltipFileRef href=""/>
 	<Visible>true</Visible>
 	<Priority>0</Priority>
 	<GameMessageReactions/>
 	<Placement>
 		<Position>
 			<First>
-				<x>55</x>
-				<y>55</y>
+				<x>0</x>
+				<y>0</y>
 			</First>
 			<Second>true</Second>
 		</Position>
@@ -21,13 +20,13 @@
 			<Second>false</Second>
 		</VerAllign>
 		<HorAllign>
-			<First>EPA_LOW_END</First>
-			<Second>false</Second>
+			<First>ERA_CENTER</First>
+			<Second>true</Second>
 		</HorAllign>
 		<Size>
 			<First>
-				<x>34</x>
-				<y>34</y>
+				<x>64</x>
+				<y>64</y>
 			</First>
 			<Second>true</Second>
 		</Size>

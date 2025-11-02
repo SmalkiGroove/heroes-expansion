@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowSimpleShared ObjectRecordID="1000326">
 	<Crap>false</Crap>
-	<Children>
-		<Item href="/UI/Doc/Heroes/Common/HeroSpell.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="/UI/Doc/Heroes/Common/HeroSpellBack.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="Una_sp1.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-	</Children>
-	<Background/>
+	<Children/>
+	<Background href="219000.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 	<Foreground/>
 	<Flags>
-		<Transparent>false</Transparent>
+		<Transparent>true</Transparent>
 	</Flags>
 	<Placement>
 		<Position>
@@ -29,10 +25,10 @@
 		</HorAllign>
 		<Size>
 			<First>
-				<x>512</x>
-				<y>186</y>
+				<x>0</x>
+				<y>0</y>
 			</First>
-			<Second>true</Second>
+			<Second>false</Second>
 		</Size>
 		<LowerMargin>
 			<First>

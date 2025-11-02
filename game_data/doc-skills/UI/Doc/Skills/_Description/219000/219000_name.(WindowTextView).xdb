@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowTextView ObjectRecordID="1000429">
 	<ClassTypeID>285694860</ClassTypeID>
-	<Shared href="/UI/Doc/Skills/_Description/SkillDescription.(WindowTextViewShared).xdb#xpointer(/WindowTextViewShared)"/>
-	<Name>Description187002</Name>
+	<Shared href="/UI/Doc/Skills/_Description/SkillName.(WindowTextViewShared).xdb#xpointer(/WindowTextViewShared)"/>
+	<Name>Name219000</Name>
 	<TooltipFileRef href=""/>
 	<Visible>true</Visible>
 	<Priority>0</Priority>
@@ -11,7 +11,7 @@
 		<Position>
 			<First>
 				<x>0</x>
-				<y>125</y>
+				<y>90</y>
 			</First>
 			<Second>true</Second>
 		</Position>
@@ -26,7 +26,7 @@
 		<Size>
 			<First>
 				<x>200</x>
-				<y>335</y>
+				<y>30</y>
 			</First>
 			<Second>true</Second>
 		</Size>
@@ -52,8 +52,8 @@
 	<Flags>
 		<SuperActive>false</SuperActive>
 	</Flags>
-	<TextFileRef href="/Text/Game/Skills/BarbarianSpec/Voice/2/Description.txt"/>
+	<TextFileRef href="/Text/Game/Skills/Common/Combat/FierceRetaliations/Name.txt"/>
 	<ResizeOnTextSet>false</ResizeOnTextSet>
 	<ResizeWidthOnTextSet>false</ResizeWidthOnTextSet>
-	<TextFormat href="/UI/Doc/Skills/_Description/Description.(TextFormat).xdb#xpointer(/TextFormat)"/>
+	<TextFormat href="/UI/Doc/Skills/_Description/Name.(TextFormat).xdb#xpointer(/TextFormat)"/>
 </WindowTextView>

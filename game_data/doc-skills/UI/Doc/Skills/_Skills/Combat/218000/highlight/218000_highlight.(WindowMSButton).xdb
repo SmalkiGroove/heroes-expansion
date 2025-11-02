@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- HERO_SKILL_STUNNING_BLOW -->
 <WindowMSButton ObjectRecordID="1000123">
 	<ClassTypeID>285694855</ClassTypeID>
-	<Shared href="180000.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
-	<Name>Button180000</Name>
+	<Shared href="/UI/Doc/Skills/Common/Highlight.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
+	<Name>DocSkillsSelection218000</Name>
 	<TooltipFileRef/>
 	<Visible>true</Visible>
 	<Priority>0</Priority>
-	<GameMessageReactions/>
+	<GameMessageReactions>
+		<Item>
+			<GameMessage>DocSkillsHideAll</GameMessage>
+			<LogicalReaction/>
+			<VisualReaction>
+				<Commands>
+					<Item href="218000_off.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+				</Commands>
+				<Reversable>false</Reversable>
+			</VisualReaction>
+			<WaitVisual>false</WaitVisual>
+			<Forward>true</Forward>
+		</Item>
+	</GameMessageReactions>
 	<Placement>
 		<Position>
 			<First>
 				<x>55</x>
-				<y>55</y>
+				<y>35</y>
 			</First>
 			<Second>true</Second>
 		</Position>

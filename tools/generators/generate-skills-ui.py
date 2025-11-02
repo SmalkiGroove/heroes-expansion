@@ -211,7 +211,7 @@ coordinates_skills = {
   '088000': [natural_x+150, natural_y+40],
   '089000': [211, 68],
   '090000': [241, 68],
-  '091000': [combat_x+150, combat_y+45],
+  '091000': [combat_x+150, combat_y+55],
   '092000': [innates_x+0, innates_y+26],
   '094000': [324, 68],
   '095000': [innates_x+180, innates_y+68],
@@ -306,7 +306,7 @@ coordinates_skills = {
   '177000': [logistics_x+150, logistics_y+45],
   '178000': [211, 68],
   '179000': [voice_x+125, voice_y+45],
-  '180000': [combat_x+55, combat_y+45],
+  '180000': [combat_x+55, combat_y+55],
   '181000': [320, 68],
   '182000': [289, 68],
   '183000': [racial_x+120, racial_y+68],
@@ -354,7 +354,8 @@ coordinates_skills = {
   '215000': [innates_x+120, innates_y+26],
   '216000': [light_x+30, light_y+45],
   '217000': [racial_x+150, racial_y+68],
-  '218000': [innates_x+270, innates_y+26],
+  '218000': [combat_x+55, combat_y+35],
+  '219000': [combat_x+150, combat_y+35],
   '220000': [innates_x+210, innates_y+26],
 }
 

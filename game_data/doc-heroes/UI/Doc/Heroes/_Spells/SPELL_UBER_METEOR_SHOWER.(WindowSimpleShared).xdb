@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<WindowSimpleShared ObjectRecordID="1000326">
+<WindowSimpleShared ObjectRecordID="1000806">
 	<Crap>false</Crap>
-	<Children>
-		<Item href="/UI/Doc/Heroes/Common/HeroSpell.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="/UI/Doc/Heroes/Common/HeroSpellBack.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="Una_sp1.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-	</Children>
-	<Background/>
+	<Children/>
+	<Background href="SPELL_UBER_METEOR_SHOWER.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 	<Foreground/>
 	<Flags>
 		<Transparent>false</Transparent>
@@ -29,10 +25,10 @@
 		</HorAllign>
 		<Size>
 			<First>
-				<x>512</x>
-				<y>186</y>
+				<x>64</x>
+				<y>64</y>
 			</First>
-			<Second>true</Second>
+			<Second>false</Second>
 		</Size>
 		<LowerMargin>
 			<First>
