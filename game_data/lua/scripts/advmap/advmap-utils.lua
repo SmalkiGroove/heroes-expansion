@@ -122,10 +122,10 @@ end
 -- COMMON
 
 function PlayerDailyResources(player)
-	for res,amount in DAILY_RESOURCES[player] do
-		local curamount = GetPlayerResource(player, res)
+	for resource,amount in DAILY_RESOURCES[player] do
+		local curamount = GetPlayerResource(player, resource)
 		local newamount = curamount + amount
-		SetPlayerResource(player, res, newamount)
+		SetPlayerResource(player, resource, newamount)
 	end
 end
 
@@ -133,12 +133,21 @@ function GiveResources(player, resource, amount, now)
 	-- log(DEBUG, "$ GiveResources")
 	if amount >= 1 then
 		if now then
-			local curamount = GetPlayerResource(player, res)
+			local curamount = GetPlayerResource(player, resource)
 			local newamount = curamount + amount
-			SetPlayerResource(player, res, newamount)
+			SetPlayerResource(player, resource, newamount)
 		else
 			DAILY_RESOURCES[player][resource] = DAILY_RESOURCES[player][resource] + amount
 		end
+	end
+end
+
+function TakeAwayResources(player, resource, amount)
+	-- log(DEBUG, "$ TakeAwayResources")
+	if amount >= 1 then
+		local curamount = GetPlayerResource(player, resource)
+		local newamount = curamount - amount
+		SetPlayerResource(player, resource, newamount)
 	end
 end
 

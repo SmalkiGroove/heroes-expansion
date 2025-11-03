@@ -87,7 +87,7 @@ function Trigger_WitchHut_confirm(player, hero, obj, givestat)
             {"/Text/Game/Scripts/MapObjects/WitchHutAccepted.txt"; stat="/GameMechanics/RefTables/HeroAttribute/"..ATTRIBUTE_TEXT_ORIGIN[givestat]..".txt"},
             "NoneRoutine"
         )
-        RemovePlayerResource(player, MERCURY, 3)
+        TakeAwayResources(player, MERCURY, 3)
         ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
         ChangeHeroStat(hero, givestat, 2)
         GiveExp(hero, 5000)

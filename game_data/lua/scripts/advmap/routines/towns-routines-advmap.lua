@@ -23,13 +23,14 @@ end
 
 function Routine_DragonTombstone(player, town)
     log(DEBUG, "$ Routine_DragonTombstone")
-    local prob = 200 + 10 * WEEKS
+    local prob = 100 + 10 * WEEKS
     prob = prob + GetObjectDwellingCreatures(town, CREATURE_SKELETON)
-    local rand = random(0, 999, TURN)
+    prob = min(prob, 500)
+    local rand = random(0, 1000, TURN)
     if rand < prob then
         local prob2 = 100 + WEEKS
         prob2 = prob2 + GetObjectDwellingCreatures(town, CREATURE_MANES)
-        rand = random(0, 999, WEEKS)
+        rand = random(0, 1000, WEEKS)
         if rand < prob2 then
             AddObjectCreatures(town, CREATURE_HORROR_DRAGON, 1)
         else
@@ -59,7 +60,9 @@ function DoTownsRoutine_Daily(player)
             if player == GetObjectOwner(town) then
                 for b = 14,25 do
                     if DAILY_TRIGGER_TOWNS_ROUTINES[f+b] then
-                        startThread(DAILY_TRIGGER_TOWNS_ROUTINES[f+b], player, town)
+                        if GetTownBuildingLevel(town, b) > 0 then
+                            startThread(DAILY_TRIGGER_TOWNS_ROUTINES[f+b], player, town)
+                        end
                     end
                 end
             end
@@ -75,7 +78,9 @@ function DoTownsRoutine_Weekly(player)
             if player == GetObjectOwner(town) then
                 for b = 14,25 do
                     if WEEKLY_TRIGGER_TOWNS_ROUTINES[f+b] then
-                        startThread(WEEKLY_TRIGGER_TOWNS_ROUTINES[f+b], player, town)
+                        if GetTownBuildingLevel(town, b) > 0 then
+                            startThread(WEEKLY_TRIGGER_TOWNS_ROUTINES[f+b], player, town)
+                        end
                     end
                 end
             end

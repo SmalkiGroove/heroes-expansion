@@ -364,7 +364,7 @@ function Routine_EarthShatterHelper(side, n, x, y)
     AddCreature(side, CREATURE_HELPER_WORLDBREAKER, n, 0, 0, nil, name)
     repeat sleep() until exist(name)
     playAnimation(GetHero(side), "cast", ONESHOT) sleep(500)
-    UnitCastAreaSpell(name, SPELL_APOCALYPSE, x, y) sleep(500)
+    UnitCastAreaSpell(name, SPELL_EARTH_SHATTER, x, y) sleep(5)
     repeat RemoveCombatUnit(name) sleep(5) until not exist(name)
 end
 

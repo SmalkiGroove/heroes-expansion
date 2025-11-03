@@ -1032,7 +1032,7 @@ end
 
 function Routine_TownBuildingUpConfirm(player, hero, town, building, cost)
     UpgradeTownBuilding(town, building)
-    RemovePlayerResource(player, GOLD, 0+cost)
+    TakeAwayResources(player, GOLD, 0+cost)
     ChangeHeroStat(hero, STAT_MOVE_POINTS, -500)
 end
 
