@@ -286,6 +286,5 @@ else
 		MessageBoxForPlayers(GetPlayerFilter(FIRST_PLAYER), "/Text/Game/Scripts/InitFail.txt")
 	end
 end
-
-sleep(30) UnblockGame()
 Register('h5x_combat_init', 0)
+sleep(30) UnblockGame()
