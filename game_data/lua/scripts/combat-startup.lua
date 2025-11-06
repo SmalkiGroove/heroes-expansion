@@ -154,6 +154,34 @@ function createTutorialAliases()
     HideTutorialMessage = clearMessage
 end
 
+ENABLE_SCRIPT = 0
+
+INIT_CHECK = 0
+INIT_COUNTER = 0
+INIT_VALUE = 0
+
+function CheckEnableScript1()
+	INIT_CHECK = 1
+	if IsComputer(ATTACKER) or IsComputer(DEFENDER) then
+		ENABLE_SCRIPT = 1
+	else
+		INIT_VALUE = GetUnitManaPoints(ATTACKER_HERO_ID)
+		while INIT_CHECK == 1 do INIT_COUNTER = INIT_COUNTER + 1; sleep(1) end
+		SetUnitManaPoints(ATTACKER_HERO_ID, INIT_COUNTER)
+	end
+end
+function CheckEnableScript2()
+	if ENABLE_SCRIPT == 0 then
+		INIT_CHECK = 2
+		sleep(10)
+		if GetUnitManaPoints(ATTACKER_HERO_ID) == INIT_COUNTER then
+			SetUnitManaPoints(ATTACKER_HERO_ID, INIT_VALUE)
+			ENABLE_SCRIPT = 1
+		end
+	end
+	log(DEBUG, "ENABLE_SCRIPT="..ENABLE_SCRIPT)
+end
+
 dofile("/scripts/common.lua") sleep()
 dofile("/scripts/combat-manager.lua") sleep()
 

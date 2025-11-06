@@ -1,8 +1,6 @@
 
 dofile("/scripts/game-vars.lua")
 
-ENABLE_SCRIPT = 0
-
 COMBAT_TURN = 0
 CURRENT_UNIT = "none"
 CURRENT_UNIT_SIDE = nil
@@ -28,18 +26,6 @@ HERO_DATA = {
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
-
-function EnableScript()
-    local temp = GetGameVar('h5x_combat_init')
-    ENABLE_SCRIPT = 1 - temp
-    consoleCmd("@SetGameVar('h5x_combat_init', ENABLE_SCRIPT)")
-    print("ENABLE_SCRIPT="..ENABLE_SCRIPT)
-end
-
-function CheckEnableScript()
-    -- consoleCmd("@if GetGameVar('h5x_combat_init') == 'true' then SetGameVar('h5x_combat_init', 'false') else EnableScript() end")
-    -- repeat sleep() until GetGameVar('h5x_combat_init') == 'true'
-end
 
 function FetchData(name, id)
     log(DEBUG, "Fetch data for hero "..name)
@@ -80,8 +66,11 @@ end
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
+startThread(CheckEnableScript1)
+
 function ManageCombatPrepare()
     -- log(TRACE, "$ Manage combat prepare")
+    CheckEnableScript2()
     if ENABLE_SCRIPT == 0 then return end
 
     combatSetPause(1)
@@ -156,7 +145,6 @@ function ManageUnitDeath(unit)
 	end
 end
 
-EnableScript()
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
