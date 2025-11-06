@@ -37,7 +37,8 @@ end
 
 function CheckEnableScript()
     startThread(EnableScript)
-    repeat sleep() until exists("h5x_combat_init")
+    repeat sleep() until exist("h5x_combat_init")
+    RemoveCombatUnit("h5x_combat_init")
     -- consoleCmd("@if GetGameVar('h5x_combat_init') == 'true' then SetGameVar('h5x_combat_init', 'false') else EnableScript() end")
     -- repeat sleep() until GetGameVar('h5x_combat_init') == 'true'
 end
