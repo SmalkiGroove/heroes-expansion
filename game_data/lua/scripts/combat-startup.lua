@@ -2,8 +2,6 @@ function StopTrigger() end --needed for lualib
 dofile = doFile
 dofile('/scripts/config.lua')
 
-consoleCmd("@SetGameVar('h5x_combat_init', 0)")
-
 function IsHuman(side) return GetHost(side) == HUMAN end
 function IsComputer(side) return GetHost(side) == COMPUTER end
 

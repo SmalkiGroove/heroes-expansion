@@ -159,7 +159,7 @@ function NewDayTrigger()
 end
 
 function CombatResultsHandler(combatIndex)
-	Register('h5x_combat_init', 'false')
+	Register('h5x_combat_init', 0)
 	local hero = GetSavedCombatArmyHero(combatIndex, 1)
 	if hero ~= nil then
 		local player = GetSavedCombatArmyPlayer(combatIndex, 1)
@@ -288,3 +288,4 @@ else
 end
 
 sleep(30) UnblockGame()
+Register('h5x_combat_init', 0)
