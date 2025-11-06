@@ -30,12 +30,15 @@ HERO_DATA = {
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 function EnableScript()
-    consoleCmd("@SetGameVar('h5x_combat_init', 'true')")
+    -- consoleCmd("@SetGameVar('h5x_combat_init', 'true')")
+    AddCreature(0, CREATURE_HELPER_DEFAULT, 1, -1, -1, nil, "h5x_combat_init")
     ENABLE_SCRIPT = 1
 end
 
 function CheckEnableScript()
-    consoleCmd("@if GetGameVar('h5x_combat_init') == 'true' then SetGameVar('h5x_combat_init', 'false') else EnableScript() end")
+    startThread(EnableScript)
+    repeat sleep() until exists("h5x_combat_init")
+    -- consoleCmd("@if GetGameVar('h5x_combat_init') == 'true' then SetGameVar('h5x_combat_init', 'false') else EnableScript() end")
     -- repeat sleep() until GetGameVar('h5x_combat_init') == 'true'
 end
 
@@ -80,6 +83,7 @@ end
 
 function ManageCombatPrepare()
     -- log(TRACE, "$ Manage combat prepare")
+    CheckEnableScript()
     if ENABLE_SCRIPT == 0 then return end
 
     combatSetPause(1)
@@ -154,7 +158,7 @@ function ManageUnitDeath(unit)
 	end
 end
 
-CheckEnableScript()
+-- CheckEnableScript()
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
