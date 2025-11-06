@@ -1,8 +1,6 @@
 
 function log(type, str)
-    if type >= LOG_LEVEL then
-        print(str)
-    end
+    if LOG_LEVEL >= type then print(str) end
 end
 
 function trunc(num)
@@ -141,9 +139,9 @@ WAR_MACHINE_FIRST_AID_TENT = 3
 WAR_MACHINE_AMMO_CART = 4
 
 
-TRACE = 0
-DEBUG = 1
-INFO = 2
-WARN = 3
-ERROR = 4
+ERROR = 1
+WARN = 2
+INFO = 3
+DEBUG = 4
+TRACE = 5
 

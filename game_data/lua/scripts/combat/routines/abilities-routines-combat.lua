@@ -68,18 +68,20 @@ function Routine_AbilityMineField(side, unit)
     HeroCast_Area(unit, SPELL_LAND_MINE, FREE_MANA, x + offset, y)
 end
 
-function Routine_AbilityRefreshMana(side, unit, amount)
-    log(DEBUG, "$ Routine_AbilityRefreshMana")
-    local cur = GetUnitManaPoints(unit)
-    local max = GetUnitMaxManaPoints(unit)
-    if cur < max then
-        SetMana(unit, min(cur+amount,max))
-    end
+function Routine_AbilityRefreshMana4(side, unit)
+    RefreshMana(side, unit, 4)
 end
 
-function Routine_AbilityRefreshMana4(side, unit)
-    Routine_AbilityRefreshMana(side, unit, 4)
+function Routine_AbilityRefreshMana20Percent(side, unit)
+    local value = round(GetUnitMaxManaPoints(unit) * 0.2)
+    RefreshMana(side, unit, value)
 end
+
+function Routine_AbilityManaTempest(side, unit)
+    log(DEBUG, "$ Routine_AbilityManaTempest")
+    startThread(Routine_AbilityManaTempestThread, side, unit)
+end
+
 
 
 COMBAT_START_ABILITIES_ROUTINES = {
@@ -88,10 +90,7 @@ COMBAT_START_ABILITIES_ROUTINES = {
 
 COMBAT_TURN_ABILITIES_ROUTINES = {
     [CREATURE_MARKSMAN] = Routine_AbilityCommandBallista,
-    [CREATURE_OBSIDIAN_GOLEM] = Routine_AbilityMagneticField,
-    [CREATURE_RUNE_MAGE] = Routine_AbilityRefreshMana4,
-    [CREATURE_FLAME_MAGE] = Routine_AbilityRefreshMana4,
-    [CREATURE_FLAME_KEEPER] = Routine_AbilityRefreshMana4,
+    -- [CREATURE_OBSIDIAN_GOLEM] = Routine_AbilityMagneticField,
 }
 
 UNIT_DIED_ABILITIES_ROUTINES = {

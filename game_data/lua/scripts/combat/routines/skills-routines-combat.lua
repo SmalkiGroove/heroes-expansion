@@ -1,6 +1,6 @@
 
 function Routine_Houndmasters(side, hero, id, mastery)
-    log(DEBUG, "Trigger Houndmasters !")
+    log(DEBUG, "$ Routine_Houndmasters")
     local level = GetHeroLevel(side)
     local amount = 10 + 2 * level + random(1, level, 99)
     if hero == H_IVOR then
@@ -14,7 +14,7 @@ function Routine_Houndmasters(side, hero, id, mastery)
 end
 
 function Routine_ElementalBalance(side, hero, id, mastery)
-    log(DEBUG, "Trigger Elemental Balance !")
+    log(DEBUG, "$ Routine_ElementalBalance")
     local creatures = GetUnits(1-side, CREATURE)
     for i,cr in creatures do
         local type = GetCreatureType(cr)
@@ -34,8 +34,17 @@ function Routine_ElementalBalance(side, hero, id, mastery)
     end
 end
 
+function Routine_RandomCreatureRush(side, hero, id, mastery)
+    log(DEBUG, "$ Routine_RandomCreatureRush")
+    local creature = RandomCreature(side, 0)
+    if creature then
+        setATB(creature, ATB_NEXT)
+        ShowFlyingSign("/Text/Game/Scripts/Combat/Rush.txt", creature, 9)
+    end
+end
+
 function Routine_ShatterMagic(side, hero, id, mastery)
-    log(DEBUG, "Trigger Shatter Magic !")
+    log(DEBUG, "$ Routine_ShatterMagic")
     local mult = 0.1 * mastery
     local h = GetHero(1-side)
     if h then
@@ -58,7 +67,7 @@ function Routine_ShatterMagic(side, hero, id, mastery)
 end
 
 function Routine_ImbueBallista(side, hero, id, mastery)
-    log(DEBUG, "Trigger Imbue Ballista !")
+    log(DEBUG, "$ Routine_ImbueBallista")
     if CURRENT_UNIT == id then
         local ballista = UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_BALLISTA'
         if IsCombatUnit(ballista) then
@@ -68,15 +77,15 @@ function Routine_ImbueBallista(side, hero, id, mastery)
 end
 
 function Routine_GuardianAngelInit(side, hero, id, mastery)
-    log(DEBUG, "Init Guardian Angel !")
+    log(DEBUG, "$ Routine_GuardianAngelInit")
     EnableAutoFinish(nil)
 end
 
 function Routine_GuardianAngelRez(side, hero, id, mastery, unit)
-    log(DEBUG, "Trigger Guardian Angel Rez !")
     if GetUnitSide(unit) ~= side then
         for _,cr in GetUnits(1-side, CREATURE) do return end
         combatSetPause(1)
+        log(DEBUG, "$ Routine_GuardianAngelRez")
         local rez_stack = "none"
         local rez_power = 0
         for cr,nb in STARTING_ARMY[side] do
@@ -101,9 +110,10 @@ end
 
 
 COMBAT_START_SKILL_ROUTINES = {
+    [SKILL_SHATTER_MAGIC] = Routine_ShatterMagic,
     [PERK_HOUNDMASTERS] = Routine_Houndmasters,
     [PERK_ELEMENTAL_BALANCE] = Routine_ElementalBalance,
-    [SKILL_SHATTER_MAGIC] = Routine_ShatterMagic,
+    [PERK_RUSH] = Routine_RandomCreatureRush
     [PERK_GUARDIAN_ANGEL] = Routine_GuardianAngelInit,
 }
 

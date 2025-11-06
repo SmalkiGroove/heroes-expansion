@@ -1,5 +1,6 @@
 
-LOG_LEVEL = 2
+-- 0 for none, up to 5 for trace
+LOG_LEVEL = 4
 
 -- 1 enable
 -- nil disable

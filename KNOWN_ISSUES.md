@@ -2,7 +2,6 @@
 
 ### Game crash
 
-- [EXE] Crash when engaging fight with rune priests sometimes
 - [EXE] Crash while generating maps with underground
 
 ### Broken graphics or animations
@@ -28,6 +27,7 @@
 - [???] Add NCF creatures in editor
 - [XDB] Darkstorm hero totem model
 - [XDB] Add ARMG templates
+- [EXE] Magnetism redirect projectiles
 
 ### Balance
 
@@ -62,3 +62,4 @@
 - Give Tavern mapobject the town portal effect
 - Improve Dougal peasant upgrade mechanic
 - Guardian Angel now also rez units on victories
+- Crash when engaging fight with rune priests sometimes

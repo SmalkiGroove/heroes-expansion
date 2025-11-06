@@ -44,6 +44,14 @@ function SetMana(unit,mana)
     until GetUnitManaPoints(unit) == mana
 end
 
+function RefreshMana(unit,amount)
+    local cur = GetUnitManaPoints(unit)
+    local max = GetUnitMaxManaPoints(unit)
+    if cur < max then
+        SetMana(unit, min(cur+amount,max))
+    end
+end
+
 function DoCastTargetSpell(unit,spell,mana,target)
     repeat sleep(1) until GetUnitManaPoints(unit) >= mana
 	UnitCastAimedSpell(unit,spell,target)

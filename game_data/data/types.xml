@@ -3210,6 +3210,7 @@
 				<Item>HERO_SKILL_UNLIMITED_RETALIATIONS</Item>
 				<Item>HERO_SKILL_FIERCE_RETALIATIONS</Item>
 				<Item>HERO_SKILL_TALENTED_WARRIOR</Item>
+				<Item>HERO_SKILL_RUSH</Item>
 			</EnumEntries>
 		</Item>
 		<Item>
@@ -68061,6 +68062,10 @@
 					<Name>HERO_SKILL_TALENTED_WARRIOR</Name>
 					<Value>220</Value>
 				</Item>
+				<Item>
+					<Name>HERO_SKILL_RUSH</Name>
+					<Value>221</Value>
+				</Item>
 			</Entries>
 			<Attributes>
 				<__ClassTypeID>270064327</__ClassTypeID>
@@ -73667,7 +73672,7 @@
 							<Key>ref_table_num_objs</Key>
 							<Data>
 								<Type>01000000</Type>
-								<Data>221</Data>
+								<Data>255</Data>
 							</Data>
 						</Item>
 						<Item>
