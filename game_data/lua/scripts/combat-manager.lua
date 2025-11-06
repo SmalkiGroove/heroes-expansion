@@ -39,9 +39,9 @@ end
 function CheckEnableScript()
     startThread(EnableScript)
     repeat sleep() until exist("h5x_combat_init")
-    local x,y = pos("h5x_combat_init")
+    local x,y = GetUnitPosition("h5x_combat_init")
     print("h5x_combat_init pos: "..x..","..y)
-    RemoveCombatUnit("h5x_combat_init")
+    startThread(RemoveCombatUnit, "h5x_combat_init")
     -- consoleCmd("@if GetGameVar('h5x_combat_init') == 'true' then SetGameVar('h5x_combat_init', 'false') else EnableScript() end")
     -- repeat sleep() until GetGameVar('h5x_combat_init') == 'true'
 end
