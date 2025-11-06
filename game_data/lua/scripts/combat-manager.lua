@@ -32,6 +32,7 @@ HERO_DATA = {
 function EnableScript()
     ENABLE_SCRIPT = 1 - GetGameVar('h5x_combat_init')
     consoleCmd("@SetGameVar('h5x_combat_init', ENABLE_SCRIPT)")
+    print("ENABLE_SCRIPT="..ENABLE_SCRIPT)
 end
 
 function CheckEnableScript()
@@ -80,7 +81,6 @@ end
 
 function ManageCombatPrepare()
     -- log(TRACE, "$ Manage combat prepare")
-    EnableScript()
     if ENABLE_SCRIPT == 0 then return end
 
     combatSetPause(1)
@@ -155,7 +155,7 @@ function ManageUnitDeath(unit)
 	end
 end
 
--- CheckEnableScript()
+EnableScript()()
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
