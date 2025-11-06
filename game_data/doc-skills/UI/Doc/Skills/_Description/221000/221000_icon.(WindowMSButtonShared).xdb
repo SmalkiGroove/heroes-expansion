@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowMSButtonShared ObjectRecordID="1000064">
 	<Crap>false</Crap>
-	<Children>
-	    <Item href="032000_icon.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-	</Children>
+	<Children/>
 	<Background/>
 	<Foreground/>
 	<Flags>
@@ -53,7 +51,7 @@
 	<VisualStates>
 		<Item>
 			<Normal>
-				<Background/>
+				<Background href="221000_icon.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 				<Foreground/>
 				<TextString/>
 				<OnEnterSubState>
@@ -64,23 +62,17 @@
 			</Normal>
 			<MouseOver>
 				<Background/>
-				<Foreground href="/UI/Doc/Skills/Common/Highlight.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Foreground/>
 				<TextString/>
 				<OnEnterSubState>
-					<Commands>
-						<Item href="/UI/Doc/Skills/_Skills/Training/185001/highlight/185001_on.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-						<Item href="/UI/Doc/Skills/_Skills/Training/221000/highlight/221000_on.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-						<Item href="/UI/Doc/Skills/_Skills/Training/185002/highlight/185002_on.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-						<Item href="/UI/Doc/Skills/_Skills/Training/032000/highlight/032000_on.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-						<Item href="/UI/Doc/Skills/_Description/032000/032000.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					</Commands>
-					<Reversable>true</Reversable>
+					<Commands/>
+					<Reversable>false</Reversable>
 				</OnEnterSubState>
 				<TextFormat/>
 			</MouseOver>
 			<Pushed>
 				<Background/>
-				<Foreground href="/UI/Doc/Skills/Common/Highlight.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Foreground/>
 				<TextString/>
 				<OnEnterSubState>
 					<Commands/>
@@ -100,7 +92,7 @@
 			</Disabled>
 			<RightButtonDown>
 				<Background/>
-				<Foreground href="/UI/Doc/Skills/Common/Highlight.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Foreground/>
 				<TextString/>
 				<OnEnterSubState>
 					<Commands/>

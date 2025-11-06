@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- HERO_SKILL_ASSAULT_TRAINING -->
 <WindowMSButton ObjectRecordID="1000123">
 	<ClassTypeID>285694855</ClassTypeID>
-	<Shared href="135000.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
-	<Name>Button135000</Name>
+	<Shared href="/UI/Doc/Skills/Common/Highlight.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
+	<Name>DocSkillsSelection221000</Name>
 	<TooltipFileRef/>
 	<Visible>true</Visible>
 	<Priority>0</Priority>
-	<GameMessageReactions/>
+	<GameMessageReactions>
+		<Item>
+			<GameMessage>DocSkillsHideAll</GameMessage>
+			<LogicalReaction/>
+			<VisualReaction>
+				<Commands>
+					<Item href="221000_off.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+				</Commands>
+				<Reversable>false</Reversable>
+			</VisualReaction>
+			<WaitVisual>false</WaitVisual>
+			<Forward>true</Forward>
+		</Item>
+	</GameMessageReactions>
 	<Placement>
 		<Position>
 			<First>
-				<x>150</x>
-				<y>35</y>
+				<x>100</x>
+				<y>45</y>
 			</First>
 			<Second>true</Second>
 		</Position>

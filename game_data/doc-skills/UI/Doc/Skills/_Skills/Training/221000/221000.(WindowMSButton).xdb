@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- HERO_SKILL_ASSAULT_TRAINING -->
+<!-- HERO_SKILL_RUSH -->
 <WindowMSButton ObjectRecordID="1000123">
 	<ClassTypeID>285694855</ClassTypeID>
-	<Shared href="135000.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
-	<Name>Button135000</Name>
+	<Shared href="221000.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
+	<Name>Button221000</Name>
 	<TooltipFileRef/>
 	<Visible>true</Visible>
 	<Priority>0</Priority>
@@ -11,8 +11,8 @@
 	<Placement>
 		<Position>
 			<First>
-				<x>150</x>
-				<y>35</y>
+				<x>100</x>
+				<y>45</y>
 			</First>
 			<Second>true</Second>
 		</Position>

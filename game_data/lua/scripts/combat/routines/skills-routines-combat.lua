@@ -113,7 +113,7 @@ COMBAT_START_SKILL_ROUTINES = {
     [SKILL_SHATTER_MAGIC] = Routine_ShatterMagic,
     [PERK_HOUNDMASTERS] = Routine_Houndmasters,
     [PERK_ELEMENTAL_BALANCE] = Routine_ElementalBalance,
-    [PERK_RUSH] = Routine_RandomCreatureRush
+    [PERK_RUSH] = Routine_RandomCreatureRush,
     [PERK_GUARDIAN_ANGEL] = Routine_GuardianAngelInit,
 }
 

@@ -3166,8 +3166,8 @@
 			<ID>HERO_SKILL_ENLIGHTENED</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Specializations/Academy/Inexhaustible.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Specializations/Academy/Inexhaustible.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Specializations/Academy/Mentor.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Specializations/Academy/Mentor.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
@@ -9223,11 +9223,11 @@
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
-					<Item href="/Text/Game/Skills/Common/Rush/Name.txt"/>
+					<Item href="/Text/Game/Skills/Common/Training/Rush/Name.txt"/>
 				</NameFileRef>
 				<CommonNameFileRef href=""/>
 				<DescriptionFileRef>
-					<Item href="/Text/Game/Skills/Common/Rush/Description.txt"/>
+					<Item href="/Text/Game/Skills/Common/Training/Rush/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_STANDART_PERK</SkillType>

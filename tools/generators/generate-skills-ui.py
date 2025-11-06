@@ -153,7 +153,7 @@ coordinates_skills = {
   '029000': [governance_x+5, governance_y+45],
   '030000': [leadership_x+5, leadership_y+45],
   '031000': [shatter_x+125, shatter_y+55],
-  '032000': [training_x+100, training_y+45],
+  '032000': [training_x+125, training_y+45],
   '033000': [governance_x+30, governance_y+45],
   '034000': [offence_x+30, offence_y+45],
   '035000': [offence_x+100, offence_y+45],
@@ -254,8 +254,8 @@ coordinates_skills = {
   '131000': [defense_x+125, defense_y+45],
   '132000': [light_x+55, light_y+45],
   '133000': [shatter_x+30, shatter_y+45],
-  '134000': [training_x+150, training_y+45],
-  '135000': [training_x+125, training_y+45],
+  '134000': [training_x+150, training_y+55],
+  '135000': [training_x+150, training_y+35],
   '136000': [innates_x+0, innates_y+26],
   '137000': [innates_x+0, innates_y+68],
   '138000': [352, 68],
@@ -357,6 +357,7 @@ coordinates_skills = {
   '218000': [combat_x+55, combat_y+35],
   '219000': [combat_x+150, combat_y+35],
   '220000': [innates_x+210, innates_y+26],
+  '221000': [training_x+100, training_y+45],
 }
 
 def window_branch_path(branch):
