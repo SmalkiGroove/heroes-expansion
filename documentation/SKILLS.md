@@ -121,6 +121,7 @@ Creatures in hero's army get a little stronger with individual combat bonuses.
 - __Toughness__ : Increases hit points of all your creatures by 2.
 - __Battle Frenzy__ : Minimum and maximum damage inflicted by each creature under hero's control is increased by 1.
 - __Onslaught__ : Creatures in hero's army have bonus speed and initiative for the first combat of each day.
+- __Rush__ : A random creature in hero's army starts with 100% ATB in every battle.
 - __Expertise__ : Combat abilities of creatures in hero's army (like Bash or Blinding Attack) have a second roll while calculating their chance to trigger.
 - __Assault Training__ : Creatures in hero's army gain the Violence ability, that gives a chance to strike twice on melee attacks.
 - __Stun Training__ : Creatures in hero's army gain the Bash ability, that gives a chance to stun targets on melee attacks.
@@ -145,10 +146,12 @@ Increase by 20/40/60% the damages of the hero's attacks and his or her troops' r
 Repeat this bonus at the start of each week.
 - __Coordination__ : Links a hero with a selected creature in his army. Every time this creature performs an attack, the hero will assault the same target. The hero's attack is by 3 his levels more powerful than usual.
 - __Stunning Blow__ : Every standard hero’s attack moves the target back along the ATB bar for 0.2 points.
+- __Unlimited Retaliations__ : Hero troops have no limit to retaliations per turn.
 - __Reinforcement__ : Hero gains +1 Attack and Defense.
 Repeat this bonus at the start of each week.
 - __Mark of the Damned__ : The hero receives special combat ability to punish the target enemy creature with a powerful strike if that creature is about to attack, retaliate or cast any spell. Once declared, Mark of the Damned is active until the end of combat.
 - __Critical Strike__ : Hero's attacks will always deal double damage.
+- __Fierce Retaliations__ : Hero troops deal twice as much damage on retaliations.
 
 ### Shatter Magic
 
@@ -230,7 +233,8 @@ Unique Haven skill. Hero's troops take 1/2/3% reduced damage from non-magical at
 
 - __Prayer__ : The hero receives special combat ability to temporarily raise the morale, initiative, attack and defense of his troops (doesn't work on undead and mechanical).
 - __Empathy__ : Each time when the Morale effect is triggered with any of the creatures in the hero’s army, the hero moves 10% forward along the ATB bar. Accordingly, when a negative Morale effect is triggered, the hero moves 10% back.
-- __Guardian Angel__ : When all the knight’s troops fall dead in combat, an Angel, summoned on a field of battle, resurrects the most powerful group of dead creatures and disappears.
+- __Guardian Angel__ : After loosing all troops or defeating all enemies, an Archangel appears and resurrects the creature stack with the most valuable losses, then disappears.
+
 - __Expert Trainer__ : Troop training in Haven towns costs 35% less than normal. Hero must be stationed within the town with Training Grounds built for this effect to take place.
 - __Retaliation Strike__ : The hero receives special combat ability to guard any selected creature in his army until the end of combat by inflicting direct damage to every enemy that is attacking this guarded creature.
 - __Holy Charge__ : Hero's Retaliation Strike ability inflicts triple damage.

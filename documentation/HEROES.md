@@ -322,7 +322,7 @@ Governor of the Mines
 
 - Every new week, Dwarven Workers are added in garnison of player's resource generating buildings. The amount is 10 + 2 * Level in each building.
 
-- Dwarven Workers increase the daily production of resources by 1% per worker in the building (rounded down). When garnisoned in a town, they increase the daily Gold imcome by 1 per unit and the weekly production of Thanes by 1 per 100 units.
+- Dwarven Workers increase the daily production of resources by 1% per worker in the building (rounded down, up to 400%). When garnisoned in a town, they increase the daily Gold income by 2 per unit and the weekly production of Thanes by 1 per 100 units.
 
 ---
 __TAZAR :__
@@ -412,9 +412,9 @@ World Breaker
 
 - Friendly creatures are immuned to earth.
 
-- Hero automatically casts Earthquake at the start of combats and enemy War Machines are removed from the battlefield.
+- Hero starts the special spell Earth Shatter, that deals earth damage in a 5x5 area.
 
-- Starts with innate skill Earth's Wrath, increasing effective spellpower when casting Land Mines and Earthquake.
+- Trigger Earth Shatter on random areas of the battlefield every hero turn. The number of areas each turn is 1 plus another one every 10 hero levels. The effective spellpower is equal to hero level.
 
 ### ACADEMY:
 
@@ -1081,7 +1081,7 @@ Exhauster
 
 - Enemy units have their Speed reduced by 1 and their Initiative reduced by 1% per hero level.
 
-- Enemy hero loses 15% additional ATB after casting a spell.
+- Opponent hero has 0 Initiative until first hero turn. Also remove the bonus to starting ATB of enemy hero.
 
 - Gain artifacts from the Afterlife set by reaching certain levels. Level 7 for the Tunic of Carved Flesh, level 11 for the Cursed Ring, level 19 for the Spirit of Oppression, level 23 for the Deadwood Staff, and level 29 for the Skull Mask.
 
@@ -1090,9 +1090,12 @@ __ZOULEIKA :__
 Potion Brewer
 
 
+- Gain a random potion among Potion of Mana, Potion of Experience, and Potion of Stamina upon leveling up.
+
 - The First Aid Tent will heal more hit points per hero level. The bonus amount is equal to (Level + 4)². The damage of Plague Tent ability is also increased by the same value.
 
 - The First Aid Tent gets 100% ATB after each hero turn during combat.
+
 
 ---
 __KUJIN :__

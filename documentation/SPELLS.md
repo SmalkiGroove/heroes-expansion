@@ -5,20 +5,20 @@
 |------|-------|------|-------------|---------|
 | 1 | [Strength](#strength) | [Weakness](#weakness) | [Magic Arrow](#magic-arrow) | [Wasp Swarm](#wasp-swarm) |
 | | | | | |
-| 2 | [Haste](#haste) | [Rupture](#rupture) | [Lightning Bolt](#lightning-bolt) | [Land Mines](#land-mines) |
-| 2 | [Endurance](#endurance) | [Slow](#slow) | [Ice Bolt](#ice-bolt) | [Arcane Crystal](#arcane-crystal) |
+| 2 | [Haste](#haste) | [Slow](#slow) | [Ice Bolt](#ice-bolt) | [Arcane Crystal](#arcane-crystal) |
+| 2 | [Endurance](#endurance) | [Rupture](#rupture) | [Lightning Bolt](#lightning-bolt) | [Land Mines](#land-mines) |
 | | | | | |
-| 3 | [Deflect Missile](#deflect-missile) | [Decay](#decay) | [Polar Ring](#polar-ring) | [Summon Elementals](#summon-elementals) |
-| 3 | [Cleansing](#cleansing) | [Sorrow](#sorrow) | [Stone spikes](#stone-spikes) | [Regeneration](#regeneration) |
-| 3 | [Righteous Might](#righteous-might) | [Suffering](#suffering) | [Fireball](#fireball) | [Confusion](#confusion) |
+| 3 | [Righteous Might](#righteous-might) | [Sorrow](#sorrow) | [Stone spikes](#stone-spikes) | [Summon Elementals](#summon-elementals) |
+| 3 | [Deflect Missile](#deflect-missile) | [Suffering](#suffering) | [Polar Ring](#polar-ring) | [Regeneration](#regeneration) |
+| 3 | [Cleansing](#cleansing) | [Decay](#decay) | [Fireball](#fireball) | [Confusion](#confusion) |
 | | | | | |
-| 4 | [Divine Vengeance](#divine-vengeance) | [Vampirism](#vampirism) | [Discharge](#discharge) | [Earthquake](#earthquake) |
-| 4 | [Blade Barrier](#blade-barrier) | [Raise Dead](#raise-dead) | [Firewall](#firewall) | [Wasp Hive](#wasp-hive) |
-| 4 | [Blind](#blind) | [Teleport](#teleport) | [Fist of Wrath](#fist-of-wrath) | [Immunity](#immunity) |
+| 4 | [Divine Vengeance](#divine-vengeance) | [Raise Dead](#raise-dead) | [Discharge](#discharge) | [Earthquake](#earthquake) |
+| 4 | [Blind](#blind) | [Vampirism](#vampirism) | [Fist of Wrath](#fist-of-wrath) | [Wasp Hive](#wasp-hive) |
+| 4 | [Blade Barrier](#blade-barrier) | [Teleport](#teleport) | [Firewall](#firewall) | [Immunity](#immunity) |
 | | | | | |
-| 5 | [Celestial Shield](#celestial-shield) | [Berserk](#berserk) | [Deep Freeze](#deep-freeze) | [Mind Control](#mind-control) |
-| 5 | [Resurrection](#resurrection) | [Shadow Image](#shadow-image) | [Implosion](#implosion) | [Meteor Shower](#meteor-shower) |
-| 5 | [Holy Word](#holy-word) | [Curse of the Netherworld](#curse-of-the-netherworld) | [Armageddon](#armageddon) | [Conjure Phoenix](#conjure-phoenix) |
+| 5 | [Celestial Shield](#celestial-shield) | [Berserk](#berserk) | [Deep Freeze](#deep-freeze) | [Meteor Shower](#meteor-shower) |
+| 5 | [Holy Word](#holy-word) | [Shadow Image](#shadow-image) | [Implosion](#implosion) | [Mind Control](#mind-control) |
+| 5 | [Resurrection](#resurrection) | [Curse of the Netherworld](#curse-of-the-netherworld) | [Armageddon](#armageddon) | [Conjure Phoenix](#conjure-phoenix) |
 | | | | | |
 
 
@@ -31,7 +31,7 @@ Shoots magic missile to deal non-phisical damage to the selected enemy creature.
 
 Damage :
 - Base: '1'
-  PerPower: '15'
+  PerPower: '13'
 - Base: '2'
   PerPower: '16'
 - Base: '3'
@@ -87,11 +87,11 @@ Damage :
 - Base: '8'
   PerPower: '14'
 - Base: '9'
-  PerPower: '15'
-- Base: '10'
   PerPower: '16'
+- Base: '10'
+  PerPower: '18'
 - Base: '11'
-  PerPower: '17'
+  PerPower: '20'
 
 Duration :
 N/A
@@ -103,13 +103,13 @@ Deals fire damage to all units in the target area.
 
 Damage :
 - Base: '10'
-  PerPower: '13'
-- Base: '10'
-  PerPower: '15'
-- Base: '10'
-  PerPower: '17'
+  PerPower: '16'
 - Base: '10'
   PerPower: '19'
+- Base: '10'
+  PerPower: '22'
+- Base: '10'
+  PerPower: '25'
 
 Duration :
 N/A
@@ -120,14 +120,14 @@ N/A
 Deals ice damage to all units surrounding the target spot.
 
 Damage :
-- Base: '11'
+- Base: '8'
   PerPower: '14'
-- Base: '13'
-  PerPower: '15'
-- Base: '15'
-  PerPower: '16'
-- Base: '17'
+- Base: '9'
   PerPower: '17'
+- Base: '10'
+  PerPower: '20'
+- Base: '11'
+  PerPower: '23'
 
 Duration :
 N/A
@@ -139,13 +139,13 @@ Deals massive lightning damage to several adjacent creatures (up to 4), starting
 
 Damage :
 - Base: '5'
-  PerPower: '15'
+  PerPower: '16'
 - Base: '6'
-  PerPower: '18'
+  PerPower: '20'
 - Base: '7'
-  PerPower: '21'
-- Base: '8'
   PerPower: '24'
+- Base: '8'
+  PerPower: '28'
 
 Duration :
 N/A
@@ -169,17 +169,17 @@ Duration :
 N/A
 
 #### Implosion
->Tier 5 Destructive Magic  (33 Mana)
+>Tier 5 Destructive Magic  (37 Mana)
 
 Deals earth damage to a single targeted enemy unit.
 
 Damage :
 - Base: '38'
-  PerPower: '19'
+  PerPower: '25'
 - Base: '46'
-  PerPower: '28'
+  PerPower: '32'
 - Base: '54'
-  PerPower: '37'
+  PerPower: '39'
 - Base: '62'
   PerPower: '46'
 
@@ -192,22 +192,22 @@ N/A
 Deals massive fire damage to all creatures and war machines on a battlefield and local physical damage in the point of impact.
 
 Damage :
-- Base: '150'
-  PerPower: '10'
-- Base: '200'
-  PerPower: '13'
-- Base: '250'
+- Base: '50'
   PerPower: '16'
-- Base: '300'
-  PerPower: '20'
+- Base: '60'
+  PerPower: '21'
+- Base: '70'
+  PerPower: '26'
+- Base: '80'
+  PerPower: '31'
 
 Duration :
 - Base: '30'
-  PerPower: '3'
+  PerPower: '6'
 - Base: '40'
-  PerPower: '4'
+  PerPower: '6'
 - Base: '50'
-  PerPower: '5'
+  PerPower: '6'
 - Base: '60'
   PerPower: '6'
 
@@ -405,7 +405,7 @@ Duration :
 
 
 #### Mind Control
->Tier 5 Natural Magic  (32 Mana)
+>Tier 5 Natural Magic  (39 Mana)
 
 Gives the hero temporary control over selected enemy unit. Unit under this spell can't counter-attack. Control will be lost if the unit is attacked (The caster should have an Expert Natural Magic skill to gain the control over tier 7 creatures. The spell does not work on undead, elemental and mechanical units.) 
 
@@ -893,14 +893,14 @@ Duration :
 Deals earth damage to all creatures in target area (cross form)
 
 Damage :
+- Base: '6'
+  PerPower: '15'
+- Base: '8'
+  PerPower: '19'
+- Base: '10'
+  PerPower: '23'
 - Base: '12'
-  PerPower: '12'
-- Base: '12'
-  PerPower: '16'
-- Base: '12'
-  PerPower: '20'
-- Base: '12'
-  PerPower: '24'
+  PerPower: '27'
 
 Duration :
 N/A
@@ -958,7 +958,7 @@ Duration :
 
 
 #### Deep Freeze
->Tier 5 Destructive Magic  (22 Mana)
+>Tier 5 Destructive Magic  (26 Mana)
 
 Freezes the target, immediately inflicting ice damage and causing it to suffer increased physical damage during a certain amount of time due to frostbites.
 

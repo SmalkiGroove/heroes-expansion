@@ -20,6 +20,11 @@ path_to_creatures = "../../game_data/data/GameMechanics/Creature/Creatures"
 path_to_allspells = "../../game_data/data/GameMechanics/RefTables/UndividedSpells.xdb"
 path_to_abilities = "../../game_data/data/GameMechanics/RefTables/CombatAbilities.xdb"
 
+def is_valid_spell(id):
+    if id.startswith("SPELL_RUNE_OF_"):
+        return False
+    return True
+
 def get_spell_name(id):
     with open(os.path.join(workdir, path_to_allspells), 'r') as xdb:
         allspells = xmltodict.parse(xdb.read())
@@ -36,7 +41,7 @@ def get_spell_name(id):
 
 def get_spells_text(spells):
     if isinstance(spells, list):
-        return ', '.join([f"{get_spell_name(spell['Spell'])} ({spell['Mastery'].replace('MASTERY_','').lower()})" for spell in spells])
+        return ', '.join([f"{get_spell_name(spell['Spell'])} ({spell['Mastery'].replace('MASTERY_','').lower()})" for spell in spells if is_valid_spell(spell['Spell'])])
     else:
         return f"{get_spell_name(spells['Spell'])} ({spells['Mastery'].replace('MASTERY_','').lower()})"
 
@@ -201,7 +206,7 @@ def artifact_doc_line(name, artifact):
         name = name_file.read()
     with open(desc_path, 'r', encoding='utf-16') as desc_file:
         desc = desc_file.read()
-        desc = re.sub(r'<[^>]+>[A-Za-z\' ]*', '', desc)
+        desc = re.sub(r'<color=FFB730FF>[A-Za-z\' ]*', '', desc)
     return f"- __{name}__ :\n{desc}"
 
 def get_artifact_by_id(artifacts, id):

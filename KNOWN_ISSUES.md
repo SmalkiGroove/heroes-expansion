@@ -7,7 +7,6 @@
 ### Broken graphics or animations
 
 - [EXE] Consume Corpse camera glitch
-- [XDB] Behemoth no roar anim
 
 ### Text issues
 
@@ -20,7 +19,6 @@
 ### Bugs
 
 - [EXE] Shantiri Moon Disc blocks all light magic
-- [LUA] Double script activation sometimes
 
 ### Suggestions
 
@@ -63,3 +61,4 @@
 - Improve Dougal peasant upgrade mechanic
 - Guardian Angel now also rez units on victories
 - Crash when engaging fight with rune priests sometimes
+- Double combat script activation sometimes

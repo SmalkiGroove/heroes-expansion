@@ -46,7 +46,8 @@ For Haven Heroes:
 
 - __Sentinel's Blade__ :
 +5 Attack
-When you spawn a Blade Barrier during combat,
+<color=red>When you spawn a Blade Barrier during combat, adjacent enemies are forced to attack it
+
 
 
 
@@ -69,7 +70,8 @@ For Sylvan Heroes:
 (6) TODO
 
 - __Avenger Bow__ :
-+1 Luck
+<color=red>+10% damage from ranged attacks
+
 
 
 - __Ranger's Cape__ :
@@ -94,7 +96,8 @@ Hero troops are Unstoppable (immunity to Slow).
 
 
 - __Sacred Seed__ :
-*sacred seed*
+Generate between 0 and 3 Wood per day, and sometimes a bonus of 1000 experience points to the hero.
+
 
 
 
@@ -117,7 +120,8 @@ For Inferno Heroes:
 (6) TODO
 
 - __Shackles of the Last Man__ :
--1 Attack and Defense to enemy creatures
+<color=red>-2 Attack and Defense to enemy creatures
+
 
 
 - __Helm Of Chaos__ :
@@ -316,7 +320,7 @@ For Fortress Heroes:
 
 - __Rune of Flame__ :
 +2 Spellpower
-Grants dwarven heroes 
+Grants dwarven heroes <value=spell_name>
 
 
 - __Helm of the Dwarven Kings__ :
@@ -383,17 +387,20 @@ Hero troops gain the Battle Rage ability
 - __Collar Of Primal Rage__ :
 +1 Attack
 +1 Spellpower
-+100 rage points at the start of combat (only for orcs)
+<color=red>+100 rage points at the start of combat (only for orcs)
+
 
 
 - __Ogre Club__ :
 +5 Attack
--25% Defense to enemy creatures
+<color=red>-25% Defense to enemy creatures
+
 
 
 - __Ogre Shield__ :
 +5 Defense
--25% Attack to enemy creatures
+<color=red>-25% Attack to enemy creatures
+
 
 
 
@@ -451,7 +458,8 @@ Hero troops gain the Battle Rage ability
 - __Dragon Flame Tongue__ :
 +4 Attack
 -40% Damage taken from enemy Frost spells
-Creatures in hero's army are immuned to Cold Death
+<color=red>Creatures in hero's army are immuned to Cold Death
+
 
 
 
@@ -514,7 +522,9 @@ Grants hero troops immunity to Blaze Power's defense reduction
 
 
 - __Spear of the Frost Lord__ :
-*spear of the frost lord*
++2 Attack
+<color=red>+20% ice damages to attacks
+
 
 
 
@@ -794,7 +804,8 @@ Creatures in hero's army are immuned to Decay
 
 
 - __Staff of the Saint__ :
-+7 Spellpower when casting Light Magic spells
+<color=red>+7 Spellpower when casting Light Magic spells
+
 
 
 - __Sandals of the Saint__ :
@@ -804,7 +815,8 @@ Creatures in hero's army are immuned to Decay
 
 - __Codex Of The Saint__ :
 +5 Knowledge
-+10% ATB after casting a spell
+<color=red>+15% ATB after casting a spell
+
 
 
 
@@ -832,7 +844,8 @@ Creatures in hero's army are immuned to Decay
 
 - __Celestial Justicar's Armor__ :
 +4 Defense
--25% melee damage taken
+<color=red>-25% melee damage taken
+
 
 
 - __Celestial Justicar's Sword__ :
@@ -879,7 +892,8 @@ Restore hero movement points on level up
 
 - __Pirate Smasher__ :
 +1 Attack
-Friendly creatures attacks reduce enemy Defense by 1
+<color=red>Friendly creatures attacks reduce enemy Defense by 1
+
 
 
 - __Captain's Hook__ :
@@ -930,14 +944,15 @@ The following artifact do not belong in a set.
 +1 Defense
 - __Wand of <value=spell_name>__ :
 +1 Spellpower
-Grants the ability to cast spell (unless the Hero’s Mastery level is higher). The wand has a limited number of uses and can be recharged at a Magic Guild (uses /)
+Grants the ability to cast spell <value=spell_name> from this wand at Advanced Mastery (unless the Hero’s Mastery level is higher). The wand has a limited number of uses and can be recharged at a Magic Guild (uses <value=charges_cur>/<value=charges_max>)
 - __Trident of the Titans__ :
 +1 Spellpower
 +20% damage to Lightning spells
 - __Shield of Crystal Ice__ :
 +4 Defense
 -40% Damage taken from enemy Fire spells
-Creatures in hero's army are immuned to Ignite
+<color=red>Creatures in hero's army are immuned to Ignite
+
 - __Four Leaf Clover__ :
 +2 Luck
 - __Crown Of Courage__ :
@@ -956,10 +971,15 @@ Grants hero troops immunity to Lightning's stun
 After using all your movement points during a day with no battle, refresh 1000 movement points
 - __Golden Horseshoe__ :
 +4 Luck
-- __Endless Sack of Golds__ :
-Generates 1000 Golds per day plus an additional 50 per hero level.
-- __Endless Purse of Golds__ :
-Generates 250 Golds per day plus an additional 25 per hero level.
+- __Endless Sack of Gold
+__ :
+Generates 1000 Golds per day.
+
+- __Endless Purse of Gold
+__ :
+Generates 250 Golds per day.
+If two of these are present in hero's inventory at the start of the day, they merge into an Endless Sack of Gold.
+
 - __Cape of the Kings__ :
 +2 Morale
 Governance skill grants an additional 1000 Gold and 1 special resource.
@@ -1012,7 +1032,8 @@ Restore 10 Mana after battle
 - __Phoenix Fire Cape__ :
 +1 Spellpower
 -33% Damage taken from enemy Fire spells
-Grants hero troops immunity to Frost Power's freeze
+<color=red>Grants hero troops immunity to Frost Power's freeze
+
 - __Tarot Deck__ :
 +1 Luck
 - __Crown of Leadership__ :
@@ -1024,11 +1045,13 @@ Doubles the effects of skills Estate (Governance), Diplomacy (Leadership) and Re
 +2 additional Attack for "evil" factions
 +2 additional Defense for "good" factions
 - __Horn of Plenty__ :
-Grants some random resource every day and 1 of all resources at the start of each week.
+Grants some random resource each day, but a large amount of resources once in a while.
+
 - __Treeborn Quiver__ :
 Ranged creatures get +4 Attack and unlimited ammo
 - __Fortune Pickaxe__ :
-*fortune pickaxe*
+Generate between 0 and 3 Ore per day, and sometimes an additional Crystal or Gem.
+
 - __Misfortune Dices__ :
 -1 Morale
 -2 Luck to enemy creatures
@@ -1049,13 +1072,16 @@ Ranged creatures get +4 Attack and unlimited ammo
 +4 Knowledge
 -2 Morale to enemy creatures
 - __Butcher Glaive__ :
-*butcher glaive*
++1 Attack
+<color=red>+10% damage from melee attacks
+
 - __Blazing Spellbook__ :
 +2 Spellpower
 -33% Mana cost for Fire spells
 - __Centaur Crossbow__ :
 +1 Attack
-+10% to hero's attacks damage
+<color=red>+10% to hero's attacks damage
+
 - __Harpy Boots__ :
 +1 Speed and Initiative to all friendly creatures
 - __Ring of Supernatural Strength__ :
@@ -1081,8 +1107,8 @@ Grants hero's army imunity to Mind Control
 +2 Defense
 Creatures in hero's army are immuned to Word of Light
 - __Dragonsbane__ :
-+9 Attack
--1 Luck
+<color=red>Creatures' attacks ignore enemy Defense
+
 - __Orb of Air Affinity__ :
 +3 Spellpower
 +33% Damage to Lightning spells

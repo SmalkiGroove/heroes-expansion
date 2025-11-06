@@ -81,9 +81,9 @@
 | BLACKBEAR RIDER | 4 | 10 | 45 | 8 | 12 | 6-7 | 6 | 10 | _none_ | Spiteful, Heavy Armor, Paw Strike |
 | WHITEBEAR RIDER | 4 | 10 | 50 | 9 | 9 | 6-8 | 6 | 10 | _none_ | Spiteful, Roar |
 | | | | | | | | | | | |
-| RUNE PRIEST | 5 | 5 | 60 | 8 | 8 | 12-16 | 3 | 9 | Mass Cleansing (basic), Magic Arrow (advanced) | Fire Resistance, Mark of Fire, Refresh Mana |
-| RUNE PATRIARCH | 5 | 5 | 64 | 8 | 8 | 12-16 | 3 | 9 | Mass Cleansing (basic), Firewall (advanced) | Fire Resistance, Mark of Fire, Refresh Mana, Area Attack |
-| RUNE KEEPER | 5 | 5 | 60 | 8 | 8 | 14-18 | 3 | 9 | Mass Cleansing (basic), Fireball (advanced) | Fire Resistance, Mark of Fire, Refresh Mana, Mana Feed, Channeling |
+| RUNE PRIEST | 5 | 5 | 60 | 8 | 8 | 12-16 | 3 | 9 | Mass Cleansing (basic), Magic Arrow (advanced) | Fire Resistance, Mark of Fire, Rune Craft |
+| RUNE PATRIARCH | 5 | 5 | 64 | 8 | 8 | 12-16 | 3 | 9 | Mass Cleansing (basic), Firewall (advanced) | Fire Resistance, Mark of Fire, Rune Craft, Area Attack |
+| RUNE KEEPER | 5 | 5 | 60 | 8 | 8 | 14-18 | 3 | 9 | Mass Cleansing (basic), Fireball (advanced) | Fire Resistance, Mark of Fire, Rune Craft, Mana Feed, Channeling |
 | | | | | | | | | | | |
 | THANE | 6 | 3 | 105 | 18 | 24 | 11-13 | 8 | 10 | _none_ | Steadiness, Double Attack |
 | FLAME LORD | 6 | 3 | 115 | 22 | 24 | 12-14 | 8 | 10 | _none_ | Steadiness, Double Attack, Fire Immuned, Flamewave, Flamestrike |
