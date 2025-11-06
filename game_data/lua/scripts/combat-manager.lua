@@ -31,13 +31,16 @@ HERO_DATA = {
 
 function EnableScript()
     -- consoleCmd("@SetGameVar('h5x_combat_init', 'true')")
-    AddCreature(0, CREATURE_HELPER_DEFAULT, 1, -1, -1, nil, "h5x_combat_init")
+    AddCreature(0, CREATURE_HELPER_DEFAULT, 1, 6, 1, nil, "h5x_combat_init")
+    consoleCmd("@print('h5x_combat_init')")
     ENABLE_SCRIPT = 1
 end
 
 function CheckEnableScript()
     startThread(EnableScript)
     repeat sleep() until exist("h5x_combat_init")
+    local x,y = pos("h5x_combat_init")
+    print("h5x_combat_init pos: "..x..","..y)
     RemoveCombatUnit("h5x_combat_init")
     -- consoleCmd("@if GetGameVar('h5x_combat_init') == 'true' then SetGameVar('h5x_combat_init', 'false') else EnableScript() end")
     -- repeat sleep() until GetGameVar('h5x_combat_init') == 'true'
