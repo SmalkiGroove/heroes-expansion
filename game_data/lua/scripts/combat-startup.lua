@@ -161,6 +161,7 @@ INIT_COUNTER = 0
 INIT_VALUE = 0
 
 function CheckEnableScript1()
+	log(DEBUG, "$ CheckEnableScript1")
 	INIT_CHECK = 1
 	if IsComputer(ATTACKER) or IsComputer(DEFENDER) then
 		ENABLE_SCRIPT = 1
@@ -168,9 +169,11 @@ function CheckEnableScript1()
 		INIT_VALUE = GetUnitManaPoints(ATTACKER_HERO_ID)
 		while INIT_CHECK == 1 do INIT_COUNTER = INIT_COUNTER + 1; sleep(1) end
 		SetUnitManaPoints(ATTACKER_HERO_ID, INIT_COUNTER)
+		print("INIT_COUNTER="..INIT_COUNTER)
 	end
 end
 function CheckEnableScript2()
+	log(DEBUG, "$ CheckEnableScript2")
 	if ENABLE_SCRIPT == 0 then
 		INIT_CHECK = 2
 		sleep(10)
