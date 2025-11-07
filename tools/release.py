@@ -37,7 +37,7 @@ with open(os.path.join(workdir, path_to_version_txt), 'w', encoding='utf-16-LE')
 pak_file = f"../h5x-{version}.pak"
 
 game_data_path = "../game_data"
-data_dirs = ["characters","data","doc","interface","lua","maps"]
+data_dirs = ["characters","data","interface","lua","maps","visuals","doc", "doc-artifacts","doc-creatures","doc-heroes","doc-skills"]
 
 path_prefix = len(os.path.abspath(game_data_path)) + 1
 
