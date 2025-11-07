@@ -67,7 +67,7 @@ ARTIFACT_STAFF_OF_THE_MAGISTER = 45                 -- negates magic-resistance
 ARTIFACT_CROWN_OF_THE_MAGISTER = 46                 -- /
 ARTIFACT_RING_OF_THE_MAGISTER = 47                  -- reduce hero spells cost by 6
 ARTIFACT_SHANTIRI_MOON_DISC = 48                    -- immunity to implosion
-ARTIFACT_PLUMED_BOOTS = 49                          -- immunity to slow
+ARTIFACT_PLUMED_BOOTS = 49                          -- immunity to slow, all creatures fly TODO
 ARTIFACT_050 = 50                                   -- immunity to blind
 ARTIFACT_HELM_OF_THE_DWARVEN_KINGS = 51             -- immunity to frenzy
 ARTIFACT_MAGIC_SCROLL_OF_SPELL = 52                 -- grants random spell
@@ -364,7 +364,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_SWORD_OF_MIGHT]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_AXE_OF_THE_MOUNTAIN_LORDS]     = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_DWARVEN, special=0},
     [ARTIFACT_WAND_OF_SPELL]                 = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_NONE, special=0},
-    [ARTIFACT_UNICORN_HORN_BOW]              = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_NONE, special=1},
+    [ARTIFACT_UNICORN_HORN_BOW]              = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_SYLVAN, special=1},
     [ARTIFACT_TITANS_TRIDENT]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_STAFF_OF_THE_NETHERWORLD]      = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_NECRO, special=0},
     [ARTIFACT_NO_RETREAT]                    = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_NONE, special=1},
@@ -409,7 +409,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_CROWN_OF_THE_MAGISTER]         = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_ACADEMY, special=0},
     [ARTIFACT_RING_OF_THE_MAGISTER]          = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_ACADEMY, special=0},
     [ARTIFACT_SHANTIRI_MOON_DISC]            = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_NECK, set=ARTIFACT_SET_NONE, special=0},
-    [ARTIFACT_PLUMED_BOOTS]                  = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_SYLVAN, special=0},
+    [ARTIFACT_PLUMED_BOOTS]                  = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_SYLVAN, special=0},
     [ARTIFACT_050]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_BACKPACK, set=ARTIFACT_SET_NONE, special=1}, -- tbd
     [ARTIFACT_HELM_OF_THE_DWARVEN_KINGS]     = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_DWARVEN, special=0},
     [ARTIFACT_MAGIC_SCROLL_OF_SPELL]         = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_NONE, special=1},
@@ -520,7 +520,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_HARPY_BOOTS]                   = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_PALACE_SHOES]                  = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_VIZIR, special=0},
     [ARTIFACT_SHACKLES_OF_THE_LAST_MAN]      = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_INFERNO, special=1}, --disabled
-    [ARTIFACT_LEGENDARY_BOOTS]               = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_NONE, special=1}, --disabled
+    [ARTIFACT_LEGENDARY_BOOTS]               = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_GOLDEN_GOOSE]                  = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_162]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_BACKPACK, set=ARTIFACT_SET_NONE, special=1},
     [ARTIFACT_163]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_BACKPACK, set=ARTIFACT_SET_NONE, special=1},
@@ -542,7 +542,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_WILL_OF_URGASH]                = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_INFERNO, special=0},
     [ARTIFACT_MOONLIGHT_BAND]                = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_MOON, special=0},
     [ARTIFACT_DWARVEN_SMITHY_HAMMER]         = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_NONE, special=0},
-    [ARTIFACT_RANGERS_CAPE]                  = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_SYLVAN, special=1}, --disabled
+    [ARTIFACT_RANGERS_CAPE]                  = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_SYLVAN, special=0},
     [ARTIFACT_MOON_CHARM]                    = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_NECK, set=ARTIFACT_SET_MOON, special=0},
     [ARTIFACT_FORGOTTEN_RING]                = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_BEARHIDE_WRAPS]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_BANDIT, special=0},

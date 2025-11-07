@@ -310,7 +310,7 @@
 				<Type>ARTF_CLASS_RELIC</Type>
 				<Slot>HEAD</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/AllSeeingCrown.xdb#xpointer(/Texture)"/>
-				<CostOfGold>1</CostOfGold>
+				<CostOfGold>20000</CostOfGold>
 				<AIValue>1</AIValue>
 				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
 				<HeroStatsModif>
@@ -1237,18 +1237,18 @@
 				<NameFileRef href="/Text/Game/Artifacts/PlumedBoots/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/PlumedBoots/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MAJOR</Type>
+				<Type>ARTF_CLASS_RELIC</Type>
 				<Slot>FEET</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/PlumedBoots.xdb#xpointer(/Texture)"/>
-				<CostOfGold>10000</CostOfGold>
-				<AIValue>20000</AIValue>
+				<CostOfGold>20000</CostOfGold>
+				<AIValue>30000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
-					<Attack>1</Attack>
-					<Defence>1</Defence>
+					<Attack>0</Attack>
+					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
-					<SpellPower>0</SpellPower>
-					<Morale>0</Morale>
+					<SpellPower>2</SpellPower>
+					<Morale>1</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
 				<ArtifactShared href="/MapObjects/Artifacts/PlumedBoots.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
@@ -2284,7 +2284,7 @@
 				</HeroStatsModif>
 				<ArtifactShared href="/MapObjects/Artifacts/EdgeOfBalance.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
-				<PresetPrice>550</PresetPrice>
+				<PresetPrice>0</PresetPrice>
 			</obj>
 		</Item>
 		<Item>
@@ -2334,7 +2334,7 @@
 				</HeroStatsModif>
 				<ArtifactShared href="/MapObjects/Artifacts/HornOfPlenty.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>false</AvailableForPresets>
-				<PresetPrice>-1</PresetPrice>
+				<PresetPrice>0</PresetPrice>
 			</obj>
 		</Item>
 		<Item>
@@ -2346,9 +2346,9 @@
 				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>FINGER</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/RingOfBanishment.xdb#xpointer(/Texture)"/>
-				<CostOfGold>1</CostOfGold>
+				<CostOfGold>5000</CostOfGold>
 				<AIValue>1</AIValue>
-				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
+				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
@@ -2359,7 +2359,7 @@
 				</HeroStatsModif>
 				<ArtifactShared href="/MapObjects/Artifacts/RingOfBanishment.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
-				<PresetPrice>900</PresetPrice>
+				<PresetPrice>0</PresetPrice>
 			</obj>
 		</Item>
 		<Item>
@@ -2448,7 +2448,7 @@
 				<Icon href="/Textures/HeroScreen/Artifacts/SacredSeed.xdb#xpointer(/Texture)"/>
 				<CostOfGold>5000</CostOfGold>
 				<AIValue>10000</AIValue>
-				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
+				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
@@ -2473,9 +2473,9 @@
 				<Icon href="/Textures/HeroScreen/Artifacts/FortunePickaxe.xdb#xpointer(/Texture)"/>
 				<CostOfGold>5000</CostOfGold>
 				<AIValue>10000</AIValue>
-				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
+				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
-					<Attack>1</Attack>
+					<Attack>0</Attack>
 					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
@@ -3180,7 +3180,7 @@
 					<Knowledge>5</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
-					<Luck>1</Luck>
+					<Luck>0</Luck>
 				</HeroStatsModif>
 				<ArtifactShared href="/MapObjects/Artifacts/CodexOfTheSaint.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
@@ -3446,7 +3446,7 @@
 				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>MISCSLOT1</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/PotionOfMana.xdb#xpointer(/Texture)"/>
-				<CostOfGold>1</CostOfGold>
+				<CostOfGold>1000</CostOfGold>
 				<AIValue>0</AIValue>
 				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
 				<HeroStatsModif>
@@ -3471,7 +3471,7 @@
 				<Type>ARTF_CLASS_MAJOR</Type>
 				<Slot>MISCSLOT1</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/PotionOfStamina.xdb#xpointer(/Texture)"/>
-				<CostOfGold>1</CostOfGold>
+				<CostOfGold>1000</CostOfGold>
 				<AIValue>0</AIValue>
 				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
 				<HeroStatsModif>
@@ -3496,14 +3496,14 @@
 				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>MISCSLOT1</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/PotionOfExperience.xdb#xpointer(/Texture)"/>
-				<CostOfGold>1</CostOfGold>
+				<CostOfGold>1000</CostOfGold>
 				<AIValue>0</AIValue>
 				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
-					<SpellPower>2</SpellPower>
+					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
@@ -4023,10 +4023,10 @@
 				<Icon href="/Textures/HeroScreen/Artifacts/LegendaryBoots.xdb#xpointer(/Texture)"/>
 				<CostOfGold>10000</CostOfGold>
 				<AIValue>20000</AIValue>
-				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
+				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
-					<Attack>0</Attack>
-					<Defence>3</Defence>
+					<Attack>1</Attack>
+					<Defence>1</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
@@ -4573,11 +4573,11 @@
 				<Icon href="/Textures/HeroScreen/Artifacts/RangersCape.xdb#xpointer(/Texture)"/>
 				<CostOfGold>10000</CostOfGold>
 				<AIValue>20000</AIValue>
-				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
+				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
-					<Knowledge>0</Knowledge>
+					<Knowledge>2</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>

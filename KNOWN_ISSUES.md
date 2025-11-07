@@ -13,8 +13,8 @@
 
 ### Something does not work
 
-- [EXE] Thunder Power skill does not apply air damage of creatures attacks
-- [EXE] Shantiri Breastplate does not immune to Earthquake
+- [EXE] Thunder Power has no lightning visual effect
+- [EXE] Magnetism not working yet
 
 ### Bugs
 
@@ -26,6 +26,7 @@
 - [XDB] Darkstorm hero totem model
 - [XDB] Add ARMG templates
 - [EXE] Magnetism redirect projectiles
+- [EXE] Make Earthquake deal magical earth damage
 
 ### Balance
 
@@ -62,3 +63,4 @@
 - Guardian Angel now also rez units on victories
 - Crash when engaging fight with rune priests sometimes
 - Double combat script activation sometimes
+- Thunder Power skill does not apply air damage of creatures attacks
