@@ -45,22 +45,4 @@
 
 # FIXED
 
-- Academy and Sylvan female heroes textures glitched
-- Hero name in hero pedia
-- Add might/magic toggle in skills pedia
-- Change towns building order
-- Arcane Brillance creature mana cost reduction from 50% to 25%
-- Crash when loading games sometimes
-- Immunity should clean everything
-- Lower damage diff between magic levels
-- Talanar loses turns when casting righteous might
-- Magic Filter incorrectly immunes to spells
-- Rissa spec quick battle crash
-- Hero that start with Absolute faction skill should get it later
-- Swaped town dwellings wrong model
-- Give Tavern mapobject the town portal effect
-- Improve Dougal peasant upgrade mechanic
-- Guardian Angel now also rez units on victories
-- Crash when engaging fight with rune priests sometimes
-- Double combat script activation sometimes
-- Thunder Power skill does not apply air damage of creatures attacks
+

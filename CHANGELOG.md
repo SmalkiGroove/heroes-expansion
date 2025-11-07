@@ -4,10 +4,11 @@
 
 This list is not exhaustive, all stats and changes regarding heroes, skills, artifacts, spells, creatures, etc are available in game and are subject to change.
 
-- [Creatures data](doc/CREATURES.md)
-- [Heroes data](doc/HEROES.md)
-- [Skills data](doc/SKILLS.md)
-- [Artifacts data](doc/ARTIFACTS.md)
+- [Creatures data](documentation/CREATURES.md)
+- [Heroes data](documentation/HEROES.md)
+- [Skills data](documentation/SKILLS.md)
+- [Artifacts data](documentation/ARTIFACTS.md)
+- [Spells data](documentation/SPELLS.md)
 
 
 ### Exe patches
@@ -148,3 +149,34 @@ Initial beta release !
 - Ballista commander reworked
 - Multiple heroes and creatures tweaked
 
+### 0.4.0 (07/11/2025)
+
+#### New
+
+- New skill Despotism with 3 new perks
+- New perks for Shatter Magic, Training, Spiritism, Voice
+- Few new artifacts
+- Significant changes to many hero specs
+- New town building orders for all towns
+
+#### Fixed/Changed
+
+- Academy and Sylvan female heroes textures glitched
+- Hero name in hero pedia
+- Add might/magic toggle in skills pedia
+- Arcane Brillance creature mana cost reduction from 50% to 25%
+- Crash when loading games sometimes
+- Immunity should clean everything
+- Lower damage diff between magic levels
+- Talanar loses turns when casting righteous might
+- Magic Filter incorrectly immunes to spells
+- Rissa spec quick battle crash
+- Hero that start with Absolute faction skill should get it later
+- Swaped town dwellings wrong model
+- Give Tavern mapobject the town portal effect
+- Improve Dougal peasant upgrade mechanic
+- Guardian Angel now also rez units on victories
+- Crash when engaging fight with rune priests sometimes
+- Double combat script activation sometimes
+- Thunder Power skill does not apply air damage of creatures attacks
+- Many more little things...
