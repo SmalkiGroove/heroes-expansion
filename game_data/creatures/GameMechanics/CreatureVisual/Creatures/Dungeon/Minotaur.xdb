@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001218">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Dungeon/Minotaur.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Dungeon/MinotaurAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Dungeon/MinotaurDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Minotaur.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Minotaur_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Minotaur_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Minotaur_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Dungeon/Minotaur.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>0.0264709</x>
+		<y>-0.128347</y>
+		<z>1.41616</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

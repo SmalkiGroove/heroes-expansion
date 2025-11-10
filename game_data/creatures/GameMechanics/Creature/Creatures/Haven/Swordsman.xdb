@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature ObjectRecordID="8">
+	<AttackSkill>4</AttackSkill>
+	<DefenceSkill>10</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>4</MinDamage>
+	<MaxDamage>5</MaxDamage>
+	<Speed>4</Speed>
+	<Initiative>9</Initiative>
+	<Flying>false</Flying>
+	<Health>22</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>40</Exp>
+	<Power>287</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>3</CreatureTier>
+	<Upgrade>true</Upgrade>
+	<PairCreature>CREATURE_FOOTMAN</PairCreature>
+	<CreatureTown>TOWN_HEAVEN</CreatureTown>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>20</WeeklyGrowth>
+	<Cost>
+		<Gold>100</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Haven/Swordsman.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>1</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Haven/Swordsman.xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_FOOTMAN</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_ENRAGED</Item>
+		<Item>ABILITY_LARGE_SHIELD</Item>
+		<Item>ABILITY_BASH</Item>
+		<Item>ABILITY_SHIELD_OTHER</Item>
+	</Abilities>
+</Creature>

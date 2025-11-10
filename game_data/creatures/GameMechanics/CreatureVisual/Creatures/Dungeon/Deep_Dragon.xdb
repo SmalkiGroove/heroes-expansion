@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001210">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Dungeon/Deep_Dragon.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Dungeon/Deep_DragonAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Dungeon/Deep_DragonDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Dungeondragon.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Dungeondragon_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Dungeondragon_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Dungeondragon_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Dungeon/DangeonDragon.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.0992544</x>
+		<y>-0.519324</y>
+		<z>1.99168</z>
+	</MountPoint>
+	<MountBone>Neck1</MountBone>
+</CreatureVisual>

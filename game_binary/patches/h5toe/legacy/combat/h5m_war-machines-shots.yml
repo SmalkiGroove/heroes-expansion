@@ -1,0 +1,35 @@
+# Change perks effects for ballista and catapult
+definitions:
+  - &mod_triple_catapult_perk_id 99
+  - &mod_ballista_catapult_perks_shots 0
+  - &mod_triple_balista_perk_shots 2
+  - &mod_triple_catapult_perk_shots 2
+  - &toe_triple_catapult_perk_id 88
+  - &toe_ballista_catapult_perks_shots 1
+  - &toe_triple_balista_perk_shots 2
+  - &toe_triple_catapult_perk_shots 2
+edits:
+  - name: Edit triple catapult perk
+    address: '006750B4'
+    size: 1
+    type: int
+    original: *toe_triple_catapult_perk_id
+    modified: *mod_triple_catapult_perk_id
+  - name: Edit Ballista and catapult perks extra shots
+    address: '00675103'
+    size: 1
+    type: int
+    original: *toe_ballista_catapult_perks_shots
+    modified: *mod_ballista_catapult_perks_shots
+  - name: Edit triple catapult perk extra shots
+    address: '006750C0'
+    size: 1
+    type: int
+    original: *toe_triple_catapult_perk_shots
+    modified: *mod_triple_catapult_perk_shots
+  - name: Edit triple ballista perk extra shots
+    address: '006750E3'
+    size: 1
+    type: int
+    original: *toe_triple_balista_perk_shots
+    modified: *mod_triple_balista_perk_shots

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001168">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Preserve/Wood_Elf.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Preserve/Wood_Elf_Abilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Preserve/Wood_Elf_desc.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Preseve/ico_Woodelf.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Preseve/ico_Woodelf_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Preseve/ico_Woodelf_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Preseve/ico_Woodelf_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Preserve/WoodElf.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot href="/GameMechanics/Shot/Creatures/Preserve/WoodElf.xdb#xpointer(/Shot)"/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="/GameMechanics/Win3DObj/Creatures/Haven/Peasant.xdb#xpointer(/Win3DObj)"/>
+	<MountPoint>
+		<x>0.00948414</x>
+		<y>0.0362078</y>
+		<z>1.10822</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

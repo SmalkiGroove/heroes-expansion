@@ -1,0 +1,1616 @@
+
+CREATURES:
+  HAVEN:
+    - name: PEASANT
+      tier: 1
+      upgrade: 0
+      path: Haven/Peasant.xdb
+    - name: CONSCRIPT
+      tier: 1
+      upgrade: 1
+      path: Haven/Militiaman.xdb
+    - name: MILITIA
+      tier: 1
+      upgrade: 2
+      path: Haven/Renegates/Landlord.xdb
+    - name: ARCHER
+      tier: 2
+      upgrade: 0
+      path: Haven/Archer.xdb
+    - name: MARKSMAN
+      tier: 2
+      upgrade: 1
+      path: Haven/Marksman.xdb
+    - name: CROSSBOWMAN
+      tier: 2
+      upgrade: 2
+      path: Haven/Renegates/Longbowman.xdb
+    - name: FOOTMAN
+      tier: 3
+      upgrade: 0
+      path: Haven/Footman.xdb
+    - name: SQUIRE
+      tier: 3
+      upgrade: 1
+      path: Haven/Swordsman.xdb
+    - name: VINDICATOR
+      tier: 3
+      upgrade: 2
+      path: Haven/Renegates/Vindicator.xdb
+    - name: GRIFFIN
+      tier: 4
+      upgrade: 0
+      path: Haven/Griffin.xdb
+    - name: IMPERIAL GRIFFIN
+      tier: 4
+      upgrade: 1
+      path: Haven/Royal_Griffin.xdb
+    - name: BATTLE GRIFFIN
+      tier: 4
+      upgrade: 2
+      path: Haven/Renegates/BattleGriffin.xdb
+    - name: PRIEST
+      tier: 5
+      upgrade: 0
+      path: Haven/Priest.xdb
+    - name: INQUISITOR
+      tier: 5
+      upgrade: 1
+      path: Haven/Cleric.xdb
+    - name: ZEALOT
+      tier: 5
+      upgrade: 2
+      path: Haven/Renegates/Zealot.xdb
+    - name: CAVALIER
+      tier: 6
+      upgrade: 0
+      path: Haven/Cavalier.xdb
+    - name: PALADIN
+      tier: 6
+      upgrade: 1
+      path: Haven/Paladin.xdb
+    - name: CHAMPION
+      tier: 6
+      upgrade: 2
+      path: Haven/Renegates/Champion.xdb
+    - name: ANGEL
+      tier: 7
+      upgrade: 0
+      path: Haven/Angel.xdb
+    - name: ARCHANGEL
+      tier: 7
+      upgrade: 1
+      path: Haven/Archangel.xdb
+    - name: SERAPH
+      tier: 7
+      upgrade: 2
+      path: Haven/Renegates/Seraph.xdb
+  PRESERVE:
+    - name: BLADE DANCER
+      tier: 1
+      upgrade: 0
+      path: Preserve/Blade_Juggler.xdb
+    - name: WAR DANCER
+      tier: 1
+      upgrade: 1
+      path: Preserve/War_Dancer.xdb
+    - name: WIND DANCER
+      tier: 1
+      upgrade: 2
+      path: Preserve/3rd/BladeSinger.xdb
+    - name: PIXIE
+      tier: 2
+      upgrade: 0
+      path: Preserve/Pixie.xdb
+    - name: SPRITE
+      tier: 2
+      upgrade: 1
+      path: Preserve/Sprite.xdb
+    - name: DRYAD
+      tier: 2
+      upgrade: 2
+      path: Preserve/3rd/Dryad.xdb
+    - name: HUNTER
+      tier: 3
+      upgrade: 0
+      path: Preserve/Wood_Elf.xdb
+    - name: MASTER HUNTER
+      tier: 3
+      upgrade: 1
+      path: Preserve/Grand_Elf.xdb
+    - name: SHARPSHOOTER
+      tier: 3
+      upgrade: 2
+      path: Preserve/3rd/SharpShooter.xdb
+    - name: DRUID
+      tier: 4
+      upgrade: 0
+      path: Preserve/Druid.xdb
+    - name: DRUID ELDER
+      tier: 4
+      upgrade: 1
+      path: Preserve/Druid_Elder.xdb
+    - name: HIGH DRUID
+      tier: 4
+      upgrade: 2
+      path: Preserve/3rd/HighDruid.xdb
+    - name: UNICORN
+      tier: 5
+      upgrade: 0
+      path: Preserve/Unicorn.xdb
+    - name: SILVER UNICORN
+      tier: 5
+      upgrade: 1
+      path: Preserve/War_Unicorn.xdb
+    - name: PRISTINE UNICORN
+      tier: 5
+      upgrade: 2
+      path: Preserve/3rd/WhiteUnicorn.xdb
+    - name: TREANT
+      tier: 6
+      upgrade: 0
+      path: Preserve/Treant.xdb
+    - name: ANCIENT TREANT
+      tier: 6
+      upgrade: 1
+      path: Preserve/Treant_Guardian.xdb
+    - name: SAVAGE TREANT
+      tier: 6
+      upgrade: 2
+      path: Preserve/3rd/AngerTreant.xdb
+    - name: GREEN DRAGON
+      tier: 7
+      upgrade: 0
+      path: Preserve/Green_Dragon.xdb
+    - name: GOLDEN DRAGON
+      tier: 7
+      upgrade: 1
+      path: Preserve/Gold_Dragon.xdb
+    - name: CRYSTAL DRAGON
+      tier: 7
+      upgrade: 2
+      path: Preserve/3rd/RainbowDragon.xdb
+  FORTRESS:
+    - name: DEFENDER
+      tier: 1
+      upgrade: 0
+      path: Dwarf/Defender.xdb
+    - name: SHIELDGUARD
+      tier: 1
+      upgrade: 1
+      path: Dwarf/Stout_Defender.xdb
+    - name: MOUNTAIN GUARD
+      tier: 1
+      upgrade: 2
+      path: Dwarf/3rd/StoneDefender.xdb
+    - name: SPEARWIELDER
+      tier: 2
+      upgrade: 0
+      path: Dwarf/Axe_Fighter.xdb
+    - name: SKIRMISHER
+      tier: 2
+      upgrade: 1
+      path: Dwarf/Axe_Thrower.xdb
+    - name: HARPOONER
+      tier: 2
+      upgrade: 2
+      path: Dwarf/3rd/Harpooner.xdb
+    - name: BRAWLER
+      tier: 3
+      upgrade: 0
+      path: Dwarf/Brawler.xdb
+    - name: BERSERKER
+      tier: 3
+      upgrade: 1
+      path: Dwarf/Berserker.xdb
+    - name: BATTLERAGER
+      tier: 3
+      upgrade: 2
+      path: Dwarf/3rd/BattleRager.xdb
+    - name: BEAR RIDER
+      tier: 4
+      upgrade: 0
+      path: Dwarf/Bear_Raider.xdb
+    - name: BLACKBEAR RIDER
+      tier: 4
+      upgrade: 1
+      path: Dwarf/Blackbear_Raider.xdb
+    - name: WHITEBEAR RIDER
+      tier: 4
+      upgrade: 2
+      path: Dwarf/3rd/WhiteBearRider.xdb
+    - name: RUNE PRIEST
+      tier: 5
+      upgrade: 0
+      path: Dwarf/Rune_Mage.xdb
+    - name: RUNE PATRIARCH
+      tier: 5
+      upgrade: 1
+      path: Dwarf/Flame_Mage.xdb
+    - name: RUNE KEEPER
+      tier: 5
+      upgrade: 2
+      path: Dwarf/3rd/FlameKeeper.xdb
+    - name: THANE
+      tier: 6
+      upgrade: 0
+      path: Dwarf/Thane.xdb
+    - name: FLAME LORD
+      tier: 6
+      upgrade: 1
+      path: Dwarf/Warlord.xdb
+    - name: THUNDER THANE
+      tier: 6
+      upgrade: 2
+      path: Dwarf/3rd/ThunderThane.xdb
+    - name: FIRE DRAGON
+      tier: 7
+      upgrade: 0
+      path: Dwarf/Fire_Dragon.xdb
+    - name: MAGMA DRAGON
+      tier: 7
+      upgrade: 1
+      path: Dwarf/Magma_Dragon.xdb
+    - name: LAVA DRAGON
+      tier: 7
+      upgrade: 2
+      path: Dwarf/3rd/LavaDragon.xdb
+  ACADEMY:
+    - name: GREMLIN
+      tier: 1
+      upgrade: 0
+      path: Academy/Gremlin.xdb
+    - name: MASTER GREMLIN
+      tier: 1
+      upgrade: 1
+      path: Academy/Master_Gremlin.xdb
+    - name: GREMLIN SABOTEUR
+      tier: 1
+      upgrade: 2
+      path: Academy/3rd/GremlinSaboteur.xdb
+    - name: STONE GARGOYLE
+      tier: 2
+      upgrade: 0
+      path: Academy/Stone_Gargoyle.xdb
+    - name: OBSIDIAN GARGOYLE
+      tier: 2
+      upgrade: 1
+      path: Academy/Obsidian_Gargoyle.xdb
+    - name: GOLDEN GARGOYLE
+      tier: 2
+      upgrade: 2
+      path: Academy/3rd/MarbleGargoyle.xdb
+    - name: STONE GOLEM
+      tier: 3
+      upgrade: 0
+      path: Academy/Iron_Golem.xdb
+    - name: STEEL GOLEM
+      tier: 3
+      upgrade: 1
+      path: Academy/Steel_Golem.xdb
+    - name: MAGNETIC GOLEM
+      tier: 3
+      upgrade: 2
+      path: Academy/3rd/ObsidianGolem.xdb
+    - name: MAGE
+      tier: 4
+      upgrade: 0
+      path: Academy/Magi.xdb
+    - name: ARCHMAGE
+      tier: 4
+      upgrade: 1
+      path: Academy/Arch_Magi.xdb
+    - name: BATTLEMAGE
+      tier: 4
+      upgrade: 2
+      path: Academy/3rd/CombatMage.xdb
+    - name: DJINN
+      tier: 5
+      upgrade: 0
+      path: Academy/Genie.xdb
+    - name: DJINN SULTAN
+      tier: 5
+      upgrade: 1
+      path: Academy/Master_Genie.xdb
+    - name: DJINN VIZIER
+      tier: 5
+      upgrade: 2
+      path: Academy/3rd/DjinnVizier.xdb
+    - name: RAKSHASA RANI
+      tier: 6
+      upgrade: 0
+      path: Academy/Rakshasa.xdb
+    - name: RAKSHASA RAJA
+      tier: 6
+      upgrade: 1
+      path: Academy/Rakshasa_Rukh.xdb
+    - name: RAKSHASA KSHATRA
+      tier: 6
+      upgrade: 2
+      path: Academy/3rd/RakshasaKshatri.xdb
+    - name: GIANT
+      tier: 7
+      upgrade: 0
+      path: Academy/Giant.xdb
+    - name: TITAN
+      tier: 7
+      upgrade: 1
+      path: Academy/Titan.xdb
+    - name: COLOSSUS
+      tier: 7
+      upgrade: 2
+      path: Academy/3rd/StormLord.xdb
+  DUNGEON:
+    - name: SCOUT
+      tier: 1
+      upgrade: 0
+      path: Dungeon/Scout.xdb
+    - name: ASSASSIN
+      tier: 1
+      upgrade: 1
+      path: Dungeon/Assassin.xdb
+    - name: STALKER
+      tier: 1
+      upgrade: 2
+      path: Dungeon/3rd/Stalker.xdb
+    - name: BLOOD MAIDEN
+      tier: 2
+      upgrade: 0
+      path: Dungeon/Witch.xdb
+    - name: BLOOD FURY
+      tier: 2
+      upgrade: 1
+      path: Dungeon/Blood_Witch.xdb
+    - name: BLOOD SISTER
+      tier: 2
+      upgrade: 2
+      path: Dungeon/3rd/BloodWitch2.xdb
+    - name: MINOTAUR
+      tier: 3
+      upgrade: 0
+      path: Dungeon/Minotaur.xdb
+    - name: MINOTAUR GUARD
+      tier: 3
+      upgrade: 1
+      path: Dungeon/Minotaur_King.xdb
+    - name: MINOTAUR TASKMASTER
+      tier: 3
+      upgrade: 2
+      path: Dungeon/3rd/MinotaurCaptain.xdb
+    - name: DARK RAIDER
+      tier: 4
+      upgrade: 0
+      path: Dungeon/Rider.xdb
+    - name: GRIM RAIDER
+      tier: 4
+      upgrade: 1
+      path: Dungeon/Ravager.xdb
+    - name: BRISK RAIDER
+      tier: 4
+      upgrade: 2
+      path: Dungeon/3rd/BlackRider.xdb
+    - name: SHADOW WITCH
+      tier: 5
+      upgrade: 0
+      path: Dungeon/Matron.xdb
+    - name: SHADOW MATRIARCH
+      tier: 5
+      upgrade: 1
+      path: Dungeon/Matriarch.xdb
+    - name: SHADOW MISTRESS
+      tier: 5
+      upgrade: 2
+      path: Dungeon/3rd/ShadowMistress.xdb
+    - name: HYDRA
+      tier: 6
+      upgrade: 0
+      path: Dungeon/Hydra.xdb
+    - name: CHAOS HYDRA
+      tier: 6
+      upgrade: 1
+      path: Dungeon/Chaos_Hydra.xdb
+    - name: FOUL HYDRA
+      tier: 6
+      upgrade: 2
+      path: Dungeon/3rd/AcidicHydra.xdb
+    - name: CAVE DRAGON
+      tier: 7
+      upgrade: 0
+      path: Dungeon/Deep_Dragon.xdb
+    - name: BLACK DRAGON
+      tier: 7
+      upgrade: 1
+      path: Dungeon/Black_Dragon.xdb
+    - name: RED DRAGON
+      tier: 7
+      upgrade: 2
+      path: Dungeon/3rd/RedDragon.xdb
+  NECROPOLIS:
+    - name: SKELETON
+      tier: 1
+      upgrade: 0
+      path: Necropolis/Skeleton.xdb
+    - name: SKELETON ARCHER
+      tier: 1
+      upgrade: 1
+      path: Necropolis/Skeleton_Archer.xdb
+    - name: SKELETON WARRIOR
+      tier: 1
+      upgrade: 2
+      path: Necropolis/3rd/SkeletonWarrior.xdb
+    - name: ZOMBIE
+      tier: 2
+      upgrade: 0
+      path: Necropolis/Walking_Dead.xdb
+    - name: PLAGUE ZOMBIE
+      tier: 2
+      upgrade: 1
+      path: Necropolis/Zombie.xdb
+    - name: ROT ZOMBIE
+      tier: 2
+      upgrade: 2
+      path: Necropolis/3rd/DiseaseZombie.xdb
+    - name: GHOST
+      tier: 3
+      upgrade: 0
+      path: Necropolis/Manes.xdb
+    - name: SPECTRE
+      tier: 3
+      upgrade: 1
+      path: Necropolis/Ghosts.xdb
+    - name: POLTERGEIST
+      tier: 3
+      upgrade: 2
+      path: Necropolis/3rd/Poltergeist.xdb
+    - name: VAMPIRE
+      tier: 4
+      upgrade: 0
+      path: Necropolis/Vampire.xdb
+    - name: VAMPIRE LORD
+      tier: 4
+      upgrade: 1
+      path: Necropolis/Vampire_Lord.xdb
+    - name: NOSFERATU
+      tier: 4
+      upgrade: 2
+      path: Necropolis/3rd/Nosferatu.xdb
+    - name: LICH
+      tier: 5
+      upgrade: 0
+      path: Necropolis/Lich.xdb
+    - name: ARCHLICH
+      tier: 5
+      upgrade: 1
+      path: Necropolis/Demilich.xdb
+    - name: LICH MASTER
+      tier: 5
+      upgrade: 2
+      path: Necropolis/3rd/LichMaster.xdb
+    - name: BLACK KNIGHT
+      tier: 6
+      upgrade: 0
+      path: Necropolis/Black_Knight.xdb
+    - name: DREAD KNIGHT
+      tier: 6
+      upgrade: 1
+      path: Necropolis/Dread_Knight.xdb
+    - name: TERROR KNIGHT
+      tier: 6
+      upgrade: 2
+      path: Necropolis/3rd/Death_Knight.xdb
+    - name: WIGHT
+      tier: 7
+      upgrade: 0
+      path: Necropolis/Wight.xdb
+    - name: WRAITH
+      tier: 7
+      upgrade: 1
+      path: Necropolis/Wraith.xdb
+    - name: BANSHEE
+      tier: 7
+      upgrade: 2
+      path: Necropolis/3rd/Banshee.xdb
+  INFERNO:
+    - name: IMP
+      tier: 1
+      upgrade: 0
+      path: Inferno/Familiar.xdb
+    - name: FAMILIAR
+      tier: 1
+      upgrade: 1
+      path: Inferno/Imp.xdb
+    - name: VERMIN
+      tier: 1
+      upgrade: 2
+      path: Inferno/3rd/Quasit.xdb
+    - name: HORNED DEMON
+      tier: 2
+      upgrade: 0
+      path: Inferno/Demon.xdb
+    - name: HORNED OVERSEER
+      tier: 2
+      upgrade: 1
+      path: Inferno/HornedDemon.xdb
+    - name: HORNED GRUNT
+      tier: 2
+      upgrade: 2
+      path: Inferno/3rd/HornedLeaper.xdb
+    - name: HELLHOUND
+      tier: 3
+      upgrade: 0
+      path: Inferno/HellHound.xdb
+    - name: CERBERUS
+      tier: 3
+      upgrade: 1
+      path: Inferno/Cerberius.xdb
+    - name: FIREHOUND
+      tier: 3
+      upgrade: 2
+      path: Inferno/3rd/FirebreatherHound.xdb
+    - name: SUCCUBUS
+      tier: 4
+      upgrade: 0
+      path: Inferno/Succubus.xdb
+    - name: SUCCUBUS MISTRESS
+      tier: 4
+      upgrade: 1
+      path: Inferno/InfernalSuccubus.xdb
+    - name: SUCCUBUS SEDUCER
+      tier: 4
+      upgrade: 2
+      path: Inferno/3rd/SuccubusSeducer.xdb
+    - name: HELL CHARGER
+      tier: 5
+      upgrade: 0
+      path: Inferno/Nightmare.xdb
+    - name: HELL STALLION
+      tier: 5
+      upgrade: 1
+      path: Inferno/FrightfulNightmare.xdb
+    - name: NIGHTMARE
+      tier: 5
+      upgrade: 2
+      path: Inferno/3rd/Hellmare.xdb
+    - name: PIT FIEND
+      tier: 6
+      upgrade: 0
+      path: Inferno/PitFiend.xdb
+    - name: PIT LORD
+      tier: 6
+      upgrade: 1
+      path: Inferno/Balor.xdb
+    - name: PIT SPAWN
+      tier: 6
+      upgrade: 2
+      path: Inferno/3rd/PitSpawn.xdb
+    - name: DEVIL
+      tier: 7
+      upgrade: 0
+      path: Inferno/Devil.xdb
+    - name: ARCHDEVIL
+      tier: 7
+      upgrade: 1
+      path: Inferno/ArchDevil_.xdb
+    - name: ARCHDEMON
+      tier: 7
+      upgrade: 2
+      path: Inferno/3rd/ArchDemon.xdb
+  STRONGHOLD:
+    - name: GOBLIN
+      tier: 1
+      upgrade: 0
+      path: Orcs/Goblin1.xdb
+    - name: GOBLIN TRAPPER
+      tier: 1
+      upgrade: 1
+      path: Orcs/Goblin2.xdb
+    - name: GOBLIN DEFILER
+      tier: 1
+      upgrade: 2
+      path: Orcs/3rd/GoblinDefiler.xdb
+    - name: SUN DAUGHTER
+      tier: 2
+      upgrade: 0
+      path: Orcs/Shaman1.xdb
+    - name: SKY DAUGHTER
+      tier: 2
+      upgrade: 1
+      path: Orcs/Shaman2.xdb
+    - name: EARTH DAUGHTER
+      tier: 2
+      upgrade: 2
+      path: Orcs/3rd/ShamanHag.xdb
+    - name: WARRIOR
+      tier: 3
+      upgrade: 0
+      path: Orcs/Orc1.xdb
+    - name: MAULER
+      tier: 3
+      upgrade: 1
+      path: Orcs/Orc2.xdb
+    - name: WARMONGER
+      tier: 3
+      upgrade: 2
+      path: Orcs/3rd/OrcWarmonger.xdb
+    - name: CENTAUR
+      tier: 4
+      upgrade: 0
+      path: Orcs/Centaur1.xdb
+    - name: CENTAUR NOMAD
+      tier: 4
+      upgrade: 1
+      path: Orcs/Centaur2.xdb
+    - name: CENTAUR MARAUDER
+      tier: 4
+      upgrade: 2
+      path: Orcs/3rd/CentaurMaradeur.xdb
+    - name: SLAYER
+      tier: 5
+      upgrade: 0
+      path: Orcs/OrcChief1.xdb
+    - name: EXECUTIONER
+      tier: 5
+      upgrade: 1
+      path: Orcs/OrcChief2.xdb
+    - name: CHIEFTAIN
+      tier: 5
+      upgrade: 2
+      path: Orcs/3rd/OrcchiefChieftain.xdb
+    - name: WYVERN
+      tier: 6
+      upgrade: 0
+      path: Orcs/Wyvern1.xdb
+    - name: FOUL WYVERN
+      tier: 6
+      upgrade: 1
+      path: Orcs/Wyvern2.xdb
+    - name: PAO KAI
+      tier: 6
+      upgrade: 2
+      path: Orcs/3rd/WyvernPaokai.xdb
+    - name: CYCLOP
+      tier: 7
+      upgrade: 0
+      path: Orcs/Cyclop1.xdb
+    - name: UNTAMED CYCLOP
+      tier: 7
+      upgrade: 1
+      path: Orcs/Cyclop2.xdb
+    - name: BLOODEYE CYCLOP
+      tier: 7
+      upgrade: 2
+      path: Orcs/3rd/CyclopBloodeyed.xdb
+  NEUTRAL:
+    - name: WOLF
+      tier: 2
+      upgrade: 0
+      path: Neutrals/Wolf.xdb
+    - name: MANTICORE
+      tier: 5
+      upgrade: 0
+      path: Neutrals/Manticore.xdb
+    - name: ARCANE EAGLE
+      tier: 6
+      upgrade: 0
+      path: Neutrals/SnowApe.xdb
+    - name: PHOENIX
+      tier: 7
+      upgrade: 0
+      path: Neutrals/Phoenix.xdb
+    - name: AIR ELEMENTAL
+      tier: 5
+      upgrade: 0
+      path: Neutrals/Air_Elemental.xdb
+    - name: EARTH ELEMENTAL
+      tier: 5
+      upgrade: 0
+      path: Neutrals/Earth_Elemental.xdb
+    - name: FIRE ELEMENTAL
+      tier: 5
+      upgrade: 0
+      path: Neutrals/Fire_Elemental.xdb
+    - name: WATER ELEMENTAL
+      tier: 5
+      upgrade: 0
+      path: Neutrals/Water_Elemental.xdb
+    - name: MUMMY
+      tier: 3
+      upgrade: 0
+      path: Neutrals/Mummy.xdb
+    - name: BONE DRAGON
+      tier: 6
+      upgrade: 0
+      path: Neutrals/Bone_Dragon.xdb
+    - name: SHADOW DRAGON
+      tier: 6
+      upgrade: 1
+      path: Neutrals/Shadow_Dragon.xdb
+    - name: SPECTRAL DRAGON
+      tier: 6
+      upgrade: 2
+      path: Neutrals/HorrorDragon.xdb
+    - name: BASILISK
+      tier: 1
+      upgrade: 0
+      path: Neutrals/Basilisk.xdb
+    - name: LIZARDMAN
+      tier: 2
+      upgrade: 0
+      path: Neutrals/Lizardman.xdb
+    - name: SPITTING SPIDER
+      tier: 3
+      upgrade: 0
+      path: Neutrals/SpittingSpider.xdb
+    - name: CAVE SPIDER
+      tier: 4
+      path: Neutrals/CaveSpider.xdb
+      upgrade: 0
+    - name: DEATH SPIDER
+      tier: 4
+      path: Neutrals/DeathSpider.xdb
+      upgrade: 1
+    - name: BEHEMOTH
+      tier: 7
+      upgrade: 0
+      path: Neutrals/Behemoth.xdb
+    - name: EINHERJAR
+      tier: 7
+      upgrade: 0
+      path: Neutrals/Einherjar.xdb
+    - name: KRAKEN
+      tier: 7
+      upgrade: 0
+      path: Neutrals/Kraken.xdb
+    - name: LEGENDARY DRAGON
+      tier: 8
+      upgrade: 0
+      path: Neutrals/LegendaryDragon.xdb
+
+HEROES:
+  HAVEN:
+    - name: DUNCAN
+      path: Haven/Duncan.(AdvMapHeroShared).xdb
+    - name: VITTORIO
+      path: Haven/Christian.(AdvMapHeroShared).xdb
+    - name: DOUGAL
+      path: Haven/Orrin.(AdvMapHeroShared).xdb
+    - name: LASZLO
+      path: Haven/Laszlo.(AdvMapHeroShared).xdb
+    - name: GABRIELLE
+      path: Haven/RedHeavenHero06.(AdvMapHeroShared).xdb
+    - name: KLAUS
+      path: Haven/Sarge.(AdvMapHeroShared).xdb
+    - name: FREYDA
+      path: Haven/Axel.(AdvMapHeroShared).xdb
+    - name: ISABEL
+      path: Haven/Isabell.(AdvMapHeroShared).xdb
+    - name: GODRIC
+      path: Haven/GodricMP.(AdvMapHeroShared).xdb
+    - name: NICOLAI
+      path: Haven/Nicolai.(AdvMapHeroShared).xdb
+    - name: MAEVE
+      path: Haven/Maeve.(AdvMapHeroShared).xdb
+    - name: ALARIC
+      path: Haven/Alaric.(AdvMapHeroShared).xdb
+  PRESERVE:
+    - name: WYNGAAL
+      path: Preserve/Linaas.(AdvMapHeroShared).xdb
+    - name: KYRRE
+      path: Preserve/Kyrre.(AdvMapHeroShared).xdb
+    - name: TALANAR
+      path: Preserve/Nadaur.(AdvMapHeroShared).xdb
+    - name: JENOVA
+      path: Preserve/Jenova.(AdvMapHeroShared).xdb
+    - name: FINDAN
+      path: Preserve/Heam.(AdvMapHeroShared).xdb
+    - name: IVOR
+      path: Preserve/Arniel.(AdvMapHeroShared).xdb
+    - name: DIRAEL
+      path: Preserve/Diraya.(AdvMapHeroShared).xdb
+    - name: VINRAEL
+      path: Preserve/Vinrael.(AdvMapHeroShared).xdb
+    - name: TIERU
+      path: Preserve/Vaniel.(AdvMapHeroShared).xdb
+    - name: YLTHIN
+      path: Preserve/Itil.(AdvMapHeroShared).xdb
+    - name: ELLESHAR
+      path: Preserve/Elleshar.(AdvMapHeroShared).xdb
+    - name: MELODIA
+      path: Preserve/Melodia.(AdvMapHeroShared).xdb
+  FORTRESS:
+    - name: INGVAR
+      path: Dwarves/Ingvar.(AdvMapHeroShared).xdb
+    - name: KARLI
+      path: Dwarves/Skeggy.(AdvMapHeroShared).xdb
+    - name: ROLF
+      path: Dwarves/Rolf.(AdvMapHeroShared).xdb
+    - name: HANGVUL
+      path: Dwarves/Hangvul2.(AdvMapHeroShared).xdb
+    - name: TAZAR
+      path: Dwarves/Tazar.(AdvMapHeroShared).xdb
+    - name: WULFSTAN
+      path: Dwarves/Wulfstan.(AdvMapHeroShared).xdb
+    - name: TOLGHAR
+      path: Dwarves/KingTolghar.(AdvMapHeroShared).xdb
+    - name: ERLING
+      path: Dwarves/Egil.(AdvMapHeroShared).xdb
+    - name: EDWIG
+      path: Dwarves/Vilma.(AdvMapHeroShared).xdb
+    - name: BRAND
+      path: Dwarves/Brand.(AdvMapHeroShared).xdb
+    - name: EBBA
+      path: Dwarves/Bersy.(AdvMapHeroShared).xdb
+    - name: INGA
+      path: Dwarves/Una.(AdvMapHeroShared).xdb
+  ACADEMY:
+    - name: HAVEZ
+      path: Academy/Havez.(AdvMapHeroShared).xdb
+    - name: RAZZAK
+      path: Academy/Razzak.(AdvMapHeroShared).xdb
+    - name: DAVIUS
+      path: Academy/Davius.(AdvMapHeroShared).xdb
+    - name: NATHIR
+      path: Academy/Astral.(AdvMapHeroShared).xdb
+    - name: THEODORUS
+      path: Academy/Timerkhan.(AdvMapHeroShared).xdb
+    - name: GALIB
+      path: Academy/Tan.(AdvMapHeroShared).xdb
+    - name: NUR
+      path: Academy/Nur.(AdvMapHeroShared).xdb
+    - name: ZEHIR
+      path: Academy/Zehir.(AdvMapHeroShared).xdb
+    - name: CYRUS
+      path: Academy/Cyrus.(AdvMapHeroShared).xdb
+    - name: MINASLI
+      path: Academy/Minasli.(AdvMapHeroShared).xdb
+    - name: RISSA
+      path: Academy/Rissa.(AdvMapHeroShared).xdb
+    - name: MAAHIR
+      path: Academy/Maahir.(AdvMapHeroShared).xdb
+  DUNGEON:
+    - name: VAYSHAN
+      path: Dungeon/Ohtarig.(AdvMapHeroShared).xdb
+    - name: YRWANNA
+      path: Dungeon/Urunir.(AdvMapHeroShared).xdb
+    - name: DARKSTORM
+      path: Dungeon/Darkstorm.(AdvMapHeroShared).xdb
+    - name: SORGAL
+      path: Dungeon/Ferigl.(AdvMapHeroShared).xdb
+    - name: SYLSAI
+      path: Dungeon/Sylsai.(AdvMapHeroShared).xdb
+    - name: RAELAG
+      path: Dungeon/Raelag.(AdvMapHeroShared).xdb
+    - name: SINITAR
+      path: Dungeon/Inagost.(AdvMapHeroShared).xdb
+    - name: RANLETH
+      path: Dungeon/Ranleth.xdb
+    - name: ERUINA
+      path: Dungeon/Eruina.(AdvMapHeroShared).xdb
+    - name: SHADYA
+      path: Dungeon/Kelodin.(AdvMapHeroShared).xdb
+    - name: LETHOS
+      path: Dungeon/Dalom.(AdvMapHeroShared).xdb
+    - name: SEPHINROTH
+      path: Dungeon/Sephinroth.(AdvMapHeroShared).xdb
+  NECROPOLIS:
+    - name: VLADIMIR
+      path: Necropolis/Pelt.(AdvMapHeroShared).xdb
+    - name: ARANTIR
+      path: Necropolis/A2_Arantir.(AdvMapHeroShared).xdb
+    - name: ORSON
+      path: Necropolis/Straker.(AdvMapHeroShared).xdb
+    - name: LUCRETIA
+      path: Necropolis/Tamika.(AdvMapHeroShared).xdb
+    - name: XERXON
+      path: Necropolis/Xerxon.(AdvMapHeroShared).xdb
+    - name: KASPAR
+      path: Necropolis/Gles.(AdvMapHeroShared).xdb
+    - name: RAVEN
+      path: Necropolis/Effig.(AdvMapHeroShared).xdb
+    - name: ARCHILUS
+      path: Necropolis/Archilus.(AdvMapHeroShared).xdb
+    - name: THANT
+      path: Necropolis/Thant.(AdvMapHeroShared).xdb
+    - name: SANDRO
+      path: Necropolis/Sandro.(AdvMapHeroShared).xdb
+    - name: ORNELLA
+      path: Necropolis/Ornella_necro.xdb
+    - name: DEIRDRE
+      path: Necropolis/Nemor.(AdvMapHeroShared).xdb
+  INFERNO:
+    - name: GROK
+      path: Inferno/Grok.(AdvMapHeroShared).xdb
+    - name: SHELTEM
+      path: Inferno/Sheltem.(AdvMapHeroShared).xdb
+    - name: GRAWL
+      path: Inferno/Guarg.(AdvMapHeroShared).xdb
+    - name: ASH
+      path: Inferno/Ash.(AdvMapHeroShared).xdb
+    - name: NYMUS
+      path: Inferno/Nymus.(AdvMapHeroShared).xdb
+    - name: MALUSTAR
+      path: Inferno/Malustar.(AdvMapHeroShared).xdb
+    - name: AGRAEL
+      path: Inferno/Agrael.(AdvMapHeroShared).xdb
+    - name: MARBAS
+      path: Inferno/Marder.(AdvMapHeroShared).xdb
+    - name: ORLANDO
+      path: Inferno/Orlando.(AdvMapHeroShared).xdb
+    - name: BIARA
+      path: Inferno/Biara.(AdvMapHeroShared).xdb
+    - name: DELEB
+      path: Inferno/Deleb.(AdvMapHeroShared).xdb
+    - name: SOVEREIGN
+      path: Inferno/Sovereign2.(AdvMapHeroShared).xdb
+  STRONGHOLD:
+    - name: KRAGH
+      path: Stronghold/Hero1.(AdvMapHeroShared).xdb
+    - name: GOTAI
+      path: Stronghold/Gottai.xdb
+    - name: KILGHAN
+      path: Stronghold/Hero9.(AdvMapHeroShared).xdb
+    - name: TELSEK
+      path: Stronghold/Hero8.(AdvMapHeroShared).xdb
+    - name: GARUNA
+      path: Stronghold/Hero3.(AdvMapHeroShared).xdb
+    - name: GORSHAK
+      path: Stronghold/Hero4.(AdvMapHeroShared).xdb
+    - name: SHAK KARUKAT
+      path: Stronghold/Hero6.(AdvMapHeroShared).xdb
+    - name: HAGGASH
+      path: Stronghold/Hero7.(AdvMapHeroShared).xdb
+    - name: MUKHA
+      path: Stronghold/Mokka.(AdvMapHeroShared).xdb
+    - name: URGHAT
+      path: Stronghold/Hero2.(AdvMapHeroShared).xdb
+    - name: ZOULEIKA
+      path: Stronghold/Zouleika.(AdvMapHeroShared).xdb
+    - name: KUJIN
+      path: Stronghold/KujinMP.(AdvMapHeroShared).xdb
+
+SKILLS:
+  OFFENCE:
+    perks:
+      - OFFENSIVE_FORMATION
+      - TACTICS
+      - SWIFTNESS
+      - ARCHERY
+      - PRECISION
+      - FATAL_STRIKES
+  DEFENSE:
+    perks:
+      - DEFENSIVE_FORMATION
+      - HOLD_GROUND
+      - PREPARATION
+      - EVASION
+      - SEAL_OF_PROTECTION
+      - STAMINA
+  LEARNING:
+    perks:
+      - INTUITION
+      - SCHOLAR
+      - MENTORING
+      - INTELLIGENCE
+      - EXALTATION
+      - MEDITATION
+  SORCERY:
+    perks:
+      - ARCANE_INITIATION
+      - ARCANE_BRILLANCE
+      - ARCANE_EXCELLENCE
+      - MAGIC_INSIGHT
+      - GRADUATE
+      - OCCULTISM
+  VOICE:
+    perks:
+      - MIGHTY_SHOUT
+      - VOICE_TRAINING
+      - BLOODLUST
+      - DOMINANT_SHOUT
+      - LUNG_WORKOUT
+      - INTIMIDATING_VOICE
+  LEADERSHIP:
+    perks:
+      - DIPLOMACY
+      - TALETELLERS
+      - CHARISMA
+      - MOTIVATION
+      - ENCOURAGE
+      - LAST_STAND
+  GOVERNANCE:
+    perks:
+      - ESTATES
+      - GEOLOGY
+      - INDUSTRY
+      - GEAR_UP
+      - HEROES_LEGACY
+      - MYTHOLOGY
+  LOGISTICS:
+    perks:
+      - PATHFINDING
+      - SCOUTING
+      - SNATCH
+      - RECRUITMENT
+      - SPOILS_OF_WAR
+      - WAR_PATH
+  WARFARE:
+    perks:
+      - BALLISTICS
+      - FLAMING_ARROWS
+      - RAPIDFIRE
+      - ANATOMY
+      - TECHNICAL_STAFF
+      - HOUNDMASTERS
+  TRAINING:
+    perks:
+      - TOUGHNESS
+      - BATTLE_FRENZY
+      - ONSLAUGHT
+      - RUSH
+      - EXPERTISE
+      - ASSAULT_TRAINING
+      - STUN_TRAINING
+  DESPOTISM:
+    perks:
+      - DEVOTION
+      - BATTLE_WRATH
+      - WAR_POLICY
+  COMBAT:
+    perks:
+      - EMPIRICISM
+      - COORDINATION
+      - STUNNING_BLOW
+      - UNLIMITED_RETALIATIONS
+      - REINFORCEMENT
+      - MARK_OF_THE_DAMNED
+      - BRUTALITY
+      - FIERCE_RETALIATIONS
+  SHATTER_MAGIC:
+    perks:
+      - PROTECTION
+      - SAP_MAGIC
+      - MAGIC_FILTER
+      - BACK_TO_THE_VOID
+      - SPELLBREAKER
+      - COUNTER_MAGIC
+      - ARMOR_PROTECTION
+      - CORRUPTION_IMMUNE
+  LIGHT_MAGIC:
+    perks:
+      - AURA_OF_PROTECTION
+      - FIRE_RESISTANCE
+      - COUNTERSPELL
+      - AURA_OF_ENERGY
+      - SIPHON_GRACE
+      - VENGEFUL_LIGHT
+  DARK_MAGIC:
+    perks:
+      - SPREAD_CURSE
+      - CONSUME_CORPSE
+      - PARIAH
+      - SPREAD_PAIN
+      - SPIRIT_LINK
+      - PLAGUE_TENT
+  NATURAL_MAGIC:
+    perks:
+      - CONJURER
+      - ELEMENTAL_BALANCE
+      - WARRIORS_OF_THE_MAGMA
+      - WARRIORS_OF_THE_SEA
+      - WARRIORS_OF_THE_MOUNTAIN
+      - WARRIORS_OF_THE_SKY
+      - SCORCHING_EARTH
+      - FOG_VEIL
+      - STORM_WIND
+  DESTRUCTIVE_MAGIC:
+    perks:
+      - FROST_POWER
+      - DEADLY_COLD
+      - COLD_STEEL
+      - BLAZE_POWER
+      - IGNITE
+      - SECRETS_OF_DESTRUCT
+  COURAGE:
+    perks:
+      - PRAYER
+      - EMPATHY
+      - GUARDIAN_ANGEL
+      - EXPERT_TRAINER
+      - RETALIATION_STRIKE
+      - HOLY_CHARGE
+  AVENGER:
+    perks:
+      - IMBUE_ARROW
+      - IMBUE_BALLISTA
+      - LUCKY_CASTER
+      - SNIPE_DEAD
+      - KNOW_YOUR_ENEMY
+      - BATTLE_COMMANDER
+  RUNELORE:
+    perks:
+      - FINE_RUNE
+      - REFRESH_RUNE
+      - GREATER_RUNE
+      - TAP_RUNES
+      - RUNIC_ATTUNEMENT
+      - RUNIC_SHIELD
+  ARTIFICIER:
+    perks:
+      - MARCH_OF_THE_GOLEMS
+      - ARTIFICIAL_GLORY
+      - REMOTE_CONTROL
+      - CONSUME_ARTIFACT
+      - MAGIC_BOND
+      - MAGIC_MIRROR
+  ARCANISM:
+    perks:
+      - EMPOWERED_SPELLS
+      - CHAOTIC_SPELLS
+      - OBLITERATION
+      - POWER_OF_STONE
+      - POWER_OF_HASTE
+      - TELEPORT_ASSAULT
+  NECROMANCY:
+    perks:
+      - CHILLING_BONES
+      - SPELLPROOF_BONES
+      - HERALD_OF_DEATH
+      - BANSHEE_HOWL
+      - HAUNTING
+      - LORD_OF_UNDEAD
+  GATING:
+    perks:
+      - SWIFT_GATING
+      - GATE_MASTER
+      - SWARMING_GATE
+      - HELLFIRE
+      - SEARING_FIRES
+      - FIERY_WRATH
+  BLOOD_RAGE:
+    perks:
+      - MEMORY_OF_OUR_BLOOD
+      - BATTLE_ELATION
+      - BLOODFIRE
+      - GOBLIN_SUPPORT
+      - DEFEND_US_ALL
+      - SHEER_STRENGTH
+  SPIRITISM:
+    perks:
+      - WITCHCRAFT
+      - TWILIGHT
+      - RAGE_AWAKENING
+      - ADVANCED_BLOOD_RAGE
+  INNATES:
+    perks:
+      - FAMILIAR_LAND
+      - SILENT_TRACKER
+      - TENACITY
+      - INFUSION
+      - ELEMENTAL_VISION
+      - ETERNAL_SERVITUDE
+      - SOIL_BURN
+      - COMMANDER
+      - BANISH
+  NONE:
+    perks:
+      - RETRIBUTION
+      - RAGE_OF_THE_FOREST
+      - BULWARK_RUNE
+      - OMNISCIENCE
+      - RAGE_OF_THE_ELEMENTS
+      - DEAD_MANS_CURSE
+      - URGASHS_CALL
+      - ORCISH_FURY
+
+ARTIFACTS:
+  HAVEN:
+    id: 1
+    pieces:
+    - ARTIFACT_SENTINELS_BRACER
+    - ARTIFACT_SENTINELS_SHIELD
+    - ARTIFACT_SENTINELS_BOOTS
+    - ARTIFACT_SENTINELS_HELM
+    - PLATE_MAIL_OF_STABILITY
+    - ARTIFACT_SENTINELS_BLADE
+  SYLVAN:
+    id: 2
+    pieces:
+    - ARTIFACT_AVENGER_BOW
+    - ARTIFACT_RANGERS_CAPE
+    - ARTIFACT_RANGERS_CUIRASS
+    - DWARVEN_MITHRAL_GREAVES
+    - ARTIFACT_SYLVAN_AMULET
+    - ARTIFACT_SACRED_SEED
+  INFERNO:
+    id: 3
+    pieces:
+    - ARTIFACT_SHACKLES_OF_WAR_2
+    - ARTIFACT_HELM_OF_CHAOS
+    - NIGHTMARISH_RING
+    - ARTIFACT_RING_OF_THE_SHADOWBRAND
+    - ARTIFACT_OBSIDIAN_ARMOR
+    - ARTIFACT_WILL_OF_URGASH
+  NECRO:
+    id: 4
+    pieces:
+    - ARTIFACT_NECROMANCER_PENDANT
+    - ARTIFACT_RING_OF_DEATH
+    - ARTIFACT_SKULL_HELMET
+    - ARTIFACT_DEATH_KNIGHT_BOOTS
+    - STAFF_OF_VEXINGS
+    - CLOAK_OF_MOURNING
+  ACADEMY:
+    id: 5
+    pieces:
+    - ARTIFACT_BOOK_OF_POWER
+    - ARTIFACT_MAGISTERS_SANDALS
+    - RING_OF_MAGI
+    - CROWN_OF_MAGI
+    - STAFF_OF_MAGI
+    - ROBE_OF_MAGI
+  DUNGEON:
+    id: 6
+    pieces:
+    - ARTIFACT_RING_OF_UNSUMMONING
+    - ARTIFACT_ALTAR_OF_ELEMENTS_SHARD
+    - ARTIFACT_SHADOWSTEP_SHOES
+    - ARTIFACT_SHADOW_MASK
+    - ARTIFACT_SHADOW_BLADE
+    - ARTIFACT_CLOAK_OF_DARKNESS
+  DWARVEN:
+    id: 7
+    pieces:
+    - ARTIFACT_RUNE_OF_FLAME
+    - DWARVEN_MITHRAL_SHIELD
+    - DWARVEN_MITHRAL_SHIELD_2
+    - ARTIFACT_OGRE_SHIELD
+    - ARTIFACT_OGRE_CLUB
+    - GREAT_AXE_OF_GIANT_SLAYING
+  ORCS:
+    id: 8
+    pieces:
+    - ARTIFACT_BARBARIAN_CUIRASS
+    - ARTIFACT_BARBARIAN_CAPE
+    - ARTIFACT_BARBARIAN_HELMET
+    - ARTIFACT_COLLAR_OF_PRIMAL_RAGE
+    - ARTIFACT_OGRE_CLUB_2
+    - ARTIFACT_OGRE_SHIELD_2
+  DRAGON:
+    id: 9
+    pieces:
+    - DRAGON_SCALE_ARMOR
+    - DRAGON_SCALE_SHIELD
+    - DRAGON_BONE_GRAVES
+    - DRAGON_WING_MANTLE
+    - DRAGON_TEETH_NECKLACE
+    - DRAGON_TALON_CROWN
+    - DRAGON_EYE_RING
+    - DRAGON_FLAME_TONGUE
+  ENLIGHTEN:
+    id: 10
+    pieces:
+    - HELM_OF_ENLIGHTMENT
+    - CHAIN_MAIL_OF_ENLIGHTMENT
+    - ARTIFACT_STAFF_OF_THE_LYRE
+    - ARTIFACT_PENDANT_OF_THE_LYRE
+  FROST:
+    id: 11
+    pieces:
+    - EVERCOLD_ICICLE
+    - ARTIFACT_BEARHIDE_WRAPS
+    - ARTIFACT_CROWN_OF_THE_FROST_LORD
+    - ARTIFACT_SPEAR_OF_THE_FROST_LORD
+  GENJI:
+    id: 12
+    pieces:
+    - ARTIFACT_GENJIS_HAT
+    - ARTIFACT_GENJIS_VEST
+    - ARTIFACT_GENJIS_SANDALS
+    - ARTIFACT_GENJIS_SILKSWORD
+  ELDENA:
+    id: 13
+    pieces:
+    - ARTIFACT_ELDENAS_RED_SCARF
+    - ARTIFACT_ELDENAS_RED_COAT
+    - ARTIFACT_ELDENAS_CIRCLET
+  WAR:
+    id: 14
+    pieces:
+    - ARTIFACT_RING_OF_CELERITY
+    - WEREWOLF_CLAW_NECKLACE
+    - RING_OF_LIFE
+    - NECKLACE_OF_POWER
+  VIZIR:
+    id: 15
+    pieces:
+    - ARTIFACT_VIZIRS_CAP
+    - ARTIFACT_VIZIRS_SCIMITAR
+    - ARTIFACT_REGAL_ARMOUR
+    - ARTIFACT_PALACE_SHOES
+  SPIRIT:
+    id: 16
+    pieces:
+    - ARTIFACT_JINXING_BAND
+    - ARTIFACT_BONESTUDDED_LEATHER
+    - ARTIFACT_SKULL_MASK
+    - ARTIFACT_DEADWOOD_STAFF
+    - ARTIFACT_SPIRIT_OF_OPPRESSION
+  WARMAGE:
+    id: 17
+    pieces:
+    - BOOTS_OF_INTERFERENCE
+    - ARTIFACT_TWISTING_NEITHER
+    - ARTIFACT_HELM_OF_THE_WARMAGE
+    - ARTIFACT_RUNIC_WAR_AXE
+    - ARTIFACT_RUNIC_WAR_HARNESS
+  BANDIT:
+    id: 18
+    pieces:
+    - ARTIFACT_PLUNDERER_VEST
+    - ARTIFACT_PLUNDERER_SHOES
+    - ARTIFACT_VIKING_HATCHET
+    - ARTIFACT_VIKING_SHIELD
+    - ARTIFACT_BEARHIDE_WRAPS_2
+  BESTIAL:
+    id: 19
+    pieces:
+    - NECKLACE_OF_BRAVERY
+    - ARTIFACT_SHIELD_OF_THE_WOLF
+    - ARTIFACT_CUIRASS_OF_THE_STAG
+    - ARTIFACT_WRAPS_OF_THE_OWL
+  SAINT:
+    id: 20
+    pieces:
+    - ARTIFACT_FORTUNE_BAND_OF_THE_SAINT
+    - ARTIFACT_ANKH_OF_THE_SAINT
+    - ARTIFACT_CLOAK_OF_THE_SAINT
+    - ARTIFACT_STAFF_OF_THE_SAINT
+    - ARTIFACT_SANDALS_OF_THE_SAINT
+    - ARTIFACT_CODEX_OF_THE_SAINT
+  ARCHANGEL:
+    id: 21
+    pieces:
+    - ARTIFACT_CELESTIAL_JUSTICAR_SHIELD
+    - ARTIFACT_CELESTIAL_JUSTICAR_HELMET
+    - ARTIFACT_CELESTIAL_JUSTICAR_ARMOR
+    - RING_OF_HASTE
+    - ARTIFACT_ELRATHS_UNITY
+  WANDERER:
+    id: 22
+    pieces:
+    - WAYFARER_BOOTS
+    - ARTIFACT_BACKPACK_OF_THE_OPEN_ROAD
+  SAILOR:
+    id: 23
+    pieces:
+    - GOLDEN_SEXTANT
+    - ARTIFACT_PIRATE_SMASHER
+    - ARTIFACT_CAPTAINS_HOOK
+  MOON:
+    id: 24
+    pieces:
+    - ARTIFACT_MOONBLADE
+    - ARTIFACT_MOON_CHARM
+    - ARTIFACT_MOONLIGHT_BAND
+    - ARTIFACT_MOONLIGHT_COAT
+  NEUTRAL:
+    id: 0
+    pieces:
+    - SWORD_OF_RUINS
+    - WAND_OF_X
+    - TITANS_TRIDENT
+    - ICEBERG_SHIELD
+    - FOUR_LEAF_CLOVER
+    - CROWN_OF_COURAGE
+    - BREASTPLATE_OF_PETRIFIED_WOOD
+    - RING_OF_LIGHTING_PROTECTION
+    - BOOTS_OF_SPEED
+    - GOLDEN_HORSESHOE
+    - ENDLESS_SACK_OF_GOLD
+    - ENDLESS_BAG_OF_GOLD
+    - LION_HIDE_CAPE
+    - PHOENIX_FEATHER_CAPE
+    - ARTIFACT_VALORIOUS_ARMOR
+    - ARTIFACT_BOOTS_OF_SWIFTNESS
+    - ARTIFACT_BAND_OF_CONJURER
+    - ARTIFACT_EARTHSLIDERS
+    - ARTIFACT_RIGID_MANTLE
+    - ARTIFACT_WISPERING_RING
+    - ARTIFACT_TOME_OF_DESTRUCTION
+    - ARTIFACT_TOME_OF_LIGHT_MAGIC
+    - ARTIFACT_TOME_OF_DARK_MAGIC
+    - ARTIFACT_TOME_OF_SUMMONING_MAGIC
+    - ARTIFACT_BEGINNER_MAGIC_STICK
+    - ARTIFACT_SKULL_OF_MARKAL
+    - ARTIFACT_DWARVEN_SMITHY_HUMMER
+    - ARTIFACT_TAROT_DECK
+    - ARTIFACT_CROWN_OF_LEADER
+    - ARTIFACT_EDGE_OF_BALANCE
+    - ARTIFACT_HORN_OF_PLENTY
+    - ARTIFACT_TREEBORN_QUIVER
+    - ARTIFACT_FORTUNE_PICKAXE
+    - ARTIFACT_CURSED_DICES
+    - ARTIFACT_NAGA_COMMANDERS_HELMET
+    - ARTIFACT_RING_OF_CELERITY
+    - ARTIFACT_STEADFAST_SHIELD
+    - ARTIFACT_ELRATHS_DIVINE_SHIELD
+    - ARTIFACT_ROD_OF_TORMENT
+    - ARTIFACT_BUTCHER_GLAIVE
+    - ARTIFACT_BLAZING_SPELLBOOK
+    - ARTIFACT_CENTAUR_CROSSBOW
+    - ARTIFACT_HARPY_BOOTS
+    - ARTIFACT_RING_OF_STRENGTH
+    - ARTIFACT_LEGENDARY_BOOTS
+    - ARTIFACT_SANCTUARYS_CROWN
+    - ARTIFACT_ANCIENT_PROTECTION_CHARM
+    - ARTIFACT_CRIMSON_SCYTHE
+    - ARTIFACT_FORGOTTEN_RING
+    - ARTIFACT_DRAGONSBANE
+    - ARTIFACT_ORB_OF_AIR
+    - ARTIFACT_ORB_OF_EARTH
+    - ARTIFACT_ORB_OF_FIRE
+    - ARTIFACT_ORB_OF_WATER
+
+SPELLS:
+  - id: SPELL_MAGIC_ARROW
+    school: DESTRUCTIVE
+    tier: 1
+  - id: SPELL_MAGIC_FIST
+    school: DESTRUCTIVE
+    tier: 4
+  - id: SPELL_LIGHTNING_BOLT
+    school: DESTRUCTIVE
+    tier: 2
+  - id: SPELL_ICE_BOLT
+    school: DESTRUCTIVE
+    tier: 2
+  - id: SPELL_FIREBALL
+    school: DESTRUCTIVE
+    tier: 3
+  - id: SPELL_FROST_RING
+    school: DESTRUCTIVE
+    tier: 3
+  - id: SPELL_CHAIN_LIGHTNING
+    school: DESTRUCTIVE
+    tier: 4
+  - id: SPELL_METEOR_SHOWER
+    school: NATURAL
+    tier: 5
+  - id: SPELL_IMPLOSION
+    school: DESTRUCTIVE
+    tier: 5
+  - id: SPELL_ARMAGEDDON
+    school: DESTRUCTIVE
+    tier: 5
+  - id: SPELL_CURSE
+    school: DARK
+    tier: 1
+  - id: SPELL_SLOW
+    school: DARK
+    tier: 2
+  - id: SPELL_DISRUPTING_RAY
+    school: DARK
+    tier: 2
+  - id: SPELL_PLAGUE
+    school: DARK
+    tier: 3
+  - id: SPELL_WEAKNESS
+    school: DARK
+    tier: 3
+  - id: SPELL_FORGETFULNESS
+    school: NATURAL
+    tier: 3
+  - id: SPELL_BERSERK
+    school: DARK
+    tier: 5
+  - id: SPELL_BLIND
+    school: LIGHT
+    tier: 4
+  - id: SPELL_HYPNOTIZE
+    school: NATURAL
+    tier: 5
+  - id: SPELL_UNHOLY_WORD
+    school: DARK
+    tier: 5
+  - id: SPELL_BLESS
+    school: LIGHT
+    tier: 1
+  - id: SPELL_HASTE
+    school: LIGHT
+    tier: 2
+  - id: SPELL_STONESKIN
+    school: LIGHT
+    tier: 2
+  - id: SPELL_DISPEL
+    school: LIGHT
+    tier: 3
+  - id: SPELL_BLOODLUST
+    school: LIGHT
+    tier: 3
+  - id: SPELL_DEFLECT_ARROWS
+    school: LIGHT
+    tier: 3
+  - id: SPELL_ANTI_MAGIC
+    school: NATURAL
+    tier: 4
+  - id: SPELL_TELEPORT
+    school: DARK
+    tier: 4
+  - id: SPELL_CELESTIAL_SHIELD
+    school: LIGHT
+    tier: 5
+  - id: SPELL_HOLY_WORD
+    school: LIGHT
+    tier: 5
+  - id: SPELL_LAND_MINE
+    school: NATURAL
+    tier: 2
+  - id: SPELL_WASP_SWARM
+    school: NATURAL
+    tier: 1
+  - id: SPELL_PHANTOM
+    school: DARK
+    tier: 5
+  - id: SPELL_EARTHQUAKE
+    school: NATURAL
+    tier: 4
+  - id: SPELL_ANIMATE_DEAD
+    school: DARK
+    tier: 4
+  - id: SPELL_SUMMON_ELEMENTALS
+    school: NATURAL
+    tier: 3
+  - id: SPELL_RESURRECT
+    school: LIGHT
+    tier: 5
+  - id: SPELL_CONJURE_PHOENIX
+    school: NATURAL
+    tier: 5
+  - id: SPELL_FIREWALL
+    school: DESTRUCTIVE
+    tier: 4
+  - id: SPELL_STONE_SPIKES
+    school: DESTRUCTIVE
+    tier: 3
+  - id: SPELL_SORROW
+    school: DARK
+    tier: 3
+  - id: SPELL_VAMPIRISM
+    school: DARK
+    tier: 4
+  - id: SPELL_DEEP_FREEZE
+    school: DESTRUCTIVE
+    tier: 5
+  - id: SPELL_REGENERATION
+    school: NATURAL
+    tier: 3
+  - id: SPELL_DIVINE_VENGEANCE
+    school: LIGHT
+    tier: 4
+  - id: SPELL_ARCANE_CRYSTAL
+    school: NATURAL
+    tier: 2
+  - id: SPELL_SUMMON_HIVE
+    school: NATURAL
+    tier: 4
+  - id: SPELL_BLADE_BARRIER
+    school: LIGHT
+    tier: 4
+  - id: SPELL_WARCRY_RALLING_CRY
+    school: WARCRY
+    tier: 1
+  - id: SPELL_WARCRY_CALL_OF_BLOOD
+    school: WARCRY
+    tier: 2
+  - id: SPELL_WARCRY_WORD_OF_THE_CHIEF
+    school: WARCRY
+    tier: 1
+  - id: SPELL_WARCRY_FEAR_MY_ROAR
+    school: WARCRY
+    tier: 2
+  - id: SPELL_WARCRY_BATTLECRY
+    school: WARCRY
+    tier: 3
+  - id: SPELL_WARCRY_SHOUT_OF_MANY
+    school: WARCRY
+    tier: 3

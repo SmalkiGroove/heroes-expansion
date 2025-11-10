@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature>
+	<AttackSkill>6</AttackSkill>
+	<DefenceSkill>6</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>6</MinDamage>
+	<MaxDamage>6</MaxDamage>
+	<Speed>5</Speed>
+	<Initiative>13</Initiative>
+	<Flying>false</Flying>
+	<Health>22</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>40</Exp>
+	<Power>350</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>3</CreatureTier>
+	<Upgrade>false</Upgrade>
+	<PairCreature>CREATURE_UNKNOWN</PairCreature>
+	<CreatureTown>TOWN_FORTRESS</CreatureTown>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>19</WeeklyGrowth>
+	<Cost>
+		<Gold>100</Gold>
+	</Cost>
+	<PresetPrice>0</PresetPrice>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Dwarf/Battlerager.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>1</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Dwarf/3rd/BattleRager.(CreatureVisual).xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_BROWLER</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_UNLIMITED_RETALIATION</Item>
+		<Item>ABILITY_BATTLE_RAGE</Item>
+		<Item>ABILITY_IMMUNITY_TO_MIND_CONTROL</Item>
+		<Item>ABILITY_ANTI_GIANT</Item>
+	</Abilities>
+</Creature>

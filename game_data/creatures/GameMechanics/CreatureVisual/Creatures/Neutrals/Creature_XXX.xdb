@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef />
+	<CreatureAbilitiesFileRef />
+	<DescriptionFileRef />
+	<Icon/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/Textures/Icons/Blank.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/invisible_creature.xdb#xpointer(/Character)"/>
+	<DeadCharacter href=""/>
+	<AnimShot/>
+	<SummoningEffect href=""/>
+	<DamageEffect href=""/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.115055</x>
+		<y>-0.192879</y>
+		<z>0.606045</z>
+	</MountPoint>
+	<MountBone>Neck1</MountBone>
+</CreatureVisual>

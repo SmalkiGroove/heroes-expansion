@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BasicSkelAnim>
+	<SrcName href="/models/Heroes/Necromancer/Necromancer.mb"/>
+	<uid>1D57340B-3AE8-429F-9AD6-B94EF86358E5</uid>
+	<ExpSrcClip href="/Animations/Heroes/Necromancer/Clip/Necromancer.rangeattack.ma"/>
+	<ExpRootTransform>Global</ExpRootTransform>
+	<ExpFrameFirst>0</ExpFrameFirst>
+	<ExpFrameLast>0</ExpFrameLast>
+	<ExpSettingsFile href=""/>
+	<MovementSpeed>0</MovementSpeed>
+	<SpeedFactor>1</SpeedFactor>
+	<Sound href="/Sounds/_(Sound)/Heroes/Necromancer/Strike.xdb#xpointer(/Sound)"/>
+	<Effect href="effects/rangeattack.(Effect).xdb#xpointer(/Effect)"/>
+	<SpeedLineFallTime>250</SpeedLineFallTime>
+	<SpeedLineMaterial/>
+</BasicSkelAnim>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001248">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Necropolis/Vampire_Lord.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Necropolis/Vampire_Lord_Abilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Necropolis/Vampire_Lord_desc.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Necropolis/ico_VampireLord.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Necropolis/ico_VampireLord_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Necropolis/ico_VampireLord_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Necropolis/ico_VampireLord_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Necropolis/VampireLord.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits2.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>true</Use>
+		<StartEffect href="/Effects/_(Effect)/Characters/Creatures/Necropolis/VampireLord/fly/movestart.xdb#xpointer(/Effect)"/>
+		<FinishEffect href="/Effects/_(Effect)/Characters/Creatures/Necropolis/VampireLord/fly/moveend.xdb#xpointer(/Effect)"/>
+	</TeleportingMove>
+	<Win3DView href="#n:inline(Win3DObj)" id="item_96347e22-e9db-4cf2-b7a4-f6abc22cdc71">
+		<Win3DObj ObjectRecordID="39">
+			<Model/>
+			<placements>
+				<Item>
+					<SizeDesc href="/GameMechanics/Win3DObjSizeDesc/creatureInfo.xdb#xpointer(/Win3DObjSizeDesc)"/>
+					<Matrix>c024a63fa14e803f00000000b6f37d3e360090be1177ba3edd7cc93fdcf97ebf6f4e763f42789fbf9298eb3e000000000000000000000000000000000000803f</Matrix>
+					<Shift>
+						<x>0.248</x>
+						<y>-0.996</y>
+					</Shift>
+					<RollY>-0.6576</RollY>
+					<RollX>-1.2864</RollX>
+					<Scale>1.64</Scale>
+				</Item>
+			</placements>
+		</Win3DObj>
+	</Win3DView>
+	<MountPoint>
+		<x>-0.0658888</x>
+		<y>-0.093502</y>
+		<z>1.18806</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

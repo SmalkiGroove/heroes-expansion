@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Spell ObjectRecordID="134">
+	<NameFileRef href="/Text/Game/Spells/Combat/Celestial_Shield/Name.txt"/>
+	<LongDescriptionFileRef href="/Text/Game/Spells/Combat/Celestial_Shield/Long_Description.txt"/>
+	<Texture href="/Textures/SpellBook______2618/Spells/Spell_CelestialShield.xdb#xpointer(/Texture)"/>
+	<EffectTexture href="/UI/Common/Icons/Spell_Buff_Icons/CelestialShield.(Texture).xdb#xpointer(/Texture)"/>
+	<SpellBookPredictions>
+		<Item href="/Text/Game/Spells/Combat/Celestial_Shield/SpellBookPrediction.txt"/>
+	</SpellBookPredictions>
+	<CombatLogTexts/>
+	<Level>5</Level>
+	<MagicSchool>MAGIC_SCHOOL_LIGHT</MagicSchool>
+	<RequiredHeroLevel>0</RequiredHeroLevel>
+	<TrainedCost>38</TrainedCost>
+	<damage>
+		<Item>
+			<Base>0.25</Base>
+			<PerPower>0.005</PerPower>
+		</Item>
+		<Item>
+			<Base>0.33</Base>
+			<PerPower>0.005</PerPower>
+		</Item>
+		<Item>
+			<Base>0.50</Base>
+			<PerPower>0.005</PerPower>
+		</Item>
+		<Item>
+			<Base>0.66</Base>
+			<PerPower>0.005</PerPower>
+		</Item>
+	</damage>
+	<duration>
+		<Item>
+			<Base>90</Base>
+			<PerPower>30</PerPower>
+		</Item>
+		<Item>
+			<Base>100</Base>
+			<PerPower>60</PerPower>
+		</Item>
+		<Item>
+			<Base>110</Base>
+			<PerPower>90</PerPower>
+		</Item>
+		<Item>
+			<Base>120</Base>
+			<PerPower>120</PerPower>
+		</Item>
+	</duration>
+	<sSpellCost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>0</Gold>
+	</sSpellCost>
+	<IsAimed>true</IsAimed>
+	<IsAreaAttack>false</IsAreaAttack>
+	<CanSelectDead>false</CanSelectDead>
+	<Target>TARGET_FRIEND</Target>
+	<Element>ELEMENT_NONE</Element>
+	<DamageIsElemental>true</DamageIsElemental>
+	<visuals>
+		<Item href="CelestialShield.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+	</visuals>
+</Spell>

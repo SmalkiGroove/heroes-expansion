@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001252">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Haven/Priest.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Haven/PriestAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Haven/PriestDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Heaven/ico_Priest.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Heaven/ico_Priest_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Heaven/ico_Priest_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Heaven/ico_Priest_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Haven/Priest.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot href="/GameMechanics/Shot/Creatures/Haven/Cleric.xdb#xpointer(/Shot)"/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="#n:inline(Win3DObj)" id="item_4a604270-cc65-40f2-bec2-ae13f5ec0dcf">
+		<Win3DObj ObjectRecordID="16">
+			<Model href="/_(Model)/Creatures/Haven/Priest.(Model).xdb#xpointer(/Model)"/>
+			<placements>
+				<Item>
+					<SizeDesc href="/GameMechanics/Win3DObjSizeDesc/creatureInfo.xdb#xpointer(/Win3DObjSizeDesc)"/>
+					<Matrix>d665a83f7459dcbdc2f5a8310000000050908b3b4e51553ddcd3a83f621098bf3f2ddcbd0c44a8bf8c07563d000000000000000000000000000000000000803f</Matrix>
+					<Shift>
+						<x>0</x>
+						<y>-1.188</y>
+					</Shift>
+					<RollY>0.0816</RollY>
+					<RollX>-1.5312</RollX>
+					<Scale>1.32</Scale>
+				</Item>
+			</placements>
+		</Win3DObj>
+	</Win3DView>
+	<MountPoint>
+		<x>0.0159507</x>
+		<y>-0.0580921</y>
+		<z>1.0577</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

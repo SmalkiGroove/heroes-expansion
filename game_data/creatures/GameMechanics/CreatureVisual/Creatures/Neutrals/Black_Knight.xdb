@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001171">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Neutrals/Black_Knight.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Neutrals/Black_KnightAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Neutrals/Black_KnightDescription.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Neutral/ico_Black_Knight_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Necropolis/BlackKnight.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="#n:inline(Win3DObj)" id="item_46c719e0-73ab-485b-a47a-ce8a5e7f349e">
+		<Win3DObj ObjectRecordID="31">
+			<Model href="/_(Model)/Creatures/Necropolis/BlackKnight.(Model).xdb#xpointer(/Model)"/>
+			<placements>
+				<Item>
+					<SizeDesc href="/GameMechanics/Win3DObjSizeDesc/creatureInfo.xdb#xpointer(/Win3DObjSizeDesc)"/>
+					<Matrix>813e0e3f0ab4c83e0000000090c2753dc5313dbe6516863efe87193fb29d6fbf0603b13e1ee8fabe0719a43e000000000000000000000000000000000000803f</Matrix>
+					<Shift>
+						<x>0.06</x>
+						<y>-0.936</y>
+					</Shift>
+					<RollY>-0.6144</RollY>
+					<RollX>-1.08</RollX>
+					<Scale>0.68</Scale>
+				</Item>
+			</placements>
+		</Win3DObj>
+	</Win3DView>
+	<MountPoint>
+		<x>-0.00897602</x>
+		<y>-0.20711</y>
+		<z>2.13534</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

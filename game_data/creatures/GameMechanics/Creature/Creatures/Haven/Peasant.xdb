@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature ObjectRecordID="2">
+	<AttackSkill>2</AttackSkill>
+	<DefenceSkill>1</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>1</MinDamage>
+	<MaxDamage>2</MaxDamage>
+	<Speed>4</Speed>
+	<Initiative>8</Initiative>
+	<Flying>false</Flying>
+	<Health>5</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>11</Exp>
+	<Power>41</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>1</CreatureTier>
+	<Upgrade>false</Upgrade>
+	<PairCreature>CREATURE_MILITIAMAN</PairCreature>
+	<CreatureTown>TOWN_HEAVEN</CreatureTown>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>60</WeeklyGrowth>
+	<Cost>
+		<Gold>15</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Haven/Peasant.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>1</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Haven/Peasant.xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_UNKNOWN</BaseCreature>
+	<Upgrades>
+		<Item>CREATURE_MILITIAMAN</Item>
+		<Item>CREATURE_LANDLORD</Item>
+	</Upgrades>
+	<Abilities>
+		<Item>ABILITY_TAXPAYER</Item>
+	</Abilities>
+</Creature>

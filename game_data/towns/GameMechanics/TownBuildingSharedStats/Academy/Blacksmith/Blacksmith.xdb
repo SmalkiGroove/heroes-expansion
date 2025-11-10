@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="1000120">
+	<NameFileRef href="/Text/Game/TownBuildings/Academy/Blacksmith/Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Academy/Blacksmith/Description.txt"/>
+	<Type>TB_BLACKSMITH</Type>
+	<Upgrade>BLD_UPG_1</Upgrade>
+	<Cost>
+		<Wood>2</Wood>
+		<Ore>2</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>500</Gold>
+	</Cost>
+	<ModObjectName>Blacksmith</ModObjectName>
+	<dependencies/>
+	<Creature>CREATURE_UNKNOWN</Creature>
+	<DevLevelNeeded>4</DevLevelNeeded>
+	<UIObjectName>Blacksmith</UIObjectName>
+	<UIStackPosition>0</UIStackPosition>
+	<Icon href="/UI/TownHall/academy/128/blacksmith.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

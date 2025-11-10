@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Dwarf/Defender.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Dwarf/DefenderAbilites.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Dwarf/DefenderDiscription.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64 href="/UI/H5A1/Icons/Creatures/Dwarven/64x64/Defender.(Texture).xdb#xpointer(/Texture)"/>
+	<Icon128 href="/UI/H5A1/Icons/Creatures/Dwarven/128x128/Defender.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Dwarves/T1_Dwarf/Deffender.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.0154394</x>
+		<y>-0.19631</y>
+		<z>0.787795</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

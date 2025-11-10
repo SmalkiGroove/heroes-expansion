@@ -1,0 +1,42 @@
+# Enable certain perks to force specific elemental type casts by "Summon Elementals" spell as follow:
+definitions: 
+  - &skill_id_earth  139   # Tremors
+  - &skill_id_water  88    # Triple catapult
+  - &skill_id_air    203   # Shatter summoning
+edits:
+  - name: Edit pointer
+    address: '00460A84'
+    size: 5
+    type: hex
+    original: '57 8D 54 24 1C'
+    modified: 'E9 E7 70 8D 00'
+  - name: ASCII text
+    address: '00BDB750'
+    size: 32
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+    modified: '3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 4D 4F 44 20 73 75 6D 6D 6F 6E 20 73 70 65 6C 6C'
+  - name: Check skills
+    address: '00BDB770'
+    size: 91
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+    modified: '8B 55 00 BB 57 00 00 00 68 00 00 00 00 89 E9 FF 92 90 02 00 00 84 C0 0F 85 09 8F 72 FF 8B 55 00 BB 56 00 00 00 6A 00 89 E9 FF 92 90 02 00 00 84 C0 0F 85 EF 8E 72 FF 8B 55 00 BB 58 00 00 00 6A 00 89 E9 FF 92 90 02 00 00 84 C0 0F 85 D5 8E 72 FF 57 8D 54 24 1C E9 BE 8E 72 FF'
+  - name: Set skill ID for Earth
+    address: '00BDB779'
+    size: 1
+    type: int
+    original: 0
+    modified: *skill_id_earth
+  - name: Set skill ID for Water
+    address: '00BDB796'
+    size: 1
+    type: int
+    original: 0
+    modified: *skill_id_water
+  - name: Set skill ID for Air
+    address: '00BDB7B0'
+    size: 1
+    type: int
+    original: 0
+    modified: *skill_id_air

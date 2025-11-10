@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Dwarf/3rd/ThunderThane_Name.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Dwarf/3rd/ThunderThane_Abils.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Dwarf/3rd/ThunderThane_Desc.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/UI/H5A2/Icons/Creatures/Dwarf_second_upg/Tunder_Thane.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Dwarves/AlternativeUpgrade/T6_ThunderThane/T6_ThunderThane.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>true</Use>
+		<StartEffect href="/Effects/_(Effect)/Characters/Creatures/Dwarves/AlternativeUpgrade/T6_ThunderThane/MoveStart.(Effect).xdb#xpointer(/Effect)"/>
+		<FinishEffect href="/Effects/_(Effect)/Characters/Creatures/Dwarves/AlternativeUpgrade/T6_ThunderThane/MoveEnd.(Effect).xdb#xpointer(/Effect)"/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>0.0431131</x>
+		<y>-0.0284288</y>
+		<z>1.59645</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

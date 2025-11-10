@@ -1,0 +1,11 @@
+# Change War Machines tier from 3 to 8
+definitions:
+  - &mod_tier 8
+  - &toe_tier 3
+edits:
+  - name: Edit tier
+    address: '00745813'
+    size: 1
+    type: int
+    original: *toe_tier
+    modified: *mod_tier

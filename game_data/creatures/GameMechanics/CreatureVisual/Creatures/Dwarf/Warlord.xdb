@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Dwarf/Warlord.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Dwarf/WarlordAbilites.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Dwarf/WarlordDiscription.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64 href="/UI/H5A1/Icons/Creatures/Dwarven/64x64/StormLord.(Texture).xdb#xpointer(/Texture)"/>
+	<Icon128 href="/UI/H5A1/Icons/Creatures/Dwarven/128x128/warLord.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Dwarves/T6_Dwarf/WarLord.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot href="/GameMechanics/Shot/Creatures/Dwarf/StormStrike.xdb#xpointer(/Shot)"/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>true</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>0.0466484</x>
+		<y>-0.03076</y>
+		<z>1.72736</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

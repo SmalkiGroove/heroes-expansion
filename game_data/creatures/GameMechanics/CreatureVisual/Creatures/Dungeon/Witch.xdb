@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001179">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Dungeon/Witch.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Dungeon/WitchAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Dungeon/WitchDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Shadowwitch.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Shadowwitch_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Shadowwitch_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Shadowwitch_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Dungeon/ShadowWitch.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>0.028083</x>
+		<y>-0.0599077</y>
+		<z>1.13344</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimSet ObjectRecordID="1000004">
+	<animations>
+		<Item>
+			<Kind>buff</Kind>
+			<Anim href="Ranger-arena-buff.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>cast</Kind>
+			<Anim href="Ranger-arena-cast.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>idle00</Kind>
+			<Anim href="Ranger-arena-idle00.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>specability</Kind>
+			<Anim href="Ranger-arena-specability.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>rangeattack</Kind>
+			<Anim href="Ranger-arena-rangeattack.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+	</animations>
+	<ExpSrcScene href="/models/Heroes/Ranger/Ranger.mb"/>
+	<ExpSrcClipFolder href="/Animations/Heroes/Ranger/Clip/"/>
+	<ExpRootTransform>Global</ExpRootTransform>
+</AnimSet>

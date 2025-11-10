@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Orcs/3rd/CyclopBloodeyed_Name.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Orcs/3rd/CyclopBloodeyed_Abils.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Orcs/3rd/CyclopBloodeyed_Desc.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/UI/H5A2/Icons/Creatures/Orcs/Bloodeyed_Cyclop.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Orcs/T7_Orc/T7c_BloodedCyclopes.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot href="/GameMechanics/Shot/Creatures/Orcs/Cyclop.xdb#xpointer(/Shot)"/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Steel_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.0624738</x>
+		<y>-0.0971343</y>
+		<z>3.20255</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

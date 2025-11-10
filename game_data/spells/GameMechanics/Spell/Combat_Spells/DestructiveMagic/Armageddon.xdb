@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Spell ObjectRecordID="3">
+	<NameFileRef href="/Text/Game/Spells/Combat/Armageddon/Name.txt"/>
+	<LongDescriptionFileRef href="/Text/Game/Spells/Combat/Armageddon/Long_Description.txt"/>
+	<Texture href="/Textures/SpellBook______2618/Spells/Spell_Armageddon.xdb#xpointer(/Texture)"/>
+	<EffectTexture href="/UI/Common/Icons/Spell_Buff_Icons/Armageddon.(Texture).xdb#xpointer(/Texture)"/>
+	<SpellBookPredictions>
+		<Item href="/Text/Game/Spells/SpellBookPredictions/DirectDamage.txt"/>
+		<Item href="/Text/Game/Spells/SpellBookPredictions/DirectDamageMasterOfFire.txt"/>
+	</SpellBookPredictions>
+	<CombatLogTexts/>
+	<Level>5</Level>
+	<MagicSchool>MAGIC_SCHOOL_DESTRUCTIVE</MagicSchool>
+	<RequiredHeroLevel>0</RequiredHeroLevel>
+	<TrainedCost>45</TrainedCost>
+	<damage>
+		<Item>
+			<Base>50</Base>
+			<PerPower>16</PerPower>
+		</Item>
+		<Item>
+			<Base>60</Base>
+			<PerPower>21</PerPower>
+		</Item>
+		<Item>
+			<Base>70</Base>
+			<PerPower>26</PerPower>
+		</Item>
+		<Item>
+			<Base>80</Base>
+			<PerPower>31</PerPower>
+		</Item>
+	</damage>
+	<duration>
+		<Item>
+			<Base>30</Base>
+			<PerPower>6</PerPower>
+		</Item>
+		<Item>
+			<Base>40</Base>
+			<PerPower>6</PerPower>
+		</Item>
+		<Item>
+			<Base>50</Base>
+			<PerPower>6</PerPower>
+		</Item>
+		<Item>
+			<Base>60</Base>
+			<PerPower>6</PerPower>
+		</Item>
+	</duration>
+	<sSpellCost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>0</Gold>
+	</sSpellCost>
+	<IsAimed>false</IsAimed>
+	<IsAreaAttack>false</IsAreaAttack>
+	<CanSelectDead>false</CanSelectDead>
+	<Target>TARGET_NEUTRAL</Target>
+	<Element>ELEMENT_FIRE</Element>
+	<DamageIsElemental>true</DamageIsElemental>
+	<visuals>
+		<Item href="Armageddon.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+		<Item href="Armageddon_Hit.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+	</visuals>
+	<PresetPrice>0</PresetPrice>
+	<AvailableForPresets>true</AvailableForPresets>
+</Spell>

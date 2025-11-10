@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Spell>
+	<NameFileRef href="RuneOfBattleRageName.txt"/>
+	<LongDescriptionFileRef href="RuneOfBattleRageDesc.txt"/>
+	<Texture href="/UI/H5A1/Icons/Magic/Runemagic/Runes128/Rune_of_Battlerage.(Texture).xdb#xpointer(/Texture)"/>
+	<EffectTexture/>
+	<SpellBookPredictions/>
+	<CombatLogTexts>
+		<Item href="Rune_Usage.txt"/>
+	</CombatLogTexts>
+	<Level>5</Level>
+	<MagicSchool>MAGIC_SCHOOL_RUNIC</MagicSchool>
+	<RequiredHeroLevel>0</RequiredHeroLevel>
+	<IsAimed>false</IsAimed>
+	<TrainedCost>0</TrainedCost>
+	<damage>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+	</damage>
+	<duration>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+	</duration>
+	<sSpellCost>
+		<Wood>0</Wood>
+		<Ore>1</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>1</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>0</Gold>
+	</sSpellCost>
+	<IsAreaAttack>false</IsAreaAttack>
+	<CanSelectDead>false</CanSelectDead>
+	<Target>TARGET_FRIEND</Target>
+	<Element>ELEMENT_NONE</Element>
+	<visuals>
+		<Item href="RuneOfBattleRage.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+	</visuals>
+</Spell>

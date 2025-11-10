@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WindowScreenShared ObjectRecordID="39">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="AdventureScreen-heavy/Minimize.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="UIEditor/AdventureScreen/FlybyText.(WindowStaticText).xdb#xpointer(/WindowStaticText)"/>
+		<Item href="AdventureScreen-heavy/JogDialBase.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="AdventureScreen-heavy/Minimap-heavy.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="AdventureScreen-heavy/resource-bar-heavy.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="AdventureScreen-heavy/JogDialButton.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="AdventureScreen-heavy/OnJog-Menu.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="AdventureScreen-heavy/OnJog-MoveHero.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="AdventureScreen-heavy/OnJog-NextHero.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="AdventureScreen-heavy/OnJog-Scenario.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="AdventureScreen-heavy/OnJog-Spellbook.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="AdventureScreen-heavy/OnJog-Underground.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="AdventureScreen-heavy/Minimize_1.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="AdventureScreen-heavy/Minimize_2.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="AdventureScreen/EnemyTurnBox/EnemyTurnBox.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="AdventureScreen-heavy/GhostGuard.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="GhostInfo/EndOfTurnNotify.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="AdventureScreen-heavy/OnJog-DigGrail.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="AdventureScreen-heavy/TownHeroPanel/TownHeroPanel.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="AdventureScreen-heavy/HotSeatBlackBg.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="Doc/Root.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="Doc/Open.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+	</Children>
+	<Background/>
+	<Foreground/>
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>1024</x>
+				<y>768</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea/>
+	<IgnoreDblClick>false</IgnoreDblClick>
+	<ActiveMask/>
+</WindowScreenShared>

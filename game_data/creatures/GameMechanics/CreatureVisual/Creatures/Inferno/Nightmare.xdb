@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001256">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Inferno/Nightmare.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Inferno/NightmareAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Inferno/NightmareDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Inferno/ico_Nightmare.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Inferno/ico_Nightmare_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Inferno/ico_Nightmare_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Inferno/ico_Nightmar_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Inferno/Nightmare.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="#n:inline(Win3DObj)" id="item_ed7ee1fc-6fee-439a-88ef-ad94e1296483">
+		<Win3DObj ObjectRecordID="28">
+			<Model href="/_(Model)/Creatures/Inferno/Nightmare.(Model).xdb#xpointer(/Model)"/>
+			<placements>
+				<Item>
+					<SizeDesc href="/GameMechanics/Win3DObjSizeDesc/creatureInfo.xdb#xpointer(/Win3DObjSizeDesc)"/>
+					<Matrix>c5cb453f71bfa8be3e0a57b200000000a334443ef6fae53e89f72e3fae47e1be274d89beb5ef20bfbc07fa3e000000000000000000000000000000000000803f</Matrix>
+					<Shift>
+						<x>0</x>
+						<y>-0.44</y>
+					</Shift>
+					<RollY>0.4032</RollY>
+					<RollX>-0.9504</RollX>
+					<Scale>0.84</Scale>
+				</Item>
+			</placements>
+		</Win3DObj>
+	</Win3DView>
+	<MountPoint>
+		<x>-0.0575086</x>
+		<y>-0.0517372</y>
+		<z>1.21965</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Haven/Seraph.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Haven/SeraphAbilites.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Haven/SeraphDescription.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64 href="/UI/H5A1/Icons/Creatures/Regenerats/64x64/FallenAngel.(Texture).xdb#xpointer(/Texture)"/>
+	<Icon128 href="/UI/H5A1/Icons/Creatures/Regenerats/128x128/Fallen_Angel.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Renegades/Archangel.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.0265395</x>
+		<y>-0.0677697</y>
+		<z>2.30853</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

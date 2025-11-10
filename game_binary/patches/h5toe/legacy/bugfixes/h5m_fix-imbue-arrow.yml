@@ -1,0 +1,14 @@
+# Allows Imbued spell to be canceled when "Imbue Arrow" ability is chosen. If the user then close the book there will be no spell imbued anymore.
+edits:
+  - name: Pointer to new code
+    address: '0013D2DA'
+    size: 7
+    type: hex
+    original: '8B 44 24 04 8B 50 04'
+    modified: 'E8 41 87 BF 00 90 90'
+  - name: New code
+    address: '00BD9620'
+    size: 78
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+    modified: '8B 44 24 04 3D C8 49 68 00 75 3B 8B 44 24 7C 3D 00 00 00 20 77 30 8B 44 24 6C 3D 00 00 00 20 77 25 8B 84 24 98 00 00 00 3D 00 10 00 00 77 17 90 90 90 90 90 90 90 8B 84 24 BC 00 00 00 83 E8 58 C7 00 00 00 00 00 8B 44 24 08 8B 50 04 C3'

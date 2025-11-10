@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Spell ObjectRecordID="116">
+	<NameFileRef href="/Text/Game/Spells/Combat/Lightning_Bolt/Name.txt"/>
+	<LongDescriptionFileRef href="/Text/Game/Spells/Combat/Lightning_Bolt/Long_Description.txt"/>
+	<Texture href="/Textures/SpellBook______2618/Spells/Spell_LightningBolt.xdb#xpointer(/Texture)"/>
+	<EffectTexture href="/UI/Common/Icons/Spell_Buff_Icons/LightningBolt.(Texture).xdb#xpointer(/Texture)"/>
+	<SpellBookPredictions>
+		<Item href="/Text/Game/Spells/SpellBookPredictions/DirectDamage.txt"/>
+		<Item href="/Text/Game/Spells/SpellBookPredictions/DirectDamageMasterOfLightning.txt"/>
+	</SpellBookPredictions>
+	<CombatLogTexts/>
+	<Level>2</Level>
+	<MagicSchool>MAGIC_SCHOOL_DESTRUCTIVE</MagicSchool>
+	<RequiredHeroLevel>0</RequiredHeroLevel>
+	<IsAimed>true</IsAimed>
+	<TrainedCost>7</TrainedCost>
+	<damage>
+		<Item>
+			<Base>5</Base>
+			<PerPower>12</PerPower>
+		</Item>
+		<Item>
+			<Base>6</Base>
+			<PerPower>14</PerPower>
+		</Item>
+		<Item>
+			<Base>7</Base>
+			<PerPower>16</PerPower>
+		</Item>
+		<Item>
+			<Base>8</Base>
+			<PerPower>18</PerPower>
+		</Item>
+	</damage>
+	<duration/>
+	<sSpellCost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>0</Gold>
+	</sSpellCost>
+	<IsAreaAttack>false</IsAreaAttack>
+	<CanSelectDead>false</CanSelectDead>
+	<Target>TARGET_HOSTILE</Target>
+	<Element>ELEMENT_AIR</Element>
+	<visuals>
+		<Item href="LightningBolt.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+	</visuals>
+</Spell>

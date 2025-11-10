@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Preserve/3rd/BladeSinger_Name.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Preserve/3rd/BladeSinger_Abils.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Preserve/3rd/BladeSinger_Desc.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/UI/H5A2/Icons/Creatures/Sylvan_second_upg/Bladesinger.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Rampart/AlternativeUpgrades/T2_Wind_Dancer.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>0.0319879</x>
+		<y>0.0443834</y>
+		<z>1.15862</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

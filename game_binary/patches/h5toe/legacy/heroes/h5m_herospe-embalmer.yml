@@ -1,0 +1,29 @@
+# Embalmer speciality will increase healing amount by 5 percent per level instead of 5 hp per level.
+definitions: 
+- &flat_per_level            4
+- &percent_per_level         0.04
+edits:
+  - name: Store flat per level value
+    address: '00A0856F'
+    size: 4
+    type: int
+    original: 0
+    modified: *flat_per_level
+  - name: Store percent per level value
+    address: '00A0856B'
+    size: 4
+    type: float
+    original: 0
+    modified: *percent_per_level
+  - name: Edit spe pointer
+    address: '0057661E'
+    size: 5
+    type: hex
+    original: '8D 04 80 01 07'
+    modified: 'E9 50 1F 49 00'
+  - name: Edit spe algorithm
+    address: '00A08573'
+    size: 51
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+    modified: '50 8B 0E 51 D9 1E 8B 0E 51 89 06 8B 0D 6F 91 E0 00 F7 E1 01 07 D9 05 6B 91 E0 00 DA 0E DA 0F DB 1E 8B 0E 01 0F 59 89 0E D9 06 59 89 0E 58 E9 7D E0 B6 FF'

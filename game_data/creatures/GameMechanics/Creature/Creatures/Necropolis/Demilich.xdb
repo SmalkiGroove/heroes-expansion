@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature ObjectRecordID="75">
+	<AttackSkill>8</AttackSkill>
+	<DefenceSkill>12</DefenceSkill>
+	<Shots>5</Shots>
+	<MinDamage>13</MinDamage>
+	<MaxDamage>18</MaxDamage>
+	<Speed>3</Speed>
+	<Initiative>10</Initiative>
+	<Flying>false</Flying>
+	<Health>40</Health>
+	<KnownSpells>
+		<Item><Spell>SPELL_CURSE</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+		<Item><Spell>SPELL_SLOW</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+		<Item><Spell>SPELL_PLAGUE</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+		<Item><Spell>SPELL_WEAKNESS</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+		<Item><Spell>SPELL_ABILITY_HARM_TOUCH</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+	</KnownSpells>
+	<SpellPoints>30</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>250</Exp>
+	<Power>1539</Power>
+	<TimeToCommand>15</TimeToCommand>
+	<CreatureTier>5</CreatureTier>
+	<Upgrade>true</Upgrade>
+	<PairCreature>CREATURE_LICH</PairCreature>
+	<CreatureTown>TOWN_NECROMANCY</CreatureTown>
+	<MagicElement><First>ELEMENT_FIRE</First><Second>ELEMENT_EARTH</Second></MagicElement>
+	<WeeklyGrowth>5</WeeklyGrowth>
+	<Cost>
+		<Gold>500</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Necropolis/Demilich.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>2</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Necropolis/Demilich.xdb#xpointer(/CreatureVisual)"/>
+	<Range>-2</Range>
+	<BaseCreature>CREATURE_LICH</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_UNDEAD</Item>
+		<Item>ABILITY_DEATH_CLOUD</Item>
+		<Item>ABILITY_MAGIC_PROOF_50</Item>
+		<Item>ABILITY_HARM_TOUCH</Item>
+	</Abilities>
+</Creature>

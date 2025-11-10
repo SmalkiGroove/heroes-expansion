@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WindowMSButtonShared ObjectRecordID="1000064">
+	<Crap>false</Crap>
+	<Children>
+	    <Item href="075000_icon.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+	</Children>
+	<Background/>
+	<Foreground/>
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea/>
+	<IgnoreDblClick>false</IgnoreDblClick>
+	<ActiveMask/>
+	<VisualStates>
+		<Item>
+			<Normal>
+				<Background/>
+				<Foreground/>
+				<TextString/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat/>
+			</Normal>
+			<MouseOver>
+				<Background/>
+				<Foreground href="/UI/Doc/Skills/Common/Highlight.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<TextString/>
+				<OnEnterSubState>
+					<Commands>
+						<Item href="/UI/Doc/Skills/_Skills/Leadership/198001/highlight/198001_on.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+						<Item href="/UI/Doc/Skills/_Skills/Leadership/061000/highlight/061000_on.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+						<Item href="/UI/Doc/Skills/_Skills/Leadership/198002/highlight/198002_on.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+						<Item href="/UI/Doc/Skills/_Skills/Leadership/075000/highlight/075000_on.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+						<Item href="/UI/Doc/Skills/_Description/075000/075000.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					</Commands>
+					<Reversable>true</Reversable>
+				</OnEnterSubState>
+				<TextFormat/>
+			</MouseOver>
+			<Pushed>
+				<Background/>
+				<Foreground href="/UI/Doc/Skills/Common/Highlight.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<TextString/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat/>
+			</Pushed>
+			<Disabled>
+				<Background/>
+				<Foreground/>
+				<TextString/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat/>
+			</Disabled>
+			<RightButtonDown>
+				<Background/>
+				<Foreground href="/UI/Doc/Skills/Common/Highlight.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<TextString/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat/>
+			</RightButtonDown>
+			<DefaultSubState>BST_NORMAL</DefaultSubState>
+			<VisualOnEnterState>
+				<Commands/>
+				<Reversable>false</Reversable>
+			</VisualOnEnterState>
+		</Item>
+	</VisualStates>
+	<TriggerMode>BCST_ON_RELEASE</TriggerMode>
+</WindowMSButtonShared>

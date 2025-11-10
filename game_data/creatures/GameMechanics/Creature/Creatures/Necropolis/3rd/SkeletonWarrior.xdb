@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature>
+	<AttackSkill>2</AttackSkill>
+	<DefenceSkill>2</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>1</MinDamage>
+	<MaxDamage>2</MaxDamage>
+	<Speed>5</Speed>
+	<Initiative>10</Initiative>
+	<Flying>false</Flying>
+	<Health>5</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>17</Exp>
+	<Power>85</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>1</CreatureTier>
+	<Upgrade>false</Upgrade>
+	<PairCreature>CREATURE_UNKNOWN</PairCreature>
+	<CreatureTown>TOWN_NECROMANCY</CreatureTown>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_FIRE</Second></MagicElement>
+	<WeeklyGrowth>57</WeeklyGrowth>
+	<Cost>
+		<Gold>20</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Necropolis/Alt_upgrade/Skeleton_Warrior.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>1</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Necropolis/3rd/SkeletonWarrior.(CreatureVisual).xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_SKELETON</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_UNDEAD</Item>
+		<Item>ABILITY_LARGE_SHIELD</Item>
+		<Item>ABILITY_BASH</Item>
+		<Item>ABILITY_SHIELD_OTHER</Item>
+	</Abilities>
+</Creature>

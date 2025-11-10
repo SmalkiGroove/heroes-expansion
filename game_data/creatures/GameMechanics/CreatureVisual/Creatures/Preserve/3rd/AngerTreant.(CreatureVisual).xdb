@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Preserve/3rd/AngerTreant_Name.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Preserve/3rd/AngerTreant_Abils.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Preserve/3rd/AngerTreant_Desc.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/UI/H5A2/Icons/Creatures/Sylvan_second_upg/Anger_Treant.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Rampart/AlternativeUpgrades/T6_Anger_Treant.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/War_Machine.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.0966168</x>
+		<y>0.539794</y>
+		<z>2.90166</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

@@ -1,0 +1,8 @@
+# Removes elemental summoning after ally creature death for Master of Elements specialization
+edits:
+  - name: Edit 1
+    address: '00659A0E'
+    size: 6
+    type: hex
+    original: '0F 84 1C 01 00 00'
+    modified: 'E9 1D 01 00 00 90'

@@ -1,0 +1,122 @@
+
+name: Package changed
+
+on:
+  workflow_dispatch:
+
+jobs:
+  package-mod:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check changes in 'data'
+        uses: dorny/paths-filter@v3
+        id: check-data
+        with:
+          base: ${{ github.ref }}
+          filters: |
+            changed:
+              - 'game_data/data/**'
+      - name: Pack data
+        if: steps.check-data.outputs.changed == 'true'
+        run: zip -q -r h5x-data.pak *
+        working-directory: game_data/data
+
+      - name: Check changes in 'interface'
+        uses: dorny/paths-filter@v3
+        id: check-interface
+        with:
+          base: ${{ github.ref }}
+          filters: |
+            changed:
+              - 'game_data/interface/**'
+      - name: Pack interface
+        if: steps.check-interface.outputs.changed == 'true'
+        run: zip -q -r h5x-interface.pak *
+        working-directory: game_data/interface
+
+      - name: Check changes in 'characters'
+        uses: dorny/paths-filter@v3
+        id: check-characters
+        with:
+          base: ${{ github.ref }}
+          filters: |
+            changed:
+              - 'game_data/characters/**'
+      - name: Pack characters
+        if: steps.check-characters.outputs.changed == 'true'
+        run: zip -q -r h5x-characters.pak *
+        working-directory: game_data/characters
+
+      - name: Check changes in 'lua'
+        uses: dorny/paths-filter@v3
+        id: check-lua
+        with:
+          base: ${{ github.ref }}
+          filters: |
+            changed:
+              - 'game_data/lua/**'
+      - name: Pack lua
+        if: steps.check-lua.outputs.changed == 'true'
+        run: zip -q -r h5x-lua.pak *
+        working-directory: game_data/lua
+
+      - name: Check changes in 'doc'
+        uses: dorny/paths-filter@v3
+        id: check-doc
+        with:
+          base: ${{ github.ref }}
+          filters: |
+            changed:
+              - 'game_data/doc/**'
+      - name: Pack doc
+        if: steps.check-doc.outputs.changed == 'true'
+        run: zip -q -r h5x-doc.pak *
+        working-directory: game_data/doc
+
+      - name: Check changes in 'battlefields'
+        uses: dorny/paths-filter@v3
+        id: check-battlefields
+        with:
+          base: ${{ github.ref }}
+          filters: |
+            changed:
+              - 'game_data/battlefields/**'
+      - name: Pack battlefields
+        if: steps.check-battlefields.outputs.changed == 'true'
+        run: zip -q -r h5x-battlefields.pak *
+        working-directory: game_data/battlefields
+
+      - name: Check changes in 'maps'
+        uses: dorny/paths-filter@v3
+        id: check-maps
+        with:
+          base: ${{ github.ref }}
+          filters: |
+            changed:
+              - 'game_data/maps/**'
+      - name: Pack maps
+        if: steps.check-maps.outputs.changed == 'true'
+        run: zip -q -r h5x-maps.pak *
+        working-directory: game_data/maps
+
+      - name: Check changes in 'texts'
+        uses: dorny/paths-filter@v3
+        id: check-texts
+        with:
+          base: ${{ github.ref }}
+          filters: |
+            changed:
+              - 'game_texts/texts-EN/**'
+      - name: Pack texts
+        if: steps.check-texts.outputs.changed == 'true'
+        run: zip -q -r h5x-texts.pak *
+        working-directory: game_texts/texts-EN
+
+      - name: Upload paks
+        uses: actions/upload-artifact@v4
+        with:
+          name: pak
+          path: ./**/*.pak

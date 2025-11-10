@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ParticleInstance>
+	<SrcName/>
+	<Light>L_NORMAL</Light>
+	<Particle href="head-idle00HF.(Particle).xdb#xpointer(/Particle)"/>
+	<Position>
+		<x>0.75</x>
+		<y>0.45</y>
+		<z>-0.8</z>
+	</Position>
+	<Rotation>
+		<x>0</x>
+		<y>0</y>
+		<z>0</z>
+		<w>1</w>
+	</Rotation>
+	<Scale>0.84</Scale>
+	<Speed>0.46</Speed>
+	<Offset>3.0</Offset>
+	<EndCycle>98.33</EndCycle>
+	<CycleCount>0</CycleCount>
+	<Pivot>
+		<x>0</x>
+		<y>0</y>
+	</Pivot>
+	<Textures>
+		<Item href="/Textures/Effects/FireSequence/fire01.(Texture).xdb#xpointer(/Texture)"/>
+	</Textures>
+	<IsCrown>false</IsCrown>
+	<Static>P_STATIC</Static>
+	<DoesCastShadow>false</DoesCastShadow>
+	<GlueToBone>0</GlueToBone>
+	<GlueToNamedBone>L_Hand</GlueToNamedBone>
+	<LeaveParticlesWhereStarted>false</LeaveParticlesWhereStarted>
+	<Priority>0</Priority>
+</ParticleInstance>

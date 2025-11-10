@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvMapHeroShared>
+	<Model href="/_(Model)/Heroes/DemonLord_LOD.(Model).xdb#xpointer(/Model)"/>
+	<AnimSet href="/_(AnimSet)/Heroes/DemonLord_LOD-adv.(AnimSet).xdb#xpointer(/AnimSet)"/>
+	<blockedTiles/>
+	<holeTiles/>
+	<activeTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+	</activeTiles>
+	<passableTiles/>
+	<PossessionMarkerTile>
+		<x>0</x>
+		<y>0</y>
+	</PossessionMarkerTile>
+	<Effect/>
+	<EffectWhenOwned/>
+	<messagesFileRef/>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect/>
+	<flybyMessageFileRef href=""/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Units.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>true</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128 href="/Maps/Scenario/A2C3M4/Dungeon Agaris_128_128.1.(Texture).xdb#xpointer(/Texture)"/>
+	<InternalName>Ranleth</InternalName>
+	<Class>HERO_CLASS_DUNGEON_MAGIC</Class>
+	<Specialization>HERO_SPEC_DARK_ACOLYTE</Specialization>
+	<PrimarySkill>
+		<SkillID>HERO_SKILL_INNATES</SkillID>
+		<Mastery>MASTERY_EXPERT</Mastery>
+	</PrimarySkill>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Dungeon/Ranleth/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Dungeon/Ranleth/Description.txt"/>
+	<SpecializationIcon href="/Maps/Scenario/A2C3M4/Dungeon Agaris_128_128.1.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTexture href="/Maps/Scenario/A2C3M4/Dungeon Agaris_128_128.1.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTextureSmall href=""/>
+	<HeroCharacterArena href="/Characters/Heroes/WarlockFW.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee/>
+	<HeroCharacterAdventure href="/Characters/Heroes/WarlockFW_LOD.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Warlock.xdb#xpointer(/CreatureVisual)"/>
+	<TownType>TOWN_DUNGEON</TownType>
+	<Editable>
+		<NameFileRef href="/Maps/Scenario/A2C3M4/name.2.txt"/>
+		<BiographyFileRef href="/Maps/Scenario/A2C3M4/bio.1.txt"/>
+		<Offence>1</Offence>
+		<Defence>1</Defence>
+		<Spellpower>1</Spellpower>
+		<Knowledge>1</Knowledge>
+		<skills>
+			<Item>
+				<SkillID>HERO_SKILL_ARCANISM</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
+			<Item>
+				<SkillID>HERO_SKILL_LEARNING</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
+		</skills>
+		<perkIDs>
+			<Item>HERO_SKILL_ELEMENTAL_VISION</Item>
+			<Item>HERO_SKILL_ENLIGHTENED</Item>
+		</perkIDs>
+		<spellIDs>
+			<Item>SPELL_DISPEL</Item>
+		</spellIDs>
+		<Ballista>false</Ballista>
+		<FirstAidTent>true</FirstAidTent>
+		<AmmoCart>false</AmmoCart>
+		<FavoriteEnemies/>
+	</Editable>
+	<ArrowButtonState>0</ArrowButtonState>
+	<Decal/>
+	<Selection href="/_(Model)/Heroes/Warlock_Path/Symbol.xdb#xpointer(/Model)"/>
+	<Trace href="/MapObjects/_(AdvMapHeroTraceSet)/Dungeon.xdb#xpointer(/AdvMapHeroTraceSet)"/>
+	<RaceTraitIcon/>
+	<RaceTraitDescFileRef href=""/>
+	<ScenarioHero>false</ScenarioHero>
+	<AdventureMusic/>
+	<HideInEditor>false</HideInEditor>
+</AdvMapHeroShared>

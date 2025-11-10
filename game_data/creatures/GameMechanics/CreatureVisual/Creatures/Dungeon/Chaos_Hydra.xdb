@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001161">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Dungeon/Chaos_Hydra.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Dungeon/Chaos_HydraAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Dungeon/Chaos_HydraDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Chaoshydra.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Chaoshydra_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Chaoshydra_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Dungeon/ico_Chaoshydra_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Dungeon/ChaosHydra.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>0.00902084</x>
+		<y>-1.37027</y>
+		<z>1.80235</z>
+	</MountPoint>
+	<MountBone>M_Neck</MountBone>
+</CreatureVisual>

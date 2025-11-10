@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="1000053">
+	<NameFileRef href="/Text/Game/TownBuildings/Necromancy/Dwelling_7/Upgraded_Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Necromancy/Dwelling_7/Upgraded_Description.txt"/>
+	<Type>TB_DWELLING_7</Type>
+	<Upgrade>BLD_UPG_2</Upgrade>
+	<Cost>
+		<Wood>15</Wood>
+		<Ore>15</Ore>
+		<Mercury>30</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>10000</Gold>
+	</Cost>
+	<ModObjectName>DragonGraveyrd</ModObjectName>
+	<dependencies>
+		<Item href="DragonGraveyard.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_WRAITH</Creature>
+	<Creature2>CREATURE_BANSHEE</Creature2>
+	<DevLevelNeeded>20</DevLevelNeeded>
+	<UIObjectName>Dwelling_7</UIObjectName>
+	<UIStackPosition>1</UIStackPosition>
+	<Icon href="/UI/TownHall/necropolis/128/d7u.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

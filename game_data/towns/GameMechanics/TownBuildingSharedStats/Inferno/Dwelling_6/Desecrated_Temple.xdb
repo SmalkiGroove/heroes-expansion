@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="68">
+	<NameFileRef href="/Text/Game/TownBuildings/Inferno/Dwelling_6/Upgraded_Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Inferno/Dwelling_6/Upgraded_Description.txt"/>
+	<Type>TB_DWELLING_6</Type>
+	<Upgrade>BLD_UPG_2</Upgrade>
+	<Cost>
+		<Wood>5</Wood>
+		<Ore>15</Ore>
+		<Mercury>15</Mercury>
+		<Crystal>5</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>5000</Gold>
+	</Cost>
+	<ModObjectName>templeofdamned</ModObjectName>
+	<dependencies>
+		<Item href="Temple_of_the_Damned.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_BALOR</Creature>
+	<Creature2>CREATURE_PIT_SPAWN</Creature2>
+	<DevLevelNeeded>16</DevLevelNeeded>
+	<UIObjectName>Dwelling_6</UIObjectName>
+	<UIStackPosition>1</UIStackPosition>
+	<Icon href="/UI/TownHall/inferno/128/d6u.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

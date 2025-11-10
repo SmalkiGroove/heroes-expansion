@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001247">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Neutrals/Phoenix.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Neutrals/PhoenixAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Neutrals/PhoenixDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Neutral/ico_Phoenix.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Neutral/ico_Phoenix_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Neutral/ico_Phoenix_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Neutral/ico_Phoenix_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Preserve/Phoenix.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="#n:inline(Win3DObj)" id="item_fbcee9c8-ddeb-436c-bdf7-6b3c6b1d36e2">
+		<Win3DObj ObjectRecordID="1000019">
+			<Model/>
+			<placements>
+				<Item>
+					<SizeDesc href="/GameMechanics/Win3DObjSizeDesc/creatureInfo.xdb#xpointer(/Win3DObjSizeDesc)"/>
+					<Matrix>00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</Matrix>
+					<Shift>
+						<x>0</x>
+						<y>0</y>
+					</Shift>
+					<RollY>0</RollY>
+					<RollX>0</RollX>
+					<Scale>1</Scale>
+				</Item>
+			</placements>
+		</Win3DObj>
+	</Win3DView>
+	<MountPoint>
+		<x>0.138907</x>
+		<y>-0.431992</y>
+		<z>3.79488</z>
+	</MountPoint>
+	<MountBone>Neck1</MountBone>
+</CreatureVisual>

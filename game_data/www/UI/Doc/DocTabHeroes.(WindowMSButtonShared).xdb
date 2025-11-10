@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WindowMSButtonShared ObjectRecordID="1000064">
+	<Crap>false</Crap>
+	<Children/>
+	<Background/>
+	<Foreground/>
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>87</x>
+				<y>73</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea/>
+	<IgnoreDblClick>false</IgnoreDblClick>
+	<ActiveMask/>
+	<VisualStates>
+		<Item>
+			<Normal>
+				<Background href="/UI/HeroScreen3/Bookmarks/Bookmark5_Passive.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Foreground/>
+				<TextString/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat/>
+			</Normal>
+			<MouseOver>
+				<Background href="/UI/HeroScreen3/Bookmarks/Bookmark5_Passive.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Foreground href="/UI/HeroScreen3/Bookmarks/HeroSingle_Hilight.(BackgroundTiledTexture).xdb#xpointer(/BackgroundTiledTexture)"/>
+				<TextString/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat/>
+			</MouseOver>
+			<Pushed>
+				<Background href="/UI/HeroScreen3/Bookmarks/Bookmark5_Pushed.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Foreground/>
+				<TextString/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat/>
+			</Pushed>
+			<Disabled>
+				<Background/>
+				<Foreground/>
+				<TextString/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat/>
+			</Disabled>
+			<RightButtonDown>
+				<Background/>
+				<Foreground/>
+				<TextString/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat/>
+			</RightButtonDown>
+			<DefaultSubState>BST_NORMAL</DefaultSubState>
+			<VisualOnEnterState>
+				<Commands>
+					<Item href="Summary/_Buttons/SummaryHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="Skills/_Buttons/SkillsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<!-- <Item href="Artifacts/_Buttons/ArtifactsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/> -->
+					<!-- <Item href="Creatures/_Buttons/CreaturesHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/> -->
+					<Item href="Heroes/_Buttons/HeroesShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+				</Commands>
+				<Reversable>false</Reversable>
+			</VisualOnEnterState>
+		</Item>
+		<Item>
+			<Normal>
+				<Background href="/UI/HeroScreen3/Bookmarks/Bookmark5_Passive.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Foreground/>
+				<TextString/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat/>
+			</Normal>
+			<MouseOver>
+				<Background href="/UI/HeroScreen3/Bookmarks/Bookmark5_Passive.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Foreground href="/UI/HeroScreen3/Bookmarks/HeroSingle_Hilight.(BackgroundTiledTexture).xdb#xpointer(/BackgroundTiledTexture)"/>
+				<TextString/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat/>
+			</MouseOver>
+			<Pushed>
+				<Background href="/UI/HeroScreen3/Bookmarks/Bookmark5_Pushed.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Foreground/>
+				<TextString/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat/>
+			</Pushed>
+			<Disabled>
+				<Background/>
+				<Foreground/>
+				<TextString/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat/>
+			</Disabled>
+			<RightButtonDown>
+				<Background/>
+				<Foreground/>
+				<TextString/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat/>
+			</RightButtonDown>
+			<DefaultSubState>BST_NORMAL</DefaultSubState>
+			<VisualOnEnterState>
+				<Commands>
+					<Item href="Heroes/_Buttons/HeroesHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+				</Commands>
+				<Reversable>false</Reversable>
+			</VisualOnEnterState>
+		</Item>
+	</VisualStates>
+	<TriggerMode>BCST_ON_RELEASE</TriggerMode>
+</WindowMSButtonShared>

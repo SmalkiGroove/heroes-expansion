@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Model ObjectRecordID="1002086">
+	<Materials>
+		<Item href="Biara2-t_Biara2_mapping_succubus_body.(Material).xdb#xpointer(/Material)"/>
+		<Item href="Biara2-Biara2_mapping_succubus_body.(Material).xdb#xpointer(/Material)"/>
+		<Item href="Biara2-Biara2_mapping_succubus_wing1.(Material).xdb#xpointer(/Material)"/>
+	</Materials>
+	<Skeleton href="#n:inline(Skeleton)" id="item_29872cee-12d4-4cb9-81de-2a1de6a3e65a">
+		<Skeleton ObjectRecordID="1000548">
+			<SrcName href="/models/Heroes/Biara/Biara.mb"/>
+			<RootJoint>Global</RootJoint>
+			<MSRFormat>true</MSRFormat>
+			<Animations/>
+			<uid>25FDCCFB-A0EC-492E-999A-7BCA9FEAC324</uid>
+		</Skeleton>
+	</Skeleton>
+	<Geometry href="#n:inline(Geometry)" id="item_3fce1e15-c66f-42f4-8660-02a4d91f2274">
+		<Geometry ObjectRecordID="1001857">
+			<SrcName href="/models/Heroes/Biara/Biara.mb"/>
+			<uid>E994A07B-7F6D-4502-BFD0-CFCBFCAD09A3</uid>
+			<RootMesh/>
+			<RootJoint>Global</RootJoint>
+			<Size>
+				<x>2.26194</x>
+				<y>2.55982</y>
+				<z>2.48656</z>
+			</Size>
+			<Center>
+				<x>0</x>
+				<y>0.981375</y>
+				<z>1.24328</z>
+			</Center>
+			<BestFitPoint>
+				<x>0.0110821</x>
+				<y>0.151237</y>
+				<z>2.33688</z>
+			</BestFitPoint>
+			<Dir>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0</w>
+			</Dir>
+			<AIGeometry href="#n:inline(AIGeometry)" id="item_65a62055-5978-4efd-a0b4-fe9380705183">
+				<AIGeometry ObjectRecordID="1000825">
+					<SrcName href="/models/Heroes/Biara/Biara.mb"/>
+					<RootMesh>AI</RootMesh>
+					<RootJoint/>
+					<Volume>0</Volume>
+					<SolidPart>0</SolidPart>
+					<AABBCenter>
+						<x>0</x>
+						<y>0.0921208</y>
+						<z>1.21317</z>
+					</AABBCenter>
+					<AABBHalfSize>
+						<x>0.470111</x>
+						<y>0.507328</y>
+						<z>1.21317</z>
+					</AABBHalfSize>
+					<uid>99DC4143-5DAF-45C8-BC31-208D27C139E9</uid>
+				</AIGeometry>
+			</AIGeometry>
+			<NumMeshes>2</NumMeshes>
+			<MaterialQuantities>
+				<Item>1</Item>
+				<Item>2</Item>
+			</MaterialQuantities>
+			<MeshNames>
+				<Item>BodyGlowShape</Item>
+				<Item>BodyShape</Item>
+			</MeshNames>
+			<MeshAnimated/>
+			<MeshWindAffected/>
+		</Geometry>
+	</Geometry>
+	<Animations/>
+	<WindPower>1</WindPower>
+</Model>

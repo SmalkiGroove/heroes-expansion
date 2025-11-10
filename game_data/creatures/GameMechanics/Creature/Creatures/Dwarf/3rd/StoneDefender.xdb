@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature>
+	<AttackSkill>1</AttackSkill>
+	<DefenceSkill>5</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>1</MinDamage>
+	<MaxDamage>2</MaxDamage>
+	<Speed>4</Speed>
+	<Initiative>8</Initiative>
+	<Flying>false</Flying>
+	<Health>7</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>17</Exp>
+	<Power>113</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>1</CreatureTier>
+	<Upgrade>false</Upgrade>
+	<PairCreature>CREATURE_UNKNOWN</PairCreature>
+	<CreatureTown>TOWN_FORTRESS</CreatureTown>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>48</WeeklyGrowth>
+	<Cost>
+		<Gold>20</Gold>
+	</Cost>
+	<PresetPrice>0</PresetPrice>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Dwarf/Stone_Defender.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>1</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Dwarf/3rd/StoneDefender.(CreatureVisual).xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_DEFENDER</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_ENRAGED</Item>
+		<Item>ABILITY_LARGE_SHIELD</Item>
+		<Item>ABILITY_SHIELD_OTHER</Item>
+		<Item>ABILITY_HOLD_GROUND</Item>
+		<Item>ABILITY_PREPARED_POSITION</Item>
+		<Item>ABILITY_FIERCE_RETALIATION</Item>
+	</Abilities>
+</Creature>

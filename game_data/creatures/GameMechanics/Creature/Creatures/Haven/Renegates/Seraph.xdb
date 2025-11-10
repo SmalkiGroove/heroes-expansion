@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature>
+	<AttackSkill>37</AttackSkill>
+	<DefenceSkill>33</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>1</MinDamage>
+	<MaxDamage>99</MaxDamage>
+	<Speed>7</Speed>
+	<Initiative>11</Initiative>
+	<Flying>true</Flying>
+	<Health>260</Health>
+	<KnownSpells>
+		<Item><Spell>SPELL_MASS_HASTE</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+		<Item><Spell>SPELL_DIVINE_VENGEANCE</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+	</KnownSpells>
+	<SpellPoints>50</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>1000</Exp>
+	<Power>6000</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>7</CreatureTier>
+	<Upgrade>true</Upgrade>
+	<PairCreature>CREATURE_UNKNOWN</PairCreature>
+	<CreatureTown>TOWN_HEAVEN</CreatureTown>
+	<MagicElement><First>ELEMENT_WATER</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>1</WeeklyGrowth>
+	<Cost>
+		<Crystal>3</Crystal>
+		<Gold>3500</Gold>
+	</Cost>
+	<PresetPrice>0</PresetPrice>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Haven/Renegates/Seraph.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>2</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Haven/Renegates/Seraph.xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_ANGEL</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_BOND_OF_LIGHT</Item>
+		<Item>ABILITY_ANTI_GIANT</Item>
+		<Item>ABILITY_FLAMEWAVE</Item>
+		<Item>ABILITY_IMMUNITY_TO_MIND_CONTROL</Item>
+	</Abilities>
+</Creature>

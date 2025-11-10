@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Added/DruidOfTheCouncil/Name.txt"/>
+	<CreatureAbilitiesFileRef/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Added/DruidOfTheCouncil/Description.txt"/>
+	<Icon href="/Textures/Creatures/Added/DruidOfTheCouncil/DruidOfTheCouncil_55.(Texture).xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Creatures/Added/DruidOfTheCouncil/DruidOfTheCouncil_32.(Texture).xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Creatures/Added/DruidOfTheCouncil/DruidOfTheCouncil_64.(Texture).xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Creatures/Added/DruidOfTheCouncil/DruidOfTheCouncil.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Added/DruidOfTheCouncil/Tieru.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot href="/GameMechanics/Shot/Creatures/Added/Druid.xdb#xpointer(/Shot)"/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.0873698</x>
+		<y>-0.0181399</y>
+		<z>1.34409</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

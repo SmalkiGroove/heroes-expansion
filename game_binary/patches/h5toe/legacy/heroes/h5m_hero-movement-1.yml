@@ -1,0 +1,35 @@
+# Modify hero movement bonuses
+# - Logistics from 0.10 per rank to 0.05
+# - Boots of speed from 0.25 to 0.15
+# - Navigation bonus from 50% to 25%
+edits:
+  - name: Pointer to logistics bonus
+    address: '0074D30C'
+    size: 3
+    type: hex
+    original: '10 2F E1'
+    modified: 'F8 E0 B4'
+  - name: Logistics bonus value
+    address: '0074D4F8'
+    size: 4
+    type: hex
+    original: 'CC CC CC CC'
+    modified: 'CD CC 4C 3D'
+  - name: Pointer to boots
+    address: '0074D347'
+    size: 4
+    type: hex
+    original: 'B8 1B E1 00'
+    modified: 'F3 E0 B4 00'
+  - name: Boots bonus value
+    address: '0074D4F3'
+    size: 4
+    type: hex
+    original: 'CC CC CC CC'
+    modified: '9A 99 19 3E'
+  - name: Navigation bonus
+    address: '0074D3C9'
+    size: 6
+    type: hex
+    original: 'D8 0D AC A3 E3 00'
+    modified: 'D8 0D BC 39 E2 00'

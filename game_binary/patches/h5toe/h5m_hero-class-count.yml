@@ -1,0 +1,11 @@
+# Increases Hero class count from 8 to 73
+definitions:
+- &new_class_count          74
+- &default_class_count      9             
+edits:
+  - name: Edit 1
+    address: '006E1DE0'
+    size: 1
+    type: int
+    original: *default_class_count
+    modified: *new_class_count 

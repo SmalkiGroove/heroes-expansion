@@ -1,0 +1,44 @@
+# Permanent and Endless Simultaneous Turns by Deflaktor
+edits:
+  - name: Edit 1
+    address: '006091C0'
+    size: 1
+    type: hex
+    original: '81'
+    modified: 'C3'
+  - name: Edit 2
+    address: '004969D9'
+    size: 1
+    type: hex
+    original: '74'
+    modified: 'EB'
+  - name: Edit 3
+    address: '005C97A6'
+    size: 6
+    type: hex
+    original: '0F 84 98 05 00 00'
+    modified: 'E9 99 05 00 00 90'
+  - name: Edit 4
+    address: '005F6634'
+    size: 2
+    type: hex
+    original: '74 12'
+    modified: 'EB 12'
+  - name: Edit 5
+    address: '0057F840'
+    size: 2
+    type: hex
+    original: '74 07'
+    modified: 'EB 07'
+  - name: Edit 6
+    address: '004F26C2'
+    size: 2
+    type: hex
+    original: '74 14'
+    modified: 'EB 14'
+  - name: Edit 7
+    address: '005C98B9'
+    size: 2
+    type: hex
+    original: '74 7F'
+    modified: 'EB 7F'

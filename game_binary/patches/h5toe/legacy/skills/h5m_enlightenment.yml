@@ -1,0 +1,11 @@
+# Changes level divisor from (6 - enlightenmentLevel) to never
+definitions: 
+ - &level_divisor 255 
+ - &original_level_divisor 5
+edits:
+  - name: Edit 1
+    address: '0074B2AA'
+    size: 4
+    type: int
+    original: *original_level_divisor
+    modified: *level_divisor

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="1000095">
+	<NameFileRef href="/Text/Game/TownBuildings/Dungeon/Dwelling_4/Upgraded_Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Dungeon/Dwelling_4/Upgraded_Description.txt"/>
+	<Type>TB_DWELLING_4</Type>
+	<Upgrade>BLD_UPG_2</Upgrade>
+	<Cost>
+		<Wood>7</Wood>
+		<Ore>5</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>8</Sulfur>
+		<Gem>4</Gem>
+		<Gold>1500</Gold>
+	</Cost>
+	<ModObjectName>wicked_pastures</ModObjectName>
+	<dependencies>
+		<Item href="DarkPastures.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_RAVAGER</Creature>
+	<Creature2>CREATURE_BLACK_RIDER</Creature2>
+	<DevLevelNeeded>8</DevLevelNeeded>
+	<UIObjectName>Dwelling_4</UIObjectName>
+	<UIStackPosition>1</UIStackPosition>
+	<Icon href="/UI/TownHall/dungeon/128/d4u.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

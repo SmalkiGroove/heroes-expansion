@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001196">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Haven/Archer.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Haven/ArcherAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Haven/ArcherDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Heaven/ico_Archer.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Heaven/ico_Archer_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Heaven/ico_Archer_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Heaven/ico_Archer_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Haven/Archer.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot href="/GameMechanics/Shot/Creatures/Haven/Archer.xdb#xpointer(/Shot)"/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="#n:inline(Win3DObj)" id="item_ea861c3f-35b1-46d0-8b55-51d94f662e61">
+		<Win3DObj ObjectRecordID="7">
+			<Model href="/_(Model)/Creatures/Haven/Archer.(Model).xdb#xpointer(/Model)"/>
+			<placements>
+				<Item>
+					<SizeDesc href="/GameMechanics/Win3DObjSizeDesc/creatureInfo.xdb#xpointer(/Win3DObjSizeDesc)"/>
+					<Matrix>2294a83f7087b5bdc2f5a8310000000009ab6d3c74b65c3e94aea63fd8a370bfe014b3bd454ea6bf44365d3e000000000000000000000000000000000000803f</Matrix>
+					<Shift>
+						<x>0</x>
+						<y>-0.94</y>
+					</Shift>
+					<RollY>0.0672</RollY>
+					<RollX>-1.4064</RollX>
+					<Scale>1.32</Scale>
+				</Item>
+			</placements>
+		</Win3DObj>
+	</Win3DView>
+	<MountPoint>
+		<x>-0.0100399</x>
+		<y>0.0096178</y>
+		<z>1.03103</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

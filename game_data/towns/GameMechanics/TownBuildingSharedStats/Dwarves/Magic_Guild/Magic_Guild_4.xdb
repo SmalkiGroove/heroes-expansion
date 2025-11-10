@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="1000124">
+	<NameFileRef href="/Text/Game/TownBuildings/Dwarves/Magic_Guild/Magic_Guild_4_Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Dwarves/Magic_Guild/Magic_Guild_4_Description.txt"/>
+	<Type>TB_MAGIC_GUILD</Type>
+	<Upgrade>BLD_UPG_4</Upgrade>
+	<Cost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>4</Mercury>
+		<Crystal>4</Crystal>
+		<Sulfur>4</Sulfur>
+		<Gem>4</Gem>
+		<Gold>4000</Gold>
+	</Cost>
+	<ModObjectName>Magic_Guild</ModObjectName>
+	<dependencies>
+		<Item href="Magic_Guild_3.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_UNKNOWN</Creature>
+	<DevLevelNeeded>4</DevLevelNeeded>
+	<UIObjectName>MagicGuild</UIObjectName>
+	<UIStackPosition>3</UIStackPosition>
+	<Icon href="/UI/H5A1/Icons/Buildings/Towns/Fortress/Building_Mode_Icon/128x128/Magic_Guild_4.(Texture).xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

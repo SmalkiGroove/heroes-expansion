@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature ObjectRecordID="48">
+	<AttackSkill>40</AttackSkill>
+	<DefenceSkill>36</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>44</MinDamage>
+	<MaxDamage>88</MaxDamage>
+	<Speed>9</Speed>
+	<Initiative>11</Initiative>
+	<Flying>true</Flying>
+	<Health>246</Health>
+	<KnownSpells>
+		<Item><Spell>SPELL_ABILITY_SUMMON_BALOR</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+		<Item><Spell>SPELL_BERSERK</Spell><Mastery>MASTERY_BASIC</Mastery></Item>
+	</KnownSpells>
+	<SpellPoints>26</SpellPoints>
+	<SpellPoints1>1</SpellPoints1>
+	<SpellPoints2>1</SpellPoints2>
+	<Exp>1000</Exp>
+	<Power>6000</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>7</CreatureTier>
+	<Upgrade>true</Upgrade>
+	<PairCreature>CREATURE_DEVIL</PairCreature>
+	<CreatureTown>TOWN_INFERNO</CreatureTown>
+	<MagicElement><First>ELEMENT_FIRE</First><Second>ELEMENT_EARTH</Second></MagicElement>
+	<WeeklyGrowth>1</WeeklyGrowth>
+	<Cost>
+		<Sulfur>3</Sulfur>
+		<Gold>3500</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Inferno/ArchDevil.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>2</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Inferno/ArchDevil_.xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_DEVIL</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_DEMONIC</Item>
+		<Item>ABILITY_IMMUNITY_TO_FIRE</Item>
+		<Item>ABILITY_HORROR_OF_THE_DEATH</Item>
+		<Item>ABILITY_EVIL_EYE</Item>
+		<Item>ABILITY_BALOR_SUMMONIG</Item>
+	</Abilities>
+</Creature>

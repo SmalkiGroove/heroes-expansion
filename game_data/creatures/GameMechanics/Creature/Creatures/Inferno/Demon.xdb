@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature ObjectRecordID="37">
+	<AttackSkill>6</AttackSkill>
+	<DefenceSkill>4</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>2</MinDamage>
+	<MaxDamage>3</MaxDamage>
+	<Speed>4</Speed>
+	<Initiative>8</Initiative>
+	<Flying>false</Flying>
+	<Health>14</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>1</SpellPoints2>
+	<Exp>22</Exp>
+	<Power>106</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>2</CreatureTier>
+	<Upgrade>false</Upgrade>
+	<PairCreature>CREATURE_HORNED_DEMON</PairCreature>
+	<CreatureTown>TOWN_INFERNO</CreatureTown>
+	<MagicElement><First>ELEMENT_FIRE</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>36</WeeklyGrowth>
+	<Cost>
+		<Gold>40</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Inferno/Demon.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>1</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Inferno/Demon.xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_UNKNOWN</BaseCreature>
+	<Upgrades>
+		<Item>CREATURE_HORNED_DEMON</Item>
+		<Item>CREATURE_HORNED_LEAPER</Item>
+	</Upgrades>
+	<Abilities>
+		<Item>ABILITY_DEMONIC</Item>
+		<Item>ABILITY_FIRE_PROOF_50</Item>
+		<Item>ABILITY_ENRAGED</Item>
+		<Item>ABILITY_BERSERKER_RAGE</Item>
+	</Abilities>
+</Creature>

@@ -1,0 +1,125 @@
+# Change and add magic resistance artifacts
+definitions:
+  - &FORGOTTEN_HERO_PLATE_MR  10
+  - &INTERFERENCE_BOOTS_MR    15
+  - &ARTIFACT01_ID           184
+  - &ARTIFACT01_MR             8
+  - &ARTIFACT02_ID           174
+  - &ARTIFACT02_MR            12
+  - &TOE_FORGOTTEN_HERO_PLATE_MR 20
+  - &TOE_INTERFERENCE_BOOTS_MR 10
+edits:
+  - name: Edit Forgotten Hero Plate
+    address: '0057C422'
+    size: 1
+    type: int
+    original: *TOE_FORGOTTEN_HERO_PLATE_MR
+    modified: *FORGOTTEN_HERO_PLATE_MR
+  - name: Edit Boots of Interference
+    address: '0057C44C'
+    size: 1
+    type: int
+    original: *TOE_INTERFERENCE_BOOTS_MR
+    modified: *INTERFERENCE_BOOTS_MR
+  - name: Fork for other artifacts
+    address: '0057C3FD'
+    size: 7
+    type: hex
+    original: '8B 16 8B CE FF 52 74'
+    modified: 'E9 1E 9D 7B 00 90 90'
+  - name: ASCII text
+    address: '00BD9D00'
+    size: 32
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+    modified: '3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 4D 4F 44 20 73 70 65 6C 6C 20 72 65 73 69 73 74'
+  - name: New code 1
+    address: '00BD9D20'
+    size: 8
+    type: hex
+    original: '00 00 00 00 00 00 00 00'
+    modified: '8B 06 89 F1 FF 50 74 68'
+  - name: Artifact 1 id
+    address: '00BD9D28'
+    size: 4
+    type: int
+    original: 0
+    modified: *ARTIFACT01_ID
+  - name: New code 2
+    address: '00BD9D2C'
+    size: 16
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+    modified: '89 C1 E8 4D F9 B6 FF 85 C0 74 15 6A 00 6A 00 68'
+  - name: Artifact 1 id again
+    address: '00BD9D3C'
+    size: 4
+    type: int
+    original: 0
+    modified: *ARTIFACT01_ID
+  - name: New code 3
+    address: '00BD9D40'
+    size: 11
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00'
+    modified: '30 D2 89 D9 E8 77 4C 88 FF 83 C5'
+  - name: Artifact 1 mr
+    address: '00BD9D4B'
+    size: 1
+    type: int
+    original: 0
+    modified: *ARTIFACT01_MR
+  - name: New code 4
+    address: '00BD9D4C'
+    size: 12
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00 00'
+    modified: '89 6C 24 10 8B 06 89 F1 FF 50 74 68'
+  - name: Artifact 2 id
+    address: '00BD9D58'
+    size: 4
+    type: int
+    original: 0
+    modified: *ARTIFACT02_ID
+  - name: New code 5
+    address: '00BD9D5C'
+    size: 16
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+    modified: '89 C1 E8 1D F9 B6 FF 85 C0 74 19 6A 00 6A 00 68'
+  - name: Artifact 2 id again
+    address: '00BD9D6C'
+    size: 4
+    type: int
+    original: 0
+    modified: *ARTIFACT02_ID
+  - name: New code 6
+    address: '00BD9D70'
+    size: 11
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00'
+    modified: '30 D2 89 D9 E8 47 4C 88 FF 83 C5'
+  - name: Artifact 2 mr
+    address: '00BD9D7B'
+    size: 1
+    type: int
+    original: 0
+    modified: *ARTIFACT02_MR
+  - name: New code 7
+    address: '00BD9D7C'
+    size: 16
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+    modified: '89 6C 24 10 8B 16 89 F1 FF 52 74 E9 78 62 84 FF'
+  - name: Fork skip mr logic
+    address: '0057C310'
+    size: 15
+    type: hex
+    original: '8B CB E8 09 76 0B 00 84 C0 74 1F 85 FF 74 0F'
+    modified: 'E9 7B 9E 7B 00 90 90 90 90 90 90 90 90 90 90'
+  - name: New code 8
+    address: '00BD9D90'
+    size: 24
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+    modified: '8B 54 24 30 89 D9 E8 15 EF 3A FF 84 C0 0F 85 97 61 84 FF E9 77 61 84 FF'

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="1000108">
+	<NameFileRef href="/Text/Game/TownBuildings/Dungeon/Special_1/Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Dungeon/Special_1/Desc.txt"/>
+	<Type>TB_SPECIAL_1</Type>
+	<Upgrade>BLD_UPG_1</Upgrade>
+	<Cost>
+		<Wood>5</Wood>
+		<Ore>5</Ore>
+		<Mercury>1</Mercury>
+		<Crystal>1</Crystal>
+		<Sulfur>1</Sulfur>
+		<Gem>1</Gem>
+		<Gold>500</Gold>
+	</Cost>
+	<ModObjectName>altar_of_elements</ModObjectName>
+	<dependencies>
+		<Item href="/GameMechanics/TownBuildingSharedStats/Dungeon/Magic_Guild/Magic_Guild_1.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_UNKNOWN</Creature>
+	<DevLevelNeeded>4</DevLevelNeeded>
+	<UIObjectName>Special_1</UIObjectName>
+	<UIStackPosition>0</UIStackPosition>
+	<Icon href="/UI/TownHall/dungeon/128/altar_of_elements.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

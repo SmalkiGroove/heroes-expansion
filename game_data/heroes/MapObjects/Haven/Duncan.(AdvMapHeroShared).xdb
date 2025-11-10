@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvMapHeroShared ObjectRecordID="17">
+	<Model href="/Characters/Heroes/Duncan_LOD.xdb#xpointer(/Model)"/>
+	<AnimSet href="/Characters/Heroes/Duncan_LOD-adv.xdb#xpointer(/AnimSet)"/>
+	<blockedTiles/>
+	<holeTiles/>
+	<activeTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+	</activeTiles>
+	<passableTiles/>
+	<PossessionMarkerTile>
+		<x>0</x>
+		<y>0</y>
+	</PossessionMarkerTile>
+	<Effect/>
+	<EffectWhenOwned/>
+	<messagesFileRef/>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect/>
+	<flybyMessageFileRef href=""/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Units.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>true</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128/>
+	<InternalName>Duncan</InternalName>
+	<Class>HERO_CLASS_HAVEN_MIGHT</Class>
+	<Specialization>HERO_SPEC_COURTIER</Specialization>
+	<PrimarySkill>
+		<SkillID>HERO_SKILL_INNATES</SkillID>
+		<Mastery>MASTERY_EXPERT</Mastery>
+	</PrimarySkill>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Haven/Duncan/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Haven/Duncan/Description.txt"/>
+	<SpecializationIcon href="/UI/H5A1/Icons/Heroes/Portrets128x128/Dunkan.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTexture href="/UI/H5A1/Icons/Heroes/Portrets128x128/Dunkan.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTextureSmall/>
+	<HeroCharacterArena href="/Characters/Heroes/Duncan.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee href="/Characters/Heroes/Duncan_Strike.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterAdventure href="/Characters/Heroes/Duncan_LOD.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Knight.xdb#xpointer(/CreatureVisual)"/>
+	<TownType>TOWN_HEAVEN</TownType>
+	<Editable>
+		<NameFileRef href="/Text/Game/Heroes/Persons/Haven/Duncan/Name.txt"/>
+		<BiographyFileRef href="/Text/Game/Heroes/Persons/Haven/Duncan/Bio.txt"/>
+		<Offence>1</Offence>
+		<Defence>1</Defence>
+		<Spellpower>1</Spellpower>
+		<Knowledge>1</Knowledge>
+		<skills>
+			<Item>
+				<SkillID>HERO_SKILL_COURAGE</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
+			<Item>
+				<SkillID>HERO_SKILL_LEADERSHIP</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
+		</skills>
+		<perkIDs>
+			<Item>HERO_SKILL_FAMILIAR_LAND</Item>
+			<Item>HERO_SKILL_DIPLOMACY</Item>
+		</perkIDs>
+		<spellIDs/>
+		<Ballista>false</Ballista>
+		<FirstAidTent>false</FirstAidTent>
+		<AmmoCart>true</AmmoCart>
+		<FavoriteEnemies/>
+	</Editable>
+	<ArrowButtonState>0</ArrowButtonState>
+	<Decal/>
+	<Selection href="/_(Model)/Heroes/Knight_Path/Symbol.(Model).xdb#xpointer(/Model)"/>
+	<Trace href="/MapObjects/_(AdvMapHeroTraceSet)/Haven.xdb#xpointer(/AdvMapHeroTraceSet)"/>
+	<RaceTraitIcon/>
+	<RaceTraitDescFileRef href=""/>
+	<ScenarioHero>false</ScenarioHero>
+	<AdventureMusic href="/Sounds/_(Music)/AdvMap-Heroes/a1-Duncan.xdb#xpointer(/Music)"/>
+	<HideInEditor>false</HideInEditor>
+</AdvMapHeroShared>

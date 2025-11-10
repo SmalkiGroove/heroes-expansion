@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001245">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Inferno/Balor.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Inferno/BalorAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Inferno/BalorDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Inferno/ico_Balor.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Inferno/ico_Balor_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Inferno/ico_Balor_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Inferno/ico_Balor_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Inferno/Balor.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="#n:inline(Win3DObj)" id="item_536c40f2-618b-414f-98da-796c45b58c7c">
+		<Win3DObj ObjectRecordID="20">
+			<Model href="/_(Model)/Creatures/Inferno/Balor.(Model).xdb#xpointer(/Model)"/>
+			<placements>
+				<Item>
+					<SizeDesc href="/GameMechanics/Win3DObjSizeDesc/creatureInfo.xdb#xpointer(/Win3DObjSizeDesc)"/>
+					<Matrix>73330f3f84f6c5be000000006e12033ec94043bd9a3d8dbd7dc02c3f4e6290bfe173c4bec41b0ebf70b2abbd000000000000000000000080000000000000803f</Matrix>
+					<Shift>
+						<x>0.128</x>
+						<y>-1.128</y>
+					</Shift>
+					<RollY>0.6048</RollY>
+					<RollX>-1.6944</RollX>
+					<Scale>0.68</Scale>
+				</Item>
+			</placements>
+		</Win3DObj>
+	</Win3DView>
+	<MountPoint>
+		<x>-0.294872</x>
+		<y>-0.572936</y>
+		<z>1.35475</z>
+	</MountPoint>
+	<MountBone>Neck</MountBone>
+</CreatureVisual>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature>
+	<AttackSkill>11</AttackSkill>
+	<DefenceSkill>11</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>14</MinDamage>
+	<MaxDamage>17</MaxDamage>
+	<Speed>5</Speed>
+	<Initiative>14</Initiative>
+	<Flying>false</Flying>
+	<Health>56</Health>
+	<KnownSpells>
+		<Item><Spell>SPELL_SLOW</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+		<Item><Spell>SPELL_FORGETFULNESS</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+		<Item><Spell>SPELL_DEEP_FREEZE</Spell><Mastery>MASTERY_BASIC</Mastery></Item>
+	</KnownSpells>
+	<SpellPoints>24</SpellPoints>
+	<SpellPoints1>1</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>250</Exp>
+	<Power>2622</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>5</CreatureTier>
+	<Upgrade>false</Upgrade>
+	<PairCreature>CREATURE_UNKNOWN</PairCreature>
+	<CreatureTown>TOWN_DUNGEON</CreatureTown>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_AIR</Second></MagicElement>
+	<WeeklyGrowth>5</WeeklyGrowth>
+	<Cost>
+		<Gold>500</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Dungeon/Shadow_Mistress.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>1</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Dungeon/3rd/ShadowMistress.(CreatureVisual).xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_MATRON</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_INVISIBILITY</Item>
+		<Item>ABILITY_WHIP_STRIKE</Item>
+	</Abilities>
+</Creature>

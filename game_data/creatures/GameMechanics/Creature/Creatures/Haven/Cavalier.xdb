@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature ObjectRecordID="12">
+	<AttackSkill>15</AttackSkill>
+	<DefenceSkill>15</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>16</MinDamage>
+	<MaxDamage>23</MaxDamage>
+	<Speed>8</Speed>
+	<Initiative>12</Initiative>
+	<Flying>false</Flying>
+	<Health>90</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>350</Exp>
+	<Power>2250</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>6</CreatureTier>
+	<Upgrade>false</Upgrade>
+	<PairCreature>CREATURE_PALADIN</PairCreature>
+	<CreatureTown>TOWN_HEAVEN</CreatureTown>
+	<MagicElement><First>ELEMENT_FIRE</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>3</WeeklyGrowth>
+	<Cost>
+		<Gold>1200</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Haven/Cavalier.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>2</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Haven/Cavalier.xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_UNKNOWN</BaseCreature>
+	<Upgrades>
+		<Item>CREATURE_PALADIN</Item>
+		<Item>CREATURE_CHAMPION</Item>
+	</Upgrades>
+	<Abilities>
+		<Item>ABILITY_JOUSTING</Item>
+		<Item>ABILITY_IMMUNITY_TO_HYPNOTIZE</Item>
+	</Abilities>
+</Creature>

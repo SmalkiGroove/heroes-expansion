@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href=""/>
+	<CreatureAbilitiesFileRef/>
+	<DescriptionFileRef href=""/>
+	<Icon/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/UI/H5A2/Icons/Heroes/Portrets128x128/GhostFSLord.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/invisible_creature.xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href=""/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.419628</x>
+		<y>-0.733445</y>
+		<z>1.39203</z>
+	</MountPoint>
+	<MountBone>Head</MountBone>
+</CreatureVisual>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WindowMSButtonShared ObjectRecordID="1000064">
+	<Crap>false</Crap>
+	<Children/>
+	<Background/>
+	<Foreground/>
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>57</x>
+				<y>57</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea/>
+	<IgnoreDblClick>false</IgnoreDblClick>
+	<ActiveMask/>
+	<VisualStates>
+		<Item>
+			<Normal>
+				<Background href="/UI/Doc/Skills/_Buttons/BgMagic.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Foreground/>
+				<TextString/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat/>
+			</Normal>
+			<MouseOver>
+				<Background href="/UI/Doc/Skills/_Buttons/BgMagic.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Foreground href="/UI/Doc/Skills/Common/Highlight.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
+				<TextString/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat/>
+			</MouseOver>
+			<Pushed>
+				<Background/>
+				<Foreground/>
+				<TextString/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat/>
+			</Pushed>
+			<Disabled>
+				<Background/>
+				<Foreground/>
+				<TextString/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat/>
+			</Disabled>
+			<RightButtonDown>
+				<Background/>
+				<Foreground/>
+				<TextString/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat/>
+			</RightButtonDown>
+			<DefaultSubState>BST_NORMAL</DefaultSubState>
+			<VisualOnEnterState>
+				<Commands>
+					<!-- <Item href="MagicSwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/> -->
+				</Commands>
+				<Reversable>false</Reversable>
+			</VisualOnEnterState>
+		</Item>
+		<Item>
+			<Normal>
+				<Background href="/UI/Doc/Skills/_Buttons/BgMagic.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Foreground href="/UI/Doc/Skills/Common/Highlight.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
+				<TextString/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat/>
+			</Normal>
+			<MouseOver>
+				<Background href="/UI/Doc/Skills/_Buttons/BgMagic.(BackgroundSimpleTexture).xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Foreground href="/UI/Doc/Skills/Common/Highlight.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
+				<TextString/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat/>
+			</MouseOver>
+			<Pushed>
+				<Background/>
+				<Foreground/>
+				<TextString/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat/>
+			</Pushed>
+			<Disabled>
+				<Background/>
+				<Foreground/>
+				<TextString/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat/>
+			</Disabled>
+			<RightButtonDown>
+				<Background/>
+				<Foreground/>
+				<TextString/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat/>
+			</RightButtonDown>
+			<DefaultSubState>BST_NORMAL</DefaultSubState>
+			<VisualOnEnterState>
+				<Commands>
+					<Item href="/UI/Doc/Skills/_Skills/Logistics/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Warfare/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Training/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Despotism/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Leadership/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Governance/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Offence/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Defense/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Learning/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Sorcery/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/DarkMagic/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/LightMagic/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/DestructiveMagic/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/NaturalMagic/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Combat/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/ShatterMagic/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+				</Commands>
+				<Reversable>false</Reversable>
+			</VisualOnEnterState>
+		</Item>
+	</VisualStates>
+	<TriggerMode>BCST_ON_PUSH</TriggerMode>
+</WindowMSButtonShared>

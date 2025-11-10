@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Spell ObjectRecordID="132">
+	<NameFileRef href="/Text/Game/Spells/Combat/Anti-magic/Name.txt"/>
+	<LongDescriptionFileRef href="/Text/Game/Spells/Combat/Anti-magic/Long_Description.txt"/>
+	<Texture href="/Textures/SpellBook______2618/Spells/Spell_AntiMagic.xdb#xpointer(/Texture)"/>
+	<EffectTexture href="/UI/Common/Icons/Spell_Buff_Icons/Antimagic.(Texture).xdb#xpointer(/Texture)"/>
+	<SpellBookPredictions>
+		<Item href="/Text/Game/Spells/Combat/Anti-magic/SpellBookPrediction.txt"/>
+	</SpellBookPredictions>
+	<CombatLogTexts/>
+	<Level>4</Level>
+	<MagicSchool>MAGIC_SCHOOL_SUMMONING</MagicSchool>
+	<RequiredHeroLevel>0</RequiredHeroLevel>
+	<TrainedCost>13</TrainedCost>
+	<damage>
+		<Item>
+			<Base>2</Base>
+			<PerPower>0</PerPower>
+		</Item>
+		<Item>
+			<Base>3</Base>
+			<PerPower>0</PerPower>
+		</Item>
+		<Item>
+			<Base>4</Base>
+			<PerPower>0</PerPower>
+		</Item>
+		<Item>
+			<Base>5</Base>
+			<PerPower>0</PerPower>
+		</Item>
+	</damage>
+	<duration>
+		<Item>
+			<Base>1.5</Base>
+			<PerPower>0.05</PerPower>
+		</Item>
+		<Item>
+			<Base>1.5</Base>
+			<PerPower>0.1</PerPower>
+		</Item>
+		<Item>
+			<Base>1.5</Base>
+			<PerPower>0.2</PerPower>
+		</Item>
+		<Item>
+			<Base>1.5</Base>
+			<PerPower>0.3</PerPower>
+		</Item>
+	</duration>
+	<sSpellCost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>0</Gold>
+	</sSpellCost>
+	<IsAimed>true</IsAimed>
+	<IsAreaAttack>false</IsAreaAttack>
+	<CanSelectDead>false</CanSelectDead>
+	<Target>TARGET_NEUTRAL</Target>
+	<Element>ELEMENT_NONE</Element>
+	<DamageIsElemental>true</DamageIsElemental>
+	<visuals>
+		<Item href="AntiMagic.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+	</visuals>
+</Spell>

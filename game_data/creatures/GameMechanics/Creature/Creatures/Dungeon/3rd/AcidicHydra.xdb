@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature>
+	<AttackSkill>18</AttackSkill>
+	<DefenceSkill>26</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>15</MinDamage>
+	<MaxDamage>23</MaxDamage>
+	<Speed>4</Speed>
+	<Initiative>7</Initiative>
+	<Flying>false</Flying>
+	<Health>170</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>500</Exp>
+	<Power>2750</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>6</CreatureTier>
+	<Upgrade>false</Upgrade>
+	<PairCreature>CREATURE_UNKNOWN</PairCreature>
+	<CreatureTown>TOWN_DUNGEON</CreatureTown>
+	<MagicElement><First>ELEMENT_WATER</First><Second>ELEMENT_AIR</Second></MagicElement>
+	<WeeklyGrowth>3</WeeklyGrowth>
+	<Cost>
+		<Gold>1500</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Dungeon/Acidic_Hydra.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>2</CombatSize>
+	<PatternAttack href="/GameMechanics/Creature/Creatures/Dungeon/SixHeadedAttack.xdb#xpointer(/PatternAttack)"/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Dungeon/3rd/AcidicHydra.(CreatureVisual).xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_HYDRA</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_BATTLE_RAGE</Item>
+		<Item>ABILITY_SIX_HEADED_ATTACK</Item>
+		<Item>ABILITY_REGENERATION</Item>
+		<Item>ABILITY_ACID_BLOOD</Item>
+	</Abilities>
+</Creature>

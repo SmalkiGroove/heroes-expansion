@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature>
+	<AttackSkill>4</AttackSkill>
+	<DefenceSkill>2</DefenceSkill>
+	<Shots>6</Shots>
+	<MinDamage>2</MinDamage>
+	<MaxDamage>4</MaxDamage>
+	<Speed>4</Speed>
+	<Initiative>13</Initiative>
+	<Flying>false</Flying>
+	<Health>12</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>25</Exp>
+	<Power>212</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>2</CreatureTier>
+	<Upgrade>false</Upgrade>
+	<PairCreature>CREATURE_UNKNOWN</PairCreature>
+	<CreatureTown>TOWN_NO_TYPE</CreatureTown>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>25</WeeklyGrowth>
+	<Cost>
+		<Gold>25</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Neutral/Lizardman.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>1</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Added/Lizardman.(CreatureVisual).xdb#xpointer(/CreatureVisual)"/>
+	<Range>-2</Range>
+	<BaseCreature>CREATURE_UNKNOWN</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_UNLIMITED_RETALIATION</Item>
+		<Item>ABILITY_MANEURE</Item>
+	</Abilities>
+</Creature>

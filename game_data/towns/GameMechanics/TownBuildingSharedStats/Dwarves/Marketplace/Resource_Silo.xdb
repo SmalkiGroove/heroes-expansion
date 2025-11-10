@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="1000127">
+	<NameFileRef href="/Text/Game/TownBuildings/Academy/Marketplace/Resource_Silo_Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Dwarves/Marketplace/Resource_Silo_Description.txt"/>
+	<Type>TB_MARKETPLACE</Type>
+	<Upgrade>BLD_UPG_2</Upgrade>
+	<Cost>
+		<Wood>4</Wood>
+		<Ore>4</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>2500</Gold>
+	</Cost>
+	<ModObjectName>MarketPlace</ModObjectName>
+	<dependencies>
+		<Item href="Marketplace.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_UNKNOWN</Creature>
+	<DevLevelNeeded>0</DevLevelNeeded>
+	<UIObjectName>Marketplace</UIObjectName>
+	<UIStackPosition>1</UIStackPosition>
+	<Icon href="/UI/H5A1/Icons/Buildings/Towns/Fortress/Building_Mode_Icon/128x128/Resource_Silo.(Texture).xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

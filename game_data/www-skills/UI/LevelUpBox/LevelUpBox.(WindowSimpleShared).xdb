@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WindowSimpleShared ObjectRecordID="61">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="ButtonOk.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="LevelUpBox/Who.(WindowStaticText).xdb#xpointer(/WindowStaticText)"/>
+		<Item href="LevelUpBox/Face.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="Skill1.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="Skill2.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="Skill3.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="Skill4.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="Back1.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="Back2.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="LevelUP.(WindowStaticText).xdb#xpointer(/WindowStaticText)"/>
+		<Item href="PerksLabel.(WindowStaticText).xdb#xpointer(/WindowStaticText)"/>
+		<Item href="SkillsLabel.(WindowStaticText).xdb#xpointer(/WindowStaticText)"/>
+		<Item href="LevelUpBoxBg.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+
+		<Item href="Buttons/HavenOpen.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="Buttons/InfernoOpen.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="Buttons/NecroOpen.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="Buttons/PreserveOpen.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="Buttons/DungeonOpen.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="Buttons/AcademyOpen.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="Buttons/FortressOpen.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="Buttons/StrongholdOpen.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="Windows/SkillsLvUpHaven.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="Windows/SkillsLvUpInferno.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="Windows/SkillsLvUpNecro.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="Windows/SkillsLvUpPreserve.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="Windows/SkillsLvUpDungeon.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="Windows/SkillsLvUpAcademy.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="Windows/SkillsLvUpFortress.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="Windows/SkillsLvUpStronghold.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+
+		<Item href="/UI/Doc/Skills/_Skills/CommonLvUp.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Skills/_Description/DescriptionLvUp.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+	</Children>
+	<Background/>
+	<Foreground/>
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>1024</x>
+				<y>768</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea/>
+	<IgnoreDblClick>false</IgnoreDblClick>
+	<ActiveMask/>
+</WindowSimpleShared>

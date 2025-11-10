@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="1000109">
+	<NameFileRef href="/Text/Game/TownBuildings/Dungeon/Special_2/Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Dungeon/Special_2/Desc.txt"/>
+	<Type>TB_SPECIAL_1</Type>
+	<Upgrade>BLD_UPG_2</Upgrade>
+	<Cost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>1</Mercury>
+		<Crystal>1</Crystal>
+		<Sulfur>1</Sulfur>
+		<Gem>1</Gem>
+		<Gold>1000</Gold>
+	</Cost>
+	<ModObjectName>altar_of_elements</ModObjectName>
+	<dependencies>
+		<Item href="/GameMechanics/TownBuildingSharedStats/Dungeon/Special_1/AltarOfElements.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_UNKNOWN</Creature>
+	<DevLevelNeeded>4</DevLevelNeeded>
+	<UIObjectName>Special_2</UIObjectName>
+	<UIStackPosition>0</UIStackPosition>
+	<Icon href="/UI/TownHall/dungeon/128/altar_of_primal_chaos.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

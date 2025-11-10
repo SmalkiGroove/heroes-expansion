@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="1000051">
+	<NameFileRef href="/Text/Game/TownBuildings/Necromancy/Dwelling_7/Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Necromancy/Dwelling_7/Description.txt"/>
+	<Type>TB_DWELLING_7</Type>
+	<Upgrade>BLD_UPG_1</Upgrade>
+	<Cost>
+		<Wood>20</Wood>
+		<Ore>10</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>10000</Gold>
+	</Cost>
+	<ModObjectName>DragonGraveyrd</ModObjectName>
+	<dependencies>
+		<Item href="/GameMechanics/TownBuildingSharedStats/Necromancy/Special_2/unholytemple.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_WIGHT</Creature>
+	<DevLevelNeeded>20</DevLevelNeeded>
+	<UIObjectName>Dwelling_7</UIObjectName>
+	<UIStackPosition>0</UIStackPosition>
+	<Icon href="/UI/TownHall/necropolis/128/d7.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

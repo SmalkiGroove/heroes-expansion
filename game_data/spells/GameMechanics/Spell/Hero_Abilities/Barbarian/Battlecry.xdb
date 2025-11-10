@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Spell>
+	<NameFileRef href="/Text/Game/Spells/Hero_Special_Abilities/Warcry_BattleCry/Name.txt"/>
+	<LongDescriptionFileRef href="/Text/Game/Spells/Hero_Special_Abilities/Warcry_BattleCry/Description.txt"/>
+	<Texture href="/UI/H5A2/Icons/Spells/WarCry/BattleCry_Ability.(Texture).xdb#xpointer(/Texture)"/>
+	<EffectTexture href="/UI/H5A2/Icons/Heroes_Skills/WarCry/Battlecry.(Texture).xdb#xpointer(/Texture)"/>
+	<SpellBookPredictions>
+		<Item href="/Text/Game/Spells/Hero_Special_Abilities/Warcry_BattleCry/SpellBookPrediction.txt"/>
+	</SpellBookPredictions>
+	<CombatLogTexts/>
+	<Level>3</Level>
+	<MagicSchool>MAGIC_SCHOOL_WARCRIES</MagicSchool>
+	<RequiredHeroLevel>1</RequiredHeroLevel>
+	<TrainedCost>15</TrainedCost>
+	<damage>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+	</damage>
+	<duration>
+		<Item>
+			<Base>2</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>2</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>2</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>2</Base>
+			<PerPower>1</PerPower>
+		</Item>
+	</duration>
+	<sSpellCost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>0</Gold>
+	</sSpellCost>
+	<IsAimed>false</IsAimed>
+	<IsAreaAttack>false</IsAreaAttack>
+	<CanSelectDead>false</CanSelectDead>
+	<Target>TARGET_FRIEND</Target>
+	<Element>ELEMENT_NONE</Element>
+	<DamageIsElemental>true</DamageIsElemental>
+	<visuals>
+		<Item href="Battlecry.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+	</visuals>
+	<PresetPrice>0</PresetPrice>
+	<AvailableForPresets>true</AvailableForPresets>
+</Spell>

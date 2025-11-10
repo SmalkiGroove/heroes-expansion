@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="1000097">
+	<NameFileRef href="/Text/Game/TownBuildings/Dungeon/Dwelling_6/Upgraded_Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Dungeon/Dwelling_6/Upgraded_Description.txt"/>
+	<Type>TB_DWELLING_6</Type>
+	<Upgrade>BLD_UPG_2</Upgrade>
+	<Cost>
+		<Wood>3</Wood>
+		<Ore>17</Ore>
+		<Mercury>5</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>15</Gem>
+		<Gold>5000</Gold>
+	</Cost>
+	<ModObjectName>chaos_cavern</ModObjectName>
+	<dependencies>
+		<Item href="DampCavern.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_CHAOS_HYDRA</Creature>
+	<Creature2>CREATURE_ACIDIC_HYDRA</Creature2>
+	<DevLevelNeeded>16</DevLevelNeeded>
+	<UIObjectName>Dwelling_6</UIObjectName>
+	<UIStackPosition>1</UIStackPosition>
+	<Icon href="/UI/TownHall/dungeon/128/d6u.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

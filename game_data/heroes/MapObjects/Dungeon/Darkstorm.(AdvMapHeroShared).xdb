@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvMapHeroShared ObjectRecordID="21">
+	<Model href="/_(Model)/Heroes/DemonLord_LOD.(Model).xdb#xpointer(/Model)"/>
+	<AnimSet href="/_(AnimSet)/Heroes/DemonLord_LOD-adv.(AnimSet).xdb#xpointer(/AnimSet)"/>
+	<blockedTiles/>
+	<holeTiles/>
+	<activeTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+	</activeTiles>
+	<passableTiles/>
+	<PossessionMarkerTile>
+		<x>0</x>
+		<y>0</y>
+	</PossessionMarkerTile>
+	<Effect/>
+	<EffectWhenOwned/>
+	<messagesFileRef/>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect/>
+	<flybyMessageFileRef href=""/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Units.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>true</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128/>
+	<InternalName>Darkstorm</InternalName>
+	<Class>HERO_CLASS_BATTLE_COMMANDER</Class>
+	<Specialization>HERO_SPEC_MINOTAURS</Specialization>
+	<PrimarySkill>
+		<SkillID>HERO_SKILL_INNATES</SkillID>
+		<Mastery>MASTERY_EXPERT</Mastery>
+	</PrimarySkill>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Dungeon/Darkstorm/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Dungeon/Darkstorm/Description.txt"/>
+	<SpecializationIcon href="/Textures/Icons/Heroes/Dungeon/Dungeon_Darkstorm_128x128.(Texture).xdb#xpointer(/Texture)"/>	
+	<FaceTexture href="/Textures/Icons/Heroes/Dungeon/Dungeon_Darkstorm_128x128.(Texture).xdb#xpointer(/Texture)"/>	
+	<FaceTextureSmall/>
+	<HeroCharacterArena href="/Characters/invisible.xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee href="/Characters/invisible.xdb#xpointer(/Character)"/>
+	<HeroCharacterAdventure href="/Characters/Creatures/Added/Darkstorm/creature.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Creatures/Added/Darkstorm.(CreatureVisual).xdb#xpointer(/CreatureVisual)"/>
+	<TownType>TOWN_DUNGEON</TownType>
+	<Editable>
+		<NameFileRef href="/Text/Game/Heroes/Persons/Dungeon/Darkstorm/Name.txt"/>
+		<BiographyFileRef href="/Text/Game/Heroes/Persons/Dungeon/Darkstorm/Bio.txt"/>
+		<Offence>1</Offence>
+		<Defence>1</Defence>
+		<Spellpower>1</Spellpower>
+		<Knowledge>1</Knowledge>
+		<skills>
+			<Item>
+				<SkillID>HERO_SKILL_COMBAT</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
+			<Item>
+				<SkillID>HERO_SKILL_LEADERSHIP</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
+		</skills>
+		<perkIDs>
+			<Item>HERO_SKILL_COMMANDER</Item>
+			<Item>HERO_SKILL_REINFORCEMENT</Item>
+			<Item>HERO_SKILL_MOTIVATION</Item>
+		</perkIDs>
+		<spellIDs>
+			<Item>SPELL_WARCRY_RALLING_CRY</Item>
+			<Item>SPELL_WARCRY_FEAR_MY_ROAR</Item>
+			<Item>SPELL_WARCRY_WORD_OF_THE_CHIEF</Item>
+			<Item>SPELL_WARCRY_SHOUT_OF_MANY</Item>
+			<Item>SPELL_WARCRY_BATTLECRY</Item>
+		</spellIDs>
+		<Ballista>false</Ballista>
+		<FirstAidTent>true</FirstAidTent>
+		<AmmoCart>false</AmmoCart>
+		<FavoriteEnemies/>
+	</Editable>
+	<ArrowButtonState>0</ArrowButtonState>
+	<Decal/>
+	<Selection href="/_(Model)/Heroes/Warlock_Path/Symbol.xdb#xpointer(/Model)"/>
+	<Trace href="/MapObjects/_(AdvMapHeroTraceSet)/Dungeon.xdb#xpointer(/AdvMapHeroTraceSet)"/>
+	<RaceTraitIcon/>
+	<RaceTraitDescFileRef href=""/>
+	<ScenarioHero>false</ScenarioHero>
+	<AdventureMusic/>
+	<HideInEditor>false</HideInEditor>
+</AdvMapHeroShared>

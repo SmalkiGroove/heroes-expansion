@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats>
+	<NameFileRef href="/Text/Game/TownBuildings/StrongHold/Special_1/Hall_of_Might_3_Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/StrongHold/Special_1/Hall_of_Might_3_Description.txt"/>
+	<Type>TB_SPECIAL_1</Type>
+	<Upgrade>BLD_UPG_3</Upgrade>
+	<Cost>
+		<Wood>1</Wood>
+		<Ore>1</Ore>
+		<Mercury>3</Mercury>
+		<Crystal>3</Crystal>
+		<Sulfur>3</Sulfur>
+		<Gem>3</Gem>
+		<Gold>1000</Gold>
+	</Cost>
+	<ModObjectName>Special_1</ModObjectName>
+	<dependencies>
+		<Item href="HallOfMastership.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_UNKNOWN</Creature>
+	<Creature2>CREATURE_UNKNOWN</Creature2>
+	<DevLevelNeeded>4</DevLevelNeeded>
+	<UIObjectName>Special_1</UIObjectName>
+	<UIStackPosition>2</UIStackPosition>
+	<Icon href="/UI/H5A2/Icons/City_Buildings/Hall_of_Might.(Texture).xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

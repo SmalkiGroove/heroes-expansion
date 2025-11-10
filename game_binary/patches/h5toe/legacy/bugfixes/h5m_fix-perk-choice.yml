@@ -1,0 +1,14 @@
+# This patch makes any perk to have a chance of appearance at both slots.
+edits:
+  - name: Edit 1
+    address: '00751DF7'
+    size: 1
+    type: hex
+    original: '00'
+    modified: '01'
+  - name: Edit 2
+    address: '00751E83'
+    size: 1
+    type: hex
+    original: '00'
+    modified: '01'

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvMapHeroShared>
+	<Model href="/_(Model)/Heroes/Knight_LOD.(Model).xdb#xpointer(/Model)"/>
+	<AnimSet href="/_(AnimSet)/Heroes/Knight_LOD-adv.(AnimSet).xdb#xpointer(/AnimSet)"/>
+	<blockedTiles/>
+	<holeTiles/>
+	<activeTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+	</activeTiles>
+	<passableTiles/>
+	<PossessionMarkerTile>
+		<x>0</x>
+		<y>0</y>
+	</PossessionMarkerTile>
+	<Effect/>
+	<EffectWhenOwned/>
+	<messagesFileRef>
+		<Item href=""/>
+	</messagesFileRef>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect/>
+	<flybyMessageFileRef href=""/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Units.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>false</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128 href="/UI/H5A2/Icons/Heroes/Portrets128x128/Haven_Alaric.(Texture).xdb#xpointer(/Texture)"/>
+	<InternalName>Alaric</InternalName>
+	<Class>HERO_CLASS_HAVEN_MAGIC</Class>
+	<Specialization>HERO_SPEC_MIND_CLEANER</Specialization>
+	<PrimarySkill>
+		<SkillID>HERO_SKILL_INNATES</SkillID>
+		<Mastery>MASTERY_EXPERT</Mastery>
+	</PrimarySkill>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Haven/Alaric/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Haven/Alaric/Description.txt"/>
+	<SpecializationIcon href="/UI/H5A2/Icons/Heroes/Portrets128x128/Haven_Alaric.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTexture href="/UI/H5A2/Icons/Heroes/Portrets128x128/Haven_Alaric.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTextureSmall/>
+	<HeroCharacterArena href="/Characters/Heroes/DS/Alaric_DS_U.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee/>
+	<HeroCharacterAdventure href="/Characters/Heroes/DS/Alaric_DS_U.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera href="/Cameras/Heroes/H5A2/Alaric/Alaric_Idle.(Camera).xdb#xpointer(/Camera)"/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Alaric.(CreatureVisual).xdb#xpointer(/CreatureVisual)"/>
+	<TownType>TOWN_HEAVEN</TownType>
+	<Editable>
+		<NameFileRef href="/Text/Game/Heroes/Persons/Haven/Alaric/Name.txt"/>
+		<BiographyFileRef href="/Text/Game/Heroes/Persons/Haven/Alaric/Bio.txt"/>
+		<Offence>1</Offence>
+		<Defence>1</Defence>
+		<Spellpower>1</Spellpower>
+		<Knowledge>1</Knowledge>
+		<skills>
+			<Item>
+				<SkillID>HERO_SKILL_COURAGE</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
+			<Item>
+				<SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
+		</skills>
+		<perkIDs>
+			<Item>HERO_SKILL_FAMILIAR_LAND</Item>
+			<Item>HERO_SKILL_AURA_OF_ENERGY</Item>
+		</perkIDs>
+		<spellIDs>
+			<Item>SPELL_DISPEL</Item>
+		</spellIDs>
+		<Ballista>false</Ballista>
+		<FirstAidTent>false</FirstAidTent>
+		<AmmoCart>true</AmmoCart>
+		<FavoriteEnemies/>
+		<TalismanLevel>0</TalismanLevel>
+	</Editable>
+	<ArrowButtonState>0</ArrowButtonState>
+	<Decal/>
+	<Selection href="/_(Model)/Heroes/Knight_Path/Symbol.(Model).xdb#xpointer(/Model)"/>
+	<Trace href="/MapObjects/_(AdvMapHeroTraceSet)/Haven.xdb#xpointer(/AdvMapHeroTraceSet)"/>
+	<RaceTraitIcon/>
+	<RaceTraitDescFileRef href=""/>
+	<ScenarioHero>false</ScenarioHero>
+	<AdventureMusic/>
+	<HideInEditor>false</HideInEditor>
+	<PresetMinimalAttributes>
+		<Offence>2</Offence>
+		<Defence>2</Defence>
+		<Spellpower>2</Spellpower>
+		<Knowledge>2</Knowledge>
+	</PresetMinimalAttributes>
+</AdvMapHeroShared>

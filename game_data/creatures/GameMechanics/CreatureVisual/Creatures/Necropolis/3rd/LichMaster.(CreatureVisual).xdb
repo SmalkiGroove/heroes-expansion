@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Necropolis/3rd/LichMaster_Name.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Necropolis/3rd/LichMaster_Abils.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Necropolis/3rd/LichMaster_Desc.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/UI/H5A2/Icons/Creatures/Necropolis_second_upg/Lich_Master.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Necropolis/AlternativeUpgrade/LichMaster.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot href="/GameMechanics/Shot/Creatures/Necropolis/LichMaster.xdb#xpointer(/Shot)"/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits2.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.000549219</x>
+		<y>-0.217282</y>
+		<z>1.3436</z>
+	</MountPoint>
+	<MountBone>L_Shoulder</MountBone>
+</CreatureVisual>

@@ -1,0 +1,8 @@
+# Increases deployment area bonus given by "Tactics" perk from 1 to 2
+edits:
+  - name: Edit 1
+    address: '005BD033'
+    size: 6
+    type: hex
+    original: '38 5E 78 0F 95 C0'
+    modified: '8A 46 78 00 C0 90'

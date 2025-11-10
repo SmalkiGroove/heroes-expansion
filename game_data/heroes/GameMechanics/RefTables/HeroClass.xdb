@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Table_HeroClassDesc_HeroClass>
+	<objects>
+		<Item>
+			<ID>HERO_CLASS_NONE</ID>
+			<obj>
+				<NameFileRef href="HeroClass/HeroClassNone.txt"/>
+				<SkillsProbs/>
+				<AttributeProbs>
+					<OffenceProb>0</OffenceProb>
+					<DefenceProb>0</DefenceProb>
+					<SpellpowerProb>0</SpellpowerProb>
+					<KnowledgeProb>0</KnowledgeProb>
+				</AttributeProbs>
+				<PreferredSpellsFromSpellShop/>
+			</obj>
+		</Item>
+		<Item>
+			<ID>HERO_CLASS_HAVEN_MIGHT</ID>
+			<obj>
+				<NameFileRef href="HeroClass/HeroClassHavenMight.txt"/>
+				<SkillsProbs>
+					<Item><SkillID>HERO_SKILL_COURAGE</SkillID><Prob>22</Prob></Item>
+					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>6</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>7</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>3</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>5</Prob></Item>
+					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>2</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>8</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<!-- <Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>12</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_DESPOTISM</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>10</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>9</Prob></Item>
+					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>4</Prob></Item>
+					<Item><SkillID>HERO_SKILL_WARFARE</SkillID><Prob>11</Prob></Item>
+				</SkillsProbs>
+				<AttributeProbs>
+					<OffenceProb>30</OffenceProb>
+					<DefenceProb>40</DefenceProb>
+					<SpellpowerProb>15</SpellpowerProb>
+					<KnowledgeProb>15</KnowledgeProb>
+				</AttributeProbs>
+				<PreferredSpellsFromSpellShop/>
+			</obj>
+		</Item>
+		<Item>
+			<ID>HERO_CLASS_HAVEN_MAGIC</ID>
+			<obj>
+				<NameFileRef href="HeroClass/HeroClassHavenMagic.txt"/>
+				<SkillsProbs>
+					<Item><SkillID>HERO_SKILL_COURAGE</SkillID><Prob>22</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>3</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>7</Prob></Item>
+					<Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>4</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>12</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>5</Prob></Item>
+					<Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>6</Prob></Item>
+					<Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>10</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_DESPOTISM</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>8</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>9</Prob></Item>
+					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>11</Prob></Item>
+					<Item><SkillID>HERO_SKILL_WARFARE</SkillID><Prob>2</Prob></Item>
+				</SkillsProbs>
+				<AttributeProbs>
+					<OffenceProb>15</OffenceProb>
+					<DefenceProb>25</DefenceProb>
+					<SpellpowerProb>35</SpellpowerProb>
+					<KnowledgeProb>25</KnowledgeProb>
+				</AttributeProbs>
+				<PreferredSpellsFromSpellShop/>
+			</obj>
+		</Item>
+		<Item>
+			<ID>HERO_CLASS_PRESERVE_MIGHT</ID>
+			<obj>
+				<NameFileRef href="HeroClass/HeroClassPreserveMight.txt"/>
+				<SkillsProbs>
+					<Item><SkillID>HERO_SKILL_AVENGER</SkillID><Prob>22</Prob></Item>
+					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>12</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>5</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>4</Prob></Item>
+					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>7</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>3</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<!-- <Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>6</Prob></Item>
+					<Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>11</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_DESPOTISM</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>10</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>2</Prob></Item>
+					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>8</Prob></Item>
+					<Item><SkillID>HERO_SKILL_WARFARE</SkillID><Prob>9</Prob></Item>
+				</SkillsProbs>
+				<AttributeProbs>
+					<OffenceProb>40</OffenceProb>
+					<DefenceProb>25</DefenceProb>
+					<SpellpowerProb>20</SpellpowerProb>
+					<KnowledgeProb>15</KnowledgeProb>
+				</AttributeProbs>
+				<PreferredSpellsFromSpellShop/>
+			</obj>
+		</Item>
+		<Item>
+			<ID>HERO_CLASS_PRESERVE_MAGIC</ID>
+			<obj>
+				<NameFileRef href="HeroClass/HeroClassPreserveMagic.txt"/>
+				<SkillsProbs>
+					<Item><SkillID>HERO_SKILL_AVENGER</SkillID><Prob>22</Prob></Item>
+					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>4</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>11</Prob></Item>
+					<Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>10</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>9</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>8</Prob></Item>
+					<Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>12</Prob></Item>
+					<Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>5</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_DESPOTISM</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>6</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>2</Prob></Item>
+					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>7</Prob></Item>
+					<Item><SkillID>HERO_SKILL_WARFARE</SkillID><Prob>3</Prob></Item>
+				</SkillsProbs>
+				<AttributeProbs>
+					<OffenceProb>20</OffenceProb>
+					<DefenceProb>15</DefenceProb>
+					<SpellpowerProb>30</SpellpowerProb>
+					<KnowledgeProb>35</KnowledgeProb>
+				</AttributeProbs>
+				<PreferredSpellsFromSpellShop/>
+			</obj>
+		</Item>
+		<Item>
+			<ID>HERO_CLASS_FORTRESS_MIGHT</ID>
+			<obj>
+				<NameFileRef href="HeroClass/HeroClassFortressMight.txt"/>
+				<SkillsProbs>
+					<Item><SkillID>HERO_SKILL_RUNELORE</SkillID><Prob>22</Prob></Item>
+					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>10</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>12</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>3</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>5</Prob></Item>
+					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>4</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>2</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>1</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>9</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_DESPOTISM</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>8</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>6</Prob></Item>
+					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>7</Prob></Item>
+					<Item><SkillID>HERO_SKILL_WARFARE</SkillID><Prob>11</Prob></Item>
+				</SkillsProbs>
+				<AttributeProbs>
+					<OffenceProb>35</OffenceProb>
+					<DefenceProb>45</DefenceProb>
+					<SpellpowerProb>10</SpellpowerProb>
+					<KnowledgeProb>10</KnowledgeProb>
+				</AttributeProbs>
+				<PreferredSpellsFromSpellShop/>			
+			</obj>
+		</Item>
+		<Item>
+			<ID>HERO_CLASS_FORTRESS_MAGIC</ID>
+			<obj>
+				<NameFileRef href="HeroClass/HeroClassFortressMagic.txt"/>
+				<SkillsProbs>
+					<Item><SkillID>HERO_SKILL_RUNELORE</SkillID><Prob>22</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>11</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>9</Prob></Item>
+					<Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>2</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>10</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>4</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>12</Prob></Item>
+					<Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>8</Prob></Item>
+					<Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>3</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_DESPOTISM</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>5</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>6</Prob></Item>
+					<Item><SkillID>HERO_SKILL_WARFARE</SkillID><Prob>7</Prob></Item>
+				</SkillsProbs>
+				<AttributeProbs>
+					<OffenceProb>15</OffenceProb>
+					<DefenceProb>15</DefenceProb>
+					<SpellpowerProb>40</SpellpowerProb>
+					<KnowledgeProb>30</KnowledgeProb>
+				</AttributeProbs>
+				<PreferredSpellsFromSpellShop/>
+			</obj>
+		</Item>
+		<Item>
+			<ID>HERO_CLASS_ACADEMY_MIGHT</ID>
+			<obj>
+				<NameFileRef href="HeroClass/HeroClassAcademyMight.txt"/>
+				<SkillsProbs>
+					<Item><SkillID>HERO_SKILL_ARTIFICIER</SkillID><Prob>22</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>8</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>9</Prob></Item>
+					<Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>1</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>11</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>3</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>2</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>5</Prob></Item>
+					<Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>4</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>0</Prob></Item> -->
+					<!-- <Item><SkillID>HERO_SKILL_DESPOTISM</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>10</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>6</Prob></Item>
+					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>7</Prob></Item>
+					<Item><SkillID>HERO_SKILL_WARFARE</SkillID><Prob>12</Prob></Item>
+				</SkillsProbs>
+				<AttributeProbs>
+					<OffenceProb>25</OffenceProb>
+					<DefenceProb>35</DefenceProb>
+					<SpellpowerProb>15</SpellpowerProb>
+					<KnowledgeProb>25</KnowledgeProb>
+				</AttributeProbs>
+				<PreferredSpellsFromSpellShop/>			
+			</obj>
+		</Item>
+		<Item>
+			<ID>HERO_CLASS_ACADEMY_MAGIC</ID>
+			<obj>
+				<NameFileRef href="HeroClass/HeroClassAcademyMagic.txt"/>
+				<SkillsProbs>
+					<Item><SkillID>HERO_SKILL_ARTIFICIER</SkillID><Prob>22</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>12</Prob></Item>
+					<Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>11</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>6</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>8</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>7</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>10</Prob></Item>
+					<Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>9</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>0</Prob></Item> -->
+					<!-- <Item><SkillID>HERO_SKILL_DESPOTISM</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>4</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>2</Prob></Item>
+					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>5</Prob></Item>
+					<Item><SkillID>HERO_SKILL_WARFARE</SkillID><Prob>3</Prob></Item>
+				</SkillsProbs>
+				<AttributeProbs>
+					<OffenceProb>5</OffenceProb>
+					<DefenceProb>10</DefenceProb>
+					<SpellpowerProb>40</SpellpowerProb>
+					<KnowledgeProb>45</KnowledgeProb>
+				</AttributeProbs>
+				<PreferredSpellsFromSpellShop/>
+			</obj>
+		</Item>
+		<Item>
+			<ID>HERO_CLASS_DUNGEON_MIGHT</ID>
+			<obj>
+				<NameFileRef href="HeroClass/HeroClassDungeonMight.txt"/>
+				<SkillsProbs>
+					<Item><SkillID>HERO_SKILL_ARCANISM</SkillID><Prob>22</Prob></Item>
+					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>12</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>3</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>2</Prob></Item>
+					<Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>6</Prob></Item>
+					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>1</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>10</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>5</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>11</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_DESPOTISM</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>7</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>8</Prob></Item>
+					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>9</Prob></Item>
+					<Item><SkillID>HERO_SKILL_WARFARE</SkillID><Prob>4</Prob></Item>
+				</SkillsProbs>
+				<AttributeProbs>
+					<OffenceProb>40</OffenceProb>
+					<DefenceProb>25</DefenceProb>
+					<SpellpowerProb>25</SpellpowerProb>
+					<KnowledgeProb>10</KnowledgeProb>
+				</AttributeProbs>
+				<PreferredSpellsFromSpellShop/>
+			</obj>
+		</Item>
+		<Item>
+			<ID>HERO_CLASS_DUNGEON_MAGIC</ID>
+			<obj>
+				<NameFileRef href="HeroClass/HeroClassDungeonMagic.txt"/>
+				<SkillsProbs>
+					<Item><SkillID>HERO_SKILL_ARCANISM</SkillID><Prob>22</Prob></Item>
+					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>9</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>4</Prob></Item>
+					<Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>12</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>3</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>10</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>11</Prob></Item>
+					<Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>2</Prob></Item>
+					<Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>5</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_DESPOTISM</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>6</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>7</Prob></Item>
+					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>8</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_WARFARE</SkillID><Prob>0</Prob></Item> -->
+				</SkillsProbs>
+				<AttributeProbs>
+					<OffenceProb>20</OffenceProb>
+					<DefenceProb>10</DefenceProb>
+					<SpellpowerProb>45</SpellpowerProb>
+					<KnowledgeProb>25</KnowledgeProb>
+				</AttributeProbs>
+				<PreferredSpellsFromSpellShop/>
+			</obj>
+		</Item>
+		<Item>
+			<ID>HERO_CLASS_NECROPOLIS_MIGHT</ID>
+			<obj>
+				<NameFileRef href="HeroClass/HeroClassNecropolisMight.txt"/>
+				<SkillsProbs>
+					<Item><SkillID>HERO_SKILL_NECROMANCY</SkillID><Prob>22</Prob></Item>
+					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>12</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>8</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>3</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>7</Prob></Item>
+					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>2</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>11</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>1</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<!-- <Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_DESPOTISM</SkillID><Prob>10</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>6</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>9</Prob></Item>
+					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>5</Prob></Item>
+					<Item><SkillID>HERO_SKILL_WARFARE</SkillID><Prob>4</Prob></Item>
+				</SkillsProbs>
+				<AttributeProbs>
+					<OffenceProb>35</OffenceProb>
+					<DefenceProb>35</DefenceProb>
+					<SpellpowerProb>15</SpellpowerProb>
+					<KnowledgeProb>15</KnowledgeProb>
+				</AttributeProbs>
+				<PreferredSpellsFromSpellShop/>
+			</obj>
+		</Item>
+		<Item>
+			<ID>HERO_CLASS_NECROPOLIS_MAGIC</ID>
+			<obj>
+				<NameFileRef href="HeroClass/HeroClassNecropolisMagic.txt"/>
+				<SkillsProbs>
+					<Item><SkillID>HERO_SKILL_NECROMANCY</SkillID><Prob>22</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>5</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>8</Prob></Item>
+					<Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>11</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>3</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>12</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>4</Prob></Item>
+					<Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>1</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_DESPOTISM</SkillID><Prob>10</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>6</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>7</Prob></Item>
+					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>9</Prob></Item>
+					<Item><SkillID>HERO_SKILL_WARFARE</SkillID><Prob>2</Prob></Item>
+				</SkillsProbs>
+				<AttributeProbs>
+					<OffenceProb>15</OffenceProb>
+					<DefenceProb>15</DefenceProb>
+					<SpellpowerProb>35</SpellpowerProb>
+					<KnowledgeProb>35</KnowledgeProb>
+				</AttributeProbs>
+				<PreferredSpellsFromSpellShop/>			
+			</obj>
+		</Item>
+		<Item>
+			<ID>HERO_CLASS_INFERNO_MIGHT</ID>
+			<obj>
+				<NameFileRef href="HeroClass/HeroClassInfernoMight.txt"/>
+				<SkillsProbs>
+					<Item><SkillID>HERO_SKILL_GATING</SkillID><Prob>22</Prob></Item>
+					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>11</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>3</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>1</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>10</Prob></Item>
+					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>9</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>5</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>4</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<!-- <Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_DESPOTISM</SkillID><Prob>12</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>5</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>7</Prob></Item>
+					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>6</Prob></Item>
+					<Item><SkillID>HERO_SKILL_WARFARE</SkillID><Prob>2</Prob></Item>
+				</SkillsProbs>
+				<AttributeProbs>
+					<OffenceProb>45</OffenceProb>
+					<DefenceProb>30</DefenceProb>
+					<SpellpowerProb>15</SpellpowerProb>
+					<KnowledgeProb>10</KnowledgeProb>
+				</AttributeProbs>
+				<PreferredSpellsFromSpellShop/>
+			</obj>
+		</Item>
+		<Item>
+			<ID>HERO_CLASS_INFERNO_MAGIC</ID>
+			<obj>
+				<NameFileRef href="HeroClass/HeroClassInfernoMagic.txt"/>
+				<SkillsProbs>
+					<Item><SkillID>HERO_SKILL_GATING</SkillID><Prob>22</Prob></Item>
+					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>8</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>2</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>3</Prob></Item>
+					<Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>9</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>4</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>10</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>11</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<!-- <Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_DESPOTISM</SkillID><Prob>12</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>5</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>7</Prob></Item>
+					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>6</Prob></Item>
+					<Item><SkillID>HERO_SKILL_WARFARE</SkillID><Prob>1</Prob></Item>
+				</SkillsProbs>
+				<AttributeProbs>
+					<OffenceProb>15</OffenceProb>
+					<DefenceProb>15</DefenceProb>
+					<SpellpowerProb>40</SpellpowerProb>
+					<KnowledgeProb>30</KnowledgeProb>
+				</AttributeProbs>
+				<PreferredSpellsFromSpellShop/>
+			</obj>
+		</Item>
+		<Item>
+			<ID>HERO_CLASS_STRONGHOLD_MIGHT</ID>
+			<obj>
+				<NameFileRef href="HeroClass/HeroClassStrongholdMight.txt"/>
+				<SkillsProbs>
+					<Item><SkillID>HERO_SKILL_BLOOD_RAGE</SkillID><Prob>34</Prob></Item>
+					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>8</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>7</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_VOICE</SkillID><Prob>9</Prob></Item>
+					<Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>11</Prob></Item>
+					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>2</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<!-- <Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<!-- <Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<!-- <Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<!-- <Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_DESPOTISM</SkillID><Prob>10</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>5</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>4</Prob></Item>
+					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>3</Prob></Item>
+					<Item><SkillID>HERO_SKILL_WARFARE</SkillID><Prob>6</Prob></Item>
+				</SkillsProbs>
+				<AttributeProbs>
+					<OffenceProb>45</OffenceProb>
+					<DefenceProb>40</DefenceProb>
+					<SpellpowerProb>10</SpellpowerProb>
+					<KnowledgeProb>5</KnowledgeProb>
+				</AttributeProbs>
+				<PreferredSpellsFromSpellShop/>
+			</obj>
+		</Item>
+		<Item>
+			<ID>HERO_CLASS_STRONGHOLD_MAGIC</ID>
+			<obj>
+				<NameFileRef href="HeroClass/HeroClassStrongholdMagic.txt"/>
+				<SkillsProbs>
+					<Item><SkillID>HERO_SKILL_SPIRITISM</SkillID><Prob>22</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>2</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>7</Prob></Item>
+					<Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>8</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>6</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>11</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>10</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>9</Prob></Item>
+					<Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>12</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>0</Prob></Item> -->
+					<!-- <Item><SkillID>HERO_SKILL_DESPOTISM</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>4</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>5</Prob></Item>
+					<Item><SkillID>HERO_SKILL_WARFARE</SkillID><Prob>3</Prob></Item>
+				</SkillsProbs>
+				<AttributeProbs>
+					<OffenceProb>10</OffenceProb>
+					<DefenceProb>20</DefenceProb>
+					<SpellpowerProb>30</SpellpowerProb>		
+					<KnowledgeProb>40</KnowledgeProb>
+				</AttributeProbs>
+				<PreferredSpellsFromSpellShop/>
+			</obj>
+		</Item>
+		<Item>
+			<ID>HERO_CLASS_BATTLE_COMMANDER</ID>
+			<obj>
+				<NameFileRef href="HeroClass/HeroClassBattleCommander.txt"/>
+				<SkillsProbs>
+					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>10</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>10</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>5</Prob></Item>
+					<Item><SkillID>HERO_SKILL_VOICE</SkillID><Prob>5</Prob></Item>
+					<Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>15</Prob></Item>
+					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>5</Prob></Item>
+					<Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>10</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>10</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>15</Prob></Item>
+					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>5</Prob></Item>
+					<Item><SkillID>HERO_SKILL_WARFARE</SkillID><Prob>10</Prob></Item>
+				</SkillsProbs>
+				<AttributeProbs>
+					<OffenceProb>40</OffenceProb>
+					<DefenceProb>35</DefenceProb>
+					<SpellpowerProb>10</SpellpowerProb>
+					<KnowledgeProb>15</KnowledgeProb>
+				</AttributeProbs>
+				<PreferredSpellsFromSpellShop/>
+			</obj>
+		</Item>
+		<Item>
+			<ID>HERO_CLASS_VAMPIRE_PRINCESS</ID>
+			<obj>
+				<NameFileRef href="HeroClass/HeroClassOther2.txt"/>
+				<SkillsProbs>
+					<Item><SkillID>HERO_SKILL_NECROMANCY</SkillID><Prob>33</Prob></Item>
+					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>12</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>8</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>3</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>7</Prob></Item>
+					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>2</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>0</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>1</Prob></Item>
+					<!-- <Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>0</Prob></Item> -->
+					<!-- <Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>0</Prob></Item> -->
+					<Item><SkillID>HERO_SKILL_DESPOTISM</SkillID><Prob>10</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>6</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>9</Prob></Item>
+					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>5</Prob></Item>
+					<Item><SkillID>HERO_SKILL_WARFARE</SkillID><Prob>4</Prob></Item>
+				</SkillsProbs>
+				<AttributeProbs>
+					<OffenceProb>30</OffenceProb>
+					<DefenceProb>40</DefenceProb>
+					<SpellpowerProb>10</SpellpowerProb>
+					<KnowledgeProb>20</KnowledgeProb>
+				</AttributeProbs>
+				<PreferredSpellsFromSpellShop/>
+			</obj>
+		</Item>
+		<Item>
+			<ID>HERO_CLASS_OTHER_3</ID>
+			<obj>
+				<NameFileRef href="HeroClass/HeroClassOther3.txt"/>
+				<SkillsProbs>
+					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>100</Prob></Item>
+				</SkillsProbs>
+				<AttributeProbs>
+					<OffenceProb>25</OffenceProb>
+					<DefenceProb>25</DefenceProb>
+					<SpellpowerProb>25</SpellpowerProb>
+					<KnowledgeProb>25</KnowledgeProb>
+				</AttributeProbs>
+				<PreferredSpellsFromSpellShop/>
+			</obj>
+		</Item>
+		<Item>
+			<ID>HERO_CLASS_OTHER_4</ID>
+			<obj>
+				<NameFileRef href="HeroClass/HeroClassOther4.txt"/>
+				<SkillsProbs>
+					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>100</Prob></Item>
+				</SkillsProbs>
+				<AttributeProbs>
+					<OffenceProb>25</OffenceProb>
+					<DefenceProb>25</DefenceProb>
+					<SpellpowerProb>25</SpellpowerProb>
+					<KnowledgeProb>25</KnowledgeProb>
+				</AttributeProbs>
+				<PreferredSpellsFromSpellShop/>
+			</obj>
+		</Item>
+		<Item>
+			<ID>HERO_CLASS_OTHER_5</ID>
+			<obj>
+				<NameFileRef href="HeroClass/HeroClassOther5.txt"/>
+				<SkillsProbs>
+					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>100</Prob></Item>
+				</SkillsProbs>
+				<AttributeProbs>
+					<OffenceProb>25</OffenceProb>
+					<DefenceProb>25</DefenceProb>
+					<SpellpowerProb>25</SpellpowerProb>
+					<KnowledgeProb>25</KnowledgeProb>
+				</AttributeProbs>
+				<PreferredSpellsFromSpellShop/>
+			</obj>
+		</Item>
+		<Item>
+			<ID>HERO_CLASS_OTHER_6</ID>
+			<obj>
+				<NameFileRef href="HeroClass/HeroClassOther6.txt"/>
+				<SkillsProbs>
+					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>100</Prob></Item>
+				</SkillsProbs>
+				<AttributeProbs>
+					<OffenceProb>25</OffenceProb>
+					<DefenceProb>25</DefenceProb>
+					<SpellpowerProb>25</SpellpowerProb>
+					<KnowledgeProb>25</KnowledgeProb>
+				</AttributeProbs>
+				<PreferredSpellsFromSpellShop/>
+			</obj>
+		</Item>
+		<Item>
+			<ID>HERO_CLASS_OTHER_7</ID>
+			<obj>
+				<NameFileRef href="HeroClass/HeroClassOther7.txt"/>
+				<SkillsProbs>
+					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>100</Prob></Item>
+				</SkillsProbs>
+				<AttributeProbs>
+					<OffenceProb>25</OffenceProb>
+					<DefenceProb>25</DefenceProb>
+					<SpellpowerProb>25</SpellpowerProb>
+					<KnowledgeProb>25</KnowledgeProb>
+				</AttributeProbs>
+				<PreferredSpellsFromSpellShop/>
+			</obj>
+		</Item>
+		<Item>
+			<ID>HERO_CLASS_OTHER_8</ID>
+			<obj>
+				<NameFileRef href="HeroClass/HeroClassOther8.txt"/>
+				<SkillsProbs>
+					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>100</Prob></Item>
+				</SkillsProbs>
+				<AttributeProbs>
+					<OffenceProb>25</OffenceProb>
+					<DefenceProb>25</DefenceProb>
+					<SpellpowerProb>25</SpellpowerProb>
+					<KnowledgeProb>25</KnowledgeProb>
+				</AttributeProbs>
+				<PreferredSpellsFromSpellShop/>
+			</obj>
+		</Item>
+	</objects>
+</Table_HeroClassDesc_HeroClass>

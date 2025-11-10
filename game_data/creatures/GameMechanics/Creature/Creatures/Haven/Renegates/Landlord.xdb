@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature>
+	<AttackSkill>3</AttackSkill>
+	<DefenceSkill>1</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>1</MinDamage>
+	<MaxDamage>2</MaxDamage>
+	<Speed>4</Speed>
+	<Initiative>8</Initiative>
+	<Flying>false</Flying>
+	<Health>6</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>17</Exp>
+	<Power>72</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>1</CreatureTier>
+	<Upgrade>true</Upgrade>
+	<PairCreature>CREATURE_UNKNOWN</PairCreature>
+	<CreatureTown>TOWN_HEAVEN</CreatureTown>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>60</WeeklyGrowth>
+	<Cost>
+		<Gold>20</Gold>
+	</Cost>
+	<PresetPrice>0</PresetPrice>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Haven/Renegates/Landlord.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>1</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Haven/Renegates/Landlord.xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_PEASANT</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_TAXPAYER</Item>
+		<Item>ABILITY_BRUTALITY</Item>
+	</Abilities>
+</Creature>

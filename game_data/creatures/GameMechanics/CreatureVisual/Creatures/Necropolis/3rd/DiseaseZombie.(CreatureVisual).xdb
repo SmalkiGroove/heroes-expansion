@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Necropolis/3rd/DiseaseZombie_Name.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Necropolis/3rd/DiseaseZombie_Abils.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Necropolis/3rd/DiseaseZombie_Desc.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/UI/H5A2/Icons/Creatures/Necropolis_second_upg/Disease_Zombie.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Necropolis/AlternativeUpgrade/DeseaseZombie.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits2.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.0972787</x>
+		<y>-0.0770954</y>
+		<z>1.27508</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

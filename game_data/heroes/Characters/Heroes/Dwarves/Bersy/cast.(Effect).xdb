@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Effect>
+	<Instances>
+		<Item href="/Effects/_(Effect)/Characters/Heroes/RuneMageHero/cast2.(ParticleInstance).xdb#xpointer(/ParticleInstance)"/>
+	</Instances>
+	<Lights>
+		<Item href="/Effects/_(Effect)/Characters/Heroes/DwarfMage/cast.(LightInstance).xdb#xpointer(/LightInstance)"/>
+		<Item href="/Effects/_(Effect)/Characters/Heroes/DwarfMage/cast.(LightInstance).xdb#xpointer(/LightInstance)"/>
+	</Lights>
+	<Models>
+		<Item href="/Effects/_(Effect)/Characters/Heroes/DwarfMage/cast.(ModelInstance).xdb#xpointer(/ModelInstance)"/>
+		<Item href="Giar_head.(ModelInstance).xdb#xpointer(/ModelInstance)"/>
+		<Item href="Axe.(ModelInstance).xdb#xpointer(/ModelInstance)"/>
+		<Item href="Chest.(ModelInstance).xdb#xpointer(/ModelInstance)"/>
+		<Item href="Hip.(ModelInstance).xdb#xpointer(/ModelInstance)"/>
+	</Models>
+	<WindAffected>false</WindAffected>
+	<WindPower>1</WindPower>
+	<Duration>2.5</Duration>
+</Effect>

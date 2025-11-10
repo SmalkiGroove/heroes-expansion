@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001223">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Academy/Genie.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Academy/GenieAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Academy/GenieDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Academy/ico_Genie.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Academy/ico_genie_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Academy/ico_genie_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Academy/ico_genie_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Academy/Genie.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.0036586</x>
+		<y>-0.223673</y>
+		<z>1.71526</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

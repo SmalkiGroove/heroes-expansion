@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shot ObjectRecordID="5">
+	<StartEffect/>
+	<RotateStartEffectToTarget>false</RotateStartEffectToTarget>
+	<MissileShot>
+		<Model href="shot.(Model).xdb#xpointer(/Model)"/>
+		<Effect/>
+		<Speed>0.03</Speed>
+		<Height>0.03</Height>
+		<ForwardOffset>-0.282</ForwardOffset>
+		<StartZOffset>1.243</StartZOffset>
+		<RightOffset>-0.068</RightOffset>
+	</MissileShot>
+	<LineShot>
+		<Effects/>
+		<SkipSegmentsNumber>1</SkipSegmentsNumber>
+		<SegmentLength>2</SegmentLength>
+		<StepDelay>0</StepDelay>
+		<EffectLifeTime>1000</EffectLifeTime>
+	</LineShot>
+	<StrikeDelay>0</StrikeDelay>
+	<DelayBetweenChains>0</DelayBetweenChains>
+	<StrikeVisualEffect/>
+</Shot>

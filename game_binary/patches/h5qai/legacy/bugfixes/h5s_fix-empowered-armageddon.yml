@@ -1,0 +1,20 @@
+# Empowered Armageddon missing interactions
+edits:
+  - name: Pointer to new code
+    address: '0066E098'
+    size: 7
+    type: hex
+    original: '8B 43 04 83 F8 0A 75'
+    modified: 'E8 E3 73 6D 00 90 74'
+  - name: Make spell benefit from fire perks
+    address: '00BD9080'
+    size: 12
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00 00'
+    modified: '8B 43 04 83 F8 15 74 03 83 F8 23 C3'
+  - name: Add bonus damage in the center
+    address: '0066DEBE'
+    size: 2
+    type: hex
+    original: '75 0E'
+    modified: '90 90'

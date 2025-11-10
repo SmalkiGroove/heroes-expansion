@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001177">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Academy/Stone_Gargoyle.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Academy/Stone_GargoyleAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Academy/Stone_GargoyleDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Academy/ico_Stonegargoyle.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Academy/ico_Stonegargoyle_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Academy/ico_Stonegargoyle_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Academy/ico_Stonegargoyle_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Academy/StoneGargoyle.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Steel_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-2.08167e-017</x>
+		<y>-0.00682404</y>
+		<z>0.536985</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

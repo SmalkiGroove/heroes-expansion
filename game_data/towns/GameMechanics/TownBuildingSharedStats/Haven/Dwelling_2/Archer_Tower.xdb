@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="19">
+	<NameFileRef href="/Text/Game/TownBuildings/Haven/Dwelling_2/Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Haven/Dwelling_2/Description.txt"/>
+	<Type>TB_DWELLING_2</Type>
+	<Upgrade>BLD_UPG_1</Upgrade>
+	<Cost>
+		<Wood>3</Wood>
+		<Ore>3</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>750</Gold>
+	</Cost>
+	<ModObjectName>ArcherTower</ModObjectName>
+	<dependencies/>
+	<Creature>CREATURE_ARCHER</Creature>
+	<DevLevelNeeded>4</DevLevelNeeded>
+	<UIObjectName>Dwelling_2</UIObjectName>
+	<UIStackPosition>0</UIStackPosition>
+	<Icon href="/UI/TownHall/haven/128/d2.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

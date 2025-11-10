@@ -1,0 +1,93 @@
+# Add bonus elemental damage to 4 artifacts (1 per element)
+definitions:
+  - &artifact_id_air   'C0 00 00 00'
+  - &artifact_id_earth 'C1 00 00 00'
+  - &artifact_id_fire  'C2 00 00 00'
+  - &artifact_id_water 'C3 00 00 00'
+  - &20_percent 'D8 0D C8 9F E0 00'
+  - &33_percent 'D8 0D A0 B2 EB 00'
+edits:
+  - name: Jump to new code space
+    address: '004B2619'
+    size: 11
+    type: hex
+    original: '83 7C 24 14 00 0F 8E 9E 00 00 00'
+    modified: 'E9 02 36 89 00 90 90 90 90 90 90'
+  - name: Jump 2
+    address: '004B2491'
+    size: 6
+    type: hex
+    original: '0F 84 82 01 00 00'
+    modified: '0F 84 DD 38 89 00'
+  - name: Jump 3
+    address: '004B24B2'
+    size: 6
+    type: hex
+    original: '0F 84 61 01 00 00'
+    modified: '0F 84 BC 38 89 00'
+  - name: Jump 4
+    address: '004B24CE'
+    size: 6
+    type: hex
+    original: '0F 84 45 01 00 00'
+    modified: '0F 84 A0 38 89 00'
+  - name: ASCII description in asm
+    address: '00BD9800'
+    size: 30
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+    modified: '3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 3D 41 72 74 66 20 73 70 65 6C 6C 20 64 6D 67'
+  - name: New code 1
+    address: '00BD9820'
+    size: 46
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+    modified: '8B 4D 04 E8 68 F2 78 FF 83 F8 01 75 48 68 C0 00 00 00 8B CF E8 77 A4 74 FF 85 C0 74 38 DB 44 24 14 6A 00 D9 7C 24 1C 6A 00 0F B7 44 24 20'
+  - name: Artifact air bonus
+    address: '00BD984E'
+    size: 6
+    type: hex
+    original: '00 00 00 00 00 00'
+    modified: *33_percent
+  - name: New code 2
+    address: '00BD9854'
+    size: 79
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+    modified: '80 CC 0C 68 C0 00 00 00 B2 01 8B CB 89 44 24 20 D9 6C 24 20 DB 5C 24 20 D9 6C 24 24 E8 5B 1D 84 FF 8B 4D 04 E8 13 F2 78 FF 83 F8 04 75 48 68 C1 00 00 00 8B CF E8 22 A4 74 FF 85 C0 74 38 DB 44 24 14 6A 00 D9 7C 24 1C 6A 00 0F B7 44 24 20'
+  - name: Artifact earth bonus
+    address: '00BD98A3'
+    size: 6
+    type: hex
+    original: '00 00 00 00 00 00'
+    modified: *33_percent
+  - name: New code 3
+    address: '00BD98A9'
+    size: 79
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+    modified: '80 CC 0C 68 C1 00 00 00 B2 01 8B CB 89 44 24 20 D9 6C 24 20 DB 5C 24 20 D9 6C 24 24 E8 06 1D 84 FF 8B 4D 04 E8 BE F1 78 FF 83 F8 02 75 48 68 C2 00 00 00 8B CF E8 CD A3 74 FF 85 C0 74 38 DB 44 24 14 6A 00 D9 7C 24 1C 6A 00 0F B7 44 24 20'
+  - name: Artifact fire bonus
+    address: '00BD98F8'
+    size: 6
+    type: hex
+    original: '00 00 00 00 00 00'
+    modified: *33_percent
+  - name: New code 4
+    address: '00BD98FE'
+    size: 79
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+    modified: '80 CC 0C 68 C2 00 00 00 B2 01 8B CB 89 44 24 20 D9 6C 24 20 DB 5C 24 20 D9 6C 24 24 E8 B1 1C 84 FF 8B 4D 04 E8 69 F1 78 FF 83 F8 03 75 48 68 C3 00 00 00 8B CF E8 78 A3 74 FF 85 C0 74 38 DB 44 24 14 6A 00 D9 7C 24 1C 6A 00 0F B7 44 24 20'
+  - name: Artifact water bonus
+    address: '00BD994D'
+    size: 6
+    type: hex
+    original: '00 00 00 00 00 00'
+    modified: *33_percent
+  - name: New code 5
+    address: '00BD9953'
+    size: 49
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+    modified: '80 CC 0C 68 C3 00 00 00 B2 01 8B CB 89 44 24 20 D9 6C 24 20 DB 5C 24 20 D9 6C 24 24 E8 5C 1C 84 FF 83 7C 24 14 00 0F 8E 43 C9 76 FF E9 9A C8 76 FF'

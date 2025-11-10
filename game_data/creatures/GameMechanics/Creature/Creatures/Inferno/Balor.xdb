@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature ObjectRecordID="46">
+	<AttackSkill>25</AttackSkill>
+	<DefenceSkill>25</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>23</MinDamage>
+	<MaxDamage>29</MaxDamage>
+	<Speed>5</Speed>
+	<Initiative>8</Initiative>
+	<Flying>false</Flying>
+	<Health>106</Health>
+	<KnownSpells>
+		<Item><Spell>SPELL_EMPOWERED_FIREBALL</Spell><Mastery>MASTERY_EXPERT</Mastery></Item>
+		<Item><Spell>SPELL_MASS_DISRUPTING_RAY</Spell><Mastery>MASTERY_EXPERT</Mastery></Item>
+	</KnownSpells>
+	<SpellPoints>44</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>1</SpellPoints2>
+	<Exp>500</Exp>
+	<Power>2750</Power>
+	<TimeToCommand>15</TimeToCommand>
+	<CreatureTier>6</CreatureTier>
+	<Upgrade>true</Upgrade>
+	<PairCreature>CREATURE_PIT_FIEND</PairCreature>
+	<CreatureTown>TOWN_INFERNO</CreatureTown>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_WATER</Second></MagicElement>
+	<WeeklyGrowth>3</WeeklyGrowth>
+	<Cost>
+		<Gold>1500</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Inferno/Balor.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>2</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Inferno/Balor.xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_PIT_FIEND</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_DEMONIC</Item>
+		<Item>ABILITY_IMMUNITY_TO_FIRE</Item>
+		<Item>ABILITY_MARK_OF_FIRE</Item>
+		<Item>ABILITY_VORPAL_SWORD</Item>
+	</Abilities>
+</Creature>

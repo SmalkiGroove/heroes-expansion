@@ -1,0 +1,228 @@
+
+function Routine_SummonElementalsType(side, hero, type)
+    local nb = 10 + trunc(0.2 * GetUnitMaxManaPoints(hero))
+    SummonCreature(side, type, nb)
+end
+
+function Routine_SummonElementalsAir(side, hero)
+    log(DEBUG, "$ Routine_SummonElementalsAir")
+    Routine_SummonElementalsType(side, hero, CREATURE_AIR_ELEMENTAL)
+end
+
+function Routine_SummonElementalsEarth(side, hero)
+    log(DEBUG, "$ Routine_SummonElementalsEarth")
+    Routine_SummonElementalsType(side, hero, CREATURE_EARTH_ELEMENTAL)
+end
+
+function Routine_SummonElementalsFire(side, hero)
+    log(DEBUG, "$ Routine_SummonElementalsFire")
+    Routine_SummonElementalsType(side, hero, CREATURE_FIRE_ELEMENTAL)
+end
+
+function Routine_SummonElementalsWater(side, hero)
+    log(DEBUG, "$ Routine_SummonElementalsWater")
+    Routine_SummonElementalsType(side, hero, CREATURE_WATER_ELEMENTAL)
+end
+
+function Routine_ArtifactMoonCharm(side, hero, unit)
+    log(DEBUG, "$ Routine_ArtifactMoonCharm")
+    if not ROUTINE_VARS.MoonCharm then
+        if STARTING_ARMY[side][unit] then
+            local type = GetCreatureType(unit)
+            local x,y = GetUnitPosition(unit)
+            local amount = STARTING_ARMY[side][unit]
+            AddCreature(side, type, amount, x, y)
+            ROUTINE_VARS.MoonCharm = not nil
+        end
+    end
+end
+
+
+function Routine_ArtfsetFrost(side, hero)
+    log(DEBUG, "$ Routine_ArtfsetFrost")
+    repeat sleep() until CURRENT_UNIT == hero
+    HeroCast_AllCreatures(hero, SPELL_DEEP_FREEZE, FREE_MANA, 1-side)
+    SetATB_ID(hero, ATB_INSTANT)
+end
+
+function Routine_ArtfsetSpirit(side, hero)
+    log(DEBUG, "$ Routine_ArtfsetSpirit")
+    HeroCast_AllCreatures(hero, SPELL_SORROW, FREE_MANA, 1-side)
+end
+
+function Routine_ArtfsetBestial(side, hero)
+    log(DEBUG, "$ Routine_ArtfsetBestial")
+    local beasts = { CREATURE_GRIFFIN, CREATURE_UNICORN, CREATURE_WYVERN, CREATURE_HYDRA, CREATURE_NIGHTMARE,
+                     CREATURE_WOLF, CREATURE_MANTICORE, CREATURE_ARCANE_EAGLE, CREATURE_CAVE_SPIDER }
+    local beast = beasts[random(1,8,0)]
+    local tier = CREATURES[beast][2]
+    local amount = 0.5 * ((10-tier) * (10-tier) * (10-tier) + tier)
+    SummonCreatureSideOffset(side, beast, amount, 4)
+end
+
+function Routine_ArtfsetGenji1(side, hero, unit)
+    log(DEBUG, "$ Routine_ArtfsetGenji1")
+    if GetUnitSide(unit) ~= side then
+        local m = GetUnitManaPoints(hero) + 50
+        SetMana(hero, m)
+        SetATB_ID(hero, ATB_INSTANT)
+    end
+end
+
+function Routine_ArtfsetWarLeader(side, hero, unit)
+    log(DEBUG, "$ Routine_ArtfsetWarLeader")
+    if GetUnitSide(unit) ~= side then
+        for i,cr in GetUnits(side, CREATURE) do
+            local tier = CREATURES[cr][2]
+            if tier == 1 or tier == 2 or tier == 3 then
+                SetATB_ID(cr, ATB_NEXT)
+            end
+        end
+    end
+end
+
+function Routine_ArtfsetDragon4(side, hero, unit)
+    log(DEBUG, "$ Routine_ArtfsetDragon4")
+    if STARTING_ARMY[side][unit] then
+        sleep(random(1,30,GetCreatureNumber(unit)))
+        if ROUTINE_VARS.Legendragon[side] then return end
+        local tier = CREATURES[GetCreatureType(unit)][2]
+        local threshold = 0.5 * (8 - tier) * (9 - tier)
+        if STARTING_ARMY[side][unit] > threshold then
+            ROUTINE_VARS.Legendragon[side] = 1
+            local name = "creature_DRAGON-SET_"..side
+            local amount = GetHeroLevel(side)
+            if GetHeroName(hero) == H_RAELAG then
+                local cr = IncreaseCreatureStack(side, CREATURES_BY_FACTION[DUNGEON][7], 1)
+                if cr then
+                    SetATB_ID(cr, ATB_NEXT)
+                    startThread(playAnimation, cr, "happy", ONESHOT)
+                else
+                    SummonCreatureSideOffset(side, CREATURE_DEEP_DRAGON, amount, 3, name)
+                    SetATB_ID(name, ATB_HALF)
+                end
+            else
+                SummonCreatureSideOffset(side, CREATURE_LEGENDARY_DRAGON, amount, 3, name)
+                SetATB_ID(name, ATB_HALF)
+            end
+        end
+    end
+end
+
+function Routine_ArtfsetDragon6(side, hero, unit)
+    log(DEBUG, "$ Routine_ArtfsetDragon6")
+    if GetUnitSide(unit) ~= side then
+        sleep(random(1,30,GetCreatureNumber(unit)))
+        if ROUTINE_VARS.Legendragon[side] then return end
+        ROUTINE_VARS.Legendragon[side] = 1
+        local name = "creature_DRAGON-SET_"..side
+        local amount = GetHeroLevel(side)
+        if GetHeroName(hero) == H_RAELAG then
+            local cr = IncreaseCreatureStack(side, CREATURES_BY_FACTION[DUNGEON][7], 1)
+            if cr then
+                SetATB_ID(cr, ATB_NEXT)
+                startThread(playAnimation, cr, "happy", ONESHOT)
+            else
+                SummonCreatureSideOffset(side, CREATURE_DEEP_DRAGON, amount, 3, name)
+                SetATB_ID(name, ATB_HALF)
+            end
+        else
+            SummonCreatureSideOffset(side, CREATURE_LEGENDARY_DRAGON, amount, 3, name)
+            SetATB_ID(name, ATB_HALF)
+        end
+    end
+end
+
+function Routine_ArtfsetDragon8(side, hero)
+    log(DEBUG, "$ Routine_ArtfsetDragon8")
+    if ROUTINE_VARS.Legendragon[side] then return end
+    ROUTINE_VARS.Legendragon[side] = 1
+    local name = "creature_DRAGON-SET_"..side
+    local amount = GetHeroLevel(side)
+    if GetHeroName(hero) == H_RAELAG then
+        local cr = IncreaseCreatureStack(side, CREATURES_BY_FACTION[DUNGEON][7], 1)
+        if cr then
+            SetATB_ID(cr, ATB_NEXT)
+            startThread(playAnimation, cr, "happy", ONESHOT)
+        else
+            SummonCreatureSideOffset(side, CREATURE_DEEP_DRAGON, amount, 3, name)
+            SetATB_ID(name, ATB_NEXT)
+        end
+    else
+        SummonCreatureSideOffset(side, CREATURE_LEGENDARY_DRAGON, amount, 3, name)
+        SetATB_ID(name, ATB_NEXT)
+    end
+end
+
+
+COMBAT_PREPARE_ARTIFACT_ROUTINES = {
+}
+COMBAT_START_ARTIFACT_ROUTINES = {
+    [ARTIFACT_ORB_OF_AIR] = Routine_SummonElementalsAir,
+    [ARTIFACT_ORB_OF_EARTH] = Routine_SummonElementalsEarth,
+    [ARTIFACT_ORB_OF_FIRE] = Routine_SummonElementalsFire,
+    [ARTIFACT_ORB_OF_WATER] = Routine_SummonElementalsWater,
+}
+COMBAT_TURN_ARTIFACT_ROUTINES = {
+}
+UNIT_DIED_ARTIFACT_ROUTINES = {
+    [ARTIFACT_MOON_CHARM] = Routine_ArtifactMoonCharm,
+}
+
+COMBAT_PREPARE_ARTFSET_ROUTINES = {
+}
+COMBAT_START_ARTFSET_ROUTINES = {
+    [ARTFSET_FROST_4PC] = Routine_ArtfsetFrost,
+    [ARTFSET_SPIRIT_5PC] = Routine_ArtfsetSpirit,
+    [ARTFSET_BESTIAL_4PC] = Routine_ArtfsetBestial,
+    [ARTFSET_DRAGON_8PC] = Routine_ArtfsetDragon8,
+}
+COMBAT_TURN_ARTFSET_ROUTINES = {
+}
+UNIT_DIED_ARTFSET_ROUTINES = {
+    [ARTFSET_GENJI_4PC] = Routine_ArtfsetGenji1,
+    [ARTFSET_WAR_4PC] = Routine_ArtfsetWarLeader,
+    [ARTFSET_DRAGON_4PC] = Routine_ArtfsetDragon4,
+    [ARTFSET_DRAGON_6PC] = Routine_ArtfsetDragon6,
+}
+
+
+function DoArtifactRoutine_CombatPrepare(side, name, id)
+    for a,routine in COMBAT_PREPARE_ARTIFACT_ROUTINES do
+        if HasHeroEquippedArtifact(side, a) then routine(side, id) end
+    end
+    for a,routine in COMBAT_PREPARE_ARTFSET_ROUTINES do
+        if HasHeroActiveArtifactSet(side, a) then routine(side, id) end
+    end
+end
+
+function DoArtifactRoutine_CombatStart(side, name, id)
+    for a,routine in COMBAT_START_ARTIFACT_ROUTINES do
+        if HasHeroEquippedArtifact(side, a) then routine(side, id) end
+    end
+    for a,routine in COMBAT_START_ARTFSET_ROUTINES do
+        if HasHeroActiveArtifactSet(side, a) then routine(side, id) end
+    end
+end
+
+function DoArtifactRoutine_CombatTurn(side, name, id)
+    for a,routine in COMBAT_TURN_ARTIFACT_ROUTINES do
+        if HasHeroEquippedArtifact(side, a) then routine(side, id) end
+    end
+    for a,routine in COMBAT_TURN_ARTFSET_ROUTINES do
+        if HasHeroActiveArtifactSet(side, a) then routine(side, id) end
+    end
+end
+
+function DoArtifactRoutine_UnitDied(side, name, id, unit)
+    for a,routine in UNIT_DIED_ARTIFACT_ROUTINES do
+        if HasHeroEquippedArtifact(side, a) then routine(side, id, unit) end
+    end
+    for a,routine in UNIT_DIED_ARTFSET_ROUTINES do
+        if HasHeroActiveArtifactSet(side, a) then routine(side, id, unit) end
+    end
+end
+
+
+-- log(TRACE, "Loaded artifacts-routines-combat.lua")
+ROUTINES_LOADED[13] = 1

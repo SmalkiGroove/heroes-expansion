@@ -1,0 +1,16 @@
+# Change Energy Channel mana cost reduction from 25% to 10%
+definitions: 
+ - &energy_channel_percentage 0.9001
+edits:
+  - name: Store new value
+    address: '00000340'
+    size: 4
+    type: float
+    original: 0
+    modified: *energy_channel_percentage
+  - name: Pointer to new value
+    address: '0057768C'
+    size: 4
+    type: hex
+    original: '5C 4C E3 00'
+    modified: '40 03 40 00'

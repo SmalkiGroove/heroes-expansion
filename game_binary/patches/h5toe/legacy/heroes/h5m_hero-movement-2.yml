@@ -1,0 +1,51 @@
+# Change hero movement costs and penalties values
+definitions:
+- &move_cost_hero_homeland                     100
+- &move_cost_road                               80
+- &move_cost_ship                               90
+- &move_cost_standard                          100
+- &move_penalty_dirt_lava_taiga_subterran       20
+- &move_penalty_sand_snow                       20
+- &original_movement_cost_hero_homeland                100
+- &original_movement_cost_road                          75
+- &original_movement_cost_ship                         100
+- &original_movement_cost_standard                     100
+- &original_movement_penalty_dirt_lava_taiga_subterran  25
+- &original_movement_penalty_sand_snow                  50
+edits:
+  - name: Edit movement cost homeland
+    address: '008A8E7D'
+    size: 4
+    type: int
+    original: *original_movement_cost_hero_homeland
+    modified: *move_cost_hero_homeland
+  - name: Edit movement cost roads
+    address: '008A8EC7'
+    size: 4
+    type: int
+    original: *original_movement_cost_road
+    modified: *move_cost_road
+  - name: Edit movement penalty 1
+    address: '008A8EF1'
+    size: 4
+    type: int
+    original: *original_movement_penalty_dirt_lava_taiga_subterran
+    modified: *move_penalty_dirt_lava_taiga_subterran
+  - name: Edit movement penalty 2
+    address: '008A8EFB'
+    size: 4
+    type: int
+    original: *original_movement_penalty_sand_snow
+    modified: *move_penalty_sand_snow
+  - name: Edit movement cost standart
+    address: '008A8F79'
+    size: 1
+    type: int
+    original: *original_movement_cost_standard
+    modified: *move_cost_standard
+  - name: Edit movement cost ship
+    address: '008A8F7D'
+    size: 4
+    type: int
+    original: *original_movement_cost_ship
+    modified: *move_cost_ship

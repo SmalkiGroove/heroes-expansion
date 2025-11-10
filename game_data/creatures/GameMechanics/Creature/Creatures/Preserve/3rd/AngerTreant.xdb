@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature>
+	<AttackSkill>23</AttackSkill>
+	<DefenceSkill>27</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>10</MinDamage>
+	<MaxDamage>20</MaxDamage>
+	<Speed>5</Speed>
+	<Initiative>8</Initiative>
+	<Flying>false</Flying>
+	<Health>180</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>1</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>500</Exp>
+	<Power>2750</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>6</CreatureTier>
+	<Upgrade>false</Upgrade>
+	<PairCreature>CREATURE_UNKNOWN</PairCreature>
+	<CreatureTown>TOWN_PRESERVE</CreatureTown>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_WATER</Second></MagicElement>
+	<WeeklyGrowth>3</WeeklyGrowth>
+	<Cost>
+		<Gold>1500</Gold>
+	</Cost>
+	<PresetPrice>0</PresetPrice>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Preserve/Alt_upgrade/Anger_Treant.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>2</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Preserve/3rd/AngerTreant.(CreatureVisual).xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_TREANT</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_ENRAGED</Item>
+		<Item>ABILITY_ENTANGLING_ROOTS</Item>
+		<Item>ABILITY_RAGE_OF_THE_FOREST</Item>
+		<Item>ABILITY_IMMUNITY_TO_SLOW</Item>
+		<Item>ABILITY_IMMUNITY_TO_CURSE</Item>
+	</Abilities>
+</Creature>

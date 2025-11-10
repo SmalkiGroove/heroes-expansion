@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature ObjectRecordID="1000052">
+	<AttackSkill>5</AttackSkill>
+	<DefenceSkill>2</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>3</MinDamage>
+	<MaxDamage>6</MaxDamage>
+	<Speed>7</Speed>
+	<Initiative>14</Initiative>
+	<Flying>false</Flying>
+	<Health>16</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>22</Exp>
+	<Power>333</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>2</CreatureTier>
+	<Upgrade>false</Upgrade>
+	<PairCreature>CREATURE_BLOOD_WITCH</PairCreature>
+	<CreatureTown>TOWN_DUNGEON</CreatureTown>
+	<MagicElement><First>ELEMENT_AIR</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>23</WeeklyGrowth>
+	<Cost>
+		<Gold>40</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Dungeon/Witch.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>1</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Dungeon/Witch.xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_UNKNOWN</BaseCreature>
+	<Upgrades>
+		<Item>CREATURE_BLOOD_WITCH</Item>
+		<Item>CREATURE_BLOOD_WITCH_2</Item>
+	</Upgrades>
+	<Abilities>
+		<Item>ABILITY_STRIKE_AND_RETURN</Item>
+		<Item>ABILITY_FAST_ATTACK</Item>
+	</Abilities>
+</Creature>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Spell ObjectRecordID="135">
+	<NameFileRef href="/Text/Game/Spells/Combat/Holy_Word/Name.txt"/>
+	<LongDescriptionFileRef href="/Text/Game/Spells/Combat/Holy_Word/Long_Description.txt"/>
+	<Texture href="/Textures/SpellBook______2618/Spells/Spell_HolyWord.xdb#xpointer(/Texture)"/>
+	<EffectTexture href="/UI/Common/Icons/Spell_Buff_Icons/HolyWord.(Texture).xdb#xpointer(/Texture)"/>
+	<SpellBookPredictions>
+		<Item href="/Text/Game/Spells/SpellBookPredictions/DirectDamage.txt"/>
+		<Item href="/Text/Game/Spells/SpellBookPredictions/DirectDamageMasterOfFire.txt"/>
+	</SpellBookPredictions>
+	<CombatLogTexts/>
+	<Level>5</Level>
+	<MagicSchool>MAGIC_SCHOOL_LIGHT</MagicSchool>
+	<RequiredHeroLevel>0</RequiredHeroLevel>
+	<TrainedCost>40</TrainedCost>
+	<damage>
+		<Item>
+			<Base>150</Base>
+			<PerPower>10</PerPower>
+		</Item>
+		<Item>
+			<Base>200</Base>
+			<PerPower>13</PerPower>
+		</Item>
+		<Item>
+			<Base>250</Base>
+			<PerPower>16</PerPower>
+		</Item>
+		<Item>
+			<Base>300</Base>
+			<PerPower>20</PerPower>
+		</Item>
+	</damage>
+	<duration/>
+	<sSpellCost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>0</Gold>
+	</sSpellCost>
+	<IsAimed>false</IsAimed>
+	<IsAreaAttack>false</IsAreaAttack>
+	<CanSelectDead>false</CanSelectDead>
+	<Target>TARGET_NEUTRAL</Target>
+	<Element>ELEMENT_NONE</Element>
+	<DamageIsElemental>false</DamageIsElemental>
+	<visuals>
+		<Item href="HolyWord.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+		<Item href="HolyWord_Hit.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+	</visuals>
+	<PresetPrice>0</PresetPrice>
+	<AvailableForPresets>true</AvailableForPresets>
+</Spell>

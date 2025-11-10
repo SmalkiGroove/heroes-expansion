@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001214">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Necropolis/Skeleton_Archer.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Necropolis/Skeleton_Archer_Abilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Necropolis/Skeleton_archer_desc.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Necropolis/ico_SceletonArcher.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Necropolis/ico_SceletonArcher_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Necropolis/ico_SceletonArcher_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Necropolis/ico_SceletonArcher_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Necropolis/SkeletonArcher.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter href="/Characters/Creatures/Necropolis/SkeletonArcher_Death.(Character).xdb#xpointer(/Character)"/>
+	<AnimShot href="/GameMechanics/Shot/Creatures/Haven/Archer.xdb#xpointer(/Shot)"/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Steel_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="#n:inline(Win3DObj)" id="item_08cdb3f2-40aa-4342-8ca1-6ac216b37afc">
+		<Win3DObj ObjectRecordID="37">
+			<Model href="/_(Model)/Creatures/Necropolis/SkeletonArcher.(Model).xdb#xpointer(/Model)"/>
+			<placements>
+				<Item>
+					<SizeDesc href="/GameMechanics/Win3DObjSizeDesc/creatureInfo.xdb#xpointer(/Win3DObjSizeDesc)"/>
+					<Matrix>4cba843fe819513f00000000b6f3fdbdb07528be66dc553e5d7fa53f3ab488bfeed04c3ffc0182bfd81e883e000000000000000000000000000000000000803f</Matrix>
+					<Shift>
+						<x>-0.124</x>
+						<y>-1.068</y>
+					</Shift>
+					<RollY>-0.6672</RollY>
+					<RollX>-1.368</RollX>
+					<Scale>1.32</Scale>
+				</Item>
+			</placements>
+		</Win3DObj>
+	</Win3DView>
+	<MountPoint>
+		<x>-0.0387896</x>
+		<y>0.164119</y>
+		<z>1.10113</z>
+	</MountPoint>
+	<MountBone>Spine</MountBone>
+</CreatureVisual>

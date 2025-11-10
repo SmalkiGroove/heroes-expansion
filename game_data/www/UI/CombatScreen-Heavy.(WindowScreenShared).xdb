@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WindowScreenShared ObjectRecordID="40">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="CombatScreen-Heavy/OnJog-AtbToggle.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="CombatScreen-Heavy/OnJog-AutoCombat.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="CombatScreen-Heavy/OnJog-Flee.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="CombatScreen-Heavy/OnJog-Menu.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="CombatScreen-Heavy/OnJog-Special.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="CombatScreen-Heavy/OnJog-Spellbook.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="CombatArena-Heavy/ATBBar/ATBBar.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="CombatScreen-Heavy/OnJog-Defend.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="CombatArena-Heavy/Jogdial.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="CombatScreen-Heavy/OnJog-StartCombat.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="CombatScreen-Heavy/OnJog-NextCreature.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="CombatArena/Face.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="CombatArena-Heavy/Prediction.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="CombatArena-Heavy/PlacementBar.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="CombatArena-Heavy/CombatLog/CombatLog.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="Common/Creatures/DragIcon.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="CombatArena-Heavy/CursorPrediction.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="CombatScreen-Heavy/TacticPhaseMarker.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="CombatArena-Heavy/RunesBar/RunesBar.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="RunesBarSnapBottomPlace.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="CombatScreen-Heavy/OnJog-Wait.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		
+	</Children>
+	<Background/>
+	<Foreground/>
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>1024</x>
+				<y>768</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea/>
+	<IgnoreDblClick>false</IgnoreDblClick>
+	<ActiveMask/>
+</WindowScreenShared>

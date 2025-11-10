@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature>
+	<AttackSkill>4</AttackSkill>
+	<DefenceSkill>2</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>2</MinDamage>
+	<MaxDamage>3</MaxDamage>
+	<Speed>3</Speed>
+	<Initiative>8</Initiative>
+	<Flying>false</Flying>
+	<Health>16</Health>
+	<KnownSpells>
+		<Item><Spell>SPELL_ABILITY_SCAVENGER</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+	</KnownSpells>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>28</Exp>
+	<Power>145</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>2</CreatureTier>
+	<Upgrade>false</Upgrade>
+	<PairCreature>CREATURE_UNKNOWN</PairCreature>
+	<CreatureTown>TOWN_NECROMANCY</CreatureTown>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_FIRE</Second></MagicElement>
+	<WeeklyGrowth>39</WeeklyGrowth>
+	<Cost>
+		<Gold>50</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Necropolis/Alt_upgrade/Disease_Zombie.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>1</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Necropolis/3rd/DiseaseZombie.(CreatureVisual).xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_WALKING_DEAD</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_UNDEAD</Item>
+		<Item>ABILITY_ENRAGED</Item>
+		<Item>ABILITY_PACK_HUNTER</Item>
+		<Item>ABILITY_WEAKENING_AURA</Item>
+		<Item>ABILITY_SCAVENGER</Item>
+	</Abilities>
+</Creature>

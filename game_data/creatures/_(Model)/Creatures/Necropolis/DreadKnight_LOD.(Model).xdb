@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Model ObjectRecordID="5554">
+	<Materials>
+		<Item href="DreadKnight_LOD-Horse_lambert.(Material).xdb#xpointer(/Material)"/>
+		<Item href="DreadKnight_LOD-__BlackKnight_lambert.(Material).xdb#xpointer(/Material)"/>
+		<Item href="DreadKnight_LOD-lambert2.(Material).xdb#xpointer(/Material)"/>
+	</Materials>
+	<Skeleton href="#n:inline(Skeleton)" id="item_53365f4f-a5d9-4f7e-90d4-c321a5d381a5">
+		<Skeleton ObjectRecordID="451">
+			<SrcName href="/models/Creatures/Necropolis/DeathKnight_LOD.mb"/>
+			<RootJoint>Global</RootJoint>
+			<MSRFormat>true</MSRFormat>
+			<Animations/>
+			<uid>1CD40344-5951-4109-B667-84368E59C41B</uid>
+		</Skeleton>
+	</Skeleton>
+	<Geometry href="#n:inline(Geometry)" id="item_6b9bee09-8849-4d2b-afc7-7414f4197d05">
+		<Geometry ObjectRecordID="4745">
+			<SrcName href="/models/Creatures/Necropolis/DeathKnight_LOD.mb"/>
+			<uid>6F0B4EED-0A7F-4A2D-9AC1-03C263400F4A</uid>
+			<RootMesh/>
+			<RootJoint>Global</RootJoint>
+			<Size>
+				<x>4.27458</x>
+				<y>4.64785</y>
+				<z>4.57078</z>
+			</Size>
+			<Center>
+				<x>0.171363</x>
+				<y>0.28199</y>
+				<z>2.28536</z>
+			</Center>
+			<BestFitPoint>
+				<x>0.00107311</x>
+				<y>-0.290427</y>
+				<z>4.51363</z>
+			</BestFitPoint>
+			<Dir>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0</w>
+			</Dir>
+			<AIGeometry href="#n:inline(AIGeometry)" id="item_520a44cf-3785-4e7b-8336-c550531effc8">
+				<AIGeometry ObjectRecordID="137">
+					<SrcName href="/models/Creatures/Necropolis/DeathKnight_LOD.mb"/>
+					<RootMesh>AI</RootMesh>
+					<RootJoint/>
+					<Volume>0</Volume>
+					<SolidPart>0</SolidPart>
+					<AABBCenter>
+						<x>0</x>
+						<y>-0.134807</y>
+						<z>1.76162</z>
+					</AABBCenter>
+					<AABBHalfSize>
+						<x>0.640667</x>
+						<y>1.49762</y>
+						<z>1.76162</z>
+					</AABBHalfSize>
+					<uid>18BC7CAD-E5C8-41D7-A945-D26BF9ABEC8A</uid>
+				</AIGeometry>
+			</AIGeometry>
+			<NumMeshes>2</NumMeshes>
+			<MaterialQuantities>
+				<Item>1</Item>
+				<Item>2</Item>
+			</MaterialQuantities>
+			<MeshNames>
+				<Item>Horse_meshShape</Item>
+				<Item>Knight_meshShape</Item>
+			</MeshNames>
+			<MeshAnimated/>
+			<MeshWindAffected/>
+		</Geometry>
+	</Geometry>
+	<Animations/>
+	<WindPower>1</WindPower>
+</Model>

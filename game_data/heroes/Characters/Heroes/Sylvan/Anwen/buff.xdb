@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Effect ObjectRecordID="1000054">
+	<Instances>
+		<Item href="#n:inline(ParticleInstance)" id="item_3c15724d-617f-4157-9648-4e5dae165a62">
+			<ParticleInstance ObjectRecordID="1000055">
+				<SrcName/>
+				<Light>L_NORMAL</Light>
+				<Particle href="#n:inline(Particle)" id="item_bc63d7a6-ae69-4bd9-b92c-36af08611ead">
+					<Particle ObjectRecordID="1000063">
+						<SrcName href="/Effects/Characters/Ranger/buff.mb"/>
+						<ExportPrefix>Glow</ExportPrefix>
+						<WrapSize>
+							<x>0</x>
+							<y>0</y>
+						</WrapSize>
+						<Bound>d804c13eb08edf3d7e971840afd9934069ae594035bfe23fc0ec2440</Bound>
+						<PerParticleFog>false</PerParticleFog>
+						<uid>A9EFF2DA-1993-4C88-BC5B-8AB0E9473E3A</uid>
+					</Particle>
+				</Particle>
+				<Position>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Position>
+				<Rotation>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+					<w>1</w>
+				</Rotation>
+				<Scale>1</Scale>
+				<Speed>1</Speed>
+				<Offset>0</Offset>
+				<EndCycle>4.1</EndCycle>
+				<CycleCount>1</CycleCount>
+				<Pivot>
+					<x>0</x>
+					<y>0</y>
+				</Pivot>
+				<Textures>
+					<Item href="/Textures/Effects/_Various/Glow05.xdb#xpointer(/Texture)"/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item href="/Textures/Effects/_Various/SparkGreen01.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/Effects/Spells/leaf00.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/Effects/Spells/leaf01.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/Effects/Spells/leaf00.xdb#xpointer(/Texture)"/>
+				</Textures>
+				<IsCrown>false</IsCrown>
+				<Static>P_STATIC</Static>
+				<DoesCastShadow>false</DoesCastShadow>
+				<GlueToBone>0</GlueToBone>
+				<GlueToNamedBone/>
+				<LeaveParticlesWhereStarted>false</LeaveParticlesWhereStarted>
+				<Priority>0</Priority>
+			</ParticleInstance>
+		</Item>
+		<Item href="#n:inline(ParticleInstance)" id="item_51c052e1-7482-4fd2-8684-778ad928176a">
+			<ParticleInstance ObjectRecordID="1000057">
+				<SrcName/>
+				<Light>L_NORMAL</Light>
+				<Particle href="#n:inline(Particle)" id="item_ee908e48-98e5-48f4-b57c-3583b479a59b">
+					<Particle ObjectRecordID="1000064">
+						<SrcName href="/Effects/Characters/Ranger/buff.mb"/>
+						<ExportPrefix>Rays</ExportPrefix>
+						<WrapSize>
+							<x>0</x>
+							<y>0</y>
+						</WrapSize>
+						<Bound>e8e2323e94ffb13eca43154097e55e4020e700405941fe3f8a050240</Bound>
+						<PerParticleFog>false</PerParticleFog>
+						<uid>09D03D31-CF75-4582-8882-4AABB4D68CCE</uid>
+					</Particle>
+				</Particle>
+				<Position>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Position>
+				<Rotation>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+					<w>1</w>
+				</Rotation>
+				<Scale>1</Scale>
+				<Speed>1</Speed>
+				<Offset>0</Offset>
+				<EndCycle>4.1</EndCycle>
+				<CycleCount>1</CycleCount>
+				<Pivot>
+					<x>0</x>
+					<y>-0.75</y>
+				</Pivot>
+				<Textures>
+					<Item href="/Textures/Effects/_Various/Glow05.xdb#xpointer(/Texture)"/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item href="/Textures/Effects/Spells/raysgold03.xdb#xpointer(/Texture)"/>
+				</Textures>
+				<IsCrown>false</IsCrown>
+				<Static>P_STATIC</Static>
+				<DoesCastShadow>false</DoesCastShadow>
+				<GlueToBone>0</GlueToBone>
+				<GlueToNamedBone/>
+				<LeaveParticlesWhereStarted>false</LeaveParticlesWhereStarted>
+				<Priority>0</Priority>
+			</ParticleInstance>
+		</Item>
+	</Instances>
+	<Lights>
+		<Item href="#n:inline(LightInstance)" id="item_c3b6fd68-3258-4b1b-845c-a4df512f9cb5">
+			<LightInstance ObjectRecordID="1000012">
+				<Light href="#n:inline(AnimLight)" id="item_939d6112-cab5-4ff4-ba5e-b1c692bb7f8a">
+					<AnimLight ObjectRecordID="1000012">
+						<SrcName href="/Effects/Characters/Ranger/buff.mb"/>
+						<SelectNode>CastLight</SelectNode>
+						<uid>33D777DF-8AAA-4E6D-9834-C368212B8170</uid>
+					</AnimLight>
+				</Light>
+				<Position>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Position>
+				<Rotation>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+					<w>1</w>
+				</Rotation>
+				<Scale>1</Scale>
+				<Speed>1</Speed>
+				<Offset>0</Offset>
+				<EndCycle>0</EndCycle>
+				<CycleCount>1</CycleCount>
+				<GlueToBone>0</GlueToBone>
+			</LightInstance>
+		</Item>
+	</Lights>
+	<Models>
+		<Item href="#n:inline(ModelInstance)" id="item_4023a373-13bc-4e02-abf9-310197588c14">
+			<ModelInstance ObjectRecordID="1000018">
+				<Model href="/_(Model)/Effects/Characters/Ranger/buff.xdb#xpointer(/Model)"/>
+				<SkelAnim href="/_(BasicSkelAnim)/Effects/Characters/Ranger/buff.xdb#xpointer(/BasicSkelAnim)"/>
+				<Position>
+					<x>1.6</x>
+					<y>-0.3</y>
+					<z>1.1</z>
+				</Position>
+				<Rotation>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+					<w>1</w>
+				</Rotation>
+				<Scale>1</Scale>
+				<Offset>0</Offset>
+				<CycleLength>0</CycleLength>
+				<CycleCount>1</CycleCount>
+				<GlueToBone>0</GlueToBone>
+			</ModelInstance>
+		</Item>
+		<Item href="Body/Body.(ModelInstance).xdb#xpointer(/ModelInstance)"/>
+		<Item href="Head/Head.(ModelInstance).xdb#xpointer(/ModelInstance)"/>
+		<Item href="Hands/Hands.(ModelInstance)_buff.xdb#xpointer(/ModelInstance)"/>
+	</Models>
+	<WindAffected>false</WindAffected>
+	<WindPower>1</WindPower>
+	<Duration>3</Duration>
+</Effect>

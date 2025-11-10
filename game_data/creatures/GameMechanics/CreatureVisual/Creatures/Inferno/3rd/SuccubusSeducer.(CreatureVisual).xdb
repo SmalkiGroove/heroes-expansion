@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Inferno/3rd/SuccubusSeducer_Name.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Inferno/3rd/SuccubusSeducer_Abils.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Inferno/3rd/SuccubusSeducer_Desc.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/UI/H5A2/Icons/Creatures/Inferno_second_upd/Succubus_Seducer.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Inferno/AlternativeUpgrade/T4_Succubus_Seducer.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot href="/GameMechanics/Shot/Creatures/Inferno/Succubus_First_Stike.xdb#xpointer(/Shot)"/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.0205362</x>
+		<y>-0.0146197</y>
+		<z>1.33696</z>
+	</MountPoint>
+	<MountBone>Spine1</MountBone>
+</CreatureVisual>

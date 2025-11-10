@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Spell>
+	<NameFileRef href="/Text/Game/Spells/Combat/SummonHive/Name.txt"/>
+	<LongDescriptionFileRef href="/Text/Game/Spells/Combat/SummonHive/Long_Description.txt"/>
+	<Texture href="/Textures/SpellBook______2618/Spells/Spell_SummonHive.xdb#xpointer(/Texture)"/>
+	<EffectTexture href="/Textures/SpellBook______2618/Spells/Spell_SummonHive.xdb#xpointer(/Texture)"/>
+	<SpellBookPredictions>
+		<Item href="/Text/Game/Spells/Combat/SummonHive/SpellBookPrediction.txt"/>
+	</SpellBookPredictions>
+	<CombatLogTexts/>
+	<Level>4</Level>
+	<MagicSchool>MAGIC_SCHOOL_SUMMONING</MagicSchool>
+	<RequiredHeroLevel>0</RequiredHeroLevel>
+	<IsAimed>true</IsAimed>
+	<TrainedCost>16</TrainedCost>
+	<damage>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+	</damage>
+	<duration>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+	</duration>
+	<sSpellCost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>0</Gold>
+	</sSpellCost>
+	<IsAreaAttack>true</IsAreaAttack>
+	<CanSelectDead>false</CanSelectDead>
+	<Target>TARGET_HOSTILE</Target>
+	<Element>ELEMENT_NONE</Element>
+	<visuals>
+		<Item href="SummonHive.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+	</visuals>
+</Spell>

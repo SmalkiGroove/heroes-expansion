@@ -1,0 +1,8 @@
+# Change luck decrease value from 1 to 2
+edits:
+  - name: Edit value
+    address: '0058926F'
+    size: 1
+    type: hex
+    original: '01'
+    modified: '02'

@@ -1,0 +1,125 @@
+# Change first aid tent healing values
+definitions:
+  - &mod_skill_for_mastery 2
+  - &mod_base_heal_mastery_none     20
+  - &mod_base_heal_mastery_basic    40
+  - &mod_base_heal_mastery_advanced 60
+  - &mod_base_heal_mastery_expert   80
+  - &mod_bonus_heal_per_defense_none     1
+  - &mod_bonus_heal_per_defense_basic    2
+  - &mod_bonus_heal_per_defense_advanced 3
+  - &mod_bonus_heal_per_defense_expert   4
+  - &toe_skill_for_mastery 2
+  - &toe_base_heal_mastery_none     10
+  - &toe_base_heal_mastery_basic    20
+  - &toe_base_heal_mastery_advanced 50
+  - &toe_base_heal_mastery_expert   100
+edits:
+  - name: Skill used for mastery
+    address: '00741DF6'
+    size: 1
+    type: int
+    original: *toe_skill_for_mastery
+    modified: *mod_skill_for_mastery
+  - name: Base heal mastery none
+    address: '004B26E6'
+    size: 4
+    type: int
+    original: *toe_base_heal_mastery_none
+    modified: *mod_base_heal_mastery_none
+  - name: Base heal mastery basic
+    address: '004B26F4'
+    size: 4
+    type: int
+    original: *toe_base_heal_mastery_basic
+    modified: *mod_base_heal_mastery_basic
+  - name: Base heal mastery advanced
+    address: '004B2702'
+    size: 4
+    type: int
+    original: *toe_base_heal_mastery_advanced
+    modified: *mod_base_heal_mastery_advanced
+  - name: Base heal mastery expert
+    address: '004B2710'
+    size: 4
+    type: int
+    original: *toe_base_heal_mastery_expert
+    modified: *mod_base_heal_mastery_expert
+  - name: Edit 6
+    address: '004B2708'
+    size: 4
+    type: int
+    original: 1
+    modified: 0
+  - name: Edit 7
+    address: '004B2716'
+    size: 4
+    type: int
+    original: 3
+    modified: 0
+  - name: Fork code
+    address: '004B2730'
+    size: 6
+    type: hex
+    original: '8B 46 04 8B 48 08'
+    modified: 'E9 15 40 55 00 90'
+  - name: Added code
+    address: '00A0674A'
+    size: 96
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+    modified: '8B 46 04 8B 48 08 8B 54 31 04 8D 4C 31 04 FF 92 94 01 00 00 50 8B 06 89 F1 FF 10 8B 10 6A 02 89 C1 FF 92 78 01 00 00 59 8B 04 85 AA 73 E0 00 F7 E1 01 07 8B 46 04 8B 48 08 8B 06 89 F1 FF 10 8B 10 6A 0B 89 C1 FF 92 78 01 00 00 89 44 24 3C 8B 46 04 8B 48 08 E9 92 BF AA FF 90 90 90 90 90 90'
+  - name: Bonus heal per def mastery none
+    address: '00A067AA'
+    size: 4
+    type: int
+    original: 0
+    modified: *mod_bonus_heal_per_defense_none
+  - name: Bonus heal per def mastery basic
+    address: '00A067AE'
+    size: 4
+    type: int
+    original: 0
+    modified: *mod_bonus_heal_per_defense_basic
+  - name: Bonus heal per def mastery advanced
+    address: '00A067B2'
+    size: 4
+    type: int
+    original: 0
+    modified: *mod_bonus_heal_per_defense_advanced
+  - name: Bonus heal per def mastery expert
+    address: '00A067B6'
+    size: 4
+    type: int
+    original: 0
+    modified: *mod_bonus_heal_per_defense_expert
+  - name: Edit plague tent 1
+    address: '004C2098'
+    size: 15
+    type: hex
+    original: '50 55 8D 54 24 30 8D 4C 24 48 E8 29 06 FF FF'
+    modified: 'E9 C3 37 88 00 E8 2E 06 FF FF E8 C9 37 88 00'
+  - name: Edit plague tent 2
+    address: '004B277F'
+    size: 8
+    type: hex
+    original: '7E 06 8B 07 03 C0 89 07'
+    modified: 'E9 1C 31 89 00 90 90 90'
+  - name: Edit plague tent 3
+    address: '004BBE69'
+    size: 10
+    type: hex
+    original: '84 C0 8B CD 0F 84 56 02 00 00'
+    modified: 'E9 4A 9A 88 00 90 90 90 90 90'
+  - name: Edit plague tent 4
+    address: '00BD9460'
+    size: 46
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+    modified: '50 55 8D 54 24 30 8D 4C 24 48 E9 2E C8 77 FF 90 81 7C 24 14 60 01 00 00 75 13 50 57 8B 3D 90 64 14 01 8B 07 8D 04 40 D1 E8 89 07 5F 58 C3'
+  - name: Edit ring of machine affinity bonus
+    address: '00BD94A0'
+    size: 62
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+    modified: '7E 09 8B 07 8D 04 40 D1 E8 89 07 89 3D 90 64 14 01 E9 CE CE 76 FF 00 00 84 C0 75 13 57 51 8B 0D 90 64 14 01 8B 39 8D 3C 7F D1 EF 89 39 59 5F 89 E9 84 C0 0F 84 F0 67 77 FF E9 90 65 77 FF'

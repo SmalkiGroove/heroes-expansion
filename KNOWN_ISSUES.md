@@ -1,0 +1,57 @@
+# KNOWN ISSUES
+
+### Game crash
+
+- [EXE] Crash while generating maps with underground
+- [XDB] Games don't start if rmg maps are present
+
+### Broken graphics or animations
+
+- [EXE] Consume Corpse camera glitch
+
+### Text issues
+
+
+### Something does not work
+
+- [EXE] Thunder Power has no lightning visual effect
+- [EXE] Magnetism not working yet
+- [???] RMG doesn't spawn monsters sometimes
+
+### Bugs
+
+- [EXE] Shantiri Moon Disc blocks all light magic
+- [LUA] Tieru recovers all druids after battles
+- [LUA] Agrael can get 2 consecutive turns
+- [LUA] Deleb still too many elem stacks
+- [LUA] Tracking hero movement loops after use tavern
+- [XDB] Level Up skillswheel always shows all skills
+
+### Suggestions
+
+- [???] Add NCF creatures in editor
+- [XDB] Darkstorm hero totem model
+- [XDB] Add ARMG templates
+- [EXE] Magnetism redirect projectiles
+- [EXE] Make Earthquake deal magical earth damage
+- [DDS] Banish change hue
+
+### Balance
+
+- [EXE] Market change rate are total scam
+- [EXE] Inferno and Dungeon sacrificial buildings are bad
+- [XDB] Nerf Meteor Shower base damage
+
+### Massive work required
+
+- [EXE] QAI version
+- [XDB] New battlefields
+- [XDB/LUA] Better vault battles with siege
+- [XDB/LUA] More custom buildings and late-game challenge
+- [EXE/XDB] Luck and Morale 1 point = 1%, no cap
+- [XDB/LUA] Add neutral heroes and bosses
+
+
+# FIXED
+
+

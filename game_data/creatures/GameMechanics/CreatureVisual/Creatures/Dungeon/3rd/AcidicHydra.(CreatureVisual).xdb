@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Dungeon/3rd/AcidicHydra_Name.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Dungeon/3rd/AcidicHydra_Abils.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Dungeon/3rd/AcidicHydra_Desc.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/UI/H5A2/Icons/Creatures/Dungeon_second_upd/Acidic_Hydra.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Dungeon/AlternativeUpgrade/T5_AcidicHydra/T5_AcidicHydra.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>0.0592908</x>
+		<y>-0.840146</y>
+		<z>1.03411</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

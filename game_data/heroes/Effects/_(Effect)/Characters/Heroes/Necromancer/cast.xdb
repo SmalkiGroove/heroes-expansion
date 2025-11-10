@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Effect ObjectRecordID="676">
+	<Instances>
+		<Item href="/Effects/_(Effect)/Characters/Heroes/Arantir/Cast_eff/Cast.(ParticleInstance).xdb#xpointer(/ParticleInstance)"/>
+		<Item href="/Effects/_(Effect)/Characters/Heroes/Arantir/Cast_eff/Cast_smoke.(ParticleInstance).xdb#xpointer(/ParticleInstance)"/>
+		<Item href="HorsEye.(ParticleInstance).xdb#xpointer(/ParticleInstance)"/>
+	</Instances>
+	<Lights>
+		<Item href="/Effects/_(Effect)/Characters/Heroes/Arantir/Cast_eff/Cast_light.(LightInstance).xdb#xpointer(/LightInstance)"/>
+	</Lights>
+	<Models>
+		<Item href="Face.(ModelInstance).xdb#xpointer(/ModelInstance)"/>
+	</Models>
+	<WindAffected>false</WindAffected>
+	<WindPower>1</WindPower>
+	<Duration>2.5</Duration>
+</Effect>

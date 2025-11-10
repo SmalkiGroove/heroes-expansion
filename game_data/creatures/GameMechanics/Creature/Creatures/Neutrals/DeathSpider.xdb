@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature ObjectRecordID="72">
+	<AttackSkill>9</AttackSkill>
+	<DefenceSkill>7</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>9</MinDamage>
+	<MaxDamage>11</MaxDamage>
+	<Speed>5</Speed>
+	<Initiative>15</Initiative>
+	<Flying>false</Flying>
+	<Health>24</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>120</Exp>
+	<Power>155</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>4</CreatureTier>
+	<Upgrade>true</Upgrade>
+	<PairCreature>CREATURE_CAVE_SPIDER</PairCreature>
+	<CreatureTown>TOWN_NO_TYPE</CreatureTown>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_FIRE</Second></MagicElement>
+	<WeeklyGrowth>17</WeeklyGrowth>
+	<Cost>
+		<Gold>120</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Neutral/DeathSpider.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>2</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Added/DeathSpider.(CreatureVisual).xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_CAVE_SPIDER</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_VENOM</Item>
+		<Item>ABILITY_FAST_ATTACK</Item>
+		<Item>ABILITY_HEXING_ATTACK</Item>
+	</Abilities>
+</Creature>

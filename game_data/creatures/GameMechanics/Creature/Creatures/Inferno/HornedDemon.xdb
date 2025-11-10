@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature ObjectRecordID="38">
+	<AttackSkill>7</AttackSkill>
+	<DefenceSkill>5</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>2</MinDamage>
+	<MaxDamage>4</MaxDamage>
+	<Speed>4</Speed>
+	<Initiative>9</Initiative>
+	<Flying>false</Flying>
+	<Health>14</Health>
+	<KnownSpells>
+		<Item><Spell>SPELL_ABILITY_EXPLOSION</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+	</KnownSpells>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>1</SpellPoints1>
+	<SpellPoints2>1</SpellPoints2>
+	<Exp>28</Exp>
+	<Power>150</Power>
+	<TimeToCommand>15</TimeToCommand>
+	<CreatureTier>2</CreatureTier>
+	<Upgrade>true</Upgrade>
+	<PairCreature>CREATURE_DEMON</PairCreature>
+	<CreatureTown>TOWN_INFERNO</CreatureTown>
+	<MagicElement><First>ELEMENT_FIRE</First><Second>ELEMENT_EARTH</Second></MagicElement>
+	<WeeklyGrowth>36</WeeklyGrowth>
+	<Cost>
+		<Gold>50</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Inferno/Horned_Demon.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>1</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Inferno/HornedDemon.xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_DEMON</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_DEMONIC</Item>
+		<Item>ABILITY_IMMUNITY_TO_FIRE</Item>
+		<Item>ABILITY_ENRAGED</Item>
+		<Item>ABILITY_BERSERKER_RAGE</Item>
+		<Item>ABILITY_EXPLOSION</Item>
+	</Abilities>
+</Creature>

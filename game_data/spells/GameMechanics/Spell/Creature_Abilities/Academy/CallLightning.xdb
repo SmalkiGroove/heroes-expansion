@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Spell ObjectRecordID="1000085">
+	<NameFileRef href="/Text/Game/Spells/Creature_Abilities/Academy/CallLightning_name.txt"/>
+	<LongDescriptionFileRef href=""/>
+	<Texture href="/Textures/SpellBook______2618/Spells/Spell_LightningBolt.xdb#xpointer(/Texture)"/>
+	<EffectTexture/>
+	<SpellBookPredictions/>
+	<CombatLogTexts/>
+	<Level>0</Level>
+	<MagicSchool>MAGIC_SCHOOL_SPECIAL</MagicSchool>
+	<RequiredHeroLevel>0</RequiredHeroLevel>
+	<IsAimed>true</IsAimed>
+	<TrainedCost>0</TrainedCost>
+	<damage>
+		<Item>
+			<Base>0</Base>
+			<PerPower>30</PerPower>
+		</Item>
+		<Item>
+			<Base>0</Base>
+			<PerPower>40</PerPower>
+		</Item>
+		<Item>
+			<Base>0</Base>
+			<PerPower>50</PerPower>
+		</Item>
+		<Item>
+			<Base>0</Base>
+			<PerPower>60</PerPower>
+		</Item>
+	</damage>
+	<duration/>
+	<sSpellCost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>0</Gold>
+	</sSpellCost>
+	<IsAreaAttack>false</IsAreaAttack>
+	<CanSelectDead>false</CanSelectDead>
+	<Target>TARGET_HOSTILE</Target>
+	<Element>ELEMENT_AIR</Element>
+	<DamageIsElemental>true</DamageIsElemental>
+	<visuals>
+		<Item href="CallLightning.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+	</visuals>
+</Spell>

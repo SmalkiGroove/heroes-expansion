@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="1000155">
+	<NameFileRef href="/Text/Game/TownBuildings/Preserve/Special_5/Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Preserve/Special_5/Description.txt"/>
+	<Type>TB_SPECIAL_5</Type>
+	<Upgrade>BLD_UPG_1</Upgrade>
+	<Cost>
+		<Wood>10</Wood>
+		<Ore>0</Ore>
+		<Mercury>2</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>2000</Gold>
+	</Cost>
+	<ModObjectName>TreantSapplings</ModObjectName>
+	<dependencies>
+		<Item href="/GameMechanics/TownBuildingSharedStats/Preserve/Dwelling_6/TreantArches.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_UNKNOWN</Creature>
+	<DevLevelNeeded>20</DevLevelNeeded>
+	<UIObjectName>Special_5</UIObjectName>
+	<UIStackPosition>0</UIStackPosition>
+	<Icon href="/UI/TownHall/preserve/128/TreantSamplings.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

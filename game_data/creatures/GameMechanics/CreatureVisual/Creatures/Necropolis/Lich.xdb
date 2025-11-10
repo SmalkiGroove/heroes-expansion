@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001242">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Necropolis/Lich.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Necropolis/Lich_Abilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Necropolis/Lich_desc.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Necropolis/ico_Lich.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Necropolis/ico_Lich_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Necropolis/ico_Lich_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Necropolis/ico_Lich_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Necropolis/Lich.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot href="/GameMechanics/Shot/Creatures/Necropolis/Lich.xdb#xpointer(/Shot)"/>
+	<SummoningEffect href="/GameMechanics/SpellVisual/CreatureSummon.xdb#xpointer(/SpellVisual)"/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits2.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="#n:inline(Win3DObj)" id="item_a74e1b9d-2fbb-4ca3-95e7-c23037dd8e51">
+		<Win3DObj ObjectRecordID="35">
+			<Model/>
+			<placements>
+				<Item>
+					<SizeDesc href="/GameMechanics/Win3DObjSizeDesc/creatureInfo.xdb#xpointer(/Win3DObjSizeDesc)"/>
+					<Matrix>9cd724bf67dd433f00000000000000002f3b0cbf600aecbe77b9323f77be1fbfd8bd083fae2ae63e1449373f000000000000000000000000000000000000803f</Matrix>
+					<Shift>
+						<x>0</x>
+						<y>-0.624</y>
+					</Shift>
+					<RollY>-2.2704</RollY>
+					<RollX>-0.7728</RollX>
+					<Scale>1</Scale>
+				</Item>
+			</placements>
+		</Win3DObj>
+	</Win3DView>
+	<MountPoint>
+		<x>-0.000549219</x>
+		<y>-0.217282</y>
+		<z>1.3436</z>
+	</MountPoint>
+	<MountBone>L_Shoulder</MountBone>
+</CreatureVisual>

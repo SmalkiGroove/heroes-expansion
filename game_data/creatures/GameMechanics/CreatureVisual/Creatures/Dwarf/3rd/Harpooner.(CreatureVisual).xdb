@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Dwarf/3rd/Harpooner_Name.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Dwarf/3rd/Harpooner_Abils.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Dwarf/3rd/Harpooner_Desc.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/UI/H5A2/Icons/Creatures/Dwarf_second_upg/Harpooner.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Dwarves/AlternativeUpgrade/T2_Harpooner/T2_Harpooner.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot href="/GameMechanics/Shot/Creatures/Dwarf/T2_Harpooner.xdb#xpointer(/Shot)"/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.0325752</x>
+		<y>-0.00549738</y>
+		<z>0.962015</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

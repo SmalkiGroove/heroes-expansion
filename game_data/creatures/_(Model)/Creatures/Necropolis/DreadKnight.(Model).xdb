@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Model ObjectRecordID="5553">
+	<Materials>
+		<Item href="#n:inline(Material)" id="item_84e85133-d99f-44f9-af11-5905add60901">
+			<Material ObjectRecordID="10252">
+				<Texture href="/Textures/Creatures/Necropolis/DreadKnight/DreadKnight_horse.tga.xdb#xpointer(/Texture)"/>
+				<Bump/>
+				<SpecFactor>0</SpecFactor>
+				<SpecColor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</SpecColor>
+				<Gloss/>
+				<MetalMirror>0</MetalMirror>
+				<DielMirror>0</DielMirror>
+				<Mirror/>
+				<CastShadow>true</CastShadow>
+				<ReceiveShadow>true</ReceiveShadow>
+				<Priority>0</Priority>
+				<TranslucentColor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</TranslucentColor>
+				<FloatParam>0</FloatParam>
+				<DetailTexture/>
+				<DetailScale>5</DetailScale>
+				<ProjectOnTerrain>false</ProjectOnTerrain>
+				<LightingMode>L_NORMAL</LightingMode>
+				<DynamicMode>DM_DONT_CARE</DynamicMode>
+				<Is2Sided>false</Is2Sided>
+				<Effect>M_GENERIC</Effect>
+				<AlphaMode>AM_ALPHA_TEST</AlphaMode>
+				<AffectedByFog>true</AffectedByFog>
+				<AddPlaced>false</AddPlaced>
+				<IgnoreZBuffer>false</IgnoreZBuffer>
+				<BackFaceCastShadow>false</BackFaceCastShadow>
+			</Material>
+		</Item>
+		<Item href="#n:inline(Material)" id="item_20d20d75-9a94-4468-afac-54e2871bb402">
+			<Material ObjectRecordID="10253">
+				<Texture href="/Textures/Creatures/Necropolis/DreadKnight/DreadKnight.tga.xdb#xpointer(/Texture)"/>
+				<Bump/>
+				<SpecFactor>0</SpecFactor>
+				<SpecColor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</SpecColor>
+				<Gloss/>
+				<MetalMirror>0</MetalMirror>
+				<DielMirror>0</DielMirror>
+				<Mirror/>
+				<CastShadow>true</CastShadow>
+				<ReceiveShadow>true</ReceiveShadow>
+				<Priority>0</Priority>
+				<TranslucentColor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</TranslucentColor>
+				<FloatParam>0</FloatParam>
+				<DetailTexture/>
+				<DetailScale>5</DetailScale>
+				<ProjectOnTerrain>false</ProjectOnTerrain>
+				<LightingMode>L_NORMAL</LightingMode>
+				<DynamicMode>DM_DONT_CARE</DynamicMode>
+				<Is2Sided>false</Is2Sided>
+				<Effect>M_GENERIC</Effect>
+				<AlphaMode>AM_ALPHA_TEST</AlphaMode>
+				<AffectedByFog>true</AffectedByFog>
+				<AddPlaced>false</AddPlaced>
+				<IgnoreZBuffer>false</IgnoreZBuffer>
+				<BackFaceCastShadow>false</BackFaceCastShadow>
+			</Material>
+		</Item>
+		<Item href="#n:inline(Material)" id="item_80929a79-034d-478a-b0cc-4e03eaed8a45">
+			<Material ObjectRecordID="10254">
+				<Texture href="/Textures/Creatures/Necropolis/DreadKnight/DreadKnight_coat.tga.xdb#xpointer(/Texture)"/>
+				<Bump/>
+				<SpecFactor>0</SpecFactor>
+				<SpecColor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</SpecColor>
+				<Gloss/>
+				<MetalMirror>0</MetalMirror>
+				<DielMirror>0</DielMirror>
+				<Mirror/>
+				<CastShadow>true</CastShadow>
+				<ReceiveShadow>true</ReceiveShadow>
+				<Priority>0</Priority>
+				<TranslucentColor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</TranslucentColor>
+				<FloatParam>0</FloatParam>
+				<DetailTexture/>
+				<DetailScale>5</DetailScale>
+				<ProjectOnTerrain>false</ProjectOnTerrain>
+				<LightingMode>L_NORMAL</LightingMode>
+				<DynamicMode>DM_DONT_CARE</DynamicMode>
+				<Is2Sided>false</Is2Sided>
+				<Effect>M_GENERIC</Effect>
+				<AlphaMode>AM_ALPHA_TEST</AlphaMode>
+				<AffectedByFog>true</AffectedByFog>
+				<AddPlaced>false</AddPlaced>
+				<IgnoreZBuffer>false</IgnoreZBuffer>
+				<BackFaceCastShadow>false</BackFaceCastShadow>
+			</Material>
+		</Item>
+	</Materials>
+	<Skeleton href="#n:inline(Skeleton)" id="item_dc783731-aa6e-4310-a2cf-626b94a380ef">
+		<Skeleton ObjectRecordID="450">
+			<SrcName href="/models/Creatures/Necropolis/DeathKnight_LOD.mb"/>
+			<RootJoint>Global</RootJoint>
+			<MSRFormat>true</MSRFormat>
+			<Animations/>
+			<uid>D60985DE-64B6-4E9F-BB4D-002BAF1D7127</uid>
+		</Skeleton>
+	</Skeleton>
+	<Geometry href="#n:inline(Geometry)" id="item_ed3859ed-3499-46a5-bc1b-8ea42f062adf">
+		<Geometry ObjectRecordID="4744">
+			<SrcName href="/models/Creatures/Necropolis/DeathKnight.mb"/>
+			<uid>B74CAA66-E777-437D-908A-A19DCDE4BAAD</uid>
+			<RootMesh/>
+			<RootJoint>Global</RootJoint>
+			<Size>
+				<x>4.27458</x>
+				<y>4.66634</y>
+				<z>4.57078</z>
+			</Size>
+			<Center>
+				<x>0.171363</x>
+				<y>0.27298</y>
+				<z>2.28536</z>
+			</Center>
+			<BestFitPoint>
+				<x>0.00172356</x>
+				<y>-0.291144</y>
+				<z>4.472</z>
+			</BestFitPoint>
+			<Dir>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0</w>
+			</Dir>
+			<AIGeometry href="#n:inline(AIGeometry)" id="item_b3d2a82c-c884-4614-9817-fa0f713143b8">
+				<AIGeometry ObjectRecordID="136">
+					<SrcName href="/models/Creatures/Necropolis/DeathKnight_LOD.mb"/>
+					<RootMesh>AI</RootMesh>
+					<RootJoint/>
+					<Volume>0</Volume>
+					<SolidPart>0</SolidPart>
+					<AABBCenter>
+						<x>0</x>
+						<y>-0.134807</y>
+						<z>1.76162</z>
+					</AABBCenter>
+					<AABBHalfSize>
+						<x>0.640667</x>
+						<y>1.49762</y>
+						<z>1.76162</z>
+					</AABBHalfSize>
+					<uid>E2D17C80-7168-4EBD-82D8-E2DB579C61AA</uid>
+				</AIGeometry>
+			</AIGeometry>
+			<NumMeshes>2</NumMeshes>
+			<MaterialQuantities>
+				<Item>1</Item>
+				<Item>2</Item>
+			</MaterialQuantities>
+			<MeshNames>
+				<Item>Horse_meshShape</Item>
+				<Item>Knight_meshShape</Item>
+			</MeshNames>
+			<MeshAnimated/>
+			<MeshWindAffected/>
+		</Geometry>
+	</Geometry>
+	<Animations/>
+	<WindPower>1</WindPower>
+</Model>

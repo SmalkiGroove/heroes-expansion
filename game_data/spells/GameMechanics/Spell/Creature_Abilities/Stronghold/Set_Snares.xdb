@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Spell>
+	<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Set_snares/name.txt"/>
+	<LongDescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Set_snares/description.txt"/>
+	<Texture href="/Textures/SpellBook______2618/Spells/Spell_Fireball.xdb#xpointer(/Texture)"/>
+	<EffectTexture/>
+	<SpellBookPredictions/>
+	<CombatLogTexts>
+		<Item href="/Text/CombatLog/Spells/SnareCast_0.txt"/>
+		<Item href="/Text/CombatLog/Spells/SnareCast_1.txt"/>
+		<Item href="/Text/CombatLog/Spells/SnareCast_2.txt"/>
+		<Item href="/Text/CombatLog/Spells/SnareCast_3.txt"/>
+	</CombatLogTexts>
+	<Level>0</Level>
+	<MagicSchool>MAGIC_SCHOOL_SPECIAL</MagicSchool>
+	<RequiredHeroLevel>0</RequiredHeroLevel>
+	<TrainedCost>0</TrainedCost>
+	<damage>
+		<Item>
+			<Base>11</Base>
+			<PerPower>11</PerPower>
+		</Item>
+		<Item>
+			<Base>14</Base>
+			<PerPower>14</PerPower>
+		</Item>
+		<Item>
+			<Base>17</Base>
+			<PerPower>17</PerPower>
+		</Item>
+		<Item>
+			<Base>20</Base>
+			<PerPower>20</PerPower>
+		</Item>
+	</damage>
+	<duration>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+	</duration>
+	<sSpellCost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>0</Gold>
+	</sSpellCost>
+	<IsAimed>true</IsAimed>
+	<IsAreaAttack>true</IsAreaAttack>
+	<CanSelectDead>false</CanSelectDead>
+	<Target>TARGET_NEUTRAL</Target>
+	<Element>ELEMENT_NONE</Element>
+	<DamageIsElemental>true</DamageIsElemental>
+	<visuals>
+		<Item href="Set_Snares.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+		<Item href="Set_Snares_End.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+	</visuals>
+</Spell>

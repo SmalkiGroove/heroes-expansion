@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature ObjectRecordID="66">
+	<AttackSkill>3</AttackSkill>
+	<DefenceSkill>2</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>2</MinDamage>
+	<MaxDamage>3</MaxDamage>
+	<Speed>3</Speed>
+	<Initiative>8</Initiative>
+	<Flying>false</Flying>
+	<Health>14</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>22</Exp>
+	<Power>105</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>2</CreatureTier>
+	<Upgrade>false</Upgrade>
+	<PairCreature>CREATURE_ZOMBIE</PairCreature>
+	<CreatureTown>TOWN_NECROMANCY</CreatureTown>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>39</WeeklyGrowth>
+	<Cost>
+		<Gold>40</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Necropolis/Walking_Dead.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>1</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Necropolis/Walking_Dead.xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_UNKNOWN</BaseCreature>
+	<Upgrades>
+		<Item>CREATURE_ZOMBIE</Item>
+		<Item>CREATURE_DISEASE_ZOMBIE</Item>
+	</Upgrades>
+	<Abilities>
+		<Item>ABILITY_UNDEAD</Item>
+		<Item>ABILITY_ENRAGED</Item>
+		<Item>ABILITY_PACK_HUNTER</Item>
+	</Abilities>
+</Creature>

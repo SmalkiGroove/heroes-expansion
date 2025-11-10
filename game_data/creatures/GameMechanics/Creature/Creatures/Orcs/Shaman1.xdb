@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature>
+	<AttackSkill>2</AttackSkill>
+	<DefenceSkill>2</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>2</MinDamage>
+	<MaxDamage>3</MaxDamage>
+	<Speed>4</Speed>
+	<Initiative>10</Initiative>
+	<Flying>false</Flying>
+	<Health>14</Health>
+	<KnownSpells>
+		<Item><Spell>SPELL_ABILITY_SACRIFICE_GOBLIN</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+		<Item><Spell>SPELL_HASTE</Spell><Mastery>MASTERY_BASIC</Mastery></Item>
+		<Item><Spell>SPELL_SLOW</Spell><Mastery>MASTERY_BASIC</Mastery></Item>
+	</KnownSpells>
+	<SpellPoints>10</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>22</Exp>
+	<Power>120</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>2</CreatureTier>
+	<Upgrade>false</Upgrade>
+	<PairCreature>CREATURE_SHAMAN_WITCH</PairCreature>
+	<CreatureTown>TOWN_STRONGHOLD</CreatureTown>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>28</WeeklyGrowth>
+	<Cost>
+		<Gold>40</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Stronghold/Shaman.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>1</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Orcs/Shaman1.xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_UNKNOWN</BaseCreature>
+	<Upgrades>
+		<Item>CREATURE_SHAMAN_WITCH</Item>
+		<Item>CREATURE_SHAMAN_HAG</Item>
+	</Upgrades>
+	<Abilities>
+		<Item>ABILITY_DEMON_RAGED</Item>
+		<Item>ABILITY_SACRIFICE_GOBLIN</Item>
+	</Abilities>
+</Creature>

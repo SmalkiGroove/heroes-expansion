@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature>
+	<AttackSkill>2</AttackSkill>
+	<DefenceSkill>3</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>1</MinDamage>
+	<MaxDamage>1</MaxDamage>
+	<Speed>5</Speed>
+	<Initiative>10</Initiative>
+	<Flying>false</Flying>
+	<Health>6</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>1</SpellPoints1>
+	<SpellPoints2>1</SpellPoints2>
+	<Exp>17</Exp>
+	<Power>124</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>1</CreatureTier>
+	<Upgrade>true</Upgrade>
+	<PairCreature>CREATURE_FAMILIAR</PairCreature>
+	<CreatureTown>TOWN_INFERNO</CreatureTown>
+	<MagicElement><First>ELEMENT_AIR</First><Second>ELEMENT_WATER</Second></MagicElement>
+	<WeeklyGrowth>66</WeeklyGrowth>
+	<Cost>
+		<Gold>20</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Inferno/Quasit.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>1</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Inferno/3rd/Quasit.(CreatureVisual).xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_FAMILIAR</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_DEMONIC</Item>
+		<Item>ABILITY_IMMUNITY_TO_FIRE</Item>
+		<Item>ABILITY_MANA_STEALER</Item>
+		<Item>ABILITY_MANA_DRAIN</Item>
+	</Abilities>	
+</Creature>

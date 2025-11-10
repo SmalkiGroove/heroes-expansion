@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001202">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Neutrals/Water_Elemental.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Neutrals/Water_ElementalAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Neutrals/Water_ElementalDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Neutral/ico_Water_Elemental.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Neutral/ico_Water_Elemental_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Neutral/ico_Water_Elemental_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Neutral/ico_Water_Elemental_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Neutral/WaterElemental.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect href="/GameMechanics/Spell/SpellLikeEffects/SummonElementals/SummonElementals_Water.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Steel_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="#n:inline(Win3DObj)" id="item_1abf9112-8ad1-4c1b-9a14-90a9e14f5995">
+		<Win3DObj ObjectRecordID="1000015">
+			<Model/>
+			<placements>
+				<Item>
+					<SizeDesc href="/GameMechanics/Win3DObjSizeDesc/creatureInfo.xdb#xpointer(/Win3DObjSizeDesc)"/>
+					<Matrix>00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</Matrix>
+					<Shift>
+						<x>0</x>
+						<y>0</y>
+					</Shift>
+					<RollY>0</RollY>
+					<RollX>0</RollX>
+					<Scale>1</Scale>
+				</Item>
+			</placements>
+		</Win3DObj>
+	</Win3DView>
+	<MountPoint>
+		<x>-0.0159087</x>
+		<y>-0.728633</y>
+		<z>1.95191</z>
+	</MountPoint>
+	<MountBone>b12B</MountBone>
+</CreatureVisual>

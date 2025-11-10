@@ -1,0 +1,164 @@
+# Redefine spells and charges for artifact Wand of X
+definitions: 
+  - &MOD_S01 3    # Lightning Bolt
+  - &MOD_C01 12
+  - &MOD_S02 4    # Ice Bolt
+  - &MOD_C02 12
+  - &MOD_S03 5    # Fireball
+  - &MOD_C03 8
+  - &MOD_S04 6    # Frost Ring
+  - &MOD_C04 8
+  - &MOD_S05 8    # Meteor Shower
+  - &MOD_C05 2
+  - &MOD_S06 9    # Implosion
+  - &MOD_C06 2
+  - &MOD_S07 38   # Land Mines
+  - &MOD_C07 12
+  - &MOD_S08 279  # Deep Freeze
+  - &MOD_C08 2
+  - &MOD_S09 236  # Fire Wall
+  - &MOD_C09 4
+  - &MOD_S10 237  # Stone Spikes
+  - &MOD_C10 8
+############
+  - &TOE_S01 1    # Magic Arrow
+  - &TOE_C01 6
+  - &TOE_S02 5    # Fireball
+  - &TOE_C02 3
+  - &TOE_S03 4    # Ice Bolt
+  - &TOE_C03 3
+  - &TOE_S04 12   # Slow
+  - &TOE_C04 5
+  - &TOE_S05 15   # Suffering
+  - &TOE_C05 5
+  - &TOE_S06 13   # Rupture
+  - &TOE_C06 10
+  - &TOE_S07 24   # Haste
+  - &TOE_C07 4
+  - &TOE_S08 25   # Endurance
+  - &TOE_C08 4
+  - &TOE_S09 29   # Deflect Arrows
+  - &TOE_C09 6
+  - &TOE_S10 40   # Shadow Image
+  - &TOE_C10 6
+edits:
+  - name: 'Spell ID 01'
+    address: '00A91728'
+    size: 4
+    type: int
+    original: *TOE_S01
+    modified: *MOD_S01
+  - name: 'Spell ID 02'
+    address: '00A9172C'
+    size: 4
+    type: int
+    original: *TOE_S02
+    modified: *MOD_S02
+  - name: 'Spell ID 03'
+    address: '00A91730'
+    size: 4
+    type: int
+    original: *TOE_S03
+    modified: *MOD_S03
+  - name: 'Spell ID 04'
+    address: '00A91734'
+    size: 4
+    type: int
+    original: *TOE_S04
+    modified: *MOD_S04
+  - name: 'Spell ID 05'
+    address: '00A91738'
+    size: 4
+    type: int
+    original: *TOE_S05
+    modified: *MOD_S05
+  - name: 'Spell ID 06'
+    address: '00A9173C'
+    size: 4
+    type: int
+    original: *TOE_S06
+    modified: *MOD_S06
+  - name: 'Spell ID 07'
+    address: '00A91740'
+    size: 4
+    type: int
+    original: *TOE_S07
+    modified: *MOD_S07
+  - name: 'Spell ID 08'
+    address: '00A91744'
+    size: 4
+    type: int
+    original: *TOE_S08
+    modified: *MOD_S08
+  - name: 'Spell ID 09'
+    address: '00A91748'
+    size: 4
+    type: int
+    original: *TOE_S09
+    modified: *MOD_S09
+  - name: 'Spell ID 10'
+    address: '00A9174C'
+    size: 4
+    type: int
+    original: *TOE_S10
+    modified: *MOD_S10
+  - name: 'Spell charges 01'
+    address: '00A91750'
+    size: 4
+    type: int
+    original: *TOE_C01
+    modified: *MOD_C01
+  - name: 'Spell charges 02'
+    address: '00A91754'
+    size: 4
+    type: int
+    original: *TOE_C02
+    modified: *MOD_C02
+  - name: 'Spell charges 03'
+    address: '00A91758'
+    size: 4
+    type: int
+    original: *TOE_C03
+    modified: *MOD_C03
+  - name: 'Spell charges 04'
+    address: '00A9175C'
+    size: 4
+    type: int
+    original: *TOE_C04
+    modified: *MOD_C04
+  - name: 'Spell charges 05'
+    address: '00A91760'
+    size: 4
+    type: int
+    original: *TOE_C05
+    modified: *MOD_C05
+  - name: 'Spell charges 06'
+    address: '00A91764'
+    size: 4
+    type: int
+    original: *TOE_C06
+    modified: *MOD_C06
+  - name: 'Spell charges 07'
+    address: '00A91768'
+    size: 4
+    type: int
+    original: *TOE_C07
+    modified: *MOD_C07
+  - name: 'Spell charges 08'
+    address: '00A9176C'
+    size: 4
+    type: int
+    original: *TOE_C08
+    modified: *MOD_C08
+  - name: 'Spell charges 09'
+    address: '00A91770'
+    size: 4
+    type: int
+    original: *TOE_C09
+    modified: *MOD_C09
+  - name: 'Spell charges 10'
+    address: '00A91774'
+    size: 4
+    type: int
+    original: *TOE_C10
+    modified: *MOD_C10

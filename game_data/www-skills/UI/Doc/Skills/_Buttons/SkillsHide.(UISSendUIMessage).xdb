@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UISSendUIMessage ObjectRecordID="5">
+	<ClassTypeID>285694982</ClassTypeID>
+	<SUIStateBaseFakeField>0</SUIStateBaseFakeField>
+	<szMessageID>
+		<First>UI_SHOW_WINDOW</First>
+		<Second>true</Second>
+	</szMessageID>
+	<szParam>
+		<First>SkillWheel</First>
+		<Second>true</Second>
+	</szParam>
+	<nForwardParam>
+		<First>0</First>
+		<Second>true</Second>
+	</nForwardParam>
+	<nBackParam>
+		<First>1</First>
+		<Second>true</Second>
+	</nBackParam>
+</UISSendUIMessage>

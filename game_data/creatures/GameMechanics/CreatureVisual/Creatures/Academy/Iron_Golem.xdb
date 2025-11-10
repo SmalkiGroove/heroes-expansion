@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001220">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Academy/Iron_Golem.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Academy/Iron_GolemAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Academy/Iron_GolemDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Academy/ico_Golem.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Academy/ico_golem_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Academy/ico_golem_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Academy/ico_golem_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Academy/IronGolem.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter href="/Characters/Creatures/Academy/IronGolem_death.(Character).xdb#xpointer(/Character)"/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Steel_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.0251883</x>
+		<y>0.0432517</y>
+		<z>1.47313</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

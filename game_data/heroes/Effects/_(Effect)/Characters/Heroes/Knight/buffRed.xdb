@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Effect ObjectRecordID="450">
+	<Instances>
+		<Item href="#n:inline(ParticleInstance)" id="item_819c4a4f-e7cc-435f-8eb0-7c58bbf45a00">
+			<ParticleInstance ObjectRecordID="593">
+				<SrcName/>
+				<Light>L_NORMAL</Light>
+				<Particle href="#n:inline(Particle)" id="item_0ede14fd-e1ea-48a6-9854-ef623ee72a8c">
+					<Particle ObjectRecordID="292">
+						<SrcName href="/Effects/Characters/Knight/KnightBuff.mb"/>
+						<ExportPrefix>Buff</ExportPrefix>
+						<WrapSize>
+							<x>0</x>
+							<y>0</y>
+						</WrapSize>
+						<Bound>c00f87be305792bf072d3440f521b9410ffe7841fece6b41789e0b41</Bound>
+						<PerParticleFog>false</PerParticleFog>
+						<uid>6FB4D66C-0A9D-4447-B17F-BDEE3837E553</uid>
+					</Particle>
+				</Particle>
+				<Position>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Position>
+				<Rotation>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+					<w>1</w>
+				</Rotation>
+				<Scale>1</Scale>
+				<Speed>1</Speed>
+				<Offset>0</Offset>
+				<EndCycle>6.5</EndCycle>
+				<CycleCount>1</CycleCount>
+				<Pivot>
+					<x>0</x>
+					<y>0</y>
+				</Pivot>
+				<Textures>
+					<Item/>
+					<Item href="/Textures/Effects/Spells/Figure01.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/Effects/Spells/Figure02.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/Effects/Spells/Figure03.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/Effects/Spells/FlashGlow06.xdb#xpointer(/Texture)"/>
+					<Item/>
+					<Item href="/Textures/Effects/Spells/FlashGlow00.xdb#xpointer(/Texture)"/>
+					<Item/>
+					<Item href="/Textures/Effects/Spells/EnergyRays00.xdb#xpointer(/Texture)"/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item href="/Textures/Effects/_Various/Glow01.xdb#xpointer(/Texture)"/>
+					<Item/>
+					<Item/>
+					<Item/>
+				</Textures>
+				<IsCrown>false</IsCrown>
+				<Static>P_STATIC</Static>
+				<DoesCastShadow>false</DoesCastShadow>
+				<GlueToBone>0</GlueToBone>
+				<GlueToNamedBone/>
+				<LeaveParticlesWhereStarted>false</LeaveParticlesWhereStarted>
+				<Priority>0</Priority>
+			</ParticleInstance>
+		</Item>
+		<Item href="#n:inline(ParticleInstance)" id="item_1256d714-e7eb-4945-aed6-462ffe8b7ba7">
+			<ParticleInstance ObjectRecordID="594">
+				<SrcName/>
+				<Light>L_NORMAL</Light>
+				<Particle href="#n:inline(Particle)" id="item_ce065866-198a-4a26-b0e1-cc08fe3ebc52">
+					<Particle ObjectRecordID="293">
+						<SrcName href="/Effects/Characters/Knight/KnightBuff.mb"/>
+						<ExportPrefix>Buff_waves</ExportPrefix>
+						<WrapSize>
+							<x>0</x>
+							<y>0</y>
+						</WrapSize>
+						<Bound>4077bb3d47f911c092c234402c842d41b1a500411ef5e040cfd7f03f</Bound>
+						<PerParticleFog>false</PerParticleFog>
+						<uid>53DDC284-4097-4C54-808F-FE06E72AE133</uid>
+					</Particle>
+				</Particle>
+				<Position>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Position>
+				<Rotation>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+					<w>1</w>
+				</Rotation>
+				<Scale>1</Scale>
+				<Speed>1</Speed>
+				<Offset>0</Offset>
+				<EndCycle>6.5</EndCycle>
+				<CycleCount>1</CycleCount>
+				<Pivot>
+					<x>0</x>
+					<y>0</y>
+				</Pivot>
+				<Textures>
+					<Item href="/Textures/Effects/FireSequence/Blue/Fire00.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/Effects/FireSequence/Blue/Fire01.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/Effects/FireSequence/Blue/Fire02.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/Effects/FireSequence/Blue/Fire03.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/Effects/FireSequence/Blue/Fire04.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/Effects/FireSequence/Blue/Fire05.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/Effects/FireSequence/Blue/Fire06.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/Effects/FireSequence/Blue/Fire07.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/Effects/FireSequence/Blue/Fire08.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/Effects/FireSequence/Blue/Fire09.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/Effects/FireSequence/Blue/Fire10.xdb#xpointer(/Texture)"/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+				</Textures>
+				<IsCrown>false</IsCrown>
+				<Static>P_STATIC</Static>
+				<DoesCastShadow>false</DoesCastShadow>
+				<GlueToBone>0</GlueToBone>
+				<GlueToNamedBone/>
+				<LeaveParticlesWhereStarted>false</LeaveParticlesWhereStarted>
+				<Priority>0</Priority>
+			</ParticleInstance>
+		</Item>
+	</Instances>
+	<Lights>
+		<Item href="buff.(LightInstance).xdb#xpointer(/LightInstance)"/>
+	</Lights>
+	<Models>
+		<Item href="Flag.(ModelInstance).xdb#xpointer(/ModelInstance)"/>
+	</Models>
+	<WindAffected>false</WindAffected>
+	<WindPower>1</WindPower>
+	<Duration>2.5</Duration>
+</Effect>

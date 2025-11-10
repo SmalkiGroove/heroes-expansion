@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Geometry ObjectRecordID="6142">
+	<SrcName href="/models/Heroes/Necromancer/Necromancer.mb"/>
+	<uid>F047720E-E6B6-4C39-8EB8-7AF1654FCF22</uid>
+	<RootMesh/>
+	<RootJoint>Global</RootJoint>
+	<Size>
+		<x>3.72342</x>
+		<y>4.1636</y>
+		<z>5.26991</z>
+	</Size>
+	<Center>
+		<x>-0.660127</x>
+		<y>0.153361</y>
+		<z>2.63159</z>
+	</Center>
+	<BestFitPoint>
+		<x>-0.96391</x>
+		<y>-0.0988156</y>
+		<z>6.08599</z>
+	</BestFitPoint>
+	<Dir>
+		<x>0</x>
+		<y>0</y>
+		<z>0</z>
+		<w>0</w>
+	</Dir>
+	<AIGeometry href="Necromancer-geom-AI.xdb#xpointer(/AIGeometry)"/>
+	<NumMeshes>3</NumMeshes>
+	<MaterialQuantities>
+		<Item>1</Item>
+		<Item>1</Item>
+		<Item>1</Item>
+	</MaterialQuantities>
+	<MeshNames>
+		<Item>ScytheShape</Item>
+		<Item>HeroShape</Item>
+		<Item>HorseShape</Item>
+	</MeshNames>
+	<MeshAnimated/>
+	<MeshWindAffected/>
+</Geometry>

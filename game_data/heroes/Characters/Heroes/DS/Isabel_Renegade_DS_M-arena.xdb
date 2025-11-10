@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimSet>
+	<animations>
+		<Item>
+			<Kind>idle01</Kind>
+			<Anim href="Isabel_Renegade_DS_M-arena-idle01.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>move</Kind>
+			<Anim href="Isabel_Renegade_DS_M-arena-move.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>spbellicose</Kind>
+			<Anim href="Isabel_Renegade_DS_M-arena-spbellicose.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+		<Item>
+			<Kind>spneutral</Kind>
+			<Anim href="Isabel_Renegade_DS_M-arena-spneutral.xdb#xpointer(/BasicSkelAnim)"/>
+		</Item>
+	</animations>
+	<ExpSrcScene href="/H5A1/Models/Heroes/Isabel_Renegade/Isabel_Flagless.mb"/>
+	<ExpSrcClipFolder href="/H5A1/Animations/Dialogs/Isabel/Isabel_mounted/Clip/"/>
+	<ExpRootTransform>Global</ExpRootTransform>
+</AnimSet>

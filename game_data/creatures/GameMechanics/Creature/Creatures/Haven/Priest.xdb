@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature ObjectRecordID="10">
+	<AttackSkill>9</AttackSkill>
+	<DefenceSkill>9</DefenceSkill>
+	<Shots>7</Shots>
+	<MinDamage>9</MinDamage>
+	<MaxDamage>12</MaxDamage>
+	<Speed>4</Speed>
+	<Initiative>9</Initiative>
+	<Flying>false</Flying>
+	<Health>57</Health>
+	<KnownSpells>
+		<Item><Spell>SPELL_BLESS</Spell><Mastery>MASTERY_EXPERT</Mastery></Item>
+		<Item><Spell>SPELL_BLOODLUST</Spell><Mastery>MASTERY_EXPERT</Mastery></Item>
+	</KnownSpells>
+	<SpellPoints>22</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>150</Exp>
+	<Power>1086</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>5</CreatureTier>
+	<Upgrade>false</Upgrade>
+	<PairCreature>CREATURE_CLERIC</PairCreature>
+	<CreatureTown>TOWN_HEAVEN</CreatureTown>
+	<MagicElement><First>ELEMENT_WATER</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>5</WeeklyGrowth>
+	<Cost>
+		<Gold>400</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Haven/Priest.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>1</CombatSize>
+	<PatternAttack href="/GameMechanics/Creature/Creatures/Fortress/CrossAttack.xdb#xpointer(/PatternAttack)"/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Haven/Priest.xdb#xpointer(/CreatureVisual)"/>
+	<Range>-2</Range>
+	<BaseCreature>CREATURE_UNKNOWN</BaseCreature>
+	<Upgrades>
+		<Item>CREATURE_CLERIC</Item>
+		<Item>CREATURE_ZEALOT</Item>
+	</Upgrades>
+	<Abilities>
+		<Item>ABILITY_IMMUNITY_TO_HYPNOTIZE</Item>
+		<Item>ABILITY_CROSS_ATTACK</Item>
+		<Item>ABILITY_PURGER</Item>
+	</Abilities>
+</Creature>

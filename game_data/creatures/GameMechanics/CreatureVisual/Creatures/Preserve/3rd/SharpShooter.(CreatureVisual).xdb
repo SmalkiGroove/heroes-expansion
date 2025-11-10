@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Preserve/3rd/SharpShooter_Name.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Preserve/3rd/SharpShooter_Abils.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Preserve/3rd/SharpShooter_Desc.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/UI/H5A2/Icons/Creatures/Sylvan_second_upg/Sharpshooter.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Rampart/AlternativeUpgrades/T3_Elf_Sniper.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot href="/GameMechanics/Shot/Creatures/Preserve/HighElf.xdb#xpointer(/Shot)"/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>0.00948414</x>
+		<y>0.0362078</y>
+		<z>1.10822</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

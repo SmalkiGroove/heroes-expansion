@@ -1,0 +1,16 @@
+# Change staff of the Netherworld initiative penalty from 20% to &INITIATIVE_PENALTY.
+definitions: 
+ - &INITIATIVE_PENALTY 0.12
+edits:
+  - name: Pointer to new value
+    address: '004A3A39'
+    size: 4
+    type: hex
+    original: 'F8 2F E1 00'
+    modified: '49 47 8A 00'
+  - name: New value
+    address: '004A3B49'
+    size: 4
+    type: float
+    original: -107374176
+    modified: *INITIATIVE_PENALTY

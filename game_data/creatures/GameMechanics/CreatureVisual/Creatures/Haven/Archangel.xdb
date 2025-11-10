@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001246">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Haven/Archangel.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Haven/ArchangelAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Haven/ArchangelDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Heaven/ico_ArchAngel.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Heaven/ico_ArchAngel_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Heaven/ico_ArchAngel_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Heaven/ico_ArchAngel_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Haven/ArchAngel.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="#n:inline(Win3DObj)" id="item_89ed72e6-19d0-4fbc-aa32-f870529a795d">
+		<Win3DObj ObjectRecordID="6">
+			<Model href="/_(Model)/Creatures/Haven/Archangel.(Model).xdb#xpointer(/Model)"/>
+			<placements>
+				<Item>
+					<SizeDesc href="/GameMechanics/Win3DObjSizeDesc/creatureInfo.xdb#xpointer(/Win3DObjSizeDesc)"/>
+					<Matrix>e7092b3f6297013e0000000000000000c5b40dbc25073b3d4bac2d3f8b6ca7bfd149013e88a32abf815a3e3d000000000000000000000000000000000000803f</Matrix>
+					<Shift>
+						<x>0</x>
+						<y>-1.308</y>
+					</Shift>
+					<RollY>-0.1872</RollY>
+					<RollX>-1.5024</RollX>
+					<Scale>0.68</Scale>
+				</Item>
+			</placements>
+		</Win3DObj>
+	</Win3DView>
+	<MountPoint>
+		<x>-0.00568152</x>
+		<y>-0.0591572</y>
+		<z>2.19119</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

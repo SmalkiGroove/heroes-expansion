@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature ObjectRecordID="1000050">
+	<AttackSkill>40</AttackSkill>
+	<DefenceSkill>40</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>40</MinDamage>
+	<MaxDamage>60</MaxDamage>
+	<Speed>5</Speed>
+	<Initiative>10</Initiative>
+	<Flying>false</Flying>
+	<Health>295</Health>
+	<KnownSpells>
+		<Item><Spell>SPELL_ABILITY_CALL_LIGHTNING</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+	</KnownSpells>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>1</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>1000</Exp>
+	<Power>6000</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>7</CreatureTier>
+	<Upgrade>true</Upgrade>
+	<PairCreature>CREATURE_GIANT</PairCreature>
+	<CreatureTown>TOWN_ACADEMY</CreatureTown>
+	<MagicElement><First>ELEMENT_AIR</First><Second>ELEMENT_WATER</Second></MagicElement>
+	<WeeklyGrowth>1</WeeklyGrowth>
+	<Cost>
+		<Gem>3</Gem>
+		<Gold>3500</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Academy/Titan.xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>2</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Academy/Titan.xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_GIANT</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_IMMUNITY_TO_MIND_CONTROL</Item>
+		<Item>ABILITY_SHIELD_WALL</Item>
+		<Item>ABILITY_IMMUNITY_TO_AIR</Item>
+		<Item>ABILITY_CALL_LIGHTNING</Item>
+		<Item>ABILITY_STORMSTRIKE</Item>
+	</Abilities>
+</Creature>

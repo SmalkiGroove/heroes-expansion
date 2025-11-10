@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature>
+	<AttackSkill>17</AttackSkill>
+	<DefenceSkill>17</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>14</MinDamage>
+	<MaxDamage>18</MaxDamage>
+	<Speed>8</Speed>
+	<Initiative>12</Initiative>
+	<Flying>true</Flying>
+	<Health>88</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>350</Exp>
+	<Power>2250</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>6</CreatureTier>
+	<Upgrade>false</Upgrade>
+	<PairCreature>CREATURE_WYVERN_POISONOUS</PairCreature>
+	<CreatureTown>TOWN_STRONGHOLD</CreatureTown>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>3</WeeklyGrowth>
+	<Cost>
+		<Gold>1200</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Stronghold/Wyvern.xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>2</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Orcs/Wyvern1.xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_UNKNOWN</BaseCreature>
+	<Upgrades>
+		<Item>CREATURE_WYVERN_POISONOUS</Item>
+		<Item>CREATURE_WYVERN_PAOKAI</Item>
+	</Upgrades>
+	<Abilities>
+		<Item>ABILITY_STRIKE_AND_RETURN</Item>
+		<Item>ABILITY_REGENERATION</Item>
+	</Abilities>
+</Creature>

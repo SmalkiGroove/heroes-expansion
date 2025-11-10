@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BasicSkelAnim>
+	<SrcName href="/models/Creatures/Inferno/HellHound.mb"/>
+	<uid>002132AF-64D7-4D91-BAA4-752C35924FCA</uid>
+	<ExpSrcClip href="/Animations/Creatures/Inferno/HellHound/Clip/HellHound.attack01.ma"/>
+	<ExpRootTransform>Global</ExpRootTransform>
+	<ExpFrameFirst>0</ExpFrameFirst>
+	<ExpFrameLast>0</ExpFrameLast>
+	<ExpSettingsFile href="/H:/Tools/MayaExportSettings/settings_character_anim.ges"/>
+	<MovementSpeed>0</MovementSpeed>
+	<SpeedFactor>1</SpeedFactor>
+	<Sound href="/Sounds/_(Sound)/Creatures/Dungeon/Maradeur/attack.xdb#xpointer(/Sound)"/>
+	<Effect href="Effect/idle.(Effect).xdb#xpointer(/Effect)"/>
+	<SpeedLineFallTime>250</SpeedLineFallTime>
+	<SpeedLineMaterial/>
+</BasicSkelAnim>

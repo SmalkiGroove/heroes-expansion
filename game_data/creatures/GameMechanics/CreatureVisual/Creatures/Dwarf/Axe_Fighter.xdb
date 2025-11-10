@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Dwarf/Axe_Fighter.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Dwarf/Axe_FighterAbilites.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Dwarf/Axe_FighterDiscription.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64 href="/UI/H5A1/Icons/Creatures/Dwarven/64x64/Axe_Fighter.(Texture).xdb#xpointer(/Texture)"/>
+	<Icon128 href="/UI/H5A1/Icons/Creatures/Dwarven/128x128/Axe_Fighter.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Dwarves/T2_Dwarf/SpearFighter.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot href="/GameMechanics/Shot/Creatures/Dwarf/AxeThrower.xdb#xpointer(/Shot)"/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>-0.0282062</x>
+		<y>0.68211</y>
+		<z>0.929118</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

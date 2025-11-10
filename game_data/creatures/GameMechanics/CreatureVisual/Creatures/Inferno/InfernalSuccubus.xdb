@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001263">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Inferno/InfernalSuccubus.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Inferno/InfernalSuccubusAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Inferno/InfernalSuccubusDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Inferno/ico_InfernalSuccubus.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Inferno/ico_InfernalSuccubus_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Inferno/ico_InfernalSuccubus_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Inferno/ico_InfernalSuccubus_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Inferno/InfernalSuccubus.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot href="/GameMechanics/Shot/Creatures/Inferno/Succubus_First_Stike.xdb#xpointer(/Shot)"/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Necro_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="#n:inline(Win3DObj)" id="item_773f900c-1cc2-43b0-89c6-50f50edf98ae">
+		<Win3DObj ObjectRecordID="4">
+			<Model href="/_(Model)/Creatures/Inferno/InfernalSuccubus.(Model).xdb#xpointer(/Model)"/>
+			<placements>
+				<Item>
+					<SizeDesc href="/GameMechanics/Win3DObjSizeDesc/creatureInfo.xdb#xpointer(/Win3DObjSizeDesc)"/>
+					<Matrix>223c933f4783193e000000001883403e88ba013bebd878bc9777943f16d98ebfda7f193ed93893bfbdf37abc000000000000000000000000000000000000803f</Matrix>
+					<Shift>
+						<x>0.188</x>
+						<y>-1.116</y>
+					</Shift>
+					<RollY>-0.129599</RollY>
+					<RollX>-1.584</RollX>
+					<Scale>1.16</Scale>
+				</Item>
+			</placements>
+		</Win3DObj>
+	</Win3DView>
+	<MountPoint>
+		<x>-0.0205362</x>
+		<y>-0.0146197</y>
+		<z>1.33696</z>
+	</MountPoint>
+	<MountBone>Spine1</MountBone>
+</CreatureVisual>

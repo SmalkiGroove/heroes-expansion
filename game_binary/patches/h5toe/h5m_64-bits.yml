@@ -1,0 +1,8 @@
+# Enables usage of additional memory for EXE
+edits:
+  - name: Make 64 bit
+    address: '00000156'
+    size: 1
+    type: hex
+    original: '0E'
+    modified: '2E'

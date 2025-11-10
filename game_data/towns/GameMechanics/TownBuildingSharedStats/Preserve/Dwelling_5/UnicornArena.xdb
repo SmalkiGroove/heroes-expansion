@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="1000069">
+	<NameFileRef href="/Text/Game/TownBuildings/Preserve/Dwelling_5/Upgraded_Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Preserve/Dwelling_5/Upgraded_Description.txt"/>
+	<Type>TB_DWELLING_5</Type>
+	<Upgrade>BLD_UPG_2</Upgrade>
+	<Cost>
+		<Wood>8</Wood>
+		<Ore>8</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>8</Sulfur>
+		<Gem>8</Gem>
+		<Gold>2500</Gold>
+	</Cost>
+	<ModObjectName>UnicornGlade</ModObjectName>
+	<dependencies>
+		<Item href="UnicornGlade.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_WAR_UNICORN</Creature>
+	<Creature2>CREATURE_WHITE_UNICORN</Creature2>
+	<DevLevelNeeded>12</DevLevelNeeded>
+	<UIObjectName>Dwelling_5</UIObjectName>
+	<UIStackPosition>1</UIStackPosition>
+	<Icon href="/UI/TownHall/preserve/128/d6u.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

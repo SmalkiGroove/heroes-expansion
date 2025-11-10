@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature>
+	<AttackSkill>6</AttackSkill>
+	<DefenceSkill>3</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>2</MinDamage>
+	<MaxDamage>6</MaxDamage>
+	<Speed>5</Speed>
+	<Initiative>10</Initiative>
+	<Flying>false</Flying>
+	<Health>23</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>40</Exp>
+	<Power>254</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>3</CreatureTier>
+	<Upgrade>true</Upgrade>
+	<PairCreature>CREATURE_ORC_WARRIOR</PairCreature>
+	<CreatureTown>TOWN_STRONGHOLD</CreatureTown>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>21</WeeklyGrowth>
+	<Cost>
+		<Gold>100</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Stronghold/Orc_Slayer.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>1</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Orcs/Orc2.xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_ORC_WARRIOR</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_DEMON_RAGED</Item>
+		<Item>ABILITY_ENRAGED</Item>
+		<Item>ABILITY_BRUTALITY</Item>
+	</Abilities>
+</Creature>

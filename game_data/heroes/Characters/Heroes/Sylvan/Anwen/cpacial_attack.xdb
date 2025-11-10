@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Effect ObjectRecordID="1000072">
+	<Instances>
+		<Item href="#n:inline(ParticleInstance)" id="item_9ffaab96-2eab-4447-915a-8e2d96a75d84">
+			<ParticleInstance ObjectRecordID="1000084">
+				<SrcName/>
+				<Light>L_NORMAL</Light>
+				<Particle href="#n:inline(Particle)" id="item_d7b5e434-eb36-4658-bb44-527e1663567a">
+					<Particle ObjectRecordID="1000083">
+						<SrcName href="/Effects/Characters/Ranger/special_attack.mb"/>
+						<ExportPrefix>Shot</ExportPrefix>
+						<WrapSize>
+							<x>0</x>
+							<y>0</y>
+						</WrapSize>
+						<Bound>3c5e2b3ebe3af73e63251340567418404e35a33f16b5b33f467eb83f</Bound>
+						<PerParticleFog>false</PerParticleFog>
+						<uid>23EF270D-223F-468A-A6F9-5AED97CB6D3A</uid>
+					</Particle>
+				</Particle>
+				<Position>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Position>
+				<Rotation>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+					<w>1</w>
+				</Rotation>
+				<Scale>1</Scale>
+				<Speed>1</Speed>
+				<Offset>0</Offset>
+				<EndCycle>4.5</EndCycle>
+				<CycleCount>1</CycleCount>
+				<Pivot>
+					<x>0</x>
+					<y>0</y>
+				</Pivot>
+				<Textures>
+					<Item href="/Textures/Effects/_Various/Glow05.xdb#xpointer(/Texture)"/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+				</Textures>
+				<IsCrown>false</IsCrown>
+				<Static>P_STATIC</Static>
+				<DoesCastShadow>false</DoesCastShadow>
+				<GlueToBone>0</GlueToBone>
+				<GlueToNamedBone/>
+				<LeaveParticlesWhereStarted>false</LeaveParticlesWhereStarted>
+				<Priority>0</Priority>
+			</ParticleInstance>
+		</Item>
+	</Instances>
+	<Lights/>
+	<Models>
+		<Item href="#n:inline(ModelInstance)" id="item_bfc1ba14-c5e4-4eac-86ab-b6d722bedd93">
+			<ModelInstance ObjectRecordID="1000022">
+				<Model href="/_(Model)/Effects/Characters/Ranger/special_attack.xdb#xpointer(/Model)"/>
+				<SkelAnim href="/_(BasicSkelAnim)/Effects/Characters/Ranger/special_attack.xdb#xpointer(/BasicSkelAnim)"/>
+				<Position>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Position>
+				<Rotation>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+					<w>1</w>
+				</Rotation>
+				<Scale>1</Scale>
+				<Offset>0</Offset>
+				<CycleLength>0</CycleLength>
+				<CycleCount>1</CycleCount>
+				<GlueToBone>0</GlueToBone>
+			</ModelInstance>
+		</Item>
+		<Item href="Body/Body.(ModelInstance).xdb#xpointer(/ModelInstance)"/>
+		<Item href="Head/Head.(ModelInstance).xdb#xpointer(/ModelInstance)"/>
+		<Item href="Hands/Hands.(ModelInstance)_specability.xdb#xpointer(/ModelInstance)"/>
+	</Models>
+	<WindAffected>false</WindAffected>
+	<WindPower>1</WindPower>
+	<Duration>2.5</Duration>
+</Effect>

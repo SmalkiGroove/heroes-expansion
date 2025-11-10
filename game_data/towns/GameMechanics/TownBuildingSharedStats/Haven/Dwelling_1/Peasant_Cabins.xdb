@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="25">
+	<NameFileRef href="/Text/Game/TownBuildings/Haven/Dwelling_1/Upgraded_Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Haven/Dwelling_1/Upgraded_Description.txt"/>
+	<Type>TB_DWELLING_1</Type>
+	<Upgrade>BLD_UPG_2</Upgrade>
+	<Cost>
+		<Wood>4</Wood>
+		<Ore>0</Ore>
+		<Mercury>1</Mercury>
+		<Crystal>1</Crystal>
+		<Sulfur>1</Sulfur>
+		<Gem>1</Gem>
+		<Gold>500</Gold>
+	</Cost>
+	<ModObjectName>field</ModObjectName>
+	<dependencies>
+		<Item href="Peasant_Huts.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_MILITIAMAN</Creature>
+	<Creature2>CREATURE_LANDLORD</Creature2>
+	<DevLevelNeeded>0</DevLevelNeeded>
+	<UIObjectName>Dwelling_1</UIObjectName>
+	<UIStackPosition>1</UIStackPosition>
+	<Icon href="/UI/TownHall/haven/128/d1u.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

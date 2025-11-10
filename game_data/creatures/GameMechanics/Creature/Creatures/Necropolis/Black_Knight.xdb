@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature ObjectRecordID="70">
+	<AttackSkill>15</AttackSkill>
+	<DefenceSkill>15</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>15</MinDamage>
+	<MaxDamage>20</MaxDamage>
+	<Speed>7</Speed>
+	<Initiative>8</Initiative>
+	<Flying>false</Flying>
+	<Health>115</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>400</Exp>
+	<Power>1793</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>6</CreatureTier>
+	<Upgrade>false</Upgrade>
+	<PairCreature>CREATURE_DREAD_KNIGHT</PairCreature>
+	<CreatureTown>TOWN_NECROMANCY</CreatureTown>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>3</WeeklyGrowth>
+	<Cost>
+		<Gold>1200</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Neutral/Black_Knight.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>2</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Neutrals/Black_Knight.xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_UNKNOWN</BaseCreature>
+	<Upgrades>
+		<Item>CREATURE_DREAD_KNIGHT</Item>
+		<Item>CREATURE_DEATH_KNIGHT</Item>
+	</Upgrades>
+	<Abilities>
+		<Item>ABILITY_UNDEAD</Item>
+		<Item>ABILITY_CURSING_ATTACK</Item>
+		<Item>ABILITY_LARGE_SHIELD</Item>
+		<Item>ABILITY_ARMORED</Item>
+	</Abilities>
+</Creature>

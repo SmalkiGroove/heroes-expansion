@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001240">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Preserve/Treant.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Preserve/Treant_Abilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Preserve/Treant_desc.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Preseve/ico_Dendroid.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Preseve/ico_Dendroid_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Preseve/ico_Dendroid_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Preseve/ico_Dendroid_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Preserve/Dendroid.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/War_Machine.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="/GameMechanics/Win3DObj/Creatures/Haven/Peasant.xdb#xpointer(/Win3DObj)"/>
+	<MountPoint>
+		<x>-0.0910861</x>
+		<y>0.594646</y>
+		<z>2.55769</z>
+	</MountPoint>
+	<MountBone>Spine</MountBone>
+</CreatureVisual>

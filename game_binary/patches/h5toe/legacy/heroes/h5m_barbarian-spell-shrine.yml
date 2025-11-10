@@ -1,0 +1,8 @@
+# Changes Magic Shrine bonus experience for Barbarians from 1000*Spell_level to 500*Spell_level
+edits:
+  - name: Edit 1
+    address: '00680400'
+    size: 2
+    type: hex
+    original: '03 F6'
+    modified: '90 90'

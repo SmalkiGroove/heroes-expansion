@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature>
+	<AttackSkill>8</AttackSkill>
+	<DefenceSkill>8</DefenceSkill>
+	<Shots>5</Shots>
+	<MinDamage>14</MinDamage>
+	<MaxDamage>18</MaxDamage>
+	<Speed>3</Speed>
+	<Initiative>9</Initiative>
+	<Flying>false</Flying>
+	<Health>60</Health>
+	<KnownSpells>
+		<Item><Spell>SPELL_MASS_DISPEL</Spell><Mastery>MASTERY_BASIC</Mastery></Item>
+		<Item><Spell>SPELL_FIREBALL</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+		<Item><Spell>SPELL_RUNE_OF_REVIVE</Spell><Mastery>MASTERY_EXPERT</Mastery></Item>
+		<Item><Spell>SPELL_RUNE_OF_ETHEREALNESS</Spell><Mastery>MASTERY_EXPERT</Mastery></Item>
+		<Item><Spell>SPELL_RUNE_OF_ELEMENTAL_IMMUNITY</Spell><Mastery>MASTERY_EXPERT</Mastery></Item>
+		<Item><Spell>SPELL_RUNE_OF_MAGIC_CONTROL</Spell><Mastery>MASTERY_EXPERT</Mastery></Item>
+		<Item><Spell>SPELL_RUNE_OF_EXORCISM</Spell><Mastery>MASTERY_EXPERT</Mastery></Item>
+		<Item><Spell>SPELL_RUNE_OF_DRAGONFORM</Spell><Mastery>MASTERY_EXPERT</Mastery></Item>
+		<Item><Spell>SPELL_RUNE_OF_BATTLERAGE</Spell><Mastery>MASTERY_EXPERT</Mastery></Item>
+		<Item><Spell>SPELL_RUNE_OF_STUNNING</Spell><Mastery>MASTERY_EXPERT</Mastery></Item>
+		<Item><Spell>SPELL_RUNE_OF_BERSERKING</Spell><Mastery>MASTERY_EXPERT</Mastery></Item>
+		<Item><Spell>SPELL_RUNE_OF_CHARGE</Spell><Mastery>MASTERY_EXPERT</Mastery></Item>
+	</KnownSpells>
+	<SpellPoints>40</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>250</Exp>
+	<Power>1329</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>5</CreatureTier>
+	<Upgrade>false</Upgrade>
+	<PairCreature>CREATURE_UNKNOWN</PairCreature>
+	<CreatureTown>TOWN_FORTRESS</CreatureTown>
+	<MagicElement><First>ELEMENT_FIRE</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>5</WeeklyGrowth>
+	<Cost>
+		<Gold>500</Gold>
+	</Cost>
+	<PresetPrice>0</PresetPrice>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Dwarf/Flame_Keeper.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>1</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Dwarf/3rd/FlameKeeper.(CreatureVisual).xdb#xpointer(/CreatureVisual)"/>
+	<Range>-2</Range>
+	<BaseCreature>CREATURE_RUNE_MAGE</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_FIRE_PROOF_50</Item>
+		<Item>ABILITY_MARK_OF_FIRE</Item>
+		<Item>ABILITY_AURA_OF_EARTH_VULNERABILITY</Item>
+		<Item>ABILITY_MANA_FEED</Item>
+		<Item>ABILITY_POWER_FEED</Item>
+	</Abilities>
+</Creature>

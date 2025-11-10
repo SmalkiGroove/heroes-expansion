@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature ObjectRecordID="1000048">
+	<AttackSkill>25</AttackSkill>
+	<DefenceSkill>25</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>20</MinDamage>
+	<MaxDamage>30</MaxDamage>
+	<Speed>6</Speed>
+	<Initiative>12</Initiative>
+	<Flying>false</Flying>
+	<Health>120</Health>
+	<KnownSpells>
+		<Item><Spell>SPELL_ABILITY_DASH</Spell><Mastery>MASTERY_ADVANCED</Mastery></Item>
+	</KnownSpells>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>3</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>500</Exp>
+	<Power>2750</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>6</CreatureTier>
+	<Upgrade>true</Upgrade>
+	<PairCreature>CREATURE_RAKSHASA</PairCreature>
+	<CreatureTown>TOWN_ACADEMY</CreatureTown>
+	<MagicElement><First>ELEMENT_WATER</First><Second>ELEMENT_FIRE</Second></MagicElement>
+	<WeeklyGrowth>3</WeeklyGrowth>
+	<Cost>
+		<Gold>1500</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Academy/Rakshasa_Rukh.xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>2</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Academy/Rakshasa_Rukh.xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_RAKSHASA</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_BRAVERY</Item>
+		<Item>ABILITY_NO_ENEMY_RETALIATION</Item>
+		<Item>ABILITY_DASH</Item>
+		<Item>ABILITY_IMMUNITY_TO_CURSE</Item>
+		<Item>ABILITY_IMMUNITY_TO_BLIND</Item>
+	</Abilities>
+</Creature>

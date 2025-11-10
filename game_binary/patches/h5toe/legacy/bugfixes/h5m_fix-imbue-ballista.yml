@@ -1,0 +1,44 @@
+# Fixes Imbue balista exhausting Hero ATB bug
+edits:
+  - name: Edit 1
+    address: '00658FED'
+    size: 2
+    type: hex
+    original: '74 5B'
+    modified: '74 63'
+  - name: Edit 2
+    address: '00658FF9'
+    size: 2
+    type: hex
+    original: '75 4F'
+    modified: '75 57'
+  - name: Edit 3
+    address: '0065900D'
+    size: 2
+    type: hex
+    original: '74 3B'
+    modified: '74 43'
+  - name: Edit 4
+    address: '00659027'
+    size: 2
+    type: hex
+    original: '74 21'
+    modified: '74 29'
+  - name: Edit 5
+    address: '00659037'
+    size: 9
+    type: hex
+    original: '8B 54 24 14 8D 4C 31 04 50'
+    modified: '50 E8 A3 C4 6D 00 90 90 90'
+  - name: Edit 6
+    address: '00659045'
+    size: 22
+    type: hex
+    original: '5F 5E C2 08 00 8B 44 24 0C 5F 5E C2 08 00 CC CC CC CC CC CC CC CC'
+    modified: '90 90 E8 E4 C4 6D 00 90 5F 5E C2 08 00 8B 44 24 0C 5F 5E C2 08 00'
+  - name: Edit 7
+    address: '00BD90E0'
+    size: 99
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+    modified: '8B 54 24 1C 8D 4C 31 04 56 51 50 89 CE 8B 86 E8 FE FF FF 8B 48 08 8D 8C 31 E8 FE FF FF 2B 49 FC 83 E9 68 8B 41 90 A3 24 61 13 01 8B 40 1C A3 28 61 13 01 58 59 5E C3 90 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 50 56 8B 35 24 61 13 01 A1 28 61 13 01 89 46 1C 5E 58 C3'

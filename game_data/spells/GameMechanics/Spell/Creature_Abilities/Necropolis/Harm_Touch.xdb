@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Spell ObjectRecordID="171">
+	<NameFileRef href="/Text/Game/Spells/Creature_Abilities/Necropolis/Harm_Touch/Name.txt"/>
+	<LongDescriptionFileRef href="/Text/Game/Spells/Creature_Abilities/Necropolis/Harm_Touch/Long_Description.txt"/>
+	<Texture href="/Textures/HeroScreen/Specializations/Necropolis/Soulhunter.xdb#xpointer(/Texture)"/>
+	<EffectTexture/>
+	<SpellBookPredictions/>
+	<CombatLogTexts>
+		<Item href="/Text/CombatLog/Spells/AbilityHarmTouch.txt"/>
+	</CombatLogTexts>
+	<Level>0</Level>
+	<MagicSchool>MAGIC_SCHOOL_SPECIAL</MagicSchool>
+	<RequiredHeroLevel>0</RequiredHeroLevel>
+	<IsAimed>true</IsAimed>
+	<TrainedCost>0</TrainedCost>
+	<damage/>
+	<duration/>
+	<sSpellCost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>0</Gold>
+	</sSpellCost>
+	<IsAreaAttack>false</IsAreaAttack>
+	<CanSelectDead>false</CanSelectDead>
+	<Target>TARGET_HOSTILE</Target>
+	<Element>ELEMENT_NONE</Element>
+	<visuals>
+		<Item href="HarmTouch.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+	</visuals>
+</Spell>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature>
+	<AttackSkill>18</AttackSkill>
+	<DefenceSkill>24</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>11</MinDamage>
+	<MaxDamage>13</MaxDamage>
+	<Speed>8</Speed>
+	<Initiative>10</Initiative>
+	<Flying>true</Flying>
+	<Health>105</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>350</Exp>
+	<Power>2250</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>6</CreatureTier>
+	<Upgrade>false</Upgrade>
+	<PairCreature>CREATURE_WARLORD</PairCreature>
+	<CreatureTown>TOWN_FORTRESS</CreatureTown>
+	<MagicElement><First>ELEMENT_AIR</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>3</WeeklyGrowth>
+	<Cost>
+		<Gold>1200</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Dwarf/Thane.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>2</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Dwarf/Thane.xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_UNKNOWN</BaseCreature>
+	<Upgrades>
+		<Item>CREATURE_WARLORD</Item>
+		<Item>CREATURE_THUNDER_THANE</Item>
+	</Upgrades>
+	<Abilities>
+		<Item>ABILITY_HOLD_GROUND</Item>
+		<Item>ABILITY_DOUBLE_ATTACK</Item>
+	</Abilities>
+</Creature>

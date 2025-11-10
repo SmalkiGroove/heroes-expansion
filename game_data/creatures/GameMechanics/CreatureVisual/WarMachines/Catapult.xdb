@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001174">
+	<CreatureNameFileRef href="/Text/Game/Creatures/WarMachines/Catapult.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/WarMachines/CatapultAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/WarMachines/CatapultDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/WarMachines/ico_Catapult.xdb#xpointer(/Texture)"/>
+	<Icon32/>
+	<Icon64/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/WarMachines/ico_Catapult_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/WarMachines/Catapult.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter href="/Characters/Creatures/WarMachines/Catapult_death.(Character).xdb#xpointer(/Character)"/>
+	<AnimShot href="/GameMechanics/Shot/Creatures/WarMachines/Catapult.xdb#xpointer(/Shot)"/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/War_Machine.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="#n:inline(Win3DObj)" id="item_4506e89b-3de0-45ab-88cf-084de904f7aa">
+		<Win3DObj ObjectRecordID="46">
+			<Model href="/_(Model)/Creatures/WarMachines/Catapult.(Model).xdb#xpointer(/Model)"/>
+			<placements>
+				<Item>
+					<SizeDesc href="/GameMechanics/Win3DObjSizeDesc/creatureInfo.xdb#xpointer(/Win3DObjSizeDesc)"/>
+					<Matrix>10689d3e84cd3fbeef51b831000000005211c03db49f1d3e648d9f3e138340bf920726be574188be1893383e000000000000000000000000000000000000803f</Matrix>
+					<Shift>
+						<x>0</x>
+						<y>-0.752</y>
+					</Shift>
+					<RollY>0.5472</RollY>
+					<RollX>-1.0464</RollX>
+					<Scale>0.36</Scale>
+				</Item>
+			</placements>
+		</Win3DObj>
+	</Win3DView>
+	<MountPoint>
+		<x>0</x>
+		<y>2.396</y>
+		<z>0.291</z>
+	</MountPoint>
+	<MountBone>hitPoint</MountBone>
+</CreatureVisual>

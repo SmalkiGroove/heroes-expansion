@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats>
+	<NameFileRef href="/Text/Game/TownBuildings/StrongHold/Dwelling_7/Upgraded_Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/StrongHold/Dwelling_7/Upgraded_Description.txt"/>
+	<Type>TB_DWELLING_7</Type>
+	<Upgrade>BLD_UPG_2</Upgrade>
+	<Cost>
+		<Wood>0</Wood>
+		<Ore>30</Ore>
+		<Mercury>30</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>10000</Gold>
+	</Cost>
+	<ModObjectName>Dwelling_7</ModObjectName>
+	<dependencies>
+		<Item href="CyclopChasm.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_CYCLOP_UNTAMED</Creature>
+	<Creature2>CREATURE_CYCLOP_BLOODEYED</Creature2>
+	<DevLevelNeeded>20</DevLevelNeeded>
+	<UIObjectName>Dwelling_7</UIObjectName>
+	<UIStackPosition>1</UIStackPosition>
+	<Icon href="/UI/H5A2/Icons/City_Buildings/Cyclop_Abyss.(Texture).xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

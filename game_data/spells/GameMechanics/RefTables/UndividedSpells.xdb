@@ -1,0 +1,1417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Table_Spell_SpellID ObjectRecordID="-1">
+	<objects>
+		<Item>
+			<ID>SPELL_NONE</ID>
+			<Obj />
+		</Item>
+		<Item>
+			<ID>SPELL_MAGIC_ARROW</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DestructiveMagic/Magic_Arrow.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_MAGIC_FIST</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DestructiveMagic/MagicFist.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_LIGHTNING_BOLT</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DestructiveMagic/Lightning_Bolt.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ICE_BOLT</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DestructiveMagic/Ice_Bolt.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_FIREBALL</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DestructiveMagic/Fireball.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_FROST_RING</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DestructiveMagic/Frost_Ring.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_CHAIN_LIGHTNING</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DestructiveMagic/Chain_Lightning_Hit.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_METEOR_SHOWER</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DestructiveMagic/Meteor_Shower.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_IMPLOSION</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DestructiveMagic/Implosion.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ARMAGEDDON</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DestructiveMagic/Armageddon.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_CURSE</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DarkMagic/Curse.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SLOW</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DarkMagic/Slow.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_DISRUPTING_RAY</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DarkMagic/Disrupting_Ray.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_PLAGUE</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DarkMagic/Plague.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_WEAKNESS</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DarkMagic/Weakness.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_WEAKNING_STRIKE</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Necropolis/Weakening_Strike.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_FORGETFULNESS</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DarkMagic/Forgetfulness.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_BERSERK</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DarkMagic/Berserk.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_BLIND</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DarkMagic/Blind.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_HYPNOTIZE</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DarkMagic/Hypnotize.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_UNHOLY_WORD</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DarkMagic/Unholy_Word.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_UNHOLY_WORD_HIT_EFFECT</ID>
+			<Obj href="/GameMechanics/Spell/Test/DebugTeleport.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_BLESS</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/LightMagic/Bless.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_HASTE</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/LightMagic/Haste.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_STONESKIN</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/LightMagic/StoneSkin.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_DISPEL</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/LightMagic/Dispel.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_DISPEL_FAIL</ID>
+			<Obj href="/GameMechanics/Spell/Test/DebugTeleport.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_BLOODLUST</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/LightMagic/Bloodlust.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_DEFLECT_ARROWS</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/LightMagic/Deflect_Arrows.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_DEFLECT_ARROWS_HIT_EFFECT</ID>
+			<Obj href="/GameMechanics/Spell/Test/DebugTeleport.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ANTI_MAGIC</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/LightMagic/AntiMagic.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_TELEPORT</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/LightMagic/Teleport.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_TELEPORT_FINISH_EFFECT</ID>
+			<Obj href="/GameMechanics/Spell/Test/DebugTeleport.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_CELESTIAL_SHIELD</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/LightMagic/Celestial_Shield.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_HOLY_WORD</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/LightMagic/Holy_Word.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_HOLY_WORD_HIT_EFFECT</ID>
+			<Obj href="/GameMechanics/Spell/Test/DebugTeleport.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ARMAGEDDON_HIT_EFFECT</ID>
+			<Obj href="/GameMechanics/Spell/Test/DebugTeleport.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_LAND_MINE</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/SummoningMagic/Land_Mine.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_WASP_SWARM</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/SummoningMagic/Wasp_Swarm.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_PHANTOM</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/SummoningMagic/Phantom.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EARTHQUAKE</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/SummoningMagic/Earthquake.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ANIMATE_DEAD</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/SummoningMagic/Animate_Dead.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SUMMON_ELEMENTALS</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/SummoningMagic/Summon_Elementals.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_SUMMON_ELEMENTALS_AIR</ID>
+			<Obj href="/GameMechanics/Spell/Test/DebugTeleport.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_SUMMON_ELEMENTALS_EARTH</ID>
+			<Obj href="/GameMechanics/Spell/Test/DebugTeleport.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_SUMMON_ELEMENTALS_FIRE</ID>
+			<Obj href="/GameMechanics/Spell/Test/DebugTeleport.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_SUMMON_ELEMENTALS_WATER</ID>
+			<Obj href="/GameMechanics/Spell/Test/DebugTeleport.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_RESURRECT</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/SummoningMagic/Resurrect.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SUMMON_BOAT</ID>
+			<Obj href="/GameMechanics/Spell/Adventure_Spells/Summon_Boat.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_DIMENSION_DOOR</ID>
+			<Obj href="/GameMechanics/Spell/Adventure_Spells/DimensionDoor.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_TOWN_PORTAL</ID>
+			<Obj href="/GameMechanics/Spell/Adventure_Spells/Town_Portal.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ENCOURAGE</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Abilities/Knight/Encourage.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_HOLY_CHARGE</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Unique/CounterStrike/HolyCharge.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_PRAYER</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Unique/CounterStrike/Prayer.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_DEMONIC_STRIKE_CAST</ID>
+			<Obj href="/GameMechanics/Spell/Test/DebugTeleport.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_DEMONIC_STRIKE</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Unique/Gating/Demonic_Strike.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_CONSUME_CORPSE</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Unique/Gating/Consume_Corpse.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPIRIT_LINK</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Necropolis/Spirit_Link.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_DEATH_SCREAM</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Unique/Necromancy/Death_Scream.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SNIPE_DEAD</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Unique/Avenger/SnipeDead.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_MULTISHOT</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Unique/Avenger/Multishot.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_IMBUE_ARROW</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Unique/Avenger/ImbueArrow.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_MAGIC_BOND</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Unique/Artificer/Magic_Bond.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_MELT_ARTIFACT</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Unique/Artificer/Melt_Artifact.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_COUNTERSPELL</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Abilities/Wizard/Counterspell.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_UNSUMMON</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Abilities/Wizard/Unsummon.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_DARK_RITUAL</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Unique/Invocation/DarkRitual.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_OFFENCE1</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Common/Offence/Offence_1.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_OFFENCE2</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Common/Offence/Offence_2.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_OFFENCE3</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Common/Offence/Offence_3.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_ARCHERY</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Common/Offence/Archery.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_FRENZY</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Common/Offence/Frenzy.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_DEFENCE1</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Common/Defence/Defence_1.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_DEFENCE2</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Common/Defence/Defence_2.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_DEFENCE3</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Common/Defence/Defence_3.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_PROTECTION</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Common/Defence/Protection.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_EVASION</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Common/Defence/Evasion.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_TOUGHNESS</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Common/Defence/Toughness.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_LUCK1</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Common/Luck/Luck_1.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_LUCK2</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Common/Luck/Luck_2.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_LUCK3</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Common/Luck/Luck_3.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_RESISTANCE</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Common/Luck/Resistance.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_LUCKY_STRIKE</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Common/Luck/Lucky_Strike.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_LEADERSHIP1</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Common/Leadership/Leadership_1.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_LEADERSHIP2</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Common/Leadership/Leadership_2.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_LEADERSHIP3</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Common/Leadership/Leadership_3.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_WAR_MACHINES1</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Common/War_Machines/War_Machines_1.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_WAR_MACHINES2</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Common/War_Machines/War_Machines_2.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_WAR_MACHINES3</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Common/War_Machines/War_Machines_3.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_FIRST_AID</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Common/War_Machines/First_Aid.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_BALLISTA</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Common/War_Machines/Ballista.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_CATAPULT</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Common/War_Machines/Catapult.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_DEMONIC_FIRE</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Feats/Demon_Lord/Demonic_Fire.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_ELVEN_VOLLEY</ID>
+			<Obj href="/GameMechanics/Spell/SpellLikeEffects/ElvenVolley.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_MATRON_SALVO</ID>
+			<Obj href="/GameMechanics/Spell/SpellLikeEffects/MatronSalvo.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_ANCIENT_SMITHY</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Feats/Knight/Ancient_Smithy.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_FIRE_PROTECTION</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Abilities/Demon_Lord/Fire_Protection.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_JOUSTER</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Haven/Jouster.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_PEASANTS</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Haven/Squire.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_ARCHERS</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Haven/Archer_Commander.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_FOOTMEN</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Haven/Infantry_Commander.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_GRIFFINS</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Haven/Griffon_Commander.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_ARTILLERYMAN</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Haven/Artilleryman.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_FURIOUS</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Inferno/Furious.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_BOMBARDIER</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Inferno/Bombardier.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_IMPREGNABLE</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Inferno/Impregnable.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_FLAGBEARER_OF_DARKNESS</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Inferno/Flagbearer_of_Darkness.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_HOUNDS</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Inferno/Breeder.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_SUCCUBUSES</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Inferno/Temptress.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_BLADE_MASTER</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Preserve/Blade_Master.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_ELVES</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Preserve/Hunter.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_UNICORNS</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Preserve/Unicorn_Trainer.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_ELVEN_FURY</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Preserve/Elven_Fury.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_FOREST_GUARDIAN</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Preserve/Forest_Guardian.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_ZOMBIES</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Necropolis/Zombie_Leader.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_VAMPIRES</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Necropolis/Vamipre_Princess.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_EMPIRIC</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Necropolis/Empiric.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_SOULHUNTER</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Necropolis/Soulhunter.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_MASTER_OF_ELEMENTS</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Academy/Master_of_Elements.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_GREMLINS</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Academy/Artisan.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_GOLEMS</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Academy/Machinist.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_MAGES</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Academy/Mentor.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_PRUDENT</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Dungeon/Prudent.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_EVASIVE</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Dungeon/Evasive.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_RIDERS</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Dungeon/Lizard_Breeder.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_MATRON_SALVO</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Dungeon/Matron_Salvo.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_SAVAGE</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Dungeon/Savage.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_WITCHES</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Dungeon/Seducer.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_MINOTAURS</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Dungeon/Slaveholder.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_TOWN_OFFENCE_P1</ID>
+			<Obj href="/GameMechanics/Spell/Town_Specializations/Offence_+_1.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_TOWN_OFFENCE_M1</ID>
+			<Obj href="/GameMechanics/Spell/Town_Specializations/Offence_-_1.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_TOWN_DEFENCE_P1</ID>
+			<Obj href="/GameMechanics/Spell/Town_Specializations/Defence_+_1.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_TOWN_DEFENCE_M1</ID>
+			<Obj href="/GameMechanics/Spell/Town_Specializations/Defence_-_1.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_TOWN_OFFENCE_DEFENCE_P1</ID>
+			<Obj href="/GameMechanics/Spell/Town_Specializations/Offence_Defence_+1.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_TOWN_OFFENCE_DEFENCE_M1</ID>
+			<Obj href="/GameMechanics/Spell/Town_Specializations/Offence_Defence_-1.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_TOWN_OFFENCE_P2</ID>
+			<Obj href="/GameMechanics/Spell/Town_Specializations/Offence_+_2.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_TOWN_OFFENCE_M2</ID>
+			<Obj href="/GameMechanics/Spell/Town_Specializations/Offence_-_2.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_TOWN_DEFENCE_P2</ID>
+			<Obj href="/GameMechanics/Spell/Town_Specializations/Defence_+_2.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_TOWN_DEFENCE_M2</ID>
+			<Obj href="/GameMechanics/Spell/Town_Specializations/Defence_-_2.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_TOWN_OFFENCE_DEFENCE_P2</ID>
+			<Obj href="/GameMechanics/Spell/Town_Specializations/Offence_Defence_+2.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_TOWN_OFFENCE_DEFENCE_M2</ID>
+			<Obj href="/GameMechanics/Spell/Town_Specializations/Offence_Defence_-2.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_TOWN_LUCK_P1</ID>
+			<Obj href="/GameMechanics/Spell/Town_Specializations/Luck_+_1.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_TOWN_LUCK_M1</ID>
+			<Obj href="/GameMechanics/Spell/Town_Specializations/Luck_-_1.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_TOWN_MORALE_P1</ID>
+			<Obj href="/GameMechanics/Spell/Town_Specializations/Morale_+_1.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_TOWN_MORALE_M1</ID>
+			<Obj href="/GameMechanics/Spell/Town_Specializations/Morale_-_1.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_TOWN_ELVEN_CAPITAL</ID>
+			<Obj href="/GameMechanics/Spell/Town_Specializations/Elven_Capital.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_TOWN_WALLS</ID>
+			<Obj href="/GameMechanics/Spell/Town_Specializations/Walls.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_TOWN_TOWERS</ID>
+			<Obj href="/GameMechanics/Spell/Town_Specializations/Towers.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_TOWN_UNHOLY_TEMPLE</ID>
+			<Obj href="/GameMechanics/Spell/Town_Specializations/UholyTemple.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_TOWN_DARK_GUARDIAN</ID>
+			<Obj href="/GameMechanics/Spell/Town_Specializations/DarkGuardian.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_TOWN_SPARKLING_FOUNTAIN</ID>
+			<Obj href="/GameMechanics/Spell/Town_Specializations/SparklingFountain.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_TOWN_DIETY_OF_FIRE</ID>
+			<Obj href="/GameMechanics/Spell/Town_Specializations/DietyOfFire.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_TOWN_INFERNAL_LOOM</ID>
+			<Obj href="/GameMechanics/Spell/Town_Specializations/InfernalLoom.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_BATTLE_DIVE</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Haven/BattleDive.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_BATTLE_DIVE_FINISH</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Haven/BattleDiveFinish.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_LAY_HANDS</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Haven/LayHands.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_RESURRECT_ALLIES</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Haven/RessurectAllies.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_SCATTER_SHOT</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Haven/ScatterShot.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_GATING</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Unique/Gating/Gating.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_FEAR</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Inferno/Fear.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_SUMMON_BALOR</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Inferno/SummonBalor.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_EXPLOSION</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Inferno/Explosion.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_EXPLOSION_EFFECT</ID>
+			<Obj href="/GameMechanics/Spell/Test/DebugTeleport.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_CHAIN_SHOT_END_EFFECT</ID>
+			<Obj href="/GameMechanics/Spell/Test/DebugTeleport.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_MANA_DESTROY</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Inferno/ManaDestroy.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_MANA_STEAL</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Inferno/ManaSteal.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_LIFE_DRAIN</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Necropolis/Life_Drain.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_MANA_DRAIN</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Necropolis/Mana_Drain.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_DEATH_CLOUD</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Necropolis/Death_Cloud.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_HARM_TOUCH</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Necropolis/Harm_Touch.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_MANA_FEED</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Preserve/Mana_Feed.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_ENTANGLING_ROOTS</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Preserve/EntanglingRoots.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_REPAIR</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Academy/Repair.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_RANDOM_CAST_DARK</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Academy/RandomCastCurse.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_RANDOM_CAST_DARK_LIGHT</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Academy/RandomCastCurseBless.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_DASH</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Academy/Dash.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_DASH_EFFECT</ID>
+			<Obj href="/GameMechanics/Spell/Test/DebugTeleport.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_REMOTE_CONTROL</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Abilities/Wizard/Remote_Control.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_ARMOR_CRUSHING</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Unique/Artificer/Armor_Crushing.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_POISONOUS_ATTACK</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Dungeon/PoisonEffect.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_LIZARD_BITE_HIT</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Dungeon/LizardBiteHitEffect.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_REGENRATION</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Dungeon/RegenerationEffect.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_REBIRTH</ID>
+			<Obj href="/GameMechanics/Spell/Test/DebugTeleport.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_FROST_BREATH</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Neutrals/FrostBreath.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_BAD_LUCK</ID>
+			<Obj href="/GameMechanics/Spell/Test/DebugTeleport.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_GOOD_LUCK</ID>
+			<Obj href="/GameMechanics/Spell/Test/DebugTeleport.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_BAD_MORALE</ID>
+			<Obj href="/GameMechanics/Spell/Test/DebugTeleport.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_GOOD_MORALE</ID>
+			<Obj href="/GameMechanics/Spell/Test/DebugTeleport.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_FIRST_AID_TENT_HEAL</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/War_Machines/FirstAidTent_Heal.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_CLERIC_HIT</ID>
+			<Obj href="/GameMechanics/Spell/Test/DebugTeleport.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_COMBAT_HIT_00</ID>
+			<Obj href="/GameMechanics/Spell/Test/DebugTeleport.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_COMBAT_HIT_01</ID>
+			<Obj href="/GameMechanics/Spell/Test/DebugTeleport.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_COMBAT_HIT_02</ID>
+			<Obj href="/GameMechanics/Spell/Test/DebugTeleport.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_WAR_MACHINE_HIT</ID>
+			<Obj href="/GameMechanics/Spell/Test/DebugTeleport.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_FIRST_AID_HIT</ID>
+			<Obj href="/GameMechanics/Spell/Test/DebugTeleport.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_FIRE_HIT</ID>
+			<Obj href="/GameMechanics/Spell/Test/DebugTeleport.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_BASH_HIT</ID>
+			<Obj href="/GameMechanics/Spell/Test/DebugTeleport.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_SUN_FIRE</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Abilities/Ranger/SunFire.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_SOIL_BURN</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Abilities/Ranger/SoilBurn.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_AVATAR_OF_DEATH</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Abilities/Necromancer/AvatarOfDeath.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_FROZEN</ID>
+			<Obj href="/GameMechanics/Spell/SpellLikeEffects/EffectFrozen.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_FIRE_DAMAGE</ID>
+			<Obj href="/GameMechanics/Spell/SpellLikeEffects/EffectFire.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_SEDUCE_CASTED</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Inferno/Seducing.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_DEMON_HUNTER</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Stronghold/DemonHunter.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_FIRE_SHIELD</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Neutrals/FireShieldEffect.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ARTFSET_NECROMANCERS_DEBUFF</ID>
+			<Obj href="/GameMechanics/Spell/SpellLikeEffects/NecromancersArtfsetEffect.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_CHILLING_BONES</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Feats/ChillingBones.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_DEBUG_TELEPORT</ID>
+			<Obj href="/GameMechanics/Spell/Test/DebugTeleport.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_ENRAGED</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Common/Enraged.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_MASS_CURSE</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DarkMagic/Mass_Curse.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_MASS_DISRUPTING_RAY</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DarkMagic/Mass_Disrupting_Ray.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_MASS_SLOW</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DarkMagic/Mass_Slow.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_MASS_FORGETFULNESS</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DarkMagic/Mass_Forgetfulness.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_MASS_PLAGUE</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DarkMagic/Mass_Plague.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_MASS_WEAKNESS</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DarkMagic/Mass_Weakness.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_MASS_BLESS</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/LightMagic/Mass_Bless.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_MASS_DISPEL</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/LightMagic/Mass_Dispel.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_MASS_STONESKIN</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/LightMagic/Mass_Stoneskin.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_MASS_DEFLECT_ARROWS</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/LightMagic/Mass_Deflect_Arrows.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_MASS_BLOODLUST</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/LightMagic/Mass_Bloodlast.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_MASS_HASTE</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/LightMagic/Mass_Haste.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_CALL_LIGHTNING</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Academy/CallLightning.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EMPOWERED_MAGIC_ARROW</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DestructiveMagic/Empowered_Magic_Arrow.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EMPOWERED_MAGIC_FIST</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DestructiveMagic/Empowered_MagicFist.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EMPOWERED_LIGHTNING_BOLT</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DestructiveMagic/Empowered_Lightning_Bolt.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EMPOWERED_ICE_BOLT</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DestructiveMagic/Empowered_Ice_Bolt.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EMPOWERED_FIREBALL</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DestructiveMagic/Empowered_Fireball.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EMPOWERED_FROST_RING</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DestructiveMagic/Empowered_Frost_Ring.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EMPOWERED_CHAIN_LIGHTNING</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DestructiveMagic/Empowered_Chain_Lightning.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EMPOWERED_METEOR_SHOWER</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DestructiveMagic/Empowered_Meteor_Shower.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EMPOWERED_IMPLOSION</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DestructiveMagic/Empowered_Implosion.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EMPOWERED_ARMAGEDDON</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DestructiveMagic/Empowered_Armageddon.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EMPOWERED_STONE_SPIKES</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DestructiveMagic/Empowered_StoneSpikes.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SUMMON_CREATURES</ID>
+			<Obj href="/GameMechanics/Spell/Adventure_Spells/Summon_Creatures.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_CONJURE_PHOENIX</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/SummoningMagic/ConjurePhoenix.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_FIREWALL</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/SummoningMagic/Firewall.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_STONE_SPIKES</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DestructiveMagic/StoneSpikes.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_UBER_CHAIN_LIGHTNING</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DestructiveMagic/Uber_Chain_Lightning.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_BOSS_FIREWALL</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Abilities/BigBossFirewall.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_TIME_SHIFT</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Academy/TimeShift.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_GUARDIAN_ANGEL</ID>
+			<Obj href="/GameMechanics/Spell/SpellLikeEffects/GuardianAngel.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_GHOST_DISPELL</ID>
+			<Obj href="/GameMechanics/Spell/Adventure_Spells/GhostSpellDispell.(Spell).xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_GHOST_GUARD</ID>
+			<Obj href="/GameMechanics/Spell/Adventure_Spells/GhostSpellGuard.(Spell).xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_WOUND</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Dwarf/WoundEffect.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_BERSERKER_RAGE</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Dwarf/BerserkerRage.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_MARK_OF_FIRE</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Dwarf/MarkOfFireEffect.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_STORMBOLT</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Dwarf/Stormbolt.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_MAGMA_SHIELD</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Dwarf/MagmaShieldEffect.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_RUNE_OF_CHARGE</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/RunicMagic/RuneOfCharge.(Spell).xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_RUNE_OF_BERSERKING</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/RunicMagic/RuneOfBerserking.(Spell).xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_RUNE_OF_MAGIC_CONTROL</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/RunicMagic/RuneOfMagicControl.(Spell).xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_RUNE_OF_EXORCISM</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/RunicMagic/RuneOfExorcism.(Spell).xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_RUNE_OF_ELEMENTAL_IMMUNITY</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/RunicMagic/RuneOfElementalImmunity.(Spell).xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_RUNE_OF_STUNNING</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/RunicMagic/RuneOfStunning.(Spell).xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_RUNE_OF_BATTLERAGE</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/RunicMagic/RuneOfBattleRage.(Spell).xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_RUNE_OF_ETHEREALNESS</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/RunicMagic/RuneOfEthrealness.(Spell).xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_RUNE_OF_REVIVE</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/RunicMagic/RuneOfRevive.(Spell).xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_RUNE_OF_DRAGONFORM</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/RunicMagic/RuneOfDragonForm.(Spell).xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_REFRESH_RUNE</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Unique/Runelore/RefreshRune.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_BORDERGUARD</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Fortress/Borderguard.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_AXE_MASTER</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Fortress/AxeMaster.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_BEAR_RAIDERS</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Fortress/BearRiders.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_MAGISTER</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Fortress/Magister.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_DEFENDER</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Fortress/Defender.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_DWARVEN_LUCK</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Feats/Runemage/DwarvenLuck.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_OFFENSIVE_FORMATION</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Feats/Runemage/OffensiveFormation.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_DEFENSIVE_FORMATION</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Feats/Runemage/DefensiveFormation.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_DISTRACT</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Feats/Runemage/Distract.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_ABSOLUTE_PROTECTION</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Unique/Runelore/AbsoluteProtection.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_SET_AFIRE</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Feats/Runemage/SetAfire.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_AGILITY</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Neutrals/Agility.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_FINE_RUNE</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/RunicMagic/FineRune.(Spell).xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_STRONG_RUNE</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/RunicMagic/StrongRune.(Spell).xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_BATTLE_FRENZY</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Haven/Renegates/BattleFrenzy.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_RUNIC_ATTUNEMENT</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/RunicMagic/EffectRunicAttunement.(Spell).xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_MASTER_OF_INITIATIVE</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Dungeon/MasterOfInitiative.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SORROW</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DarkMagic/Sorrow/Sorrow.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_VAMPIRISM</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DarkMagic/Vampirism/Vampirism.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_DEEP_FREEZE</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DestructiveMagic/DeepFreeze.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_REGENERATION</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/LightMagic/Regeneration.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_DIVINE_VENGEANCE</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/LightMagic/DivineVengeance.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ARCANE_CRYSTAL</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/SummoningMagic/ArcaneCrystal.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SUMMON_HIVE</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/SummoningMagic/SummonHive.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_BLADE_BARRIER</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/SummoningMagic/BladeBarrier.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_UBER_METEOR_SHOWER</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DestructiveMagic/Uber_Meteor_Shower.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_PREPARATION</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Feats/Runemage/Preparation.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_EXPLODING_CORPSES</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Unique/Gating/Exploding_Corpses.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_MASTER_OF_LIGHTNING</ID>
+			<Obj href="/GameMechanics/Spell/SpellLikeEffects/EffectMasterOfLighinings.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_TOWN_BLAZING_ANVIL</ID>
+			<Obj href="/GameMechanics/Spell/Town_Specializations/BlazingAnvil.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_WARCRY_RALLING_CRY</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Abilities/Barbarian/RallingCry.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_WARCRY_CALL_OF_BLOOD</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Abilities/Barbarian/CallOfBlood.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_WARCRY_WORD_OF_THE_CHIEF</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Abilities/Barbarian/WordOfTheChief.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_WARCRY_FEAR_MY_ROAR</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Abilities/Barbarian/FearMyRoar.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_WARCRY_BATTLECRY</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Abilities/Barbarian/Battlecry.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_WARCRY_SHOUT_OF_MANY</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Abilities/Barbarian/ShoutOfMany.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_VENOM</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Stronghold/Venom.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ARTFSET_LIONS_DEMORALIZED</ID>
+			<Obj href="/GameMechanics/Spell/SpellLikeEffects/LionArtifactDemoralized.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EMPOWERED_DEEP_FREEZE</ID>
+			<Obj href="/GameMechanics/Spell/Combat_Spells/DestructiveMagic/Empowered_DeepFreeze.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_SACRIFICE_GOBLIN</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Stronghold/Sacrifice_Goblin.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_SWALLOW_GOBLIN</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Stronghold/Swallow_Goblin.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_SET_SNARES</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Stronghold/Set_Snares.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_DEMON_RAGE_LEVEL_1</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Stronghold/DemonRageLevel1.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_DEMON_RAGE_LEVEL_2</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Stronghold/DemonRageLevel2.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_DEMON_RAGE_LEVEL_3</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Stronghold/DemonRageLevel3.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_POWERFULL_BLOW</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Abilities/Barbarian/PowerfullBlow.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_BATTLE_ELATION</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Feats/Barbarian/BattleElation.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_LUCK_OF_THE_BARBARIAN</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Feats/Barbarian/LuckOfTheBarbarian.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_DEATH_TO_NONEXISTENT</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Feats/Barbarian/DeathToNonexistent.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SKILL_MIGHT_OVER_MAGIC</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Feats/Barbarian/MightOverMagic.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_GRIM_FIGHTER</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Stronghold/GrimFighter.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_CENTAUR_MISTRESS</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Stronghold/CentaurMistress.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_WYVERN_TAMER</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Stronghold/WyvernTamer.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_ORC_ELDER</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Stronghold/OrcElder.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_BLOODDRINKER</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Stronghold/Blooddrinker.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_SPEC_GOBLIN_KING</ID>
+			<Obj href="/GameMechanics/Spell/Hero_Skills/Specializations/Stronghold/GoblinKing.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_DEATH_WAIL</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Necropolis/Death_Wail.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_INVISIBILITY</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Dungeon/Invisibility.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_SCAVENGER</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Stronghold/Scavenger.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_SYPHON_MANA</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Inferno/Syphon_Mana.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_LEAP</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Inferno/Leap.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_SUMMON_OTHER</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Inferno/SummonOther.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_INCINERATE</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Dungeon/Incinerate.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_TREEANT_UNION</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Preserve/Treeant_Union.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_AMMO_STEAL</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Necropolis/Ammo_Steal.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_ORDER_OF_THE_CHIEF</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Stronghold/Order_Of_The_Chielf.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_DEFILE_MAGIC</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Stronghold/Defile_Magic.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_BEAR_ROAR</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Dwarf/BearRoar.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_SEDUCE</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Inferno/Seduce.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_RAGE_OF_THE_FOREST</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Preserve/Rage_Of_The_Forest.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_SABOTAGE</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Academy/Sabotage.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_HARPOON_STRIKE</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Dwarf/HarpoonStrike.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_LUCK_GAMBLER</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Academy/LuckGambler.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_POWER_FEED</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Preserve/PowerFeed.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_CALL_STORM</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Academy/CallStorm.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_LIQUID_FLAME_BREATH</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Dwarf/LiquidFlameEffect.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_SLEEPING_STRIKE</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Necropolis/SleepingStrike.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_PREPARED_POSITION</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Dwarf/PreparedPosition.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_BATTLE_RAGE</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Dwarf/BattleRage.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_UNLUCKY</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Stronghold/EvilEyeEffect.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_HORROR_OF_THE_DEATH</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Necropolis/HorrorOfDeath.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_IMMUNITY_TO_AIR</ID>
+			<Obj href="/GameMechanics/Spell/SpellLikeEffects/ImmunityToAir.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_IMMUNITY_TO_FIRE</ID>
+			<Obj href="/GameMechanics/Spell/SpellLikeEffects/ImmunityToFire.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_IMMUNITY_TO_WATER</ID>
+			<Obj href="/GameMechanics/Spell/SpellLikeEffects/ImmunityToWater.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_IMMUNITY_TO_EARTH</ID>
+			<Obj href="/GameMechanics/Spell/SpellLikeEffects/ImmunityToEarth.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_FLAMESTRIKE</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Dwarf/Flamestrike.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_PACK_DIVE</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Haven/PackDive.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_PACK_DIVE_FINISH</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/Haven/PackDive.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_CUSTOM1</ID>
+			<Obj href="/GameMechanics/Spell/Script_Abilities/Custom1/Custom1.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_CUSTOM2</ID>
+			<Obj href="/GameMechanics/Spell/Script_Abilities/Custom2/Custom2.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_CUSTOM3</ID>
+			<Obj href="/GameMechanics/Spell/Script_Abilities/Custom3/Custom3.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_ABILITY_CUSTOM4</ID>
+			<Obj href="/GameMechanics/Spell/Script_Abilities/Custom4/Custom4.xdb#xpointer(/Spell)"/>
+		</Item>
+		<Item>
+			<ID>SPELL_EFFECT_FIRST_AID_TENT_PLAGUE</ID>
+			<Obj href="/GameMechanics/Spell/Creature_Abilities/War_Machines/FirstAidTent_Plague.xdb#xpointer(/Spell)"/>
+		</Item>
+	</objects>
+</Table_Spell_SpellID>

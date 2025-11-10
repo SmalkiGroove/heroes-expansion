@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Model ObjectRecordID="5643">
+	<Materials>
+		<Item href="#n:inline(Material)" id="item_87463519-324c-41b4-b28b-439905232b5c">
+			<Material ObjectRecordID="8982">
+				<Texture href="FireHound.(Texture).xdb#xpointer(/Texture)"/>
+				<Bump/>
+				<SpecFactor>0</SpecFactor>
+				<SpecColor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</SpecColor>
+				<Gloss/>
+				<MetalMirror>0</MetalMirror>
+				<DielMirror>0</DielMirror>
+				<Mirror/>
+				<CastShadow>true</CastShadow>
+				<ReceiveShadow>true</ReceiveShadow>
+				<Priority>0</Priority>
+				<TranslucentColor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</TranslucentColor>
+				<FloatParam>0</FloatParam>
+				<DetailTexture/>
+				<DetailScale>5</DetailScale>
+				<ProjectOnTerrain>false</ProjectOnTerrain>
+				<LightingMode>L_NORMAL</LightingMode>
+				<DynamicMode>DM_DONT_CARE</DynamicMode>
+				<Is2Sided>false</Is2Sided>
+				<Effect>M_GENERIC</Effect>
+				<AlphaMode>AM_ALPHA_TEST</AlphaMode>
+				<AffectedByFog>true</AffectedByFog>
+				<AddPlaced>false</AddPlaced>
+				<IgnoreZBuffer>false</IgnoreZBuffer>
+				<BackFaceCastShadow>false</BackFaceCastShadow>
+			</Material>
+		</Item>
+	</Materials>
+	<Skeleton href="#n:inline(Skeleton)" id="item_63d93968-c1b7-48e5-8690-bc39db951190">
+		<Skeleton ObjectRecordID="466">
+			<SrcName href="/models/Creatures/Inferno/HellHound.mb"/>
+			<RootJoint>Global</RootJoint>
+			<MSRFormat>true</MSRFormat>
+			<Animations/>
+			<uid>C2199FDC-6B38-4B81-8F48-2B342BA39E63</uid>
+		</Skeleton>
+	</Skeleton>
+	<Geometry href="#n:inline(Geometry)" id="item_768348bd-31e6-4e71-919d-492e1cc1e691">
+		<Geometry ObjectRecordID="4834">
+			<SrcName href="/models/Creatures/Inferno/HellHound.mb"/>
+			<uid>F1361FCF-20F5-4064-A1D9-06960B2A049B</uid>
+			<RootMesh/>
+			<RootJoint>Global</RootJoint>
+			<Size>
+				<x>0.766534</x>
+				<y>3.70451</y>
+				<z>1.49999</z>
+			</Size>
+			<Center>
+				<x>0</x>
+				<y>0.901263</y>
+				<z>0.749996</z>
+			</Center>
+			<BestFitPoint>
+				<x>0.00335752</x>
+				<y>-0.668455</y>
+				<z>1.34484</z>
+			</BestFitPoint>
+			<Dir>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0</w>
+			</Dir>
+			<AIGeometry href="#n:inline(AIGeometry)" id="item_28341690-0fa4-4613-92e5-517b1ea1c152">
+				<AIGeometry ObjectRecordID="188">
+					<SrcName href="/models/Creatures/Inferno/HellHound.mb"/>
+					<RootMesh>AI</RootMesh>
+					<RootJoint/>
+					<Volume>0</Volume>
+					<SolidPart>0</SolidPart>
+					<AABBCenter>
+						<x>0</x>
+						<y>-0.0780626</y>
+						<z>0.703289</z>
+					</AABBCenter>
+					<AABBHalfSize>
+						<x>0.3774</x>
+						<y>0.800418</y>
+						<z>0.707777</z>
+					</AABBHalfSize>
+					<uid>D0ACD79B-BDAC-45C3-8557-332597BAC99C</uid>
+				</AIGeometry>
+			</AIGeometry>
+			<NumMeshes>1</NumMeshes>
+			<MaterialQuantities>
+				<Item>1</Item>
+			</MaterialQuantities>
+			<MeshNames>
+				<Item>BodyShape</Item>
+			</MeshNames>
+			<MeshAnimated/>
+			<MeshWindAffected/>
+		</Geometry>
+	</Geometry>
+	<Animations/>
+	<WindPower>1</WindPower>
+</Model>

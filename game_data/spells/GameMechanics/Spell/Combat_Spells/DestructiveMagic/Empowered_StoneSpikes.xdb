@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Spell ObjectRecordID="1000103">
+	<NameFileRef href="/Text/Game/Spells/Combat/EmpoweredStoneSpikes/Name.txt"/>
+	<LongDescriptionFileRef href="/Text/Game/Spells/Combat/EmpoweredStoneSpikes/Long_Description.txt"/>
+	<Texture href="/Textures/SpellBook______2618/Spells/Spell_StoneSpikes.xdb#xpointer(/Texture)"/>
+	<EffectTexture href="/UI/Common/Icons/Spell_Buff_Icons/Stone_Spikes.(Texture).xdb#xpointer(/Texture)"/>
+	<SpellBookPredictions/>
+	<CombatLogTexts/>
+	<Level>3</Level>
+	<MagicSchool>MAGIC_SCHOOL_DESTRUCTIVE</MagicSchool>
+	<RequiredHeroLevel>0</RequiredHeroLevel>
+	<IsAimed>true</IsAimed>
+	<TrainedCost>22</TrainedCost>
+	<damage>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+		<Item>
+			<Base>1</Base>
+			<PerPower>1</PerPower>
+		</Item>
+	</damage>
+	<duration/>
+	<sSpellCost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>0</Gold>
+	</sSpellCost>
+	<IsAreaAttack>true</IsAreaAttack>
+	<CanSelectDead>false</CanSelectDead>
+	<Target>TARGET_HOSTILE</Target>
+	<Element>ELEMENT_EARTH</Element>
+	<visuals/>
+</Spell>

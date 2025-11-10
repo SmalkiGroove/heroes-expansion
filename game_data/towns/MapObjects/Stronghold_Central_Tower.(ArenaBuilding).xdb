@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ArenaBuilding>
+	<Pos>
+		<x>16</x>
+		<y>8</y>
+	</Pos>
+	<Size>
+		<x>2</x>
+		<y>2</y>
+	</Size>
+	<Object href="/Arenas/CombatArena/Stronghold_arena/s_central_tower.(ArenaModObject).xdb#xpointer(/ArenaModObject)"/>
+	<Locator href="/Arenas/CombatArena/Stronghold_arena/shooter_s3.(ArenaLocObject).xdb#xpointer(/ArenaLocObject)"/>
+	<Shooter href="/Characters/Creatures/Orcs/T2_Orc/T2b_CentaurNomad.(Character).xdb#xpointer(/Character)"/>
+	<Shot href="/GameMechanics/Shot/Creatures/Orcs/Centaur.xdb#xpointer(/Shot)"/>
+	<Type>BIG_TOWER</Type>
+	<HitEffect href="/Effects/_(Effect)/Arenas/InfernoSiege/Hit/BigTower.xdb#xpointer(/Effect)"/>
+	<HitSound/>
+	<DestroyEffects>
+		<Item>
+			<Upgrade>1</Upgrade>
+			<RuinLevel>0</RuinLevel>
+			<Effect href="/Effects/_(Effect)/Arenas/Stronghold/GateCrash01.xdb#xpointer(/Effect)"/>
+			<SoundEffect/>
+			<Locator/>
+		</Item>
+		<Item>
+			<Upgrade>1</Upgrade>
+			<RuinLevel>1</RuinLevel>
+			<Effect/>
+			<SoundEffect/>
+			<Locator/>
+		</Item>
+	</DestroyEffects>
+	<blockedTiles>
+		<Item>
+			<x>15</x>
+			<y>7</y>
+		</Item>
+		<Item>
+			<x>15</x>
+			<y>8</y>
+		</Item>
+	</blockedTiles>
+	<blockedTilesForDestroyed>
+		<Item>
+			<x>15</x>
+			<y>7</y>
+		</Item>
+		<Item>
+			<x>15</x>
+			<y>8</y>
+		</Item>
+	</blockedTilesForDestroyed>
+	<NameFileRef href="/Text/Game/Creatures/CombatBuildings/CenterTower.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/CombatBuildings/CenterTowerDescription.txt"/>
+</ArenaBuilding>

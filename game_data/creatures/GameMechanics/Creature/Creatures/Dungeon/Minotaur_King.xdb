@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature ObjectRecordID="1000028">
+	<AttackSkill>10</AttackSkill>
+	<DefenceSkill>6</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>5</MinDamage>
+	<MaxDamage>8</MaxDamage>
+	<Speed>5</Speed>
+	<Initiative>9</Initiative>
+	<Flying>false</Flying>
+	<Health>31</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>40</Exp>
+	<Power>474</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>3</CreatureTier>
+	<Upgrade>true</Upgrade>
+	<PairCreature>CREATURE_MINOTAUR</PairCreature>
+	<CreatureTown>TOWN_DUNGEON</CreatureTown>
+	<MagicElement><First>ELEMENT_FIRE</First><Second>ELEMENT_WATER</Second></MagicElement>
+	<WeeklyGrowth>16</WeeklyGrowth>
+	<Cost>
+		<Gold>100</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Dungeon/Minotaur_King.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>1</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Dungeon/Minotaur_King.xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_MINOTAUR</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_BRAVERY</Item>
+		<Item>ABILITY_DOUBLE_ATTACK</Item>
+		<Item>ABILITY_FIERCE_RETALIATION</Item>
+	</Abilities>
+</Creature>

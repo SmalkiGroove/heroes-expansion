@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual>
+	<CreatureNameFileRef href="/Text/Game/Creatures/Haven/Zealot.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Haven/ZealotAbilites.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Haven/ZealotDescription.txt"/>
+	<Icon/>
+	<Icon32/>
+	<Icon64 href="/UI/H5A1/Icons/Creatures/Regenerats/64x64/Zealot.(Texture).xdb#xpointer(/Texture)"/>
+	<Icon128 href="/UI/H5A1/Icons/Creatures/Regenerats/128x128/Zealot.(Texture).xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Renegades/Cleric.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot href="/GameMechanics/Shot/Creatures/Haven/Cleric.xdb#xpointer(/Shot)"/>
+	<SummoningEffect/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Flesh_and_Blood.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView/>
+	<MountPoint>
+		<x>0.0175458</x>
+		<y>-0.0639013</y>
+		<z>1.16347</z>
+	</MountPoint>
+	<MountBone>Chest</MountBone>
+</CreatureVisual>

@@ -1,0 +1,86 @@
+# Better exp curve and max level increased to 50
+edits:
+  - name: Algorithm
+    address: '0074BAB0'
+    size: 64
+    type: hex
+    original: '83 EC 08 80 3D 46 71 02 01 00 0F 85 4C 01 00 00 A1 E0 55 F7 00 8B 15 E4 55 F7 00 A3 90 6D 02 01 A1 E8 55 F7 00 A3 98 6D 02 01 A1 F0 55 F7 00 89 15 94 6D 02 01 8B 15 EC 55 F7 00 A3 A0 6D 02 01'
+    modified: 'B8 FF FF FF 7F 3B 0D F0 C6 B4 00 0F 8F 22 00 00 00 3B 0D F4 C6 B4 00 0F 8E 17 00 00 00 A1 F8 C6 B4 00 8B 15 F4 C6 B4 00 03 05 FC C6 B4 00 42 39 CA 7C F5 C3 8B 04 8D 00 C7 B4 00 C3 90 90 90 90'
+  - name: Edit max level
+    address: '0074BAF0'
+    size: 4
+    type: hex
+    original: 'A1 F8 55 F7'
+    modified: '32 00 00 00'
+  - name: Edit last defined level
+    address: '0074BAF4'
+    size: 4
+    type: hex
+    original: '00 89 15 9C'
+    modified: '3C 00 00 00'
+  - name: Edit max exp
+    address: '0074BAF8'
+    size: 4
+    type: hex
+    original: '6D 02 01 8B'
+    modified: '00 E1 F5 05'
+  - name: Edit exp after last defined
+    address: '0074BAFC'
+    size: 4
+    type: hex
+    original: '15 F4 55 F7'
+    modified: '80 96 98 00'
+  - name: Edit level 0 exp
+    address: '0074BB00'
+    size: 4
+    type: hex
+    original: '00 A3 A8 6D'
+    modified: '00 00 00 00'
+  - name: Edit exp table
+    address: '0074BB04'
+    size: 240
+    type: hex
+    original: '02 01 A1 00  56 F7 00 89  15 A4 6D 02  01 8B 15 FC  55 F7 00 A3  B0 6D 02 01  A1 08 56 F7  00 89 15 AC  6D 02 01 8B  15 04 56 F7  00 A3 B8 6D  02 01 A1 10  56 F7 00 56  8B 35 0C 56  F7 00 89 15  B4 6D 02 01  A3 C0 6D 02  01 8B D0 2B  C6 89 35 BC  6D 02 01 89  44 24 08 BE  C4 6D 02 01  8D 64 24 00  DB 44 24 08  D9 7C 24 04  0F B7 44 24  04 D8 0D 1C  2F E1 00 80  CC 0C 89 44  24 08 D9 6C  24 08 DB 5C  24 08 03 54  24 08 81 FA  FF FF FF 7F  D9 6C 24 04  0F 8D 80 00  00 00 85 D2  8B C2 7D 02  33 C0 89 06  83 C6 04 81  FE F4 6D 02  01 7C B5 BE  19 00 00 00  8D 46 F3 89  44 24 04 DB  44 24 04 D9  7C 24 04 0F  B7 44 24 04  DA 4C 24 08  80 CC 0C D8  0D 10 2F E1  00 89 44 24  08 D9 6C 24  08 DB 5C 24  08 03 54 24  08 81 FA FF  FF FF 7F D9  6C 24 04 7D  30 85 D2 8B  C2 7D 02 33'
+    modified: '00 00 00 00  E8 03 00 00  D0 07 00 00  80 0C 00 00  F8 11 00 00  38 18 00 00  40 1F 00 00  10 27 00 00  A8 2F 00 00  6C 39 00 00  5C 44 00 00  78 50 00 00  EC 5E 00 00  1C 70 00 00  34 85 00 00  34 9E 00 00  48 BC 00 00  38 E0 00 00  94 0B 01 00  24 3F 01 00  40 7D 01 00  20 C5 01 00  F8 1E 02 00  58 8C 02 00  40 0D 03 00  98 A5 03 00  30 5D 04 00  D8 3B 05 00  78 45 06 00  E0 81 07 00  B0 00 09 00  D0 C5 0A 00  B0 E8 0C 00  50 69 0F 00  90 76 12 00  10 20 16 00  E0 8C 1A 00  00 BD 1F 00  A0 25 26 00  C0 C6 2D 00  80 EE 36 00  10 12 42 00  B0 CD 4F 00  70 48 60 00  C0 93 74 00  C0 FD 8C 00  00 E6 AA 00  60 FE CD 00  80 3E FA 00  00 2D 31 01  40 43 71 01  60 22 C2 01  C0 43 22 02  A0 B4 94 02  80 5A 13 03  C0 AE 9C 03  C0 2A 2F 04  00 B4 C4 04  80 4A 5D 05  00 E1 F5 05'
+  - name: Edit default map max level
+    address: '00596EC0'
+    size: 4
+    type: hex
+    original: '28 00 00 00'
+    modified: '32 00 00 00'
+  - name: Edit formula 1
+    address: '005A9D73'
+    size: 1
+    type: hex
+    original: '28'
+    modified: '32'
+  - name: Edit formula 2
+    address: '005A9D77'
+    size: 4
+    type: hex
+    original: '28 00 00 00'
+    modified: '32 00 00 00'
+  - name: Edit formula 3
+    address: '0074BC56'
+    size: 1
+    type: hex
+    original: '28'
+    modified: '32'
+  - name: Edit formula 4
+    address: '0074BC5A'
+    size: 4
+    type: hex
+    original: '28 00 00 00'
+    modified: '32 00 00 00'
+  - name: Edit formula 5
+    address: '0058BA86'
+    size: 1
+    type: hex
+    original: '28'
+    modified: '32'
+  - name: Edit formula 6
+    address: '0058BA8A'
+    size: 4
+    type: hex
+    original: '28 00 00 00'
+    modified: '32 00 00 00'

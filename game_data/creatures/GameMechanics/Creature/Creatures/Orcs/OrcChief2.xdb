@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature>
+	<AttackSkill>16</AttackSkill>
+	<DefenceSkill>8</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>8</MinDamage>
+	<MaxDamage>14</MaxDamage>
+	<Speed>6</Speed>
+	<Initiative>9</Initiative>
+	<Flying>false</Flying>
+	<Health>46</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>250</Exp>
+	<Power>876</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>5</CreatureTier>
+	<Upgrade>true</Upgrade>
+	<PairCreature>CREATURE_ORCCHIEF_BUTCHER</PairCreature>
+	<CreatureTown>TOWN_STRONGHOLD</CreatureTown>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>6</WeeklyGrowth>
+	<Cost>
+		<Gold>500</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Stronghold/Executioner.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>1</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Orcs/OrcChief2.xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_ORCCHIEF_BUTCHER</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_DEMON_RAGED</Item>
+		<Item>ABILITY_CLEAVE</Item>
+		<Item>ABILITY_BRAVERY</Item>
+	</Abilities>
+</Creature>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CreatureVisual ObjectRecordID="1001257">
+	<CreatureNameFileRef href="/Text/Game/Creatures/Neutrals/Air_Elemental.txt"/>
+	<CreatureAbilitiesFileRef href="/Text/Game/Creatures/Neutrals/Air_ElementalAbilities.txt"/>
+	<DescriptionFileRef href="/Text/Game/Creatures/Neutrals/Air_ElementalDescription.txt"/>
+	<Icon href="/Textures/Interface/CombatArena/Faces/Neutral/ico_Air_Elemental.xdb#xpointer(/Texture)"/>
+	<Icon32 href="/Textures/Interface/CombatArena/Faces/Neutral/ico_Air_Elemental_32.xdb#xpointer(/Texture)"/>
+	<Icon64 href="/Textures/Interface/CombatArena/Faces/Neutral/ico_Air_Elemental_64.xdb#xpointer(/Texture)"/>
+	<Icon128 href="/Textures/Interface/CombatArena/Faces/Neutral/ico_Air_Elemental_128.xdb#xpointer(/Texture)"/>
+	<AnimCharacter href="/Characters/Creatures/Neutral/WindElemental.(Character).xdb#xpointer(/Character)"/>
+	<DeadCharacter/>
+	<AnimShot/>
+	<SummoningEffect href="/GameMechanics/Spell/SpellLikeEffects/SummonElementals/SummonElementals_Air.(SpellVisual).xdb#xpointer(/SpellVisual)"/>
+	<DamageEffect href="/GameMechanics/CreatureDamage/Steel_Hits.xdb#xpointer(/CreatureDamage)"/>
+	<TeleportingMove>
+		<Use>false</Use>
+		<StartEffect/>
+		<FinishEffect/>
+	</TeleportingMove>
+	<Win3DView href="/GameMechanics/Win3DObj/Creatures/Neutral/Air_Elemental.xdb#xpointer(/Win3DObj)"/>
+	<MountPoint>
+		<x>-0.278464</x>
+		<y>-0.0594477</y>
+		<z>1.81015</z>
+	</MountPoint>
+	<MountBone>W5</MountBone>
+</CreatureVisual>

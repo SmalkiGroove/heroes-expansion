@@ -1,0 +1,22 @@
+# Increase amount of skills to 255
+definitions:
+  - &skills_count 255
+edits:
+  - name: Edit 1
+    address: '0044BF40'
+    size: 4
+    type: int
+    original: 221
+    modified: *skills_count
+  - name: Edit 2
+    address: '00446CB1'
+    size: 4
+    type: int
+    original: 221
+    modified: *skills_count
+  - name: Edit 3
+    address: '00988C1F'
+    size: 4
+    type: int
+    original: 221
+    modified: *skills_count

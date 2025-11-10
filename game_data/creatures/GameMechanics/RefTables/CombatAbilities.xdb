@@ -1,0 +1,1668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Table_CreatureAbility_CombatAbility ObjectRecordID="-1">
+	<objects>
+		<Item>
+			<ID>ABILITY_NONE</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href=""/>
+				<DescriptionFileRef href=""/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_SHOOTER</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Shooter/Shooter_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Shooter/Shooter_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_NO_MELEE_PENALTY</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/No_melee_penalty/No_melee_penalty_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/No_melee_penalty/No_melee_penalty_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_NO_RANGE_PENALTY</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/No_range_penalty/No_range_penalty_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/No_range_penalty/No_range_penalty_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_RANGE_PENALTY</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Range_penalty/Range_penalty_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Range_penalty/Range_penalty_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_NO_ENEMY_RETALIATION</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/No_enemy_retaliation/No_enemy_retaliation_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/No_enemy_retaliation/No_enemy_retaliation_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_UNLIMITED_RETALIATION</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Unlimited_Retaliation/Unlimited_retaliation_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Unlimited_Retaliation/Unlimited_retaliation_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_DOUBLE_ATTACK</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Double_attack/Double_attack_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Double_attack/Double_attack_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_DOUBLE_SHOT</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Double_Shot/Double_shot_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Double_Shot/Double_shot_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_MECHANICAL</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Mechanical/Mechanical_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Mechanical/Mechanical_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_UNDEAD</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Undead/Undead_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Undead/Undead_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_DEMONIC</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Demonic/Demonic_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Demonic/Demonic_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_ELEMENTAL</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Elemental/Elemental_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Elemental/Elemental_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_CURSING_ATTACK</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/CursingAttack.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Cursing_attack/Cursing_attack_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Cursing_attack/Cursin_attack_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_FLESH_AND_BLOOD</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Flesh_and_blood/Flesh_and_blood_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Flesh_and_blood/Flesh_and_blood_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_ENRAGED</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Enraged/Enraged_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Enraged/Enraged_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_IMMUNITY_TO_BLIND</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_blind/Immunity_to_blind_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_blind/Immunity_to_blind_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_IMMUNITY_TO_MAGIC</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_magic/Immunity_to_magic_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_magic/Immunity_to_magic_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_IMMUNITY_TO_SLOW</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_slow/Immunity_to_slow_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_slow/Immunity_to_slow_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_IMMUNITY_TO_MIND_CONTROL</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_mind_control/Immunity_to_mind_control_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_mind_control/Immunity_to_mind_control_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_IMMUNITY_TO_AIR</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_air/Immunity_to_air_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_air/Immunity_to_air_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_IMMUNITY_TO_FIRE</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_fire/Immunity_to_fire_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_fire/Immunity_to_fire_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_IMMUNITY_TO_WATER</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_water/Immunity_to_water_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_water/Immunity_to_water_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_IMMUNITY_TO_EARTH</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_earth/Immunity_to_earth_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_earth/Immunity_to_earth_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_MAGIC_PROOF_50</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Magic_proof_50/Magic_proof50_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Magic_proof_50/Magic_proof50_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_PRECISE_SHOT</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Precise_shot/Precise_shot_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Precise_shot/Precise_shot_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_LARGE_SHIELD</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Large_shield/Large_shield_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Large_shield/Large_shield_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_SHIELD_OTHER</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Shiled_other/Shield_other_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Shiled_other/Shield_other_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_JOUSTING</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Jousting/Jousting_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Jousting/Jousting_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_BASH</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/Bash.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Bash/Bash_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Bash/Bash_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_BATTLE_DIVE</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Battle_dive/Battle_dive_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Battle_dive/Battle_dive_desc.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_BATTLE_DIVE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_MANA_DESTROYER</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Mana_destroyer/Mana_destroyer_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Mana_destroyer/Mana_destroyer_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_MANA_STEALER</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/ManaStealer.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Mana_stealer/Mana_stealer_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Mana_stealer/Mana_stealer_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_EXPLOSION</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Explosion/Explosion_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Explosion/Explosion_desc.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_EXPLOSION</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_RANGED_RETALIATE</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Ranged_Retaliate/Ranged_retaliate_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Ranged_Retaliate/Ranged_retaliate_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_FEAR</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Fear/Fear_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Fear/Fear_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_FRIGHT_AURA</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Fright_aura/Fright_aura_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Fright_aura/Fright_aura_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_VORPAL_SWORD</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/VorpalSword.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Vorpal_Sword/Vorpal_sword_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Vorpal_Sword/Vorpal_sword_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_CHAIN_SHOT</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Chain_shot/Chain_shot_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Chain_shot/Chain_shot_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_WEAKENING_STRIKE</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/WeakeningStrike.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Weakening_strike/Weakening_strike_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Weakening_strike/Weakening_strike_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_INCORPOREAL</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/Incorporeal.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Incorporeal/Incorporeal_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Incorporeal/Incorporeal_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_MANA_DRAIN</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/ManaDrain.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Mana_drain/Mana_drain_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Mana_drain/Mana_drain_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_LIFE_DRAIN</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/LifeDrain.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Life_drain/Life_drain_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Life_drain/Life_drain_desct.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_DEATH_CLOUD</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Death_cloud/Death_cloud_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Death_cloud/Death_cloud_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_ELVES_DOUBLE_SHOT</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Elves_double_shot/Elves_double_shot_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Elves_double_shot/Elves_double_shot_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_WARDING_ARROWS</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/WardingArrows.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Warding_arrows/Warding_arrows_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Warding_arrows/Warding_arrows_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_BLINDING_ATTACK</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/BlindingAttack.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Blinding_attack/Blinding_attack_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Blinding_attack/Blinding_attack_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_AURA_OF_MAGIC_RESISTANCE</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Aura_of_magic_resistance/Aura_of_magic_resistance_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Aura_of_magic_resistance/Aura_of_magic_resistance_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_TAKE_ROOTS</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Take_roots/Take_roots_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Take_roots/Take_roots_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_ENTANGLING_ROOTS</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/EntanglingRoot.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Entangling_roots/Entangling_roots_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Entangling_roots/Entangling_roots_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_ACID_BREATH</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Acid_breath/Acid_breath_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Acid_breath/Acid_breath_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_MAGIC_ATTACK</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Magic_attack/Magic_attack_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Magic_attack/Magic_attack_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_ENERGY_CHANNEL</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Energy_channel/Energy_channel_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Energy_channel/Energy_channel_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_MAGIC_PROOF_75</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Magic_proof_75/Magic_proof75_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Magic_proof_75/Magic_proof75_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_POISONOUS_ATTACK</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/PoisonousAttack.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Poisonous_attack/Poisonous_attack_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Poisonous_attack/Poisonous_attack_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_STRIKE_AND_RETURN</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Strike_and_return/Strike_and_return_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Strike_and_return/Strike_and_return_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_BRAVERY</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Bravery/Bravery_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Bravery/Bravery_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_RIDER_CHARGE</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Rider_charge/Rider_charge_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Rider_charge/Rider_charge_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_LIZARD_BITE</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Lizard_bite_name/Lizard_bite_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Lizard_bite_name/Lizard_bite_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_SIX_HEADED_ATTACK</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Six_headed_attack/Six_headed_attack_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Six_headed_attack/Six_headed_attack_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_REGENERATION</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Regeneration/Regeneration_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Regeneration/Regeneration_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_WHIP_STRIKE</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/WhipStrike.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Whip_strike/Whip_strike_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Whip_strike/Whip_strike_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_FIRE_SHIELD</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Spells/FireShield.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Fire_shield/Fire_shield_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Fire_shield/Fire_shield_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_DEADLY_STRIKE</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/DeadlyStrike.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Deadly_strike/Deadly_strike_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Deadly_strike/Deadly_strike_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_REBIRTH</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/Rebirth.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Rebirth/Rebrith_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Rebirth/Rebrith_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_FRIGHTFUL_PRESENCE</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Frightful_presence/Frightful_precence_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Frightful_presence/Frightful_presence_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_CRYSTAL_SCALES</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Crystal_scale/Crystal_scale_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Crystal_scale/Crystal_scale_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_LARGE_CREATURE</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Large_creature/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Large_creature/Description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_FLYER</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Flyer/Flyer_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Flyer/Flyer_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_CASTER</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Caster/Caster_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Caster/Caster_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_TAXPAYER</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Taxpayer/Taxpayer_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Taxpayer/Taxpayer_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_SCATTER_SHOT</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Scatter_shot/Scatter_shot_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Scatter_shot/Scatter_shot_desc.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_SCATTER_SHOT</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_RESURRECT_ALLIES</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Ressurected_allies/Ressurected_allies_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Ressurected_allies/Ressurected_allies_desc.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_RESURRECT_ALLIES</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_BALOR_SUMMONIG</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Balor_summoning/Balor_summoning_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Balor_summoning/Balor_summoning_desc.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_SUMMON_BALOR</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_SPRAY_ATTACK</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Spray_attack/Spray_attack_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Spray_attack/Spray_attack_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_MANA_FEED</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Mana_feed/Mana_feed_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Mana_feed/Mana_feed_desc.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_MANA_FEED</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_FIRE_BREATH</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Fire_breath/Fire_breath_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Fire_breath/Fire_breath_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_HARM_TOUCH</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Harm_touch/Harm_touch_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Harm_touch/Harm_touch_desc.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_HARM_TOUCH</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_WAR_DANCE</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/War_dance_combo/War_dance_combo_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/War_dance_combo/War_dance_combo_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_REPAIR</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Repair/Repair_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Repair/Repair_desc.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_REPAIR</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_RANDOM_CASTER</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Random_caster/Random_caster_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Random_caster/Random_caster_desc.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_RANDOM_CAST_DARK</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_DASH</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Dash/Dash_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Dash/Dash_desc.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_DASH</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_CALL_LIGHTNING</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Call_lightning/Call_lightning_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Call_lightning/Call_lightning_desc.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_CALL_LIGHTNING</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_LAY_HANDS</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Lay_Hands/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Lay_Hands/description.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_LAY_HANDS</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_THREE_HEADED_ATTACK</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Three_headed_attack/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Three_headed_attack/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_ARMORED</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Armored/Armored_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Armored/Armored_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_SHIELD_WALL</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Shield_wall/Shield_wall_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Shield_wall/Shield_wall_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_WOUND</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/Wound.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Wound/Wound_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Wound/Wound_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_PAW_STRIKE</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/PawStrike.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Paw_strike/Paw_strike_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Paw_strike/Paw_strike_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_BERSERKER_RAGE</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Berserker_Rage/Berserker_Rage_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Berserker_Rage/Berserker_Rage_desc.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_BERSERKER_RAGE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_STORMBOLT</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/StormStrike.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Stormbolt/Stormbolt_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Stormbolt/Stormbolt_desc.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_STORMBOLT</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_STORMSTRIKE</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/StormStrike.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Stormstrike/Stormstrike_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Stormstrike/Stormstrike_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_MARK_OF_FIRE</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/MarkOfFire.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Mark_of_fire/Mark_of_fire_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Mark_of_fire/Mark_of_fire_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_CROSS_ATTACK</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Cross_attack/Cross_attack_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Cross_attack/Cross_attack_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_MAGMA_SHIELD</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Spells/MagmaShield.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Magma_shield/Magma_shield_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Magma_shield/Magma_shield_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_PACK_HUNTER</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Pack_hunter/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Pack_hunter/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_HOWL</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/howl.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Howl/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Howl/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_AGILITY</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Agility/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Agility/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_HEXING_ATTACK</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/HexingAttack.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Hexing_attack/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Hexing_attack/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_CLEAVE</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/Cleave.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Cleave/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Cleave/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_BATTLE_FRENZY</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Battle_frenzy/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Battle_frenzy/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_PACK_DIVE</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Pack_dive/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Pack_dive/description.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_PACK_DIVE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_CHAMPION_CHARGE</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Champion_charge/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Champion_charge/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_PURGER</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/Purger.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Purger/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Purger/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_BLADE_BARRIER</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Attack.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Blade_Barrier/Blade_barrier_name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Blade_Barrier/Blade_barrier_desc.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_DEMON_RAGED</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Demon_raged/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Demon_raged/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_COWARDICE</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/Cowardice.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Cowardice/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Cowardice/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_TREACHERY</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/Treachery.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Treachery/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Treachery/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_SET_SNARES</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Set_snares/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Set_snares/description.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_SET_SNARES</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_DEFILE_MAGIC</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Defile_magic/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Defile_magic/description.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_DEFILE_MAGIC</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_MANEURE</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/Maneure.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Maneure/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Maneure/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_BRUTALITY</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Brutality/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Brutality/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_TAUNT</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/Taunt.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Taunt/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Taunt/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_FIERCE_RETALIATION</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Fierce_retaliation/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Fierce_retaliation/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_SACRIFICE_GOBLIN</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Sacrifice_goblin/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Sacrifice_goblin/description.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_SACRIFICE_GOBLIN</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_FAST_ATTACK</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Fast_attack/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Fast_attack/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_PRESENCE_OF_COMMANDER</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Presnce_of_commander/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Presnce_of_commander/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_ORDER_OF_THE_CHIEF</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Order_of_the_chief/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Order_of_the_chief/description.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_ORDER_OF_THE_CHIEF</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_VENOM</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/PoisonousAttack.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Venom/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Venom/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_SCAVENGER</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Scavenger/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Scavenger/description.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_SCAVENGER</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_LIGHTNING_BREATH</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/LightningBreath.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Lightning_breath/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Lightning_breath/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_SWALLOW_GOBLIN</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Swallow_goblin/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Swallow_goblin/description.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_SWALLOW_GOBLIN</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_GOBLIN_THROWER</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Goblin_thrower/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Goblin_thrower/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_CRUSHING_BLOW</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Crushing_blow/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Crushing_blow/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_EVIL_EYE</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/EvilEye.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Evil_eye/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Evil_eye/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_RANDOM_CASTER_BLESS</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Random_Caster_Bless/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Random_Caster_Bless/Description.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_RANDOM_CAST_DARK_LIGHT</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_SYPHON_MANA</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/SyphonMana.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Syphon_mana/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Syphon_mana/description.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_SYPHON_MANA</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_SEARING_AURA</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/SearingAura.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Searing_aura/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Searing_aura/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_AXE_OF_SLAUGHTER</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/AxeOfSlaughter.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Axe_of_slaughter/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Axe_of_slaughter/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_SUMMON_OTHER</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Summon_other/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Summon_other/Description.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_SUMMON_OTHER</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_SEDUCE</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Seduce/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Seduce/description.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_SEDUCE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_LEAP</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Spells/Creature_Abilities/Inferno/Leap/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Spells/Creature_Abilities/Inferno/Leap/Description.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_LEAP</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_DEATH_WAIL</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/DeathWail/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/DeathWail/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_WEAKENING_AURA</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Weakening_Aura/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Weakening_Aura/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_AMMO_STEAL</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Ammo_Steal/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Ammo_Steal/description.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_AMMO_STEAL</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_SLEEPING_STRIKE</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/SleepingStrike.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Sleeping_Strike/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Sleeping_Strike/Description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_SORROW_STRIKE</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/SorrowStrike.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Sorrow_strike/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Sorrow_strike/Description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_HORROR_OF_THE_DEATH</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Horror_of_death/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Horror_of_death/Description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_PIERCING_ARROW</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="ForceArrow.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Piercing_arrow/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Piercing_arrow/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_TREEANT_UNION</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Treeant_union/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Treeant_union/description.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_TREEANT_UNION</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_RAGE_OF_THE_FOREST</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Rage_of_the_forest/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Rage_of_the_forest/description.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_RAGE_OF_THE_FOREST</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_POWER_FEED</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Power_feed/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Power_feed/Description.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_POWER_FEED</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_RAINBOW_BREATH</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Rainbow_Breath/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Rainbow_Breath/Description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_BOND_OF_LIGHT</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Bond_of_light/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Bond_of_light/Description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_WHIRLWIND</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Whirlwind/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Whirlwind/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_ELDRITCH_AURA</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Eldritch_aura/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Eldritch_aura/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_AURA_OF_FIRE_VULNERABILITY</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Aura_of_fire_vulnerability/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Aura_of_fire_vulnerability/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_AURA_OF_ICE_VULNERABILITY</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Aura_of_ice_vulnerability/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Aura_of_ice_vulnerability/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_AURA_OF_LIGHTNING_VULNERABILITY</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Aura_of_lightning_vulnerability/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Aura_of_lightning_vulnerability/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_AURA_OF_EARTH_VULNERABILITY</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Aura_of_earth_vulnerability/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Aura_of_earth_vulnerability/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_CALL_STORM</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Presence_of_the_storm/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Presence_of_the_storm/Description.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_CALL_STORM</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_SABOTAGE</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Sabotage/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Sabotage/description.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_SABOTAGE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_LUCK_GAMBLER</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Luck_gambler/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Luck_gambler/Description.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_LUCK_GAMBLER</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_ENCHANTED_OBSIDIAN</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/EnchantedObsidian/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/EnchantedObsidian/Description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_ACID_BLOOD</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/AcidBlood.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/AcidBlood/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/AcidBlood/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_AURA_OF_BRAVERY</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Aura_of_bravery/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Aura_of_bravery/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_INCINERATE</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Incinerate/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Incinerate/description.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_INCINERATE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_INVISIBILITY</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Invisibility/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Invisibility/Description.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_INVISIBILITY</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_RIDE_BY_ATTACK</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/RideByAttack.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/RideByAttack/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/RideByAttack/Description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_ANTI_GIANT</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Anti_giant/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Anti_giant/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_AVENGING_FLAME</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/AvengingFlame.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Avenging_flame/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Avenging_flame/Description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_PREPARED_POSITION</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Prepared_position/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Prepared_position/Description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_BATTLE_RAGE</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Battle_rage/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Battle_rage/Description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_HARPOON_STRIKE</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Harpoon_strike/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Harpoon_strike/Description.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_HARPOON_STRIKE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_BEAR_ROAR</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/BearRoar/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/BearRoar/Description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_HOLD_GROUND</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Hold_ground/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Hold_ground/Description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_FLAMEWAVE</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Firestorm/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Firestorm/Description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_FLAMESTRIKE</ID>
+			<obj>
+				<CombatLogTexts>
+					<Item href="/Text/CombatLog/Abilities/FlameStrike.txt"/>
+				</CombatLogTexts>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Flamestrike/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Flamestrike/Description.txt"/>
+				<ActivatedSpell>SPELL_ABILITY_FLAMESTRIKE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_LIQUID_FLAME_BREATH</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Liquid_flame/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Liquid_flame/Description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_IMMUNITY_TO_CURSE</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_curse/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_curse/Description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_IMMUNITY_TO_BERSERK</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_berserk/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_berserk/Description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_IMMUNITY_TO_HYPNOTIZE</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_hypnotize/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Immunity_to_hypnotize/Description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_MAGIC_PROOF_25</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Magic_proof_25/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Magic_proof_25/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_FIRE_PROOF_50</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/Fire_proof_50/name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/Fire_proof_50/description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+		<Item>
+			<ID>ABILITY_DESTRUCTION_MAGIC_MAGNETISM</ID>
+			<obj>
+				<CombatLogTexts/>
+				<NameFileRef href="/Text/Game/Creatures/Creature_abilities/DestructionMagicMagnetism/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Creatures/Creature_abilities/DestructionMagicMagnetism/Description.txt"/>
+				<ActivatedSpell>SPELL_NONE</ActivatedSpell>
+			</obj>
+		</Item>
+	</objects>
+</Table_CreatureAbility_CombatAbility>

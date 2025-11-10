@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="52">
+	<NameFileRef href="/Text/Game/TownBuildings/Inferno/Magic_Guild/Magic_Guild_5_Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Inferno/Magic_Guild/Magic_Guild_5_Description.txt"/>
+	<Type>TB_MAGIC_GUILD</Type>
+	<Upgrade>BLD_UPG_5</Upgrade>
+	<Cost>
+		<Wood>0</Wood>
+		<Ore>0</Ore>
+		<Mercury>5</Mercury>
+		<Crystal>5</Crystal>
+		<Sulfur>5</Sulfur>
+		<Gem>5</Gem>
+		<Gold>5000</Gold>
+	</Cost>
+	<ModObjectName>magicguild</ModObjectName>
+	<dependencies>
+		<Item href="Magic_Guild_4.xdb#xpointer(/TownBuildingSharedStats)"/>
+	</dependencies>
+	<Creature>CREATURE_UNKNOWN</Creature>
+	<DevLevelNeeded>4</DevLevelNeeded>
+	<UIObjectName>MagicGuild</UIObjectName>
+	<UIStackPosition>4</UIStackPosition>
+	<Icon href="/UI/TownHall/inferno/128/mageguild5.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

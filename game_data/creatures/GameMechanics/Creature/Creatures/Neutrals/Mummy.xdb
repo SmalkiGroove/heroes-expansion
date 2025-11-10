@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature>
+	<AttackSkill>4</AttackSkill>
+	<DefenceSkill>7</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>2</MinDamage>
+	<MaxDamage>4</MaxDamage>
+	<Speed>4</Speed>
+	<Initiative>8</Initiative>
+	<Flying>false</Flying>
+	<Health>30</Health>
+	<KnownSpells>
+		<Item><Spell>SPELL_FORGETFULNESS</Spell><Mastery>MASTERY_BASIC</Mastery></Item>
+		<Item><Spell>SPELL_WASP_SWARM</Spell><Mastery>MASTERY_BASIC</Mastery></Item>
+	</KnownSpells>
+	<SpellPoints>18</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>100</Exp>
+	<Power>1542</Power>
+	<TimeToCommand>15</TimeToCommand>
+	<CreatureTier>3</CreatureTier>
+	<Upgrade>true</Upgrade>
+	<PairCreature>CREATURE_UNKNOWN</PairCreature>
+	<CreatureTown>TOWN_NO_TYPE</CreatureTown>
+	<MagicElement><First>ELEMENT_EARTH</First><Second>ELEMENT_NONE</Second></MagicElement>
+	<WeeklyGrowth>20</WeeklyGrowth>
+	<Cost>
+		<Gold>100</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Neutral/Mummy.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>1</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Neutrals/Mummy.xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_UNKNOWN</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_UNDEAD</Item>
+		<Item>ABILITY_HEXING_ATTACK</Item>
+	</Abilities>
+</Creature>

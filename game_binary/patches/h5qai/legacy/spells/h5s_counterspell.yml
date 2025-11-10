@@ -1,0 +1,20 @@
+# Changes Counterspell ability to charge 1.1x instead of 2.0x mana of resisted spell
+edits:
+  - name: Edit 1
+    address: '004B3B2B'
+    size: 6
+    type: hex
+    original: '8D 0C 3F 5E 2B C1'
+    modified: 'E8 60 1C 89 00 5E'
+  - name: Edit 2
+    address: '004B3BCF'
+    size: 5
+    type: hex
+    original: '8D 0C 1B 2B C1'
+    modified: 'E8 C8 1B 89 00'
+  - name: Edit 3
+    address: '00BD9390'
+    size: 16
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+    modified: 'BB 0A 00 00 00 89 F9 0F AF C8 83 C1 64 29 C8 C3'

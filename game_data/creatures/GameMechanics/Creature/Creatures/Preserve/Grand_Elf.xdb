@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature ObjectRecordID="1000009">
+	<AttackSkill>5</AttackSkill>
+	<DefenceSkill>3</DefenceSkill>
+	<Shots>15</Shots>
+	<MinDamage>5</MinDamage>
+	<MaxDamage>6</MaxDamage>
+	<Speed>5</Speed>
+	<Initiative>11</Initiative>
+	<Flying>false</Flying>
+	<Health>16</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>40</Exp>
+	<Power>433</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>3</CreatureTier>
+	<Upgrade>true</Upgrade>
+	<PairCreature>CREATURE_WOOD_ELF</PairCreature>
+	<CreatureTown>TOWN_PRESERVE</CreatureTown>
+	<MagicElement><First>ELEMENT_AIR</First><Second>ELEMENT_WATER</Second></MagicElement>
+	<WeeklyGrowth>14</WeeklyGrowth>
+	<Cost>
+		<Gold>100</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>true</SubjectOfRandomGeneration>
+	<MonsterShared href="/MapObjects/Preserve/Grand_Elf.(AdvMapMonsterShared).xdb#xpointer(/AdvMapMonsterShared)"/>
+	<CombatSize>1</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Preserve/Grand_Elf.xdb#xpointer(/CreatureVisual)"/>
+	<Range>-2</Range>
+	<BaseCreature>CREATURE_WOOD_ELF</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_ELVES_DOUBLE_SHOT</Item>
+		<Item>ABILITY_WARDING_ARROWS</Item>
+	</Abilities>
+</Creature>

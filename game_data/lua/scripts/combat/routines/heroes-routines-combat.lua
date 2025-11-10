@@ -1,0 +1,1100 @@
+
+function NoneRoutine()
+    -- Trigger nothing
+end
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------
+-- HAVEN
+
+function Routine_BallistaRandomSalvo(side, hero)
+    log(DEBUG, "$ Routine_BallistaRandomSalvo")
+    local ballista = UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_BALLISTA'
+    if IsCombatUnit(ballista) then
+        local n = 1 + trunc(GetHeroLevel(side) * 0.1)
+        for i = 1,n do
+            local target = RandomCreature(1-side,i)
+            if target then startThread(ShootCombatUnit, ballista, target) end
+            sleep(600)
+            if not IsCombatUnit(ballista) then return end
+        end
+    end
+end
+
+function Routine_PeasantsMoveNext(side, hero)
+    if CURRENT_UNIT == hero then
+        log(DEBUG, "$ Routine_PeasantsMoveNext")
+        SetATB_CreatureTypes(side, {CREATURE_PEASANT,CREATURE_MILITIAMAN,CREATURE_LANDLORD}, ATB_NEXT)
+    end
+end
+
+function Routine_ArchersMoveFirst(side, hero)
+    log(DEBUG, "$ Routine_ArchersMoveFirst")
+    SetATB_CreatureTypes(side, {CREATURE_ARCHER,CREATURE_MARKSMAN,CREATURE_LONGBOWMAN}, ATB_INSTANT)
+end
+
+function Routine_InfantryDash(side, hero)
+    log(DEBUG, "$ Routine_InfantryDash")
+    local creatures = GetUnits(side, CREATURE)
+    for i,cr in creatures do
+        local type = GetCreatureType(cr)
+        if type == CREATURE_FOOTMAN or type == CREATURE_SWORDSMAN or type == CREATURE_VINDICATOR then
+            UseCombatAbility(cr, SPELL_ABILITY_DASH)
+            SetATB_ID(cr, 0.1)
+        end
+    end
+end
+
+function Routine_RetaliationStrike(side, hero)
+    log(DEBUG, "$ Routine_RetaliationStrike")
+    local cavalier = "none"
+    local max = 0
+    for i,cr in GetUnits(side, CREATURE) do
+        local type = GetCreatureType(cr)
+        if type == CREATURE_CAVALIER or type == CREATURE_PALADIN or type == CREATURE_CHAMPION then
+            local nb = GetCreatureNumber(cr)
+            if nb > max then
+                cavalier = cr
+                max = nb
+            end
+        end
+    end
+    if max > 0 then
+        HeroCast_Target(hero, SPELL_HOLY_CHARGE, NO_COST, cavalier)
+        sleep() SetATB_ID(hero, 0)
+    end
+end
+
+function Routine_CastPrayer(side, hero)
+    log(DEBUG, "$ Routine_CastPrayer")
+    HeroCast_Global(hero, SPELL_PRAYER, NO_COST)
+end
+
+function Routine_CastRandomStoneskin(side, hero)
+    if CURRENT_UNIT == hero then
+        log(DEBUG, "$ Routine_CastRandomStoneskin")
+        HeroCast_RandomCreature(hero, SPELL_STONESKIN, FREE_MANA, side)
+        if IsHuman(side) then SetATB_ID(hero, ATB_INSTANT) end
+    end
+end
+
+function Routine_GriffinInstantDive(side, hero)
+    log(DEBUG, "$ Routine_GriffinInstantDive")
+    for k,v in ROUTINE_VARS.GriffinDives do
+        if v == 1 then
+            local found = nil
+            for i,cr in GetUnits(side, CREATURE) do
+                if cr == k then found = not nil end
+            end
+            if not found then
+                SetATB_ID(k, ATB_INSTANT)
+                SetATB_ID(CURRENT_UNIT, ATB_NEXT)
+            end
+        end
+    end
+    if CURRENT_UNIT_SIDE == side then
+        if IsCreature(CURRENT_UNIT) then
+            local type = GetCreatureType(CURRENT_UNIT)
+            if type == CREATURE_GRIFFIN or type == CREATURE_BATTLE_GRIFFIN or type == CREATURE_ROYAL_GRIFFIN then
+                ROUTINE_VARS.GriffinDives[CURRENT_UNIT] = 1
+            end
+        end
+    end
+end
+
+function Routine_GriffinDead(side, hero, unit)
+    log(DEBUG, "$ Routine_GriffinDead")
+    if ROUTINE_VARS.GriffinDives[unit] then
+        ROUTINE_VARS.GriffinDives[unit] = 0
+    end
+end
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------
+-- PRESERVE
+
+function Routine_EnragedRighteousMight(side, hero)
+    log(DEBUG, "$ Routine_EnragedRighteousMight")
+    for i,cr in GetUnits(side, CREATURE) do
+        local type = GetCreatureType(cr)
+        if CREATURES[type][1] == PRESERVE and contains({1,3,4,6}, CREATURES[type][2]) then
+            HeroCast_Target(hero, SPELL_BLOODLUST, FREE_MANA, cr)
+        end
+    end
+end
+
+function Routine_ResetAtbOnKillEnraged(side, hero, unit)
+    log(DEBUG, "$ Routine_ResetAtbOnKillEnraged")
+    if GetUnitSide(unit) ~= GetUnitSide(hero) and IsCreature(unit) then
+        -- SetATB_ID(CURRENT_UNIT, ATB_NEXT)
+        for i,cr in GetUnits(side, CREATURE) do
+            local type = GetCreatureType(cr)
+            if CREATURES[type][1] == PRESERVE and contains({1,3,4,6}, CREATURES[type][2]) then
+                if not ROUTINE_VARS.AtbBoosted[cr] then
+                    SetATB_ID(cr, ATB_INSTANT)
+                    ROUTINE_VARS.AtbBoosted[cr] = not nil
+                    return
+                end
+            end
+        end
+    end
+end
+
+function Routine_HunterRandomShoot(side, hero)
+    log(DEBUG, "$ Routine_HunterRandomShoot")
+    local hunter = "none"
+    local largest = 0
+    for i,cr in GetUnits(side,CREATURE) do
+        local type = GetCreatureType(cr)
+        if type == CREATURE_WOOD_ELF or type == CREATURE_GRAND_ELF or type == CREATURE_SHARP_SHOOTER then
+            local nb = GetCreatureNumber(cr)
+            if nb > largest then
+                hunter = cr
+                largest = nb
+            end
+        end
+    end
+    if largest > 0 then
+        local target = RandomCreature(1-side,largest)
+        if target then ShootCombatUnit(hunter, target) end
+    end
+end
+
+function Routine_MoveForwardUnits(side, hero)
+    log(DEBUG, "$ Routine_MoveForwardUnits")
+    for i,cr in GetUnits(side, CREATURE) do
+        local x,y = GetUnitPosition(cr)
+        local x0 = (side == ATTACKER) and GRID_X_MIN or GRID_X_MAX
+        local x1 = (side == ATTACKER) and (x + 3) or (x - 3)
+        if x ~= x0 then
+            startThread(MoveCombatUnit, cr, x1, y)
+        end
+    end
+end
+
+function Routine_WolfDeadRevenge(side, hero, unit)
+    log(DEBUG, "$ Routine_WolfDeadRevenge")
+    if GetUnitSide(unit) == GetUnitSide(hero) and IsCreature(unit) then
+        if GetCreatureType(unit) == CREATURE_WOLF then
+            local x,y = GetUnitPosition(unit)
+            local target = nil
+            local distance = 1000
+            for i,cr in GetUnits(1-side, CREATURE) do
+                local xx,yy = GetUnitPosition(cr)
+                local dx = x-xx
+                local dy = y-yy
+                local d = dx*dx + dy*dy
+                if d < distance then
+                    target = cr
+                    distance = d
+                end
+            end
+            if target then
+                sleep(100)
+                local nb = 0
+                for i,cr in GetUnits(side, CREATURE) do
+                    if GetCreatureType(cr) == CREATURE_WOLF then
+                        AttackCombatUnit(cr, target)
+                        nb = nb + 1
+                        if nb == 2 then return else sleep(250) end
+                    end
+                end
+            end
+        end
+    end
+end
+
+function Routine_CastSummonHive(side, hero)
+    log(DEBUG, "$ Routine_CastSummonHive")
+    local x = (side == ATTACKER) and GRID_X_MAX or GRID_X_MIN
+    local y1 = GRID_Y_MIN
+    local y2 = GRID_Y_MAX
+    while y1 ~= GRID_Y_MIN + 4 do
+        HeroCast_Area(hero, SPELL_SUMMON_HIVE, FREE_MANA, x, y1)
+        sleep(5)
+        if length(GetUnits(side, SPELL_SPAWN)) == 1 then y1 = GRID_Y_MIN + 4 else y1 = y1 + 1 end
+    end
+    while y2 ~= GRID_Y_MAX - 4 do
+        HeroCast_Area(hero, SPELL_SUMMON_HIVE, FREE_MANA, x, y2)
+        sleep(5)
+        if length(GetUnits(side, SPELL_SPAWN)) == 2 then y2 = GRID_Y_MAX - 4 else y2 = y2 - 1 end
+    end
+end
+
+function Routine_SpriteManaLink(side, hero)
+    if CURRENT_UNIT_SIDE == side then
+        log(DEBUG, "$ Routine_SpriteManaLink")
+        if IsCreature(CURRENT_UNIT) then
+            if GetCreatureType(CURRENT_UNIT) == CREATURE_SPRITE then
+                local amount = trunc(0.1 * GetCreatureNumber(CURRENT_UNIT))
+                if amount > 0 then
+                    local cur = GetUnitManaPoints(hero)
+                    local max = GetUnitMaxManaPoints(hero)
+                    SetMana(hero, min(cur+amount, max))
+                end
+            end
+        elseif CURRENT_UNIT == hero then
+            for i,cr in GetUnits(side, CREATURE) do
+                if GetCreatureType(cr) == CREATURE_SPRITE then
+                    local m = 1 + trunc(0.2 * GetHeroLevel(side))
+                    local cur = GetUnitManaPoints(cr)
+                    local max = GetUnitMaxManaPoints(cr)
+                    SetMana(cr, min(cur+m, max))
+                end
+            end
+        end
+    end
+end
+
+function Routine_CastMassHaste(side, hero)
+    log(DEBUG, "$ Routine_CastMassHaste")
+    HeroCast_Global(hero, SPELL_MASS_HASTE, FREE_MANA)
+end
+
+function Routine_SummonDruidStack(side, hero)
+    log(DEBUG, "$ Routine_SummonDruidStack")
+    local druid = "none"
+    local number = 0
+    for i,cr in GetUnits(side, CREATURE) do
+        if GetCreatureType(cr) == CREATURE_DRUID then
+            local amount = GetCreatureNumber(cr)
+            if number == 0 or amount < number then
+                druid = cr
+                number = amount
+            end
+        end
+    end
+    if druid ~= "none" then
+        local x,y = GetUnitPosition(druid)
+        RemoveCombatUnit(druid)
+        repeat sleep() until not exist(druid)
+        SummonCreature(side, CREATURE_DRUID_OF_THE_COUNCIL, number, x, y, nil, druid)
+        repeat sleep() until exist(druid)
+        UseCombatAbility(druid, SPELL_ABILITY_POWER_FEED)
+        if GetUnitManaPoints(hero) < GetUnitMaxManaPoints(hero) then
+            UseCombatAbility(druid, SPELL_ABILITY_MANA_FEED)
+        end
+    end
+end
+
+function Routine_DruidsMoveNext(side, hero)
+    if CURRENT_UNIT == hero then
+        log(DEBUG, "$ Routine_DruidsMoveNext")
+        SetATB_CreatureTypes(side, {CREATURE_DRUID,CREATURE_DRUID_ELDER,CREATURE_HIGH_DRUID,CREATURE_DRUID_OF_THE_COUNCIL}, ATB_NEXT)
+    end
+end
+
+function Routine_AllRegeneration(side, hero)
+    if CURRENT_UNIT == hero then
+        log(DEBUG, "$ Routine_AllRegeneration")
+        local limit = 5 + trunc(0.2 * GetHeroLevel(side))
+        ROUTINE_VARS.HeroTurns = ROUTINE_VARS.HeroTurns + 1
+        if ROUTINE_VARS.HeroTurns == limit then
+            HeroCast_AllCreatures(hero, SPELL_REGENERATION, FREE_MANA, side)
+            SetATB_ID(hero, ATB_INSTANT)
+        end
+    end
+end
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------
+-- FORTRESS
+
+function Routine_BallistaMoveFirst(side, hero)
+    log(DEBUG, "$ Routine_BallistaMoveFirst")
+    local ballista = UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_BALLISTA'
+    if IsCombatUnit(ballista) then
+        SetATB_ID(ballista, ATB_INSTANT)
+        ShowFlyingSign("/Text/Game/Scripts/Combat/WorkshopExpert.txt", ballista, 9)
+    end
+end
+
+function Routine_SpearWielderCoordination(side, hero)
+    if CURRENT_UNIT_SIDE == side then
+        if IsCreature(CURRENT_UNIT) then
+            local type = GetCreatureType(CURRENT_UNIT)
+            if type == CREATURE_AXE_FIGHTER or type == CREATURE_AXE_THROWER or type == CREATURE_HARPOONER then
+                log(DEBUG, "$ Routine_SpearWielderCoordination")
+                if GetCreatureNumber(CURRENT_UNIT) >= 28 + GetHeroLevel(side) then
+                    HeroCast_Target(hero, SPELL_EFFECT_COORDINATION, NO_COST, CURRENT_UNIT)
+                end
+            end
+        end
+    end
+end
+
+function Routine_ThanesAbility(side, hero)
+    log(DEBUG, "$ Routine_ThanesAbility")
+    local creatures = GetUnits(side, CREATURE)
+    for i,cr in creatures do
+        if GetCreatureType(cr) == CREATURE_WARLORD then
+            local x,y = GetUnitPosition(RandomCreature(1-side, i))
+            UseCombatAbility(cr, SPELL_ABILITY_FLAMESTRIKE, x, y)
+            SetATB_ID(cr, ATB_HALF)
+            sleep(100)
+        elseif GetCreatureType(cr) == CREATURE_THUNDER_THANE then
+            local x,y = GetUnitPosition(RandomCreature(1-side, i))
+            UseCombatAbility(cr, SPELL_ABILITY_STORMBOLT, x, y)
+            SetATB_ID(cr, ATB_HALF)
+            sleep(100)
+        end
+    end
+end
+
+function Routine_CastFireWalls(side, hero)
+    log(DEBUG, "$ Routine_CastFireWalls")
+    local m = GetUnitManaPoints(hero)
+    local x = 12 - 7 * side
+    for _,y in {3,6,9} do
+        HeroCast_Area(hero, SPELL_FIREWALL, FREE_MANA, x, y)
+        sleep(10)
+    end
+    SetMana(hero, m)
+end
+
+function Routine_RunePriestsMoveFirst(side, hero)
+    log(DEBUG, "$ Routine_RunePriestsMoveFirst")
+    SetATB_CreatureTypes(side, {CREATURE_RUNE_MAGE,CREATURE_FLAME_MAGE,CREATURE_FLAME_KEEPER}, ATB_INSTANT)
+end
+
+function Routine_EarthShatterHelper(side, n, x, y)
+    local name = "HELPER_WORLDBREAKER-"..COMBAT_TURN.."-"..x.."-"..y
+    AddCreature(side, CREATURE_HELPER_WORLDBREAKER, n, 0, 0, nil, name)
+    repeat sleep() until exist(name)
+    playAnimation(GetHero(side), "cast", ONESHOT) sleep(500)
+    UnitCastAreaSpell(name, SPELL_EARTH_SHATTER, x, y) sleep(500)
+    repeat RemoveCombatUnit(name) sleep(5) until not exist(name)
+end
+
+function Routine_EarthShatter(side, hero)
+    if CURRENT_UNIT == hero then
+        log(DEBUG, "$ Routine_EarthShatter")
+        local spellpower = GetHeroLevel(side)
+        local x, y = 0, 0
+        local n = 1 + trunc(0.1 * GetHeroLevel(side))
+        for i = 1,n do
+            x = random(GRID_X_MIN, GRID_X_MAX, COMBAT_TURN+i)
+            y = random(GRID_Y_MIN, GRID_Y_MAX, COMBAT_TURN-i)
+            startThread(Routine_EarthShatterHelper, side, spellpower, x, y)
+        end
+        SetATB_ID(hero, ATB_INSTANT)
+    end
+end
+
+function Routine_DwavenDefendOrder(side, hero)
+    if CURRENT_UNIT_SIDE == side then
+        if IsCreature(CURRENT_UNIT) then
+            log(DEBUG, "$ Routine_DwavenDefendOrder")
+            local type = GetCreatureType(CURRENT_UNIT)
+            if CREATURES[type][1] == FORTRESS then
+                startThread(Routine_DwavenDefendOrderWait, CURRENT_UNIT)
+            end
+        end
+    end
+end
+
+function Routine_DwavenDefendOrderWait(id)
+    repeat sleep(10) until CURRENT_UNIT ~= id
+    DefendCombatUnit(id)
+end
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------
+-- ACADEMY
+
+function Routine_GremlinRandomShoot(side, hero)
+    if CURRENT_UNIT == hero then
+        log(DEBUG, "$ Routine_GremlinRandomShoot")
+        for i,cr in GetUnits(side, CREATURE) do
+            if cr ~= ROUTINE_VARS.GremlinShot then
+                local type = GetCreatureType(cr)
+                if type == CREATURE_GREMLIN or type == CREATURE_MASTER_GREMLIN or type == CREATURE_GREMLIN_SABOTEUR then
+                    if CanCreatureShoot(cr) then
+                        local target = RandomCreature(1-side,COMBAT_TURN+i)
+                        TryShootTarget(cr, target)
+                        SetATB_ID(cr, ATB_HALF)
+                        ROUTINE_VARS.GremlinShot = cr
+                        return
+                    end
+                end
+            end
+        end
+    end
+end
+
+function Routine_RakshasasAbility(side, hero)
+    log(DEBUG, "$ Routine_RakshasasAbility")
+    local creatures = GetUnits(side, CREATURE)
+    for i,cr in creatures do
+        local type = GetCreatureType(cr)
+        if type == CREATURE_RAKSHASA or type == CREATURE_RAKSHASA_RUKH or type == CREATURE_RAKSHASA_KSHATRI then
+            UseCombatAbility(cr, SPELL_ABILITY_DASH)
+            SetATB_ID(cr, 0.1)
+        end
+    end
+end
+
+function Routine_BallistaMoveNext(side, hero)
+    if CURRENT_UNIT == hero then
+        log(DEBUG, "$ Routine_BallistaMoveNext")
+        SetATB_WarMachineType(side, WAR_MACHINE_BALLISTA, ATB_NEXT)
+    end
+end
+
+function Routine_CastMultipleArcaneCrystals(side, hero)
+    log(DEBUG, "$ Routine_CastMultipleArcaneCrystals")
+    local m = GetUnitManaPoints(hero)
+    local n = trunc(0.125 * m)
+    local x1 = 15 - 13 * side
+    local x2 = 11 - 5 * side
+    for i = 1,n do
+        HeroCast_Area(hero, SPELL_ARCANE_CRYSTAL, 10, random(x1,x2,m-i), random(GRID_Y_MIN,GRID_Y_MAX,m-i))
+        sleep(10)
+    end
+    SetMana(hero, m-n)
+end
+
+function Routine_MagesCastMagicFist(side, hero)
+    log(DEBUG, "$ Routine_MagesCastMagicFist")
+    local creatures = GetUnits(side, CREATURE)
+    for i,cr in creatures do
+        local type = GetCreatureType(cr)
+        if type == CREATURE_MAGI or type == CREATURE_ARCH_MAGI or type == CREATURE_COMBAT_MAGE then
+            local target = RandomCreature(1-side,i)
+            if target then
+                UnitCastAimedSpell(cr, SPELL_MAGIC_FIST, target) sleep(100)
+            end
+            UnitCastAimedSpell(cr, SPELL_DEFLECT_ARROWS, cr) sleep(100)
+            SetATB_ID(cr, 0.1)
+        end
+    end
+end
+
+function Routine_CastSummonElementals(side, hero)
+    log(DEBUG, "$ Routine_CastSummonElementals")
+    HeroCast_Global(hero, SPELL_SUMMON_ELEMENTALS, FREE_MANA)
+end
+
+function Routine_TimeShift(side, hero)
+    if CURRENT_UNIT == hero then
+        log(DEBUG, "$ Routine_TimeShift")
+        if ROUTINE_VARS.TimeShifter then
+            local min = {[0]=0, [1]=0}
+            local max = {[0]=99, [1]=99}
+            min[side] = GetHeroLevel(side)
+            max[1-side] = 99 - GetHeroLevel(side)
+            for team = 0,1 do
+                for i,cr in GetUnits(team, CREATURE) do
+                    local atb = random(min[team], max[team], GetCreatureType(cr))
+                    SetATB_ID(cr, 0.01*atb)
+                end
+            end
+            ShowFlyingSign("/Text/Game/Scripts/Combat/TimeShift.txt", hero, 9)
+            ROUTINE_VARS.TimeShifter = nil
+        else
+            ROUTINE_VARS.TimeShifter = not nil
+            SetATB_ID(hero, ATB_ZERO)
+        end
+    end
+end
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------
+-- DUNGEON
+
+function Routine_ScoutsMoveFirst(side, hero)
+    log(DEBUG, "$ Routine_ScoutsMoveFirst")
+    SetATB_CreatureTypes(side, {CREATURE_SCOUT,CREATURE_ASSASSIN,CREATURE_STALKER}, ATB_INSTANT)
+end
+
+function Routine_SummonDarkstorm(side, hero)
+    log(DEBUG, "$ Routine_SummonDarkstorm")
+    local type = CREATURE_DARKSTORM + GetHeroLevel(side)
+    local name = "DARKSTORM-creature"
+    local x = (side == ATTACKER) and (GRID_X_MIN+1) or (GRID_X_MAX)
+    local y = GRID_Y_MAX
+    CREATURES[type] = {DUNGEON,8}
+    AddCreature(side, type, 1, x, y, 1, name)
+    sleep(1)
+    ROUTINE_VARS.Darkstorm = name
+end
+
+function Routine_DarkstormLoseIfDead(side, hero, unit)
+    if unit == ROUTINE_VARS.Darkstorm then
+        log(DEBUG, "$ Routine_DarkstormLoseIfDead")
+        Finish(1-side)
+    end
+end
+
+function Routine_RidersHydraSynergy(side, hero)
+    if CURRENT_UNIT_SIDE == side then
+        if IsCreature(CURRENT_UNIT) then
+            log(DEBUG, "$ Routine_RidersHydraSynergy")
+            local type = GetCreatureType(CURRENT_UNIT)
+            if type == CREATURE_RIDER or type == CREATURE_RAVAGER or type == CREATURE_BLACK_RIDER then
+                local r = 25 + trunc(GetHeroLevel(side) * 0.25)
+                if r > random(0, 100, COMBAT_TURN) then
+                    SetATB_CreatureTypes(side, {CREATURE_HYDRA,CREATURE_CHAOS_HYDRA,CREATURE_ACIDIC_HYDRA}, ATB_NEXT)
+                end
+            end
+        end
+    end
+end
+
+function Routine_HeroCastBerserk(side, hero)
+    log(DEBUG, "$ Routine_HeroCastBerserk")
+    local enemies = GetUnits(1-side, CREATURE)
+    local v = 1 + trunc(GetHeroLevel(side) * 0.05)
+    local n = min(length(enemies), v)
+    for i = 1,n do
+        HeroCast_Target(hero, SPELL_BERSERK, FREE_MANA, enemies[i-1])
+    end
+end
+
+function Routine_SummonDeadEnnemyCreature(side, hero, unit)
+    log(DEBUG, "$ Routine_SummonDeadEnnemyCreature")
+    if STARTING_ARMY[1-side][unit] then
+        local type = GetCreatureType(unit)
+        local x,y = GetUnitPosition(unit)
+        local p = 10 + GetHeroLevel(side)
+        local amount = ceil(STARTING_ARMY[1-side][unit] * p * 0.01)
+        SummonCreature(side, type, amount, x, y)
+    end
+end
+
+function Routine_DragonStrike(side, hero)
+    log(DEBUG, "$ Routine_DragonStrike")
+    if HasHeroActiveArtifactSet(side, ARTFSET_DRAGON_8PC) then
+        local dragon = nil
+        local count = 0
+        for i,cr in GetUnits(side, CREATURE) do
+            local type = GetCreatureType(cr)
+            if type == CREATURE_DEEP_DRAGON or type == CREATURE_BLACK_DRAGON or type == CREATURE_RED_DRAGON then
+                local nb = GetCreatureNumber(cr)
+                if nb > count then
+                    dragon = cr
+                    count = nb
+                end
+            end
+        end
+        if dragon then
+            local target = RandomCreature(1-side, count)
+            AttackCombatUnit(dragon, target)
+            combatPlayEmotion(side, 1)
+        end
+    end
+end
+
+function Routine_RefreshMatronMana(side, hero)
+    if CURRENT_UNIT == hero then
+        log(DEBUG, "$ Routine_RefreshMatronMana")
+        local prob = 20 + 2 * GetHeroLevel(side)
+        for i,cr in GetUnits(side, CREATURE) do
+            local type = GetCreatureType(cr)
+            if type == CREATURE_MATRON or type == CREATURE_MATRIARCH or type == CREATURE_SHADOW_MISTRESS then
+                if random(0,100,COMBAT_TURN+i) < prob then
+                    local max = GetUnitMaxManaPoints(cr)
+                    SetMana(cr, max)
+                end
+            end
+        end
+    end
+end
+
+function Routine_CastSlowOrConfusion(side, hero)
+    log(DEBUG, "$ Routine_CastSlowOrConfusion")
+    local melee_creatures = {}
+    local range_creatures = {}
+    for i,cr in GetUnits(1-side, CREATURE) do
+        local type = GetCreatureType(cr)
+        if contains(RANGED_CREATURES, type) then
+            insert(range_creatures, cr)
+        else
+            insert(melee_creatures, cr)
+        end
+    end
+    if length(melee_creatures) > 0 then
+        local target = melee_creatures[random(1, length(melee_creatures))]
+        HeroCast_Target(hero, SPELL_SLOW, FREE_MANA, target)
+    end
+    if length(range_creatures) > 0 then
+        local target = range_creatures[random(1, length(range_creatures))]
+        HeroCast_Target(hero, SPELL_FORGETFULNESS, FREE_MANA, target)
+    end
+end
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------
+-- NECROPOLIS
+
+function Routine_SummonAndKillEnnemySkeleton(side, hero)
+    log(DEBUG, "$ Routine_SummonAndKillEnnemySkeleton")
+    local n = length(GetUnits(1-side, CREATURE))
+    local cr = SummonCreatureSideOffset(1-side, CREATURE_SKELETON, 1, 6)
+    if cr then HeroCast_Target(hero, SPELL_MAGIC_FIST, FREE_MANA, cr) end
+end
+
+function Routine_SummonZombieStack(side, hero)
+    if CURRENT_UNIT == hero then
+        log(DEBUG, "$ Routine_SummonZombieStack")
+        local turns = COMBAT_TURN - ROUTINE_VARS.TurnMarker
+        local n = 1 + trunc(1.5 * (GetHeroLevel(side) + turns))
+        local type = random(1, 3, COMBAT_TURN)
+        local id = CREATURES_BY_FACTION[NECROPOLIS][2][type]
+        SummonCreature(side, id, n)
+        ROUTINE_VARS.TurnMarker = COMBAT_TURN
+    end
+end
+
+function Routine_FirstAidLastAid(side, hero)
+    log(DEBUG, "$ Routine_FirstAidLastAid")
+    if GetHeroSkillMastery(side, PERK_PLAGUE_TENT) == 1 then
+        local tent = GetWarMachine(side, WAR_MACHINE_FIRST_AID_TENT)
+        if tent then
+            local x,y = GetUnitPosition(RandomCreature(1-side, GetHeroLevel(side)))
+            startThread(UseCombatAbility, tent, SPELL_EFFECT_FIRST_AID_TENT_PLAGUE, x, y)
+        end
+    end
+end
+
+function Routine_EmbalmerManaRegen(side, hero)
+    if CURRENT_UNIT == hero then
+        log(DEBUG, "$ Routine_EmbalmerManaRegen")
+        if IsCombatUnit(UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_FIRST_AID_TENT') then
+            local m = 1 + GetHeroSkillMastery(side, SKILL_DARK_MAGIC)
+            local value = min(GetUnitManaPoints(hero)+m, GetUnitMaxManaPoints(hero))
+            SetMana(hero, value)
+        end
+    end
+end
+
+function Routine_SummonAvatarOfDeath(side, hero)
+    log(DEBUG, "$ Routine_SummonAvatarOfDeath")
+    local cost = 4 * GetHeroLevel(side)
+    if GetUnitManaPoints(hero) >= cost then
+        local units = GetUnits(side, CREATURE)
+        HeroCast_Global(hero, SPELL_ABILITY_AVATAR_OF_DEATH, cost)
+        sleep(100)
+        ROUTINE_VARS.AvatarOfDeath = GetUnits(side, CREATURE)[length(units)]
+    end
+end
+
+function Routine_AvatarDead(side, hero, unit)
+    if unit == ROUTINE_VARS.AvatarOfDeath then
+        log(DEBUG, "$ Routine_AvatarDead")
+        HeroCast_AllCreatures(hero, SPELL_SORROW, FREE_MANA, 1-side)
+        sleep(100)
+        -- SetMana(hero, GetHeroLevel(side))
+    end
+end
+
+function Routine_CastMassWeakness(side, hero)
+    log(DEBUG, "$ Routine_CastMassWeakness")
+    HeroCast_Global(hero, SPELL_MASS_CURSE, FREE_MANA)
+end
+
+function Routine_CastRandomIceBolt(side, hero)
+    if CURRENT_UNIT == hero then
+        log(DEBUG, "$ Routine_CastRandomIceBolt")
+        HeroCast_RandomCreature(hero, SPELL_ICE_BOLT, 1, 1-side)
+        if IsHuman(side) then SetATB_ID(hero, ATB_INSTANT) end
+    end
+end
+
+function Routine_RaiseUndead(side, hero, unit)
+    log(DEBUG, "$ Routine_RaiseUndead")
+    if STARTING_ARMY[1-side][unit] then
+        local dead = GetCreatureType(unit)
+        local type = CreatureToUndead(dead)
+        local x,y = GetUnitPosition(unit)
+        local p = 10 + GetHeroLevel(side)
+        local amount = ceil(STARTING_ARMY[1-side][unit] * p * 0.01)
+        SummonCreature(side, type, amount, x, y)
+    end
+end
+
+function Routine_CastBansheeHowl(side, hero)
+    log(DEBUG, "$ Routine_CastBansheeHowl")
+    local p = 2 * GetHeroLevel(side)
+    if random(0,100) < p then
+        HeroCast_Global(hero, SPELL_BANSHEE_HOWL, 0)
+    end
+end
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------
+-- INFERNO
+
+function Routine_BallistaShootUnit(side, hero)
+    local ballista = UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_BALLISTA'
+    if IsCombatUnit(ballista) then
+        if CURRENT_UNIT == hero then
+            log(DEBUG, "$ Routine_BallistaShootUnit")
+            ShowFlyingSign("/Text/Game/Scripts/Combat/Bombardier.txt", hero, 9)
+            for i,cr in GetUnits(1-side, CREATURE) do
+                local x,y = GetUnitPosition(cr)
+                local target = cr.."-"..(10*COMBAT_TURN+i)
+                AddCreature(1-side, 180, 1, x, y, nil, target)
+                repeat sleep() until IsCombatUnit(target)
+                TryShootTarget(ballista, target, 360)
+            end
+        else
+            SetATB_ID(ballista, ATB_ZERO)
+        end
+    end
+end
+
+function Routine_ResetAtbOnKillHellhounds(side, hero, unit)
+    log(DEBUG, "$ Routine_ResetAtbOnKillHellhounds")
+    if GetUnitSide(unit) ~= GetUnitSide(hero) then
+        -- SetATB_ID(CURRENT_UNIT, ATB_NEXT)
+        for i,cr in GetUnits(side, CREATURE) do
+            local type = GetCreatureType(cr)
+            if type == CREATURE_HELL_HOUND or type == CREATURE_CERBERI or type == CREATURE_FIREBREATHER_HOUND then
+                if not ROUTINE_VARS.AtbBoosted[cr] then
+                    SetATB_ID(cr, ATB_INSTANT)
+                    ROUTINE_VARS.AtbBoosted[cr] = not nil
+                    return
+                end
+            end
+        end
+    end
+end
+
+function Routine_BoostHeroAtbOnDeath(side, hero, unit)
+    log(DEBUG, "$ Routine_BoostHeroAtbOnDeath")
+    if GetUnitSide(unit) == GetUnitSide(hero) then
+        if IsCreature(unit) then
+            SetATB_ID(hero, ATB_INSTANT)
+        end
+    end
+end
+
+function Routine_HeroMoveFirst(side, hero)
+    log(DEBUG, "$ Routine_HeroMoveFirst")
+    SetATB_ID(hero, ATB_INSTANT)
+end
+
+function Routine_DemonicCreatureExplosion(side, hero)
+    if CURRENT_UNIT_SIDE == side then
+        if IsCreature(CURRENT_UNIT) then
+            log(DEBUG, "$ Routine_DemonicCreatureExplosion")
+            local id = GetCreatureType(CURRENT_UNIT)
+            if CREATURES[id][1] == INFERNO then
+                local x,y = GetUnitPosition(CURRENT_UNIT)
+                UnitCastAreaSpell(CURRENT_UNIT, SPELL_ABILITY_EXPLOSION, x, y)
+                SetATB_ID(CURRENT_UNIT, ATB_INSTANT)
+            end
+        end
+    end
+end
+
+function Routine_CastRandomFireball(side, hero)
+    if CURRENT_UNIT == hero and ROUTINE_VARS.Incendiary > 0 then
+        log(DEBUG, "$ Routine_CastRandomFireball")
+        local x,y = GetUnitPosition(RandomCreature(1-side, COMBAT_TURN))
+        HeroCast_Area(hero, SPELL_FIREBALL, FREE_MANA, x, y)
+        SetATB_ID(hero, 0.4)
+        ROUTINE_VARS.Incendiary = ROUTINE_VARS.Incendiary - 1
+    end
+end
+
+function Routine_CastMineFields(side, hero)
+    log(DEBUG, "$ Routine_CastMineFields")
+    local x = 12 - 9 * side
+    HeroCast_Area(hero, SPELL_LAND_MINE, FREE_MANA, x, 9)
+    HeroCast_Area(hero, SPELL_LAND_MINE, FREE_MANA, x, 3)
+end
+
+function Routine_SummonEarthElementals(side, hero)
+    if CURRENT_UNIT == hero then
+        log(DEBUG, "$ Routine_SummonEarthElementals")
+        local stacks = 0
+        for i,cr in GetUnits(side, CREATURE) do
+            if GetCreatureType(cr) == CREATURE_EARTH_ELEMENTAL then stacks = stacks + 1 end
+        end
+        if stacks < 50 then
+            local nb = 3 + trunc(GetHeroLevel(side) * 0.1)
+            local amount = 1 + trunc(GetHeroLevel(side) * 0.2)
+            for i = 1,nb do
+                SummonCreature(side, CREATURE_EARTH_ELEMENTAL, amount)
+                sleep(4)
+            end
+        end
+    end
+end
+
+function TryGating(unit, x, y, table)
+    UnitCastAreaSpell(unit, SPELL_ABILITY_GATING, x, y)
+    table[unit] = 1
+end
+
+function Routine_InfernoGating(side, hero)
+    log(DEBUG, "$ Routine_InfernoGating")
+    local gated_creatures = {}
+    local gating_tier = 2 * GetHeroSkillMastery(side, SKILL_GATING)
+    for i,cr in GetUnits(side, CREATURE) do
+        local id = GetCreatureType(cr)
+        if CREATURES[id][1] == INFERNO and CREATURES[id][2] <= gating_tier then
+            gated_creatures[cr] = 0
+            local nb = GetCreatureNumber(cr)
+            while gated_creatures[cr] == 0 do
+                local x = random(GRID_X_MIN+2, GRID_X_MAX-2, nb)
+                local y = random(GRID_Y_MIN, GRID_Y_MAX, id)
+                startThread(TryGating, cr, x, y, gated_creatures)
+                sleep(7)
+            end
+        end
+    end
+end
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------
+-- STRONGHOLD
+
+function Routine_CastRallingCry(side, hero)
+    if CURRENT_UNIT == hero then
+        log(DEBUG, "$ Routine_CastRallingCry")
+        HeroCast_Global(hero, SPELL_WARCRY_RALLING_CRY, FREE_MANA)
+        if IsHuman(side) then SetATB_ID(hero, ATB_INSTANT) end
+    end
+end
+
+function Routine_CastBattlecry(side, hero)
+    log(DEBUG, "$ Routine_CastBattlecry")
+    HeroCast_Global(hero, SPELL_WARCRY_BATTLECRY, FREE_MANA)
+end
+
+function Routine_CastCallOfBlood(side, hero)
+    log(DEBUG, "$ Routine_CastCallOfBlood")
+    HeroCast_TargetCreatureTypes(hero, SPELL_WARCRY_CALL_OF_BLOOD, FREE_MANA, side, {CREATURE_ORC_WARRIOR,CREATURE_ORC_SLAYER,CREATURE_ORC_WARMONGER})
+end
+
+function Routine_CountInitialGoblins(side, hero)
+    log(DEBUG, "$ Routine_CountInitialGoblins")
+    local creatures = GetUnits(side, CREATURE)
+    local goblins = 0
+    for i,cr in creatures do
+        local type = GetCreatureType(cr)
+        if type == CREATURE_GOBLIN or type == CREATURE_GOBLIN_TRAPPER or type == CREATURE_GOBLIN_DEFILER then
+            goblins = goblins + GetCreatureNumber(cr)
+        end
+    end
+    ROUTINE_VARS.GoblinsTotal = trunc(0.1 * goblins)
+end
+
+function Routine_SummonGoblinStack(side, hero)
+    if CURRENT_UNIT == hero then
+        log(DEBUG, "$ Routine_SummonGoblinStack")
+        local goblin = "Kilghan-GoblinSpawn_"..COMBAT_TURN
+        SummonCreature(side, CREATURE_GOBLIN, ROUTINE_VARS.GoblinsTotal, -1, -1, 1, goblin)
+        repeat sleep() until exist(goblin)
+        SetATB_ID(goblin, ATB_HALF)
+    end
+end
+
+function Routine_WatchRageLevels(side, hero)
+    log(DEBUG, "$ Routine_WatchRageLevels")
+    startThread(Routine_WatchRageLevelsThread, side, hero)
+end
+
+function Routine_WatchRageLevelsThread(side, hero)
+    local RageLevels = {}
+    local up = nil
+    while 1 do
+        up = nil
+        for i,cr in GetUnits(side, CREATURE) do
+            local type = GetCreatureType(cr)
+            if CREATURES[type][1] == STRONGHOLD and CREATURES[type][2] ~= 6 then
+                if not RageLevels[cr] then
+                    RageLevels[cr] = GetRageLevel(cr)
+                else
+                    if RageLevels[cr] < GetRageLevel(cr) then up = not nil end
+                    RageLevels[cr] = GetRageLevel(cr)
+                end
+            end
+        end
+        if up then SetATB_ID(hero, ATB_INSTANT) end
+        sleep(100)
+    end
+end
+
+function Routine_HealingTentMoveNext(side, hero)
+    if CURRENT_UNIT == hero then
+        log(DEBUG, "$ Routine_HealingTentMoveNext")
+        SetATB_WarMachineType(side, WAR_MACHINE_FIRST_AID_TENT, ATB_NEXT)
+    end
+end
+
+function Routine_ShamansManaRegen(side, hero)
+    if CURRENT_UNIT_SIDE == side then
+        log(DEBUG, "$ Routine_ShamansManaRegen")
+        if IsCreature(CURRENT_UNIT) then
+            local type = GetCreatureType(CURRENT_UNIT)
+            if type == CREATURE_SHAMAN or type == CREATURE_SHAMAN_WITCH or type == CREATURE_SHAMAN_HAG then
+                local n = 1 + trunc(GetHeroLevel(side) * 0.125)
+                local m = GetUnitManaPoints(CURRENT_UNIT)
+                SetMana(CURRENT_UNIT, m + n)
+            end
+        elseif IsHero(CURRENT_UNIT) then
+            local m = GetUnitManaPoints(hero)
+            local n = 1 + trunc(GetHeroLevel(side) * 0.25)
+            SetMana(hero, m + n)
+        end
+    end
+end
+
+function Routine_CastRandomLightningBolt(side, hero)
+    if CURRENT_UNIT == hero then
+        log(DEBUG, "$ Routine_CastRandomLightningBolt")
+        HeroCast_RandomCreature(hero, SPELL_LIGHTNING_BOLT, 1, 1-side)
+        if IsHuman(side) then SetATB_ID(hero, ATB_INSTANT) end
+    end
+end
+
+function Routine_SlowOpponentHero(side, hero)
+    log(DEBUG, "$ Routine_SlowOpponentHero")
+    local opponent = GetHero(1-side)
+    if opponent then
+        while CURRENT_UNIT ~= hero do
+            SetATB_ID(opponent, ATB_ZERO)
+            sleep(100)
+        end
+    end
+end
+
+
+
+COMBAT_START_HERO_ROUTINES = {
+    -- haven
+    [H_VITTORIO] = Routine_BallistaRandomSalvo,
+    [H_DOUGAL] = Routine_ArchersMoveFirst,
+    [H_LASZLO] = Routine_InfantryDash,
+    [H_KLAUS] = Routine_RetaliationStrike,
+    [H_FREYDA] = Routine_CastPrayer,
+    -- preserve
+    [H_TALANAR] = Routine_EnragedRighteousMight,
+    [H_FINDAN] = Routine_HunterRandomShoot,
+    [H_WYNGAAL] = Routine_MoveForwardUnits,
+    [H_DIRAEL] = Routine_CastSummonHive,
+    [H_VINRAEL] = Routine_CastMassHaste,
+    [H_TIERU] = Routine_SummonDruidStack,
+    -- fortress
+    [H_WULFSTAN] = Routine_BallistaMoveFirst,
+    [H_HANGVUL] = Routine_ThanesAbility,
+    [H_BRAND] = Routine_CastFireWalls,
+    [H_ERLING] = Routine_RunePriestsMoveFirst,
+    -- academy
+    [H_DAVIUS] = Routine_RakshasasAbility,
+    [H_NUR] = Routine_CastMultipleArcaneCrystals,
+    [H_CYRUS] = Routine_MagesCastMagicFist,
+    [H_ZEHIR] = Routine_CastSummonElementals,
+    -- dungeon
+    [H_VAYSHAN] = Routine_ScoutsMoveFirst,
+    [H_DARKSTORM] = Routine_SummonDarkstorm,
+    [H_SYLSAI] = Routine_HeroCastBerserk,
+    [H_SHADYA] = Routine_CastSlowOrConfusion,
+    -- necropolis
+    [H_VLADIMIR] = Routine_SummonAndKillEnnemySkeleton,
+    [H_KASPAR] = Routine_FirstAidLastAid,
+    [H_THANT] = Routine_CastMassWeakness,
+    [H_ARCHILUS] = Routine_SummonAvatarOfDeath,
+    [H_DEIRDRE] = Routine_CastBansheeHowl,
+    -- inferno
+    [H_GROK] = Routine_HeroMoveFirst,
+    [H_DELEB] = Routine_CastMineFields,
+    [H_KHABELETH] = Routine_InfernoGating,
+    -- stronghold
+    [H_GOTAI] = Routine_CastBattlecry,
+    [H_KILGHAN] = Routine_CountInitialGoblins,
+    [H_TELSEK] = Routine_CastCallOfBlood,
+    [H_HAGGASH] = Routine_WatchRageLevels,
+    [H_URGHAT] = Routine_SlowOpponentHero,
+}
+
+COMBAT_TURN_HERO_ROUTINES = {
+    -- haven
+    [H_MAEVE] = Routine_PeasantsMoveNext,
+    [H_GABRIELLE] = Routine_GriffinInstantDive,
+    [H_GODRIC] = Routine_CastRandomStoneskin,
+    -- preserve
+    [H_DIRAEL] = Routine_SpriteManaLink,
+    [H_TIERU] = Routine_DruidsMoveNext,
+    [H_MELODIA] = Routine_AllRegeneration,
+    -- fortress
+    [H_KARLI] = Routine_SpearWielderCoordination,
+    [H_HEDWIG] = Routine_DwavenDefendOrder,
+    [H_INGA] = Routine_EarthShatter,
+    -- academy
+    [H_HAVEZ] = Routine_GremlinRandomShoot,
+    [H_NATHIR] = Routine_BallistaMoveNext,
+    [H_RISSA] = Routine_TimeShift,
+    -- dungeon
+    [H_SORGAL] = Routine_RidersHydraSynergy,
+    [H_ERUINA] = Routine_RefreshMatronMana,
+    -- necropolis
+    [H_KASPAR]= Routine_EmbalmerManaRegen,
+    [H_ORSON] = Routine_SummonZombieStack,
+    [H_ORNELLA] = Routine_CastRandomIceBolt,
+    -- inferno
+    [H_SHELTEM] = Routine_BallistaShootUnit,
+    [H_MALUSTAR] = Routine_DemonicCreatureExplosion,
+    [H_AGRAEL] = Routine_CastRandomFireball,
+    [H_DELEB] = Routine_SummonEarthElementals,
+    -- stronghold
+    [H_KRAGH] = Routine_CastRallingCry,
+    [H_KILGHAN] = Routine_SummonGoblinStack,
+    [H_ZOULEIKA] = Routine_HealingTentMoveNext,
+    [H_KUJIN] = Routine_ShamansManaRegen,
+    [H_MUKHA] = Routine_CastRandomLightningBolt,
+}
+
+UNIT_DIED_HERO_ROUTINES = {
+    -- haven
+    [H_GABRIELLE] = Routine_GriffinDead,
+    -- preserve
+    [H_TALANAR] = Routine_ResetAtbOnKillEnraged,
+    [H_IVOR] = Routine_WolfDeadRevenge,
+    -- fortress
+    -- academy
+    -- dungeon
+    [H_DARKSTORM] = Routine_DarkstormLoseIfDead,
+    [H_SYLSAI] = Routine_SummonDeadEnnemyCreature,
+    -- necropolis
+    [H_ARCHILUS] = Routine_AvatarDead,
+    [H_SANDRO] = Routine_RaiseUndead,
+    -- inferno
+    [H_GRAWL] = Routine_ResetAtbOnKillHellhounds,
+    [H_ASH] = Routine_BoostHeroAtbOnDeath,
+    -- stronghold
+}
+
+
+function DoHeroSpeRoutine_CombatStart(side, name, id)
+    if COMBAT_START_HERO_ROUTINES[name] then
+        COMBAT_START_HERO_ROUTINES[name](side, id)
+    end
+end
+
+function DoHeroSpeRoutine_CombatTurn(side, name, id)
+    if COMBAT_TURN_HERO_ROUTINES[name] then
+        COMBAT_TURN_HERO_ROUTINES[name](side, id)
+    end
+end
+
+function DoHeroSpeRoutine_UnitDied(side, name, id, unit)
+    if UNIT_DIED_HERO_ROUTINES[name] then
+        UNIT_DIED_HERO_ROUTINES[name](side, id, unit)
+    end
+end
+
+
+-- log(TRACE, "Loaded heroes-routines-combat.lua")
+ROUTINES_LOADED[11] = 1

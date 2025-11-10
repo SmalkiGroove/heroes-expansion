@@ -1,0 +1,45 @@
+# Increase tower main damage from 70 to 200 and tower side damage from 50 to 140, also changes formula.
+definitions: 
+ - &tower_main_damage 200
+ - &tower_side_damage 140
+ - &factor_linear     0.5
+ - &factor_quadratic  0.5
+ - &original_tower_main_damage 70
+ - &original_tower_side_damage 50
+edits:
+  - name: Edit 1
+    address: '00000352'
+    size: 53
+    type: hex
+    original: '00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00'
+    modified: '83 EC 04 DB 44 24 0C DA 74 24 10 D8 0D 87 03 40 00 D9 1C 24 DB 44 24 0C DA 4C 24 0C DA 74 24 10 DA 74 24 10 D8 0D 8B 03 40 00 D8 04 24 83 C4 04 E9 4B B3 55 00'
+  - name: Edit 2
+    address: '00000387'
+    size: 4
+    type: float
+    original: 0
+    modified: *factor_linear
+  - name: Edit 3
+    address: '0000038B'
+    size: 4
+    type: float
+    original: 0
+    modified: *factor_quadratic
+  - name: Edit 4
+    address: '0055AACD'
+    size: 14
+    type: hex
+    original: 'DB 44 24 08 5F 5E DA 74 24 04 83 C4 0C C3'
+    modified: 'E9 80 4C AA FF 5F 5E 83 C4 0C C3 CC CC CC'
+  - name: Edit 5
+    address: '0074F243'
+    size: 4
+    type: int
+    original: *original_tower_main_damage
+    modified: *tower_main_damage
+  - name: Edit 6
+    address: '0074F24D'
+    size: 4
+    type: int
+    original: *original_tower_side_damage
+    modified: *tower_side_damage
