@@ -1,0 +1,21 @@
+name: pak
+description: "Packages a working directory into a .pak archive"
+inputs:
+  directory:
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - name: Check changes in '${{ inputs.directory }}'
+      uses: dorny/paths-filter@v3
+      id: check-changes
+      with:
+        base: ${{ github.ref }}
+        filters: |
+          changed:
+            - 'game_data/${{ inputs.directory }}/**'
+    - name: Pack ${{ inputs.directory }}
+      if: steps.check-changes.outputs.changed == 'true'
+      shell: bash
+      run: zip -q -r h5x-${{ inputs.directory }}.pak *
+      working-directory: game_data/${{ inputs.directory }}

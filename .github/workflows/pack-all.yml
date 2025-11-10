@@ -4,46 +4,22 @@ on:
   workflow_dispatch:
 
 jobs:
-  package-mod:
+  package-all:
     runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
-      - name: Pack data
-        run: zip -q -r h5x-data.pak *
-        working-directory: game_data/data
+      - name: Install dependencies
+        run: pip install semver
 
-      - name: Pack interface
-        run: zip -q -r h5x-interface.pak *
-        working-directory: game_data/interface
-
-      - name: Pack characters
-        run: zip -q -r h5x-characters.pak *
-        working-directory: game_data/characters
-
-      - name: Pack lua
-        run: zip -q -r h5x-lua.pak *
-        working-directory: game_data/lua
-
-      - name: Pack doc
-        run: zip -q -r h5x-doc.pak *
-        working-directory: game_data/doc
-
-      - name: Pack battlefields
-        run: zip -q -r h5x-battlefields.pak *
-        working-directory: game_data/battlefields
-
-      - name: Pack maps
-        run: zip -q -r h5x-maps.pak *
-        working-directory: game_data/maps
-
-      - name: Pack texts
-        run: zip -q -r h5x-texts.pak *
-        working-directory: game_texts/texts-EN
+      - name: Release package
+        run: python release.py
+        working-directory: tools
 
       - name: Upload paks
         uses: actions/upload-artifact@v4
         with:
-          name: pak
-          path: ./**/*.pak
+          name: h5x
+          path: h5x-*.pak

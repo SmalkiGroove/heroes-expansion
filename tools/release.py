@@ -2,14 +2,14 @@ import os
 import zipfile
 import semver
 
-BUMP = 'm' # M.m.p
+BUMP = '' # M.m.p
 
 workdir = os.path.dirname(os.path.abspath(__file__))
 
 print("=== UPDATE VERSION ===")
 
 path_to_version_file = "../VERSION"
-path_to_version_txt = "../game_data/data/UI/MainMenu2/Version.txt"
+path_to_version_txt = "../game_data/core/UI/MainMenu2/Version.txt"
 
 with open(os.path.join(workdir, path_to_version_file), 'r') as version_file:
     version = version_file.read()
@@ -37,7 +37,24 @@ with open(os.path.join(workdir, path_to_version_txt), 'w', encoding='utf-16-LE')
 pak_file = f"../h5x-{version}.pak"
 
 game_data_path = "../game_data"
-data_dirs = ["characters","data","interface","lua","maps","visuals","doc", "doc-artifacts","doc-creatures","doc-heroes","doc-skills"]
+data_dirs = [
+    "core",
+    "hud",
+    "lua",
+    "creatures",
+    "heroes",
+    "spells",
+    "artifacts",
+    "skills",
+    "towns",
+    "maps",
+    "battlefields",
+    "www",
+    "www-creatures",
+    "www-heroes",
+    "www-artifacts",
+    "www-skills",
+]
 
 path_prefix = len(os.path.abspath(game_data_path)) + 1
 
@@ -54,7 +71,9 @@ with zipfile.ZipFile(os.path.join(workdir, pak_file), 'w', zipfile.ZIP_DEFLATED)
                     pak.write(file_path, arcname=arcname)
 
 game_texts_path = "../game_texts"
-text_dirs = ["texts-EN"]
+text_dirs = [
+    "texts-EN"
+]
 
 for textdir in text_dirs:
     lang_file = f"../h5x-{version}-{textdir}.pak"

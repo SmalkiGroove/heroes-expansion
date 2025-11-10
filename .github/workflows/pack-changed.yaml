@@ -5,102 +5,53 @@ on:
   workflow_dispatch:
 
 jobs:
-  package-mod:
+  package-changed:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        dirs:
+        - core
+        - hud
+        - lua
+        - creatures
+        - heroes
+        - spells
+        - artifacts
+        - skills
+        - towns
+        - maps
+        - battlefields
+        - www
+        - www-creatures
+        - www-heroes
+        - www-artifacts
+        - www-skills
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
-      - name: Check changes in 'data'
-        uses: dorny/paths-filter@v3
-        id: check-data
+      - name: Pack '${{ matrix.dirs }}' if changed
+        uses: ./.github/actions/pak
         with:
-          base: ${{ github.ref }}
-          filters: |
-            changed:
-              - 'game_data/data/**'
-      - name: Pack data
-        if: steps.check-data.outputs.changed == 'true'
-        run: zip -q -r h5x-data.pak *
-        working-directory: game_data/data
+          directory: ${{ matrix.dirs }}
+  
+      - name: Upload pak artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pak-${{ matrix.dirs }}
+          path: ./game_data/${{ matrix.dirs }}/h5x-${{ matrix.dirs }}.pak
 
-      - name: Check changes in 'interface'
-        uses: dorny/paths-filter@v3
-        id: check-interface
-        with:
-          base: ${{ github.ref }}
-          filters: |
-            changed:
-              - 'game_data/interface/**'
-      - name: Pack interface
-        if: steps.check-interface.outputs.changed == 'true'
-        run: zip -q -r h5x-interface.pak *
-        working-directory: game_data/interface
+  finalize:
+    runs-on: ubuntu-latest
+    needs: package-changed
 
-      - name: Check changes in 'characters'
-        uses: dorny/paths-filter@v3
-        id: check-characters
+    steps:
+      - name: Download all paks
+        uses: actions/download-artifact@v4
         with:
-          base: ${{ github.ref }}
-          filters: |
-            changed:
-              - 'game_data/characters/**'
-      - name: Pack characters
-        if: steps.check-characters.outputs.changed == 'true'
-        run: zip -q -r h5x-characters.pak *
-        working-directory: game_data/characters
-
-      - name: Check changes in 'lua'
-        uses: dorny/paths-filter@v3
-        id: check-lua
-        with:
-          base: ${{ github.ref }}
-          filters: |
-            changed:
-              - 'game_data/lua/**'
-      - name: Pack lua
-        if: steps.check-lua.outputs.changed == 'true'
-        run: zip -q -r h5x-lua.pak *
-        working-directory: game_data/lua
-
-      - name: Check changes in 'doc'
-        uses: dorny/paths-filter@v3
-        id: check-doc
-        with:
-          base: ${{ github.ref }}
-          filters: |
-            changed:
-              - 'game_data/doc/**'
-      - name: Pack doc
-        if: steps.check-doc.outputs.changed == 'true'
-        run: zip -q -r h5x-doc.pak *
-        working-directory: game_data/doc
-
-      - name: Check changes in 'battlefields'
-        uses: dorny/paths-filter@v3
-        id: check-battlefields
-        with:
-          base: ${{ github.ref }}
-          filters: |
-            changed:
-              - 'game_data/battlefields/**'
-      - name: Pack battlefields
-        if: steps.check-battlefields.outputs.changed == 'true'
-        run: zip -q -r h5x-battlefields.pak *
-        working-directory: game_data/battlefields
-
-      - name: Check changes in 'maps'
-        uses: dorny/paths-filter@v3
-        id: check-maps
-        with:
-          base: ${{ github.ref }}
-          filters: |
-            changed:
-              - 'game_data/maps/**'
-      - name: Pack maps
-        if: steps.check-maps.outputs.changed == 'true'
-        run: zip -q -r h5x-maps.pak *
-        working-directory: game_data/maps
+          path: game_data_paks
 
       - name: Check changes in 'texts'
         uses: dorny/paths-filter@v3
@@ -118,5 +69,7 @@ jobs:
       - name: Upload paks
         uses: actions/upload-artifact@v4
         with:
-          name: pak
-          path: ./**/*.pak
+          name: paks
+          path: |
+            game_data_paks/**/*.pak
+            game_texts/texts-EN/h5x-texts.pak
