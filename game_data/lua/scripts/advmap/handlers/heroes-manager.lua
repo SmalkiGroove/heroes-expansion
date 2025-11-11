@@ -140,7 +140,7 @@ function HeroLevelUp_KujinMP() HeroLevelUp(H_KUJIN) end
 function HeroLostBattle(player, hero, opponent)
     log(DEBUG, "$ HeroLostBattle "..hero)
     if opponent ~= nil then
-        for a = 200,255 do
+        for a = 200,254 do
             if HasArtefact(opponent, a) then RemoveArtefact(opponent, a) end
         end
     end

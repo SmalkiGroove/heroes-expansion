@@ -166,7 +166,10 @@ function CheckEnableScript1()
 		ENABLE_SCRIPT = 1
 	else
 		INIT_VALUE = GetUnitManaPoints(ATTACKER_HERO_ID)
-		while INIT_CHECK == 1 do INIT_COUNTER = INIT_COUNTER + 1; sleep(1) end
+		while INIT_CHECK == 1 do
+			INIT_COUNTER = INIT_COUNTER + 1
+			sleep(1)
+		end
 		SetUnitManaPoints(ATTACKER_HERO_ID, INIT_COUNTER)
 		log(DEBUG, "INIT_COUNTER="..INIT_COUNTER)
 	end
@@ -174,8 +177,13 @@ end
 function CheckEnableScript2()
 	if ENABLE_SCRIPT == 0 then
 		INIT_CHECK = 2
-		sleep(10)
-		if GetUnitManaPoints(ATTACKER_HERO_ID) == INIT_COUNTER then
+		local value = 0
+		repeat
+			value = GetUnitManaPoints(ATTACKER_HERO_ID)
+			sleep()
+		until value ~= INIT_VALUE
+		log(DEBUG, "Value="..value)
+		if value == INIT_COUNTER then
 			SetUnitManaPoints(ATTACKER_HERO_ID, INIT_VALUE)
 			ENABLE_SCRIPT = 1
 		end
