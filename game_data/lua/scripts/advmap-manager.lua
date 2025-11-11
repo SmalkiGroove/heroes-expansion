@@ -70,7 +70,7 @@ function WatchPlayer(player, wait)
         while (not IsPlayerCurrent(player)) do sleep(10) end
     end
 	sleep(10)
-	log(DEBUG, "$ WatchPlayer "..player)
+	log(INFO, "$ WatchPlayer "..player)
     local tracker = {}
     for _,hero in GetPlayerHeroes(player) do
 		local x,y,z = GetObjectPosition(hero)
@@ -88,7 +88,7 @@ function WatchPlayer(player, wait)
 			if tracker[hero].track then
 				local mvp = GetHeroStat(hero, STAT_MOVE_POINTS)
 				if mvp == 0 then
-					log(DEBUG, "Hero "..hero.." has 0 move points")
+					log(TRACE, "Hero "..hero.." has 0 move points")
 					if IsEqualPosition(hero, tracker[hero].x, tracker[hero].y, tracker[hero].z) then
 						Routine_ArtifactBootsOfSwiftJourneyCancel(player, hero, nil)
 						if HasHeroSkill(hero, PERK_MEDITATION) and GetHeroStat(hero, STAT_MANA_POINTS) > tracker[hero].mana then
@@ -108,7 +108,7 @@ function WatchPlayer(player, wait)
 			startThread(DoHeroSpeRoutine_Continuous, player, hero)
 			startThread(DoArtifactsRoutine_Continuous, player, hero)
         end
-		sleep(15)
+		sleep(10)
 	end
 end
 
@@ -228,7 +228,7 @@ function InitializeHeroes()
 	for player = 1,8 do
 		if (GetPlayerState(player) == 1) then
 			startThread(StartingBonus, player)
-			DIFFICULTY_MULTIPLIER[player] = IsAIPlayer(player) and (1+0.5*GetDifficulty()) or 1
+			DIFFICULTY_MULTIPLIER[player] = IsAIPlayer(player) and (1+0.5*DIFFICULTY) or 1
 			for i = 1,8 do AllowPlayerTavernRace(player, FactionToTownType(i), 0) end
 			for i,hero in GetPlayerHeroes(player) do
 				log(DEBUG, "Initialize hero "..hero)

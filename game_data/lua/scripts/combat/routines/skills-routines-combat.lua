@@ -76,15 +76,8 @@ function Routine_ImbueBallista(side, hero, id, mastery)
     end
 end
 
-function Routine_GuardianAngelInit(side, hero, id, mastery)
-    log(DEBUG, "$ Routine_GuardianAngelInit")
-    EnableAutoFinish(nil)
-end
-
-function Routine_GuardianAngelRez(side, hero, id, mastery, unit)
-    if GetUnitSide(unit) ~= side then
-        for _,cr in GetUnits(1-side, CREATURE) do return end
-        combatSetPause(1)
+function Routine_GuardianAngelRez(side, hero, id, mastery, winner)
+    if winner == side then
         log(DEBUG, "$ Routine_GuardianAngelRez")
         local rez_stack = "none"
         local rez_power = 0
@@ -102,7 +95,6 @@ function Routine_GuardianAngelRez(side, hero, id, mastery, unit)
             local angel = "creature_ARCHANGEL-GUARDIAN_ANGEL"
             SummonCreatureSideOffset(side, CREATURE_ARCHANGEL, 1, 1, angel)
             UnitCastAimedSpell(angel, SPELL_ABILITY_RESURRECT_ALLIES, rez_stack)
-            Finish(side)
         end
     end
 end
@@ -114,7 +106,6 @@ COMBAT_START_SKILL_ROUTINES = {
     [PERK_HOUNDMASTERS] = Routine_Houndmasters,
     [PERK_ELEMENTAL_BALANCE] = Routine_ElementalBalance,
     [PERK_RUSH] = Routine_RandomCreatureRush,
-    [PERK_GUARDIAN_ANGEL] = Routine_GuardianAngelInit,
 }
 
 COMBAT_TURN_SKILL_ROUTINES = {
@@ -122,6 +113,9 @@ COMBAT_TURN_SKILL_ROUTINES = {
 }
 
 UNIT_DIED_SKILL_ROUTINES = {
+}
+
+COMBAT_END_SKILL_ROUTINES = {
     [PERK_GUARDIAN_ANGEL] = Routine_GuardianAngelRez,
 }
 
@@ -149,6 +143,15 @@ function DoSkillRoutine_UnitDied(side, name, id, unit)
         local mastery = GetHeroSkillMastery(side, skill)
         if mastery >= 1 then
             routine(side, name, id, mastery, unit)
+        end
+    end
+end
+
+function DoSkillRoutine_CombatEnd(side, name, id, winner)
+    for skill,routine in COMBAT_END_SKILL_ROUTINES do
+        local mastery = GetHeroSkillMastery(side, skill)
+        if mastery >= 1 then
+            routine(side, name, id, mastery, winner)
         end
     end
 end

@@ -122,6 +122,8 @@ end
 -- COMMON
 
 function PlayerDailyResources(player)
+	log(DEBUG, "Player "..player.." daily resources :")
+	log(DEBUG, DAILY_RESOURCES[player])
 	for resource,amount in DAILY_RESOURCES[player] do
 		local curamount = GetPlayerResource(player, resource)
 		local newamount = curamount + amount
@@ -403,7 +405,7 @@ function TransformCreatures(obj, creature, faction)
 end
 
 function InitializeRandomSeed()
-	local value = GetTerrainSize() + GetDifficulty()
+	local value = GetTerrainSize() + DIFFICULTY
 	for p = 1,8 do
 		if (GetPlayerState(p) == 1) then
 			value = value + p

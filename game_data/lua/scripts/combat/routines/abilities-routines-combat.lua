@@ -96,6 +96,9 @@ COMBAT_TURN_ABILITIES_ROUTINES = {
 UNIT_DIED_ABILITIES_ROUTINES = {
 }
 
+COMBAT_END_ABILITIES_ROUTINES = {
+}
+
 
 function DoAbilitiesRoutine_CombatStart()
     for _,cr in GetUnits(ATTACKER, CREATURE) do
@@ -122,6 +125,27 @@ function DoAbilitiesRoutine_CombatTurn()
 end
 
 function DoAbilitiesRoutine_UnitDied(unit)
+    if IsCreature(unit) then
+        local type = GetCreatureType(unit)
+        if UNIT_DIED_ABILITIES_ROUTINES[type] then
+            UNIT_DIED_ABILITIES_ROUTINES[type](GetUnitSide(unit), unit)
+        end
+    end
+end
+
+function DoAbilitiesRoutine_CombatEnd()
+    for _,cr in GetUnits(ATTACKER, CREATURE) do
+        local type = GetCreatureType(cr)
+        if COMBAT_END_ABILITIES_ROUTINES[type] then
+            COMBAT_END_ABILITIES_ROUTINES[type](ATTACKER, cr)
+        end
+    end
+    for _,cr in GetUnits(DEFENDER, CREATURE) do
+        local type = GetCreatureType(cr)
+        if COMBAT_END_ABILITIES_ROUTINES[type] then
+            COMBAT_END_ABILITIES_ROUTINES[type](DEFENDER, cr)
+        end
+    end
 end
 
 

@@ -155,8 +155,7 @@ function Routine_ArtfsetDragon8(side, hero)
 end
 
 
-COMBAT_PREPARE_ARTIFACT_ROUTINES = {
-}
+
 COMBAT_START_ARTIFACT_ROUTINES = {
     [ARTIFACT_ORB_OF_AIR] = Routine_SummonElementalsAir,
     [ARTIFACT_ORB_OF_EARTH] = Routine_SummonElementalsEarth,
@@ -168,9 +167,10 @@ COMBAT_TURN_ARTIFACT_ROUTINES = {
 UNIT_DIED_ARTIFACT_ROUTINES = {
     [ARTIFACT_MOON_CHARM] = Routine_ArtifactMoonCharm,
 }
-
-COMBAT_PREPARE_ARTFSET_ROUTINES = {
+COMBAT_END_ARTIFACT_ROUTINES = {
 }
+
+
 COMBAT_START_ARTFSET_ROUTINES = {
     [ARTFSET_FROST_4PC] = Routine_ArtfsetFrost,
     [ARTFSET_SPIRIT_5PC] = Routine_ArtfsetSpirit,
@@ -185,16 +185,9 @@ UNIT_DIED_ARTFSET_ROUTINES = {
     [ARTFSET_DRAGON_4PC] = Routine_ArtfsetDragon4,
     [ARTFSET_DRAGON_6PC] = Routine_ArtfsetDragon6,
 }
+COMBAT_END_ARTFSET_ROUTINES = {
+}
 
-
-function DoArtifactRoutine_CombatPrepare(side, name, id)
-    for a,routine in COMBAT_PREPARE_ARTIFACT_ROUTINES do
-        if HasHeroEquippedArtifact(side, a) then routine(side, id) end
-    end
-    for a,routine in COMBAT_PREPARE_ARTFSET_ROUTINES do
-        if HasHeroActiveArtifactSet(side, a) then routine(side, id) end
-    end
-end
 
 function DoArtifactRoutine_CombatStart(side, name, id)
     for a,routine in COMBAT_START_ARTIFACT_ROUTINES do
@@ -220,6 +213,15 @@ function DoArtifactRoutine_UnitDied(side, name, id, unit)
     end
     for a,routine in UNIT_DIED_ARTFSET_ROUTINES do
         if HasHeroActiveArtifactSet(side, a) then routine(side, id, unit) end
+    end
+end
+
+function DoArtifactRoutine_CombatEnd(side, name, id, winner)
+    for a,routine in COMBAT_END_ARTIFACT_ROUTINES do
+        if HasHeroEquippedArtifact(side, a) then routine(side, id, winner) end
+    end
+    for a,routine in COMBAT_END_ARTFSET_ROUTINES do
+        if HasHeroActiveArtifactSet(side, a) then routine(side, id, winner) end
     end
 end
 

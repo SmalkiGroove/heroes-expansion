@@ -131,9 +131,9 @@ function InitializeMapTowns()
     for faction,type in Towns_Types do
         for _,town in GetObjectNamesByType(type) do
             local owner = GetObjectOwner(town)
-            if not PLAYER_MAIN_TOWN[owner] then
+            if owner > 0 and not PLAYER_MAIN_TOWN[owner] then
                 PLAYER_MAIN_TOWN[owner] = town
-                if GetDifficulty() > 1 and IsAIPlayer(owner) then UpgradeTownBuilding(town, TOWN_BUILDING_GRAIL) end
+                if DIFFICULTY > 1 and IsAIPlayer(owner) then UpgradeTownBuilding(town, TOWN_BUILDING_GRAIL) end
             end
             local x,y,floor = GetObjectPosition(town)
             local dx = TOWN_TYPES_CENTER_TILE[type][1]

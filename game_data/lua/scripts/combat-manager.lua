@@ -69,7 +69,7 @@ end
 startThread(CheckEnableScript1)
 
 function ManageCombatPrepare()
-    -- log(TRACE, "$ Manage combat prepare")
+    log(TRACE, "$ Manage combat prepare")
     CheckEnableScript2()
     if ENABLE_SCRIPT == 0 then return end
 
@@ -84,10 +84,11 @@ function ManageCombatPrepare()
     end
     sleep(100)
     InitializeRandomSeed()
+    EnableAutoFinish(nil)
 end
 
 function ManageCombatStart()
-    -- log(TRACE, "$ Manage combat start")
+    log(TRACE, "$ Manage combat start")
     if ENABLE_SCRIPT == 0 then return end
     GetArmySummary()
     log(DEBUG, "Combat random seed = "..RANDOM_SEED)
@@ -108,7 +109,7 @@ function ManageCombatStart()
 end
 
 function ManageCombatTurn(unit)
-    -- log(TRACE, "$ Manage combat turn")
+    log(TRACE, "$ Manage combat turn - "..unit)
     if ENABLE_SCRIPT == 0 then return end
 
     if CURRENT_UNIT ~= unit then
@@ -119,10 +120,12 @@ function ManageCombatTurn(unit)
         CURRENT_UNIT_SIDE = GetUnitSide(unit)
 
         if ATTACKER_HERO ~= "" then
+            DoSkillRoutine_CombatTurn(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
             DoHeroSpeRoutine_CombatTurn(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
             DoArtifactRoutine_CombatTurn(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
         end
         if DEFENDER_HERO ~= "" then
+            DoSkillRoutine_CombatTurn(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
             DoHeroSpeRoutine_CombatTurn(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
             DoArtifactRoutine_CombatTurn(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
         end
@@ -132,17 +135,55 @@ function ManageCombatTurn(unit)
 end
 
 function ManageUnitDeath(unit)
-    -- log(TRACE, "$ Manage unit death")
+    log(TRACE, "$ Manage unit death - "..unit)
     if ENABLE_SCRIPT == 0 then return end
 
     if ATTACKER_HERO ~= "" then
+        DoSkillRoutine_UnitDied(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID, unit)
 		DoHeroSpeRoutine_UnitDied(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID, unit)
         DoArtifactRoutine_UnitDied(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID, unit)
 	end
 	if DEFENDER_HERO ~= "" then
+        DoSkillRoutine_UnitDied(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID, unit)
 		DoHeroSpeRoutine_UnitDied(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID, unit)
 		DoArtifactRoutine_UnitDied(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID, unit)
 	end
+
+    do
+        local winner = nil
+        local alive = nil
+        for side = 0,1 do
+            alive = nil
+            for cr,_ in STARTING_ARMY[side] do
+                if cr ~= unit and exist(cr) and GetCreatureNumber(cr) > 0 then
+                    alive = not nil 
+                end
+            end
+            if not alive then winner = 1 - side; break end
+        end
+        if winner then ManageCombatEnd(winner) end
+    end
+end
+
+function ManageCombatEnd(winner)
+    log(TRACE, "$ Manage combat end - "..winner)
+    if ENABLE_SCRIPT == 1 then
+        combatSetPause(1)
+
+        DoAbilitiesRoutine_CombatEnd()
+        if ATTACKER_HERO ~= "" then
+            DoSkillRoutine_CombatEnd(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID, winner)
+            DoHeroSpeRoutine_CombatEnd(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID, winner)
+            DoArtifactRoutine_CombatEnd(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID, winner)
+        end
+        if DEFENDER_HERO ~= "" then
+            DoSkillRoutine_CombatEnd(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID, winner)
+            DoHeroSpeRoutine_CombatEnd(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID, winner)
+            DoArtifactRoutine_CombatEnd(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID, winner)
+        end
+
+        Finish(winner)
+    end
 end
 
 

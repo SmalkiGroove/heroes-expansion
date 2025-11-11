@@ -246,15 +246,6 @@ function Routine_UpgradeMagicGuild(player, hero)
     end
 end
 
-function Routine_RollbackDruids(player, hero, combatIndex)
-    log(DEBUG, "$ Routine_RollbackDruids")
-    local nb = GetHeroCreatures(hero, CREATURE_DRUID_OF_THE_COUNCIL)
-    if nb > 0 then
-        RemoveHeroCreatures(hero, CREATURE_DRUID_OF_THE_COUNCIL, nb) sleep(1)
-        AddHeroCreatures(hero, CREATURE_DRUID, nb)
-    end
-end
-
 Var_Ylthin_BattleWon = 0
 function Routine_YlthinVictoryCounter(player, hero, combatIndex)
     log(DEBUG, "$ Routine_YlthinVictoryCounter")
@@ -1036,10 +1027,9 @@ function Routine_TownBuildingUpConfirm(player, hero, town, building, cost)
     ChangeHeroStat(hero, STAT_MOVE_POINTS, -500)
 end
 
-function Routine_GenerateSulfur(player, hero)
+function Routine_GenerateSulfur(player, hero, level)
     log(DEBUG, "$ Routine_GenerateSulfur")
-    local amount = trunc(0.2 * GetHeroLevel(hero))
-    GiveResources(player, SULFUR, amount)
+    GiveResources(player, SULFUR, 1, 1)
 end
 
 function Routine_MultiplyTroops(player, hero)
@@ -1259,7 +1249,6 @@ DAILY_TRIGGER_HERO_ROUTINES = {
     [H_ORNELLA] = Routine_FrostLordArtifacts,
     -- inferno
     [H_ORLANDO] = Routine_TownBuildingUp,
-    [H_DELEB] = Routine_GenerateSulfur,
     [H_KHABELETH] = Routine_MultiplyTroops,
     -- stronghold
     [H_KARUKAT] = Routine_AddHeroWyverns,
@@ -1316,6 +1305,7 @@ LEVEL_UP_HERO_ROUTINES_HERO = {
     -- inferno
     [H_ASH] = Routine_GainAttackPerLevel,
     [H_BIARA] = Routine_AddHeroSuccubus,
+    [H_DELEB] = Routine_GenerateSulfur,
     -- stronghold
     [H_URGHAT] = Routine_SpiritArtifacts,
     [H_ZOULEIKA] = Routine_GainPotionLevelUp,
@@ -1326,7 +1316,6 @@ AFTER_COMBAT_TRIGGER_HERO_ROUTINES = {
     [H_ALARIC] = Routine_ConvertPeasantToPriest,
     -- preserve
     [H_KYRRE] = Routine_KyrreVictoryCounter,
-    [H_TIERU] = Routine_RollbackDruids,
     [H_ELLESHAR] = Routine_ElvenSageVictory,
     [H_YLTHIN] = Routine_YlthinVictoryCounter,
     -- fortress

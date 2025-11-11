@@ -254,22 +254,22 @@ end
 
 function Routine_SummonDruidStack(side, hero)
     log(DEBUG, "$ Routine_SummonDruidStack")
-    local druid = "none"
     local number = 0
     for i,cr in GetUnits(side, CREATURE) do
         if GetCreatureType(cr) == CREATURE_DRUID then
             local amount = GetCreatureNumber(cr)
             if number == 0 or amount < number then
-                druid = cr
+                ROUTINE_VARS.DruidOfTheCouncil = cr
                 number = amount
             end
         end
     end
-    if druid ~= "none" then
-        local x,y = GetUnitPosition(druid)
-        RemoveCombatUnit(druid)
-        repeat sleep() until not exist(druid)
-        SummonCreature(side, CREATURE_DRUID_OF_THE_COUNCIL, number, x, y, nil, druid)
+    if number > 0 then
+        local x,y = GetUnitPosition(ROUTINE_VARS.DruidOfTheCouncil)
+        RemoveCombatUnit(ROUTINE_VARS.DruidOfTheCouncil)
+        repeat sleep() until not exist(ROUTINE_VARS.DruidOfTheCouncil)
+        local druid = "druidofthecouncil"
+        AddCreature(side, CREATURE_DRUID_OF_THE_COUNCIL, number, x, y, nil, druid)
         repeat sleep() until exist(druid)
         UseCombatAbility(druid, SPELL_ABILITY_POWER_FEED)
         if GetUnitManaPoints(hero) < GetUnitMaxManaPoints(hero) then
@@ -282,6 +282,19 @@ function Routine_DruidsMoveNext(side, hero)
     if CURRENT_UNIT == hero then
         log(DEBUG, "$ Routine_DruidsMoveNext")
         SetATB_CreatureTypes(side, {CREATURE_DRUID,CREATURE_DRUID_ELDER,CREATURE_HIGH_DRUID,CREATURE_DRUID_OF_THE_COUNCIL}, ATB_NEXT)
+    end
+end
+
+function Routine_RollbackDruids(side, hero, winner)
+    if winner == side then
+        log(DEBUG, "$ Routine_RollbackDruids")
+        local druid = "druidofthecouncil"
+        local n = GetCreatureNumber(druid)
+        local x,y = GetUnitPosition(druid)
+        RemoveCombatUnit(druid)
+        repeat sleep() until not exist(druid)
+        AddCreature(side, CREATURE_DRUID, n, x, y, nil, ROUTINE_VARS.DruidOfTheCouncil)
+        repeat sleep() until exist(ROUTINE_VARS.DruidOfTheCouncil)
     end
 end
 
@@ -526,7 +539,7 @@ end
 function Routine_DarkstormLoseIfDead(side, hero, unit)
     if unit == ROUTINE_VARS.Darkstorm then
         log(DEBUG, "$ Routine_DarkstormLoseIfDead")
-        Finish(1-side)
+        ManageCombatEnd(1-side)
     end
 end
 
@@ -795,21 +808,27 @@ function Routine_DemonicCreatureExplosion(side, hero)
     end
 end
 
+function Routine_IncendiaryResetATB(hero)
+    repeat sleep() until CURRENT_UNIT ~= hero
+    SetATB_ID(hero, 0.55)
+end
+
 function Routine_CastRandomFireball(side, hero)
     if CURRENT_UNIT == hero and ROUTINE_VARS.Incendiary > 0 then
         log(DEBUG, "$ Routine_CastRandomFireball")
         local x,y = GetUnitPosition(RandomCreature(1-side, COMBAT_TURN))
         HeroCast_Area(hero, SPELL_FIREBALL, FREE_MANA, x, y)
-        SetATB_ID(hero, 0.4)
         ROUTINE_VARS.Incendiary = ROUTINE_VARS.Incendiary - 1
+        startThread(Routine_IncendiaryResetATB, hero)
     end
 end
 
 function Routine_CastMineFields(side, hero)
     log(DEBUG, "$ Routine_CastMineFields")
     local x = 12 - 9 * side
-    HeroCast_Area(hero, SPELL_LAND_MINE, FREE_MANA, x, 9)
-    HeroCast_Area(hero, SPELL_LAND_MINE, FREE_MANA, x, 3)
+    HeroCast_Area(hero, SPELL_LAND_MINE, FREE_MANA, x, 10)
+    HeroCast_Area(hero, SPELL_LAND_MINE, FREE_MANA, x, 6)
+    HeroCast_Area(hero, SPELL_LAND_MINE, FREE_MANA, x, 2)
 end
 
 function Routine_SummonEarthElementals(side, hero)
@@ -819,9 +838,9 @@ function Routine_SummonEarthElementals(side, hero)
         for i,cr in GetUnits(side, CREATURE) do
             if GetCreatureType(cr) == CREATURE_EARTH_ELEMENTAL then stacks = stacks + 1 end
         end
-        if stacks < 50 then
+        if stacks < GRID_Y_MAX then
             local nb = 3 + trunc(GetHeroLevel(side) * 0.1)
-            local amount = 1 + trunc(GetHeroLevel(side) * 0.2)
+            local amount = 1 + trunc(GetHeroLevel(side) * 0.34)
             for i = 1,nb do
                 SummonCreature(side, CREATURE_EARTH_ELEMENTAL, amount)
                 sleep(4)
@@ -1076,6 +1095,18 @@ UNIT_DIED_HERO_ROUTINES = {
     -- stronghold
 }
 
+COMBAT_END_HERO_ROUTINES = {
+    -- haven
+    -- preserve
+    [H_TIERU] = Routine_RollbackDruids,
+    -- fortress
+    -- academy
+    -- dungeon
+    -- necropolis
+    -- inferno
+    -- stronghold
+}
+
 
 function DoHeroSpeRoutine_CombatStart(side, name, id)
     if COMBAT_START_HERO_ROUTINES[name] then
@@ -1092,6 +1123,12 @@ end
 function DoHeroSpeRoutine_UnitDied(side, name, id, unit)
     if UNIT_DIED_HERO_ROUTINES[name] then
         UNIT_DIED_HERO_ROUTINES[name](side, id, unit)
+    end
+end
+
+function DoHeroSpeRoutine_CombatEnd(side, name, id, winner)
+    if COMBAT_END_HERO_ROUTINES[name] then
+        COMBAT_END_HERO_ROUTINES[name](side, id, winner)
     end
 end
 

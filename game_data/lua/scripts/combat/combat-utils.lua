@@ -244,7 +244,7 @@ end
 function Win()
     for side = 0,1 do
         if GetHost(side) == COMPUTER then
-            Finish(1-side)
+            ManageCombatEnd(1-side)
         end
     end
 end

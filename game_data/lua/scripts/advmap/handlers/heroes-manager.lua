@@ -149,7 +149,7 @@ end
 function AIDailyBonus(player, hero)
     if IsAIPlayer(player) then
         log(DEBUG, "$ AIDailyBonus for "..hero)
-        local amount = 125 * TURN * GetDifficulty()
+        local amount = 125 * TURN * DIFFICULTY
         GiveExp(hero, amount)
     end
 end
@@ -160,8 +160,8 @@ function AIWeeklyBonus(player, hero)
         local faction = HEROES[hero].faction
         local n = min(WEEKS,7)
         for i = 1,n do
-            local amount = WEEKS * (8-i) * GetDifficulty()
-            AddHeroCreatureType(player, hero, faction, i, amount, 0)
+            local amount = WEEKS * (8-i) * DIFFICULTY
+            AddHeroCreatureType(player, hero, faction, i, amount, 1)
             sleep(1)
         end
     end
@@ -170,8 +170,13 @@ end
 function AIRecruitBonus(player, hero)
     if IsAIPlayer(player) then
         log(DEBUG, "$ AIRecruitBonus for "..hero)
-        GiveExp(hero, 10000)
-        GiveHeroRandomArtifact(player, hero, ARTIFACT_CLASS_RELIC)
+        if DIFFICULTY > 0 then
+            ChangeHeroStat(hero, STAT_ATTACK, DIFFICULTY)
+            ChangeHeroStat(hero, STAT_DEFENCE, DIFFICULTY)
+            ChangeHeroStat(hero, STAT_KNOWLEDGE, DIFFICULTY)
+            ChangeHeroStat(hero, STAT_SPELL_POWER, DIFFICULTY)
+            GiveHeroRandomArtifact(player, hero, DIFFICULTY)
+        end
     end
 end
 

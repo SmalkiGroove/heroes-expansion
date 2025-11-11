@@ -26,6 +26,7 @@ ROUTINE_VARS = {
     HeroTurns = 0,
     TurnMarker = 0,
     GriffinDives = {},
+    DruidOfTheCouncil = "none",
     TimeShifter = not nil,
     GremlinShot = "none",
     AvatarOfDeath = "none",

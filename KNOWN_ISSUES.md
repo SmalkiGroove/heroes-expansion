@@ -21,11 +21,8 @@
 ### Bugs
 
 - [EXE] Shantiri Moon Disc blocks all light magic
-- [LUA] Tieru recovers all druids after battles
-- [LUA] Agrael can get 2 consecutive turns
-- [LUA] Deleb still too many elem stacks
-- [LUA] Tracking hero movement loops after use tavern
 - [XDB] Level Up skillswheel always shows all skills
+- [???] Gateways and subterra entrance not working on RMG maps
 
 ### Suggestions
 
@@ -41,6 +38,7 @@
 - [EXE] Market change rate are total scam
 - [EXE] Inferno and Dungeon sacrificial buildings are bad
 - [XDB] Nerf Meteor Shower base damage
+- [XDB] Anger Treant change ability root for fierce retal
 
 ### Massive work required
 
@@ -54,4 +52,5 @@
 
 # FIXED
 
-
+- Agrael can get 2 consecutive turns
+- Tieru recovers all druids after battles
