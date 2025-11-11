@@ -160,6 +160,19 @@ INIT_CHECK = 0
 INIT_COUNTER = 0
 INIT_VALUE = 0
 
+function CheckEnableScript()
+	if IsComputer(ATTACKER) or IsComputer(DEFENDER) then
+		ENABLE_SCRIPT = 1
+	else
+		while INIT_COUNTER < 100 do
+			INIT_COUNTER = INIT_COUNTER + 1
+			sleep()
+		end
+		local init = GetGameVar('h5x_combat_init') or 0
+		ENABLE_SCRIPT = 1 - init
+		consoleCmd("@SetGameVar('h5x_combat_init',"..ENABLE_SCRIPT..")")
+	end
+end
 function CheckEnableScript1()
 	INIT_CHECK = 1
 	if IsComputer(ATTACKER) or IsComputer(DEFENDER) then

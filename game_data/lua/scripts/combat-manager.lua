@@ -66,11 +66,12 @@ end
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
-startThread(CheckEnableScript1)
+startThread(CheckEnableScript)
+-- startThread(CheckEnableScript1)
 
 function ManageCombatPrepare()
     log(TRACE, "$ Manage combat prepare")
-    CheckEnableScript2()
+    -- CheckEnableScript2()
     if ENABLE_SCRIPT == 0 then return end
 
     combatSetPause(1)
