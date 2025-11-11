@@ -171,6 +171,7 @@ function CheckEnableScript1()
 		repeat sleep(1) until GetGameVar(INIT_COUNTER) ~= ""
 		SetUnitManaPoints(ATTACKER_HERO_ID, INIT_COUNTER)
 		log(DEBUG, "INIT_COUNTER="..INIT_COUNTER)
+		print("GetGameVar(INIT_COUNTER)="..GetGameVar(INIT_COUNTER))
 	end
 end
 function CheckEnableScript2()
@@ -181,7 +182,7 @@ function CheckEnableScript2()
 			value = GetUnitManaPoints(ATTACKER_HERO_ID)
 			sleep()
 		until value ~= INIT_VALUE
-		local temp = GetGameVar("'"..value.."'")
+		local temp = GetGameVar(value)
 		print("Init="..temp)
 		if temp == INIT_COUNTER then
 			SetUnitManaPoints(ATTACKER_HERO_ID, INIT_VALUE)
