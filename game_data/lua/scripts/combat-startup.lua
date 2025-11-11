@@ -167,8 +167,8 @@ function CheckEnableScript1()
 	else
 		INIT_VALUE = GetUnitManaPoints(ATTACKER_HERO_ID)
 		while INIT_CHECK == 1 do INIT_COUNTER = INIT_COUNTER + 1; sleep(1) end
-		consoleCmd("@SetGameVar('"..INIT_COUNTER.."',"..INIT_COUNTER..")")
-		repeat sleep(1) until GetGameVar("'"..INIT_COUNTER.."'") == INIT_COUNTER
+		consoleCmd("@SetGameVar("..INIT_COUNTER..","..INIT_COUNTER..")")
+		repeat sleep(1) until GetGameVar(INIT_COUNTER) ~= ""
 		SetUnitManaPoints(ATTACKER_HERO_ID, INIT_COUNTER)
 		log(DEBUG, "INIT_COUNTER="..INIT_COUNTER)
 	end
