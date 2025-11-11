@@ -160,19 +160,6 @@ INIT_CHECK = 0
 INIT_COUNTER = 0
 INIT_VALUE = 0
 
-function CheckEnableScript()
-	if IsComputer(ATTACKER) or IsComputer(DEFENDER) then
-		ENABLE_SCRIPT = 1
-	else
-		while INIT_COUNTER < 100 do
-			INIT_COUNTER = INIT_COUNTER + 1
-			sleep()
-		end
-		local init = GetGameVar('h5x_combat_init') or 0
-		ENABLE_SCRIPT = 1 - init
-		consoleCmd("@SetGameVar('h5x_combat_init',"..ENABLE_SCRIPT..")")
-	end
-end
 function CheckEnableScript1()
 	INIT_CHECK = 1
 	if IsComputer(ATTACKER) or IsComputer(DEFENDER) then
@@ -181,14 +168,21 @@ function CheckEnableScript1()
 		INIT_VALUE = GetUnitManaPoints(ATTACKER_HERO_ID)
 		while INIT_CHECK == 1 do INIT_COUNTER = INIT_COUNTER + 1; sleep(1) end
 		SetUnitManaPoints(ATTACKER_HERO_ID, INIT_COUNTER)
+		consoleCmd("@SetGameVar('"..INIT_COUNTER.."',"..INIT_COUNTER..")")
 		log(DEBUG, "INIT_COUNTER="..INIT_COUNTER)
 	end
 end
 function CheckEnableScript2()
 	if ENABLE_SCRIPT == 0 then
 		INIT_CHECK = 2
-		sleep(10)
-		if GetUnitManaPoints(ATTACKER_HERO_ID) == INIT_COUNTER then
+		local value = 0
+		repeat
+			value = GetUnitManaPoints(ATTACKER_HERO_ID)
+			sleep()
+		until value ~= INIT_VALUE
+		local temp = GetGameVar("'"..value.."'")
+		print("Init="..temp)
+		if temp == INIT_COUNTER then
 			SetUnitManaPoints(ATTACKER_HERO_ID, INIT_VALUE)
 			ENABLE_SCRIPT = 1
 		end
