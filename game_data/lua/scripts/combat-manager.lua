@@ -31,22 +31,18 @@ function FetchData(name, id)
     log(DEBUG, "Fetch data for hero "..name)
     local temp = GetGameVar(VarHeroLevel(name))
     HERO_DATA[id].Level = 0 + temp
-    -- log(TRACE, "* fetched level ok")
     for _,s in COMBAT_EFFECT_SKILLS do
         temp = GetGameVar(VarHeroSkillId(name,s))
         HERO_DATA[id].Skills[s] = temp == "" and 0 or 0 + temp
     end
-    -- log(TRACE, "* fetched skills ok")
     for _,a in COMBAT_EFFECT_ARTIFACTS do
         temp = GetGameVar(VarHeroArtifactId(name,a))
         HERO_DATA[id].Artifacts[a] = temp == "" and 0 or 0 + temp
     end
-    -- log(TRACE, "* fetched artifacts ok")
     for set = ARTFSET_NONE,ARTFSET_ACTIVABLES_COUNT do
         temp = GetGameVar(VarHeroArtfsetId(name,set))
         HERO_DATA[id].ArtfSets[set] = temp == "" and 0 or 0 + temp
     end
-    -- log(TRACE, "* fetched artifact sets ok")
     log(DEBUG, "Hero "..name.." : Lvl "..HERO_DATA[id].Level)
 end
 
@@ -55,12 +51,6 @@ function Wait()
     THREAD_FINISHER = THREAD_FINISHER - 1
     -- log(TRACE, "Thread finisher = "..THREAD_FINISHER)
     if THREAD_FINISHER == 0 then THREAD_STATE = 1 end
-end
-
-function PauseTemp()
-    repeat Wait() until THREAD_STATE == 1
-    THREAD_STATE = 0 THREAD_FINISHER = THREAD_LIMIT
-    combatSetPause(nil)
 end
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -93,7 +83,7 @@ function ManageCombatStart()
     GetArmySummary()
     log(DEBUG, "Combat random seed = "..RANDOM_SEED)
 
-    combatSetPause(1) --startThread(PauseTemp)
+    combatSetPause(1)
     DoAbilitiesRoutine_CombatStart()
 	if ATTACKER_HERO ~= "" then
         DoSkillRoutine_CombatStart(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID)
@@ -113,7 +103,7 @@ function ManageCombatTurn(unit)
     if ENABLE_SCRIPT == 0 then return end
 
     if CURRENT_UNIT ~= unit then
-        combatSetPause(1) --startThread(PauseTemp)
+        combatSetPause(1)
 
         COMBAT_TURN = COMBAT_TURN + 1
         CURRENT_UNIT = unit
@@ -197,7 +187,7 @@ ROUTINES_LOADED = {
 }
 
 function LoadScript(path, key)
-	-- log(TRACE, "Loading script "..path)
+	log(TRACE, "Loading script "..path)
 	dofile(path)
 	sleep() -- repeat sleep() until ROUTINES_LOADED[key] == 1
 end
