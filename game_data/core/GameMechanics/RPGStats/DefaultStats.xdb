@@ -4310,6 +4310,1240 @@
 	<ArtifactSets>
 		<Sets>
 			<Item>
+				<Effect>ARTFSET_H5X_HAVEN</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>ARTIFACT_SENTINELS_BLADE</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>PLATE_MAIL_OF_STABILITY</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_SENTINELS_SHIELD</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_SENTINELS_HELM</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_SENTINELS_BOOTS</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_SENTINELS_BRACER</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef href="/Text/Game/Artfsets/1/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artfsets/1/Description.txt"/>
+				<CombinedDescriptionsFileRefs>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href="/Text/Game/Artfsets/Activations/1/4.txt"/>
+					<Item href="/Text/Game/Artfsets/Activations/1/4.txt"/>
+					<Item href="/Text/Game/Artfsets/Activations/1/6.txt"/>
+				</CombinedDescriptionsFileRefs>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item href="/Textures/HeroScreen/Artifacts/SentinelsBreastplate.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Artifacts/SentinelsBreastplate.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Artifacts/SentinelsBreastplate.xdb#xpointer(/Texture)"/>
+				</CombinedIcons>
+			</Item>
+			<Item>
+				<Effect>ARTFSET_H5X_SYLVAN</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>ARTIFACT_AVENGER_BOW</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_RANGERS_CUIRASS</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_RANGERS_CAPE</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_SYLVAN_AMULET</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_SACRED_SEED</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>DWARVEN_MITHRAL_GREAVES</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef href="/Text/Game/Artfsets/2/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artfsets/2/Description.txt"/>
+				<CombinedDescriptionsFileRefs>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href="/Text/Game/Artfsets/Activations/2/4.txt"/>
+					<Item href="/Text/Game/Artfsets/Activations/2/4.txt"/>
+					<Item href="/Text/Game/Artfsets/Activations/2/6.txt"/>
+				</CombinedDescriptionsFileRefs>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item href="/Textures/HeroScreen/Artifacts/SylvanAmulet.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Artifacts/SylvanAmulet.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Artifacts/SylvanAmulet.xdb#xpointer(/Texture)"/>
+				</CombinedIcons>
+			</Item>
+			<Item>
+				<Effect>ARTFSET_H5X_INFERNO</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>ARTIFACT_WILL_OF_URGASH</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_OBSIDIAN_ARMOR</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_RING_OF_THE_SHADOWBRAND</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>NIGHTMARISH_RING</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_SHACKLES_OF_WAR_2</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_HELM_OF_CHAOS</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef href="/Text/Game/Artfsets/3/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artfsets/3/Description.txt"/>
+				<CombinedDescriptionsFileRefs>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href="/Text/Game/Artfsets/Activations/3/4.txt"/>
+					<Item href="/Text/Game/Artfsets/Activations/3/4.txt"/>
+					<Item href="/Text/Game/Artfsets/Activations/3/6.txt"/>
+				</CombinedDescriptionsFileRefs>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item href="/Textures/HeroScreen/Artifacts/WillOfUrgash.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Artifacts/WillOfUrgash.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Artifacts/WillOfUrgash.xdb#xpointer(/Texture)"/>
+				</CombinedIcons>
+			</Item>
+			<Item>
+				<Effect>ARTFSET_H5X_NECRO</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>STAFF_OF_VEXINGS</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>CLOAK_OF_MOURNING</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_SKULL_HELMET</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_NECROMANCER_PENDANT</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_RING_OF_DEATH</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_DEATH_KNIGHT_BOOTS</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef href="/Text/Game/Artfsets/4/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artfsets/4/Description.txt"/>
+				<CombinedDescriptionsFileRefs>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href="/Text/Game/Artfsets/Activations/4/4.txt"/>
+					<Item href="/Text/Game/Artfsets/Activations/4/4.txt"/>
+					<Item href="/Text/Game/Artfsets/Activations/4/6.txt"/>
+				</CombinedDescriptionsFileRefs>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item href="/Textures/HeroScreen/Artifacts/StaffOfTheNetherworld.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Artifacts/StaffOfTheNetherworld.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Artifacts/StaffOfTheNetherworld.xdb#xpointer(/Texture)"/>
+				</CombinedIcons>
+			</Item>
+			<Item>
+				<Effect>ARTFSET_H5X_ACADEMY</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>STAFF_OF_MAGI</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ROBE_OF_MAGI</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>CROWN_OF_MAGI</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>RING_OF_MAGI</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_BOOK_OF_POWER</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_MAGISTERS_SANDALS</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef href="/Text/Game/Artfsets/5/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artfsets/5/Description.txt"/>
+				<CombinedDescriptionsFileRefs>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href="/Text/Game/Artfsets/Activations/5/4.txt"/>
+					<Item href="/Text/Game/Artfsets/Activations/5/4.txt"/>
+					<Item href="/Text/Game/Artfsets/Activations/5/6.txt"/>
+				</CombinedDescriptionsFileRefs>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item href="/Textures/HeroScreen/Artifacts/RobeOfTheMagister.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Artifacts/RobeOfTheMagister.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Artifacts/RobeOfTheMagister.xdb#xpointer(/Texture)"/>
+				</CombinedIcons>
+			</Item>
+			<Item>
+				<Effect>ARTFSET_H5X_DUNGEON</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>ARTIFACT_SHADOW_BLADE</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_CLOAK_OF_DARKNESS</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_SHADOW_MASK</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_SHADOWSTEP_SHOES</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_ALTAR_OF_ELEMENTS_SHARD</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_RING_OF_UNSUMMONING</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef href="/Text/Game/Artfsets/6/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artfsets/6/Description.txt"/>
+				<CombinedDescriptionsFileRefs>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href="/Text/Game/Artfsets/Activations/6/4.txt"/>
+					<Item href="/Text/Game/Artfsets/Activations/6/4.txt"/>
+					<Item href="/Text/Game/Artfsets/Activations/6/6.txt"/>
+				</CombinedDescriptionsFileRefs>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item href="/Textures/HeroScreen/Artifacts/ShadowMask.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Artifacts/ShadowMask.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Artifacts/ShadowMask.xdb#xpointer(/Texture)"/>
+				</CombinedIcons>
+			</Item>
+			<Item>
+				<Effect>ARTFSET_H5X_FORTRESS</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>GREAT_AXE_OF_GIANT_SLAYING</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_OGRE_CLUB</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_OGRE_SHIELD</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>DWARVEN_MITHRAL_SHIELD</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>DWARVEN_MITHRAL_SHIELD_2</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_RUNE_OF_FLAME</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef href="/Text/Game/Artfsets/7/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artfsets/7/Description.txt"/>
+				<CombinedDescriptionsFileRefs>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href="/Text/Game/Artfsets/Activations/7/4.txt"/>
+					<Item href="/Text/Game/Artfsets/Activations/7/4.txt"/>
+					<Item href="/Text/Game/Artfsets/Activations/7/6.txt"/>
+				</CombinedDescriptionsFileRefs>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item href="/Textures/HeroScreen/Artifacts/CuirassOfTheDwarvenKings.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Artifacts/CuirassOfTheDwarvenKings.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Artifacts/CuirassOfTheDwarvenKings.xdb#xpointer(/Texture)"/>
+				</CombinedIcons>
+			</Item>
+			<Item>
+				<Effect>ARTFSET_H5X_STRONGHOLD</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>ARTIFACT_OGRE_CLUB_2</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_OGRE_SHIELD_2</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_BARBARIAN_HELMET</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_BARBARIAN_HELMET</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_BARBARIAN_CAPE</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_COLLAR_OF_PRIMAL_RAGE</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef href="/Text/Game/Artfsets/8/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artfsets/8/Description.txt"/>
+				<CombinedDescriptionsFileRefs>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href="/Text/Game/Artfsets/Activations/8/4.txt"/>
+					<Item href="/Text/Game/Artfsets/Activations/8/4.txt"/>
+					<Item href="/Text/Game/Artfsets/Activations/8/6.txt"/>
+				</CombinedDescriptionsFileRefs>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item href="/Textures/HeroScreen/Artifacts/OgreShield.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Artifacts/OgreShield.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Artifacts/OgreShield.xdb#xpointer(/Texture)"/>
+				</CombinedIcons>
+			</Item>
+			<Item>
+				<Effect>ARTFSET_H5X_DRAGON</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>DRAGON_FLAME_TONGUE</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>DRAGON_SCALE_ARMOR</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>DRAGON_SCALE_SHIELD</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>DRAGON_WING_MANTLE</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>DRAGON_TALON_CROWN</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>DRAGON_BONE_GRAVES</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>DRAGON_TEETH_NECKLACE</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>DRAGON_EYE_RING</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef href="/Text/Game/Artfsets/9/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artfsets/9/Description.txt"/>
+				<CombinedDescriptionsFileRefs>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href="/Text/Game/Artfsets/Activations/9/4.txt"/>
+					<Item href="/Text/Game/Artfsets/Activations/9/4.txt"/>
+					<Item href="/Text/Game/Artfsets/Activations/9/6.txt"/>
+					<Item href="/Text/Game/Artfsets/Activations/9/6.txt"/>
+					<Item href="/Text/Game/Artfsets/Activations/9/8.txt"/>
+				</CombinedDescriptionsFileRefs>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item href="/Textures/HeroScreen/Artifacts/DragonFlameTongue.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Artifacts/DragonFlameTongue.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Artifacts/DragonFlameTongue.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Artifacts/DragonFlameTongue.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Artifacts/DragonFlameTongue.xdb#xpointer(/Texture)"/>
+				</CombinedIcons>
+			</Item>
+			<Item>
+				<Effect>ARTFSET_H5X_ENLIGHTEN</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>HELM_OF_ENLIGHTMENT</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>CHAIN_MAIL_OF_ENLIGHTMENT</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_STAFF_OF_THE_LYRE</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_PENDANT_OF_THE_LYRE</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef href="/Text/Game/Artfsets/10/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artfsets/10/Description.txt"/>
+				<CombinedDescriptionsFileRefs>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href="/Text/Game/Artfsets/Activations/10/4.txt"/>
+				</CombinedDescriptionsFileRefs>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item href="/Textures/HeroScreen/Artifacts/TurbanOfEnlightment.xdb#xpointer(/Texture)"/>
+				</CombinedIcons>
+			</Item>
+			<Item>
+				<Effect>ARTFSET_H5X_FROST</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>ARTIFACT_SPEAR_OF_THE_FROST_LORD</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_CROWN_OF_THE_FROST_LORD</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>EVERCOLD_ICICLE</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_FROZEN_HEART</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef href="/Text/Game/Artfsets/11/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artfsets/11/Description.txt"/>
+				<CombinedDescriptionsFileRefs>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href="/Text/Game/Artfsets/Activations/11/4.txt"/>
+				</CombinedDescriptionsFileRefs>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item href="/Textures/HeroScreen/Artifacts/CrownOfTheFrostLord.xdb#xpointer(/Texture)"/>
+				</CombinedIcons>
+			</Item>
+			<Item>
+				<Effect>ARTFSET_H5X_GENJI</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>ARTIFACT_GENJIS_SILKSWORD</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_GENJIS_VEST</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_GENJIS_HAT</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_GENJIS_SANDALS</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef href="/Text/Game/Artfsets/12/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artfsets/12/Description.txt"/>
+				<CombinedDescriptionsFileRefs>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href="/Text/Game/Artfsets/Activations/12/4.txt"/>
+				</CombinedDescriptionsFileRefs>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item href="/Textures/HeroScreen/Artifacts/GenjisVest.xdb#xpointer(/Texture)"/>
+				</CombinedIcons>
+			</Item>
+			<Item>
+				<Effect>ARTFSET_H5X_ELDENA</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>ARTIFACT_ELDENAS_CIRCLET</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_ELDENAS_RED_COAT</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_ELDENAS_RED_SCARF</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef href="/Text/Game/Artfsets/13/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artfsets/13/Description.txt"/>
+				<CombinedDescriptionsFileRefs>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href="/Text/Game/Artfsets/Activations/13/3.txt"/>
+				</CombinedDescriptionsFileRefs>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons>
+					<Item/>
+					<Item/>
+					<Item href="/Textures/HeroScreen/Artifacts/EldenasCirclet.xdb#xpointer(/Texture)"/>
+				</CombinedIcons>
+			</Item>
+			<Item>
+				<Effect>ARTFSET_H5X_WAR</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>WEREWOLF_CLAW_NECKLACE</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>RING_OF_LIFE</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_RING_OF_CELERITY</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>NECKLACE_OF_POWER</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef href="/Text/Game/Artfsets/14/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artfsets/14/Description.txt"/>
+				<CombinedDescriptionsFileRefs>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href="/Text/Game/Artfsets/Activations/14/4.txt"/>
+				</CombinedDescriptionsFileRefs>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item href="/Textures/HeroScreen/Artifacts/WarBanner.xdb#xpointer(/Texture)"/>
+				</CombinedIcons>
+			</Item>
+			<Item>
+				<Effect>ARTFSET_H5X_VIZIR</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>ARTIFACT_VIZIRS_SCIMITAR</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_VIZIRS_CAP</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_PALACE_SHOES</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_REGAL_ARMOUR</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef href="/Text/Game/Artfsets/15/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artfsets/15/Description.txt"/>
+				<CombinedDescriptionsFileRefs>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href="/Text/Game/Artfsets/Activations/15/4.txt"/>
+				</CombinedDescriptionsFileRefs>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item href="/Textures/HeroScreen/Artifacts/VizirsCap.xdb#xpointer(/Texture)"/>
+				</CombinedIcons>
+			</Item>
+			<Item>
+				<Effect>ARTFSET_H5X_SPIRIT</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>ARTIFACT_DEADWOOD_STAFF</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_SKULL_MASK</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_BONESTUDDED_LEATHER</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_JINXING_BAND</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_SPIRIT_OF_OPPRESSION</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef href="/Text/Game/Artfsets/16/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artfsets/16/Description.txt"/>
+				<CombinedDescriptionsFileRefs>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href="/Text/Game/Artfsets/Activations/16/5.txt"/>
+				</CombinedDescriptionsFileRefs>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item href="/Textures/HeroScreen/Artifacts/SpiritOfOppression.xdb#xpointer(/Texture)"/>
+				</CombinedIcons>
+			</Item>
+			<Item>
+				<Effect>ARTFSET_H5X_WARMAGE</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>ARTIFACT_RUNIC_WAR_AXE</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_RUNIC_WAR_HARNESS</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_HELM_OF_THE_WARMAGE</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_TWISTING_NEITHER</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>BOOTS_OF_INTERFERENCE</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef href="/Text/Game/Artfsets/17/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artfsets/17/Description.txt"/>
+				<CombinedDescriptionsFileRefs>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href="/Text/Game/Artfsets/Activations/17/5.txt"/>
+				</CombinedDescriptionsFileRefs>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item href="/Textures/HeroScreen/Artifacts/PendantOfConflux.xdb#xpointer(/Texture)"/>
+				</CombinedIcons>
+			</Item>
+			<Item>
+				<Effect>ARTFSET_H5X_BANDIT</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>ARTIFACT_VIKING_HATCHET</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_VIKING_SHIELD</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_PLUNDERER_VEST</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_PLUNDERER_SHOES</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_BEARHIDE_WRAPS</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef href="/Text/Game/Artfsets/18/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artfsets/18/Description.txt"/>
+				<CombinedDescriptionsFileRefs>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href="/Text/Game/Artfsets/Activations/18/5.txt"/>
+				</CombinedDescriptionsFileRefs>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item href="/Textures/HeroScreen/Artifacts/VikingHatchet.xdb#xpointer(/Texture)"/>
+				</CombinedIcons>
+			</Item>
+			<Item>
+				<Effect>ARTFSET_H5X_BESTIAL</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>ARTIFACT_SHIELD_OF_THE_WOLF</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_CUIRASS_OF_THE_STAG</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_WRAPS_OF_THE_OWL</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>NECKLACE_OF_BRAVERY</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef href="/Text/Game/Artfsets/19/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artfsets/19/Description.txt"/>
+				<CombinedDescriptionsFileRefs>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href="/Text/Game/Artfsets/Activations/19/4.txt"/>
+				</CombinedDescriptionsFileRefs>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item href="/Textures/HeroScreen/Artifacts/WrapsOfTheOwl.xdb#xpointer(/Texture)"/>
+				</CombinedIcons>
+			</Item>
+			<Item>
+				<Effect>ARTFSET_H5X_SAINT</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>ARTIFACT_STAFF_OF_THE_SAINT</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_CLOAK_OF_THE_SAINT</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_CODEX_OF_THE_SAINT</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_FORTUNE_BAND_OF_THE_SAINT</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_ANKH_OF_THE_SAINT</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_SANDALS_OF_THE_SAINT</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef href="/Text/Game/Artfsets/20/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artfsets/20/Description.txt"/>
+				<CombinedDescriptionsFileRefs>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href="/Text/Game/Artfsets/Activations/20/4.txt"/>
+					<Item href="/Text/Game/Artfsets/Activations/20/4.txt"/>
+					<Item href="/Text/Game/Artfsets/Activations/20/6.txt"/>
+				</CombinedDescriptionsFileRefs>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item href="/Textures/HeroScreen/Artifacts/CodexOfTheSaint.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Artifacts/CodexOfTheSaint.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Artifacts/CodexOfTheSaint.xdb#xpointer(/Texture)"/>
+				</CombinedIcons>
+			</Item>
+			<Item>
+				<Effect>ARTFSET_H5X_ARCHANGEL</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>RING_OF_HASTE</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_CELESTIAL_JUSTICAR_ARMOR</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_CELESTIAL_JUSTICAR_SHIELD</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_CELESTIAL_JUSTICAR_HELMET</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_ELRATHS_UNITY</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef href="/Text/Game/Artfsets/21/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artfsets/21/Description.txt"/>
+				<CombinedDescriptionsFileRefs>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href="/Text/Game/Artfsets/Activations/21/5.txt"/>
+				</CombinedDescriptionsFileRefs>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item href="/Textures/HeroScreen/Artifacts/CelestialJusticarHelmet.xdb#xpointer(/Texture)"/>
+				</CombinedIcons>
+			</Item>
+			<Item>
+				<Effect>ARTFSET_H5X_WANDERER</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>WAYFARER_BOOTS</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_BACKPACK_OF_THE_OPEN_ROAD</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef href="/Text/Game/Artfsets/22/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artfsets/22/Description.txt"/>
+				<CombinedDescriptionsFileRefs>
+					<Item href=""/>
+					<Item href="/Text/Game/Artfsets/Activations/22/2.txt"/>
+				</CombinedDescriptionsFileRefs>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons>
+					<Item/>
+					<Item href="/Textures/HeroScreen/Artifacts/BootsOfTheOpenRoad.xdb#xpointer(/Texture)"/>
+				</CombinedIcons>
+			</Item>
+			<Item>
+				<Effect>ARTFSET_H5X_SAILOR</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>ARTIFACT_PIRATE_SMASHER</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_CAPTAINS_HOOK</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>GOLDEN_SEXTANT</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef href="/Text/Game/Artfsets/23/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artfsets/23/Description.txt"/>
+				<CombinedDescriptionsFileRefs>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href="/Text/Game/Artfsets/Activations/23/3.txt"/>
+				</CombinedDescriptionsFileRefs>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons>
+					<Item/>
+					<Item/>
+					<Item href="/Textures/HeroScreen/Artifacts/OceanCharm.xdb#xpointer(/Texture)"/>
+				</CombinedIcons>
+			</Item>
+			<Item>
+				<Effect>ARTFSET_H5X_MOON</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>ARTIFACT_MOONBLADE</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_MOONLIGHT_COAT</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_MOONLIGHT_BAND</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_MOON_CHARM</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>false</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef href="/Text/Game/Artfsets/24/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artfsets/24/Description.txt"/>
+				<CombinedDescriptionsFileRefs>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href=""/>
+					<Item href="/Text/Game/Artfsets/Activations/24/4.txt"/>
+				</CombinedDescriptionsFileRefs>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons>
+					<Item/>
+					<Item/>
+					<Item/>
+					<Item href="/Textures/HeroScreen/Artifacts/MoonCharm.xdb#xpointer(/Texture)"/>
+				</CombinedIcons>
+			</Item>
+			<Item>
+				<Effect>ARTFSET_H5X_25</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>ARTIFACT_210</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_211</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef/>
+				<DescriptionFileRef/>
+				<CombinedDescriptionsFileRefs/>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons/>
+			</Item>
+			<Item>
+				<Effect>ARTFSET_H5X_26</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>ARTIFACT_212</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_213</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef/>
+				<DescriptionFileRef/>
+				<CombinedDescriptionsFileRefs/>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons/>
+			</Item>
+			<Item>
+				<Effect>ARTFSET_H5X_27</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>ARTIFACT_214</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_215</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef/>
+				<DescriptionFileRef/>
+				<CombinedDescriptionsFileRefs/>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons/>
+			</Item>
+			<Item>
+				<Effect>ARTFSET_H5X_28</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>ARTIFACT_216</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_217</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef/>
+				<DescriptionFileRef/>
+				<CombinedDescriptionsFileRefs/>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons/>
+			</Item>
+			<Item>
+				<Effect>ARTFSET_H5X_29</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>ARTIFACT_218</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_219</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef/>
+				<DescriptionFileRef/>
+				<CombinedDescriptionsFileRefs/>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons/>
+			</Item>
+			<Item>
+				<Effect>ARTFSET_H5X_30</Effect>
+				<Artifacts>
+					<Item>
+						<Artifact>ARTIFACT_220</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
+					</Item>
+					<Item>
+						<Artifact>ARTIFACT_221</Artifact>
+						<CombinesAtPuton>true</CombinesAtPuton>
+						<CombinesAtBackpack>true</CombinesAtBackpack>
+					</Item>
+				</Artifacts>
+				<NameFileRef/>
+				<DescriptionFileRef/>
+				<CombinedDescriptionsFileRefs/>
+				<CombinedHeroClassBonusesDescs/>
+				<CombinedIcons/>
+			</Item>
+			<Item>
 				<Effect>ARTFSET_EFFECT_DRAGONISH</Effect>
 				<Artifacts>
 					<Item>
