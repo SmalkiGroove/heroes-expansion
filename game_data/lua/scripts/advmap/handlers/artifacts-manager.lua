@@ -51,7 +51,7 @@ REGISTERED_ARTIFACTS = {
 }
 
 function ScanHeroArtifacts(hero)
-    -- log(DEBUG, "$ ScanHeroArtifacts : "..hero)
+    log(TRACE, "$ ScanHeroArtifacts : "..hero)
     local faction = HEROES[hero].faction
     local tracker = {}
     for set = 1,ARTFSET_ACTIVABLES_COUNT do

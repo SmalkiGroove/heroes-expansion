@@ -2,8 +2,6 @@
 
 ### Game crash
 
-- [EXE] Crash while generating maps with underground
-- [XDB] Games don't start if rmg maps are present
 
 ### Broken graphics or animations
 
@@ -37,8 +35,6 @@
 
 - [EXE] Market change rate are total scam
 - [EXE] Inferno and Dungeon sacrificial buildings are bad
-- [XDB] Nerf Meteor Shower base damage
-- [XDB] Anger Treant change ability root for fierce retal
 
 ### Massive work required
 
@@ -52,5 +48,10 @@
 
 # FIXED
 
+- Game stuck on script error when difficulty is greater than normal
+- Crash while generating maps with underground
 - Agrael can get 2 consecutive turns
+- Deleb spawn less elem stack but more per stack
 - Tieru recovers all druids after battles
+- Anger Treant change ability root for fierce retal
+- Nerf Meteor Shower base damage

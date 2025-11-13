@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvMapTreasureShared ObjectRecordID="2">
+	<Model href="/_(Model)/Resourses/Ore.(Model).xdb#xpointer(/Model)"/>
+	<AnimSet/>
+	<blockedTiles/>
+	<holeTiles/>
+	<activeTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+	</activeTiles>
+	<passableTiles/>
+	<PossessionMarkerTile>
+		<x>0</x>
+		<y>0</y>
+	</PossessionMarkerTile>
+	<Effect/>
+	<EffectWhenOwned/>
+	<messagesFileRef>
+		<Item href="/Text/Game/Treasures/Ore/Name.txt"/>
+		<Item href="/Text/Game/Treasures/Ore/Description.txt"/>
+	</messagesFileRef>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect href="/Sounds/_(Sound)/Interface/Events/Get_artf_res02.xdb#xpointer(/Sound)"/>
+	<flybyMessageFileRef href=""/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Treasures.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>true</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128/>
+	<Type>TREASURE_ORE</Type>
+	<MinResource>4</MinResource>
+	<MaxResource>6</MaxResource>
+</AdvMapTreasureShared>
