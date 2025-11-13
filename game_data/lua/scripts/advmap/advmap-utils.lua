@@ -438,7 +438,8 @@ end
 
 
 function CheckEnableCheat()
-	if not ENABLE_CHEAT then log(ERROR, "!!! Cheating is disabled !!!") end
+	if ENABLE_CHEAT then log(WARN, "!!! Player is cheating !!!")
+	else log(ERROR, "!!! Cheating is disabled !!!") end
 	return ENABLE_CHEAT
 end
 
@@ -450,11 +451,17 @@ function RevealMap()
 		end
 	end
 end
-function AddAllArtifacts(hero)
+function GiveArtfset(hero, set)
 	if not CheckEnableCheat() then return end
-	for a = 1,199 do
-		if ARTIFACTS_DATA[a].special == 0 then GiveArtifact(hero, a) end
+	if set ~= ARTIFACT_SET_NONE and (set < ARTIFACT_SET_1 or set > ARTIFACT_SET_COUNT) then print("Invalid set ID") return end
+	for _,a in ARTIFACT_SETS[set] do
+		GiveArtefact(hero, a)
 	end
+end
+function MovePoints(hero)
+	if not CheckEnableCheat() then return end
+	if not hero then hero = GetPlayerHeroes(GetCurrentPlayer())[0] end
+	ChangeHeroStat(hero, STAT_MOVE_POINTS, 10000)
 end
 function Lv25(hero)
 	if not CheckEnableCheat() then return end

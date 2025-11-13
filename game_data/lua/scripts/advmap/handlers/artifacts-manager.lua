@@ -5,7 +5,7 @@ HERO_ARTFSETS_STATUS = {}
 
 for hero,_ in HEROES do
     HERO_ARTFSETS_PIECES[hero] = {}
-    for set = 1,ARTIFACT_SET_COUNT do
+    for set = ARTIFACT_SET_1,ARTIFACT_SET_COUNT do
         HERO_ARTFSETS_PIECES[hero][set] = 0
     end
     HERO_ARTFSETS_STATUS[hero] = {}
@@ -57,7 +57,7 @@ function ScanHeroArtifacts(hero)
     for set = 1,ARTFSET_ACTIVABLES_COUNT do
         if HERO_ARTFSETS_STATUS[hero][set] == 1 then tracker[set] = 0 end
     end
-    for set = 1,ARTIFACT_SET_COUNT do
+    for set = ARTIFACT_SET_1,ARTIFACT_SET_COUNT do
         local pieces = 0
         local active_set = 0
         for _,a in ARTIFACT_SETS[set] do
@@ -69,7 +69,7 @@ function ScanHeroArtifacts(hero)
             if pieces >= k then active_set = v end
         end
         if active_set ~= 0 then
-            if faction == set then active_set = active_set + 1 end
+            if faction + 10 == set then active_set = active_set + 1 end
             tracker[active_set] = 1
         end
         if pieces ~= HERO_ARTFSETS_PIECES[hero][set] then

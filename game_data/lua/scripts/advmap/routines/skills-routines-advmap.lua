@@ -245,8 +245,8 @@ function Routine_GearUp(player, hero, mastery)
     if mastery > HERO_SKILL_BONUSES[hero][SKILLBONUS_GEAR_UP] then
         local faction = HEROES[hero].faction
         local minors = {}
-        for set = 1,ARTIFACT_SET_COUNT do
-            if set == faction or set > 9 then
+        for set = ARTIFACT_SET_1,ARTIFACT_SET_COUNT do
+            if set == faction + 10 or set >= 20 then
                 for _,a in ARTIFACT_SETS[set] do
                     if ARTIFACTS_DATA[a].special == 0 and ARTIFACTS_DATA[a].class == ARTIFACT_CLASS_MINOR then
                         insert(minors, a)
@@ -265,8 +265,8 @@ function Routine_HeroesLegacy(player, hero, mastery)
     if mastery > HERO_SKILL_BONUSES[hero][SKILLBONUS_HEROES_LEGACY] then
         local faction = HEROES[hero].faction
         local majors = {}
-        for set = 1,ARTIFACT_SET_COUNT do
-            if set == faction or set > 9 then
+        for set = ARTIFACT_SET_1,ARTIFACT_SET_COUNT do
+            if set == faction + 10 or set >= 20 then
                 for _,a in ARTIFACT_SETS[set] do
                     if ARTIFACTS_DATA[a].special == 0 and ARTIFACTS_DATA[a].class == ARTIFACT_CLASS_MAJOR then
                         insert(majors, a)
@@ -285,8 +285,8 @@ function Routine_Mythology(player, hero, mastery)
     if mastery > HERO_SKILL_BONUSES[hero][SKILLBONUS_MYTHOLOGY] then
         local faction = HEROES[hero].faction
         local relics = {}
-        for set = 1,ARTIFACT_SET_COUNT do
-            if set == faction or set > 9 then
+        for set = ARTIFACT_SET_1,ARTIFACT_SET_COUNT do
+            if set == faction + 10 or set >= 20 then
                 for _,a in ARTIFACT_SETS[set] do
                     if ARTIFACTS_DATA[a].special == 0 and ARTIFACTS_DATA[a].class == ARTIFACT_CLASS_RELIC then
                         insert(relics, a)
