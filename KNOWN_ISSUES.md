@@ -48,10 +48,4 @@
 
 # FIXED
 
-- Game stuck on script error when difficulty is greater than normal
-- Crash while generating maps with underground
-- Agrael can get 2 consecutive turns
-- Deleb spawn less elem stack but more per stack
-- Tieru recovers all druids after battles
-- Anger Treant change ability root for fierce retal
-- Nerf Meteor Shower base damage
+

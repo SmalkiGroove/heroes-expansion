@@ -2,7 +2,7 @@ import os
 import zipfile
 import semver
 
-BUMP = '' # M.m.p
+BUMP = 'p' # M.m.p
 
 workdir = os.path.dirname(os.path.abspath(__file__))
 

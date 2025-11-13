@@ -180,3 +180,20 @@ Initial beta release !
 - Double combat script activation sometimes
 - Thunder Power skill does not apply air damage of creatures attacks
 - Many more little things...
+
+### 0.4.1 (13/11/2025)
+
+#### New
+
+- New artifact sets are now correctly handled by the game
+
+#### Fixed/Changed
+
+- Game stuck on script error when difficulty is greater than normal
+- Crash while generating maps with underground
+- Agrael can get 2 consecutive turns
+- Deleb spawn less elem stack but more per stack
+- Tieru recovers all druids after battles
+- Anger Treant change ability root for fierce retal
+- Nerf Meteor Shower base damage
+- Dragon set artifacts increase creature initiative by 5% instead of 10%
