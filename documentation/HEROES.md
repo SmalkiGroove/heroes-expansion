@@ -956,9 +956,9 @@ Volcanic
 
 - Hero casts Land Mines around enemy positions at the start of combat.
 
-- Spawns multiple Earth Elementals at random positions each hero turn in combat. The amount of stacks spawned is equal to 3 + 1 every 10 levels, and the number of elementals per stack is equal to 1 + 1 every 5 levels.
+- Spawns multiple Earth Elementals at random positions each hero turn in combat. The amount of stacks spawned is equal to 3 + 1 every 10 levels, and the number of elementals per stack is equal to 1 + 1 every 3 levels.
 
-- Hero generates 1 Sulfur per day every 5 levels (no gain before level 5).
+- Hero generates 1 Sulfur per level up.
 
 - Starts with innate skill Earth's Wrath, increasing effective spellpower when casting Land Mines and Earthquake.
 

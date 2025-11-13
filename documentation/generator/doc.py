@@ -10,15 +10,17 @@ workdir = os.path.dirname(os.path.abspath(__file__))
 reference_file = os.path.join(workdir, "doc-refs.yml")
 doc_path = ".."
 
-root_path_data = "../../game_data/data"
+root_core_path = "../../game_data/core"
+root_creatures_path = "../../game_data/creatures"
+root_heroes_path = "../../game_data/heroes"
+root_spells_path = "../../game_data/spells"
+root_skills_path = "../../game_data/skills"
+root_artifacts_path = "../../game_data/artifacts"
 root_text_path = "../../game_texts/texts-EN"
 
 ### CREATURES
 ###############################################################################################################################################################
 #
-path_to_creatures = "../../game_data/data/GameMechanics/Creature/Creatures"
-path_to_allspells = "../../game_data/data/GameMechanics/RefTables/UndividedSpells.xdb"
-path_to_abilities = "../../game_data/data/GameMechanics/RefTables/CombatAbilities.xdb"
 
 def is_valid_spell(id):
     if id.startswith("SPELL_RUNE_OF_"):
@@ -26,11 +28,11 @@ def is_valid_spell(id):
     return True
 
 def get_spell_name(id):
-    with open(os.path.join(workdir, path_to_allspells), 'r') as xdb:
+    with open(os.path.join(workdir, root_spells_path, "GameMechanics/RefTables/UndividedSpells.xdb"), 'r') as xdb:
         allspells = xmltodict.parse(xdb.read())
     for item in allspells['Table_Spell_SpellID']['objects']['Item']:
         if item['ID'] == id:
-            spell_path = os.path.join(workdir, root_path_data + item['Obj']['@href'].replace('#xpointer(/Spell)',''))
+            spell_path = os.path.join(workdir, root_spells_path + item['Obj']['@href'].replace('#xpointer(/Spell)',''))
             with open(spell_path, 'r', encoding='utf-8-sig') as spell_file:
                 spl = xmltodict.parse(spell_file.read())
             name_path = os.path.join(workdir, root_text_path + spl['Spell']['NameFileRef']['@href'])
@@ -46,7 +48,7 @@ def get_spells_text(spells):
         return f"{get_spell_name(spells['Spell'])} ({spells['Mastery'].replace('MASTERY_','').lower()})"
 
 def get_ability_name(id):
-    with open(os.path.join(workdir, path_to_abilities), 'r') as xdb:
+    with open(os.path.join(workdir, root_creatures_path, "GameMechanics/RefTables/CombatAbilities.xdb"), 'r') as xdb:
         abilities = xmltodict.parse(xdb.read())
     for item in abilities['Table_CreatureAbility_CombatAbility']['objects']['Item']:
         if item['ID'] == id:
@@ -99,7 +101,7 @@ def generate_creature_doc(ref_data):
             if last_tier != tier:
                 last_tier = tier
                 print("| | | | | | | | | | | |", file=out)
-            path = os.path.join(workdir, path_to_creatures, c['path'])
+            path = os.path.join(workdir, root_creatures_path, "GameMechanics/Creature/Creatures", c['path'])
             line = creature_doc_line(tier, upg, name, path)
             print(line, file=out)
     out.close()
@@ -109,7 +111,6 @@ def generate_creature_doc(ref_data):
 ### HEROES
 ###############################################################################################################################################################
 #
-path_to_heroes = "../../game_data/data/MapObjects"
 
 def hero_doc_line(name, path):
     print(f"Hero {name}")
@@ -130,7 +131,7 @@ def generate_heroes_doc(ref_data):
         print(f"### {faction}:", file=out)
         for h in ref_data[faction]:
             name = h['name']
-            path = os.path.join(workdir, path_to_heroes, h['path'])
+            path = os.path.join(workdir, root_heroes_path, "MapObjects", h['path'])
             hero = hero_doc_line(name, path)
             print("", file=out)
             print("---", file=out)
@@ -143,7 +144,6 @@ def generate_heroes_doc(ref_data):
 ### SKILLS
 ###############################################################################################################################################################
 #
-path_to_skills = "../../game_data/data/GameMechanics/RefTables/Skills.xdb"
 
 def skill_doc_line(name, skill):
     print(f"Skill {name}")
@@ -176,7 +176,7 @@ def get_skill_by_id(skills, id):
 def generate_skills_doc(ref_data):
     out = open(os.path.join(workdir, doc_path, 'SKILLS.md'), 'w')
     print("# SKILLS DOCUMENTATION", file=out)
-    file_path = os.path.join(workdir, path_to_skills)
+    file_path = os.path.join(workdir, root_skills_path, "GameMechanics/RefTables/Skills.xdb")
     with open(file_path, 'r') as xdb:
         skills = xmltodict.parse(xdb.read())['Table_HeroSkill_SkillID']['objects']['Item']
     for s in ref_data.keys():
@@ -195,8 +195,6 @@ def generate_skills_doc(ref_data):
 ### ARTIFACTS
 ###############################################################################################################################################################
 #
-path_to_artifacts = "../../game_data/data/GameMechanics/RefTables/Artifacts.xdb"
-path_to_artfset_texts = "../../game_texts/texts-EN/Text/Game/Artfsets"
 
 def artifact_doc_line(name, artifact):
     print(f"Artifact {name}")
@@ -219,7 +217,7 @@ def get_artifact_by_id(artifacts, id):
 def generate_artifacts_doc(ref_data):
     out = open(os.path.join(workdir, doc_path, 'ARTIFACTS.md'), 'w')
     print("# ARTIFACTS DOCUMENTATION", file=out)
-    file_path = os.path.join(workdir, path_to_artifacts)
+    file_path = os.path.join(workdir, root_artifacts_path, "GameMechanics/RefTables/Artifacts.xdb")
     with open(file_path, 'r') as xdb:
         artifacts = xmltodict.parse(xdb.read())['Table_DBArtifact_ArtifactEffect']['objects']['Item']
     for artfset in ref_data.keys():
@@ -227,7 +225,7 @@ def generate_artifacts_doc(ref_data):
             set_name = "Neutrals"
             set_desc = "The following artifact do not belong in a set."
         else:
-            set_texts = os.path.join(workdir, path_to_artfset_texts, str(ref_data[artfset]['id']))
+            set_texts = os.path.join(workdir, root_text_path, "Text/Game/Artfsets", str(ref_data[artfset]['id']))
             with open(set_texts + '/Name.txt', 'r', encoding='utf-16') as name_file:
                 set_name = name_file.read()
             with open(set_texts + '/Description.txt', 'r', encoding='utf-16') as desc_file:
@@ -263,7 +261,7 @@ def get_spell_by_id(id, allspells):
     print(f"Get spell {id} data")
     for item in allspells:
         if item['ID'] == id:
-            spell_path = os.path.join(workdir, root_path_data + item['Obj']['@href']).replace('#xpointer(/Spell)','')
+            spell_path = os.path.join(workdir, root_spells_path + item['Obj']['@href']).replace('#xpointer(/Spell)','')
             with open(spell_path, 'r') as xdb:
                 spell_data = xmltodict.parse(xdb.read())['Spell']
             return spell_data
@@ -317,7 +315,7 @@ def generate_spells_doc(ref_data):
     for spell in ref_data:
         spells_by_school[spell['school']].append(spell['id'])
         spells_by_tier[spell['tier']].append(spell['id'])
-    with open(os.path.join(workdir, path_to_allspells), 'r') as xdb:
+    with open(os.path.join(workdir, root_spells_path, "GameMechanics/RefTables/UndividedSpells.xdb"), 'r') as xdb:
         allspells = xmltodict.parse(xdb.read())['Table_Spell_SpellID']['objects']['Item']
     print("## Classification", file=out)
     print("| Tier | LIGHT | DARK | DESTRUCTIVE | NATURAL |", file=out)

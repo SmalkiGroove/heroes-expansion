@@ -5,20 +5,20 @@
 |------|-------|------|-------------|---------|
 | 1 | [Strength](#strength) | [Weakness](#weakness) | [Magic Arrow](#magic-arrow) | [Wasp Swarm](#wasp-swarm) |
 | | | | | |
-| 2 | [Haste](#haste) | [Slow](#slow) | [Ice Bolt](#ice-bolt) | [Arcane Crystal](#arcane-crystal) |
-| 2 | [Endurance](#endurance) | [Rupture](#rupture) | [Lightning Bolt](#lightning-bolt) | [Land Mines](#land-mines) |
+| 2 | [Haste](#haste) | [Slow](#slow) | [Lightning Bolt](#lightning-bolt) | [Arcane Crystal](#arcane-crystal) |
+| 2 | [Endurance](#endurance) | [Rupture](#rupture) | [Ice Bolt](#ice-bolt) | [Land Mines](#land-mines) |
 | | | | | |
-| 3 | [Righteous Might](#righteous-might) | [Sorrow](#sorrow) | [Stone spikes](#stone-spikes) | [Summon Elementals](#summon-elementals) |
-| 3 | [Deflect Missile](#deflect-missile) | [Suffering](#suffering) | [Polar Ring](#polar-ring) | [Regeneration](#regeneration) |
-| 3 | [Cleansing](#cleansing) | [Decay](#decay) | [Fireball](#fireball) | [Confusion](#confusion) |
+| 3 | [Cleansing](#cleansing) | [Decay](#decay) | [Polar Ring](#polar-ring) | [Summon Elementals](#summon-elementals) |
+| 3 | [Deflect Missile](#deflect-missile) | [Sorrow](#sorrow) | [Stone spikes](#stone-spikes) | [Confusion](#confusion) |
+| 3 | [Righteous Might](#righteous-might) | [Suffering](#suffering) | [Fireball](#fireball) | [Regeneration](#regeneration) |
 | | | | | |
-| 4 | [Divine Vengeance](#divine-vengeance) | [Raise Dead](#raise-dead) | [Discharge](#discharge) | [Earthquake](#earthquake) |
-| 4 | [Blind](#blind) | [Vampirism](#vampirism) | [Fist of Wrath](#fist-of-wrath) | [Wasp Hive](#wasp-hive) |
-| 4 | [Blade Barrier](#blade-barrier) | [Teleport](#teleport) | [Firewall](#firewall) | [Immunity](#immunity) |
+| 4 | [Divine Vengeance](#divine-vengeance) | [Teleport](#teleport) | [Fist of Wrath](#fist-of-wrath) | [Earthquake](#earthquake) |
+| 4 | [Blind](#blind) | [Raise Dead](#raise-dead) | [Firewall](#firewall) | [Wasp Hive](#wasp-hive) |
+| 4 | [Blade Barrier](#blade-barrier) | [Vampirism](#vampirism) | [Discharge](#discharge) | [Immunity](#immunity) |
 | | | | | |
 | 5 | [Celestial Shield](#celestial-shield) | [Berserk](#berserk) | [Deep Freeze](#deep-freeze) | [Meteor Shower](#meteor-shower) |
-| 5 | [Holy Word](#holy-word) | [Shadow Image](#shadow-image) | [Implosion](#implosion) | [Mind Control](#mind-control) |
-| 5 | [Resurrection](#resurrection) | [Curse of the Netherworld](#curse-of-the-netherworld) | [Armageddon](#armageddon) | [Conjure Phoenix](#conjure-phoenix) |
+| 5 | [Resurrection](#resurrection) | [Curse of the Netherworld](#curse-of-the-netherworld) | [Implosion](#implosion) | [Mind Control](#mind-control) |
+| 5 | [Holy Word](#holy-word) | [Shadow Image](#shadow-image) | [Armageddon](#armageddon) | [Conjure Phoenix](#conjure-phoenix) |
 | | | | | |
 
 
@@ -156,14 +156,14 @@ N/A
 Deals massive earth damage to all creatures in target area.
 
 Damage :
+- Base: '45'
+  PerPower: '29'
+- Base: '50'
+  PerPower: '35'
+- Base: '55'
+  PerPower: '41'
 - Base: '60'
-  PerPower: '30'
-- Base: '70'
-  PerPower: '36'
-- Base: '80'
-  PerPower: '42'
-- Base: '90'
-  PerPower: '48'
+  PerPower: '47'
 
 Duration :
 N/A
@@ -436,13 +436,13 @@ Duration :
 Deals unholy damage to all creatures on a battlefield except undead and infernal ones.
 
 Damage :
-- Base: '150'
+- Base: '100'
   PerPower: '10'
-- Base: '200'
+- Base: '135'
   PerPower: '13'
-- Base: '250'
+- Base: '165'
   PerPower: '16'
-- Base: '300'
+- Base: '200'
   PerPower: '20'
 
 Duration :
@@ -650,12 +650,12 @@ Damage :
 Duration :
 - Base: '90'
   PerPower: '30'
-- Base: '100'
-  PerPower: '60'
 - Base: '110'
-  PerPower: '90'
-- Base: '120'
-  PerPower: '120'
+  PerPower: '45'
+- Base: '130'
+  PerPower: '60'
+- Base: '150'
+  PerPower: '75'
 
 
 #### Holy Word
@@ -664,13 +664,13 @@ Duration :
 Deals holy damage to all the undead and infernal creatures on a battlefield.
 
 Damage :
-- Base: '150'
+- Base: '100'
   PerPower: '10'
-- Base: '200'
+- Base: '135'
   PerPower: '13'
-- Base: '250'
+- Base: '165'
   PerPower: '16'
-- Base: '300'
+- Base: '200'
   PerPower: '20'
 
 Duration :
@@ -682,24 +682,24 @@ N/A
 Puts randomly several magical explosive mines in a selected area of the battlefield. Mines are invisible to the enemy.
 
 Damage :
-- Base: '11'
-  PerPower: '6'
-- Base: '16'
-  PerPower: '10'
-- Base: '22'
+- Base: '10'
   PerPower: '14'
-- Base: '28'
+- Base: '16'
+  PerPower: '16'
+- Base: '22'
   PerPower: '18'
+- Base: '28'
+  PerPower: '20'
 
 Duration :
 - Base: '5'
-  PerPower: '0.06'
-- Base: '5.5'
   PerPower: '0.10'
-- Base: '6'
+- Base: '5.5'
   PerPower: '0.14'
-- Base: '6.5'
+- Base: '6'
   PerPower: '0.18'
+- Base: '6.5'
+  PerPower: '0.22'
 
 
 #### Wasp Swarm
@@ -708,14 +708,14 @@ Duration :
 Summons a swarm of insects to inflict magical damage on the selected enemy creature. (The spell does not work on undead, elemental and mechanical units.)
 
 Damage :
-- Base: '5'
-  PerPower: '5'
-- Base: '9'
+- Base: '3'
   PerPower: '9'
-- Base: '13'
+- Base: '5'
+  PerPower: '11'
+- Base: '7'
   PerPower: '13'
-- Base: '17'
-  PerPower: '17'
+- Base: '9'
+  PerPower: '15'
 
 Duration :
 - Base: '0'
@@ -805,11 +805,11 @@ Summons fire, earth, water or air elementals (depending on the battlefield terra
 
 Damage :
 - Base: '1'
-  PerPower: '1'
-- Base: '5'
   PerPower: '1.6'
+- Base: '5'
+  PerPower: '2.0'
 - Base: '10'
-  PerPower: '2.2'
+  PerPower: '2.4'
 - Base: '15'
   PerPower: '2.8'
 
@@ -824,13 +824,13 @@ Permanently resurrects creatures in target friendly stack.
 
 Damage :
 - Base: '10'
-  PerPower: '25'
+  PerPower: '24'
 - Base: '20'
-  PerPower: '35'
+  PerPower: '33'
 - Base: '30'
-  PerPower: '45'
+  PerPower: '42'
 - Base: '40'
-  PerPower: '55'
+  PerPower: '51'
 
 Duration :
 - Base: '0'
@@ -1034,14 +1034,14 @@ N/A
 Creates a crystal on the selected place on the field, blocking the way until the end of combat or until the crystal is attacked and destroyed.
 
 Damage :
-- Base: '25'
-  PerPower: '10'
-- Base: '40'
-  PerPower: '15'
-- Base: '50'
-  PerPower: '20'
-- Base: '60'
-  PerPower: '25'
+- Base: '22'
+  PerPower: '14'
+- Base: '30'
+  PerPower: '18'
+- Base: '38'
+  PerPower: '22'
+- Base: '46'
+  PerPower: '26'
 
 Duration :
 - Base: '1'

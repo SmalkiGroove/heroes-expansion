@@ -56,7 +56,7 @@
 | | | | | | | | | | | |
 | TREANT | 6 | 3 | 177 | 17 | 27 | 7-17 | 5 | 7 | _none_ | Spiteful, Entangling Roots |
 | ANCIENT TREANT | 6 | 3 | 188 | 18 | 28 | 8-18 | 5 | 7 | _none_ | Spiteful, Entangling Roots, Take Roots, Steadiness, Protect Allies |
-| SAVAGE TREANT | 6 | 3 | 180 | 23 | 27 | 10-20 | 5 | 8 | _none_ | Spiteful, Entangling Roots, Rage Of The Forest, Unstoppable, Unflagging |
+| SAVAGE TREANT | 6 | 3 | 180 | 23 | 27 | 10-20 | 5 | 8 | _none_ | Spiteful, Fierce Retaliation, Rage Of The Forest, Unstoppable, Unflagging |
 | | | | | | | | | | | |
 | GREEN DRAGON | 7 | 1 | 220 | 31 | 31 | 40-50 | 9 | 13 | _none_ | Acid Breath, Acid Blood, Regeneration |
 | GOLDEN DRAGON | 7 | 1 | 230 | 34 | 34 | 45-55 | 9 | 13 | _none_ | Acid Breath, Acid Blood, Regeneration, Natural Luck |
