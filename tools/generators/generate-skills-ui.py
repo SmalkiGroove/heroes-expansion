@@ -4,8 +4,8 @@ import xmltodict
 from jinja2 import Environment, FileSystemLoader
 
 root_text_path = "../../game_texts/texts-EN"
-skills_xdb_path = "../../game_data/data/GameMechanics/RefTables/Skills.xdb"
-skills_pedia_path = "../../game_data/doc-skills/UI/Doc/Skills"
+skills_xdb_path = "../../game_data/skills/GameMechanics/RefTables/Skills.xdb"
+skills_pedia_path = "../../game_data/www-skills/UI/Doc/Skills"
 
 jinja_env = Environment(loader=FileSystemLoader(searchpath="templates-skills"))
 

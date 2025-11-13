@@ -8,11 +8,10 @@ debug = False
 dry_run = False
 
 root_text_path = "../../game_texts/texts-EN"
-heroes_xdb_path = "../../game_data/data/MapObjects"
-reftable_xdb_path = "../../game_data/data/GameMechanics/RefTables"
+heroes_xdb_path = "../../game_data/heroes/MapObjects"
 armies_lua_path = "../../game_data/lua/scripts"
-heroes_pedia_path = "../../game_data/doc-heroes/UI/Doc/Heroes"
-numbers_txt_path = "../../game_data/doc/UI/Doc/Common/N"
+heroes_pedia_path = "../../game_data/www-heroes/UI/Doc/Heroes"
+numbers_txt_path = "../../game_data/www/UI/Doc/Common/N"
 hero_lua_regex = r"(H_[A-Z0-9_]+) = '([A-Za-z0-9]+)'"
 army_lua_regex = r".* = {(.*)},"
 army1_lua_regex = r'.*\[(H_[A-Z0-9_]+)\] = \{(.*)\},'
@@ -20,13 +19,13 @@ army2_lua_regex = r'.*\["([A-Za-z]+)"\] = \{(.*)\},'
 
 jinja_env = Environment(loader=FileSystemLoader(searchpath="templates-heroes"))
 
-with open(os.path.join(reftable_xdb_path, "HeroClass.xdb"), 'r') as class_xdb:
+with open("../../game_data/heroes/GameMechanics/RefTables/HeroClass.xdb", 'r') as class_xdb:
     class_data = xmltodict.parse(class_xdb.read())
-with open(os.path.join(reftable_xdb_path, "Skills.xdb"), 'r') as skills_xdb:
+with open("../../game_data/skills/GameMechanics/RefTables/Skills.xdb", 'r') as skills_xdb:
     skills_data = xmltodict.parse(skills_xdb.read())
-with open(os.path.join(reftable_xdb_path, "UndividedSpells.xdb"), 'r') as spells_xdb:
+with open("../../game_data/spells/GameMechanics/RefTables/UndividedSpells.xdb", 'r') as spells_xdb:
     spells_data = xmltodict.parse(spells_xdb.read())
-with open(os.path.join(reftable_xdb_path, "Creatures.xdb"), 'r') as creatures_xdb:
+with open("../../game_data/creatures/GameMechanics/RefTables/Creatures.xdb", 'r') as creatures_xdb:
     creatures_data = xmltodict.parse(creatures_xdb.read())
 
 def hero_base_path(name, faction):
@@ -145,9 +144,9 @@ def get_creature_data(creature_id):
     for creature in creatures_data["Table_Creature_CreatureType"]["objects"]["Item"]:
         if creature["ID"] == creature_id:
             creature_path = creature["Obj"]["@href"][1:-20]
-            with open(os.path.join("../../game_data/data", creature_path), 'r') as creature_xdb:
+            with open(os.path.join("../../game_data/creatures", creature_path), 'r') as creature_xdb:
                 creaturevisual_path = xmltodict.parse(creature_xdb.read())["Creature"]["Visual"]["@href"][1:-26]
-                with open(os.path.join("../../game_data/characters", creaturevisual_path), 'r') as creature_visual_xdb:
+                with open(os.path.join("../../game_data/creatures", creaturevisual_path), 'r') as creature_visual_xdb:
                     return xmltodict.parse(creature_visual_xdb.read())["CreatureVisual"]
 def get_class_data(class_id):
     for heroclass in class_data["Table_HeroClassDesc_HeroClass"]["objects"]["Item"]:
@@ -165,7 +164,7 @@ def get_spell_data(spell_id):
     for spell in spells_data["Table_Spell_SpellID"]["objects"]["Item"]:
         if spell["ID"] == spell_id:
             spell_path = spell["Obj"]["@href"][1:-17]
-            with open(os.path.join("../../game_data/data", spell_path), 'r') as spell_xdb:
+            with open(os.path.join("../../game_data/spells", spell_path), 'r') as spell_xdb:
                 return xmltodict.parse(spell_xdb.read())["Spell"]
     print(f"WARN: spell with name {spell_id} not found")
     return None
@@ -198,7 +197,7 @@ factions = {
     "Necropolis": "Necro",
     "Inferno": "Inferno",
     "Stronghold": "Stronghold",
-    "Neutral": "Neutral"
+    #"Neutral": "Neutral"
 }
 
 masteries = {
