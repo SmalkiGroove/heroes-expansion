@@ -204,7 +204,6 @@ def artifact_doc_line(name, artifact):
         name = name_file.read()
     with open(desc_path, 'r', encoding='utf-16') as desc_file:
         desc = desc_file.read()
-        desc = re.sub(r'<color=FFB730FF>[A-Za-z\' ]*', '', desc)
     return f"- __{name}__ :\n{desc}"
 
 def get_artifact_by_id(artifacts, id):
@@ -221,20 +220,20 @@ def generate_artifacts_doc(ref_data):
     with open(file_path, 'r') as xdb:
         artifacts = xmltodict.parse(xdb.read())['Table_DBArtifact_ArtifactEffect']['objects']['Item']
     for artfset in ref_data.keys():
-        if ref_data[artfset]['id'] == 0:
-            set_name = "Neutrals"
-            set_desc = "The following artifact do not belong in a set."
-        else:
-            set_texts = os.path.join(workdir, root_text_path, "Text/Game/Artfsets", str(ref_data[artfset]['id']))
-            with open(set_texts + '/Name.txt', 'r', encoding='utf-16') as name_file:
-                set_name = name_file.read()
-            with open(set_texts + '/Description.txt', 'r', encoding='utf-16') as desc_file:
+        set_texts = os.path.join(workdir, root_text_path, "Text/Game/Artfsets", str(ref_data[artfset]['id']))
+        with open(set_texts + '/Name.txt', 'r', encoding='utf-16') as name_file:
+            set_name = name_file.read()
+        set_activations = "| Nb | Effects |\n| --- | --- |"
+        for a in ref_data[artfset]['activations']:
+            with open(set_texts + f'/{a}.txt', 'r', encoding='utf-16') as desc_file:
                 set_desc = desc_file.read()
                 set_desc = re.sub(r'<[^>]+>', '', set_desc)
+                set_desc = re.sub(r'\n[\n]*', '  ', set_desc)
+            set_activations = set_activations + f"\n| {a} | {set_desc} |"
         print("", file=out)
         print("---", file=out)
         print(f"### {set_name}", file=out)
-        print(f"{set_desc}", file=out)
+        print(f"{set_activations}", file=out)
         print(f"", file=out)
         for a in ref_data[artfset]['pieces']:
             artifact = get_artifact_by_id(artifacts, a)

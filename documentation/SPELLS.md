@@ -5,20 +5,20 @@
 |------|-------|------|-------------|---------|
 | 1 | [Strength](#strength) | [Weakness](#weakness) | [Magic Arrow](#magic-arrow) | [Wasp Swarm](#wasp-swarm) |
 | | | | | |
-| 2 | [Haste](#haste) | [Slow](#slow) | [Lightning Bolt](#lightning-bolt) | [Arcane Crystal](#arcane-crystal) |
-| 2 | [Endurance](#endurance) | [Rupture](#rupture) | [Ice Bolt](#ice-bolt) | [Land Mines](#land-mines) |
+| 2 | [Endurance](#endurance) | [Rupture](#rupture) | [Lightning Bolt](#lightning-bolt) | [Arcane Crystal](#arcane-crystal) |
+| 2 | [Haste](#haste) | [Slow](#slow) | [Ice Bolt](#ice-bolt) | [Land Mines](#land-mines) |
 | | | | | |
-| 3 | [Cleansing](#cleansing) | [Decay](#decay) | [Polar Ring](#polar-ring) | [Summon Elementals](#summon-elementals) |
-| 3 | [Deflect Missile](#deflect-missile) | [Sorrow](#sorrow) | [Stone spikes](#stone-spikes) | [Confusion](#confusion) |
-| 3 | [Righteous Might](#righteous-might) | [Suffering](#suffering) | [Fireball](#fireball) | [Regeneration](#regeneration) |
+| 3 | [Deflect Missile](#deflect-missile) | [Suffering](#suffering) | [Stone spikes](#stone-spikes) | [Confusion](#confusion) |
+| 3 | [Righteous Might](#righteous-might) | [Decay](#decay) | [Polar Ring](#polar-ring) | [Summon Elementals](#summon-elementals) |
+| 3 | [Cleansing](#cleansing) | [Sorrow](#sorrow) | [Fireball](#fireball) | [Regeneration](#regeneration) |
 | | | | | |
-| 4 | [Divine Vengeance](#divine-vengeance) | [Teleport](#teleport) | [Fist of Wrath](#fist-of-wrath) | [Earthquake](#earthquake) |
-| 4 | [Blind](#blind) | [Raise Dead](#raise-dead) | [Firewall](#firewall) | [Wasp Hive](#wasp-hive) |
-| 4 | [Blade Barrier](#blade-barrier) | [Vampirism](#vampirism) | [Discharge](#discharge) | [Immunity](#immunity) |
+| 4 | [Blind](#blind) | [Raise Dead](#raise-dead) | [Fist of Wrath](#fist-of-wrath) | [Wasp Hive](#wasp-hive) |
+| 4 | [Blade Barrier](#blade-barrier) | [Vampirism](#vampirism) | [Firewall](#firewall) | [Earthquake](#earthquake) |
+| 4 | [Divine Vengeance](#divine-vengeance) | [Teleport](#teleport) | [Discharge](#discharge) | [Immunity](#immunity) |
 | | | | | |
-| 5 | [Celestial Shield](#celestial-shield) | [Berserk](#berserk) | [Deep Freeze](#deep-freeze) | [Meteor Shower](#meteor-shower) |
-| 5 | [Resurrection](#resurrection) | [Curse of the Netherworld](#curse-of-the-netherworld) | [Implosion](#implosion) | [Mind Control](#mind-control) |
-| 5 | [Holy Word](#holy-word) | [Shadow Image](#shadow-image) | [Armageddon](#armageddon) | [Conjure Phoenix](#conjure-phoenix) |
+| 5 | [Resurrection](#resurrection) | [Berserk](#berserk) | [Armageddon](#armageddon) | [Meteor Shower](#meteor-shower) |
+| 5 | [Celestial Shield](#celestial-shield) | [Shadow Image](#shadow-image) | [Deep Freeze](#deep-freeze) | [Conjure Phoenix](#conjure-phoenix) |
+| 5 | [Holy Word](#holy-word) | [Curse of the Netherworld](#curse-of-the-netherworld) | [Implosion](#implosion) | [Mind Control](#mind-control) |
 | | | | | |
 
 
@@ -849,13 +849,13 @@ Duration :
 Summons a phoenix on the battle field to fight on the hero’s side. Only one phoenix can be summoned at a time
 
 Damage :
-- Base: '7'
+- Base: '2'
   PerPower: '0'
-- Base: '6'
+- Base: '1'
   PerPower: '0'
-- Base: '5'
+- Base: '1'
   PerPower: '0'
-- Base: '4'
+- Base: '1'
   PerPower: '0'
 
 Duration :
@@ -990,14 +990,14 @@ Duration :
 The target creature gains health regeneration on its turn. Does not work on Undead, Mechanical and Elemental creatures.
 
 Damage :
-- Base: '40'
-  PerPower: '2'
-- Base: '50'
+- Base: '75'
   PerPower: '3'
-- Base: '60'
+- Base: '80'
   PerPower: '4'
-- Base: '70'
+- Base: '85'
   PerPower: '5'
+- Base: '90'
+  PerPower: '6'
 
 Duration :
 - Base: '1.5'

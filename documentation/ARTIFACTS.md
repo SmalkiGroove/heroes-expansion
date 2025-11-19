@@ -2,7 +2,10 @@
 
 ---
 ### The Sentinel
-(4-6) (Haven)
+| Nb | Effects |
+| --- | --- |
+| 4 | • Victories grant bonuses to hero troops for the next battle. The stronger the defeated monsters are, the stronger the bonuses are.  For Haven heroes:  • Angels in hero's army Encourage a random ally each turn. |
+| 6 | • Victories grant bonuses to hero troops for the next battle. The stronger the defeated monsters are, the stronger the bonuses are.  • Summons a row of Footmen in front of hero's army at the start of combats.  For Haven heroes:  • Angels in hero's army Encourage a random ally each turn.  • Summons a row of Squires instead of Footmen. |
 
 - __Sentinel's Bracer__ :
 +1 Defense
@@ -26,7 +29,10 @@
 
 ---
 ### Elven Secret
-(4-6) (Sylvan)
+| Nb | Effects |
+| --- | --- |
+| 4 | • Coming soon     For Sylvan heroes:  • Coming soon |
+| 6 | • Coming soon     For Sylvan heroes:  • Coming soon |
 
 - __Avenger Bow__ :
 <color=red>+10% damage from ranged attacks
@@ -49,7 +55,10 @@ Generate between 0 and 3 Wood per day, and sometimes a bonus of 1000 experience 
 
 ---
 ### Hell Conquest
-(4-6) (Inferno)
+| Nb | Effects |
+| --- | --- |
+| 4 | • Coming soon     For Inferno heroes:  • Coming soon |
+| 6 | • Coming soon     For Inferno heroes:  • Coming soon |
 
 - __Shackles of the Last Man__ :
 <color=red>-2 Attack and Defense to enemy creatures
@@ -70,7 +79,10 @@ Creatures in hero's army are immuned to Armageddon
 
 ---
 ### Death's Embrace
-(4-6) (Necropolis)
+| Nb | Effects |
+| --- | --- |
+| 4 | • Summons a stack of Bone Dragons when combat starts.  For Necropolis heroes:  • Summons Spectral Dragons instead. |
+| 6 | • Summons two stacks of Bone Dragons when combat starts.  For Necropolis heroes:  • Summons Spectral Dragons instead. They start with 100% ATB. |
 
 - __Amulet of Necromancy__ :
 +1 Spellpower
@@ -95,7 +107,10 @@ After every victory, gain an amount of Movement points and Experience depending 
 
 ---
 ### Magister Set
-(4-6) (Academy)
+| Nb | Effects |
+| --- | --- |
+| 4 | • Casters in hero's army regenerate mana during combat.     For Academy heroes:  • Mages in hero's army start with double mana. |
+| 6 | • Casters in hero's army regenerate mana during combat and start with 100% ATB.     For Academy heroes:  • Mages in hero's army start with double mana. The largest stack uses Power Feed. |
 
 - __Book Of Power__ :
 +1 Spellpower and Knowledge per rank of Learning skill
@@ -119,7 +134,10 @@ Gain Experience every day based on the hero's Knowledge, and half the amount to 
 
 ---
 ### Shadow Burst
-(4-6) (Dungeon)
+| Nb | Effects |
+| --- | --- |
+| 4 | • Coming soon     For Dungeon heroes:  • Coming soon |
+| 6 | • Coming soon     For Dungeon heroes:  • Coming soon |
 
 - __Ring of Banishment__ :
 -50% to the amount of enemy summoned elementals
@@ -143,7 +161,10 @@ Grants the Banish ability
 
 ---
 ### Dwarven Set
-(4-6) (Fortress)
+| Nb | Effects |
+| --- | --- |
+| 4 | • Coming soon     For Fortress heroes:  • Coming soon |
+| 6 | • Coming soon     For Fortress heroes:  • Coming soon |
 
 - __Rune of Flame__ :
 +2 Spellpower
@@ -167,7 +188,10 @@ Creatures in hero's army are Undisturbed (immunity to Berserk)
 
 ---
 ### Brutalist Set
-(4-6) (Stronghold)
+| Nb | Effects |
+| --- | --- |
+| 4 | • Coming soon     For Stronghold heroes:  • Coming soon |
+| 6 | • Coming soon     For Stronghold heroes:  • Coming soon |
 
 - __Barbarian Cuirass__ :
 +3 Defense
@@ -190,7 +214,11 @@ Troops gain the Battle Rage ability
 
 ---
 ### Draconic Power
-(4-6-8) (Neutral)
+| Nb | Effects |
+| --- | --- |
+| 4 | Summon the Legendary Dragon when a friendly stack of creatures is killed. It comes with 50% ATB. |
+| 6 | Summon the Legendary Dragon when an enemy stack of creatures is killed. It comes with 75% ATB. |
+| 8 | Summon the Legendary Dragon when combat starts. It comes with 100% ATB. |
 
 - __Dragon Scale Armor__ :
 +3 Defense
@@ -220,7 +248,9 @@ Troops gain the Battle Rage ability
 
 ---
 ### Empowerement
-(4) (Neutral)
+| Nb | Effects |
+| --- | --- |
+| 4 | Hero gains +2 to his or her lowest primary attribute on every level up. |
 
 - __Turban of Enlightenment__ :
 +3 Knowledge
@@ -237,7 +267,9 @@ Every 4 victories, gain 1000 + 1% experience
 
 ---
 ### Frozen Kingdom
-(4) (Neutral)
+| Nb | Effects |
+| --- | --- |
+| 4 | Hero learns Deep Freeze and casts it on enemy creatures after their first combat turn. |
 
 - __Evercold Icicle__ :
 +1 Spellpower
@@ -256,7 +288,9 @@ Grants hero troops immunity to Blaze Power's defense reduction
 
 ---
 ### Faraway Kingdom
-(4) (Neutral)
+| Nb | Effects |
+| --- | --- |
+| 4 | When an enemy stack is killed, the hero gains 100% ATB and mana equal to 10 + Level. The mana can raise above limit, and all exceeding mana points are converted to experience after battles. |
 
 - __Genji's Hat__ :
 *genji's hat*
@@ -269,7 +303,9 @@ Grants hero troops immunity to Blaze Power's defense reduction
 
 ---
 ### Eldena's Pride
-(3) (Neutral)
+| Nb | Effects |
+| --- | --- |
+| 3 | New Tier 4 and Tier 5 creatures of hero's faction add added to the army on each level up. |
 
 - __Eldena's Red Scarf__ :
 +1 Knowledge
@@ -285,7 +321,9 @@ Grants hero troops immunity to Blaze Power's defense reduction
 
 ---
 ### War Leader
-(4) (Neutral)
+| Nb | Effects |
+| --- | --- |
+| 4 | Creatures of tier 1, 2 and 3 gain 100% ATB when an enemy stack is killed during combat. |
 
 - __War Horn__ :
 +1 Morale
@@ -302,7 +340,9 @@ Grants hero troops immunity to Blaze Power's defense reduction
 
 ---
 ### Vizier's Fortune
-(4) (Neutral)
+| Nb | Effects |
+| --- | --- |
+| 4 | After defeating a neutral army, gain an artifact whose value depends on the defeated army strength. (no artifact is gained if minimum threshold is not reached) |
 
 - __Grand Vizir's Cap__ :
 +1 Knowledge
@@ -317,7 +357,9 @@ Gain random temporary battle bonuses after each victory
 
 ---
 ### Afterlife Set
-(5) (Neutral)
+| Nb | Effects |
+| --- | --- |
+| 5 | Hero learns Sorrow and casts it on all enemy creatures at the start of combat. |
 
 - __Cursed Ring__ :
 -1 Luck to enemy creatures
@@ -336,7 +378,9 @@ Gain random temporary battle bonuses after each victory
 
 ---
 ### Warmage
-(5) (Neutral)
+| Nb | Effects |
+| --- | --- |
+| 5 | When hero levels up, gain +1 Spellpower and Knowledge, and an additional +1 to all primary attributes for each Magic School mastered at expert level. |
 
 - __Boots of Interference__ :
 +1 Luck
@@ -358,7 +402,9 @@ Restore 25 Mana after battle
 
 ---
 ### Bandit Set
-(5) (Neutral)
+| Nb | Effects |
+| --- | --- |
+| 5 | Coming soon |
 
 - __Plunderer Vest__ :
 +1 Health to friendly creatures
@@ -376,7 +422,9 @@ Gain Wood and Ore after battle depending on the strength of the defeated army
 
 ---
 ### Animal Spirit
-(4) (Neutral)
+| Nb | Effects |
+| --- | --- |
+| 4 | At the start of combats, call for a random beast (among Wolf, Griffin, Unicorn, Wyvern, Hydra, Hell Charger, Arcane Eagle, Manticore, Cave Spider and Basilisk). |
 
 - __Eagle Bravery Necklace__ :
 +1 Attack
@@ -393,7 +441,10 @@ Gain Wood and Ore after battle depending on the strength of the defeated army
 
 ---
 ### Saint's Grace
-(4-6) (Neutral)
+| Nb | Effects |
+| --- | --- |
+| 4 | Resurrects half of the creatures lost at the end of battles. |
+| 6 | Resurrects all the creatures lost at the end of battles. |
 
 - __Fortune Band of the Saint__ :
 +1 Luck permanently every 20 victories with this item equipped
@@ -414,7 +465,9 @@ Creatures in hero's army are immuned to Decay
 
 ---
 ### Celestial Justicar
-(5) (Neutral)
+| Nb | Effects |
+| --- | --- |
+| 5 | Gain the Angel Wings, that gives +10 to all attributes, including Luck and morale, and allows to move hero above obstacles. |
 
 - __Celestial Justicar's Shield__ :
 +2 Defense
@@ -436,7 +489,9 @@ Creatures in hero's army are immuned to Decay
 
 ---
 ### Wanderer
-(2) (Neutral)
+| Nb | Effects |
+| --- | --- |
+| 2 | Doubles the weekly production bonus of the Logistics skill. |
 
 - __Boots of the Open Road__ :
 +1 Defense
@@ -447,7 +502,9 @@ Restore hero movement points on level up
 
 ---
 ### Sailor Set
-(3) (Neutral)
+| Nb | Effects |
+| --- | --- |
+| 3 | Grants infinite movement while sailing a ship. |
 
 - __Ocean Charm__ :
 +1 Luck
@@ -460,7 +517,9 @@ Restore hero movement points on level up
 
 ---
 ### Moon Gleam
-(4) (Neutral)
+| Nb | Effects |
+| --- | --- |
+| 4 | Gain an additional free level every time hero levels up. |
 
 - __Moonblade__ :
 +4 Attack
@@ -479,8 +538,9 @@ Creatures in hero's army are immuned to Curse of the Netherworld
 -25% Mana cost to all spells
 
 ---
-### Neutrals
-The following artifact do not belong in a set.
+### Neutral
+| Nb | Effects |
+| --- | --- |
 
 - __Sword of Might__ :
 +1 Attack

@@ -1212,6 +1212,7 @@ ARTIFACTS:
     - ARTIFACT_SENTINELS_HELM
     - PLATE_MAIL_OF_STABILITY
     - ARTIFACT_SENTINELS_BLADE
+    activations: [4,6]
   SYLVAN:
     id: 2
     pieces:
@@ -1221,6 +1222,7 @@ ARTIFACTS:
     - DWARVEN_MITHRAL_GREAVES
     - ARTIFACT_SYLVAN_AMULET
     - ARTIFACT_SACRED_SEED
+    activations: [4,6]
   INFERNO:
     id: 3
     pieces:
@@ -1230,6 +1232,7 @@ ARTIFACTS:
     - ARTIFACT_RING_OF_THE_SHADOWBRAND
     - ARTIFACT_OBSIDIAN_ARMOR
     - ARTIFACT_WILL_OF_URGASH
+    activations: [4,6]
   NECRO:
     id: 4
     pieces:
@@ -1239,6 +1242,7 @@ ARTIFACTS:
     - ARTIFACT_DEATH_KNIGHT_BOOTS
     - STAFF_OF_VEXINGS
     - CLOAK_OF_MOURNING
+    activations: [4,6]
   ACADEMY:
     id: 5
     pieces:
@@ -1248,6 +1252,7 @@ ARTIFACTS:
     - CROWN_OF_MAGI
     - STAFF_OF_MAGI
     - ROBE_OF_MAGI
+    activations: [4,6]
   DUNGEON:
     id: 6
     pieces:
@@ -1257,6 +1262,7 @@ ARTIFACTS:
     - ARTIFACT_SHADOW_MASK
     - ARTIFACT_SHADOW_BLADE
     - ARTIFACT_CLOAK_OF_DARKNESS
+    activations: [4,6]
   DWARVEN:
     id: 7
     pieces:
@@ -1266,6 +1272,7 @@ ARTIFACTS:
     - ARTIFACT_OGRE_SHIELD
     - ARTIFACT_OGRE_CLUB
     - GREAT_AXE_OF_GIANT_SLAYING
+    activations: [4,6]
   ORCS:
     id: 8
     pieces:
@@ -1275,6 +1282,7 @@ ARTIFACTS:
     - ARTIFACT_COLLAR_OF_PRIMAL_RAGE
     - ARTIFACT_OGRE_CLUB_2
     - ARTIFACT_OGRE_SHIELD_2
+    activations: [4,6]
   DRAGON:
     id: 9
     pieces:
@@ -1286,6 +1294,7 @@ ARTIFACTS:
     - DRAGON_TALON_CROWN
     - DRAGON_EYE_RING
     - DRAGON_FLAME_TONGUE
+    activations: [4,6,8]
   ENLIGHTEN:
     id: 10
     pieces:
@@ -1293,6 +1302,7 @@ ARTIFACTS:
     - CHAIN_MAIL_OF_ENLIGHTMENT
     - ARTIFACT_STAFF_OF_THE_LYRE
     - ARTIFACT_PENDANT_OF_THE_LYRE
+    activations: [4]
   FROST:
     id: 11
     pieces:
@@ -1300,6 +1310,7 @@ ARTIFACTS:
     - ARTIFACT_BEARHIDE_WRAPS
     - ARTIFACT_CROWN_OF_THE_FROST_LORD
     - ARTIFACT_SPEAR_OF_THE_FROST_LORD
+    activations: [4]
   GENJI:
     id: 12
     pieces:
@@ -1307,12 +1318,14 @@ ARTIFACTS:
     - ARTIFACT_GENJIS_VEST
     - ARTIFACT_GENJIS_SANDALS
     - ARTIFACT_GENJIS_SILKSWORD
+    activations: [4]
   ELDENA:
     id: 13
     pieces:
     - ARTIFACT_ELDENAS_RED_SCARF
     - ARTIFACT_ELDENAS_RED_COAT
     - ARTIFACT_ELDENAS_CIRCLET
+    activations: [3]
   WAR:
     id: 14
     pieces:
@@ -1320,6 +1333,7 @@ ARTIFACTS:
     - WEREWOLF_CLAW_NECKLACE
     - RING_OF_LIFE
     - NECKLACE_OF_POWER
+    activations: [4]
   VIZIR:
     id: 15
     pieces:
@@ -1327,6 +1341,7 @@ ARTIFACTS:
     - ARTIFACT_VIZIRS_SCIMITAR
     - ARTIFACT_REGAL_ARMOUR
     - ARTIFACT_PALACE_SHOES
+    activations: [4]
   SPIRIT:
     id: 16
     pieces:
@@ -1335,6 +1350,7 @@ ARTIFACTS:
     - ARTIFACT_SKULL_MASK
     - ARTIFACT_DEADWOOD_STAFF
     - ARTIFACT_SPIRIT_OF_OPPRESSION
+    activations: [5]
   WARMAGE:
     id: 17
     pieces:
@@ -1343,6 +1359,7 @@ ARTIFACTS:
     - ARTIFACT_HELM_OF_THE_WARMAGE
     - ARTIFACT_RUNIC_WAR_AXE
     - ARTIFACT_RUNIC_WAR_HARNESS
+    activations: [5]
   BANDIT:
     id: 18
     pieces:
@@ -1351,6 +1368,7 @@ ARTIFACTS:
     - ARTIFACT_VIKING_HATCHET
     - ARTIFACT_VIKING_SHIELD
     - ARTIFACT_BEARHIDE_WRAPS_2
+    activations: [5]
   BESTIAL:
     id: 19
     pieces:
@@ -1358,6 +1376,7 @@ ARTIFACTS:
     - ARTIFACT_SHIELD_OF_THE_WOLF
     - ARTIFACT_CUIRASS_OF_THE_STAG
     - ARTIFACT_WRAPS_OF_THE_OWL
+    activations: [4]
   SAINT:
     id: 20
     pieces:
@@ -1367,6 +1386,7 @@ ARTIFACTS:
     - ARTIFACT_STAFF_OF_THE_SAINT
     - ARTIFACT_SANDALS_OF_THE_SAINT
     - ARTIFACT_CODEX_OF_THE_SAINT
+    activations: [4,6]
   ARCHANGEL:
     id: 21
     pieces:
@@ -1375,17 +1395,20 @@ ARTIFACTS:
     - ARTIFACT_CELESTIAL_JUSTICAR_ARMOR
     - RING_OF_HASTE
     - ARTIFACT_ELRATHS_UNITY
+    activations: [5]
   WANDERER:
     id: 22
     pieces:
     - WAYFARER_BOOTS
     - ARTIFACT_BACKPACK_OF_THE_OPEN_ROAD
+    activations: [2]
   SAILOR:
     id: 23
     pieces:
     - GOLDEN_SEXTANT
     - ARTIFACT_PIRATE_SMASHER
     - ARTIFACT_CAPTAINS_HOOK
+    activations: [3]
   MOON:
     id: 24
     pieces:
@@ -1393,6 +1416,7 @@ ARTIFACTS:
     - ARTIFACT_MOON_CHARM
     - ARTIFACT_MOONLIGHT_BAND
     - ARTIFACT_MOONLIGHT_COAT
+    activations: [4]
   NEUTRAL:
     id: 0
     pieces:
@@ -1450,6 +1474,7 @@ ARTIFACTS:
     - ARTIFACT_ORB_OF_EARTH
     - ARTIFACT_ORB_OF_FIRE
     - ARTIFACT_ORB_OF_WATER
+    activations: []
 
 SPELLS:
   - id: SPELL_MAGIC_ARROW
