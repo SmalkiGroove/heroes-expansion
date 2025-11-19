@@ -20,7 +20,6 @@
 
 - [EXE] Shantiri Moon Disc blocks all light magic
 - [XDB] Level Up skillswheel always shows all skills
-- [???] Gateways and subterra entrance not working on RMG maps
 
 ### Suggestions
 
@@ -29,12 +28,13 @@
 - [XDB] Add ARMG templates
 - [EXE] Magnetism redirect projectiles
 - [EXE] Make Earthquake deal magical earth damage
-- [DDS] Banish change hue
 
 ### Balance
 
 - [EXE] Market change rate are total scam
 - [EXE] Inferno and Dungeon sacrificial buildings are bad
+- [XDB] Buff Conjure Phoenix again
+- [XDB] Buff Regeneration spell
 
 ### Massive work required
 
@@ -48,4 +48,6 @@
 
 # FIXED
 
+- Battles don't end when enemy stacks are killed simultaneously
+- Gateways and subterra entrance not working when monsters on the other side
 

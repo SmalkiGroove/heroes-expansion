@@ -151,7 +151,16 @@ function ManageUnitDeath(unit)
             end
             if not alive then winner = 1 - side; break end
         end
-        if winner then ManageCombatEnd(winner) end
+        if winner then
+            ManageCombatEnd(winner)
+        else
+            unit = CURRENT_UNIT
+            repeat sleep() until unit ~= CURRENT_UNIT
+            for cr,_ in STARTING_ARMY[1-CURRENT_UNIT_SIDE] do
+                if exist(cr) and GetCreatureNumber(cr) > 0 then return end
+            end
+            ManageCombatEnd(CURRENT_UNIT_SIDE)
+        end
     end
 end
 

@@ -3,6 +3,14 @@ Var_WitchHutVisited = {}
 Var_TempleVisited = {}
 
 function Override_Monsters(obj)
+    local x, y, z = GetObjectPosition(obj)
+    for _,gate in MAP_GATES do
+        local xx, yy, zz = GetObjectPosition(gate)
+        if z == zz and abs(x-xx) < 3 and abs(y-yy) < 3 then
+            log(DEBUG, "$ Gate found for monsters "..obj)
+            return
+        end
+    end
     Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_Monsters")
     SetObjectEnabled(obj, nil)
 end
@@ -190,6 +198,12 @@ end
 
 -----------------------------------------------
 
+function RegisterMapGates()
+    for _,type in FASTTRAVEL_GATE_OBJECTS do
+        for _,obj in GetObjectNamesByType(type) do insert(MAP_GATES, obj) end
+    end
+end
+
 TRIGGER_OVERRIDES = {
     ["CREATURE"] = Override_Monsters,
     ["BUILDING_WITCH_HUT"] = Override_WitchHut,
@@ -199,6 +213,7 @@ TRIGGER_OVERRIDES = {
 }
 
 function InitializeMapObjects()
+    RegisterMapGates()
     for k,v in TRIGGER_OVERRIDES do
         for _,obj in GetObjectNamesByType(k) do
             startThread(v, obj)
