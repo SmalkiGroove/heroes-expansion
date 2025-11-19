@@ -197,3 +197,13 @@ Initial beta release !
 - Anger Treant change ability root for fierce retal
 - Nerf Meteor Shower base damage
 - Dragon set artifacts increase creature initiative by 5% instead of 10%
+
+### 0.4.2 (19/11/2025)
+
+#### Fixed/Changed
+
+- Battles don't end when enemy stacks are killed simultaneously
+- Gateways and subterra entrance not working when monsters on the other side
+- Buff/fix Conjure Phoenix
+- Buff Regeneration spell
+- Level Up skillswheel shows superposed skills

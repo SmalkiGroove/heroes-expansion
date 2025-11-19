@@ -45,9 +45,3 @@
 
 # FIXED
 
-- Battles don't end when enemy stacks are killed simultaneously
-- Gateways and subterra entrance not working when monsters on the other side
-- Buff Conjure Phoenix again
-- Buff Regeneration spell
-- Level Up skillswheel shows only valid skills
-
