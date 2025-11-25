@@ -13,25 +13,29 @@
 ### Something does not work
 
 - [EXE] Thunder Power has no lightning visual effect
-- [EXE] Magnetism not working yet
+- [EXE] Magnetic Field not working yet
 - [???] RMG doesn't spawn monsters sometimes
 
 ### Bugs
 
 - [EXE] Shantiri Moon Disc blocks all light magic
+- Elem orb spawn position
+- Inferno sacrificial pit not required for city hall
+- Frozen heart not in frost artfset
 
 ### Suggestions
 
 - [???] Add NCF creatures in editor
 - [XDB] Darkstorm hero totem model
 - [XDB] Add ARMG templates
-- [EXE] Magnetism redirect projectiles
+- [EXE] Magnetic Field redirect projectiles
 - [EXE] Make Earthquake deal magical earth damage
 
 ### Balance
 
 - [EXE] Market change rate are total scam
 - [EXE] Inferno and Dungeon sacrificial buildings are bad
+- Nerf Kha Beleth late game
 
 ### Massive work required
 

@@ -66,6 +66,7 @@ function Trigger_Monsters_Ongoing(hero, obj)
     ONGOING_BATTLES[hero] = nil
 end
 
+Var_WitchHutResCost = {3,2,4,5}
 function Trigger_WitchHut(hero, obj)
     log(DEBUG, "$ Trigger_WitchHut")
     local player = GetObjectOwner(hero)
@@ -78,9 +79,11 @@ function Trigger_WitchHut(hero, obj)
         SetObjectEnabled(obj, nil)
     elseif Var_WitchHutVisited[obj] == 0 then
         local givestat = random(1,4,TURN)
+        local text_stat = "/GameMechanics/RefTables/HeroAttribute/"..ATTRIBUTE_TEXT_ORIGIN[givestat]..".txt"
+        local text_res = "/Text/Game/Script/Resources/"..RESOURCE_TEXT[Var_WitchHutResCost[givestat]]..".txt"
         QuestionBoxForPlayers(
             GetPlayerFilter(player),
-            {"/Text/Game/Scripts/MapObjects/WitchHut.txt"; stat="/GameMechanics/RefTables/HeroAttribute/"..ATTRIBUTE_TEXT_ORIGIN[givestat]..".txt"},
+            {"/Text/Game/Scripts/MapObjects/WitchHut.txt"; stat=text_stat, res=text_res},
             "Trigger_WitchHut_confirm("..player..",'"..hero.."','"..obj.."',"..givestat..")",
             "Trigger_WitchHut_cancel("..player..",'"..hero.."','"..obj.."')"
         )
@@ -90,13 +93,14 @@ function Trigger_WitchHut(hero, obj)
 end
 function Trigger_WitchHut_confirm(player, hero, obj, givestat)
     log(DEBUG, "$ Trigger_WitchHut_confirm")
-    if GetPlayerResource(player, MERCURY) >= 3 then
+    local res = Var_WitchHutResCost[givestat]
+    if GetPlayerResource(player, res) >= 3 then
         MessageBoxForPlayers(
             GetPlayerFilter(player),
             {"/Text/Game/Scripts/MapObjects/WitchHutAccepted.txt"; stat="/GameMechanics/RefTables/HeroAttribute/"..ATTRIBUTE_TEXT_ORIGIN[givestat]..".txt"},
             "NoneRoutine"
         )
-        TakeAwayResources(player, MERCURY, 3)
+        TakeAwayResources(player, res, 3)
         ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
         ChangeHeroStat(hero, givestat, 2)
         GiveExp(hero, 5000)
