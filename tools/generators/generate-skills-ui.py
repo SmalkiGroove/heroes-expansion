@@ -543,16 +543,17 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
             print(f"WARN: missing button file for ID {id} ({skill_name})")
 
 
-for branch in branches[10:]:
-    x = coordinates_branch[branch][0]
-    y = coordinates_branch[branch][1]
-    write_from_template("branch.(WindowSimple).xdb.j2", window_branch_path(branch), {'skill_name': branch, 'pos_x': x, 'pos_y': y})
-for branch in branches:
+for branch in [branches[0]] + branches[10:]:
+    if branch != branches[0]:
+        x = coordinates_branch[branch][0]
+        y = coordinates_branch[branch][1]
+        write_from_template("branch.(WindowSimple).xdb.j2", window_branch_path(branch), {'skill_name': branch, 'pos_x': x, 'pos_y': y})
     branch_skills = []
     for root, dirs, files in os.walk(branch_path(branch)):
         branch_skills = dirs
         break
     write_from_template("branch.(WindowSimpleShared).xdb.j2", window_branchshared_path(branch), {'skills': branch_skills})
+
 
 
 all_buttons.close()
