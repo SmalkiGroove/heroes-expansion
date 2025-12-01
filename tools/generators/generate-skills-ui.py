@@ -480,7 +480,7 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
             'desc': skill["obj"]["DescriptionFileRef"]["Item"]["@href"],
         }
         base_skill = get_skill_id_from_name(skill["obj"]["BasicSkillID"])
-        if base_skill == 0 or base_skill == 54:
+        if base_skill == 0 or base_skill == 254:
             prerequisites[id] = []
         else:
             if skill["obj"]["SkillType"] == "SKILLTYPE_STANDART_PERK":
@@ -547,6 +547,7 @@ for branch in branches[10:]:
     x = coordinates_branch[branch][0]
     y = coordinates_branch[branch][1]
     write_from_template("branch.(WindowSimple).xdb.j2", window_branch_path(branch), {'skill_name': branch, 'pos_x': x, 'pos_y': y})
+for branch in branches:
     branch_skills = []
     for root, dirs, files in os.walk(branch_path(branch)):
         branch_skills = dirs
