@@ -93,7 +93,9 @@ coordinates_skills = {
   '004002': [racial_x+70, racial_y+26],
   '004003': [racial_x+100, racial_y+26],
   '004004': [racial_x+130, racial_y+26],
-  '005000': [offence_x+125, offence_y+45],
+  '005001': [leadership_x+45, leadership_y+10],
+  '005002': [leadership_x+75, leadership_y+10],
+  '005003': [leadership_x+105, leadership_y+10],
   '006001': [offence_x+45, offence_y+10],
   '006002': [offence_x+75, offence_y+10],
   '006003': [offence_x+105, offence_y+10],
@@ -140,12 +142,9 @@ coordinates_skills = {
   '018004': [racial_x+130, racial_y+26],
   '019000': [logistics_x+5, logistics_y+45],
   '020000': [logistics_x+30, logistics_y+45],
-  '021001': [governance_x+45, governance_y+10],
-  '021002': [governance_x+75, governance_y+10],
-  '021003': [governance_x+105, governance_y+10],
+  '021000': [training_x+100, training_y+45],
   '022000': [warfare_x+100, warfare_y+45],
   '023000': [warfare_x+5, warfare_y+45],
-  '024000': [warfare_x+150, warfare_y+45],
   '025000': [learning_x+100, learning_y+45],
   '026000': [learning_x+30, learning_y+45],
   '027000': [learning_x+5, learning_y+45],
@@ -208,7 +207,7 @@ coordinates_skills = {
   '085000': [349, 68],
   '086000': [183, 68],
   '087000': [learning_x+125, learning_y+45],
-  '088000': [natural_x+150, natural_y+40],
+  '088000': [defense_x+150, defense_y+45],
   '089000': [211, 68],
   '090000': [241, 68],
   '091000': [combat_x+150, combat_y+55],
@@ -216,7 +215,6 @@ coordinates_skills = {
   '094000': [324, 68],
   '095000': [innates_x+180, innates_y+68],
   '096000': [innates_x+270, innates_y+26],
-  '097000': [natural_x+150, natural_y+60],
   '098000': [innates_x+0, innates_y+68],
   '099000': [innates_x+90, innates_y+68],
   '100000': [dark_x+150, dark_y+45],
@@ -230,7 +228,6 @@ coordinates_skills = {
   '108000': [dark_x+125, dark_y+45],
   '109000': [racial_x+50, racial_y+68],
   '110000': [211, 68],
-  '111000': [innates_x+120, innates_y+68],
   '112000': [innates_x+0, innates_y+26],
   '113000': [211, 68],
   '114000': [315, 68],
@@ -243,9 +240,7 @@ coordinates_skills = {
   '121000': [innates_x+0, innates_y+26],
   '122000': [natural_x+55, natural_y+45],
   '123000': [natural_x+30, natural_y+45],
-  '124001': [235, 26],
-  '124002': [265, 26],
-  '124003': [295, 26],
+  '124000': [offence_x+125, offence_y+45],
   '125000': [320, 68],
   '126000': [349, 68],
   '128000': [289, 68],
@@ -259,14 +254,12 @@ coordinates_skills = {
   '136000': [innates_x+0, innates_y+26],
   '137000': [innates_x+0, innates_y+68],
   '138000': [352, 68],
-  '139000': [natural_x+150, natural_y+20],
   '140000': [sorcery_x+125, sorcery_y+45],
   '141000': [offence_x+55, offence_y+45],
   '142000': [242, 68],
   '143000': [321, 68],
   '144000': [290, 68],
   '145000': [214, 68],
-  '146000': [innates_x+150, innates_y+68],
   '147000': [destructive_x+55, destructive_y+45],
   '148000': [sorcery_x+30, sorcery_y+45],
   '149000': [244, 68],
@@ -311,9 +304,7 @@ coordinates_skills = {
   '182000': [289, 68],
   '183000': [racial_x+120, racial_y+68],
   '184000': [240, 68],
-  '185001': [training_x+45, training_y+10],
-  '185002': [training_x+75, training_y+10],
-  '185003': [training_x+105, training_y+10],
+  '185000': [warfare_x+150, warfare_y+45],
   '186000': [349, 68],
   '187001': [voice_x+45, voice_y+10],
   '187002': [voice_x+75, voice_y+10],
@@ -321,33 +312,11 @@ coordinates_skills = {
   '188000': [voice_x+30, voice_y+45],
   '189000': [voice_x+5, voice_y+45],
   '190000': [voice_x+55, voice_y+45],
-  '191000': [leadership_x+30, leadership_y+45],
-  '192000': [leadership_x+55, leadership_y+45],
-  '193000': [training_x+55, training_y+45],
-  '194000': [light_x+125, light_y+45],
-  '195000': [combat_x+100, combat_y+45],
-  '196000': [combat_x+5, combat_y+45],
-  '197000': [innates_x+0, innates_y+0],
-  '198001': [leadership_x+45, leadership_y+10],
-  '198002': [leadership_x+75, leadership_y+10],
-  '198003': [leadership_x+105, leadership_y+10],
-  '199001': [shatter_x+45, shatter_y+10],
-  '199002': [shatter_x+75, shatter_y+10],
-  '199003': [shatter_x+105, shatter_y+10],
-  '200000': [governance_x+100, governance_y+45],
-  '201000': [governance_x+125, governance_y+45],
-  '202000': [governance_x+150, governance_y+45],
-  '203000': [natural_x+150, natural_y+0],
-  '204000': [defense_x+150, defense_y+45],
-  '205000': [innates_x+180, innates_y+26],
-  '206000': [shatter_x+55, shatter_y+45],
   '207000': [shatter_x+100, shatter_y+45],
-  '208000': [shatter_x+150, shatter_y+35],
-  '209000': [shatter_x+125, shatter_y+35],
+  '208000': [leadership_x+30, leadership_y+45],
+  '209000': [leadership_x+55, leadership_y+45],
   '210000': [natural_x+5, natural_y+45],
-  '211001': [despotism_x+45, despotism_y+10],
-  '211002': [despotism_x+75, despotism_y+10],
-  '211003': [despotism_x+105, despotism_y+10],
+  '211000': [light_x+125, light_y+45],
   '212000': [despotism_x+5, despotism_y+45],
   '213000': [despotism_x+30, despotism_y+45],
   '214000': [despotism_x+55, despotism_y+45],
@@ -357,13 +326,47 @@ coordinates_skills = {
   '218000': [combat_x+55, combat_y+35],
   '219000': [combat_x+150, combat_y+35],
   '220000': [innates_x+210, innates_y+26],
-  '221000': [training_x+100, training_y+45],
+  '221000': [governance_x+100, governance_y+45],
+  '222000': [governance_x+125, governance_y+45],
+  '223000': [governance_x+150, governance_y+45],
+  '224000': [training_x+55, training_y+45],
+  '225000': [combat_x+5, combat_y+45],
+  '226000': [combat_x+100, combat_y+45],
+  '227000': [shatter_x+55, shatter_y+45],
+  '228000': [shatter_x+125, shatter_y+35],
+  '229000': [shatter_x+150, shatter_y+35],
+  '241000': [natural_x+150, natural_y+60],
+  '242000': [natural_x+150, natural_y+20],
+  '243000': [natural_x+150, natural_y+40],
+  '244000': [natural_x+150, natural_y+0],
+  '246000': [innates_x+150, innates_y+68],
+  '247000': [innates_x+120, innates_y+68],
+  '248000': [innates_x+180, innates_y+26],
+  '249001': [shatter_x+45, shatter_y+10],
+  '249002': [shatter_x+75, shatter_y+10],
+  '249003': [shatter_x+105, shatter_y+10],
+  '250001': [governance_x+45, governance_y+10],
+  '250002': [governance_x+75, governance_y+10],
+  '250003': [governance_x+105, governance_y+10],
+  '251001': [training_x+45, training_y+10],
+  '251002': [training_x+75, training_y+10],
+  '251003': [training_x+105, training_y+10],
+  '252001': [despotism_x+45, despotism_y+10],
+  '252002': [despotism_x+75, despotism_y+10],
+  '252003': [despotism_x+105, despotism_y+10],
+  '253001': [innates_x+131, innates_y+26],
+  '253002': [innates_x+161, innates_y+26],
+  '253003': [innates_x+191, innates_y+26],
 }
 
+def branch_path(branch):
+    return os.path.join(skills_pedia_path, "_Skills", branch)
 def window_branch_path(branch):
     return os.path.join(skills_pedia_path, "_Skills", branch, f"{branch}.(WindowSimple).xdb")
 def window_branchshared_path(branch):
     return os.path.join(skills_pedia_path, "_Skills", branch, f"{branch}.(WindowSimpleShared).xdb")
+def skill_base_path(id, branch):
+    return os.path.join(skills_pedia_path, "_Skills", branch, id)
 def button_base_path(id, branch):
     return os.path.join(skills_pedia_path, "_Skills", branch, id, f"{id}.(WindowMSButton).xdb")
 def button_shared_path(id, branch):
@@ -446,12 +449,6 @@ def find_icon_size(path:str):
     return 64
 
 
-for branch in branches[10:]:
-    x = coordinates_branch[branch][0]
-    y = coordinates_branch[branch][1]
-    write_from_template("branch.(WindowSimple).xdb.j2", window_branch_path(branch), {'skill_name': branch, 'pos_x': x, 'pos_y': y})
-
-
 counter = -1
 for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
     counter = counter + 1
@@ -501,7 +498,7 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
     for id in elements:
         found = False
         for branch in branches:
-            if os.path.isfile(button_base_path(id, branch)):
+            if os.path.exists(skill_base_path(id, branch)):
                 print(f"Processing ID {id}...")
                 if found:
                     print(f"WARN: found duplicate button file for ID {id}")
@@ -518,11 +515,6 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
                 for targetDir in directories:
                     if not os.path.exists(targetDir):
                         os.makedirs(targetDir)
-                # dirrm = os.path.join(skills_pedia_path, branch, id, "selection")
-                # if os.path.exists(dirrm):
-                #     for file in os.listdir(dirrm):
-                #         os.remove(os.path.join(dirrm, file))
-                #     os.rmdir(dirrm)
                 write_from_template("button.(WindowMSButton).xdb.j2", button_base_path(id, branch), {'skill_id': id, 'skill_name': skill['ID'], 'pos_x': x, 'pos_y': y})
                 write_from_template("buttonshared.(WindowMSButtonShared).xdb.j2", button_shared_path(id, branch), {'branch': branch, 'skill_id': id, 'required_skills': prerequisites[id]})
                 write_from_template("skillicon.(WindowSimple).xdb.j2", button_bgwindow_path(id, branch), {'skill_id': id})
@@ -543,11 +535,24 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
                 all_selected.write(f"<Item href=\"{id}/{id}_select.(WindowMSButton).xdb#xpointer(/WindowMSButton)\"/>\n")
                 all_windows.write(f"<Item href=\"{id}/{id}_window.(WindowSimple).xdb#xpointer(/WindowSimple)\"/>\n")
         if not found:
-            skill_name = skill['ID']
-            if elements[id]['name'] != "":
+            if (elements[id]['name'] == "") or ('XXX' in elements[id]['name']):
+                skill_name = skill['ID']
+            else:
                 with open(os.path.join(root_text_path, elements[id]['name'][1:]), 'r', encoding="utf-16") as skill_name_txt:
                     skill_name = skill_name_txt.read().strip()
             print(f"WARN: missing button file for ID {id} ({skill_name})")
+
+
+for branch in branches[10:]:
+    x = coordinates_branch[branch][0]
+    y = coordinates_branch[branch][1]
+    write_from_template("branch.(WindowSimple).xdb.j2", window_branch_path(branch), {'skill_name': branch, 'pos_x': x, 'pos_y': y})
+    branch_skills = []
+    for root, dirs, files in os.walk(branch_path(branch)):
+        branch_skills = dirs
+        break
+    write_from_template("branch.(WindowSimpleShared).xdb.j2", window_branchshared_path(branch), {'skills': branch_skills})
+
 
 all_buttons.close()
 all_selected.close()

@@ -2143,41 +2143,35 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_INNATES</ID>
+			<ID>HERO_SKILL_54</ID>
 			<obj>
 				<Texture>
-					<Item/>
-					<Item href="/Textures/HeroScreen/Skills/xInnate.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Skills/xInnate.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Skills/xInnate.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/XXX_grey.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Perks/XXX.xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
-					<Item href="/Text/Game/Skills/Innates/Name.txt"/>
-					<Item href="/Text/Game/Skills/Innates/Name.txt"/>
-					<Item href="/Text/Game/Skills/Innates/Name.txt"/>
+					<Item href="/Text/Game/Skills/Common/XXX/XXX/Name.txt"/>
 				</NameFileRef>
-				<CommonNameFileRef href="/Text/Game/Skills/Innates/Name.txt"/>
+				<CommonNameFileRef href=""/>
 				<DescriptionFileRef>
-					<Item href="/Text/Game/Skills/Innates/Description.txt"/>
-					<Item href="/Text/Game/Skills/Innates/Description.txt"/>
-					<Item href="/Text/Game/Skills/Innates/Description.txt"/>
+					<Item href="/Text/Game/Skills/Common/XXX/XXX/Description.txt"/>
 				</DescriptionFileRef>
-				<CommonDescriptionFileRef href="/Text/Game/Skills/Innates/Description.txt"/>
-				<SkillType>SKILLTYPE_SKILL</SkillType>
+				<CommonDescriptionFileRef href=""/>
+				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
 				<BasicSkillID>HERO_SKILL_NONE</BasicSkillID>
 				<SkillPrerequisites/>
 				<AIRacesValues>
-					<Haven><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Haven>
-					<Sylvan><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Sylvan>
-					<Academy><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Academy>
-					<Dungeon><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Dungeon>
-					<Necropolis><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Necropolis>
-					<Inferno><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Inferno>
-					<Fortress><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Fortress>
-					<Stronghold><CommanderValue>0</CommanderValue><CollectorSupplierValue>0</CollectorSupplierValue><FreelancerValue>0</FreelancerValue></Stronghold>
+					<Haven><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Haven>
+					<Sylvan><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Sylvan>
+					<Academy><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Academy>
+					<Dungeon><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Dungeon>
+					<Necropolis><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Necropolis>
+					<Inferno><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Inferno>
+					<Fortress><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Fortress>
+					<Stronghold><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Stronghold>
 				</AIRacesValues>
 				<PresetPrice>0</PresetPrice>
 			</obj>
