@@ -186,6 +186,7 @@ function IncreaseCreatureStack(side, types, amount)
             repeat sleep() until not exist(cr)
             AddCreature(side, type, nb, x, y, nil, cr)
             repeat sleep() until exist(cr)
+            STARTING_ARMY[side][cr] = nb
             return cr
         end
     end

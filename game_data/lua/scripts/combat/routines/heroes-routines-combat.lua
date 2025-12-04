@@ -753,7 +753,7 @@ function Routine_BallistaShootUnit(side, hero)
             for i,cr in GetUnits(1-side, CREATURE) do
                 local x,y = GetUnitPosition(cr)
                 local target = cr.."-"..(10*COMBAT_TURN+i)
-                AddCreature(1-side, 180, 1, x, y, nil, target)
+                AddCreature(1-side, 180, 1, x, y, 1, target)
                 repeat sleep() until IsCombatUnit(target)
                 TryShootTarget(ballista, target, 360)
             end

@@ -80,6 +80,7 @@ function WatchPlayer(player, wait)
 			move = GetHeroStat(hero, STAT_MOVE_POINTS),
 			mana = GetHeroStat(hero, STAT_MANA_POINTS),
 		}
+		-- ControlHeroCustomAbility(hero, CUSTOM_ABILITY_1, CUSTOM_ABILITY_ENABLED)
     end
 	PlayerDailyResources(player)
     while IsPlayerCurrent(player) do
@@ -94,7 +95,7 @@ function WatchPlayer(player, wait)
 						if HasHeroSkill(hero, PERK_MEDITATION) and GetHeroStat(hero, STAT_MANA_POINTS) > tracker[hero].mana then
 							log(DEBUG, "Hero "..hero.." has used Meditation")
 							local amount = GetHeroStat(hero, STAT_MANA_POINTS) - tracker[hero].mana
-							startThread(Routine_MeditationExp, player, hero, amount)
+							startThread(ActivateMeditation, player, hero, amount)
 						else
 							log(DEBUG, "Hero "..hero.." has used digging")
 							startThread(ActivateDigging, player, hero)
@@ -116,6 +117,7 @@ function PlayerDailyHandler(player)
 	while (not IsPlayerCurrent(player)) do sleep(5) end
 	log(INFO, "Player "..player.." turn "..TURN.." started")
 	for i,hero in GetPlayerHeroes(player) do
+		ControlHeroCustomAbility(hero, CUSTOM_ABILITY_1, CUSTOM_ABILITY_DISABLED)
 		startThread(DoHeroSpeRoutine_Daily, player, hero)
 		startThread(DoSkillsRoutine_Daily, player, hero)
 		startThread(DoArtifactsRoutine_Daily, player, hero)

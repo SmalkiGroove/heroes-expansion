@@ -156,17 +156,6 @@ function Routine_CheckIntelligence(player, hero, mastery)
     end
 end
 
-function Routine_CheckExaltation(player, hero, mastery)
-    log(DEBUG, "$ Routine_CheckExaltation")
-    local value = 2 * mastery
-    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_EXALTATION]
-    if diff ~= 0 then
-        if hero == H_RANLETH then diff = 2 * diff end
-        AddHeroStatAmount(player, hero, STAT_SPELL_POWER, diff)
-        HERO_SKILL_BONUSES[hero][SKILLBONUS_EXALTATION] = value
-    end
-end
-
 function Routine_CheckArcaneExcellence(player, hero, mastery)
     log(DEBUG, "$ Routine_CheckArcaneExcellence")
     local value = 3 * mastery
@@ -814,12 +803,6 @@ end
 
 
 
-function Routine_MeditationExp(player, hero, amount)
-    log(DEBUG, "$ Routine_MeditationExp")
-    AddHeroStatAmount(player, hero, STAT_EXPERIENCE, 50 * amount)
-end
-
-
 START_TRIGGER_SKILLS_ROUTINES = {
     [SKILL_OFFENCE] = Routine_CheckOffence,
     [SKILL_DEFENSE] = Routine_CheckDefense,
@@ -835,7 +818,6 @@ START_TRIGGER_SKILLS_ROUTINES = {
     [PERK_BALLISTICS] = Routine_CheckBallistics,
     [PERK_ANATOMY] = Routine_CheckAnatomy,
     [PERK_INTELLIGENCE] = Routine_CheckIntelligence,
-    -- [PERK_EXALTATION] = Routine_CheckExaltation,
     [PERK_ARCANE_EXCELLENCE] = Routine_CheckArcaneExcellence,
     [PERK_GRADUATE] = Routine_CheckGraduate,
     [PERK_OCCULTISM] = Routine_CheckOccultism,

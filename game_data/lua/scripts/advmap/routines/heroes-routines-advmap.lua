@@ -1035,8 +1035,8 @@ end
 function Routine_MultiplyTroops(player, hero)
     log(DEBUG, "$ Routine_MultiplyTroops")
     local level = GetHeroLevel(hero)
-    local percent = 1 + trunc(0.13 * level)
-    local maxtier = 1 + trunc(0.22 * level)
+    local percent = 1 + trunc(0.05 * level)
+    local maxtier = 1 + trunc(0.20 * level)
     local tracker = {}
     for i,cr in GetHeroArmy(hero) do
         if cr and cr ~= 0 then

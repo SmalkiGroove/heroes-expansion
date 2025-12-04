@@ -1,7 +1,13 @@
 
-function ActivateDigging(player, hero)
-    log(DEBUG, "$ ActivateDigging")
-
+function ActivateInfoWindow(player, hero)
+    log(DEBUG, "$ ActivateInfoWindow")
+    MessageBoxForPlayers(
+        GetPlayerFilter(player),
+        {"/Text/Game/Scripts/InfoWindow.txt";
+            something1="Toto\nTutu<br>Titi"
+        },
+        "NoneRoutine"
+    )
 end
 
 
@@ -66,8 +72,22 @@ function ActivateBuildingConversion(player, hero)
     end
 end
 
+
+function ActivateMeditation(player, hero, amount)
+    log(DEBUG, "$ ActivateMeditation")
+    AddHeroStatAmount(player, hero, STAT_EXPERIENCE, 50 * amount)
+end
+
+
+function ActivateDigging(player, hero)
+    log(DEBUG, "$ ActivateDigging")
+
+end
+
+
+
 CUSTOM_ABILITIES = {
-    [CUSTOM_ABILITY_1] = NoneRoutine,
+    [CUSTOM_ABILITY_1] = ActivateInfoWindow,
     [CUSTOM_ABILITY_2] = ActivateKnowYourEnemy,
     [CUSTOM_ABILITY_3] = ActivateHeroTimeShift,
     [CUSTOM_ABILITY_4] = ActivateBuildingConversion,

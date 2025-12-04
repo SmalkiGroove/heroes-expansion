@@ -5,47 +5,49 @@
 
 ### Broken graphics or animations
 
-- [EXE] Consume Corpse camera glitch
+- Consume Corpse camera glitch
 
 ### Text issues
 
 
 ### Something does not work
 
-- [EXE] Thunder Power has no lightning visual effect
-- [EXE] Magnetic Field not working yet
-- [???] RMG doesn't spawn monsters sometimes
+- Thunder Power has no lightning visual effect
+- Magnetic Field not working yet
+- RMG doesn't spawn monsters sometimes
 
 ### Bugs
 
-- [EXE] Shantiri Moon Disc blocks all light magic
-- Elem orb spawn position
+- Shantiri Moon Disc blocks all light magic
 - Inferno sacrificial pit not required for city hall
-- Frozen heart not in frost artfset
 
 ### Suggestions
 
-- [???] Add NCF creatures in editor
-- [XDB] Darkstorm hero totem model
-- [XDB] Add ARMG templates
-- [EXE] Magnetic Field redirect projectiles
-- [EXE] Make Earthquake deal magical earth damage
+- Add NCF creatures in editor
+- Darkstorm hero totem model
+- Add ARMG templates
+- Magnetic Field redirect projectiles
+- Make Earthquake deal magical earth damage
 
 ### Balance
 
-- [EXE] Market change rate are total scam
-- [EXE] Inferno and Dungeon sacrificial buildings are bad
-- Nerf Kha Beleth late game
+- Market change rate are total scam
+- Inferno and Dungeon sacrificial buildings are bad
 
 ### Massive work required
 
-- [EXE] QAI version
-- [XDB] New battlefields
-- [XDB/LUA] Better vault battles with siege
-- [XDB/LUA] More custom buildings and late-game challenge
-- [EXE/XDB] Luck and Morale 1 point = 1%, no cap
-- [XDB/LUA] Add neutral heroes and bosses
+- QAI version
+- New battlefields
+- Better vault battles with siege
+- More custom buildings and late-game challenge
+- Luck and Morale 1 point = 1%, no cap
+- Add neutral heroes and bosses
 
 
 # FIXED
 
+- Summoned Wolves stack stay in army permanently
+- Starting bonus artifact not working
+- Elem orb spawn position random
+- Nerf Kha Beleth late game
+- Frozen heart not in frost artfset

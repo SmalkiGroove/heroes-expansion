@@ -1,7 +1,7 @@
 
 function Routine_SummonElementalsType(side, hero, type)
     local nb = 10 + trunc(0.2 * GetUnitMaxManaPoints(hero))
-    SummonCreature(side, type, nb)
+    SummonCreatureSideOffset(side, type, nb, 0)
 end
 
 function Routine_SummonElementalsAir(side, hero)
@@ -31,7 +31,7 @@ function Routine_ArtifactMoonCharm(side, hero, unit)
             local type = GetCreatureType(unit)
             local x,y = GetUnitPosition(unit)
             local amount = STARTING_ARMY[side][unit]
-            AddCreature(side, type, amount, x, y)
+            AddCreature(side, type, amount, x, y, nil, unit)
             ROUTINE_VARS.MoonCharm = not nil
         end
     end

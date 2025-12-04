@@ -34,7 +34,7 @@ function StartingBonus(player)
 		local hero = GetPlayerHeroes(player)[0]
 		if hero then
 			for a = 1,199 do if HasArtefact(hero, a) then RemoveArtefact(hero, a) end end
-			GiveHeroRandomArtifact(player, hero, ARTIFACT_CLASS_MAJOR, HEROES[hero].faction)
+			GiveHeroRandomArtifact(player, hero, ARTIFACT_CLASS_MAJOR, HEROES[hero].faction + 10)
 		end
 	end
 end
@@ -123,7 +123,7 @@ end
 
 function PlayerDailyResources(player)
 	log(DEBUG, "Player "..player.." daily resources :")
-	log(DEBUG, DAILY_RESOURCES[player])
+	-- log(DEBUG, DAILY_RESOURCES[player])
 	for resource,amount in DAILY_RESOURCES[player] do
 		local curamount = GetPlayerResource(player, resource)
 		local newamount = curamount + amount
