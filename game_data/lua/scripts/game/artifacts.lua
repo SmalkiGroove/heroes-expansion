@@ -124,7 +124,7 @@ ARTIFACT_ALTAR_OF_ELEMENTS_SHARD = 102	            -- increase elemental spell d
 ARTIFACT_ELDENAS_RED_SCARF = 103                    -- level up grants t1 creatures **
 ARTIFACT_ELDENAS_CIRCLET = 104                      -- level up grants t3 creatures **
 ARTIFACT_NAGA_COMMANDERS_HELMET = 105               -- 
-ARTIFACT_NECKLACE_OF_THE_BLOODY_CLAW = 106          -- creatures have +50% max damage TODO
+ARTIFACT_NECKLACE_OF_THE_BLOODY_CLAW = 106          -- creatures have +50% max damage
 ARTIFACT_RING_OF_CELERITY = 107                     -- hero has +2 initiative
 ARTIFACT_ELDENAS_RED_COAT = 108                     -- level up grants t2 creatures **
 ARTIFACT_RING_OF_LIFE = 109                         -- 
@@ -222,12 +222,12 @@ ARTIFACT_BLOOD_CRYSTAL = 200                        -- yrwanna spec **
 ARTIFACT_ARTIFICIER_1 = 201                         -- increase hero and creatures init
 ARTIFACT_ARTIFICIER_2 = 202                         -- increase hero and creatures init
 ARTIFACT_ARTIFICIER_3 = 203                         -- increase hero and creatures init
-ARTIFACT_204 = 204                                  -- todo 204
-ARTIFACT_205 = 205                                  -- todo 205
-ARTIFACT_206 = 206                                  -- todo 206
-ARTIFACT_207 = 207                                  -- todo 207
-ARTIFACT_208 = 208                                  -- todo 208
-ARTIFACT_209 = 209                                  -- todo 209
+ARTIFACT_204 = 204                                  -- not used 204
+ARTIFACT_205 = 205                                  -- not used 205
+ARTIFACT_206 = 206                                  -- not used 206
+ARTIFACT_207 = 207                                  -- not used 207
+ARTIFACT_208 = 208                                  -- not used 208
+ARTIFACT_209 = 209                                  -- not used 209
 ARTIFACT_210 = 210                                  -- placeholder set 25
 ARTIFACT_211 = 211                                  -- placeholder set 25
 ARTIFACT_212 = 212                                  -- placeholder set 26
@@ -467,7 +467,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_ELDENAS_RED_SCARF]             = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_NECK, set=ARTIFACT_SET_ELDENA, special=0},
     [ARTIFACT_ELDENAS_CIRCLET]               = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_ELDENA, special=0},
     [ARTIFACT_NAGA_COMMANDERS_HELMET]        = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_NONE, special=1},
-    [ARTIFACT_NECKLACE_OF_THE_BLOODY_CLAW]   = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_NECK, set=ARTIFACT_SET_NONE, special=1},
+    [ARTIFACT_NECKLACE_OF_THE_BLOODY_CLAW]   = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_NECK, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_RING_OF_CELERITY]              = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_ELDENAS_RED_COAT]              = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_ELDENA, special=0},
     [ARTIFACT_RING_OF_LIFE]                  = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_NONE, special=1},
