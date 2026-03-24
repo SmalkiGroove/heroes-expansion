@@ -117,6 +117,7 @@ function FindClosestTown(player, hero)
 end
 
 function InitializeMapTowns()
+    if DUEL_MODE ~= nil then return end
     TOWN_TYPES_CENTER_TILE = {
         ["TOWN_HEAVEN"] = {-1,1},
         ["TOWN_PRESERVE"] = {-1,0},

@@ -20,6 +20,7 @@
 
 - Shantiri Moon Disc blocks all light magic
 - Inferno sacrificial pit not required for city hall
+- Combat does not end if all army is defeated and war machines are remaining
 
 ### Suggestions
 

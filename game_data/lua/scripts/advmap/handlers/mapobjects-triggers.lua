@@ -217,6 +217,7 @@ TRIGGER_OVERRIDES = {
 }
 
 function InitializeMapObjects()
+    if DUEL_MODE ~= nil then return end
     RegisterMapGates()
     for k,v in TRIGGER_OVERRIDES do
         for _,obj in GetObjectNamesByType(k) do

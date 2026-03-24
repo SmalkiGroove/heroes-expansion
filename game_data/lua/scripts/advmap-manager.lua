@@ -9,6 +9,15 @@ for i = 1,8 do
 	end
 end
 
+-- Check Duel Map
+startThread(function()
+	print("Checking for duel map...")
+	GetObjectiveState('DUEL', FIRST_PLAYER)
+	DUEL_MODE = GetDifficulty()
+	print("Duel map detected!")
+end)
+
+
 ROUTINES_LOADED = {
 	[1] = 0, [2] = 0, [3] = 0, [4] = 0, [5] = 0, [6] = 0, [7] = 0, [8] = 0, [9] = 0, [10]= 0,
 	[11]= 0, [12]= 0, [13]= 0, [14]= 0, [15]= 0, [16]= 0, [17]= 0, [18]= 0, [19]= 0, [20]= 0,
@@ -18,7 +27,7 @@ ROUTINES_LOADED = {
 function LoadScript(path, key)
 	log(TRACE, "Loading script "..path)
 	dofile(path)
-	repeat sleep(1) until ROUTINES_LOADED[key] == 1
+	repeat sleep() until ROUTINES_LOADED[key] == 1
 end
 
 LoadScript("/scripts/game/creatures.lua", 1)
@@ -264,6 +273,7 @@ function Init()
 		InitializeMapObjects()
 		ExecConsoleCommand("@UnblockGame()") UnblockGame()
 		log(INFO, "Initializers done. The game can start. Have fun !")
+		if DUEL_MODE ~= nil then ExecConsoleCommand("@DuelMain()") end
 	else
 		startThread(LoadedGame_GameVars)
 	end

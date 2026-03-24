@@ -97,6 +97,7 @@ function SetupConvertibleTrigger(type, f, t)
 end
 
 function InitializeConvertibles()
+    if DUEL_MODE ~= nil then return end
 	for faction = 1,8 do
 		SetupConvertibleTrigger(Towns_Types[faction], faction, 0)
 		SetupConvertibleTrigger(Dwellings_T1[faction], faction, 1)
