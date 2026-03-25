@@ -3,7 +3,7 @@ repeat sleep() until DUEL_MODE ~= nil
 
 
 function DuelInfoWindow(player)
-    MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/Welcome.txt")
+    MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/Welcome.txt", "NoneRoutine")
 end
 
 DUEL_HERO = {GetPlayerHeroes(1)[0], GetPlayerHeroes(2)[0]}
@@ -57,16 +57,39 @@ DUEL_START_COORDINATES = {
         [STRONGHOLD] = {x=202, y=20},
     },
 }
+DUEL_TOWNS_COORDINATES = {
+    {
+        [HAVEN]      = {x=90, y=18},
+        [PRESERVE]   = {x=90, y=111},
+        [FORTRESS]   = {x=90, y=42},
+        [ACADEMY]    = {x=90, y=88},
+        [DUNGEON]    = {x=90, y=65},
+        [NECROPOLIS] = {x=90, y=134},
+        [INFERNO]    = {x=90, y=157},
+        [STRONGHOLD] = {x=90, y=19},
+    },
+    {
+        [HAVEN]      = {x=202, y=181},
+        [PRESERVE]   = {x=202, y=112},
+        [FORTRESS]   = {x=202, y=43},
+        [ACADEMY]    = {x=202, y=89},
+        [DUNGEON]    = {x=202, y=66},
+        [NECROPOLIS] = {x=202, y=135},
+        [INFERNO]    = {x=202, y=158},
+        [STRONGHOLD] = {x=202, y=20},
+    },
+}
 
 DUEL_STAGE = {0, 0}
-
-DUEL_DAYS_MAX = 2 + DUEL_MODE
-DUEL_DAYS = {DUEL_DAYS_MAX, DUEL_DAYS_MAX}
+DUEL_DAYS = {2+DUEL_MODE, 2+DUEL_MODE}
 
 
 function DuelLevelUp(player, level)
     GiveResources(player, GOLD, 5000, 1)
-    if mod(level, 5) == 0 then UpgradeTownBuilding(DUEL_TOWN[player], TOWN_BUILDING_MAGIC_GUILD) end
+    if mod(level, 5) == 0 then
+        SetTownBuildingLimitLevel(DUEL_TOWN[player], TOWN_BUILDING_MAGIC_GUILD, level/5)
+        UpgradeTownBuilding(DUEL_TOWN[player], TOWN_BUILDING_MAGIC_GUILD)
+    end
 end
 function DuelLevelUp1() DuelLevelUp(1, GetHeroLevel(DUEL_HERO[1])) end
 function DuelLevelUp2() DuelLevelUp(2, GetHeroLevel(DUEL_HERO[2])) end
@@ -122,23 +145,39 @@ function DuelStart(player)
 end
 
 function DuelSetUp(player)
+    local hero = DUEL_HERO[player]
     local player = GetObjectOwner(hero)
     local x,y,z = GetObjectPosition(hero)
     local offset = 9 - player * 6
     ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
     SetObjectPosition(hero, x+offset, y, z)
-     DUEL_STAGE[player] = 2
+    DUEL_STAGE[player] = 2
 end
 
 function DuelNewDay(player)
     local days = DUEL_DAYS[player]
     if days > 0 then
-        MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/NewDay.txt"; days=days})
+        MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/NewDay.txt"; days=days}, "NoneRoutine")
         DUEL_DAYS[player] = days - 1
         ChangeHeroStat(DUEL_HERO[player], STAT_MOVE_POINTS, 9999)
     else
-        DUEL_STAGE[player] = 3
+        DuelCastle(player)
     end
+end
+
+function DuelCastle(player)
+    SetObjectPosition(DUEL_HERO[player], DUEL_TOWNS_COORDINATES[player][DUEL_FACTION[player]].x, DUEL_TOWNS_COORDINATES[player][DUEL_FACTION[player]].y)
+    SetObjectRotation(DUEL_HERO[player], 4.71239)
+    DUEL_STAGE[player] = 3
+end
+
+function DuelBattle(player)
+    OpenCircleFog(100, 100, UNDERGROUND, 99, player)
+    DUEL_STAGE[player] = 4
+end
+
+function DuelEnd(player)
+    DUEL_STAGE[player] = 5
 end
 
 function DuelLoop(player)
@@ -151,8 +190,15 @@ function DuelLoop(player)
         sleep(5)
     end
     while DUEL_STAGE[player] == 2 do
-        local movement = GetHeroStat(DUEL_HERO[player], STAT_MOVE_POINTS)
-        if movement < 100 then DuelNewDay(player) end
+        if GetHeroStat(DUEL_HERO[player], STAT_MOVE_POINTS) < 100 then DuelNewDay(player) end
+        sleep(5)
+    end
+    while DUEL_STAGE[player] == 3 do
+        ChangeHeroStat(DUEL_HERO[player], STAT_MOVE_POINTS, 100)
+        sleep(5)
+    end
+    while DUEL_STAGE[player] == 4 do
+        ChangeHeroStat(DUEL_HERO[player], STAT_MOVE_POINTS, 999)
         sleep(5)
     end
 end
@@ -164,6 +210,11 @@ end
 function DuelMain()
     print("DUEL: bootstrap")
     for player = 1,2 do DuelInfoWindow(player) end
+    for _,town in DUEL_TOWN do
+        for build = TOWN_BUILDING_SPECIAL_0, TOWN_BUILDING_SPECIAL_6 do
+            startThread(SetTownBuildingLimitLevel, town, build, 0)
+        end
+    end
 
     DUEL_FACTION = {HEROES[DUEL_HERO[1]].faction, HEROES[DUEL_HERO[2]].faction}
     DUEL_TOWN = {DUEL_TOWN_NAME[1][DUEL_FACTION[1]], DUEL_TOWN_NAME[2][DUEL_FACTION[2]]}
