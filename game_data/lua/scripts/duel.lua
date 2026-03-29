@@ -1,10 +1,18 @@
 
 repeat sleep() until DUEL_MODE ~= nil
 
+DUEL_STAGE_START = 0
+DUEL_STAGE_SETUP = 1
+DUEL_STAGE_ADVENTURE = 2
+DUEL_STAGE_CASTLE = 3
+DUEL_STAGE_BATTLE = 4
+DUEL_STAGE_END = 5
 
-function DuelInfoWindow(player)
-    MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/Welcome.txt", "NoneRoutine")
-end
+function DuelInfoWindow0(player) MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/InfoStart.txt", "NoneRoutine") end
+function DuelInfoWindow1(player) MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/InfoSetup.txt", "NoneRoutine") end
+function DuelInfoWindow2(player) MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/InfoAdventure.txt", "NoneRoutine") end
+function DuelInfoWindow3(player) MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/InfoCastle.txt", "NoneRoutine") end
+function DuelInfoWindow4(player) MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/InfoBattle.txt", "NoneRoutine") end
 
 DUEL_HERO = {GetPlayerHeroes(1)[0], GetPlayerHeroes(2)[0]}
 
@@ -36,47 +44,30 @@ DUEL_FACTION = {0, 0}
 DUEL_TOWN = {"TOWN_1", "TOWN_2"}
 
 DUEL_START_COORDINATES = {
-    {
-        [HAVEN]      = {x=13, y=181},
-        [PRESERVE]   = {x=13, y=112},
-        [FORTRESS]   = {x=13, y=43},
-        [ACADEMY]    = {x=13, y=89},
-        [DUNGEON]    = {x=13, y=66},
-        [NECROPOLIS] = {x=13, y=135},
-        [INFERNO]    = {x=13, y=158},
-        [STRONGHOLD] = {x=13, y=20},
-    },
-    {
-        [HAVEN]      = {x=202, y=181},
-        [PRESERVE]   = {x=202, y=112},
-        [FORTRESS]   = {x=202, y=43},
-        [ACADEMY]    = {x=202, y=89},
-        [DUNGEON]    = {x=202, y=66},
-        [NECROPOLIS] = {x=202, y=135},
-        [INFERNO]    = {x=202, y=158},
-        [STRONGHOLD] = {x=202, y=20},
-    },
+    {x=93, y=176},
+    {x=121, y=176},
 }
+
 DUEL_TOWNS_COORDINATES = {
     {
-        [HAVEN]      = {x=90, y=18},
-        [PRESERVE]   = {x=90, y=111},
-        [FORTRESS]   = {x=90, y=42},
-        [ACADEMY]    = {x=90, y=88},
-        [DUNGEON]    = {x=90, y=65},
-        [NECROPOLIS] = {x=90, y=134},
-        [INFERNO]    = {x=90, y=157},
-        [STRONGHOLD] = {x=90, y=19},
+        [HAVEN]      = {x=27, y=181},
+        [PRESERVE]   = {x=27, y=112},
+        [FORTRESS]   = {x=27, y=43},
+        [ACADEMY]    = {x=27, y=89},
+        [DUNGEON]    = {x=27, y=66},
+        [NECROPOLIS] = {x=27, y=135},
+        [INFERNO]    = {x=27, y=158},
+        [STRONGHOLD] = {x=27, y=20},
     },
     {
-        [HAVEN]      = {x=202, y=181},
-        [PRESERVE]   = {x=202, y=112},
-        [FORTRESS]   = {x=202, y=43},
-        [ACADEMY]    = {x=202, y=89},
-        [DUNGEON]    = {x=202, y=66},
-        [NECROPOLIS] = {x=202, y=135},
-        [INFERNO]    = {x=202, y=158},
-        [STRONGHOLD] = {x=202, y=20},
+        [HAVEN]      = {x=188, y=180},
+        [PRESERVE]   = {x=188, y=111},
+        [FORTRESS]   = {x=188, y=42},
+        [ACADEMY]    = {x=188, y=88},
+        [DUNGEON]    = {x=188, y=65},
+        [NECROPOLIS] = {x=188, y=134},
+        [INFERNO]    = {x=188, y=157},
+        [STRONGHOLD] = {x=188, y=19},
     },
 }
 
@@ -99,7 +90,15 @@ function DuelOverrideSign()
     Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_SIGN_1", "DuelTriggerSign")
     Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_SIGN_2", "DuelTriggerSign")
 end
-function DuelTriggerSign(hero, obj) DuelInfoWindow(GetObjectOwner(hero)) end
+function DuelTriggerSign(hero, obj)
+    local player = GetObjectOwner(hero)
+    if DUEL_STAGE[player] == DUEL_STAGE_START then DuelInfoWindow0(player) end
+    elseif DUEL_STAGE[player] == DUEL_STAGE_SETUP then DuelInfoWindow1(player) end
+    elseif DUEL_STAGE[player] == DUEL_STAGE_ADVENTURE then DuelInfoWindow2(player) end
+    elseif DUEL_STAGE[player] == DUEL_STAGE_CASTLE then DuelInfoWindow3(player) end
+    elseif DUEL_STAGE[player] == DUEL_STAGE_BATTLE then DuelInfoWindow4(player) end
+    end
+end
 
 function DuelOverrideStart()
     Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_START_1", "DuelTriggerStart")
@@ -113,6 +112,11 @@ function DuelOverrideSetUp(obj)
     Trigger(OBJECT_TOUCH_TRIGGER, obj, "DuelTriggerSetUp")
 end
 function DuelTriggerSetUp(hero, obj) DuelSetUp(GetObjectOwner(hero)) end
+
+function DuelOverrideMonolith(obj)
+    Trigger(OBJECT_TOUCH_TRIGGER, obj, "DuelTriggerMonolith")
+end
+function DuelTriggerMonolith(hero, obj) DuelBattle(GetObjectOwner(hero)) end
 
 
 DUEL_DOLMEN_MAX_LEVEL = 20 + DUEL_MODE * 5
@@ -140,18 +144,17 @@ end
 
 function DuelStart(player)
     SetObjectOwner(DUEL_TOWN[player], player)
-    SetObjectPosition(DUEL_HERO[player], DUEL_START_COORDINATES[player][DUEL_FACTION[player]].x, DUEL_START_COORDINATES[player][DUEL_FACTION[player]].y)
-    DUEL_STAGE[player] = 1
+    SetObjectPosition(DUEL_HERO[player], DUEL_START_COORDINATES[player].x, DUEL_START_COORDINATES[player].y)
+    DUEL_STAGE[player] = DUEL_STAGE_SETUP
 end
 
 function DuelSetUp(player)
     local hero = DUEL_HERO[player]
     local player = GetObjectOwner(hero)
     local x,y,z = GetObjectPosition(hero)
-    local offset = 9 - player * 6
     ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
-    SetObjectPosition(hero, x+offset, y, z)
-    DUEL_STAGE[player] = 2
+    SetObjectPosition(hero, x, y-5, z)
+    DUEL_STAGE[player] = DUEL_STAGE_ADVENTURE
 end
 
 function DuelNewDay(player)
@@ -167,37 +170,41 @@ end
 
 function DuelCastle(player)
     SetObjectPosition(DUEL_HERO[player], DUEL_TOWNS_COORDINATES[player][DUEL_FACTION[player]].x, DUEL_TOWNS_COORDINATES[player][DUEL_FACTION[player]].y)
-    SetObjectRotation(DUEL_HERO[player], 4.71239)
-    DUEL_STAGE[player] = 3
+    SetObjectRotation(DUEL_HERO[player], 270)
+    DUEL_STAGE[player] = DUEL_STAGE_CASTLE
 end
 
 function DuelBattle(player)
     OpenCircleFog(100, 100, UNDERGROUND, 99, player)
-    DUEL_STAGE[player] = 4
+    DUEL_STAGE[player] = DUEL_STAGE_BATTLE
 end
 
 function DuelEnd(player)
-    DUEL_STAGE[player] = 5
+    DUEL_STAGE[player] = DUEL_STAGE_END
 end
 
 function DuelLoop(player)
-    while DUEL_STAGE[player] == 0 do 
+    while DUEL_STAGE[player] == DUEL_STAGE_START do 
         ChangeHeroStat(DUEL_HERO[player], STAT_MOVE_POINTS, 100)
         sleep(5)
     end
-    while DUEL_STAGE[player] == 1 do
+    print("DUEL: player "..player.." entered setup stage")
+    while DUEL_STAGE[player] == DUEL_STAGE_SETUP do
         ChangeHeroStat(DUEL_HERO[player], STAT_MOVE_POINTS, 100)
         sleep(5)
     end
-    while DUEL_STAGE[player] == 2 do
+    print("DUEL: player "..player.." entered adventure stage")
+    while DUEL_STAGE[player] == DUEL_STAGE_ADVENTURE do
         if GetHeroStat(DUEL_HERO[player], STAT_MOVE_POINTS) < 100 then DuelNewDay(player) end
         sleep(5)
     end
-    while DUEL_STAGE[player] == 3 do
+    print("DUEL: player "..player.." entered castle stage")
+    while DUEL_STAGE[player] == DUEL_STAGE_CASTLE do
         ChangeHeroStat(DUEL_HERO[player], STAT_MOVE_POINTS, 100)
         sleep(5)
     end
-    while DUEL_STAGE[player] == 4 do
+    print("DUEL: player "..player.." entered battle stage")
+    while DUEL_STAGE[player] == DUEL_STAGE_BATTLE do
         ChangeHeroStat(DUEL_HERO[player], STAT_MOVE_POINTS, 999)
         sleep(5)
     end
@@ -227,6 +234,7 @@ function DuelMain()
 
     for _, obj in GetObjectNamesByType("BUILDING_HUT_OF_MAGI") do DuelOverrideSetUp(obj) end
     for _, obj in GetObjectNamesByType("BUILDING_LEARNING_STONE") do DuelOverrideDolmen(obj) end
+    for _, obj in GetObjectNamesByType("BUILDING_MONOLITH_ONE_WAY_ENTRANCE") do DuelOverrideMonolith(obj) end
 
     print("DUEL: start")
     for p=1,2 do startThread(DuelLoop, p) end
