@@ -21,6 +21,7 @@ function HeroLevelUp(hero)
     startThread(DoHeroSpeRoutine_LevelUp, player, hero, level)
     startThread(DoSkillsRoutine_LevelUp, player, hero, level)
     startThread(DoArtifactsRoutine_LevelUp, player, hero, level)
+    if DUEL_MODE ~= nil then startThread(DuelLevelUp, player, level) end
 end
 
 

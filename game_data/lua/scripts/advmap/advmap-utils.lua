@@ -404,6 +404,10 @@ function TransformCreatures(obj, creature, faction)
 	AddObjectCreatures(obj, cr, nb) sleep()
 end
 
+function ListObjects(type)
+	for _,obj in GetObjectNamesByType(type) do print(obj) end
+end
+
 function InitializeRandomSeed()
 	local value = GetTerrainSize() + DIFFICULTY
 	for p = 1,8 do

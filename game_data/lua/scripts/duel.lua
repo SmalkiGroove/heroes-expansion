@@ -72,7 +72,7 @@ DUEL_TOWNS_COORDINATES = {
 }
 
 DUEL_STAGE = {0, 0}
-DUEL_DAYS = {2+DUEL_MODE, 2+DUEL_MODE}
+DUEL_DAYS = {3+2*DUEL_MODE, 3+2*DUEL_MODE}
 
 
 function DuelLevelUp(player, level)
@@ -82,8 +82,6 @@ function DuelLevelUp(player, level)
         UpgradeTownBuilding(DUEL_TOWN[player], TOWN_BUILDING_MAGIC_GUILD)
     end
 end
-function DuelLevelUp1() DuelLevelUp(1, GetHeroLevel(DUEL_HERO[1])) end
-function DuelLevelUp2() DuelLevelUp(2, GetHeroLevel(DUEL_HERO[2])) end
 
 
 function DuelOverrideSign()
@@ -91,22 +89,24 @@ function DuelOverrideSign()
     Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_SIGN_2", "DuelTriggerSign")
 end
 function DuelTriggerSign(hero, obj)
+    ChangeHeroStat(hero, STAT_MOVE_POINTS, 500)
     local player = GetObjectOwner(hero)
-    if DUEL_STAGE[player] == DUEL_STAGE_START then DuelInfoWindow0(player) end
-    elseif DUEL_STAGE[player] == DUEL_STAGE_SETUP then DuelInfoWindow1(player) end
-    elseif DUEL_STAGE[player] == DUEL_STAGE_ADVENTURE then DuelInfoWindow2(player) end
-    elseif DUEL_STAGE[player] == DUEL_STAGE_CASTLE then DuelInfoWindow3(player) end
-    elseif DUEL_STAGE[player] == DUEL_STAGE_BATTLE then DuelInfoWindow4(player) end
+    if DUEL_STAGE[player] == DUEL_STAGE_START then DuelInfoWindow0(player)
+    elseif DUEL_STAGE[player] == DUEL_STAGE_SETUP then DuelInfoWindow1(player)
+    elseif DUEL_STAGE[player] == DUEL_STAGE_ADVENTURE then DuelInfoWindow2(player)
+    elseif DUEL_STAGE[player] == DUEL_STAGE_CASTLE then DuelInfoWindow3(player)
+    elseif DUEL_STAGE[player] == DUEL_STAGE_BATTLE then DuelInfoWindow4(player)
     end
 end
 
 function DuelOverrideStart()
-    Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_START_1", "DuelTriggerStart")
-    Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_START_2", "DuelTriggerStart")
+    Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_START_1", "DuelTriggerStart1")
+    Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_START_2", "DuelTriggerStart2")
     SetObjectEnabled("DUEL_START_1", nil)
     SetObjectEnabled("DUEL_START_2", nil)
 end
-function DuelTriggerStart(hero, obj) DuelStart(GetObjectOwner(hero)) end
+function DuelTriggerStart1(hero, obj) DuelStart(1) end
+function DuelTriggerStart2(hero, obj) DuelStart(2) end
 
 function DuelOverrideSetUp(obj)
     Trigger(OBJECT_TOUCH_TRIGGER, obj, "DuelTriggerSetUp")
@@ -195,12 +195,12 @@ function DuelLoop(player)
     end
     print("DUEL: player "..player.." entered adventure stage")
     while DUEL_STAGE[player] == DUEL_STAGE_ADVENTURE do
-        if GetHeroStat(DUEL_HERO[player], STAT_MOVE_POINTS) < 100 then DuelNewDay(player) end
+        if GetHeroStat(DUEL_HERO[player], STAT_MOVE_POINTS) < 50 then DuelNewDay(player) end
         sleep(5)
     end
     print("DUEL: player "..player.." entered castle stage")
     while DUEL_STAGE[player] == DUEL_STAGE_CASTLE do
-        ChangeHeroStat(DUEL_HERO[player], STAT_MOVE_POINTS, 100)
+        ChangeHeroStat(DUEL_HERO[player], STAT_MOVE_POINTS, 250)
         sleep(5)
     end
     print("DUEL: player "..player.." entered battle stage")
@@ -210,31 +210,117 @@ function DuelLoop(player)
     end
 end
 
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+DUEL_RECRUITS_WEEKS = 8 + DUEL_MODE * 4
+
+DUEL_CREATURE_GROWTH = {
+    [HAVEN] = {
+        [CREATURE_PEASANT] = 60,
+        [CREATURE_ARCHER] = 30,
+        [CREATURE_FOOTMAN] = 20,
+        [CREATURE_GRIFFIN] = 12,
+        [CREATURE_PRIEST] = 6,
+        [CREATURE_CAVALIER] = 3,
+        [CREATURE_ANGEL] = 1,
+    },
+    [INFERNO] = {
+        [CREATURE_FAMILIAR] = 60,
+        [CREATURE_DEMON] = 30,
+        [CREATURE_HELL_HOUND] = 20,
+        [CREATURE_SUCCUBUS] = 12,
+        [CREATURE_NIGHTMARE] = 6,
+        [CREATURE_PIT_FIEND] = 3,
+        [CREATURE_DEVIL] = 1,
+    },
+    [NECROPOLIS] = {
+        [CREATURE_SKELETON] = 60,
+        [CREATURE_WALKING_DEAD] = 30,
+        [CREATURE_MANES] = 20,
+        [CREATURE_VAMPIRE] = 12,
+        [CREATURE_LICH] = 6,
+        [CREATURE_BLACK_KNIGHT] = 3,
+        [CREATURE_WIGHT] = 1,
+    },
+    [PRESERVE] = {
+        [CREATURE_BLADE_JUGGLER] = 60,
+        [CREATURE_PIXIE] = 30,
+        [CREATURE_WOOD_ELF] = 20,
+        [CREATURE_DRUID] = 12,
+        [CREATURE_UNICORN] = 6,
+        [CREATURE_TREANT] = 3,
+        [CREATURE_GREEN_DRAGON] = 1,
+    },
+    [ACADEMY] = {
+        [CREATURE_GREMLIN] = 60,
+        [CREATURE_STONE_GARGOYLE] = 30,
+        [CREATURE_IRON_GOLEM] = 20,
+        [CREATURE_MAGI] = 12,
+        [CREATURE_GENIE] = 6,
+        [CREATURE_RAKSHASA] = 3,
+        [CREATURE_GIANT] = 1,
+    },
+    [DUNGEON] = {
+        [CREATURE_SCOUT] = 60,
+        [CREATURE_WITCH] = 30,
+        [CREATURE_MINOTAUR] = 20,
+        [CREATURE_RIDER] = 12,
+        [CREATURE_MATRON] = 6,
+        [CREATURE_HYDRA] = 3,
+        [CREATURE_DEEP_DRAGON] = 1,
+    },
+    [FORTRESS] = {
+        [CREATURE_DEFENDER] = 60,
+        [CREATURE_AXE_FIGHTER] = 30,
+        [CREATURE_BROWLER] = 20,
+        [CREATURE_BEAR_RIDER] = 12,
+        [CREATURE_RUNE_MAGE] = 6,
+        [CREATURE_THANE] = 3,
+        [CREATURE_FIRE_DRAGON] = 1,
+    },
+    [STRONGHOLD] = {
+        [CREATURE_GOBLIN] = 60,
+        [CREATURE_SHAMAN] = 30,
+        [CREATURE_ORC_WARRIOR] = 20,
+        [CREATURE_CENTAUR] = 12,
+        [CREATURE_ORCCHIEF_BUTCHER] = 6,
+        [CREATURE_WYVERN] = 3,
+        [CREATURE_CYCLOP] = 1,
+    }
+}
+
+function DuelTownRecruits(town, creature_growth, weeks)
+    for creature, growth in creature_growth do
+        SetObjectDwellingCreatures(town, creature, growth * weeks)
+    end
+end
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
 function DuelMain()
     print("DUEL: bootstrap")
-    for player = 1,2 do DuelInfoWindow(player) end
-    for _,town in DUEL_TOWN do
-        for build = TOWN_BUILDING_SPECIAL_0, TOWN_BUILDING_SPECIAL_6 do
-            startThread(SetTownBuildingLimitLevel, town, build, 0)
-        end
-    end
+
+    MoveHeroRealTime(DUEL_HERO[1], 103, 209, 0)
+    MoveHeroRealTime(DUEL_HERO[2], 112, 209, 0)
+    sleep(1)
+    for player = 1,2 do DuelInfoWindow0(player) end
+
+    for _,town in DUEL_TOWN do SetObjectOwner(town, 0) SetObjectEnabled(town, nil) end
 
     DUEL_FACTION = {HEROES[DUEL_HERO[1]].faction, HEROES[DUEL_HERO[2]].faction}
     DUEL_TOWN = {DUEL_TOWN_NAME[1][DUEL_FACTION[1]], DUEL_TOWN_NAME[2][DUEL_FACTION[2]]}
     
-    Trigger(HERO_LEVELUP_TRIGGER, DUEL_HERO[1], "DuelLevelUp1")
-    Trigger(HERO_LEVELUP_TRIGGER, DUEL_HERO[2], "DuelLevelUp2")
-
     DuelOverrideSign()
     DuelOverrideStart()
 
     for _, obj in GetObjectNamesByType("BUILDING_HUT_OF_MAGI") do DuelOverrideSetUp(obj) end
     for _, obj in GetObjectNamesByType("BUILDING_LEARNING_STONE") do DuelOverrideDolmen(obj) end
     for _, obj in GetObjectNamesByType("BUILDING_MONOLITH_ONE_WAY_ENTRANCE") do DuelOverrideMonolith(obj) end
+
+    for i=1,2 do for j=1,8 do
+        DuelTownRecruits(DUEL_TOWN_NAME[i][j], DUEL_CREATURE_GROWTH[DUEL_FACTION[i]], DUEL_RECRUITS_WEEKS)
+    end end
 
     print("DUEL: start")
     for p=1,2 do startThread(DuelLoop, p) end
