@@ -4,15 +4,16 @@ repeat sleep() until DUEL_MODE ~= nil
 DUEL_STAGE_START = 0
 DUEL_STAGE_SETUP = 1
 DUEL_STAGE_ADVENTURE = 2
-DUEL_STAGE_CASTLE = 3
-DUEL_STAGE_BATTLE = 4
-DUEL_STAGE_END = 5
+DUEL_STAGE_STAGING = 3
+DUEL_STAGE_CASTLE = 4
+DUEL_STAGE_BATTLE = 5
+DUEL_STAGE_END = 6
 
 function DuelInfoWindow0(player) MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/InfoStart.txt", "NoneRoutine") end
 function DuelInfoWindow1(player) MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/InfoSetup.txt", "NoneRoutine") end
 function DuelInfoWindow2(player) MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/InfoAdventure.txt", "NoneRoutine") end
-function DuelInfoWindow3(player) MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/InfoCastle.txt", "NoneRoutine") end
-function DuelInfoWindow4(player) MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/InfoBattle.txt", "NoneRoutine") end
+function DuelInfoWindow4(player) MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/InfoCastle.txt", "NoneRoutine") end
+function DuelInfoWindow5(player) MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/InfoBattle.txt", "NoneRoutine") end
 
 DUEL_HERO = {GetPlayerHeroes(1)[0], GetPlayerHeroes(2)[0]}
 
@@ -46,6 +47,11 @@ DUEL_TOWN = {"TOWN_1", "TOWN_2"}
 DUEL_START_COORDINATES = {
     {x=93, y=176},
     {x=121, y=176},
+}
+
+DUEL_STAGING_COORDINATES = {
+    {x=93, y=35},
+    {x=121, y=35},
 }
 
 DUEL_TOWNS_COORDINATES = {
@@ -113,6 +119,11 @@ function DuelOverrideSetUp(obj)
 end
 function DuelTriggerSetUp(hero, obj) DuelSetUp(GetObjectOwner(hero)) end
 
+function DuelOverrideLighthouse(obj)
+    Trigger(OBJECT_TOUCH_TRIGGER, obj, "DuelTriggerLighthouse")
+end
+function DuelTriggerLighthouse(hero, obj) DuelCastle(GetObjectOwner(hero)) end
+
 function DuelOverrideMonolith(obj)
     Trigger(OBJECT_TOUCH_TRIGGER, obj, "DuelTriggerMonolith")
 end
@@ -157,15 +168,21 @@ function DuelSetUp(player)
     DUEL_STAGE[player] = DUEL_STAGE_ADVENTURE
 end
 
-function DuelNewDay(player)
+function DuelAdventureDay(player)
     local days = DUEL_DAYS[player]
     if days > 0 then
         MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/NewDay.txt"; days=days}, "NoneRoutine")
         DUEL_DAYS[player] = days - 1
         ChangeHeroStat(DUEL_HERO[player], STAT_MOVE_POINTS, 9999)
     else
-        DuelCastle(player)
+        DuelStaging(player)
     end
+end
+
+function DuelStaging(player)
+    SetObjectPosition(DUEL_HERO[player], DUEL_STAGING_COORDINATES[player].x, DUEL_STAGING_COORDINATES[player].y)
+    ChangeHeroStat(DUEL_HERO[player], STAT_MOVE_POINTS, 9999)
+    DUEL_STAGE[player] = DUEL_STAGE_STAGING
 end
 
 function DuelCastle(player)
@@ -195,7 +212,12 @@ function DuelLoop(player)
     end
     print("DUEL: player "..player.." entered adventure stage")
     while DUEL_STAGE[player] == DUEL_STAGE_ADVENTURE do
-        if GetHeroStat(DUEL_HERO[player], STAT_MOVE_POINTS) < 50 then DuelNewDay(player) end
+        if GetHeroStat(DUEL_HERO[player], STAT_MOVE_POINTS) <= 50 then DuelAdventureDay(player) end
+        sleep(5)
+    end
+    print("DUEL: player "..player.." entered staging stage")
+    while DUEL_STAGE[player] == DUEL_STAGE_STAGING do
+        ChangeHeroStat(DUEL_HERO[player], STAT_MOVE_POINTS, 250)
         sleep(5)
     end
     print("DUEL: player "..player.." entered castle stage")
@@ -216,11 +238,11 @@ DUEL_RECRUITS_WEEKS = 8 + DUEL_MODE * 4
 
 DUEL_CREATURE_GROWTH = {
     [HAVEN] = {
-        [CREATURE_PEASANT] = 60,
+        [CREATURE_PEASANT] = 65,
         [CREATURE_ARCHER] = 30,
         [CREATURE_FOOTMAN] = 20,
-        [CREATURE_GRIFFIN] = 12,
-        [CREATURE_PRIEST] = 6,
+        [CREATURE_GRIFFIN] = 9,
+        [CREATURE_PRIEST] = 5,
         [CREATURE_CAVALIER] = 3,
         [CREATURE_ANGEL] = 1,
     },
@@ -315,6 +337,7 @@ function DuelMain()
     DuelOverrideStart()
 
     for _, obj in GetObjectNamesByType("BUILDING_HUT_OF_MAGI") do DuelOverrideSetUp(obj) end
+    for _, obj in GetObjectNamesByType("BUILDING_LIGHTHOUSE") do DuelOverrideLighthouse(obj) end
     for _, obj in GetObjectNamesByType("BUILDING_LEARNING_STONE") do DuelOverrideDolmen(obj) end
     for _, obj in GetObjectNamesByType("BUILDING_MONOLITH_ONE_WAY_ENTRANCE") do DuelOverrideMonolith(obj) end
 
