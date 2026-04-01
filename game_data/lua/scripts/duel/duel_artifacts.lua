@@ -14,7 +14,7 @@ DUEL_ARTIFACT_EFFECTS {
     [ARTIFACT_RUNIC_WAR_HARNESS] = DuelRunicWarHarness,
     [ARTIFACT_CROWN_OF_LEADER] = DuelCrownOfLeader,
     [ARTIFACT_HORN_OF_PLENTY] = DuelHornOfPlenty,
-    [ARTIFACT_SACRED_SEEDS] = DuelSacredSeeds,
+    [ARTIFACT_SACRED_SEED] = DuelSacredSeed,
     [ARTIFACT_FORTUNE_PICKAXE] = DuelFortunePickaxe,
     [ARTIFACT_ELDENAS_RED_SCARF] = DuelEldenasRedScarf,
     [ARTIFACT_ELDENAS_CIRCLET] = DuelEldenasCirclet,
@@ -38,101 +38,134 @@ DUEL_ARTIFACT_EFFECTS {
 
 
 function DuelEndlessSackOfGold(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/EndlessSackOfGold.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelEndlessPouchOfGold(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/EndlessPouchOfGold.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelCapeOfKings(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/CapeOfKings.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelTurbanOfEnlightenment(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/TurbanOfEnlightenment.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelScaleMailOfEnlightenment(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/ScaleMailOfEnlightenment.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelRobeOfTheMagister(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/RobeOfTheMagister.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelRingOfTheUnrepentant(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/RingOfTheUnrepentant.txt", arg=0}, "NoneRoutine")
 end
 
-function DuelAmuletOfNecromancy(player, hero)
+function DuelAmuletOfNecromancy(player, hero)    
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/AmuletOfNecromancy.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelBeginnerMagicStick(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/BeginnerMagicStick.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelRunicWarAxe(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/RunicWarAxe.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelRunicWarHarness(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/RunicWarHarness.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelCrownOfLeader(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/CrownOfLeader.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelHornOfPlenty(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/HornOfPlenty.txt", arg=0}, "NoneRoutine")
 end
 
-function DuelSacredSeeds(player, hero)
+function DuelSacredSeed(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/SacredSeed.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelFortunePickaxe(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/FortunePickaxe.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelEldenasRedScarf(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/EldenasRedScarf.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelEldenasCirclet(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/EldenasCirclet.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelEldenasRedCoat(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/EldenasRedCoat.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelVikingShield(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/VikingShield.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelFortuneBandOfTheSaint(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/FortuneBandOfTheSaint.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelSentinelsHelm(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/SentinelsHelm.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelSentinelsBoots(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/SentinelsBoots.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelVizirsCap(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/VizirsCap.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelVizirsScimitar(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/VizirsScimitar.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelMagistersSandals(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/MagistersSandals.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelDeathKnightBoots(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/DeathKnightBoots.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelPalaceShoes(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/PalaceShoes.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelHelmOfTheWarmage(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/HelmOfTheWarmage.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelStaffOfTheLyre(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/StaffOfTheLyre.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelPendantOfTheLyre(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/PendantOfTheLyre.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelDwarvenSmithyHammer(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/DwarvenSmithyHammer.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelBearhideWraps(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/BearhideWraps.txt", arg=0}, "NoneRoutine")
 end
 
 function DuelVikingHatchet(player, hero)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/VikingHatchet.txt", arg=0}, "NoneRoutine")
 end
 
