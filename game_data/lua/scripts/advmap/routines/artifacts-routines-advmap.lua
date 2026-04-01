@@ -51,7 +51,7 @@ function Routine_ArtifactBootsOfSwiftJourney(player, hero)
     Var_BootsOfSwiftJourneyCheck[hero] = not nil
     while IsPlayerCurrent(player) do
         sleep(100)
-        if HasArtefact(hero, ARTIFACT_BOOTS_OF_THE_SWIFT_JOUNREY, 1) then
+        if HasArtefact(hero, ARTIFACT_BOOTS_OF_THE_SWIFT_JOURNEY, 1) then
             if Var_BootsOfSwiftJourneyCheck[hero] then
                 if GetHeroStat(hero, STAT_MOVE_POINTS) < 100 then
                     ChangeHeroStat(hero, STAT_MOVE_POINTS, 1000)
@@ -423,7 +423,7 @@ DAILY_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_FORTUNE_PICKAXE] = Routine_ArtifactFortunePickaxe,
     [ARTIFACT_HORN_OF_PLENTY] = Routine_ArtifactHornOfPlenty,
     [ARTIFACT_CAPE_OF_KINGS] = Routine_ArtifactCapeOfKings,
-    [ARTIFACT_BOOTS_OF_THE_SWIFT_JOUNREY] = Routine_ArtifactBootsOfSwiftJourney,
+    [ARTIFACT_BOOTS_OF_THE_SWIFT_JOURNEY] = Routine_ArtifactBootsOfSwiftJourney,
     [ARTIFACT_ROBE_OF_THE_MAGISTER] = Routine_ArtifactRobeOfTheMagister,
     [ARTIFACT_DWARVEN_SMITHY_HAMMER] = Routine_ArtifactSmithyHammer,
     [ARTIFACT_POTION_OF_MANA] = Routine_ArtifactPotionOfMana,
@@ -444,7 +444,7 @@ LEVELUP_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_ELDENAS_CIRCLET] = Routine_ArtifactEldenaCirclet,
 }
 AFTER_COMBAT_TRIGGER_ARTIFACTS_ROUTINES = {
-    [ARTIFACT_BOOTS_OF_THE_SWIFT_JOUNREY] = Routine_ArtifactBootsOfSwiftJourneyCancel,
+    [ARTIFACT_BOOTS_OF_THE_SWIFT_JOURNEY] = Routine_ArtifactBootsOfSwiftJourneyCancel,
     [ARTIFACT_BEGINNER_MAGIC_STICK] = Routine_ArtifactBeginnerMagicStick,
     [ARTIFACT_SENTINELS_BOOTS] = Routine_ArtifactSentinelsBoots,
     [ARTIFACT_RING_OF_THE_UNREPENTANT] = Routine_ArtifactRingOfTheUnrepentant,

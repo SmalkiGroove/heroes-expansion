@@ -42,7 +42,7 @@ ARTIFACT_MAGNETIC_RING = 20                         -- reduce enemy lightning sp
 ARTIFACT_WAR_BANNER = 21                            -- creatures have +2 hp
 ARTIFACT_CELESTIAL_JUSTICAR_SWORD = 22              -- creatures have +15% initiative
 ARTIFACT_RING_OF_THE_BROKEN_WILL = 23               -- enemy creatures have -2 morale
-ARTIFACT_BOOTS_OF_THE_SWIFT_JOUNREY = 24            -- more movement on land / refresh if no battle **
+ARTIFACT_BOOTS_OF_THE_SWIFT_JOURNEY = 24            -- more movement on land / refresh if no battle **
 ARTIFACT_GOLDEN_HORSESHOE = 25                      -- /
 ARTIFACT_BOOTS_OF_THE_OPEN_ROAD = 26                -- no terrain penalties
 ARTIFACT_BOOTS_OF_INTERFERENCE = 27                 -- magic resistance
@@ -385,7 +385,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_WAR_BANNER]                    = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_WAR, special=0},
     [ARTIFACT_CELESTIAL_JUSTICAR_SWORD]      = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_ARCHANGEL, special=0},
     [ARTIFACT_RING_OF_THE_BROKEN_WILL]       = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_INFERNO, special=0},
-    [ARTIFACT_BOOTS_OF_THE_SWIFT_JOUNREY]    = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_NONE, special=0},
+    [ARTIFACT_BOOTS_OF_THE_SWIFT_JOURNEY]    = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_GOLDEN_HORSESHOE]              = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_BOOTS_OF_THE_OPEN_ROAD]        = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_WANDERER, special=0},
     [ARTIFACT_BOOTS_OF_INTERFERENCE]         = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_WARMAGE, special=0},

@@ -1,4 +1,10 @@
 
+dofile("/scripts/duel/duel_heroes.lua")
+dofile("/scripts/duel/duel_skills.lua")
+dofile("/scripts/duel/duel_artifacts.lua")
+dofile("/scripts/duel/duel_mapobjects.lua")
+dofile("/scripts/duel/duel_armies.lua")
+
 repeat sleep() until DUEL_MODE ~= nil
 
 DUEL_STAGE_START = 0
@@ -89,78 +95,14 @@ function DuelLevelUp(player, level)
     end
 end
 
-
-function DuelOverrideSign()
-    Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_SIGN_1", "DuelTriggerSign")
-    Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_SIGN_2", "DuelTriggerSign")
-end
-function DuelTriggerSign(hero, obj)
-    ChangeHeroStat(hero, STAT_MOVE_POINTS, 500)
-    local player = GetObjectOwner(hero)
-    if DUEL_STAGE[player] == DUEL_STAGE_START then DuelInfoWindow0(player)
-    elseif DUEL_STAGE[player] == DUEL_STAGE_SETUP then DuelInfoWindow1(player)
-    elseif DUEL_STAGE[player] == DUEL_STAGE_ADVENTURE then DuelInfoWindow2(player)
-    elseif DUEL_STAGE[player] == DUEL_STAGE_CASTLE then DuelInfoWindow3(player)
-    elseif DUEL_STAGE[player] == DUEL_STAGE_BATTLE then DuelInfoWindow4(player)
-    end
-end
-
-function DuelOverrideStart()
-    Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_START_1", "DuelTriggerStart1")
-    Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_START_2", "DuelTriggerStart2")
-    SetObjectEnabled("DUEL_START_1", nil)
-    SetObjectEnabled("DUEL_START_2", nil)
-end
-function DuelTriggerStart1(hero, obj) DuelStart(1) end
-function DuelTriggerStart2(hero, obj) DuelStart(2) end
-
-function DuelOverrideSetUp(obj)
-    Trigger(OBJECT_TOUCH_TRIGGER, obj, "DuelTriggerSetUp")
-end
-function DuelTriggerSetUp(hero, obj) DuelSetUp(GetObjectOwner(hero)) end
-
-function DuelOverrideLighthouse(obj)
-    Trigger(OBJECT_TOUCH_TRIGGER, obj, "DuelTriggerLighthouse")
-end
-function DuelTriggerLighthouse(hero, obj) DuelCastle(GetObjectOwner(hero)) end
-
-function DuelOverrideMonolith(obj)
-    Trigger(OBJECT_TOUCH_TRIGGER, obj, "DuelTriggerMonolith")
-end
-function DuelTriggerMonolith(hero, obj) DuelBattle(GetObjectOwner(hero)) end
-
-
-DUEL_DOLMEN_MAX_LEVEL = 20 + DUEL_MODE * 5
-DUEL_DOLMEN_LEVELS = {1, 1}
-
-function DuelOverrideDolmen(obj)
-    Trigger(OBJECT_TOUCH_TRIGGER, obj, "DuelTriggerDolmen")
-    SetObjectEnabled(obj, nil)
-end
-
-function DuelTriggerDolmen(hero, obj)
-    local player = GetObjectOwner(hero)
-    if DUEL_DOLMEN_LEVELS[player] < DUEL_DOLMEN_MAX_LEVEL then
-        LevelUpHero(hero)
-        DUEL_DOLMEN_LEVELS[player] = DUEL_DOLMEN_LEVELS[player] + 1
-    else
-        Trigger(OBJECT_TOUCH_TRIGGER, obj, nil)
-        MessageBoxForPlayers(GetPlayerFilter(GetObjectOwner(hero)), "/Text/Duel/DolmenMaxLevel.txt")
-    end
-end
-
-
-
--------------------------------------------------------------------------------------------------------------------------------------------------
-
-function DuelStart(player)
+function DuelStart(player, hero)
     SetObjectOwner(DUEL_TOWN[player], player)
-    SetObjectPosition(DUEL_HERO[player], DUEL_START_COORDINATES[player].x, DUEL_START_COORDINATES[player].y)
+    SetObjectPosition(hero, DUEL_START_COORDINATES[player].x, DUEL_START_COORDINATES[player].y)
+    SetObjectRotation(hero, 0)
     DUEL_STAGE[player] = DUEL_STAGE_SETUP
 end
 
-function DuelSetUp(player)
-    local hero = DUEL_HERO[player]
+function DuelSetUp(player, hero)
     local player = GetObjectOwner(hero)
     local x,y,z = GetObjectPosition(hero)
     ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
@@ -168,155 +110,78 @@ function DuelSetUp(player)
     DUEL_STAGE[player] = DUEL_STAGE_ADVENTURE
 end
 
-function DuelAdventureDay(player)
+function DuelAdventureDay(player, hero)
     local days = DUEL_DAYS[player]
     if days > 0 then
         MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/NewDay.txt"; days=days}, "NoneRoutine")
         DUEL_DAYS[player] = days - 1
-        ChangeHeroStat(DUEL_HERO[player], STAT_MOVE_POINTS, 9999)
+        ChangeHeroStat(hero, STAT_MOVE_POINTS, 9999)
     else
-        DuelStaging(player)
+        DuelStaging(player, hero)
     end
 end
 
-function DuelStaging(player)
-    SetObjectPosition(DUEL_HERO[player], DUEL_STAGING_COORDINATES[player].x, DUEL_STAGING_COORDINATES[player].y)
-    ChangeHeroStat(DUEL_HERO[player], STAT_MOVE_POINTS, 9999)
+function DuelStaging(player, hero)
+    SetObjectPosition(hero, DUEL_STAGING_COORDINATES[player].x, DUEL_STAGING_COORDINATES[player].y)
+    SetObjectRotation(hero, 0)
+    for artifact = 1, 199 do
+        if HasArtefact(hero, artifact, 1) then
+            if DUEL_ARTIFACT_EFFECTS[artifact] then DUEL_ARTIFACT_EFFECTS[artifact](player, hero) end
+        end
+    end
+    ChangeHeroStat(hero, STAT_MOVE_POINTS, 9999)
     DUEL_STAGE[player] = DUEL_STAGE_STAGING
 end
 
-function DuelCastle(player)
-    SetObjectPosition(DUEL_HERO[player], DUEL_TOWNS_COORDINATES[player][DUEL_FACTION[player]].x, DUEL_TOWNS_COORDINATES[player][DUEL_FACTION[player]].y)
-    SetObjectRotation(DUEL_HERO[player], 270)
+function DuelCastle(player, hero)
+    SetObjectPosition(hero, DUEL_TOWNS_COORDINATES[player][DUEL_FACTION[player]].x, DUEL_TOWNS_COORDINATES[player][DUEL_FACTION[player]].y)
+    SetObjectRotation(hero, 270)
     DUEL_STAGE[player] = DUEL_STAGE_CASTLE
 end
 
-function DuelBattle(player)
+function DuelBattle(player, hero)
     OpenCircleFog(100, 100, UNDERGROUND, 99, player)
     DUEL_STAGE[player] = DUEL_STAGE_BATTLE
 end
 
-function DuelEnd(player)
+function DuelEnd(player, hero)
     DUEL_STAGE[player] = DUEL_STAGE_END
-end
-
-function DuelLoop(player)
-    while DUEL_STAGE[player] == DUEL_STAGE_START do 
-        ChangeHeroStat(DUEL_HERO[player], STAT_MOVE_POINTS, 100)
-        sleep(5)
-    end
-    print("DUEL: player "..player.." entered setup stage")
-    while DUEL_STAGE[player] == DUEL_STAGE_SETUP do
-        ChangeHeroStat(DUEL_HERO[player], STAT_MOVE_POINTS, 100)
-        sleep(5)
-    end
-    print("DUEL: player "..player.." entered adventure stage")
-    while DUEL_STAGE[player] == DUEL_STAGE_ADVENTURE do
-        if GetHeroStat(DUEL_HERO[player], STAT_MOVE_POINTS) <= 50 then DuelAdventureDay(player) end
-        sleep(5)
-    end
-    print("DUEL: player "..player.." entered staging stage")
-    while DUEL_STAGE[player] == DUEL_STAGE_STAGING do
-        ChangeHeroStat(DUEL_HERO[player], STAT_MOVE_POINTS, 250)
-        sleep(5)
-    end
-    print("DUEL: player "..player.." entered castle stage")
-    while DUEL_STAGE[player] == DUEL_STAGE_CASTLE do
-        ChangeHeroStat(DUEL_HERO[player], STAT_MOVE_POINTS, 250)
-        sleep(5)
-    end
-    print("DUEL: player "..player.." entered battle stage")
-    while DUEL_STAGE[player] == DUEL_STAGE_BATTLE do
-        ChangeHeroStat(DUEL_HERO[player], STAT_MOVE_POINTS, 999)
-        sleep(5)
-    end
 end
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
-DUEL_RECRUITS_WEEKS = 8 + DUEL_MODE * 4
-
-DUEL_CREATURE_GROWTH = {
-    [HAVEN] = {
-        [CREATURE_PEASANT] = 65,
-        [CREATURE_ARCHER] = 30,
-        [CREATURE_FOOTMAN] = 20,
-        [CREATURE_GRIFFIN] = 9,
-        [CREATURE_PRIEST] = 5,
-        [CREATURE_CAVALIER] = 3,
-        [CREATURE_ANGEL] = 1,
-    },
-    [INFERNO] = {
-        [CREATURE_FAMILIAR] = 60,
-        [CREATURE_DEMON] = 30,
-        [CREATURE_HELL_HOUND] = 20,
-        [CREATURE_SUCCUBUS] = 12,
-        [CREATURE_NIGHTMARE] = 6,
-        [CREATURE_PIT_FIEND] = 3,
-        [CREATURE_DEVIL] = 1,
-    },
-    [NECROPOLIS] = {
-        [CREATURE_SKELETON] = 60,
-        [CREATURE_WALKING_DEAD] = 30,
-        [CREATURE_MANES] = 20,
-        [CREATURE_VAMPIRE] = 12,
-        [CREATURE_LICH] = 6,
-        [CREATURE_BLACK_KNIGHT] = 3,
-        [CREATURE_WIGHT] = 1,
-    },
-    [PRESERVE] = {
-        [CREATURE_BLADE_JUGGLER] = 60,
-        [CREATURE_PIXIE] = 30,
-        [CREATURE_WOOD_ELF] = 20,
-        [CREATURE_DRUID] = 12,
-        [CREATURE_UNICORN] = 6,
-        [CREATURE_TREANT] = 3,
-        [CREATURE_GREEN_DRAGON] = 1,
-    },
-    [ACADEMY] = {
-        [CREATURE_GREMLIN] = 60,
-        [CREATURE_STONE_GARGOYLE] = 30,
-        [CREATURE_IRON_GOLEM] = 20,
-        [CREATURE_MAGI] = 12,
-        [CREATURE_GENIE] = 6,
-        [CREATURE_RAKSHASA] = 3,
-        [CREATURE_GIANT] = 1,
-    },
-    [DUNGEON] = {
-        [CREATURE_SCOUT] = 60,
-        [CREATURE_WITCH] = 30,
-        [CREATURE_MINOTAUR] = 20,
-        [CREATURE_RIDER] = 12,
-        [CREATURE_MATRON] = 6,
-        [CREATURE_HYDRA] = 3,
-        [CREATURE_DEEP_DRAGON] = 1,
-    },
-    [FORTRESS] = {
-        [CREATURE_DEFENDER] = 60,
-        [CREATURE_AXE_FIGHTER] = 30,
-        [CREATURE_BROWLER] = 20,
-        [CREATURE_BEAR_RIDER] = 12,
-        [CREATURE_RUNE_MAGE] = 6,
-        [CREATURE_THANE] = 3,
-        [CREATURE_FIRE_DRAGON] = 1,
-    },
-    [STRONGHOLD] = {
-        [CREATURE_GOBLIN] = 60,
-        [CREATURE_SHAMAN] = 30,
-        [CREATURE_ORC_WARRIOR] = 20,
-        [CREATURE_CENTAUR] = 12,
-        [CREATURE_ORCCHIEF_BUTCHER] = 6,
-        [CREATURE_WYVERN] = 3,
-        [CREATURE_CYCLOP] = 1,
-    }
-}
-
-function DuelTownRecruits(town, creature_growth, weeks)
-    for creature, growth in creature_growth do
-        SetObjectDwellingCreatures(town, creature, growth * weeks)
+function DuelLoop(player)
+    local hero = DUEL_HERO[player]
+    while DUEL_STAGE[player] == DUEL_STAGE_START do 
+        ChangeHeroStat(hero, STAT_MOVE_POINTS, 100)
+        sleep(5)
+    end
+    print("DUEL: player "..player.." entered setup stage")
+    while DUEL_STAGE[player] == DUEL_STAGE_SETUP do
+        ChangeHeroStat(hero, STAT_MOVE_POINTS, 100)
+        sleep(5)
+    end
+    print("DUEL: player "..player.." entered adventure stage")
+    while DUEL_STAGE[player] == DUEL_STAGE_ADVENTURE do
+        if GetHeroStat(hero, STAT_MOVE_POINTS) < 100 then DuelAdventureDay(player, hero) end
+        sleep(5)
+    end
+    print("DUEL: player "..player.." entered staging stage")
+    while DUEL_STAGE[player] == DUEL_STAGE_STAGING do
+        ChangeHeroStat(hero, STAT_MOVE_POINTS, 250)
+        sleep(5)
+    end
+    print("DUEL: player "..player.." entered castle stage")
+    while DUEL_STAGE[player] == DUEL_STAGE_CASTLE do
+        ChangeHeroStat(hero, STAT_MOVE_POINTS, 250)
+        sleep(5)
+    end
+    print("DUEL: player "..player.." entered battle stage")
+    while DUEL_STAGE[player] == DUEL_STAGE_BATTLE do
+        ChangeHeroStat(hero, STAT_MOVE_POINTS, 999)
+        sleep(5)
     end
 end
-
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
