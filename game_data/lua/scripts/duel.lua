@@ -86,7 +86,7 @@ DUEL_TOWNS_COORDINATES = {
 }
 
 DUEL_STAGE = {0, 0}
-DUEL_DAYS = {3+2*DUEL_MODE, 3+2*DUEL_MODE}
+DUEL_DAYS = {-1+2*DUEL_MODE, 5+2*DUEL_MODE}
 
 
 function DuelLevelUp(player, level)
@@ -97,19 +97,23 @@ function DuelLevelUp(player, level)
     end
 end
 
+function DuelBorderGuardKey(player, key)
+    for k = 1,8 do
+        if HasBorderguardKey(player, k) then
+            MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/BorderGuardKeyOut.txt", "NoneRoutine") return
+        end
+    end
+    GiveBorderguardKey(player, key)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/BorderGuardKey.txt"; key=key}, "NoneRoutine")
+end
+
 function DuelStart(player, hero)
-    SetObjectOwner(DUEL_TOWN[player], player)
     SetObjectPosition(hero, DUEL_START_COORDINATES[player].x, DUEL_START_COORDINATES[player].y)
     SetObjectRotation(hero, 0)
     DUEL_STAGE[player] = DUEL_STAGE_SETUP
 end
 
-function DuelSetUp(player, hero)
-    local player = GetObjectOwner(hero)
-    local x,y,z = GetObjectPosition(hero)
-    ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
-    sleep(5)
-    SetObjectPosition(hero, x, y-5, z)
+function DuelAdventure(player, hero)
     DUEL_STAGE[player] = DUEL_STAGE_ADVENTURE
 end
 
@@ -127,7 +131,7 @@ end
 function DuelStaging(player, hero)
     SetObjectPosition(hero, DUEL_STAGING_COORDINATES[player].x, DUEL_STAGING_COORDINATES[player].y)
     SetObjectRotation(hero, 0)
-    sleep(5)
+    sleep(10)
     for artifact, func in DUEL_ARTIFACT_EFFECTS do
         if HasArtefact(hero, artifact, 1) then func(player, hero) end
     end
@@ -137,7 +141,7 @@ end
 
 function DuelCastle(player, hero)
     SetObjectPosition(hero, DUEL_TOWNS_COORDINATES[player][DUEL_FACTION[player]].x, DUEL_TOWNS_COORDINATES[player][DUEL_FACTION[player]].y)
-    SetObjectRotation(hero, 270)
+    SetObjectRotation(hero, player == 1 and 270 or 90)
     DUEL_STAGE[player] = DUEL_STAGE_CASTLE
 end
 
@@ -196,14 +200,14 @@ function DuelMain()
 
     DUEL_FACTION = {HEROES[DUEL_HERO[1]].faction, HEROES[DUEL_HERO[2]].faction}
     DUEL_TOWN = {DUEL_TOWN_NAME[1][DUEL_FACTION[1]], DUEL_TOWN_NAME[2][DUEL_FACTION[2]]}
-    
-    DuelOverrideSign()
-    DuelOverrideStart()
 
-    for _, obj in GetObjectNamesByType("BUILDING_HUT_OF_MAGI") do DuelOverrideSetUp(obj) end
-    for _, obj in GetObjectNamesByType("BUILDING_LIGHTHOUSE") do DuelOverrideLighthouse(obj) end
-    for _, obj in GetObjectNamesByType("BUILDING_LEARNING_STONE") do DuelOverrideDolmen(obj) end
-    for _, obj in GetObjectNamesByType("BUILDING_MONOLITH_ONE_WAY_ENTRANCE") do DuelOverrideMonolith(obj) end
+    for player = 1,2 do SetObjectOwner(DUEL_TOWN[player], player) end
+
+    DuelOverrideSign()
+    DuelOverrideFlag()
+    DuelOverrideDolmen()
+    DuelOverrideMonolith()
+    DuelOverrideStart()
 
     for i=1,2 do for j=1,8 do
         DuelTownRecruits(DUEL_TOWN_NAME[i][j], DUEL_CREATURE_GROWTH[DUEL_FACTION[i]], DUEL_RECRUITS_WEEKS)
