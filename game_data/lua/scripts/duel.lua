@@ -22,6 +22,8 @@ function DuelInfoWindow4(player) MessageBoxForPlayers(GetPlayerFilter(player), "
 function DuelInfoWindow5(player) MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/InfoBattle.txt", "NoneRoutine") end
 
 DUEL_HERO = {GetPlayerHeroes(1)[0], GetPlayerHeroes(2)[0]}
+MoveHeroRealTime(DUEL_HERO[1], 103, 209, 0)
+MoveHeroRealTime(DUEL_HERO[2], 112, 209, 0)
 
 DUEL_TOWN_NAME = {
     {
@@ -106,6 +108,7 @@ function DuelSetUp(player, hero)
     local player = GetObjectOwner(hero)
     local x,y,z = GetObjectPosition(hero)
     ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
+    sleep(5)
     SetObjectPosition(hero, x, y-5, z)
     DUEL_STAGE[player] = DUEL_STAGE_ADVENTURE
 end
@@ -124,10 +127,9 @@ end
 function DuelStaging(player, hero)
     SetObjectPosition(hero, DUEL_STAGING_COORDINATES[player].x, DUEL_STAGING_COORDINATES[player].y)
     SetObjectRotation(hero, 0)
-    for artifact = 1, 199 do
-        if HasArtefact(hero, artifact, 1) then
-            if DUEL_ARTIFACT_EFFECTS[artifact] then DUEL_ARTIFACT_EFFECTS[artifact](player, hero) end
-        end
+    sleep(5)
+    for artifact, func in DUEL_ARTIFACT_EFFECTS do
+        if HasArtefact(hero, artifact, 1) then func(player, hero) end
     end
     ChangeHeroStat(hero, STAT_MOVE_POINTS, 9999)
     DUEL_STAGE[player] = DUEL_STAGE_STAGING
@@ -188,9 +190,6 @@ end
 function DuelMain()
     print("DUEL: bootstrap")
 
-    MoveHeroRealTime(DUEL_HERO[1], 103, 209, 0)
-    MoveHeroRealTime(DUEL_HERO[2], 112, 209, 0)
-    sleep(1)
     for player = 1,2 do DuelInfoWindow0(player) end
 
     for _,town in DUEL_TOWN do SetObjectOwner(town, 0) SetObjectEnabled(town, nil) end
