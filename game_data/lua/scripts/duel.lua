@@ -86,7 +86,7 @@ DUEL_TOWNS_COORDINATES = {
 }
 
 DUEL_STAGE = {0, 0}
-DUEL_DAYS = {-1+2*DUEL_MODE, 5+2*DUEL_MODE}
+DUEL_DAYS = {5+2*DUEL_MODE, 5+2*DUEL_MODE}
 
 
 function DuelLevelUp(player, level)
