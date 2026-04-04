@@ -226,5 +226,5 @@ function DoArtifactRoutine_CombatEnd(side, name, id, winner)
 end
 
 
--- log(TRACE, "Loaded artifacts-routines-combat.lua")
-WAIT_GROUP[3].n = WAIT_GROUP[3].n - 1
+ log(TRACE, "Loaded artifacts-routines-combat.lua")
+

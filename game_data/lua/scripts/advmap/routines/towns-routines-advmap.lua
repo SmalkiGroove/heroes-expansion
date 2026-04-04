@@ -89,5 +89,5 @@ function DoTownsRoutine_Weekly(player)
 end
 
 
--- log(TRACE, "Loaded towns-routines-advmap.lua")
-WAIT_GROUP[3].n = WAIT_GROUP[3].n - 1
+ log(TRACE, "Loaded towns-routines-advmap.lua")
+

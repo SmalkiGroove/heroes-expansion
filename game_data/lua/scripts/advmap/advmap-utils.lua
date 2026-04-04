@@ -3,6 +3,9 @@ function NoneRoutine()
     -- Nothing happens
 end
 
+function IsDuelMode()
+	return DUEL_MODE ~= -1
+end
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -474,5 +477,5 @@ function Lv25(hero)
 end
 
 
--- log(TRACE, "Loaded advmap-utils.lua")
-WAIT_GROUP[2].n = WAIT_GROUP[2].n - 1
+ log(TRACE, "Loaded advmap-utils.lua")
+

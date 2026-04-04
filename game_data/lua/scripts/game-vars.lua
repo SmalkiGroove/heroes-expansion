@@ -18,5 +18,5 @@ function VarHeroArtfsetId(hero, artfset)
 end
 
 
--- log(TRACE, "Loaded game-vars.lua")
-if WAIT_GROUP[6] then WAIT_GROUP[6].n = WAIT_GROUP[6].n - 1 end
+ log(TRACE, "Loaded game-vars.lua")
+

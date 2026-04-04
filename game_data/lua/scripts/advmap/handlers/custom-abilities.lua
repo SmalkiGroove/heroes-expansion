@@ -99,5 +99,5 @@ function CustomAbilityHandler(hero, id)
 end
 
 
--- log(TRACE, "Loaded custom-abilities.lua")
-WAIT_GROUP[5].n = WAIT_GROUP[5].n - 1
+ log(TRACE, "Loaded custom-abilities.lua")
+

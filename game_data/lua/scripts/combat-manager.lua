@@ -1,5 +1,5 @@
 
-dofile("/scripts/game-vars.lua")
+-- dofile("/scripts/game-vars.lua")
 
 COMBAT_TURN = 0
 CURRENT_UNIT = "none"
@@ -49,7 +49,7 @@ end
 function Wait()
     sleep(1)
     THREAD_FINISHER = THREAD_FINISHER - 1
-    -- log(TRACE, "Thread finisher = "..THREAD_FINISHER)
+     log(TRACE, "Thread finisher = "..THREAD_FINISHER)
     if THREAD_FINISHER == 0 then THREAD_STATE = 1 end
 end
 
@@ -189,31 +189,31 @@ end
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
-WAIT_GROUP = {
-	[1] = {n=5, files= {
-			"/scripts/game/creatures.lua",
-			"/scripts/game/spells.lua",
-			"/scripts/game/skills.lua",
-			"/scripts/game/artifacts.lua",
-			"/scripts/game/heroes.lua",
-		}
-	},
-	[2] = {n=2, files= {
-			"/scripts/combat/combat-data.lua",
-			"/scripts/combat/combat-utils.lua",
-		}
-	},
-	[3] = {n=4, files= {
-			"/scripts/combat/routines/abilities-routines-combat.lua",
-			"/scripts/combat/routines/heroes-routines-combat.lua",
-			"/scripts/combat/routines/skills-routines-combat.lua",
-			"/scripts/combat/routines/artifacts-routines-combat.lua",
-		}
-	},
+SCRIPTS_GROUP = {
+    [0] = {
+        "/scripts/game-vars.lua",
+    },
+    [1] = {
+        "/scripts/game/creatures.lua",
+        "/scripts/game/spells.lua",
+        "/scripts/game/skills.lua",
+        "/scripts/game/artifacts.lua",
+        "/scripts/game/heroes.lua",
+    },
+    [2] = {
+        "/scripts/combat/combat-data.lua",
+        "/scripts/combat/combat-utils.lua",
+    },
+    [3] = {
+        "/scripts/combat/routines/abilities-routines-combat.lua",
+        "/scripts/combat/routines/heroes-routines-combat.lua",
+        "/scripts/combat/routines/skills-routines-combat.lua",
+        "/scripts/combat/routines/artifacts-routines-combat.lua",
+    },
 }
 function LoadScripts(wg)
-	log(TRACE, "Loading scripts group "..wg)
-	for _, file in WAIT_GROUP[wg].files do dofile(file) end
-	repeat sleep() until WAIT_GROUP[wg].n == 0
+    log(TRACE, "Loading scripts group "..wg)
+    for i, file in SCRIPTS_GROUP[wg] do dofile(file) end
+    sleep(1)
 end
-for wg = 1,3 do LoadScripts(wg) end
+for i = 0,3 do LoadScripts(i) end

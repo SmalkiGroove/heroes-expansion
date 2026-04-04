@@ -354,5 +354,5 @@ _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_INFUSION            = _skillbonu
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_ENLIGHTENED         = _skillbonus_id
 
 
--- log(TRACE, "Loaded skills.lua")
-WAIT_GROUP[1].n = WAIT_GROUP[1].n - 1
+ log(TRACE, "Loaded skills.lua")
+

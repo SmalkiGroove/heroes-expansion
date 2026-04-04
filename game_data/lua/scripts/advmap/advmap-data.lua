@@ -78,5 +78,5 @@ DAILY_RESOURCES = {
 }
 
 
--- log(TRACE, "Loaded advmap-data.lua")
-WAIT_GROUP[2].n = WAIT_GROUP[2].n - 1
+ log(TRACE, "Loaded advmap-data.lua")
+

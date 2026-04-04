@@ -386,5 +386,5 @@ RUNIC_SPELLS = {
 }
 
 
--- log(TRACE, "Loaded spells.lua")
-WAIT_GROUP[1].n = WAIT_GROUP[1].n - 1
+ log(TRACE, "Loaded spells.lua")
+

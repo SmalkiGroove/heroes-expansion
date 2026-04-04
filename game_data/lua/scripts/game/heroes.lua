@@ -143,5 +143,5 @@ HEROES = {
 }
 
 
--- log(TRACE, "Loaded heroes.lua")
-WAIT_GROUP[1].n = WAIT_GROUP[1].n - 1
+ log(TRACE, "Loaded heroes.lua")
+

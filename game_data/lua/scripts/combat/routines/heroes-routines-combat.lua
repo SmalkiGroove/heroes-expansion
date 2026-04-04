@@ -1141,5 +1141,5 @@ function DoHeroSpeRoutine_CombatEnd(side, name, id, winner)
 end
 
 
--- log(TRACE, "Loaded heroes-routines-combat.lua")
-WAIT_GROUP[3].n = WAIT_GROUP[3].n - 1
+ log(TRACE, "Loaded heroes-routines-combat.lua")
+

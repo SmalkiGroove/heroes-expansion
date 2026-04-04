@@ -5,8 +5,6 @@ dofile("/scripts/duel/duel_artifacts.lua")
 dofile("/scripts/duel/duel_mapobjects.lua")
 dofile("/scripts/duel/duel_armies.lua")
 
-repeat sleep() until DUEL_MODE ~= nil
-
 DUEL_STAGE_START = 0
 DUEL_STAGE_SETUP = 1
 DUEL_STAGE_ADVENTURE = 2
@@ -110,11 +108,13 @@ end
 function DuelStart(player, hero)
     SetObjectPosition(hero, DUEL_START_COORDINATES[player].x, DUEL_START_COORDINATES[player].y)
     SetObjectRotation(hero, 0)
-    DUEL_STAGE[player] = DUEL_STAGE_SETUP
+    DuelStage(player, DUEL_STAGE_SETUP)
+    -- ExecConsoleCommand("@DuelStage("..player..","..DUEL_STAGE_SETUP..")")
 end
 
 function DuelAdventure(player, hero)
-    DUEL_STAGE[player] = DUEL_STAGE_ADVENTURE
+    DuelStage(player, DUEL_STAGE_ADVENTURE)
+    -- ExecConsoleCommand("@DuelStage("..player..","..DUEL_STAGE_ADVENTURE..")")
 end
 
 function DuelAdventureDay(player, hero)
@@ -136,25 +136,34 @@ function DuelStaging(player, hero)
         if HasArtefact(hero, artifact, 1) then func(player, hero) end
     end
     ChangeHeroStat(hero, STAT_MOVE_POINTS, 9999)
-    DUEL_STAGE[player] = DUEL_STAGE_STAGING
+    DuelStage(player, DUEL_STAGE_STAGING)
+    -- ExecConsoleCommand("@DuelStage("..player..","..DUEL_STAGE_STAGING..")")
 end
 
 function DuelCastle(player, hero)
     SetObjectPosition(hero, DUEL_TOWNS_COORDINATES[player][DUEL_FACTION[player]].x, DUEL_TOWNS_COORDINATES[player][DUEL_FACTION[player]].y)
     SetObjectRotation(hero, player == 1 and 270 or 90)
-    DUEL_STAGE[player] = DUEL_STAGE_CASTLE
+    DuelStage(player, DUEL_STAGE_CASTLE)
+    -- ExecConsoleCommand("@DuelStage("..player..","..DUEL_STAGE_CASTLE..")")
 end
 
 function DuelBattle(player, hero)
     OpenCircleFog(100, 100, UNDERGROUND, 99, player)
-    DUEL_STAGE[player] = DUEL_STAGE_BATTLE
+    ChangeHeroStat(hero, STAT_MANA_POINTS, 999)
+    DuelStage(player, DUEL_STAGE_BATTLE)
+    -- ExecConsoleCommand("@DuelStage("..player..","..DUEL_STAGE_BATTLE..")")
 end
 
 function DuelEnd(player, hero)
-    DUEL_STAGE[player] = DUEL_STAGE_END
+    DuelStage(player, DUEL_STAGE_END)
+    -- ExecConsoleCommand("@DuelStage("..player..","..DUEL_STAGE_END..")")
 end
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
+
+function DuelStage(player, stage)
+    DUEL_STAGE[player] = stage
+end
 
 function DuelLoop(player)
     local hero = DUEL_HERO[player]

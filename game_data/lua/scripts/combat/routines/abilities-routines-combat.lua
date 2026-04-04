@@ -149,5 +149,5 @@ function DoAbilitiesRoutine_CombatEnd()
 end
 
 
--- log(TRACE, "Loaded abilities-routines-combat.lua")
-WAIT_GROUP[3].n = WAIT_GROUP[3].n - 1
+ log(TRACE, "Loaded abilities-routines-combat.lua")
+

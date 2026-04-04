@@ -76,5 +76,5 @@ COMBAT_EFFECT_ARTIFACTS = {
 }
 
 
--- log(TRACE, "Loaded combat-data.lua")
-WAIT_GROUP[2].n = WAIT_GROUP[2].n - 1
+ log(TRACE, "Loaded combat-data.lua")
+

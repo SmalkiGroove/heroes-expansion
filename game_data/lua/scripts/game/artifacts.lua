@@ -575,5 +575,5 @@ for artefact,data in ARTIFACTS_DATA do
 end
 
 
--- log(TRACE, "Loaded artifacts.lua")
-WAIT_GROUP[1].n = WAIT_GROUP[1].n - 1
+ log(TRACE, "Loaded artifacts.lua")
+

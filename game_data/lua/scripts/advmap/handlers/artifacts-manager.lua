@@ -106,5 +106,5 @@ function GetHeroArtfset(hero)
 end
 
 
--- log(TRACE, "Loaded artifact-manager.lua")
-WAIT_GROUP[4].n = WAIT_GROUP[4].n - 1
+ log(TRACE, "Loaded artifact-manager.lua")
+

@@ -1398,5 +1398,5 @@ function DoHeroSpeRoutine_Continuous(player, hero)
 end
 
 
--- log(TRACE, "Loaded heroes-routines-advmap.lua")
-WAIT_GROUP[3].n = WAIT_GROUP[3].n - 1
+ log(TRACE, "Loaded heroes-routines-advmap.lua")
+

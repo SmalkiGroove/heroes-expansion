@@ -13,18 +13,26 @@ function DuelOverrideMonolith()
     for _, obj in GetObjectNamesByType("BUILDING_MONOLITH_ONE_WAY_ENTRANCE") do
         Trigger(OBJECT_TOUCH_TRIGGER, obj, "DuelTriggerMonolith")
     end
-    -- SetObjectEnabled("MONOLITH_FAKE_1", nil)
-    -- SetObjectEnabled("MONOLITH_FAKE_2", nil)
 end
 function DuelTriggerMonolith(hero, obj)
     ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
     local player = GetObjectOwner(hero)
-    if DUEL_STAGE[player] == DUEL_STAGE_START then return
+    if DUEL_STAGE[player] == DUEL_STAGE_START then DuelSetup(player, hero)
     elseif DUEL_STAGE[player] == DUEL_STAGE_SETUP then DuelAdventure(player, hero)
-    elseif DUEL_STAGE[player] == DUEL_STAGE_ADVENTURE then return
+    elseif DUEL_STAGE[player] == DUEL_STAGE_ADVENTURE then DuelStaging(player, hero)
     elseif DUEL_STAGE[player] == DUEL_STAGE_STAGING then DuelCastle(player, hero)
     elseif DUEL_STAGE[player] == DUEL_STAGE_CASTLE then DuelBattle(player, hero)
     end
+end
+
+
+function DuelOverrideLighthouse()
+    for _, obj in GetObjectNamesByType("BUILDING_LIGHTHOUSE") do
+        Trigger(OBJECT_TOUCH_TRIGGER, obj, "DuelTriggerLighthouse")
+    end
+end
+function DuelTriggerLighthouse(hero, obj)
+    DuelCastle(GetObjectOwner(hero), hero)
 end
 
 

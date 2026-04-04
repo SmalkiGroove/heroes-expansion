@@ -117,7 +117,7 @@ function FindClosestTown(player, hero)
 end
 
 function InitializeMapTowns()
-    if DUEL_MODE >= 0 then return end
+    if IsDuelMode() then return end
     TOWN_TYPES_CENTER_TILE = {
         ["TOWN_HEAVEN"] = {-1,1},
         ["TOWN_PRESERVE"] = {-1,0},
@@ -199,4 +199,4 @@ end
 
 
 -- log(DEBUG, "Loaded towns-manager.lua")
-WAIT_GROUP[4].n = WAIT_GROUP[4].n - 1
+

@@ -121,5 +121,5 @@ function UnbindHeroSkillTrigger(hero)
 end
 
 
--- log(TRACE, "Loaded skills-manager.lua")
-WAIT_GROUP[4].n = WAIT_GROUP[4].n - 1
+ log(TRACE, "Loaded skills-manager.lua")
+

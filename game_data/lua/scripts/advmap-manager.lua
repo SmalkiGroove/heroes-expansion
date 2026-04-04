@@ -18,53 +18,47 @@ startThread(function()
 	print("Duel map detected!")
 end)
 
-
-WAIT_GROUP = {
-	[1] = {n=5, files= {
-			"/scripts/game/creatures.lua",
-			"/scripts/game/spells.lua",
-			"/scripts/game/skills.lua",
-			"/scripts/game/artifacts.lua",
-			"/scripts/game/heroes.lua",
-		}
+SCRIPTS_GROUP = {
+	[0] = {
+		"/scripts/game-vars.lua",
 	},
-	[2] = {n=2, files= {
-			"/scripts/advmap/advmap-data.lua",
-			"/scripts/advmap/advmap-utils.lua",
-		}
+	[1] = {
+		"/scripts/game/creatures.lua",
+		"/scripts/game/spells.lua",
+		"/scripts/game/skills.lua",
+		"/scripts/game/artifacts.lua",
+		"/scripts/game/heroes.lua",
 	},
-	[3] = {n=4, files= {
-			"/scripts/advmap/routines/skills-routines-advmap.lua",
-			"/scripts/advmap/routines/artifacts-routines-advmap.lua",
-			"/scripts/advmap/routines/heroes-routines-advmap.lua",
-			"/scripts/advmap/routines/towns-routines-advmap.lua",
-		}
+	[2] = {
+		"/scripts/advmap/advmap-data.lua",
+		"/scripts/advmap/advmap-utils.lua",
 	},
-	[4] = {n=4, files= {
-			"/scripts/advmap/handlers/skills-manager.lua",
-			"/scripts/advmap/handlers/artifacts-manager.lua",
-			"/scripts/advmap/handlers/heroes-manager.lua",
-			"/scripts/advmap/handlers/towns-manager.lua",
-		}
+	[3] = {
+		"/scripts/advmap/routines/skills-routines-advmap.lua",
+		"/scripts/advmap/routines/artifacts-routines-advmap.lua",
+		"/scripts/advmap/routines/heroes-routines-advmap.lua",
+		"/scripts/advmap/routines/towns-routines-advmap.lua",
 	},
-	[5] = {n=4, files= {
-			"/scripts/advmap/handlers/starting-armies.lua",
-			"/scripts/advmap/handlers/town-conversion.lua",
-			"/scripts/advmap/handlers/mapobjects-triggers.lua",
-			"/scripts/advmap/handlers/custom-abilities.lua",
-		}
+	[4] = {
+		"/scripts/advmap/handlers/skills-manager.lua",
+		"/scripts/advmap/handlers/artifacts-manager.lua",
+		"/scripts/advmap/handlers/heroes-manager.lua",
+		"/scripts/advmap/handlers/towns-manager.lua",
 	},
-	[6] = {n=1, files= {
-			"/scripts/game-vars.lua",
-		}				
+	[5] = {
+		"/scripts/advmap/handlers/starting-armies.lua",
+		"/scripts/advmap/handlers/town-conversion.lua",
+		"/scripts/advmap/handlers/mapobjects-triggers.lua",
+		"/scripts/advmap/handlers/custom-abilities.lua",
 	},
 }
 function LoadScripts(wg)
 	log(TRACE, "Loading scripts group "..wg)
-	for _, file in WAIT_GROUP[wg].files do dofile(file) end
-	repeat sleep() until WAIT_GROUP[wg].n == 0
+	for i, file in SCRIPTS_GROUP[wg] do dofile(file) end
+	sleep(1)
 end
-for wg = 1,6 do LoadScripts(wg) end
+for i = 0,5 do LoadScripts(i) end
+if IsDuelMode() then dofile("/scripts/duel.lua") end
 
 
 ADD_PLAYER_HERO = {
@@ -166,7 +160,7 @@ end
 function NewDayTrigger()
 	TURN = TURN + 1
 	log(INFO, "New day ! Turn "..TURN)
-	if DUEL_MODE >= 0 then return end
+	if IsDuelMode() then return end
 	local newweek = GetDate(DAY_OF_WEEK) == 1
 	if newweek then
 		WEEKS = WEEKS + 1
@@ -186,7 +180,7 @@ function NewDayTrigger()
 end
 
 function CombatResultsHandler(combatIndex)
-	if DUEL_MODE >= 0 then return ExecConsoleCommand("@DuelAfterCombat()") end
+	if IsDuelMode() then return ExecConsoleCommand("@DuelAfterCombat()") end
 	local hero = GetSavedCombatArmyHero(combatIndex, 1)
 	if hero ~= nil then
 		local player = GetSavedCombatArmyPlayer(combatIndex, 1)
@@ -270,9 +264,10 @@ function InitializeHeroes()
 				MakeHeroReturnToTavernAfterDeath(hero, 1, 0)
 				HEROES[hero].owner = player
 			end
-			sleep(1)
-			startThread(Routine_MagicGuildsBonus, player)
-			startThread(WatchPlayer, player, 1)
+			if not IsDuelMode() then
+				startThread(Routine_MagicGuildsBonus, player)
+				startThread(WatchPlayer, player, 1)
+			end
 		end
 	end
 	startThread(UpdateTavernHeroes)
@@ -290,7 +285,7 @@ function Init()
 		InitializeMapObjects()
 		ExecConsoleCommand("@UnblockGame()") UnblockGame()
 		log(INFO, "Initializers done. The game can start. Have fun !")
-		if DUEL_MODE >= 0 then ExecConsoleCommand("@DuelMain()") end
+		if IsDuelMode() then ExecConsoleCommand("@DuelMain()") end
 	else
 		startThread(LoadedGame_GameVars)
 	end

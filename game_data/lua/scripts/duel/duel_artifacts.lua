@@ -1,5 +1,5 @@
 
-dofile("/scripts/game/artifacts.lua") sleep(1)
+-- dofile("/scripts/game/artifacts.lua") sleep(1)
 
 
 function DuelEndlessSackOfGold(player, hero)

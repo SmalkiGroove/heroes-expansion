@@ -1,5 +1,5 @@
 
-dofile("/scripts/game/skills.lua") sleep(1)
+-- dofile("/scripts/game/skills.lua") sleep(1)
 
 
 function DuelLogistics(player, hero)

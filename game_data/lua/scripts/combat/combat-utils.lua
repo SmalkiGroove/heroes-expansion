@@ -252,5 +252,5 @@ end
 
 
 
--- log(TRACE, "Loaded combat-utils.lua")
-WAIT_GROUP[2].n = WAIT_GROUP[2].n - 1
+ log(TRACE, "Loaded combat-utils.lua")
+

@@ -119,5 +119,5 @@ function InitializeArmy(hero)
     end
 end
 
--- log(TRACE, "Loaded starting-armies.lua")
-WAIT_GROUP[5].n = WAIT_GROUP[5].n - 1
+ log(TRACE, "Loaded starting-armies.lua")
+
