@@ -1,10 +1,4 @@
 
-dofile("/scripts/duel/duel_heroes.lua")
-dofile("/scripts/duel/duel_skills.lua")
-dofile("/scripts/duel/duel_artifacts.lua")
-dofile("/scripts/duel/duel_mapobjects.lua")
-dofile("/scripts/duel/duel_armies.lua")
-
 DUEL_STAGE_START = 0
 DUEL_STAGE_SETUP = 1
 DUEL_STAGE_ADVENTURE = 2
@@ -13,9 +7,26 @@ DUEL_STAGE_CASTLE = 4
 DUEL_STAGE_BATTLE = 5
 DUEL_STAGE_END = 6
 
+function DuelSetPlayerStage(player, stage)
+    local var = "DUEL_STAGE_"..player
+    Register(var, stage)
+end
+function DuelGetPlayerStage(player)
+    local var = "DUEL_STAGE_"..player
+    return 0 + GetGameVar(var)
+end
+
+dofile("/scripts/duel/duel_heroes.lua")
+dofile("/scripts/duel/duel_skills.lua")
+dofile("/scripts/duel/duel_artifacts.lua")
+dofile("/scripts/duel/duel_mapobjects.lua")
+dofile("/scripts/duel/duel_armies.lua")
+sleep()
+
 function DuelInfoWindow0(player) MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/InfoStart.txt", "NoneRoutine") end
 function DuelInfoWindow1(player) MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/InfoSetup.txt", "NoneRoutine") end
 function DuelInfoWindow2(player) MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/InfoAdventure.txt", "NoneRoutine") end
+function DuelInfoWindow3(player) MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/InfoStaging.txt", "NoneRoutine") end
 function DuelInfoWindow4(player) MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/InfoCastle.txt", "NoneRoutine") end
 function DuelInfoWindow5(player) MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/InfoBattle.txt", "NoneRoutine") end
 
@@ -83,7 +94,6 @@ DUEL_TOWNS_COORDINATES = {
     },
 }
 
-DUEL_STAGE = {0, 0}
 DUEL_DAYS = {5+2*DUEL_MODE, 5+2*DUEL_MODE}
 
 
@@ -105,16 +115,28 @@ function DuelBorderGuardKey(player, key)
     MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/BorderGuardKey.txt"; key=key}, "NoneRoutine")
 end
 
-function DuelStart(player, hero)
-    SetObjectPosition(hero, DUEL_START_COORDINATES[player].x, DUEL_START_COORDINATES[player].y)
+function DuelNextStage(player, hero)
+    local stage = DuelGetPlayerStage(player)
+    if stage == DUEL_STAGE_START then DuelSetup(player, hero)
+    elseif stage == DUEL_STAGE_SETUP then DuelAdventure(player, hero)
+    elseif stage == DUEL_STAGE_ADVENTURE then DuelStaging(player, hero)
+    elseif stage == DUEL_STAGE_STAGING then DuelCastle(player, hero)
+    elseif stage == DUEL_STAGE_CASTLE then DuelBattle(player, hero)
+    elseif stage == DUEL_STAGE_BATTLE then DuelEnd(player, hero)
+    end
+end
+
+function DuelSetup(player, hero)
+    log(DEBUG, "DUEL: player "..player.." entered setup stage")
+    SetObjectPosition(hero, DUEL_START_COORDINATES[player].x, DUEL_START_COORDINATES[player].y, 0, 3)
     SetObjectRotation(hero, 0)
-    DuelStage(player, DUEL_STAGE_SETUP)
-    -- ExecConsoleCommand("@DuelStage("..player..","..DUEL_STAGE_SETUP..")")
+    DuelSetPlayerStage(player, DUEL_STAGE_SETUP)
 end
 
 function DuelAdventure(player, hero)
-    DuelStage(player, DUEL_STAGE_ADVENTURE)
-    -- ExecConsoleCommand("@DuelStage("..player..","..DUEL_STAGE_ADVENTURE..")")
+    log(DEBUG, "DUEL: player "..player.." entered adventure stage")
+    ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
+    DuelSetPlayerStage(player, DUEL_STAGE_ADVENTURE)
 end
 
 function DuelAdventureDay(player, hero)
@@ -129,72 +151,70 @@ function DuelAdventureDay(player, hero)
 end
 
 function DuelStaging(player, hero)
-    SetObjectPosition(hero, DUEL_STAGING_COORDINATES[player].x, DUEL_STAGING_COORDINATES[player].y)
+    log(DEBUG, "DUEL: player "..player.." entered staging stage")
+    SetObjectPosition(hero, DUEL_STAGING_COORDINATES[player].x, DUEL_STAGING_COORDINATES[player].y, 0, 1)
     SetObjectRotation(hero, 0)
     sleep(10)
     for artifact, func in DUEL_ARTIFACT_EFFECTS do
         if HasArtefact(hero, artifact, 1) then func(player, hero) end
     end
     ChangeHeroStat(hero, STAT_MOVE_POINTS, 9999)
-    DuelStage(player, DUEL_STAGE_STAGING)
-    -- ExecConsoleCommand("@DuelStage("..player..","..DUEL_STAGE_STAGING..")")
+    DuelSetPlayerStage(player, DUEL_STAGE_STAGING)
 end
 
 function DuelCastle(player, hero)
-    SetObjectPosition(hero, DUEL_TOWNS_COORDINATES[player][DUEL_FACTION[player]].x, DUEL_TOWNS_COORDINATES[player][DUEL_FACTION[player]].y)
+    log(DEBUG, "DUEL: player "..player.." entered castle stage")
+    SetObjectPosition(hero, DUEL_TOWNS_COORDINATES[player][DUEL_FACTION[player]].x, DUEL_TOWNS_COORDINATES[player][DUEL_FACTION[player]].y, 0, 4)
     SetObjectRotation(hero, player == 1 and 270 or 90)
-    DuelStage(player, DUEL_STAGE_CASTLE)
-    -- ExecConsoleCommand("@DuelStage("..player..","..DUEL_STAGE_CASTLE..")")
+    DuelSetPlayerStage(player, DUEL_STAGE_CASTLE)
 end
 
 function DuelBattle(player, hero)
+    log(DEBUG, "DUEL: player "..player.." entered battle stage")
     OpenCircleFog(100, 100, UNDERGROUND, 99, player)
     ChangeHeroStat(hero, STAT_MANA_POINTS, 999)
-    DuelStage(player, DUEL_STAGE_BATTLE)
-    -- ExecConsoleCommand("@DuelStage("..player..","..DUEL_STAGE_BATTLE..")")
+    DuelSetPlayerStage(player, DUEL_STAGE_BATTLE)
 end
 
 function DuelEnd(player, hero)
-    DuelStage(player, DUEL_STAGE_END)
-    -- ExecConsoleCommand("@DuelStage("..player..","..DUEL_STAGE_END..")")
+    log(DEBUG, "DUEL: player "..player.." entered end stage")
+    DuelSetPlayerStage(player, DUEL_STAGE_END)
 end
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
-function DuelStage(player, stage)
-    DUEL_STAGE[player] = stage
-end
-
 function DuelLoop(player)
     local hero = DUEL_HERO[player]
-    while DUEL_STAGE[player] == DUEL_STAGE_START do 
+    local stage = 0
+    while stage == DUEL_STAGE_START do
         ChangeHeroStat(hero, STAT_MOVE_POINTS, 100)
         sleep(5)
+        stage = DuelGetPlayerStage(player)
     end
-    print("DUEL: player "..player.." entered setup stage")
-    while DUEL_STAGE[player] == DUEL_STAGE_SETUP do
+    while stage == DUEL_STAGE_SETUP do
         ChangeHeroStat(hero, STAT_MOVE_POINTS, 100)
         sleep(5)
+        stage = DuelGetPlayerStage(player)
     end
-    print("DUEL: player "..player.." entered adventure stage")
-    while DUEL_STAGE[player] == DUEL_STAGE_ADVENTURE do
+    while stage == DUEL_STAGE_ADVENTURE do
         if GetHeroStat(hero, STAT_MOVE_POINTS) < 100 then DuelAdventureDay(player, hero) end
         sleep(5)
+        stage = DuelGetPlayerStage(player)
     end
-    print("DUEL: player "..player.." entered staging stage")
-    while DUEL_STAGE[player] == DUEL_STAGE_STAGING do
+    while stage == DUEL_STAGE_STAGING do
         ChangeHeroStat(hero, STAT_MOVE_POINTS, 250)
         sleep(5)
+        stage = DuelGetPlayerStage(player)
     end
-    print("DUEL: player "..player.." entered castle stage")
-    while DUEL_STAGE[player] == DUEL_STAGE_CASTLE do
+    while stage == DUEL_STAGE_CASTLE do
         ChangeHeroStat(hero, STAT_MOVE_POINTS, 250)
         sleep(5)
+        stage = DuelGetPlayerStage(player)
     end
-    print("DUEL: player "..player.." entered battle stage")
-    while DUEL_STAGE[player] == DUEL_STAGE_BATTLE do
+    while stage == DUEL_STAGE_BATTLE do
         ChangeHeroStat(hero, STAT_MOVE_POINTS, 999)
         sleep(5)
+        stage = DuelGetPlayerStage(player)
     end
 end
 
@@ -203,7 +223,7 @@ end
 function DuelMain()
     print("DUEL: bootstrap")
 
-    for player = 1,2 do DuelInfoWindow0(player) end
+    for player = 1,2 do DuelSetPlayerStage(player, DUEL_STAGE_START) DuelInfoWindow0(player) end
 
     for _,town in DUEL_TOWN do SetObjectOwner(town, 0) SetObjectEnabled(town, nil) end
 
@@ -212,11 +232,12 @@ function DuelMain()
 
     for player = 1,2 do SetObjectOwner(DUEL_TOWN[player], player) end
 
+    DuelOverrideStart()
     DuelOverrideSign()
     DuelOverrideFlag()
     DuelOverrideDolmen()
     DuelOverrideMonolith()
-    DuelOverrideStart()
+    DuelOverrideLighthouse()
 
     for i=1,2 do for j=1,8 do
         DuelTownRecruits(DUEL_TOWN_NAME[i][j], DUEL_CREATURE_GROWTH[DUEL_FACTION[i]], DUEL_RECRUITS_WEEKS)

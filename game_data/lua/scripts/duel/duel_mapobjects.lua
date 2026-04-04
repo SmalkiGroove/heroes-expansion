@@ -5,8 +5,8 @@ function DuelOverrideStart()
     SetObjectEnabled("DUEL_START_1", nil)
     SetObjectEnabled("DUEL_START_2", nil)
 end
-function DuelTriggerStart1(hero, obj) DuelStart(1, hero) end
-function DuelTriggerStart2(hero, obj) DuelStart(2, hero) end
+function DuelTriggerStart1(hero, obj) DuelSetup(1, hero) end
+function DuelTriggerStart2(hero, obj) DuelSetup(2, hero) end
 
 
 function DuelOverrideMonolith()
@@ -15,24 +15,18 @@ function DuelOverrideMonolith()
     end
 end
 function DuelTriggerMonolith(hero, obj)
-    ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
-    local player = GetObjectOwner(hero)
-    if DUEL_STAGE[player] == DUEL_STAGE_START then DuelSetup(player, hero)
-    elseif DUEL_STAGE[player] == DUEL_STAGE_SETUP then DuelAdventure(player, hero)
-    elseif DUEL_STAGE[player] == DUEL_STAGE_ADVENTURE then DuelStaging(player, hero)
-    elseif DUEL_STAGE[player] == DUEL_STAGE_STAGING then DuelCastle(player, hero)
-    elseif DUEL_STAGE[player] == DUEL_STAGE_CASTLE then DuelBattle(player, hero)
-    end
+    ExecConsoleCommand("@DuelNextStage("..GetObjectOwner(hero)..", '"..hero.."')")
 end
 
 
 function DuelOverrideLighthouse()
     for _, obj in GetObjectNamesByType("BUILDING_LIGHTHOUSE") do
         Trigger(OBJECT_TOUCH_TRIGGER, obj, "DuelTriggerLighthouse")
+        SetObjectEnabled(obj, nil)
     end
 end
 function DuelTriggerLighthouse(hero, obj)
-    DuelCastle(GetObjectOwner(hero), hero)
+    ExecConsoleCommand("@DuelNextStage("..GetObjectOwner(hero)..", '"..hero.."')")
 end
 
 
@@ -58,18 +52,33 @@ end
 
 
 function DuelOverrideSign()
-    Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_SIGN_1", "DuelTriggerSign")
-    Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_SIGN_2", "DuelTriggerSign")
-end
-function DuelTriggerSign(hero, obj)
-    ChangeHeroStat(hero, STAT_MOVE_POINTS, 500)
-    local player = GetObjectOwner(hero)
-    if DUEL_STAGE[player] == DUEL_STAGE_START then DuelInfoWindow0(player)
-    elseif DUEL_STAGE[player] == DUEL_STAGE_SETUP then DuelInfoWindow1(player)
-    elseif DUEL_STAGE[player] == DUEL_STAGE_ADVENTURE then DuelInfoWindow2(player)
-    elseif DUEL_STAGE[player] == DUEL_STAGE_CASTLE then DuelInfoWindow3(player)
-    elseif DUEL_STAGE[player] == DUEL_STAGE_BATTLE then DuelInfoWindow4(player)
+    for p = 1,2 do
+        Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_SIGN_"..p, "DuelTriggerSign0")
+        -- Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_SIGN_"..p.."_1", "DuelTriggerSign1")
+        -- Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_SIGN_"..p.."_2", "DuelTriggerSign2")
+        -- Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_SIGN_"..p.."_3", "DuelTriggerSign3")
+        -- Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_SIGN_"..p.."_4", "DuelTriggerSign4")
+        -- Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_SIGN_"..p.."_5", "DuelTriggerSign5")
     end
+end
+function DuelTriggerSign0(hero, obj)
+    DuelInfoWindow0(GetObjectOwner(hero))
+end
+function DuelTriggerSign1(hero, obj)
+    DuelInfoWindow1(GetObjectOwner(hero))
+end
+function DuelTriggerSign2(hero, obj)
+    ChangeHeroStat(hero, STAT_MOVE_POINTS, 500)
+    DuelInfoWindow2(GetObjectOwner(hero))
+end
+function DuelTriggerSign3(hero, obj)
+    DuelInfoWindow3(GetObjectOwner(hero))
+end
+function DuelTriggerSign4(hero, obj)
+    DuelInfoWindow4(GetObjectOwner(hero))
+end
+function DuelTriggerSign5(hero, obj)
+    DuelInfoWindow5(GetObjectOwner(hero))
 end
 
 

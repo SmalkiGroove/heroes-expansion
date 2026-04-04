@@ -310,4 +310,4 @@ else
 	end
 end
 
-sleep(30) UnblockGame()
+sleep(10) UnblockGame()
