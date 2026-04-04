@@ -1399,4 +1399,4 @@ end
 
 
 -- log(TRACE, "Loaded heroes-routines-advmap.lua")
-ROUTINES_LOADED[13] = 1
+WAIT_GROUP[3].n = WAIT_GROUP[3].n - 1

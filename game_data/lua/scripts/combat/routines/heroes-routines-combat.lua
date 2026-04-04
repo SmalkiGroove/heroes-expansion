@@ -1142,4 +1142,4 @@ end
 
 
 -- log(TRACE, "Loaded heroes-routines-combat.lua")
-ROUTINES_LOADED[11] = 1
+WAIT_GROUP[3].n = WAIT_GROUP[3].n - 1

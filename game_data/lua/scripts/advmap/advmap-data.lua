@@ -79,4 +79,4 @@ DAILY_RESOURCES = {
 
 
 -- log(TRACE, "Loaded advmap-data.lua")
-ROUTINES_LOADED[8] = 1
+WAIT_GROUP[2].n = WAIT_GROUP[2].n - 1

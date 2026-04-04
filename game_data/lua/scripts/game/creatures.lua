@@ -347,4 +347,4 @@ CREATURES_BY_FACTION = {
 
 
 -- log(TRACE, "Loaded creatures.lua")
-ROUTINES_LOADED[1] = 1
+WAIT_GROUP[1].n = WAIT_GROUP[1].n - 1

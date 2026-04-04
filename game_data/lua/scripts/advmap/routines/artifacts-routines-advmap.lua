@@ -558,4 +558,4 @@ end
 
 
 -- log(TRACE, "Loaded artifacts-routines-advmap.lua")
-ROUTINES_LOADED[12] = 1
+WAIT_GROUP[3].n = WAIT_GROUP[3].n - 1

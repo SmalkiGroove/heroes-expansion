@@ -949,4 +949,4 @@ end
 
 
 -- log(TRACE, "Loaded skills-routines-advmap.lua")
-ROUTINES_LOADED[11] = 1
+WAIT_GROUP[3].n = WAIT_GROUP[3].n - 1

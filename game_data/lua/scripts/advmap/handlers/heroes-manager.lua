@@ -21,7 +21,7 @@ function HeroLevelUp(hero)
     startThread(DoHeroSpeRoutine_LevelUp, player, hero, level)
     startThread(DoSkillsRoutine_LevelUp, player, hero, level)
     startThread(DoArtifactsRoutine_LevelUp, player, hero, level)
-    if DUEL_MODE ~= nil then startThread(DuelLevelUp, player, level) end
+    if DUEL_MODE >= 0 then startThread(DuelLevelUp, player, level) end
 end
 
 
@@ -182,4 +182,4 @@ function AIRecruitBonus(player, hero)
 end
 
 -- log(TRACE, "Loaded heroes-manager.lua")
-ROUTINES_LOADED[18] = 1
+WAIT_GROUP[4].n = WAIT_GROUP[4].n - 1

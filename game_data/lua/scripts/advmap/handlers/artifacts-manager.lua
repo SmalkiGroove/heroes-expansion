@@ -107,4 +107,4 @@ end
 
 
 -- log(TRACE, "Loaded artifact-manager.lua")
-ROUTINES_LOADED[17] = 1
+WAIT_GROUP[4].n = WAIT_GROUP[4].n - 1

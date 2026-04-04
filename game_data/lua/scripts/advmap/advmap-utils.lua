@@ -475,4 +475,4 @@ end
 
 
 -- log(TRACE, "Loaded advmap-utils.lua")
-ROUTINES_LOADED[9] = 1
+WAIT_GROUP[2].n = WAIT_GROUP[2].n - 1

@@ -217,7 +217,7 @@ TRIGGER_OVERRIDES = {
 }
 
 function InitializeMapObjects()
-    if DUEL_MODE ~= nil then return end
+    if DUEL_MODE >= 0 then return end
     RegisterMapGates()
     for k,v in TRIGGER_OVERRIDES do
         for _,obj in GetObjectNamesByType(k) do
@@ -227,4 +227,4 @@ function InitializeMapObjects()
 end
 
 -- log(TRACE, "Loaded mapobjects-triggers.lua")
-ROUTINES_LOADED[23] = 1
+WAIT_GROUP[5].n = WAIT_GROUP[5].n - 1

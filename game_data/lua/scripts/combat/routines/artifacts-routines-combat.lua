@@ -227,4 +227,4 @@ end
 
 
 -- log(TRACE, "Loaded artifacts-routines-combat.lua")
-ROUTINES_LOADED[13] = 1
+WAIT_GROUP[3].n = WAIT_GROUP[3].n - 1

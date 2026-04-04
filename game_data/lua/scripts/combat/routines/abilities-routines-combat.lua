@@ -150,4 +150,4 @@ end
 
 
 -- log(TRACE, "Loaded abilities-routines-combat.lua")
-ROUTINES_LOADED[10] = 1
+WAIT_GROUP[3].n = WAIT_GROUP[3].n - 1

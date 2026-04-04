@@ -97,7 +97,7 @@ function SetupConvertibleTrigger(type, f, t)
 end
 
 function InitializeConvertibles()
-    if DUEL_MODE ~= nil then return end
+    if DUEL_MODE >= 0 then return end
 	for faction = 1,8 do
 		SetupConvertibleTrigger(Towns_Types[faction], faction, 0)
 		SetupConvertibleTrigger(Dwellings_T1[faction], faction, 1)
@@ -109,4 +109,4 @@ end
 
 
 -- log(TRACE, "Loaded town-conversion.lua")
-ROUTINES_LOADED[22] = 1
+WAIT_GROUP[5].n = WAIT_GROUP[5].n - 1

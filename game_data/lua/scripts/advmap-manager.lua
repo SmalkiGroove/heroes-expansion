@@ -12,44 +12,59 @@ end
 -- Check Duel Map
 startThread(function()
 	print("Checking for duel map...")
+	DUEL_MODE = -1
 	GetObjectiveState('DUEL', FIRST_PLAYER)
 	DUEL_MODE = GetDifficulty()
 	print("Duel map detected!")
 end)
 
 
-ROUTINES_LOADED = {
-	[1] = 0, [2] = 0, [3] = 0, [4] = 0, [5] = 0, [6] = 0, [7] = 0, [8] = 0, [9] = 0, [10]= 0,
-	[11]= 0, [12]= 0, [13]= 0, [14]= 0, [15]= 0, [16]= 0, [17]= 0, [18]= 0, [19]= 0, [20]= 0,
-	[21]= 0, [22]= 0, [23]= 0, [24]= 0, [25]= 0, [26]= 0, [27]= 0, [28]= 0, [29]= 0, [30]= 0,
+WAIT_GROUP = {
+	[1] = {n=5, files= {
+			"/scripts/game/creatures.lua",
+			"/scripts/game/spells.lua",
+			"/scripts/game/skills.lua",
+			"/scripts/game/artifacts.lua",
+			"/scripts/game/heroes.lua",
+		}
+	},
+	[2] = {n=2, files= {
+			"/scripts/advmap/advmap-data.lua",
+			"/scripts/advmap/advmap-utils.lua",
+		}
+	},
+	[3] = {n=4, files= {
+			"/scripts/advmap/routines/skills-routines-advmap.lua",
+			"/scripts/advmap/routines/artifacts-routines-advmap.lua",
+			"/scripts/advmap/routines/heroes-routines-advmap.lua",
+			"/scripts/advmap/routines/towns-routines-advmap.lua",
+		}
+	},
+	[4] = {n=4, files= {
+			"/scripts/advmap/handlers/skills-manager.lua",
+			"/scripts/advmap/handlers/artifacts-manager.lua",
+			"/scripts/advmap/handlers/heroes-manager.lua",
+			"/scripts/advmap/handlers/towns-manager.lua",
+		}
+	},
+	[5] = {n=4, files= {
+			"/scripts/advmap/handlers/starting-armies.lua",
+			"/scripts/advmap/handlers/town-conversion.lua",
+			"/scripts/advmap/handlers/mapobjects-triggers.lua",
+			"/scripts/advmap/handlers/custom-abilities.lua",
+		}
+	},
+	[6] = {n=1, files= {
+			"/scripts/game-vars.lua",
+		}				
+	},
 }
-
-function LoadScript(path, key)
-	log(TRACE, "Loading script "..path)
-	dofile(path)
-	repeat sleep() until ROUTINES_LOADED[key] == 1
+function LoadScripts(wg)
+	log(TRACE, "Loading scripts group "..wg)
+	for _, file in WAIT_GROUP[wg].files do dofile(file) end
+	repeat sleep() until WAIT_GROUP[wg].n == 0
 end
-
-LoadScript("/scripts/game/creatures.lua", 1)
-LoadScript("/scripts/game/spells.lua", 2)
-LoadScript("/scripts/game/skills.lua",3)
-LoadScript("/scripts/game/artifacts.lua", 4)
-LoadScript("/scripts/game/heroes.lua", 5)
-LoadScript("/scripts/advmap/advmap-data.lua", 8)
-LoadScript("/scripts/advmap/advmap-utils.lua", 9)
-LoadScript("/scripts/advmap/routines/skills-routines-advmap.lua", 11)
-LoadScript("/scripts/advmap/routines/artifacts-routines-advmap.lua", 12)
-LoadScript("/scripts/advmap/routines/heroes-routines-advmap.lua", 13)
-LoadScript("/scripts/advmap/routines/towns-routines-advmap.lua", 14)
-LoadScript("/scripts/advmap/handlers/skills-manager.lua", 16)
-LoadScript("/scripts/advmap/handlers/artifacts-manager.lua", 17)
-LoadScript("/scripts/advmap/handlers/heroes-manager.lua", 18)
-LoadScript("/scripts/advmap/handlers/towns-manager.lua", 19)
-LoadScript("/scripts/advmap/handlers/starting-armies.lua", 21)
-LoadScript("/scripts/advmap/handlers/town-conversion.lua", 22)
-LoadScript("/scripts/advmap/handlers/mapobjects-triggers.lua", 23)
-LoadScript("/scripts/advmap/handlers/custom-abilities.lua", 25)
-LoadScript("/scripts/game-vars.lua", 30)
+for wg = 1,6 do LoadScripts(wg) end
 
 
 ADD_PLAYER_HERO = {
@@ -151,6 +166,7 @@ end
 function NewDayTrigger()
 	TURN = TURN + 1
 	log(INFO, "New day ! Turn "..TURN)
+	if DUEL_MODE >= 0 then return end
 	local newweek = GetDate(DAY_OF_WEEK) == 1
 	if newweek then
 		WEEKS = WEEKS + 1
@@ -170,6 +186,7 @@ function NewDayTrigger()
 end
 
 function CombatResultsHandler(combatIndex)
+	if DUEL_MODE >= 0 then return ExecConsoleCommand("@DuelAfterCombat()") end
 	local hero = GetSavedCombatArmyHero(combatIndex, 1)
 	if hero ~= nil then
 		local player = GetSavedCombatArmyPlayer(combatIndex, 1)
@@ -273,7 +290,7 @@ function Init()
 		InitializeMapObjects()
 		ExecConsoleCommand("@UnblockGame()") UnblockGame()
 		log(INFO, "Initializers done. The game can start. Have fun !")
-		if DUEL_MODE ~= nil then ExecConsoleCommand("@DuelMain()") end
+		if DUEL_MODE >= 0 then ExecConsoleCommand("@DuelMain()") end
 	else
 		startThread(LoadedGame_GameVars)
 	end

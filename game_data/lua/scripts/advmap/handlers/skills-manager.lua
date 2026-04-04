@@ -122,4 +122,4 @@ end
 
 
 -- log(TRACE, "Loaded skills-manager.lua")
-ROUTINES_LOADED[16] = 1
+WAIT_GROUP[4].n = WAIT_GROUP[4].n - 1

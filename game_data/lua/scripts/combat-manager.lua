@@ -189,26 +189,31 @@ end
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
-ROUTINES_LOADED = {
-	[1] = 0, [2] = 0, [3] = 0, [4] = 0, [5] = 0,
-	[6] = 0, [7] = 0, [8] = 0, [9] = 0, [10]= 0,
-    [11]= 0, [12]= 0, [13]= 0, [14]= 0, [15]= 0,
+WAIT_GROUP = {
+	[1] = {n=5, files= {
+			"/scripts/game/creatures.lua",
+			"/scripts/game/spells.lua",
+			"/scripts/game/skills.lua",
+			"/scripts/game/artifacts.lua",
+			"/scripts/game/heroes.lua",
+		}
+	},
+	[2] = {n=2, files= {
+			"/scripts/combat/combat-data.lua",
+			"/scripts/combat/combat-utils.lua",
+		}
+	},
+	[3] = {n=4, files= {
+			"/scripts/combat/routines/abilities-routines-combat.lua",
+			"/scripts/combat/routines/heroes-routines-combat.lua",
+			"/scripts/combat/routines/skills-routines-combat.lua",
+			"/scripts/combat/routines/artifacts-routines-combat.lua",
+		}
+	},
 }
-
-function LoadScript(path, key)
-	log(TRACE, "Loading script "..path)
-	dofile(path)
-	sleep() -- repeat sleep() until ROUTINES_LOADED[key] == 1
+function LoadScripts(wg)
+	log(TRACE, "Loading scripts group "..wg)
+	for _, file in WAIT_GROUP[wg].files do dofile(file) end
+	repeat sleep() until WAIT_GROUP[wg].n == 0
 end
-
-LoadScript("/scripts/game/creatures.lua", 1)
-LoadScript("/scripts/game/spells.lua", 2)
-LoadScript("/scripts/game/skills.lua",3)
-LoadScript("/scripts/game/artifacts.lua", 4)
-LoadScript("/scripts/game/heroes.lua", 5)
-LoadScript("/scripts/combat/combat-data.lua", 8)
-LoadScript("/scripts/combat/combat-utils.lua", 9)
-LoadScript("/scripts/combat/routines/abilities-routines-combat.lua", 10)
-LoadScript("/scripts/combat/routines/heroes-routines-combat.lua", 11)
-LoadScript("/scripts/combat/routines/skills-routines-combat.lua", 12)
-LoadScript("/scripts/combat/routines/artifacts-routines-combat.lua", 13)
+for wg = 1,3 do LoadScripts(wg) end

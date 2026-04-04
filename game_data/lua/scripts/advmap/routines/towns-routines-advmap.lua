@@ -90,4 +90,4 @@ end
 
 
 -- log(TRACE, "Loaded towns-routines-advmap.lua")
-ROUTINES_LOADED[14] = 1
+WAIT_GROUP[3].n = WAIT_GROUP[3].n - 1

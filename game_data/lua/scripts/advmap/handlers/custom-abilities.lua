@@ -100,4 +100,4 @@ end
 
 
 -- log(TRACE, "Loaded custom-abilities.lua")
-ROUTINES_LOADED[25] = 1
+WAIT_GROUP[5].n = WAIT_GROUP[5].n - 1

@@ -355,4 +355,4 @@ _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_ENLIGHTENED         = _skillbonu
 
 
 -- log(TRACE, "Loaded skills.lua")
-ROUTINES_LOADED[3] = 1
+WAIT_GROUP[1].n = WAIT_GROUP[1].n - 1

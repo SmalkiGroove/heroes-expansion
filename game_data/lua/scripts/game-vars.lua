@@ -19,4 +19,4 @@ end
 
 
 -- log(TRACE, "Loaded game-vars.lua")
-ROUTINES_LOADED[30] = 1
+if WAIT_GROUP[6] then WAIT_GROUP[6].n = WAIT_GROUP[6].n - 1 end
