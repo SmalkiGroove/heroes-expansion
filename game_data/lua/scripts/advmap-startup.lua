@@ -68,7 +68,17 @@
 		[3] = "Cystal",
 		[4] = "Sulfur",
 		[5] = "Gem",
-		[6] = "Golds",
+		[6] = "Gold",
+	}
+
+	RESOURCE_NAME_FILE = {
+		[0] = "/Text/Game/Scripts/Resources/Wood.txt",
+		[1] = "/Text/Game/Scripts/Resources/Ore.txt",
+		[2] = "/Text/Game/Scripts/Resources/Mercury.txt",
+		[3] = "/Text/Game/Scripts/Resources/Crystal.txt",
+		[4] = "/Text/Game/Scripts/Resources/Sulfur.txt",
+		[5] = "/Text/Game/Scripts/Resources/Gem.txt",
+		[6] = "/Text/Game/Scripts/Resources/Gold.txt",
 	}
 	
 	--

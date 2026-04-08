@@ -54,32 +54,19 @@ end
 function DuelOverrideSign()
     for p = 1,2 do
         Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_SIGN_"..p, "DuelTriggerSign0")
-        -- Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_SIGN_"..p.."_1", "DuelTriggerSign1")
-        -- Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_SIGN_"..p.."_2", "DuelTriggerSign2")
-        -- Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_SIGN_"..p.."_3", "DuelTriggerSign3")
-        -- Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_SIGN_"..p.."_4", "DuelTriggerSign4")
-        -- Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_SIGN_"..p.."_5", "DuelTriggerSign5")
+        Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_SIGN_"..p.."_10", "DuelTriggerSign1")
+        Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_SIGN_"..p.."_20", "DuelTriggerSign2")
+        Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_SIGN_"..p.."_30", "DuelTriggerSign3")
+        Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_SIGN_"..p.."_50", "DuelTriggerSign5")
+        for j = 1,8 do Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_SIGN_"..p.."_4"..j, "DuelTriggerSign4") end
     end
 end
-function DuelTriggerSign0(hero, obj)
-    DuelInfoWindow0(GetObjectOwner(hero))
-end
-function DuelTriggerSign1(hero, obj)
-    DuelInfoWindow1(GetObjectOwner(hero))
-end
-function DuelTriggerSign2(hero, obj)
-    ChangeHeroStat(hero, STAT_MOVE_POINTS, 500)
-    DuelInfoWindow2(GetObjectOwner(hero))
-end
-function DuelTriggerSign3(hero, obj)
-    DuelInfoWindow3(GetObjectOwner(hero))
-end
-function DuelTriggerSign4(hero, obj)
-    DuelInfoWindow4(GetObjectOwner(hero))
-end
-function DuelTriggerSign5(hero, obj)
-    DuelInfoWindow5(GetObjectOwner(hero))
-end
+function DuelTriggerSign0(hero, obj) DuelInfoWindow0(GetObjectOwner(hero)) end
+function DuelTriggerSign1(hero, obj) DuelInfoWindow1(GetObjectOwner(hero)) end
+function DuelTriggerSign2(hero, obj) DuelInfoWindow2(GetObjectOwner(hero)) end
+function DuelTriggerSign3(hero, obj) DuelInfoWindow3(GetObjectOwner(hero)) end
+function DuelTriggerSign4(hero, obj) DuelInfoWindow4(GetObjectOwner(hero)) end
+function DuelTriggerSign5(hero, obj) DuelInfoWindow5(GetObjectOwner(hero)) end
 
 
 function DuelOverrideFlag()

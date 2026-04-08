@@ -1,17 +1,41 @@
 
--- dofile("/scripts/game/artifacts.lua") sleep(1)
-
 
 function DuelEndlessSackOfGold(player, hero)
-    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/EndlessSackOfGold.txt"; arg=0}, "NoneRoutine")
+    local value = 15000
+    GiveResources(player, GOLD, value)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/EndlessSackOfGold.txt"; arg=value}, "NoneRoutine")
 end
 
 function DuelEndlessPouchOfGold(player, hero)
-    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/EndlessPouchOfGold.txt"; arg=0}, "NoneRoutine")
+    local value = 5000
+    GiveResources(player, GOLD, value)
+    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/EndlessPouchOfGold.txt"; arg=value}, "NoneRoutine")
 end
 
 function DuelCapeOfKings(player, hero)
-    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/Artifact/CapeOfKings.txt"; arg=0}, "NoneRoutine")
+    local res = FACTION_RESOURCE[DUEL_FACTION[player]]
+    local gov = GetHeroSkillMastery(hero, SKILL_GOVERNANCE)
+    local gg = 500 * gov * DUEL_ADVENTURE_DAYS
+    local gs = gov * DUEL_ADVENTURE_DAYS
+    local gr = RESOURCE_NAME_FILE[res]
+    GiveResources(player, GOLD, gg)
+    GiveResources(player, res, gs)
+    local ind, myt = 0, 0
+    if HasHeroSkill(hero, PERK_INDUSTRY) then
+        ind = 2 * DUEL_ADVENTURE_DAYS
+        for r = 0,5 do GiveResources(player, r, ind) end
+    end
+    if HasHeroSkill(hero, PERK_MYTHOLOGY) then
+        myt = 1000 * DUEL_ADVENTURE_DAYS
+        GiveResources(player, GOLD, myt)
+    end
+    MessageBoxForPlayers(GetPlayerFilter(player),
+        { "/Text/Duel/Artifact/CapeOfKings.txt";
+            days=DUEL_ADVENTURE_DAYS,
+            gov=gov,
+            gg=gg, gs=gs, gr=gr,
+            ind=ind, myt=myt,
+        }, "NoneRoutine")
 end
 
 function DuelTurbanOfEnlightenment(player, hero)

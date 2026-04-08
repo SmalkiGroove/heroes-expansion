@@ -575,11 +575,10 @@ end
 function Routine_GovernanceWeeklyResources(player, hero, mastery)
     log(DEBUG, "$ Routine_GovernanceWeeklyResources")
     local golds = { [0]=0, [1]=1000, [2]=2500, [3]=5000 }
-    local res = { [HAVEN]=CRYSTAL, [PRESERVE]=GEM, [FORTRESS]=CRYSTAL, [ACADEMY]=GEM, [DUNGEON]=SULFUR, [NECROPOLIS]=MERCURY, [INFERNO]=SULFUR, [STRONGHOLD]=MERCURY }
     local faction = HEROES[hero].faction
     local bonus = HasArtefact(hero, ARTIFACT_CAPE_OF_KINGS) and 1 or 0
     GiveResources(player, GOLD, golds[mastery]+1000*bonus)
-    GiveResources(player, res[faction], mastery+bonus)
+    GiveResources(player, FACTION_RESOURCE[faction], mastery+bonus)
 end
 
 function Routine_GearUpWeeklyGolds(player, hero, mastery)

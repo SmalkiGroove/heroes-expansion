@@ -1,4 +1,11 @@
 
+dofile("/scripts/duel/duel_heroes.lua")
+dofile("/scripts/duel/duel_skills.lua")
+dofile("/scripts/duel/duel_artifacts.lua")
+dofile("/scripts/duel/duel_mapobjects.lua")
+dofile("/scripts/duel/duel_armies.lua")
+sleep()
+
 DUEL_STAGE_START = 0
 DUEL_STAGE_SETUP = 1
 DUEL_STAGE_ADVENTURE = 2
@@ -15,13 +22,6 @@ function DuelGetPlayerStage(player)
     local var = "DUEL_STAGE_"..player
     return 0 + GetGameVar(var)
 end
-
-dofile("/scripts/duel/duel_heroes.lua")
-dofile("/scripts/duel/duel_skills.lua")
-dofile("/scripts/duel/duel_artifacts.lua")
-dofile("/scripts/duel/duel_mapobjects.lua")
-dofile("/scripts/duel/duel_armies.lua")
-sleep()
 
 function DuelInfoWindow0(player) MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/InfoStart.txt", "NoneRoutine") end
 function DuelInfoWindow1(player) MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/InfoSetup.txt", "NoneRoutine") end
@@ -94,7 +94,8 @@ DUEL_TOWNS_COORDINATES = {
     },
 }
 
-DUEL_DAYS = {5+2*DUEL_MODE, 5+2*DUEL_MODE}
+DUEL_ADVENTURE_DAYS = 5 + 2 * DUEL_MODE
+DUEL_PLAYER_DAYS = {DUEL_ADVENTURE_DAYS, DUEL_ADVENTURE_DAYS}
 
 
 function DuelLevelUp(player, level)
@@ -140,10 +141,10 @@ function DuelAdventure(player, hero)
 end
 
 function DuelAdventureDay(player, hero)
-    local days = DUEL_DAYS[player]
+    local days = DUEL_PLAYER_DAYS[player]
     if days > 0 then
         MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/NewDay.txt"; days=days}, "NoneRoutine")
-        DUEL_DAYS[player] = days - 1
+        DUEL_PLAYER_DAYS[player] = days - 1
         ChangeHeroStat(hero, STAT_MOVE_POINTS, 9999)
     else
         DuelStaging(player, hero)
@@ -158,6 +159,7 @@ function DuelStaging(player, hero)
     for artifact, func in DUEL_ARTIFACT_EFFECTS do
         if HasArtefact(hero, artifact, 1) then func(player, hero) end
     end
+    PlayerDailyResources(player)
     ChangeHeroStat(hero, STAT_MOVE_POINTS, 9999)
     DuelSetPlayerStage(player, DUEL_STAGE_STAGING)
 end
