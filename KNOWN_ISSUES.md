@@ -24,7 +24,6 @@
 
 ### Suggestions
 
-- Add NCF creatures in editor
 - Darkstorm hero totem model
 - Add ARMG templates
 - Magnetic Field redirect projectiles
@@ -52,3 +51,4 @@
 - Elem orb spawn position random
 - Nerf Kha Beleth late game
 - Frozen heart not in frost artfset
+- Add NCF creatures in editor
