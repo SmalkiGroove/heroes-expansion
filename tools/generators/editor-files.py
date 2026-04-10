@@ -16,7 +16,7 @@ with open(os.path.join(path_to_artifacts, "GameMechanics/RefTables/Artifacts.xdb
     artifacts = xmltodict.parse(f_artifacts.read())
     for artifact in artifacts["Table_DBArtifact_ArtifactEffect"]["objects"]["Item"]:
         if artifact["ID"] != "ARTIFACT_NONE":
-            if artifact["obj"]["CanBeGeneratedToSell"] == "true":
+            if artifact["obj"]["Slot"] != "INVENTORY":
                 artifact_name = str(artifact["obj"]["NameFileRef"]["@href"]).split("/")[4]
                 icon_path = str(artifact["obj"]["Icon"]["@href"])[1:-22] + "dds"
                 icon_artifact(artifact_name, icon_path)
