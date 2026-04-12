@@ -25,7 +25,6 @@
 
 ### Suggestions
 
-- Add NCF creatures in editor
 - Darkstorm hero totem model
 - Add ARMG templates
 - Magnetic Field redirect projectiles
@@ -48,3 +47,9 @@
 
 # FIXED
 
+- Summoned Wolves stack stay in army permanently
+- Starting bonus artifact not working
+- Elem orb spawn position random
+- Nerf Kha Beleth late game
+- Frozen heart not in frost artfset
+- Add NCF creatures in editor
