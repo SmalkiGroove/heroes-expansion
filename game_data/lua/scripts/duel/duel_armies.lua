@@ -76,8 +76,15 @@ DUEL_CREATURE_GROWTH = {
     }
 }
 
-function DuelTownRecruits(town, creature_growth, weeks)
-    for creature, growth in creature_growth do
-        SetObjectDwellingCreatures(town, creature, growth * weeks)
+DUEL_TOWN_RECRUITS = {{}, {}}
+
+function DuelTownRecruits(player)
+    log(DEBUG, "DUEL: DuelTownRecruits for player "..player)
+    local faction = DUEL_FACTION[player]
+    local town = DUEL_TOWN_NAME[player][faction]
+    for creature, growth in DUEL_CREATURE_GROWTH[faction] do
+        local nb = growth * DUEL_RECRUITS_WEEKS
+        SetObjectDwellingCreatures(town, creature, nb)
+        DUEL_TOWN_RECRUITS[player][creature] = nb
     end
 end

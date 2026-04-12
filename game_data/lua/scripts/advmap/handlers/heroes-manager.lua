@@ -21,7 +21,7 @@ function HeroLevelUp(hero)
     startThread(DoHeroSpeRoutine_LevelUp, player, hero, level)
     startThread(DoSkillsRoutine_LevelUp, player, hero, level)
     startThread(DoArtifactsRoutine_LevelUp, player, hero, level)
-    if IsDuelMode() then startThread(DuelLevelUp, player, level) end
+    if IsDuelMode() then startThread(DuelLevelUp, player, hero, level) end
 end
 
 

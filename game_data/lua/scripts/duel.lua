@@ -1,9 +1,9 @@
 
+dofile("/scripts/duel/duel_mapobjects.lua")
+dofile("/scripts/duel/duel_armies.lua")
 dofile("/scripts/duel/duel_heroes.lua")
 dofile("/scripts/duel/duel_skills.lua")
 dofile("/scripts/duel/duel_artifacts.lua")
-dofile("/scripts/duel/duel_mapobjects.lua")
-dofile("/scripts/duel/duel_armies.lua")
 sleep()
 
 DUEL_STAGE_START = 0
@@ -34,6 +34,8 @@ DUEL_HERO = {GetPlayerHeroes(1)[0], GetPlayerHeroes(2)[0]}
 MoveHeroRealTime(DUEL_HERO[1], 103, 209, 0)
 MoveHeroRealTime(DUEL_HERO[2], 112, 209, 0)
 
+DUEL_FACTION = {HEROES[DUEL_HERO[1]].faction, HEROES[DUEL_HERO[2]].faction}
+
 DUEL_TOWN_NAME = {
     {
         [0] = "TOWN_1",
@@ -58,8 +60,10 @@ DUEL_TOWN_NAME = {
         [8] = "TOWN_STRONGHOLD_2",
     },
 }
-DUEL_FACTION = {0, 0}
-DUEL_TOWN = {"TOWN_1", "TOWN_2"}
+function DuelPlayerTown(player) return DUEL_TOWN_NAME[player][DUEL_FACTION[player]] end
+
+DUEL_TOWN = {DuelPlayerTown(1), DuelPlayerTown(2)}
+
 
 DUEL_START_COORDINATES = {
     {x=93, y=176},
@@ -98,10 +102,21 @@ DUEL_ADVENTURE_DAYS = 5 + 2 * DUEL_MODE
 DUEL_PLAYER_DAYS = {DUEL_ADVENTURE_DAYS, DUEL_ADVENTURE_DAYS}
 
 
-function DuelLevelUp(player, level)
-    GiveResources(player, GOLD, 5000, 1)
-    if mod(level, 5) == 0 then
-        SetTownBuildingLimitLevel(DUEL_TOWN[player], TOWN_BUILDING_MAGIC_GUILD, level/5)
+function DuelStartingBonus(player)
+    log(DEBUG, "DUEL: StartingBonus for player "..player)
+    startThread(function(player)
+        for a = 1,199 do if HasArtefact(DUEL_HERO[player], a) then RemoveArtefact(DUEL_HERO[player], a) break end end
+    end, player)
+    local amount = 5 * DUEL_MODE + 10
+    for r = 0,1 do SetPlayerResource(player, r, 2 * amount) end
+    for s = 2,5 do SetPlayerResource(player, s, amount) end
+    SetPlayerResource(player, FACTION_RESOURCE[DUEL_FACTION[player]], 2 * amount)
+    SetPlayerResource(player, GOLD, 10000 * amount)
+end
+
+function DuelMagicGuild(player)
+    if DUEL_MODE > 0 then
+        SetTownBuildingLimitLevel(DUEL_TOWN[player], TOWN_BUILDING_MAGIC_GUILD, 5)
         UpgradeTownBuilding(DUEL_TOWN[player], TOWN_BUILDING_MAGIC_GUILD)
     end
 end
@@ -114,6 +129,12 @@ function DuelBorderGuardKey(player, key)
     end
     GiveBorderguardKey(player, key)
     MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/BorderGuardKey.txt"; key=key}, "NoneRoutine")
+end
+
+function DuelLevelUp(player, hero, level)
+    for skill, func in DUEL_SKILL_LEVELUP_EFFECTS do
+        if HasHeroSkill(hero, skill) then func(player, hero, level) end
+    end
 end
 
 function DuelNextStage(player, hero)
@@ -136,6 +157,9 @@ end
 
 function DuelAdventure(player, hero)
     log(DEBUG, "DUEL: player "..player.." entered adventure stage")
+    for skill, func in DUEL_SKILL_ADVENTURE_EFFECTS do
+        if HasHeroSkill(hero, skill) then func(player, hero) end
+    end
     ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
     DuelSetPlayerStage(player, DUEL_STAGE_ADVENTURE)
 end
@@ -156,6 +180,9 @@ function DuelStaging(player, hero)
     SetObjectPosition(hero, DUEL_STAGING_COORDINATES[player].x, DUEL_STAGING_COORDINATES[player].y, 0, 1)
     SetObjectRotation(hero, 0)
     sleep(10)
+    for skill, func in DUEL_SKILL_STAGING_EFFECTS do
+        if HasHeroSkill(hero, skill) then func(player, hero) end
+    end
     for artifact, func in DUEL_ARTIFACT_EFFECTS do
         if HasArtefact(hero, artifact, 1) then func(player, hero) end
     end
@@ -175,6 +202,9 @@ function DuelBattle(player, hero)
     log(DEBUG, "DUEL: player "..player.." entered battle stage")
     OpenCircleFog(100, 100, UNDERGROUND, 99, player)
     ChangeHeroStat(hero, STAT_MANA_POINTS, 999)
+    for skill, func in DUEL_SKILL_BATTLE_EFFECTS do
+        if HasHeroSkill(hero, skill) then func(player, hero) end
+    end
     DuelSetPlayerStage(player, DUEL_STAGE_BATTLE)
 end
 
@@ -227,12 +257,12 @@ function DuelMain()
 
     for player = 1,2 do DuelSetPlayerStage(player, DUEL_STAGE_START) DuelInfoWindow0(player) end
 
-    for _,town in DUEL_TOWN do SetObjectOwner(town, 0) SetObjectEnabled(town, nil) end
-
-    DUEL_FACTION = {HEROES[DUEL_HERO[1]].faction, HEROES[DUEL_HERO[2]].faction}
-    DUEL_TOWN = {DUEL_TOWN_NAME[1][DUEL_FACTION[1]], DUEL_TOWN_NAME[2][DUEL_FACTION[2]]}
-
-    for player = 1,2 do SetObjectOwner(DUEL_TOWN[player], player) end
+    for player = 1,2 do
+        SetObjectOwner(DUEL_TOWN_NAME[player][0], 0)
+        SetObjectEnabled(DUEL_TOWN_NAME[player][0], nil)
+        SetObjectOwner(DUEL_TOWN[player], player)
+        DuelMagicGuild(player)
+    end
 
     DuelOverrideStart()
     DuelOverrideSign()
@@ -241,10 +271,8 @@ function DuelMain()
     DuelOverrideMonolith()
     DuelOverrideLighthouse()
 
-    for i=1,2 do for j=1,8 do
-        DuelTownRecruits(DUEL_TOWN_NAME[i][j], DUEL_CREATURE_GROWTH[DUEL_FACTION[i]], DUEL_RECRUITS_WEEKS)
-    end end
+    for player = 1,2 do DuelTownRecruits(player) end
 
     print("DUEL: start")
-    for p=1,2 do startThread(DuelLoop, p) end
+    for player = 1,2 do startThread(DuelLoop, player) end
 end

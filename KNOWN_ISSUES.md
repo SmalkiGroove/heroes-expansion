@@ -21,6 +21,7 @@
 - Shantiri Moon Disc blocks all light magic
 - Inferno sacrificial pit not required for city hall
 - Combat does not end if all army is defeated and war machines are remaining
+- Combat does not end if Goblin treason
 
 ### Suggestions
 
@@ -47,8 +48,3 @@
 
 # FIXED
 
-- Summoned Wolves stack stay in army permanently
-- Starting bonus artifact not working
-- Elem orb spawn position random
-- Nerf Kha Beleth late game
-- Frozen heart not in frost artfset

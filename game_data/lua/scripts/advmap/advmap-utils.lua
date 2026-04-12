@@ -14,6 +14,7 @@ end
 
 function StartingBonus(player)
 	log(DEBUG, "$ StartingBonus for player "..player)
+	if IsDuelMode() then return ExecConsoleCommand("@DuelStartingBonus("..player..")") end
 	local gold = GetPlayerResource(player, GOLD)
 	local diff = mod(gold, 10000)
 	if diff > 1 then -- bonus resources chosen
@@ -36,7 +37,7 @@ function StartingBonus(player)
 		log(DEBUG, "Bonus artifact chosen")
 		local hero = GetPlayerHeroes(player)[0]
 		if hero then
-			for a = 1,199 do if HasArtefact(hero, a) then RemoveArtefact(hero, a) end end
+			for a = 1,199 do if HasArtefact(hero, a) then RemoveArtefact(hero, a) break end end
 			GiveHeroRandomArtifact(player, hero, ARTIFACT_CLASS_MAJOR, HEROES[hero].faction + 10)
 		end
 	end

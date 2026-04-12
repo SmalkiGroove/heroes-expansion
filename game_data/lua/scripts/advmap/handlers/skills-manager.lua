@@ -97,6 +97,7 @@ function AddHeroSkill(hero, skill, mastery)
     if START_TRIGGER_SKILLS_ROUTINES[skill] then
         START_TRIGGER_SKILLS_ROUTINES[skill](player, hero, mastery, level)
     end
+    if IsDuelMode() then DuelAddSkill(player, hero, skill, mastery) end
     Register(VarHeroSkillId(hero, skill), mastery)
     CheckForAbsolute(player, hero)
     CheckForUltimate(player, hero)
@@ -108,6 +109,7 @@ function RemoveHeroSkill(hero, skill, mastery)
     if START_TRIGGER_SKILLS_ROUTINES[skill] then
         START_TRIGGER_SKILLS_ROUTINES[skill](player, hero, mastery, level)
     end
+    if IsDuelMode() then DuelRemoveSkill(player, hero, skill, mastery) end
     Register(VarHeroSkillId(hero, skill), mastery)
 end
 
