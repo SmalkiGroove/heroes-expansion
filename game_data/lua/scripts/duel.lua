@@ -99,7 +99,11 @@ DUEL_TOWNS_COORDINATES = {
 }
 
 DUEL_ADVENTURE_DAYS = 5 + 2 * DUEL_MODE
-DUEL_PLAYER_DAYS = {DUEL_ADVENTURE_DAYS, DUEL_ADVENTURE_DAYS}
+
+DUEL_PLAYER_DATA = {
+    ADVENTURE_DAYS = {DUEL_ADVENTURE_DAYS, DUEL_ADVENTURE_DAYS}
+    TOTAL_EXP = {0, 0}
+}
 
 
 function DuelStartingBonus(player)
@@ -165,10 +169,10 @@ function DuelAdventure(player, hero)
 end
 
 function DuelAdventureDay(player, hero)
-    local days = DUEL_PLAYER_DAYS[player]
+    local days = DUEL_PLAYER_DATA.ADVENTURE_DAYS[player]
     if days > 0 then
         MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/NewDay.txt"; days=days}, "NoneRoutine")
-        DUEL_PLAYER_DAYS[player] = days - 1
+        DUEL_PLAYER_DATA.ADVENTURE_DAYS[player] = days - 1
         ChangeHeroStat(hero, STAT_MOVE_POINTS, 9999)
     else
         DuelStaging(player, hero)
@@ -179,6 +183,7 @@ function DuelStaging(player, hero)
     log(DEBUG, "DUEL: player "..player.." entered staging stage")
     SetObjectPosition(hero, DUEL_STAGING_COORDINATES[player].x, DUEL_STAGING_COORDINATES[player].y, 0, 1)
     SetObjectRotation(hero, 0)
+    DUEL_PLAYER_DATA.TOTAL_EXP[player] = GetHeroStat(hero, STAT_EXPERIENCE)
     sleep(10)
     for skill, func in DUEL_SKILL_STAGING_EFFECTS do
         if HasHeroSkill(hero, skill) then func(player, hero) end

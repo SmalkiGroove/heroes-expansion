@@ -150,8 +150,10 @@ end
 function AIDailyBonus(player, hero)
     if IsAIPlayer(player) then
         log(DEBUG, "$ AIDailyBonus for "..hero)
-        local amount = 125 * TURN * DIFFICULTY
-        GiveExp(hero, amount)
+        if DIFFICULTY > 0 then
+            local amount = 125 * TURN * DIFFICULTY
+            GiveExp(hero, amount)
+        end
     end
 end
 

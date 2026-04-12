@@ -13,21 +13,22 @@ function SetStartingArmy(hero)
         army = STARTING_ARMIES[faction_text]
     end
     local player = IsObjectExists(hero) and GetObjectOwner(hero) or 0
+    local merge = PLAYER_ARMY_BONUS[player] or IsDuelMode()
     for i = 1,7 do
         if army[i] then
             local creature = army[i][1]
             local nb = round(army[i][2] * DIFFICULTY_MULTIPLIER[player])
-            AddHeroCreatures(hero, creature, nb, PLAYER_ARMY_BONUS[player] and -1 or i-1)
+            AddHeroCreatures(hero, creature, nb, merge and -1 or i-1)
         end
     end
-    sleep(2)
+    sleep(1)
     if PLAYER_ARMY_BONUS[player] then
         for i = 1,5 do
             local nb = power(2, 5-i) + 5 - i
             AddHeroCreatureType(player, hero, faction, i, nb * DIFFICULTY_MULTIPLIER[player], 1)
         end
     end
-    sleep(2)
+    sleep(1)
     while GetHeroCreatures(hero, 180) > 0 do RemoveHeroCreatures(hero, 180, 1) sleep(2) end
 end
 

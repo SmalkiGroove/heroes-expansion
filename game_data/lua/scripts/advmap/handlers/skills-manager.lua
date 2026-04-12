@@ -94,10 +94,12 @@ function AddHeroSkill(hero, skill, mastery)
     log(DEBUG, "Hero "..hero.." has learnt skill '"..skill.."' rank "..mastery..".")
     local player = GetObjectOwner(hero)
     local level = GetHeroLevel(hero)
+    if IsDuelMode() then
+        if DuelAddSkill(player, hero, skill, mastery) then START_TRIGGER_SKILLS_ROUTINES[skill] = nil end
+    end
     if START_TRIGGER_SKILLS_ROUTINES[skill] then
         START_TRIGGER_SKILLS_ROUTINES[skill](player, hero, mastery, level)
     end
-    if IsDuelMode() then DuelAddSkill(player, hero, skill, mastery) end
     Register(VarHeroSkillId(hero, skill), mastery)
     CheckForAbsolute(player, hero)
     CheckForUltimate(player, hero)
@@ -106,10 +108,12 @@ function RemoveHeroSkill(hero, skill, mastery)
     log(DEBUG, "Hero "..hero.." has removed skill '"..skill.."' rank "..mastery..".")
     local player = GetObjectOwner(hero)
     local level = GetHeroLevel(hero)
+    if IsDuelMode() then
+        if DuelRemoveSkill(player, hero, skill, mastery) then START_TRIGGER_SKILLS_ROUTINES[skill] = nil end
+    end
     if START_TRIGGER_SKILLS_ROUTINES[skill] then
         START_TRIGGER_SKILLS_ROUTINES[skill](player, hero, mastery, level)
     end
-    if IsDuelMode() then DuelRemoveSkill(player, hero, skill, mastery) end
     Register(VarHeroSkillId(hero, skill), mastery)
 end
 
