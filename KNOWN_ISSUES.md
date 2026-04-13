@@ -22,6 +22,7 @@
 - Inferno sacrificial pit not required for city hall
 - Combat does not end if all army is defeated and war machines are remaining
 - Combat does not end if Goblin treason
+- Witchcraft does not give +2 spellpower
 
 ### Suggestions
 
