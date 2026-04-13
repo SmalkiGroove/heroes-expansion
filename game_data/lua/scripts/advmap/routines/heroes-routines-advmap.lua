@@ -1398,5 +1398,5 @@ function DoHeroSpeRoutine_Continuous(player, hero)
 end
 
 
- log(TRACE, "Loaded heroes-routines-advmap.lua")
+log(TRACE, "Loaded heroes-routines-advmap.lua")
 

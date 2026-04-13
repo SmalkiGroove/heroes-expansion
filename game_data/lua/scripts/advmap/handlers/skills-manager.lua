@@ -95,7 +95,7 @@ function AddHeroSkill(hero, skill, mastery)
     local player = GetObjectOwner(hero)
     local level = GetHeroLevel(hero)
     if IsDuelMode() then
-        if DuelAddSkill(player, hero, skill, mastery) then START_TRIGGER_SKILLS_ROUTINES[skill] = nil end
+        if DuelAddSkill(player, hero, skill) == 1 then START_TRIGGER_SKILLS_ROUTINES[skill] = nil end
     end
     if START_TRIGGER_SKILLS_ROUTINES[skill] then
         START_TRIGGER_SKILLS_ROUTINES[skill](player, hero, mastery, level)
@@ -109,7 +109,7 @@ function RemoveHeroSkill(hero, skill, mastery)
     local player = GetObjectOwner(hero)
     local level = GetHeroLevel(hero)
     if IsDuelMode() then
-        if DuelRemoveSkill(player, hero, skill, mastery) then START_TRIGGER_SKILLS_ROUTINES[skill] = nil end
+        if DuelRemoveSkill(player, hero, skill) == 1 then START_TRIGGER_SKILLS_ROUTINES[skill] = nil end
     end
     if START_TRIGGER_SKILLS_ROUTINES[skill] then
         START_TRIGGER_SKILLS_ROUTINES[skill](player, hero, mastery, level)
@@ -127,5 +127,5 @@ function UnbindHeroSkillTrigger(hero)
 end
 
 
- log(TRACE, "Loaded skills-manager.lua")
+log(TRACE, "Loaded skills-manager.lua")
 

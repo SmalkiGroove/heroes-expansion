@@ -252,5 +252,5 @@ end
 
 
 
- log(TRACE, "Loaded combat-utils.lua")
+log(TRACE, "Loaded combat-utils.lua")
 

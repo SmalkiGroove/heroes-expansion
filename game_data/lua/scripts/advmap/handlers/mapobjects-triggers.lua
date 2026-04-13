@@ -226,5 +226,5 @@ function InitializeMapObjects()
     end
 end
 
- log(TRACE, "Loaded mapobjects-triggers.lua")
+log(TRACE, "Loaded mapobjects-triggers.lua")
 

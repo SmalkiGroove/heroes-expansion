@@ -346,5 +346,5 @@ CREATURES_BY_FACTION = {
 }
 
 
- log(TRACE, "Loaded creatures.lua")
+log(TRACE, "Loaded creatures.lua")
 

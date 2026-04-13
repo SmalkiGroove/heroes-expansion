@@ -108,5 +108,5 @@ function InitializeConvertibles()
 end
 
 
- log(TRACE, "Loaded town-conversion.lua")
+log(TRACE, "Loaded town-conversion.lua")
 

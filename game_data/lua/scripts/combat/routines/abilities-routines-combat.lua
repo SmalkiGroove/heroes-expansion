@@ -149,5 +149,5 @@ function DoAbilitiesRoutine_CombatEnd()
 end
 
 
- log(TRACE, "Loaded abilities-routines-combat.lua")
+log(TRACE, "Loaded abilities-routines-combat.lua")
 

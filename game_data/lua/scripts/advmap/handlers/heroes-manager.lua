@@ -183,5 +183,5 @@ function AIRecruitBonus(player, hero)
     end
 end
 
- log(TRACE, "Loaded heroes-manager.lua")
+log(TRACE, "Loaded heroes-manager.lua")
 

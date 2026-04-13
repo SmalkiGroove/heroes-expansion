@@ -89,5 +89,5 @@ function DoTownsRoutine_Weekly(player)
 end
 
 
- log(TRACE, "Loaded towns-routines-advmap.lua")
+log(TRACE, "Loaded towns-routines-advmap.lua")
 

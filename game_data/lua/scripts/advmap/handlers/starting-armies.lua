@@ -120,5 +120,5 @@ function InitializeArmy(hero)
     end
 end
 
- log(TRACE, "Loaded starting-armies.lua")
+log(TRACE, "Loaded starting-armies.lua")
 

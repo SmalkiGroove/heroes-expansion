@@ -226,5 +226,5 @@ function DoArtifactRoutine_CombatEnd(side, name, id, winner)
 end
 
 
- log(TRACE, "Loaded artifacts-routines-combat.lua")
+log(TRACE, "Loaded artifacts-routines-combat.lua")
 

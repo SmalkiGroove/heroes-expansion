@@ -478,5 +478,5 @@ function Lv25(hero)
 end
 
 
- log(TRACE, "Loaded advmap-utils.lua")
+log(TRACE, "Loaded advmap-utils.lua")
 

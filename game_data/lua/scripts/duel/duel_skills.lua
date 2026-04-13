@@ -68,11 +68,9 @@ end
 
 function DuelGovernance(player, hero, level)
     log(DEBUG, "DUEL: DuelGovernance")
-    if mod(level, 2) == 0 then
-        local n = GetHeroSkillMastery(hero, SKILL_GOVERNANCE)
-        local amount = 500 * n
-        GiveResources(player, GOLD, amount, 1)
-    end
+    local n = GetHeroSkillMastery(hero, SKILL_GOVERNANCE)
+    local amount = 500 * n
+    GiveResources(player, GOLD, amount, 1)
 end
 
 function DuelGovernance2(player, hero)
@@ -195,7 +193,6 @@ end
 function DuelEmpiricism2(player, hero)
     log(DEBUG, "DUEL: DuelEmpiricism2")
     LevelUpHero(hero)
-    return 1
 end
 
 function DuelReinforcement(player, hero)
@@ -376,15 +373,18 @@ DUEL_SKILL_LEARNT_EFFECTS = {
     [SKILL_SPIRITISM] = DuelSpiritism,
 }
 
-function DuelAddSkill(player, hero, skill, mastery)
+DUEL_SKILL_OVERRIDE = {
+    [PERK_EMPIRICISM] = 1,
+}
+
+function DuelAddSkill(player, hero, skill)
     if DUEL_SKILL_LEARNT_EFFECTS[skill] then
-        return DUEL_SKILL_LEARNT_EFFECTS[skill](player, hero)
-    else
-        return nil
+        DUEL_SKILL_LEARNT_EFFECTS[skill](player, hero)
     end
+    return (DUEL_SKILL_OVERRIDE[skill] and 1 or nil)
 end
 
-function DuelRemoveSkill(player, hero, skill, mastery)
+function DuelRemoveSkill(player, hero, skill)
     return nil
 end
 

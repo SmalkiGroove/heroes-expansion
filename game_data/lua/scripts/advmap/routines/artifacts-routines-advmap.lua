@@ -557,5 +557,5 @@ function DoArtifactsRoutine_AfterCombat(player, hero, index)
 end
 
 
- log(TRACE, "Loaded artifacts-routines-advmap.lua")
+log(TRACE, "Loaded artifacts-routines-advmap.lua")
 

@@ -899,6 +899,9 @@ function DoSkillsRoutine_Start(player, hero)
         if HasHeroSkill(hero, skill) then
             local mastery = GetHeroSkillMastery(hero, skill)
             Register(VarHeroSkillId(hero, skill), mastery)
+            if IsDuelMode() then
+                if DuelAddSkill(player, hero, skill) == 1 then START_TRIGGER_SKILLS_ROUTINES[skill] = nil end
+            end
             if START_TRIGGER_SKILLS_ROUTINES[skill] then
                 startThread(START_TRIGGER_SKILLS_ROUTINES[skill], player, hero, mastery)
             end
@@ -947,5 +950,5 @@ function DoSkillsRoutine_AfterCombat(player, hero, index)
 end
 
 
- log(TRACE, "Loaded skills-routines-advmap.lua")
+log(TRACE, "Loaded skills-routines-advmap.lua")
 

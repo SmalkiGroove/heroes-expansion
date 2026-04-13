@@ -143,5 +143,5 @@ HEROES = {
 }
 
 
- log(TRACE, "Loaded heroes.lua")
+log(TRACE, "Loaded heroes.lua")
 

@@ -101,8 +101,8 @@ DUEL_TOWNS_COORDINATES = {
 DUEL_ADVENTURE_DAYS = 5 + 2 * DUEL_MODE
 
 DUEL_PLAYER_DATA = {
-    ADVENTURE_DAYS = {DUEL_ADVENTURE_DAYS, DUEL_ADVENTURE_DAYS}
-    TOTAL_EXP = {0, 0}
+    ADVENTURE_DAYS = {DUEL_ADVENTURE_DAYS, DUEL_ADVENTURE_DAYS},
+    TOTAL_EXP = {0, 0},
 }
 
 
@@ -154,7 +154,7 @@ end
 
 function DuelSetup(player, hero)
     log(DEBUG, "DUEL: player "..player.." entered setup stage")
-    SetObjectPosition(hero, DUEL_START_COORDINATES[player].x, DUEL_START_COORDINATES[player].y, 0, 3)
+    SetObjectPosition(hero, DUEL_START_COORDINATES[player].x, DUEL_START_COORDINATES[player].y, 0, 4)
     SetObjectRotation(hero, 0)
     DuelSetPlayerStage(player, DUEL_STAGE_SETUP)
 end
@@ -181,7 +181,7 @@ end
 
 function DuelStaging(player, hero)
     log(DEBUG, "DUEL: player "..player.." entered staging stage")
-    SetObjectPosition(hero, DUEL_STAGING_COORDINATES[player].x, DUEL_STAGING_COORDINATES[player].y, 0, 1)
+    SetObjectPosition(hero, DUEL_STAGING_COORDINATES[player].x, DUEL_STAGING_COORDINATES[player].y, 0, 2)
     SetObjectRotation(hero, 0)
     DUEL_PLAYER_DATA.TOTAL_EXP[player] = GetHeroStat(hero, STAT_EXPERIENCE)
     sleep(10)
@@ -260,7 +260,10 @@ end
 function DuelMain()
     print("DUEL: bootstrap")
 
-    for player = 1,2 do DuelSetPlayerStage(player, DUEL_STAGE_START) DuelInfoWindow0(player) end
+    for player = 1,2 do
+        DuelSetPlayerStage(player, DUEL_STAGE_START)
+        DuelInfoWindow0(player)
+    end
 
     for player = 1,2 do
         SetObjectOwner(DUEL_TOWN_NAME[player][0], 0)

@@ -157,5 +157,5 @@ function DoSkillRoutine_CombatEnd(side, name, id, winner)
 end
 
 
- log(TRACE, "Loaded skills-routines-combat.lua")
+log(TRACE, "Loaded skills-routines-combat.lua")
 

@@ -1141,5 +1141,5 @@ function DoHeroSpeRoutine_CombatEnd(side, name, id, winner)
 end
 
 
- log(TRACE, "Loaded heroes-routines-combat.lua")
+log(TRACE, "Loaded heroes-routines-combat.lua")
 

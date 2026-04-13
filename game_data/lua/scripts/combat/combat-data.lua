@@ -76,5 +76,5 @@ COMBAT_EFFECT_ARTIFACTS = {
 }
 
 
- log(TRACE, "Loaded combat-data.lua")
+log(TRACE, "Loaded combat-data.lua")
 

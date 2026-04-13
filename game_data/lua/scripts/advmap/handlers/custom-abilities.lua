@@ -99,5 +99,5 @@ function CustomAbilityHandler(hero, id)
 end
 
 
- log(TRACE, "Loaded custom-abilities.lua")
+log(TRACE, "Loaded custom-abilities.lua")
 
