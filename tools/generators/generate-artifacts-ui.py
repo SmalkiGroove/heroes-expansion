@@ -3,7 +3,7 @@ import xmltodict
 from jinja2 import Environment, FileSystemLoader
 from collections import defaultdict
 
-debug = False
+debug = True
 dry_run = False
 
 artifacts_xdb_path = "../../game_data/artifacts/GameMechanics/RefTables/Artifacts.xdb"
@@ -30,7 +30,9 @@ slot_names = {
     "PRIMARY": "Right hand",
     "SECONDARY": "Left hand",
     "HEAD": "Head",
+    "SHOULDERS": "Shoulders",
     "CHEST": "Chest",
+    "FEET": "Feet",
     "NECK": "Neck",
     "FINGER": "Ring",
     "MISCSLOT1": "Pocket",
@@ -62,9 +64,10 @@ def get_artifacts_list():
         obj = item['obj']
         
         # Skip ARTIFACT_NONE
-        if artifact_id == "ARTIFACT_NONE":
+        if obj.get('Slot', 'INVENTORY') == "INVENTORY":
             continue
         
+        log(f"Load artifact {artifact_id}...")
         name_ref = obj.get('NameFileRef', {}).get('@href', '')
         desc_ref = obj.get('DescriptionFileRef', {}).get('@href', '')
         icon = obj.get('Icon', {})
@@ -93,6 +96,10 @@ def get_artifact_sets():
         artifact_sets = [artifact_sets]
     
     for artf_set in artifact_sets:
+        if artf_set.get('NameFileRef', {}) == None:
+            continue
+        
+        log(f"Load artifact set {artf_set.get('Effect', '')}...")
         effect = artf_set.get('Effect', '')
         name_ref = artf_set.get('NameFileRef', {}).get('@href', '')
         desc_ref = artf_set.get('DescriptionFileRef', {}).get('@href', '')
