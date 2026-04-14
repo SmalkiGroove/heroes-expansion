@@ -115,7 +115,8 @@ function DuelStartingBonus(player)
     for r = 0,1 do SetPlayerResource(player, r, 2 * amount) end
     for s = 2,5 do SetPlayerResource(player, s, amount) end
     SetPlayerResource(player, FACTION_RESOURCE[DUEL_FACTION[player]], 2 * amount)
-    SetPlayerResource(player, GOLD, 10000 * amount)
+    SetPlayerResource(player, GOLD, 5000 * amount)
+    GiveHeroRandomArtifact(player, hero, ARTIFACT_CLASS_MINOR, DUEL_FACTION[player] + 10)
 end
 
 function DuelMagicGuild(player)
@@ -131,9 +132,16 @@ function DuelBorderGuardKey(player, key)
             MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/BorderGuardKeyOut.txt", "NoneRoutine") return
         end
     end
+    QuestionBoxForPlayers(GetPlayerFilter(player),  {"/Text/Duel/BorderGuardKeyAsk.txt"; key=key}, "DuelBorderGuardKeyConfirm("..player..","..key..")", "NoneRoutine")
+end
+function DuelBorderGuardKeyConfirm(player, key)
+    local gold = GetPlayerResource(player, GOLD)
+    if gold < 50000 then return end
+    SetPlayerResource(player, GOLD, gold - 50000)
     GiveBorderguardKey(player, key)
     MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/BorderGuardKey.txt"; key=key}, "NoneRoutine")
 end
+
 
 function DuelLevelUp(player, hero, level)
     for skill, func in DUEL_SKILL_LEVELUP_EFFECTS do
