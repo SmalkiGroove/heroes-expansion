@@ -207,3 +207,16 @@ Initial beta release !
 - Buff/fix Conjure Phoenix
 - Buff Regeneration spell
 - Level Up skillswheel shows superposed skills
+
+### 0.5.0
+
+#### New
+
+- Duel map !
+- New artifacts and creatures from the mod added to the editor
+- Added spells and training bonuses sections in creatures description window
+- A few new artifacts
+
+#### Fixed/Changed
+
+- Much faster script initialization = shorter freeze time at game start

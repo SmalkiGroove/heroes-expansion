@@ -250,7 +250,7 @@ end
 function DuelBattle(player, hero)
     log(DEBUG, "DUEL: player "..player.." entered battle stage")
     OpenCircleFog(100, 100, UNDERGROUND, 99, player)
-    ChangeHeroStat(hero, STAT_MANA_POINTS, 999)
+    ChangeHeroStat(hero, STAT_MANA_POINTS, 999) sleep()
     for skill, func in DUEL_SKILL_BATTLE_EFFECTS do
         if HasHeroSkill(hero, skill) then func(player, hero) end
     end
