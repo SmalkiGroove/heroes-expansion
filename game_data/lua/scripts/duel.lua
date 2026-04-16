@@ -23,12 +23,36 @@ function DuelGetPlayerStage(player)
     return 0 + GetGameVar(var)
 end
 
-function DuelInfoWindow0(player) MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/InfoStart.txt", "NoneRoutine") end
-function DuelInfoWindow1(player) MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/InfoSetup.txt", "NoneRoutine") end
-function DuelInfoWindow2(player) MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/InfoAdventure.txt", "NoneRoutine") end
-function DuelInfoWindow3(player) MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/InfoStaging.txt", "NoneRoutine") end
-function DuelInfoWindow4(player) MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/InfoCastle.txt", "NoneRoutine") end
-function DuelInfoWindow5(player) MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/InfoBattle.txt", "NoneRoutine") end
+function DuelInfoWindow0(player)
+    MessageBoxForPlayers(GetPlayerFilter(player),
+        "/Text/Duel/InfoStart.txt",
+        "NoneRoutine")
+end
+function DuelInfoWindow1(player)
+    MessageBoxForPlayers(GetPlayerFilter(player),
+        "/Text/Duel/InfoSetup.txt",
+        "NoneRoutine")
+end
+function DuelInfoWindow2(player)
+    MessageBoxForPlayers(GetPlayerFilter(player),
+        {"/Text/Duel/InfoAdventure.txt"; days=DUEL_PLAYER_DATA.ADVENTURE_DAYS[player]},
+        "NoneRoutine")
+end
+function DuelInfoWindow3(player)
+    MessageBoxForPlayers(GetPlayerFilter(player),
+        "/Text/Duel/InfoStaging.txt",
+        "NoneRoutine")
+end
+function DuelInfoWindow4(player)
+    MessageBoxForPlayers(GetPlayerFilter(player),
+        "/Text/Duel/InfoCastle.txt",
+        "NoneRoutine")
+end
+function DuelInfoWindow5(player)
+    MessageBoxForPlayers(GetPlayerFilter(player),
+        "/Text/Duel/InfoBattle.txt",
+        "NoneRoutine")
+end
 
 DUEL_HERO = {GetPlayerHeroes(1)[0], GetPlayerHeroes(2)[0]}
 MoveHeroRealTime(DUEL_HERO[1], 103, 209, 0)
@@ -116,6 +140,7 @@ function DuelStartingBonus(player)
     for s = 2,5 do SetPlayerResource(player, s, amount) end
     SetPlayerResource(player, FACTION_RESOURCE[DUEL_FACTION[player]], 2 * amount)
     SetPlayerResource(player, GOLD, 10000 * amount)
+    GiveHeroRandomArtifact(player, DUEL_HERO[player], ARTIFACT_CLASS_MINOR, DUEL_FACTION[player] + 10)
 end
 
 function DuelMagicGuild(player)
@@ -128,12 +153,26 @@ end
 function DuelBorderGuardKey(player, key)
     for k = 1,8 do
         if HasBorderguardKey(player, k) then
-            MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Duel/BorderGuardKeyOut.txt", "NoneRoutine") return
+            MessageBoxForPlayers(GetPlayerFilter(player),
+                "/Text/Duel/BorderGuardKeyOut.txt",
+                "NoneRoutine"
+            ) return
         end
     end
+    QuestionBoxForPlayers(GetPlayerFilter(player),
+        {"/Text/Duel/BorderGuardKeyAsk.txt"; key=key},
+        "DuelBorderGuardKeyConfirm("..player..","..key..")",
+        "NoneRoutine"
+    )
+end
+function DuelBorderGuardKeyConfirm(player, key)
+    local gold = GetPlayerResource(player, GOLD)
+    if gold < 50000 then return end
+    SetPlayerResource(player, GOLD, gold - 50000)
     GiveBorderguardKey(player, key)
     MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/BorderGuardKey.txt"; key=key}, "NoneRoutine")
 end
+
 
 function DuelLevelUp(player, hero, level)
     for skill, func in DUEL_SKILL_LEVELUP_EFFECTS do
@@ -164,15 +203,20 @@ function DuelAdventure(player, hero)
     for skill, func in DUEL_SKILL_ADVENTURE_EFFECTS do
         if HasHeroSkill(hero, skill) then func(player, hero) end
     end
-    ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
+    ChangeHeroStat(hero, STAT_MOVE_POINTS, 9999)
     DuelSetPlayerStage(player, DUEL_STAGE_ADVENTURE)
+    DuelAdventureStart(player, hero)
+end
+
+function DuelAdventureStart(player, hero)
+    DuelInfoWindow2(player)
 end
 
 function DuelAdventureDay(player, hero)
-    local days = DUEL_PLAYER_DATA.ADVENTURE_DAYS[player]
+    local days = DUEL_PLAYER_DATA.ADVENTURE_DAYS[player] - 1
     if days > 0 then
         MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/NewDay.txt"; days=days}, "NoneRoutine")
-        DUEL_PLAYER_DATA.ADVENTURE_DAYS[player] = days - 1
+        DUEL_PLAYER_DATA.ADVENTURE_DAYS[player] = days
         ChangeHeroStat(hero, STAT_MOVE_POINTS, 9999)
     else
         DuelStaging(player, hero)
@@ -206,7 +250,7 @@ end
 function DuelBattle(player, hero)
     log(DEBUG, "DUEL: player "..player.." entered battle stage")
     OpenCircleFog(100, 100, UNDERGROUND, 99, player)
-    ChangeHeroStat(hero, STAT_MANA_POINTS, 999)
+    ChangeHeroStat(hero, STAT_MANA_POINTS, 999) sleep()
     for skill, func in DUEL_SKILL_BATTLE_EFFECTS do
         if HasHeroSkill(hero, skill) then func(player, hero) end
     end

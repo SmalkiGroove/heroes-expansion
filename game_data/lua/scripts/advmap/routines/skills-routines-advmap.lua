@@ -895,11 +895,12 @@ AFTER_COMBAT_TRIGGER_SKILLS_ROUTINES = {
 
 function DoSkillsRoutine_Start(player, hero)
     log(DEBUG, "$ DoSkillsRoutine_Start - "..hero)
-    for skill = 1,207 do
+    for skill = 1,254 do
         if HasHeroSkill(hero, skill) then
             local mastery = GetHeroSkillMastery(hero, skill)
             Register(VarHeroSkillId(hero, skill), mastery)
             if IsDuelMode() then
+                repeat sleep() until DuelAddSkill
                 if DuelAddSkill(player, hero, skill) == 1 then START_TRIGGER_SKILLS_ROUTINES[skill] = nil end
             end
             if START_TRIGGER_SKILLS_ROUTINES[skill] then
