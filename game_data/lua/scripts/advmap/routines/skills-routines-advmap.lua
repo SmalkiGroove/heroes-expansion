@@ -906,6 +906,7 @@ function DoSkillsRoutine_Start(player, hero)
             if START_TRIGGER_SKILLS_ROUTINES[skill] then
                 startThread(START_TRIGGER_SKILLS_ROUTINES[skill], player, hero, mastery)
             end
+            if skill == PERK_WITCHCRAFT then GiveHeroSkill(hero, skill) end
         end
     end
 end

@@ -11,11 +11,11 @@ end
 
 -- Check Duel Map
 startThread(function()
-	print("Checking for duel map...")
+	log(INFO, "Checking for duel map...")
 	DUEL_MODE = -1
 	GetObjectiveState('DUEL', FIRST_PLAYER)
 	DUEL_MODE = GetDifficulty()
-	print("Duel map detected!")
+	log(INFO, "Duel map detected!")
 end)
 
 SCRIPTS_GROUP = {
