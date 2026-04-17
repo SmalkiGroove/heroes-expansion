@@ -61,7 +61,7 @@ ARTIFACT_DRAGON_WING_MANTLE = 39                    -- flying creatures have +5%
 ARTIFACT_DRAGON_TEETH_NECKLACE = 40                 -- caster creatures have +5% initiative
 ARTIFACT_DRAGON_TALON_CROWN = 41                    -- war machines have +10% initiative
 ARTIFACT_DRAGON_EYE_RING = 42                       -- ranged creatures have +5% initiative
-ARTIFACT_DRAGON_FLAME_TONGUE = 43                   -- reduce enemy ice spells and immune to cold death TODO
+ARTIFACT_DRAGON_FLAME_TONGUE = 43                   -- reduce enemy ice spells and immune to cold death
 ARTIFACT_ROBE_OF_THE_MAGISTER = 44                  -- gain exp based on knowledge **
 ARTIFACT_STAFF_OF_THE_MAGISTER = 45                 -- negates magic-resistance
 ARTIFACT_CROWN_OF_THE_MAGISTER = 46                 -- /
@@ -124,7 +124,7 @@ ARTIFACT_ALTAR_OF_ELEMENTS_SHARD = 102	            -- increase elemental spell d
 ARTIFACT_ELDENAS_RED_SCARF = 103                    -- level up grants t1 creatures **
 ARTIFACT_ELDENAS_CIRCLET = 104                      -- level up grants t3 creatures **
 ARTIFACT_NAGA_COMMANDERS_HELMET = 105               -- 
-ARTIFACT_NECKLACE_OF_THE_BLOODY_CLAW = 106          -- creatures have +50% max damage
+ARTIFACT_NECKLACE_OF_THE_BLOODY_CLAW = 106          -- creatures have +25% max damage
 ARTIFACT_RING_OF_CELERITY = 107                     -- hero has +2 initiative
 ARTIFACT_ELDENAS_RED_COAT = 108                     -- level up grants t2 creatures **
 ARTIFACT_RING_OF_LIFE = 109                         -- 
@@ -188,7 +188,7 @@ ARTIFACT_SHIELD_OF_THE_WOLF = 166                   -- /
 ARTIFACT_HELM_OF_THE_WARMAGE = 167                  -- learn new spell on level up **
 ARTIFACT_CELESTIAL_JUSTICAR_HELMET = 168            -- 
 ARTIFACT_RING_OF_STRENGTH = 169                     -- creatures have +3 hp
-ARTIFACT_SPEAR_OF_THE_FROST_LORD = 170              -- creatures deal 20% additional ice damage TODO
+ARTIFACT_SPEAR_OF_THE_FROST_LORD = 170              -- creatures deal 20% additional ice damage
 ARTIFACT_STAFF_OF_THE_LYRE = 171                    -- every 4 victories, gain +1 to the lowest stat **
 ARTIFACT_SANCTUARYS_CROWN = 172                     -- immunity to hypnotize
 ARTIFACT_PENDANT_OF_THE_LYRE = 173                  -- every 4 victories, gain mana and experience **
@@ -531,7 +531,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_HELM_OF_THE_WARMAGE]           = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_WARMAGE, special=0},
     [ARTIFACT_CELESTIAL_JUSTICAR_HELMET]     = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_ARCHANGEL, special=1}, --disabled
     [ARTIFACT_RING_OF_STRENGTH]              = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_NONE, special=0},
-    [ARTIFACT_SPEAR_OF_THE_FROST_LORD]       = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_FROST, special=1}, --disabled
+    [ARTIFACT_SPEAR_OF_THE_FROST_LORD]       = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_FROST, special=0},
     [ARTIFACT_STAFF_OF_THE_LYRE]             = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_ENLIGHTEN, special=0},
     [ARTIFACT_SANCTUARYS_CROWN]              = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_PENDANT_OF_THE_LYRE]           = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_NECK, set=ARTIFACT_SET_ENLIGHTEN, special=0},

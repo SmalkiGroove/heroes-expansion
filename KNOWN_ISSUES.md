@@ -54,3 +54,6 @@
 - Inferno sacrificial pit not required for city hall
 - Witchcraft perk has no effect if natively known
 - Combat does not end if Goblin treason
+- Despotism doesn't reduce army morale
+- Spear of the Frost Lord effect now works
+- Dragon Flame Tongue immunity to cold death now works
