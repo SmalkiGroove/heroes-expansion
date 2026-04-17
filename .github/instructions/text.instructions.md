@@ -1,3 +1,6 @@
+---
+applyTo: "game_texts/**/*.txt"
+---
 # Heroes 5 Mod: Text Guide
 
 ## Structure

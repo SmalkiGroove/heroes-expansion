@@ -1,5 +1,6 @@
 import sys
 import os
+import re
 from deep_translator import (GoogleTranslator)
 
 workdir = os.path.dirname(os.path.abspath(__file__))
@@ -12,6 +13,24 @@ translators = {
     'FR': GoogleTranslator(source='en',target='fr'),
 }
 
+def translate_text(text, translator):
+    tag_pattern = r'<[^>]+>'
+    segments = re.split(f'({tag_pattern})', text)
+    translated_segments = []
+    for segment in segments:
+        if re.match(tag_pattern, segment):
+            translated_segments.append(segment)
+        elif not segment:
+            translated_segments.append(segment)
+        else:
+            try:
+                translated_text = translator.translate(text=segment)
+                translated_segments.append(translated_text if translated_text else segment)
+            except Exception as err:
+                print(f"ERROR translating segment '{segment}': {err}")
+                translated_segments.append(segment)
+    return ''.join(translated_segments)
+
 original = ""
 translation = ""
 for root, dirs, files in os.walk(os.path.join(workdir, texts_root_path, "texts-EN")):
@@ -20,23 +39,22 @@ for root, dirs, files in os.walk(os.path.join(workdir, texts_root_path, "texts-E
             with open(os.path.join(root, file), 'r', encoding='utf-16-LE') as source_file:
                 original = source_file.read()
         except Exception as err:
-            print(f"ERROR: {err}")
+            print(f"ERROR reading file: {err}")
             continue
-        for lang,translator in translators.items():
-            target_path = root.replace('EN',lang)
+        for lang, translator in translators.items():
+            target_path = root.replace('EN', lang)
             target_file = os.path.join(target_path, file)
             if not os.path.exists(target_path):
                 os.makedirs(target_path)
             if not os.path.isfile(target_file):
                 print(target_file)
                 try:
-                    translation = translator.translate(text=original)
+                    translation = translate_text(original, translator)
                 except Exception as err:
                     print(f"ERROR: {err}")
                     continue
                 if translation != None:
                     with open(target_file, 'w', encoding='utf-16-LE') as translated_file:
                         translated_file.write(translation)
-                    # print(f"{original} => {translation}")
 
     

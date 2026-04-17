@@ -1,7 +1,7 @@
 ---
-applyTo: "**"
+applyTo: "game_data/lua/**/*.lua"
 ---
-# Lua scripts instructions
+# Heroes 5 Mod: Lua scripts instructions
 
 The game supports lua 4.0 scripts without any library available (no math or table functions for example).
 
