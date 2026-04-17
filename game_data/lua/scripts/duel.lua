@@ -302,7 +302,7 @@ end
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
 function DuelMain()
-    print("DUEL: bootstrap")
+    log(DEBUG, "DUEL: bootstrap")
 
     for player = 1,2 do
         DuelSetPlayerStage(player, DUEL_STAGE_START)
@@ -325,6 +325,6 @@ function DuelMain()
 
     for player = 1,2 do DuelTownRecruits(player) end
 
-    print("DUEL: start")
+    log(DEBUG, "DUEL: start")
     for player = 1,2 do startThread(DuelLoop, player) end
 end

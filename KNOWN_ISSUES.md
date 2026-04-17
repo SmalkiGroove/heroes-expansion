@@ -19,10 +19,6 @@
 ### Bugs
 
 - Shantiri Moon Disc blocks all light magic
-- Inferno sacrificial pit not required for city hall
-- Combat does not end if all army is defeated and war machines are remaining
-- Combat does not end if Goblin treason
-- Witchcraft does not give +2 spellpower
 
 ### Suggestions
 
@@ -52,5 +48,9 @@
 - Starting bonus artifact not working
 - Elem orb spawn position random
 - Nerf Kha Beleth late game
-- Frozen heart not in frost artfset
+- Frozen heart not in frost artifact fset
 - Add NCF creatures in editor
+- Leadership give +2 Luck instead of Precision
+- Inferno sacrificial pit not required for city hall
+- Witchcraft perk has no effect if natively known
+- Combat does not end if Goblin treason

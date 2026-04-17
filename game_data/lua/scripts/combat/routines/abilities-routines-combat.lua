@@ -69,23 +69,42 @@ function Routine_AbilityMineField(side, unit)
 end
 
 function Routine_AbilityRefreshMana4(side, unit)
+    log(DEBUG, "$ Routine_AbilityRefreshMana4")
     RefreshMana(side, unit, 4)
 end
 
 function Routine_AbilityRefreshMana20Percent(side, unit)
+    log(DEBUG, "$ Routine_AbilityRefreshMana20Percent")
     local value = round(GetUnitMaxManaPoints(unit) * 0.2)
     RefreshMana(side, unit, value)
 end
 
 function Routine_AbilityManaTempest(side, unit)
     log(DEBUG, "$ Routine_AbilityManaTempest")
-    startThread(Routine_AbilityManaTempestThread, side, unit)
+    local thread = function(side, unit)
+    end
+    startThread(thread, side, unit)
+end
+
+function Routine_AbilityTreachery(side, unit)
+    log(DEBUG, "$ Routine_AbilityTreachery")
+    local thread = function(side, unit)
+        repeat sleep(10) until GetUnitSide(unit) ~= side
+        STARTING_ARMY[side][unit] = nil
+        local finish = 1-side
+        for i,_ in GetUnits(side, CREATURE) do finish = nil; break end
+        if finish ~= nil then ManageCombatEnd(finish) end
+    end
+    startThread(thread, side, unit)
 end
 
 
 
 COMBAT_START_ABILITIES_ROUTINES = {
     [CREATURE_ANGER_TREANT] = Routine_AbilityRageOfTheForest,
+    [CREATURE_GOBLIN] = Routine_AbilityTreachery,
+    [CREATURE_GOBLIN_TRAPPER] = Routine_AbilityTreachery,
+    [CREATURE_GOBLIN_DEFILER] = Routine_AbilityTreachery,
 }
 
 COMBAT_TURN_ABILITIES_ROUTINES = {
