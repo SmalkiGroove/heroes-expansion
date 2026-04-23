@@ -24,7 +24,6 @@
 
 - Darkstorm hero totem model
 - Add ARMG templates
-- Magnetic Field redirect projectiles
 - Make Earthquake deal magical earth damage
 
 ### Balance
@@ -57,3 +56,7 @@
 - Despotism doesn't reduce army morale
 - Spear of the Frost Lord effect now works
 - Dragon Flame Tongue immunity to cold death now works
+- Celestial Justicar's Armor melee damage reduction now works
+- Dragonsbane effects now work
+- Phoenix Feather's Cape immunity to freeze now works
+- Collar of Primal Rage bonus rage points now works
