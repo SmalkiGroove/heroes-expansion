@@ -154,7 +154,7 @@ ARTIFACT_BUTCHER_GLAIVE = 132	                    -- increase melee damage
 ARTIFACT_CELESTIAL_JUSTICAR_SHIELD = 133            -- reduce ranged damage
 ARTIFACT_STAFF_OF_THE_SAINT = 134                   -- gain spellpower for light magic spells
 ARTIFACT_BACKPACK_OF_THE_OPEN_ROAD = 135            -- reset hero movement points on level up **
-ARTIFACT_MAGMA_SHIELD = 136                         -- 
+ARTIFACT_MAGMA_SHIELD = 136                         -- TODO
 ARTIFACT_POTION_OF_MANA = 137	                    -- gain mana next turn **
 ARTIFACT_POTION_OF_STAMINA = 138		            -- gain movement points next turn **
 ARTIFACT_POTION_OF_EXPERIENCE = 139                 -- gain exp points next turn **
@@ -524,7 +524,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_LEGENDARY_BOOTS]               = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_GOLDEN_GOOSE]                  = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=1},
     [ARTIFACT_162]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_BACKPACK, set=ARTIFACT_SET_NONE, special=1},
-    [ARTIFACT_ARDENT_SMITH]                  = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_NONE, special=1},
+    [ARTIFACT_ARDENT_SMITH]                  = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_CLOAK_OF_DARKNESS]             = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_DUNGEON, special=0},
     [ARTIFACT_SHANTIRI_BREASTPLATE]          = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_BODY, set=ARTIFACT_SET_NONE, special=1}, --disabled
     [ARTIFACT_SHIELD_OF_THE_WOLF]            = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_BESTIAL, special=0},
