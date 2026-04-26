@@ -56,7 +56,12 @@
 - Despotism doesn't reduce army morale
 - Spear of the Frost Lord effect now works
 - Dragon Flame Tongue immunity to cold death now works
+- Shield of Crystal Ice immunity to ignite now works
 - Celestial Justicar's Armor melee damage reduction now works
-- Dragonsbane effects now work
+- Dragonsbane damages ignoring defense now work
 - Phoenix Feather's Cape immunity to freeze now works
 - Collar of Primal Rage bonus rage points now works
+- Codex of the Saint atb reset now works
+- Staff of the Saint bonus spellpower now works
+- Avenger Bow bonus ranged damage now works
+- Butcher Glaive bonus melee damage now works

@@ -27,7 +27,7 @@ ARTIFACT_TITANS_TRIDENT = 5                         -- lightning spells damage
 ARTIFACT_STAFF_OF_THE_NETHERWORLD = 6               -- decrease enemy initiative
 ARTIFACT_NO_RETREAT = 7                             -- no retreat
 ARTIFACT_FOUR_LEAF_CLOVER = 8                       -- /
-ARTIFACT_SHIELD_OF_CRYSTAL_ICE = 9                  -- reduce enemy fire spells and immune to ignite TODO
+ARTIFACT_SHIELD_OF_CRYSTAL_ICE = 9                  -- reduce enemy fire spells and immune to ignite
 ARTIFACT_OCEAN_CHARM = 10                           -- more movement on sea
 ARTIFACT_CROWN_OF_COURAGE = 11                      -- /
 ARTIFACT_ALL_SEEING_CROWN = 12                      -- increase vision range
@@ -137,22 +137,22 @@ ARTIFACT_CLOAK_OF_THE_SAINT = 115                   -- immunity to plague
 ARTIFACT_GENJIS_HAT = 116                           -- reduce mana cost by 1
 ARTIFACT_GENJIS_VEST = 117                          -- magic proof TODO
 ARTIFACT_GENJIS_SANDALS = 118                       -- hero has +1 initiative TODO
-ARTIFACT_GENJIS_SILKSWORD = 119                     -- 
+ARTIFACT_GENJIS_SILKSWORD = 119                     -- ignore enemy magic-proof TODO
 ARTIFACT_SENTINELS_HELM = 120                       -- gain battle boost on level up **
 ARTIFACT_SENTINELS_BOOTS = 121                      -- gain movement and morale after battle with no loss **
 ARTIFACT_SENTINELS_SHIELD = 122                     -- reduce ranged damage
 ARTIFACT_OBSIDIAN_ARMOR = 123                       -- immunity to armaggeddon
 ARTIFACT_ELRATHS_DIVINE_SHIELD = 124                -- reduce magic damage taken from all elements
 ARTIFACT_ROD_OF_TORMENT = 125                       -- enemy creatures have -2 morale
-ARTIFACT_CODEX_OF_THE_SAINT = 126                   -- casting spells use less atb TODO
+ARTIFACT_CODEX_OF_THE_SAINT = 126                   -- casting spells use less atb
 ARTIFACT_VIZIRS_CAP = 127                           -- gain weekly golds per dwelling **
 ARTIFACT_PLUNDERER_VEST = 128                       -- creatures have +1 hp
-ARTIFACT_AVENGER_BOW = 129                          -- increase ranged damage TODO
+ARTIFACT_AVENGER_BOW = 129                          -- increase ranged damage
 ARTIFACT_CAPTAINS_HOOK = 130                        -- 
 ARTIFACT_PLUNDERER_SHOES = 131                      -- creatures have +1 initiative
-ARTIFACT_BUTCHER_GLAIVE = 132	                    -- increase melee damage TODO
+ARTIFACT_BUTCHER_GLAIVE = 132	                    -- increase melee damage
 ARTIFACT_CELESTIAL_JUSTICAR_SHIELD = 133            -- reduce ranged damage
-ARTIFACT_STAFF_OF_THE_SAINT = 134                   -- gain spellpower for light magic spells TODO
+ARTIFACT_STAFF_OF_THE_SAINT = 134                   -- gain spellpower for light magic spells
 ARTIFACT_BACKPACK_OF_THE_OPEN_ROAD = 135            -- reset hero movement points on level up **
 ARTIFACT_PHOENIX_FEATHER = 136                      -- 
 ARTIFACT_POTION_OF_MANA = 137	                    -- gain mana next turn **
@@ -487,15 +487,15 @@ ARTIFACTS_DATA = {
     [ARTIFACT_OBSIDIAN_ARMOR]                = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_BODY, set=ARTIFACT_SET_INFERNO, special=0},
     [ARTIFACT_ELRATHS_DIVINE_SHIELD]         = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_ROD_OF_TORMENT]                = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_NONE, special=0},
-    [ARTIFACT_CODEX_OF_THE_SAINT]            = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_SAINT, special=1}, --disabled
+    [ARTIFACT_CODEX_OF_THE_SAINT]            = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_SAINT, special=0},
     [ARTIFACT_VIZIRS_CAP]                    = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_VIZIR, special=0},
     [ARTIFACT_PLUNDERER_VEST]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_BODY, set=ARTIFACT_SET_BANDIT, special=0},
-    [ARTIFACT_AVENGER_BOW]                   = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_SYLVAN, special=1}, --disabled
+    [ARTIFACT_AVENGER_BOW]                   = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_SYLVAN, special=0},
     [ARTIFACT_CAPTAINS_HOOK]                 = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_SAILOR, special=1},
     [ARTIFACT_PLUNDERER_SHOES]               = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_BANDIT, special=0},
-    [ARTIFACT_BUTCHER_GLAIVE]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_NONE, special=1}, --disabled
+    [ARTIFACT_BUTCHER_GLAIVE]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_CELESTIAL_JUSTICAR_SHIELD]     = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_ARCHANGEL, special=0},
-    [ARTIFACT_STAFF_OF_THE_SAINT]            = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_SAINT, special=1}, --disabled
+    [ARTIFACT_STAFF_OF_THE_SAINT]            = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_SAINT, special=0},
     [ARTIFACT_BACKPACK_OF_THE_OPEN_ROAD]     = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_WANDERER, special=0},
     [ARTIFACT_PHOENIX_FEATHER]               = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=1},
     [ARTIFACT_POTION_OF_MANA]                = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=1},
