@@ -154,7 +154,7 @@ ARTIFACT_BUTCHER_GLAIVE = 132	                    -- increase melee damage
 ARTIFACT_CELESTIAL_JUSTICAR_SHIELD = 133            -- reduce ranged damage
 ARTIFACT_STAFF_OF_THE_SAINT = 134                   -- gain spellpower for light magic spells
 ARTIFACT_BACKPACK_OF_THE_OPEN_ROAD = 135            -- reset hero movement points on level up **
-ARTIFACT_PHOENIX_FEATHER = 136                      -- 
+ARTIFACT_MAGMA_SHIELD = 136                         -- 
 ARTIFACT_POTION_OF_MANA = 137	                    -- gain mana next turn **
 ARTIFACT_POTION_OF_STAMINA = 138		            -- gain movement points next turn **
 ARTIFACT_POTION_OF_EXPERIENCE = 139                 -- gain exp points next turn **
@@ -181,7 +181,7 @@ ARTIFACT_SHACKLES_OF_THE_LAST_MAN = 159             -- enemy creatures have -2 a
 ARTIFACT_LEGENDARY_BOOTS = 160                      -- creatures get rider charge ability
 ARTIFACT_GOLDEN_GOOSE = 161                         -- all attacks are lucky
 ARTIFACT_162 = 162                                  -- creatures get child of light ability
-ARTIFACT_163 = 163                                  -- creatures get flame wave ability
+ARTIFACT_ARDENT_SMITH = 163                         -- creatures get flame wave ability
 ARTIFACT_CLOAK_OF_DARKNESS = 164                    -- enemy creatures have -1 luck
 ARTIFACT_SHANTIRI_BREASTPLATE = 165                 -- immunity to earthquake TODO
 ARTIFACT_SHIELD_OF_THE_WOLF = 166                   -- /
@@ -497,7 +497,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_CELESTIAL_JUSTICAR_SHIELD]     = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_ARCHANGEL, special=0},
     [ARTIFACT_STAFF_OF_THE_SAINT]            = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_SAINT, special=0},
     [ARTIFACT_BACKPACK_OF_THE_OPEN_ROAD]     = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_WANDERER, special=0},
-    [ARTIFACT_PHOENIX_FEATHER]               = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=1},
+    [ARTIFACT_MAGMA_SHIELD]                  = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_NONE, special=1},
     [ARTIFACT_POTION_OF_MANA]                = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=1},
     [ARTIFACT_POTION_OF_STAMINA]             = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=1},
     [ARTIFACT_POTION_OF_EXPERIENCE]          = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=1},
@@ -524,7 +524,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_LEGENDARY_BOOTS]               = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_GOLDEN_GOOSE]                  = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=1},
     [ARTIFACT_162]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_BACKPACK, set=ARTIFACT_SET_NONE, special=1},
-    [ARTIFACT_163]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_BACKPACK, set=ARTIFACT_SET_NONE, special=1},
+    [ARTIFACT_ARDENT_SMITH]                  = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_NONE, special=1},
     [ARTIFACT_CLOAK_OF_DARKNESS]             = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_DUNGEON, special=0},
     [ARTIFACT_SHANTIRI_BREASTPLATE]          = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_BODY, set=ARTIFACT_SET_NONE, special=1}, --disabled
     [ARTIFACT_SHIELD_OF_THE_WOLF]            = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_BESTIAL, special=0},

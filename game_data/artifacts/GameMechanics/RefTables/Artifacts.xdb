@@ -240,7 +240,7 @@
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>4</Defence>
+					<Defence>5</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
@@ -3413,26 +3413,26 @@
 			</obj>
 		</Item>	
 		<Item>
-			<ID>ARTIFACT_PHOENIX_FEATHER</ID>
+			<ID>ARTIFACT_MAGMA_SHIELD</ID>
 			<obj>
-				<NameFileRef href="/Text/Game/Artifacts/PhoenixFeather/Name.txt"/>
-				<DescriptionFileRef href="/Text/Game/Artifacts/PhoenixFeather/Description.txt"/>
+				<NameFileRef href="/Text/Game/Artifacts/MagmaShield/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artifacts/MagmaShield/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MINOR</Type>
-				<Slot>MISCSLOT1</Slot>
-				<Icon href="/Textures/HeroScreen/Artifacts/PhoenixFeather.xdb#xpointer(/Texture)"/>
-				<CostOfGold>1</CostOfGold>
-				<AIValue>0</AIValue>
+				<Type>ARTF_CLASS_RELIC</Type>
+				<Slot>SECONDARY</Slot>
+				<Icon href="/Textures/HeroScreen/Artifacts/MagmaShield.xdb#xpointer(/Texture)"/>
+				<CostOfGold>20000</CostOfGold>
+				<AIValue>30000</AIValue>
 				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>0</Defence>
+					<Defence>5</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
-				<ArtifactShared href="/MapObjects/Artifacts/PhoenixFeather.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
+				<ArtifactShared href="/MapObjects/Artifacts/MagmaShield.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
 				<PresetPrice>0</PresetPrice>
 			</obj>
@@ -4088,26 +4088,26 @@
 			</obj>
 		</Item>	
 		<Item>
-			<ID>ARTIFACT_163</ID>
+			<ID>ARTIFACT_ARDENT_SMITH</ID>
 			<obj>
-				<NameFileRef href="/Text/Game/Artifacts/XXX/Name.txt"/>
-				<DescriptionFileRef href="/Text/Game/Artifacts/XXX/Description.txt"/>
+				<NameFileRef href="/Text/Game/Artifacts/ArdentSmith/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artifacts/ArdentSmith/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MINOR</Type>
-				<Slot>INVENTORY</Slot>
-				<Icon href="/Textures/Icons/Blank.xdb#xpointer(/Texture)"/>
-				<CostOfGold>1</CostOfGold>
-				<AIValue>1</AIValue>
+				<Type>ARTF_CLASS_MAJOR</Type>
+				<Slot>PRIMARY</Slot>
+				<Icon href="/Textures/HeroScreen/Artifacts/ArdentSmith.xdb#xpointer(/Texture)"/>
+				<CostOfGold>10000</CostOfGold>
+				<AIValue>20000</AIValue>
 				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
 				<HeroStatsModif>
-					<Attack>0</Attack>
+					<Attack>2</Attack>
 					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
-				<ArtifactShared href="/MapObjects/Artifacts/XXX.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
+				<ArtifactShared href="/MapObjects/Artifacts/ArdentSmith.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>false</AvailableForPresets>
 				<PresetPrice>0</PresetPrice>
 			</obj>
