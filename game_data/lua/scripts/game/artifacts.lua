@@ -135,9 +135,9 @@ ARTIFACT_SENTINELS_BRACER = 113                     -- /
 ARTIFACT_ANKH_OF_THE_SAINT = 114                    -- 
 ARTIFACT_CLOAK_OF_THE_SAINT = 115                   -- immunity to plague
 ARTIFACT_GENJIS_HAT = 116                           -- reduce mana cost by 1
-ARTIFACT_GENJIS_VEST = 117                          -- magic proof TODO
-ARTIFACT_GENJIS_SANDALS = 118                       -- hero has +1 initiative TODO
-ARTIFACT_GENJIS_SILKSWORD = 119                     -- ignore enemy magic-proof TODO
+ARTIFACT_GENJIS_VEST = 117                          -- magic proof
+ARTIFACT_GENJIS_SANDALS = 118                       -- hero has +1 initiative
+ARTIFACT_GENJIS_SILKSWORD = 119                     -- ignore enemy magic-proof
 ARTIFACT_SENTINELS_HELM = 120                       -- gain battle boost on level up **
 ARTIFACT_SENTINELS_BOOTS = 121                      -- gain movement and morale after battle with no loss **
 ARTIFACT_SENTINELS_SHIELD = 122                     -- reduce ranged damage
@@ -477,10 +477,10 @@ ARTIFACTS_DATA = {
     [ARTIFACT_SENTINELS_BRACER]              = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_HAVEN, special=0},
     [ARTIFACT_ANKH_OF_THE_SAINT]             = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_NECK, set=ARTIFACT_SET_SAINT, special=1}, --disabled
     [ARTIFACT_CLOAK_OF_THE_SAINT]            = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_SAINT, special=0},
-    [ARTIFACT_GENJIS_HAT]                    = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_GENJI, special=1}, --disabled
-    [ARTIFACT_GENJIS_VEST]                   = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_BODY, set=ARTIFACT_SET_GENJI, special=1}, --disabled
-    [ARTIFACT_GENJIS_SANDALS]                = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_GENJI, special=1}, --disabled
-    [ARTIFACT_GENJIS_SILKSWORD]              = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_GENJI, special=1}, --disabled
+    [ARTIFACT_GENJIS_HAT]                    = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_GENJI, special=0},
+    [ARTIFACT_GENJIS_VEST]                   = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_BODY, set=ARTIFACT_SET_GENJI, special=0},
+    [ARTIFACT_GENJIS_SANDALS]                = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_GENJI, special=0},
+    [ARTIFACT_GENJIS_SILKSWORD]              = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_GENJI, special=0},
     [ARTIFACT_SENTINELS_HELM]                = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_HAVEN, special=0},
     [ARTIFACT_SENTINELS_BOOTS]               = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_HAVEN, special=0},
     [ARTIFACT_SENTINELS_SHIELD]              = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_HAVEN, special=0},
