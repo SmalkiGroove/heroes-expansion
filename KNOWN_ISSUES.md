@@ -18,7 +18,7 @@
 
 ### Bugs
 
-- Shantiri Moon Disc blocks all light magic
+- Hero (kha beleth only?) swaping his spellpower for attack after months of game
 
 ### Suggestions
 
@@ -47,7 +47,7 @@
 - Starting bonus artifact not working
 - Elem orb spawn position random
 - Nerf Kha Beleth late game
-- Frozen heart not in frost artifact fset
+- Frozen heart not in frost artifact set
 - Add NCF creatures in editor
 - Leadership give +2 Luck instead of Precision
 - Inferno sacrificial pit not required for city hall
@@ -58,10 +58,11 @@
 - Dragon Flame Tongue immunity to cold death now works
 - Shield of Crystal Ice immunity to ignite now works
 - Celestial Justicar's Armor melee damage reduction now works
-- Dragonsbane damages ignoring defense now work
+- Dragonsbane damages ignoring defense now works
 - Phoenix Feather's Cape immunity to freeze now works
 - Collar of Primal Rage bonus rage points now works
 - Codex of the Saint atb reset now works
 - Staff of the Saint bonus spellpower now works
 - Avenger Bow bonus ranged damage now works
 - Butcher Glaive bonus melee damage now works
+- Shantiri Moon Disc blocks all light magic
