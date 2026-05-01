@@ -151,9 +151,10 @@ function AIDailyBonus(player, hero)
     if IsAIPlayer(player) then
         log(DEBUG, "$ AIDailyBonus for "..hero)
         if DIFFICULTY > 0 then
-            local amount = 125 * TURN * DIFFICULTY
+            local amount = 75 * TURN * DIFFICULTY
             GiveExp(hero, amount)
         end
+        if WEEKS < 5 then ChangeHeroStat(hero, STAT_MOVE_POINTS, -750) end
     end
 end
 
@@ -163,7 +164,7 @@ function AIWeeklyBonus(player, hero)
         local faction = HEROES[hero].faction
         local n = min(WEEKS,7)
         for i = 1,n do
-            local amount = WEEKS * (8-i) * DIFFICULTY
+            local amount = (WEEKS-1) * (8-i) * DIFFICULTY
             AddHeroCreatureType(player, hero, faction, i, amount, 1)
             sleep(1)
         end

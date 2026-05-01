@@ -124,6 +124,12 @@ function Routine_EnragedRighteousMight(side, hero)
     end
 end
 
+function Routine_CancelHeroAtbBonus(side, hero)
+    log(DEBUG, "$ Routine_CancelHeroAtbBonus")
+    DefendCombatUnit(hero) sleep()
+    SetATB_ID(hero, 0.1)
+end
+
 function Routine_ResetAtbOnKillEnraged(side, hero, unit)
     log(DEBUG, "$ Routine_ResetAtbOnKillEnraged")
     if GetUnitSide(unit) ~= GetUnitSide(hero) and IsCreature(unit) then
@@ -289,12 +295,14 @@ function Routine_RollbackDruids(side, hero, winner)
     if winner == side then
         log(DEBUG, "$ Routine_RollbackDruids")
         local druid = "druidofthecouncil"
-        local n = GetCreatureNumber(druid)
-        local x,y = GetUnitPosition(druid)
-        RemoveCombatUnit(druid)
-        repeat sleep() until not exist(druid)
-        AddCreature(side, CREATURE_DRUID, n, x, y, nil, ROUTINE_VARS.DruidOfTheCouncil)
-        repeat sleep() until exist(ROUTINE_VARS.DruidOfTheCouncil)
+        if exist(druid) then
+            local n = GetCreatureNumber(druid)
+            local x,y = GetUnitPosition(druid)
+            RemoveCombatUnit(druid)
+            repeat sleep() until not exist(druid)
+            AddCreature(side, CREATURE_DRUID, n, x, y, nil, ROUTINE_VARS.DruidOfTheCouncil)
+            repeat sleep() until exist(ROUTINE_VARS.DruidOfTheCouncil)
+        end
     end
 end
 
@@ -1008,6 +1016,7 @@ COMBAT_START_HERO_ROUTINES = {
     [H_FREYDA] = Routine_CastPrayer,
     -- preserve
     [H_TALANAR] = Routine_EnragedRighteousMight,
+    [H_JENOVA] = Routine_CancelHeroAtbBonus,
     [H_FINDAN] = Routine_HunterRandomShoot,
     [H_WYNGAAL] = Routine_MoveForwardUnits,
     [H_DIRAEL] = Routine_CastSummonHive,

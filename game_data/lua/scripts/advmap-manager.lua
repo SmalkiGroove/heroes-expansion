@@ -132,7 +132,7 @@ function WatchPlayer(player, wait)
 end
 
 function PlayerDailyHandler(player)
-	while (not IsPlayerCurrent(player)) do sleep(5) end
+	while (not IsPlayerCurrent(player)) do sleep(1) end
 	log(INFO, "Player "..player.." turn "..TURN.." started")
 	for i,hero in GetPlayerHeroes(player) do
 		ControlHeroCustomAbility(hero, CUSTOM_ABILITY_1, CUSTOM_ABILITY_DISABLED)
@@ -146,7 +146,7 @@ function PlayerDailyHandler(player)
 end
 
 function PlayerWeeklyHandler(player)
-	while (not IsPlayerCurrent(player)) do sleep(5) end
+	--while (not IsPlayerCurrent(player)) do sleep(1) end
 	log(INFO, "Player "..player.." week "..WEEKS.." started")
 	for i,hero in GetPlayerHeroes(player) do
 		startThread(DoHeroSpeRoutine_Weekly, player, hero)
@@ -172,7 +172,7 @@ function NewDayTrigger()
 	for player = 1,8 do
 		if (GetPlayerState(player) == 1) then
 			DAILY_RESOURCES[player] = {[0]=0,[1]=0,[2]=0,[3]=0,[4]=0,[5]=0,[6]=0}
-			if newweek then startThread(PlayerWeeklyHandler, player) sleep(3) end
+			if newweek then startThread(PlayerWeeklyHandler, player) sleep(1) end
 			startThread(PlayerDailyHandler, player)
 		end
 	end

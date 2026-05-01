@@ -66,3 +66,8 @@
 - Avenger Bow bonus ranged damage now works
 - Butcher Glaive bonus melee damage now works
 - Shantiri Moon Disc blocks all light magic
+- Nerf early game AI bonuses
+- Nerf Druid of the Council spellpower
+- Script error if Tieru does not have Druids of the Council at the end of battle
+- Nightmare icon low quality
+- Tap Runes has no grey icon

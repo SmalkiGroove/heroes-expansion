@@ -212,7 +212,6 @@ Initial beta release !
 
 #### New
 
-- Duel map !
 - New artifacts and creatures from the mod added to the editor
 - Added spells and training bonuses sections in creatures description window
 - More artifacts (Ardent Smith, Genji's set and many that were disabled for now working)
