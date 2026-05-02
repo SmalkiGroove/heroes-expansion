@@ -30,6 +30,8 @@
 
 - Market change rate are total scam
 - Inferno and Dungeon sacrificial buildings are bad
+- Buff spiteful ability from +1 to +3
+- Nerf Devotion broken values
 
 ### Massive work required
 

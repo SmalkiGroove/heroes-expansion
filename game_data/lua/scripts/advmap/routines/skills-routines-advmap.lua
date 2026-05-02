@@ -704,7 +704,6 @@ end
 Var_DespotismBonus = {}
 function Routine_DespotismAfterBattle(player, hero, mastery, combatIndex)
     log(DEBUG, "$ Routine_DespotismAfterBattle")
-    if not Var_DespotismBonus[hero] then Var_DespotismBonus[hero] = {attribute=0, value=0} end
     local total = 0
     for i,cr in GetHeroArmy(hero) do
         if cr and cr ~= 0 then
@@ -717,22 +716,24 @@ function Routine_DespotismAfterBattle(player, hero, mastery, combatIndex)
         bonus = bonus + 1
         total = total - threshold
     end
-    local stat = GetHeroHighestStat(hero)
-    if stat == Var_DespotismBonus[hero].attribute then
-        local diff = Var_DespotismBonus[hero].value - bonus
-        if diff ~= 0 then ChangeHeroStat(hero, stat, diff) end
-    else
-        ChangeHeroStat(hero, Var_DespotismBonus[hero].attribute, -Var_DespotismBonus[hero].value)
-        ChangeHeroStat(hero, stat, bonus)
+    startThread(Routine_DespotismThread, player, hero, bonus)
+end
+
+function Routine_DespotismThread(player, hero, bonus)
+    sleep(3)
+    if Var_DespotismBonus[hero] then
+        ChangeHeroStat(hero, Var_DespotismBonus[hero].attribute, -Var_DespotismBonus[hero].value) sleep()
     end
+    local stat = GetHeroHighestStat(hero)
     Var_DespotismBonus[hero] = {attribute=stat, value=bonus}
+    ChangeHeroStat(hero, stat, bonus)
 end
 
 function Routine_DevotionAfterBattle(player, hero, mastery, combatIndex)
     log(DEBUG, "$ Routine_DevotionAfterBattle")
     local value = GetArmyStrength(combatIndex, 1)
     local level = GetHeroLevel(hero)
-    AddHeroStatAmount(player, hero, STAT_EXPERIENCE, 1000*level*value)
+    AddHeroStatAmount(player, hero, STAT_EXPERIENCE, 10*level*value)
 end
 
 function Routine_BattleWrathAfterBattle(player, hero, mastery, combatIndex)

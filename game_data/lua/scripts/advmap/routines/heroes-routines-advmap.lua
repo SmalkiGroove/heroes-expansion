@@ -1043,28 +1043,28 @@ function Routine_MultiplyTroops(player, hero)
         local fort = GetTownBuildingLevel(town, TOWN_BUILDING_FORT)
         if fort > 1 then towns[town] = towns[town] + 0.5 * (fort-1) end
     end
-    local dweelings = {0, 0, 0, 0, 0, 0, 0}
+    local dwellings = {0, 0, 0, 0, 0, 0, 0}
     for _, dw in GetObjectNamesByType("BUILDING_IMP_CRUCIBLE") do
-        if GetObjectOwner(dw) == player then dweelings[1] = dweelings[1] + 1 end
+        if GetObjectOwner(dw) == player then dwellings[1] = dwellings[1] + 1 end
     end
     for _, dw in GetObjectNamesByType("BUILDING_DEMONIC_GATE") do
-        if GetObjectOwner(dw) == player then dweelings[2] = dweelings[2] + 1 end
+        if GetObjectOwner(dw) == player then dwellings[2] = dwellings[2] + 1 end
     end
     for _, dw in GetObjectNamesByType("BUILDING_KENNELS") do
-        if GetObjectOwner(dw) == player then dweelings[3] = dweelings[3] + 1 end
+        if GetObjectOwner(dw) == player then dwellings[3] = dwellings[3] + 1 end
     end
     for _, dw in GetObjectNamesByType("BUILDING_INFERNO_MILITARY_POST") do
-        if GetObjectOwner(dw) == player and GetObjectCreatures(dw, CREATURE_SUCCUBUS) > 0 then dweelings[4] = dweelings[4] + 1 end
-        if GetObjectOwner(dw) == player and GetObjectCreatures(dw, CREATURE_NIGHTMARE) > 0 then dweelings[5] = dweelings[5] + 1 end
-        if GetObjectOwner(dw) == player and GetObjectCreatures(dw, CREATURE_PIT_FIEND) > 0 then dweelings[6] = dweelings[6] + 1 end
-        if GetObjectOwner(dw) == player and GetObjectCreatures(dw, CREATURE_DEVIL) > 0 then dweelings[7] = dweelings[7] + 1 end
+        if GetObjectOwner(dw) == player and GetObjectCreatures(dw, CREATURE_SUCCUBUS) > 0 then dwellings[4] = dwellings[4] + 1 end
+        if GetObjectOwner(dw) == player and GetObjectCreatures(dw, CREATURE_NIGHTMARE) > 0 then dwellings[5] = dwellings[5] + 1 end
+        if GetObjectOwner(dw) == player and GetObjectCreatures(dw, CREATURE_PIT_FIEND) > 0 then dwellings[6] = dwellings[6] + 1 end
+        if GetObjectOwner(dw) == player and GetObjectCreatures(dw, CREATURE_DEVIL) > 0 then dwellings[7] = dwellings[7] + 1 end
     end
     local tracker = {}
     for _, cr in GetHeroArmy(hero) do
+        local tier = CREATURES[cr][2]
         if cr and cr ~= 0 then
-            if not tracker[cr] then
+            if not tracker[tier] then
                 if CREATURES[cr][1] == INFERNO then
-                    local tier = CREATURES[cr][2]
                     local growth = 0
                     for town, mult in towns do
                         if GetTownBuildingLevel(town, 6 + tier) ~= 0 then
@@ -1076,7 +1076,7 @@ function Routine_MultiplyTroops(player, hero)
                     end
                     local nb = trunc(0.01 * level * growth)
                     if nb > 0 then AddHeroCreatures(hero, cr, nb) end
-                    tracker[cr] = 1
+                    tracker[tier] = 1
                 end
             end
         end

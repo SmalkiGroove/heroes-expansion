@@ -107,7 +107,7 @@ function HeroLevelUp_Marder() HeroLevelUp(H_MARBAS) end
 function HeroLevelUp_Orlando() HeroLevelUp(H_ORLANDO) end
 function HeroLevelUp_Biara() HeroLevelUp(H_BIARA) end
 function HeroLevelUp_Deleb() HeroLevelUp(H_DELEB) end
-function HeroLevelUp_Sovereign2() HeroLevelUp(H_KHABELETH) end
+function HeroLevelUp_Sovereign() HeroLevelUp(H_KHABELETH) end
 
 -- dungeon
 function HeroLevelUp_Ohtarig() HeroLevelUp(H_VAYSHAN) end
