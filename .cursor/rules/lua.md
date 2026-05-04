@@ -1,5 +1,6 @@
 ---
-applyTo: "game_data/lua/**/*.lua"
+globs: game_data/lua/**/*.lua
+alwaysApply: false
 ---
 # Heroes 5 Mod: Lua scripts instructions
 

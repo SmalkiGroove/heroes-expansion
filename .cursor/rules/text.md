@@ -1,5 +1,6 @@
 ---
-applyTo: "game_texts/**/*.txt"
+globs: game_texts/**/*.txt
+alwaysApply: false
 ---
 # Heroes 5 Mod: Text Guide
 

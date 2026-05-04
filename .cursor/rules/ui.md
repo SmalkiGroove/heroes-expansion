@@ -1,3 +1,7 @@
+---
+globs: game_data/www*
+alwaysApply: true
+---
 # Heroes 5 Mod: In-Game UI Creation Guide
 
 ## Overview
