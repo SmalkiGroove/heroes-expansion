@@ -11,11 +11,13 @@ function Routine_MagicGuildsBonus(player)
             if diff ~= 0 then
                 ChangeHeroStat(hero, STAT_SPELL_POWER, diff)
                 ChangeHeroStat(hero, STAT_KNOWLEDGE, diff)
+                ChangeHeroStat(hero, STAT_MANA_POINTS, diff * 10)
                 MAGIC_GUILD_HERO_BONUSES[hero] = bonus
             end
         else
             ChangeHeroStat(hero, STAT_SPELL_POWER, bonus)
             ChangeHeroStat(hero, STAT_KNOWLEDGE, bonus)
+            ChangeHeroStat(hero, STAT_MANA_POINTS, bonus * 10)
             MAGIC_GUILD_HERO_BONUSES[hero] = bonus
         end
     end

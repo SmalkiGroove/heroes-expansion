@@ -18,19 +18,20 @@
 
 ### Bugs
 
-- Shantiri Moon Disc blocks all light magic
+- Hero (kha beleth only?) swaping his spellpower for attack after months of game
 
 ### Suggestions
 
 - Darkstorm hero totem model
 - Add ARMG templates
-- Magnetic Field redirect projectiles
 - Make Earthquake deal magical earth damage
 
 ### Balance
 
 - Market change rate are total scam
 - Inferno and Dungeon sacrificial buildings are bad
+- Buff spiteful ability from +1 to +3
+- Nerf Devotion broken values
 
 ### Massive work required
 
@@ -48,7 +49,7 @@
 - Starting bonus artifact not working
 - Elem orb spawn position random
 - Nerf Kha Beleth late game
-- Frozen heart not in frost artifact fset
+- Frozen heart not in frost artifact set
 - Add NCF creatures in editor
 - Leadership give +2 Luck instead of Precision
 - Inferno sacrificial pit not required for city hall
@@ -57,3 +58,18 @@
 - Despotism doesn't reduce army morale
 - Spear of the Frost Lord effect now works
 - Dragon Flame Tongue immunity to cold death now works
+- Shield of Crystal Ice immunity to ignite now works
+- Celestial Justicar's Armor melee damage reduction now works
+- Dragonsbane damages ignoring defense now works
+- Phoenix Feather's Cape immunity to freeze now works
+- Collar of Primal Rage bonus rage points now works
+- Codex of the Saint atb reset now works
+- Staff of the Saint bonus spellpower now works
+- Avenger Bow bonus ranged damage now works
+- Butcher Glaive bonus melee damage now works
+- Shantiri Moon Disc blocks all light magic
+- Nerf early game AI bonuses
+- Nerf Druid of the Council spellpower
+- Script error if Tieru does not have Druids of the Council at the end of battle
+- Nightmare icon low quality
+- Tap Runes has no grey icon

@@ -1035,19 +1035,48 @@ end
 function Routine_MultiplyTroops(player, hero)
     log(DEBUG, "$ Routine_MultiplyTroops")
     local level = GetHeroLevel(hero)
-    local percent = 1 + trunc(0.05 * level)
-    local maxtier = 1 + trunc(0.20 * level)
+    local base_growth = {66, 36, 22, 11, 5, 3, 1}
+    local towns = {}
+    for _, town in GetHeroTowns(player, hero) do
+        local grail = GetTownBuildingLevel(town, TOWN_BUILDING_GRAIL)
+        towns[town] = 1 + 0.5 * grail
+        local fort = GetTownBuildingLevel(town, TOWN_BUILDING_FORT)
+        if fort > 1 then towns[town] = towns[town] + 0.5 * (fort-1) end
+    end
+    local dwellings = {0, 0, 0, 0, 0, 0, 0}
+    for _, dw in GetObjectNamesByType("BUILDING_IMP_CRUCIBLE") do
+        if GetObjectOwner(dw) == player then dwellings[1] = dwellings[1] + 1 end
+    end
+    for _, dw in GetObjectNamesByType("BUILDING_DEMONIC_GATE") do
+        if GetObjectOwner(dw) == player then dwellings[2] = dwellings[2] + 1 end
+    end
+    for _, dw in GetObjectNamesByType("BUILDING_KENNELS") do
+        if GetObjectOwner(dw) == player then dwellings[3] = dwellings[3] + 1 end
+    end
+    for _, dw in GetObjectNamesByType("BUILDING_INFERNO_MILITARY_POST") do
+        if GetObjectOwner(dw) == player and GetObjectCreatures(dw, CREATURE_SUCCUBUS) > 0 then dwellings[4] = dwellings[4] + 1 end
+        if GetObjectOwner(dw) == player and GetObjectCreatures(dw, CREATURE_NIGHTMARE) > 0 then dwellings[5] = dwellings[5] + 1 end
+        if GetObjectOwner(dw) == player and GetObjectCreatures(dw, CREATURE_PIT_FIEND) > 0 then dwellings[6] = dwellings[6] + 1 end
+        if GetObjectOwner(dw) == player and GetObjectCreatures(dw, CREATURE_DEVIL) > 0 then dwellings[7] = dwellings[7] + 1 end
+    end
     local tracker = {}
-    for i,cr in GetHeroArmy(hero) do
+    for _, cr in GetHeroArmy(hero) do
+        local tier = CREATURES[cr][2]
         if cr and cr ~= 0 then
-            if not tracker[cr] then
-                local faction = CREATURES[cr][1]
-                local tier = CREATURES[cr][2]
-                if faction == INFERNO and tier <= maxtier then
-                    local nb = GetHeroCreatures(hero, cr)
-                    local add = trunc(0.01 * percent * nb)
-                    if add > 0 then AddHeroCreatures(hero, cr, add) end
-                    tracker[cr] = 1
+            if not tracker[tier] then
+                if CREATURES[cr][1] == INFERNO then
+                    local growth = 0
+                    for town, mult in towns do
+                        if GetTownBuildingLevel(town, 6 + tier) ~= 0 then
+                            growth = growth + base_growth[tier] * mult
+                        end
+                    end
+                    if dwellings[tier] > 0 then
+                        growth = growth + base_growth[tier] * dwellings[tier] + dwellings[tier]
+                    end
+                    local nb = trunc(0.01 * level * growth)
+                    if nb > 0 then AddHeroCreatures(hero, cr, nb) end
+                    tracker[tier] = 1
                 end
             end
         end
@@ -1249,7 +1278,6 @@ DAILY_TRIGGER_HERO_ROUTINES = {
     [H_ORNELLA] = Routine_FrostLordArtifacts,
     -- inferno
     [H_ORLANDO] = Routine_TownBuildingUp,
-    [H_KHABELETH] = Routine_MultiplyTroops,
     -- stronghold
     [H_KARUKAT] = Routine_AddHeroWyverns,
 }
@@ -1280,6 +1308,7 @@ WEEKLY_TRIGGER_HERO_ROUTINES = {
     [H_XERXON] = Routine_AddHeroBlackKnight,
     -- inferno
     [H_GRAWL] = Routine_AddHeroHellHounds,
+    [H_KHABELETH] = Routine_MultiplyTroops,
     -- stronghold
     [H_GARUNA] = Routine_AddRecruitsCentaurs,
 }
