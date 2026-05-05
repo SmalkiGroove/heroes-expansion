@@ -164,8 +164,7 @@ function NewDayTrigger()
 	local newweek = GetDate(DAY_OF_WEEK) == 1
 	if newweek then
 		WEEKS = WEEKS + 1
-		startThread(WitchHuts_reset)
-		startThread(Temples_reset)
+		startThread(ResetMapObjects)
 	end
 	startThread(UpdateTavernHeroes)
 	startThread(UpdateTavernFactions)

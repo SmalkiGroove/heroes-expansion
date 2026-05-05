@@ -140,11 +140,11 @@
 		[7] = "Movement",
 		[8] = "Mana",
 	}
-	ATTRIBUTE_TEXT_ORIGIN = {
-		[1] = "Offence",
-		[2] = "Defence",
-		[3] = "SpellPower",
-		[4] = "Knowledge",
+	ATTRIBUTE_NAME_FILE = {
+		[1] = "/GameMechanics/RefTables/HeroAttribute/Offence.txt",
+		[2] = "/GameMechanics/RefTables/HeroAttribute/Defence.txt",
+		[3] = "/GameMechanics/RefTables/HeroAttribute/SpellPower.txt",
+		[4] = "/GameMechanics/RefTables/HeroAttribute/Knowledge.txt",
 	}
 	
 	--
@@ -250,6 +250,13 @@
 	TOWN_BUILDING_STRONGHOLD_TRAVELLERS_SHELTER		= TOWN_BUILDING_SPECIAL_3
 	TOWN_BUILDING_STRONGHOLD_PILE_OF_OUR_FOES		= TOWN_BUILDING_SPECIAL_4
 	TOWN_BUILDING_STRONGHOLD_SLAVE_MARKET			= TOWN_BUILDING_SPECIAL_5
+
+	WAR_MACHINE_NAME_FILE = {
+		"/Text/Game/Creatures/WarMachines/Ballista.txt",
+		"/Text/Game/Creatures/WarMachines/Catapult.txt",
+		"/Text/Game/Creatures/WarMachines/FirstAidTent.txt",
+		"/Text/Game/Creatures/WarMachines/AmmoCart.txt",
+	}
 
 	--
 	-- Monster mood IDs

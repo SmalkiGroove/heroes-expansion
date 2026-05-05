@@ -1,6 +1,8 @@
 
 Var_WitchHutVisited = {}
 Var_TempleVisited = {}
+Var_RallyFlagVisited = {}
+Var_WarAcademyVisited = {}
 
 function Override_Monsters(obj)
     local x, y, z = GetObjectPosition(obj)
@@ -35,6 +37,12 @@ end
 function Override_Tavern(obj)
     Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_Tavern")
     SetObjectEnabled(obj, nil)
+end
+
+function Override_WarAcademy(obj)
+    Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_WarAcademy")
+    SetObjectEnabled(obj, nil)
+    Var_WarAcademyVisited[obj] = {}
 end
 
 -----------------------------------------------
@@ -79,7 +87,7 @@ function Trigger_WitchHut(hero, obj)
         SetObjectEnabled(obj, nil)
     elseif Var_WitchHutVisited[obj] == 0 then
         local givestat = random(1,4,TURN)
-        local text_stat = "/GameMechanics/RefTables/HeroAttribute/"..ATTRIBUTE_TEXT_ORIGIN[givestat]..".txt"
+        local text_stat = ATTRIBUTE_NAME_FILE[givestat]
         local text_res = "/Text/Game/Script/Resources/"..RESOURCE_TEXT[Var_WitchHutResCost[givestat]]..".txt"
         QuestionBoxForPlayers(
             GetPlayerFilter(player),
@@ -92,12 +100,11 @@ function Trigger_WitchHut(hero, obj)
     end
 end
 function Trigger_WitchHut_confirm(player, hero, obj, givestat)
-    log(DEBUG, "$ Trigger_WitchHut_confirm")
     local res = Var_WitchHutResCost[givestat]
     if GetPlayerResource(player, res) >= 3 then
         MessageBoxForPlayers(
             GetPlayerFilter(player),
-            {"/Text/Game/Scripts/MapObjects/WitchHutAccepted.txt"; stat="/GameMechanics/RefTables/HeroAttribute/"..ATTRIBUTE_TEXT_ORIGIN[givestat]..".txt"},
+            {"/Text/Game/Scripts/MapObjects/WitchHutAccepted.txt"; stat=ATTRIBUTE_NAME_FILE[givestat]},
             "NoneRoutine"
         )
         TakeAwayResources(player, res, 3)
@@ -188,14 +195,54 @@ function Trigger_Tavern(hero, obj)
 end
 function Trigger_Tavern_confirm(player, hero)
     local town = FindClosestTown(player, hero)
-    log(INFO, "Nearest town: "..town)
     if town then
         ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
         local x = MAP_TOWNS[town].x
         local y = MAP_TOWNS[town].y
         local z = MAP_TOWNS[town].z
-        log(INFO, "Town position: "..x..", "..y..", "..z)
         SetObjectPosition(hero, x, y, z, 4)
+    end
+end
+
+
+function Trigger_WarAcademy(hero, obj)
+    log(DEBUG, "$ Trigger_WarAcademy")
+    local player = GetObjectOwner(hero)
+    if IsAIPlayer(player) then
+        MarkObjectAsVisited(obj, hero)
+        Trigger(OBJECT_TOUCH_TRIGGER, obj, nil)
+        SetObjectEnabled(obj, not nil)
+        MakeHeroInteractWithObject(hero, obj)
+        Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_WarAcademy")
+        SetObjectEnabled(obj, nil)
+    elseif Var_WarAcademyVisited[obj][hero] == 1 then
+        MessageBoxPEST(player, "/Text/Game/Scripts/MapObjects/WarAcademyVisited.txt", "NoneRoutine")
+    else
+        local stat = GetHeroLowestStat(hero)
+        local wm = WAR_MACHINE_AMMO_CART
+        if not HasHeroWarMachine(hero, WAR_MACHINE_BALLISTA) then wm = WAR_MACHINE_BALLISTA
+        elseif not HasHeroWarMachine(hero, WAR_MACHINE_FIRST_AID_TENT) then wm = WAR_MACHINE_FIRST_AID_TENT
+        end
+        local text_stat = ATTRIBUTE_NAME_FILE[stat]
+        local text_wm = WAR_MACHINE_NAME_FILE[wm]
+        QuestionBoxForPlayers(
+            GetPlayerFilter(player),
+            {"/Text/Game/Scripts/MapObjects/WarAcademy.txt"; stat=text_stat, wm=text_wm},
+            "Trigger_WarAcademy_confirm("..player..",'"..hero.."','"..obj.."',"..stat..","..wm..")",
+            "NoneRoutine"
+        )
+    end
+end
+function Trigger_WarAcademy_confirm(player, hero, obj, stat, wm)
+    GiveHeroWarMachine(hero, wm)
+    ChangeHeroStat(hero, stat, 1)
+    ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
+    Var_WarAcademyVisited[obj][hero] = 1
+    MarkObjectAsVisited(obj, hero)
+end
+function WarAcademies_reset()
+    for obj,_ in Var_WarAcademyVisited do
+        Var_WarAcademyVisited[obj] = {}
     end
 end
 
@@ -214,6 +261,7 @@ TRIGGER_OVERRIDES = {
     ["BUILDING_TEMPLE"] = Override_Temple,
     ["BUILDING_RALLY_FLAG"] = Override_RallyFlag,
     ["BUILDING_TAVERN"] = Override_Tavern,
+    ["BUILDING_WAR_ACADEMY"] = Override_WarAcademy,
 }
 
 function InitializeMapObjects()
@@ -224,6 +272,12 @@ function InitializeMapObjects()
             startThread(v, obj)
         end
     end
+end
+
+function ResetMapObjects()
+    WitchHuts_reset()
+    Temples_reset()
+    WarAcademies_reset()
 end
 
 log(TRACE, "Loaded mapobjects-triggers.lua")
