@@ -24,6 +24,43 @@ function Routine_SummonElementalsWater(side, hero)
     Routine_SummonElementalsType(side, hero, CREATURE_WATER_ELEMENTAL)
 end
 
+function Routine_ArtifactSentinelsBlade(side, hero)
+    log(DEBUG, "$ Routine_ArtifactSentinelsBlade")
+    if CURRENT_UNIT == hero then
+        local thread = function(side, hero)
+            local prefix = UNIT_SIDE_PREFIX[side].."-spawn-"
+            local suffix = "-SPELL_BLADE_BARRIER"
+            repeat sleep() until CURRENT_UNIT ~= hero
+            local enemies = {}
+            for _, s in GetUnits(side, SPELL_SPAWN) do
+                for n = 0, 99 do
+                    if s == prefix..n..suffix then
+                        if not ROUTINE_VARS.SentinelsBlade[s] then
+                            local x, y = GetUnitPosition(s)
+                            for _, unit in GetUnits(1-side, CREATURE) do
+                                for i = -1,1 do for j = -1,1 do
+                                    if i ~= 0 or j ~= 0 then
+                                        if not enemies[unit] then
+                                            if CreatureAtPosition(unit, x+i, y+j) == 1 then
+                                                AttackCombatUnit(unit, s)
+                                                enemies[unit] = 1
+                                            end
+                                        end
+                                    end
+                                end end
+                                if not exist(s) then break end
+                            end
+                            ROUTINE_VARS.SentinelsBlade[s] = 1
+                        end
+                        break
+                    end
+                end
+            end
+        end
+        startThread(thread, side, hero)
+    end
+end
+
 function Routine_ArtifactMoonCharm(side, hero, unit)
     log(DEBUG, "$ Routine_ArtifactMoonCharm")
     if not ROUTINE_VARS.MoonCharm then
@@ -163,6 +200,7 @@ COMBAT_START_ARTIFACT_ROUTINES = {
     [ARTIFACT_ORB_OF_WATER] = Routine_SummonElementalsWater,
 }
 COMBAT_TURN_ARTIFACT_ROUTINES = {
+    [ARTIFACT_SENTINELS_BLADE] = Routine_ArtifactSentinelsBlade,
 }
 UNIT_DIED_ARTIFACT_ROUTINES = {
     [ARTIFACT_MOON_CHARM] = Routine_ArtifactMoonCharm,

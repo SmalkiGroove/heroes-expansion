@@ -46,7 +46,7 @@ function DuelTriggerDolmen(hero, obj)
         DUEL_DOLMEN_LEVELS[player] = DUEL_DOLMEN_LEVELS[player] + 1
     else
         Trigger(OBJECT_TOUCH_TRIGGER, obj, nil)
-        MessageBoxForPlayers(GetPlayerFilter(GetObjectOwner(hero)), "/Text/Duel/DolmenMaxLevel.txt")
+        MessageBoxPEST(GetPlayerFilter(GetObjectOwner(hero)), "/Text/Duel/DolmenMaxLevel.txt")
     end
 end
 

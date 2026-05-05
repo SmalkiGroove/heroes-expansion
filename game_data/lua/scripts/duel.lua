@@ -24,32 +24,32 @@ function DuelGetPlayerStage(player)
 end
 
 function DuelInfoWindow0(player)
-    MessageBoxForPlayers(GetPlayerFilter(player),
+    MessageBoxPEST(GetPlayerFilter(player),
         "/Text/Duel/InfoStart.txt",
         "NoneRoutine")
 end
 function DuelInfoWindow1(player)
-    MessageBoxForPlayers(GetPlayerFilter(player),
+    MessageBoxPEST(GetPlayerFilter(player),
         "/Text/Duel/InfoSetup.txt",
         "NoneRoutine")
 end
 function DuelInfoWindow2(player)
-    MessageBoxForPlayers(GetPlayerFilter(player),
+    MessageBoxPEST(GetPlayerFilter(player),
         {"/Text/Duel/InfoAdventure.txt"; days=DUEL_PLAYER_DATA.ADVENTURE_DAYS[player]},
         "NoneRoutine")
 end
 function DuelInfoWindow3(player)
-    MessageBoxForPlayers(GetPlayerFilter(player),
+    MessageBoxPEST(GetPlayerFilter(player),
         "/Text/Duel/InfoStaging.txt",
         "NoneRoutine")
 end
 function DuelInfoWindow4(player)
-    MessageBoxForPlayers(GetPlayerFilter(player),
+    MessageBoxPEST(GetPlayerFilter(player),
         "/Text/Duel/InfoCastle.txt",
         "NoneRoutine")
 end
 function DuelInfoWindow5(player)
-    MessageBoxForPlayers(GetPlayerFilter(player),
+    MessageBoxPEST(GetPlayerFilter(player),
         "/Text/Duel/InfoBattle.txt",
         "NoneRoutine")
 end
@@ -153,7 +153,7 @@ end
 function DuelBorderGuardKey(player, key)
     for k = 1,8 do
         if HasBorderguardKey(player, k) then
-            MessageBoxForPlayers(GetPlayerFilter(player),
+            MessageBoxPEST(GetPlayerFilter(player),
                 "/Text/Duel/BorderGuardKeyOut.txt",
                 "NoneRoutine"
             ) return
@@ -170,7 +170,7 @@ function DuelBorderGuardKeyConfirm(player, key)
     if gold < 50000 then return end
     SetPlayerResource(player, GOLD, gold - 50000)
     GiveBorderguardKey(player, key)
-    MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/BorderGuardKey.txt"; key=key}, "NoneRoutine")
+    MessageBoxPEST(GetPlayerFilter(player), {"/Text/Duel/BorderGuardKey.txt"; key=key}, "NoneRoutine")
 end
 
 
@@ -215,7 +215,7 @@ end
 function DuelAdventureDay(player, hero)
     local days = DUEL_PLAYER_DATA.ADVENTURE_DAYS[player] - 1
     if days > 0 then
-        MessageBoxForPlayers(GetPlayerFilter(player), {"/Text/Duel/NewDay.txt"; days=days}, "NoneRoutine")
+        MessageBoxPEST(GetPlayerFilter(player), {"/Text/Duel/NewDay.txt"; days=days}, "NoneRoutine")
         DUEL_PLAYER_DATA.ADVENTURE_DAYS[player] = days
         ChangeHeroStat(hero, STAT_MOVE_POINTS, 9999)
     else

@@ -206,16 +206,12 @@ function IsCreature2x2(unit)
     return nil
 end
 
-function CreatureAtPosition(x,y)
-    for side = 0,1 do
-        for i,cr in GetUnits(side, CREATURE) do
-            local ux,uy = GetUnitPosition(cr)
-            if IsCreature2x2(cr) then
-                if (x == ux and y == uy) or (x+1 == ux and y == uy) or (x == ux and y+1 == uy) or (x+1 == ux and y+1 == uy) then return side end
-            else
-                if (x == ux and y == uy) then return side end
-            end
-        end
+function CreatureAtPosition(cr, x, y)
+    local ux,uy = GetUnitPosition(cr)
+    if IsCreature2x2(cr) then
+        if (x == ux and y == uy) or (x+1 == ux and y == uy) or (x == ux and y+1 == uy) or (x+1 == ux and y+1 == uy) then return 1 end
+    else
+        if (x == ux and y == uy) then return 1 end
     end
     return nil
 end
@@ -228,7 +224,9 @@ function CanCreatureShoot(unit)
     else
         for i = -1,1 do for j = -1,1 do
             if i ~= 0 or j ~= 0 then
-                if CreatureAtPosition(x+i,y+j) == (1-side) then return nil end
+                for _, cr in GetUnits(1-side, CREATURE) do
+                     if CreatureAtPosition(cr, x+i, y+j) == 1 then return nil end
+                end
             end
         end end
     end

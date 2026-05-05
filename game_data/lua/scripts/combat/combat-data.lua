@@ -34,6 +34,7 @@ ROUTINE_VARS = {
     Incendiary = 3,
     AtbBoosted = {},
     GoblinsTotal = 0,
+    SentinelsBlade = {},
     MoonCharm = nil,
     Legendragon = {},
     BallistaCommanders = {},

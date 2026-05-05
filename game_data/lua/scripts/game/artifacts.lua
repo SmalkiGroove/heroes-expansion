@@ -162,7 +162,7 @@ ARTIFACT_SYLVAN_AMULET = 140                        -- reduce mana cost of natur
 ARTIFACT_SHADOW_MASK = 141                          -- /
 ARTIFACT_BARBARIAN_HELMET = 142                     -- creatures get battle rage ability
 ARTIFACT_SKULL_MASK = 143                           -- decrease enemy initiative
-ARTIFACT_SENTINELS_BLADE = 144                      -- after spawning a blade barrier, ... TODO **
+ARTIFACT_SENTINELS_BLADE = 144                      -- after spawning a blade barrier, adjacent enemies attack it **
 ARTIFACT_VIZIRS_SCIMITAR = 145                      -- increase t1 and t2 weekly prod by 10 **
 ARTIFACT_BARBARIAN_CAPE = 146                       -- disable cowardice / immunity to fear TODO
 ARTIFACT_SHADOW_BLADE = 147                         -- /
@@ -505,7 +505,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_SHADOW_MASK]                   = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_DUNGEON, special=0},
     [ARTIFACT_BARBARIAN_HELMET]              = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_ORCS, special=0},
     [ARTIFACT_SKULL_MASK]                    = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_SPIRIT, special=0},
-    [ARTIFACT_SENTINELS_BLADE]               = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_HAVEN, special=1}, --disabled
+    [ARTIFACT_SENTINELS_BLADE]               = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_HAVEN, special=0},
     [ARTIFACT_VIZIRS_SCIMITAR]               = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_VIZIR, special=0},
     [ARTIFACT_BARBARIAN_CAPE]                = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_ORCS, special=1}, --disabled
     [ARTIFACT_SHADOW_BLADE]                  = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_DUNGEON, special=0},

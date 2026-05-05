@@ -574,6 +574,18 @@ if QuestionBoxInt then
 	QuestionBox = QuestionBoxInt
 --	QuestionBox = function(name, callback) SyncCommand(QuestionBoxInt, name, callback) end
 end
+function MessageBoxPEST(player, message, callback)
+	UnblockGame()
+	local current = GetCurrentPlayer()
+	repeat
+		if GetPlayerState(player) ~= 1 then return end
+		sleep()
+		UnblockGame()
+	until IsPlayerCurrent(player)
+	MessageBoxForPlayers(GetPlayerFilter(player), message, callback)
+	UnblockGame()
+end
+
 if StartCutSceneInt then
 	StartCutScene = function(name, callback, saveName) SyncCommand(StartCutSceneInt, name, callback, saveName) end
 end
