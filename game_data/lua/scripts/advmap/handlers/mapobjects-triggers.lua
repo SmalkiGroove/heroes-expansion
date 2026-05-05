@@ -3,6 +3,7 @@ Var_WitchHutVisited = {}
 Var_TempleVisited = {}
 Var_RallyFlagVisited = {}
 Var_WarAcademyVisited = {}
+Var_IdolOfFortuneVisited = {}
 
 function Override_Monsters(obj)
     local x, y, z = GetObjectPosition(obj)
@@ -45,6 +46,17 @@ function Override_WarAcademy(obj)
     Var_WarAcademyVisited[obj] = {}
 end
 
+function Override_TombOfTheWarrior(obj)
+    Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_TombOfTheWarrior")
+    SetObjectEnabled(obj, nil)
+end
+
+function Override_IdolOfFortune(obj)
+    Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_IdolOfFortune")
+    SetObjectEnabled(obj, nil)
+    Var_IdolOfFortuneVisited[obj] = nil
+end
+
 -----------------------------------------------
 
 function Trigger_Monsters(hero, obj)
@@ -79,12 +91,7 @@ function Trigger_WitchHut(hero, obj)
     log(DEBUG, "$ Trigger_WitchHut")
     local player = GetObjectOwner(hero)
     if IsAIPlayer(player) then
-        MarkObjectAsVisited(obj, hero)
-        Trigger(OBJECT_TOUCH_TRIGGER, obj, nil)
-        SetObjectEnabled(obj, not nil)
-        MakeHeroInteractWithObject(hero, obj)
-        Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_WitchHut")
-        SetObjectEnabled(obj, nil)
+        NoOverrideAI(obj, hero, "Trigger_WitchHut")
     elseif Var_WitchHutVisited[obj] == 0 then
         local givestat = random(1,4,TURN)
         local text_stat = ATTRIBUTE_NAME_FILE[givestat]
@@ -140,12 +147,7 @@ function Trigger_Temple(hero, obj)
     log(DEBUG, "$ Trigger_Temple")
     local player = GetObjectOwner(hero)
     if IsAIPlayer(player) then
-        MarkObjectAsVisited(obj, hero)
-        Trigger(OBJECT_TOUCH_TRIGGER, obj, nil)
-        SetObjectEnabled(obj, not nil)
-        MakeHeroInteractWithObject(hero, obj)
-        Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_Temple")
-        SetObjectEnabled(obj, nil)
+        NoOverrideAI(obj, hero, "Trigger_Temple")
     elseif Var_TempleVisited[obj] == 0 then
         local exp = 10 * (WEEKS+10) * (WEEKS+10)
         ShowFlyingSign({"/Text/Game/Scripts/MapObjects/Temple.txt"; amount=exp}, hero, player, FLYING_SIGN_TIME)
@@ -170,12 +172,7 @@ function Trigger_RallyFlag(hero, obj)
     log(DEBUG, "$ Trigger_RallyFlag")
     local player = GetObjectOwner(hero)
     if IsAIPlayer(player) then
-        MarkObjectAsVisited(obj, hero)
-        Trigger(OBJECT_TOUCH_TRIGGER, obj, nil)
-        SetObjectEnabled(obj, not nil)
-        MakeHeroInteractWithObject(hero, obj)
-        Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_RallyFlag")
-        SetObjectEnabled(obj, nil)
+        NoOverrideAI(obj, hero, "Trigger_RallyFlag")
     else
         ShowFlyingSign("/Text/Game/Scripts/MapObjects/RallyFlag.txt", hero, player, FLYING_SIGN_TIME)
         ChangeHeroStat(hero, STAT_MOVE_POINTS, 9999)
@@ -209,12 +206,7 @@ function Trigger_WarAcademy(hero, obj)
     log(DEBUG, "$ Trigger_WarAcademy")
     local player = GetObjectOwner(hero)
     if IsAIPlayer(player) then
-        MarkObjectAsVisited(obj, hero)
-        Trigger(OBJECT_TOUCH_TRIGGER, obj, nil)
-        SetObjectEnabled(obj, not nil)
-        MakeHeroInteractWithObject(hero, obj)
-        Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_WarAcademy")
-        SetObjectEnabled(obj, nil)
+        NoOverrideAI(obj, hero, "Trigger_WarAcademy")
     elseif Var_WarAcademyVisited[obj][hero] == 1 then
         MessageBoxPEST(player, "/Text/Game/Scripts/MapObjects/WarAcademyVisited.txt", "NoneRoutine")
     else
@@ -247,6 +239,53 @@ function WarAcademies_reset()
 end
 
 
+function Trigger_TombOfTheWarrior(hero, obj)
+    log(DEBUG, "$ Trigger_TombOfTheWarrior")
+    local player = GetObjectOwner(hero)
+    if IsAIPlayer(player) then
+        NoOverrideAI(obj, hero, "Trigger_TombOfTheWarrior")
+    else
+        
+    end
+end
+
+
+Var_IdolOfFortuneBonus = {
+    [HERO_BATTLE_BONUS_LUCK] = 2,
+    [HERO_BATTLE_BONUS_MORALE] = 2,
+    [HERO_BATTLE_BONUS_ATTACK] = 6,
+    [HERO_BATTLE_BONUS_DEFENCE] = 6,
+    [HERO_BATTLE_BONUS_HITPOINTS] = 10,
+    [HERO_BATTLE_BONUS_INITIATIVE] = 3,
+    [HERO_BATTLE_BONUS_SPEED] = 2,
+}
+function Trigger_IdolOfFortune(hero, obj)
+    log(DEBUG, "$ Trigger_IdolOfFortune")
+    local player = GetObjectOwner(hero)
+    if IsAIPlayer(player) then
+        NoOverrideAI(obj, hero, "Trigger_IdolOfFortune")
+    else
+        Var_IdolOfFortuneVisited[obj] = hero
+        MarkObjectAsVisited(obj, hero)
+        local bonus = random(0,6,TURN)
+        GiveHeroBattleBonus(hero, bonus, Var_IdolOfFortuneBonus[bonus])
+        MessageBoxPEST(player, "/Text/Game/Scripts/MapObjects/IdolOfFortune.txt", "NoneRoutine")
+    end
+end
+function IdolOfFortune_daily()
+    for obj, hero in Var_IdolOfFortuneVisited do
+        if hero ~= nil then
+            if IsObjectExists(hero) then
+                local bonus = random(0,6,TURN)
+                GiveHeroBattleBonus(hero, bonus, Var_IdolOfFortuneBonus[bonus])
+            else
+                Var_IdolOfFortuneVisited[obj] = nil
+            end
+        end
+    end
+end
+
+
 -----------------------------------------------
 
 function RegisterMapGates()
@@ -262,6 +301,8 @@ TRIGGER_OVERRIDES = {
     ["BUILDING_RALLY_FLAG"] = Override_RallyFlag,
     ["BUILDING_TAVERN"] = Override_Tavern,
     ["BUILDING_WAR_ACADEMY"] = Override_WarAcademy,
+    ["BUILDING_TOMB_OF_THE_WARRIOR"] = Override_TombOfTheWarrior,
+    ["BUILDING_IDOL_OF_FORTUNE"] = Override_IdolOfFortune,
 }
 
 function InitializeMapObjects()
@@ -274,10 +315,23 @@ function InitializeMapObjects()
     end
 end
 
-function ResetMapObjects()
+function DailyMapObjects()
+    IdolOfFortune_daily()
+end
+
+function WeeklyMapObjects()
     WitchHuts_reset()
     Temples_reset()
     WarAcademies_reset()
+end
+
+function NoOverrideAI(obj, hero, callback)
+    MarkObjectAsVisited(obj, hero)
+    Trigger(OBJECT_TOUCH_TRIGGER, obj, nil)
+    SetObjectEnabled(obj, not nil)
+    MakeHeroInteractWithObject(hero, obj)
+    Trigger(OBJECT_TOUCH_TRIGGER, obj, callback)
+    SetObjectEnabled(obj, nil)
 end
 
 log(TRACE, "Loaded mapobjects-triggers.lua")

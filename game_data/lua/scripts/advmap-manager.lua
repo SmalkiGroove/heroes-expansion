@@ -164,8 +164,9 @@ function NewDayTrigger()
 	local newweek = GetDate(DAY_OF_WEEK) == 1
 	if newweek then
 		WEEKS = WEEKS + 1
-		startThread(ResetMapObjects)
+		startThread(WeeklyMapObjects)
 	end
+	startThread(DailyMapObjects)
 	startThread(UpdateTavernHeroes)
 	startThread(UpdateTavernFactions)
 	for player = 1,8 do
