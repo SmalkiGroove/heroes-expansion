@@ -18,7 +18,6 @@
 
 ### Bugs
 
-- Hero (kha beleth only?) swaping his spellpower for attack after months of game
 
 ### Suggestions
 
@@ -31,7 +30,6 @@
 - Market change rate are total scam
 - Inferno and Dungeon sacrificial buildings are bad
 - Buff spiteful ability from +1 to +3
-- Nerf Devotion broken values
 
 ### Massive work required
 
@@ -73,3 +71,5 @@
 - Script error if Tieru does not have Druids of the Council at the end of battle
 - Nightmare icon low quality
 - Tap Runes has no grey icon
+- Hero (kha beleth only?) swaping his spellpower for attack after months of game
+- Nerf Devotion broken values

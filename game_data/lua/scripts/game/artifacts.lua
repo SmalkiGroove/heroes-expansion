@@ -68,7 +68,7 @@ ARTIFACT_CROWN_OF_THE_MAGISTER = 46                 -- /
 ARTIFACT_RING_OF_THE_MAGISTER = 47                  -- reduce hero spells cost by 6
 ARTIFACT_SHANTIRI_MOON_DISC = 48                    -- immunity to implosion
 ARTIFACT_PLUMED_BOOTS = 49                          -- immunity to slow, all creatures fly TODO
-ARTIFACT_050 = 50                                   -- immunity to blind
+ARTIFACT_CELESTIAL_JUSTICAR_HELMET = 50             -- immunity to blind, berserk and confusion
 ARTIFACT_HELM_OF_THE_DWARVEN_KINGS = 51             -- immunity to frenzy
 ARTIFACT_MAGIC_SCROLL_OF_SPELL = 52                 -- grants random spell
 ARTIFACT_GRAAL = 53                                 -- GRAIL
@@ -186,7 +186,7 @@ ARTIFACT_CLOAK_OF_DARKNESS = 164                    -- enemy creatures have -1 l
 ARTIFACT_SHANTIRI_BREASTPLATE = 165                 -- immunity to earthquake TODO
 ARTIFACT_SHIELD_OF_THE_WOLF = 166                   -- /
 ARTIFACT_HELM_OF_THE_WARMAGE = 167                  -- learn new spell on level up **
-ARTIFACT_CELESTIAL_JUSTICAR_HELMET = 168            -- immunity to blind, berserk and confusion TODO
+ARTIFACT_168 = 168                                  -- 
 ARTIFACT_RING_OF_STRENGTH = 169                     -- creatures have +3 hp
 ARTIFACT_SPEAR_OF_THE_FROST_LORD = 170              -- creatures deal 20% additional ice damage
 ARTIFACT_STAFF_OF_THE_LYRE = 171                    -- every 4 victories, gain +1 to the lowest stat **
@@ -411,7 +411,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_RING_OF_THE_MAGISTER]          = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_ACADEMY, special=0},
     [ARTIFACT_SHANTIRI_MOON_DISC]            = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_NECK, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_PLUMED_BOOTS]                  = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_SYLVAN, special=0},
-    [ARTIFACT_050]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_BACKPACK, set=ARTIFACT_SET_NONE, special=1}, -- tbd
+    [ARTIFACT_CELESTIAL_JUSTICAR_HELMET]     = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_ARCHANGEL, special=0},
     [ARTIFACT_HELM_OF_THE_DWARVEN_KINGS]     = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_DWARVEN, special=0},
     [ARTIFACT_MAGIC_SCROLL_OF_SPELL]         = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_NONE, special=1},
     [ARTIFACT_GRAAL]                         = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_BACKPACK, set=ARTIFACT_SET_NONE, special=1},
@@ -446,7 +446,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_RUNIC_WAR_HARNESS]             = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_BODY, set=ARTIFACT_SET_WARMAGE, special=0},
     [ARTIFACT_SKULL_OF_THE_FORBIDDEN]        = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_FROZEN_HEART]                  = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_FROST, special=0},
-    [ARTIFACT_PHOENIX_FEATHER_CAPE]          = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_NONE, special=0},
+    [ARTIFACT_PHOENIX_FEATHER_CAPE]          = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_RUNE_OF_FLAME]                 = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_DWARVEN, special=0},
     [ARTIFACT_TAROT_DECK]                    = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_CROWN_OF_LEADER]               = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_NONE, special=0},
@@ -529,7 +529,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_SHANTIRI_BREASTPLATE]          = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_BODY, set=ARTIFACT_SET_NONE, special=1}, --disabled
     [ARTIFACT_SHIELD_OF_THE_WOLF]            = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_BESTIAL, special=0},
     [ARTIFACT_HELM_OF_THE_WARMAGE]           = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_WARMAGE, special=0},
-    [ARTIFACT_CELESTIAL_JUSTICAR_HELMET]     = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_ARCHANGEL, special=1}, --disabled
+    [ARTIFACT_168]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_BACKPACK, set=ARTIFACT_SET_NONE, special=1}, -- disabled
     [ARTIFACT_RING_OF_STRENGTH]              = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_SPEAR_OF_THE_FROST_LORD]       = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_FROST, special=0},
     [ARTIFACT_STAFF_OF_THE_LYRE]             = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_ENLIGHTEN, special=0},

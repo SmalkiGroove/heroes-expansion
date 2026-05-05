@@ -733,7 +733,7 @@ function Routine_DevotionAfterBattle(player, hero, mastery, combatIndex)
     log(DEBUG, "$ Routine_DevotionAfterBattle")
     local value = GetArmyStrength(combatIndex, 1)
     local level = GetHeroLevel(hero)
-    AddHeroStatAmount(player, hero, STAT_EXPERIENCE, 10*level*value)
+    AddHeroStatAmount(player, hero, STAT_EXPERIENCE, 5*level*value)
 end
 
 function Routine_BattleWrathAfterBattle(player, hero, mastery, combatIndex)
