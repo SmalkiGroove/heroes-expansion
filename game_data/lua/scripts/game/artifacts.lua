@@ -164,7 +164,7 @@ ARTIFACT_BARBARIAN_HELMET = 142                     -- creatures get battle rage
 ARTIFACT_SKULL_MASK = 143                           -- decrease enemy initiative
 ARTIFACT_SENTINELS_BLADE = 144                      -- after spawning a blade barrier, adjacent enemies attack it **
 ARTIFACT_VIZIRS_SCIMITAR = 145                      -- increase t1 and t2 weekly prod by 10 **
-ARTIFACT_BARBARIAN_CAPE = 146                       -- disable cowardice / immunity to fear TODO
+ARTIFACT_BARBARIAN_CAPE = 146                       -- disable cowardice / immunity to fear
 ARTIFACT_SHADOW_BLADE = 147                         -- /
 ARTIFACT_SHADOWSTEP_SHOES = 148                     -- /
 ARTIFACT_RANGERS_CUIRASS = 149                      -- bonus defense vs large creatures TODO
@@ -507,7 +507,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_SKULL_MASK]                    = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_SPIRIT, special=0},
     [ARTIFACT_SENTINELS_BLADE]               = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_HAVEN, special=0},
     [ARTIFACT_VIZIRS_SCIMITAR]               = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_VIZIR, special=0},
-    [ARTIFACT_BARBARIAN_CAPE]                = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_ORCS, special=1}, --disabled
+    [ARTIFACT_BARBARIAN_CAPE]                = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_ORCS, special=0},
     [ARTIFACT_SHADOW_BLADE]                  = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_DUNGEON, special=0},
     [ARTIFACT_SHADOWSTEP_SHOES]              = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_DUNGEON, special=0},
     [ARTIFACT_RANGERS_CUIRASS]               = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_BODY, set=ARTIFACT_SET_SYLVAN, special=1}, --disabled

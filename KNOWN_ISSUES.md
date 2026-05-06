@@ -72,6 +72,7 @@
 - Avenger Bow bonus ranged damage now works
 - Butcher Glaive bonus melee damage now works
 - Sentinel's Blade blade barrier effect now works
+- Barbarian Cape immunity to fear now works
 - Shantiri Moon Disc blocks all light magic
 - Nerf early game AI
 - Nerf Druid of the Council spellpower
