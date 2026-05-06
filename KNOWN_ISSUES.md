@@ -25,6 +25,10 @@
 - Darkstorm hero totem model
 - Add ARMG templates
 - Make Earthquake deal magical earth damage
+- Custom Haven town building that produces wolves per day +undeads
+- Custom Inferno town building that produces gold per recruits
+- Custom Sylvan town building ?
+- Custom Academy town building ?
 
 ### Balance
 
@@ -42,7 +46,7 @@
 - Add neutral heroes and bosses
 
 
-# FIXED
+# FIXED/CHANGED
 
 - Summoned Wolves stack stay in army permanently
 - Starting bonus artifact not working
@@ -59,6 +63,7 @@
 - Dragon Flame Tongue immunity to cold death now works
 - Shield of Crystal Ice immunity to ignite now works
 - Celestial Justicar's Armor melee damage reduction now works
+- Celestial Justicar's Hemet immunity to blind/confusion/berserk now works
 - Dragonsbane damages ignoring defense now works
 - Phoenix Feather's Cape immunity to freeze now works
 - Collar of Primal Rage bonus rage points now works

@@ -3,7 +3,9 @@ Var_WitchHutVisited = {}
 Var_TempleVisited = {}
 Var_RallyFlagVisited = {}
 Var_WarAcademyVisited = {}
+Var_TombOfTheWarriorVisited = {}
 Var_IdolOfFortuneVisited = {}
+Var_FortuitousSanctuaryVisited = {}
 
 function Override_Monsters(obj)
     local x, y, z = GetObjectPosition(obj)
@@ -49,12 +51,29 @@ end
 function Override_TombOfTheWarrior(obj)
     Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_TombOfTheWarrior")
     SetObjectEnabled(obj, nil)
+    Var_TombOfTheWarriorVisited[obj] = {}
 end
 
 function Override_IdolOfFortune(obj)
     Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_IdolOfFortune")
     SetObjectEnabled(obj, nil)
     Var_IdolOfFortuneVisited[obj] = nil
+end
+
+function Override_SeerHut(obj)
+    Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_SeerHut")
+    SetObjectEnabled(obj, nil)
+end
+
+function Override_MotherEarthShrine(obj)
+    Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_MotherEarthShrine")
+    SetObjectEnabled(obj, nil)
+end
+
+function Override_FortuitousSanctuary(obj)
+    Trigger(OBJECT_TOUCH_TRIGGER, obj, "Trigger_FortuitousSanctuary")
+    SetObjectEnabled(obj, nil)
+    Var_FortuitousSanctuaryVisited[obj] = 0
 end
 
 -----------------------------------------------
@@ -135,11 +154,6 @@ function WitchHuts_reset()
     for obj,_ in Var_WitchHutVisited do
         Var_WitchHutVisited[obj] = 0
     end
-    -- for player = 1,8 do
-    --     if (GetPlayerState(player) == 1) then
-    --         for _,h in GetPlayerHeroes(player) do MarkObjectAsVisited(obj, h) end
-    --     end
-    -- end
 end
 
 
@@ -244,8 +258,14 @@ function Trigger_TombOfTheWarrior(hero, obj)
     local player = GetObjectOwner(hero)
     if IsAIPlayer(player) then
         NoOverrideAI(obj, hero, "Trigger_TombOfTheWarrior")
+    elseif Var_TombOfTheWarriorVisited[obj][hero] then
+        ShowFlyingSign("/Text/Game/Scripts/MapObjects/TombOfTheWarriorVisited.txt", hero, player, FLYING_SIGN_TIME)
     else
-        
+        ChangeHeroStat(hero, STAT_ATTACK, 1)
+        ChangeHeroStat(hero, STAT_DEFENCE, 1)
+        ChangeHeroStat(hero, STAT_EXPERIENCE, 3000)
+        Var_TombOfTheWarriorVisited[obj][hero] = 1
+        MarkObjectAsVisited(obj, hero)
     end
 end
 
@@ -286,6 +306,81 @@ function IdolOfFortune_daily()
 end
 
 
+function Trigger_SeerHut(hero, obj)
+    log(DEBUG, "$ Trigger_SeerHut")
+    local player = GetObjectOwner(hero)
+    if IsAIPlayer(player) then
+        NoOverrideAI(obj, hero, "Trigger_SeerHut")
+    else
+        QuestionBoxForPlayers(
+            GetPlayerFilter(player),
+            "/Text/Game/Scripts/MapObjects/SeerHut.txt",
+            "Trigger_SeerHut_confirm("..player..")",
+            "NoneRoutine"
+        )
+    end
+end
+function Trigger_SeerHut_confirm(player)
+    TakeAwayResources(player, GOLD, 5000)
+    for p = 1,8 do
+        if p ~= player and GetPlayerState(p) == 1 then
+            if GetPlayerTeam(p) ~= GetPlayerTeam(player) then
+                for _,h in GetPlayerHeroes(p) do
+                    local x, y, z = GetObjectPosition(h)
+                    OpenCircleFog(x, y, z, 2, player)
+                end
+            end
+        end
+    end
+end
+
+
+function Trigger_MotherEarthShrine(hero, obj)
+    log(DEBUG, "$ Trigger_MotherEarthShrine")
+    local player = GetObjectOwner(hero)
+    if IsAIPlayer(player) then
+        NoOverrideAI(obj, hero, "Trigger_MotherEarthShrine")
+    else
+        
+    end
+end
+
+
+function Trigger_FortuitousSanctuary(hero, obj)
+    log(DEBUG, "$ Trigger_FortuitousSanctuary")
+    local player = GetObjectOwner(hero)
+    if IsAIPlayer(player) then
+        NoOverrideAI(obj, hero, "Trigger_FortuitousSanctuary")
+    elseif Var_FortuitousSanctuaryVisited[obj] == 1 then
+        MessageBoxPEST(player, "/Text/Game/Scripts/MapObjects/ArcaneSanctuaryVisited.txt", "NoneRoutine")
+    else
+        local required_skill = {11, 11, 11, 10, 10, 10, 12, 12, 12, 9, 9, 9}
+        local unknown_spells = {}
+        local n, c = 0, 0
+        for circle = 1, 5 do
+            for i, spell in SPELLS_BY_TIER[circle] do
+                if circle < 3 or GetHeroSkillMastery(hero, required_skill[i]) > (circle-3) then
+                    if not KnowHeroSpell(hero, spell) then insert(unknown_spells, spell); n = n + 1 end
+                end
+            end
+            if n > 0 then c = circle break end
+        end
+        if n == 0 then
+            MessageBoxPEST(player, "/Text/Game/Scripts/MapObjects/ArcaneSanctuaryCancel.txt", "NoneRoutine") return
+        elseif n == 1 then
+            TeachHeroSpell(hero, unknown_spells[1])
+        else
+            local s = unknown_spells[random(1, n, TURN-1)]
+            TeachHeroSpell(hero, s)
+        end
+        local txt_arg = "/Text/Game/Scripts/_n/"..c..".txt"
+        MessageBoxPEST(player, {"/Text/Game/Scripts/MapObjects/ArcaneSanctuaryAccept.txt"; arg=txt_arg}, "NoneRoutine")
+        Var_FortuitousSanctuaryVisited[obj] = 1
+        MarkObjectAsVisited(obj, hero)
+    end
+end
+
+
 -----------------------------------------------
 
 function RegisterMapGates()
@@ -303,6 +398,9 @@ TRIGGER_OVERRIDES = {
     ["BUILDING_WAR_ACADEMY"] = Override_WarAcademy,
     ["BUILDING_TOMB_OF_THE_WARRIOR"] = Override_TombOfTheWarrior,
     ["BUILDING_IDOL_OF_FORTUNE"] = Override_IdolOfFortune,
+    ["BUILDING_SEER_HUT"] = Override_SeerHut,
+    ["BUILDING_NOMADS_SHAMAN"] = Override_MotherEarthShrine,
+    ["BUILDING_FORTUITOUS_SANCTUARY"] = Override_FortuitousSanctuary,
 }
 
 function InitializeMapObjects()
