@@ -48,8 +48,7 @@ end
 
 function GetHeroTowns(player, hero)
     local cities = {}
-    local factionID = HEROES[hero].faction
-    local towns = GetFactionTowns(factionID)
+    local towns = GetFactionTowns(HEROES[hero].faction)
     for i,town in towns do
 		if GetObjectOwner(town) == player then
 			insert(cities,town)

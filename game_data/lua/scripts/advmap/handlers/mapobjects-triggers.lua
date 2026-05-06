@@ -341,8 +341,38 @@ function Trigger_MotherEarthShrine(hero, obj)
     if IsAIPlayer(player) then
         NoOverrideAI(obj, hero, "Trigger_MotherEarthShrine")
     else
-        
+        QuestionBoxForPlayers(
+            GetPlayerFilter(player),
+            "/Text/Game/Scripts/MapObjects/MotherEarthShrine.txt",
+            "Trigger_MotherEarthShrine_confirm("..player..",'"..hero.."')",
+            "NoneRoutine"
+        )
     end
+end
+function Trigger_MotherEarthShrine_confirm(player, hero)
+    local faction = HEROES[hero].faction
+    local towns = GetHeroTowns(player, hero)
+    local total = 0
+    local k, units, amounts = GetHeroArmySummary(hero)
+    for i = 1, k do
+        local creature = units[i]
+        local f = CREATURES[creature][1]
+        if f ~= faction and f ~= NEUTRAL then
+            local count = amounts[i]
+            local tier = CREATURES[creature][2]
+            local recruit = CREATURES_BY_FACTION[faction][tier][1]
+            for _, town in towns do
+                if GetTownBuildingLevel(town, 6+tier) > 0 then
+                    local cur = GetObjectDwellingCreatures(town, recruit)
+                    SetObjectDwellingCreatures(town, recruit, count + cur)
+                    RemoveHeroCreatures(hero, creature, count)
+                    total = total + count
+                    break
+                end
+            end
+        end
+    end
+    MessageBoxPEST(player, {"/Text/Game/Scripts/MapObjects/MotherEarthShrineDone.txt"; amount=total}, "NoneRoutine")
 end
 
 
