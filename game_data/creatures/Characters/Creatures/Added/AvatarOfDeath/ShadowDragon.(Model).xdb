@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Model ObjectRecordID="7303">
+	<Materials>
+		<Item href="#n:inline(Material)" id="item_07829054-6b9a-4176-b75c-4846ff58cfd8">
+			<Material ObjectRecordID="17445">
+				<Texture href="/Textures/auto-imported_______320/Creatures/Necropolis/ShadowDragon/ShadowDragon.tga.xdb#xpointer(/Texture)"/>
+				<Bump/>
+				<SpecFactor>0</SpecFactor>
+				<SpecColor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</SpecColor>
+				<Gloss/>
+				<MetalMirror>0</MetalMirror>
+				<DielMirror>0</DielMirror>
+				<Mirror/>
+				<CastShadow>true</CastShadow>
+				<ReceiveShadow>true</ReceiveShadow>
+				<Priority>0</Priority>
+				<TranslucentColor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</TranslucentColor>
+				<FloatParam>0</FloatParam>
+				<DetailTexture/>
+				<DetailScale>5</DetailScale>
+				<ProjectOnTerrain>false</ProjectOnTerrain>
+				<LightingMode>L_NORMAL</LightingMode>
+				<DynamicMode>DM_DONT_CARE</DynamicMode>
+				<Is2Sided>false</Is2Sided>
+				<Effect>M_GENERIC</Effect>
+				<AlphaMode>AM_ALPHA_TEST</AlphaMode>
+				<AffectedByFog>true</AffectedByFog>
+				<AddPlaced>false</AddPlaced>
+				<IgnoreZBuffer>false</IgnoreZBuffer>
+				<BackFaceCastShadow>false</BackFaceCastShadow>
+			</Material>
+		</Item>
+		<Item href="#n:inline(Material)" id="item_9a75f0a3-ecf0-4ec1-b2ab-9e8a98745df5">
+			<Material ObjectRecordID="17446">
+				<Texture href="/Textures/auto-imported_______320/Creatures/Necropolis/ShadowDragon/ShadowDragon_add.tga.xdb#xpointer(/Texture)"/>
+				<Bump/>
+				<SpecFactor>0</SpecFactor>
+				<SpecColor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</SpecColor>
+				<Gloss/>
+				<MetalMirror>0</MetalMirror>
+				<DielMirror>0</DielMirror>
+				<Mirror/>
+				<CastShadow>false</CastShadow>
+				<ReceiveShadow>true</ReceiveShadow>
+				<Priority>0</Priority>
+				<TranslucentColor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</TranslucentColor>
+				<FloatParam>0</FloatParam>
+				<DetailTexture/>
+				<DetailScale>5</DetailScale>
+				<ProjectOnTerrain>false</ProjectOnTerrain>
+				<LightingMode>L_NORMAL</LightingMode>
+				<DynamicMode>DM_DONT_CARE</DynamicMode>
+				<Is2Sided>false</Is2Sided>
+				<Effect>M_GENERIC</Effect>
+				<AlphaMode>AM_ALPHA_TEST</AlphaMode>
+				<AffectedByFog>true</AffectedByFog>
+				<AddPlaced>false</AddPlaced>
+				<IgnoreZBuffer>false</IgnoreZBuffer>
+				<BackFaceCastShadow>false</BackFaceCastShadow>
+			</Material>
+		</Item>
+		<Item href="ShadowDragon_add_glow.(Material).xdb#xpointer(/Material)"/>
+		<Item href="ShadowDragon_glow.(Material).xdb#xpointer(/Material)"/>
+	</Materials>
+	<Skeleton href="#n:inline(Skeleton)" id="item_c006c295-f0b3-4c60-8425-7e4cb3925efe">
+		<Skeleton ObjectRecordID="1325">
+			<SrcName href="/models/Creatures/Necropolis/ShadowDragon.mb"/>
+			<RootJoint>Global</RootJoint>
+			<MSRFormat>true</MSRFormat>
+			<Animations/>
+			<uid>2D0E8D07-3CEA-455A-9881-6C04086B7345</uid>
+		</Skeleton>
+	</Skeleton>
+	<Geometry href="#n:inline(Geometry)" id="item_0cde7dfe-e21a-4244-8001-4b041ca87ce0">
+		<Geometry ObjectRecordID="6502">
+			<SrcName href="/models/Creatures/Necropolis/ShadowDragon.mb"/>
+			<uid>0AE0807C-F40B-4074-A062-25D8BA8C4AAC</uid>
+			<RootMesh/>
+			<RootJoint>Global</RootJoint>
+			<Size>
+				<x>1.62472</x>
+				<y>9.44448</y>
+				<z>7.30988</z>
+			</Size>
+			<Center>
+				<x>0</x>
+				<y>1.27079</y>
+				<z>3.65484</z>
+			</Center>
+			<BestFitPoint>
+				<x>-0.000916669</x>
+				<y>-0.0738132</y>
+				<z>7.19841</z>
+			</BestFitPoint>
+			<Dir>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0</w>
+			</Dir>
+			<AIGeometry href="#n:inline(AIGeometry)" id="item_4b9c9f1b-736c-46bf-8256-0269a21e9c55">
+				<AIGeometry ObjectRecordID="362">
+					<SrcName href="/models/Creatures/Necropolis/ShadowDragon.mb"/>
+					<RootMesh>AI</RootMesh>
+					<RootJoint/>
+					<Volume>0</Volume>
+					<SolidPart>0</SolidPart>
+					<AABBCenter>
+						<x>-0.0863713</x>
+						<y>-0.140288</y>
+						<z>2.21054</z>
+					</AABBCenter>
+					<AABBHalfSize>
+						<x>1.15305</x>
+						<y>2.55391</y>
+						<z>1.14522</z>
+					</AABBHalfSize>
+					<uid>E3EF4F82-3F08-434E-8EA5-ACDA9DB39029</uid>
+				</AIGeometry>
+			</AIGeometry>
+			<NumMeshes>1</NumMeshes>
+			<MaterialQuantities>
+				<Item>4</Item>
+			</MaterialQuantities>
+			<MeshNames>
+				<Item>Dragon_meshShape</Item>
+			</MeshNames>
+			<MeshAnimated/>
+			<MeshWindAffected/>
+		</Geometry>
+	</Geometry>
+	<Animations/>
+	<WindPower>1</WindPower>
+</Model>

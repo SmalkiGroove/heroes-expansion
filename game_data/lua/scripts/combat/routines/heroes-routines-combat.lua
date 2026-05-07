@@ -700,17 +700,13 @@ function Routine_SummonAvatarOfDeath(side, hero)
     if GetUnitManaPoints(hero) >= cost then
         local units = GetUnits(side, CREATURE)
         HeroCast_Global(hero, SPELL_ABILITY_AVATAR_OF_DEATH, cost)
-        sleep(100)
-        ROUTINE_VARS.AvatarOfDeath = GetUnits(side, CREATURE)[length(units)]
     end
 end
 
 function Routine_AvatarDead(side, hero, unit)
-    if unit == ROUTINE_VARS.AvatarOfDeath then
+    if GetCreatureType(unit) == CREATURE_AVATAR_OF_DEATH then
         log(DEBUG, "$ Routine_AvatarDead")
         HeroCast_AllCreatures(hero, SPELL_SORROW, FREE_MANA, 1-side)
-        sleep(100)
-        -- SetMana(hero, GetHeroLevel(side))
     end
 end
 

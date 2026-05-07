@@ -29,7 +29,6 @@ ROUTINE_VARS = {
     DruidOfTheCouncil = "none",
     TimeShifter = not nil,
     GremlinShot = "none",
-    AvatarOfDeath = "none",
     Darkstorm = "none",
     Incendiary = 3,
     AtbBoosted = {},

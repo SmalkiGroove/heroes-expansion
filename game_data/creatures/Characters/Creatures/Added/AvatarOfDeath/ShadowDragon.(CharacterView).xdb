@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CharacterView ObjectRecordID="229">
+	<Model href="ShadowDragon.(Model).xdb#xpointer(/Model)"/>
+	<AnimSet href="/_(AnimSet)/Creatures/Necropolis/ShadowDragon-arena.(AnimSet).xdb#xpointer(/AnimSet)"/>
+	<sequence>
+		<Item>
+			<Kind>death</Kind>
+			<Counter>100</Counter>
+			<CutBegin>false</CutBegin>
+			<CutEnd>false</CutEnd>
+		</Item>
+	</sequence>
+	<Effect href="/Effects/_(Effect)/Cutscenes/ShadowDragon_arrival.xdb#xpointer(/Effect)"/>
+</CharacterView>

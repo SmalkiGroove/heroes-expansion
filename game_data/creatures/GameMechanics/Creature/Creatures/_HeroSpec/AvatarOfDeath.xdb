@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Creature>
+	<AttackSkill>1</AttackSkill>
+	<DefenceSkill>1</DefenceSkill>
+	<Shots>0</Shots>
+	<MinDamage>1</MinDamage>
+	<MaxDamage>1</MaxDamage>
+	<Speed>1</Speed>
+	<Initiative>1</Initiative>
+	<Flying>true</Flying>
+	<Health>1</Health>
+	<KnownSpells/>
+	<SpellPoints>0</SpellPoints>
+	<SpellPoints1>0</SpellPoints1>
+	<SpellPoints2>0</SpellPoints2>
+	<Exp>5000</Exp>
+	<Power>15000</Power>
+	<TimeToCommand>10</TimeToCommand>
+	<CreatureTier>7</CreatureTier>
+	<Upgrade>true</Upgrade>
+	<PairCreature>CREATURE_BONE_DRAGON</PairCreature>
+	<CreatureTown>TOWN_NO_TYPE</CreatureTown>
+	<MagicElement><First>ELEMENT_AIR</First><Second>ELEMENT_WATER</Second></MagicElement>
+	<WeeklyGrowth>1</WeeklyGrowth>
+	<Cost>
+		<Gold>3500</Gold>
+	</Cost>
+	<SubjectOfRandomGeneration>false</SubjectOfRandomGeneration>
+	<MonsterShared/>
+	<CombatSize>2</CombatSize>
+	<PatternAttack/>
+	<flybySequence/>
+	<Visual href="/GameMechanics/CreatureVisual/Creatures/Added/AvatarOfDeath.(CreatureVisual).xdb#xpointer(/CreatureVisual)"/>
+	<Range>0</Range>
+	<BaseCreature>CREATURE_BONE_DRAGON</BaseCreature>
+	<Upgrades/>
+	<Abilities>
+		<Item>ABILITY_UNDEAD</Item>
+	</Abilities>
+</Creature>
