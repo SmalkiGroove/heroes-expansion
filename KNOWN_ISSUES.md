@@ -70,6 +70,7 @@
 - Codex of the Saint atb reset now works
 - Staff of the Saint bonus spellpower now works
 - Avenger Bow bonus ranged damage now works
+- Ranger Cuirass defense vs large creatures now works
 - Butcher Glaive bonus melee damage now works
 - Sentinel's Blade blade barrier effect now works
 - Barbarian Cape immunity to fear now works
