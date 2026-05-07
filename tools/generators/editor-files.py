@@ -2,8 +2,8 @@ import os
 import xmltodict
 from PIL import Image
 
-ENABLE_ARTIFACTS = False
-ENABLE_CREATURES = True
+ENABLE_ARTIFACTS = True
+ENABLE_CREATURES = False
 
 editor_files = "../../editor/Complete/Icons/Generated/MapObjects/_(AdvMapObjectLink)"
 

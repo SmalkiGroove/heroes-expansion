@@ -51,8 +51,8 @@ for artifact in artifacts_data["Table_DBArtifact_ArtifactEffect"]["objects"]["It
                 mapobject_file = str(artifact["obj"]["ArtifactShared"]["@href"])
                 artifactshared[artifact_class][artifact["ID"]] = f"    <Item href=\"{mapobject_file}\"/>"
 
-        advmaplink_file = os.path.join(root_path, advmaplink_path, f"{artifact_name}.xdb")
-        write_from_template(advmaplink_file, {'mapobject': mapobj_artifact_path, 'icon': f"{editor_icons}/{artifact_name}.tga"})
+        # advmaplink_file = os.path.join(root_path, advmaplink_path, f"{artifact_name}.xdb")
+        # write_from_template(advmaplink_file, {'mapobject': mapobj_artifact_path, 'icon': f"{editor_icons}/{artifact_name}.tga"})
 
 for artifact_class in artifactshared.keys():
     print(f"{artifact_class} artifacts :")
