@@ -127,7 +127,7 @@ ARTIFACT_NAGA_COMMANDERS_HELMET = 105               --
 ARTIFACT_NECKLACE_OF_THE_BLOODY_CLAW = 106          -- creatures have +25% max damage
 ARTIFACT_RING_OF_CELERITY = 107                     -- hero has +2 initiative
 ARTIFACT_ELDENAS_RED_COAT = 108                     -- level up grants t2 creatures **
-ARTIFACT_RING_OF_LIFE = 109                         -- 
+ARTIFACT_RING_OF_HEALTH = 109                       -- increase tent healing
 ARTIFACT_STEADFAST_SHIELD = 110                     -- /
 ARTIFACT_VIKING_SHIELD = 111                        -- gain wood/ore after battles **
 ARTIFACT_FORTUNE_BAND_OF_THE_SAINT = 112            -- gain permanent luck after victories **
@@ -186,7 +186,7 @@ ARTIFACT_CLOAK_OF_DARKNESS = 164                    -- enemy creatures have -1 l
 ARTIFACT_SHANTIRI_BREASTPLATE = 165                 -- immunity to earthquake TODO
 ARTIFACT_SHIELD_OF_THE_WOLF = 166                   -- /
 ARTIFACT_HELM_OF_THE_WARMAGE = 167                  -- learn new spell on level up **
-ARTIFACT_168 = 168                                  -- 
+ARTIFACT_RING_OF_DEVASTATION = 168                  -- increase ballista attack
 ARTIFACT_RING_OF_STRENGTH = 169                     -- creatures have +3 hp
 ARTIFACT_SPEAR_OF_THE_FROST_LORD = 170              -- creatures deal 20% additional ice damage
 ARTIFACT_STAFF_OF_THE_LYRE = 171                    -- every 4 victories, gain +1 to the lowest stat **
@@ -470,7 +470,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_NECKLACE_OF_THE_BLOODY_CLAW]   = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_NECK, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_RING_OF_CELERITY]              = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_ELDENAS_RED_COAT]              = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_ELDENA, special=0},
-    [ARTIFACT_RING_OF_LIFE]                  = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_NONE, special=1},
+    [ARTIFACT_RING_OF_HEALTH]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_STEADFAST_SHIELD]              = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_VIKING_SHIELD]                 = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_BANDIT, special=0},
     [ARTIFACT_FORTUNE_BAND_OF_THE_SAINT]     = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_SAINT, special=0},
@@ -529,7 +529,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_SHANTIRI_BREASTPLATE]          = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_BODY, set=ARTIFACT_SET_NONE, special=1}, --disabled
     [ARTIFACT_SHIELD_OF_THE_WOLF]            = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_BESTIAL, special=0},
     [ARTIFACT_HELM_OF_THE_WARMAGE]           = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_WARMAGE, special=0},
-    [ARTIFACT_168]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_BACKPACK, set=ARTIFACT_SET_NONE, special=1}, -- disabled
+    [ARTIFACT_RING_OF_DEVASTATION]           = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_RING_OF_STRENGTH]              = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_SPEAR_OF_THE_FROST_LORD]       = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_FROST, special=0},
     [ARTIFACT_STAFF_OF_THE_LYRE]             = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_ENLIGHTEN, special=0},

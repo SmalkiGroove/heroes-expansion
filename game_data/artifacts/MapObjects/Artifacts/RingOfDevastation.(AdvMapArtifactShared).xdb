@@ -18,8 +18,8 @@
 	<Effect href="/Effects/_(Effect)/ResoursesAndChests/Chest.xdb#xpointer(/Effect)"/>
 	<EffectWhenOwned/>
 	<messagesFileRef>
-		<Item href="/Text/Game/Artifacts/RingOfLife/Name.txt"/>
-		<Item href="/Text/Game/Artifacts/RingOfLife/Description.txt"/>
+		<Item href="/Text/Game/Artifacts/RingOfDevastation/Name.txt"/>
+		<Item href="/Text/Game/Artifacts/RingOfDevastation/Description.txt"/>
 	</messagesFileRef>
 	<WaterBased>false</WaterBased>
 	<ApplyHeroTrace>false</ApplyHeroTrace>
@@ -32,5 +32,5 @@
 	<RazedStatic/>
 	<Icon128/>
 	<Type>ARTF_RANDOM_SPECIFIC</Type>
-	<ArtifactID>ARTIFACT_RING_OF_HEALTH</ArtifactID>
+	<ArtifactID>ARTIFACT_RING_OF_DEVASTATION</ArtifactID>
 </AdvMapArtifactShared>

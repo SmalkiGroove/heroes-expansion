@@ -998,10 +998,17 @@ function Routine_SlowOpponentHero(side, hero)
     log(DEBUG, "$ Routine_SlowOpponentHero")
     local opponent = GetHero(1-side)
     if opponent then
-        while CURRENT_UNIT ~= hero do
-            SetATB_ID(opponent, ATB_ZERO)
-            sleep(100)
+        local thread = function(h1, h2)
+            local unit = nil
+            repeat
+                if unit ~= CURRENT_UNIT then
+                    unit = CURRENT_UNIT
+                    SetATB_ID(h2, ATB_ZERO)
+                end
+                sleep(100)
+            until CURRENT_UNIT == h1
         end
+        startThread(thread, hero, opponent)
     end
 end
 

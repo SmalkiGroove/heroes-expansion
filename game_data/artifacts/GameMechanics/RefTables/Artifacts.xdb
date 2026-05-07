@@ -2664,7 +2664,7 @@
 			</obj>
 		</Item>	
 		<Item>
-			<ID>WEREWOLF_CLAW_NECKLACE_2</ID>
+			<ID>ARTIFACT_NECKLACE_OF_THE_BLOODY_CLAW</ID>
 			<obj>
 				<NameFileRef href="/Text/Game/Artifacts/NecklaceOfTheBloodyClaw/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/NecklaceOfTheBloodyClaw/Description.txt"/>
@@ -2739,17 +2739,17 @@
 			</obj>
 		</Item>	
 		<Item>
-			<ID>RING_OF_LIFE_2</ID>
+			<ID>ARTIFACT_RING_OF_HEALTH</ID>
 			<obj>
 				<NameFileRef href="/Text/Game/Artifacts/RingOfLife/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/RingOfLife/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MAJOR</Type>
+				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>FINGER</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/RingOfLife.xdb#xpointer(/Texture)"/>
-				<CostOfGold>10000</CostOfGold>
-				<AIValue>20000</AIValue>
-				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>10000</AIValue>
+				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
@@ -4214,17 +4214,17 @@
 			</obj>
 		</Item>	
 		<Item>
-			<ID>ARTIFACT_168</ID>
+			<ID>ARTIFACT_RING_OF_DEVASTATION</ID>
 			<obj>
-				<NameFileRef href="/Text/Game/Artifacts/XXX/Name.txt"/>
-				<DescriptionFileRef href="/Text/Game/Artifacts/XXX/Description.txt"/>
+				<NameFileRef href="/Text/Game/Artifacts/RingOfDevastation/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artifacts/RingOfDevastation/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
 				<Type>ARTF_CLASS_MINOR</Type>
-				<Slot>INVENTORY</Slot>
-				<Icon href="/Textures/Icons/Blank.xdb#xpointer(/Texture)"/>
-				<CostOfGold>1</CostOfGold>
-				<AIValue>1</AIValue>
-				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
+				<Slot>FINGER</Slot>
+				<Icon href="/Textures/HeroScreen/Artifacts/RingOfDevastation.xdb#xpointer(/Texture)"/>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>10000</AIValue>
+				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
@@ -4233,8 +4233,8 @@
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
-				<ArtifactShared href="/MapObjects/Artifacts/XXX.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
-				<AvailableForPresets>false</AvailableForPresets>
+				<ArtifactShared href="/MapObjects/Artifacts/RingOfDevastation.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
+				<AvailableForPresets>true</AvailableForPresets>
 				<PresetPrice>0</PresetPrice>
 			</obj>
 		</Item>		
