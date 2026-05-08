@@ -101,7 +101,7 @@
 | GREMLIN SABOTEUR | 1 | 51 | 7 | 2 | 2 | 1-2 | 3 | 10 | _none_ | Magic-proof 25%, Sabotage |
 | | | | | | | | | | | |
 | STONE GARGOYLE | 2 | 33 | 15 | 2 | 8 | 2-2 | 6 | 7 | _none_ | Elemental, Taunt |
-| OBSIDIAN GARGOYLE | 2 | 33 | 19 | 2 | 8 | 2-2 | 6 | 7 | _none_ | Elemental, Taunt, Magnetism |
+| OBSIDIAN GARGOYLE | 2 | 33 | 19 | 2 | 8 | 2-2 | 6 | 7 | _none_ | Elemental, Taunt, Gravity |
 | GOLDEN GARGOYLE | 2 | 33 | 15 | 4 | 8 | 2-2 | 6 | 8 | _none_ | Elemental, Taunt, Enchanted Metal |
 | | | | | | | | | | | |
 | STONE GOLEM | 3 | 20 | 22 | 7 | 7 | 3-5 | 4 | 8 | _none_ | Mechanical, Unstoppable, Magic-proof 50% |
@@ -175,7 +175,7 @@
 | NOSFERATU | 4 | 10 | 34 | 9 | 9 | 6-10 | 7 | 10 | _none_ | Undead, Life Drain, Torpor |
 | | | | | | | | | | | |
 | LICH | 5 | 5 | 37 | 8 | 12 | 12-17 | 3 | 10 | Suffering (advanced), Harm Touch (advanced) | Undead, Death Cloud, Magic-proof 50%, Harm Touch |
-| ARCHLICH | 5 | 5 | 40 | 8 | 12 | 13-18 | 3 | 10 | Weakness (advanced), Slow (advanced), Decay (advanced), Suffering (advanced), Harm Touch (advanced) | Undead, Death Cloud, Magic-proof 50%, Harm Touch |
+| ARCHLICH | 5 | 5 | 40 | 8 | 12 | 13-18 | 3 | 10 | Suffering (advanced), Decay (advanced), Sorrow (advanced), Harm Touch (advanced) | Undead, Death Cloud, Magic-proof 50%, Harm Touch |
 | LICH MASTER | 5 | 5 | 39 | 10 | 14 | 12-17 | 3 | 10 | Suffering (advanced), Raise Dead (advanced), Harm Touch (advanced) | Undead, Long Range, Magic-proof 50%, Harm Touch |
 | | | | | | | | | | | |
 | BLACK KNIGHT | 6 | 3 | 115 | 15 | 15 | 15-20 | 7 | 8 | _none_ | Undead, Weakening Strike, Shielded, Heavy Armor |

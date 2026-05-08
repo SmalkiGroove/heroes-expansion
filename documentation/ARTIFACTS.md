@@ -22,10 +22,11 @@
 +2 Attack, Defense and Morale temporarily after leveling up
 - __Sentinel's Breastplate__ :
 +5 Defense
-+10% Magic-proof
++15% Spell-proof
 - __Sentinel's Blade__ :
-+5 Attack
-<color=red>When you spawn a Blade Barrier during combat, adjacent enemies are forced to attack it
++4 Attack
+When hero spawns a Blade Barrier during combat, adjacent enemies are forced to attack it
+Grants the Blade Barrier spell if it wasn't learned already
 
 ---
 ### Elven Secret
@@ -35,12 +36,13 @@
 | 6 | • Coming soon     For Sylvan heroes:  • Coming soon |
 
 - __Avenger Bow__ :
-<color=red>+10% damage from ranged attacks
++10% damage from ranged attacks
 - __Ranger's Cape__ :
 +2 Knowledge
 Troops gain Agility, increasing their defense by 2 per tile moved.
 - __Ranger's Armor__ :
-*ranger cuirass*
++2 Defense
+Hero troops have +10 effective Defense when attacked by large creatures
 - __Plumed Boots__ :
 +2 Spellpower
 +1 Morale
@@ -197,14 +199,16 @@ Creatures in hero's army are Undisturbed (immunity to Berserk)
 +3 Defense
 +3% Health to friendly creatures
 - __Barbarian Cape__ :
-*cape*
++1 Morale
+Creatures in hero's army are immuned to Fear
+Disables the Cowardice ability for hero troops
 - __Crag Hack's Helmet__ :
 +1 Defense
 Troops gain the Battle Rage ability
 - __Collar Of Primal Rage__ :
 +1 Attack
 +1 Spellpower
-<color=red>+100 rage points at the start of combat (only for orcs)
++100 rage points at the start of combat (only for orcs)
 - __Ogre Club__ :
 +5 Attack
 <color=red>-25% Defense to enemy creatures
@@ -244,7 +248,7 @@ Troops gain the Battle Rage ability
 - __Dragon Flame Tongue__ :
 +4 Attack
 -40% Damage taken from enemy Frost spells
-<color=red>Creatures in hero's army are immuned to Cold Death
+Creatures in hero's army are immuned to Cold Death
 
 ---
 ### Empowerement
@@ -284,7 +288,7 @@ Grants hero troops immunity to Blaze Power's defense reduction
 -50% mana cost to frost spells
 - __Spear of the Frost Lord__ :
 +2 Attack
-<color=red>+20% ice damages to attacks
++20% ice damages to attacks
 
 ---
 ### Faraway Kingdom
@@ -293,13 +297,17 @@ Grants hero troops immunity to Blaze Power's defense reduction
 | 4 | When an enemy stack is killed, the hero gains 100% ATB and mana equal to 10 + Level. The mana can raise above limit, and all exceeding mana points are converted to experience after battles. |
 
 - __Genji's Hat__ :
-*genji's hat*
++2 Spellpower
+-1 Mana cost to all spells
 - __Genji's Vest__ :
-*genji's vest*
++2 Defense
++20% Spell-proof
 - __Genji's Sandals__ :
-*genji's sandals*
++2 Knowledge
++1 Initiative to the hero
 - __Genji's Silksword__ :
-*genji's sword*
++2 Attack
+Damaging spells ignore 20% of enemy creatures' spell-proof
 
 ---
 ### Eldena's Pride
@@ -455,13 +463,13 @@ Gain Wood and Ore after battle depending on the strength of the defeated army
 +2 Knowledge
 Creatures in hero's army are immuned to Decay
 - __Staff of the Saint__ :
-<color=red>+7 Spellpower when casting Light Magic spells
++7 Spellpower when casting Light Magic spells
 - __Sandals of the Saint__ :
 +3 Defense
 +1 Luck
 - __Codex Of The Saint__ :
 +5 Knowledge
-<color=red>+15% ATB after casting a spell
++15% ATB after casting a spell
 
 ---
 ### Celestial Justicar
@@ -472,13 +480,9 @@ Creatures in hero's army are immuned to Decay
 - __Celestial Justicar's Shield__ :
 +2 Defense
 -50% damage taken from ranged attacks
-- __Celestial Justicar's Helm__ :
-+2 Defense
-+2 Spellpower
-.
 - __Celestial Justicar's Armor__ :
 +4 Defense
-<color=red>-25% melee damage taken
+-25% melee damage taken
 - __Celestial Justicar's Sword__ :
 +3 Attack
 +15% Initiative to friendly creatures
@@ -552,9 +556,9 @@ Grants the ability to cast spell <value=spell_name> from this wand at Advanced M
 +1 Spellpower
 +20% damage to Lightning spells
 - __Shield of Crystal Ice__ :
-+4 Defense
++5 Defense
 -40% Damage taken from enemy Fire spells
-<color=red>Creatures in hero's army are immuned to Ignite
+Creatures in hero's army are immuned to Ignite
 - __Four Leaf Clover__ :
 +2 Luck
 - __Crown Of Courage__ :
@@ -627,10 +631,6 @@ Restore 10 Mana after battle
 +10 Spellpower
 -1 Luck
 -1 Morale
-- __Phoenix Fire Cape__ :
-+1 Spellpower
--33% Damage taken from enemy Fire spells
-<color=red>Grants hero troops immunity to Frost Power's freeze
 - __Tarot Deck__ :
 +1 Luck
 - __Crown of Leadership__ :
@@ -652,9 +652,6 @@ Generate between 0 and 3 Ore per day, and sometimes an additional Crystal or Gem
 -2 Luck to enemy creatures
 - __Naga Commander's Helm__ :
 *naga commanders helm*
-- __War Horn__ :
-+1 Morale
-+10% Initiative to friendly creatures
 - __Steadfast Shield__ :
 +2 Defense
 - __Elrath's Divine Shield__ :
@@ -665,13 +662,13 @@ Generate between 0 and 3 Ore per day, and sometimes an additional Crystal or Gem
 -2 Morale to enemy creatures
 - __Butcher Glaive__ :
 +1 Attack
-<color=red>+10% damage from melee attacks
++15% damage from melee attacks
 - __Blazing Spellbook__ :
 +2 Spellpower
 -33% Mana cost for Fire spells
 - __Centaur Crossbow__ :
 +1 Attack
-<color=red>+10% to hero's attacks damage
++10% hero's attacks damage
 - __Harpy Boots__ :
 +1 Speed and Initiative to all friendly creatures
 - __Ring of Supernatural Strength__ :
@@ -690,7 +687,7 @@ Grants hero's army imunity to Mind Control
 +1 Defense
 +1 Luck
 +10% Magic Disruption
-+10% Magic-proof
++10% Spell-proof
 - __Crimson Scythe__ :
 +5 Attack
 -1 Morale to enemy creatures
@@ -699,7 +696,7 @@ Grants hero's army imunity to Mind Control
 +2 Defense
 Creatures in hero's army are immuned to Word of Light
 - __Dragonsbane__ :
-<color=red>Creatures' attacks ignore enemy Defense
+Attacks ignore enemy Defense but cannot be lucky or unlucky
 - __Orb of Air Affinity__ :
 +3 Spellpower
 +33% Damage to Lightning spells
@@ -716,3 +713,21 @@ A stack of Fire Elementals joins hero's army at the start of combats (scales wit
 +3 Spellpower
 +33% Damage to Frost spells
 A stack of Water Elementals joins hero's army at the start of combats (scales with Knowledge)
+- __Necklace of the Bloody Claw__ :
++25% maximum damages to friendly units
+- __Ring Of Celerity__ :
++2 Initiative to the hero
+- __Ring of Health__ :
++100 Healing power to the First Aid Tent
+- __Ring Of Devastation__ :
++10 Attack to the Ballista
+- __Golden Goose__ :
+Hero's army attacks are always lucky
+-1 to all primary stats
+- __Ardent Smith__ :
++2 Attack
+Creatures in hero's army get the Flame Wave ability
+- __Smithy Hammer__ :
++1 Attack
++1 Defense
++3 Attack and Defense for the first battle of each day

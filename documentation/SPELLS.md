@@ -5,20 +5,20 @@
 |------|-------|------|-------------|---------|
 | 1 | [Strength](#strength) | [Weakness](#weakness) | [Magic Arrow](#magic-arrow) | [Wasp Swarm](#wasp-swarm) |
 | | | | | |
-| 2 | [Endurance](#endurance) | [Rupture](#rupture) | [Lightning Bolt](#lightning-bolt) | [Arcane Crystal](#arcane-crystal) |
-| 2 | [Haste](#haste) | [Slow](#slow) | [Ice Bolt](#ice-bolt) | [Land Mines](#land-mines) |
+| 2 | [Endurance](#endurance) | [Slow](#slow) | [Lightning Bolt](#lightning-bolt) | [Land Mines](#land-mines) |
+| 2 | [Haste](#haste) | [Rupture](#rupture) | [Ice Bolt](#ice-bolt) | [Arcane Crystal](#arcane-crystal) |
 | | | | | |
-| 3 | [Deflect Missile](#deflect-missile) | [Suffering](#suffering) | [Stone spikes](#stone-spikes) | [Confusion](#confusion) |
-| 3 | [Righteous Might](#righteous-might) | [Decay](#decay) | [Polar Ring](#polar-ring) | [Summon Elementals](#summon-elementals) |
-| 3 | [Cleansing](#cleansing) | [Sorrow](#sorrow) | [Fireball](#fireball) | [Regeneration](#regeneration) |
+| 3 | [Cleansing](#cleansing) | [Sorrow](#sorrow) | [Polar Ring](#polar-ring) | [Confusion](#confusion) |
+| 3 | [Deflect Missile](#deflect-missile) | [Suffering](#suffering) | [Stone spikes](#stone-spikes) | [Summon Elementals](#summon-elementals) |
+| 3 | [Righteous Might](#righteous-might) | [Decay](#decay) | [Fireball](#fireball) | [Regeneration](#regeneration) |
 | | | | | |
-| 4 | [Blind](#blind) | [Raise Dead](#raise-dead) | [Fist of Wrath](#fist-of-wrath) | [Wasp Hive](#wasp-hive) |
-| 4 | [Blade Barrier](#blade-barrier) | [Vampirism](#vampirism) | [Firewall](#firewall) | [Earthquake](#earthquake) |
-| 4 | [Divine Vengeance](#divine-vengeance) | [Teleport](#teleport) | [Discharge](#discharge) | [Immunity](#immunity) |
+| 4 | [Blind](#blind) | [Vampirism](#vampirism) | [Discharge](#discharge) | [Earthquake](#earthquake) |
+| 4 | [Blade Barrier](#blade-barrier) | [Teleport](#teleport) | [Firewall](#firewall) | [Immunity](#immunity) |
+| 4 | [Divine Vengeance](#divine-vengeance) | [Raise Dead](#raise-dead) | [Fist of Wrath](#fist-of-wrath) | [Wasp Hive](#wasp-hive) |
 | | | | | |
-| 5 | [Resurrection](#resurrection) | [Berserk](#berserk) | [Armageddon](#armageddon) | [Meteor Shower](#meteor-shower) |
-| 5 | [Celestial Shield](#celestial-shield) | [Shadow Image](#shadow-image) | [Deep Freeze](#deep-freeze) | [Conjure Phoenix](#conjure-phoenix) |
-| 5 | [Holy Word](#holy-word) | [Curse of the Netherworld](#curse-of-the-netherworld) | [Implosion](#implosion) | [Mind Control](#mind-control) |
+| 5 | [Resurrection](#resurrection) | [Shadow Image](#shadow-image) | [Armageddon](#armageddon) | [Meteor Shower](#meteor-shower) |
+| 5 | [Celestial Shield](#celestial-shield) | [Curse of the Netherworld](#curse-of-the-netherworld) | [Deep Freeze](#deep-freeze) | [Mind Control](#mind-control) |
+| 5 | [Holy Word](#holy-word) | [Berserk](#berserk) | [Implosion](#implosion) | [Conjure Phoenix](#conjure-phoenix) |
 | | | | | |
 
 
@@ -63,7 +63,7 @@ N/A
 #### Lightning Bolt
 >Tier 2 Destructive Magic  (7 Mana)
 
-Deals lightning damage to selected enemy unit.
+Deals lightning damage to selected enemy unit and removes 20% of its current ATB.
 
 Damage :
 - Base: '5'
@@ -135,7 +135,7 @@ N/A
 #### Discharge
 >Tier 4 Destructive Magic  (24 Mana)
 
-Deals massive lightning damage to several adjacent creatures (up to 4), starting with the selected one. Every next creature in the chain gets 75% of the damage inflicted to the previous one.  (The chain can hit the own creatures) 
+Deals lightning damage to the target and removes 20% of its current ATB, then bounces twice, targeting the closest unit (ally or enemy), and dealing 75% of the damage inflicted to the previous one. It cannot damage the same unit twice.
 
 Damage :
 - Base: '5'
@@ -729,7 +729,7 @@ Duration :
 
 
 #### Shadow Image
->Tier 5 Dark Magic  (22 Mana)
+>Tier 5 Dark Magic  (23 Mana)
 
 Copies the selected friendly unit (only one copy can be made). The copy can't cast any spells or use any abilities and disappears as soon as it recieves any damage (Incorporial ability gives the copy 50% chance to avoid any damage)
 

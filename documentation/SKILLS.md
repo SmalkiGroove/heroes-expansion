@@ -35,7 +35,7 @@ Hero receives 5/10/15% bonus to the experience gained from all sources.
 - __Mentoring__ : When this hero meets another friendly hero, the latter gains as much experience as needed to have total experience points equal to 30% of that of the mentor’s.
 - __Intelligence__ : Grants the hero +4 Knowledge permanently.
 - __Exaltation__ : Delving deep into the secrets of spellcraft, hero gains +4 Spellpower permanently.
-- __Meditation__ : Special adventure ability. Hero spends entire day to meditate, grating experience and full mana. Can only be used at the beginning of the day.
+- __Meditation__ : Special adventure ability. Hero spends entire day to meditate, granting experience and full mana. Can only be used at the beginning of the day.
 
 ### Sorcery
 
@@ -314,7 +314,7 @@ Unique Inferno skill. Tier 1,2/3,4/5,6 demonic creatures are granted an ability 
 
 Unique Stronghold skill. Allows Stronghold creatures in hero’s army to achieve a first/second/third level of rage while fighting. The resulting Blood Rage grants them appropriate combat bonuses.
 
-- __Memory Of Our Blood__ : All Stronghold creatures in the hero's army get from 50 up to 100 rage points (randomly) at the beginning of combat.
+- __Memory Of Our Blood__ : All orcs in hero's army get from 25 up to 125 rage points (randomly) at the beginning of combat.
 - __Battle Elation__ : Every time when a Morale effect is triggered with a creature in the hero’s army, it gains 50 Rage points.
 - __Bloodfire__ : Every time when a creature in the hero’s army gets Rage, it gets 50% more than usual. But if a creature loses Rage, it loses 1.5 of the usual amount, too.
 - __Goblin Support__ : If there is an Ammo Cart in the hero’s army, there will be 3 Goblins joining his army every day.
