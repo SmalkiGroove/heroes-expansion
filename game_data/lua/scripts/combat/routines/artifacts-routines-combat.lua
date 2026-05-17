@@ -97,6 +97,17 @@ function Routine_ArtfsetBestial(side, hero)
     SummonCreatureSideOffset(side, beast, amount, 4)
 end
 
+function Routine_ArtfsetHaven4X(side, hero)
+    log(DEBUG, "$ Routine_ArtfsetHaven4X")
+    if IsCreature(CURRENT_UNIT) then
+        local type = GetCreatureType(CURRENT_UNIT)
+        if type == CREATURE_ANGEL or type == CREATURE_ARCHANGEL or type == CREATURE_SERAPH then
+            UnitCastAimedSpell(CURRENT_UNIT, SPELL_ENCOURAGE, RandomCreature(side, COMBAT_TURN))
+            sleep() SetATB_ID(CURRENT_UNIT, ATB_INSTANT)
+        end
+    end
+end
+
 function Routine_ArtfsetGenji1(side, hero, unit)
     log(DEBUG, "$ Routine_ArtfsetGenji1")
     if GetUnitSide(unit) ~= side then
@@ -216,6 +227,7 @@ COMBAT_START_ARTFSET_ROUTINES = {
     [ARTFSET_DRAGON_8PC] = Routine_ArtfsetDragon8,
 }
 COMBAT_TURN_ARTFSET_ROUTINES = {
+    [ARTFSET_HAVEN_4PCX] = Routine_ArtfsetHaven4X,
 }
 UNIT_DIED_ARTFSET_ROUTINES = {
     [ARTFSET_GENJI_4PC] = Routine_ArtfsetGenji1,

@@ -53,7 +53,6 @@
 - Elem orb spawn position random
 - Nerf Kha Beleth late game
 - Frozen heart not in frost artifact set
-- Add NCF creatures in editor
 - Leadership give +2 Luck instead of Precision
 - Inferno sacrificial pit not required for city hall
 - Witchcraft perk has no effect if natively known
@@ -63,7 +62,7 @@
 - Dragon Flame Tongue immunity to cold death now works
 - Shield of Crystal Ice immunity to ignite now works
 - Celestial Justicar's Armor melee damage reduction now works
-- Celestial Justicar's Hemet immunity to blind/confusion/berserk now works
+- Celestial Justicar's Helmet immunity to blind/confusion/berserk now works
 - Dragonsbane damages ignoring defense now works
 - Phoenix Feather's Cape immunity to freeze now works
 - Collar of Primal Rage bonus rage points now works

@@ -2286,7 +2286,7 @@
 				<Unsummon_DamagePerHeroLevel>50</Unsummon_DamagePerHeroLevel>
 				<Unsummon_DamagePerSkillMastery>0</Unsummon_DamagePerSkillMastery>
 				<MeltArtifact_HealPerArtifactEffectPerHeroLevel>15</MeltArtifact_HealPerArtifactEffectPerHeroLevel>
-				<MeltArtifact_ATBUsage>0.25</MeltArtifact_ATBUsage>
+				<MeltArtifact_ATBUsage>0</MeltArtifact_ATBUsage>
 			</Wizard>
 			<Ranger>
 				<SunFireDamagePerHeroLevel>12</SunFireDamagePerHeroLevel>
@@ -2310,7 +2310,7 @@
 				<Distract_EnemyHeroInitiativeDrop>0.15</Distract_EnemyHeroInitiativeDrop>
 				<SetAfire_DamageMultiplier>0.25</SetAfire_DamageMultiplier>
 				<SetAfire_DamageDurationInRounds>2</SetAfire_DamageDurationInRounds>
-				<ShrugDarkness_EnemySpellpowerMultiplier>0.8</ShrugDarkness_EnemySpellpowerMultiplier>
+				<ShrugDarkness_EnemySpellpowerMultiplier>0.66</ShrugDarkness_EnemySpellpowerMultiplier>
 				<RunicArmor_SpellpowerBonus>6</RunicArmor_SpellpowerBonus>
 				<RunicMachines_InitiativeBonus>3</RunicMachines_InitiativeBonus>
 				<Mentoring_ExpPecentToGiveToVisitor>0.3</Mentoring_ExpPecentToGiveToVisitor>
@@ -2372,8 +2372,8 @@
 					<Item>0.15</Item>
 				</HeroDamageLevel30>
 			</Melee>
-			<EmpoweredLightningATBDrop>0.3</EmpoweredLightningATBDrop>
-			<EmpoweredIceFreezeDuration>0.6</EmpoweredIceFreezeDuration>
+			<EmpoweredLightningATBDrop>0.2</EmpoweredLightningATBDrop>
+			<EmpoweredIceFreezeDuration>0.4</EmpoweredIceFreezeDuration>
 			<MagicMirrorLevelMultiplier>2</MagicMirrorLevelMultiplier>
 			<PrayerLevelMultiplier>0.25</PrayerLevelMultiplier>
 			<DeathScreamLevelMultiplier>0.25</DeathScreamLevelMultiplier>

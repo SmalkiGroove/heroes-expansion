@@ -393,6 +393,14 @@ function Routine_ArtfsetMoon(player, hero)
     end
 end
 
+function Routine_ArtfsetHaven4(player, hero)
+    log(DEBUG, "$ Routine_ArtfsetHaven4")
+    local value = GetArmyStrength(combatIndex, 0)
+    local bonus = trunc(0.001 * value)
+    GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_ATTACK, bonus)
+    GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_DEFENCE, bonus)
+end
+
 function Routine_ArtfsetVizir(player, hero, combatIndex)
     log(DEBUG, "$ Routine_ArtfsetVizir")
     local value = GetArmyStrength(combatIndex, 0)
@@ -475,6 +483,7 @@ LEVELUP_TRIGGER_ARTFSETS_ROUTINES = {
     [ARTFSET_MOON_4PC] = Routine_ArtfsetMoon,
 }
 AFTER_COMBAT_TRIGGER_ARTFSETS_ROUTINES = {
+    [ARTFSET_HAVEN_4PC] = Routine_ArtfsetHaven4,
     [ARTFSET_VIZIR_4PC] = Routine_ArtfsetVizir,
     [ARTFSET_GENJI_4PC] = Routine_ArtfsetGenji2,
 }
