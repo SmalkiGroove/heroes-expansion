@@ -196,6 +196,16 @@ function Routine_CheckSecretsOfDestruct(player, hero, mastery)
     end
 end
 
+function Routine_CheckElementalFocus(player, hero, mastery)
+    log(DEBUG, "$ Routine_CheckElementalFocus")
+    local value = mastery
+    local diff = value - HERO_SKILL_BONUSES[hero][SKILLBONUS_ELEMENTAL_FOCUS]
+    if diff ~= 0 then
+        AddHeroStatAmount(player, hero, STAT_SPELL_POWER, diff)
+        HERO_SKILL_BONUSES[hero][SKILLBONUS_ELEMENTAL_FOCUS] = value
+    end
+end
+
 function Routine_CheckReinforcement(player, hero, mastery)
     log(DEBUG, "$ Routine_CheckReinforcement")
     local value = mastery
@@ -823,6 +833,7 @@ START_TRIGGER_SKILLS_ROUTINES = {
     [PERK_GRADUATE] = Routine_CheckGraduate,
     [PERK_OCCULTISM] = Routine_CheckOccultism,
     [PERK_SECRETS_OF_DESTRUCT] = Routine_CheckSecretsOfDestruct,
+    [PERK_ELEMENTAL_FOCUS] = Routine_CheckElementalFocus,
     [PERK_REINFORCEMENT] = Routine_CheckReinforcement,
     [PERK_EMPIRICISM] = Routine_CheckEmpiricism,
     [PERK_ONSLAUGHT] = Routine_OnslaughtBuff,
