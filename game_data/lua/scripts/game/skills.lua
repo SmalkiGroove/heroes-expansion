@@ -212,7 +212,7 @@ PERK_BACK_TO_THE_VOID = 207
 PERK_208 = 208
 PERK_209 = 209
 PERK_SCORCHING_EARTH = 210
-PERK_211 = 211
+PERK_PERCEPTION_OF_WEAKNESS = 211
 PERK_DEVOTION = 212
 PERK_BATTLE_WRATH = 213
 PERK_WAR_POLICY = 214
@@ -334,6 +334,7 @@ _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_EXALTATION          = _skillbonu
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_ARCANE_EXCELLENCE   = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_GRADUATE            = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_OCCULTISM           = _skillbonus_id
+_skillbonus_id = _skillbonus_id + 1; SKILLBONUS_DESTRUCT_LEARNING   = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_SECRETS_OF_DESTRUCT = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_ELEMENTAL_FOCUS     = _skillbonus_id
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_REINFORCEMENT       = _skillbonus_id

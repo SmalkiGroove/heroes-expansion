@@ -125,6 +125,7 @@ function WatchPlayer(player, wait)
 				end
 			end
 			startThread(DoHeroSpeRoutine_Continuous, player, hero)
+			startThread(DoSkillsRoutine_Continuous, player, hero)
 			startThread(DoArtifactsRoutine_Continuous, player, hero)
         end
 		sleep(10)

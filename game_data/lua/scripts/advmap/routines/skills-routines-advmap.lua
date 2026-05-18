@@ -813,6 +813,18 @@ function Routine_OnslaughtReset(player, hero, mastery, combatIndex)
 end
 
 
+function Routine_DestructionLearning(player, hero)
+    log(DEBUG, "$ Routine_DestructionLearning")
+    if HERO_SKILL_BONUSES[hero][SKILLBONUS_DESTRUCT_LEARNING] == 1 then return end
+    for i = 1, 6 do
+        local spell = SPELLS_BY_SCHOOL[SPELL_SCHOOL_DESTRUCT][i]
+        if not KnowHeroSpell(hero, spell) then return end
+    end
+    ChangeHeroStat(hero, STAT_KNOWLEDGE, 2)
+    HERO_SKILL_BONUSES[hero][SKILLBONUS_DESTRUCT_LEARNING] = 1
+end
+
+
 
 START_TRIGGER_SKILLS_ROUTINES = {
     [SKILL_OFFENCE] = Routine_CheckOffence,
@@ -905,6 +917,10 @@ AFTER_COMBAT_TRIGGER_SKILLS_ROUTINES = {
     [PERK_STAMINA] = Routine_StaminaBuff,
 }
 
+CONTINUOUS_TRIGGER_SKILLS_ROUTINES = {
+    [PERK_DESTRUCTION_LEARNING] = Routine_DestructionLearning,
+}
+
 
 function DoSkillsRoutine_Start(player, hero)
     log(DEBUG, "$ DoSkillsRoutine_Start - "..hero)
@@ -960,6 +976,15 @@ function DoSkillsRoutine_AfterCombat(player, hero, index)
         if HasHeroSkill(hero, k) then
             local mastery = GetHeroSkillMastery(hero, k)
             startThread(v, player, hero, mastery, index)
+        end
+    end
+end
+
+function DoSkillsRoutine_Continuous(player, hero)
+    -- log(DEBUG, "$ DoSkillsRoutine_Continuous - "..hero)
+    for k,v in CONTINUOUS_TRIGGER_SKILLS_ROUTINES do
+        if HasHeroSkill(hero, k) then
+            startThread(v, player, hero)
         end
     end
 end
