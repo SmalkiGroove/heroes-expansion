@@ -81,3 +81,7 @@
 - Tap Runes has no grey icon
 - Hero (kha beleth only?) swaping his spellpower for attack after months of game
 - Nerf Devotion broken values
+- All fire spells now reduce armor by 30% without skill required
+- All ice spells now freeze atb for 0.4 turn witout skill required
+- All lightning spells now remove 50% of atb without skill required
+- All earth spells now ignore half of the spell-proof

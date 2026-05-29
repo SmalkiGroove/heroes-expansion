@@ -215,6 +215,8 @@ Initial beta release !
 - New artifacts and creatures from the mod added to the editor
 - Added spells and training bonuses sections in creatures description window
 - More artifacts (Ardent Smith, war machine rings, Genji's set and many others that were disabled are now working)
+- Totally reworked destructive magic spells and skills
+- New Sorcery perk Arcane Protection that reduces damage taken by army based on hero's spellpower
 - Changed map objects effects (Idol of Fortune, Tomb of the Warrior, Seer Hut, War Academy, Arcane Sanctuary, Mother Earth Shrine)
 
 #### Fixed/Changed
