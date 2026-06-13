@@ -121,7 +121,7 @@ Grants the ability to learn any 4th level spell if the hero has the Magic Insigh
 +1 Defense
 Gain +1 Knowledge at the start of each week
 - __Ring of the Magister__ :
--6 Mana cost to all spells (minimum 1)
+-4 Mana cost to all spells (minimum 1)
 - __Crown of the Magister__ :
 +2 Spellpower
 +2 Knowledge

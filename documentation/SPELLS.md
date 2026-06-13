@@ -5,20 +5,20 @@
 |------|-------|------|-------------|---------|
 | 1 | [Strength](#strength) | [Weakness](#weakness) | [Magic Arrow](#magic-arrow) | [Wasp Swarm](#wasp-swarm) |
 | | | | | |
-| 2 | [Endurance](#endurance) | [Slow](#slow) | [Lightning Bolt](#lightning-bolt) | [Land Mines](#land-mines) |
-| 2 | [Haste](#haste) | [Rupture](#rupture) | [Ice Bolt](#ice-bolt) | [Arcane Crystal](#arcane-crystal) |
+| 2 | [Endurance](#endurance) | [Rupture](#rupture) | [Lightning Bolt](#lightning-bolt) | [Arcane Crystal](#arcane-crystal) |
+| 2 | [Haste](#haste) | [Slow](#slow) | [Ice Bolt](#ice-bolt) | [Land Mines](#land-mines) |
 | | | | | |
-| 3 | [Cleansing](#cleansing) | [Sorrow](#sorrow) | [Polar Ring](#polar-ring) | [Confusion](#confusion) |
-| 3 | [Deflect Missile](#deflect-missile) | [Suffering](#suffering) | [Stone spikes](#stone-spikes) | [Summon Elementals](#summon-elementals) |
-| 3 | [Righteous Might](#righteous-might) | [Decay](#decay) | [Fireball](#fireball) | [Regeneration](#regeneration) |
+| 3 | [Cleansing](#cleansing) | [Suffering](#suffering) | [Stone spikes](#stone-spikes) | [Regeneration](#regeneration) |
+| 3 | [Deflect Missile](#deflect-missile) | [Sorrow](#sorrow) | [Polar Ring](#polar-ring) | [Confusion](#confusion) |
+| 3 | [Righteous Might](#righteous-might) | [Decay](#decay) | [Fireball](#fireball) | [Summon Elementals](#summon-elementals) |
 | | | | | |
-| 4 | [Blind](#blind) | [Vampirism](#vampirism) | [Discharge](#discharge) | [Earthquake](#earthquake) |
-| 4 | [Blade Barrier](#blade-barrier) | [Teleport](#teleport) | [Firewall](#firewall) | [Immunity](#immunity) |
-| 4 | [Divine Vengeance](#divine-vengeance) | [Raise Dead](#raise-dead) | [Fist of Wrath](#fist-of-wrath) | [Wasp Hive](#wasp-hive) |
+| 4 | [Blade Barrier](#blade-barrier) | [Teleport](#teleport) | [Discharge](#discharge) | [Wasp Hive](#wasp-hive) |
+| 4 | [Divine Vengeance](#divine-vengeance) | [Raise Dead](#raise-dead) | [Fist of Wrath](#fist-of-wrath) | [Immunity](#immunity) |
+| 4 | [Blind](#blind) | [Vampirism](#vampirism) | [Firewall](#firewall) | [Earthquake](#earthquake) |
 | | | | | |
-| 5 | [Resurrection](#resurrection) | [Shadow Image](#shadow-image) | [Armageddon](#armageddon) | [Meteor Shower](#meteor-shower) |
-| 5 | [Celestial Shield](#celestial-shield) | [Curse of the Netherworld](#curse-of-the-netherworld) | [Deep Freeze](#deep-freeze) | [Mind Control](#mind-control) |
-| 5 | [Holy Word](#holy-word) | [Berserk](#berserk) | [Implosion](#implosion) | [Conjure Phoenix](#conjure-phoenix) |
+| 5 | [Resurrection](#resurrection) | [Curse of the Netherworld](#curse-of-the-netherworld) | [Implosion](#implosion) | [Meteor Shower](#meteor-shower) |
+| 5 | [Holy Word](#holy-word) | [Berserk](#berserk) | [Deep Freeze](#deep-freeze) | [Conjure Phoenix](#conjure-phoenix) |
+| 5 | [Celestial Shield](#celestial-shield) | [Shadow Image](#shadow-image) | [Armageddon](#armageddon) | [Mind Control](#mind-control) |
 | | | | | |
 
 
@@ -63,7 +63,7 @@ N/A
 #### Lightning Bolt
 >Tier 2 Destructive Magic  (7 Mana)
 
-Deals lightning damage to selected enemy unit and removes 20% of its current ATB.
+Deals lightning damage to selected enemy unit and removes 30% of its current ATB.
 
 Damage :
 - Base: '5'
@@ -81,7 +81,7 @@ N/A
 #### Ice Bolt
 >Tier 2 Destructive Magic  (8 Mana)
 
-Deals ice damage to selected enemy unit.
+Deals ice damage to selected enemy unit and freeze it's ATB value temporarily.
 
 Damage :
 - Base: '8'
@@ -99,7 +99,7 @@ N/A
 #### Fireball
 >Tier 3 Destructive Magic  (14 Mana)
 
-Deals fire damage to all units in the target area.
+Deals fire damage to all units in the target area and reduce their Defense by 30%.
 
 Damage :
 - Base: '10'
@@ -117,7 +117,7 @@ N/A
 #### Polar Ring
 >Tier 3 Destructive Magic  (15 Mana)
 
-Deals ice damage to all units surrounding the target spot.
+Deals ice damage to all units surrounding the target spot and freeze their ATB value temporarily.
 
 Damage :
 - Base: '8'
@@ -135,7 +135,7 @@ N/A
 #### Discharge
 >Tier 4 Destructive Magic  (24 Mana)
 
-Deals lightning damage to the target and removes 20% of its current ATB, then bounces twice, targeting the closest unit (ally or enemy), and dealing 75% of the damage inflicted to the previous one. It cannot damage the same unit twice.
+Deals lightning damage to the target and removes 30% of its current ATB, then bounces twice, targeting the closest unit (ally or enemy), and dealing 75% of the damage inflicted to the previous one. It cannot damage the same unit twice.
 
 Damage :
 - Base: '5'
@@ -153,7 +153,7 @@ N/A
 #### Meteor Shower
 >Tier 5 Natural Magic  (36 Mana)
 
-Deals massive earth damage to all creatures in target area.
+Deals massive earth damage to all creatures in target area.  The damage ignore half of the unit's spell-proof.
 
 Damage :
 - Base: '45'
@@ -171,7 +171,7 @@ N/A
 #### Implosion
 >Tier 5 Destructive Magic  (37 Mana)
 
-Deals earth damage to a single targeted enemy unit.
+Deals enourmous earth damage to a single targeted enemy unit. The damage ignore half of the unit's spell-proof.
 
 Damage :
 - Base: '38'
@@ -189,7 +189,7 @@ N/A
 #### Armageddon
 >Tier 5 Destructive Magic  (45 Mana)
 
-Deals massive fire damage to all creatures and war machines on a battlefield and local physical damage in the point of impact.
+Deals massive fire damage to all creatures and war machines on a battlefield and reduce their Defense by 30%.
 
 Damage :
 - Base: '50'
@@ -864,7 +864,7 @@ N/A
 #### Firewall
 >Tier 4 Destructive Magic  (22 Mana)
 
-Creates a wall of fire in the selected area on battlefield. Deals fire damage to all creatures in this area during several turns.
+Creates a wall of fire in the selected area on battlefield. Deals fire damage to all creatures in this area during several turns and reduce their Defense by 30%.
 
 Damage :
 - Base: '20'
@@ -890,7 +890,7 @@ Duration :
 #### Stone spikes
 >Tier 3 Destructive Magic  (11 Mana)
 
-Deals earth damage to all creatures in target area (cross form)
+Deals earth damage to all creatures in target area. The damage ignore half of the unit's spell-proof.
 
 Damage :
 - Base: '6'

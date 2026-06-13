@@ -27,8 +27,8 @@
 - Make Earthquake deal magical earth damage
 - Custom Haven town building that produces wolves per day +undeads
 - Custom Inferno town building that produces gold per recruits
-- Custom Sylvan town building ?
-- Custom Academy town building ?
+- Custom Sylvan town building that adds movement points to nearby heroes
+- Custom Academy town building alchemy lab that offers to transform creatures into res/potions
 
 ### Balance
 
@@ -85,3 +85,4 @@
 - All ice spells now freeze atb for 0.4 turn witout skill required
 - All lightning spells now remove 50% of atb without skill required
 - All earth spells now ignore half of the spell-proof
+- Rebalanced damage of destructive magic spells

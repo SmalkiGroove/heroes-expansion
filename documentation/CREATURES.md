@@ -89,32 +89,32 @@
 | FLAME LORD | 6 | 3 | 115 | 22 | 24 | 12-14 | 8 | 10 | _none_ | Steadiness, Double Attack, Fire Immuned, Flamewave, Flamestrike |
 | THUNDER THANE | 6 | 3 | 110 | 19 | 25 | 11-14 | 8 | 11 | _none_ | Steadiness, Storm Strike, Lightning Immuned, Thunder Shock |
 | | | | | | | | | | | |
-| FIRE DRAGON | 7 | 1 | 300 | 30 | 30 | 44-55 | 5 | 9 | _none_ | Elemental, Fire Immuned, Magic-proof 25%, Breath Attack, Fire Body |
-| MAGMA DRAGON | 7 | 1 | 300 | 30 | 45 | 44-55 | 5 | 9 | _none_ | Elemental, Fire Immuned, Magic-proof 25%, Breath Attack, Magma Armor, Shielded |
-| LAVA DRAGON | 7 | 1 | 300 | 30 | 35 | 55-66 | 5 | 9 | _none_ | Elemental, Fire Immuned, Magic-proof 25%, Melting Breath, Fire Body, Searing Aura |
+| FIRE DRAGON | 7 | 1 | 300 | 30 | 30 | 44-55 | 5 | 9 | _none_ | Elemental, Fire Immuned, Spell-proof 25%, Breath Attack, Fire Body |
+| MAGMA DRAGON | 7 | 1 | 300 | 30 | 45 | 44-55 | 5 | 9 | _none_ | Elemental, Fire Immuned, Spell-proof 25%, Breath Attack, Magma Armor, Shielded |
+| LAVA DRAGON | 7 | 1 | 300 | 30 | 35 | 55-66 | 5 | 9 | _none_ | Elemental, Fire Immuned, Spell-proof 25%, Melting Breath, Fire Body, Searing Aura |
 
 ### ACADEMY:
 | CREATURE | TIER | NB | HP | ATT | DEF | DMG± | SPD | INIT | SPELLS | ABILITIES |
 |----------|------|----|----|-----|-----|------|-----|------|--------|-----------|
-| GREMLIN | 1 | 51 | 6 | 1 | 1 | 1-2 | 3 | 10 | _none_ | Magic-proof 25% |
-| MASTER GREMLIN | 1 | 51 | 6 | 1 | 2 | 1-2 | 3 | 11 | Repair (advanced) | Magic-proof 25%, Repair |
-| GREMLIN SABOTEUR | 1 | 51 | 7 | 2 | 2 | 1-2 | 3 | 10 | _none_ | Magic-proof 25%, Sabotage |
+| GREMLIN | 1 | 51 | 6 | 1 | 1 | 1-2 | 3 | 10 | _none_ | Spell-proof 25% |
+| MASTER GREMLIN | 1 | 51 | 6 | 1 | 2 | 1-2 | 3 | 11 | Repair (advanced) | Spell-proof 25%, Repair |
+| GREMLIN SABOTEUR | 1 | 51 | 7 | 2 | 2 | 1-2 | 3 | 10 | _none_ | Spell-proof 25%, Sabotage |
 | | | | | | | | | | | |
 | STONE GARGOYLE | 2 | 33 | 15 | 2 | 8 | 2-2 | 6 | 7 | _none_ | Elemental, Taunt |
 | OBSIDIAN GARGOYLE | 2 | 33 | 19 | 2 | 8 | 2-2 | 6 | 7 | _none_ | Elemental, Taunt, Gravity |
 | GOLDEN GARGOYLE | 2 | 33 | 15 | 4 | 8 | 2-2 | 6 | 8 | _none_ | Elemental, Taunt, Enchanted Metal |
 | | | | | | | | | | | |
-| STONE GOLEM | 3 | 20 | 22 | 7 | 7 | 3-5 | 4 | 8 | _none_ | Mechanical, Unstoppable, Magic-proof 50% |
-| STEEL GOLEM | 3 | 20 | 26 | 7 | 7 | 4-6 | 4 | 8 | _none_ | Mechanical, Unstoppable, Magic-proof 50%, Unlimited Retaliations |
-| MAGNETIC GOLEM | 3 | 20 | 22 | 7 | 7 | 4-6 | 4 | 9 | _none_ | Mechanical, Unstoppable, Magic-proof 50%, Magnetic Field |
+| STONE GOLEM | 3 | 20 | 22 | 7 | 7 | 3-5 | 4 | 8 | _none_ | Mechanical, Unstoppable, Spell-proof 50% |
+| STEEL GOLEM | 3 | 20 | 26 | 7 | 7 | 4-6 | 4 | 8 | _none_ | Mechanical, Unstoppable, Spell-proof 50%, Unlimited Retaliations |
+| MAGNETIC GOLEM | 3 | 20 | 22 | 7 | 7 | 4-6 | 4 | 9 | _none_ | Mechanical, Unstoppable, Spell-proof 50%, Magnetic Field |
 | | | | | | | | | | | |
 | MAGE | 4 | 10 | 24 | 6 | 6 | 9-9 | 3 | 9 | Fist of Wrath (advanced), Deflect Missile (advanced) | Long Range, Arcane Shot, Arcane Aura |
 | ARCHMAGE | 4 | 10 | 25 | 6 | 6 | 9-9 | 3 | 9 | Fist of Wrath (advanced), Deflect Missile (advanced), Immunity (basic) | Long Range, Arcane Shot, Arcane Aura, Energy Channel |
 | BATTLEMAGE | 4 | 10 | 26 | 8 | 8 | 9-9 | 3 | 10 | Fist of Wrath (expert), Deflect Missile (expert) | Long Range, Arcane Shot, Arcane Aura |
 | | | | | | | | | | | |
-| DJINN | 5 | 5 | 39 | 12 | 8 | 11-15 | 7 | 13 | Random cast (Dark magic) (advanced) | Elemental, Random Curse, Magic-proof 75% |
-| DJINN SULTAN | 5 | 5 | 46 | 12 | 10 | 12-16 | 7 | 13 | Random cast (Dark or Light magic) (advanced) | Elemental, Random Blessing, Magic-proof 75%, Purge |
-| DJINN VIZIER | 5 | 5 | 42 | 12 | 8 | 11-15 | 7 | 15 | _none_ | Elemental, Wheel of Fortune, Magic-proof 75%, Manavorous |
+| DJINN | 5 | 5 | 39 | 12 | 8 | 11-15 | 7 | 13 | Random cast (Dark magic) (advanced) | Elemental, Random Curse, Spell-proof 75% |
+| DJINN SULTAN | 5 | 5 | 46 | 12 | 10 | 12-16 | 7 | 13 | Random cast (Dark or Light magic) (advanced) | Elemental, Random Blessing, Spell-proof 75%, Purge |
+| DJINN VIZIER | 5 | 5 | 42 | 12 | 8 | 11-15 | 7 | 15 | _none_ | Elemental, Wheel of Fortune, Spell-proof 75%, Manavorous |
 | | | | | | | | | | | |
 | RAKSHASA RANI | 6 | 3 | 100 | 20 | 20 | 15-25 | 6 | 12 | _none_ | Bravery, No Enemy Retaliation, Unflagging |
 | RAKSHASA RAJA | 6 | 3 | 120 | 25 | 25 | 20-30 | 6 | 12 | Warm-up (advanced) | Bravery, No Enemy Retaliation, Warm-up, Unflagging, Keen Eye |
@@ -174,9 +174,9 @@
 | VAMPIRE LORD | 4 | 10 | 35 | 10 | 8 | 7-11 | 7 | 9 | _none_ | Undead, Life Drain, No Enemy Retaliation |
 | NOSFERATU | 4 | 10 | 34 | 9 | 9 | 6-10 | 7 | 10 | _none_ | Undead, Life Drain, Torpor |
 | | | | | | | | | | | |
-| LICH | 5 | 5 | 37 | 8 | 12 | 12-17 | 3 | 10 | Suffering (advanced), Harm Touch (advanced) | Undead, Death Cloud, Magic-proof 50%, Harm Touch |
-| ARCHLICH | 5 | 5 | 40 | 8 | 12 | 13-18 | 3 | 10 | Suffering (advanced), Decay (advanced), Sorrow (advanced), Harm Touch (advanced) | Undead, Death Cloud, Magic-proof 50%, Harm Touch |
-| LICH MASTER | 5 | 5 | 39 | 10 | 14 | 12-17 | 3 | 10 | Suffering (advanced), Raise Dead (advanced), Harm Touch (advanced) | Undead, Long Range, Magic-proof 50%, Harm Touch |
+| LICH | 5 | 5 | 37 | 8 | 12 | 12-17 | 3 | 10 | Suffering (advanced), Harm Touch (advanced) | Undead, Death Cloud, Spell-proof 50%, Harm Touch |
+| ARCHLICH | 5 | 5 | 40 | 8 | 12 | 13-18 | 3 | 10 | Suffering (advanced), Decay (advanced), Sorrow (advanced), Harm Touch (advanced) | Undead, Death Cloud, Spell-proof 50%, Harm Touch |
+| LICH MASTER | 5 | 5 | 39 | 10 | 14 | 12-17 | 3 | 10 | Suffering (advanced), Raise Dead (advanced), Harm Touch (advanced) | Undead, Long Range, Spell-proof 50%, Harm Touch |
 | | | | | | | | | | | |
 | BLACK KNIGHT | 6 | 3 | 115 | 15 | 15 | 15-20 | 7 | 8 | _none_ | Undead, Weakening Strike, Shielded, Heavy Armor |
 | DREAD KNIGHT | 6 | 3 | 120 | 20 | 20 | 16-21 | 7 | 9 | _none_ | Undead, Vorpal Sword, Weakening Strike, Evil Strike, Shielded, Heavy Armor |
@@ -211,7 +211,7 @@
 | | | | | | | | | | | |
 | PIT FIEND | 6 | 3 | 106 | 24 | 24 | 20-26 | 5 | 8 | Fireball (expert), Mass Rupture (expert) | Demonic, Fire Resistance, Mark of Fire |
 | PIT LORD | 6 | 3 | 106 | 25 | 25 | 23-29 | 5 | 8 | Empowered Fireball (expert), Mass Rupture (expert) | Demonic, Fire Immuned, Mark of Fire, Vorpal Sword |
-| PIT SPAWN | 6 | 3 | 116 | 26 | 26 | 26-29 | 5 | 9 | _none_ | Demonic, Fire Immuned, Mark of Fire, Blade of Slaughter, Magic-proof 50% |
+| PIT SPAWN | 6 | 3 | 116 | 26 | 26 | 26-29 | 5 | 9 | _none_ | Demonic, Fire Immuned, Mark of Fire, Blade of Slaughter, Spell-proof 50% |
 | | | | | | | | | | | |
 | DEVIL | 7 | 1 | 236 | 36 | 36 | 44-66 | 9 | 10 | _none_ | Demonic, Fire Resistance, Pressure, Evil Strike |
 | ARCHDEVIL | 7 | 1 | 246 | 40 | 36 | 44-88 | 9 | 11 | Pit Lord Summoning (advanced), Berserk (basic) | Demonic, Fire Immuned, Pressure, Evil Strike, Call Pit Lord |
@@ -281,7 +281,7 @@
 | DEATH SPIDER | 4 | 17 | 24 | 9 | 7 | 9-11 | 5 | 15 | _none_ | Venom, Swift Strike, Cursed Strike |
 | | | | | | | | | | | |
 | BEHEMOTH | 7 | 1 | 280 | 36 | 26 | 43-52 | 6 | 9 | _none_ | Battle Rage, Roar, Ice Immuned, Frightful Presence |
-| EINHERJAR | 7 | 1 | 248 | 28 | 28 | 32-44 | 5 | 10 | _none_ | Melee Potent, Long Range, Fire Immuned, Free Mind, Magic-proof 25%, Bravery |
-| KRAKEN | 7 | 1 | 430 | 30 | 36 | 40-60 | 4 | 8 | Convocation (advanced) | Convocation, Entangling Roots, Circle Attack, Magic-proof 25%, Undisturbed, Incorruptible, Unstoppable |
+| EINHERJAR | 7 | 1 | 248 | 28 | 28 | 32-44 | 5 | 10 | _none_ | Melee Potent, Long Range, Fire Immuned, Free Mind, Spell-proof 25%, Bravery |
+| KRAKEN | 7 | 1 | 430 | 30 | 36 | 40-60 | 4 | 8 | Convocation (advanced) | Convocation, Entangling Roots, Circle Attack, Spell-proof 25%, Undisturbed, Incorruptible, Unstoppable |
 | | | | | | | | | | | |
-| LEGENDARY DRAGON | 8 | 1 | 400 | 50 | 40 | 69-99 | 10 | 10 | _none_ | Breath Attack, No Enemy Retaliation, Dominant Presence, Magic-proof 50%, Free Mind, Unstoppable, Unflagging, Mythic |
+| LEGENDARY DRAGON | 8 | 1 | 400 | 50 | 40 | 69-99 | 10 | 10 | _none_ | Breath Attack, No Enemy Retaliation, Dominant Presence, Spell-proof 50%, Free Mind, Unstoppable, Unflagging, Mythic |

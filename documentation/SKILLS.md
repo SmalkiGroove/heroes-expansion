@@ -45,6 +45,7 @@ Speeds up hero's casting in combat. Interval between two consecutive spell casts
 - __Arcane Initiation__ : Reduces casting costs of all spells by 20%.
 - __Arcane Brillance__ : Casters in hero army will spend 25% less mana to cast their spells.
 - __Arcane Excellence__ : Hero gains a permanent +3 Spellpower, and has +25% bonus to Initiative at start of combat.
+- __Arcane Protection__ : Hero troops take 0.5% reduced damage per hero Spellpower.
 - __Magic Insight__ : Allows a hero to learn magic spells of the third circle regardless of actual skills in the respective schools of magic.
 - __Graduate__ : Hero gains a permanent +2 Knowledge and qualifies for additional level up.
 - __Occultism__ : The hero learns forbidden magic powers, granting him or her +5 Spellpower and twice faster Mana regeneration.
@@ -219,11 +220,20 @@ At the start of each week, new Air Elementals will permanently join hero's army.
 Allows hero to learn Destructive Magic spells of the third/fourth/fifth circle and learns a random one instantly.
 Increases Destructive Magic spells efficiency, damages, duration etc.
 
-- __Frost Power__ : Grants freezing effect to Ice Bolt, Circle of Winter and Deep Freeze spells, delaying target creature's turn by 1 turn.
-- __Deadly Cold__ : Makes Hero’s casting of the spells Ice Bolt, Circle of Winter and Deep Freeze more powerful. Those spells will deal additional damage to kill one creature in the target stack (if that creature has no Immunity to Cold).
-- __Cold Steel__ : The hero enhances weapons of all troops in his or her army to strike with 10% additional ice damages.
-- __Blaze Power__ : Grants armor-damaging effect to Fireball, Firewall and Armageddon spells. Creatures affected by these spells suffer additional -50% defence penalty.
-- __Ignite__ : Fire spells casted by the hero in combat will ignite enemies, inflicting 50% of current spell damage to the target during next 2 rounds.
+- __Elemental Focus__ : Gain +1 Spellpower. Casting elemental spells uses 10% less ATB.
+- __Blaze Power__ : Hero casts fire spells for 10% less mana and with +3 effective spellpower.
+- __Frost Power__ : Hero casts ice spells for 10% less mana and with +3 effective spellpower.
+- __Thunder Power__ : Hero casts lightning spells for 10% less mana and with +3 effective spellpower.
+- __Earth Power__ : Hero casts earth spells for 10% less mana and with +3 effective spellpower.
+- __Ignite__ : Fire spells casted by the hero in combat will reduce target's armor twice as much and ignite enemies, inflicting 25% of current spell damage to the target during next 2 turns.
+- __Deadly Cold__ : Makes Hero’s casting of ice spells more powerful. Those spells will freeze targets twice longer and deal additional damage to kill one creature in the target stack.
+- __Destruction Learning__ : Hero gains +2 Knowledge permanently and randomly acquires one damaging spell of 1st to 3rd circle that is not yet in hero's spellbook. When all destructive spells from 1st to 3rd circle are known, gain another +2 Knowledge.
+- __Perception of Weakness__ : Allows hero to see the element of enemy creatures. Using a damaging spell of the opposite element will deal additional damage equal to 15% of the base spell damage. (Adds up with Arcanism bonus to elemental chains)
+<color_default>
+The opposite elements are :
+Air ~ Earth
+Fire ~ Water
+- __Elements Virtuoso__ : Hero gains 0.25 initiative and 10% bonus damage to elemental spells for each spell element that hero has cast during the battle.
 - __Secrets of Destruction__ : Grants the hero +4 Spellpower.
 Should it happen that any spell is disrupted by a target, the hero gains back all the mana spent to cast that spell.
 
@@ -335,7 +345,7 @@ Hero regenerates an additional 10/20/30 Mana per day.
 Contains innates skills that cannot be learnt otherwise.
 - __Home Land__ : All creatures in hero's army receive +1 movement speed if the battle is taking place on grass terrain.
 - __Silent Tracker__ : The enemy will see only the strongest creature in hero's army with no number at all. Also this ability allows to see courage of neutral monsters and enlarges hero's field of view by 12 tiles.
-- __Tenacity__ : Enemy Dark Magic spells will be cast with 20% less effective Spellpower.
+- __Tenacity__ : Enemy Dark Magic spells will be cast with 33% less effective Spellpower.
 - __Infusion__ : The hero gains +1 Spellpower.
 At the start of each week, gain +50 temporary mana that can go beyond maximum.
 - __Elemental Vision__ : Allows hero to see elements on enemy creatures so that Destructive Magic spells cast by the hero can inflict additional elemental damage.
