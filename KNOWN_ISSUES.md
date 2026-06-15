@@ -34,7 +34,6 @@
 
 - Market change rate are total scam
 - Inferno and Dungeon sacrificial buildings are bad
-- Buff spiteful ability from +1 to +3
 
 ### Massive work required
 
@@ -73,6 +72,9 @@
 - Butcher Glaive bonus melee damage now works
 - Sentinel's Blade blade barrier effect now works
 - Barbarian Cape immunity to fear now works
+- Ogre Club and Ogre Shield stat reduction effect now works
+- Shackles of the Last Man stat reduction effect now works
+- Plumed Boots flying effect now works
 - Shantiri Moon Disc blocks all light magic
 - Nerf early game AI
 - Nerf Druid of the Council spellpower
@@ -86,3 +88,4 @@
 - All lightning spells now remove 50% of atb without skill required
 - All earth spells now ignore half of the spell-proof
 - Rebalanced damage of destructive magic spells
+- Buff spiteful ability from +1 to +3

@@ -67,7 +67,7 @@ ARTIFACT_STAFF_OF_THE_MAGISTER = 45                 -- negates magic-resistance
 ARTIFACT_CROWN_OF_THE_MAGISTER = 46                 -- /
 ARTIFACT_RING_OF_THE_MAGISTER = 47                  -- reduce hero spells cost by 6
 ARTIFACT_SHANTIRI_MOON_DISC = 48                    -- immunity to implosion
-ARTIFACT_PLUMED_BOOTS = 49                          -- immunity to slow, all creatures fly TODO
+ARTIFACT_PLUMED_BOOTS = 49                          -- immunity to slow, all creatures fly
 ARTIFACT_CELESTIAL_JUSTICAR_HELMET = 50             -- immunity to blind, berserk and confusion
 ARTIFACT_HELM_OF_THE_DWARVEN_KINGS = 51             -- immunity to frenzy
 ARTIFACT_MAGIC_SCROLL_OF_SPELL = 52                 -- grants random spell
@@ -132,7 +132,7 @@ ARTIFACT_STEADFAST_SHIELD = 110                     -- /
 ARTIFACT_VIKING_SHIELD = 111                        -- gain wood/ore after battles **
 ARTIFACT_FORTUNE_BAND_OF_THE_SAINT = 112            -- gain permanent luck after victories **
 ARTIFACT_SENTINELS_BRACER = 113                     -- /
-ARTIFACT_ANKH_OF_THE_SAINT = 114                    -- units cannot have negative luck TODO
+ARTIFACT_ANKH_OF_THE_SAINT = 114                    -- units cannot have negative luck
 ARTIFACT_CLOAK_OF_THE_SAINT = 115                   -- immunity to plague
 ARTIFACT_GENJIS_HAT = 116                           -- reduce mana cost by 1
 ARTIFACT_GENJIS_VEST = 117                          -- magic proof
@@ -475,7 +475,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_VIKING_SHIELD]                 = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_BANDIT, special=0},
     [ARTIFACT_FORTUNE_BAND_OF_THE_SAINT]     = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_SAINT, special=0},
     [ARTIFACT_SENTINELS_BRACER]              = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_HAVEN, special=0},
-    [ARTIFACT_ANKH_OF_THE_SAINT]             = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_NECK, set=ARTIFACT_SET_SAINT, special=1}, --disabled
+    [ARTIFACT_ANKH_OF_THE_SAINT]             = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_NECK, set=ARTIFACT_SET_SAINT, special=0},
     [ARTIFACT_CLOAK_OF_THE_SAINT]            = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_SAINT, special=0},
     [ARTIFACT_GENJIS_HAT]                    = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_GENJI, special=0},
     [ARTIFACT_GENJIS_VEST]                   = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_BODY, set=ARTIFACT_SET_GENJI, special=0},
@@ -520,7 +520,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_BARBARIAN_CUIRASS]             = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_BODY, set=ARTIFACT_SET_ORCS, special=0},
     [ARTIFACT_HARPY_BOOTS]                   = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_PALACE_SHOES]                  = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_VIZIR, special=0},
-    [ARTIFACT_SHACKLES_OF_THE_LAST_MAN]      = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_INFERNO, special=1}, --disabled
+    [ARTIFACT_SHACKLES_OF_THE_LAST_MAN]      = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_INFERNO, special=0},
     [ARTIFACT_LEGENDARY_BOOTS]               = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_GOLDEN_GOOSE]                  = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=1},
     [ARTIFACT_162]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_BACKPACK, set=ARTIFACT_SET_NONE, special=1},
@@ -557,8 +557,8 @@ ARTIFACTS_DATA = {
     [ARTIFACT_ORB_OF_EARTH]                  = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_ORB_OF_FIRE]                   = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_ORB_OF_WATER]                  = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=0},
-    [ARTIFACT_OGRE_CLUB]                     = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_ORCS, special=1}, --disabled
-    [ARTIFACT_OGRE_SHIELD]                   = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_ORCS, special=1}, --disabled
+    [ARTIFACT_OGRE_CLUB]                     = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_ORCS, special=0},
+    [ARTIFACT_OGRE_SHIELD]                   = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_ORCS, special=0},
     [ARTIFACT_SHIELD_OF_THE_DWARVEN_KINGS]   = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_DWARVEN, special=0},
     [ARTIFACT_199]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_BACKPACK, set=ARTIFACT_SET_NONE, special=1},
 }
