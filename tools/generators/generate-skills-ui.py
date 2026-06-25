@@ -163,8 +163,6 @@ coordinates_skills = {
   '040000': [sorcery_x+150, sorcery_y+45],
   '041000': [sorcery_x+100, sorcery_y+45],
   '042000': [sorcery_x+5, sorcery_y+45],
-  '043000': [destructive_x+100, destructive_y+45],
-  '044000': [destructive_x+5, destructive_y+45],
   '045000': [innates_x+240, innates_y+26],
   '046000': [dark_x+5, dark_y+45],
   '047000': [innates_x+60, innates_y+26],
@@ -174,6 +172,7 @@ coordinates_skills = {
   '051000': [light_x+100, light_y+45],
   '052000': [innates_x+210, innates_y+68],
   '053000': [natural_x+100, natural_y+45],
+  '054000': [sorcery_x+55, sorcery_y+55],
   '055000': [320, 68],
   '056000': [183, 68],
   '057000': [289, 68],
@@ -215,19 +214,21 @@ coordinates_skills = {
   '094000': [324, 68],
   '095000': [innates_x+180, innates_y+68],
   '096000': [innates_x+270, innates_y+26],
+  '097000': [leadership_x+30, leadership_y+45],
   '098000': [innates_x+0, innates_y+68],
   '099000': [innates_x+90, innates_y+68],
   '100000': [dark_x+150, dark_y+45],
   '101000': [243, 68],
   '102000': [357, 68],
   '103000': [innates_x+0, innates_y+68],
-  '104000': [destructive_x+150, destructive_y+45],
+  '104000': [0, 0],
   '105000': [295, 68],
   '106000': [327, 68],
-  '107000': [destructive_x+125, destructive_y+45],
+  '107000': [destructive_x+150, destructive_y+20],
   '108000': [dark_x+125, dark_y+45],
   '109000': [racial_x+50, racial_y+68],
   '110000': [211, 68],
+  '111000': [leadership_x+55, leadership_y+45],
   '112000': [innates_x+0, innates_y+26],
   '113000': [211, 68],
   '114000': [315, 68],
@@ -254,13 +255,15 @@ coordinates_skills = {
   '136000': [innates_x+0, innates_y+26],
   '137000': [innates_x+0, innates_y+68],
   '138000': [352, 68],
+  '139000': [light_x+125, light_y+45],
   '140000': [sorcery_x+125, sorcery_y+45],
   '141000': [offence_x+55, offence_y+45],
   '142000': [242, 68],
   '143000': [321, 68],
   '144000': [290, 68],
   '145000': [214, 68],
-  '147000': [destructive_x+55, destructive_y+45],
+  '146000': [destructive_x+5, destructive_y+45],
+  '147000': [destructive_x+55, destructive_y+55],
   '148000': [sorcery_x+30, sorcery_y+45],
   '149000': [244, 68],
   '150000': [innates_x+0, innates_y+68],
@@ -271,7 +274,7 @@ coordinates_skills = {
   '152000': [212, 68],
   '153000': [242, 68],
   '154000': [183, 68],
-  '155000': [sorcery_x+55, sorcery_y+45],
+  '155000': [sorcery_x+55, sorcery_y+35],
   '156000': [warfare_x+125, warfare_y+45],
   '157000': [293, 68],
   '158000': [324, 68],
@@ -279,7 +282,7 @@ coordinates_skills = {
   '160000': [offence_x+5, offence_y+45],
   '161000': [defense_x+5, defense_y+45],
   '162000': [voice_x+150, voice_y+45],
-  '163000': [destructive_x+30, destructive_y+45],
+  '163000': [destructive_x+150, destructive_y+0],
   '164000': [innates_x+0, innates_y+26],
   '165000': [light_x+150, light_y+45],
   '166000': [352, 68],
@@ -313,10 +316,8 @@ coordinates_skills = {
   '189000': [voice_x+5, voice_y+45],
   '190000': [voice_x+55, voice_y+45],
   '207000': [shatter_x+100, shatter_y+45],
-  '208000': [leadership_x+30, leadership_y+45],
-  '209000': [leadership_x+55, leadership_y+45],
   '210000': [natural_x+5, natural_y+45],
-  '211000': [light_x+125, light_y+45],
+  '211000': [destructive_x+30, destructive_y+45],
   '212000': [despotism_x+5, despotism_y+45],
   '213000': [despotism_x+30, despotism_y+45],
   '214000': [despotism_x+55, despotism_y+45],
@@ -335,9 +336,15 @@ coordinates_skills = {
   '227000': [shatter_x+55, shatter_y+45],
   '228000': [shatter_x+125, shatter_y+35],
   '229000': [shatter_x+150, shatter_y+35],
-  '241000': [natural_x+150, natural_y+60],
-  '242000': [natural_x+150, natural_y+20],
-  '243000': [natural_x+150, natural_y+40],
+  '230000': [destructive_x+100, destructive_y+45],
+  '231000': [destructive_x+125, destructive_y+0],
+  '232000': [destructive_x+125, destructive_y+0],
+  '233000': [destructive_x+125, destructive_y+0],
+  '234000': [destructive_x+125, destructive_y+0],
+  '235000': [destructive_x+55, destructive_y+35],
+  '241000': [natural_x+150, natural_y+0],
+  '242000': [natural_x+150, natural_y+0],
+  '243000': [natural_x+150, natural_y+0],
   '244000': [natural_x+150, natural_y+0],
   '246000': [innates_x+150, innates_y+68],
   '247000': [innates_x+120, innates_y+68],
@@ -449,10 +456,13 @@ def find_icon_size(path:str):
     return 64
 
 
+variants = ['a', 'b', 'c', 'd']
+
+elements = {}
+
 counter = -1
 for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
     counter = counter + 1
-    elements = {}
     prerequisites = {}
     if skill["obj"]["SkillType"] == "SKILLTYPE_SKILL":
         if not skill["obj"]["NameFileRef"]:
@@ -461,6 +471,7 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
         for k in range(1,ranks+1):
             id = f"{counter:03}{k:03}"
             elements[id] = {
+                'skill_id': skill['ID'],
                 'icon': skill["obj"]["Texture"]["Item"][k]["@href"],
                 'name': skill["obj"]["NameFileRef"]["Item"][k-1]["@href"],
                 'desc': skill["obj"]["DescriptionFileRef"]["Item"][k-1]["@href"],
@@ -475,6 +486,7 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
     else:
         id = f"{counter:03}000"
         elements[id] = {
+            'skill_id': skill['ID'],
             'icon': skill["obj"]["Texture"]["Item"][1]["@href"],
             'name': skill["obj"]["NameFileRef"]["Item"]["@href"],
             'desc': skill["obj"]["DescriptionFileRef"]["Item"]["@href"],
@@ -495,58 +507,116 @@ for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
                 else:
                     prerequisites[id] = [f"{base_skill:03}001"]
     # print(prerequisites)
-    for id in elements:
-        found = False
-        for branch in branches:
-            if os.path.exists(skill_base_path(id, branch)):
-                print(f"Processing ID {id}...")
-                if found:
-                    print(f"WARN: found duplicate button file for ID {id}")
-                    continue
-                else:
+
+
+def check_skill_found(id, branch, found):
+    if os.path.exists(skill_base_path(id, branch)):
+        if found:
+            print(f"WARN: found duplicate button file for ID {id}")
+        return True
+    else:
+        return False
+
+def variant_element_y(branch, id):
+    if branch.endswith("_a"):
+        if id == '231000' or id == '241000':
+            return 15
+        if id == '232000' or id == '243000':
+            return 35
+        if id == '233000' or id == '244000':
+            return 0
+        if id == '234000' or id == '242000':
+            return 55
+    if branch.endswith("_b"):
+        if id == '231000' or id == '241000':
+            return 0
+        if id == '232000' or id == '243000':
+            return 15
+        if id == '233000' or id == '244000':
+            return 55
+        if id == '234000' or id == '242000':
+            return 35
+    if branch.endswith("_c"):
+        if id == '231000' or id == '241000':
+            return 15
+        if id == '232000' or id == '243000':
+            return 35
+        if id == '233000' or id == '244000':
+            return 55
+        if id == '234000' or id == '242000':
+            return 0
+    if branch.endswith("_d"):
+        if id == '231000' or id == '241000':
+            return 15
+        if id == '232000' or id == '243000':
+            return 0
+        if id == '233000' or id == '244000':
+            return 55
+        if id == '234000' or id == '242000':
+            return 35
+    return 45
+
+def process_skill_element(branch, id, element):
+    print(f"Processing ID {id}...")
+    x = coordinates_skills[id][0]
+    y = coordinates_skills[id][1]
+    if y == 0:
+        y = variant_element_y(branch, id)
+        if y == 0:
+            return
+    icon_size = find_icon_size(element['icon'])
+    directories = {
+        os.path.join(skills_pedia_path, "_Skills", branch, id, "highlight"),
+        os.path.join(skills_pedia_path, "_Description", id),
+    }
+    for targetDir in directories:
+        if not os.path.exists(targetDir):
+            os.makedirs(targetDir)
+    write_from_template("button.(WindowMSButton).xdb.j2", button_base_path(id, branch), {'skill_id': id, 'skill_name': element['skill_id'], 'pos_x': x, 'pos_y': y})
+    write_from_template("buttonshared.(WindowMSButtonShared).xdb.j2", button_shared_path(id, branch), {'branch': branch, 'skill_id': id, 'required_skills': prerequisites[id]})
+    write_from_template("skillicon.(WindowSimple).xdb.j2", button_bgwindow_path(id, branch), {'skill_id': id})
+    write_from_template("skillicon.(WindowSimpleShared).xdb.j2", button_bgshared_path(id, branch), {'skill_id': id})
+    write_from_template("icon.(BackgroundSimpleScallingTexture).xdb.j2", button_background_path(id, branch), {'icon_path': element['icon'], 'icon_size': icon_size})
+    write_from_template("selection.(WindowMSButton).xdb.j2", button_selected_path(id, branch), {'skill_id': id, 'pos_x': x, 'pos_y': y})
+    write_from_template("uimessage1.(UISSendUIMessage).xdb.j2", ui_message_up_path(id, branch), {'skill_id': id})
+    write_from_template("uimessage2.(UISSendUIMessage).xdb.j2", ui_message_down_path(id, branch), {'skill_id': id})
+    write_from_template("descuimessage.(UISSendUIMessage).xdb.j2", desc_ui_message_path(id), {'skill_id': id})
+    write_from_template("windowbase.(WindowSimple).xdb.j2", desc_window_base_path(id), {'skill_id': id})
+    write_from_template("windowshared.(WindowSimpleShared).xdb.j2", desc_window_shared_path(id), {'skill_id': id})
+    write_from_template("iconbase.(WindowMSButton).xdb.j2", desc_icon_base_path(id), {'skill_id': id})
+    write_from_template("iconshared.(WindowMSButtonShared).xdb.j2", desc_icon_shared_path(id), {'skill_id': id})
+    write_from_template("icon.(BackgroundSimpleScallingTexture).xdb.j2", desc_icon_path(id), {'icon_path': element['icon'], 'icon_size': icon_size})
+    write_from_template("skillname.(WindowTextView).xdb.j2", skill_name_path(id), {'skill_id': id, 'name_path': element['name']})
+    write_from_template("skilldesc.(WindowTextView).xdb.j2", skill_desc_path(id), {'skill_id': id, 'desc_path': element['desc']})
+    all_buttons.write(f"<Item href=\"{id}/{id}.(WindowMSButton).xdb#xpointer(/WindowMSButton)\"/>\n")
+    all_selected.write(f"<Item href=\"{id}/{id}_select.(WindowMSButton).xdb#xpointer(/WindowMSButton)\"/>\n")
+    all_windows.write(f"<Item href=\"{id}/{id}_window.(WindowSimple).xdb#xpointer(/WindowSimple)\"/>\n")
+
+for id, skill in elements.items():
+    found = False
+    for branch in branches:
+        if (branch == "DestructiveMagic" or branch == "NaturalMagic"):
+            for v in variants:
+                branch = f"{branch}_{v}"
+                if check_skill_found(id, branch, found):
                     found = True
-                x = coordinates_skills[id][0]
-                y = coordinates_skills[id][1]
-                icon_size = find_icon_size(elements[id]['icon'])
-                directories = {
-                    os.path.join(skills_pedia_path, "_Skills", branch, id, "highlight"),
-                    os.path.join(skills_pedia_path, "_Description", id),
-                }
-                for targetDir in directories:
-                    if not os.path.exists(targetDir):
-                        os.makedirs(targetDir)
-                write_from_template("button.(WindowMSButton).xdb.j2", button_base_path(id, branch), {'skill_id': id, 'skill_name': skill['ID'], 'pos_x': x, 'pos_y': y})
-                write_from_template("buttonshared.(WindowMSButtonShared).xdb.j2", button_shared_path(id, branch), {'branch': branch, 'skill_id': id, 'required_skills': prerequisites[id]})
-                write_from_template("skillicon.(WindowSimple).xdb.j2", button_bgwindow_path(id, branch), {'skill_id': id})
-                write_from_template("skillicon.(WindowSimpleShared).xdb.j2", button_bgshared_path(id, branch), {'skill_id': id})
-                write_from_template("icon.(BackgroundSimpleScallingTexture).xdb.j2", button_background_path(id, branch), {'icon_path': elements[id]['icon'], 'icon_size': icon_size})
-                write_from_template("selection.(WindowMSButton).xdb.j2", button_selected_path(id, branch), {'skill_id': id, 'pos_x': x, 'pos_y': y})
-                write_from_template("uimessage1.(UISSendUIMessage).xdb.j2", ui_message_up_path(id, branch), {'skill_id': id})
-                write_from_template("uimessage2.(UISSendUIMessage).xdb.j2", ui_message_down_path(id, branch), {'skill_id': id})
-                write_from_template("descuimessage.(UISSendUIMessage).xdb.j2", desc_ui_message_path(id), {'skill_id': id})
-                write_from_template("windowbase.(WindowSimple).xdb.j2", desc_window_base_path(id), {'skill_id': id})
-                write_from_template("windowshared.(WindowSimpleShared).xdb.j2", desc_window_shared_path(id), {'skill_id': id})
-                write_from_template("iconbase.(WindowMSButton).xdb.j2", desc_icon_base_path(id), {'skill_id': id})
-                write_from_template("iconshared.(WindowMSButtonShared).xdb.j2", desc_icon_shared_path(id), {'skill_id': id})
-                write_from_template("icon.(BackgroundSimpleScallingTexture).xdb.j2", desc_icon_path(id), {'icon_path': elements[id]['icon'], 'icon_size': icon_size})
-                write_from_template("skillname.(WindowTextView).xdb.j2", skill_name_path(id), {'skill_id': id, 'name_path': elements[id]['name']})
-                write_from_template("skilldesc.(WindowTextView).xdb.j2", skill_desc_path(id), {'skill_id': id, 'desc_path': elements[id]['desc']})
-                all_buttons.write(f"<Item href=\"{id}/{id}.(WindowMSButton).xdb#xpointer(/WindowMSButton)\"/>\n")
-                all_selected.write(f"<Item href=\"{id}/{id}_select.(WindowMSButton).xdb#xpointer(/WindowMSButton)\"/>\n")
-                all_windows.write(f"<Item href=\"{id}/{id}_window.(WindowSimple).xdb#xpointer(/WindowSimple)\"/>\n")
-        if not found:
-            if (elements[id]['name'] == "") or ('XXX' in elements[id]['name']):
-                skill_name = skill['ID']
-            else:
-                with open(os.path.join(root_text_path, elements[id]['name'][1:]), 'r', encoding="utf-16") as skill_name_txt:
-                    skill_name = skill_name_txt.read().strip()
-            print(f"WARN: missing button file for ID {id} ({skill_name})")
+                    process_skill_element(branch, id, skill)
+        else:
+            if check_skill_found(id, branch, found):
+                found = True
+                process_skill_element(branch, id, skill)
+    if not found:
+        if (skill['name'] == "") or ('XXX' in skill['name']):
+            skill_name = skill['skill_id']
+        else:
+            with open(os.path.join(root_text_path, skill['name'][1:]), 'r', encoding="utf-16") as skill_name_txt:
+                skill_name = skill_name_txt.read().strip()
+        print(f"WARN: missing button file for ID {id} ({skill_name})")
 
 
-for branch in [branches[0]] + branches[10:]:
-    if branch != branches[0]:
-        x = coordinates_branch[branch][0]
-        y = coordinates_branch[branch][1]
+
+def tidy_branch_window(branch, x, y):
+    if branch != "Innates":
         write_from_template("branch.(WindowSimple).xdb.j2", window_branch_path(branch), {'skill_name': branch, 'pos_x': x, 'pos_y': y})
     branch_skills = []
     for root, dirs, files in os.walk(branch_path(branch)):
@@ -554,6 +624,16 @@ for branch in [branches[0]] + branches[10:]:
         break
     write_from_template("branch.(WindowSimpleShared).xdb.j2", window_branchshared_path(branch), {'skills': branch_skills})
 
+for branch in [branches[0]] + branches[10:]:
+    x = coordinates_branch[branch][0]
+    y = coordinates_branch[branch][1]
+    if (branch == "DestructiveMagic" or branch == "NaturalMagic"):
+        for v in variants:
+            branch = f"{branch}_{v}"
+            tidy_branch_window(branch, x, y):
+    else:
+        tidy_branch_window(branch, x, y):
+    
 
 
 all_buttons.close()

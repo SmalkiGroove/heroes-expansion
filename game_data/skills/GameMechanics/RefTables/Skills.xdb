@@ -9614,10 +9614,10 @@
 					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_FOCUS</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_FORTRESS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_FOCUS</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_FORTRESS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_FOCUS</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_ACADEMY_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_FOCUS</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_ACADEMY_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_FOCUS</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_DUNGEON_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_FOCUS</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_DUNGEON_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_FOCUS</Item></dependenciesIDs></Item>
+					<!-- <Item><Class>HERO_CLASS_ACADEMY_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_FOCUS</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_ACADEMY_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_FOCUS</Item></dependenciesIDs></Item> -->
+					<!-- <Item><Class>HERO_CLASS_DUNGEON_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_FOCUS</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_DUNGEON_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_FOCUS</Item></dependenciesIDs></Item> -->
 					<Item><Class>HERO_CLASS_NECROPOLIS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_FOCUS</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_NECROPOLIS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_FOCUS</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_INFERNO_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_FOCUS</Item></dependenciesIDs></Item>
@@ -9884,21 +9884,21 @@
 				<SkillPrerequisites>
 					<Item><Class>HERO_CLASS_HAVEN_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_HAVEN_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
+					<!-- <Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item> -->
 					<Item><Class>HERO_CLASS_FORTRESS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_FORTRESS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_ACADEMY_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_ACADEMY_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_DUNGEON_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_DUNGEON_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_NECROPOLIS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_NECROPOLIS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
+					<!-- <Item><Class>HERO_CLASS_NECROPOLIS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_NECROPOLIS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item> -->
 					<Item><Class>HERO_CLASS_INFERNO_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_INFERNO_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_STRONGHOLD_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_STRONGHOLD_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_VAMPIRE_PRINCESS</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
+					<!-- <Item><Class>HERO_CLASS_VAMPIRE_PRINCESS</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item> -->
 				</SkillPrerequisites>
 				<AIRacesValues>
 					<Haven><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Haven>
@@ -9940,10 +9940,10 @@
 					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_FORTRESS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_FORTRESS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_ACADEMY_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_ACADEMY_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_DUNGEON_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_DUNGEON_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
+					<!-- <Item><Class>HERO_CLASS_ACADEMY_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_ACADEMY_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item> -->
+					<!-- <Item><Class>HERO_CLASS_DUNGEON_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_DUNGEON_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item> -->
 					<Item><Class>HERO_CLASS_NECROPOLIS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_NECROPOLIS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_INFERNO_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
@@ -9998,10 +9998,10 @@
 					<Item><Class>HERO_CLASS_DUNGEON_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_NECROPOLIS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_NECROPOLIS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_INFERNO_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_INFERNO_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_STRONGHOLD_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_STRONGHOLD_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
+					<!-- <Item><Class>HERO_CLASS_INFERNO_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_INFERNO_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item> -->
+					<!-- <Item><Class>HERO_CLASS_STRONGHOLD_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_STRONGHOLD_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item> -->
 					<Item><Class>HERO_CLASS_VAMPIRE_PRINCESS</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
 				</SkillPrerequisites>
 				<AIRacesValues>
@@ -10038,12 +10038,12 @@
 				<spellBuffs/>
 				<BasicSkillID>HERO_SKILL_NATURAL_MAGIC</BasicSkillID>
 				<SkillPrerequisites>
-					<Item><Class>HERO_CLASS_HAVEN_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_HAVEN_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
+					<!-- <Item><Class>HERO_CLASS_HAVEN_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_HAVEN_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item> -->
 					<Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_FORTRESS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_FORTRESS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
+					<!-- <Item><Class>HERO_CLASS_FORTRESS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_FORTRESS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item> -->
 					<Item><Class>HERO_CLASS_ACADEMY_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_ACADEMY_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_DUNGEON_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_ELEMENTAL_BALANCE</Item></dependenciesIDs></Item>
