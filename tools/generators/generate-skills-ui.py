@@ -80,46 +80,46 @@ racial_x = coordinates_relative["Racial"][0]
 racial_y = coordinates_relative["Racial"][1]
 
 coordinates_skills = {
-  '001001': [logistics_x+45, logistics_y+10],
-  '001002': [logistics_x+75, logistics_y+10],
-  '001003': [logistics_x+105, logistics_y+10],
-  '002001': [warfare_x+45, warfare_y+10],
-  '002002': [warfare_x+75, warfare_y+10],
-  '002003': [warfare_x+105, warfare_y+10],
-  '003001': [learning_x+45, learning_y+10],
-  '003002': [learning_x+75, learning_y+10],
-  '003003': [learning_x+105, learning_y+10],
+  '001001': [logistics_x+45, logistics_y+5],
+  '001002': [logistics_x+75, logistics_y+5],
+  '001003': [logistics_x+105, logistics_y+5],
+  '002001': [warfare_x+45, warfare_y+5],
+  '002002': [warfare_x+75, warfare_y+5],
+  '002003': [warfare_x+105, warfare_y+5],
+  '003001': [learning_x+45, learning_y+5],
+  '003002': [learning_x+75, learning_y+5],
+  '003003': [learning_x+105, learning_y+5],
   '004001': [racial_x+40, racial_y+26],
   '004002': [racial_x+70, racial_y+26],
   '004003': [racial_x+100, racial_y+26],
   '004004': [racial_x+130, racial_y+26],
-  '005001': [leadership_x+45, leadership_y+10],
-  '005002': [leadership_x+75, leadership_y+10],
-  '005003': [leadership_x+105, leadership_y+10],
-  '006001': [offence_x+45, offence_y+10],
-  '006002': [offence_x+75, offence_y+10],
-  '006003': [offence_x+105, offence_y+10],
-  '007001': [defense_x+45, defense_y+10],
-  '007002': [defense_x+75, defense_y+10],
-  '007003': [defense_x+105, defense_y+10],
-  '008001': [sorcery_x+45, sorcery_y+10],
-  '008002': [sorcery_x+75, sorcery_y+10],
-  '008003': [sorcery_x+105, sorcery_y+10],
-  '009001': [destructive_x+45, destructive_y+10],
-  '009002': [destructive_x+75, destructive_y+10],
-  '009003': [destructive_x+105, destructive_y+10],
-  '010001': [dark_x+45, dark_y+10],
-  '010002': [dark_x+75, dark_y+10],
-  '010003': [dark_x+105, dark_y+10],
-  '011001': [light_x+45, light_y+10],
-  '011002': [light_x+75, light_y+10],
-  '011003': [light_x+105, light_y+10],
-  '012001': [natural_x+45, natural_y+10],
-  '012002': [natural_x+75, natural_y+10],
-  '012003': [natural_x+105, natural_y+10],
-  '013001': [combat_x+45, combat_y+10],
-  '013002': [combat_x+75, combat_y+10],
-  '013003': [combat_x+105, combat_y+10],
+  '005001': [leadership_x+45, leadership_y+5],
+  '005002': [leadership_x+75, leadership_y+5],
+  '005003': [leadership_x+105, leadership_y+5],
+  '006001': [offence_x+45, offence_y+5],
+  '006002': [offence_x+75, offence_y+5],
+  '006003': [offence_x+105, offence_y+5],
+  '007001': [defense_x+45, defense_y+5],
+  '007002': [defense_x+75, defense_y+5],
+  '007003': [defense_x+105, defense_y+5],
+  '008001': [sorcery_x+45, sorcery_y+5],
+  '008002': [sorcery_x+75, sorcery_y+5],
+  '008003': [sorcery_x+105, sorcery_y+5],
+  '009001': [destructive_x+45, destructive_y+5],
+  '009002': [destructive_x+75, destructive_y+5],
+  '009003': [destructive_x+105, destructive_y+5],
+  '010001': [dark_x+45, dark_y+5],
+  '010002': [dark_x+75, dark_y+5],
+  '010003': [dark_x+105, dark_y+5],
+  '011001': [light_x+45, light_y+5],
+  '011002': [light_x+75, light_y+5],
+  '011003': [light_x+105, light_y+5],
+  '012001': [natural_x+45, natural_y+5],
+  '012002': [natural_x+75, natural_y+5],
+  '012003': [natural_x+105, natural_y+5],
+  '013001': [combat_x+45, combat_y+5],
+  '013002': [combat_x+75, combat_y+5],
+  '013003': [combat_x+105, combat_y+5],
   '014001': [racial_x+40, racial_y+26],
   '014002': [racial_x+70, racial_y+26],
   '014003': [racial_x+100, racial_y+26],
@@ -163,6 +163,7 @@ coordinates_skills = {
   '040000': [sorcery_x+150, sorcery_y+45],
   '041000': [sorcery_x+100, sorcery_y+45],
   '042000': [sorcery_x+5, sorcery_y+45],
+  '044000': [destructive_x+150, destructive_y+0],
   '045000': [innates_x+240, innates_y+26],
   '046000': [dark_x+5, dark_y+45],
   '047000': [innates_x+60, innates_y+26],
@@ -224,7 +225,7 @@ coordinates_skills = {
   '104000': [0, 0],
   '105000': [295, 68],
   '106000': [327, 68],
-  '107000': [destructive_x+150, destructive_y+20],
+  '107000': [destructive_x+150, destructive_y+0],
   '108000': [dark_x+125, dark_y+45],
   '109000': [racial_x+50, racial_y+68],
   '110000': [211, 68],
@@ -309,9 +310,9 @@ coordinates_skills = {
   '184000': [240, 68],
   '185000': [warfare_x+150, warfare_y+45],
   '186000': [349, 68],
-  '187001': [voice_x+45, voice_y+10],
-  '187002': [voice_x+75, voice_y+10],
-  '187003': [voice_x+105, voice_y+10],
+  '187001': [voice_x+45, voice_y+5],
+  '187002': [voice_x+75, voice_y+5],
+  '187003': [voice_x+105, voice_y+5],
   '188000': [voice_x+30, voice_y+45],
   '189000': [voice_x+5, voice_y+45],
   '190000': [voice_x+55, voice_y+45],
@@ -349,18 +350,18 @@ coordinates_skills = {
   '246000': [innates_x+150, innates_y+68],
   '247000': [innates_x+120, innates_y+68],
   '248000': [innates_x+180, innates_y+26],
-  '249001': [shatter_x+45, shatter_y+10],
-  '249002': [shatter_x+75, shatter_y+10],
-  '249003': [shatter_x+105, shatter_y+10],
-  '250001': [governance_x+45, governance_y+10],
-  '250002': [governance_x+75, governance_y+10],
-  '250003': [governance_x+105, governance_y+10],
-  '251001': [training_x+45, training_y+10],
-  '251002': [training_x+75, training_y+10],
-  '251003': [training_x+105, training_y+10],
-  '252001': [despotism_x+45, despotism_y+10],
-  '252002': [despotism_x+75, despotism_y+10],
-  '252003': [despotism_x+105, despotism_y+10],
+  '249001': [shatter_x+45, shatter_y+5],
+  '249002': [shatter_x+75, shatter_y+5],
+  '249003': [shatter_x+105, shatter_y+5],
+  '250001': [governance_x+45, governance_y+5],
+  '250002': [governance_x+75, governance_y+5],
+  '250003': [governance_x+105, governance_y+5],
+  '251001': [training_x+45, training_y+5],
+  '251002': [training_x+75, training_y+5],
+  '251003': [training_x+105, training_y+5],
+  '252001': [despotism_x+45, despotism_y+5],
+  '252002': [despotism_x+75, despotism_y+5],
+  '252003': [despotism_x+105, despotism_y+5],
   '253001': [innates_x+131, innates_y+26],
   '253002': [innates_x+161, innates_y+26],
   '253003': [innates_x+191, innates_y+26],
@@ -459,11 +460,11 @@ def find_icon_size(path:str):
 variants = ['a', 'b', 'c', 'd']
 
 elements = {}
+prerequisites = {}
 
 counter = -1
 for skill in skills_data["Table_HeroSkill_SkillID"]["objects"]["Item"]:
     counter = counter + 1
-    prerequisites = {}
     if skill["obj"]["SkillType"] == "SKILLTYPE_SKILL":
         if not skill["obj"]["NameFileRef"]:
             continue
@@ -517,51 +518,51 @@ def check_skill_found(id, branch, found):
     else:
         return False
 
-def variant_element_y(branch, id):
-    if branch.endswith("_a"):
-        if id == '231000' or id == '241000':
-            return 15
-        if id == '232000' or id == '243000':
-            return 35
-        if id == '233000' or id == '244000':
+def variant_element_y(id, variant):
+    if variant == 'a':
+        if id == '231000' or id == '241000' or id == '163000':
+            return 20
+        if id == '232000' or id == '243000' or id == '107000':
+            return 40
+        if id == '233000' or id == '244000' or id == '043000':
             return 0
-        if id == '234000' or id == '242000':
-            return 55
-    if branch.endswith("_b"):
-        if id == '231000' or id == '241000':
+        if id == '234000' or id == '242000' or id == '044000':
+            return 60
+    if variant == 'b':
+        if id == '231000' or id == '241000' or id == '163000':
             return 0
-        if id == '232000' or id == '243000':
-            return 15
-        if id == '233000' or id == '244000':
-            return 55
-        if id == '234000' or id == '242000':
-            return 35
-    if branch.endswith("_c"):
-        if id == '231000' or id == '241000':
-            return 15
-        if id == '232000' or id == '243000':
-            return 35
-        if id == '233000' or id == '244000':
-            return 55
-        if id == '234000' or id == '242000':
+        if id == '232000' or id == '243000' or id == '107000':
+            return 20
+        if id == '233000' or id == '244000' or id == '043000':
+            return 60
+        if id == '234000' or id == '242000' or id == '044000':
+            return 40
+    if variant == 'c':
+        if id == '231000' or id == '241000' or id == '163000':
+            return 20
+        if id == '232000' or id == '243000' or id == '107000':
+            return 40
+        if id == '233000' or id == '244000' or id == '043000':
+            return 60
+        if id == '234000' or id == '242000' or id == '044000':
             return 0
-    if branch.endswith("_d"):
-        if id == '231000' or id == '241000':
-            return 15
-        if id == '232000' or id == '243000':
+    if variant == 'd':
+        if id == '231000' or id == '241000' or id == '163000':
+            return 20
+        if id == '232000' or id == '243000' or id == '107000':
             return 0
-        if id == '233000' or id == '244000':
-            return 55
-        if id == '234000' or id == '242000':
-            return 35
+        if id == '233000' or id == '244000' or id == '043000':
+            return 60
+        if id == '234000' or id == '242000' or id == '044000':
+            return 40
     return 45
 
-def process_skill_element(branch, id, element):
+def process_skill_element(branch, id, element, variant=None):
     print(f"Processing ID {id}...")
     x = coordinates_skills[id][0]
     y = coordinates_skills[id][1]
     if y == 0:
-        y = variant_element_y(branch, id)
+        y = variant_element_y(id, variant)
         if y == 0:
             return
     icon_size = find_icon_size(element['icon'])
@@ -577,9 +578,9 @@ def process_skill_element(branch, id, element):
     write_from_template("skillicon.(WindowSimple).xdb.j2", button_bgwindow_path(id, branch), {'skill_id': id})
     write_from_template("skillicon.(WindowSimpleShared).xdb.j2", button_bgshared_path(id, branch), {'skill_id': id})
     write_from_template("icon.(BackgroundSimpleScallingTexture).xdb.j2", button_background_path(id, branch), {'icon_path': element['icon'], 'icon_size': icon_size})
-    write_from_template("selection.(WindowMSButton).xdb.j2", button_selected_path(id, branch), {'skill_id': id, 'pos_x': x, 'pos_y': y})
-    write_from_template("uimessage1.(UISSendUIMessage).xdb.j2", ui_message_up_path(id, branch), {'skill_id': id})
-    write_from_template("uimessage2.(UISSendUIMessage).xdb.j2", ui_message_down_path(id, branch), {'skill_id': id})
+    write_from_template("selection.(WindowMSButton).xdb.j2", button_selected_path(id, branch), {'skill_id': id, 'variant':variant, 'pos_x': x, 'pos_y': y})
+    write_from_template("uimessage1.(UISSendUIMessage).xdb.j2", ui_message_up_path(id, branch), {'skill_id': id, 'variant':variant,})
+    write_from_template("uimessage2.(UISSendUIMessage).xdb.j2", ui_message_down_path(id, branch), {'skill_id': id, 'variant':variant,})
     write_from_template("descuimessage.(UISSendUIMessage).xdb.j2", desc_ui_message_path(id), {'skill_id': id})
     write_from_template("windowbase.(WindowSimple).xdb.j2", desc_window_base_path(id), {'skill_id': id})
     write_from_template("windowshared.(WindowSimpleShared).xdb.j2", desc_window_shared_path(id), {'skill_id': id})
@@ -597,10 +598,10 @@ for id, skill in elements.items():
     for branch in branches:
         if (branch == "DestructiveMagic" or branch == "NaturalMagic"):
             for v in variants:
-                branch = f"{branch}_{v}"
-                if check_skill_found(id, branch, found):
+                branch_variant = f"{branch}_{v}"
+                if check_skill_found(id, branch_variant, found):
                     found = True
-                    process_skill_element(branch, id, skill)
+                    process_skill_element(branch_variant, id, skill, v)
         else:
             if check_skill_found(id, branch, found):
                 found = True
@@ -629,10 +630,10 @@ for branch in [branches[0]] + branches[10:]:
     y = coordinates_branch[branch][1]
     if (branch == "DestructiveMagic" or branch == "NaturalMagic"):
         for v in variants:
-            branch = f"{branch}_{v}"
-            tidy_branch_window(branch, x, y):
+            branch_variant = f"{branch}_{v}"
+            tidy_branch_window(branch_variant, x, y)
     else:
-        tidy_branch_window(branch, x, y):
+        tidy_branch_window(branch, x, y)
     
 
 

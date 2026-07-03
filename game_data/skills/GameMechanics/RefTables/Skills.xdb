@@ -1802,26 +1802,44 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_SKILL_44</ID>
+			<ID>HERO_SKILL_UNSETTLE</ID>
 			<obj>
 				<Texture>
-					<Item href="/Textures/HeroScreen/Perks/XXX_grey.xdb#xpointer(/Texture)"/>
-					<Item href="/Textures/HeroScreen/Perks/XXX.xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Feats/Warlock/WarMachines_ShakeGround_grey.(Texture).xdb#xpointer(/Texture)"/>
+					<Item href="/Textures/HeroScreen/Feats/Warlock/WarMachines_ShakeGround.(Texture).xdb#xpointer(/Texture)"/>
 				</Texture>
 				<CommonTexture/>
 				<NameFileRef>
-					<Item href="/Text/Game/Skills/Common/XXX/XXX/Name.txt"/>
+					<Item href="/Text/Game/Skills/Common/DestructiveMagic/Unsettle/Name.txt"/>
 				</NameFileRef>
 				<CommonNameFileRef href=""/>
 				<DescriptionFileRef>
-					<Item href="/Text/Game/Skills/Common/XXX/XXX/Description.txt"/>
+					<Item href="/Text/Game/Skills/Common/DestructiveMagic/Unsettle/Description.txt"/>
 				</DescriptionFileRef>
 				<CommonDescriptionFileRef href=""/>
 				<SkillType>SKILLTYPE_SPECIAL_PERK</SkillType>
 				<HeroClass>HERO_CLASS_NONE</HeroClass>
 				<spellBuffs/>
-				<BasicSkillID>HERO_SKILL_NONE</BasicSkillID>
-				<SkillPrerequisites/>
+				<BasicSkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</BasicSkillID>
+				<SkillPrerequisites>
+					<Item><Class>HERO_CLASS_HAVEN_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_EARTH_POWER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_HAVEN_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_EARTH_POWER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_EARTH_POWER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_EARTH_POWER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_FORTRESS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_EARTH_POWER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_FORTRESS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_EARTH_POWER</Item></dependenciesIDs></Item>
+					<!-- <Item><Class>HERO_CLASS_ACADEMY_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_EARTH_POWER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_ACADEMY_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_EARTH_POWER</Item></dependenciesIDs></Item> -->
+					<!-- <Item><Class>HERO_CLASS_DUNGEON_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_EARTH_POWER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_DUNGEON_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_EARTH_POWER</Item></dependenciesIDs></Item> -->
+					<Item><Class>HERO_CLASS_NECROPOLIS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_EARTH_POWER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_NECROPOLIS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_EARTH_POWER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_INFERNO_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_EARTH_POWER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_INFERNO_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_EARTH_POWER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_STRONGHOLD_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_EARTH_POWER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_STRONGHOLD_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_EARTH_POWER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_VAMPIRE_PRINCESS</Class><dependenciesIDs><Item>HERO_SKILL_EARTH_POWER</Item></dependenciesIDs></Item>
+				</SkillPrerequisites>
 				<AIRacesValues>
 					<Haven><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Haven>
 					<Sylvan><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Sylvan>
@@ -4303,10 +4321,10 @@
 					<Item><Class>HERO_CLASS_DUNGEON_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_FROST_POWER</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_NECROPOLIS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_FROST_POWER</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_NECROPOLIS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_FROST_POWER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_INFERNO_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_FROST_POWER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_INFERNO_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_FROST_POWER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_STRONGHOLD_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_FROST_POWER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_STRONGHOLD_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_FROST_POWER</Item></dependenciesIDs></Item>
+					<!-- <Item><Class>HERO_CLASS_INFERNO_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_FROST_POWER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_INFERNO_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_FROST_POWER</Item></dependenciesIDs></Item> -->
+					<!-- <Item><Class>HERO_CLASS_STRONGHOLD_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_FROST_POWER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_STRONGHOLD_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_FROST_POWER</Item></dependenciesIDs></Item> -->
 					<Item><Class>HERO_CLASS_VAMPIRE_PRINCESS</Class><dependenciesIDs><Item>HERO_SKILL_FROST_POWER</Item></dependenciesIDs></Item>
 				</SkillPrerequisites>
 				<AIRacesValues>
@@ -6694,21 +6712,21 @@
 				<SkillPrerequisites>
 					<Item><Class>HERO_CLASS_HAVEN_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BLAZE_POWER</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_HAVEN_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BLAZE_POWER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BLAZE_POWER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BLAZE_POWER</Item></dependenciesIDs></Item>
+					<!-- <Item><Class>HERO_CLASS_PRESERVE_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BLAZE_POWER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_PRESERVE_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BLAZE_POWER</Item></dependenciesIDs></Item> -->
 					<Item><Class>HERO_CLASS_FORTRESS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BLAZE_POWER</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_FORTRESS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BLAZE_POWER</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_ACADEMY_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BLAZE_POWER</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_ACADEMY_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BLAZE_POWER</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_DUNGEON_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BLAZE_POWER</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_DUNGEON_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BLAZE_POWER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_NECROPOLIS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BLAZE_POWER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_NECROPOLIS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BLAZE_POWER</Item></dependenciesIDs></Item>
+					<!-- <Item><Class>HERO_CLASS_NECROPOLIS_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BLAZE_POWER</Item></dependenciesIDs></Item>
+					<Item><Class>HERO_CLASS_NECROPOLIS_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BLAZE_POWER</Item></dependenciesIDs></Item> -->
 					<Item><Class>HERO_CLASS_INFERNO_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BLAZE_POWER</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_INFERNO_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BLAZE_POWER</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_STRONGHOLD_MIGHT</Class><dependenciesIDs><Item>HERO_SKILL_BLAZE_POWER</Item></dependenciesIDs></Item>
 					<Item><Class>HERO_CLASS_STRONGHOLD_MAGIC</Class><dependenciesIDs><Item>HERO_SKILL_BLAZE_POWER</Item></dependenciesIDs></Item>
-					<Item><Class>HERO_CLASS_VAMPIRE_PRINCESS</Class><dependenciesIDs><Item>HERO_SKILL_BLAZE_POWER</Item></dependenciesIDs></Item>
+					<!-- <Item><Class>HERO_CLASS_VAMPIRE_PRINCESS</Class><dependenciesIDs><Item>HERO_SKILL_BLAZE_POWER</Item></dependenciesIDs></Item> -->
 				</SkillPrerequisites>
 				<AIRacesValues>
 					<Haven><CommanderValue>1000</CommanderValue><CollectorSupplierValue>1000</CollectorSupplierValue><FreelancerValue>1000</FreelancerValue></Haven>
