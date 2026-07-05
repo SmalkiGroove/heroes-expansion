@@ -16,9 +16,12 @@
 - Thunder Power has no lightning visual effect
 - Magnetic Field not working yet
 - RMG doesn't spawn monsters sometimes
+- Maeve no additional peasant recruits
 
 ### Bugs
 
+- Combat ends twice vs wolf summoned packs
+- Guardian angel didn't proc when last kill is on retaliation
 
 ### Suggestions
 
