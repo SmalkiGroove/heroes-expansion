@@ -37,6 +37,7 @@
 
 - Market change rate are total scam
 - Inferno and Dungeon sacrificial buildings are bad
+- Remove 2nd retaliation combo with Preparation + Unlimited retaliations
 
 ### Massive work required
 
