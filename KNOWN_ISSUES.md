@@ -15,7 +15,6 @@
 
 - Thunder Power has no lightning visual effect
 - RMG doesn't spawn monsters sometimes
-- Maeve no additional peasant recruits
 
 ### Bugs
 
@@ -34,7 +33,6 @@
 
 - Market change rate are total scam
 - Inferno and Dungeon sacrificial buildings are bad
-- Remove 2nd retaliation combo with Preparation + Unlimited retaliations
 
 ### Massive work required
 
@@ -44,6 +42,7 @@
 - More custom buildings and late-game challenge
 - Luck and Morale 1 point = 1%, no cap
 - Add neutral heroes and bosses
+- Campaigns compatibility
 
 
 # FIXED/CHANGED
@@ -91,3 +90,5 @@
 - Rebalanced damage of destructive magic spells
 - Buff spiteful ability from +1 to +3
 - Magnetic Field ability now works
+- Remove 2nd retaliation combo with Preparation + Unlimited retaliations
+- Maeve no additional peasant recruits when skill Logistics is known

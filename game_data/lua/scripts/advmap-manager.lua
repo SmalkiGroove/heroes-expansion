@@ -268,6 +268,8 @@ function InitializeHeroes()
 				AllowPlayerTavernRace(player, FactionToTownType(HEROES[hero].faction), 1)
 				MakeHeroReturnToTavernAfterDeath(hero, 1, 0)
 				HEROES[hero].owner = player
+				WON_BATTLES[hero] = 0
+				LAST_BATTLES[hero] = 0
 			end
 			if not IsDuelMode() then
 				startThread(Routine_MagicGuildsBonus, player)
