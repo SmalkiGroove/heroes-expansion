@@ -14,14 +14,11 @@
 ### Something does not work
 
 - Thunder Power has no lightning visual effect
-- Magnetic Field not working yet
 - RMG doesn't spawn monsters sometimes
 - Maeve no additional peasant recruits
 
 ### Bugs
 
-- Combat ends twice vs wolf summoned packs
-- Guardian angel didn't proc when last kill is on retaliation
 
 ### Suggestions
 
@@ -93,3 +90,4 @@
 - All earth spells now ignore half of the spell-proof
 - Rebalanced damage of destructive magic spells
 - Buff spiteful ability from +1 to +3
+- Magnetic Field ability now works

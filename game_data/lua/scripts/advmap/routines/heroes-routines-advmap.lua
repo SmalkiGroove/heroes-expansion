@@ -1387,42 +1387,42 @@ CONTINUOUS_TRIGGER_HERO_ROUTINES = {
 function DoHeroSpeRoutine_Start(player, hero)
     log(DEBUG, "$ DoHeroSpeRoutine_Start - "..hero)
     if START_TRIGGER_HERO_ROUTINES[hero] then
-        startThread(START_TRIGGER_HERO_ROUTINES[hero], player, hero)
+        START_TRIGGER_HERO_ROUTINES[hero](player, hero)
     end
 end
 
 function DoHeroSpeRoutine_Daily(player, hero)
     log(DEBUG, "$ DoHeroSpeRoutine_Daily - "..hero)
     if DAILY_TRIGGER_HERO_ROUTINES[hero] then
-        startThread(DAILY_TRIGGER_HERO_ROUTINES[hero], player, hero)
+        DAILY_TRIGGER_HERO_ROUTINES[hero](player, hero)
     end
 end
 
 function DoHeroSpeRoutine_Weekly(player, hero)
     log(DEBUG, "$ DoHeroSpeRoutine_Weekly - "..hero)
     if WEEKLY_TRIGGER_HERO_ROUTINES[hero] then
-        startThread(WEEKLY_TRIGGER_HERO_ROUTINES[hero], player, hero)
+        WEEKLY_TRIGGER_HERO_ROUTINES[hero](player, hero)
     end
 end
 
 function DoHeroSpeRoutine_LevelUp(player, hero, level)
     log(DEBUG, "$ DoHeroSpeRoutine_LevelUp - "..hero)
     if LEVEL_UP_HERO_ROUTINES_HERO[hero] then
-        startThread(LEVEL_UP_HERO_ROUTINES_HERO[hero], player, hero, level)
+        LEVEL_UP_HERO_ROUTINES_HERO[hero](player, hero, level)
     end
 end
 
 function DoHeroSpeRoutine_AfterCombat(player, hero, index)
     log(DEBUG, "$ DoHeroSpeRoutine_AfterCombat - "..hero)
     if AFTER_COMBAT_TRIGGER_HERO_ROUTINES[hero] then
-        startThread(AFTER_COMBAT_TRIGGER_HERO_ROUTINES[hero], player, hero, index)
+        AFTER_COMBAT_TRIGGER_HERO_ROUTINES[hero](player, hero, index)
     end
 end
 
 function DoHeroSpeRoutine_Continuous(player, hero)
     -- log(DEBUG, "$ DoHeroSpeRoutine_Continuous - "..hero)
     if CONTINUOUS_TRIGGER_HERO_ROUTINES[hero] then
-        startThread(CONTINUOUS_TRIGGER_HERO_ROUTINES[hero], player, hero)
+        CONTINUOUS_TRIGGER_HERO_ROUTINES[hero](player, hero)
     end
 end
 

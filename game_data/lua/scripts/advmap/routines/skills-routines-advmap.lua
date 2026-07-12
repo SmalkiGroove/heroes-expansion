@@ -814,7 +814,7 @@ end
 
 
 function Routine_DestructionLearning(player, hero)
-    log(DEBUG, "$ Routine_DestructionLearning")
+    -- log(DEBUG, "$ Routine_DestructionLearning")
     if HERO_SKILL_BONUSES[hero][SKILLBONUS_DESTRUCT_LEARNING] == 1 then return end
     for i = 1, 6 do
         local spell = SPELLS_BY_SCHOOL[SPELL_SCHOOL_DESTRUCT][i]
@@ -945,7 +945,7 @@ function DoSkillsRoutine_Daily(player, hero)
     for k,v in DAILY_TRIGGER_SKILLS_ROUTINES do
         if HasHeroSkill(hero, k) then
             local mastery = GetHeroSkillMastery(hero, k)
-            startThread(v, player, hero, mastery)
+            v(player, hero, mastery)
         end
     end
 end
@@ -955,7 +955,7 @@ function DoSkillsRoutine_Weekly(player, hero)
     for k,v in WEEKLY_TRIGGER_SKILLS_ROUTINES do
         if HasHeroSkill(hero, k) then
             local mastery = GetHeroSkillMastery(hero, k)
-            startThread(v, player, hero, mastery)
+            v(player, hero, mastery)
         end
     end
 end
@@ -965,7 +965,7 @@ function DoSkillsRoutine_LevelUp(player, hero, level)
     for k,v in LEVELUP_TRIGGER_SKILLS_ROUTINES do
         if HasHeroSkill(hero, k) then
             local mastery = GetHeroSkillMastery(hero, k)
-            startThread(v, player, hero, mastery, level)
+            v(player, hero, mastery, level)
         end
     end
 end
@@ -975,7 +975,7 @@ function DoSkillsRoutine_AfterCombat(player, hero, index)
     for k,v in AFTER_COMBAT_TRIGGER_SKILLS_ROUTINES do
         if HasHeroSkill(hero, k) then
             local mastery = GetHeroSkillMastery(hero, k)
-            startThread(v, player, hero, mastery, index)
+            v(player, hero, mastery, index)
         end
     end
 end
@@ -984,7 +984,7 @@ function DoSkillsRoutine_Continuous(player, hero)
     -- log(DEBUG, "$ DoSkillsRoutine_Continuous - "..hero)
     for k,v in CONTINUOUS_TRIGGER_SKILLS_ROUTINES do
         if HasHeroSkill(hero, k) then
-            startThread(v, player, hero)
+            v(player, hero)
         end
     end
 end

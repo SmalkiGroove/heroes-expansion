@@ -124,9 +124,9 @@ function WatchPlayer(player, wait)
 					tracker[hero].track = nil
 				end
 			end
-			startThread(DoHeroSpeRoutine_Continuous, player, hero)
-			startThread(DoSkillsRoutine_Continuous, player, hero)
-			startThread(DoArtifactsRoutine_Continuous, player, hero)
+			DoHeroSpeRoutine_Continuous(player, hero)
+			DoSkillsRoutine_Continuous(player, hero)
+			DoArtifactsRoutine_Continuous(player, hero)
         end
 		sleep(10)
 	end
@@ -137,10 +137,10 @@ function PlayerDailyHandler(player)
 	log(INFO, "Player "..player.." turn "..TURN.." started")
 	for i,hero in GetPlayerHeroes(player) do
 		ControlHeroCustomAbility(hero, CUSTOM_ABILITY_1, CUSTOM_ABILITY_DISABLED)
-		startThread(DoHeroSpeRoutine_Daily, player, hero)
-		startThread(DoSkillsRoutine_Daily, player, hero)
-		startThread(DoArtifactsRoutine_Daily, player, hero)
-		startThread(AIDailyBonus, player, hero)
+		DoHeroSpeRoutine_Daily(player, hero)
+		DoSkillsRoutine_Daily(player, hero)
+		DoArtifactsRoutine_Daily(player, hero)
+		AIDailyBonus(player, hero)
 	end
 	startThread(DoTownsRoutine_Daily, player)
 	WatchPlayer(player, nil)
@@ -150,10 +150,10 @@ function PlayerWeeklyHandler(player)
 	--while (not IsPlayerCurrent(player)) do sleep(1) end
 	log(INFO, "Player "..player.." week "..WEEKS.." started")
 	for i,hero in GetPlayerHeroes(player) do
-		startThread(DoHeroSpeRoutine_Weekly, player, hero)
-		startThread(DoSkillsRoutine_Weekly, player, hero)
-		startThread(DoArtifactsRoutine_Weekly, player, hero)
-		startThread(AIWeeklyBonus, player, hero)
+		DoHeroSpeRoutine_Weekly(player, hero)
+		DoSkillsRoutine_Weekly(player, hero)
+		DoArtifactsRoutine_Weekly(player, hero)
+		AIWeeklyBonus(player, hero)
 	end
 	startThread(DoTownsRoutine_Weekly, player)
 end

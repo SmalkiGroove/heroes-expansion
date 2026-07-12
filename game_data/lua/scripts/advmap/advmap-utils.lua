@@ -319,6 +319,7 @@ function AddHeroTownRecruits(player, hero, dwelling, creature, nb)
 			if GetTownBuildingLevel(town, dwelling) ~= 0 then
                 local current = GetObjectDwellingCreatures(town, creature)
 				SetObjectDwellingCreatures(town, creature, current + nb)
+				sleep()
 			end
 		end
 	end

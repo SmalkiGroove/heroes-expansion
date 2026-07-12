@@ -621,4 +621,6 @@ function IsHumanPlayer( player )
 	return GetPlayerState(player) == 1 and not IsAIPlayer(player)
 end
 
+log.SetLogLevel(LOG_LEVEL)
+
 dofile("/scripts/advmap-manager.lua")

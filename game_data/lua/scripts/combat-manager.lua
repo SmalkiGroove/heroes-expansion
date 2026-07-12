@@ -180,6 +180,8 @@ function ManageCombatEnd(winner)
             DoHeroSpeRoutine_CombatEnd(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID, winner)
             DoArtifactRoutine_CombatEnd(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID, winner)
         end
+        for _,cr in GetUnits(CREATURE, 1-winner) do RemoveCombatUnit(cr) end
+
         EnableAutoFinish(1)
         combatSetPause(nil)
     end

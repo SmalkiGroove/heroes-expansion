@@ -493,12 +493,12 @@ function DoArtifactsRoutine_Continuous(player, hero)
     -- log(DEBUG, "$ DoArtifactsRoutine_Continuous - "..hero)
     for k,v in CONTINUOUS_TRIGGER_ARTIFACTS_ROUTINES do
         if HasArtefact(hero, k, 1) then
-            startThread(v, player, hero)
+            v(player, hero)
         end
     end
     for k,v in CONTINUOUS_TRIGGER_ARTFSETS_ROUTINES do
         if HERO_ARTFSETS_STATUS[hero][k] == 1 then
-            startThread(v, player, hero)
+            v(player, hero)
         end
     end
 end
@@ -507,60 +507,60 @@ function DoArtifactsRoutine_Daily(player, hero)
     log(DEBUG, "$ DoArtifactsRoutine_Daily - "..hero)
     for k,v in DAILY_TRIGGER_ARTIFACTS_ROUTINES do
         if HasArtefact(hero, k, 1) then
-            startThread(v, player, hero)
+            v(player, hero)
         end
     end
     for k,v in DAILY_TRIGGER_ARTFSETS_ROUTINES do
         if HERO_ARTFSETS_STATUS[hero][k] == 1 then
-            startThread(v, player, hero)
+            v(player, hero)
         end
     end
     local nb = GetHeroArtifactsCount(hero, ARTIFACT_BLOOD_CRYSTAL)
-    if nb > 0 then startThread(Routine_ArtifactBloodCrystalExp, player, hero, nb) end
+    if nb > 0 then Routine_ArtifactBloodCrystalExp(player, hero, nb) end
 end
 
 function DoArtifactsRoutine_Weekly(player, hero)
     log(DEBUG, "$ DoArtifactsRoutine_Weekly - "..hero)
     for k,v in WEEKLY_TRIGGER_ARTIFACTS_ROUTINES do
         if HasArtefact(hero, k, 1) then
-            startThread(v, player, hero)
+            v(player, hero)
         end
     end
     for k,v in WEEKLY_TRIGGER_ARTFSETS_ROUTINES do
         if HERO_ARTFSETS_STATUS[hero][k] == 1 then
-            startThread(v, player, hero)
+            v(player, hero)
         end
     end
     local nb = GetHeroArtifactsCount(hero, ARTIFACT_BLOOD_CRYSTAL)
-    if nb > 0 then startThread(Routine_ArtifactBloodCrystalWitches, player, hero, nb) end
+    if nb > 0 then Routine_ArtifactBloodCrystalWitches(player, hero, nb) end
 end
 
 function DoArtifactsRoutine_LevelUp(player, hero, level)
     log(DEBUG, "$ DoArtifactsRoutine_LevelUp - "..hero)
     for k,v in LEVELUP_TRIGGER_ARTIFACTS_ROUTINES do
         if HasArtefact(hero, k, 1) then
-            startThread(v, player, hero, level)
+            v(player, hero, level)
         end
     end
     for k,v in LEVELUP_TRIGGER_ARTFSETS_ROUTINES do
         if HERO_ARTFSETS_STATUS[hero][k] == 1 then
-            startThread(v, player, hero, level)
+            v(player, hero, level)
         end
     end
     local nb = GetHeroArtifactsCount(hero, ARTIFACT_BLOOD_CRYSTAL)
-    if nb > 0 then startThread(Routine_ArtifactBloodCrystalStat, player, hero, nb) end
+    if nb > 0 then Routine_ArtifactBloodCrystalStat(player, hero, nb) end
 end
 
 function DoArtifactsRoutine_AfterCombat(player, hero, index)
     log(DEBUG, "$ DoArtifactsRoutine_AfterCombat - "..hero)
     for k,v in AFTER_COMBAT_TRIGGER_ARTIFACTS_ROUTINES do
         if HasArtefact(hero, k, 1) then
-            startThread(v, player, hero, index)
+            v(player, hero, index)
         end
     end
     for k,v in AFTER_COMBAT_TRIGGER_ARTFSETS_ROUTINES do
         if HERO_ARTFSETS_STATUS[hero][k] == 1 then
-            startThread(v, player, hero, index)
+            v(player, hero, index)
         end
     end
 end

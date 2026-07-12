@@ -1,4 +1,20 @@
 
+log = {
+    error = function(str) end,
+    warn = function(str) end,
+    info = function(str) end,
+    debug = function(str) end,
+    trace = function(str) end,
+
+    SetLogLevel = function(level)
+        if level >= 1 then log.error = function(str) print("[ERROR] "..str) end end
+        if level >= 2 then log.warn = function(str) print("[WARN] "..str) end end
+        if level >= 3 then log.info = function(str) print("[INFO] "..str) end end
+        if level >= 4 then log.debug = function(str) print("[DEBUG] "..str) end end
+        if level >= 5 then log.trace = function(str) print("[TRACE] "..str) end end
+    end,
+}
+
 function log(type, str)
     if LOG_LEVEL >= type then print(str) end
 end
