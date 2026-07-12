@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowSimple ObjectRecordID="1001263">
 	<ClassTypeID>285700801</ClassTypeID>
-	<Shared href="/UI/Doc/Heroes/_Skills/HERO_SKILL_TENACITY.(WindowSimpleShared).xdb#xpointer(/WindowSimpleShared)"/>
-	<Name>WindowBersySk3</Name>
-	<TooltipFileRef href="/Text/Game/Skills/Unique/Runelore/Tenacity/Name.txt"/>
+	<Shared href="/UI/Doc/Heroes/_Spells/SPELL_VAMPIRISM.(WindowSimpleShared).xdb#xpointer(/WindowSimpleShared)"/>
+	<Name>WindowTamikaSp1</Name>
+	<TooltipFileRef href="/Text/Game/Spells/Combat/Vampirism/Name.txt"/>
 	<Visible>true</Visible>
 	<Priority>0</Priority>
 	<GameMessageReactions/>
 	<Placement>
 		<Position>
 			<First>
-				<x>240</x>
+				<x>100</x>
 				<y>14</y>
 			</First>
 			<Second>true</Second>

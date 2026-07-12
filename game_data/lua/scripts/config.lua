@@ -5,8 +5,8 @@
 -- 3 = informative logs
 -- 4 = adds debugging
 -- 5 = all logs
-LOG_LEVEL = 4
+LOG_LEVEL = 3
 
 -- 1 enable
 -- nil disable
-ENABLE_CHEAT = 1
+ENABLE_CHEAT = nil

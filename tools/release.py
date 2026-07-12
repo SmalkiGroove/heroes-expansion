@@ -2,7 +2,7 @@ import os
 import zipfile
 import semver
 
-BUMP = 'p' # M.m.p
+BUMP = 'm' # M.m.p
 
 workdir = os.path.dirname(os.path.abspath(__file__))
 
@@ -73,7 +73,7 @@ with zipfile.ZipFile(os.path.join(workdir, pak_file), 'w', zipfile.ZIP_DEFLATED)
 game_texts_path = "../game_texts"
 text_dirs = [
     "texts-EN",
-    "texts-duel-EN",
+    # "texts-duel-EN",
 ]
 
 for textdir in text_dirs:

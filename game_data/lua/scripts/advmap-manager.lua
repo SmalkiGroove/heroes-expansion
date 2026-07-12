@@ -136,7 +136,7 @@ function PlayerDailyHandler(player)
 	while (not IsPlayerCurrent(player)) do sleep(1) end
 	log.info("Player "..player.." turn "..TURN.." started")
 	for i,hero in GetPlayerHeroes(player) do
-		ControlHeroCustomAbility(hero, CUSTOM_ABILITY_1, CUSTOM_ABILITY_DISABLED)
+		-- ControlHeroCustomAbility(hero, CUSTOM_ABILITY_1, CUSTOM_ABILITY_DISABLED)
 		DoHeroSpeRoutine_Daily(player, hero)
 		DoSkillsRoutine_Daily(player, hero)
 		DoArtifactsRoutine_Daily(player, hero)
