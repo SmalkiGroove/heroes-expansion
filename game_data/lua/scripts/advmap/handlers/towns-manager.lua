@@ -92,7 +92,7 @@ function CheckMainTown(player)
     local main_town = PLAYER_MAIN_TOWN[player]
     if player ~= GetObjectOwner(main_town) then
         PLAYER_MAIN_TOWN[player] = FindMainTown(player)
-        log(DEBUG, "Player "..player.." has new main town : "..PLAYER_MAIN_TOWN[player])
+        log.debug("Player "..player.." has new main town : "..PLAYER_MAIN_TOWN[player])
     end
 end
 
@@ -158,16 +158,16 @@ function InitializeMapTowns()
             end if found then break end end
             if found then
                 local data = MAP_TOWNS[town]
-                log(DEBUG, "Registered town of faction "..FACTION_TEXT[data.faction].." at coords x="..data.x..",y="..data.y..",z="..data.z.." (entrance)")
+                log.debug("Registered town of faction "..FACTION_TEXT[data.faction].." at coords x="..data.x..",y="..data.y..",z="..data.z.." (entrance)")
             else
-                log(DEBUG, "Town "..town.." has no entrance ?? (type is "..type..")")
+                log.debug("Town "..town.." has no entrance ?? (type is "..type..")")
             end
 			SetupTownTavern(town, faction)
         end
     end
     for player = 1,8 do
         if GetPlayerState(player) == 1 and not PLAYER_MAIN_TOWN[player] then
-            log(DEBUG, "WARNING: Player "..player.." has no main town ??")
+            log.debug("WARNING: Player "..player.." has no main town ??")
         end
     end
 end
@@ -180,7 +180,7 @@ function TownBuildTrigger(player)
             if town_buildings[town] then
                 for b,v in town_buildings[town] do
                     if GetTownBuildingLevel(town,b) > v then
-                        log(DEBUG, "Player "..player.." has built "..b.." in town "..town)
+                        log.debug("Player "..player.." has built "..b.." in town "..town)
                         town_buildings[town][b] = v + 1
                     end
                 end
@@ -197,5 +197,5 @@ function TownBuildTrigger(player)
 end
 
 
--- log(DEBUG, "Loaded towns-manager.lua")
+-- log.debug("Loaded towns-manager.lua")
 

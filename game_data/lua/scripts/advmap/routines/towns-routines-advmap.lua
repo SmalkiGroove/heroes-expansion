@@ -24,7 +24,7 @@ function Routine_MagicGuildsBonus(player)
 end
 
 function Routine_DragonTombstone(player, town)
-    log(DEBUG, "$ Routine_DragonTombstone")
+    log.debug("$ Routine_DragonTombstone")
     local prob = 100 + 10 * WEEKS
     prob = prob + GetObjectDwellingCreatures(town, CREATURE_SKELETON)
     prob = min(prob, 500)
@@ -54,7 +54,7 @@ WEEKLY_TRIGGER_TOWNS_ROUTINES = {
 
 
 function DoTownsRoutine_Daily(player)
-    log(DEBUG, "$ DoTownsRoutine_Daily")
+    log.debug("$ DoTownsRoutine_Daily")
     startThread(Routine_MagicGuildsBonus, player)
     for faction,type in Towns_Types do
         local f = faction * 100
@@ -73,7 +73,7 @@ function DoTownsRoutine_Daily(player)
 end
 
 function DoTownsRoutine_Weekly(player)
-    log(DEBUG, "$ DoTownsRoutine_Weekly")
+    log.debug("$ DoTownsRoutine_Weekly")
     for faction,type in Towns_Types do
         local f = faction * 100
         for _,town in GetObjectNamesByType(type) do
@@ -91,5 +91,5 @@ function DoTownsRoutine_Weekly(player)
 end
 
 
-log(TRACE, "Loaded towns-routines-advmap.lua")
+log.trace("Loaded towns-routines-advmap.lua")
 

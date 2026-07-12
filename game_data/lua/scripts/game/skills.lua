@@ -356,5 +356,5 @@ _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_INFUSION            = _skillbonu
 _skillbonus_id = _skillbonus_id + 1; SKILLBONUS_ENLIGHTENED         = _skillbonus_id
 
 
-log(TRACE, "Loaded skills.lua")
+log.trace("Loaded skills.lua")
 

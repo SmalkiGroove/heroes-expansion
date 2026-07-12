@@ -1,6 +1,6 @@
 
 function Routine_Houndmasters(side, hero, id, mastery)
-    log(DEBUG, "$ Routine_Houndmasters")
+    log.debug("$ Routine_Houndmasters")
     local level = GetHeroLevel(side)
     local amount = 10 + 2 * level + random(1, level, 99)
     if hero == H_IVOR then
@@ -14,7 +14,7 @@ function Routine_Houndmasters(side, hero, id, mastery)
 end
 
 function Routine_ElementalBalance(side, hero, id, mastery)
-    log(DEBUG, "$ Routine_ElementalBalance")
+    log.debug("$ Routine_ElementalBalance")
     local creatures = GetUnits(1-side, CREATURE)
     for i,cr in creatures do
         local type = GetCreatureType(cr)
@@ -35,7 +35,7 @@ function Routine_ElementalBalance(side, hero, id, mastery)
 end
 
 function Routine_RandomCreatureRush(side, hero, id, mastery)
-    log(DEBUG, "$ Routine_RandomCreatureRush")
+    log.debug("$ Routine_RandomCreatureRush")
     local creature = RandomCreature(side, 0)
     if creature then
         setATB(creature, ATB_NEXT)
@@ -44,7 +44,7 @@ function Routine_RandomCreatureRush(side, hero, id, mastery)
 end
 
 function Routine_ShatterMagic(side, hero, id, mastery)
-    log(DEBUG, "$ Routine_ShatterMagic")
+    log.debug("$ Routine_ShatterMagic")
     local mult = 0.1 * mastery
     local h = GetHero(1-side)
     if h then
@@ -67,7 +67,7 @@ function Routine_ShatterMagic(side, hero, id, mastery)
 end
 
 function Routine_ImbueBallista(side, hero, id, mastery)
-    log(DEBUG, "$ Routine_ImbueBallista")
+    log.debug("$ Routine_ImbueBallista")
     if CURRENT_UNIT == id then
         local ballista = UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_BALLISTA'
         if IsCombatUnit(ballista) then
@@ -78,7 +78,7 @@ end
 
 function Routine_GuardianAngelRez(side, hero, id, mastery, winner)
     if winner == side then
-        log(DEBUG, "$ Routine_GuardianAngelRez")
+        log.debug("$ Routine_GuardianAngelRez")
         local rez_stack = "none"
         local rez_power = 0
         for cr,nb in STARTING_ARMY[side] do
@@ -157,5 +157,5 @@ function DoSkillRoutine_CombatEnd(side, name, id, winner)
 end
 
 
-log(TRACE, "Loaded skills-routines-combat.lua")
+log.trace("Loaded skills-routines-combat.lua")
 

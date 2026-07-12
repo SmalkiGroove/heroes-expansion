@@ -15,9 +15,6 @@ log = {
     end,
 }
 
-function log(type, str)
-    if LOG_LEVEL >= type then print(str) end
-end
 
 function trunc(num)
     local n = num - mod(num, 1)

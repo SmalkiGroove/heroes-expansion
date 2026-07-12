@@ -13,12 +13,12 @@ end
 -- PLAYER MISC
 
 function StartingBonus(player)
-	log(DEBUG, "$ StartingBonus for player "..player)
+	log.debug("$ StartingBonus for player "..player)
 	if IsDuelMode() then return ExecConsoleCommand("@DuelStartingBonus("..player..")") end
 	local gold = GetPlayerResource(player, GOLD)
 	local diff = mod(gold, 10000)
 	if diff > 1 then -- bonus resources chosen
-		log(DEBUG, "Bonus resources chosen")
+		log.debug("Bonus resources chosen")
 		for res = 0,5 do SetPlayerResource(player, res, GetPlayerResource(player, res) + 5) end
 		SetPlayerResource(player, GOLD, gold - diff + 5000)
 		return
@@ -32,9 +32,9 @@ function StartingBonus(player)
 		end
 	end
 	if PLAYER_ARMY_BONUS[player] then
-		log(DEBUG, "Bonus army chosen")
+		log.debug("Bonus army chosen")
 	else -- bonus artifact chosen
-		log(DEBUG, "Bonus artifact chosen")
+		log.debug("Bonus artifact chosen")
 		local hero = GetPlayerHeroes(player)[0]
 		if hero then
 			for a = 1,199 do if HasArtefact(hero, a) then RemoveArtefact(hero, a) break end end
@@ -126,8 +126,8 @@ end
 -- COMMON
 
 function PlayerDailyResources(player)
-	log(DEBUG, "Player "..player.." daily resources :")
-	-- log(DEBUG, DAILY_RESOURCES[player])
+	log.debug("Player "..player.." daily resources :")
+	-- log.debug(DAILY_RESOURCES[player])
 	for resource,amount in DAILY_RESOURCES[player] do
 		local curamount = GetPlayerResource(player, resource)
 		local newamount = curamount + amount
@@ -136,7 +136,7 @@ function PlayerDailyResources(player)
 end
 
 function GiveResources(player, resource, amount, now)
-	-- log(DEBUG, "$ GiveResources")
+	-- log.debug("$ GiveResources")
 	if amount >= 1 then
 		if now then
 			local curamount = GetPlayerResource(player, resource)
@@ -149,7 +149,7 @@ function GiveResources(player, resource, amount, now)
 end
 
 function TakeAwayResources(player, resource, amount)
-	-- log(DEBUG, "$ TakeAwayResources")
+	-- log.debug("$ TakeAwayResources")
 	if amount >= 1 then
 		local curamount = GetPlayerResource(player, resource)
 		local newamount = curamount - amount
@@ -158,14 +158,14 @@ function TakeAwayResources(player, resource, amount)
 end
 
 function AddHeroStatAmount(player, hero, stat, amount)
-	-- log(DEBUG, "$ AddHeroStatAmount")
+	-- log.debug("$ AddHeroStatAmount")
     if amount ~= 0 then
 		ChangeHeroStat(hero, stat, amount)
 	end
 end
 
 function GetHeroLowestStat(hero)
-	-- log(DEBUG, "$ GetHeroLowestStat")
+	-- log.debug("$ GetHeroLowestStat")
 	local stat = 0
 	local value = 9999
 	for s = 1,4 do
@@ -179,7 +179,7 @@ function GetHeroLowestStat(hero)
 end
 
 function GetHeroHighestStat(hero)
-	-- log(DEBUG, "$ GetHeroHighestStat")
+	-- log.debug("$ GetHeroHighestStat")
 	local stat = 0
 	local value = 0
 	for s = 1,4 do
@@ -193,7 +193,7 @@ function GetHeroHighestStat(hero)
 end
 
 function AddHeroManaUnbound(player, hero, amount)
-	-- log(DEBUG, "$ AddHeroManaUnbound")
+	-- log.debug("$ AddHeroManaUnbound")
 	local klg = ceil(0.1 * amount)
 	ChangeHeroStat(hero, STAT_KNOWLEDGE, klg) sleep()
 	ChangeHeroStat(hero, STAT_MANA_POINTS, amount) sleep()
@@ -201,7 +201,7 @@ function AddHeroManaUnbound(player, hero, amount)
 end
 
 function TeachHeroRandomSpell(player, hero, school, maxtier)
-	-- log(DEBUG, "$ TeachHeroRandomSpell")
+	-- log.debug("$ TeachHeroRandomSpell")
 	local spells = {}
 	if school == SPELL_SCHOOL_ANY then
 		for tier = 1,maxtier do
@@ -228,7 +228,7 @@ function TeachHeroRandomSpell(player, hero, school, maxtier)
 end
 
 function TeachHeroRandomSpellTier(player, hero, school, tier)
-	-- log(DEBUG, "$ TeachHeroRandomSpellTier")
+	-- log.debug("$ TeachHeroRandomSpellTier")
 	local spells = {}
 	if school == SPELL_SCHOOL_ANY then
 		for _,spell in SPELLS_BY_TIER[tier] do
@@ -253,7 +253,7 @@ function TeachHeroRandomSpellTier(player, hero, school, tier)
 end
 
 function GiveHeroRandomArtifact(player, hero, tier, set)
-	-- log(DEBUG, "$ GiveHeroRandomArtifact hero="..hero.." tier="..tier.." set="..set)
+	-- log.debug("$ GiveHeroRandomArtifact hero="..hero.." tier="..tier.." set="..set)
 	tier = tier or 0
 	set = set or 0
 	local artefacts = {}
@@ -278,7 +278,7 @@ function GiveHeroRandomArtifact(player, hero, tier, set)
 end
 
 function AddHeroCreaturePerLevel(player, hero, type, coef)
-	-- log(DEBUG, "AddHeroCreaturePerLevel")
+	-- log.debug("AddHeroCreaturePerLevel")
 	local level = GetHeroLevel(hero)
 	local nb = round(coef * level)
 	if nb >= 1 then
@@ -287,7 +287,7 @@ function AddHeroCreaturePerLevel(player, hero, type, coef)
 end
 
 function AddHeroCreatureType(player, hero, faction, tier, nb, default)
-	-- log(DEBUG, "$ AddHeroCreatureType")
+	-- log.debug("$ AddHeroCreatureType")
 	if nb >= 1 then
 		local army = GetHeroArmy(hero)
 		for i = 1,7 do
@@ -303,7 +303,7 @@ function AddHeroCreatureType(player, hero, faction, tier, nb, default)
 end
 
 function CountHeroCreatureType(player, hero, faction, tier)
-	-- log(DEBUG, "$ CountHeroCreatureType")
+	-- log.debug("$ CountHeroCreatureType")
 	local count = 0
 	for _,cr in CREATURES_BY_FACTION[faction][tier] do
 		count = count + GetHeroCreatures(hero, cr)
@@ -312,7 +312,7 @@ function CountHeroCreatureType(player, hero, faction, tier)
 end
 
 function AddHeroTownRecruits(player, hero, dwelling, creature, nb)
-	-- log(DEBUG, "AddHeroTownRecruits")
+	-- log.debug("AddHeroTownRecruits")
 	local towns = GetHeroTowns(player, hero)
 	if nb >= 1 then
 		for i,town in towns do
@@ -326,7 +326,7 @@ function AddHeroTownRecruits(player, hero, dwelling, creature, nb)
 end
 
 function TransferCreatureFromTown(player, hero, dwelling, creature, coef)
-	-- log(DEBUG, "$ TransferCreatureFromTown")
+	-- log.debug("$ TransferCreatureFromTown")
 	local level = GetHeroLevel(hero)
 	local towns = GetHeroTowns(player, hero)
 	for i,town in towns do
@@ -342,7 +342,7 @@ function TransferCreatureFromTown(player, hero, dwelling, creature, coef)
 end
 
 function TransformTownRecruits(player, hero, dwelling1, creature1, dwelling2, creature2, amount)
-	-- log(DEBUG, "$ TransformTownRecruits")
+	-- log.debug("$ TransformTownRecruits")
 	local towns = GetHeroTowns(player, hero)
 	for i,town in towns do
 		if GetTownBuildingLevel(town, dwelling1) ~= 0 and GetTownBuildingLevel(town, dwelling2) ~= 0 then
@@ -358,7 +358,7 @@ function TransformTownRecruits(player, hero, dwelling1, creature1, dwelling2, cr
 end
 
 function UpgradeHeroCreatures(player, hero, base, upgrade)
-	-- log(DEBUG, "$ UpgradeHeroCreatures")
+	-- log.debug("$ UpgradeHeroCreatures")
 	local nb = GetHeroCreatures(hero, base)
 	if nb >= 1 then
 		RemoveHeroCreatures(hero, base, nb)
@@ -367,7 +367,7 @@ function UpgradeHeroCreatures(player, hero, base, upgrade)
 end
 
 function ResurrectCreatureType(player, hero, combatIndex, faction, tier, max)
-	-- log(DEBUG, "$ ResurrectCreatureType")
+	-- log.debug("$ ResurrectCreatureType")
 	local cap = max
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
     for i = 0,stacks-1 do
@@ -426,7 +426,7 @@ function InitializeRandomSeed()
 		end
 	end
 	RANDOM_SEED = value
-	log(DEBUG, "Random seed = "..RANDOM_SEED)
+	log.debug("Random seed = "..RANDOM_SEED)
 end
 
 function LoadedGame_GameVars()
@@ -447,8 +447,8 @@ end
 
 
 function CheckEnableCheat()
-	if ENABLE_CHEAT then log(WARN, "!!! Player is cheating !!!")
-	else log(ERROR, "!!! Cheating is disabled !!!") end
+	if ENABLE_CHEAT then log.warn("!!! Player is cheating !!!")
+	else log.error("!!! Cheating is disabled !!!") end
 	return ENABLE_CHEAT
 end
 
@@ -479,5 +479,5 @@ function Lv25(hero)
 end
 
 
-log(TRACE, "Loaded advmap-utils.lua")
+log.trace("Loaded advmap-utils.lua")
 

@@ -131,7 +131,7 @@ DUEL_PLAYER_DATA = {
 
 
 function DuelStartingBonus(player)
-    log(DEBUG, "DUEL: StartingBonus for player "..player)
+    log.debug("DUEL: StartingBonus for player "..player)
     startThread(function(player)
         for a = 1,199 do if HasArtefact(DUEL_HERO[player], a) then RemoveArtefact(DUEL_HERO[player], a) break end end
     end, player)
@@ -192,14 +192,14 @@ function DuelNextStage(player, hero)
 end
 
 function DuelSetup(player, hero)
-    log(DEBUG, "DUEL: player "..player.." entered setup stage")
+    log.debug("DUEL: player "..player.." entered setup stage")
     SetObjectPosition(hero, DUEL_START_COORDINATES[player].x, DUEL_START_COORDINATES[player].y, 0, 4)
     SetObjectRotation(hero, 0)
     DuelSetPlayerStage(player, DUEL_STAGE_SETUP)
 end
 
 function DuelAdventure(player, hero)
-    log(DEBUG, "DUEL: player "..player.." entered adventure stage")
+    log.debug("DUEL: player "..player.." entered adventure stage")
     for skill, func in DUEL_SKILL_ADVENTURE_EFFECTS do
         if HasHeroSkill(hero, skill) then func(player, hero) end
     end
@@ -224,7 +224,7 @@ function DuelAdventureDay(player, hero)
 end
 
 function DuelStaging(player, hero)
-    log(DEBUG, "DUEL: player "..player.." entered staging stage")
+    log.debug("DUEL: player "..player.." entered staging stage")
     SetObjectPosition(hero, DUEL_STAGING_COORDINATES[player].x, DUEL_STAGING_COORDINATES[player].y, 0, 2)
     SetObjectRotation(hero, 0)
     DUEL_PLAYER_DATA.TOTAL_EXP[player] = GetHeroStat(hero, STAT_EXPERIENCE)
@@ -241,14 +241,14 @@ function DuelStaging(player, hero)
 end
 
 function DuelCastle(player, hero)
-    log(DEBUG, "DUEL: player "..player.." entered castle stage")
+    log.debug("DUEL: player "..player.." entered castle stage")
     SetObjectPosition(hero, DUEL_TOWNS_COORDINATES[player][DUEL_FACTION[player]].x, DUEL_TOWNS_COORDINATES[player][DUEL_FACTION[player]].y, 0, 4)
     SetObjectRotation(hero, player == 1 and 270 or 90)
     DuelSetPlayerStage(player, DUEL_STAGE_CASTLE)
 end
 
 function DuelBattle(player, hero)
-    log(DEBUG, "DUEL: player "..player.." entered battle stage")
+    log.debug("DUEL: player "..player.." entered battle stage")
     OpenCircleFog(100, 100, UNDERGROUND, 99, player)
     ChangeHeroStat(hero, STAT_MANA_POINTS, 999) sleep()
     for skill, func in DUEL_SKILL_BATTLE_EFFECTS do
@@ -258,7 +258,7 @@ function DuelBattle(player, hero)
 end
 
 function DuelEnd(player, hero)
-    log(DEBUG, "DUEL: player "..player.." entered end stage")
+    log.debug("DUEL: player "..player.." entered end stage")
     DuelSetPlayerStage(player, DUEL_STAGE_END)
 end
 
@@ -302,7 +302,7 @@ end
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
 function DuelMain()
-    log(DEBUG, "DUEL: bootstrap")
+    log.debug("DUEL: bootstrap")
 
     for player = 1,2 do
         DuelSetPlayerStage(player, DUEL_STAGE_START)
@@ -325,6 +325,6 @@ function DuelMain()
 
     for player = 1,2 do DuelTownRecruits(player) end
 
-    log(DEBUG, "DUEL: start")
+    log.debug("DUEL: start")
     for player = 1,2 do startThread(DuelLoop, player) end
 end

@@ -575,5 +575,5 @@ for artefact,data in ARTIFACTS_DATA do
 end
 
 
-log(TRACE, "Loaded artifacts.lua")
+log.trace("Loaded artifacts.lua")
 

@@ -163,6 +163,7 @@ coordinates_skills = {
   '040000': [sorcery_x+150, sorcery_y+45],
   '041000': [sorcery_x+100, sorcery_y+45],
   '042000': [sorcery_x+5, sorcery_y+45],
+  '043000': [destructive_x+150, destructive_y+0],
   '044000': [destructive_x+150, destructive_y+0],
   '045000': [innates_x+240, innates_y+26],
   '046000': [dark_x+5, dark_y+45],

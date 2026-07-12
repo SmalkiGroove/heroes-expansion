@@ -51,7 +51,7 @@ REGISTERED_ARTIFACTS = {
 }
 
 function ScanHeroArtifacts(hero)
-    log(TRACE, "$ ScanHeroArtifacts : "..hero)
+    log.trace("$ ScanHeroArtifacts : "..hero)
     local faction = HEROES[hero].faction
     local tracker = {}
     for set = 1,ARTFSET_ACTIVABLES_COUNT do
@@ -73,7 +73,7 @@ function ScanHeroArtifacts(hero)
             tracker[active_set] = 1
         end
         if pieces ~= HERO_ARTFSETS_PIECES[hero][set] then
-            log(DEBUG, "Hero "..hero.." artifact set #"..set.." has changed from "..HERO_ARTFSETS_PIECES[hero][set].." to "..pieces.." pieces")
+            log.debug("Hero "..hero.." artifact set #"..set.." has changed from "..HERO_ARTFSETS_PIECES[hero][set].." to "..pieces.." pieces")
             HERO_ARTFSETS_PIECES[hero][set] = pieces
         end
     end
@@ -101,10 +101,10 @@ end
 function GetHeroArtfset(hero)
     for set, activations in ARTIFACT_SETS_ACTIVATIONS do
         local count = GetArtifactSetItemsCount(hero, set, 1)
-        log(DEBUG, "Hero "..hero.." has "..count.." artifacts from set "..set)
+        log.debug("Hero "..hero.." has "..count.." artifacts from set "..set)
     end
 end
 
 
-log(TRACE, "Loaded artifact-manager.lua")
+log.trace("Loaded artifact-manager.lua")
 

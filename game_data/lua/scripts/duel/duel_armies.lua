@@ -79,7 +79,7 @@ DUEL_CREATURE_GROWTH = {
 DUEL_TOWN_RECRUITS = {{}, {}}
 
 function DuelTownRecruits(player)
-    log(DEBUG, "DUEL: DuelTownRecruits for player "..player)
+    log.debug("DUEL: DuelTownRecruits for player "..player)
     local faction = DUEL_FACTION[player]
     local town = DUEL_TOWN_NAME[player][faction]
     for creature, growth in DUEL_CREATURE_GROWTH[faction] do

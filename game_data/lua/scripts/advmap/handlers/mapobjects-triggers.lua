@@ -12,7 +12,7 @@ function Override_Monsters(obj)
     for _,gate in MAP_GATES do
         local xx, yy, zz = GetObjectPosition(gate)
         if z == zz and abs(x-xx) < 3 and abs(y-yy) < 3 then
-            log(DEBUG, "$ Gate found for monsters "..obj)
+            log.debug("$ Gate found for monsters "..obj)
             return
         end
     end
@@ -79,7 +79,7 @@ end
 -----------------------------------------------
 
 function Trigger_Monsters(hero, obj)
-    log(DEBUG, "$ Trigger_Monsters")
+    log.debug("$ Trigger_Monsters")
     local x, y, z = GetObjectPosition(obj)
     ONGOING_BATTLES[hero] = {x=x, y=y, z=z}
     startThread(Trigger_Monsters_Ongoing, hero, obj)
@@ -96,7 +96,7 @@ end
 function Trigger_Monsters_Ongoing(hero, obj)
     local x, y, z = GetObjectPosition(hero)
     while IsObjectExists(hero) do
-        log(DEBUG, "Hero "..hero.." is fighting monsters...")
+        log.debug("Hero "..hero.." is fighting monsters...")
         sleep(5)
         if not IsObjectExists(obj) then return end
         local xx, yy, zz = GetObjectPosition(hero)
@@ -107,7 +107,7 @@ end
 
 Var_WitchHutResCost = {3,2,4,5}
 function Trigger_WitchHut(hero, obj)
-    log(DEBUG, "$ Trigger_WitchHut")
+    log.debug("$ Trigger_WitchHut")
     local player = GetObjectOwner(hero)
     if IsAIPlayer(player) then
         NoOverrideAI(obj, hero, "Trigger_WitchHut")
@@ -158,7 +158,7 @@ end
 
 
 function Trigger_Temple(hero, obj)
-    log(DEBUG, "$ Trigger_Temple")
+    log.debug("$ Trigger_Temple")
     local player = GetObjectOwner(hero)
     if IsAIPlayer(player) then
         NoOverrideAI(obj, hero, "Trigger_Temple")
@@ -183,7 +183,7 @@ end
 
 
 function Trigger_RallyFlag(hero, obj)
-    log(DEBUG, "$ Trigger_RallyFlag")
+    log.debug("$ Trigger_RallyFlag")
     local player = GetObjectOwner(hero)
     if IsAIPlayer(player) then
         NoOverrideAI(obj, hero, "Trigger_RallyFlag")
@@ -195,7 +195,7 @@ end
 
 
 function Trigger_Tavern(hero, obj)
-    log(DEBUG, "$ Trigger_Tavern")
+    log.debug("$ Trigger_Tavern")
     local player = GetObjectOwner(hero)
     QuestionBoxForPlayers(
         GetPlayerFilter(player),
@@ -217,7 +217,7 @@ end
 
 
 function Trigger_WarAcademy(hero, obj)
-    log(DEBUG, "$ Trigger_WarAcademy")
+    log.debug("$ Trigger_WarAcademy")
     local player = GetObjectOwner(hero)
     if IsAIPlayer(player) then
         NoOverrideAI(obj, hero, "Trigger_WarAcademy")
@@ -254,7 +254,7 @@ end
 
 
 function Trigger_TombOfTheWarrior(hero, obj)
-    log(DEBUG, "$ Trigger_TombOfTheWarrior")
+    log.debug("$ Trigger_TombOfTheWarrior")
     local player = GetObjectOwner(hero)
     if IsAIPlayer(player) then
         NoOverrideAI(obj, hero, "Trigger_TombOfTheWarrior")
@@ -280,7 +280,7 @@ Var_IdolOfFortuneBonus = {
     [HERO_BATTLE_BONUS_SPEED] = 2,
 }
 function Trigger_IdolOfFortune(hero, obj)
-    log(DEBUG, "$ Trigger_IdolOfFortune")
+    log.debug("$ Trigger_IdolOfFortune")
     local player = GetObjectOwner(hero)
     if IsAIPlayer(player) then
         NoOverrideAI(obj, hero, "Trigger_IdolOfFortune")
@@ -307,7 +307,7 @@ end
 
 
 function Trigger_SeerHut(hero, obj)
-    log(DEBUG, "$ Trigger_SeerHut")
+    log.debug("$ Trigger_SeerHut")
     local player = GetObjectOwner(hero)
     if IsAIPlayer(player) then
         NoOverrideAI(obj, hero, "Trigger_SeerHut")
@@ -336,7 +336,7 @@ end
 
 
 function Trigger_MotherEarthShrine(hero, obj)
-    log(DEBUG, "$ Trigger_MotherEarthShrine")
+    log.debug("$ Trigger_MotherEarthShrine")
     local player = GetObjectOwner(hero)
     if IsAIPlayer(player) then
         NoOverrideAI(obj, hero, "Trigger_MotherEarthShrine")
@@ -377,7 +377,7 @@ end
 
 
 function Trigger_FortuitousSanctuary(hero, obj)
-    log(DEBUG, "$ Trigger_FortuitousSanctuary")
+    log.debug("$ Trigger_FortuitousSanctuary")
     local player = GetObjectOwner(hero)
     if IsAIPlayer(player) then
         NoOverrideAI(obj, hero, "Trigger_FortuitousSanctuary")
@@ -462,5 +462,5 @@ function NoOverrideAI(obj, hero, callback)
     SetObjectEnabled(obj, nil)
 end
 
-log(TRACE, "Loaded mapobjects-triggers.lua")
+log.trace("Loaded mapobjects-triggers.lua")
 

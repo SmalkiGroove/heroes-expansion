@@ -250,5 +250,5 @@ end
 
 
 
-log(TRACE, "Loaded combat-utils.lua")
+log.trace("Loaded combat-utils.lua")
 

@@ -80,5 +80,5 @@ DAILY_RESOURCES = {
 }
 
 
-log(TRACE, "Loaded advmap-data.lua")
+log.trace("Loaded advmap-data.lua")
 

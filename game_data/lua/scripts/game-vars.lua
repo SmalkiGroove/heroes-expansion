@@ -18,5 +18,5 @@ function VarHeroArtfsetId(hero, artfset)
 end
 
 
-log(TRACE, "Loaded game-vars.lua")
+log.trace("Loaded game-vars.lua")
 

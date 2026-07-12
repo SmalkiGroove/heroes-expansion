@@ -28,7 +28,7 @@ HERO_DATA = {
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 function FetchData(name, id)
-    log(DEBUG, "Fetch data for hero "..name)
+    log.debug("Fetch data for hero "..name)
     local temp = GetGameVar(VarHeroLevel(name))
     HERO_DATA[id].Level = 0 + temp
     for _,s in COMBAT_EFFECT_SKILLS do
@@ -43,13 +43,13 @@ function FetchData(name, id)
         temp = GetGameVar(VarHeroArtfsetId(name,set))
         HERO_DATA[id].ArtfSets[set] = temp == "" and 0 or 0 + temp
     end
-    log(DEBUG, "Hero "..name.." : Lvl "..HERO_DATA[id].Level)
+    log.debug("Hero "..name.." : Lvl "..HERO_DATA[id].Level)
 end
 
 function Wait()
     sleep(1)
     THREAD_FINISHER = THREAD_FINISHER - 1
-     log(TRACE, "Thread finisher = "..THREAD_FINISHER)
+     log.trace("Thread finisher = "..THREAD_FINISHER)
     if THREAD_FINISHER == 0 then THREAD_STATE = 1 end
 end
 
@@ -59,7 +59,7 @@ end
 startThread(CheckEnableScript1)
 
 function ManageCombatPrepare()
-    log(TRACE, "$ Manage combat prepare")
+    log.trace("$ Manage combat prepare")
     CheckEnableScript2()
     if ENABLE_SCRIPT == 0 then return end
 
@@ -78,10 +78,10 @@ function ManageCombatPrepare()
 end
 
 function ManageCombatStart()
-    log(TRACE, "$ Manage combat start")
+    log.trace("$ Manage combat start")
     if ENABLE_SCRIPT == 0 then return end
     GetArmySummary()
-    log(DEBUG, "Combat random seed = "..RANDOM_SEED)
+    log.debug("Combat random seed = "..RANDOM_SEED)
 
     combatSetPause(1)
     DoAbilitiesRoutine_CombatStart()
@@ -99,7 +99,7 @@ function ManageCombatStart()
 end
 
 function ManageCombatTurn(unit)
-    log(TRACE, "$ Manage combat turn - "..unit)
+    log.trace("$ Manage combat turn - "..unit)
     if ENABLE_SCRIPT == 0 then return end
 
     if CURRENT_UNIT ~= unit then
@@ -125,7 +125,7 @@ function ManageCombatTurn(unit)
 end
 
 function ManageUnitDeath(unit)
-    log(TRACE, "$ Manage unit death - "..unit)
+    log.trace("$ Manage unit death - "..unit)
     if ENABLE_SCRIPT == 0 then return end
 
     if ATTACKER_HERO ~= "" then
@@ -165,7 +165,7 @@ function ManageUnitDeath(unit)
 end
 
 function ManageCombatEnd(winner)
-    log(TRACE, "$ Manage combat end - "..winner)
+    log.trace("$ Manage combat end - "..winner)
     if ENABLE_SCRIPT == 1 then
         combatSetPause(1)
 
@@ -214,7 +214,7 @@ SCRIPTS_GROUP = {
     },
 }
 function LoadScripts(wg)
-    log(TRACE, "Loading scripts group "..wg)
+    log.trace("Loading scripts group "..wg)
     for i, file in SCRIPTS_GROUP[wg] do dofile(file) end
     sleep(1)
 end

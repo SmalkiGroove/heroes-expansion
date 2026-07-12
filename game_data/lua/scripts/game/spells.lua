@@ -386,5 +386,5 @@ RUNIC_SPELLS = {
 }
 
 
-log(TRACE, "Loaded spells.lua")
+log.trace("Loaded spells.lua")
 

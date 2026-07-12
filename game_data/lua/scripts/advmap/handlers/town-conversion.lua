@@ -8,12 +8,12 @@ function HeroInConvertible(hero, obj, value)
 end
 
 function EnableTownConversionAbility(hero, obj)
-    log(DEBUG, "$ EnableTownConversionAbility")
+    log.debug("$ EnableTownConversionAbility")
     HeroInConvertible(hero, obj, CUSTOM_ABILITY_ENABLED)
     local x,y,z = GetObjectPosition(hero)
     repeat sleep(10) until not IsEqualPosition(hero, x, y, z)
     HeroInConvertible(hero, obj, CUSTOM_ABILITY_DISABLED)
-    log(DEBUG, "Hero moved - conversion ability disabled")
+    log.debug("Hero moved - conversion ability disabled")
 end
 
 function CanHeroConvert(hero, obj)
@@ -36,7 +36,7 @@ function SetTriggerConvertible(obj, bool)
 end
 
 function ConvertTown(player, hero, town)
-    log(DEBUG, "$ ConvertTown")
+    log.debug("$ ConvertTown")
     local resource_cost = 20
     local gold_cost = 10000
     if     GetPlayerResource(player, WOOD) < resource_cost then ShowFlyingSign("/Text/Game/Scripts/Resources/xNotEnoughWood.txt", hero, player, 3)
@@ -54,7 +54,7 @@ function ConvertTown(player, hero, town)
 end
 
 function ConvertDwelling(player, hero, dwelling, tier)
-    log(DEBUG, "$ ConvertDwelling")
+    log.debug("$ ConvertDwelling")
     local resource_cost = 3 * tier
     local gold_cost = 1000 * tier
     if     GetPlayerResource(player, WOOD) < resource_cost then ShowFlyingSign("/Text/Game/Scripts/Resources/xNotEnoughWood.txt", hero, player, 3)
@@ -71,7 +71,7 @@ function ConvertDwelling(player, hero, dwelling, tier)
 end
 
 function HeroVisitConvertible(hero, obj)
-    log(DEBUG, "$ HeroVisitConvertible")
+    log.debug("$ HeroVisitConvertible")
     if hero == H_DOUGAL then
         startThread(Routine_TrainPeasantsToArchers, hero, obj)
         repeat sleep() until Var_Dougal_TrainPeasantLock == 0
@@ -108,5 +108,5 @@ function InitializeConvertibles()
 end
 
 
-log(TRACE, "Loaded town-conversion.lua")
+log.trace("Loaded town-conversion.lua")
 

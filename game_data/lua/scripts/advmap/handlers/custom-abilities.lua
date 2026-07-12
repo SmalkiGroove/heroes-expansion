@@ -1,6 +1,6 @@
 
 function ActivateInfoWindow(player, hero)
-    log(DEBUG, "$ ActivateInfoWindow")
+    log.debug("$ ActivateInfoWindow")
     MessageBoxForPlayers(
         GetPlayerFilter(player),
         {"/Text/Game/Scripts/InfoWindow.txt";
@@ -12,7 +12,7 @@ end
 
 
 function ActivateKnowYourEnemy(player, hero)
-    log(DEBUG, "$ ActivateKnowYourEnemy")
+    log.debug("$ ActivateKnowYourEnemy")
     if GetHeroStat(hero, STAT_MOVE_POINTS) < 100 then return end
     local exp = 0
     local k, units, amounts = GetHeroArmySummary(hero)
@@ -34,7 +34,7 @@ end
 
 
 function ActivateHeroTimeShift(player, hero)
-    log(DEBUG, "$ ActivateHeroTimeShift")
+    log.debug("$ ActivateHeroTimeShift")
     local points = GetHeroStat(hero, STAT_MOVE_POINTS)
     local cost = round(0.001 * points * (51 - GetHeroLevel(hero)))
     if GetHeroStat(hero, STAT_MANA_POINTS) < cost then
@@ -51,7 +51,7 @@ end
 
 
 function ActivateBuildingConversion(player, hero)
-    log(DEBUG, "$ ActivateBuildingConversion")
+    log.debug("$ ActivateBuildingConversion")
     local obj = HERO_IN_CONVERTIBLE[hero]
     if not obj then ShowFlyingSign("/Text/Game/Scripts/Abilities/HeroNotInConvertible.txt", hero, player, 3) return end
     local tier = MAP_CONVERTIBLES[obj].tier
@@ -74,13 +74,13 @@ end
 
 
 function ActivateMeditation(player, hero, amount)
-    log(DEBUG, "$ ActivateMeditation")
+    log.debug("$ ActivateMeditation")
     AddHeroStatAmount(player, hero, STAT_EXPERIENCE, 50 * amount)
 end
 
 
 function ActivateDigging(player, hero)
-    log(DEBUG, "$ ActivateDigging")
+    log.debug("$ ActivateDigging")
 
 end
 
@@ -99,5 +99,5 @@ function CustomAbilityHandler(hero, id)
 end
 
 
-log(TRACE, "Loaded custom-abilities.lua")
+log.trace("Loaded custom-abilities.lua")
 

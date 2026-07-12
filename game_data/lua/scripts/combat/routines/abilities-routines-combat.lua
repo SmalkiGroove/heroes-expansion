@@ -1,6 +1,6 @@
 
 function Routine_AbilityCommandBallista(side, unit)
-    log(DEBUG, "$ Routine_AbilityCommandBallista")
+    log.debug("$ Routine_AbilityCommandBallista")
     local growth = {[CREATURE_MARKSMAN] = 30}
     if not ROUTINE_VARS.BallistaCommanders[unit] then
         ROUTINE_VARS.BallistaCommanders[unit] = 1
@@ -29,12 +29,12 @@ function Routine_AbilityCommandBallista(side, unit)
 end
 
 function Routine_AbilityRageOfTheForest(side, unit)
-    log(DEBUG, "$ Routine_AbilityRageOfTheForest")
+    log.debug("$ Routine_AbilityRageOfTheForest")
     UseCombatAbility(unit, SPELL_ABILITY_RAGE_OF_THE_FOREST)
 end
 
 function Routine_AbilityMagneticField(side, unit)
-    log(DEBUG, "$ Routine_AbilityMagneticField")
+    log.debug("$ Routine_AbilityMagneticField")
     local nb = GetCreatureNumber(unit)
     local x,y = GetUnitPosition(unit)
     local enemy = "none"
@@ -62,32 +62,32 @@ function Routine_AbilityMagneticField(side, unit)
 end
 
 function Routine_AbilityMineField(side, unit)
-    log(DEBUG, "$ Routine_AbilityMineField")
+    log.debug("$ Routine_AbilityMineField")
     local x,y = GetUnitPosition(unit)
     local offset = 2 - 4 * side
     HeroCast_Area(unit, SPELL_LAND_MINE, FREE_MANA, x + offset, y)
 end
 
 function Routine_AbilityRefreshMana4(side, unit)
-    log(DEBUG, "$ Routine_AbilityRefreshMana4")
+    log.debug("$ Routine_AbilityRefreshMana4")
     RefreshMana(side, unit, 4)
 end
 
 function Routine_AbilityRefreshMana20Percent(side, unit)
-    log(DEBUG, "$ Routine_AbilityRefreshMana20Percent")
+    log.debug("$ Routine_AbilityRefreshMana20Percent")
     local value = round(GetUnitMaxManaPoints(unit) * 0.2)
     RefreshMana(side, unit, value)
 end
 
 function Routine_AbilityManaTempest(side, unit)
-    log(DEBUG, "$ Routine_AbilityManaTempest")
+    log.debug("$ Routine_AbilityManaTempest")
     local thread = function(side, unit)
     end
     startThread(thread, side, unit)
 end
 
 function Routine_AbilityTreachery(side, unit)
-    log(DEBUG, "$ Routine_AbilityTreachery")
+    log.debug("$ Routine_AbilityTreachery")
     local thread = function(side, unit)
         repeat sleep(10) until GetUnitSide(unit) ~= side
         STARTING_ARMY[side][unit] = nil
@@ -168,5 +168,5 @@ function DoAbilitiesRoutine_CombatEnd()
 end
 
 
-log(TRACE, "Loaded abilities-routines-combat.lua")
+log.trace("Loaded abilities-routines-combat.lua")
 

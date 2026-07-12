@@ -1,7 +1,7 @@
 
 
 function DuelLogistics(player, hero)
-    log(DEBUG, "DUEL: DuelLogistics")
+    log.debug("DUEL: DuelLogistics")
     local n = GetHeroSkillMastery(hero, SKILL_LOGISTICS)
     for i = 1,n do
         local cr = CREATURES_BY_FACTION[DUEL_FACTION[player]][i][1]
@@ -14,12 +14,12 @@ function DuelLogistics(player, hero)
 end
 
 function DuelPathfinding(player, hero, level)
-    log(DEBUG, "DUEL: DuelPathfinding")
+    log.debug("DUEL: DuelPathfinding")
     DUEL_PLAYER_DATA.ADVENTURE_DAYS[player] = DUEL_PLAYER_DATA.ADVENTURE_DAYS[player] + 0.1
 end
 
 function DuelScouting(player, hero)
-    log(DEBUG, "DUEL: DuelScouting")
+    log.debug("DUEL: DuelScouting")
     local x = player == 1 and 121 or 94
     local y = 48
     for i = 0,10 do
@@ -28,18 +28,18 @@ function DuelScouting(player, hero)
 end
 
 function DuelSpoilsOfWar(player, hero, level)
-    log(DEBUG, "DUEL: DuelSpoilsOfWar")
+    log.debug("DUEL: DuelSpoilsOfWar")
     GiveResources(player, GOLD, 250, 1)
     if mod(level, 4) == 0 then GiveHeroRandomArtifact(player, hero, ARTIFACT_CLASS_MINOR) end
 end
 
 function DuelWarPath(player, hero, level)
-    log(DEBUG, "DUEL: DuelWarPath")
+    log.debug("DUEL: DuelWarPath")
     DUEL_PLAYER_DATA.ADVENTURE_DAYS[player] = DUEL_PLAYER_DATA.ADVENTURE_DAYS[player] + 0.1
 end
 
 function DuelLeadership(player, hero, level)
-    log(DEBUG, "DUEL: DuelLeadership")
+    log.debug("DUEL: DuelLeadership")
     if mod(level, 2) == 0 then
         local n = GetHeroSkillMastery(hero, SKILL_LEADERSHIP)
         local percent = 5 + 5 * n + level
@@ -52,7 +52,7 @@ function DuelLeadership(player, hero, level)
 end
 
 function DuelDiplomacy(player, hero, level)
-    log(DEBUG, "DUEL: DuelDiplomacy")
+    log.debug("DUEL: DuelDiplomacy")
     if mod(level, 2) == 0 then
         local tier = random(1,5)
         local creature = CREATURES_BY_FACTION[DUEL_FACTION[player]][tier][1]
@@ -62,25 +62,25 @@ function DuelDiplomacy(player, hero, level)
 end
 
 function DuelTaletellers(player, hero)
-    log(DEBUG, "DUEL: DuelTaletellers")
+    log.debug("DUEL: DuelTaletellers")
     LevelUpHero(hero)
 end
 
 function DuelGovernance(player, hero, level)
-    log(DEBUG, "DUEL: DuelGovernance")
+    log.debug("DUEL: DuelGovernance")
     local n = GetHeroSkillMastery(hero, SKILL_GOVERNANCE)
     local amount = 500 * n
     GiveResources(player, GOLD, amount, 1)
 end
 
 function DuelGovernance2(player, hero)
-    log(DEBUG, "DUEL: DuelGovernance2")
+    log.debug("DUEL: DuelGovernance2")
     local res = FACTION_RESOURCE[DUEL_FACTION[player]]
     GiveResources(player, res, 5, 1)
 end
 
 function DuelGearUp(player, hero)
-    log(DEBUG, "DUEL: DuelGearUp")
+    log.debug("DUEL: DuelGearUp")
     local count = 0
     for a,data in ARTIFACTS_DATA do
         if data.class == ARTIFACT_CLASS_MINOR then
@@ -91,7 +91,7 @@ function DuelGearUp(player, hero)
 end
 
 function DuelHeroesLegacy(player, hero)
-    log(DEBUG, "DUEL: DuelHeroesLegacy")
+    log.debug("DUEL: DuelHeroesLegacy")
     local count = 0
     for a,data in ARTIFACTS_DATA do
         if data.class == ARTIFACT_CLASS_MAJOR then
@@ -102,7 +102,7 @@ function DuelHeroesLegacy(player, hero)
 end
 
 function DuelMythology(player, hero)
-    log(DEBUG, "DUEL: DuelMythology")
+    log.debug("DUEL: DuelMythology")
     local count = 0
     for a,data in ARTIFACTS_DATA do
         if data.class == ARTIFACT_CLASS_RELIC then
@@ -113,38 +113,38 @@ function DuelMythology(player, hero)
 end
 
 function DuelEstates(player, hero, level)
-    log(DEBUG, "DUEL: DuelEstates")
+    log.debug("DUEL: DuelEstates")
     local amount = 500 + level * 25
     GiveResources(player, GOLD, amount, 1)
 end
 
 function DuelGeology(player, hero, level)
-    log(DEBUG, "DUEL: DuelEstates")
+    log.debug("DUEL: DuelEstates")
     GiveResources(player, ORE, 2, 1)
     GiveResources(player, GOLD, level * 50, 1)
 end
 
 function DuelIndustry(player, hero)
-    log(DEBUG, "DUEL: DuelIndustry")
+    log.debug("DUEL: DuelIndustry")
     for res = 0,5 do GiveResources(player, res, 20) end
 end
 
 function DuelLearning(player, hero)
-    log(DEBUG, "DUEL: DuelLearning")
+    log.debug("DUEL: DuelLearning")
     local n = GetHeroSkillMastery(hero, SKILL_LEARNING)
     local exp = trunc(0.05 * n * DUEL_PLAYER_DATA.TOTAL_EXP[player])
     ChangeHeroStat(hero, STAT_EXPERIENCE, exp)
 end
 
 function DuelIntuition(player, hero)
-    log(DEBUG, "DUEL: DuelIntuition")
+    log.debug("DUEL: DuelIntuition")
     for school = 1,4 do for tier = 1,3 do
         TeachHeroRandomSpellTier(player, hero, school, tier)
     end end
 end
 
 function DuelScholar(player, hero)
-    log(DEBUG, "DUEL: DuelScholar")
+    log.debug("DUEL: DuelScholar")
     local mapping = {[9]=4, [10]=2, [11]=1, [12]=3}
     for skill = 9, 12 do
         if not HasHeroSkill(hero, skill) then
@@ -154,56 +154,56 @@ function DuelScholar(player, hero)
 end
 
 function DuelMentoring(player, hero)
-    log(DEBUG, "DUEL: DuelMentoring")
+    log.debug("DUEL: DuelMentoring")
     local exp = trunc(0.15 * DUEL_PLAYER_DATA.TOTAL_EXP[player])
     ChangeHeroStat(hero, STAT_EXPERIENCE, exp)
 end
 
 function DuelMeditation(player, hero)
-    log(DEBUG, "DUEL: DuelMeditation")
+    log.debug("DUEL: DuelMeditation")
     LevelUpHero(hero)
 end
 
 function DuelWarriorsOfTheMagma(player, hero, level)
-    log(DEBUG, "DUEL: DuelWarriorsOfTheMagma")
+    log.debug("DUEL: DuelWarriorsOfTheMagma")
     AddHeroCreatures(hero, CREATURE_FIRE_ELEMENTAL, level)
 end
 
 function DuelWarriorsOfTheMountain(player, hero, level)
-    log(DEBUG, "DUEL: DuelWarriorsOfTheMountain")
+    log.debug("DUEL: DuelWarriorsOfTheMountain")
     AddHeroCreatures(hero, CREATURE_EARTH_ELEMENTAL, level)
 end
 
 function DuelWarriorsOfTheSea(player, hero, level)
-    log(DEBUG, "DUEL: DuelWarriorsOfTheSea")
+    log.debug("DUEL: DuelWarriorsOfTheSea")
     AddHeroCreatures(hero, CREATURE_WATER_ELEMENTAL, level)
 end
 
 function DuelWarriorsOfTheSky(player, hero, level)
-    log(DEBUG, "DUEL: DuelWarriorsOfTheSky")
+    log.debug("DUEL: DuelWarriorsOfTheSky")
     AddHeroCreatures(hero, CREATURE_AIR_ELEMENTAL, level)
 end
 
 function DuelEmpiricism(player, hero)
-    log(DEBUG, "DUEL: DuelEmpiricism")
+    log.debug("DUEL: DuelEmpiricism")
     local exp = trunc(0.15 * DUEL_PLAYER_DATA.TOTAL_EXP[player])
     ChangeHeroStat(hero, STAT_EXPERIENCE, exp)
 end
 
 function DuelEmpiricism2(player, hero)
-    log(DEBUG, "DUEL: DuelEmpiricism2")
+    log.debug("DUEL: DuelEmpiricism2")
     LevelUpHero(hero)
 end
 
 function DuelReinforcement(player, hero)
-    log(DEBUG, "DUEL: DuelReinforcement")
+    log.debug("DUEL: DuelReinforcement")
     local amount = trunc(0.15 * GetHeroLevel(hero))
     ChangeHeroStat(hero, STAT_ATTACK, amount)
     ChangeHeroStat(hero, STAT_DEFENCE, amount)
 end
 
 function DuelDespotism(player, hero)
-    log(DEBUG, "DUEL: DuelDespotism")
+    log.debug("DUEL: DuelDespotism")
     local n = GetHeroSkillMastery(hero, SKILL_DESPOTISM)
     local total = 0
     for i,cr in GetHeroArmy(hero) do
@@ -222,18 +222,18 @@ function DuelDespotism(player, hero)
 end
 
 function DuelDevotion(player, hero)
-    log(DEBUG, "DUEL: DuelDevotion")
+    log.debug("DUEL: DuelDevotion")
     LevelUpHero(hero)
 end
 
 function DuelBattleWrath(player, hero)
-    log(DEBUG, "DUEL: DuelBattleWrath")
+    log.debug("DUEL: DuelBattleWrath")
     GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_ATTACK, 2)
     GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_INITIATIVE, 2)
 end
 
 function DuelWarPolicy(player, hero, level)
-    log(DEBUG, "DUEL: DuelWarPolicy")
+    log.debug("DUEL: DuelWarPolicy")
     for creature, growth in DUEL_CREATURE_GROWTH[DUEL_FACTION[player]] do
         local cur = DUEL_TOWN_RECRUITS[player][creature]
         local nb = round(0.01 * level * growth)
@@ -242,13 +242,13 @@ function DuelWarPolicy(player, hero, level)
 end
 
 function DuelLungWorkout(player, hero)
-    log(DEBUG, "DUEL: DuelLungWorkout")
+    log.debug("DUEL: DuelLungWorkout")
     ChangeHeroStat(hero, STAT_SPELL_POWER, 1)
     ChangeHeroStat(hero, STAT_KNOWLEDGE, 1)
 end
 
 function DuelNecromancy(player, hero, level)
-    log(DEBUG, "DUEL: DuelNecromancy")
+    log.debug("DUEL: DuelNecromancy")
     local n = GetHeroSkillMastery(hero, SKILL_NECROMANCY)
     for tier = 1,7 do
         if mod(level, tier) == 0 then
@@ -261,31 +261,31 @@ function DuelNecromancy(player, hero, level)
 end
 
 function DuelHaunting(player, hero)
-    log(DEBUG, "DUEL: DuelHaunting")
+    log.debug("DUEL: DuelHaunting")
     local amount = 5 * GetHeroLevel(hero)
     AddHeroCreatures(hero, CREATURE_MANES, amount)
 end
 
 function DuelLordOfUndead(player, hero)
-    log(DEBUG, "DUEL: DuelLordOfUndead")
+    log.debug("DUEL: DuelLordOfUndead")
     local amount = round(0.1 * GetPlayerNecroEnergy(player))
     AddHeroCreatures(hero, CREATURE_SKELETON, amount)
 end
 
 function DuelHeraldOfDeath(player, hero)
-    log(DEBUG, "DUEL: DuelHeraldOfDeath")
+    log.debug("DUEL: DuelHeraldOfDeath")
     local amount = 20000
     GiveResources(player, GOLD, amount)
 end
 
 function DuelKnowYourEnemy(player, hero)
-    log(DEBUG, "DUEL: DuelKnowYourEnemy")
+    log.debug("DUEL: DuelKnowYourEnemy")
     local exp = trunc(0.05 * DUEL_PLAYER_DATA.TOTAL_EXP[player])
     ChangeHeroStat(hero, STAT_EXPERIENCE, exp)
 end
 
 function DuelBattleCommander(player, hero, level)
-    log(DEBUG, "DUEL: DuelBattleCommander")
+    log.debug("DUEL: DuelBattleCommander")
     if mod(level, 3) == 0 then
         local amount = 10 + level
         AddHeroCreatureType(player, hero, PRESERVE, 1, amount, 2)
@@ -293,17 +293,17 @@ function DuelBattleCommander(player, hero, level)
 end
 
 function DuelSpiritism(player, hero)
-    log(DEBUG, "DUEL: DuelSpiritism")
+    log.debug("DUEL: DuelSpiritism")
     ChangeHeroStat(hero, STAT_KNOWLEDGE, 1)
 end
 
 function DuelGoblinSupport(player, hero, level)
-    log(DEBUG, "DUEL: DuelGoblinSupport")
+    log.debug("DUEL: DuelGoblinSupport")
     AddHeroCreatures(hero, CREATURE_GOBLIN, 6)
 end
 
 function DuelDefendUsAll(player, hero, level)
-    log(DEBUG, "DUEL: DuelDefendUsAll")
+    log.debug("DUEL: DuelDefendUsAll")
     if mod(level, 4) == 0 then
         AddHeroCreatures(hero, CREATURE_ORC_WARRIOR, 10)
         AddHeroCreatures(hero, CREATURE_ORCCHIEF_BUTCHER, 1)
@@ -311,7 +311,7 @@ function DuelDefendUsAll(player, hero, level)
 end
 
 function DuelInfusion(player, hero)
-    log(DEBUG, "DUEL: DuelInfusion")
+    log.debug("DUEL: DuelInfusion")
     AddHeroManaUnbound(player, hero, 50)
 end
 
