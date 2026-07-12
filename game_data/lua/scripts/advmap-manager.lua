@@ -184,11 +184,13 @@ function CombatResultsHandler(combatIndex)
 	if IsDuelMode() then return ExecConsoleCommand("@DuelAfterCombat()") end
 	local hero = GetSavedCombatArmyHero(combatIndex, 1)
 	if hero ~= nil then
+		WON_BATTLES[hero] = WON_BATTLES[hero] + 1
 		local player = GetSavedCombatArmyPlayer(combatIndex, 1)
-		startThread(DoHeroSpeRoutine_AfterCombat, player, hero, combatIndex)
-		startThread(DoSkillsRoutine_AfterCombat, player, hero, combatIndex)
-		startThread(DoArtifactsRoutine_AfterCombat, player, hero, combatIndex)
-		sleep(10) ONGOING_BATTLES[hero] = nil
+		DoHeroSpeRoutine_AfterCombat(player, hero, combatIndex)
+		DoSkillsRoutine_AfterCombat(player, hero, combatIndex)
+		DoArtifactsRoutine_AfterCombat(player, hero, combatIndex)
+		ONGOING_BATTLES[hero] = nil
+		LAST_BATTLES[hero] = TURN
 	end
 	local loser = GetSavedCombatArmyHero(combatIndex, 0)
 	if loser ~= nil then
@@ -213,6 +215,8 @@ function AddPlayerHero(player, hero)
 		startThread(DoHeroSpeRoutine_Start, player, hero)
 		startThread(AIRecruitBonus, player, hero)
 		MakeHeroReturnToTavernAfterDeath(hero, 1, 0)
+		WON_BATTLES[hero] = 0
+		LAST_BATTLES[hero] = 0
 	else
 		log.debug("Comeback hero "..hero)
 		startThread(BindHeroLevelUpTrigger, hero)

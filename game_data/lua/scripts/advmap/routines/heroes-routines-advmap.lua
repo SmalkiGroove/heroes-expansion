@@ -170,16 +170,10 @@ end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 -- PRESERVE
 
-Var_Kyrre_BattleWon = 0
 function Routine_AddHeroExperience(player, hero)
     log.debug("$ Routine_AddHeroExperience")
-    local exp = 1000 + Var_Kyrre_BattleWon * 50 * (GetHeroLevel(hero) + 10)
+    local exp = 1000 + WON_BATTLES[hero] * 50 * (GetHeroLevel(hero) + 10)
     AddHeroStatAmount(player, hero, STAT_EXPERIENCE, exp)
-end
-
-function Routine_KyrreVictoryCounter(player, hero, combatIndex)
-    log.debug("$ Routine_KyrreVictoryCounter")
-    Var_Kyrre_BattleWon = Var_Kyrre_BattleWon + 1
 end
 
 function Routine_UpgradeAvengersGuild(player, hero)
@@ -246,13 +240,14 @@ function Routine_UpgradeMagicGuild(player, hero)
     end
 end
 
-Var_Ylthin_BattleWon = 0
 function Routine_YlthinVictoryCounter(player, hero, combatIndex)
     log.debug("$ Routine_YlthinVictoryCounter")
-    Var_Ylthin_BattleWon = Var_Ylthin_BattleWon + 1
-    if Var_Ylthin_BattleWon == 25 then
+    local victories = WON_BATTLES[hero]
+    if victories == 25 then
         GiveArtifact(hero, ARTIFACT_UNICORN_HORN_BOW, 0)
         ShowFlyingSign("/Text/Game/Scripts/HeroSpe/GainUnicornBow.txt", hero, player, FLYING_SIGN_TIME)
+    elseif victories < 25 then
+        ShowFlyingSign({"/Text/Game/Scripts/HeroSpe/GainUnicornBowCount.txt"; nb=25-victories}, hero, player, FLYING_SIGN_TIME)
     end
 end
 
@@ -261,11 +256,9 @@ function Routine_HeroCallUnicorns(player, hero)
     TransferCreatureFromTown(player, hero, TOWN_BUILDING_DWELLING_5, CREATURE_UNICORN, 0.75)
 end
 
-Var_Elleshar_BattleWon = 0
 function Routine_ElvenSageVictory(player, hero, combatIndex)
     log.debug("$ Routine_ElvenSageVictory")
-    Var_Elleshar_BattleWon = Var_Elleshar_BattleWon + 1
-    if mod(Var_Elleshar_BattleWon, 6) == 0 then
+    if mod(WON_BATTLES[hero], 6) == 0 then
         local upgradable = {}
         local maxed = {}
         for sk = 9,12 do
@@ -279,7 +272,7 @@ function Routine_ElvenSageVictory(player, hero, combatIndex)
         elseif n == 1 then
             GiveHeroSkill(hero, upgradable[1])
         else
-            GiveHeroSkill(hero, upgradable[random(1,n,Var_Elleshar_BattleWon)])
+            GiveHeroSkill(hero, upgradable[random(1,n,WON_BATTLES[hero])])
         end
         local skill_to_attribute = {[9]=3,[10]=1,[11]=2,[12]=4}
         for _,sk in maxed do
@@ -407,12 +400,14 @@ function Routine_AddLuckAndMorale(player, hero)
     ChangeHeroStat(hero, STAT_MORALE, 1)
 end
 
-Var_BrandVictoryCounter = 0
 function Routine_GiveArtifactBlazingSpellbook(player, hero, combatIndex)
     log.debug("$ Routine_GiveArtifactBlazingSpellbook")
-    Var_BrandVictoryCounter = Var_BrandVictoryCounter + 1
-    if Var_BrandVictoryCounter == 10 then
+    local victories = WON_BATTLES[hero]
+    if victories == 10 then
         GiveArtifact(hero, ARTIFACT_BLAZING_SPELLBOOK)
+        ShowFlyingSign("/Text/Game/Scripts/HeroSpe/GainBlazingSpellbook.txt", hero, player, FLYING_SIGN_TIME)
+    elseif victories < 10 then
+        ShowFlyingSign({"/Text/Game/Scripts/HeroSpe/GainBlazingSpellbookCount.txt"; nb=10-victories}, hero, player, FLYING_SIGN_TIME)
     end
 end
 
@@ -813,13 +808,15 @@ function Routine_ReviveZombies(player, hero, combatIndex)
     ResurrectCreatureType(player, hero, combatIndex, NECROPOLIS, 2, GetHeroLevel(hero))
 end
 
-Var_Lucretia_BattleWon = 0
 function Routine_LearnDarkMagic(player, hero, combatIndex)
     log.debug("$ Routine_LearnDarkMagic")
-    Var_Lucretia_BattleWon = Var_Lucretia_BattleWon + 1
-    if Var_Lucretia_BattleWon == 13 then
+    local victories = WON_BATTLES[hero]
+    local threshold = 13
+    if victories == threshold then
         GiveHeroSkill(hero, SKILL_DARK_MAGIC)
         ShowFlyingSign("/Text/Game/Scripts/HeroSpe/LearnDarkMagic.txt", hero, player, FLYING_SIGN_TIME)
+    elseif victories < threshold then
+        ShowFlyingSign({"/Text/Game/Scripts/HeroSpe/LearnDarkMagicCount.txt"; nb=threshold-victories}, hero, player, FLYING_SIGN_TIME)
     end
 end
 
@@ -902,10 +899,12 @@ function Routine_FrostLordArtifacts(player, hero)
     log.debug("$ Routine_FrostLordArtifacts")
     local factor = 1 + 0.05 * GetHeroLevel(hero)
     for a,p in Var_Ornella_FrostLordSet do
-        if (p * factor) > random(0,100,a) then
-            GiveArtifact(hero, a)
-            Var_Ornella_FrostLordSet[a] = 0
-            return
+        if p > 0 then
+            if (p * factor) > random(0,100,a) then
+                GiveArtifact(hero, a)
+                Var_Ornella_FrostLordSet[a] = 0
+                return
+            end
         end
     end
 end
@@ -943,14 +942,17 @@ function Routine_BuildInfernalLoom(player, hero)
     end
 end
 
-Var_AgraelVictoryCounter = 0
 function Routine_AgraelVictoryCounter(player, hero, combatIndex)
     log.debug("$ Routine_AgraelVictoryCounter")
-    Var_AgraelVictoryCounter = Var_AgraelVictoryCounter + 1
-    if Var_AgraelVictoryCounter == 25 then
+    local victories = WON_BATTLES[hero]
+    local threshold = 25
+    if victories == threshold then
         for _,h in GetPlayerHeroes(player) do
             TeachHeroSpell(h, SPELL_ARMAGEDDON)
         end
+        ShowFlyingSign("/Text/Game/Scripts/HeroSpe/LearnArmageddon.txt", hero, player, FLYING_SIGN_TIME)
+    elseif victories < threshold then
+        ShowFlyingSign({"/Text/Game/Scripts/HeroSpe/LearnArmageddonCount.txt"; nb=threshold-victories}, hero, player, FLYING_SIGN_TIME)
     end
 end
 
@@ -1126,13 +1128,15 @@ function Routine_AddRecruitsCentaurs(player, hero)
     end
 end
 
-Var_Gorshak_BattleWon = 0
 function Routine_GainAttackDefense(player, hero, combatIndex)
     log.debug("$ Routine_GainAttackDefense")
-    Var_Gorshak_BattleWon = Var_Gorshak_BattleWon + 1
-    if mod(Var_Gorshak_BattleWon, 10) == 0 then
+    local victories = mod(WON_BATTLES[hero], 10)
+    if victories == 0 then
         AddHeroStatAmount(player, hero, STAT_ATTACK, 1)
         AddHeroStatAmount(player, hero, STAT_DEFENCE, 1)
+        ShowFlyingSign("/Text/Game/Scripts/HeroSpe/GainAttackDefense.txt", hero, player, FLYING_SIGN_TIME)
+    else
+        ShowFlyingSign({"/Text/Game/Scripts/HeroSpe/GainAttackDefenseCount.txt"; nb=10-victories}, hero, player, FLYING_SIGN_TIME)
     end
 end
 
@@ -1344,7 +1348,6 @@ AFTER_COMBAT_TRIGGER_HERO_ROUTINES = {
     -- haven
     [H_ALARIC] = Routine_ConvertPeasantToPriest,
     -- preserve
-    [H_KYRRE] = Routine_KyrreVictoryCounter,
     [H_ELLESHAR] = Routine_ElvenSageVictory,
     [H_YLTHIN] = Routine_YlthinVictoryCounter,
     -- fortress

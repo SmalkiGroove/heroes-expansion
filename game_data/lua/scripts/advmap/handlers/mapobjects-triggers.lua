@@ -76,6 +76,15 @@ function Override_FortuitousSanctuary(obj)
     Var_FortuitousSanctuaryVisited[obj] = 0
 end
 
+Var_IdolOfFortuneBonus = {
+    [HERO_BATTLE_BONUS_LUCK] = 2,
+    [HERO_BATTLE_BONUS_MORALE] = 2,
+    [HERO_BATTLE_BONUS_ATTACK] = 6,
+    [HERO_BATTLE_BONUS_DEFENCE] = 6,
+    [HERO_BATTLE_BONUS_HITPOINTS] = 10,
+    [HERO_BATTLE_BONUS_INITIATIVE] = 3,
+    [HERO_BATTLE_BONUS_SPEED] = 2,
+}
 -----------------------------------------------
 
 function Trigger_Monsters(hero, obj)
@@ -270,15 +279,6 @@ function Trigger_TombOfTheWarrior(hero, obj)
 end
 
 
-Var_IdolOfFortuneBonus = {
-    [HERO_BATTLE_BONUS_LUCK] = 2,
-    [HERO_BATTLE_BONUS_MORALE] = 2,
-    [HERO_BATTLE_BONUS_ATTACK] = 6,
-    [HERO_BATTLE_BONUS_DEFENCE] = 6,
-    [HERO_BATTLE_BONUS_HITPOINTS] = 10,
-    [HERO_BATTLE_BONUS_INITIATIVE] = 3,
-    [HERO_BATTLE_BONUS_SPEED] = 2,
-}
 function Trigger_IdolOfFortune(hero, obj)
     log.debug("$ Trigger_IdolOfFortune")
     local player = GetObjectOwner(hero)
@@ -296,8 +296,10 @@ function IdolOfFortune_daily()
     for obj, hero in Var_IdolOfFortuneVisited do
         if hero ~= nil then
             if IsObjectExists(hero) then
-                local bonus = random(0,6,TURN)
-                GiveHeroBattleBonus(hero, bonus, Var_IdolOfFortuneBonus[bonus])
+                if LAST_BATTLES[hero] == TURN - 1 then
+                    local bonus = random(0,6,TURN)
+                    GiveHeroBattleBonus(hero, bonus, Var_IdolOfFortuneBonus[bonus])
+                end
             else
                 Var_IdolOfFortuneVisited[obj] = nil
             end
