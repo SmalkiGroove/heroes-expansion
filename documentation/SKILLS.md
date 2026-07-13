@@ -177,7 +177,7 @@ Allows hero to learn Light Magic spells of the third/fourth/fifth circle and lea
 Increases Light Magic spells efficiency, damages, duration etc.
 
 - __Aura of Protection__ : Grants mass effects to Deflect Missile and Endurance spells, for double the casting cost of these spells. Hero’s Light spells are twice harder to dispel, opposite spells (like Slow versus Haste) applied by an enemy to hero’s creatures have 50% chance to fail.
-- __Fire Resistance__ : Creatures under Hero's control receive only 50% damage from all fire spells attacks and are immune to armor damaging effects of Blaze Power ability.
+- __Fire Resistance__ : Enemy fire spells deal 50% reduced damaged to hero troops and do not decrease their defense.
 - __Counterspell__ : Special combat ability. Negates all effects of the next spell cast by the enemy, but drains mana equal to 10% more than the original cost of that spell.
 - __Aura of Energy__ : Grants mass effects to Righteous Might and Haste spells, for double the casting cost of these spells. Adds +4 to effective spellpower of Holy Word spell.
 - __Siphon Grace__ : Hero troops will steal enemy creature's buffs when attacking them.
@@ -225,8 +225,10 @@ Increases Destructive Magic spells efficiency, damages, duration etc.
 - __Frost Power__ : Hero casts ice spells for 10% less mana and with +3 effective spellpower.
 - __Thunder Power__ : Hero casts lightning spells for 10% less mana and with +3 effective spellpower.
 - __Earth Power__ : Hero casts earth spells for 10% less mana and with +3 effective spellpower.
-- __Ignite__ : Fire spells casted by the hero in combat will reduce target's armor twice as much and ignite enemies, inflicting 25% of current spell damage to the target during next 2 turns.
+- __Ignite__ : Fire spells cast by the hero in combat will reduce target's armor twice as much and ignite enemies, inflicting 25% of current spell damage to the target during next 2 turns.
 - __Deadly Cold__ : Makes Hero’s casting of ice spells more powerful. Those spells will freeze targets twice longer and deal additional damage to kill one creature in the target stack.
+- __Shocking Bolts__ : Hero's Lightning spells remove all ATB from the targeted creature, and make them unable to retaliate until their next turn.
+- __Unsettle__ : Earth spells cast by the hero decrease the maximum health of targeted creature by 1.
 - __Destruction Learning__ : Hero gains +2 Knowledge permanently and randomly acquires one damaging spell of 1st to 3rd circle that is not yet in hero's spellbook. When all destructive spells from 1st to 3rd circle are known, gain another +2 Knowledge.
 - __Perception of Weakness__ : Allows hero to see the element of enemy creatures. Using a damaging spell of the opposite element will deal additional damage equal to 15% of the base spell damage. (Adds up with Arcanism bonus to elemental chains)
 <color_default>
@@ -235,7 +237,7 @@ Air ~ Earth
 Fire ~ Water
 - __Elements Virtuoso__ : Hero gains 0.25 initiative and 10% bonus damage to elemental spells for each spell element that hero has cast during the battle.
 - __Secrets of Destruction__ : Grants the hero +4 Spellpower.
-Should it happen that any spell is disrupted by a target, the hero gains back all the mana spent to cast that spell.
+Negates enemy creatures' magic disruption.
 
 ### Courage
 

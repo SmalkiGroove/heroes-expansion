@@ -63,7 +63,7 @@ Generate between 0 and 3 Wood per day, and sometimes a bonus of 1000 experience 
 | 6 | • Coming soon     For Inferno heroes:  • Coming soon |
 
 - __Shackles of the Last Man__ :
-<color=red>-2 Attack and Defense to enemy creatures
+-2 Attack and Defense to enemy creatures
 - __Helm Of Chaos__ :
 +1 Defense
 +6% Magic Disruption
@@ -210,11 +210,11 @@ Troops gain the Battle Rage ability
 +1 Spellpower
 +100 rage points at the start of combat (only for orcs)
 - __Ogre Club__ :
-+5 Attack
-<color=red>-25% Defense to enemy creatures
++4 Attack
+-25% Defense to enemy creatures
 - __Ogre Shield__ :
-+5 Defense
-<color=red>-25% Attack to enemy creatures
++4 Defense
+-25% Attack to enemy creatures
 
 ---
 ### Draconic Power
@@ -457,7 +457,8 @@ Gain Wood and Ore after battle depending on the strength of the defeated army
 - __Fortune Band of the Saint__ :
 +1 Luck permanently every 20 victories with this item equipped
 - __Ankh of the Saint__ :
-*ankh of the saint*
++1 Spellpower
+Hero troops cannot have negative Luck.
 - __Cloak of the Saint__ :
 +2 Defense
 +2 Knowledge

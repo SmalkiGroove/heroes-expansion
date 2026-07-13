@@ -5,20 +5,20 @@
 |------|-------|------|-------------|---------|
 | 1 | [Strength](#strength) | [Weakness](#weakness) | [Magic Arrow](#magic-arrow) | [Wasp Swarm](#wasp-swarm) |
 | | | | | |
-| 2 | [Endurance](#endurance) | [Rupture](#rupture) | [Lightning Bolt](#lightning-bolt) | [Arcane Crystal](#arcane-crystal) |
-| 2 | [Haste](#haste) | [Slow](#slow) | [Ice Bolt](#ice-bolt) | [Land Mines](#land-mines) |
+| 2 | [Endurance](#endurance) | [Rupture](#rupture) | [Lightning Bolt](#lightning-bolt) | [Land Mines](#land-mines) |
+| 2 | [Haste](#haste) | [Slow](#slow) | [Ice Bolt](#ice-bolt) | [Arcane Crystal](#arcane-crystal) |
 | | | | | |
-| 3 | [Cleansing](#cleansing) | [Suffering](#suffering) | [Stone spikes](#stone-spikes) | [Regeneration](#regeneration) |
-| 3 | [Deflect Missile](#deflect-missile) | [Sorrow](#sorrow) | [Polar Ring](#polar-ring) | [Confusion](#confusion) |
-| 3 | [Righteous Might](#righteous-might) | [Decay](#decay) | [Fireball](#fireball) | [Summon Elementals](#summon-elementals) |
+| 3 | [Righteous Might](#righteous-might) | [Sorrow](#sorrow) | [Polar Ring](#polar-ring) | [Regeneration](#regeneration) |
+| 3 | [Cleansing](#cleansing) | [Suffering](#suffering) | [Stone spikes](#stone-spikes) | [Confusion](#confusion) |
+| 3 | [Deflect Missile](#deflect-missile) | [Decay](#decay) | [Fireball](#fireball) | [Summon Elementals](#summon-elementals) |
 | | | | | |
-| 4 | [Blade Barrier](#blade-barrier) | [Teleport](#teleport) | [Discharge](#discharge) | [Wasp Hive](#wasp-hive) |
-| 4 | [Divine Vengeance](#divine-vengeance) | [Raise Dead](#raise-dead) | [Fist of Wrath](#fist-of-wrath) | [Immunity](#immunity) |
-| 4 | [Blind](#blind) | [Vampirism](#vampirism) | [Firewall](#firewall) | [Earthquake](#earthquake) |
+| 4 | [Divine Vengeance](#divine-vengeance) | [Vampirism](#vampirism) | [Firewall](#firewall) | [Earthquake](#earthquake) |
+| 4 | [Blind](#blind) | [Teleport](#teleport) | [Discharge](#discharge) | [Immunity](#immunity) |
+| 4 | [Blade Barrier](#blade-barrier) | [Raise Dead](#raise-dead) | [Fist of Wrath](#fist-of-wrath) | [Wasp Hive](#wasp-hive) |
 | | | | | |
-| 5 | [Resurrection](#resurrection) | [Curse of the Netherworld](#curse-of-the-netherworld) | [Implosion](#implosion) | [Meteor Shower](#meteor-shower) |
-| 5 | [Holy Word](#holy-word) | [Berserk](#berserk) | [Deep Freeze](#deep-freeze) | [Conjure Phoenix](#conjure-phoenix) |
-| 5 | [Celestial Shield](#celestial-shield) | [Shadow Image](#shadow-image) | [Armageddon](#armageddon) | [Mind Control](#mind-control) |
+| 5 | [Resurrection](#resurrection) | [Curse of the Netherworld](#curse-of-the-netherworld) | [Deep Freeze](#deep-freeze) | [Meteor Shower](#meteor-shower) |
+| 5 | [Holy Word](#holy-word) | [Shadow Image](#shadow-image) | [Implosion](#implosion) | [Conjure Phoenix](#conjure-phoenix) |
+| 5 | [Celestial Shield](#celestial-shield) | [Berserk](#berserk) | [Armageddon](#armageddon) | [Mind Control](#mind-control) |
 | | | | | |
 
 
@@ -63,7 +63,7 @@ N/A
 #### Lightning Bolt
 >Tier 2 Destructive Magic  (7 Mana)
 
-Deals lightning damage to selected enemy unit and removes 30% of its current ATB.
+Deals lightning damage to selected enemy unit and removes half of its current ATB.
 
 Damage :
 - Base: '5'
@@ -135,7 +135,7 @@ N/A
 #### Discharge
 >Tier 4 Destructive Magic  (24 Mana)
 
-Deals lightning damage to the target and removes 30% of its current ATB, then bounces twice, targeting the closest unit (ally or enemy), and dealing 75% of the damage inflicted to the previous one. It cannot damage the same unit twice.
+Deals lightning damage to the target and removes half of its current ATB, then bounces twice, targeting the closest unit (ally or enemy), and dealing 75% of the damage inflicted to the previous one. It cannot damage the same unit twice.
 
 Damage :
 - Base: '5'
