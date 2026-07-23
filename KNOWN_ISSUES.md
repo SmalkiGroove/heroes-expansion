@@ -46,3 +46,5 @@
 
 
 # FIXED/CHANGED
+
+- Fixed combat never ending when killing all enemiesd with Discharge

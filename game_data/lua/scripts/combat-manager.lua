@@ -1,6 +1,8 @@
 
 -- dofile("/scripts/game-vars.lua")
 
+COMBAT_STATE = 0
+
 COMBAT_TURN = 0
 CURRENT_UNIT = "none"
 CURRENT_UNIT_SIDE = nil
@@ -53,6 +55,22 @@ function Wait()
     if THREAD_FINISHER == 0 then THREAD_STATE = 1 end
 end
 
+function CheckCombatEnd()
+    local alive = nil
+    while COMBAT_STATE == 1 do
+        for side = 0,1 do
+            alive = nil
+            for cr,_ in STARTING_ARMY[side] do
+                if exist(cr) and GetCreatureNumber(cr) > 0 then
+                    alive = not nil
+                end
+            end
+            if not alive then ManageCombatEnd(1-side); break end
+        end
+        sleep(10)
+    end
+end
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -79,6 +97,7 @@ end
 
 function ManageCombatStart()
     log.trace("$ Manage combat start")
+    COMBAT_STATE = 1
     if ENABLE_SCRIPT == 0 then return end
     GetArmySummary()
     log.debug("Combat random seed = "..RANDOM_SEED)
@@ -96,6 +115,7 @@ function ManageCombatStart()
 		DoArtifactRoutine_CombatStart(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID)
 	end
     combatSetPause(nil)
+    startThread(CheckCombatEnd)
 end
 
 function ManageCombatTurn(unit)
@@ -138,34 +158,11 @@ function ManageUnitDeath(unit)
 		DoHeroSpeRoutine_UnitDied(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID, unit)
 		DoArtifactRoutine_UnitDied(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID, unit)
 	end
-
-    do
-        local winner = nil
-        local alive = nil
-        for side = 0,1 do
-            alive = nil
-            for cr,_ in STARTING_ARMY[side] do
-                if cr ~= unit and exist(cr) and GetCreatureNumber(cr) > 0 then
-                    alive = not nil 
-                end
-            end
-            if not alive then winner = 1 - side; break end
-        end
-        if winner then
-            ManageCombatEnd(winner)
-        else
-            unit = CURRENT_UNIT
-            repeat sleep() until unit ~= CURRENT_UNIT
-            for cr,_ in STARTING_ARMY[1-CURRENT_UNIT_SIDE] do
-                if exist(cr) and GetCreatureNumber(cr) > 0 then return end
-            end
-            ManageCombatEnd(CURRENT_UNIT_SIDE)
-        end
-    end
 end
 
 function ManageCombatEnd(winner)
     log.trace("$ Manage combat end - "..winner)
+    COMBAT_STATE = 2
     if ENABLE_SCRIPT == 1 then
         combatSetPause(1)
 
