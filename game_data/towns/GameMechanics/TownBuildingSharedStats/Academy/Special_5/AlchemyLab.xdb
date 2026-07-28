@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="1000147">
+	<NameFileRef href="/Text/Game/TownBuildings/Academy/Special_5/Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Academy/Special_5/Desc.txt"/>
+	<Type>TB_SPECIAL_5</Type>
+	<Upgrade>BLD_UPG_1</Upgrade>
+	<Cost>
+		<Wood>5</Wood>
+		<Ore>5</Ore>
+		<Mercury>5</Mercury>
+		<Crystal>5</Crystal>
+		<Sulfur>5</Sulfur>
+		<Gem>5</Gem>
+		<Gold>2500</Gold>
+	</Cost>
+	<ModObjectName>AlchemyLab</ModObjectName>
+	<dependencies/>
+	<Creature>CREATURE_UNKNOWN</Creature>
+	<DevLevelNeeded>12</DevLevelNeeded>
+	<UIObjectName>Special_5</UIObjectName>
+	<UIStackPosition>0</UIStackPosition>
+	<Icon href="/UI/TownHall/academy/128/alchemylab.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>
+<!-- MapObjects\Grass\Combat_Arena\Academy_House1.(AdvMapStaticShared) -->
