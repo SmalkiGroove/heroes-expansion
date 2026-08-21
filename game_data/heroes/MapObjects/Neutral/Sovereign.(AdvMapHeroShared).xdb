@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvMapHeroShared>
+	<Model href="/Characters/Heroes/Demon_Sovereign_LOD.xdb#xpointer(/Model)"/>
+	<AnimSet href="/Characters/Heroes/Demon_Sovereign_LOD-adv.xdb#xpointer(/AnimSet)"/>
+	<blockedTiles/>
+	<holeTiles/>
+	<activeTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+	</activeTiles>
+	<passableTiles/>
+	<PossessionMarkerTile>
+		<x>0</x>
+		<y>0</y>
+	</PossessionMarkerTile>
+	<Effect/>
+	<EffectWhenOwned/>
+	<messagesFileRef/>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect/>
+	<flybyMessageFileRef href=""/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Units.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>true</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128/>
+	<InternalName>Boss1</InternalName>
+	<Class>HERO_CLASS_OTHER_5</Class>
+	<Specialization/>
+	<PrimarySkill>
+		<SkillID>HERO_SKILL_INNATES</SkillID>
+		<Mastery>MASTERY_EXPERT</Mastery>
+	</PrimarySkill>
+	<SpecializationNameFileRef href="/Text/Game/Heroes/Specializations/Neutral/KhaBeleth/Name.txt"/>
+	<SpecializationDescFileRef href="/Text/Game/Heroes/Specializations/Neutral/KhaBeleth/Description.txt"/>
+	<SpecializationIcon href="/Textures/Icons/Heroes/Inferno/Inferno_Sovereign_128x128.(Texture).xdb#xpointer(/Texture)"/>	
+	<FaceTexture href="/Textures/Icons/Heroes/Inferno/Inferno_Sovereign_128x128.(Texture).xdb#xpointer(/Texture)"/>
+	<FaceTextureSmall/>
+	<HeroCharacterArena href="/Characters/Heroes/Demon_Sovereign.(Character).xdb#xpointer(/Character)"/>
+	<HeroCharacterArenaMelee/>
+	<HeroCharacterAdventure href="/Characters/Heroes/Demon_Sovereign.(Character).xdb#xpointer(/Character)"/>
+	<HeroIndividualCamera href="/Cameras/Interface/HeroScreen/Sovereign.xdb#xpointer(/Camera)"/>
+	<CombatVisual href="/GameMechanics/CreatureVisual/Heroes/Demon_Sovereign.xdb#xpointer(/CreatureVisual)"/>
+	<TownType>TOWN_SPECIAL</TownType>
+	<Editable>
+		<NameFileRef href="/Text/Game/Heroes/Persons/Inferno/Sovereign/Name.txt"/>
+		<BiographyFileRef href="/Text/Game/Heroes/Persons/Inferno/Sovereign/Bio.txt"/>
+		<Offence>10</Offence>
+		<Defence>10</Defence>
+		<Spellpower>10</Spellpower>
+		<Knowledge>10</Knowledge>
+		<skills>
+			<Item>
+				<SkillID>HERO_SKILL_DESPOTISM</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
+			<Item>
+				<SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID>
+				<Mastery>MASTERY_BASIC</Mastery>
+			</Item>
+		</skills>
+		<perkIDs>
+			<Item>HERO_SKILL_SOIL_BURN</Item>
+			<Item>HERO_SKILL_DEAD_MANS_CURSE</Item>
+			<Item>HERO_SKILL_ELEMENTAL_FOCUS</Item>
+		</perkIDs>
+		<spellIDs>
+			<Item>SPELL_STONESKIN</Item>
+			<Item>SPELL_DISRUPTING_RAY</Item>
+			<Item>SPELL_MAGIC_ARROW</Item>
+			<Item>SPELL_LAND_MINE</Item>
+		</spellIDs>
+		<Ballista>true</Ballista>
+		<FirstAidTent>true</FirstAidTent>
+		<AmmoCart>true</AmmoCart>
+		<FavoriteEnemies/>
+		<TalismanLevel>0</TalismanLevel>
+	</Editable>
+	<ArrowButtonState>0</ArrowButtonState>
+	<Decal/>
+	<Selection href="/_(Model)/Heroes/DemonLord_Path/Symbol.(Model).xdb#xpointer(/Model)"/>
+	<Trace href="/MapObjects/_(AdvMapHeroTraceSet)/Inferno.xdb#xpointer(/AdvMapHeroTraceSet)"/>
+	<RaceTraitIcon/>
+	<RaceTraitDescFileRef href=""/>
+	<ScenarioHero>false</ScenarioHero>
+	<AdventureMusic/>
+	<HideInEditor>false</HideInEditor>
+</AdvMapHeroShared>
