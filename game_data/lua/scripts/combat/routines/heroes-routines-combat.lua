@@ -1009,6 +1009,39 @@ function Routine_SlowOpponentHero(side, hero)
 end
 
 
+---------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------
+-- NEUTRAL
+
+function Routine_RandomBuffDragons(side, hero)
+    if CURRENT_UNIT == hero then
+        log.debug("$ Routine_RandomBuffDragons")
+        local buffs = {}
+        local count = 0
+        for s,i in ROUTINE_VARS.BuffSpells do
+            if i == 1 then insert(buffs, s) count = count + 1 end
+        end
+        local buff = 0
+        if count == 0 then return
+        elseif count == 1 then buff = buffs[1]
+        else buff = random(1, count, COMBAT_TURN)
+        end
+        for i,cr in GetUnits(side, CREATURE) do
+            local type = GetCreatureType(cr)
+            local faction = CREATURES[type][1]
+            local tier = CREATURES[type][2]
+            if tier == 7 then
+                if faction == DUNGEON or faction == FORTRESS or faction == PRESERVE 
+                or cr == CREATURE_BONE_DRAGON or cr == CREATURE_SHADOW_DRAGON or cr == CREATURE_HORROR_DRAGON
+                then HeroCast_Target(hero, buff, FREE_MANA, target) end
+            end
+        end
+        ROUTINE_VARS.BuffSpells[buff] = nil
+        SetATB_ID(hero, ATB_INSTANT)
+    end
+end
+
+
 
 COMBAT_START_HERO_ROUTINES = {
     -- haven
@@ -1093,6 +1126,8 @@ COMBAT_TURN_HERO_ROUTINES = {
     [H_ZOULEIKA] = Routine_HealingTentMoveNext,
     [H_KUJIN] = Routine_ShamansManaRegen,
     [H_MUKHA] = Routine_CastRandomLightningBolt,
+    -- neutral
+    [H_BOSS1] = Routine_RandomBuffDragons,
 }
 
 UNIT_DIED_HERO_ROUTINES = {

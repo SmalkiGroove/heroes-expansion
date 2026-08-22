@@ -1227,6 +1227,27 @@ end
 
 
 
+function Routine_GainRandomDragon(player, hero)
+    log.debug("$ Routine_GainRandomDragon")
+    local dragons = {}
+    for i, cr in GetHeroArmy(hero) do
+        local faction = CREATURES[cr][1]
+        local tier = CREATURES[cr][2]
+        if tier == 7 then
+            if faction == DUNGEON or faction == FORTRESS or faction == PRESERVE 
+            or cr == CREATURE_BONE_DRAGON or cr == CREATURE_SHADOW_DRAGON or cr == CREATURE_HORROR_DRAGON
+            then dragons[cr] = 1 end
+        end
+    end
+    local prob = 20 + 2 * GetHeroLevel(hero)
+    for dragon, _ in dragons do
+        local rnd = random(1, 100, dragon)
+        if rnd <= prob then AddHeroCreatures(hero, dragon, 1) sleep() end
+    end
+end
+
+
+
 
 
 START_TRIGGER_HERO_ROUTINES = {
@@ -1315,6 +1336,8 @@ WEEKLY_TRIGGER_HERO_ROUTINES = {
     [H_KHABELETH] = Routine_MultiplyTroops,
     -- stronghold
     [H_GARUNA] = Routine_AddRecruitsCentaurs,
+    -- neutral
+    [H_BOSS1] = Routine_GainRandomDragon,
 }
 
 LEVEL_UP_HERO_ROUTINES_HERO = {

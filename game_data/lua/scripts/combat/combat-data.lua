@@ -37,6 +37,7 @@ ROUTINE_VARS = {
     MoonCharm = nil,
     Legendragon = {},
     BallistaCommanders = {},
+    BuffSpells = {[SPELL_BLESS]=1, [SPELL_HASTE]=1, [SPELL_STONESKIN]=1, [SPELL_BLOODLUST]=1, [SPELL_DEFLECT_ARROWS]=1,[SPELL_CELESTIAL_SHIELD]=1,[SPELL_REGENERATION]=1},
 }
 
 SUMMON_ID = 0

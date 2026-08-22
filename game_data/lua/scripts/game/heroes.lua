@@ -112,6 +112,10 @@ H_URGHAT = 'Hero2'                  -- exhauster
 H_ZOULEIKA = 'Zouleika'             -- healing tent
 H_KUJIN = 'KujinMP'                 -- shamans
 
+-- neutrals
+H_BOSS1 = 'Boss1'                   -- dragons
+H_BOSS2 = 'Boss2'                   -- ghosts
+
 
 -- heroes data
 HEROES = {
@@ -140,6 +144,9 @@ HEROES = {
     [H_SANDRO]   = {faction=NECROPOLIS,owner=0},  [H_BIARA]     = {faction=INFERNO,owner=0},  [H_SHADYA]     = {faction=DUNGEON,owner=0},  [H_URGHAT]   = {faction=STRONGHOLD,owner=0},
     [H_ORNELLA]  = {faction=NECROPOLIS,owner=0},  [H_DELEB]     = {faction=INFERNO,owner=0},  [H_LETHOS]     = {faction=DUNGEON,owner=0},  [H_ZOULEIKA] = {faction=STRONGHOLD,owner=0},
     [H_DEIRDRE]  = {faction=NECROPOLIS,owner=0},  [H_KHABELETH] = {faction=INFERNO,owner=0},  [H_SEPHINROTH] = {faction=DUNGEON,owner=0},  [H_KUJIN]    = {faction=STRONGHOLD,owner=0},
+
+    [H_BOSS1]   = {faction=NEUTRAL,owner=0},
+    [H_BOSS2]   = {faction=NEUTRAL,owner=0},
 }
 
 
