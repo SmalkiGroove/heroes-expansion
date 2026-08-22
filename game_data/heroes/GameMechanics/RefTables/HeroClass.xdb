@@ -556,7 +556,7 @@
 		<Item>
 			<ID>HERO_CLASS_VAMPIRE_PRINCESS</ID>
 			<obj>
-				<NameFileRef href="HeroClass/HeroClassOther2.txt"/>
+				<NameFileRef href="HeroClass/HeroClassSpecialDeathknight.txt"/>
 				<SkillsProbs>
 					<Item><SkillID>HERO_SKILL_NECROMANCY</SkillID><Prob>33</Prob></Item>
 					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>12</Prob></Item>
@@ -618,11 +618,26 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>HERO_CLASS_OTHER_5</ID>
+			<ID>HERO_CLASS_BOSS</ID>
 			<obj>
-				<NameFileRef href="HeroClass/HeroClassOther5.txt"/>
+				<NameFileRef href="HeroClass/HeroClassBoss.txt"/>
 				<SkillsProbs>
-					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>100</Prob></Item>
+					<Item><SkillID>HERO_SKILL_OFFENCE</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DEFENSE</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEARNING</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_SORCERY</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_COMBAT</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_SHATTER_MAGIC</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LIGHT_MAGIC</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DARK_MAGIC</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DESTRUCTIVE_MAGIC</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_NATURAL_MAGIC</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_TRAINING</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_DESPOTISM</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LOGISTICS</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_LEADERSHIP</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_GOVERNANCE</SkillID><Prob>1</Prob></Item>
+					<Item><SkillID>HERO_SKILL_WARFARE</SkillID><Prob>1</Prob></Item>
 				</SkillsProbs>
 				<AttributeProbs>
 					<OffenceProb>25</OffenceProb>
