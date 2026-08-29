@@ -244,11 +244,6 @@ function Routine_ArtifactEldenaCirclet(player, hero)
 end
 
 
-function Routine_ArtifactBeginnerMagicStick(player, hero, combatIndex)
-    log.debug("$ Routine_ArtifactBeginnerMagicStick")
-    ChangeHeroStat(hero, STAT_MANA_POINTS, 10)
-end
-
 function Routine_ArtifactRunicWar(player, hero, combatIndex)
     log.debug("$ Routine_ArtifactRunicWar")
     ChangeHeroStat(hero, STAT_MANA_POINTS, 25)
@@ -453,11 +448,8 @@ LEVELUP_TRIGGER_ARTIFACTS_ROUTINES = {
 }
 AFTER_COMBAT_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_BOOTS_OF_THE_SWIFT_JOURNEY] = Routine_ArtifactBootsOfSwiftJourneyCancel,
-    [ARTIFACT_BEGINNER_MAGIC_STICK] = Routine_ArtifactBeginnerMagicStick,
     [ARTIFACT_SENTINELS_BOOTS] = Routine_ArtifactSentinelsBoots,
     [ARTIFACT_RING_OF_THE_UNREPENTANT] = Routine_ArtifactRingOfTheUnrepentant,
-    [ARTIFACT_RUNIC_WAR_AXE] = Routine_ArtifactRunicWar,
-    [ARTIFACT_RUNIC_WAR_HARNESS] = Routine_ArtifactRunicWar,
     [ARTIFACT_DEATH_KNIGHT_BOOTS] = Routine_ArtifactDeathknightBoots,
     [ARTIFACT_VIKING_HATCHET] = Routine_ArtifactVikingHatchet,
     [ARTIFACT_VIKING_SHIELD] = Routine_ArtifactVikingShield,

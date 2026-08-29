@@ -28,7 +28,6 @@
 - Custom Inferno town building that produces gold per recruits
 - Custom Sylvan town building that adds movement points to nearby heroes
 - Custom Academy town building alchemy lab that offers to transform creatures into res/potions
-- Artifacts that restore mana after battles should restore during combat instead
 
 ### Balance
 
@@ -48,4 +47,5 @@
 
 # FIXED/CHANGED
 
-- Fixed combat never ending when killing all enemiesd with Discharge
+- Fixed combat never ending when killing all enemies with Discharge
+- Artifacts that restore mana after battles should restore during combat instead
