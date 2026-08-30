@@ -83,4 +83,3 @@ DAILY_RESOURCES = {
 
 
 log.trace("Loaded advmap-data.lua")
-

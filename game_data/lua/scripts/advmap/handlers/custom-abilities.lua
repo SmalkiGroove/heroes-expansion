@@ -1,5 +1,6 @@
 
 function ActivateInfoWindow(player, hero)
+    log.trace("/scripts/advmap/handlers/custom-abilities.lua: ActivateInfoWindow")
     log.debug("$ ActivateInfoWindow")
     MessageBoxForPlayers(
         GetPlayerFilter(player),
@@ -12,6 +13,7 @@ end
 
 
 function ActivateKnowYourEnemy(player, hero)
+    log.trace("/scripts/advmap/handlers/custom-abilities.lua: ActivateKnowYourEnemy")
     log.debug("$ ActivateKnowYourEnemy")
     if GetHeroStat(hero, STAT_MOVE_POINTS) < 100 then return end
     local exp = 0
@@ -34,6 +36,7 @@ end
 
 
 function ActivateHeroTimeShift(player, hero)
+    log.trace("/scripts/advmap/handlers/custom-abilities.lua: ActivateHeroTimeShift")
     log.debug("$ ActivateHeroTimeShift")
     local points = GetHeroStat(hero, STAT_MOVE_POINTS)
     local cost = round(0.001 * points * (51 - GetHeroLevel(hero)))
@@ -51,6 +54,7 @@ end
 
 
 function ActivateBuildingConversion(player, hero)
+    log.trace("/scripts/advmap/handlers/custom-abilities.lua: ActivateBuildingConversion")
     log.debug("$ ActivateBuildingConversion")
     local obj = HERO_IN_CONVERTIBLE[hero]
     if not obj then ShowFlyingSign("/Text/Game/Scripts/Abilities/HeroNotInConvertible.txt", hero, player, 3) return end
@@ -74,12 +78,14 @@ end
 
 
 function ActivateMeditation(player, hero, amount)
+    log.trace("/scripts/advmap/handlers/custom-abilities.lua: ActivateMeditation")
     log.debug("$ ActivateMeditation")
     AddHeroStatAmount(player, hero, STAT_EXPERIENCE, 50 * amount)
 end
 
 
 function ActivateDigging(player, hero)
+    log.trace("/scripts/advmap/handlers/custom-abilities.lua: ActivateDigging")
     log.debug("$ ActivateDigging")
 
 end
@@ -94,10 +100,10 @@ CUSTOM_ABILITIES = {
 }
 
 function CustomAbilityHandler(hero, id)
+    log.trace("/scripts/advmap/handlers/custom-abilities.lua: CustomAbilityHandler")
     local player = GetObjectOwner(hero)
     startThread(CUSTOM_ABILITIES[id], player, hero)
 end
 
 
 log.trace("Loaded custom-abilities.lua")
-

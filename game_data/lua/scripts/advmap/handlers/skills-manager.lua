@@ -12,6 +12,7 @@ NB_CARAVAN = 0
 CURRENT_CARAVANS = {}
 
 function CaravanCountdown()
+    log.trace("/scripts/advmap/handlers/skills-manager.lua: CaravanCountdown")
     log.debug("$ CaravanCountdown")
     local caravans = {}
     for k,v in CURRENT_CARAVANS do
@@ -46,6 +47,7 @@ ABSOLUTE_MASTERIES = {
     [H_TELSEK]=0,
 }
 function CheckForAbsolute(player, hero)
+    log.trace("/scripts/advmap/handlers/skills-manager.lua: CheckForAbsolute")
     -- log.debug("$ CheckForAbsolute")
     if ABSOLUTE_MASTERIES[hero] then
         if ABSOLUTE_MASTERIES[hero] == 0 then
@@ -64,6 +66,7 @@ function CheckForAbsolute(player, hero)
     end
 end
 function CheckForUltimate(player, hero)
+    log.trace("/scripts/advmap/handlers/skills-manager.lua: CheckForUltimate")
     -- log.debug("$ CheckForUltimate")
     local f = HEROES[hero].faction
     local ult = SKILLS_BY_FACTION[f].ult
@@ -91,6 +94,7 @@ end
 
 
 function AddHeroSkill(hero, skill, mastery)
+    log.trace("/scripts/advmap/handlers/skills-manager.lua: AddHeroSkill")
     log.debug("Hero "..hero.." has learnt skill '"..skill.."' rank "..mastery..".")
     local player = GetObjectOwner(hero)
     local level = GetHeroLevel(hero)
@@ -105,6 +109,7 @@ function AddHeroSkill(hero, skill, mastery)
     CheckForUltimate(player, hero)
 end
 function RemoveHeroSkill(hero, skill, mastery)
+    log.trace("/scripts/advmap/handlers/skills-manager.lua: RemoveHeroSkill")
     log.debug("Hero "..hero.." has removed skill '"..skill.."' rank "..mastery..".")
     local player = GetObjectOwner(hero)
     local level = GetHeroLevel(hero)
@@ -128,4 +133,3 @@ end
 
 
 log.trace("Loaded skills-manager.lua")
-

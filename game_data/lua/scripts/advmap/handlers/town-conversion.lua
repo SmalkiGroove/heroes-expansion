@@ -3,11 +3,13 @@ MAP_CONVERTIBLES = {}
 HERO_IN_CONVERTIBLE = {}
 
 function HeroInConvertible(hero, obj, value)
+    log.trace("/scripts/advmap/handlers/town-conversion.lua: HeroInConvertible")
     ControlHeroCustomAbility(hero, CUSTOM_ABILITY_4, value)
     HERO_IN_CONVERTIBLE[hero] = (value == 1) and obj or nil
 end
 
 function EnableTownConversionAbility(hero, obj)
+    log.trace("/scripts/advmap/handlers/town-conversion.lua: EnableTownConversionAbility")
     log.debug("$ EnableTownConversionAbility")
     HeroInConvertible(hero, obj, CUSTOM_ABILITY_ENABLED)
     local x,y,z = GetObjectPosition(hero)
@@ -17,6 +19,7 @@ function EnableTownConversionAbility(hero, obj)
 end
 
 function CanHeroConvert(hero, obj)
+    log.trace("/scripts/advmap/handlers/town-conversion.lua: CanHeroConvert")
     local player = GetObjectOwner(hero)
     if IsHumanPlayer(player) then
         if HasHeroSkill(hero, SKILL_GOVERNANCE) then
@@ -36,6 +39,7 @@ function SetTriggerConvertible(obj, bool)
 end
 
 function ConvertTown(player, hero, town)
+    log.trace("/scripts/advmap/handlers/town-conversion.lua: ConvertTown")
     log.debug("$ ConvertTown")
     local resource_cost = 20
     local gold_cost = 10000
@@ -54,6 +58,7 @@ function ConvertTown(player, hero, town)
 end
 
 function ConvertDwelling(player, hero, dwelling, tier)
+    log.trace("/scripts/advmap/handlers/town-conversion.lua: ConvertDwelling")
     log.debug("$ ConvertDwelling")
     local resource_cost = 3 * tier
     local gold_cost = 1000 * tier
@@ -71,6 +76,7 @@ function ConvertDwelling(player, hero, dwelling, tier)
 end
 
 function HeroVisitConvertible(hero, obj)
+    log.trace("/scripts/advmap/handlers/town-conversion.lua: HeroVisitConvertible")
     log.debug("$ HeroVisitConvertible")
     if hero == H_DOUGAL then
         startThread(Routine_TrainPeasantsToArchers, hero, obj)
@@ -89,6 +95,7 @@ function HeroVisitConvertible(hero, obj)
 end
 
 function SetupConvertibleTrigger(type, f, t)
+    log.trace("/scripts/advmap/handlers/town-conversion.lua: SetupConvertibleTrigger")
     local names = GetObjectNamesByType(type)
     for _,name in names do
         MAP_CONVERTIBLES[name] = { faction=f, tier=t }
@@ -97,6 +104,7 @@ function SetupConvertibleTrigger(type, f, t)
 end
 
 function InitializeConvertibles()
+    log.trace("/scripts/advmap/handlers/town-conversion.lua: InitializeConvertibles")
     if IsDuelMode() then return end
 	for faction = 1,8 do
 		SetupConvertibleTrigger(Towns_Types[faction], faction, 0)
@@ -109,4 +117,3 @@ end
 
 
 log.trace("Loaded town-conversion.lua")
-
