@@ -445,37 +445,40 @@ function LoadedGame_GameVars()
 end
 
 
-
-function CheckEnableCheat()
-	if ENABLE_CHEAT then log.warn("!!! Player is cheating !!!")
-	else log.error("!!! Cheating is disabled !!!") end
-	return ENABLE_CHEAT
+function hero()
+	return GetPlayerHeroes(GetCurrentPlayer())[0]
 end
 
 function RevealMap()
-	if not CheckEnableCheat() then return end
 	for player = 1,8 do
 		if IsHumanPlayer(player) then
 			for z = 0,GetMaxFloor() do OpenCircleFog(1, 1, z, 9999, player) end
 		end
 	end
 end
+
 function GiveArtfset(hero, set)
-	if not CheckEnableCheat() then return end
 	if set ~= ARTIFACT_SET_NONE and (set < ARTIFACT_SET_1 or set > ARTIFACT_SET_COUNT) then print("Invalid set ID") return end
 	for _,a in ARTIFACT_SETS[set] do
 		GiveArtefact(hero, a)
 	end
 end
+
 function MovePoints(hero)
-	if not CheckEnableCheat() then return end
-	if not hero then hero = GetPlayerHeroes(GetCurrentPlayer())[0] end
-	ChangeHeroStat(hero, STAT_MOVE_POINTS, 10000)
+	startThread(function(hero)
+		local player = GetObjectOwner(hero)
+		while IsPlayerCurrent(player) do
+			ChangeHeroStat(hero, STAT_MOVE_POINTS, 10000)
+			sleep(4)
+		end
+	end, hero)
 end
-function Lv25(hero)
-	if not CheckEnableCheat() then return end
-	if not hero then hero = GetPlayerHeroes(GetCurrentPlayer())[0] end
-	ChangeHeroStat(hero, STAT_EXPERIENCE, 200000)
+
+function LvUp(hero, nb)
+	for i = 1,nb do
+		LevelUpHero(hero)
+		sleep(1)
+	end
 end
 
 

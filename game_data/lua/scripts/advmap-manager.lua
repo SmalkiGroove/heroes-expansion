@@ -256,7 +256,7 @@ function InitializeHeroes()
 		if (GetPlayerState(player) == 1) then
 			startThread(StartingBonus, player)
 			DIFFICULTY_MULTIPLIER[player] = IsAIPlayer(player) and (1+0.5*DIFFICULTY) or 1
-			for i = 1,8 do AllowPlayerTavernRace(player, FactionToTownType(i), 0) end
+			AllowPlayerTavernRace(player, -1, 0)
 			for i,hero in GetPlayerHeroes(player) do
 				log.debug("Initialize hero "..hero)
 				Register(VarHeroLevel(hero), GetHeroLevel(hero))
@@ -265,8 +265,11 @@ function InitializeHeroes()
 				startThread(BindHeroSkillTrigger, hero)
 				startThread(DoSkillsRoutine_Start, player, hero) sleep(1)
 				startThread(DoHeroSpeRoutine_Start, player, hero) sleep(1)
-				AllowPlayerTavernRace(player, FactionToTownType(HEROES[hero].faction), 1)
-				MakeHeroReturnToTavernAfterDeath(hero, 1, 0)
+				local f = HEROES[hero].faction
+				if f ~= 0 then
+					AllowPlayerTavernRace(player, FactionToTownType(f), 1)
+					MakeHeroReturnToTavernAfterDeath(hero, 1, 0)
+				end
 				HEROES[hero].owner = player
 				WON_BATTLES[hero] = 0
 				LAST_BATTLES[hero] = 0
