@@ -4,6 +4,7 @@
 -- HAVEN
 
 function Routine_BuildAndRevealStables(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_BuildAndRevealStables")
     log.debug("$ Routine_BuildAndRevealStables")
     for town,data in MAP_TOWNS do
         if IsHeroInTown(hero, town, 1, 1) then
@@ -24,6 +25,7 @@ function Routine_BuildAndRevealStables(player, hero)
 end
 
 function Routine_AddRecruitsPeasants(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_AddRecruitsPeasants")
     log.debug("$ Routine_AddRecruitsPeasants")
     local amount = trunc(4.2 * GetHeroLevel(hero))
     AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_1, CREATURE_PEASANT, amount)
@@ -36,6 +38,7 @@ function Routine_AddRecruitsPeasants(player, hero)
 end
 
 function Routine_PeasantTaxLevel(player, hero, level)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_PeasantTaxLevel")
     log.debug("$ Routine_PeasantTaxLevel")
     local amount = 0
     amount = amount + GetHeroCreatures(hero, CREATURE_PEASANT)
@@ -46,12 +49,14 @@ end
 
 Var_Dougal_TrainCount = 0
 function Routine_EnableTrainPeasantsToArchers(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_EnableTrainPeasantsToArchers")
     log.debug("$ Routine_EnableTrainPeasantsToArchers")
     Var_Dougal_TrainCount = 0
 end
 
 Var_Dougal_TrainPeasantLock = 0
 function Routine_TrainPeasantsToArchers(hero, town)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_TrainPeasantsToArchers")
     log.debug("$ Routine_TrainPeasantsToArchers")
     if MAP_TOWNS[town] and MAP_TOWNS[town].faction == HAVEN then
         if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_1) > 0 and GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_2) > 0 then
@@ -75,16 +80,19 @@ function Routine_TrainPeasantsToArchers(hero, town)
     end
 end
 function Routine_TrainPeasantsToArchersConfirm(player, hero, amount)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_TrainPeasantsToArchersConfirm")
     RemoveHeroCreatures(hero, CREATURE_PEASANT, amount) sleep(1)
     AddHeroCreatures(hero, CREATURE_ARCHER, amount) sleep(1)
     Var_Dougal_TrainCount = Var_Dougal_TrainCount + amount
     Var_Dougal_TrainPeasantLock = 0
 end
 function Routine_TrainPeasantsToArcherCancel()
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_TrainPeasantsToArcherCancel")
     Var_Dougal_TrainPeasantLock = 0
 end
 
 function Routine_GainExpFromTotalGolds(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GainExpFromTotalGolds")
     log.debug("$ Routine_GainExpFromTotalGolds")
     local level = GetHeroLevel(hero)
     local golds = GetPlayerResource(player, GOLD)
@@ -94,6 +102,7 @@ function Routine_GainExpFromTotalGolds(player, hero)
 end
 
 function Routine_GainPrimaryStats(player, hero, level)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GainPrimaryStats")
     log.debug("$ Routine_GainPrimaryStats")
     if mod(level, 10) == 0 then
         ChangeHeroStat(hero, STAT_ATTACK, 1)
@@ -104,6 +113,7 @@ function Routine_GainPrimaryStats(player, hero, level)
 end
 
 function Routine_UpgradeMonastery(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_UpgradeMonastery")
     log.debug("$ Routine_UpgradeMonastery")
     for town,data in MAP_TOWNS do
         if IsHeroInTown(hero, town, 1, 1) then
@@ -124,6 +134,7 @@ function Routine_UpgradeMonastery(player, hero)
 end
 
 function Routine_ConvertPeasantToPriest(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_ConvertPeasantToPriest")
     log.debug("$ Routine_ConvertPeasantToPriest")
     local peasant = nil
     if GetHeroCreatures(hero, CREATURE_PEASANT) > 0 then peasant = CREATURE_PEASANT
@@ -138,11 +149,13 @@ function Routine_ConvertPeasantToPriest(player, hero)
 end
 
 function Routine_AddTwoLuckPoints(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_AddTwoLuckPoints")
     log.debug("$ Routine_AddTwoLuckPoints")
     ChangeHeroStat(hero, STAT_LUCK, 2)
 end
 
 function Routine_MovePointsPerGriffin(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_MovePointsPerGriffin")
     log.debug("$ Routine_MovePointsPerGriffin")
     local movement = GetHeroStat(hero, STAT_MOVE_POINTS)
     local counter = 0
@@ -171,12 +184,14 @@ end
 -- PRESERVE
 
 function Routine_AddHeroExperience(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_AddHeroExperience")
     log.debug("$ Routine_AddHeroExperience")
     local exp = 1000 + WON_BATTLES[hero] * 50 * (GetHeroLevel(hero) + 10)
     AddHeroStatAmount(player, hero, STAT_EXPERIENCE, exp)
 end
 
 function Routine_UpgradeAvengersGuild(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_UpgradeAvengersGuild")
     log.debug("$ Routine_UpgradeAvengersGuild")
     for town,data in MAP_TOWNS do
         if IsHeroInTown(hero, town, 1, 1) then
@@ -193,6 +208,7 @@ function Routine_UpgradeAvengersGuild(player, hero)
 end 
 
 function Routine_HuntersWeeklyProd(player, hero, combatIndex)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_HuntersWeeklyProd")
     log.debug("$ Routine_HuntersWeeklyProd")
     local base = 0.5 * GetHeroLevel(hero)
     for town,data in MAP_TOWNS do
@@ -211,6 +227,7 @@ function Routine_HuntersWeeklyProd(player, hero, combatIndex)
 end
 
 function Routine_AddHeroWolves(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_AddHeroWolves")
     log.debug("$ Routine_AddHeroWolves")
     AddHeroCreatures(hero, CREATURE_WOLF, 1)
     if GetDate(DAY_OF_WEEK) == 1 then
@@ -219,6 +236,7 @@ function Routine_AddHeroWolves(player, hero)
 end
 
 function Routine_GainAirElementals(player, hero, level)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GainAirElementals")
     log.debug("$ Routine_GainAirElementals")
     if mod(level, 4) == 0 then
         local nb = GetHeroStat(hero, STAT_KNOWLEDGE)
@@ -227,6 +245,7 @@ function Routine_GainAirElementals(player, hero, level)
 end
 
 function Routine_UpgradeMagicGuild(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_UpgradeMagicGuild")
     log.debug("$ Routine_UpgradeMagicGuild")
     for town,data in MAP_TOWNS do
         if IsHeroInTown(hero, town, 1, 1) then
@@ -241,6 +260,7 @@ function Routine_UpgradeMagicGuild(player, hero)
 end
 
 function Routine_YlthinVictoryCounter(player, hero, combatIndex)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_YlthinVictoryCounter")
     log.debug("$ Routine_YlthinVictoryCounter")
     local victories = WON_BATTLES[hero]
     if victories == 25 then
@@ -252,11 +272,13 @@ function Routine_YlthinVictoryCounter(player, hero, combatIndex)
 end
 
 function Routine_HeroCallUnicorns(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_HeroCallUnicorns")
     log.debug("$ Routine_HeroCallUnicorns")
     TransferCreatureFromTown(player, hero, TOWN_BUILDING_DWELLING_5, CREATURE_UNICORN, 0.75)
 end
 
 function Routine_ElvenSageVictory(player, hero, combatIndex)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_ElvenSageVictory")
     log.debug("$ Routine_ElvenSageVictory")
     if mod(WON_BATTLES[hero], 6) == 0 then
         local upgradable = {}
@@ -287,12 +309,14 @@ end
 -- FORTRESS
 
 function Routine_AddHeroDefenders(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_AddHeroDefenders")
     log.debug("$ Routine_AddHeroDefenders")
     local amount = trunc(0.3 * GetHeroLevel(hero))
     AddHeroCreatureType(player, hero, FORTRESS, 1, amount, 1)
 end
 
 function Routine_MovePointsPerBear(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_MovePointsPerBear")
     log.debug("$ Routine_MovePointsPerBear")
     local movement = GetHeroStat(hero, STAT_MOVE_POINTS)
     local n = 0
@@ -311,12 +335,14 @@ function Routine_MovePointsPerBear(player, hero)
 end
 
 function Routine_ReviveBearRiders(player, hero, combatIndex)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_ReviveBearRiders")
     log.debug("$ Routine_ReviveBearRiders")
     local max = 1 + trunc(0.66 * GetHeroLevel(hero))
     ResurrectCreatureType(player, hero, combatIndex, FORTRESS, 4, max)
 end
 
 function Routine_WorkshopExpertStart(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_WorkshopExpertStart")
     log.debug("$ Routine_WorkshopExpertStart")
     GiveArtifact(hero, ARTIFACT_RING_OF_MACHINE_AFFINITY, 1)
     for town,data in MAP_TOWNS do
@@ -334,6 +360,7 @@ function Routine_WorkshopExpertStart(player, hero)
 end
 
 function Routine_GarnisonDwarvenWorkers(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GarnisonDwarvenWorkers")
     log.debug("$ Routine_GarnisonDwarvenWorkers")
     local level = GetHeroLevel(hero)
     local amount = 10 + 2 * level
@@ -347,6 +374,7 @@ function Routine_GarnisonDwarvenWorkers(player, hero)
 end
 
 function Routine_ProductionIncreaseDwarvenWorkers(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_ProductionIncreaseDwarvenWorkers")
     log.debug("$ Routine_ProductionIncreaseDwarvenWorkers")
     local total = {[0]=0,[1]=0,[2]=0,[3]=0,[4]=0,[5]=0,[6]=0}
     for obj,data in RESOURCE_GENERATING_OBJECTS do
@@ -383,6 +411,7 @@ function Routine_ProductionIncreaseDwarvenWorkers(player, hero)
 end
 
 function Routine_UpgradeRunicShrine(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_UpgradeRunicShrine")
     log.debug("$ Routine_UpgradeRunicShrine")
     for town,data in MAP_TOWNS do
         if IsHeroInTown(hero, town, 1, 1) then
@@ -395,12 +424,14 @@ function Routine_UpgradeRunicShrine(player, hero)
 end
 
 function Routine_AddLuckAndMorale(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_AddLuckAndMorale")
     log.debug("$ Routine_AddLuckAndMorale")
     ChangeHeroStat(hero, STAT_LUCK, 1)
     ChangeHeroStat(hero, STAT_MORALE, 1)
 end
 
 function Routine_GiveArtifactBlazingSpellbook(player, hero, combatIndex)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GiveArtifactBlazingSpellbook")
     log.debug("$ Routine_GiveArtifactBlazingSpellbook")
     local victories = WON_BATTLES[hero]
     if victories == 10 then
@@ -412,6 +443,7 @@ function Routine_GiveArtifactBlazingSpellbook(player, hero, combatIndex)
 end
 
 function Routine_GiveArtifactRuneOfFlame(player, hero, level)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GiveArtifactRuneOfFlame")
     log.debug("$ Routine_GiveArtifactRuneOfFlame")
     if mod(level, 8) == 0 then
         GiveArtifact(hero, ARTIFACT_RUNE_OF_FLAME)
@@ -422,6 +454,7 @@ Var_Ebba_RunicSpells = {}
 for rune,_ in RUNIC_SPELLS do Var_Ebba_RunicSpells[rune] = 0 end
 
 function Routine_GainStatsPerRune(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GainStatsPerRune")
     log.debug("$ Routine_GainStatsPerRune")
     for rune,tier in RUNIC_SPELLS do
         if KnowHeroSpell(hero, rune) and Var_Ebba_RunicSpells[rune] == 0 then
@@ -436,6 +469,7 @@ function Routine_GainStatsPerRune(player, hero)
 end
 
 function Routine_LearnRunicSpell(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_LearnRunicSpell")
     log.debug("$ Routine_LearnRunicSpell")
 	local spells = {}
     for rune,_ in RUNIC_SPELLS do
@@ -457,6 +491,7 @@ end
 -- ACADEMY
 
 function Routine_AddOtherHeroesGremlins(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_AddOtherHeroesGremlins")
     log.debug("$ Routine_AddOtherHeroesGremlins")
     local amount = GetHeroLevel(hero)
     for _,h in GetPlayerHeroes(player) do
@@ -467,6 +502,7 @@ function Routine_AddOtherHeroesGremlins(player, hero)
 end
 
 function Routine_AssembleGargoyles(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_AssembleGargoyles")
     log.debug("$ Routine_AssembleGargoyles")
     local total = 0
     local max = 2 * GetHeroLevel(hero)
@@ -493,6 +529,7 @@ function Routine_AssembleGargoyles(player, hero)
 end
 
 function Routine_FixDestroyedGolems(player, hero, combatIndex)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_FixDestroyedGolems")
     log.debug("$ Routine_FixDestroyedGolems")
     local total = 0
     local fix_table = {
@@ -519,6 +556,7 @@ function Routine_FixDestroyedGolems(player, hero, combatIndex)
 end
 
 function Routine_GenerateGoldsPerDjinn(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GenerateGoldsPerDjinn")
     log.debug("$ Routine_GenerateGoldsPerDjinn")
     local djinns = CountHeroCreatureType(player, hero, ACADEMY, 5)
     local amount = GetHeroLevel(hero) * djinns
@@ -526,6 +564,7 @@ function Routine_GenerateGoldsPerDjinn(player, hero)
 end
 
 function Routine_RespawnDjinns(player, hero, combatIndex)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_RespawnDjinns")
     log.debug("$ Routine_RespawnDjinns")
     AddHeroCreatureType(player, hero, ACADEMY, 5, 1, 1)
     local mana = GetHeroStat(hero, STAT_MANA_POINTS)
@@ -549,6 +588,7 @@ function Routine_RespawnDjinns(player, hero, combatIndex)
 end
 
 function Routine_UpgradeSilverPavillon(player, hero, level)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_UpgradeSilverPavillon")
     log.debug("$ Routine_UpgradeSilverPavillon")
     if mod(level, 10) == 0 then
         local amount = 0
@@ -566,17 +606,20 @@ function Routine_UpgradeSilverPavillon(player, hero, level)
 end
 
 function Routine_GainExpPerSulfur(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GainExpPerSulfur")
     log.debug("$ Routine_GainExpPerSulfur")
     local amount = 5 * GetHeroLevel(hero) * GetPlayerResource(player, SULFUR)
     AddHeroStatAmount(player, hero, STAT_EXPERIENCE, amount)
 end
 
 function Routine_GainSulfurPerBattle(player, hero, combatIndex)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GainSulfurPerBattle")
     log.debug("$ Routine_GainSulfurPerBattle")
     GiveResources(player, SULFUR, 1, 1)
 end
 
 function Routine_GetCraftingResources(player, hero, level)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GetCraftingResources")
     log.debug("$ Routine_GetCraftingResources")
     local max = 1 + trunc(0.5 * level)
     local res = random(0, max, TURN)
@@ -591,6 +634,7 @@ function Routine_GetCraftingResources(player, hero, level)
 end
 
 function Routine_IncreaseKnowledgeTemp(hero, obj)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_IncreaseKnowledgeTemp")
     log.debug("$ Routine_IncreaseKnowledgeTemp")
     if MAP_TOWNS[obj] and MAP_TOWNS[obj].faction == ACADEMY then
         local value = GetHeroLevel(hero)
@@ -602,6 +646,7 @@ function Routine_IncreaseKnowledgeTemp(hero, obj)
 end
 
 function Routine_AddRecruitsMages(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_AddRecruitsMages")
     log.debug("$ Routine_AddRecruitsMages")
     if GetHeroLevel(hero) >= 20 then
         for i,town in GetHeroTowns(player, hero) do
@@ -619,6 +664,7 @@ function Routine_AddRecruitsMages(player, hero)
 end
 
 function Routine_AddOtherHeroesExperience(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_AddOtherHeroesExperience")
     log.debug("$ Routine_AddOtherHeroesExperience")
     local exp = round(0.01 * GetHeroStat(hero, STAT_EXPERIENCE))
     for _,h in GetPlayerHeroes(player) do
@@ -629,28 +675,33 @@ function Routine_AddOtherHeroesExperience(player, hero)
 end
 
 function Routine_GainKnowledgePerWeek(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GainKnowledgePerWeek")
     log.debug("$ Routine_GainKnowledgePerWeek")
     local amount = 1 + trunc(GetHeroLevel(hero) * 0.1)
     ChangeHeroStat(hero, STAT_KNOWLEDGE, amount)
 end
 
 function Routine_RefreshTimeShift(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_RefreshTimeShift")
     log.debug("$ Routine_RefreshTimeShift")
     ControlHeroCustomAbility(hero, CUSTOM_ABILITY_3, CUSTOM_ABILITY_ENABLED)
 end
 
 function Routine_AddHeroEaglesPerWeek(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_AddHeroEaglesPerWeek")
     log.debug("$ Routine_AddHeroEaglesPerWeek")
     AddHeroCreaturePerLevel(player, hero, CREATURE_ARCANE_EAGLE, 0.3)
 end
 
 function Routine_AddHeroEaglePerLevel(player, hero, level)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_AddHeroEaglePerLevel")
     log.debug("$ Routine_AddHeroEaglePerLevel")
     AddHeroCreatures(hero, CREATURE_ARCANE_EAGLE, 1)
 end
 
 Var_EaglesReviving = {}
 function Routine_RebirthEagleToPhoenix(player, hero, combatIndex)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_RebirthEagleToPhoenix")
     log.debug("$ Routine_RebirthEagleToPhoenix")
     local dead_eagles = 0
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
@@ -671,6 +722,7 @@ function Routine_RebirthEagleToPhoenix(player, hero, combatIndex)
 end
 
 function Routine_RebirthPhoenixesDaily(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_RebirthPhoenixesDaily")
     log.debug("$ Routine_RebirthPhoenixesDaily")
     if Var_EaglesReviving[TURN] then
         AddHeroCreatures(hero, CREATURE_PHOENIX, Var_EaglesReviving[TURN])
@@ -684,6 +736,7 @@ end
 -- DUNGEON
 
 function Routine_GenerateGoldPerScout(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GenerateGoldPerScout")
     log.debug("$ Routine_GenerateGoldPerScout")
     local mult = trunc(GetHeroLevel(hero) * 0.2)
     if mult > 0 then
@@ -698,6 +751,7 @@ end
 Var_Yrwanna_Corpses = 0
 Var_BloodCrystal_Corpses = 1000
 function Routine_GainBloodCrystals(player, hero, combatIndex)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GainBloodCrystals")
     log.debug("$ Routine_GainBloodCrystals")
     Var_Yrwanna_Corpses = Var_Yrwanna_Corpses + GetArmyStrength(combatIndex, 0)
     while Var_Yrwanna_Corpses >= Var_BloodCrystal_Corpses do
@@ -708,6 +762,7 @@ function Routine_GainBloodCrystals(player, hero, combatIndex)
 end
 
 function Routine_BuildHallOfIntrigue(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_BuildHallOfIntrigue")
     log.debug("$ Routine_BuildHallOfIntrigue")
     ChangeHeroStat(hero, STAT_LUCK, 1)
     for town,data in MAP_TOWNS do
@@ -724,12 +779,14 @@ function Routine_BuildHallOfIntrigue(player, hero)
 end
 
 function Routine_AddHeroRiders(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_AddHeroRiders")
     log.debug("$ Routine_AddHeroRiders")
     local amount = round(0.12 * GetHeroLevel(hero))
     AddHeroCreatureType(player, hero, DUNGEON, 4, amount, 1)
 end
 
 function Routine_GainDragonArtifacts(player, hero, combatIndex)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GainDragonArtifacts")
     log.debug("$ Routine_GainDragonArtifacts")
     local level = GetHeroLevel(hero)
     local value = trunc(0.001 * GetArmyStrength(combatIndex, 0))
@@ -753,11 +810,13 @@ function Routine_GainDragonArtifacts(player, hero, combatIndex)
 end
 
 function Routine_GainWeeklySpellpower(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GainWeeklySpellpower")
     log.debug("$ Routine_GainWeeklySpellpower")
     ChangeHeroStat(hero, STAT_SPELL_POWER, 1)
 end
 
 function Routine_AddHeroLevel(player, hero, level)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_AddHeroLevel")
     log.debug("$ Routine_AddHeroLevel")
     if mod(level, 6) == 0 then
         LevelUpHero(hero)
@@ -765,6 +824,7 @@ function Routine_AddHeroLevel(player, hero, level)
 end
 
 function Routine_UpgradeToWitches(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_UpgradeToWitches")
     log.debug("$ Routine_UpgradeToWitches")
     local max_bloodwitch = trunc(GetHeroLevel(hero) * 1.25)
     TransformTownRecruits(player, hero, TOWN_BUILDING_DWELLING_1, CREATURE_SCOUT, TOWN_BUILDING_DWELLING_2, CREATURE_WITCH, max_bloodwitch)
@@ -773,6 +833,7 @@ function Routine_UpgradeToWitches(player, hero)
 end
 
 function Routine_AddHeroManticores(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_AddHeroManticores")
     log.debug("$ Routine_AddHeroManticores")
     AddHeroCreaturePerLevel(player, hero, CREATURE_MANTICORE, 0.4)
 end
@@ -783,11 +844,13 @@ end
 -- NECROPOLIS
 
 function Routine_GainMovePointsPerLevel(player, hero, level)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GainMovePointsPerLevel")
     log.debug("$ Routine_GainMovePointsPerLevel")
     ChangeHeroStat(hero, STAT_MOVE_POINTS, 50 * level)
 end
 
 function Routine_UpgradeCrypt(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_UpgradeCrypt")
     log.debug("$ Routine_UpgradeCrypt")
     for town,data in MAP_TOWNS do
         if IsHeroInTown(hero, town, 1, 1) then
@@ -804,11 +867,13 @@ function Routine_UpgradeCrypt(player, hero)
 end
 
 function Routine_ReviveZombies(player, hero, combatIndex)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_ReviveZombies")
     log.debug("$ Routine_ReviveZombies")
     ResurrectCreatureType(player, hero, combatIndex, NECROPOLIS, 2, GetHeroLevel(hero))
 end
 
 function Routine_LearnDarkMagic(player, hero, combatIndex)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_LearnDarkMagic")
     log.debug("$ Routine_LearnDarkMagic")
     local victories = WON_BATTLES[hero]
     local threshold = 13
@@ -821,11 +886,13 @@ function Routine_LearnDarkMagic(player, hero, combatIndex)
 end
 
 function Routine_AddHeroBlackKnight(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_AddHeroBlackKnight")
     log.debug("$ Routine_AddHeroBlackKnight")
     AddHeroCreatureType(player, hero, NECROPOLIS, 6, 1, 1)
 end
 
 function Routine_ResurrectBlackKnight(player, hero, combatIndex)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_ResurrectBlackKnight")
     log.debug("$ Routine_ResurrectBlackKnight")
     local level = GetHeroLevel(hero)
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
@@ -842,6 +909,7 @@ function Routine_ResurrectBlackKnight(player, hero, combatIndex)
 end
 
 function Routine_AddRecruitsNecropolis(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_AddRecruitsNecropolis")
     log.debug("$ Routine_AddRecruitsNecropolis")
     local amount1 = trunc(2.5 * GetHeroLevel(hero))
     local amount2 = trunc(1.3 * GetHeroLevel(hero))
@@ -852,11 +920,13 @@ function Routine_AddRecruitsNecropolis(player, hero)
 end
 
 function Routine_AddHeroMummies(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_AddHeroMummies")
     log.debug("$ Routine_AddHeroMummies")
     AddHeroCreaturePerLevel(player, hero, CREATURE_MUMMY, 0.3)
 end
 
 function Routine_BansheeHowlBuffs(player, hero, level)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_BansheeHowlBuffs")
     log.debug("$ Routine_BansheeHowlBuffs")
     if level == 15 then
         GiveArtifact(hero, ARTIFACT_251)
@@ -868,6 +938,7 @@ function Routine_BansheeHowlBuffs(player, hero, level)
 end
 
 function Routine_BuildDragonTombstone(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_BuildDragonTombstone")
     log.debug("$ Routine_BuildDragonTombstone")
     for town,data in MAP_TOWNS do
         if IsHeroInTown(hero, town, 1, 1) then
@@ -879,11 +950,13 @@ function Routine_BuildDragonTombstone(player, hero)
 end
 
 function Routine_GiveSandrosCloak(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GiveSandrosCloak")
     log.debug("$ Routine_GiveSandrosCloak")
     GiveArtifact(hero, ARTIFACT_SANDROS_CLOAK, 1)
 end
 
 function Routine_AddLichesPerKnowledge(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_AddLichesPerKnowledge")
     log.debug("$ Routine_AddLichesPerKnowledge")
     local nb = trunc(0.2 * GetHeroStat(hero, STAT_KNOWLEDGE))
     AddHeroCreatureType(player, hero, NECROPOLIS, 5, nb, 1)
@@ -896,6 +969,7 @@ Var_Ornella_FrostLordSet = {
     [ARTIFACT_SPEAR_OF_THE_FROST_LORD]=1,
 }
 function Routine_FrostLordArtifacts(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_FrostLordArtifacts")
     log.debug("$ Routine_FrostLordArtifacts")
     local factor = 1 + 0.05 * GetHeroLevel(hero)
     for a,p in Var_Ornella_FrostLordSet do
@@ -915,12 +989,14 @@ end
 -- INFERNO
 
 function Routine_AddHeroHellHounds(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_AddHeroHellHounds")
     log.debug("$ Routine_AddHeroHellHounds")
     local amount = round(0.90 * GetHeroLevel(hero))
     AddHeroCreatureType(player, hero, INFERNO, 3, amount, 1)
 end
 
 function Routine_GainAttackPerLevel(player, hero, level)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GainAttackPerLevel")
     log.debug("$ Routine_GainAttackPerLevel")
     if mod(level, 5) == 0 then
         AddHeroStatAmount(player, hero, STAT_ATTACK, 1)
@@ -928,6 +1004,7 @@ function Routine_GainAttackPerLevel(player, hero, level)
 end
 
 function Routine_BuildInfernalLoom(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_BuildInfernalLoom")
     log.debug("$ Routine_BuildInfernalLoom")
     for town,data in MAP_TOWNS do
         if IsHeroInTown(hero, town, 1, 1) then
@@ -943,6 +1020,7 @@ function Routine_BuildInfernalLoom(player, hero)
 end
 
 function Routine_AgraelVictoryCounter(player, hero, combatIndex)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_AgraelVictoryCounter")
     log.debug("$ Routine_AgraelVictoryCounter")
     local victories = WON_BATTLES[hero]
     local threshold = 25
@@ -957,12 +1035,14 @@ function Routine_AgraelVictoryCounter(player, hero, combatIndex)
 end
 
 function Routine_AddHeroSuccubus(player, hero, level)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_AddHeroSuccubus")
     log.debug("$ Routine_AddHeroSuccubus")
     local nb = 1 + trunc(0.34 * level)
     AddHeroCreatureType(player, hero, INFERNO, 4, nb, 1)
 end
 
 function Routine_GainBonusExpAndRes(player, hero, combatIndex)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GainBonusExpAndRes")
     log.debug("$ Routine_GainBonusExpAndRes")
     local total = 0
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 0)
@@ -977,6 +1057,7 @@ function Routine_GainBonusExpAndRes(player, hero, combatIndex)
 end
 
 function Routine_TownBuildingUp(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_TownBuildingUp")
     log.debug("$ Routine_TownBuildingUp")
     if IsAIPlayer(player) then return end
     local mult = 1 - 0.01 * GetHeroLevel(hero)
@@ -1024,17 +1105,20 @@ function Routine_TownBuildingUp(player, hero)
 end
 
 function Routine_TownBuildingUpConfirm(player, hero, town, building, cost)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_TownBuildingUpConfirm")
     UpgradeTownBuilding(town, building)
     TakeAwayResources(player, GOLD, 0+cost)
     ChangeHeroStat(hero, STAT_MOVE_POINTS, -500)
 end
 
 function Routine_GenerateSulfur(player, hero, level)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GenerateSulfur")
     log.debug("$ Routine_GenerateSulfur")
     GiveResources(player, SULFUR, 1, 1)
 end
 
 function Routine_MultiplyTroops(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_MultiplyTroops")
     log.debug("$ Routine_MultiplyTroops")
     local level = GetHeroLevel(hero)
     local base_growth = {66, 36, 22, 11, 5, 3, 1}
@@ -1091,6 +1175,7 @@ end
 -- STRONGHOLD
 
 function Routine_GainArmyReinforcement(player, hero, combatIndex)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GainArmyReinforcement")
     log.debug("$ Routine_GainArmyReinforcement")
     local mem_tiers = {}
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
@@ -1109,11 +1194,13 @@ function Routine_GainArmyReinforcement(player, hero, combatIndex)
 end
 
 function Routine_GiveArtifactCentaurCrossbow(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GiveArtifactCentaurCrossbow")
     log.debug("$ Routine_GiveArtifactCentaurCrossbow")
     GiveArtifact(hero, ARTIFACT_CENTAUR_CROSSBOW, 1)
 end
 
 function Routine_AddRecruitsCentaurs(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_AddRecruitsCentaurs")
     log.debug("$ Routine_AddRecruitsCentaurs")
     for i,town in GetHeroTowns(player, hero) do
         if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_4) ~= 0 then
@@ -1129,6 +1216,7 @@ function Routine_AddRecruitsCentaurs(player, hero)
 end
 
 function Routine_GainAttackDefense(player, hero, combatIndex)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GainAttackDefense")
     log.debug("$ Routine_GainAttackDefense")
     local victories = mod(WON_BATTLES[hero], 10)
     if victories == 0 then
@@ -1141,6 +1229,7 @@ function Routine_GainAttackDefense(player, hero, combatIndex)
 end
 
 function Routine_UpgradeChamberOfWrath(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_UpgradeChamberOfWrath")
     log.debug("$ Routine_UpgradeChamberOfWrath")
     for town,data in MAP_TOWNS do
         if IsHeroInTown(hero, town, 1, 1) then
@@ -1155,6 +1244,7 @@ function Routine_UpgradeChamberOfWrath(player, hero)
 end
 
 function Routine_BuildStrongholdFort(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_BuildStrongholdFort")
     log.debug("$ Routine_BuildStrongholdFort")
     for town,data in MAP_TOWNS do
         if IsHeroInTown(hero, town, 1, 1) then
@@ -1172,6 +1262,7 @@ end
 
 Var_ShakKarukat_LastWyvernDay = 1
 function Routine_AddHeroWyverns(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_AddHeroWyverns")
     log.debug("$ Routine_AddHeroWyverns")
     local lvl_reduction = trunc(0.34 * GetHeroLevel(hero))
     local max_fort = 0
@@ -1187,6 +1278,7 @@ function Routine_AddHeroWyverns(player, hero)
 end
 
 function Routine_SacrificeGoblinCorpses(player, hero, combatIndex)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_SacrificeGoblinCorpses")
     log.debug("$ Routine_SacrificeGoblinCorpses")
     local limit = 1 + trunc(0.5 * GetHeroLevel(hero))
     local total = 0
@@ -1205,6 +1297,7 @@ function Routine_SacrificeGoblinCorpses(player, hero, combatIndex)
 end
 
 function Routine_SpiritArtifacts(player, hero, level)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_SpiritArtifacts")
     log.debug("$ Routine_SpiritArtifacts")
     if level == 7 then
         GiveArtifact(hero, ARTIFACT_TUNIC_OF_CARVED_FLESH)
@@ -1220,6 +1313,7 @@ function Routine_SpiritArtifacts(player, hero, level)
 end
 
 function Routine_GainPotionLevelUp(player, hero, level)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GainPotionLevelUp")
     log.debug("$ Routine_GainPotionLevelUp")
     local potion = random(137, 139, level)
     GiveArtifact(hero, potion)
@@ -1228,6 +1322,7 @@ end
 
 
 function Routine_GainRandomDragon(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GainRandomDragon")
     log.debug("$ Routine_GainRandomDragon")
     local dragons = {}
     for i, cr in GetHeroArmy(hero) do
@@ -1411,6 +1506,7 @@ CONTINUOUS_TRIGGER_HERO_ROUTINES = {
 
 
 function DoHeroSpeRoutine_Start(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: DoHeroSpeRoutine_Start")
     log.debug("$ DoHeroSpeRoutine_Start - "..hero)
     if START_TRIGGER_HERO_ROUTINES[hero] then
         START_TRIGGER_HERO_ROUTINES[hero](player, hero)
@@ -1418,6 +1514,7 @@ function DoHeroSpeRoutine_Start(player, hero)
 end
 
 function DoHeroSpeRoutine_Daily(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: DoHeroSpeRoutine_Daily")
     log.debug("$ DoHeroSpeRoutine_Daily - "..hero)
     if DAILY_TRIGGER_HERO_ROUTINES[hero] then
         DAILY_TRIGGER_HERO_ROUTINES[hero](player, hero)
@@ -1425,6 +1522,7 @@ function DoHeroSpeRoutine_Daily(player, hero)
 end
 
 function DoHeroSpeRoutine_Weekly(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: DoHeroSpeRoutine_Weekly")
     log.debug("$ DoHeroSpeRoutine_Weekly - "..hero)
     if WEEKLY_TRIGGER_HERO_ROUTINES[hero] then
         WEEKLY_TRIGGER_HERO_ROUTINES[hero](player, hero)
@@ -1432,6 +1530,7 @@ function DoHeroSpeRoutine_Weekly(player, hero)
 end
 
 function DoHeroSpeRoutine_LevelUp(player, hero, level)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: DoHeroSpeRoutine_LevelUp")
     log.debug("$ DoHeroSpeRoutine_LevelUp - "..hero)
     if LEVEL_UP_HERO_ROUTINES_HERO[hero] then
         LEVEL_UP_HERO_ROUTINES_HERO[hero](player, hero, level)
@@ -1439,6 +1538,7 @@ function DoHeroSpeRoutine_LevelUp(player, hero, level)
 end
 
 function DoHeroSpeRoutine_AfterCombat(player, hero, index)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: DoHeroSpeRoutine_AfterCombat")
     log.debug("$ DoHeroSpeRoutine_AfterCombat - "..hero)
     if AFTER_COMBAT_TRIGGER_HERO_ROUTINES[hero] then
         AFTER_COMBAT_TRIGGER_HERO_ROUTINES[hero](player, hero, index)
@@ -1446,6 +1546,7 @@ function DoHeroSpeRoutine_AfterCombat(player, hero, index)
 end
 
 function DoHeroSpeRoutine_Continuous(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: DoHeroSpeRoutine_Continuous")
     -- log.debug("$ DoHeroSpeRoutine_Continuous - "..hero)
     if CONTINUOUS_TRIGGER_HERO_ROUTINES[hero] then
         CONTINUOUS_TRIGGER_HERO_ROUTINES[hero](player, hero)
@@ -1454,4 +1555,3 @@ end
 
 
 log.trace("Loaded heroes-routines-advmap.lua")
-

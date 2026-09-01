@@ -88,6 +88,7 @@ Var_IdolOfFortuneBonus = {
 -----------------------------------------------
 
 function Trigger_Monsters(hero, obj)
+    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_Monsters")
     log.debug("$ Trigger_Monsters")
     local x, y, z = GetObjectPosition(obj)
     ONGOING_BATTLES[hero] = {x=x, y=y, z=z}
@@ -103,6 +104,7 @@ function Trigger_Monsters(hero, obj)
 end
 
 function Trigger_Monsters_Ongoing(hero, obj)
+    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_Monsters_Ongoing")
     local x, y, z = GetObjectPosition(hero)
     while IsObjectExists(hero) do
         log.debug("Hero "..hero.." is fighting monsters...")
@@ -116,6 +118,7 @@ end
 
 Var_WitchHutResCost = {3,2,4,5}
 function Trigger_WitchHut(hero, obj)
+    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_WitchHut")
     log.debug("$ Trigger_WitchHut")
     local player = GetObjectOwner(hero)
     if IsAIPlayer(player) then
@@ -135,6 +138,7 @@ function Trigger_WitchHut(hero, obj)
     end
 end
 function Trigger_WitchHut_confirm(player, hero, obj, givestat)
+    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_WitchHut_confirm")
     local res = Var_WitchHutResCost[givestat]
     if GetPlayerResource(player, res) >= 3 then
         MessageBoxForPlayers(
@@ -153,13 +157,16 @@ function Trigger_WitchHut_confirm(player, hero, obj, givestat)
     end
 end
 function Trigger_WitchHut_cancel(player, hero, obj)
+    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_WitchHut_cancel")
     MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Game/Scripts/MapObjects/WitchHutRefused.txt", "NoneRoutine")
 end
 function Trigger_WitchHut_visited(player, hero, obj)
+    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_WitchHut_visited")
     MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Game/Scripts/MapObjects/WitchHutVisited.txt", "NoneRoutine")
     for _,h in GetPlayerHeroes(player) do MarkObjectAsVisited(obj, h) end
 end
 function WitchHuts_reset()
+    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: WitchHuts_reset")
     for obj,_ in Var_WitchHutVisited do
         Var_WitchHutVisited[obj] = 0
     end
@@ -167,6 +174,7 @@ end
 
 
 function Trigger_Temple(hero, obj)
+    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_Temple")
     log.debug("$ Trigger_Temple")
     local player = GetObjectOwner(hero)
     if IsAIPlayer(player) then
@@ -185,6 +193,7 @@ function Trigger_Temple(hero, obj)
     end
 end
 function Temples_reset()
+    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Temples_reset")
     for obj,_ in Var_TempleVisited do
         Var_TempleVisited[obj] = 0
     end
@@ -192,6 +201,7 @@ end
 
 
 function Trigger_RallyFlag(hero, obj)
+    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_RallyFlag")
     log.debug("$ Trigger_RallyFlag")
     local player = GetObjectOwner(hero)
     if IsAIPlayer(player) then
@@ -204,6 +214,7 @@ end
 
 
 function Trigger_Tavern(hero, obj)
+    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_Tavern")
     log.debug("$ Trigger_Tavern")
     local player = GetObjectOwner(hero)
     QuestionBoxForPlayers(
@@ -214,6 +225,7 @@ function Trigger_Tavern(hero, obj)
     )
 end
 function Trigger_Tavern_confirm(player, hero)
+    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_Tavern_confirm")
     local town = FindClosestTown(player, hero)
     if town then
         ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
@@ -226,6 +238,7 @@ end
 
 
 function Trigger_WarAcademy(hero, obj)
+    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_WarAcademy")
     log.debug("$ Trigger_WarAcademy")
     local player = GetObjectOwner(hero)
     if IsAIPlayer(player) then
@@ -249,6 +262,7 @@ function Trigger_WarAcademy(hero, obj)
     end
 end
 function Trigger_WarAcademy_confirm(player, hero, obj, stat, wm)
+    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_WarAcademy_confirm")
     GiveHeroWarMachine(hero, wm)
     ChangeHeroStat(hero, stat, 1)
     ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
@@ -256,6 +270,7 @@ function Trigger_WarAcademy_confirm(player, hero, obj, stat, wm)
     MarkObjectAsVisited(obj, hero)
 end
 function WarAcademies_reset()
+    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: WarAcademies_reset")
     for obj,_ in Var_WarAcademyVisited do
         Var_WarAcademyVisited[obj] = {}
     end
@@ -263,6 +278,7 @@ end
 
 
 function Trigger_TombOfTheWarrior(hero, obj)
+    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_TombOfTheWarrior")
     log.debug("$ Trigger_TombOfTheWarrior")
     local player = GetObjectOwner(hero)
     if IsAIPlayer(player) then
@@ -280,6 +296,7 @@ end
 
 
 function Trigger_IdolOfFortune(hero, obj)
+    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_IdolOfFortune")
     log.debug("$ Trigger_IdolOfFortune")
     local player = GetObjectOwner(hero)
     if IsAIPlayer(player) then
@@ -293,6 +310,7 @@ function Trigger_IdolOfFortune(hero, obj)
     end
 end
 function IdolOfFortune_daily()
+    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: IdolOfFortune_daily")
     for obj, hero in Var_IdolOfFortuneVisited do
         if hero ~= nil then
             if IsObjectExists(hero) then
@@ -309,6 +327,7 @@ end
 
 
 function Trigger_SeerHut(hero, obj)
+    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_SeerHut")
     log.debug("$ Trigger_SeerHut")
     local player = GetObjectOwner(hero)
     if IsAIPlayer(player) then
@@ -323,6 +342,7 @@ function Trigger_SeerHut(hero, obj)
     end
 end
 function Trigger_SeerHut_confirm(player)
+    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_SeerHut_confirm")
     TakeAwayResources(player, GOLD, 5000)
     for p = 1,8 do
         if p ~= player and GetPlayerState(p) == 1 then
@@ -338,6 +358,7 @@ end
 
 
 function Trigger_MotherEarthShrine(hero, obj)
+    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_MotherEarthShrine")
     log.debug("$ Trigger_MotherEarthShrine")
     local player = GetObjectOwner(hero)
     if IsAIPlayer(player) then
@@ -352,6 +373,7 @@ function Trigger_MotherEarthShrine(hero, obj)
     end
 end
 function Trigger_MotherEarthShrine_confirm(player, hero)
+    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_MotherEarthShrine_confirm")
     local faction = HEROES[hero].faction
     local towns = GetHeroTowns(player, hero)
     local total = 0
@@ -379,6 +401,7 @@ end
 
 
 function Trigger_FortuitousSanctuary(hero, obj)
+    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_FortuitousSanctuary")
     log.debug("$ Trigger_FortuitousSanctuary")
     local player = GetObjectOwner(hero)
     if IsAIPlayer(player) then
@@ -416,6 +439,7 @@ end
 -----------------------------------------------
 
 function RegisterMapGates()
+    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: RegisterMapGates")
     for _,type in FASTTRAVEL_GATE_OBJECTS do
         for _,obj in GetObjectNamesByType(type) do insert(MAP_GATES, obj) end
     end
@@ -436,6 +460,7 @@ TRIGGER_OVERRIDES = {
 }
 
 function InitializeMapObjects()
+    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: InitializeMapObjects")
     if IsDuelMode() then return end
     RegisterMapGates()
     for k,v in TRIGGER_OVERRIDES do
@@ -446,10 +471,12 @@ function InitializeMapObjects()
 end
 
 function DailyMapObjects()
+    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: DailyMapObjects")
     IdolOfFortune_daily()
 end
 
 function WeeklyMapObjects()
+    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: WeeklyMapObjects")
     WitchHuts_reset()
     Temples_reset()
     WarAcademies_reset()
@@ -465,4 +492,3 @@ function NoOverrideAI(obj, hero, callback)
 end
 
 log.trace("Loaded mapobjects-triggers.lua")
-

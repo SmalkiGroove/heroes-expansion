@@ -2,40 +2,21 @@
 MAGIC_GUILD_HERO_BONUSES = {}
 
 function SetupTownTavern(town, faction)
+    log.trace("/scripts/advmap/handlers/towns-manager.lua: SetupTownTavern")
 	for i = 1,8 do
 		local enabled = (faction == i) and 1 or 0
 		AllowHeroHiringByRaceInTown(town, FactionToTownType(i), enabled)
 	end
 end
 
-function GetTownFactionID(town)
-	local towntype = 0
-	if     contains(GetObjectNamesByType("TOWN_HEAVEN"),town) ~= nil then towntype = 1 
-	elseif contains(GetObjectNamesByType("TOWN_PRESERVE"),town) ~= nil then towntype = 2 
-	elseif contains(GetObjectNamesByType("TOWN_INFERNO"),town) ~= nil then towntype = 3 
-	elseif contains(GetObjectNamesByType("TOWN_NECROMANCY"),town) ~= nil then towntype = 4 
-	elseif contains(GetObjectNamesByType("TOWN_ACADEMY"),town) ~= nil then towntype = 5 
-	elseif contains(GetObjectNamesByType("TOWN_DUNGEON"),town) ~= nil then towntype = 6 
-	elseif contains(GetObjectNamesByType("TOWN_FORTRESS"),town) ~= nil then towntype = 7 
-	elseif contains(GetObjectNamesByType("TOWN_STRONGHOLD"),town) ~= nil then towntype = 8 end
-	return towntype
-end
-
 function GetFactionTowns(num)
-	local towntype = "TOWN"
-	if 	   num == 1 then towntype = "TOWN_HEAVEN"
-	elseif num == 2 then towntype = "TOWN_PRESERVE"
-	elseif num == 3 then towntype = "TOWN_INFERNO" 
-	elseif num == 4 then towntype = "TOWN_NECROMANCY" 
-	elseif num == 5 then towntype = "TOWN_ACADEMY" 
-	elseif num == 6 then towntype = "TOWN_DUNGEON" 
-	elseif num == 7 then towntype = "TOWN_FORTRESS" 
-	elseif num == 8 then towntype = "TOWN_STRONGHOLD" end
-    local towns = GetObjectNamesByType(towntype)
-    return towns
+	log.trace("/scripts/advmap/handlers/towns-manager.lua: GetFactionTowns")
+	local towntype = Towns_Types[num] or "TOWN"
+    return GetObjectNamesByType(towntype)
 end
 
 function GetPlayerTowns(player)
+	log.trace("/scripts/advmap/handlers/towns-manager.lua: GetPlayerTowns")
 	local cities = {}
 	local towns = GetObjectNamesByType("TOWN")
 	for i,town in towns do
@@ -47,6 +28,7 @@ function GetPlayerTowns(player)
 end
 
 function GetHeroTowns(player, hero)
+    log.trace("/scripts/advmap/handlers/towns-manager.lua: GetHeroTowns")
     local cities = {}
     local towns = GetFactionTowns(HEROES[hero].faction)
     for i,town in towns do
@@ -58,6 +40,7 @@ function GetHeroTowns(player, hero)
 end
 
 function GetTownValue(town)
+    log.trace("/scripts/advmap/handlers/towns-manager.lua: GetTownValue")
     local value = 0
     value = value + GetTownBuildingLevel(town, TOWN_BUILDING_GRAIL) * 10000
     value = value + GetTownBuildingLevel(town, TOWN_BUILDING_TOWN_HALL) * 1000
@@ -75,6 +58,7 @@ function GetTownValue(town)
 end
 
 function FindMainTown(player)
+    log.trace("/scripts/advmap/handlers/towns-manager.lua: FindMainTown")
     local main_town = nil
     local max_value = 0
     local towns = GetPlayerTowns(player)
@@ -89,6 +73,7 @@ function FindMainTown(player)
 end
 
 function CheckMainTown(player)
+    log.trace("/scripts/advmap/handlers/towns-manager.lua: CheckMainTown")
     local main_town = PLAYER_MAIN_TOWN[player]
     if player ~= GetObjectOwner(main_town) then
         PLAYER_MAIN_TOWN[player] = FindMainTown(player)
@@ -97,6 +82,7 @@ function CheckMainTown(player)
 end
 
 function FindClosestTown(player, hero)
+	log.trace("/scripts/advmap/handlers/towns-manager.lua: FindClosestTown")
 	local x,y,z = GetObjectPosition(hero)
 	local closest = nil
 	local distance = 1000000000
@@ -116,6 +102,7 @@ function FindClosestTown(player, hero)
 end
 
 function InitializeMapTowns()
+    log.trace("/scripts/advmap/handlers/towns-manager.lua: InitializeMapTowns")
     if IsDuelMode() then return end
     TOWN_TYPES_CENTER_TILE = {
         ["TOWN_HEAVEN"] = {-1,1},
@@ -174,6 +161,7 @@ end
 
 
 function TownBuildTrigger(player)
+    log.trace("/scripts/advmap/handlers/towns-manager.lua: TownBuildTrigger")
     local town_buildings = {}
     while IsPlayerCurrent(player) do
         for _,town in GetPlayerTowns(player) do
@@ -198,4 +186,3 @@ end
 
 
 -- log.debug("Loaded towns-manager.lua")
-

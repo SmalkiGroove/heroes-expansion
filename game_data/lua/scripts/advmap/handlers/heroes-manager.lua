@@ -14,6 +14,7 @@ end
 
 
 function HeroLevelUp(hero)
+    log.trace("/scripts/advmap/handlers/heroes-manager.lua: HeroLevelUp")
     local level = GetHeroLevel(hero)
     local player = GetObjectOwner(hero)
     log.debug("Hero "..hero.." leveled up to level "..level)
@@ -139,6 +140,7 @@ function HeroLevelUp_KujinMP() HeroLevelUp(H_KUJIN) end
 
 
 function HeroLostBattle(player, hero, opponent)
+    log.trace("/scripts/advmap/handlers/heroes-manager.lua: HeroLostBattle")
     log.debug("$ HeroLostBattle "..hero)
     if opponent ~= nil then
         for a = 200,254 do
@@ -148,6 +150,7 @@ function HeroLostBattle(player, hero, opponent)
 end
 
 function AIDailyBonus(player, hero)
+    log.trace("/scripts/advmap/handlers/heroes-manager.lua: AIDailyBonus")
     if IsAIPlayer(player) and DIFFICULTY > 0 then
         log.debug("$ AIDailyBonus for "..hero)
         local amount = 75 * TURN * DIFFICULTY
@@ -157,6 +160,7 @@ function AIDailyBonus(player, hero)
 end
 
 function AIWeeklyBonus(player, hero)
+    log.trace("/scripts/advmap/handlers/heroes-manager.lua: AIWeeklyBonus")
     if IsAIPlayer(player) and DIFFICULTY > 0 then
         log.debug("$ AIWeeklyBonus for "..hero)
         local faction = HEROES[hero].faction
@@ -170,6 +174,7 @@ function AIWeeklyBonus(player, hero)
 end
 
 function AIRecruitBonus(player, hero)
+    log.trace("/scripts/advmap/handlers/heroes-manager.lua: AIRecruitBonus")
     if IsAIPlayer(player) and DIFFICULTY > 0 then
         log.debug("$ AIRecruitBonus for "..hero)
         ChangeHeroStat(hero, STAT_ATTACK, DIFFICULTY)
@@ -181,4 +186,3 @@ function AIRecruitBonus(player, hero)
 end
 
 log.trace("Loaded heroes-manager.lua")
-

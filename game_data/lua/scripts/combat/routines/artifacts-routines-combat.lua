@@ -24,6 +24,31 @@ function Routine_SummonElementalsWater(side, hero)
     Routine_SummonElementalsType(side, hero, CREATURE_WATER_ELEMENTAL)
 end
 
+
+function Routine_ArtifactBeginnerMagicStick(side, hero)
+    if CURRENT_UNIT == hero then
+        log.debug("$ Routine_ArtifactBeginnerMagicStick")
+        RefreshMana(side, hero, 2)
+    end
+end
+
+function Routine_ArtifactRunicWarHarness(side, hero)
+    if CURRENT_UNIT == hero then
+        log.debug("$ Routine_ArtifactRunicWarHarness")
+        local m = trunc(0.05 * GetUnitMaxManaPoints(hero))
+        RefreshMana(side, hero, m)
+    end
+end
+
+function Routine_ArtifactRunicWarAxe(side, hero, unit)
+    if GetUnitSide(unit) ~= side then
+        log.debug("$ Routine_ArtifactRunicWarAxe")
+        local missing = GetUnitMaxManaPoints(hero) - GetUnitManaPoints(hero);
+        local m = trunc(0.25 * missing)
+        if m > 0 then RefreshMana(side, hero, m) end
+    end
+end
+
 function Routine_ArtifactSentinelsBlade(side, hero)
     log.debug("$ Routine_ArtifactSentinelsBlade")
     if CURRENT_UNIT == hero then
@@ -211,9 +236,12 @@ COMBAT_START_ARTIFACT_ROUTINES = {
     [ARTIFACT_ORB_OF_WATER] = Routine_SummonElementalsWater,
 }
 COMBAT_TURN_ARTIFACT_ROUTINES = {
+    [ARTIFACT_BEGINNER_MAGIC_STICK] = Routine_ArtifactBeginnerMagicStick,
     [ARTIFACT_SENTINELS_BLADE] = Routine_ArtifactSentinelsBlade,
+    [ARTIFACT_RUNIC_WAR_HARNESS] = Routine_ArtifactRunicWarHarness,
 }
 UNIT_DIED_ARTIFACT_ROUTINES = {
+    [ARTIFACT_RUNIC_WAR_AXE] = Routine_ArtifactRunicWarAxe,
     [ARTIFACT_MOON_CHARM] = Routine_ArtifactMoonCharm,
 }
 COMBAT_END_ARTIFACT_ROUTINES = {

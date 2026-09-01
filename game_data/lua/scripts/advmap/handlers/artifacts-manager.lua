@@ -51,6 +51,7 @@ REGISTERED_ARTIFACTS = {
 }
 
 function ScanHeroArtifacts(hero)
+    log.trace("/scripts/advmap/handlers/artifacts-manager.lua: ScanHeroArtifacts")
     log.trace("$ ScanHeroArtifacts : "..hero)
     local faction = HEROES[hero].faction
     local tracker = {}
@@ -99,6 +100,7 @@ function ScanHeroArtifacts(hero)
 end
 
 function GetHeroArtfset(hero)
+    log.trace("/scripts/advmap/handlers/artifacts-manager.lua: GetHeroArtfset")
     for set, activations in ARTIFACT_SETS_ACTIVATIONS do
         local count = GetArtifactSetItemsCount(hero, set, 1)
         log.debug("Hero "..hero.." has "..count.." artifacts from set "..set)
@@ -107,4 +109,3 @@ end
 
 
 log.trace("Loaded artifact-manager.lua")
-
