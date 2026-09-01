@@ -43,6 +43,60 @@ function Routine_DragonTombstone(player, town)
     end
 end
 
+function Routine_AlchemyLab(player, town)
+    log.debug("$ Routine_AlchemyLab")
+    local hero = GetTownHero(town)
+    if not hero then return end
+    local artificier = GetHeroSkillMastery(hero, SKILL_ARTIFICIER)
+    if artificier == 0 then return end
+    local k, units, amounts = GetHeroArmySummary(hero)
+    local total_value = 0
+    for i = 1, k do
+        local creature = units[i]
+        local amount = amounts[i]
+        if CREATURES[creature] then
+            local faction = CREATURES[creature][1]
+            local tier = CREATURES[creature][2]
+            if faction ~= ACADEMY and faction ~= NEUTRAL then
+                local value = amount * power(2, tier-1)
+                total_value = total_value + value
+                RemoveHeroCreatures(hero, creature, amount)
+            end
+        end
+    end
+    if total_value == 0 then return end
+    local multiplier = 1 + 0.1 * artificier
+    total_value = trunc(total_value * multiplier)
+    local awards = {}
+    while total_value > 0 do
+        local range = min(256, total_value)
+        local x = random(1, range, total_value)
+        if x < 32 then
+            awards[GOLD] = (awards[GOLD] or 0) + x
+            total_value = total_value - x
+        elseif x < 64 then
+            local res = mod(total_value, 2)
+            local n = round(0.05 * x)
+            awards[res] = (awards[res] or 0) + n
+            total_value = total_value - 20*n
+        elseif x < 128 then
+            local res = random(2,5,x)
+            local n = round(0.025 * x)
+            awards[res] = (awards[res] or 0) + n
+            total_value = total_value - 40*n
+        else
+            local potion = ARTIFACT_POTION_OF_MANA + mod(total_value, 3)
+            awards[potion] = (awards[potion] or 0) + 1
+            total_value = total_value - 100
+        end
+    end
+    for award,amount in awards do
+        if award <= GOLD then GiveResources(player, award, amount) sleep()
+        else for i = 1, amount do GiveArtifact(hero, award) sleep() end
+        end
+    end
+end
+
 
 BUILT_TRIGGER_TOWNS_ROUTINES = {
 }
@@ -50,6 +104,7 @@ LOST_TRIGGER_TOWNS_ROUTINES = {
 }
 DAILY_TRIGGER_TOWNS_ROUTINES = {
     [420] = Routine_DragonTombstone,
+    [521] = Routine_AlchemyLab,
 }
 WEEKLY_TRIGGER_TOWNS_ROUTINES = {
 }
@@ -96,3 +151,4 @@ end
 
 
 log.trace("Loaded towns-routines-advmap.lua")
+
