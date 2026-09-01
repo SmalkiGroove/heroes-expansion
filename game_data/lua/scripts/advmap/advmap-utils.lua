@@ -47,11 +47,13 @@ end
 function UpdateTavernHeroes()
     log.trace("/scripts/advmap/advmap-utils.lua: UpdateTavernHeroes")
     for hero,data in HEROES do
-        if not IsHeroAlive(hero) then
-            if IsArmyEmpty(hero) then
-                startThread(SetStartingArmy, hero)
-            end
-        end
+		if data.faction ~= NEUTRAL then
+			if not IsHeroAlive(hero) then
+				if IsArmyEmpty(hero) then
+					startThread(SetStartingArmy, hero)
+				end
+			end
+		end
     end
 end
 
@@ -115,13 +117,13 @@ end
 function FactionToTownType(faction)
 	log.trace("/scripts/advmap/advmap-utils.lua: FactionToTownType")
 	local town_type = -1
-	if     faction == HAVEN then town_type = TOWN_HEAVEN
-	elseif faction == PRESERVE then town_type = TOWN_PRESERVE
-	elseif faction == INFERNO then town_type = TOWN_INFERNO
+	if     faction == HAVEN      then town_type = TOWN_HEAVEN
+	elseif faction == PRESERVE   then town_type = TOWN_PRESERVE
+	elseif faction == INFERNO    then town_type = TOWN_INFERNO
 	elseif faction == NECROPOLIS then town_type = TOWN_NECROMANCY
-	elseif faction == ACADEMY then town_type = TOWN_ACADEMY
-	elseif faction == DUNGEON then town_type = TOWN_DUNGEON
-	elseif faction == FORTRESS then town_type = TOWN_FORTRESS
+	elseif faction == ACADEMY    then town_type = TOWN_ACADEMY
+	elseif faction == DUNGEON    then town_type = TOWN_DUNGEON
+	elseif faction == FORTRESS   then town_type = TOWN_FORTRESS
 	elseif faction == STRONGHOLD then town_type = TOWN_STRONGHOLD
 	end
 	return town_type

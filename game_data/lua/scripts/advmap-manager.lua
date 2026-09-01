@@ -256,7 +256,7 @@ function InitializeHeroes()
 		if (GetPlayerState(player) == 1) then
 			startThread(StartingBonus, player)
 			DIFFICULTY_MULTIPLIER[player] = IsAIPlayer(player) and (1+0.5*DIFFICULTY) or 1
-			AllowPlayerTavernRace(player, -1, 0)
+			for i = 1,8 do AllowPlayerTavernRace(player, FactionToTownType(i), 0) end
 			for i,hero in GetPlayerHeroes(player) do
 				log.debug("Initialize hero "..hero)
 				Register(VarHeroLevel(hero), GetHeroLevel(hero))
