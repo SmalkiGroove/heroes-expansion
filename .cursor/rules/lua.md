@@ -77,6 +77,7 @@ The adventure map runtime provides the following predefined functions for intera
 
 #### Town and Building Management
 
+- `GetTownHero(town)` → string or nil: Name of the hero garrisoned in the town, or nil if there is none
 - `GetTownBuildingLevel(town, building)` → number: Get building upgrade level (0 = not built, 1+ = upgrade levels)
 - `UpgradeTownBuilding(town, building)` → void: Build or upgrade town building one level
 - `TransformTown(town, townType)` → void: Convert town to different faction
