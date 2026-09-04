@@ -129,6 +129,19 @@ function FactionToTownType(faction)
 	return town_type
 end
 
+function ComputeHeroMagicGuildBonus(player, hero)
+    log.trace("/scripts/advmap/advmap-utils.lua: ComputeHeroMagicGuildBonus")
+    local bonus = PLAYER_MAGIC_GUILD_LEVEL[player] or 0
+    local current = HERO_MAGIC_GUILD_BONUS[hero] or 0
+    local diff = bonus - current
+    if diff ~= 0 then
+        ChangeHeroStat(hero, STAT_SPELL_POWER, diff)
+        ChangeHeroStat(hero, STAT_KNOWLEDGE, diff)
+        HERO_MAGIC_GUILD_BONUS[hero] = bonus
+        sleep() ChangeHeroStat(hero, STAT_MANA_POINTS, diff * 10)
+    end
+end
+
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------

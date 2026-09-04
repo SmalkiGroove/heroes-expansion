@@ -1,6 +1,4 @@
 
-MAGIC_GUILD_HERO_BONUSES = {}
-
 function SetupTownTavern(town, faction)
     log.trace("/scripts/advmap/handlers/towns-manager.lua: SetupTownTavern")
 	for i = 1,8 do
@@ -126,6 +124,9 @@ function InitializeMapTowns()
             for b = 0,25 do
                 local v = GetTownBuildingLevel(town,b)
                 MAP_TOWN_BUILDINGS[town][b] = v
+                if b == TOWN_BUILDING_MAGIC_GUILD and owner > 0 then
+                    PLAYER_MAGIC_GUILD_LEVEL[owner] = PLAYER_MAGIC_GUILD_LEVEL[owner] + v
+                end
             end
             local x,y,floor = GetObjectPosition(town)
             local dx = TOWN_TYPES_CENTER_TILE[type][1]
@@ -180,5 +181,26 @@ function TownBuildTrigger(player)
     end
 end
 
+
+function ObjectCaptureHandler(from_player, to_player, hero, obj)
+    log.trace("/scripts/advmap/handlers/towns-manager.lua: ObjectCaptureHandler")
+    if MAP_TOWNS[obj] then
+        if MAP_TOWN_BUILDINGS[obj][TOWN_BUILDING_MAGIC_GUILD] > 0 then
+            if from_player > 0 then
+                PLAYER_MAGIC_GUILD_LEVEL[from_player] = PLAYER_MAGIC_GUILD_LEVEL[from_player] - MAP_TOWN_BUILDINGS[obj][TOWN_BUILDING_MAGIC_GUILD]
+                for _,h in GetPlayerHeroes(from_player) do startThread(ComputeHeroMagicGuildBonus, from_player, h) end
+            if to_player > 0 then
+                PLAYER_MAGIC_GUILD_LEVEL[to_player] = PLAYER_MAGIC_GUILD_LEVEL[to_player] + MAP_TOWN_BUILDINGS[obj][TOWN_BUILDING_MAGIC_GUILD]
+                for _,h in GetPlayerHeroes(to_player) do startThread(ComputeHeroMagicGuildBonus, to_player, h) end
+            end
+        end
+
+        if from_player > 0 then
+            for _,h in GetPlayerHeroes(from_player) do
+                if Var_LastVisitedTown[h] == obj then Var_LastVisitedTown[h] = nil end
+            end
+        end
+    end
+end
 
 -- log.debug("Loaded towns-manager.lua")

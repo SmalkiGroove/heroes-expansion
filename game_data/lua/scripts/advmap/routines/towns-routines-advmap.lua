@@ -1,26 +1,10 @@
 
 
-function Routine_MagicGuildsBonus(player)
+function Routine_MagicGuildsBonus(player, town)
     log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: Routine_MagicGuildsBonus")
-    local bonus = 0
-    for _,town in GetPlayerTowns(player) do
-        bonus = bonus + GetTownBuildingLevel(town, TOWN_BUILDING_MAGIC_GUILD)
-    end
+    PLAYER_MAGIC_GUILD_LEVEL[player] = PLAYER_MAGIC_GUILD_LEVEL[player] + 1
     for _,hero in GetPlayerHeroes(player) do
-        if MAGIC_GUILD_HERO_BONUSES[hero] then
-            local diff = bonus - MAGIC_GUILD_HERO_BONUSES[hero]
-            if diff ~= 0 then
-                ChangeHeroStat(hero, STAT_SPELL_POWER, diff)
-                ChangeHeroStat(hero, STAT_KNOWLEDGE, diff)
-                MAGIC_GUILD_HERO_BONUSES[hero] = bonus
-                sleep() ChangeHeroStat(hero, STAT_MANA_POINTS, diff * 10)
-            end
-        else
-            ChangeHeroStat(hero, STAT_SPELL_POWER, bonus)
-            ChangeHeroStat(hero, STAT_KNOWLEDGE, bonus)
-            MAGIC_GUILD_HERO_BONUSES[hero] = bonus
-            sleep() ChangeHeroStat(hero, STAT_MANA_POINTS, bonus * 10)
-        end
+        startThread(ComputeHeroMagicGuildBonus, player, hero)
     end
 end
 
@@ -162,6 +146,14 @@ end
 
 
 BUILT_TRIGGER_TOWNS_ROUTINES = {
+    [106] = Routine_MagicGuildsBonus,
+    [206] = Routine_MagicGuildsBonus,
+    [306] = Routine_MagicGuildsBonus,
+    [406] = Routine_MagicGuildsBonus,
+    [506] = Routine_MagicGuildsBonus,
+    [606] = Routine_MagicGuildsBonus,
+    [706] = Routine_MagicGuildsBonus,
+    [806] = Routine_MagicGuildsBonus,
     [222] = Routine_WatchTowerReveal,
 }
 LOST_TRIGGER_TOWNS_ROUTINES = {
@@ -175,10 +167,19 @@ WEEKLY_TRIGGER_TOWNS_ROUTINES = {
 }
 
 
+function DoTownsRoutine_Built(player, town, building)
+    log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: DoTownsRoutine_Built")
+    local faction = MAP_TOWNS[town].faction
+    if not faction then return end
+    local routine = BUILT_TRIGGER_TOWNS_ROUTINES[faction * 100 + building]
+    if routine then
+        startThread(routine, player, town)
+    end
+end
+
 function DoTownsRoutine_Daily(player)
     log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: DoTownsRoutine_Daily")
     log.debug("$ DoTownsRoutine_Daily")
-    startThread(Routine_MagicGuildsBonus, player)
     for faction,type in Towns_Types do
         local f = faction * 100
         for _,town in GetObjectNamesByType(type) do
@@ -192,16 +193,6 @@ function DoTownsRoutine_Daily(player)
                 end
             end
         end
-    end
-end
-
-function DoTownsRoutine_Built(player, town, building)
-    log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: DoTownsRoutine_Built")
-    local faction = MAP_TOWNS[town].faction
-    if not faction then return end
-    local routine = BUILT_TRIGGER_TOWNS_ROUTINES[faction * 100 + building]
-    if routine then
-        startThread(routine, player, town)
     end
 end
 

@@ -203,6 +203,7 @@ end
 
 Trigger(NEW_DAY_TRIGGER, "NewDayTrigger")
 Trigger(COMBAT_RESULTS_TRIGGER, "CombatResultsHandler")
+Trigger(OBJECT_CAPTURE_TRIGGER, "ObjectCaptureHandler")
 Trigger(CUSTOM_ABILITY_TRIGGER, "CustomAbilityHandler")
 
 
@@ -214,6 +215,7 @@ function AddPlayerHero(player, hero)
 		startThread(BindHeroSkillTrigger, hero)
 		startThread(DoSkillsRoutine_Start, player, hero)
 		startThread(DoHeroSpeRoutine_Start, player, hero)
+		startThread(ComputeHeroMagicGuildBonus, player, hero)
 		startThread(AIRecruitBonus, player, hero)
 		MakeHeroReturnToTavernAfterDeath(hero, 1, 0)
 		WON_BATTLES[hero] = 0
@@ -222,6 +224,7 @@ function AddPlayerHero(player, hero)
 		log.debug("Comeback hero "..hero)
 		startThread(BindHeroLevelUpTrigger, hero)
 		startThread(BindHeroSkillTrigger, hero)
+		startThread(ComputeHeroMagicGuildBonus, player, hero)
 	end
 	HEROES[hero].owner = player
 end
@@ -266,6 +269,7 @@ function InitializeHeroes()
 				startThread(BindHeroSkillTrigger, hero)
 				startThread(DoSkillsRoutine_Start, player, hero) sleep(1)
 				startThread(DoHeroSpeRoutine_Start, player, hero) sleep(1)
+				startThread(ComputeHeroMagicGuildBonus, player, hero)
 				local f = HEROES[hero].faction
 				if f ~= 0 then
 					AllowPlayerTavernRace(player, FactionToTownType(f), 1)
@@ -276,7 +280,6 @@ function InitializeHeroes()
 				LAST_BATTLES[hero] = 0
 			end
 			if not IsDuelMode() then
-				startThread(Routine_MagicGuildsBonus, player)
 				startThread(WatchPlayer, player, 1)
 			end
 		end

@@ -54,6 +54,11 @@ function ConvertTown(player, hero, town)
         TransformTown(town, FactionToTownType(f))
         SetupTownTavern(town, f)
         MAP_CONVERTIBLES[town] = { faction=f, tier=0 }
+        MAP_TOWNS[town].faction = f
+        PLAYER_MAGIC_GUILD_LEVEL[player] = PLAYER_MAGIC_GUILD_LEVEL[player] - MAP_TOWN_BUILDINGS[town][TOWN_BUILDING_MAGIC_GUILD]
+        for _,h in GetPlayerHeroes(player) do startThread(ComputeHeroMagicGuildBonus, player, h) end
+        for b = 0,25 do MAP_TOWN_BUILDINGS[town][b] = 0 end
+        MAP_TOWN_BUILDINGS[town][TOWN_BUILDING_TOWN_HALL] = 1
     end
 end
 

@@ -63,14 +63,14 @@ function ActivateBuildingConversion(player, hero)
         QuestionBoxForPlayers(
             GetPlayerFilter(player),
             {"/Text/Game/Scripts/Abilities/ConvertTown.txt"; wood=20,ore=20,gold=10000},
-            "ConvertTown('"..player.."','"..hero.."','"..obj.."')",
+            "ConvertTown("..player..",'"..hero.."','"..obj.."')",
             "NoneRoutine"
         )
     else
         QuestionBoxForPlayers(
             GetPlayerFilter(player),
             {"/Text/Game/Scripts/Abilities/ConvertDwelling.txt"; wood=3*tier,ore=3*tier,gold=1000*tier},
-            "ConvertDwelling('"..player.."','"..hero.."','"..obj.."','"..tier.."')",
+            "ConvertDwelling("..player..",'"..hero.."','"..obj.."','"..tier.."')",
             "NoneRoutine"
         )
     end
