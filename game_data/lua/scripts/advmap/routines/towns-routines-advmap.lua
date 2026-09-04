@@ -97,12 +97,77 @@ function Routine_AlchemyLab(player, town)
     end
 end
 
+function Routine_WatchTowerReveal(player, town)
+    log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: Routine_WatchTowerReveal")
+    local x, y, z
+    if MAP_TOWNS[town] then
+        x = MAP_TOWNS[town].x
+        y = MAP_TOWNS[town].y
+        z = MAP_TOWNS[town].z
+    else
+        x, y, z = GetObjectPosition(town)
+        MAP_TOWNS[town] = {faction = PRESERVE, x = x, y = y, z = z}
+    end
+    OpenCircleFog(x, y, z, 50, player)
+end
+
+function Routine_WatchTower(player, town)
+    log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: Routine_WatchTower")
+    log.debug("$ Routine_WatchTower")
+    local tx = MAP_TOWNS[town].x
+    local ty = MAP_TOWNS[town].y
+    local tz = MAP_TOWNS[town].z
+    for _,hero in GetPlayerHeroes(player) do
+        if HEROES[hero].faction == PRESERVE then
+            local bonus = 0
+            if IsHeroInTown(hero, town, 1, 1) then
+                bonus = 1000
+            else
+                local hx, hy, hz = GetObjectPosition(hero)
+                if hz == tz then
+                    local dx = hx - tx
+                    local dy = hy - ty
+                    local d2 = dx*dx + dy*dy
+                    if d2 <= 100 then
+                        bonus = 1000
+                    elseif d2 < 2500 then
+                        for i = 1, 40 do
+                            local v = i+10
+                            if d2 < (v*v) then bonus = 25*(40-i) break end
+                        end
+                    end
+                end
+            end
+            if bonus > 0 then startThread(Routine_WatchTowerThread, player, hero, bonus) end
+        end
+    end
+end
+
+function Routine_WatchTowerThread(player, hero, amount)
+    log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: Routine_WatchTowerThread")
+    log.debug("$ Routine_WatchTowerThread")
+    local movement = GetHeroStat(hero, STAT_MOVE_POINTS)
+    local current = 0
+    local counter = 0
+    while counter < amount do
+        sleep(2)
+        if not IsPlayerCurrent(player) then break end
+        current = GetHeroStat(hero, STAT_MOVE_POINTS)
+        if (movement - current) > 25 then
+            ChangeHeroStat(hero, STAT_MOVE_POINTS, current + 25)
+            counter = counter + 25
+        end
+    end
+end
+
 
 BUILT_TRIGGER_TOWNS_ROUTINES = {
+    [222] = Routine_WatchTowerReveal,
 }
 LOST_TRIGGER_TOWNS_ROUTINES = {
 }
 DAILY_TRIGGER_TOWNS_ROUTINES = {
+    [222] = Routine_WatchTower,
     [420] = Routine_DragonTombstone,
     [521] = Routine_AlchemyLab,
 }
@@ -127,6 +192,16 @@ function DoTownsRoutine_Daily(player)
                 end
             end
         end
+    end
+end
+
+function DoTownsRoutine_Built(player, town, building)
+    log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: DoTownsRoutine_Built")
+    local faction = MAP_TOWNS[town].faction
+    if not faction then return end
+    local routine = BUILT_TRIGGER_TOWNS_ROUTINES[faction * 100 + building]
+    if routine then
+        startThread(routine, player, town)
     end
 end
 

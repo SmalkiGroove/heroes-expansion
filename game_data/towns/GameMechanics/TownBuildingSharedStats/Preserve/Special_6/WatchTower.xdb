@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TownBuildingSharedStats ObjectRecordID="1000155">
+	<NameFileRef href="/Text/Game/TownBuildings/Preserve/Special_6/Name.txt"/>
+	<DescriptionFileRef href="/Text/Game/TownBuildings/Preserve/Special_6/Desc.txt"/>
+	<Type>TB_SPECIAL_6</Type>
+	<Upgrade>BLD_UPG_1</Upgrade>
+	<Cost>
+		<Wood>2</Wood>
+		<Ore>5</Ore>
+		<Mercury>0</Mercury>
+		<Crystal>0</Crystal>
+		<Sulfur>0</Sulfur>
+		<Gem>0</Gem>
+		<Gold>3000</Gold>
+	</Cost>
+	<ModObjectName>WatchTower</ModObjectName>
+	<dependencies/>
+	<Creature>CREATURE_UNKNOWN</Creature>
+	<DevLevelNeeded>16</DevLevelNeeded>
+	<UIObjectName>Special_6</UIObjectName>
+	<UIStackPosition>0</UIStackPosition>
+	<Icon href="/UI/TownHall/preserve/128/WatchTower.xdb#xpointer(/Texture)"/>
+</TownBuildingSharedStats>

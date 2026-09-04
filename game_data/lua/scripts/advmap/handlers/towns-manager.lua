@@ -122,6 +122,11 @@ function InitializeMapTowns()
                 PLAYER_MAIN_TOWN[owner] = town
                 if DIFFICULTY > 1 and IsAIPlayer(owner) then UpgradeTownBuilding(town, TOWN_BUILDING_GRAIL) end
             end
+            MAP_TOWN_BUILDINGS[town] = {}
+            for b = 0,25 do
+                local v = GetTownBuildingLevel(town,b)
+                MAP_TOWN_BUILDINGS[town][b] = v
+            end
             local x,y,floor = GetObjectPosition(town)
             local dx = TOWN_TYPES_CENTER_TILE[type][1]
             local dy = TOWN_TYPES_CENTER_TILE[type][2]
@@ -162,25 +167,16 @@ end
 
 function TownBuildTrigger(player)
     log.trace("/scripts/advmap/handlers/towns-manager.lua: TownBuildTrigger")
-    local town_buildings = {}
-    while IsPlayerCurrent(player) do
-        for _,town in GetPlayerTowns(player) do
-            if town_buildings[town] then
-                for b,v in town_buildings[town] do
-                    if GetTownBuildingLevel(town,b) > v then
-                        log.debug("Player "..player.." has built "..b.." in town "..town)
-                        town_buildings[town][b] = v + 1
-                    end
-                end
-            else
-                town_buildings[town] = {}
-                for b = 0,25 do
-                    local v = GetTownBuildingLevel(town,b)
-                    town_buildings[town][b] = v
+    for _,town in GetPlayerTowns(player) do
+        if MAP_TOWN_BUILDINGS[town] then
+            for b,v in MAP_TOWN_BUILDINGS[town] do
+                if GetTownBuildingLevel(town,b) > v then
+                    log.debug("Player "..player.." has built "..b.." in town "..town)
+                    MAP_TOWN_BUILDINGS[town][b] = v + 1
+                    startThread(DoTownsRoutine_Built, player, town, b)
                 end
             end
         end
-        sleep(10)
     end
 end
 

@@ -128,6 +128,7 @@ function WatchPlayer(player, wait)
 			DoSkillsRoutine_Continuous(player, hero)
 			DoArtifactsRoutine_Continuous(player, hero)
         end
+		TownBuildTrigger(player)
 		sleep(10)
 	end
 end
