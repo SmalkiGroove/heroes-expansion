@@ -144,6 +144,30 @@ function Routine_WatchTowerThread(player, hero, amount)
     end
 end
 
+function Routine_WolfKennel(player, town)
+    log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: Routine_WolfKennel")
+    log.debug("$ Routine_WolfKennel")
+    local weekly_growth = {
+        [INFERNO] = {66, 36, 22, 11, 5, 3, 1},
+        [NECROPOLIS] = {57, 39, 19, 10, 5, 3, 1},
+        [STRONGHOLD] = {55, 28, 21, 10, 6, 3, 1},
+        [NEUTRAL] = {1, 1, 20, 1, 1, 1, 1},
+    }
+    local feeders = {15,16,47,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,89,90,116,117,118,119,120,121,122,123,124,125,126,129,130,131,132,133,134,135,136,137,152,153,154,155,156,157,158,173,174,175,176,177,179,191}
+    local total_value = 0
+    for _, creature in feeders do
+        local amount = GetObjectCreatures(town, creature)
+        if amount > 0 then
+            local faction = CREATURES[creature][1]
+            local tier = CREATURES[creature][2]
+            if faction == NECROPOLIS and tier == 1 then amount = amount * 2 end
+            total_value = total_value + amount / weekly_growth[faction][tier]
+        end
+    end
+    local wolves = 2 + round(7 * total_value)
+    if wolves > 0 then AddObjectCreatures(town, CREATURE_WOLF, wolves) end
+end
+
 
 BUILT_TRIGGER_TOWNS_ROUTINES = {
     [106] = Routine_MagicGuildsBonus,
@@ -156,9 +180,8 @@ BUILT_TRIGGER_TOWNS_ROUTINES = {
     [806] = Routine_MagicGuildsBonus,
     [222] = Routine_WatchTowerReveal,
 }
-LOST_TRIGGER_TOWNS_ROUTINES = {
-}
 DAILY_TRIGGER_TOWNS_ROUTINES = {
+    [119] = Routine_WolfKennel,
     [222] = Routine_WatchTower,
     [420] = Routine_DragonTombstone,
     [521] = Routine_AlchemyLab,

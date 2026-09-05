@@ -69,7 +69,7 @@ end
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
--- HERO MISC
+-- ARMIES
 
 
 function GetHeroArmy(hero)
@@ -89,6 +89,31 @@ function GetHeroArmySummary(hero)
 		local cr = army[i]
 		if cr and cr ~= 0 and not contains(units, cr) then
 			local nb = GetHeroCreatures(hero, cr)
+			k = k + 1
+			units[k] = cr
+			amounts[k] = nb
+		end
+	end
+	return k, units, amounts
+end
+
+function GetObjectArmy(obj)
+	log.trace("/scripts/advmap/advmap-utils.lua: GetObjectArmy")
+	local type = {}
+	type[1], type[2], type[3], type[4], type[5], type[6], type[7] = GetObjectCreaturesTypes(obj)
+	return type
+end
+
+function GetObjectArmySummary(obj)
+	log.trace("/scripts/advmap/advmap-utils.lua: GetObjectArmySummary")
+	local units = {}
+	local amounts = {}
+	local k = 0
+	local army = GetObjectArmy(obj)
+	for i = 1,7 do
+		local cr = army[i]
+		if cr and cr ~= 0 and not contains(units, cr) then
+			local nb = GetObjectCreatures(obj, cr)
 			k = k + 1
 			units[k] = cr
 			amounts[k] = nb

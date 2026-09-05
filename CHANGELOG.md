@@ -274,3 +274,5 @@ Initial beta release !
 
 - Custom Academy town building alchemy lab that offers to transform creatures into res/potions
 - Custom Sylvan town building that adds movement points to nearby heroes
+- Custom Haven town building that produces wolves per day
+- Custom Inferno town building that produces gold per recruits

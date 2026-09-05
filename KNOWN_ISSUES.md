@@ -24,9 +24,7 @@
 - Darkstorm hero totem model
 - Add ARMG templates
 - Make Earthquake deal magical earth damage
-- Custom Haven town building that produces wolves per day +undeads
-- Custom Inferno town building that produces gold per recruits
-- Custom Dungeon town building ?
+- Custom Dungeon town building that generates blood crystals
 
 ### Balance
 
