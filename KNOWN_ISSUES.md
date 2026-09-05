@@ -26,8 +26,7 @@
 - Make Earthquake deal magical earth damage
 - Custom Haven town building that produces wolves per day +undeads
 - Custom Inferno town building that produces gold per recruits
-- Custom Sylvan town building that adds movement points to nearby heroes
-- Custom Academy town building alchemy lab that offers to transform creatures into res/potions
+- Custom Dungeon town building ?
 
 ### Balance
 

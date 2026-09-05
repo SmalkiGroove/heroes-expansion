@@ -208,7 +208,7 @@ Initial beta release !
 - Buff Regeneration spell
 - Level Up skillswheel shows superposed skills
 
-### 0.5.0
+### 0.5.0 (14/07/2026)
 
 #### New
 
@@ -268,3 +268,9 @@ Initial beta release !
 - Remove 2nd retaliation combo with Preparation + Unlimited retaliations
 - Maeve no additional peasant recruits when skill Logistics is known
 
+### 0.5.1 ()
+
+#### New
+
+- Custom Academy town building alchemy lab that offers to transform creatures into res/potions
+- Custom Sylvan town building that adds movement points to nearby heroes
