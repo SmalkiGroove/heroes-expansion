@@ -60,6 +60,10 @@ end
 for i = 0,5 do LoadScripts(i) end
 if IsDuelMode() then dofile("/scripts/duel.lua") end
 
+for f = 1,8 do
+	FACTION_TOWN_BUILDINGS[f][0] = 1
+	for b = 1,14 do FACTION_TOWN_BUILDINGS[f][b] = 0 end
+end
 
 ADD_PLAYER_HERO = {
 	[1] = "AddPlayer1Hero",
@@ -203,7 +207,6 @@ end
 
 Trigger(NEW_DAY_TRIGGER, "NewDayTrigger")
 Trigger(COMBAT_RESULTS_TRIGGER, "CombatResultsHandler")
-Trigger(OBJECT_CAPTURE_TRIGGER, "ObjectCaptureHandler")
 Trigger(CUSTOM_ABILITY_TRIGGER, "CustomAbilityHandler")
 
 

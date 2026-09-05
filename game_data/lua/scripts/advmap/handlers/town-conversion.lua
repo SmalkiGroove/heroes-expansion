@@ -57,8 +57,7 @@ function ConvertTown(player, hero, town)
         MAP_TOWNS[town].faction = f
         PLAYER_MAGIC_GUILD_LEVEL[player] = PLAYER_MAGIC_GUILD_LEVEL[player] - MAP_TOWN_BUILDINGS[town][TOWN_BUILDING_MAGIC_GUILD]
         for _,h in GetPlayerHeroes(player) do startThread(ComputeHeroMagicGuildBonus, player, h) end
-        for b = 0,25 do MAP_TOWN_BUILDINGS[town][b] = 0 end
-        MAP_TOWN_BUILDINGS[town][TOWN_BUILDING_TOWN_HALL] = 1
+        for b,v in FACTION_TOWN_BUILDINGS[f] do MAP_TOWN_BUILDINGS[town][b] = v end
     end
 end
 

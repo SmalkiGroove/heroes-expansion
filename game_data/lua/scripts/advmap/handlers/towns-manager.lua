@@ -121,7 +121,7 @@ function InitializeMapTowns()
                 if DIFFICULTY > 1 and IsAIPlayer(owner) then UpgradeTownBuilding(town, TOWN_BUILDING_GRAIL) end
             end
             MAP_TOWN_BUILDINGS[town] = {}
-            for b = 0,25 do
+            for b,_ in FACTION_TOWN_BUILDINGS[faction] do
                 local v = GetTownBuildingLevel(town,b)
                 MAP_TOWN_BUILDINGS[town][b] = v
                 if b == TOWN_BUILDING_MAGIC_GUILD and owner > 0 then
@@ -156,6 +156,7 @@ function InitializeMapTowns()
                 log.debug("Town "..town.." has no entrance ?? (type is "..type..")")
             end
 			SetupTownTavern(town, faction)
+            Trigger(OBJECT_CAPTURE_TRIGGER, town, "ObjectCaptureHandler")
         end
     end
     for player = 1,8 do
@@ -189,6 +190,7 @@ function ObjectCaptureHandler(from_player, to_player, hero, obj)
             if from_player > 0 then
                 PLAYER_MAGIC_GUILD_LEVEL[from_player] = PLAYER_MAGIC_GUILD_LEVEL[from_player] - MAP_TOWN_BUILDINGS[obj][TOWN_BUILDING_MAGIC_GUILD]
                 for _,h in GetPlayerHeroes(from_player) do startThread(ComputeHeroMagicGuildBonus, from_player, h) end
+            end
             if to_player > 0 then
                 PLAYER_MAGIC_GUILD_LEVEL[to_player] = PLAYER_MAGIC_GUILD_LEVEL[to_player] + MAP_TOWN_BUILDINGS[obj][TOWN_BUILDING_MAGIC_GUILD]
                 for _,h in GetPlayerHeroes(to_player) do startThread(ComputeHeroMagicGuildBonus, to_player, h) end
@@ -202,5 +204,7 @@ function ObjectCaptureHandler(from_player, to_player, hero, obj)
         end
     end
 end
+
+
 
 -- log.debug("Loaded towns-manager.lua")
