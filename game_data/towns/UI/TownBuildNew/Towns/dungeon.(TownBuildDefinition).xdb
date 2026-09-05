@@ -167,6 +167,16 @@
 			</buildings>
 		</Item>
 		<Item>
+			<BuildingType>TB_SPECIAL_5</BuildingType>
+			<buildings>
+				<Item>
+					<Upgrade>BLD_UPG_1</Upgrade>
+					<XSlotPos>1</XSlotPos>
+					<YSlotPos>5</YSlotPos>
+				</Item>
+			</buildings>
+		</Item>
+		<Item>
 			<BuildingType>TB_SPECIAL_6</BuildingType>
 			<buildings>
 				<Item>
@@ -301,7 +311,12 @@
 		<Item>
 			<XSlotPos>1</XSlotPos>
 			<YSlotPos>4</YSlotPos>
-			<Length>2</Length>
+			<Length>1</Length>
+		</Item>
+		<Item>
+			<XSlotPos>1</XSlotPos>
+			<YSlotPos>5</YSlotPos>
+			<Length>1</Length>
 		</Item>
 		<Item>
 			<XSlotPos>2</XSlotPos>

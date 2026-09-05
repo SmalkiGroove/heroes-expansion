@@ -173,10 +173,8 @@ function Routine_EternalSuffering(player, town)
     log.debug("$ Routine_EternalSuffering")
     local gold = 0
     for tier = 1, 7 do
-        local n = 0
-        for _, creature in CREATURES_BY_FACTION[INFERNO][tier] do
-            n = n + GetObjectDwellingCreatures(town, creature)
-        end
+        local creature = CREATURES_BY_FACTION[INFERNO][tier][1]
+        local n = GetObjectDwellingCreatures(town, creature)
         if n > 0 then
             gold = gold + 0.1 * n * tier * power(2, tier-1)
         end
