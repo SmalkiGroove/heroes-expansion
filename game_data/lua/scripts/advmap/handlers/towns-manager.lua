@@ -183,6 +183,16 @@ function TownBuildTrigger(player)
 end
 
 
+function TownVisitTrigger(hero, town)
+    log.trace("/scripts/advmap/handlers/towns-manager.lua: TownVisitTrigger")
+    startThread(Routine_LogisticsVisitTown, hero, town)
+    Routine_Bloodstone_Visit(hero, town)
+    if     hero == H_THEODORUS then Routine_IncreaseKnowledgeTemp(hero, town)
+    elseif hero == H_DOUGAL    then Routine_TrainPeasantsToArchers(hero, town)
+    end
+end
+
+
 function ObjectCaptureHandler(from_player, to_player, hero, obj)
     log.trace("/scripts/advmap/handlers/towns-manager.lua: ObjectCaptureHandler")
     if MAP_TOWNS[obj] then

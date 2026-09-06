@@ -54,11 +54,10 @@ function Routine_EnableTrainPeasantsToArchers(player, hero)
     Var_Dougal_TrainCount = 0
 end
 
-Var_Dougal_TrainPeasantLock = 0
 function Routine_TrainPeasantsToArchers(hero, town)
     log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_TrainPeasantsToArchers")
     log.debug("$ Routine_TrainPeasantsToArchers")
-    if MAP_TOWNS[town] and MAP_TOWNS[town].faction == HAVEN then
+    if MAP_TOWNS[town].faction == HAVEN then
         if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_1) > 0 and GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_2) > 0 then
             if GetTownBuildingLevel(town, TOWN_BUILDING_HAVEN_TRAINING_GROUNDS) > 0 then
                 local peasants = GetHeroCreatures(hero, CREATURE_PEASANT)
@@ -66,13 +65,12 @@ function Routine_TrainPeasantsToArchers(hero, town)
                 if GetTownBuildingLevel(town, TOWN_BUILDING_HAVEN_MONUMENT_TO_FALLEN_HEROES) > 0 then n = n + 13 end
                 n = min(n, peasants)
                 if n > 0 then
-                    Var_Dougal_TrainPeasantLock = 1
                     local player = GetObjectOwner(hero)
                     QuestionBoxForPlayers(
                         GetPlayerFilter(player),
                         {"/Text/Game/Scripts/HeroSpe/TrainArchers.txt"; num=n},
                         "Routine_TrainPeasantsToArchersConfirm("..player..",'"..hero.."',"..n..")",
-                        "Routine_TrainPeasantsToArcherCancel()"
+                        "NoneRoutine"
                     )
                 end
             end
@@ -84,11 +82,6 @@ function Routine_TrainPeasantsToArchersConfirm(player, hero, amount)
     RemoveHeroCreatures(hero, CREATURE_PEASANT, amount) sleep(1)
     AddHeroCreatures(hero, CREATURE_ARCHER, amount) sleep(1)
     Var_Dougal_TrainCount = Var_Dougal_TrainCount + amount
-    Var_Dougal_TrainPeasantLock = 0
-end
-function Routine_TrainPeasantsToArcherCancel()
-    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_TrainPeasantsToArcherCancel")
-    Var_Dougal_TrainPeasantLock = 0
 end
 
 function Routine_GainExpFromTotalGolds(player, hero)
@@ -636,7 +629,7 @@ end
 function Routine_IncreaseKnowledgeTemp(hero, obj)
     log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_IncreaseKnowledgeTemp")
     log.debug("$ Routine_IncreaseKnowledgeTemp")
-    if MAP_TOWNS[obj] and MAP_TOWNS[obj].faction == ACADEMY then
+    if MAP_TOWNS[obj].faction == ACADEMY then
         local value = GetHeroLevel(hero)
         local x,y,z = GetObjectPosition(hero)
         ChangeHeroStat(hero, STAT_KNOWLEDGE, value)

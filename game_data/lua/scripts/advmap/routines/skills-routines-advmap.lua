@@ -594,7 +594,7 @@ end
 Var_LastVisitedTown = {}
 function Routine_LogisticsVisitTown(hero, obj)
     log.trace("/scripts/advmap/routines/skills-routines-advmap.lua: Routine_LogisticsVisitTown")
-    if MAP_TOWNS[obj] then Var_LastVisitedTown[hero] = obj end
+    if HasHeroSkill(hero, SKILL_LOGISTICS) then Var_LastVisitedTown[hero] = obj end
 end
 
 function Routine_LogisticsWeeklyProd(player, hero, mastery)

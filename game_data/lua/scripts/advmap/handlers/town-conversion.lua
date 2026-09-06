@@ -82,16 +82,7 @@ end
 function HeroVisitConvertible(hero, obj)
     log.trace("/scripts/advmap/handlers/town-conversion.lua: HeroVisitConvertible")
     log.debug("$ HeroVisitConvertible")
-    if hero == H_DOUGAL then
-        startThread(Routine_TrainPeasantsToArchers, hero, obj)
-        repeat sleep() until Var_Dougal_TrainPeasantLock == 0
-    end
-    if hero == H_THEODORUS then
-        startThread(Routine_IncreaseKnowledgeTemp, hero, obj)
-    end
-    if HasHeroSkill(hero, SKILL_LOGISTICS) then
-        startThread(Routine_LogisticsVisitTown, hero, obj)
-    end
+    if MAP_TOWNS[obj] then TownVisitTrigger(hero, obj) end
     if CanHeroConvert(hero, obj) then startThread(EnableTownConversionAbility, hero, obj) end
     SetTriggerConvertible(obj, nil)
     MakeHeroInteractWithObject(hero, obj)

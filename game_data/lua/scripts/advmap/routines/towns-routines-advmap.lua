@@ -8,6 +8,7 @@ function Routine_MagicGuildsBonus(player, town)
     end
 end
 
+
 function Routine_DragonTombstone(player, town)
     log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: Routine_DragonTombstone")
     log.debug("$ Routine_DragonTombstone")
@@ -26,6 +27,7 @@ function Routine_DragonTombstone(player, town)
         end
     end
 end
+
 
 function Routine_AlchemyLab(player, town)
     log.debug("$ Routine_AlchemyLab")
@@ -80,6 +82,7 @@ function Routine_AlchemyLab(player, town)
         end
     end
 end
+
 
 function Routine_WatchTowerReveal(player, town)
     log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: Routine_WatchTowerReveal")
@@ -144,6 +147,7 @@ function Routine_WatchTowerThread(player, hero, amount)
     end
 end
 
+
 function Routine_WolfKennel(player, town)
     log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: Routine_WolfKennel")
     log.debug("$ Routine_WolfKennel")
@@ -168,6 +172,7 @@ function Routine_WolfKennel(player, town)
     if wolves > 0 then AddObjectCreatures(town, CREATURE_WOLF, wolves) end
 end
 
+
 function Routine_EternalSuffering(player, town)
     log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: Routine_EternalSuffering")
     log.debug("$ Routine_EternalSuffering")
@@ -181,6 +186,37 @@ function Routine_EternalSuffering(player, town)
     end
     gold = round(gold)
     if gold > 0 then GiveResources(player, GOLD, gold) end
+end
+
+
+Var_Bloodstone_Count = {}
+function Routine_Bloodstone_Visit(hero, town)
+    log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: Routine_Bloodstone_FirstVisit")
+    local amount = Var_Bloodstone_Count[town]
+    if amount and amount > 0 then
+        for i = 1, amount do
+            GiveArtifact(hero, ARTIFACT_BLOOD_CRYSTAL)
+            sleep()
+        end
+        Var_Bloodstone_Count[town] = 0
+        MessageBoxPEST(GetPlayerFilter(GetObjectOwner(hero)),
+          {"/Text/Game/Scripts/Buildings/Bloodstone.txt", nb=amount},
+          "NoneRoutine")
+    end
+end
+
+function Routine_Bloodstone(player, town)
+    log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: Routine_Bloodstone")
+    log.debug("$ Routine_Bloodstone")
+    local hero = GetTownHero(town)
+    if not hero then
+        for _,h in GetPlayerHeroes(player) do
+            if IsHeroInTown(h, town, 1, 1) then hero = h break end
+        end
+    end
+    if hero then Routine_Bloodstone_FirstVisit(hero, town)
+    else Var_Bloodstone_Count[town] = (Var_Bloodstone_Count[town] or 0) + 1
+    end
 end
 
 
@@ -203,6 +239,7 @@ DAILY_TRIGGER_TOWNS_ROUTINES = {
     [521] = Routine_AlchemyLab,
 }
 WEEKLY_TRIGGER_TOWNS_ROUTINES = {
+    [621] = Routine_Bloodstone,
 }
 
 
