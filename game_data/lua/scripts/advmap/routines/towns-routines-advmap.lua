@@ -9,6 +9,49 @@ function Routine_MagicGuildsBonus(player, town)
 end
 
 
+function Routine_BeaconOfSoulsReveal(player, town)
+    log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: Routine_BeaconOfSoulsReveal")
+    local necro_monsters = {
+        "CREATURE_SKELETON",
+        "CREATURE_WALKING_DEAD", "CREATURE_ZOMBIE", "CREATURE_DISEASE_ZOMBIE",
+        "CREATURE_MANES", "CREATURE_GHOST", "CREATURE_POLTERGEIST",
+        "CREATURE_VAMPIRE", "CREATURE_NOSFERATU",
+        "CREATURE_LICH", "CREATURE_DEMILICH",
+        "CREATURE_BLACK_KNIGHT", "CREATURE_DREAD_KNIGHT", "CREATURE_DEATH_KNIGHT",
+        "CREATURE_WIGHT", "CREATURE_WRAITH", "CREATURE_BANSHEE"
+    }
+    for _, monster in necro_monsters do
+        for _,obj in GetObjectNamesByType(monster) do
+            local x, y, z = GetObjectPosition(obj)
+            OpenCircleFog(x, y, z, 2, player)
+        end
+    end
+end
+
+function Routine_BeaconOfSouls(player, town, combatIndex)
+    log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: Routine_BeaconOfSouls")
+    log.debug("$ Routine_BeaconOfSouls")
+    local distance = 1000000
+    local hero = "none"
+    for _,h in GetPlayerHeroes(player) do
+        if HasHeroSkill(h, SKILL_NECROMANCY) then
+            local x, y, z = GetObjectPosition(h)
+            if z == MAP_TOWNS[town].z then
+                local dx = x - MAP_TOWNS[town].x
+                local dy = y - MAP_TOWNS[town].y
+                local d = dx*dx + dy*dy
+                if d < distance then distance = d; hero = h end
+            end
+        end
+    end
+    if hero ~= "none" then
+        local value = trunc(0.25 * GetArmyStrength(combatIndex, 0))
+        GiveExp(hero, value)
+        ShowFlyingSign({"/Text/Game/Scripts/Buildings/BeaconOfSouls.txt"; amount=value}, hero, player, FLYING_SIGN_TIME)
+    end
+end
+
+
 function Routine_DragonTombstone(player, town)
     log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: Routine_DragonTombstone")
     log.debug("$ Routine_DragonTombstone")
@@ -200,7 +243,7 @@ function Routine_Bloodstone_Visit(hero, town)
         end
         Var_Bloodstone_Count[town] = 0
         MessageBoxPEST(GetPlayerFilter(GetObjectOwner(hero)),
-          {"/Text/Game/Scripts/Buildings/Bloodstone.txt", nb=amount},
+          {"/Text/Game/Scripts/Buildings/Bloodstone.txt"; nb=amount},
           "NoneRoutine")
     end
 end
@@ -230,6 +273,7 @@ BUILT_TRIGGER_TOWNS_ROUTINES = {
     [706] = Routine_MagicGuildsBonus,
     [806] = Routine_MagicGuildsBonus,
     [222] = Routine_WatchTowerReveal,
+    [421] = Routine_BeaconOfSoulsReveal,
 }
 DAILY_TRIGGER_TOWNS_ROUTINES = {
     [119] = Routine_WolfKennel,
@@ -240,6 +284,9 @@ DAILY_TRIGGER_TOWNS_ROUTINES = {
 }
 WEEKLY_TRIGGER_TOWNS_ROUTINES = {
     [621] = Routine_Bloodstone,
+}
+AFTER_COMBAT_TRIGGER_TOWNS_ROUTINES = {
+    [421] = Routine_BeaconOfSouls,
 }
 
 
@@ -260,7 +307,7 @@ function DoTownsRoutine_Daily(player)
         local f = faction * 100
         for _,town in GetObjectNamesByType(type) do
             if player == GetObjectOwner(town) then
-                for b = 14,25 do
+                for b = 16,25 do
                     if DAILY_TRIGGER_TOWNS_ROUTINES[f+b] then
                         if GetTownBuildingLevel(town, b) > 0 then
                             startThread(DAILY_TRIGGER_TOWNS_ROUTINES[f+b], player, town)
@@ -279,7 +326,7 @@ function DoTownsRoutine_Weekly(player)
         local f = faction * 100
         for _,town in GetObjectNamesByType(type) do
             if player == GetObjectOwner(town) then
-                for b = 14,25 do
+                for b = 16,25 do
                     if WEEKLY_TRIGGER_TOWNS_ROUTINES[f+b] then
                         if GetTownBuildingLevel(town, b) > 0 then
                             startThread(WEEKLY_TRIGGER_TOWNS_ROUTINES[f+b], player, town)
@@ -291,6 +338,23 @@ function DoTownsRoutine_Weekly(player)
     end
 end
 
+function DoTownsRoutine_AfterCombat(combatIndex)
+    log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: DoTownsRoutine_AfterCombat")
+    log.debug("$ DoTownsRoutine_AfterCombat")
+    for faction,type in Towns_Types do
+        local f = faction * 100
+        for b = 16,25 do
+            if AFTER_COMBAT_TRIGGER_TOWNS_ROUTINES[f+b] then
+                for _,town in GetObjectNamesByType(type) do
+                    if GetTownBuildingLevel(town, b) > 0 then
+                        local player = GetObjectOwner(town)
+                        startThread(AFTER_COMBAT_TRIGGER_TOWNS_ROUTINES[f+b], player, town, combatIndex)
+                    end
+                end
+            end
+        end
+    end
+end
 
 log.trace("Loaded towns-routines-advmap.lua")
 

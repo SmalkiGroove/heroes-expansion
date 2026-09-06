@@ -24,7 +24,6 @@
 - Darkstorm hero totem model
 - Add ARMG templates
 - Make Earthquake deal magical earth damage
-- Custom Dungeon town building that generates blood crystals
 
 ### Balance
 

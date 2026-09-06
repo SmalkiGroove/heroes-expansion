@@ -16,7 +16,7 @@ This list is not exhaustive, all stats and changes regarding heroes, skills, art
 - Maximum creature ATB at the start of combats lowered from 25% to 5%
 - Mass spells consume all the ATB, like any other spell
 - Creature's spellpower formula is now linear : `S = 1 + 2.5 * N / G` (N is number of creatures in the stack, G is the creature's weekly growth)
-- First Aid Tent healing and damages now also scale with hero's level and defense stat
+- First Aid Tent heal and damage now also scale with hero's level and defense stat
 - Battlefield size is 14x11
 - PEST (permanent endless simultaneous turns)
 - Heroes can learn up to 8 skills
@@ -45,7 +45,7 @@ This list is not exhaustive, all stats and changes regarding heroes, skills, art
 - Some additional creatures, either neutral or granted by specific heroes
 - Totally revamped skill tree with 15 branches and totally new skills
 - Every hero is unique and all heroes are more powerful in general, and there are no trash heroes
-- Scripts are massively used, on the map as well as during combats
+- Scripts are massively used for new features, on the map as well as during combats
 
 
 ## Releases
@@ -208,7 +208,7 @@ Initial beta release !
 - Buff Regeneration spell
 - Level Up skillswheel shows superposed skills
 
-### 0.5.0 (14/07/2026)
+### 0.5.0 (13/06/2026)
 
 #### New
 
@@ -272,7 +272,11 @@ Initial beta release !
 
 #### New
 
-- Custom Academy town building alchemy lab that offers to transform creatures into res/potions
-- Custom Sylvan town building that adds movement points to nearby heroes
-- Custom Haven town building that produces wolves per day
-- Custom Inferno town building that produces gold per recruits
+- New Academy town building Alchemy Lab, that transforms creatures into res/potions
+- New Sylvan town building Watch Tower, that adds movement points to nearby heroes
+- New Haven town building Wolf Kennel, that produces wolves per day
+- New Inferno town building Eternal Suffering Stick, that produces gold per recruits
+- New Dungeon town building Bloodstone, that generates blood crystals
+- New Necropolis town building Beacon of Souls, that redirect exp from defeated undead monsters to nearby hero
+
+#### Fixed/Changed

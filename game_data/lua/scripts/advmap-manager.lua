@@ -198,7 +198,9 @@ function CombatResultsHandler(combatIndex)
 		LAST_BATTLES[hero] = TURN
 	end
 	local loser = GetSavedCombatArmyHero(combatIndex, 0)
-	if loser ~= nil then
+	if loser == nil then
+		DoTownsRoutine_AfterCombat(combatIndex)
+	else
 		local player = GetSavedCombatArmyPlayer(combatIndex, 0)
 		startThread(HeroLostBattle, player, loser, hero)
 	end
