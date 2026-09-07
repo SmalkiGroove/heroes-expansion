@@ -15,7 +15,7 @@
 		<x>0</x>
 		<y>0</y>
 	</PossessionMarkerTile>
-	<Effect href="/Effects/_(Effect)/Artefacts/General/Gold.xdb#xpointer(/Effect)"/>
+	<Effect href="/Effects/_(Effect)/ResoursesAndChests/Chest.xdb#xpointer(/Effect)"/>
 	<EffectWhenOwned/>
 	<messagesFileRef>
 		<Item href="/Text/Game/Artifacts/ShacklesOfTheLastMan/Name.txt"/>
@@ -32,5 +32,5 @@
 	<RazedStatic/>
 	<Icon128/>
 	<Type>ARTF_RANDOM_SPECIFIC</Type>
-	<ArtifactID>SHACKLES_OF_WAR</ArtifactID>
+	<ArtifactID>ARTIFACT_SHACKLES_OF_WAR_2</ArtifactID>
 </AdvMapArtifactShared>
