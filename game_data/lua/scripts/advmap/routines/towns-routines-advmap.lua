@@ -31,8 +31,18 @@ end
 function Routine_BeaconOfSouls(player, town, combatIndex)
     log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: Routine_BeaconOfSouls")
     log.debug("$ Routine_BeaconOfSouls")
-    local distance = 1000000
+    if GetSavedCombatArmyPlayer(combatIndex, 0) == player then return end
+    local value = 0
+    local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 0)
+	for i = 0,stacks-1 do
+        local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 0, i)
+        if CREATURES[creature][1] == NECROPOLIS then
+            value = value + died * power(2, CREATURES[creature][2])
+        end
+    end
+    if value == 0 then return else value = trunc(0.25 * value) end
     local hero = "none"
+    local distance = 1000000
     for _,h in GetPlayerHeroes(player) do
         if HasHeroSkill(h, SKILL_NECROMANCY) then
             local x, y, z = GetObjectPosition(h)
@@ -45,8 +55,7 @@ function Routine_BeaconOfSouls(player, town, combatIndex)
         end
     end
     if hero ~= "none" then
-        local value = trunc(0.25 * GetArmyStrength(combatIndex, 0))
-        GiveExp(hero, value)
+        ChangeHeroStat(hero, STAT_EXPERIENCE, value)
         ShowFlyingSign({"/Text/Game/Scripts/Buildings/BeaconOfSouls.txt"; amount=value}, hero, player, FLYING_SIGN_TIME)
     end
 end
