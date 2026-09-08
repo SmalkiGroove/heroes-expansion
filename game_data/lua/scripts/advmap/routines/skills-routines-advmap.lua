@@ -835,8 +835,8 @@ function Routine_WarPolicyAfterBattle(player, hero, mastery, combatIndex)
     for i = 0,stacks-1 do
         local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
         if died > 0 then
-            if CREATURES[creature][1] == faction then
-                local tier = CREATURES[creature][2]
+            if GetFaction(creature) == faction then
+                local tier = GetTier(creature)
                 if not losses[tier] then losses[tier] = died else losses[tier] = losses[tier] + died end
             end
         end

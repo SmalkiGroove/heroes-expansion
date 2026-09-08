@@ -118,7 +118,7 @@ function Routine_EnragedRighteousMight(side, hero)
     log.debug("$ Routine_EnragedRighteousMight")
     for i,cr in GetUnits(side, CREATURE) do
         local type = GetCreatureType(cr)
-        if CREATURES[type][1] == PRESERVE and contains({1,3,4,6}, CREATURES[type][2]) then
+        if GetFaction(type) == PRESERVE and contains({1,3,4,6}, GetTier(type)) then
             HeroCast_Target(hero, SPELL_BLOODLUST, FREE_MANA, cr)
         end
     end
@@ -136,7 +136,7 @@ function Routine_ResetAtbOnKillEnraged(side, hero, unit)
         -- SetATB_ID(CURRENT_UNIT, ATB_NEXT)
         for i,cr in GetUnits(side, CREATURE) do
             local type = GetCreatureType(cr)
-            if CREATURES[type][1] == PRESERVE and contains({1,3,4,6}, CREATURES[type][2]) then
+            if GetFaction(type) == PRESERVE and contains({1,3,4,6}, GetTier(type)) then
                 if not ROUTINE_VARS.AtbBoosted[cr] then
                     SetATB_ID(cr, ATB_INSTANT)
                     ROUTINE_VARS.AtbBoosted[cr] = not nil
@@ -409,7 +409,7 @@ function Routine_DwavenDefendOrder(side, hero)
         if IsCreature(CURRENT_UNIT) then
             log.debug("$ Routine_DwavenDefendOrder")
             local type = GetCreatureType(CURRENT_UNIT)
-            if CREATURES[type][1] == FORTRESS then
+            if GetFaction(type) == FORTRESS then
                 startThread(Routine_DwavenDefendOrderWait, CURRENT_UNIT)
             end
         end
@@ -538,7 +538,7 @@ function Routine_SummonDarkstorm(side, hero)
     local name = "DARKSTORM-creature"
     local x = (side == ATTACKER) and (GRID_X_MIN+1) or (GRID_X_MAX)
     local y = GRID_Y_MAX
-    CREATURES[type] = {DUNGEON,8}
+    CREATURES[type] = {faction=DUNGEON, tier=8, growth=1}
     AddCreature(side, type, 1, x, y, 1, name)
     sleep(1)
     ROUTINE_VARS.Darkstorm = name
@@ -803,7 +803,7 @@ function Routine_DemonicCreatureExplosion(side, hero)
         if IsCreature(CURRENT_UNIT) then
             log.debug("$ Routine_DemonicCreatureExplosion")
             local id = GetCreatureType(CURRENT_UNIT)
-            if CREATURES[id][1] == INFERNO then
+            if GetFaction(id) == INFERNO then
                 local x,y = GetUnitPosition(CURRENT_UNIT)
                 UnitCastAreaSpell(CURRENT_UNIT, SPELL_ABILITY_EXPLOSION, x, y)
                 SetATB_ID(CURRENT_UNIT, ATB_INSTANT)
@@ -864,7 +864,7 @@ function Routine_InfernoGating(side, hero)
     local gating_tier = 2 * GetHeroSkillMastery(side, SKILL_GATING)
     for i,cr in GetUnits(side, CREATURE) do
         local id = GetCreatureType(cr)
-        if CREATURES[id][1] == INFERNO and CREATURES[id][2] <= gating_tier then
+        if GetFaction(id) == INFERNO and GetTier(id) <= gating_tier then
             gated_creatures[cr] = 0
             local nb = GetCreatureNumber(cr)
             while gated_creatures[cr] == 0 do
@@ -935,7 +935,7 @@ function Routine_WatchRageLevelsThread(side, hero)
         up = nil
         for i,cr in GetUnits(side, CREATURE) do
             local type = GetCreatureType(cr)
-            if CREATURES[type][1] == STRONGHOLD and CREATURES[type][2] ~= 6 then
+            if GetFaction(type) == STRONGHOLD and GetTier(type) ~= 6 then
                 if not RageLevels[cr] then
                     RageLevels[cr] = GetRageLevel(cr)
                 else
@@ -1028,8 +1028,8 @@ function Routine_RandomBuffDragons(side, hero)
         end
         for i,cr in GetUnits(side, CREATURE) do
             local type = GetCreatureType(cr)
-            local faction = CREATURES[type][1]
-            local tier = CREATURES[type][2]
+            local faction = GetFaction(type)
+            local tier = GetTier(type)
             if tier == 7 then
                 if faction == DUNGEON or faction == FORTRESS or faction == PRESERVE 
                 or cr == CREATURE_BONE_DRAGON or cr == CREATURE_SHADOW_DRAGON or cr == CREATURE_HORROR_DRAGON

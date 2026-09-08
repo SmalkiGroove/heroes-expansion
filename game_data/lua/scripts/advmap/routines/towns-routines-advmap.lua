@@ -36,8 +36,8 @@ function Routine_BeaconOfSouls(player, town, combatIndex)
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 0)
 	for i = 0,stacks-1 do
         local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 0, i)
-        if CREATURES[creature][1] == NECROPOLIS then
-            value = value + died * power(2, CREATURES[creature][2])
+        if GetFaction(creature) == NECROPOLIS then
+            value = value + died * power(2, GetTier(creature))
         end
     end
     if value == 0 then return else value = trunc(0.25 * value) end
@@ -92,9 +92,9 @@ function Routine_AlchemyLab(player, town)
     for i = 1, k do
         local creature = units[i]
         local amount = amounts[i]
-        if CREATURES[creature] then
-            local faction = CREATURES[creature][1]
-            local tier = CREATURES[creature][2]
+        if GetFaction(creature) ~= nil then
+            local faction = GetFaction(creature)
+            local tier = GetTier(creature)
             if faction ~= ACADEMY and faction ~= NEUTRAL then
                 local value = amount * power(2, tier-1)
                 total_value = total_value + value
@@ -214,8 +214,8 @@ function Routine_WolfKennel(player, town)
     for _, creature in feeders do
         local amount = GetObjectCreatures(town, creature)
         if amount > 0 then
-            local faction = CREATURES[creature][1]
-            local tier = CREATURES[creature][2]
+            local faction = GetFaction(creature)
+            local tier = GetTier(creature)
             if faction == NECROPOLIS and tier == 1 then amount = amount * 2 end
             total_value = total_value + amount / weekly_growth[faction][tier]
         end

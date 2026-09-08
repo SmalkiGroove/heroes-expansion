@@ -128,7 +128,7 @@ function GetArmyStrength(combatIndex, side)
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, side)
 	for i = 0,stacks-1 do
         local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, side, i)
-        value = value + died * power(2, CREATURES[creature][2])
+        value = value + died * power(2, GetTier(creature))
     end
 	return value
 end
@@ -397,7 +397,7 @@ function TransferCreatureFromTown(player, hero, dwelling, creature, coef)
 			local nb = min(trunc(coef * level), recruits)
 			if nb >= 1 then
 				SetObjectDwellingCreatures(town, creature, recruits-nb)
-				AddHeroCreatureType(player, hero, CREATURES[creature][1], CREATURES[creature][2], nb, 1)
+				AddHeroCreatureType(player, hero, GetFaction(creature), GetTier(creature), nb, 1)
 			end
 		end
 	end
@@ -438,7 +438,7 @@ function ResurrectCreatureType(player, hero, combatIndex, faction, tier, max)
     for i = 0,stacks-1 do
         local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
         if died > 0 and cap > 0 then
-            if CREATURES[creature][1] == faction and CREATURES[creature][2] == tier then
+            if GetFaction(creature) == faction and GetTier(creature) == tier then
 				local rez = min(cap, died)
 				cap = cap - rez
 				AddHeroCreatures(hero, creature, rez)
@@ -461,17 +461,17 @@ end
 
 function CreatureToUndead(cr)
 	log.trace("/scripts/advmap/advmap-utils.lua: CreatureToUndead")
-	if CREATURES[cr][1] == NECROPOLIS or cr == CREATURE_MUMMY or cr == CREATURE_BONE_DRAGON or cr == CREATURE_SHADOW_DRAGON or cr == CREATURE_HORROR_DRAGON then
+	if GetFaction(cr) == NECROPOLIS or cr == CREATURE_MUMMY or cr == CREATURE_BONE_DRAGON or cr == CREATURE_SHADOW_DRAGON or cr == CREATURE_HORROR_DRAGON then
 		return cr
 	end
-	local tier = CREATURES[cr][2]
+	local tier = GetTier(cr)
 	return CREATURES_BY_FACTION[NECROPOLIS][tier][1]
 end
 
 function TransformCreatures(obj, creature, faction)
 	log.trace("/scripts/advmap/advmap-utils.lua: TransformCreatures")
 	local nb = GetObjectCreature(obj, creature)
-	local tier = CREATURES[creature][2]
+	local tier = GetTier(creature)
 	local cr = CREATURES_BY_FACTION[faction][tier][1]
 	RemoveObjectCreatures(obj, creature, nb) sleep()
 	AddObjectCreatures(obj, cr, nb) sleep()

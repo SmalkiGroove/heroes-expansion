@@ -84,7 +84,7 @@ function Routine_GuardianAngelRez(side, hero, id, mastery, winner)
         for cr,nb in STARTING_ARMY[side] do
             local lost = nb - GetCreatureNumber(cr)
             local type = GetCreatureType(cr)
-            local tier = CREATURES[type][2]
+            local tier = GetTier(type)
             local rez_power_cr = lost * power(2, tier)
             if rez_power_cr > rez_power then
                 rez_stack = cr

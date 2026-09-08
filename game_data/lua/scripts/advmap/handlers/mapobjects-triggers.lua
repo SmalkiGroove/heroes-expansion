@@ -380,10 +380,10 @@ function Trigger_MotherEarthShrine_confirm(player, hero)
     local k, units, amounts = GetHeroArmySummary(hero)
     for i = 1, k do
         local creature = units[i]
-        local f = CREATURES[creature][1]
+        local f = GetFaction(creature)
         if f ~= faction and f ~= NEUTRAL then
             local count = amounts[i]
-            local tier = CREATURES[creature][2]
+            local tier = GetTier(creature)
             local recruit = CREATURES_BY_FACTION[faction][tier][1]
             for _, town in towns do
                 if GetTownBuildingLevel(town, 6+tier) > 0 then

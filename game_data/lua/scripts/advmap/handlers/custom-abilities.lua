@@ -20,10 +20,10 @@ function ActivateKnowYourEnemy(player, hero)
     local k, units, amounts = GetHeroArmySummary(hero)
     for i = 1,k do
         local creature = units[i]
-        local faction = CREATURES[creature][1]
+        local faction = GetFaction(creature)
         if faction ~= PRESERVE and faction ~= NEUTRAL then
             local count = amounts[i]
-            local tier = CREATURES[creature][2]
+            local tier = GetTier(creature)
             exp = exp + count * power(2, tier+2)
             RemoveHeroCreatures(hero, creature, count)
         end

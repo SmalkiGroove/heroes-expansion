@@ -117,7 +117,7 @@ function Routine_ArtfsetBestial(side, hero)
     local beasts = { CREATURE_GRIFFIN, CREATURE_UNICORN, CREATURE_WYVERN, CREATURE_HYDRA, CREATURE_NIGHTMARE,
                      CREATURE_WOLF, CREATURE_MANTICORE, CREATURE_ARCANE_EAGLE, CREATURE_CAVE_SPIDER }
     local beast = beasts[random(1,8,0)]
-    local tier = CREATURES[beast][2]
+    local tier = GetTier(beast)
     local amount = 0.5 * ((10-tier) * (10-tier) * (10-tier) + tier)
     SummonCreatureSideOffset(side, beast, amount, 4)
 end
@@ -146,7 +146,7 @@ function Routine_ArtfsetWarLeader(side, hero, unit)
     log.debug("$ Routine_ArtfsetWarLeader")
     if GetUnitSide(unit) ~= side then
         for i,cr in GetUnits(side, CREATURE) do
-            local tier = CREATURES[cr][2]
+            local tier = GetTier(cr)
             if tier == 1 or tier == 2 or tier == 3 then
                 SetATB_ID(cr, ATB_NEXT)
             end
@@ -159,7 +159,7 @@ function Routine_ArtfsetDragon4(side, hero, unit)
     if STARTING_ARMY[side][unit] then
         sleep(random(1,30,GetCreatureNumber(unit)))
         if ROUTINE_VARS.Legendragon[side] then return end
-        local tier = CREATURES[GetCreatureType(unit)][2]
+        local tier = GetTier(GetCreatureType(unit))
         local threshold = 0.5 * (8 - tier) * (9 - tier)
         if STARTING_ARMY[side][unit] > threshold then
             ROUTINE_VARS.Legendragon[side] = 1

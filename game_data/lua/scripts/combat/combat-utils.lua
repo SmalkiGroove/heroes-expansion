@@ -195,13 +195,13 @@ end
 
 function IsCreature2x2(unit)
     local type = GetCreatureType(unit)
-    if CREATURES[type][2] >= 6 then return 1 end
-    if CREATURES[type][2] == 5 then
+    if GetTier(type) >= 6 then return 1 end
+    if GetTier(type) == 5 then
         if type == CREATURE_MANTICORE then return 1 end
-        if CREATURES[type][1] == PRESERVE or CREATURES[type][1] == NECROPOLIS or CREATURES[type][1] == INFERNO then return 1 end
+        if GetFaction(type) == PRESERVE or GetFaction(type) == NECROPOLIS or GetFaction(type) == INFERNO then return 1 end
     end
-    if CREATURES[type][2] == 4 then
-        if CREATURES[type][1] == HAVEN or CREATURES[type][1] == FORTRESS or CREATURES[type][1] == DUNGEON or CREATURES[type][1] == STRONGHOLD then return 1 end
+    if GetTier(type) == 4 then
+        if GetFaction(type) == HAVEN or GetFaction(type) == FORTRESS or GetFaction(type) == DUNGEON or GetFaction(type) == STRONGHOLD then return 1 end
     end
     return nil
 end
@@ -234,8 +234,8 @@ function CanCreatureShoot(unit)
 end
 
 function CreatureToUndead(creature)
-	if CREATURES[creature][1] == NECROPOLIS or creature == CREATURE_MUMMY then return creature end
-	local tier = CREATURES[creature][2]
+	if GetFaction(creature) == NECROPOLIS or creature == CREATURE_MUMMY then return creature end
+	local tier = GetTier(creature)
 	return CREATURES_BY_FACTION[NECROPOLIS][tier][1]
 end
 

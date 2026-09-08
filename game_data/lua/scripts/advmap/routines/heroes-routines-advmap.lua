@@ -892,7 +892,7 @@ function Routine_ResurrectBlackKnight(player, hero, combatIndex)
     for i = 0,stacks-1 do
         local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
         if died > 0 then
-            if CREATURES[creature][1] == NECROPOLIS and CREATURES[creature][2] == 6 then
+            if GetFaction(creature) == NECROPOLIS and GetTier(creature) == 6 then
                 local rez = ceil(0.01 * level * count)
                 rez = min(rez, died)
                 AddHeroCreatures(hero, creature, rez)
@@ -1041,7 +1041,7 @@ function Routine_GainBonusExpAndRes(player, hero, combatIndex)
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 0)
     for i = 0,stacks-1 do
         local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 0, i)
-        local tier = CREATURES[creature][2]
+        local tier = GetTier(creature)
         local value = 2*tier + power(2, tier)
         total = total + count * value
     end
@@ -1140,10 +1140,10 @@ function Routine_MultiplyTroops(player, hero)
     end
     local tracker = {}
     for _, cr in GetHeroArmy(hero) do
-        local tier = CREATURES[cr][2]
+        local tier = GetTier(cr)
         if cr and cr ~= 0 then
             if not tracker[tier] then
-                if CREATURES[cr][1] == INFERNO then
+                if GetFaction(cr) == INFERNO then
                     local growth = 0
                     for town, mult in towns do
                         if GetTownBuildingLevel(town, 6 + tier) ~= 0 then
@@ -1174,8 +1174,8 @@ function Routine_GainArmyReinforcement(player, hero, combatIndex)
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
     for i = 0,stacks-1 do
         local creature, _, _ = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
-        if CREATURES[creature][1] == STRONGHOLD then
-            local tier = CREATURES[creature][2]
+        if GetFaction(creature) == STRONGHOLD then
+            local tier = GetTier(creature)
             if not mem_tiers[tier] and tier ~= 6 then
                 local div = tier * (tier + 1)
                 local nb = trunc(1.5 * GetHeroLevel(hero) / div)
@@ -1319,8 +1319,8 @@ function Routine_GainRandomDragon(player, hero)
     log.debug("$ Routine_GainRandomDragon")
     local dragons = {}
     for i, cr in GetHeroArmy(hero) do
-        local faction = CREATURES[cr][1]
-        local tier = CREATURES[cr][2]
+        local faction = GetFaction(cr)
+        local tier = GetTier(cr)
         if tier == 7 then
             if faction == DUNGEON or faction == FORTRESS or faction == PRESERVE 
             or cr == CREATURE_BONE_DRAGON or cr == CREATURE_SHADOW_DRAGON or cr == CREATURE_HORROR_DRAGON

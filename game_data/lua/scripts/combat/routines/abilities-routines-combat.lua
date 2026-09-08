@@ -42,7 +42,7 @@ function Routine_AbilityMagneticField(side, unit)
     local target = {x=0,y=0}
     for i,cr in GetUnits(1-side, CREATURE) do
         local type = GetCreatureType(cr)
-        local tier = CREATURES[type][2]
+        local tier = GetTier(type)
         if tier <= 3 then
             local xx,yy = GetUnitPosition(cr)
             local dx = x-xx
