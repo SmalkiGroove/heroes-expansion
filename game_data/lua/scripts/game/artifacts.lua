@@ -318,10 +318,10 @@ ARTFSET_ACADEMY_4PC = 9         -- casters in hero's army have double mana and s
 ARTFSET_ACADEMY_4PCX = 10       -- ^ mages gain max hp
 ARTFSET_ACADEMY_6PC = 11        -- casters in hero's army start with max atb
 ARTFSET_ACADEMY_6PCX = 12       -- ^ mages also use power feed
-ARTFSET_DWARVEN_4PC = 13        -- 
-ARTFSET_DWARVEN_4PCX = 14       --
-ARTFSET_DWARVEN_6PC = 15        --
-ARTFSET_DWARVEN_6PCX = 16       --
+ARTFSET_DWARVEN_4PC = 13        -- doubles the bonus att/def from offensive/defensive formation
+ARTFSET_DWARVEN_4PCX = 14       -- ^ dwarf creatures in hero's army gain battle leader and aura of bravery
+ARTFSET_DWARVEN_6PC = 15        -- creatures gain spell-proof
+ARTFSET_DWARVEN_6PCX = 16       -- ^ unlimited uses for runes
 ARTFSET_NECRO_4PC = 17          -- summons a stack of bone dragons on combat start
 ARTFSET_NECRO_4PCX = 18         -- ^ spectral dragons instead
 ARTFSET_NECRO_6PC = 19          -- all creatures in hero's army are undead
@@ -332,12 +332,12 @@ ARTFSET_INFERNO_6PC = 23        -- reduce enemy units luck
 ARTFSET_INFERNO_6PCX = 24       -- ^ inferno creatures have fire shield
 ARTFSET_DUNGEON_4PC = 25        -- gain spellpower for dark spells
 ARTFSET_DUNGEON_4PCX = 26       -- ^ hero can cast mass slow and confusion
-ARTFSET_DUNGEON_6PC = 27        -- 
-ARTFSET_DUNGEON_6PCX = 28       --
+ARTFSET_DUNGEON_6PC = 27        -- creatures are immuned to cotn and gain +2 initiative
+ARTFSET_DUNGEON_6PCX = 28       -- ^ dark elf creatures gain immunity to mind control
 ARTFSET_ORCS_4PC = 29           -- creatures in hero's army gain the beat-up ability
 ARTFSET_ORCS_4PCX = 30          -- ^ gain 100 rage points at the start of combat
-ARTFSET_ORCS_6PC = 31           -- 
-ARTFSET_ORCS_6PCX = 32          --
+ARTFSET_ORCS_6PC = 31           -- creatures in hero's army gain +2 speed and morale
+ARTFSET_ORCS_6PCX = 32          -- ^ gain 250 rage points at the start of combat
 ARTFSET_DRAGON_4PC = 33         -- summon the legendary dragon when any stack is killed
 ARTFSET_DRAGON_6PC = 34         -- summon the legendary dragon when combat starts
 ARTFSET_DRAGON_8PC = 35         -- summon twice the amount of legendary dragons and they start with max atb
@@ -393,7 +393,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_ENDLESS_POUCH_OF_GOLD]         = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_ANGEL_WINGS]                   = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_NONE, special=1},
     [ARTIFACT_CAPE_OF_KINGS]                 = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_NONE, special=0},
-    [ARTIFACT_SOLAR_RING]                    = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_NONE, special=0},
+    [ARTIFACT_SOLAR_RING]                    = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_CLOAK_OF_DEATHS_SHADOW]        = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_NECRO, special=0},
     [ARTIFACT_TURBAN_OF_ENLIGHTMENT]         = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_ENLIGHTEN, special=0},
     [ARTIFACT_SCALE_MAIL_OF_ENLIGHTMENT]     = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_BODY, set=ARTIFACT_SET_ENLIGHTEN, special=0},
@@ -446,7 +446,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_RUNIC_WAR_HARNESS]             = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_BODY, set=ARTIFACT_SET_WARMAGE, special=0},
     [ARTIFACT_SKULL_OF_THE_FORBIDDEN]        = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_FROZEN_HEART]                  = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_FROST, special=0},
-    [ARTIFACT_PHOENIX_FEATHER_CAPE]          = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_NONE, special=0},
+    [ARTIFACT_PHOENIX_FEATHER_CAPE]          = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_RUNE_OF_FLAME]                 = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_DWARVEN, special=0},
     [ARTIFACT_TAROT_DECK]                    = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_CROWN_OF_LEADER]               = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_NONE, special=0},
@@ -466,7 +466,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_ALTAR_OF_ELEMENTS_SHARD]       = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_NECK, set=ARTIFACT_SET_DUNGEON, special=0},
     [ARTIFACT_ELDENAS_RED_SCARF]             = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_NECK, set=ARTIFACT_SET_ELDENA, special=0},
     [ARTIFACT_ELDENAS_CIRCLET]               = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_ELDENA, special=0},
-    [ARTIFACT_NAGA_COMMANDERS_HELMET]        = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_NONE, special=1},
+    [ARTIFACT_NAGA_COMMANDERS_HELMET]        = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_NONE, special=1},
     [ARTIFACT_NECKLACE_OF_THE_BLOODY_CLAW]   = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_NECK, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_RING_OF_CELERITY]              = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_ELDENAS_RED_COAT]              = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_ELDENA, special=0},
@@ -493,7 +493,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_AVENGER_BOW]                   = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_SYLVAN, special=0},
     [ARTIFACT_CAPTAINS_HOOK]                 = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_SAILOR, special=1},
     [ARTIFACT_PLUNDERER_SHOES]               = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_BANDIT, special=0},
-    [ARTIFACT_BUTCHER_GLAIVE]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_NONE, special=0},
+    [ARTIFACT_BUTCHER_GLAIVE]                = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_CELESTIAL_JUSTICAR_SHIELD]     = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_ARCHANGEL, special=0},
     [ARTIFACT_STAFF_OF_THE_SAINT]            = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_SAINT, special=0},
     [ARTIFACT_BACKPACK_OF_THE_OPEN_ROAD]     = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_WANDERER, special=0},
@@ -535,7 +535,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_STAFF_OF_THE_LYRE]             = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_ENLIGHTEN, special=0},
     [ARTIFACT_SANCTUARYS_CROWN]              = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_PENDANT_OF_THE_LYRE]           = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_NECK, set=ARTIFACT_SET_ENLIGHTEN, special=0},
-    [ARTIFACT_ANCIENT_PROTECTION_CHARM]      = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_NECK, set=ARTIFACT_SET_NONE, special=0},
+    [ARTIFACT_ANCIENT_PROTECTION_CHARM]      = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_NECK, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_SPIRIT_OF_OPPRESSION]          = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_NECK, set=ARTIFACT_SET_SPIRIT, special=0},
     [ARTIFACT_CRIMSON_SCYTHE]                = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_PIRATE_SMASHER]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_SAILOR, special=1},
@@ -547,7 +547,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_MOON_CHARM]                    = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_NECK, set=ARTIFACT_SET_MOON, special=0},
     [ARTIFACT_FORGOTTEN_RING]                = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_BEARHIDE_WRAPS]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_BANDIT, special=0},
-    [ARTIFACT_MOONLIGHT_COAT]                = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_MOON, special=0},
+    [ARTIFACT_MOONLIGHT_COAT]                = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_BODY, set=ARTIFACT_SET_MOON, special=0},
     [ARTIFACT_DRAGONSBANE]                   = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_CUIRASS_OF_THE_STAG]           = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_BODY, set=ARTIFACT_SET_BESTIAL, special=0},
     [ARTIFACT_WRAPS_OF_THE_OWL]              = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_BESTIAL, special=0},
