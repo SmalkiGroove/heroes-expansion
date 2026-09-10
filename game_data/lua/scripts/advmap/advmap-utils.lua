@@ -7,6 +7,21 @@ function IsDuelMode()
 	return DUEL_MODE ~= -1
 end
 
+function PlayerResponseOk(player)
+	PLAYER_RESPONSE[player] = 1
+end
+
+function PlayerResponseCancel(player)
+	PLAYER_RESPONSE[player] = nil
+end
+
+function Prompt(player, message)
+	PLAYER_RESPONSE[player] = 0
+	QuestionBoxForPlayers(GetPlayerFilter(player), message, "PlayerResponseOk("..player..")", "PlayerResponseCancel("..player..")")
+	while PLAYER_RESPONSE[player] == 0 do sleep() end
+	return PLAYER_RESPONSE[player]
+end
+
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------

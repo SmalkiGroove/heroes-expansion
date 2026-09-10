@@ -1308,7 +1308,8 @@ end
 function Routine_GainPotionLevelUp(player, hero, level)
     log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GainPotionLevelUp")
     log.debug("$ Routine_GainPotionLevelUp")
-    local potion = random(137, 139, level)
+    local potion = random(204, 209, level)
+    GiveArtifact(hero, )
     GiveArtifact(hero, potion)
 end
 

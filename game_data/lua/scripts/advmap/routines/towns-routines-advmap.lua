@@ -123,7 +123,7 @@ function Routine_AlchemyLab(player, town)
             awards[res] = (awards[res] or 0) + n
             total_value = total_value - 40*n
         else
-            local potion = ARTIFACT_POTION_OF_MANA + mod(total_value, 3)
+            local potion = 204 + mod(total_value, 3)
             awards[potion] = (awards[potion] or 0) + 1
             total_value = total_value - 100
         end

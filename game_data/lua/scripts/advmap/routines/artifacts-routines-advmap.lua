@@ -1,4 +1,138 @@
 
+function Routine_ArtifactPotionOfEnlightenment(player, hero)
+    log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactPotionOfEnlightenment")
+    log.debug("$ Routine_ArtifactPotionOfEnlightenment")
+    if Prompt(player, "/Text/Game/Scripts/Artifacts/PotionOfEnlightenment.txt") then
+        RemoveArtefact(hero, ARTIFACT_POTION_OF_ENLIGHTENMENT)
+        local mana = 30 + GetHeroStat(hero, STAT_KNOWLEDGE)
+        local exp = 1000 + round(0.02 * GetHeroStat(hero, STAT_EXPERIENCE))
+        ChangeHeroStat(hero, STAT_EXPERIENCE, exp)
+        AddHeroManaUnbound(player, hero, mana)
+    end
+end
+
+function Routine_ArtifactPotionOfPower(player, hero)
+    log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactPotionOfPower")
+    log.debug("$ Routine_ArtifactPotionOfPower")
+    if Prompt(player, "/Text/Game/Scripts/Artifacts/PotionOfPower.txt") then
+        RemoveArtefact(hero, ARTIFACT_POTION_OF_POWER)
+        ChangeHeroStat(hero, STAT_SPELL_POWER, 1)
+    end
+end
+
+function Routine_ArtifactPotionOfStamina(player, hero)
+    log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactPotionOfStamina")
+    log.debug("$ Routine_ArtifactPotionOfStamina")
+    if Prompt(player, "/Text/Game/Scripts/Artifacts/PotionOfStamina.txt") then
+        RemoveArtefact(hero, ARTIFACT_POTION_OF_STAMINA)
+        local value = 2000
+        while value > 0 do
+            sleep(2)
+            if not IsPlayerCurrent(player) then break end
+            if GetHeroStat(hero, STAT_MOVE_POINTS) < 1000 then
+                ChangeHeroStat(hero, STAT_MOVE_POINTS, 50)
+                value = value - 50
+            end
+        end
+    end
+end
+
+function Routine_ArtifactPotionOfVision(player, hero)
+    log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactPotionOfVision")
+    log.debug("$ Routine_ArtifactPotionOfVision")
+    if Prompt(player, "/Text/Game/Scripts/Artifacts/PotionOfVision.txt") then
+        RemoveArtefact(hero, ARTIFACT_POTION_OF_VISION)
+        local x, y, z, r
+        for _,h in GetAllNames(0) do
+            x, y, z = GetObjectPosition(h)
+            r = (h == hero) and 30 or 3
+            OpenCircleFog(x, y, z, r, player)
+        end
+        for obj,t in MAP_TOWNS do
+            if GetObjectOwner(obj) > 0 then
+                OpenCircleFog(t.x, t.y, t.z, 5, player)
+            end
+        end
+        for _,b in Dwellings_T1 do
+            for _,obj in GetObjectNamesByType(b) do
+                if GetObjectOwner(obj) > 0 then
+                    x, y, z = GetObjectPosition(obj)
+                    OpenCircleFog(x, y, z, 3, player)
+                end
+            end
+        end
+        for _,b in Dwellings_T2 do
+            for _,obj in GetObjectNamesByType(b) do
+                if GetObjectOwner(obj) > 0 then
+                    x, y, z = GetObjectPosition(obj)
+                    OpenCircleFog(x, y, z, 3, player)
+                end
+            end
+        end
+        for _,b in Dwellings_T3 do
+            for _,obj in GetObjectNamesByType(b) do
+                if GetObjectOwner(obj) > 0 then
+                    x, y, z = GetObjectPosition(obj)
+                    OpenCircleFog(x, y, z, 3, player)
+                end
+            end
+        end
+        for _,b in Dwellings_MP do
+            for _,obj in GetObjectNamesByType(b) do
+                if GetObjectOwner(obj) > 0 then
+                    x, y, z = GetObjectPosition(obj)
+                    OpenCircleFog(x, y, z, 3, player)
+                end
+            end
+        end
+        for b,_ in RESOURCE_GENERATING_OBJECTS do
+            for _,obj in GetObjectNamesByType(b) do
+                if GetObjectOwner(obj) > 0 then
+                    x, y, z = GetObjectPosition(obj)
+                    OpenCircleFog(x, y, z, 3, player)
+                end
+            end
+        end
+    end
+end
+
+function Routine_ArtifactPotionOfTeleportation(player, hero)
+    log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactPotionOfTeleportation")
+    log.debug("$ Routine_ArtifactPotionOfTeleportation")
+    if Prompt(player, "/Text/Game/Scripts/Artifacts/PotionOfTeleportation.txt") then
+        RemoveArtefact(hero, ARTIFACT_POTION_OF_TELEPORTATION)
+        local x, y, z = GetObjectPosition(hero)
+        local size = GetTerrainSize() - 1
+        local tx = random(0, size, x)
+        local ty = random(0, size, y)
+    end
+end
+
+function Routine_ArtifactPotionOfSkill(player, hero)
+    log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactPotionOfSkill")
+    log.debug("$ Routine_ArtifactPotionOfSkill")
+    if Prompt(player, "/Text/Game/Scripts/Artifacts/PotionOfSkill.txt") then
+        RemoveArtefact(hero, ARTIFACT_POTION_OF_SKILL)
+        local mastery
+        for skill,_ in SKILLS_COMMON do
+            mastery = GetHeroSkillMastery(hero, skill)
+            if mastery == 1 or mastery == 2 then
+                GiveHeroSkill(hero, skill) return
+            end
+        end
+        mastery = GetHeroSkillMastery(hero, SKILL_SPIRITISM)
+        if mastery == 1 or mastery == 2 then
+            GiveHeroSkill(hero, SKILL_SPIRITISM) return
+        end
+        local main = SKILLS_BY_FACTION[HEROES[hero].faction].base
+        mastery = GetHeroSkillMastery(hero, main)
+        if mastery == 1 or mastery == 2 then
+            GiveHeroSkill(hero, main)
+        end
+    end
+end
+
+
 function Routine_ArtifactPouchOfGolds(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactPouchOfGolds")
     log.debug("$ Routine_ArtifactPouchOfGolds")
@@ -127,36 +261,13 @@ function Routine_ArtifactSmithyHammer(player, hero)
     GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_DEFENCE, 3)
 end
 
-function Routine_ArtifactPotionOfMana(player, hero)
-    log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactPotionOfMana")
-    log.debug("$ Routine_ArtifactPotionOfMana")
-    local value = 30 + GetHeroStat(hero, STAT_KNOWLEDGE)
-    AddHeroManaUnbound(player, hero, value)
-    RemoveArtefact(hero, ARTIFACT_POTION_OF_MANA)
-end
-
-function Routine_ArtifactPotionOfStamina(player, hero)
-    log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactPotionOfStamina")
-    log.debug("$ Routine_ArtifactPotionOfStamina")
-    local value = 1000
-    while value > 0 do
-        if not IsPlayerCurrent(player) then break end
-        if GetHeroStat(hero, STAT_MOVE_POINTS) < 1000 then
-            ChangeHeroStat(hero, STAT_MOVE_POINTS, 50)
-            value = value - 50
-        end
-        sleep(2)
-    end
-    RemoveArtefact(hero, ARTIFACT_POTION_OF_STAMINA)
-end
-
-function Routine_ArtifactPotionOfExperience(player, hero)
-    log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactPotionOfExperience")
-    log.debug("$ Routine_ArtifactPotionOfExperience")
-    local value = 1000 + round(0.02 * GetHeroStat(hero, STAT_EXPERIENCE))
-    GiveExp(hero, value)
-    RemoveArtefact(hero, ARTIFACT_POTION_OF_EXPERIENCE)
-end
+-- function Routine_ArtifactPotionOfExperience(player, hero)
+--     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactPotionOfExperience")
+--     log.debug("$ Routine_ArtifactPotionOfExperience")
+--     local value = 1000 + round(0.02 * GetHeroStat(hero, STAT_EXPERIENCE))
+--     GiveExp(hero, value)
+--     RemoveArtefact(hero, ARTIFACT_POTION_OF_EXPERIENCE)
+-- end
 
 function Routine_ArtifactMagistersSandals(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactMagistersSandals")
@@ -462,6 +573,12 @@ end
 
 
 CONTINUOUS_TRIGGER_ARTIFACTS_ROUTINES = {
+    [ARTIFACT_POTION_OF_ENLIGHTENMENT] = Routine_ArtifactPotionOfEnlightenment,
+    [ARTIFACT_POTION_OF_POWER] = Routine_ArtifactPotionOfPower,
+    [ARTIFACT_POTION_OF_STAMINA] = Routine_ArtifactPotionOfStamina,
+    [ARTIFACT_POTION_OF_VISION] = Routine_ArtifactPotionOfVision,
+    [ARTIFACT_POTION_OF_TELEPORTATION] = Routine_ArtifactPotionOfTeleportation,
+    [ARTIFACT_POTION_OF_SKILL] = Routine_ArtifactPotionOfSkill,
 }
 DAILY_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_ENDLESS_POUCH_OF_GOLD] = Routine_ArtifactPouchOfGolds,
@@ -472,9 +589,6 @@ DAILY_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_BOOTS_OF_THE_SWIFT_JOURNEY] = Routine_ArtifactBootsOfSwiftJourney,
     [ARTIFACT_ROBE_OF_THE_MAGISTER] = Routine_ArtifactRobeOfTheMagister,
     [ARTIFACT_DWARVEN_SMITHY_HAMMER] = Routine_ArtifactSmithyHammer,
-    [ARTIFACT_POTION_OF_MANA] = Routine_ArtifactPotionOfMana,
-    [ARTIFACT_POTION_OF_STAMINA] = Routine_ArtifactPotionOfStamina,
-    [ARTIFACT_POTION_OF_EXPERIENCE] = Routine_ArtifactPotionOfExperience,
 }
 WEEKLY_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_MAGISTERS_SANDALS] = Routine_ArtifactMagistersSandals,
