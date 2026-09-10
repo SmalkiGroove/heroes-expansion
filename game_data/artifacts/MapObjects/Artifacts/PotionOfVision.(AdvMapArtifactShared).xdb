@@ -17,8 +17,8 @@
 	<Effect href="/Effects/_(Effect)/ResoursesAndChests/Chest.xdb#xpointer(/Effect)"/>
 	<EffectWhenOwned />
 	<messagesFileRef>
-		<Item href="/Text/Game/Artifacts/PotionOfExperience/Name.txt" />
-		<Item href="/Text/Game/Artifacts/PotionOfExperience/Description.txt" />
+		<Item href="/Text/Game/Artifacts/PotionOfVision/Name.txt" />
+		<Item href="/Text/Game/Artifacts/PotionOfVision/Description.txt" />
 	</messagesFileRef>
 	<WaterBased>false</WaterBased>
 	<ApplyHeroTrace>false</ApplyHeroTrace>
@@ -31,5 +31,5 @@
 	<RazedStatic />
 	<Icon128 />
 	<Type>ARTF_RANDOM_SPECIFIC</Type>
-	<ArtifactID>ARTIFACT_POTION_OF_EXPERIENCE</ArtifactID>
+	<ArtifactID>POTION_OF_VISION</ArtifactID>
 </AdvMapArtifactShared>

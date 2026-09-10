@@ -105,6 +105,11 @@ function Routine_ArtifactPotionOfTeleportation(player, hero)
         local size = GetTerrainSize() - 1
         local tx = random(0, size, x)
         local ty = random(0, size, y)
+        while not IsTilePassable(tx, ty, z) do
+            tx = random(0, size, x)
+            ty = random(0, size, y)
+        end
+        SetObjectPosition(hero, tx, ty, z, 1)
     end
 end
 

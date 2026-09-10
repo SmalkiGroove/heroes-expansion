@@ -17,8 +17,8 @@
 	<Effect href="/Effects/_(Effect)/ResoursesAndChests/Chest.xdb#xpointer(/Effect)"/>
 	<EffectWhenOwned />
 	<messagesFileRef>
-		<Item href="/Text/Game/Artifacts/PotionOfStamina/Name.txt" />
-		<Item href="/Text/Game/Artifacts/PotionOfStamina/Description.txt" />
+		<Item href="/Text/Game/Artifacts/PotionOfPower/Name.txt" />
+		<Item href="/Text/Game/Artifacts/PotionOfPower/Description.txt" />
 	</messagesFileRef>
 	<WaterBased>false</WaterBased>
 	<ApplyHeroTrace>false</ApplyHeroTrace>
@@ -31,5 +31,5 @@
 	<RazedStatic />
 	<Icon128 />
 	<Type>ARTF_RANDOM_SPECIFIC</Type>
-	<ArtifactID>POTION_OF_STAMINA</ArtifactID>
+	<ArtifactID>POTION_OF_POWER</ArtifactID>
 </AdvMapArtifactShared>
