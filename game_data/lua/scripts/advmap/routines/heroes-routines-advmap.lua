@@ -1309,8 +1309,9 @@ function Routine_GainPotionLevelUp(player, hero, level)
     log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GainPotionLevelUp")
     log.debug("$ Routine_GainPotionLevelUp")
     local potion = random(204, 209, level)
-    GiveArtifact(hero, )
-    GiveArtifact(hero, potion)
+    GiveArtifact(hero, ARTIFACT_FILLER_POCKET) sleep()
+    GiveArtifact(hero, potion) sleep()
+    RemoveArtefact(hero, ARTIFACT_FILLER_POCKET)
 end
 
 
@@ -1543,7 +1544,7 @@ function DoHeroSpeRoutine_Continuous(player, hero)
     log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: DoHeroSpeRoutine_Continuous")
     -- log.debug("$ DoHeroSpeRoutine_Continuous - "..hero)
     if CONTINUOUS_TRIGGER_HERO_ROUTINES[hero] then
-        CONTINUOUS_TRIGGER_HERO_ROUTINES[hero](player, hero)
+        startThread(CONTINUOUS_TRIGGER_HERO_ROUTINES[hero], player, hero)
     end
 end
 

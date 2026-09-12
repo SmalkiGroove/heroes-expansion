@@ -43,54 +43,37 @@ function Routine_ArtifactPotionOfVision(player, hero)
     if Prompt(player, "/Text/Game/Scripts/Artifacts/PotionOfVision.txt") then
         RemoveArtefact(hero, ARTIFACT_POTION_OF_VISION)
         local x, y, z, r
-        for _,h in GetAllNames(0) do
+        for _,h in GetObjectNamesByType("HERO") do
             x, y, z = GetObjectPosition(h)
             r = (h == hero) and 30 or 3
             OpenCircleFog(x, y, z, r, player)
         end
         for obj,t in MAP_TOWNS do
-            if GetObjectOwner(obj) > 0 then
-                OpenCircleFog(t.x, t.y, t.z, 5, player)
-            end
+            if GetObjectOwner(obj) > 0 then OpenCircleFog(t.x, t.y, t.z, 8, player) end
         end
         for _,b in Dwellings_T1 do
             for _,obj in GetObjectNamesByType(b) do
-                if GetObjectOwner(obj) > 0 then
-                    x, y, z = GetObjectPosition(obj)
-                    OpenCircleFog(x, y, z, 3, player)
-                end
+                if GetObjectOwner(obj) > 0 then x, y, z = GetObjectPosition(obj); OpenCircleFog(x, y, z, 3, player) end
             end
         end
         for _,b in Dwellings_T2 do
             for _,obj in GetObjectNamesByType(b) do
-                if GetObjectOwner(obj) > 0 then
-                    x, y, z = GetObjectPosition(obj)
-                    OpenCircleFog(x, y, z, 3, player)
-                end
+                if GetObjectOwner(obj) > 0 then x, y, z = GetObjectPosition(obj); OpenCircleFog(x, y, z, 3, player) end
             end
         end
         for _,b in Dwellings_T3 do
             for _,obj in GetObjectNamesByType(b) do
-                if GetObjectOwner(obj) > 0 then
-                    x, y, z = GetObjectPosition(obj)
-                    OpenCircleFog(x, y, z, 3, player)
-                end
+                if GetObjectOwner(obj) > 0 then x, y, z = GetObjectPosition(obj); OpenCircleFog(x, y, z, 3, player) end
             end
         end
         for _,b in Dwellings_MP do
             for _,obj in GetObjectNamesByType(b) do
-                if GetObjectOwner(obj) > 0 then
-                    x, y, z = GetObjectPosition(obj)
-                    OpenCircleFog(x, y, z, 3, player)
-                end
+                if GetObjectOwner(obj) > 0 then x, y, z = GetObjectPosition(obj); OpenCircleFog(x, y, z, 3, player) end
             end
         end
         for b,_ in RESOURCE_GENERATING_OBJECTS do
             for _,obj in GetObjectNamesByType(b) do
-                if GetObjectOwner(obj) > 0 then
-                    x, y, z = GetObjectPosition(obj)
-                    OpenCircleFog(x, y, z, 3, player)
-                end
+                if GetObjectOwner(obj) > 0 then x, y, z = GetObjectPosition(obj); OpenCircleFog(x, y, z, 3, player) end
             end
         end
     end
@@ -109,7 +92,9 @@ function Routine_ArtifactPotionOfTeleportation(player, hero)
             tx = random(0, size, x)
             ty = random(0, size, y)
         end
-        SetObjectPosition(hero, tx, ty, z, 1)
+        SetObjectPosition(hero, tx, ty, z, 2)
+        repeat sleep(10) until not IsPlayerCurrent(player)
+        SetObjectPosition(hero, x, y, z, 2)
     end
 end
 
@@ -648,12 +633,12 @@ function DoArtifactsRoutine_Continuous(player, hero)
     -- log.debug("$ DoArtifactsRoutine_Continuous - "..hero)
     for k,v in CONTINUOUS_TRIGGER_ARTIFACTS_ROUTINES do
         if HasArtefact(hero, k, 1) then
-            v(player, hero)
+            startThread(v, player, hero)
         end
     end
     for k,v in CONTINUOUS_TRIGGER_ARTFSETS_ROUTINES do
         if HERO_ARTFSETS_STATUS[hero][k] == 1 then
-            v(player, hero)
+            startThread(v, player, hero)
         end
     end
 end
