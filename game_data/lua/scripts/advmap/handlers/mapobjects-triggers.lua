@@ -141,15 +141,15 @@ function Trigger_WitchHut_confirm(player, hero, obj, givestat)
     log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_WitchHut_confirm")
     local res = Var_WitchHutResCost[givestat]
     if GetPlayerResource(player, res) >= 3 then
-        MessageBoxForPlayers(
-            GetPlayerFilter(player),
-            {"/Text/Game/Scripts/MapObjects/WitchHutAccepted.txt"; stat=ATTRIBUTE_NAME_FILE[givestat]},
-            "NoneRoutine"
-        )
+        Popup(player, {"/Text/Game/Scripts/MapObjects/WitchHutAccepted.txt"; stat=ATTRIBUTE_NAME_FILE[givestat]})
         TakeAwayResources(player, res, 3)
-        ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
+        if IsDuelMode() then
+            ChangeHeroStat(hero, STAT_EXPERIENCE, 500000)
+        else
+            ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
+            ChangeHeroStat(hero, STAT_EXPERIENCE, 5000)
+        end
         ChangeHeroStat(hero, givestat, 2)
-        GiveExp(hero, 5000)
         Var_WitchHutVisited[obj] = 1
         for _,h in GetPlayerHeroes(player) do MarkObjectAsVisited(obj, h) end
     else
@@ -158,11 +158,11 @@ function Trigger_WitchHut_confirm(player, hero, obj, givestat)
 end
 function Trigger_WitchHut_cancel(player, hero, obj)
     log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_WitchHut_cancel")
-    MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Game/Scripts/MapObjects/WitchHutRefused.txt", "NoneRoutine")
+    Popup(player, "/Text/Game/Scripts/MapObjects/WitchHutRefused.txt")
 end
 function Trigger_WitchHut_visited(player, hero, obj)
     log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_WitchHut_visited")
-    MessageBoxForPlayers(GetPlayerFilter(player), "/Text/Game/Scripts/MapObjects/WitchHutVisited.txt", "NoneRoutine")
+    Popup(player, "/Text/Game/Scripts/MapObjects/WitchHutVisited.txt")
     for _,h in GetPlayerHeroes(player) do MarkObjectAsVisited(obj, h) end
 end
 function WitchHuts_reset()
@@ -244,7 +244,7 @@ function Trigger_WarAcademy(hero, obj)
     if IsAIPlayer(player) then
         NoOverrideAI(obj, hero, "Trigger_WarAcademy")
     elseif Var_WarAcademyVisited[obj][hero] == 1 then
-        MessageBoxPEST(player, "/Text/Game/Scripts/MapObjects/WarAcademyVisited.txt", "NoneRoutine")
+        Popup(player, "/Text/Game/Scripts/MapObjects/WarAcademyVisited.txt")
     else
         local stat = GetHeroLowestStat(hero)
         local wm = WAR_MACHINE_AMMO_CART
@@ -263,9 +263,13 @@ function Trigger_WarAcademy(hero, obj)
 end
 function Trigger_WarAcademy_confirm(player, hero, obj, stat, wm)
     log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_WarAcademy_confirm")
-    GiveHeroWarMachine(hero, wm)
-    ChangeHeroStat(hero, stat, 1)
-    ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
+    if IsDuelMode() then
+        ChangeHeroStat(hero, stat, 2)
+    else
+        GiveHeroWarMachine(hero, wm)
+        ChangeHeroStat(hero, stat, 1)
+        ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
+    end
     Var_WarAcademyVisited[obj][hero] = 1
     MarkObjectAsVisited(obj, hero)
 end
@@ -306,7 +310,7 @@ function Trigger_IdolOfFortune(hero, obj)
         MarkObjectAsVisited(obj, hero)
         local bonus = random(0,6,TURN)
         GiveHeroBattleBonus(hero, bonus, Var_IdolOfFortuneBonus[bonus])
-        MessageBoxPEST(player, "/Text/Game/Scripts/MapObjects/IdolOfFortune.txt", "NoneRoutine")
+        Popup(player, "/Text/Game/Scripts/MapObjects/IdolOfFortune.txt")
     end
 end
 function IdolOfFortune_daily()
@@ -396,7 +400,7 @@ function Trigger_MotherEarthShrine_confirm(player, hero)
             end
         end
     end
-    MessageBoxPEST(player, {"/Text/Game/Scripts/MapObjects/MotherEarthShrineDone.txt"; amount=total}, "NoneRoutine")
+    Popup(player, {"/Text/Game/Scripts/MapObjects/MotherEarthShrineDone.txt"; amount=total})
 end
 
 
@@ -407,7 +411,7 @@ function Trigger_FortuitousSanctuary(hero, obj)
     if IsAIPlayer(player) then
         NoOverrideAI(obj, hero, "Trigger_FortuitousSanctuary")
     elseif Var_FortuitousSanctuaryVisited[obj] == 1 then
-        MessageBoxPEST(player, "/Text/Game/Scripts/MapObjects/ArcaneSanctuaryVisited.txt", "NoneRoutine")
+        Popup(player, "/Text/Game/Scripts/MapObjects/ArcaneSanctuaryVisited.txt")
     else
         local required_skill = {11, 11, 11, 10, 10, 10, 12, 12, 12, 9, 9, 9}
         local unknown_spells = {}
@@ -421,7 +425,7 @@ function Trigger_FortuitousSanctuary(hero, obj)
             if n > 0 then c = circle break end
         end
         if n == 0 then
-            MessageBoxPEST(player, "/Text/Game/Scripts/MapObjects/ArcaneSanctuaryCancel.txt", "NoneRoutine") return
+            Popup(player, "/Text/Game/Scripts/MapObjects/ArcaneSanctuaryCancel.txt") return
         elseif n == 1 then
             TeachHeroSpell(hero, unknown_spells[1])
         else
@@ -429,7 +433,7 @@ function Trigger_FortuitousSanctuary(hero, obj)
             TeachHeroSpell(hero, s)
         end
         local txt_arg = "/Text/Game/Scripts/_n/"..c..".txt"
-        MessageBoxPEST(player, {"/Text/Game/Scripts/MapObjects/ArcaneSanctuaryAccept.txt"; arg=txt_arg}, "NoneRoutine")
+        Popup(player, {"/Text/Game/Scripts/MapObjects/ArcaneSanctuaryAccept.txt"; arg=txt_arg})
         Var_FortuitousSanctuaryVisited[obj] = 1
         MarkObjectAsVisited(obj, hero)
     end

@@ -325,7 +325,7 @@ else
 		Trigger(OBJECTIVE_STATE_CHANGE_TRIGGER, 'H5X', FIRST_PLAYER, 'Init') sleep()
 		ExecConsoleCommand("@if GetObjectiveState('H5X', FIRST_PLAYER) == OBJECTIVE_UNKNOWN then SetObjectiveState('H5X', OBJECTIVE_ACTIVE, FIRST_PLAYER) else LoadedGame_GameVars() end")
 	else
-		MessageBoxForPlayers(GetPlayerFilter(FIRST_PLAYER), "/Text/Game/Scripts/InitFail.txt")
+		Popup(FIRST_PLAYER, "/Text/Game/Scripts/InitFail.txt")
 	end
 end
 

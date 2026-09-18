@@ -2,13 +2,10 @@
 function ActivateInfoWindow(player, hero)
     log.trace("/scripts/advmap/handlers/custom-abilities.lua: ActivateInfoWindow")
     log.debug("$ ActivateInfoWindow")
-    MessageBoxForPlayers(
-        GetPlayerFilter(player),
-        {"/Text/Game/Scripts/InfoWindow.txt";
-            something1="Toto\nTutu<br>Titi"
-        },
-        "NoneRoutine"
-    )
+    Popup(player, {
+        "/Text/Game/Scripts/InfoWindow.txt";
+        something1="Toto\nTutu<br>Titi"
+    })
 end
 
 

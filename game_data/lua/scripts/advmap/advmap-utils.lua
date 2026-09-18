@@ -22,6 +22,17 @@ function Prompt(player, message)
 	return PLAYER_RESPONSE[player]
 end
 
+function Popup(player, message)
+	UnblockGame()
+	repeat
+		if GetPlayerState(player) ~= 1 then return end
+		sleep()
+		UnblockGame()
+	until IsPlayerCurrent(player)
+	MessageBoxForPlayers(GetPlayerFilter(player), message, "NoneRoutine")
+	UnblockGame()
+end
+
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------

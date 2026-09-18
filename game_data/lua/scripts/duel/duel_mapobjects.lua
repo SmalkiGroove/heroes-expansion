@@ -1,12 +1,11 @@
 
 function DuelOverrideStart()
-    Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_START_1", "DuelTriggerStart1")
-    Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_START_2", "DuelTriggerStart2")
-    SetObjectEnabled("DUEL_START_1", nil)
-    SetObjectEnabled("DUEL_START_2", nil)
+    Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_START", "DuelTriggerStart")
+    SetObjectEnabled("DUEL_START", nil)
 end
-function DuelTriggerStart1(hero, obj) DuelSetup(1, hero) end
-function DuelTriggerStart2(hero, obj) DuelSetup(2, hero) end
+function DuelTriggerStart(hero, obj)
+    ExecConsoleCommand("@DuelStart("..GetObjectOwner(hero)..", '"..hero.."')")
+end
 
 
 function DuelOverrideMonolith()
@@ -44,9 +43,11 @@ function DuelTriggerDolmen(hero, obj)
     if DUEL_DOLMEN_LEVELS[player] < DUEL_DOLMEN_MAX_LEVEL then
         LevelUpHero(hero)
         DUEL_DOLMEN_LEVELS[player] = DUEL_DOLMEN_LEVELS[player] + 1
+        ShowFlyingSign({"/Text/Duel/DolmenRemainingUses.txt"; nb=(DUEL_DOLMEN_MAX_LEVEL-DUEL_DOLMEN_LEVELS[player])}, hero, player, FLYING_SIGN_TIME)
     else
         Trigger(OBJECT_TOUCH_TRIGGER, obj, nil)
-        MessageBoxPEST(GetPlayerFilter(GetObjectOwner(hero)), "/Text/Duel/DolmenMaxLevel.txt")
+        MarkObjectAsVisited(obj, hero)
+        Popup(player, "/Text/Duel/DolmenMaxLevel.txt")
     end
 end
 

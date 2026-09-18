@@ -1,4 +1,6 @@
 
+IsPESTEnabled = (IsPlayerCurrent(1) and IsPlayerCurrent(2)) or 0
+
 dofile("/scripts/duel/duel_mapobjects.lua")
 dofile("/scripts/duel/duel_armies.lua")
 dofile("/scripts/duel/duel_heroes.lua")
@@ -24,34 +26,22 @@ function DuelGetPlayerStage(player)
 end
 
 function DuelInfoWindow0(player)
-    MessageBoxPEST(GetPlayerFilter(player),
-        "/Text/Duel/InfoStart.txt",
-        "NoneRoutine")
+    startThread(Popup, player, "/Text/Duel/InfoStart.txt")
 end
 function DuelInfoWindow1(player)
-    MessageBoxPEST(GetPlayerFilter(player),
-        "/Text/Duel/InfoSetup.txt",
-        "NoneRoutine")
+    startThread(Popup, player, "/Text/Duel/InfoSetup.txt")
 end
 function DuelInfoWindow2(player)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/InfoAdventure.txt"; days=DUEL_PLAYER_DATA.ADVENTURE_DAYS[player]},
-        "NoneRoutine")
+    startThread(Popup, player, {"/Text/Duel/InfoAdventure.txt"; days=DUEL_PLAYER_DATA.ADVENTURE_DAYS[player]})
 end
 function DuelInfoWindow3(player)
-    MessageBoxPEST(GetPlayerFilter(player),
-        "/Text/Duel/InfoStaging.txt",
-        "NoneRoutine")
+    startThread(Popup, player, "/Text/Duel/InfoStaging.txt")
 end
 function DuelInfoWindow4(player)
-    MessageBoxPEST(GetPlayerFilter(player),
-        "/Text/Duel/InfoCastle.txt",
-        "NoneRoutine")
+    startThread(Popup, player, "/Text/Duel/InfoCastle.txt")
 end
 function DuelInfoWindow5(player)
-    MessageBoxPEST(GetPlayerFilter(player),
-        "/Text/Duel/InfoBattle.txt",
-        "NoneRoutine")
+    startThread(Popup, player, "/Text/Duel/InfoBattle.txt")
 end
 
 DUEL_HERO = {GetPlayerHeroes(1)[0], GetPlayerHeroes(2)[0]}
@@ -89,7 +79,7 @@ function DuelPlayerTown(player) return DUEL_TOWN_NAME[player][DUEL_FACTION[playe
 DUEL_TOWN = {DuelPlayerTown(1), DuelPlayerTown(2)}
 
 
-DUEL_START_COORDINATES = {
+DUEL_SETUP_COORDINATES = {
     {x=93, y=176},
     {x=121, y=176},
 }
@@ -125,6 +115,7 @@ DUEL_TOWNS_COORDINATES = {
 DUEL_ADVENTURE_DAYS = 5 + 2 * DUEL_MODE
 
 DUEL_PLAYER_DATA = {
+    READY = 0,
     ADVENTURE_DAYS = {DUEL_ADVENTURE_DAYS, DUEL_ADVENTURE_DAYS},
     TOTAL_EXP = {0, 0},
 }
@@ -139,7 +130,7 @@ function DuelStartingBonus(player)
     for r = 0,1 do SetPlayerResource(player, r, 2 * amount) end
     for s = 2,5 do SetPlayerResource(player, s, amount) end
     SetPlayerResource(player, FACTION_RESOURCE[DUEL_FACTION[player]], 2 * amount)
-    SetPlayerResource(player, GOLD, 10000 * amount)
+    SetPlayerResource(player, GOLD, 10000 * amount + 20000)
     GiveHeroRandomArtifact(player, DUEL_HERO[player], ARTIFACT_CLASS_MINOR, DUEL_FACTION[player] + 10)
 end
 
@@ -153,10 +144,7 @@ end
 function DuelBorderGuardKey(player, key)
     for k = 1,8 do
         if HasBorderguardKey(player, k) then
-            MessageBoxPEST(GetPlayerFilter(player),
-                "/Text/Duel/BorderGuardKeyOut.txt",
-                "NoneRoutine"
-            ) return
+            Popup(player, "/Text/Duel/BorderGuardKeyOut.txt") return
         end
     end
     QuestionBoxForPlayers(GetPlayerFilter(player),
@@ -170,7 +158,7 @@ function DuelBorderGuardKeyConfirm(player, key)
     if gold < 50000 then return end
     SetPlayerResource(player, GOLD, gold - 50000)
     GiveBorderguardKey(player, key)
-    MessageBoxPEST(GetPlayerFilter(player), {"/Text/Duel/BorderGuardKey.txt"; key=key}, "NoneRoutine")
+    Popup(player, {"/Text/Duel/BorderGuardKey.txt"; key=key})
 end
 
 
@@ -191,9 +179,20 @@ function DuelNextStage(player, hero)
     end
 end
 
+------- Stages entrypoints ---------------------------------------------------
+
+function DuelStart(player, hero)
+    log.debug("DUEL: player "..player.." is ready to start")
+    if IsPESTEnabled == 1 then
+        DUEL_PLAYER_DATA.READY[player] = DUEL_PLAYER_DATA.READY[player] + 1
+        repeat sleep(1) until DUEL_PLAYER_DATA.READY[player] == 2
+    end
+    DuelSetup(player, hero)
+end
+
 function DuelSetup(player, hero)
     log.debug("DUEL: player "..player.." entered setup stage")
-    SetObjectPosition(hero, DUEL_START_COORDINATES[player].x, DUEL_START_COORDINATES[player].y, 0, 4)
+    SetObjectPosition(hero, DUEL_SETUP_COORDINATES[player].x, DUEL_SETUP_COORDINATES[player].y, 0, 4)
     SetObjectRotation(hero, 0)
     DuelSetPlayerStage(player, DUEL_STAGE_SETUP)
 end
@@ -215,7 +214,7 @@ end
 function DuelAdventureDay(player, hero)
     local days = DUEL_PLAYER_DATA.ADVENTURE_DAYS[player] - 1
     if days > 0 then
-        MessageBoxPEST(GetPlayerFilter(player), {"/Text/Duel/NewDay.txt"; days=days}, "NoneRoutine")
+        Popup(player, {"/Text/Duel/NewDay.txt"; days=days})
         DUEL_PLAYER_DATA.ADVENTURE_DAYS[player] = days
         ChangeHeroStat(hero, STAT_MOVE_POINTS, 9999)
     else

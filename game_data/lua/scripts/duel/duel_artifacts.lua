@@ -3,17 +3,15 @@
 function DuelEndlessSackOfGold(player, hero)
     local value = 15000
     GiveResources(player, GOLD, value)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/EndlessSackOfGold.txt"; arg=value},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/EndlessSackOfGold.txt"; arg=value})
 end
 
 function DuelEndlessPouchOfGold(player, hero)
     local value = 5000
     GiveResources(player, GOLD, value)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/EndlessPouchOfGold.txt"; arg=value},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/EndlessPouchOfGold.txt"; arg=value})
 end
 
 function DuelCapeOfKings(player, hero)
@@ -33,190 +31,159 @@ function DuelCapeOfKings(player, hero)
         myt = 1000 * DUEL_ADVENTURE_DAYS
         GiveResources(player, GOLD, myt)
     end
-    MessageBoxPEST(GetPlayerFilter(player),
+    Popup(player,
         {"/Text/Duel/Artifact/CapeOfKings.txt";
-         days=DUEL_ADVENTURE_DAYS, gov=gov, gg=gg, gs=gs, gr=gr, ind=ind, myt=myt},
-        "NoneRoutine")
+         days=DUEL_ADVENTURE_DAYS, gov=gov, gg=gg, gs=gs, gr=gr, ind=ind, myt=myt})
 end
 
 function DuelTurbanOfEnlightenment(player, hero)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/TurbanOfEnlightenment.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/TurbanOfEnlightenment.txt"; arg=0})
 end
 
 function DuelScaleMailOfEnlightenment(player, hero)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/ScaleMailOfEnlightenment.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/ScaleMailOfEnlightenment.txt"; arg=0})
 end
 
 function DuelRobeOfTheMagister(player, hero)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/RobeOfTheMagister.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/RobeOfTheMagister.txt"; arg=0})
 end
 
 function DuelRingOfTheUnrepentant(player, hero)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/RingOfTheUnrepentant.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/RingOfTheUnrepentant.txt"; arg=0})
 end
 
 function DuelAmuletOfNecromancy(player, hero)    
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/AmuletOfNecromancy.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/AmuletOfNecromancy.txt"; arg=0})
 end
 
 function DuelBeginnerMagicStick(player, hero)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/BeginnerMagicStick.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/BeginnerMagicStick.txt"; arg=0})
 end
 
 function DuelRunicWarAxe(player, hero)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/RunicWarAxe.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/RunicWarAxe.txt"; arg=0})
 end
 
 function DuelRunicWarHarness(player, hero)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/RunicWarHarness.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/RunicWarHarness.txt"; arg=0})
 end
 
 function DuelCrownOfLeader(player, hero)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/CrownOfLeader.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/CrownOfLeader.txt"; arg=0})
 end
 
 function DuelHornOfPlenty(player, hero)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/HornOfPlenty.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/HornOfPlenty.txt"; arg=0})
 end
 
 function DuelSacredSeed(player, hero)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/SacredSeed.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/SacredSeed.txt"; arg=0})
 end
 
 function DuelFortunePickaxe(player, hero)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/FortunePickaxe.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/FortunePickaxe.txt"; arg=0})
 end
 
 function DuelEldenasRedScarf(player, hero)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/EldenasRedScarf.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/EldenasRedScarf.txt"; arg=0})
 end
 
 function DuelEldenasCirclet(player, hero)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/EldenasCirclet.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/EldenasCirclet.txt"; arg=0})
 end
 
 function DuelEldenasRedCoat(player, hero)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/EldenasRedCoat.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/EldenasRedCoat.txt"; arg=0})
 end
 
 function DuelVikingShield(player, hero)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/VikingShield.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/VikingShield.txt"; arg=0})
 end
 
 function DuelFortuneBandOfTheSaint(player, hero)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/FortuneBandOfTheSaint.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/FortuneBandOfTheSaint.txt"; arg=0})
 end
 
 function DuelSentinelsHelm(player, hero)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/SentinelsHelm.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/SentinelsHelm.txt"; arg=0})
 end
 
 function DuelSentinelsBoots(player, hero)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/SentinelsBoots.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/SentinelsBoots.txt"; arg=0})
 end
 
 function DuelVizirsCap(player, hero)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/VizirsCap.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/VizirsCap.txt"; arg=0})
 end
 
 function DuelVizirsScimitar(player, hero)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/VizirsScimitar.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/VizirsScimitar.txt"; arg=0})
 end
 
 function DuelMagistersSandals(player, hero)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/MagistersSandals.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/MagistersSandals.txt"; arg=0})
 end
 
 function DuelDeathKnightBoots(player, hero)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/DeathKnightBoots.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/DeathKnightBoots.txt"; arg=0})
 end
 
 function DuelPalaceShoes(player, hero)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/PalaceShoes.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/PalaceShoes.txt"; arg=0})
 end
 
 function DuelHelmOfTheWarmage(player, hero)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/HelmOfTheWarmage.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/HelmOfTheWarmage.txt"; arg=0})
 end
 
 function DuelStaffOfTheLyre(player, hero)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/StaffOfTheLyre.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/StaffOfTheLyre.txt"; arg=0})
 end
 
 function DuelPendantOfTheLyre(player, hero)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/PendantOfTheLyre.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/PendantOfTheLyre.txt"; arg=0})
 end
 
 function DuelDwarvenSmithyHammer(player, hero)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/DwarvenSmithyHammer.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/DwarvenSmithyHammer.txt"; arg=0})
 end
 
 function DuelBearhideWraps(player, hero)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/BearhideWraps.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/BearhideWraps.txt"; arg=0})
 end
 
 function DuelVikingHatchet(player, hero)
-    MessageBoxPEST(GetPlayerFilter(player),
-        {"/Text/Duel/Artifact/VikingHatchet.txt"; arg=0},
-        "NoneRoutine")
+    Popup(player,
+        {"/Text/Duel/Artifact/VikingHatchet.txt"; arg=0})
 end
 
 

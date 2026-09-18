@@ -251,9 +251,7 @@ function Routine_Bloodstone_Visit(hero, town)
             sleep()
         end
         Var_Bloodstone_Count[town] = 0
-        MessageBoxPEST(GetPlayerFilter(GetObjectOwner(hero)),
-          {"/Text/Game/Scripts/Buildings/Bloodstone.txt"; nb=amount},
-          "NoneRoutine")
+        Popup(GetObjectOwner(hero), {"/Text/Game/Scripts/Buildings/Bloodstone.txt"; nb=amount})
     end
 end
 
