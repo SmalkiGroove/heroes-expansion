@@ -143,12 +143,8 @@ function Trigger_WitchHut_confirm(player, hero, obj, givestat)
     if GetPlayerResource(player, res) >= 3 then
         Popup(player, {"/Text/Game/Scripts/MapObjects/WitchHutAccepted.txt"; stat=ATTRIBUTE_NAME_FILE[givestat]})
         TakeAwayResources(player, res, 3)
-        if IsDuelMode() then
-            ChangeHeroStat(hero, STAT_EXPERIENCE, 500000)
-        else
-            ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
-            ChangeHeroStat(hero, STAT_EXPERIENCE, 5000)
-        end
+        ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
+        ChangeHeroStat(hero, STAT_EXPERIENCE, 5000)
         ChangeHeroStat(hero, givestat, 2)
         Var_WitchHutVisited[obj] = 1
         for _,h in GetPlayerHeroes(player) do MarkObjectAsVisited(obj, h) end
@@ -263,15 +259,12 @@ function Trigger_WarAcademy(hero, obj)
 end
 function Trigger_WarAcademy_confirm(player, hero, obj, stat, wm)
     log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_WarAcademy_confirm")
-    if IsDuelMode() then
-        ChangeHeroStat(hero, stat, 2)
-    else
-        GiveHeroWarMachine(hero, wm)
-        ChangeHeroStat(hero, stat, 1)
-        ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
-    end
+    GiveHeroWarMachine(hero, wm)
+    ChangeHeroStat(hero, stat, 1)
+    ChangeHeroStat(hero, STAT_MOVE_POINTS, -500)
     Var_WarAcademyVisited[obj][hero] = 1
     MarkObjectAsVisited(obj, hero)
+    Popup(player, {"/Text/Game/Scripts/MapObjects/WarAcademyAccepted.txt"; stat=ATTRIBUTE_NAME_FILE[stat], wm=WAR_MACHINE_NAME_FILE[wm]})
 end
 function WarAcademies_reset()
     log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: WarAcademies_reset")

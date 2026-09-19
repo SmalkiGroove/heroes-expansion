@@ -52,6 +52,56 @@ function DuelTriggerDolmen(hero, obj)
 end
 
 
+function DuelOverrideWitchHut()
+    for _, obj in GetObjectNamesByType("BUILDING_WITCH_HUT") do
+        Trigger(OBJECT_TOUCH_TRIGGER, obj, "DuelTriggerWitchHut")
+        SetObjectEnabled(obj, nil)
+    end
+end
+function DuelTriggerWitchHut(hero, obj)
+    local player = GetObjectOwner(hero)
+    if Var_WitchHutVisited[obj] == 0 then
+        local givestat = random(1,4)
+        local rescost = Var_WitchHutResCost[givestat]
+        local text_stat = ATTRIBUTE_NAME_FILE[givestat]
+        local text_res = "/Text/Game/Script/Resources/"..RESOURCE_TEXT[rescost]..".txt"
+        if Prompt(player, {"/Text/Game/Scripts/MapObjects/WitchHut.txt"; stat=text_stat, res=text_res}) then
+            Popup(player, {"/Text/Game/Scripts/MapObjects/WitchHutAccepted.txt"; stat=text_stat})
+            TakeAwayResources(player, rescost, 3)
+            ChangeHeroStat(hero, givestat, 3)
+            Var_WitchHutVisited[obj] = 1
+            MarkObjectAsVisited(obj, hero)
+        else
+            Popup(player, "/Text/Game/Scripts/MapObjects/WitchHutRefused.txt")
+        end
+    else
+        Popup(player, "/Text/Game/Scripts/MapObjects/WitchHutVisited.txt")
+        MarkObjectAsVisited(obj, hero)
+    end
+end
+
+
+function DuelOverrideWarAcademy()
+    for _, obj in GetObjectNamesByType("BUILDING_WAR_ACADEMY") do
+        Trigger(OBJECT_TOUCH_TRIGGER, obj, "DuelTriggerWarAcademy")
+        SetObjectEnabled(obj, nil)
+    end
+end
+function DuelTriggerWarAcademy(hero, obj)
+    local player = GetObjectOwner(hero)
+    if Var_WarAcademyVisited[obj] == 0 then
+        local stat = GetHeroLowestStat(hero)
+        ChangeHeroStat(hero, stat, 2)
+        Var_WarAcademyVisited[obj] = 1
+        MarkObjectAsVisited(obj, hero)
+        Popup(player, {"/Text/Game/Scripts/MapObjects/WarAcademyAccepted.txt"; stat=ATTRIBUTE_NAME_FILE[stat]})
+    else
+        Popup(player, "/Text/Game/Scripts/MapObjects/WarAcademyVisited.txt")
+        MarkObjectAsVisited(obj, hero)
+    end
+end
+
+
 function DuelOverrideSign()
     for p = 1,2 do
         Trigger(OBJECT_TOUCH_TRIGGER, "DUEL_SIGN_"..p, "DuelTriggerSign0")

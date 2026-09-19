@@ -134,10 +134,23 @@ function DuelStartingBonus(player)
     GiveHeroRandomArtifact(player, DUEL_HERO[player], ARTIFACT_CLASS_MINOR, DUEL_FACTION[player] + 10)
 end
 
-function DuelMagicGuild(player)
+function DuelTownSetup(player)
     if DUEL_MODE > 0 then
         SetTownBuildingLimitLevel(DUEL_TOWN[player], TOWN_BUILDING_MAGIC_GUILD, 5)
         UpgradeTownBuilding(DUEL_TOWN[player], TOWN_BUILDING_MAGIC_GUILD)
+    end
+    local disabled_buildings = {
+        [1] = {TOWN_BUILDING_HAVEN_WOLF_KENNEL},
+        [2] = {TOWN_BUILDING_PRESERVE_WATCH_TOWER},
+        [3] = {TOWN_BUILDING_INFERNO_ETERNAL_SUFFERING},
+        [4] = {TOWN_BUILDING_NECROMANCY_BEACON_OF_SOULS},
+        [5] = {TOWN_BUILDING_ACADEMY_ALCHEMY_LAB},
+        [6] = {TOWN_BUILDING_DUNGEON_BLOODSTONE},
+        [7] = {},
+        [8] = {},
+    }
+    for _, building in disabled_buildings[DUEL_FACTION[player]] do
+        SetTownBuildingLimitLevel(DUEL_TOWN[player], building, 0)
     end
 end
 
@@ -312,7 +325,7 @@ function DuelMain()
         SetObjectOwner(DUEL_TOWN_NAME[player][0], 0)
         SetObjectEnabled(DUEL_TOWN_NAME[player][0], nil)
         SetObjectOwner(DUEL_TOWN[player], player)
-        DuelMagicGuild(player)
+        DuelTownSetup(player)
     end
 
     DuelOverrideStart()
@@ -321,6 +334,7 @@ function DuelMain()
     DuelOverrideDolmen()
     DuelOverrideMonolith()
     DuelOverrideLighthouse()
+    
 
     for player = 1,2 do DuelTownRecruits(player) end
 
