@@ -334,7 +334,8 @@ function DuelMain()
     DuelOverrideDolmen()
     DuelOverrideMonolith()
     DuelOverrideLighthouse()
-    
+    DuelOverrideWarAcademy()
+    DuelOverrideWitchHut()
 
     for player = 1,2 do DuelTownRecruits(player) end
 

@@ -783,20 +783,32 @@ function Routine_GainDragonArtifacts(player, hero, combatIndex)
     log.debug("$ Routine_GainDragonArtifacts")
     local level = GetHeroLevel(hero)
     local value = trunc(0.001 * GetArmyStrength(combatIndex, 0))
-    log.debug("---DEBUG: value = "..value)
-    local rnd = random(1,100,level)
-    if (2 * level + value) > rnd then
-        local r = (value+level) > 45 and 1 or 0
-        local i = 1 + mod(rnd, 7+r)
-        local a = ARTIFACT_SETS[ARTIFACT_SET_DRAGON][i]
-        while value > 0 do
-            if HasArtefact(hero, a, 0) then
-                value = value - 2
-                rnd = random(1,100,a)
-                i = 1 + mod(rnd, 7+r)
-                a = ARTIFACT_SETS[ARTIFACT_SET_DRAGON][i]
-            else
-                GiveArtifact(hero, a) return
+    log.debug("---DEBUG: value (percent) = "..value)
+    local pieces = {n=0}
+    for a = 36,43 do if not HasArtefact(hero, a, 0) then
+        pieces[pieces.n] = a
+        pieces.n = pieces.n + 1
+    end end
+    local percent = 2 * level + value + pieces.n - 8
+    local rnd = random(0,100,level)
+    if percent > rnd then
+        local i = mod(rnd, pieces.n)
+        GiveArtifact(hero, pieces[i])
+    end
+end
+
+Var_Raelag_DragonSpire = 0
+function Routine_BuildDragonSpire(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_BuildDragonSpire")
+    if Var_Raelag_DragonSpire == 0 then
+        if HERO_ARTFSETS_PIECES[hero][ARTIFACT_SET_DRAGON] == 8 then
+            log.debug("$ Routine_BuildDragonSpire")
+            for _,town in GetHeroTowns(player, hero) do
+                if GetTownBuildingLevel(town, TOWN_BUILDING_DUNGEON_SPIRE) < 2 then
+                    UpgradeTownBuilding(town, TOWN_BUILDING_DUNGEON_SPIRE)
+                    Var_Raelag_DragonSpire = 1
+                    return
+                end
             end
         end
     end
@@ -1494,6 +1506,7 @@ CONTINUOUS_TRIGGER_HERO_ROUTINES = {
     [H_EBBA] = Routine_GainStatsPerRune,
     -- academy
     -- dungeon
+    [H_RAELAG] = Routine_BuildDragonSpire,
     -- necropolis
     -- inferno
     -- stronghold

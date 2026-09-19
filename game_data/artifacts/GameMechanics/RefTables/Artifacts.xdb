@@ -1085,14 +1085,14 @@
 				<NameFileRef href="/Text/Game/Artifacts/DragonFlameTongue/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/DragonFlameTongue/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_RELIC</Type>
+				<Type>ARTF_CLASS_MAJOR</Type>
 				<Slot>PRIMARY</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/DragonFlameTongue.xdb#xpointer(/Texture)"/>
-				<CostOfGold>20000</CostOfGold>
-				<AIValue>30000</AIValue>
+				<CostOfGold>10000</CostOfGold>
+				<AIValue>20000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
-					<Attack>4</Attack>
+					<Attack>1</Attack>
 					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
@@ -3424,7 +3424,7 @@
 				<Icon href="/Textures/HeroScreen/Artifacts/MagmaShield.xdb#xpointer(/Texture)"/>
 				<CostOfGold>20000</CostOfGold>
 				<AIValue>30000</AIValue>
-				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
+				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>5</Defence>
@@ -4049,7 +4049,7 @@
 				<Icon href="/Textures/HeroScreen/Artifacts/GoldenGoose.xdb#xpointer(/Texture)"/>
 				<CostOfGold>20000</CostOfGold>
 				<AIValue>30000</AIValue>
-				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
+				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>-1</Attack>
 					<Defence>-1</Defence>
@@ -4064,26 +4064,26 @@
 			</obj>
 		</Item>	
 		<Item>
-			<ID>ARTIFACT_162</ID>
+			<ID>ARTIFACT_DAWN_GLEAM</ID>
 			<obj>
-				<NameFileRef href="/Text/Game/Artifacts/XXX/Name.txt"/>
-				<DescriptionFileRef href="/Text/Game/Artifacts/XXX/Description.txt"/>
+				<NameFileRef href="/Text/Game/Artifacts/DawnGleam/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artifacts/DawnGleam/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MAJOR</Type>
-				<Slot>INVENTORY</Slot>
-				<Icon href="/Textures/HeroScreen/Artifacts/XXX.xdb#xpointer(/Texture)"/>
-				<CostOfGold>16000</CostOfGold>
-				<AIValue>8000</AIValue>
+				<Type>ARTF_CLASS_RELIC</Type>
+				<Slot>PRIMARY</Slot>
+				<Icon href="/Textures/HeroScreen/Artifacts/DawnGleam.xdb#xpointer(/Texture)"/>
+				<CostOfGold>20000</CostOfGold>
+				<AIValue>30000</AIValue>
 				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
-					<Knowledge>0</Knowledge>
+					<Knowledge>3</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
-				<ArtifactShared href="/MapObjects/Artifacts/XXX.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
+				<ArtifactShared href="/MapObjects/Artifacts/DawnGleam.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
 				<PresetPrice>0</PresetPrice>
 			</obj>

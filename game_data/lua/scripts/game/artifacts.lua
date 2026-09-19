@@ -61,7 +61,7 @@ ARTIFACT_DRAGON_WING_MANTLE = 39                    -- flying creatures have +5%
 ARTIFACT_DRAGON_TEETH_NECKLACE = 40                 -- caster creatures have +5% initiative
 ARTIFACT_DRAGON_TALON_CROWN = 41                    -- war machines have +10% initiative
 ARTIFACT_DRAGON_EYE_RING = 42                       -- ranged creatures have +5% initiative
-ARTIFACT_DRAGON_FLAME_TONGUE = 43                   -- reduce enemy ice spells and immune to cold death
+ARTIFACT_DRAGON_FLAME_TONGUE = 43                   -- creatures deal 15% additional fire damage
 ARTIFACT_ROBE_OF_THE_MAGISTER = 44                  -- gain exp based on knowledge **
 ARTIFACT_STAFF_OF_THE_MAGISTER = 45                 -- negates magic-resistance
 ARTIFACT_CROWN_OF_THE_MAGISTER = 46                 -- /
@@ -154,7 +154,7 @@ ARTIFACT_BUTCHER_GLAIVE = 132	                    -- increase melee damage
 ARTIFACT_CELESTIAL_JUSTICAR_SHIELD = 133            -- reduce ranged damage
 ARTIFACT_STAFF_OF_THE_SAINT = 134                   -- gain spellpower for light magic spells
 ARTIFACT_BACKPACK_OF_THE_OPEN_ROAD = 135            -- reset hero movement points on level up **
-ARTIFACT_MAGMA_SHIELD = 136                         -- TODO
+ARTIFACT_MAGMA_SHIELD = 136                         -- reduce enemy ice spells and immune to cold death
 ARTIFACT_137 = 137	                                -- not used 137
 ARTIFACT_138 = 138                                  -- not used 138
 ARTIFACT_139 = 139                                  -- not used 139
@@ -180,7 +180,7 @@ ARTIFACT_PALACE_SHOES = 158                         -- gain random battle bonuse
 ARTIFACT_SHACKLES_OF_THE_LAST_MAN = 159             -- enemy creatures have -2 att and def
 ARTIFACT_LEGENDARY_BOOTS = 160                      -- creatures get rider charge ability
 ARTIFACT_GOLDEN_GOOSE = 161                         -- all attacks are lucky
-ARTIFACT_162 = 162                                  -- creatures get child of light ability
+ARTIFACT_DAWN_GLEAM = 162                           -- creatures get child of light ability
 ARTIFACT_ARDENT_SMITH = 163                         -- creatures get flame wave ability
 ARTIFACT_CLOAK_OF_DARKNESS = 164                    -- enemy creatures have -1 luck
 ARTIFACT_SHANTIRI_BREASTPLATE = 165                 -- immunity to earthquake TODO
@@ -404,7 +404,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_DRAGON_TEETH_NECKLACE]         = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_NECK, set=ARTIFACT_SET_DRAGON, special=0},
     [ARTIFACT_DRAGON_TALON_CROWN]            = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_DRAGON, special=0},
     [ARTIFACT_DRAGON_EYE_RING]               = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_DRAGON, special=0},
-    [ARTIFACT_DRAGON_FLAME_TONGUE]           = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_DRAGON, special=0},
+    [ARTIFACT_DRAGON_FLAME_TONGUE]           = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_DRAGON, special=0},
     [ARTIFACT_ROBE_OF_THE_MAGISTER]          = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_BODY, set=ARTIFACT_SET_ACADEMY, special=0},
     [ARTIFACT_STAFF_OF_THE_MAGISTER]         = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_ACADEMY, special=0},
     [ARTIFACT_CROWN_OF_THE_MAGISTER]         = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_ACADEMY, special=0},
@@ -497,7 +497,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_CELESTIAL_JUSTICAR_SHIELD]     = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_ARCHANGEL, special=0},
     [ARTIFACT_STAFF_OF_THE_SAINT]            = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_SAINT, special=0},
     [ARTIFACT_BACKPACK_OF_THE_OPEN_ROAD]     = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_WANDERER, special=0},
-    [ARTIFACT_MAGMA_SHIELD]                  = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_NONE, special=1},
+    [ARTIFACT_MAGMA_SHIELD]                  = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_137]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_BACKPACK, set=ARTIFACT_SET_NONE, special=1},
     [ARTIFACT_138]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_BACKPACK, set=ARTIFACT_SET_NONE, special=1},
     [ARTIFACT_139]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_BACKPACK, set=ARTIFACT_SET_NONE, special=1},
@@ -523,7 +523,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_SHACKLES_OF_THE_LAST_MAN]      = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_INFERNO, special=0},
     [ARTIFACT_LEGENDARY_BOOTS]               = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_GOLDEN_GOOSE]                  = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=1},
-    [ARTIFACT_162]                           = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_BACKPACK, set=ARTIFACT_SET_NONE, special=1},
+    [ARTIFACT_DAWN_GLEAM]                    = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_NONE, special=1},
     [ARTIFACT_ARDENT_SMITH]                  = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_CLOAK_OF_DARKNESS]             = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_DUNGEON, special=0},
     [ARTIFACT_SHANTIRI_BREASTPLATE]          = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_BODY, set=ARTIFACT_SET_NONE, special=1}, --disabled
