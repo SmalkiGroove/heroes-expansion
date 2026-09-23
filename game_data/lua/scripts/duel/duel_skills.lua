@@ -10,6 +10,7 @@ function DuelLogistics(player, hero)
         if HasHeroSkill(hero, PERK_RECRUITMENT) then bonus = bonus * 2 end
         local new = round(cur * (1 + bonus))
         SetObjectDwellingCreatures(DuelPlayerTown(player), cr, new)
+        DUEL_TOWN_RECRUITS[player][cr] = new
     end
 end
 
@@ -237,7 +238,11 @@ function DuelWarPolicy(player, hero, level)
     for creature, growth in DUEL_CREATURE_GROWTH[DUEL_FACTION[player]] do
         local cur = DUEL_TOWN_RECRUITS[player][creature]
         local nb = round(0.01 * level * growth)
-        if nb > 0 then SetObjectDwellingCreatures(DuelPlayerTown(player), creature, cur + nb) end
+        local new = cur + nb
+        if nb > 0 then
+            SetObjectDwellingCreatures(DuelPlayerTown(player), creature, new)
+            DUEL_TOWN_RECRUITS[player][creature] = new
+        end
     end
 end
 
