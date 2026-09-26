@@ -228,6 +228,16 @@ function Routine_AddHeroWolves(player, hero)
     end
 end
 
+function Routine_UpgradePixieToSprite(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_UpgradePixieToSprite")
+    log.debug("$ Routine_UpgradePixieToSprite")
+    local nb = GetHeroCreatures(hero, CREATURE_PIXIE)
+    if nb > 0 then
+        RemoveHeroCreatures(hero, CREATURE_PIXIE, nb)
+        AddHeroCreatures(hero, CREATURE_SPRITE, nb)
+    end
+end
+
 function Routine_GainAirElementals(player, hero, level)
     log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GainAirElementals")
     log.debug("$ Routine_GainAirElementals")
@@ -400,6 +410,16 @@ function Routine_ProductionIncreaseDwarvenWorkers(player, hero)
     end
     for res,amount in total do
         GiveResources(player, res, amount)
+    end
+end
+
+function Routine_UpgradeThaneToThunderThane(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_UpgradeThaneToThunderThane")
+    log.debug("$ Routine_UpgradeThaneToThunderThane")
+    local nb = GetHeroCreatures(hero, CREATURE_THANE)
+    if nb > 0 then
+        RemoveHeroCreatures(hero, CREATURE_THANE, nb)
+        AddHeroCreatures(hero, CREATURE_THUNDER_THANE, nb)
     end
 end
 
@@ -1301,6 +1321,16 @@ function Routine_SacrificeGoblinCorpses(player, hero, combatIndex)
     end
 end
 
+function Routine_UpgradeShamanToSkyDaughter(player, hero)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_UpgradeShamanToSkyDaughter")
+    log.debug("$ Routine_UpgradeShamanToSkyDaughter")
+    local nb = GetHeroCreatures(hero, CREATURE_SHAMAN)
+    if nb > 0 then
+        RemoveHeroCreatures(hero, CREATURE_SHAMAN, nb)
+        AddHeroCreatures(hero, CREATURE_SHAMAN_WITCH, nb)
+    end
+end
+
 function Routine_SpiritArtifacts(player, hero, level)
     log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_SpiritArtifacts")
     log.debug("$ Routine_SpiritArtifacts")
@@ -1502,7 +1532,9 @@ AFTER_COMBAT_TRIGGER_HERO_ROUTINES = {
 CONTINUOUS_TRIGGER_HERO_ROUTINES = {
     -- haven
     -- preserve
+    [H_DIRAEL] = Routine_UpgradePixieToSprite,
     -- fortress
+    [H_HANGVUL] = Routine_UpgradeThaneToThunderThane,
     [H_EBBA] = Routine_GainStatsPerRune,
     -- academy
     -- dungeon
@@ -1510,6 +1542,7 @@ CONTINUOUS_TRIGGER_HERO_ROUTINES = {
     -- necropolis
     -- inferno
     -- stronghold
+    [H_KUJIN] = Routine_UpgradeShamanToSkyDaughter,
 }
 
 
