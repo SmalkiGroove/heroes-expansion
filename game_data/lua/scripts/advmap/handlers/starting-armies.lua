@@ -108,8 +108,8 @@ function IsArmyEmpty(hero)
             if i > 1 or GetHeroCreatures(hero, cr) > 1 then
                 return nil
             else
-                AddHeroCreatures(hero, 180, 1, 6) sleep(1)
-                RemoveHeroCreatures(hero, cr, 1, 0) sleep(1)
+                AddHeroCreatures(hero, 180, 1, 6) sleep()
+                RemoveHeroCreatures(hero, cr, 1, 0) sleep()
             end
         end
     end
