@@ -32,6 +32,7 @@ SCRIPTS_GROUP = {
 	[2] = {
 		"/scripts/advmap/advmap-data.lua",
 		"/scripts/advmap/advmap-utils.lua",
+		"/scripts/texts.lua",
 	},
 	[3] = {
 		"/scripts/advmap/routines/skills-routines-advmap.lua",

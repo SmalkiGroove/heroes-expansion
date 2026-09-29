@@ -154,26 +154,6 @@ function DuelTownSetup(player)
     end
 end
 
-function DuelBorderGuardKey(player, key)
-    for k = 1,8 do
-        if HasBorderguardKey(player, k) then
-            Popup(player, "/Text/Duel/BorderGuardKeyOut.txt") return
-        end
-    end
-    QuestionBoxForPlayers(GetPlayerFilter(player),
-        {"/Text/Duel/BorderGuardKeyAsk.txt"; key=key},
-        "DuelBorderGuardKeyConfirm("..player..","..key..")",
-        "NoneRoutine"
-    )
-end
-function DuelBorderGuardKeyConfirm(player, key)
-    local gold = GetPlayerResource(player, GOLD)
-    if gold < 50000 then return end
-    SetPlayerResource(player, GOLD, gold - 50000)
-    GiveBorderguardKey(player, key)
-    Popup(player, {"/Text/Duel/BorderGuardKey.txt"; key=key})
-end
-
 
 function DuelLevelUp(player, hero, level)
     for skill, func in DUEL_SKILL_LEVELUP_EFFECTS do
@@ -329,13 +309,16 @@ function DuelMain()
     end
 
     DuelOverrideStart()
-    DuelOverrideSign()
-    DuelOverrideFlag()
-    DuelOverrideDolmen()
     DuelOverrideMonolith()
     DuelOverrideLighthouse()
-    DuelOverrideWarAcademy()
+    DuelOverrideSign()
+    DuelOverrideWagon()
+    DuelOverrideFountain()
+    DuelOverrideDolmen()
     DuelOverrideWitchHut()
+    DuelOverrideWarAcademy()
+    DuelOverrideSanctuary()
+    DuelOverrideTombOfTheWarrior()
 
     for player = 1,2 do DuelTownRecruits(player) end
 

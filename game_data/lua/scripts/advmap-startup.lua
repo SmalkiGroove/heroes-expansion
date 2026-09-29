@@ -61,26 +61,6 @@
 	GEM     = 5
 	GOLD    = 6
 
-	RESOURCE_TEXT = {
-		[0] = "Wood",
-		[1] = "Ore",
-		[2] = "Mercury",
-		[3] = "Cystal",
-		[4] = "Sulfur",
-		[5] = "Gem",
-		[6] = "Gold",
-	}
-
-	RESOURCE_NAME_FILE = {
-		[0] = "/Text/Game/Scripts/Resources/Wood.txt",
-		[1] = "/Text/Game/Scripts/Resources/Ore.txt",
-		[2] = "/Text/Game/Scripts/Resources/Mercury.txt",
-		[3] = "/Text/Game/Scripts/Resources/Crystal.txt",
-		[4] = "/Text/Game/Scripts/Resources/Sulfur.txt",
-		[5] = "/Text/Game/Scripts/Resources/Gem.txt",
-		[6] = "/Text/Game/Scripts/Resources/Gold.txt",
-	}
-	
 	--
 	-- Kinds of treasures
 	--
@@ -129,24 +109,6 @@
     STAT_MOVE_POINTS = 7
     STAT_MANA_POINTS = 8
 
-	ATTRIBUTE_TEXT = {
-		[0] = "Experience",
-		[1] = "Attack",
-		[2] = "Defense",
-		[3] = "Spellpower",
-		[4] = "Knowledge",
-		[5] = "Luck",
-		[6] = "Morale",
-		[7] = "Movement",
-		[8] = "Mana",
-	}
-	ATTRIBUTE_NAME_FILE = {
-		[1] = "/GameMechanics/RefTables/HeroAttribute/Offence.txt",
-		[2] = "/GameMechanics/RefTables/HeroAttribute/Defence.txt",
-		[3] = "/GameMechanics/RefTables/HeroAttribute/SpellPower.txt",
-		[4] = "/GameMechanics/RefTables/HeroAttribute/Knowledge.txt",
-	}
-	
 	--
 	-- Objective state`s IDs
 	--
@@ -168,18 +130,6 @@
 	TOWN_INFERNO = 5
 	TOWN_FORTRESS = 6
 	TOWN_STRONGHOLD = 7
-
-	FACTION_TEXT = {
-		[0] = "Neutral",
-		[1] = "Haven",
-		[2] = "Preserve",
-		[3] = "Inferno",
-		[4] = "Necro",
-		[5] = "Academy",
-		[6] = "Dungeon",
-		[7] = "Fortress",
-		[8] = "Stronghold",
-	}
 
 	--
 	-- Town buildings IDs
@@ -251,13 +201,6 @@
 	TOWN_BUILDING_STRONGHOLD_TRAVELLERS_SHELTER		= TOWN_BUILDING_SPECIAL_3
 	TOWN_BUILDING_STRONGHOLD_PILE_OF_OUR_FOES		= TOWN_BUILDING_SPECIAL_4
 	TOWN_BUILDING_STRONGHOLD_SLAVE_MARKET			= TOWN_BUILDING_SPECIAL_5
-
-	WAR_MACHINE_NAME_FILE = {
-		"/Text/Game/Creatures/WarMachines/Ballista.txt",
-		"/Text/Game/Creatures/WarMachines/Catapult.txt",
-		"/Text/Game/Creatures/WarMachines/FirstAidTent.txt",
-		"/Text/Game/Creatures/WarMachines/AmmoCart.txt",
-	}
 
 	--
 	-- Monster mood IDs
