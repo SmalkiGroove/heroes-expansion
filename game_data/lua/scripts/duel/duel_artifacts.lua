@@ -302,7 +302,7 @@ function DuelVikingShield(player, hero)
 end
 
 
-DUEL_ARTIFACT_EFFECTS = {
+DUEL_ARTIFACT_STAGING_EFFECTS = {
     [ARTIFACT_ENDLESS_SACK_OF_GOLD] = DuelEndlessSackOfGold,
     [ARTIFACT_ENDLESS_POUCH_OF_GOLD] = DuelEndlessPouchOfGold,
     [ARTIFACT_CAPE_OF_KINGS] = DuelCapeOfKings,

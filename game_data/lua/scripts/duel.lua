@@ -221,10 +221,13 @@ function DuelStaging(player, hero)
     SetObjectRotation(hero, 0)
     DUEL_PLAYER_DATA.TOTAL_EXP[player] = GetHeroStat(hero, STAT_EXPERIENCE)
     sleep(10)
+    if DUEL_HERO_STAGING_EFFECTS[hero] then
+        DUEL_HERO_STAGING_EFFECTS[hero](player, hero)
+    end
     for skill, func in DUEL_SKILL_STAGING_EFFECTS do
         if HasHeroSkill(hero, skill) then func(player, hero) end
     end
-    for artifact, func in DUEL_ARTIFACT_EFFECTS do
+    for artifact, func in DUEL_ARTIFACT_STAGING_EFFECTS do
         if HasArtefact(hero, artifact, 1) then func(player, hero) end
     end
     PlayerDailyResources(player)
