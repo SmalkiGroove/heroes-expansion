@@ -130,7 +130,7 @@ function DuelStartingBonus(player)
     for r = 0,1 do SetPlayerResource(player, r, 2 * amount) end
     for s = 2,5 do SetPlayerResource(player, s, amount) end
     SetPlayerResource(player, FACTION_RESOURCE[DUEL_FACTION[player]], 2 * amount)
-    SetPlayerResource(player, GOLD, 12000 * amount + 20000)
+    SetPlayerResource(player, GOLD, 12000 * amount + 50000)
     GiveHeroRandomArtifact(player, DUEL_HERO[player], ARTIFACT_CLASS_MINOR, DUEL_FACTION[player] + 10)
 end
 
