@@ -127,6 +127,7 @@ The adventure map runtime provides the following predefined functions for intera
   - confirmFunction and cancelFunction are string callbacks to execute
 - `MessageBoxForPlayers(playerFilter, text, onCloseFunction)` → void: Show message dialog
   - onCloseFunction is a string callback to execute
+  - `text` (here and in `QuestionBoxForPlayers` / `ShowFlyingSign`) is either a text file path or a table `{"/Text/...txt"; key=value, ...}` whose values fill the `<value=key>` placeholders of the file. A value can itself be another text file path (e.g. an artifact name file)
 - `ShowFlyingSign(text, hero, player, duration)` → void: Display floating text above hero/object
 - `GetPlayerFilter(player)` → filter: Get filter to target specific player for UI functions
 
@@ -151,7 +152,7 @@ The adventure map runtime provides the following predefined functions for intera
 #### Logging and Debugging
 
 - `print(message)` → void: Write to game console
-  - a `log(level, message)` function is defined for more structured logging with levels (INFO, WARNING, ERROR), basically a conditionned wrapper around `print` that adds a log level prefix to the message and can be filtered in the console by log level
+  - a `log` table is defined in `common.lua` with `log.error`, `log.warn`, `log.info`, `log.debug` and `log.trace` (each takes a string). They are no-ops until `log.SetLogLevel(level)` enables them (1 = error ... 5 = trace), then print with a `[LEVEL]` prefix. By convention every mod function starts with `log.trace("/scripts/<path>.lua: FunctionName")`
 
 #### Utility Functions (Limited Lua)
 
@@ -160,7 +161,7 @@ The game provides mathematical and table functions since Lua 4.0 standard librar
 - `contains(table, value)` → boolean: Check if table contains value
 - `insert(table, value)` → void: Add value to table
 - `length(table)` → number: Get table length
-- `random(min, max, seed)` → number: Get random number in range with seed
+- `random(min, max, seed)` → number: Get random number in range (defined in `common.lua`). It is a deterministic generator over the global `RANDOM_SEED`; the optional `seed` is *added* to `RANDOM_SEED` and every call mutates it, so two calls with the same seed still return different values
 - `power(base, exponent)` → number: Raise base to exponent
 - `mod(dividend, divisor)` → number: Get remainder of division
 - `round(value)` → number: Round to nearest integer
@@ -267,7 +268,7 @@ The combat runtime provides the following predefined functions for implementing 
 #### Logging and Debugging
 
 - `print(message)` → void: Write to game console
-  - a `log(level, message)` function is defined for more structured logging with levels (INFO, WARNING, ERROR), basically a conditionned wrapper around `print` that adds a log level prefix to the message and can be filtered in the console by log level
+  - a `log` table is defined in `common.lua` with `log.error`, `log.warn`, `log.info`, `log.debug` and `log.trace` (each takes a string). They are no-ops until `log.SetLogLevel(level)` enables them (1 = error ... 5 = trace), then print with a `[LEVEL]` prefix. By convention every mod function starts with `log.trace("/scripts/<path>.lua: FunctionName")`
 
 #### Utility Functions (Limited Lua)
 
@@ -276,7 +277,7 @@ The game provides mathematical and table functions since Lua 4.0 standard librar
 - `contains(table, value)` → boolean: Check if table contains value
 - `insert(table, value)` → void: Add value to table
 - `length(table)` → number: Get table length
-- `random(min, max, seed)` → number: Get random number in range with seed
+- `random(min, max, seed)` → number: Get random number in range (defined in `common.lua`). It is a deterministic generator over the global `RANDOM_SEED`; the optional `seed` is *added* to `RANDOM_SEED` and every call mutates it, so two calls with the same seed still return different values
 - `power(base, exponent)` → number: Raise base to exponent
 - `mod(dividend, divisor)` → number: Get remainder of division
 - `round(value)` → number: Round to nearest integer
@@ -330,3 +331,92 @@ From each of these functions, we can call other functions defined in the loaded 
 ## Fetch data from adventure map script in combat script
 
 Since the combat script runtime is separate from the adventure map script runtime, we cannot directly access any variable defined in the adventure map scripts. However, we can use the `Register(variable, value)` function to register any variable from the adventure map scripts that we want to access in the combat scripts. This function allows us to store a variable in a way that it can be accessed from the combat runtime when a combat starts.
+
+## Mod conventions and helpers
+
+### Lua 4 gotchas
+
+- Iterate tables with `for k,v in t do` (no `pairs`/`ipairs`). Numeric loops `for i = 1,n do` work as usual.
+- There is no `#` operator: use `length(t)`. `insert(t, v)` builds 1-based arrays.
+- Functions cannot read local variables of an enclosing function (no closures over locals): pass them as arguments instead (e.g. `startThread(func, arg1, arg2)`).
+- Booleans are `nil` / non-nil: `Prompt` returns `1` or `nil`, `HasHeroSkill` and similar return non-nil or `nil`.
+
+### Coding style
+
+- Every function starts with `log.trace("/scripts/<path>.lua: FunctionName")`, optionally followed by a `log.debug(...)`.
+- Feature-specific effects are written as one small function per effect, then registered in dispatch tables declared at the bottom of the file (e.g. `START_TRIGGER_HERO_ROUTINES`, `DUEL_SKILL_STAGING_EFFECTS`).
+- Heroes are always referenced with the `H_*` constants of `game/heroes.lua`: the script name of a hero often differs from its display name (`H_DOUGAL = 'Orrin'`, `H_KRAGH = 'Hero1'`).
+
+### Adventure map helpers (`advmap/advmap-utils.lua`)
+
+- `GiveResources(player, res, amount, now)`: with `now`, resources are given immediately. Without it, the amount is added to `DAILY_RESOURCES[player]` and only paid when `PlayerDailyResources(player)` runs.
+- `TakeAwayResources(player, res, amount)`, `AddHeroStatAmount(player, hero, stat, amount)`, `GetHeroLowestStat(hero)`, `GetHeroHighestStat(hero)`.
+- `Popup(player, msg)`: message box that waits until `player` is the current player. `Prompt(player, msg)`: yes/no box that blocks and returns `1` (yes) or `nil` (no).
+- `GetHeroArmy(hero)` → table of the 7 slot creature types (0 or nil for empty slots).
+- `AddHeroCreatureType(player, hero, faction, tier, nb, default)`: adds `nb` creatures to the existing stack of that faction tier (base or upgraded); if none, adds `CREATURES_BY_FACTION[faction][tier][default]` (`default = 0` means add nothing). Prefer it over `AddHeroCreatures` for faction creatures.
+- `CountHeroCreatureType(player, hero, faction, tier)`, `UpgradeHeroCreatures(player, hero, base, upgrade)`, `AddHeroCreaturePerLevel(player, hero, creature, coef)`.
+- `TeachHeroRandomSpell(player, hero, school, maxtier)`, `TeachHeroRandomSpellTier(player, hero, school, tier)` (`SPELL_SCHOOL_ANY` for any school), `GiveHeroRandomArtifact(player, hero, class, set)`, `AddHeroManaUnbound(player, hero, amount)` (mana above the maximum).
+- `GetHeroTowns`, `AddHeroTownRecruits`, `TransferCreatureFromTown` and `TransformTownRecruits` rely on the town data registered at game start (`MAP_TOWNS`). They do not work in duel mode.
+
+### Game data tables (`game/*.lua`, `texts.lua`)
+
+- `CREATURES_BY_FACTION[faction][tier] = {base, upgrade1, upgrade2}`; `GetFaction(creature)`, `GetTier(creature)`, `GetGrowth(creature)`.
+- `ARTIFACTS_DATA[artifact] = {class, slot, set, special}` (`special = 1` artifacts are excluded from random rewards).
+- `SPELLS_BY_TIER[tier]`, `SPELLS_BY_SCHOOL[school]`, `RUNIC_SPELLS[rune] = tier`.
+- `texts.lua` maps IDs to text files: `RESOURCE_NAME_FILE`, `ATTRIBUTE_NAME_FILE`, `ARTIFACT_NAME_FILE`, `WAR_MACHINE_NAME_FILE`. Use them as message values to display names.
+
+### Hero routines
+
+`advmap/routines/heroes-routines-advmap.lua` holds the hero specialization routines, dispatched by hero through these tables: `START_TRIGGER_HERO_ROUTINES`, `DAILY_TRIGGER_HERO_ROUTINES`, `WEEKLY_TRIGGER_HERO_ROUTINES`, `LEVEL_UP_HERO_ROUTINES_HERO`, `AFTER_COMBAT_TRIGGER_HERO_ROUTINES` and `CONTINUOUS_TRIGGER_HERO_ROUTINES` (run in a loop by `WatchPlayer` while the player is active). Skills and artifacts follow the same pattern in their own routine files.
+
+### Text files
+
+- Script texts are UTF-16 LE files with BOM and CRLF line endings, without a trailing newline.
+- Popup format: `<h3>Title:<body>`, an empty line, then the body with `<value=key>` placeholders.
+- Duel popups live in `game_texts/texts-duel-EN/Text/Duel/{Skill,Artifact,Hero}/` (EN first, other languages translated afterwards).
+
+
+## Duel mode
+
+The duel map reuses the adventure map runtime with its own scripts (`/scripts/duel.lua` and `/scripts/duel/*.lua`), loaded only in duel mode.
+
+### Detection and difficulty
+
+`DUEL_MODE` is `-1` on regular maps, otherwise the difficulty level (0 to 3). Test it with `IsDuelMode()`. "Per difficulty level" in duel descriptions means `DUEL_MODE`.
+
+### What runs and what does not
+
+- Disabled: the new day handler (no daily/weekly routines), `WatchPlayer` (no continuous routines, no `ScanHeroArtifacts`, so `HERO_ARTFSETS_PIECES` is never updated: use `GetArtifactSetItemsCount` instead), after-combat routines (`CombatResultsHandler` calls `DuelAfterCombat`), town registration (`MAP_TOWNS` stays empty), town visit triggers and map object overrides.
+- Still running: start routines (`DoHeroSpeRoutine_Start`...), level-up routines (`LEVEL_UP_HERO_ROUTINES_HERO`...) and skill triggers (which also call `DuelAddSkill`).
+- To replace a regular routine by a duel version, remove its entry from the routine table in a duel script (e.g. `LEVEL_UP_HERO_ROUTINES_HERO[H_ZOULEIKA] = nil`, or `DUEL_SKILL_OVERRIDE` for skill start routines).
+
+### Stages and effect tables
+
+Stages are START → SETUP → ADVENTURE → STAGING → CASTLE → BATTLE → END (`DuelNextStage`). Each stage entry point in `duel.lua` dispatches effect tables:
+
+| Stage / event | Hero effects (`duel_heroes.lua`) | Skill / artifact effects |
+|---|---|---|
+| Setup starts (`DuelSetup`) | `DUEL_HERO_SETUP_EFFECTS` | |
+| Adventure starts (`DuelAdventure`) | `DUEL_HERO_ADVENTURE_EFFECTS` | `DUEL_SKILL_ADVENTURE_EFFECTS` |
+| Each adventure day ends (`DuelAdventureDay`) | `DUEL_HERO_ADVENTURE_DAY_EFFECTS` | |
+| Level up (`DuelLevelUp`) | `DUEL_HERO_LEVELUP_EFFECTS` | `DUEL_SKILL_LEVELUP_EFFECTS` |
+| Skill learnt (`DuelAddSkill`) | | `DUEL_SKILL_LEARNT_EFFECTS` |
+| Staging = end of adventure (`DuelStaging`) | `DUEL_HERO_STAGING_EFFECTS` | `DUEL_SKILL_STAGING_EFFECTS`, `DUEL_ARTIFACT_STAGING_EFFECTS` |
+| Castle starts (`DuelCastle`) | `DUEL_HERO_CASTLE_EFFECTS` | |
+| Battle starts (`DuelBattle`) | | `DUEL_SKILL_BATTLE_EFFECTS` |
+
+Effect functions have the signature `DuelXxx(player, hero)` (`DuelXxx(player, hero, level)` for level-up effects) and end with a `Popup(player, {"/Text/Duel/...txt"; ...})` describing what was gained.
+
+### Duel data
+
+- `DUEL_HERO[player]`, `DUEL_FACTION[player]`, `DUEL_TOWN[player]` / `DuelPlayerTown(player)`.
+- `DUEL_CREATURE_GROWTH[faction][creature]`: weekly growth of the faction base creatures ("weekly growth" in descriptions).
+- `DUEL_TOWN_RECRUITS[player][creature]`: mirror of the town dwellings. Always modify town recruits with `DuelAddTownRecruits(player, creature, nb)` so both stay in sync.
+- `DUEL_ADVENTURE_DAYS` (base amount of days), `DUEL_PLAYER_DATA.ADVENTURE_DAYS[player]` (remaining days, can be increased), `DUEL_PLAYER_DATA.TOTAL_EXP[player]` (hero experience at staging).
+- `DUEL_DOLMEN_MAX_LEVEL` and `DUEL_DOLMEN_LEVELS[player]`: decrease the latter to grant extra Dolmen uses.
+
+### Pitfalls
+
+- `DuelStartingBonus` removes the hero's first artifact at game start: give start-of-game artifacts at the setup stage.
+- At staging, give gold with `GiveResources` without `now`: `DuelStaging` pays it through `PlayerDailyResources`. In other stages, use `now = 1`.
+- Hero staging effects run before skill and artifact staging effects.
