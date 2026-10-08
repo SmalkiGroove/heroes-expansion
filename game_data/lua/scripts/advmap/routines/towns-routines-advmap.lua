@@ -193,7 +193,7 @@ function Routine_WatchTowerThread(player, hero, amount)
         if not IsPlayerCurrent(player) then break end
         current = GetHeroStat(hero, STAT_MOVE_POINTS)
         if (movement - current) > 25 then
-            ChangeHeroStat(hero, STAT_MOVE_POINTS, current + 25)
+            ChangeHeroStat(hero, STAT_MOVE_POINTS, 25)
             counter = counter + 25
         end
     end
@@ -209,7 +209,7 @@ function Routine_WolfKennel(player, town)
         [STRONGHOLD] = {55, 28, 21, 10, 6, 3, 1},
         [NEUTRAL] = {1, 1, 20, 1, 1, 1, 1},
     }
-    local feeders = {15,16,47,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,89,90,116,117,118,119,120,121,122,123,124,125,126,129,130,131,132,133,134,135,136,137,152,153,154,155,156,157,158,173,174,175,176,177,179,191}
+    local feeders = {15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,89,90,116,117,118,119,120,121,122,123,124,125,126,129,130,131,132,133,134,135,136,137,152,153,154,155,156,157,158,173,174,175,176,177,179,191}
     local total_value = 0
     for _, creature in feeders do
         local amount = GetObjectCreatures(town, creature)
@@ -243,7 +243,7 @@ end
 
 Var_Bloodstone_Count = {}
 function Routine_Bloodstone_Visit(hero, town)
-    log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: Routine_Bloodstone_FirstVisit")
+    log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: Routine_Bloodstone_Visit")
     local amount = Var_Bloodstone_Count[town]
     if amount and amount > 0 then
         for i = 1, amount do
@@ -264,7 +264,7 @@ function Routine_Bloodstone(player, town)
             if IsHeroInTown(h, town, 1, 1) then hero = h break end
         end
     end
-    if hero then Routine_Bloodstone_FirstVisit(hero, town)
+    if hero then Routine_Bloodstone_Visit(hero, town)
     else Var_Bloodstone_Count[town] = (Var_Bloodstone_Count[town] or 0) + 1
     end
 end

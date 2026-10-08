@@ -256,9 +256,9 @@ end
 function DuelStaffOfTheLyre(player, hero)
     log.trace("/scripts/duel/duel_artifacts.lua: DuelStaffOfTheLyre")
     local attributes = {GetHeroStat(hero, STAT_ATTACK), GetHeroStat(hero, STAT_DEFENCE), GetHeroStat(hero, STAT_SPELL_POWER), GetHeroStat(hero, STAT_KNOWLEDGE)}
-    local a1, a2 = 99, 99
-    for i = 1,4 do if attributes[i] < a1 then a1 = attributes[i]; a1 = i end end
-    for i = 1,4 do if attributes[i] < a2 and i ~= a1 then a2 = attributes[i]; a2 = i end end
+    local a1, a2, v1, v2 = 0, 0, 99, 99
+    for i = 1,4 do if attributes[i] < v1 then v1 = attributes[i]; a1 = i end end
+    for i = 1,4 do if attributes[i] < v2 and i ~= a1 then v2 = attributes[i]; a2 = i end end
     ChangeHeroStat(hero, a1, 4)
     ChangeHeroStat(hero, a2, 4)
     Popup(player, {"/Text/Duel/Artifact/StaffOfTheLyre.txt"; arg1=ATTRIBUTE_NAME_FILE[a1], arg2=ATTRIBUTE_NAME_FILE[a2]})

@@ -126,7 +126,7 @@ function Trigger_WitchHut(hero, obj)
     elseif Var_WitchHutVisited[obj] == 0 then
         local givestat = random(1,4,TURN)
         local text_stat = ATTRIBUTE_NAME_FILE[givestat]
-        local text_res = "/Text/Game/Script/Resources/"..RESOURCE_TEXT[Var_WitchHutResCost[givestat]]..".txt"
+        local text_res = "/Text/Game/Scripts/Resources/"..RESOURCE_TEXT[Var_WitchHutResCost[givestat]]..".txt"
         QuestionBoxForPlayers(
             GetPlayerFilter(player),
             {"/Text/Game/Scripts/MapObjects/WitchHut.txt"; stat=text_stat, res=text_res},
@@ -340,6 +340,9 @@ function Trigger_SeerHut(hero, obj)
 end
 function Trigger_SeerHut_confirm(player)
     log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_SeerHut_confirm")
+    if GetPlayerResource(player, GOLD) < 5000 then
+        Popup(player, "/Text/Game/Scripts/MapObjects/SeerHutCancel.txt") return
+    end
     TakeAwayResources(player, GOLD, 5000)
     for p = 1,8 do
         if p ~= player and GetPlayerState(p) == 1 then

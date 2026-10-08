@@ -82,8 +82,10 @@ end
 function HeroVisitConvertible(hero, obj)
     log.trace("/scripts/advmap/handlers/town-conversion.lua: HeroVisitConvertible")
     log.debug("$ HeroVisitConvertible")
-    if MAP_TOWNS[obj] then TownVisitTrigger(hero, obj) end
-    if CanHeroConvert(hero, obj) then startThread(EnableTownConversionAbility, hero, obj) end
+    if GetObjectOwner(hero) == GetObjectOwner(obj) then
+        if MAP_TOWNS[obj] then TownVisitTrigger(hero, obj) end
+        if CanHeroConvert(hero, obj) then startThread(EnableTownConversionAbility, hero, obj) end
+    end
     SetTriggerConvertible(obj, nil)
     MakeHeroInteractWithObject(hero, obj)
     SetTriggerConvertible(obj, not nil)

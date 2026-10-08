@@ -82,20 +82,6 @@ function replace(array, sample, rep, all)
 	end
 end
 
-function remove(array, sample)
-    local n = length(array)
-    local j = 0
-    for i = 0,n do
-        if array[i] == sample then
-            j = j + 1
-        else
-            array[i-j] = array[i]
-        end
-        array[i] = nil
-    end
-    array.n = n - j
-end
-
 RANDOM_SEED = 0
 function random(a,b,seed)
     if (a == b) then return a end

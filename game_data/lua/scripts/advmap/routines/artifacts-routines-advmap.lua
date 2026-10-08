@@ -179,8 +179,12 @@ function Routine_ArtifactBootsOfSwiftJourney(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactBootsOfSwiftJourney")
     log.debug("$ Routine_ArtifactBootsOfSwiftJourney")
     Var_BootsOfSwiftJourneyCheck[hero] = not nil
+    startThread(Routine_ArtifactBootsOfSwiftJourneyThread, player, hero)
+end
+
+function Routine_ArtifactBootsOfSwiftJourneyThread(player, hero)
     while IsPlayerCurrent(player) do
-        sleep(100)
+        sleep(30)
         if HasArtefact(hero, ARTIFACT_BOOTS_OF_THE_SWIFT_JOURNEY, 1) then
             if Var_BootsOfSwiftJourneyCheck[hero] then
                 if GetHeroStat(hero, STAT_MOVE_POINTS) < 100 then
@@ -529,7 +533,7 @@ function Routine_ArtfsetMoon(player, hero)
     end
 end
 
-function Routine_ArtfsetHaven4(player, hero)
+function Routine_ArtfsetHaven4(player, hero, combatIndex)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtfsetHaven4")
     log.debug("$ Routine_ArtfsetHaven4")
     local value = GetArmyStrength(combatIndex, 0)

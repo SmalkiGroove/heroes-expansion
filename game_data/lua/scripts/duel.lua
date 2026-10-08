@@ -175,13 +175,15 @@ function DuelNextStage(player, hero)
     end
 end
 
+function DuelAfterCombat() end
+
 ------- Stages entrypoints ---------------------------------------------------
 
 function DuelStart(player, hero)
     log.debug("DUEL: player "..player.." is ready to start")
     if IsPESTEnabled == 1 then
-        DUEL_PLAYER_DATA.READY[player] = DUEL_PLAYER_DATA.READY[player] + 1
-        repeat sleep(1) until DUEL_PLAYER_DATA.READY[player] == 2
+        DUEL_PLAYER_DATA.READY = DUEL_PLAYER_DATA.READY + 1
+        repeat sleep(1) until DUEL_PLAYER_DATA.READY == 2
     end
     DuelSetup(player, hero)
 end
@@ -304,6 +306,7 @@ function DuelLoop(player)
     end
     while stage == DUEL_STAGE_BATTLE do
         ChangeHeroStat(hero, STAT_MOVE_POINTS, 999)
+        ScanHeroArtifacts(hero)
         sleep(5)
         stage = DuelGetPlayerStage(player)
     end

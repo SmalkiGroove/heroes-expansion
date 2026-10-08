@@ -11,7 +11,7 @@ function DuelLogistics(player, hero)
     for i = 1,n do
         local cr = CREATURES_BY_FACTION[DUEL_FACTION[player]][i][1]
         local growth = DUEL_CREATURE_GROWTH[DUEL_FACTION[player]][cr]
-        nb[i] = round(growth * (1 + bonus))
+        nb[i] = round(growth * bonus)
         local new = DUEL_TOWN_RECRUITS[player][cr] + nb[i]
         SetObjectDwellingCreatures(DuelPlayerTown(player), cr, new)
         DUEL_TOWN_RECRUITS[player][cr] = new
@@ -326,7 +326,7 @@ function DuelNecromancy(player, hero, level)
         if mod(level, tier) == 0 then
             local creature = CREATURES_BY_FACTION[NECROPOLIS][tier][1]
             local growth = DUEL_CREATURE_GROWTH[NECROPOLIS][creature]
-            local nb = ceil(growth * percent)
+            local nb = ceil(0.01 * growth * percent)
             AddHeroCreatures(hero, creature, nb)
             result[tier] = nb
         end

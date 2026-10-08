@@ -98,7 +98,7 @@ function Routine_SpiritismLevelUp(player, hero, mastery, level)
     log.debug("$ Routine_SpiritismLevelUp")
     if mod(level, 2) == 0 then
         local school = SPIRITISM_SCHOOL_AFFINITY[hero] and SPIRITISM_SCHOOL_AFFINITY[hero] or SPELL_SCHOOL_ANY
-        school = school * mod(level, 4)
+        if mod(level, 4) == 0 then school = SPELL_SCHOOL_ANY end
         TeachHeroRandomSpell(player, hero, school, mastery+2)
     end
 end
@@ -719,9 +719,10 @@ function Routine_DefendUsAllWeekly(player, hero, mastery)
     log.debug("$ Routine_DefendUsAllWeekly")
     for _,goblin in CREATURES_BY_FACTION[STRONGHOLD][1] do
         if GetHeroCreatures(hero, goblin) > 0 then
-            RemoveHeroCreatures(hero, goblin, 1)
+            RemoveHeroCreatures(hero, goblin, 1) sleep()
             AddHeroCreatureType(player, hero, STRONGHOLD, 3, 10, 1)
             AddHeroCreatureType(player, hero, STRONGHOLD, 5, 1, 1)
+            return
         end
     end
 end
@@ -779,10 +780,9 @@ function Routine_DespotismAfterBattle(player, hero, mastery, combatIndex)
     log.trace("/scripts/advmap/routines/skills-routines-advmap.lua: Routine_DespotismAfterBattle")
     log.debug("$ Routine_DespotismAfterBattle")
     local total = 0
-    for i,cr in GetHeroArmy(hero) do
-        if cr and cr ~= 0 then
-            total = total + GetHeroCreatures(hero, cr)
-        end
+    local k, units, amounts = GetHeroArmySummary(hero)
+    for i = 1,k do
+        total = total + amounts[i]
     end
     local bonus = mastery
     local threshold = 1200 - mastery * 200

@@ -150,6 +150,10 @@ end
 function Routine_MovePointsPerGriffin(player, hero)
     log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_MovePointsPerGriffin")
     log.debug("$ Routine_MovePointsPerGriffin")
+    startThread(Routine_MovePointsPerGriffinThread, player, hero)
+end
+
+function Routine_MovePointsPerGriffinThread(player, hero)
     local movement = GetHeroStat(hero, STAT_MOVE_POINTS)
     local counter = 0
     local n = 0
@@ -204,17 +208,15 @@ function Routine_HuntersWeeklyProd(player, hero, combatIndex)
     log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_HuntersWeeklyProd")
     log.debug("$ Routine_HuntersWeeklyProd")
     local base = 0.5 * GetHeroLevel(hero)
-    for town,data in MAP_TOWNS do
-        if data.faction == PRESERVE then
-            if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_3) ~= 0 then
-                local fort = GetTownBuildingLevel(town, TOWN_BUILDING_FORT)
-                local grail = GetTownBuildingLevel(town, TOWN_BUILDING_GRAIL)
-                local multiplier = 1 + 0.5 * grail
-                if fort > 1 then multiplier = multiplier + 0.5 * (fort-1) end
-                local nb = trunc(base * multiplier)
-                local current = GetObjectDwellingCreatures(town, CREATURE_WOOD_ELF)
-                SetObjectDwellingCreatures(town, CREATURE_WOOD_ELF, current + nb)
-            end
+    for _,town in GetHeroTowns(player, hero) do
+        if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_3) ~= 0 then
+            local fort = GetTownBuildingLevel(town, TOWN_BUILDING_FORT)
+            local grail = GetTownBuildingLevel(town, TOWN_BUILDING_GRAIL)
+            local multiplier = 1 + 0.5 * grail
+            if fort > 1 then multiplier = multiplier + 0.5 * (fort-1) end
+            local nb = trunc(base * multiplier)
+            local current = GetObjectDwellingCreatures(town, CREATURE_WOOD_ELF)
+            SetObjectDwellingCreatures(town, CREATURE_WOOD_ELF, current + nb)
         end
     end
 end
@@ -321,6 +323,10 @@ end
 function Routine_MovePointsPerBear(player, hero)
     log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_MovePointsPerBear")
     log.debug("$ Routine_MovePointsPerBear")
+    startThread(Routine_MovePointsPerBearThread, player, hero)
+end
+
+function Routine_MovePointsPerBearThread(player, hero)
     local movement = GetHeroStat(hero, STAT_MOVE_POINTS)
     local n = 0
     n = n + GetHeroCreatures(hero, CREATURE_BEAR_RIDER)
@@ -809,6 +815,7 @@ function Routine_GainDragonArtifacts(player, hero, combatIndex)
         pieces[pieces.n] = a
         pieces.n = pieces.n + 1
     end end
+    if pieces.n == 0 then return end
     local percent = 2 * level + value + pieces.n - 8
     local rnd = random(0,100,level)
     if percent > rnd then
@@ -824,8 +831,8 @@ function Routine_BuildDragonSpire(player, hero)
         if HERO_ARTFSETS_PIECES[hero][ARTIFACT_SET_DRAGON] == 8 then
             log.debug("$ Routine_BuildDragonSpire")
             for _,town in GetHeroTowns(player, hero) do
-                if GetTownBuildingLevel(town, TOWN_BUILDING_DUNGEON_SPIRE) < 2 then
-                    UpgradeTownBuilding(town, TOWN_BUILDING_DUNGEON_SPIRE)
+                if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_7) < 2 then
+                    UpgradeTownBuilding(town, TOWN_BUILDING_DWELLING_7)
                     Var_Raelag_DragonSpire = 1
                     return
                 end
@@ -1158,7 +1165,7 @@ function Routine_MultiplyTroops(player, hero)
     for _, dw in GetObjectNamesByType("BUILDING_IMP_CRUCIBLE") do
         if GetObjectOwner(dw) == player then dwellings[1] = dwellings[1] + 1 end
     end
-    for _, dw in GetObjectNamesByType("BUILDING_DEMONIC_GATE") do
+    for _, dw in GetObjectNamesByType("BUILDING_DEMON_GATE") do
         if GetObjectOwner(dw) == player then dwellings[2] = dwellings[2] + 1 end
     end
     for _, dw in GetObjectNamesByType("BUILDING_KENNELS") do
@@ -1172,8 +1179,8 @@ function Routine_MultiplyTroops(player, hero)
     end
     local tracker = {}
     for _, cr in GetHeroArmy(hero) do
-        local tier = GetTier(cr)
         if cr and cr ~= 0 then
+            local tier = GetTier(cr)
             if not tracker[tier] then
                 if GetFaction(cr) == INFERNO then
                     local growth = 0
@@ -1363,12 +1370,14 @@ function Routine_GainRandomDragon(player, hero)
     log.debug("$ Routine_GainRandomDragon")
     local dragons = {}
     for i, cr in GetHeroArmy(hero) do
-        local faction = GetFaction(cr)
-        local tier = GetTier(cr)
-        if tier == 7 then
-            if faction == DUNGEON or faction == FORTRESS or faction == PRESERVE 
-            or cr == CREATURE_BONE_DRAGON or cr == CREATURE_SHADOW_DRAGON or cr == CREATURE_HORROR_DRAGON
-            then dragons[cr] = 1 end
+        if cr and cr ~= 0 then
+            local faction = GetFaction(cr)
+            local tier = GetTier(cr)
+            if tier == 7 then
+                if faction == DUNGEON or faction == FORTRESS or faction == PRESERVE 
+                or cr == CREATURE_BONE_DRAGON or cr == CREATURE_SHADOW_DRAGON or cr == CREATURE_HORROR_DRAGON
+                then dragons[cr] = 1 end
+            end
         end
     end
     local prob = 20 + 2 * GetHeroLevel(hero)

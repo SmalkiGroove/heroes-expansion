@@ -106,7 +106,9 @@ function DuelWishFountain(player, nb)
     for _,artifact in DUEL_KEY_ARTIFACTS[nb] do
         local text_artifact = ARTIFACT_NAME_FILE[artifact]
         if Prompt(player, {"/Text/Duel/FountainWish.txt"; artifact=text_artifact}) then
-            GiveHeroArtifact(player, artifact) return
+            local fountain = "P"..player.."_FOUNTAIN_"..nb
+            Trigger(OBJECT_TOUCH_TRIGGER, fountain, nil)
+            GiveArtifact(player, artifact) return
         end
     end
 end
