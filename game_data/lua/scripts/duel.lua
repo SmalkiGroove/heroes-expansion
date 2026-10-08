@@ -156,6 +156,9 @@ end
 
 
 function DuelLevelUp(player, hero, level)
+    if DUEL_HERO_LEVELUP_EFFECTS[hero] then
+        DUEL_HERO_LEVELUP_EFFECTS[hero](player, hero, level)
+    end
     for skill, func in DUEL_SKILL_LEVELUP_EFFECTS do
         if HasHeroSkill(hero, skill) then func(player, hero, level) end
     end
@@ -187,11 +190,17 @@ function DuelSetup(player, hero)
     log.debug("DUEL: player "..player.." entered setup stage")
     SetObjectPosition(hero, DUEL_SETUP_COORDINATES[player].x, DUEL_SETUP_COORDINATES[player].y, 0, 4)
     SetObjectRotation(hero, 0)
+    if DUEL_HERO_SETUP_EFFECTS[hero] then
+        DUEL_HERO_SETUP_EFFECTS[hero](player, hero)
+    end
     DuelSetPlayerStage(player, DUEL_STAGE_SETUP)
 end
 
 function DuelAdventure(player, hero)
     log.debug("DUEL: player "..player.." entered adventure stage")
+    if DUEL_HERO_ADVENTURE_EFFECTS[hero] then
+        DUEL_HERO_ADVENTURE_EFFECTS[hero](player, hero)
+    end
     for skill, func in DUEL_SKILL_ADVENTURE_EFFECTS do
         if HasHeroSkill(hero, skill) then func(player, hero) end
     end
@@ -205,6 +214,9 @@ function DuelAdventureStart(player, hero)
 end
 
 function DuelAdventureDay(player, hero)
+    if DUEL_HERO_ADVENTURE_DAY_EFFECTS[hero] then
+        DUEL_HERO_ADVENTURE_DAY_EFFECTS[hero](player, hero)
+    end
     local days = DUEL_PLAYER_DATA.ADVENTURE_DAYS[player] - 1
     if days > 0 then
         Popup(player, {"/Text/Duel/NewDay.txt"; days=days})
@@ -239,6 +251,9 @@ function DuelCastle(player, hero)
     log.debug("DUEL: player "..player.." entered castle stage")
     SetObjectPosition(hero, DUEL_TOWNS_COORDINATES[player][DUEL_FACTION[player]].x, DUEL_TOWNS_COORDINATES[player][DUEL_FACTION[player]].y, 0, 4)
     SetObjectRotation(hero, player == 1 and 270 or 90)
+    if DUEL_HERO_CASTLE_EFFECTS[hero] then
+        DUEL_HERO_CASTLE_EFFECTS[hero](player, hero)
+    end
     DuelSetPlayerStage(player, DUEL_STAGE_CASTLE)
 end
 

@@ -5,7 +5,8 @@ function DuelLogistics(player, hero)
     log.debug("DUEL: DuelLogistics")
     local n = GetHeroSkillMastery(hero, SKILL_LOGISTICS)
     local bonus = 0.1
-    if HasHeroSkill(hero, PERK_RECRUITMENT) then bonus = bonus * 2 end
+    if HasHeroSkill(hero, PERK_RECRUITMENT) then bonus = bonus + 0.1 end
+    if hero == H_WYNGAAL then bonus = bonus + 0.1 end
     local nb = {0,0,0}
     for i = 1,n do
         local cr = CREATURES_BY_FACTION[DUEL_FACTION[player]][i][1]
@@ -62,6 +63,7 @@ function DuelLeadership(player, hero, level)
         local n = GetHeroSkillMastery(hero, SKILL_LEADERSHIP)
         local percent = 5 + 5 * n + level
         if HasHeroSkill(hero, PERK_CHARISMA) then percent = percent + 20 end
+        percent = percent + DuelHeroLeadershipBonus(hero, level)
         local result = {0,0,0,0,0,0,0}
         for creature, growth in DUEL_CREATURE_GROWTH[DUEL_FACTION[player]] do
             local nb = trunc(0.01 * percent * growth)
@@ -80,7 +82,8 @@ function DuelDiplomacy(player, hero, level)
     if mod(level, 2) == 0 then
         local tier = random(1,5)
         local creature = CREATURES_BY_FACTION[DUEL_FACTION[player]][tier][1]
-        local nb = round(0.2 * DUEL_CREATURE_GROWTH[DUEL_FACTION[player]][creature])
+        local percent = 20 + DuelHeroLeadershipBonus(hero, level)
+        local nb = round(0.01 * percent * DUEL_CREATURE_GROWTH[DUEL_FACTION[player]][creature])
         if nb > 0 then AddHeroCreatures(hero, creature, nb) end
         Popup(player, {"/Text/Duel/Skill/Diplomacy.txt"; arg1=nb, arg2=tier})
     end
