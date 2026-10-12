@@ -564,7 +564,26 @@ function Routine_ArtfsetGenji2(player, hero, combatIndex)
     end
 end
 
+function Routine_ArtfsetSaint4(player, hero, combatIndex)
+    log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtfsetSaint4")
+    log.debug("$ Routine_ArtfsetSaint4")
+    local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
+    for i = 0,stacks-1 do
+        local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
+        local half = trunc(0.5 * died)
+        if half > 0 then AddHeroCreatures(hero, creature, half) end
+    end
+end
 
+function Routine_ArtfsetSaint6(player, hero, combatIndex)
+    log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtfsetSaint6")
+    log.debug("$ Routine_ArtfsetSaint6")
+    local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
+    for i = 0,stacks-1 do
+        local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
+        if died > 0 then AddHeroCreatures(hero, creature, died) end
+    end
+end
 
 CONTINUOUS_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_POTION_OF_ENLIGHTENMENT] = Routine_ArtifactPotionOfEnlightenment,
@@ -629,6 +648,8 @@ AFTER_COMBAT_TRIGGER_ARTFSETS_ROUTINES = {
     [ARTFSET_HAVEN_4PC] = Routine_ArtfsetHaven4,
     [ARTFSET_VIZIR_4PC] = Routine_ArtfsetVizir,
     [ARTFSET_GENJI_4PC] = Routine_ArtfsetGenji2,
+    [ARTFSET_SAINT_4PC] = Routine_ArtfsetSaint4,
+    [ARTFSET_SAINT_6PC] = Routine_ArtfsetSaint6,
 }
 
 

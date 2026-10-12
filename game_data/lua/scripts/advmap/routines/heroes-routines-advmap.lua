@@ -232,9 +232,9 @@ end
 
 function Routine_UpgradePixieToSprite(player, hero)
     log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_UpgradePixieToSprite")
-    log.debug("$ Routine_UpgradePixieToSprite")
     local nb = GetHeroCreatures(hero, CREATURE_PIXIE)
     if nb > 0 then
+        log.debug("$ Routine_UpgradePixieToSprite")
         RemoveHeroCreatures(hero, CREATURE_PIXIE, nb)
         AddHeroCreatures(hero, CREATURE_SPRITE, nb)
     end
@@ -421,9 +421,9 @@ end
 
 function Routine_UpgradeThaneToThunderThane(player, hero)
     log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_UpgradeThaneToThunderThane")
-    log.debug("$ Routine_UpgradeThaneToThunderThane")
     local nb = GetHeroCreatures(hero, CREATURE_THANE)
     if nb > 0 then
+        log.debug("$ Routine_UpgradeThaneToThunderThane")
         RemoveHeroCreatures(hero, CREATURE_THANE, nb)
         AddHeroCreatures(hero, CREATURE_THUNDER_THANE, nb)
     end
@@ -474,9 +474,9 @@ for rune,_ in RUNIC_SPELLS do Var_Ebba_RunicSpells[rune] = 0 end
 
 function Routine_GainStatsPerRune(player, hero)
     log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GainStatsPerRune")
-    log.debug("$ Routine_GainStatsPerRune")
     for rune,tier in RUNIC_SPELLS do
         if KnowHeroSpell(hero, rune) and Var_Ebba_RunicSpells[rune] == 0 then
+            log.debug("$ Routine_GainStatsPerRune")
             AddHeroStatAmount(player, hero, STAT_ATTACK, 1)
             AddHeroStatAmount(player, hero, STAT_DEFENCE, 1)
             AddHeroStatAmount(player, hero, STAT_SPELL_POWER, 1)
@@ -1330,9 +1330,9 @@ end
 
 function Routine_UpgradeShamanToSkyDaughter(player, hero)
     log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_UpgradeShamanToSkyDaughter")
-    log.debug("$ Routine_UpgradeShamanToSkyDaughter")
     local nb = GetHeroCreatures(hero, CREATURE_SHAMAN)
     if nb > 0 then
+        log.debug("$ Routine_UpgradeShamanToSkyDaughter")
         RemoveHeroCreatures(hero, CREATURE_SHAMAN, nb)
         AddHeroCreatures(hero, CREATURE_SHAMAN_WITCH, nb)
     end

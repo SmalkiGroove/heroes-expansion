@@ -99,6 +99,35 @@ function Routine_ArtifactMoonCharm(side, hero, unit)
     end
 end
 
+------------- artifact sets ----------------------
+
+function Routine_ArtfsetNecro4(side, hero)
+    log.debug("$ Routine_ArtfsetNecro4")
+    SummonCreatureSideOffset(side, CREATURE_BONE_DRAGON, GetHeroLevel(side), 0)
+end
+
+function Routine_ArtfsetNecro4X(side, hero)
+    log.debug("$ Routine_ArtfsetNecro4X")
+    SummonCreatureSideOffset(side, CREATURE_SPECTRAL_DRAGON, GetHeroLevel(side), 0)
+end
+
+function Routine_ArtfsetAcademy6(side, hero)
+    log.debug("$ Routine_ArtfsetAcademy6")
+    for _, unit in GetUnits(side, CREATURE) do
+        if GetUnitMaxManaPoints(unit) > 0 then SetATB_ID(unit, ATB_INSTANT) end
+    end
+end
+
+function Routine_ArtfsetAcademy6X(side, hero)
+    log.debug("$ Routine_ArtfsetAcademy6X")
+    for _, unit in GetUnits(side, CREATURE) do
+        local type = GetCreatureType(unit)
+        if type == CREATURE_MAGE or type == CREATURE_ARCH_MAGI or type == CREATURE_COMBAT_MAGE then
+            UseCombatAbility(unit, SPELL_ABILITY_POWER_FEED)
+        end
+        if GetUnitMaxManaPoints(unit) > 0 then SetATB_ID(unit, ATB_INSTANT) end
+    end
+end
 
 function Routine_ArtfsetFrost(side, hero)
     log.debug("$ Routine_ArtfsetFrost")
@@ -249,6 +278,10 @@ COMBAT_END_ARTIFACT_ROUTINES = {
 
 
 COMBAT_START_ARTFSET_ROUTINES = {
+    [ARTFSET_NECRO_4PC] = Routine_ArtfsetNecro4,
+    [ARTFSET_NECRO_4PCX] = Routine_ArtfsetNecro4X,
+    [ARTFSET_ACADEMY_6PC] = Routine_ArtfsetAcademy6,
+    [ARTFSET_ACADEMY_6PCX] = Routine_ArtfsetAcademy6X,
     [ARTFSET_FROST_4PC] = Routine_ArtfsetFrost,
     [ARTFSET_SPIRIT_5PC] = Routine_ArtfsetSpirit,
     [ARTFSET_BESTIAL_4PC] = Routine_ArtfsetBestial,
