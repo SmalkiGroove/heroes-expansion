@@ -273,6 +273,13 @@ ARTIFACT_NAME_FILE = {
     [ARTIFACT_OGRE_CLUB]                     = "/Text/Game/Artifacts/OgreClub/Name.txt",
     [ARTIFACT_OGRE_SHIELD]                   = "/Text/Game/Artifacts/OgreShield/Name.txt",
     [ARTIFACT_SHIELD_OF_THE_DWARVEN_KINGS]   = "/Text/Game/Artifacts/ShieldOfTheDwarvenKings/Name.txt",
+    
+    [ARTIFACT_POTION_OF_ENLIGHTENMENT]       = "/Text/Game/Artifacts/PotionOfEnlightenment/Name.txt",
+    [ARTIFACT_POTION_OF_POWER]               = "/Text/Game/Artifacts/PotionOfPower/Name.txt",
+    [ARTIFACT_POTION_OF_STAMINA]             = "/Text/Game/Artifacts/PotionOfStamina/Name.txt",
+    [ARTIFACT_POTION_OF_VISION]              = "/Text/Game/Artifacts/PotionOfVision/Name.txt",
+    [ARTIFACT_POTION_OF_TELEPORTATION]       = "/Text/Game/Artifacts/PotionOfTeleportation/Name.txt",
+    [ARTIFACT_POTION_OF_SKILL]               = "/Text/Game/Artifacts/PotionOfSkill/Name.txt",
 }
 
 

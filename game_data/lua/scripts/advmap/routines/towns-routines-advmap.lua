@@ -218,6 +218,7 @@ function Routine_WolfKennel(player, town)
             local tier = GetTier(creature)
             if faction == NECROPOLIS and tier == 1 then amount = amount * 2 end
             total_value = total_value + amount / weekly_growth[faction][tier]
+            RemoveObjectCreatures(town, creature, amount)
         end
     end
     local wolves = 2 + round(7 * total_value)

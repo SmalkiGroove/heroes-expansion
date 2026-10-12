@@ -95,21 +95,22 @@ function WatchPlayer(player, wait)
 	sleep(10)
 	log.info("$ WatchPlayer "..player)
     local tracker = {}
-	local watchHero = function(hero)
+	local heroTracker = function(hero)
 		local x,y,z = GetObjectPosition(hero)
-		tracker[hero] = {
+		local t = {
 			track = not nil,
 			x = x, y = y, z = z,
 			move = GetHeroStat(hero, STAT_MOVE_POINTS),
 			mana = GetHeroStat(hero, STAT_MANA_POINTS),
 		}
 		-- ControlHeroCustomAbility(hero, CUSTOM_ABILITY_1, CUSTOM_ABILITY_ENABLED)
+		return t
 	end
-    for _,hero in GetPlayerHeroes(player) do watchHero(hero) end
+    for _,hero in GetPlayerHeroes(player) do tracker[hero] = heroTracker(hero) end
 	PlayerDailyResources(player)
     while IsPlayerCurrent(player) do
 		for _,hero in GetPlayerHeroes(player) do
-			if not tracker[hero] then watchHero(hero) end
+			if not tracker[hero] then tracker[hero] = heroTracker(hero) end
 			if tracker[hero].track then
 				local mvp = GetHeroStat(hero, STAT_MOVE_POINTS)
 				if mvp == 0 then

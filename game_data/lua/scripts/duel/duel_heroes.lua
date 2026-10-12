@@ -29,14 +29,14 @@ DUEL_HERO_DOLMEN_BONUS = {
 function DuelDolmenBonus(player, hero)
     log.trace("/scripts/duel/duel_heroes.lua: DuelDolmenBonus")
     local n = DUEL_HERO_DOLMEN_BONUS[hero]
-    DUEL_DOLMEN_LEVELS[player] = DUEL_DOLMEN_LEVELS[player] - n
+    DUEL_DOLMEN_LEVELS[player] = DUEL_DOLMEN_LEVELS[player] + n
     Popup(player, {"/Text/Duel/Hero/Dolmen.txt"; arg=n})
 end
 
 function DuelYlthinSetup(player, hero)
     log.trace("/scripts/duel/duel_heroes.lua: DuelYlthinSetup")
     GiveArtifact(hero, ARTIFACT_UNICORN_HORN_BOW, 0)
-    Popup(player, {"/Text/Duel/Hero/YlthinSetup.txt"; arg=ARTIFACT_NAME_FILE[ARTIFACT_UNICORN_HORN_BOW]})
+    Popup(player, "/Text/Duel/Hero/YlthinSetup.txt")
 end
 
 function DuelWulfstanSetup(player, hero)
@@ -97,28 +97,14 @@ end
 ---------------------------------------------------------------------------------------------------------------------------------------------
 -- LEVEL UP
 
-DUEL_ZOULEIKA_POTIONS = {
-    ARTIFACT_POTION_OF_ENLIGHTENMENT,
-    ARTIFACT_POTION_OF_POWER,
-    ARTIFACT_POTION_OF_STAMINA,
-    ARTIFACT_POTION_OF_VISION,
-    ARTIFACT_POTION_OF_SKILL,
-}
-DUEL_POTION_NAME_FILE = {
-    [ARTIFACT_POTION_OF_ENLIGHTENMENT] = "/Text/Game/Artifacts/PotionOfEnlightenment/Name.txt",
-    [ARTIFACT_POTION_OF_POWER] = "/Text/Game/Artifacts/PotionOfPower/Name.txt",
-    [ARTIFACT_POTION_OF_STAMINA] = "/Text/Game/Artifacts/PotionOfStamina/Name.txt",
-    [ARTIFACT_POTION_OF_VISION] = "/Text/Game/Artifacts/PotionOfVision/Name.txt",
-    [ARTIFACT_POTION_OF_SKILL] = "/Text/Game/Artifacts/PotionOfSkill/Name.txt",
-}
-
 function DuelZouleikaPotion(player, hero, level)
     log.trace("/scripts/duel/duel_heroes.lua: DuelZouleikaPotion")
-    local potion = DUEL_ZOULEIKA_POTIONS[random(1,5,level)]
+    local potions = {ARTIFACT_POTION_OF_ENLIGHTENMENT,ARTIFACT_POTION_OF_POWER,ARTIFACT_POTION_OF_VISION,ARTIFACT_POTION_OF_SKILL,}
+    local potion = potions[random(1,4,level)]
     GiveArtifact(hero, ARTIFACT_FILLER_POCKET) sleep()
     GiveArtifact(hero, potion) sleep()
     RemoveArtefact(hero, ARTIFACT_FILLER_POCKET)
-    Popup(player, {"/Text/Duel/Hero/Zouleika.txt"; arg=DUEL_POTION_NAME_FILE[potion]})
+    Popup(player, {"/Text/Duel/Hero/Zouleika.txt"; arg=ARTIFACT_NAME_FILE[potion]})
 end
 
 function DuelEllesharLevelUp(player, hero, level)
