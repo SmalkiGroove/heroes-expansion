@@ -13,7 +13,6 @@
 
 ### Something does not work
 
-- Thunder Power has no lightning visual effect
 - RMG doesn't spawn monsters sometimes
 
 ### Bugs
@@ -27,7 +26,6 @@
 
 ### Balance
 
-- Market change rate are total scam
 - Inferno and Dungeon sacrificial buildings are bad
 
 ### Massive work required
@@ -48,3 +46,5 @@
 - Artifacts that restore mana after battles should restore during combat instead
 - Magic guild bonuses apply when built instead of the following day
 - More potions with new effects
+- Market exchange rate are better
+- Thunder Power has no lightning visual effect
