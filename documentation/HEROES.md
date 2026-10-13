@@ -214,6 +214,8 @@ __DIRAEL :__
 Swarm Queen
 
 
+All Pixies in hero's army are upgraded to Sprites for free.
+
 Wasp Swarm spell is more effective depending on hero level. Damage is increased by 5% per level, and reduction of ATB is increased by 2% every 3 levels.
 
 Hero spawns 2 Hives nearby enemy positions when combat starts.
@@ -315,6 +317,8 @@ Hero gains bonus movement points based on the amount of Bear Riders in his army.
 __HANGVUL :__
 Governor of the Mines
 
+
+All unupgraded Thanes in hero's army are upgraded to Thunder Thanes for free.
 
 Flame Lords and Thunder Thanes cast their special ability on random enemy creatures at the start of combat.
 
@@ -613,7 +617,7 @@ After every victory, the hero has a chance to drop an artifact of the Dragon set
 
 Instead of summoning Legendary Dragons, the effect of the Dragon set adds a permanent Dungeon dragon if the hero has at least one in his army, otherwise summons a temporary stack of Cave Dragons.
 
-Build or upgrade the Dragon Spire in one on your Dungeon towns after gathering all artifacts of the Dragon set except Dragon Flame Tongue.
+Build or upgrade the Dragon Spire in one on your Dungeon towns after gathering all artifacts of the Dragon set.
 
 After learning 3 perks in the Arcanism skill, upgrades the Arcanism skill to absolute mastery, that increases elemental chain damages and ignoring 100% of enemy magic-proof.
 
@@ -635,7 +639,7 @@ Experience and Knowledge bonuses granted by the Learning skill are doubled.
 
 Intelligence gives 6 Knowledge instead of 4, Exaltation gives 6 Spellpower instead of 4, and Meditation restores mana beyond limit, increasing with hero level.
 
-Hero starts with innate skill Enlightened, giving +2 Knowledge and 1000 experience points right away.
+Hero starts with innate skill Enlightened, giving +2 Knowledge and 1500 experience points right away.
 
 ---
 __ERUINA :__
@@ -1088,7 +1092,7 @@ __ZOULEIKA :__
 Potion Brewer
 
 
-Gain a random potion among Potion of Mana, Potion of Experience, and Potion of Stamina upon leveling up.
+Gain a random potion among Potion of Enlightenment, Potion of Power, Potion of Stamina, Potion of Vision, Potion of Teleportation, and Potion of Skill upon leveling up.
 
 The First Aid Tent will heal more hit points per hero level. The bonus amount is equal to (Level + 4)². The damage of Plague Tent ability is also increased by the same value.
 
@@ -1099,6 +1103,8 @@ The First Aid Tent gets 100% ATB after each hero turn during combat.
 __KUJIN :__
 Shaman Matriarch
 
+
+All Shamans in hero's army are upgraded to Sky Daughters for free.
 
 Shamans in hero's army have double Spellpower and Mana.
 

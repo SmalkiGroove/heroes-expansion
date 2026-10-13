@@ -4,8 +4,8 @@
 ### The Sentinel
 | Nb | Effects |
 | --- | --- |
-| 4 | • Victories grant bonuses to hero troops for the next battle. The stronger the defeated monsters are, the stronger the bonuses are.  For Haven heroes:  • Angels in hero's army Encourage a random ally each turn. |
-| 6 | • Victories grant bonuses to hero troops for the next battle. The stronger the defeated monsters are, the stronger the bonuses are.  • Summons a row of Footmen in front of hero's army at the start of combats.  For Haven heroes:  • Angels in hero's army Encourage a random ally each turn.  • Summons a row of Squires instead of Footmen. |
+| 4 | • Victories grant Attack and Defense bonuses to hero troops for the next battle. The stronger the defeated monsters are, the higher the bonuses are.  For Haven heroes:  • Angels in hero's army Encourage a random ally each turn. |
+| 6 | • Victories grant Attack and Defense bonuses to hero troops for the next battle. The stronger the defeated monsters are, the higher the bonuses are.  • Creatures in hero's army always get good Morale rolls.  For Haven heroes:  • Angels in hero's army Encourage a random ally each turn.  • Hero troops have +2 to their Attack and Defense per Morale point. |
 
 - __Sentinel's Bracer__ :
 +1 Defense
@@ -32,8 +32,8 @@ Grants the Blade Barrier spell if it wasn't learned already
 ### Elven Secret
 | Nb | Effects |
 | --- | --- |
-| 4 | • Coming soon     For Sylvan heroes:  • Coming soon |
-| 6 | • Coming soon     For Sylvan heroes:  • Coming soon |
+| 4 | • Hero casts Nature spells with doubled effective spellpower.     For Sylvan heroes:  • Sylvan creatures in hero's army deal 20% more damage to favoured enemies. |
+| 6 | • Hero casts Nature spells with doubled effective spellpower.  • Creatures in hero's army always have lucky hit rolls.     For Sylvan heroes:  • Sylvan creatures in hero's army deal 20% more damage to favoured enemies.  • Hero troops gain 5% magic proof per Luck point. |
 
 - __Avenger Bow__ :
 +10% damage from ranged attacks
@@ -59,8 +59,8 @@ Generate between 0 and 3 Wood per day, and sometimes a bonus of 1000 experience 
 ### Hell Conquest
 | Nb | Effects |
 | --- | --- |
-| 4 | • Coming soon     For Inferno heroes:  • Coming soon |
-| 6 | • Coming soon     For Inferno heroes:  • Coming soon |
+| 4 | • Hero troops melee attacks leave a flame on the ground (like the Liquid Flame Breath ability).     For Inferno heroes:  • All enemy creatures fire-proof is ignored (immunities still apply). |
+| 6 | • Hero troops melee attacks leave a flame on the ground (like the Liquid Flame Breath ability).  • Reduce enemy creatures luck by 5.     For Inferno heroes:  • All enemy creatures fire-proof is ignored (immunities still apply).  • Inferno creaures in hero's army have the Fire Shield ability. |
 
 - __Shackles of the Last Man__ :
 -2 Attack and Defense to enemy creatures
@@ -84,7 +84,7 @@ Creatures in hero's army are immuned to Armageddon
 | Nb | Effects |
 | --- | --- |
 | 4 | • Summons a stack of Bone Dragons when combat starts.  For Necropolis heroes:  • Summons Spectral Dragons instead. |
-| 6 | • Summons two stacks of Bone Dragons when combat starts.  For Necropolis heroes:  • Summons Spectral Dragons instead. They start with 100% ATB. |
+| 6 | • Summons a stack of Bone Dragons when combat starts.  • All hero troops are now Undead.  For Necropolis heroes:  • Summons Spectral Dragons instead.  • Undeads in hero's army have Regeneration. |
 
 - __Amulet of Necromancy__ :
 +1 Spellpower
@@ -111,8 +111,8 @@ After every victory, gain an amount of Movement points and Experience depending 
 ### Magister Set
 | Nb | Effects |
 | --- | --- |
-| 4 | • Casters in hero's army regenerate mana during combat.     For Academy heroes:  • Mages in hero's army start with double mana. |
-| 6 | • Casters in hero's army regenerate mana during combat and start with 100% ATB.     For Academy heroes:  • Mages in hero's army start with double mana. The largest stack uses Power Feed. |
+| 4 | • Casters in hero's army have twice as much mana and spellpower.     For Academy heroes:  • Mages in hero's army have +10 Health. |
+| 6 | • Casters in hero's army have twice as much mana and spellpower.  • They start battles with 100% ATB.     For Academy heroes:  • Mages in hero's army have +10 Health.  • They cast Power Feed at the start of combat. |
 
 - __Book Of Power__ :
 +1 Spellpower and Knowledge per rank of Learning skill
@@ -138,8 +138,8 @@ Gain Experience every day based on the hero's Knowledge, and half the amount to 
 ### Shadow Burst
 | Nb | Effects |
 | --- | --- |
-| 4 | • Coming soon     For Dungeon heroes:  • Coming soon |
-| 6 | • Coming soon     For Dungeon heroes:  • Coming soon |
+| 4 | • Hero casts Dark spells with doubled effective spellpower.     For Dungeon heroes:  • Hero gains the ability to cast Mass Slow and Mass Confusion. |
+| 6 | • Hero casts Dark spells with doubled effective spellpower.  • Hero troops gain +2 initiative and are immuned to Curse of the Netherworld.     For Dungeon heroes:  • Hero gains the ability to cast Mass Slow and Mass Confusion.  • Dark elves cannot be affected by mind afflictions. |
 
 - __Ring of Banishment__ :
 -50% to the amount of enemy summoned elementals
@@ -165,8 +165,8 @@ Grants the Banish ability
 ### Dwarven Set
 | Nb | Effects |
 | --- | --- |
-| 4 | • Coming soon     For Fortress heroes:  • Coming soon |
-| 6 | • Coming soon     For Fortress heroes:  • Coming soon |
+| 4 | • Hero troops gain the befenits of Offensive Formation and Defensive Formation. If the perks are already known, their bonus is doubled.     For Fortress heroes:  • Dwarves in hero's army gain the abilities Battle Leader and Aura of Bravery. |
+| 6 | • Hero troops gain 50% spell-proof and get the befenits of Offensive Formation and Defensive Formation. If the perks are already known, their bonus is doubled.     For Fortress heroes:  • Dwarves in hero's army gain the abilities Battle Leader and Aura of Bravery.  • Creatures in hero's army have unlimited uses of runes (the activation cost is unchanged). |
 
 - __Rune of Flame__ :
 +2 Spellpower
@@ -192,8 +192,8 @@ Creatures in hero's army are Undisturbed (immunity to Berserk)
 ### Brutalist Set
 | Nb | Effects |
 | --- | --- |
-| 4 | • Coming soon     For Stronghold heroes:  • Coming soon |
-| 6 | • Coming soon     For Stronghold heroes:  • Coming soon |
+| 4 | • All creatures in hero's army gain the ability Beat-up.     For Stronghold heroes:  • Orcs gain 100 additional rage points at the start of combat. |
+| 6 | • All creatures in hero's army gain the ability Beat-up, and +2 to their Speed and Morale.     For Stronghold heroes:  • Orcs gain 250 additional rage points at the start of combat. |
 
 - __Barbarian Cuirass__ :
 +3 Defense
@@ -220,8 +220,8 @@ Troops gain the Battle Rage ability
 ### Draconic Power
 | Nb | Effects |
 | --- | --- |
-| 4 | Summon the Legendary Dragon when a friendly stack of creatures is killed. It comes with 50% ATB. |
-| 6 | Summon the Legendary Dragon when an enemy stack of creatures is killed. It comes with 75% ATB. |
+| 4 | Summon the Legendary Dragon when any stack of creatures is killed. |
+| 6 | Summon the Legendary Dragon when combat starts. |
 | 8 | Summon the Legendary Dragon when combat starts. It comes with 100% ATB. |
 
 - __Dragon Scale Armor__ :
@@ -246,9 +246,8 @@ Troops gain the Battle Rage ability
 +3 Spellpower
 +5% Initiative to friendly shooting creatures
 - __Dragon Flame Tongue__ :
-+4 Attack
--40% Damage taken from enemy Frost spells
-Creatures in hero's army are immuned to Cold Death
++1 Attack
++15% fire damage to attacks
 
 ---
 ### Empowerement
@@ -363,6 +362,8 @@ Damaging spells ignore 20% of enemy creatures' spell-proof
 - __Palace Boots__ :
 Gain random temporary battle bonuses after each victory
 
+<color_default>The bonuses are: +1 Luck, +1 Morale, +3 Attack, +3 Defense, +6% HP, +2 Initiative, +1 Speed.
+
 ---
 ### Afterlife Set
 | Nb | Effects |
@@ -402,11 +403,11 @@ Learn a new spell on level up (tier dépends on hero level)
 - __Runic War Axe__ :
 +2 Attack
 +2 Knowledge
-Restore 25 Mana after battle
+Restore 25% of missing mana every time an enemy stack is killed
 - __Runic War Harness__ :
 +2 Defense
 +2 Spellpower
-Restore 25 Mana after battle
+Restore 5% of maximum mana per combat turn
 
 ---
 ### Bandit Set
@@ -484,6 +485,10 @@ Creatures in hero's army are immuned to Decay
 - __Celestial Justicar's Armor__ :
 +4 Defense
 -25% melee damage taken
+- __Celestial Justicar's Helm__ :
++2 Defense
++2 Spellpower
+Creatures in hero's army are immuned to Confusion, Blind and Berserk
 - __Celestial Justicar's Sword__ :
 +3 Attack
 +15% Initiative to friendly creatures
@@ -516,7 +521,7 @@ Restore hero movement points on level up
 +25% Movement points on water
 - __Pirate Smasher__ :
 +1 Attack
-<color=red>Friendly creatures attacks reduce enemy Defense by 1
+Friendly creatures attacks reduce enemy Defense by 3
 - __Captain's Hook__ :
 *captain's hook*
 
@@ -588,6 +593,10 @@ If two of these are present in hero's inventory at the start of the day, they me
 Governance skill grants an additional 1000 Gold and 1 special resource.
 Industry perk has no range limit.
 Mythology perk's gold income is daily.
+- __Phoenix Fire Cape__ :
++1 Spellpower
+-33% Damage taken from enemy Fire spells
+Grants hero troops immunity to Frost Power's freeze
 - __Solar Ring__ :
 +1 Spellpower
 +20% damage to Fire spells
@@ -627,7 +636,7 @@ Grants the hero all Dark Magic spells regardless of having any skill in this sch
 Grants the hero all Natural Magic spells regardless of having any skill in this school.
 - __Beginner’s Magic Wand__ :
 +1 Spellpower
-Restore 10 Mana after battle
+Restore 2 mana per combat turn
 - __Skull of the Forbidden__ :
 +10 Spellpower
 -1 Luck
@@ -658,6 +667,10 @@ Generate between 0 and 3 Ore per day, and sometimes an additional Crystal or Gem
 - __Elrath's Divine Shield__ :
 +4 Defense
 +40% Magic-proof against all elemental spells
+- __Shantiri Moon Disc__ :
++4 Defense
++4 Spellpower
+Creatures in hero's army are immuned to Implosion
 - __Rod of Torment__ :
 +4 Knowledge
 -2 Morale to enemy creatures
@@ -722,9 +735,6 @@ A stack of Water Elementals joins hero's army at the start of combats (scales wi
 +100 Healing power to the First Aid Tent
 - __Ring Of Devastation__ :
 +10 Attack to the Ballista
-- __Golden Goose__ :
-Hero's army attacks are always lucky
--1 to all primary stats
 - __Ardent Smith__ :
 +2 Attack
 Creatures in hero's army get the Flame Wave ability
@@ -732,3 +742,36 @@ Creatures in hero's army get the Flame Wave ability
 +1 Attack
 +1 Defense
 +3 Attack and Defense for the first battle of each day
+- __Magma Shield__ :
++5 Defense
+-40% Damage taken from enemy Frost spells
+Creatures in hero's army are immuned to Cold Death
+- __Dawn Gleam__ :
++3 Knowledge
+All creatures in hero's army have the Chid of Light ability
+- __Potion of Enlightenment__ :
+<color=FFFFD700>Consumable<body_bright>
+
+Gain mana equal to 30 + 10% of total mana (can surpass hero's max mana)
+Gain experience equal to 1000 + 2% of total experience gained
+- __Potion Of Power__ :
+<color=FFFFD700>Consumable<body_bright>
+
+Gain +1 Spellpower
+- __Potion of Stamina__ :
+<color=FFFFD700>Consumable<body_bright>
+
+Gain 2000 movement points for this turn
+- __Potion Of Vision__ :
+<color=FFFFD700>Consumable<body_bright>
+
+Reveal area around the hero
+Reveal all buildings owned by opponents
+- __Potion Of Teleportation__ :
+<color=FFFFD700>Consumable<body_bright>
+
+Teleports the hero to a random place on the map until the end of turn
+- __Potion Of Skill__ :
+<color=FFFFD700>Consumable<body_bright>
+
+Increase the mastery of a known skill that is not at expert level
