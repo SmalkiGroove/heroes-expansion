@@ -1,0 +1,18 @@
+# Increase amount of spells (spell records, including the effects shown on creatures) to 354
+# The count must equal the number of SpellID entries (game_data/core/types.xml, RefTables/UndividedSpells.xdb):
+# IDs at or above it are outside the spell table.
+definitions:
+  - &spells_count 354
+edits:
+  - name: Spell table size (push 161h in the STable_Spell_SpellID loader, VA 0x0084C9BF)
+    address: '0044BDC0'
+    size: 4
+    type: int
+    original: 353
+    modified: *spells_count
+  - name: Spell count getter (mov eax,161h, VA 0x00847890)
+    address: '00446C91'
+    size: 4
+    type: int
+    original: 353
+    modified: *spells_count

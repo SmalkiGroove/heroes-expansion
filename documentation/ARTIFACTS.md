@@ -111,8 +111,8 @@ After every victory, gain an amount of Movement points and Experience depending 
 ### Magister Set
 | Nb | Effects |
 | --- | --- |
-| 4 | • Casters in hero's army have twice as much mana and spellpower.     For Academy heroes:  • Mages in hero's army have +10 Health. |
-| 6 | • Casters in hero's army have twice as much mana and spellpower.  • They start battles with 100% ATB.     For Academy heroes:  • Mages in hero's army have +10 Health.  • They cast Power Feed at the start of combat. |
+| 4 | • Hero gain 2% increased spellpower per knowledge point, and caster in the army gain 2% increased spellpower per maximum mana point.     For Academy heroes:  • Hero and mages use 15% less ATB for casting spells. |
+| 6 | • Hero gain 2% increased spellpower per knowledge point, and caster in the army gain 2% increased spellpower per maximum mana point.  • Hero and caster in the army start combats with +50% ATB.  • Casters in hero's army gain the benefits of the Magister artifacts.     For Academy heroes:  • Hero and mages use 15% less ATB for casting spells.  • Mages and surrounding allies take 20% reduced damage. |
 
 - __Book Of Power__ :
 +1 Spellpower and Knowledge per rank of Learning skill
