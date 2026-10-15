@@ -46,7 +46,11 @@
 		</UpperMargin>
 	</Placement>
 	<Enabled>true</Enabled>
+	{%- if has_count %}
 	<TextString href="{{ hero }}_cr{{ x }}.(ForegroundTextString).xdb#xpointer(/ForegroundTextString)"/>
+	{%- else %}
+	<TextString/>
+	{%- endif %}
 	<relatedTexts/>
 	<relatedTextures/>
 	<Flags>

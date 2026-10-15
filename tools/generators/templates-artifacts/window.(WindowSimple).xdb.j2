@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<WindowSimple ObjectRecordID="1000000">
-	<ClassTypeID>269488144</ClassTypeID>
-	<Shared href="Artifacts.(WindowSimpleShared).xdb#xpointer(/WindowSimpleShared)"/>
-	<Name>ArtifactsWindow</Name>
-	<Visible>true</Visible>
-	<Priority>0</Priority>
+<WindowSimple ObjectRecordID="1000406">
+	<ClassTypeID>285700801</ClassTypeID>
+	<Shared href="{{ shared }}#xpointer(/WindowSimpleShared)"/>
+	<Name>{{ name }}</Name>
+	<TooltipFileRef/>
+	<Visible>{{ 'true' if visible else 'false' }}</Visible>
+	<Priority>{{ priority | default(0) }}</Priority>
 	<GameMessageReactions/>
 	<Placement>
 		<Position>
 			<First>
-				<x>0</x>
-				<y>0</y>
+				<x>{{ x }}</x>
+				<y>{{ y }}</y>
 			</First>
 			<Second>true</Second>
 		</Position>
 		<VerAllign>
-			<First>EPA_CENTER</First>
+			<First>EPA_LOW_END</First>
 			<Second>false</Second>
 		</VerAllign>
 		<HorAllign>
-			<First>EPA_CENTER</First>
+			<First>EPA_LOW_END</First>
 			<Second>false</Second>
 		</HorAllign>
 		<Size>
 			<First>
-				<x>800</x>
-				<y>600</y>
+				<x>{{ w }}</x>
+				<y>{{ h }}</y>
 			</First>
 			<Second>true</Second>
 		</Size>
@@ -44,4 +45,11 @@
 			<Second>false</Second>
 		</UpperMargin>
 	</Placement>
+	<Enabled>true</Enabled>
+	<TextString/>
+	<relatedTexts/>
+	<relatedTextures/>
+	<Flags>
+		<SuperActive>false</SuperActive>
+	</Flags>
 </WindowSimple>

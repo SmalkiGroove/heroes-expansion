@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<WindowSimpleShared ObjectRecordID="1000001">
+<WindowSimpleShared ObjectRecordID="1000326">
 	<Crap>false</Crap>
 	<Children>
-		<Item href="ByClass/minor.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="BySlot/primary.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="BySet/artfset_h5x_haven.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+	{%- for skill in skills %}
+		<Item href="{{ skill }}/{{ skill }}_window.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+	{%- endfor %}
 	</Children>
 	<Background/>
 	<Foreground/>
 	<Flags>
-		<Transparent>false</Transparent>
+		<Transparent>true</Transparent>
 	</Flags>
 	<Placement>
 		<Position>
@@ -29,10 +29,10 @@
 		</HorAllign>
 		<Size>
 			<First>
-				<x>800</x>
-				<y>600</y>
+				<x>0</x>
+				<y>0</y>
 			</First>
-			<Second>true</Second>
+			<Second>false</Second>
 		</Size>
 		<LowerMargin>
 			<First>
@@ -49,4 +49,7 @@
 			<Second>false</Second>
 		</UpperMargin>
 	</Placement>
+	<ActiveArea/>
+	<IgnoreDblClick>false</IgnoreDblClick>
+	<ActiveMask/>
 </WindowSimpleShared>

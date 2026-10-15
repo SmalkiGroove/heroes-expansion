@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<WindowSimpleShared ObjectRecordID="1000201">
+<WindowSimpleShared ObjectRecordID="1000806">
 	<Crap>false</Crap>
-	<Children>
-		<Item href="{{ artifact_id }}.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
-	</Children>
-	<Background/>
+	<Children/>
+	<Background href="{{ id }}.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 	<Foreground/>
 	<Flags>
-		<Transparent>true</Transparent>
+		<Transparent>false</Transparent>
 	</Flags>
 	<Placement>
 		<Position>
@@ -27,10 +25,10 @@
 		</HorAllign>
 		<Size>
 			<First>
-				<x>64</x>
-				<y>64</y>
+				<x>{{ size }}</x>
+				<y>{{ size }}</y>
 			</First>
-			<Second>true</Second>
+			<Second>false</Second>
 		</Size>
 		<LowerMargin>
 			<First>
@@ -47,4 +45,7 @@
 			<Second>false</Second>
 		</UpperMargin>
 	</Placement>
+	<ActiveArea/>
+	<IgnoreDblClick>false</IgnoreDblClick>
+	<ActiveMask/>
 </WindowSimpleShared>

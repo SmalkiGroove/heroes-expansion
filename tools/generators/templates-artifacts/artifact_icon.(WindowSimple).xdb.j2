@@ -1,27 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<WindowSimple ObjectRecordID="1000200">
-	<ClassTypeID>269488144</ClassTypeID>
-	<Shared href="{{ artifact_id }}.(WindowSimpleShared).xdb#xpointer(/WindowSimpleShared)"/>
-	<Name>{{ artifact_id }}Icon</Name>
+<WindowSimple ObjectRecordID="1001263">
+	<ClassTypeID>285700801</ClassTypeID>
+	<Shared href="/UI/Doc/Artifacts/_Artifacts/{{ artifact_id }}.(WindowSimpleShared).xdb#xpointer(/WindowSimpleShared)"/>
+	<Name>DocArtifactsDescIcon{{ artifact_id }}</Name>
+	<TooltipFileRef/>
 	<Visible>true</Visible>
-	<Priority>20</Priority>
-	<GameMessageReactions>
-		<Item>
-			<Message>GEM_MSG_MOUSE_ENTER</Message>
-			<Reactions>
-				<Item href="{{ artifact_id }}_tooltip.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
-			</Reactions>
-		</Item>
-		<Item>
-			<Message>GEM_MSG_MOUSE_LEAVE</Message>
-			<Reactions/>
-		</Item>
-	</GameMessageReactions>
+	<Priority>0</Priority>
+	<GameMessageReactions/>
 	<Placement>
 		<Position>
 			<First>
-				<x>{{ x_pos }}</x>
-				<y>{{ y_pos }}</y>
+				<x>{{ x }}</x>
+				<y>{{ y }}</y>
 			</First>
 			<Second>true</Second>
 		</Position>
@@ -35,8 +25,8 @@
 		</HorAllign>
 		<Size>
 			<First>
-				<x>64</x>
-				<y>64</y>
+				<x>{{ size }}</x>
+				<y>{{ size }}</y>
 			</First>
 			<Second>true</Second>
 		</Size>
@@ -55,4 +45,11 @@
 			<Second>false</Second>
 		</UpperMargin>
 	</Placement>
+	<Enabled>true</Enabled>
+	<TextString/>
+	<relatedTexts/>
+	<relatedTextures/>
+	<Flags>
+		<SuperActive>false</SuperActive>
+	</Flags>
 </WindowSimple>

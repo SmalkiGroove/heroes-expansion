@@ -2,9 +2,16 @@
 <WindowSimpleShared ObjectRecordID="1000326">
 	<Crap>false</Crap>
 	<Children>
+	{%- for item in header %}
+		<Item href="{{ item }}"/>
+	{%- endfor %}
 	{%- for skill in skills %}
 		<Item href="{{ skill }}/{{ skill }}.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
 		<Item href="{{ skill }}/highlight/{{ skill }}_highlight.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+	{%- endfor %}
+	{%- for branch, skill in extra %}
+		<Item href="/UI/Doc/Skills/_Skills/{{ branch }}/{{ skill }}/{{ skill }}.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="/UI/Doc/Skills/_Skills/{{ branch }}/{{ skill }}/highlight/{{ skill }}_highlight.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
 	{%- endfor %}
 	</Children>
 	<Background/>
