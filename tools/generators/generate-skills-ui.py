@@ -632,19 +632,19 @@ def skill_tree(folder):
     """Masteries, the 2 perk chains as {depth: [perks]} and the information perks (no mastery required) of a branch folder."""
     ids = generated_in[folder]
     masteries = sorted(i for i in ids if not i.endswith("000"))
-    perks = [i for i in ids if i.endswith("000")]
-    infos = sorted((p for p in perks if not any(r in masteries for r in prerequisites[p])), key=lambda p: coordinates_skills[p])
+    perks = sorted(i for i in ids if i.endswith("000"))
+    infos = sorted((p for p in perks if not any(r in masteries for r in prerequisites[p])), key=lambda p: (coordinates_skills[p], p))
     pickable = [p for p in perks if p not in infos]
     depth = {}
     def get_depth(p):
         if p not in depth:
             depth[p] = 1 + max([get_depth(r) for r in prerequisites[p] if r in pickable] or [0])
         return depth[p]
-    roots = sorted((p for p in pickable if get_depth(p) == 1), key=lambda p: coordinates_skills[p])
+    roots = sorted((p for p in pickable if get_depth(p) == 1), key=lambda p: (coordinates_skills[p], p))
     chains = []
     for root in roots:
         chain = defaultdict(list)
-        for p in sorted(pickable, key=lambda p: coordinates_skills[p]):
+        for p in sorted(pickable, key=lambda p: (coordinates_skills[p], p)):
             if p == root or root in requirements(p, pickable):
                 chain[get_depth(p)].append(p)
         chains.append(chain)
