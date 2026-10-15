@@ -56,26 +56,59 @@
 		<Item>
 			<MessageOnEnterState/>
 			<CommandsOnEnterState>
-				<Commands/>
-				<Reversable>true</Reversable>
-			</CommandsOnEnterState>
-			<CommandsOnRightClick>
-				<Commands/>
+				<Commands>
+					<Item href="/UI/Doc/Skills/_Skills/Logistics/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Logistics/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/ShatterMagic/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/ShatterMagic/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Combat/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Combat/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Warfare/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Warfare/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/LightMagic/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/LightMagic/GrayOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Offence/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Offence/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Governance/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Governance/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/DarkMagic/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/DarkMagic/GrayOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Defense/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Defense/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Leadership/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Leadership/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/NaturalMagic_a/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/NaturalMagic_a/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/NaturalMagic_b/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/NaturalMagic_b/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/NaturalMagic_c/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/NaturalMagic_c/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/NaturalMagic_d/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/NaturalMagic_d/GrayOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Learning/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Learning/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Training/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Training/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Despotism/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Despotism/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/DestructiveMagic_a/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/DestructiveMagic_a/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/DestructiveMagic_b/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/DestructiveMagic_b/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/DestructiveMagic_c/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/DestructiveMagic_c/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/DestructiveMagic_d/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/DestructiveMagic_d/GrayOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Sorcery/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Sorcery/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Voice/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Voice/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/BloodRage/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Spiritism/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Stronghold/MightDisable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Stronghold/MagicEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+				</Commands>
 				<Reversable>false</Reversable>
-			</CommandsOnRightClick>
-			<commandsOnLDblKlick>
-				<Commands/>
-				<Reversable>false</Reversable>
-			</commandsOnLDblKlick>
-			<WaitVisual>false</WaitVisual>
-			<ReverseCommands>false</ReverseCommands>
-			<Name/>
-		</Item>
-		<Item>
-			<MessageOnEnterState/>
-			<CommandsOnEnterState>
-				<Commands/>
-				<Reversable>true</Reversable>
 			</CommandsOnEnterState>
 			<CommandsOnRightClick>
 				<Commands/>
@@ -90,8 +123,8 @@
 			<Name/>
 		</Item>
 	</ButtonStates>
-	<ButtonGroupID>10</ButtonGroupID>
-	<AutoChangeState>true</AutoChangeState>
+	<ButtonGroupID>0</ButtonGroupID>
+	<AutoChangeState>false</AutoChangeState>
 	<PushEffect>
 		<Commands/>
 		<Reversable>false</Reversable>

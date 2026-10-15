@@ -75,7 +75,7 @@ A window's children are declared in its **Shared** file. To add an element to a 
 - Each field is a `First` (the value) / `Second` (a boolean that says whether this file sets the value) pair. In an instance, `Second=false` means the value comes from the Shared file.
 - Coordinates are in pixels, relative to the parent window. The encyclopedia root is laid out on a 1280x1024 canvas.
 - `EPA_LOW_END` anchors to the top or left edge, and `EPA_HIGH_END` anchors to the bottom or right edge. With `EPA_HIGH_END`, negative positions move the element inwards. For example, `Doc/Open` sits at `-131,-151` from the bottom-right corner.
-- `Priority` sets the drawing order. Higher values are drawn on top.
+- `Priority` sets the drawing order. Higher values are drawn on top. **Give a text a higher priority than its backdrop.** With equal priorities, the backdrop hides the text, even when it is listed first in `<Children>`. Working pairs: the skills description list (9999) over `DescriptionBack` (100), and a hero spec text (100) over `HeroSpecBack` (0).
 
 ### Known types and ClassTypeIDs
 
@@ -129,7 +129,9 @@ Windows are toggled by **name**, using `UISSendUIMessage` commands:
 - `ButtonGroupID` groups buttons that act together. Faction buttons use `1` and hero buttons use `12`, so that selecting one releases the others. Artifact view buttons use `20` and category buttons `21`.
 - **Text buttons**: a button can show a text instead of a texture. The instance sets `<TextFileRef>`, and each sub-state of the Shared file sets a `<TextFormat>`. This is how vanilla `/UI/Common/MenuButton` works. The Artifacts tab uses it, changing the text color per sub-state.
 - **Hover effects**: put commands in a sub-state's `OnEnterSubState`. Skill icons use `MouseOver` to highlight their prerequisites and to show the description panel.
-- `TriggerMode` is `BCST_ON_PUSH` for the toggle buttons (factions, heroes, artifact views and categories) and `BCST_ON_RELEASE` for the others (tabs, skill icons).
+- `TriggerMode` is `BCST_ON_PUSH` for the toggle buttons (factions, heroes, artifact views and categories) and `BCST_ON_RELEASE` for the others (tabs, skill icons, the encyclopedia Open button, the skills view buttons).
+- **A button's state can't be set by a command.** Only `UI_SHOW_WINDOW` and `UI_ENABLE_WINDOW` exist. To show which of several click buttons is selected, disable the selected one with `UI_ENABLE_WINDOW`: its `Disabled` sub-state draws the "selected" look, and it can't be clicked again. The skills view buttons (Might/Magic) and the skill selection highlights work this way.
+- **Click buttons** have a single state. Their commands are in the instance's `CommandsOnEnterState`, with `AutoChangeState` set to `false` and `ButtonGroupID` set to `0`, like `www/UI/Doc/Open`.
 
 ### Broadcasting a game message
 
@@ -287,24 +289,35 @@ A clean run of the heroes or skills generator on unchanged data produces no git 
 
 **Prerequisites** are computed from `Skills.xdb` (`BasicSkillID`, `SkillPrerequisites`). They are rendered as `MouseOver` commands that highlight each required element. Selection highlights are reset through the `DocSkillsHideAll` game message.
 
-**Variants:** `DestructiveMagic` and `NaturalMagic` exist as `_a` to `_d` folders, because their 4 elemental perks are ordered differently per faction (`variant_element_y`). An element shared by the variants is expected in all of them. Each faction's Might/Magic buttons switch on the right variant.
+**Variants:** `DestructiveMagic` and `NaturalMagic` exist as `_a` to `_d` folders, because their 4 elemental perks are ordered differently per faction (`variant_element_y`). An element shared by the variants is expected in all of them. Each faction uses one variant letter, set in `factions`.
+
+**Gray elements:** every element also gets a gray version in `_Skills/<Branch>/<ID>/gray/`. It's a plain `WindowSimple` icon with the element name as tooltip, so it can't be hovered for a description or clicked.
+- Each branch of the tree has a hidden gray twin, `<Branch>Gray.(WindowSimple|Shared)` (`DocSkillsGray<Branch>`), with `GrayOn` / `GrayOff` messages. The twins are grouped in `_Skills/Gray.(WindowSimple)` (`DocSkillsGrayBranches`), which is listed only in the encyclopedia, not in the level-up box.
+- The gray texture is the perk's `Texture/Item[0]` (`*_grey`) in `Skills.xdb`. Otherwise it's `<icon>_grey.xdb` or `<icon>_grey.(Texture).xdb` at the icon's path, in any data folder. Without either, the normal icon is drawn with a gray `<Color>` tint (`gray_tint`), which hasn't been tested in game. The skill masteries and 2 perks have no gray texture yet. `--debug` lists them with their icon paths.
+
+**Class views:** each faction window has a Might and a Magic button. These are click buttons, generated with their `<Kind>Enable` / `<Kind>Disable` messages.
+- A view's commands set the full state of the tree. Every branch of the class (`HeroClass.xdb` → `SkillsProbs` with `Prob > 0`) is shown, and the other slots are grayed out. Each command list switches every branch folder on or off, in both its normal and gray version, so nothing from the previous view can remain.
+- `tree_slots` lists the branches that share a position, for example Training/Despotism and Sorcery/Voice. A slot shows the class's own branch. Otherwise it grays the branch of the faction's other class, or the first one of the slot.
+- Racial branches are always shown in their faction window, except when the two classes have different ones (Stronghold): the view then switches them.
+- The selected view button is disabled, which shows it highlighted.
+- The faction buttons' Shared files (`<Faction>Button/Button.(WindowMSButtonShared)`) are generated too. Selecting a faction applies its Might view (the first of `class_kinds`).
 
 **Hand-made:**
 
-- Faction windows (`<Faction>/<Faction>.(WindowSimpleShared)` and `<Faction>_LvUp`), which select the branches.
-- The Might / Magic / MM buttons, which send `SwitchOn` or `SwitchOff` to each branch.
+- Faction windows (`<Faction>/<Faction>.(WindowSimpleShared)` and `<Faction>_LvUp`), which list the view buttons and the racial branches.
+- The faction button instances (`<Faction>Button/Button.(WindowMSButton)`).
 - The branch `SwitchOn` / `SwitchOff` messages.
-- `_Skills/Common*`, `Common/`, `_Buttons/`, and the `LevelUpBox` overrides.
+- `_Skills/Common*`, `Common/`, `_Buttons/`, `Skills.(WindowSimpleShared)` (which lists `_Skills/Gray`), and the `LevelUpBox` overrides. The level-up box shows the union of both classes' branches, and its `<Faction>Open` buttons send `GrayOff` to every gray branch.
 
 ### Artifacts (`generate-artifacts-ui.py`)
 
-**Inputs:** `artifacts/.../Artifacts.xdb` and the sets in `core/GameMechanics/RPGStats/DefaultStats.xdb`. Only equipable artifacts with an icon are kept, and only sets with a `NameFileRef`.
+**Inputs:** `artifacts/.../Artifacts.xdb` and the sets in `core/GameMechanics/RPGStats/DefaultStats.xdb`. Only equipable artifacts with an icon are kept, and not the ones with `CanBeGeneratedToSell` set to `false` (quest, campaign and similar artifacts). Only sets with a `NameFileRef` and at least one shown artifact are kept.
 
 **Navigation** (same pattern as factions and heroes):
 
 1. Three view buttons, `<View>Button/Button` (`ByClass`, `BySlot`, `BySet`), toggle the view windows `DocArtifacts<View>`.
 2. Each view window lists one button per category, `<View>/<category>/Button`, and the hidden category windows `DocArtifacts<View><category>`. Categories are the classes, the slots (in `slot_texts` order) and the sets (in `DefaultStats` order).
-3. A category window holds a grid of icon buttons. The icon size is the largest that fits, as listed in `grid_sizes`. Hovering an icon shows its description window `DocArtifactsDesc<ID>`, using a reversible `MouseOver` command as in the skill trees.
+3. A category window holds a grid of icon buttons. The icon size is the largest that fits, as listed in `grid_sizes`. The views in `grid_columns` (`ByClass`: 8 columns) use a fixed number of columns instead, with one icon size for all their categories, small enough for the largest one. Hovering an icon shows its description window `DocArtifactsDesc<ID>`, using a reversible `MouseOver` command as in the skill trees.
 4. A set category window also has `Panel`: the set name, its description, and one column per bonus tier. A tier starts where the text in `CombinedDescriptionsFileRefs` changes.
 
 **Output**, in `www-artifacts/UI/Doc/Artifacts/`:

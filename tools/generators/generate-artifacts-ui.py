@@ -48,6 +48,9 @@ category_button_step = (186, 28)
 # Icons grid of a category window: the largest (step, icon size) that fits wins
 grid_width = 600
 grid_sizes = [(70, 64), (62, 56), (54, 48), (48, 44), (42, 38)]
+# Views whose categories all use the same number of columns, with icons small enough for the largest category
+grid_columns = {'ByClass': 8}
+grid_gap = 6
 # Set bonuses panel, below one row of icons
 set_panel_y = 80
 set_panel_size = (600, 300)
@@ -56,6 +59,10 @@ set_back_size = (1041, 531)  # HeroSpecBack draws its frame on the top-left 57.6
 description_back = (655, 250, 305, 600)
 description_pos = (690, 310)
 description_size = (200, 400)
+# Drawing priorities: a text must be above its backdrop, as in the skills description (9999 over 100)
+# and the hero spec (100 over 0); with equal priorities the backdrop hides the text
+back_priority = 100
+text_priority = 9999
 # Button groups: selecting a button releases the other buttons of its group
 view_group = 20
 category_group = 21
@@ -71,10 +78,11 @@ def doc_path(*parts):
 def child(href, ui_type):
     return {'href': href, 'type': ui_type}
 
-def write_window(path, name, visible, x, y, w, h, children=(), background=None):
+def write_window(path, name, visible, x, y, w, h, children=(), background=None, priority=0):
     """A WindowSimple instance and its own Shared file."""
     shared = path.replace("(WindowSimple)", "(WindowSimpleShared)")
-    gen.write("window.(WindowSimple).xdb.j2", path, {'name': name, 'shared': os.path.basename(shared), 'visible': visible, 'x': x, 'y': y, 'w': w, 'h': h})
+    gen.write("window.(WindowSimple).xdb.j2", path, {'name': name, 'shared': os.path.basename(shared), 'visible': visible, 'priority': priority,
+                                                     'x': x, 'y': y, 'w': w, 'h': h})
     gen.write("window.(WindowSimpleShared).xdb.j2", shared, {'children': children, 'background': background, 'w': w, 'h': h})
 
 def write_text_button(folder, name, window, text_ref, x, y, size, group):
@@ -86,17 +94,22 @@ def write_text_button(folder, name, window, text_ref, x, y, size, group):
     gen.write("switch.(UISSendUIMessage).xdb.j2", os.path.join(folder, "SwitchOn.(UISSendUIMessage).xdb"), {'window': window, 'open': 1, 'close': 0})
     gen.write("switch.(UISSendUIMessage).xdb.j2", os.path.join(folder, "SwitchOff.(UISSendUIMessage).xdb"), {'window': window, 'open': 0, 'close': 1})
 
-def write_text_view(path, name, text_ref, text_format, x, y, w, h):
-    gen.write("textview.(WindowTextView).xdb.j2", path, {'name': name, 'text_ref': text_ref, 'format': text_format, 'x': x, 'y': y, 'w': w, 'h': h})
+def write_text_view(path, name, text_ref, text_format, x, y, w, h, priority=0):
+    gen.write("textview.(WindowTextView).xdb.j2", path, {'name': name, 'text_ref': text_ref, 'format': text_format, 'priority': priority,
+                                                         'x': x, 'y': y, 'w': w, 'h': h})
 
 
 def get_artifacts_list():
-    """Every artifact that can be equipped and has an icon, in table order."""
+    """Every artifact that can be equipped, can be generated and has an icon, in table order."""
     artifacts = []
     for item in as_list(artifacts_data['Table_DBArtifact_ArtifactEffect']['objects']['Item']):
         obj = item['obj']
         # Skips ARTIFACT_NONE and backpack-only items
         if obj.get('Slot', 'INVENTORY') == "INVENTORY":
+            continue
+        # Skips the artifacts that are never generated (quest, campaign and creature artifacts...)
+        if obj.get('CanBeGeneratedToSell') == "false":
+            gen.log(f"Skip artifact {item['ID']}, it is never generated")
             continue
         icon = (obj.get('Icon') or {}).get('@href', '')
         if not icon:
@@ -160,16 +173,23 @@ def get_categories(artifacts, artifact_sets):
             categories['BySlot'].append({'id': slot.capitalize(), 'label_ref': label_ref, 'artifacts': by_slot[slot]})
     by_id = {artifact['id']: artifact for artifact in artifacts}
     for artf_set in artifact_sets:
+        shown = [by_id[a] for a in artf_set['artifacts'] if a in by_id]
         missing = [a for a in artf_set['artifacts'] if a not in by_id]
+        if not shown:
+            print(f"Skip set {artf_set['effect']}: none of its artifacts is shown")
+            continue
         if missing:
-            warn(f"set {artf_set['effect']} contains unknown or non-equipable artifacts {missing}")
+            warn(f"set {artf_set['effect']} contains unknown, non-equipable or never generated artifacts {missing}")
         categories['BySet'].append({'id': artf_set['effect'].replace("ARTFSET_", ""), 'label_ref': artf_set['name_ref'],
-                                    'artifacts': [by_id[a] for a in artf_set['artifacts'] if a in by_id], 'set': artf_set})
+                                    'artifacts': shown, 'set': artf_set})
     return categories
 
 
-def grid_layout(count, height):
-    """(step, icon size, columns) of the largest icons that fit count icons in grid_width x height."""
+def grid_layout(count, height, columns=None):
+    """(step, icon size, columns) of the largest icons that fit count icons in grid_width x height, in the given columns if any."""
+    if columns:
+        step = min(grid_sizes[0][0], grid_width // columns, height // ((count + columns - 1) // columns))
+        return step, step - grid_gap, columns
     for step, size in grid_sizes:
         columns = grid_width // step
         if (count + columns - 1) // columns * step <= height:
@@ -186,17 +206,17 @@ def generate_set_panel(category_id, artf_set):
     gen.write("window.(WindowSimple).xdb.j2", os.path.join(folder, "Back.(WindowSimple).xdb"),
               {'name': f"{name}Back", 'shared': doc_path("BySet", "SetBack.(WindowSimpleShared).xdb"), 'visible': True,
                'x': 0, 'y': 0, 'w': set_back_size[0], 'h': set_back_size[1]})
-    write_text_view(os.path.join(folder, "Title.(WindowTextView).xdb"), f"{name}Title", artf_set['name_ref'], "SetTitle", 15, 12, w - 30, 30)
+    write_text_view(os.path.join(folder, "Title.(WindowTextView).xdb"), f"{name}Title", artf_set['name_ref'], "SetTitle", 15, 12, w - 30, 30, text_priority)
     children = [child("Back.(WindowSimple).xdb", "WindowSimple"), child("Title.(WindowTextView).xdb", "WindowTextView")]
     if artf_set['desc_ref']:
-        write_text_view(os.path.join(folder, "Description.(WindowTextView).xdb"), f"{name}Description", artf_set['desc_ref'], "SetDescription", 15, 42, w - 30, 22)
+        write_text_view(os.path.join(folder, "Description.(WindowTextView).xdb"), f"{name}Description", artf_set['desc_ref'], "SetDescription", 15, 42, w - 30, 22, text_priority)
         children.append(child("Description.(WindowTextView).xdb", "WindowTextView"))
     column_width = (w - 30) // max(len(artf_set['tiers']), 1)
     for idx, tier in enumerate(artf_set['tiers']):
         pieces = tier['pieces']
         x = 15 + idx * column_width
-        write_text_view(os.path.join(folder, f"Label{pieces}.(WindowTextView).xdb"), f"{name}Label{pieces}", doc_path("BySet", f"Pieces{pieces}.txt"), "SetLabel", x, 72, column_width - 10, 24)
-        write_text_view(os.path.join(folder, f"Bonus{pieces}.(WindowTextView).xdb"), f"{name}Bonus{pieces}", tier['ref'], "SetBonus", x, 98, column_width - 10, h - 110)
+        write_text_view(os.path.join(folder, f"Label{pieces}.(WindowTextView).xdb"), f"{name}Label{pieces}", doc_path("BySet", f"Pieces{pieces}.txt"), "SetLabel", x, 72, column_width - 10, 24, text_priority)
+        write_text_view(os.path.join(folder, f"Bonus{pieces}.(WindowTextView).xdb"), f"{name}Bonus{pieces}", tier['ref'], "SetBonus", x, 98, column_width - 10, h - 110, text_priority)
         children.append(child(f"Label{pieces}.(WindowTextView).xdb", "WindowTextView"))
         children.append(child(f"Bonus{pieces}.(WindowTextView).xdb", "WindowTextView"))
     write_window(os.path.join(folder, "Panel.(WindowSimple).xdb"), name, True, 0, set_panel_y, w, h, children)
@@ -215,6 +235,7 @@ def generate_view(view, view_idx, categories):
     grid_top = rows * category_button_step[1] + 12
     view_w, view_h = view_window_size
     buttons, windows, pieces = [], [], set()
+    largest = max(len(category['artifacts']) for category in categories)
     for idx, category in enumerate(categories):
         category_id = category['id']
         items = category['artifacts']
@@ -226,7 +247,8 @@ def generate_view(view, view_idx, categories):
         buttons.append(child(f"{category_id}/Button.(WindowMSButton).xdb", "WindowMSButton"))
 
         grid_height = set_panel_y if 'set' in category else view_h - grid_top
-        step, size, columns = grid_layout(len(items), grid_height)
+        # With fixed columns, every category of the view gets the icon size of the largest one
+        step, size, columns = grid_layout(largest if view in grid_columns else len(items), grid_height, grid_columns.get(view))
         children = []
         for item_idx, artifact in enumerate(items):
             gen.write("artifact_button.(WindowMSButton).xdb.j2", out_path(view, category_id, f"{artifact['id']}.(WindowMSButton).xdb"),
@@ -283,9 +305,9 @@ for artifact in artifacts:
     gen.write("artifact_button.(WindowMSButtonShared).xdb.j2", f"{icon_path}.(WindowMSButtonShared).xdb", {'artifact_id': artifact['id']})
     generate_description(artifact, set_of.get(artifact['id']))
 write_window(out_path("_Description", "Descriptions.(WindowSimple).xdb"), "DocArtifactsDescriptions", True, *description_pos, *description_size,
-             [child(f"{a['id']}/{a['id']}.(WindowSimple).xdb", "WindowSimple") for a in artifacts])
+             [child(f"{a['id']}/{a['id']}.(WindowSimple).xdb", "WindowSimple") for a in artifacts], priority=text_priority)
 write_window(out_path("_Description", "Back.(WindowSimple).xdb"), "DocArtifactsDescriptionBack", True, *description_back,
-             background="/UI/Doc/Skills/_Description/DescriptionBack.(BackgroundSimpleScallingTexture).xdb")
+             background="/UI/Doc/Skills/_Description/DescriptionBack.(BackgroundSimpleScallingTexture).xdb", priority=back_priority)
 
 categories = get_categories(artifacts, artifact_sets)
 for view_idx, view in enumerate(views):

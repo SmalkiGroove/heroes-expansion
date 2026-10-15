@@ -7,7 +7,8 @@ IDs are <index in Skills.xdb on 3 digits><rank on 3 digits>, rank 000 being a pe
 
 import os
 import re
-from common import Generator, GAME_DATA, TEXTS_EN, warn, load_xdb, as_list, find_icon_size
+from collections import defaultdict
+from common import Generator, GAME_DATA, TEXTS_EN, warn, load_xdb, as_list, items, href_path, game_file, find_icon_size
 
 gen = Generator("templates-skills", __doc__)
 
@@ -355,6 +356,20 @@ def branch_folders(branch):
 
 skill_index = {skill["ID"]: nb for nb, skill in enumerate(skills_data)}
 
+# Tint of the normal icon when an element has no gray texture (0xFF808080)
+gray_tint = -8355712
+
+def find_gray_texture(icon_href, gray_href=None):
+    """Gray version of an icon: the one given by Skills.xdb (perks), else <icon>_grey.xdb / <icon>_grey.(Texture).xdb in the mod."""
+    if gray_href:
+        return gray_href
+    base = href_path(icon_href)
+    base = base[:-len(".(Texture).xdb")] if base.endswith(".(Texture).xdb") else base[:-len(".xdb")]
+    for suffix in ("_grey.xdb", "_grey.(Texture).xdb"):
+        if game_file(base + suffix):
+            return f"/{base}{suffix}#xpointer(/Texture)"
+    return None
+
 def get_skill_id_from_name(name):
     if name not in skill_index:
         warn(f"prerequisite skill with name {name} not found")
@@ -387,6 +402,7 @@ for counter, skill in enumerate(skills_data):
             elements[id] = {
                 'skill_id': skill['ID'],
                 'icon': skill["obj"]["Texture"]["Item"][k]["@href"],
+                'gray': find_gray_texture(skill["obj"]["Texture"]["Item"][k]["@href"]),
                 'name': skill["obj"]["NameFileRef"]["Item"][k-1]["@href"],
                 'desc': skill["obj"]["DescriptionFileRef"]["Item"][k-1]["@href"],
             }
@@ -397,6 +413,7 @@ for counter, skill in enumerate(skills_data):
         elements[id] = {
             'skill_id': skill['ID'],
             'icon': skill["obj"]["Texture"]["Item"][1]["@href"],
+            'gray': find_gray_texture(skill["obj"]["Texture"]["Item"][1]["@href"], (items(skill["obj"]["Texture"])[0] or {}).get("@href")),
             'name': skill["obj"]["NameFileRef"]["Item"]["@href"],
             'desc': skill["obj"]["DescriptionFileRef"]["Item"]["@href"],
         }
@@ -458,11 +475,21 @@ def process_skill_element(branch, id, element, variant=None):
     gen.write("icon.(BackgroundSimpleScallingTexture).xdb.j2", description_path(id, f"{id}_icon.(BackgroundSimpleScallingTexture).xdb"), {'icon_path': element['icon'], 'icon_size': icon_size})
     gen.write("skillname.(WindowTextView).xdb.j2", description_path(id, f"{id}_name.(WindowTextView).xdb"), {'skill_id': id, 'name_path': element['name']})
     gen.write("skilldesc.(WindowTextView).xdb.j2", description_path(id, f"{id}_desc.(WindowTextView).xdb"), {'skill_id': id, 'desc_path': element['desc']})
+    # Gray version, displayed when the branch is not available to the hero class: an icon with the name as tooltip
+    gen.write("grayicon.(WindowSimple).xdb.j2", element_path(id, branch, "gray", f"{id}_gray.(WindowSimple).xdb"), {'skill_id': id, 'name_path': element['name'], 'pos_x': x + 3, 'pos_y': y + 3})
+    gen.write("grayicon.(WindowSimpleShared).xdb.j2", element_path(id, branch, "gray", f"{id}_gray.(WindowSimpleShared).xdb"), {'skill_id': id})
+    gen.write("icon.(BackgroundSimpleScallingTexture).xdb.j2", element_path(id, branch, "gray", f"{id}_gray.(BackgroundSimpleScallingTexture).xdb"),
+              {'icon_path': element['gray'] or element['icon'], 'icon_size': icon_size, 'color': -1 if element['gray'] else gray_tint})
+    if not element['gray']:
+        missing_gray.add(id)
+    generated_in[branch].add(id)
     return True
 
 
 # Elements, placed in the branches where their folder exists
 generated = set()
+generated_in = defaultdict(set)
+missing_gray = set()
 for id, element in elements.items():
     found_in = []
     for branch in branches:
@@ -495,6 +522,86 @@ for branch in branches:
                 warn(f"folder {folder}/{id} does not match any skill of Skills.xdb")
         gen.write("branch.(WindowSimpleShared).xdb.j2", os.path.join(branch_dir, f"{folder}.(WindowSimpleShared).xdb"),
                   {'skills': branch_skills, 'header': branch_header.get(branch, []), 'extra': branch_extra.get(branch, [])})
+
+# Gray branch windows of the tree (not of Innates and racial branches), in a container of the encyclopedia only
+def skills_file(*parts):
+    return os.path.join(skills_pedia_path, *parts)
+def skills_href(*parts):
+    return "/UI/Doc/Skills/" + "/".join(parts)
+
+gray_folders = [folder for branch in branches if branch in coordinates_branch and branch != "Innates" for folder in branch_folders(branch)]
+for folder in gray_folders:
+    x, y = coordinates_branch[folder.split("_")[0]]
+    gen.write("graybranch.(WindowSimple).xdb.j2", skills_file("_Skills", folder, f"{folder}Gray.(WindowSimple).xdb"), {'skill_name': folder, 'pos_x': x, 'pos_y': y})
+    gen.write("graybranch.(WindowSimpleShared).xdb.j2", skills_file("_Skills", folder, f"{folder}Gray.(WindowSimpleShared).xdb"), {'skills': sorted(generated_in[folder])})
+    for name, shown in (("GrayOn", 1), ("GrayOff", 0)):
+        gen.write("message.(UISSendUIMessage).xdb.j2", skills_file("_Skills", folder, f"{name}.(UISSendUIMessage).xdb"),
+                  {'message': "UI_SHOW_WINDOW", 'target': f"DocSkillsGray{folder}", 'forward': shown, 'back': 1 - shown})
+gen.write("grayroot.(WindowSimple).xdb.j2", skills_file("_Skills", "Gray.(WindowSimple).xdb"), {'priority': 0})
+gen.write("grayroot.(WindowSimpleShared).xdb.j2", skills_file("_Skills", "Gray.(WindowSimpleShared).xdb"), {'folders': gray_folders})
+
+
+# Class views of each faction: the branches of the hero class are shown, the other branches of the tree are grayed out
+# Encyclopedia folder, number of its buttons, hero class prefix, variant of the Destructive and Natural magic branches
+factions = [
+    ("Haven", 1, "HAVEN", "a"), ("Inferno", 2, "INFERNO", "d"), ("Necro", 3, "NECROPOLIS", "b"), ("Preserve", 4, "PRESERVE", "b"),
+    ("Dungeon", 5, "DUNGEON", "c"), ("Academy", 6, "ACADEMY", "c"), ("Fortress", 7, "FORTRESS", "a"), ("Stronghold", 8, "STRONGHOLD", "d"),
+]
+# Faction textures in /UI/Doc/Common, when not named after the folder
+faction_textures = {"Necro": "Necropolis"}
+# View buttons and their x position; the first one is the view selected with the faction
+class_kinds = {"Might": 575, "Magic": 635}
+# Slots of the tree: branches sharing a position, the first one is grayed out when no class of the faction has any of them
+tree_slots = [["Logistics"], ["ShatterMagic"], ["Combat"], ["Warfare"], ["LightMagic"], ["Offence"], ["Governance"], ["DarkMagic"],
+              ["Defense"], ["Leadership"], ["NaturalMagic"], ["Learning"], ["Training", "Despotism"], ["DestructiveMagic"], ["Sorcery", "Voice"]]
+assert sorted(b for slot in tree_slots for b in slot) == sorted(b for b in branches if b in coordinates_branch and b != "Innates")
+
+hero_classes = {item["ID"]: item["obj"] for item in as_list(load_xdb(GAME_DATA, "heroes", "GameMechanics", "RefTables", "HeroClass.xdb")["Table_HeroClassDesc_HeroClass"]["objects"]["Item"])}
+def class_skills(hero_class):
+    return {skill["SkillID"] for skill in items(hero_class["SkillsProbs"]) if int(skill["Prob"]) > 0}
+# Skill of each branch, from its first mastery
+branch_skill = {branch: elements[id]['skill_id'] for branch in branches for folder in branch_folders(branch) for id in generated_in[folder] if id.endswith("001")}
+
+def view_commands(faction, prefix, variant, kind):
+    other_kind = next(k for k in class_kinds if k != kind)
+    own = class_skills(hero_classes[f"HERO_CLASS_{prefix}_{kind.upper()}"])
+    other = class_skills(hero_classes[f"HERO_CLASS_{prefix}_{other_kind.upper()}"])
+    commands = []
+    for slot in tree_slots:
+        shown = next((b for b in slot if branch_skill[b] in own), None)
+        grayed = None if shown else next((b for b in slot if branch_skill[b] in other), slot[0])
+        for branch in slot:
+            for folder in branch_folders(branch):
+                faction_folder = folder in (branch, f"{branch}_{variant}")
+                commands.append(skills_href("_Skills", folder, f"Switch{'On' if faction_folder and branch == shown else 'Off'}.(UISSendUIMessage).xdb"))
+                commands.append(skills_href("_Skills", folder, f"Gray{'On' if faction_folder and branch == grayed else 'Off'}.(UISSendUIMessage).xdb"))
+    # Racial branches that depend on the class (Stronghold), the others are always shown in the faction window
+    for branch in racial_branches:
+        if (branch_skill[branch] in own) != (branch_skill[branch] in other):
+            commands.append(skills_href("_Skills", branch, f"Switch{'On' if branch_skill[branch] in own else 'Off'}.(UISSendUIMessage).xdb"))
+    # The selected view button is disabled, which shows it highlighted
+    commands += [skills_href(faction, f"{k}{'Disable' if k == kind else 'Enable'}.(UISSendUIMessage).xdb") for k in class_kinds]
+    return commands
+
+for faction, number, prefix, variant in factions:
+    for kind, pos_x in class_kinds.items():
+        gen.write("classbutton.(WindowMSButton).xdb.j2", skills_file(faction, f"{kind}Button.(WindowMSButton).xdb"),
+                  {'kind': kind, 'number': number, 'pos_x': pos_x, 'commands': view_commands(faction, prefix, variant, kind)})
+        gen.write("classbutton.(WindowMSButtonShared).xdb.j2", skills_file(faction, f"{kind}Button.(WindowMSButtonShared).xdb"), {'kind': kind})
+        for name, enabled in (("Enable", 1), ("Disable", 0)):
+            gen.write("message.(UISSendUIMessage).xdb.j2", skills_file(faction, f"{kind}{name}.(UISSendUIMessage).xdb"),
+                      {'message': "UI_ENABLE_WINDOW", 'target': f"{kind}Button{number}", 'forward': enabled, 'back': 1 - enabled})
+    # Selecting the faction lands on its first view
+    gen.write("factionbutton.(WindowMSButtonShared).xdb.j2", skills_file(f"{faction}Button", "Button.(WindowMSButtonShared).xdb"),
+              {'faction': faction_textures.get(faction, faction), 'commands': view_commands(faction, prefix, variant, next(iter(class_kinds)))})
+    for old_file in ("MMButton.(WindowMSButton).xdb", "MMButton.(WindowMSButtonShared).xdb"):
+        if os.path.exists(skills_file(faction, old_file)):
+            gen.prune(skills_file(faction, old_file))
+
+if missing_gray:
+    warn(f"{len(missing_gray)} elements have no gray texture and use their tinted icon (add <icon>_grey.(Texture).xdb, see --debug)")
+    for id in sorted(missing_gray):
+        gen.log(f"  {id} {elements[id]['skill_id']}: {elements[id]['icon'].split('#')[0]}")
 
 # Description windows: list the generated ones, remove those of elements that are no longer displayed
 descriptions_dir = os.path.join(skills_pedia_path, "_Description")

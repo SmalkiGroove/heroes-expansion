@@ -2,7 +2,7 @@
 <BackgroundSimpleScallingTexture ObjectRecordID="1000037">
 	<ClassTypeID>285694784</ClassTypeID>
 	<Texture href="{{ icon_path }}"/>
-	<Color>-1</Color>
+	<Color>{{ color | default(-1) }}</Color>
 	<Size>
 		<x>{{ icon_size }}</x>
 		<y>{{ icon_size }}</y>

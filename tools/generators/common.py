@@ -105,14 +105,22 @@ def game_path(*parts):
     return '/' + '/'.join(p.replace('\\', '/').strip('/') for p in parts if p)
 
 
-def texture_size(href, default=64):
-    """Width of a texture of the mod, read from its (Texture).xdb in any data folder; default for vanilla ones."""
+def game_file(href):
+    """Local file of a path of the game's virtual file system, searched in every data folder; None for vanilla files."""
     path = href_path(href)
     for folder in sorted(os.listdir(GAME_DATA)):
-        texture_file = os.path.join(GAME_DATA, folder, path)
-        if os.path.isfile(texture_file):
-            width = load_xdb(texture_file).get('Texture', {}).get('Width')
-            return int(width) if width else default
+        local_file = os.path.join(GAME_DATA, folder, path)
+        if os.path.isfile(local_file):
+            return local_file
+    return None
+
+
+def texture_size(href, default=64):
+    """Width of a texture of the mod, read from its (Texture).xdb in any data folder; default for vanilla ones."""
+    texture_file = game_file(href)
+    if texture_file:
+        width = load_xdb(texture_file).get('Texture', {}).get('Width')
+        return int(width) if width else default
     return default
 
 

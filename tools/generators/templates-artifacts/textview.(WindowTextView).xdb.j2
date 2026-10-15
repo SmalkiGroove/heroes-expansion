@@ -5,7 +5,7 @@
 	<Name>{{ name }}</Name>
 	<TooltipFileRef href=""/>
 	<Visible>true</Visible>
-	<Priority>0</Priority>
+	<Priority>{{ priority | default(0) }}</Priority>
 	<GameMessageReactions/>
 	<Placement>
 		<Position>
