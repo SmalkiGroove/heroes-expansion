@@ -302,6 +302,19 @@ A clean run of the heroes or skills generator on unchanged data produces no git 
 - The selected view button is disabled, which shows it highlighted.
 - The faction buttons' Shared files (`<Faction>Button/Button.(WindowMSButtonShared)`) are generated too. Selecting a faction applies its Might view (the first of `class_kinds`).
 
+**Build layout (prototype, `build_factions`, Haven only for now):** this replaces the trees of the faction with three panels, generated in `<Faction>/Build/`:
+- **Bar (left):** the hero build, one row per skill of the class. Each row has a mastery slot, where the masteries are stacked and the highest is on top, and 3 perk slots. A grayed basic skill icon below the row shows which skill it is.
+- **Center:** the basic skill icons of the class. Clicking one shows its tree below and selects it, using the disabled-button trick.
+- **Tree (bottom):** masteries on top, the 2 perk chains of the skill in the left and right halves (one row per depth), and the information perks without a mastery requirement (innates) at the bottom.
+
+Clicking a tree element adds it to the build, together with all its requirements (`requirements()`, built on `prerequisites`). For each of them, the tree button is disabled and the bar slot is shown. Clicking a bar slot removes it, together with every element that requires it. All of this is a fixed command list per element: the build state is only the visibility of the slots and the enabled state of the tree buttons. The engine can't count, so the 3-perks-per-skill and skill limits aren't enforced, and the mastery isn't derived from the number of perks.
+
+**Perk columns** are fixed per perk (`assign_columns()`):
+- Each skill has 2 chains, and a chain can only be taken from its start, so the first chain fills the columns from the left and the second from the right.
+- The assignment then minimizes, over every build the game allows (at most 3 perks, with their requirements), the builds that put 2 perks in the same column. Same-depth alternatives (Shatter Magic's 031000/228000, Destructive Magic's elemental perks) leave 1–2 builds per skill that overlap, because they would need a 4th column.
+
+Window names are `DocBuild<Faction><Kind><What><ID>`. The views of a build faction hide every old tree and gray branch, and show `DocBuild<Faction>` and its class container. The other factions' views hide `DocBuild<Faction>`. Each build faction's `Build/Build.(WindowSimple)` must be listed by hand in `Skills.(WindowSimpleShared)`, and its racial branch removed from its faction window. The level-up box keeps the old trees.
+
 **Hand-made:**
 
 - Faction windows (`<Faction>/<Faction>.(WindowSimpleShared)` and `<Faction>_LvUp`), which list the view buttons and the racial branches.

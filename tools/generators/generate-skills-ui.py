@@ -562,11 +562,237 @@ def class_skills(hero_class):
 # Skill of each branch, from its first mastery
 branch_skill = {branch: elements[id]['skill_id'] for branch in branches for folder in branch_folders(branch) for id in generated_in[folder] if id.endswith("001")}
 
+# Build layout (prototype, for the factions of build_factions), replacing the trees of the faction:
+# - a bar on the left lists the hero build, one row per skill of the class: the mastery, then 3 perk slots;
+# - the center shows the basic skill icons of the class, clicking one shows its tree in the panel below;
+# - clicking an element of the tree adds it to the build with all its requirements,
+#   clicking an element of the bar removes it with all the elements that require it.
+# Every perk has a fixed slot: each skill has 2 chains of perks, and a chain can only be taken from its start,
+# so the first chain fills the slots from the left and the second one from the right.
+build_factions = ["Haven"]
+build_area = [80, 130, 565, 720]           # x, y, width, height of the layout in the skills window
+bar_box = [0, 0, 250, 720]                 # boxes inside the layout
+central_box = [260, 0, 305, 300]
+tree_box = [260, 310, 305, 410]
+tree_size, central_size, slot_size, icon_inset = 48, 56, 48, 4
+bar_row_step, bar_col_step, bar_margin = 54, 56, (13, 10)
+central_step, central_columns, central_margin = 72, 4, 12
+tree_mastery_step, tree_perk_step, tree_row_y, tree_info_y = 56, 52, [15, 95, 175, 255], 335
+panel_background = "/UI/Doc/Skills/_Description/DescriptionBack.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"
+selected_frame = "/UI/Doc/Skills/Common/Highlight.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"
+
+def build_file(faction, *parts):
+    return skills_file(faction, "Build", *parts)
+def build_href(faction, *parts):
+    return skills_href(faction, "Build", *parts)
+def window_href(faction, *parts):
+    return build_href(faction, *parts[:-1], f"{parts[-1]}.(WindowSimple).xdb") + "#xpointer(/WindowSimple)"
+def button_href(faction, *parts):
+    return build_href(faction, *parts[:-1], f"{parts[-1]}.(WindowMSButton).xdb") + "#xpointer(/WindowMSButton)"
+
+def toggle_messages(faction, parts, target, message="UI_SHOW_WINDOW"):
+    """Writes the 2 messages showing/hiding (or enabling/disabling) a window, returns their hrefs (on, off)."""
+    names = ("Show", "Hide") if message == "UI_SHOW_WINDOW" else ("Enable", "Disable")
+    hrefs = []
+    for name, value in zip(names, (1, 0)):
+        file = f"{parts[-1]}{name}.(UISSendUIMessage).xdb"
+        gen.write("message.(UISSendUIMessage).xdb.j2", build_file(faction, *parts[:-1], file), {'message': message, 'target': target, 'forward': value, 'back': 1 - value})
+        hrefs.append(build_href(faction, *parts[:-1], file))
+    return hrefs
+
+def write_panel(faction, parts, name, box, children, background=None, visible='true'):
+    gen.write("panel.(WindowSimple).xdb.j2", build_file(faction, *parts[:-1], f"{parts[-1]}.(WindowSimple).xdb"),
+              {'shared': build_href(faction, *parts[:-1], f"{parts[-1]}.(WindowSimpleShared).xdb"), 'name': name, 'visible': visible,
+               'pos_x': box[0], 'pos_y': box[1], 'width': box[2], 'height': box[3]})
+    gen.write("panel.(WindowSimpleShared).xdb.j2", build_file(faction, *parts[:-1], f"{parts[-1]}.(WindowSimpleShared).xdb"),
+              {'children': children, 'background': background})
+    return window_href(faction, *parts)
+
+def write_click_button(faction, parts, name, pos, size, icon_shared, commands, hover_commands, disabled_frame=None, tooltip='', priority=1, visible='true'):
+    """A button drawing an icon, running commands on click and reversible commands on hover."""
+    folder, base = parts[:-1], parts[-1]
+    gen.write("iconwindow.(WindowSimple).xdb.j2", build_file(faction, *folder, f"{base}Icon.(WindowSimple).xdb"),
+              {'shared': icon_shared, 'name': f"{name}Icon", 'pos_x': icon_inset, 'pos_y': icon_inset, 'size': size - 2 * icon_inset})
+    gen.write("clickbutton.(WindowMSButtonShared).xdb.j2", build_file(faction, *folder, f"{base}.(WindowMSButtonShared).xdb"),
+              {'icon': build_href(faction, *folder, f"{base}Icon.(WindowSimple).xdb"), 'hover_commands': hover_commands, 'disabled_frame': disabled_frame})
+    gen.write("clickbutton.(WindowMSButton).xdb.j2", build_file(faction, *folder, f"{base}.(WindowMSButton).xdb"),
+              {'shared': build_href(faction, *folder, f"{base}.(WindowMSButtonShared).xdb"), 'name': name, 'tooltip': tooltip, 'priority': priority,
+               'visible': visible, 'pos_x': pos[0], 'pos_y': pos[1], 'size': size, 'commands': commands})
+    return button_href(faction, *parts)
+
+def icon_shared_href(folder, id, gray=False):
+    if gray:
+        return skills_href("_Skills", folder, id, "gray", f"{id}_gray.(WindowSimpleShared).xdb")
+    return skills_href("_Skills", folder, id, f"{id}_icon.(WindowSimpleShared).xdb")
+
+def description_href(id):
+    return skills_href("_Description", id, f"{id}.(UISSendUIMessage).xdb")
+
+def skill_tree(folder):
+    """Masteries, the 2 perk chains as {depth: [perks]} and the information perks (no mastery required) of a branch folder."""
+    ids = generated_in[folder]
+    masteries = sorted(i for i in ids if not i.endswith("000"))
+    perks = [i for i in ids if i.endswith("000")]
+    infos = sorted((p for p in perks if not any(r in masteries for r in prerequisites[p])), key=lambda p: coordinates_skills[p])
+    pickable = [p for p in perks if p not in infos]
+    depth = {}
+    def get_depth(p):
+        if p not in depth:
+            depth[p] = 1 + max([get_depth(r) for r in prerequisites[p] if r in pickable] or [0])
+        return depth[p]
+    roots = sorted((p for p in pickable if get_depth(p) == 1), key=lambda p: coordinates_skills[p])
+    chains = []
+    for root in roots:
+        chain = defaultdict(list)
+        for p in sorted(pickable, key=lambda p: coordinates_skills[p]):
+            if p == root or root in requirements(p, pickable):
+                chain[get_depth(p)].append(p)
+        chains.append(chain)
+    if len(chains) != 2 or sum(len(v) for c in chains for v in c.values()) != len(pickable):
+        warn(f"{folder} perks are not 2 separate chains, the build slots may overlap")
+    return masteries, chains, infos
+
+def requirements(id, members):
+    """Every element of members required by id, directly or not."""
+    required, stack = set(), [id]
+    while stack:
+        for r in prerequisites[stack.pop()]:
+            if r in members and r not in required:
+                required.add(r)
+                stack.append(r)
+    return required
+
+def assign_columns(chains, max_perks=3):
+    """Column (1-3) of each perk in the bar: the first chain from the left, the second from the right, then adjusted so that
+    the builds allowed by the game (at most 3 perks, with their requirements) put as few perks as possible in the same column."""
+    preferred = {p: depth if side == 0 else 4 - depth for side, chain in enumerate(chains[:2]) for depth, perks in chain.items() for p in perks}
+    perks = sorted(preferred, key=lambda p: (preferred[p], p))
+    builds, frontier = set(), {frozenset()}
+    while frontier:
+        new_builds = {b | {p} for b in frontier for p in perks if p not in b and len(b) < max_perks and requirements(p, perks) <= b}
+        frontier = new_builds - builds
+        builds |= frontier
+    builds = [b for b in builds if len(b) > 1]
+    best = [None, len(builds) + 1]
+    def cost(columns):
+        return sum(1 for b in builds if all(p in columns for p in b) and len({columns[p] for p in b}) < len(b))
+    def search(i, columns):
+        current = cost(columns)
+        if current >= best[1]:
+            return
+        if i == len(perks):
+            best[:] = [dict(columns), current]
+            return
+        p = perks[i]
+        for column in sorted((1, 2, 3), key=lambda c: c != preferred[p]):
+            columns[p] = column
+            search(i + 1, columns)
+            del columns[p]
+    search(0, {})
+    if best[1]:
+        gen.log(f"  {best[1]} builds of {len(builds)} put 2 perks in the same column")
+    return best[0]
+
+def generate_build(faction, prefix, variant, kind):
+    """Writes the build layout of a class, returns the href of its container window."""
+    own = class_skills(hero_classes[f"HERO_CLASS_{prefix}_{kind.upper()}"])
+    skill_branches = [b for b in racial_branches if branch_skill[b] in own] + [b for slot in tree_slots for b in slot if branch_skill[b] in own]
+    folders = {b: f"{b}_{variant}" if b in variant_branches else b for b in skill_branches}
+    trees = {b: skill_tree(folders[b]) for b in skill_branches}
+    members = {e for b in skill_branches for e in trees[b][0] + [p for chain in trees[b][1] for ps in chain.values() for p in ps]}
+    names = lambda what, id: f"DocBuild{faction}{kind}{what}{id}"
+    msg = {}
+    for b in skill_branches:
+        for e in sorted(generated_in[folders[b]]):
+            msg[e] = {
+                'btn': toggle_messages(faction, [kind, b, e, "Btn"], names("Btn", e), "UI_ENABLE_WINDOW"),
+                'slot': toggle_messages(faction, [kind, b, e, "Slot"], names("Slot", e)) if e in members else None,
+                # Disabling a highlight shows it, like the selections of the trees
+                'hl': toggle_messages(faction, [kind, b, e, "Hl"], names("Hl", e), "UI_ENABLE_WINDOW")[1],
+            }
+    def pick(e):
+        return [m for x in sorted(requirements(e, members) | {e}) for m in (msg[x]['btn'][1], msg[x]['slot'][0])]
+    def remove(e):
+        return [m for x in sorted({d for d in members if e in requirements(d, members)} | {e}) for m in (msg[x]['btn'][0], msg[x]['slot'][1])]
+
+    bar_children, central_children, tree_children, tree_messages, skill_messages = [], [], [], {}, {}
+    for b in skill_branches:
+        tree_messages[b] = toggle_messages(faction, [kind, b, "Tree"], names("Tree", b))
+        skill_messages[b] = toggle_messages(faction, [kind, b, "Skill"], names("Skill", b), "UI_ENABLE_WINDOW")
+    for row, b in enumerate(skill_branches):
+        folder = folders[b]
+        masteries, chains, infos = trees[b]
+        basic = masteries[0]
+        # Tree: masteries on top, the 2 chains below (left and right halves), the information perks at the bottom
+        positions = {}
+        left = (tree_box[2] - (len(masteries) * tree_mastery_step - (tree_mastery_step - tree_size))) // 2
+        for i, e in enumerate(masteries):
+            positions[e] = (left + i * tree_mastery_step, tree_row_y[0])
+        half = tree_box[2] // 2
+        for side, chain in enumerate(chains[:2]):
+            for depth, perks in chain.items():
+                left = side * half + (half - (len(perks) * tree_perk_step - (tree_perk_step - tree_size))) // 2
+                for i, p in enumerate(perks):
+                    positions[p] = (left + i * tree_perk_step, tree_row_y[min(depth, 3)])
+        left = (tree_box[2] - (len(infos) * tree_perk_step - (tree_perk_step - tree_size))) // 2
+        for i, p in enumerate(infos):
+            positions[p] = (left + i * tree_perk_step, tree_info_y)
+        children = []
+        for e, pos in positions.items():
+            gen.write("highlight.(WindowMSButton).xdb.j2", build_file(faction, kind, b, e, "Hl.(WindowMSButton).xdb"), {'name': names("Hl", e), 'pos_x': pos[0], 'pos_y': pos[1], 'size': tree_size})
+            children.append(button_href(faction, kind, b, e, "Hl"))
+            highlights = [msg[r]['hl'] for r in sorted(requirements(e, members))] + [msg[e]['hl']]
+            children.append(write_click_button(faction, [kind, b, e, "Btn"], names("Btn", e), pos, tree_size, icon_shared_href(folder, e),
+                                               pick(e) if e in members else [], highlights + [description_href(e)], selected_frame))
+        tree_children.append(write_panel(faction, [kind, b, "Tree"], names("Tree", b), [0, 0, tree_box[2], tree_box[3]], children, visible='false'))
+
+        # Center: the basic skill, showing its tree and selected while it is shown
+        others = [x for x in skill_branches if x != b]
+        commands = [tree_messages[b][0]] + [tree_messages[x][1] for x in others] + [skill_messages[b][1]] + [skill_messages[x][0] for x in others]
+        pos = (central_margin + (row % central_columns) * central_step, central_margin + (row // central_columns) * central_step)
+        central_children.append(write_click_button(faction, [kind, b, "Skill"], names("Skill", b), pos, central_size, icon_shared_href(folder, basic),
+                                                   commands, [description_href(basic)], selected_frame, tooltip=elements[basic]['name']))
+
+        # Bar row: the grayed basic skill below the slots, then a slot per element, the higher masteries on top
+        y = bar_margin[1] + row * bar_row_step
+        slot_x = lambda column: bar_margin[0] + column * bar_col_step
+        gen.write("iconwindow.(WindowSimple).xdb.j2", build_file(faction, kind, b, "Row.(WindowSimple).xdb"),
+                  {'shared': icon_shared_href(folder, basic, gray=True), 'name': names("Row", b), 'tooltip': elements[basic]['name'], 'priority': 0,
+                   'pos_x': slot_x(0) + icon_inset, 'pos_y': y + icon_inset, 'size': slot_size - 2 * icon_inset})
+        bar_children.append(window_href(faction, kind, b, "Row"))
+        slots = [(e, 0, 10 + rank) for rank, e in enumerate(masteries, 1)]
+        slots += [(p, column, 11) for p, column in assign_columns(chains).items()]
+        for e, column, priority in slots:
+            bar_children.append(write_click_button(faction, [kind, b, e, "Slot"], names("Slot", e), (slot_x(min(column, 3)), y), slot_size, icon_shared_href(folder, e),
+                                                   remove(e), [description_href(e)], priority=priority, visible='false'))
+
+    children = [write_panel(faction, [kind, "Bar"], names("Bar", ""), bar_box, bar_children, panel_background),
+                write_panel(faction, [kind, "Central"], names("Central", ""), central_box, central_children, panel_background),
+                write_panel(faction, [kind, "Trees"], names("Trees", ""), tree_box, tree_children, panel_background)]
+    return write_panel(faction, [kind, kind], f"DocBuild{faction}{kind}", [0, 0, build_area[2], build_area[3]], children, visible='false')
+
+build_visibility = {}
+for faction, number, prefix, variant in factions:
+    if faction in build_factions:
+        build_visibility[faction] = toggle_messages(faction, ["Build"], f"DocBuild{faction}")
+        for kind in class_kinds:
+            build_visibility[(faction, kind)] = toggle_messages(faction, [kind, kind], f"DocBuild{faction}{kind}")
+        write_panel(faction, ["Build"], f"DocBuild{faction}", build_area, [generate_build(faction, prefix, variant, kind) for kind in class_kinds], visible='false')
+    if os.path.isdir(skills_file(faction, "Build")):
+        gen.prune_unwritten(skills_file(faction, "Build"))
+
+
 def view_commands(faction, prefix, variant, kind):
     other_kind = next(k for k in class_kinds if k != kind)
     own = class_skills(hero_classes[f"HERO_CLASS_{prefix}_{kind.upper()}"])
     other = class_skills(hero_classes[f"HERO_CLASS_{prefix}_{other_kind.upper()}"])
     commands = []
+    if faction in build_factions:
+        commands += [skills_href("_Skills", folder, f"{name}.(UISSendUIMessage).xdb") for slot in tree_slots for branch in slot for folder in branch_folders(branch) for name in ("SwitchOff", "GrayOff")]
+        commands += [build_visibility[faction][0], build_visibility[(faction, kind)][0], build_visibility[(faction, other_kind)][1]]
+        commands += [skills_href(faction, f"{k}{'Disable' if k == kind else 'Enable'}.(UISSendUIMessage).xdb") for k in class_kinds]
+        return commands
+    commands += [build_visibility[f][1] for f in build_factions]
     for slot in tree_slots:
         shown = next((b for b in slot if branch_skill[b] in own), None)
         grayed = None if shown else next((b for b in slot if branch_skill[b] in other), slot[0])
