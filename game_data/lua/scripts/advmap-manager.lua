@@ -314,23 +314,7 @@ function Init()
 	end
 end
 
--- Script enabler
-if NB_HUMAN <= 1 then
-	log.debug("Single player game detected. Initializing...")
-	Init()
-else
-	log.debug("Multi player game detected. Check state...")
-	OBJECTIVE_CHECK = 0
-	startThread(function()
-		GetObjectiveState('H5X', FIRST_PLAYER)
-		OBJECTIVE_CHECK = 1 -- than means the objective exists in the map
-	end) sleep(1)
-	if OBJECTIVE_CHECK == 1 then
-		Trigger(OBJECTIVE_STATE_CHANGE_TRIGGER, 'H5X', FIRST_PLAYER, 'Init') sleep()
-		ExecConsoleCommand("@if GetObjectiveState('H5X', FIRST_PLAYER) == OBJECTIVE_UNKNOWN then SetObjectiveState('H5X', OBJECTIVE_ACTIVE, FIRST_PLAYER) else LoadedGame_GameVars() end")
-	else
-		Popup(FIRST_PLAYER, "/Text/Game/Scripts/InitFail.txt")
-	end
-end
+-- Script enabler: Init runs once for the whole game, even with one script instance per player
+Trigger(GAME_START_TRIGGER, "Init")
 
 sleep(10) UnblockGame()

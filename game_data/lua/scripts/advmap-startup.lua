@@ -248,6 +248,7 @@
 	HERO_ADD_SKILL_TRIGGER = 14
 	HERO_REMOVE_SKILL_TRIGGER = 15
 	HERO_TOUCH_TRIGGER = 16  -- works only for heroes disabled by SetObjectEnabled function
+	GAME_START_TRIGGER = 17  -- H5X DLL: fires at once, the function runs once for the whole game
 
 	--
 	-- Saved combat results types

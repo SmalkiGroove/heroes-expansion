@@ -194,111 +194,27 @@ end
 dofile("/scripts/common.lua") sleep()
 dofile("/scripts/combat-manager.lua") sleep()
 
-function Prepare() end
 function DoPrepare()
-	Prepare()
 	ManageCombatPrepare()
 	return nil
 end
 
-function Start() end
 function DoStart()
 	ManageCombatStart()
-	Start()
 	return nil
 end
 
-
-function AttackerHeroMove(heroName) return nil end
-function AttackerCreatureMove(creatureName) return nil end
-function AttackerWarMachineMove(warMachineName) return nil end
-function DefenderHeroMove(heroName) return nil end
-function DefenderCreatureMove(creatureName) return nil end
-function DefenderWarMachineMove(warMachineName) return nil end
-function DefenderBuildingMove(buildingName) return nil end
-
-function AttackerUnitMove(unitName)
-	local temp = nil
-	if IsHero(unitName) then
-		temp = AttackerHeroMove(unitName)
-	elseif IsCreature(unitName) then
-		temp = AttackerCreatureMove(unitName)
-	elseif IsWarMachine(unitName) then
-		temp = AttackerWarMachineMove(unitName)
-	elseif IsBuilding(unitName) then
-		temp = DefenderBuildingMove(unitName)
-	end
-	return temp
-end
-function DefenderUnitMove(unitName)
-	local temp = nil
-	if IsHero(unitName) then
-		temp = DefenderHeroMove(unitName)
-	elseif IsCreature(unitName) then
-		temp = DefenderCreatureMove(unitName)
-	elseif IsWarMachine(unitName) then
-		temp = DefenderWarMachineMove(unitName)
-	elseif IsBuilding(unitName) then
-		temp = DefenderBuildingMove(unitName)
-	end
-	return temp
-end
-
+-- nil: the unit's turn is played normally (player or AI); not nil would mean the script played it
 function UnitMove(unitName)
-	local temp = nil
 	ManageCombatTurn(unitName)
-	if IsAttacker(unitName) then
-		temp = AttackerUnitMove(unitName)
-	elseif IsDefender(unitName) then
-		temp = DefenderUnitMove(unitName)
-	end
-	return temp
+	return nil
 end
 
-function AttackerHeroDeath(heroName) end
-function AttackerCreatureDeath(creatureName) end
-function AttackerWarMachineDeath(warMachineName) end
-function AttackerSpellSpawnDeath(buildingName) end
-function DefenderHeroDeath(heroName) end
-function DefenderCreatureDeath(creatureName) end
-function DefenderWarMachineDeath(warMachineName) end
-function DefenderBuildingDeath(buildingName) end
-function DefenderSpellSpawnDeath(buildingName) end
-
-function AttackerUnitDeath(unitName)
-	if IsHero(unitName) then
-		AttackerHeroDeath(unitName)
-	elseif IsCreature(unitName) then
-		AttackerCreatureDeath(unitName)
-	elseif IsWarMachine(unitName) then
-		AttackerWarMachineDeath(unitName)
-	elseif IsBuilding(unitName) then
-		DefenderBuildingDeath(unitName)
-	elseif IsSpellSpawn(unitName) then
-		AttackerSpellSpawnDeath(unitName)
-	end
-end
-function DefenderUnitDeath(unitName)
-	if IsHero(unitName) then
-		DefenderHeroDeath(unitName)
-	elseif IsCreature(unitName) then
-		DefenderCreatureDeath(unitName)
-	elseif IsWarMachine(unitName) then
-		DefenderWarMachineDeath(unitName)
-	elseif IsBuilding(unitName) then
-		DefenderBuildingDeath(unitName)
-	elseif IsSpellSpawn(unitName) then
-		DefenderSpellSpawnDeath(unitName)
-	end
-end
+-- Called by the H5X DLL after each attack (creature, war machine, hero): defined here so the call never reads a nil global
+function UnitAttack(attacker, defender) end
 
 function UnitDeath(unitName)
 	ManageUnitDeath(unitName)
-	if IsAttacker(unitName) then
-		AttackerUnitDeath(unitName)
-	elseif IsDefender(unitName) then
-		DefenderUnitDeath(unitName)
-	end
 end
 
 EnableCinematicCamera(nil)
