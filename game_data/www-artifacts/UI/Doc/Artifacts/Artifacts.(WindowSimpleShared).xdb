@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<WindowSimpleShared ObjectRecordID="1000860">
+<WindowSimpleShared ObjectRecordID="1000326">
 	<Crap>false</Crap>
 	<Children>
-		<!-- <Item href="About.(WindowStaticText).xdb#xpointer(/WindowStaticText)"/> -->
+		<Item href="ByClassButton/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="BySlotButton/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="BySetButton/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="ByClass/ByClass.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="BySlot/BySlot.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="BySet/BySet.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="_Description/Back.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="_Description/Descriptions.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
 	</Children>
 	<Background href="/UI/Doc/Common/Background.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 	<Foreground/>
@@ -27,10 +34,10 @@
 		</HorAllign>
 		<Size>
 			<First>
-				<x>0</x>
-				<y>0</y>
+				<x>1024</x>
+				<y>1024</y>
 			</First>
-			<Second>false</Second>
+			<Second>true</Second>
 		</Size>
 		<LowerMargin>
 			<First>
