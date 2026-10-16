@@ -5,7 +5,7 @@
 	<Name>DocBuildFortressMightSkillShatterMagic</Name>
 	<TooltipFileRef href="/Text/Game/Skills/Common/ShatterMagic/1/Name.txt"/>
 	<Visible>true</Visible>
-	<Priority>2</Priority>
+	<Priority>3</Priority>
 	<GameMessageReactions/>
 	<Placement>
 		<Position>
@@ -57,7 +57,6 @@
 			<MessageOnEnterState/>
 			<CommandsOnEnterState>
 				<Commands>
-					<Item href="/UI/Doc/Skills/Fortress/Build/Might/ShatterMagic/DescHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/Fortress/Build/Might/ShatterMagic/TreeShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/Fortress/Build/Might/Runelore/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/Fortress/Build/Might/Offence/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
@@ -71,19 +70,19 @@
 					<Item href="/UI/Doc/Skills/Fortress/Build/Might/Governance/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/Fortress/Build/Might/Logistics/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/Fortress/Build/Might/DestructiveMagic/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Fortress/Build/Might/ShatterMagic/SkillDisable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Fortress/Build/Might/Runelore/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Fortress/Build/Might/Offence/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Fortress/Build/Might/Defense/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Fortress/Build/Might/Leadership/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Fortress/Build/Might/Warfare/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Fortress/Build/Might/Combat/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Fortress/Build/Might/LightMagic/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Fortress/Build/Might/Training/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Fortress/Build/Might/Learning/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Fortress/Build/Might/Governance/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Fortress/Build/Might/Logistics/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Fortress/Build/Might/DestructiveMagic/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Fortress/Build/Might/ShatterMagic/SelShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Fortress/Build/Might/Runelore/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Fortress/Build/Might/Offence/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Fortress/Build/Might/Defense/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Fortress/Build/Might/Leadership/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Fortress/Build/Might/Warfare/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Fortress/Build/Might/Combat/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Fortress/Build/Might/LightMagic/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Fortress/Build/Might/Training/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Fortress/Build/Might/Learning/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Fortress/Build/Might/Governance/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Fortress/Build/Might/Logistics/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Fortress/Build/Might/DestructiveMagic/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 				</Commands>
 				<Reversable>false</Reversable>
 			</CommandsOnEnterState>

@@ -5,7 +5,7 @@
 	<Name>DocBuildNeutralAllSkillDespotism</Name>
 	<TooltipFileRef href="/Text/Game/Skills/Common/Despotism/1/Name.txt"/>
 	<Visible>true</Visible>
-	<Priority>2</Priority>
+	<Priority>3</Priority>
 	<GameMessageReactions/>
 	<Placement>
 		<Position>
@@ -57,7 +57,6 @@
 			<MessageOnEnterState/>
 			<CommandsOnEnterState>
 				<Commands>
-					<Item href="/UI/Doc/Skills/Neutral/Build/All/Despotism/DescHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/Neutral/Build/All/Despotism/TreeShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/Neutral/Build/All/Innates/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/Neutral/Build/All/Offence/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
@@ -75,23 +74,23 @@
 					<Item href="/UI/Doc/Skills/Neutral/Build/All/ShatterMagic/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/Neutral/Build/All/DestructiveMagic/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/Neutral/Build/All/NaturalMagic/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Neutral/Build/All/Despotism/SkillDisable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Neutral/Build/All/Innates/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Neutral/Build/All/Offence/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Neutral/Build/All/Defense/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Neutral/Build/All/Leadership/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Neutral/Build/All/Warfare/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Neutral/Build/All/Combat/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Neutral/Build/All/LightMagic/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Neutral/Build/All/DarkMagic/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Neutral/Build/All/Training/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Neutral/Build/All/Learning/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Neutral/Build/All/Sorcery/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Neutral/Build/All/Governance/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Neutral/Build/All/Logistics/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Neutral/Build/All/ShatterMagic/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Neutral/Build/All/DestructiveMagic/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Neutral/Build/All/NaturalMagic/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Neutral/Build/All/Despotism/SelShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Neutral/Build/All/Innates/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Neutral/Build/All/Offence/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Neutral/Build/All/Defense/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Neutral/Build/All/Leadership/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Neutral/Build/All/Warfare/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Neutral/Build/All/Combat/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Neutral/Build/All/LightMagic/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Neutral/Build/All/DarkMagic/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Neutral/Build/All/Training/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Neutral/Build/All/Learning/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Neutral/Build/All/Sorcery/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Neutral/Build/All/Governance/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Neutral/Build/All/Logistics/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Neutral/Build/All/ShatterMagic/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Neutral/Build/All/DestructiveMagic/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Neutral/Build/All/NaturalMagic/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 				</Commands>
 				<Reversable>false</Reversable>
 			</CommandsOnEnterState>

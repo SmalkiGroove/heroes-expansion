@@ -5,7 +5,7 @@
 	<Name>DocBuildStrongholdMightSkillLeadership</Name>
 	<TooltipFileRef href="/Text/Game/Skills/Common/Leadership/1/Name.txt"/>
 	<Visible>true</Visible>
-	<Priority>2</Priority>
+	<Priority>3</Priority>
 	<GameMessageReactions/>
 	<Placement>
 		<Position>
@@ -57,7 +57,6 @@
 			<MessageOnEnterState/>
 			<CommandsOnEnterState>
 				<Commands>
-					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/Leadership/DescHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/Leadership/TreeShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/BloodRage/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/Offence/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
@@ -70,18 +69,18 @@
 					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/Logistics/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/ShatterMagic/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/Despotism/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/Leadership/SkillDisable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/BloodRage/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/Offence/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/Defense/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/Warfare/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/Combat/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/Learning/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/Voice/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/Governance/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/Logistics/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/ShatterMagic/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/Despotism/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/Leadership/SelShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/BloodRage/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/Offence/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/Defense/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/Warfare/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/Combat/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/Learning/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/Voice/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/Governance/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/Logistics/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/ShatterMagic/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Stronghold/Build/Might/Despotism/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 				</Commands>
 				<Reversable>false</Reversable>
 			</CommandsOnEnterState>

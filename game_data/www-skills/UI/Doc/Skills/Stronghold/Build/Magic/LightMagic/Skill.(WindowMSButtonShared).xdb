@@ -84,12 +84,10 @@
 			</Pushed>
 			<Disabled>
 				<Background href="/UI/Doc/Skills/_Skills/LightMagic/011001/011001.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
-				<Foreground href="/UI/Doc/Skills/Common/Highlight.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
+				<Foreground/>
 				<TextString/>
 				<OnEnterSubState>
-					<Commands>
-						<Item href="/UI/Doc/Skills/Stronghold/Build/Magic/LightMagic/DescHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					</Commands>
+					<Commands/>
 					<Reversable>false</Reversable>
 				</OnEnterSubState>
 				<TextFormat/>

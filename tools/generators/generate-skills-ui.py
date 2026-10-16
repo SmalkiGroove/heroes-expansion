@@ -606,8 +606,12 @@ innate_label_format = "/UI/Doc/Skills/Common/InnateLabel.(TextFormat).xdb#xpoint
 # Frame behind each racial skill (hand-made Common/Racial), larger than the icon and centered on it
 racial_back = "/UI/Doc/Skills/Common/Racial.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"
 racial_back_size = 80
-# Drawing priorities in the center: the grid backdrop, then the racial frames, then the icons and labels
-grid_back_priority, racial_back_priority, central_priority = 0, 1, 2
+# Drawing priorities in the center: the grid backdrop, the racial frames, the selection glows, then the icons and labels
+grid_back_priority, racial_back_priority, selection_priority, central_priority = 0, 1, 2, 3
+# The selected skill is shown by a glow behind its button (the additive Highlight texture), larger than the button. The button
+# isn't disabled, as the view buttons are: a disabled button never reverses its MouseOver commands, so the descriptions stayed.
+selection_glow = "/UI/Doc/Skills/Common/Highlight.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"
+selection_padding = 6
 racial_center_y = grid_top - build_icon_size // 2 - 20      # center line of the row
 racial_raise = 20                                          # the racial skills (and their frames) are above that line
 central_box = [0, 0, build_area[2], grid_back_box[1] + grid_back_box[3]]
@@ -620,7 +624,6 @@ tree_margin, tree_perks_gap = 4, 16
 tree_row_step, tree_perk_step, tree_column_step, tree_halves_gap = 56, 52, 64, 32
 # Perk rows of every tree, as if each column had 3 stacked perks: a single perk is always on the middle line (Destruction Learning)
 tree_stack = 3
-selected_frame = "/UI/Doc/Skills/Common/Highlight.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"
 
 def build_file(faction, *parts):
     return skills_file(faction, "Build", *parts)
@@ -780,7 +783,7 @@ def generate_build(faction, prefix, variant, kind, own=None, other=None, racial=
     default = next(iter(clickable))
     trees = {b: skill_tree(folder_of(b)) for b in clickable}
     tree_messages = {b: toggle_messages(faction, [kind, b, "Tree"], names("Tree", b)) for b in clickable}
-    skill_messages = {b: toggle_messages(faction, [kind, b, "Skill"], names("Skill", b), "UI_ENABLE_WINDOW") for b in clickable}
+    selection_messages = {b: toggle_messages(faction, [kind, b, "Sel"], names("Sel", b)) for b in clickable}
     # The innate perks (information perks) of a racial skill of the class are beside it, not in its tree
     # with the elements of another branch shown in it (Spiritism shows BloodRage's Orcish Fury), innate before ultimate (old row)
     innates = {b: sorted(trees[b][2] + [e for _, e in branch_extra.get(b, [])], key=lambda e: (coordinates_skills[e][1], e))
@@ -834,20 +837,18 @@ def generate_build(faction, prefix, variant, kind, own=None, other=None, racial=
                            'tooltip': elements[basic]['name'], 'priority': central_priority, 'pos_x': pos[0], 'pos_y': pos[1], 'size': size})
                 central_children.append(window_href(faction, kind, b, "Gray"))
                 continue
-            # The basic skill shows its tree and is selected (disabled) while it is shown. A disabled button never reverses its
-            # MouseOver commands, and the click re-enters MouseOver after its commands, so the description is hidden again
-            # when the button gets disabled
+            # The basic skill shows its tree and its selection glow, and hides the others
             others = [o for o in clickable if o != b]
             description = skill_description(basic)
-            hide_description = toggle_messages(faction, [kind, b, "Desc"], f"Window{description}")[1]
-            select = [tree_messages[b][0]] + [tree_messages[o][1] for o in others] + [skill_messages[b][1]] + [skill_messages[o][0] for o in others]
-            commands = [hide_description] + select
+            select = [tree_messages[b][0]] + [tree_messages[o][1] for o in others] + [selection_messages[b][0]] + [selection_messages[o][1] for o in others]
             # The view selects its first skill, a racial one
             if b == default:
                 build_default[(faction, kind)] = select
+            central_children.append(write_panel(faction, [kind, b, "Sel"], names("Sel", b),
+                                                [pos[0] - selection_padding, pos[1] - selection_padding, size + 2 * selection_padding, size + 2 * selection_padding],
+                                                [], selection_glow, visible='false', priority=selection_priority))
             central_children.append(write_click_button(faction, [kind, b, "Skill"], names("Skill", b), pos, size, skill_icon(b),
-                                                       commands, [description_href(description)], selected_frame, tooltip=elements[basic]['name'],
-                                                       disabled_commands=[hide_description], priority=central_priority))
+                                                       select, [description_href(description)], tooltip=elements[basic]['name'], priority=central_priority))
             # Tree: hovering an element highlights its requirements (disabling a highlight shows it) and shows its description
             masteries, chains, infos = trees[b]
             positions = tree_positions(folder, masteries, chains, [] if b in innates else infos)

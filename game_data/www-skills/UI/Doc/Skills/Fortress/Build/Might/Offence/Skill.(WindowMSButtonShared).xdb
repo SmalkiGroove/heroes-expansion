@@ -84,12 +84,10 @@
 			</Pushed>
 			<Disabled>
 				<Background href="/UI/Doc/Skills/_Skills/Offence/006001/006001.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
-				<Foreground href="/UI/Doc/Skills/Common/Highlight.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
+				<Foreground/>
 				<TextString/>
 				<OnEnterSubState>
-					<Commands>
-						<Item href="/UI/Doc/Skills/Fortress/Build/Might/Offence/DescHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					</Commands>
+					<Commands/>
 					<Reversable>false</Reversable>
 				</OnEnterSubState>
 				<TextFormat/>
