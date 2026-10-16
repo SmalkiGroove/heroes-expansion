@@ -86,22 +86,10 @@
 			</Pushed>
 			<Disabled>
 				<Background href="{{ icon }}"/>
-				{%- if disabled_frame %}
-				<Foreground href="{{ disabled_frame }}"/>
-				{%- else %}
 				<Foreground/>
-				{%- endif %}
 				<TextString/>
 				<OnEnterSubState>
-					{%- if disabled_commands %}
-					<Commands>
-						{%- for command in disabled_commands %}
-						<Item href="{{ command }}#xpointer(/UISSendUIMessage)"/>
-						{%- endfor %}
-					</Commands>
-					{%- else %}
 					<Commands/>
-					{%- endif %}
 					<Reversable>false</Reversable>
 				</OnEnterSubState>
 				<TextFormat/>
