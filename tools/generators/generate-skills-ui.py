@@ -565,6 +565,9 @@ def class_skills(hero_class):
     return {skill["SkillID"] for skill in items(hero_class["SkillsProbs"]) if int(skill["Prob"]) > 0}
 # Skill of each branch, from its first mastery
 branch_skill = {branch: elements[id]['skill_id'] for branch in branches for folder in branch_folders(branch) for id in generated_in[folder] if id.endswith("001")}
+# Innates is the faction skill of Neutral, HERO_SKILL_INNATES, whose masteries have no element folder
+innates_basic = f"{skill_index['HERO_SKILL_INNATES']:03}001"
+branch_skill["Innates"] = elements[innates_basic]['skill_id']
 
 # Build layout (prototype, for the factions of build_factions), replacing the trees of the faction:
 # - the center shows the racial skills of the faction with their innate perks, then the basic skill icons in a grid,
@@ -700,7 +703,7 @@ def skill_tree(folder):
             if p == root or root in requirements(p, pickable):
                 chain[get_depth(p)].append(p)
         chains.append(chain)
-    if len(chains) != 2 or sum(len(v) for c in chains for v in c.values()) != len(pickable):
+    if pickable and (len(chains) != 2 or sum(len(v) for c in chains for v in c.values()) != len(pickable)):
         warn(f"{folder} perks are not 2 separate chains, the tree may overlap")
     return masteries, chains, infos
 
@@ -724,6 +727,14 @@ def tree_positions(folder, masteries, chains, infos):
         left = (tree_box[2] - span(len(ids), tree_row_step)) // 2
         for i, e in enumerate(ids):
             positions[e] = (left + i * tree_row_step, y)
+    # Information perks only (Innates): balanced rows from the top
+    if not masteries and not chains:
+        max_columns = (tree_box[2] + tree_row_step - build_icon_size) // tree_row_step
+        rows = -(-len(infos) // max_columns)
+        columns = -(-len(infos) // rows) if infos else 1
+        for r in range(rows):
+            row(infos[r * columns:(r + 1) * columns], tree_margin + r * tree_perk_step)
+        return positions
     row(masteries, tree_margin)
     # One column per depth of each chain (deeper perks in the 3rd one), same-depth perks stacked and centered vertically,
     # in the order of their rows in the old trees, which keeps a perk on the line of its requirement (Blaze Power and Ignite)
@@ -743,18 +754,26 @@ def tree_positions(folder, masteries, chains, infos):
     row(infos, top + stack * tree_perk_step)
     return positions
 
-def generate_build(faction, prefix, variant, kind):
-    """Writes the build layout of a class, returns the href of its container window."""
-    own = class_skills(hero_classes[f"HERO_CLASS_{prefix}_{kind.upper()}"])
-    other_kind = next(k for k in class_kinds if k != kind)
-    other = class_skills(hero_classes[f"HERO_CLASS_{prefix}_{other_kind.upper()}"])
+def generate_build(faction, prefix, variant, kind, own=None, other=None, racial=None):
+    """Writes the build layout of a class (or of a faction without classes, given own, other and racial), returns the href of its container window."""
+    if own is None:
+        own = class_skills(hero_classes[f"HERO_CLASS_{prefix}_{kind.upper()}"])
+        other_kind = next(k for k in class_kinds if k != kind)
+        other = class_skills(hero_classes[f"HERO_CLASS_{prefix}_{other_kind.upper()}"])
     folder_of = lambda b: f"{b}_{variant}" if b in variant_branches else b
-    basic_of = lambda b: min(i for i in generated_in[folder_of(b)] if i.endswith("001"))
+    basic_of = lambda b: innates_basic if b == "Innates" else min(i for i in generated_in[folder_of(b)] if i.endswith("001"))
+    def skill_icon(b):
+        if b != "Innates":
+            return icon_href(folder_of(b), basic_of(b))
+        gen.write("icon.(BackgroundSimpleScallingTexture).xdb.j2", build_file(faction, "InnatesIcon.(BackgroundSimpleScallingTexture).xdb"),
+                  {'icon_path': elements[innates_basic]['icon'], 'icon_size': find_icon_size(elements[innates_basic]['icon'])})
+        return build_href(faction, "InnatesIcon.(BackgroundSimpleScallingTexture).xdb") + "#xpointer(/BackgroundSimpleScallingTexture)"
     names = lambda what, id: f"DocBuild{faction}{kind}{what}{id}"
     # A row with the racial skills of the faction, then the grid rows
     # In a slot: the branch of the class, else the one of the other class, else the first
     # Only the racial skill of the class: Stronghold's Might class has Blood Rage, its Magic class Spiritism
-    racial = [b for b in racial_branches if branch_skill[b] in own]
+    if racial is None:
+        racial = [b for b in racial_branches if branch_skill[b] in own]
     grid = [[next((b for b in slot if branch_skill[b] in own), None) or next((b for b in slot if branch_skill[b] in other), slot[0]) for slot in row]
             for row in build_grid]
     clickable = [b for b in racial + [b for row in grid for b in row] if branch_skill[b] in own]
@@ -764,7 +783,8 @@ def generate_build(faction, prefix, variant, kind):
     skill_messages = {b: toggle_messages(faction, [kind, b, "Skill"], names("Skill", b), "UI_ENABLE_WINDOW") for b in clickable}
     # The innate perks (information perks) of a racial skill of the class are beside it, not in its tree
     # with the elements of another branch shown in it (Spiritism shows BloodRage's Orcish Fury), innate before ultimate (old row)
-    innates = {b: sorted(trees[b][2] + [e for _, e in branch_extra.get(b, [])], key=lambda e: (coordinates_skills[e][1], e)) for b in racial if b in clickable}
+    innates = {b: sorted(trees[b][2] + [e for _, e in branch_extra.get(b, [])], key=lambda e: (coordinates_skills[e][1], e))
+               for b in racial if b in clickable and b != "Innates"}
     element_folder = {e: folder for folder, ids in generated_in.items() for e in ids}
     rows = [[(b, e) for b in racial for e in [None] + innates.get(b, [])]] + [[(b, None) for b in row] for row in grid]
 
@@ -825,7 +845,7 @@ def generate_build(faction, prefix, variant, kind):
             # The view selects its first skill, a racial one
             if b == default:
                 build_default[(faction, kind)] = select
-            central_children.append(write_click_button(faction, [kind, b, "Skill"], names("Skill", b), pos, size, icon_href(folder, basic),
+            central_children.append(write_click_button(faction, [kind, b, "Skill"], names("Skill", b), pos, size, skill_icon(b),
                                                        commands, [description_href(description)], selected_frame, tooltip=elements[basic]['name'],
                                                        disabled_commands=[hide_description], priority=central_priority))
             # Tree: hovering an element highlights its requirements (disabling a highlight shows it) and shows its description
@@ -855,6 +875,15 @@ for faction, number, prefix, variant in factions:
                     visible='false', priority=build_priority)
     if os.path.isdir(skills_file(faction, "Build")):
         gen.prune_unwritten(skills_file(faction, "Build"))
+
+# Neutral, without classes: a single view where every skill can be selected, with Innates as faction skill
+neutral, neutral_kind, neutral_variant = "Neutral", "All", "c"
+build_visibility[neutral] = toggle_messages(neutral, ["Build"], f"DocBuild{neutral}")
+build_visibility[(neutral, neutral_kind)] = toggle_messages(neutral, [neutral_kind, neutral_kind], f"DocBuild{neutral}{neutral_kind}")
+write_panel(neutral, ["Build"], f"DocBuild{neutral}", build_area,
+            [generate_build(neutral, None, neutral_variant, neutral_kind, own=set(branch_skill.values()), other=set(), racial=["Innates"])],
+            visible='false', priority=build_priority)
+gen.prune_unwritten(skills_file(neutral, "Build"))
 
 
 def view_commands(faction, prefix, variant, kind):
@@ -901,6 +930,11 @@ for faction, number, prefix, variant in factions:
     for old_file in ("MMButton.(WindowMSButton).xdb", "MMButton.(WindowMSButtonShared).xdb"):
         if os.path.exists(skills_file(faction, old_file)):
             gen.prune(skills_file(faction, old_file))
+
+neutral_commands = [skills_href("_Skills", folder, f"{name}.(UISSendUIMessage).xdb") for slot in tree_slots for branch in slot for folder in branch_folders(branch) for name in ("SwitchOff", "GrayOff")]
+neutral_commands += [build_visibility[neutral][0], build_visibility[(neutral, neutral_kind)][0]] + build_default[(neutral, neutral_kind)]
+gen.write("factionbutton.(WindowMSButtonShared).xdb.j2", skills_file(f"{neutral}Button", "Button.(WindowMSButtonShared).xdb"),
+          {'faction': faction_textures.get(neutral, neutral), 'commands': neutral_commands, 'off_commands': [build_visibility[neutral][1]]})
 
 if missing_gray:
     warn(f"{len(missing_gray)} elements have no gray texture and use their tinted icon (add <icon>_grey.(Texture).xdb, see --debug)")
