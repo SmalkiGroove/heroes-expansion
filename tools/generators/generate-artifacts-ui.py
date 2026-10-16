@@ -307,7 +307,7 @@ for artifact in artifacts:
 write_window(out_path("_Description", "Descriptions.(WindowSimple).xdb"), "DocArtifactsDescriptions", True, *description_pos, *description_size,
              [child(f"{a['id']}/{a['id']}.(WindowSimple).xdb", "WindowSimple") for a in artifacts], priority=text_priority)
 write_window(out_path("_Description", "Back.(WindowSimple).xdb"), "DocArtifactsDescriptionBack", True, *description_back,
-             background="/UI/Doc/Skills/_Description/DescriptionBack.(BackgroundSimpleScallingTexture).xdb", priority=back_priority)
+             background="/UI/Doc/Artifacts/Common/DescriptionBack.(BackgroundSimpleScallingTexture).xdb", priority=back_priority)
 
 categories = get_categories(artifacts, artifact_sets)
 for view_idx, view in enumerate(views):

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowMSButtonShared ObjectRecordID="1000064">
 	<Crap>false</Crap>
-	<Children>
-		<Item href="/UI/Doc/Skills/Haven/Build/Magic/Learning/071000/BtnIcon.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-	</Children>
+	<Children/>
 	<Background/>
 	<Foreground/>
 	<Flags>
@@ -53,7 +51,7 @@
 	<VisualStates>
 		<Item>
 			<Normal>
-				<Background/>
+				<Background href="/UI/Doc/Skills/_Skills/Learning/071000/071000.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 				<Foreground/>
 				<TextString/>
 				<OnEnterSubState>
@@ -63,7 +61,7 @@
 				<TextFormat/>
 			</Normal>
 			<MouseOver>
-				<Background/>
+				<Background href="/UI/Doc/Skills/_Skills/Learning/071000/071000.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 				<Foreground href="/UI/Doc/Skills/Common/Highlight.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 				<TextString/>
 				<OnEnterSubState>
@@ -81,7 +79,7 @@
 				<TextFormat/>
 			</MouseOver>
 			<Pushed>
-				<Background/>
+				<Background href="/UI/Doc/Skills/_Skills/Learning/071000/071000.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 				<Foreground href="/UI/Doc/Skills/Common/Highlight.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 				<TextString/>
 				<OnEnterSubState>
@@ -91,8 +89,8 @@
 				<TextFormat/>
 			</Pushed>
 			<Disabled>
-				<Background/>
-				<Foreground href="/UI/Doc/Skills/Common/Highlight.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
+				<Background href="/UI/Doc/Skills/_Skills/Learning/071000/071000.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
+				<Foreground/>
 				<TextString/>
 				<OnEnterSubState>
 					<Commands/>
@@ -101,7 +99,7 @@
 				<TextFormat/>
 			</Disabled>
 			<RightButtonDown>
-				<Background/>
+				<Background href="/UI/Doc/Skills/_Skills/Learning/071000/071000.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 				<Foreground href="/UI/Doc/Skills/Common/Highlight.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 				<TextString/>
 				<OnEnterSubState>

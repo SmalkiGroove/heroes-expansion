@@ -74,5 +74,5 @@ CI (`.github/workflows/`) only packages paks, on manual dispatch. It runs no tes
 - The **Creatures** encyclopedia tab is hand-made, disabled in `www/UI/Doc/Root.(WindowSimpleShared).xdb`, and has broken references. `generate-creatures-ui.py` is empty.
 - The **Artifacts** tab (views by class, slot and set, hover descriptions, set bonuses) is generated but not yet tested in game.
 - The hero spec panel has no title window, unlike the skills and spells panels.
-- The **Skills** tab of **Haven** uses a prototype build layout (`build_factions` in `generate-skills-ui.py`, see ui.md), which isn't tested in game yet. The other factions keep the tree layout.
+- The **Skills** tab of **Haven** uses a prototype build layout (`build_factions` in `generate-skills-ui.py`, see ui.md): a grid of skill buttons, and the tree of the selected skill below it. It hasn't been tested in game since its rework. The other factions keep the tree layout.
 - The **Skills** tab grays out the branches a class can't learn. The skill masteries and 2 perks have no gray texture yet, so they use a `<Color>` tint that hasn't been tested in game (`generate-skills-ui.py --debug` lists them).

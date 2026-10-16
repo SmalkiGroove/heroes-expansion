@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowMSButtonShared ObjectRecordID="1000064">
 	<Crap>false</Crap>
-	<Children>
-		<Item href="/UI/Doc/Skills/Haven/Build/Might/Combat/SkillIcon.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-	</Children>
+	<Children/>
 	<Background/>
 	<Foreground/>
 	<Flags>
@@ -53,7 +51,7 @@
 	<VisualStates>
 		<Item>
 			<Normal>
-				<Background/>
+				<Background href="/UI/Doc/Skills/_Skills/Combat/013001/013001.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 				<Foreground/>
 				<TextString/>
 				<OnEnterSubState>
@@ -63,19 +61,19 @@
 				<TextFormat/>
 			</Normal>
 			<MouseOver>
-				<Background/>
+				<Background href="/UI/Doc/Skills/_Skills/Combat/013001/013001.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 				<Foreground href="/UI/Doc/Skills/Common/Highlight.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 				<TextString/>
 				<OnEnterSubState>
 					<Commands>
-						<Item href="/UI/Doc/Skills/_Description/013001/013001.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+						<Item href="/UI/Doc/Skills/_Description/013000/013000.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					</Commands>
 					<Reversable>true</Reversable>
 				</OnEnterSubState>
 				<TextFormat/>
 			</MouseOver>
 			<Pushed>
-				<Background/>
+				<Background href="/UI/Doc/Skills/_Skills/Combat/013001/013001.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 				<Foreground href="/UI/Doc/Skills/Common/Highlight.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 				<TextString/>
 				<OnEnterSubState>
@@ -85,17 +83,19 @@
 				<TextFormat/>
 			</Pushed>
 			<Disabled>
-				<Background/>
+				<Background href="/UI/Doc/Skills/_Skills/Combat/013001/013001.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 				<Foreground href="/UI/Doc/Skills/Common/Highlight.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 				<TextString/>
 				<OnEnterSubState>
-					<Commands/>
+					<Commands>
+						<Item href="/UI/Doc/Skills/Haven/Build/Might/Combat/DescHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					</Commands>
 					<Reversable>false</Reversable>
 				</OnEnterSubState>
 				<TextFormat/>
 			</Disabled>
 			<RightButtonDown>
-				<Background/>
+				<Background href="/UI/Doc/Skills/_Skills/Combat/013001/013001.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 				<Foreground href="/UI/Doc/Skills/Common/Highlight.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 				<TextString/>
 				<OnEnterSubState>

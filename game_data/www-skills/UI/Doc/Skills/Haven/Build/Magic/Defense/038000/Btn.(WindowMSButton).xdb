@@ -10,8 +10,8 @@
 	<Placement>
 		<Position>
 			<First>
-				<x>204</x>
-				<y>95</y>
+				<x>306</x>
+				<y>120</y>
 			</First>
 			<Second>true</Second>
 		</Position>
@@ -57,10 +57,6 @@
 			<MessageOnEnterState/>
 			<CommandsOnEnterState>
 				<Commands>
-					<Item href="/UI/Doc/Skills/Haven/Build/Magic/Defense/007001/BtnDisable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Haven/Build/Magic/Defense/007001/SlotShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Haven/Build/Magic/Defense/038000/BtnDisable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Haven/Build/Magic/Defense/038000/SlotShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 				</Commands>
 				<Reversable>false</Reversable>
 			</CommandsOnEnterState>

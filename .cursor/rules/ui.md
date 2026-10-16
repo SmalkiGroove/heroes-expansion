@@ -132,6 +132,7 @@ Windows are toggled by **name**, using `UISSendUIMessage` commands:
 - `TriggerMode` is `BCST_ON_PUSH` for the toggle buttons (factions, heroes, artifact views and categories) and `BCST_ON_RELEASE` for the others (tabs, skill icons, the encyclopedia Open button, the skills view buttons).
 - **A button's state can't be set by a command.** Only `UI_SHOW_WINDOW` and `UI_ENABLE_WINDOW` exist. To show which of several click buttons is selected, disable the selected one with `UI_ENABLE_WINDOW`: its `Disabled` sub-state draws the "selected" look, and it can't be clicked again. The skills view buttons (Might/Magic) and the skill selection highlights work this way.
 - **Click buttons** have a single state. Their commands are in the instance's `CommandsOnEnterState`, with `AutoChangeState` set to `false` and `ButtonGroupID` set to `0`, like `www/UI/Doc/Open`.
+- **A clickable button draws its icon as the `Background` of each sub-state**, like the skills view buttons. An icon window among the button's `<Children>` catches the clicks: the button is still hovered, but it can't be clicked. The skill tree icons have such a child, which is fine only because they're never clicked.
 
 ### Broadcasting a game message
 
@@ -262,7 +263,7 @@ A clean run of the heroes or skills generator on unchanged data produces no git 
 
 ### Skills (`generate-skills-ui.py`)
 
-**Element IDs** are 6 digits: the skill's 3-digit index in `Skills.xdb`, then the 3-digit rank. The rank is `001` to `004` for skill masteries and `000` for perks. For example, `001001` is Logistics Basic and `019000` is the first perk with index 19.
+**Element IDs** are 6 digits: the skill's 3-digit index in `Skills.xdb`, then the 3-digit rank. The rank is `001` to `004` for skill masteries and `000` for perks. The build layout also uses `<skill index>000` for the description of a skill itself (`skill_description()`), which can't collide since a skill's index is never a perk's. For example, `001001` is Logistics Basic and `019000` is the first perk with index 19.
 
 **The folder layout drives generation.** A skill is only generated if the folder `www-skills/UI/Doc/Skills/_Skills/<Branch>/<ID>/` already exists. The branch folder determines which tree the skill appears in. If an ID has no folder, the generator prints `WARN: missing button folder`. This is expected for the unused IDs (`HERO_SKILL_<n>`, `Innates`, and so on).
 
@@ -302,25 +303,23 @@ A clean run of the heroes or skills generator on unchanged data produces no git 
 - The selected view button is disabled, which shows it highlighted.
 - The faction buttons' Shared files (`<Faction>Button/Button.(WindowMSButtonShared)`) are generated too. Selecting a faction applies its Might view (the first of `class_kinds`).
 
-**Build layout (prototype, `build_factions`, Haven only for now):** this replaces the trees of the faction with three panels, generated in `<Faction>/Build/`:
-- **Bar (left):** the hero build, one row per skill of the class. Each row has a mastery slot, where the masteries are stacked and the highest is on top, and 3 perk slots. A grayed basic skill icon below the row shows which skill it is.
-- **Center:** the basic skill icons of the class. Clicking one shows its tree below and selects it, using the disabled-button trick.
-- **Tree (bottom):** masteries on top, the 2 perk chains of the skill in the left and right halves (one row per depth), and the information perks without a mastery requirement (innates) at the bottom.
+**Build layout (prototype, `build_factions`, Haven only for now):** this replaces the trees of the faction with two panels per class, generated in `<Faction>/Build/<Kind>/`. The layout (`build_area`) starts at x=70 in the skills window.
+- **Center:** the faction texture `<Faction>/<Faction>.(Texture).xdb` (hand-made, one per faction) is the backdrop of the racial row and the grid (`grid_back_box`, 581x242, ending at the description backdrop). The basic skill icons are in the 2x8 grid of `build_grid`, centered in it, whose top was aligned with the top of the old description scroll (`grid_top`, y=250 in the skills window). Unlike the tree layout, Training and Despotism have their own slots; Sorcery and Voice still share one, which shows the class's own branch, else the other class's, else the first one. The racial skills of the faction are on a row above the grid: centered on it, 64x64 (`racial_icon_size`) in an 80x80 frame (`Common/Racial`, hand-made, `racial_back_size`), and raised above the row (`racial_raise`) so that the frame sits on the top border of the grid backdrop. Their innate perks (the information perks of the tree, Home Land and Retribution for Haven) are aligned right with the grid (`innate_step`); they are only hovered and are left out of the tree. Each innate has a label on its left, 60px wide so that it doesn't cover the previous perk, "Innate" or "Ultimate" from its row in the old Innates column (y=26 or 68), in `Common/InnateLabel`: the gold format of the artifact set labels (`SetLabel`), aligned right. The class's skills are buttons: clicking one shows its tree below and selects it, using the disabled-button trick. The other skills are gray icons (`Gray.(WindowSimple)`, using the element's `gray/` icon) with the skill name as tooltip, and can't be clicked.
+- **Tree (bottom):** below the grid backdrop, without a backdrop, down to y=675 in the skills window (`description_bottom`, the bottom of the old description scroll). The masteries are centered on top, and the perks are right below them, in the horizontal order of the old trees: the 2 perk chains of the skill run from left to right by depth, in the left and right halves (3 columns each). Same-depth alternatives are stacked in their column in the order of their rows in the old trees (`variant_element_y` for the elemental perks), which keeps a perk on the line of its requirement (Blaze Power and Ignite). Every tree is laid out as if its columns had 3 stacked perks (`tree_stack`), so a single perk is always on the middle line, the one of Destruction Learning, even in a tree on one line like Offence. The information perks without a mastery requirement are on a row below them. When they don't fit, the generator prints a `WARN:`. Tree elements are only hovered: hovering one highlights its requirements (`requirements()`, built on `prerequisites`) and shows its description.
 
-Clicking a tree element adds it to the build, together with all its requirements (`requirements()`, built on `prerequisites`). For each of them, the tree button is disabled and the bar slot is shown. Clicking a bar slot removes it, together with every element that requires it. All of this is a fixed command list per element: the build state is only the visibility of the slots and the enabled state of the tree buttons. The engine can't count, so the 3-perks-per-skill and skill limits aren't enforced, and the mastery isn't derived from the number of perks.
+Every skill icon of the layout is 48x48 (`build_icon_size`). Each view also selects its first skill, the racial one, so its tree is open when landing on the view. The faction window of a build faction holds only its view buttons (`view_button_x`, `view_button_y`). It is moved by hand between the faction buttons and the exit button (726,50, 137x81), above the build area: the build window is drawn above the faction window and would catch clicks where they overlap. Every button of the layout is a click button that draws its icon as a background (`write_click_button`). `DocBuild<Faction>` has priority 10 (`build_priority`), above the faction window and the `_Skills/Common` and `_Skills/Gray` containers, which overlap it at priority 0 and catch its clicks otherwise. Hovering any skill or element shows its description in the right panel. The skills of the center show the description of the skill itself, not of its basic mastery: the name and description of its texts folder `0` (`Text/Game/Skills/Unique/Courage/0/`, next to the masteries' `1` to `4`), which `Skills.xdb` doesn't reference, with the icon of the basic mastery. Clicking a skill disables its button, and a disabled button never reverses its `MouseOver` commands. The click also re-enters `MouseOver` after its commands, which shows the description again, so the skill's description is hidden both by the click and by the `OnEnterSubState` of the button's `Disabled` sub-state (`<Skill>/DescHide`, `disabled_commands`). The center is drawn in 3 layers: the grid backdrop (priority 0), the racial frames (1), then the icons and labels (2).
 
-**Perk columns** are fixed per perk (`assign_columns()`):
-- Each skill has 2 chains, and a chain can only be taken from its start, so the first chain fills the columns from the left and the second from the right.
-- The assignment then minimizes, over every build the game allows (at most 3 perks, with their requirements), the builds that put 2 perks in the same column. Same-depth alternatives (Shatter Magic's 031000/228000, Destructive Magic's elemental perks) leave 1–2 builds per skill that overlap, because they would need a 4th column.
+A hero build tracker (a bar listing the picked skills and perks) was tried and dropped: the UI can only show, hide, enable and disable windows by name, so it can't put an element in "the next free slot", count perks or check a limit.
 
 Window names are `DocBuild<Faction><Kind><What><ID>`. The views of a build faction hide every old tree and gray branch, and show `DocBuild<Faction>` and its class container. The other factions' views hide `DocBuild<Faction>`. Each build faction's `Build/Build.(WindowSimple)` must be listed by hand in `Skills.(WindowSimpleShared)`, and its racial branch removed from its faction window. The level-up box keeps the old trees.
 
 **Hand-made:**
 
-- Faction windows (`<Faction>/<Faction>.(WindowSimpleShared)` and `<Faction>_LvUp`), which list the view buttons and the racial branches.
+- Faction windows (`<Faction>/<Faction>.(WindowSimpleShared)` and `<Faction>_LvUp`), which list the view buttons and the racial branches (a build faction's window lists only the view buttons, and is moved beside the faction buttons).
 - The faction button instances (`<Faction>Button/Button.(WindowMSButton)`).
 - The branch `SwitchOn` / `SwitchOff` messages.
 - `_Skills/Common*`, `Common/`, `_Buttons/`, `Skills.(WindowSimpleShared)` (which lists `_Skills/Gray`), and the `LevelUpBox` overrides. The level-up box shows the union of both classes' branches, and its `<Faction>Open` buttons send `GrayOff` to every gray branch.
+- The description backdrop `_Description/DescriptionBack` (656,150, 435x870). Behind the description text, `_Description/DescriptionInner` (682,202, 374x738, priority 200, between the backdrop and the text) draws the `TextBack` panel (the frame of `HeroSpecBack`), which covers the top-left 590x577 of its 1024x1024 texture, 8px around the description list, for readability. Its scroll texture covers only the top-left 328x602 of 512x1024, and the whole texture is scaled to the window, so the window is larger than the visible scroll (279x512), which must contain the description list `000000.(WindowSimple)` (690,210, 200x400).
 
 ### Artifacts (`generate-artifacts-ui.py`)
 
@@ -344,13 +343,13 @@ Window names are `DocBuild<Faction><Kind><What><ID>`. The views of a build facti
 | `<View>/<category>/` | Category button, its switches, and one `<ID>.(WindowMSButton)` icon per artifact. Set categories also have the `Panel`. |
 | `ByClass/<category>/Name.txt`, `BySet/Pieces<n>.txt` | UI-local labels. Slot labels are the vanilla `/UI/HeroScreen3/Inventory/*.txt` texts, and set labels are the set names. |
 | `_Artifacts/<ID>.*` | Icon texture (size read with `texture_size()`), icon button visuals (shared by all views), and the icon window of the description |
-| `_Description/` | `Back` (the skills `DescriptionBack` texture), `Descriptions` (list of all descriptions), and `<ID>/` (icon, name, description and set name) |
+| `_Description/` | `Back` (the `Common/DescriptionBack` texture), `Descriptions` (list of all descriptions), and `<ID>/` (icon, name, description and set name) |
 
 **Window names** (all unique): `DocArtifactsButton<View>[<category>]`, `DocArtifacts<View>[<category>]`, `DocArtifactsIcon<View><ID>`, `DocArtifactsDesc<ID>[...]` and `DocArtifactsSet<category>...`.
 
-**Hand-made:** `Artifacts.(WindowSimple)`, `_Buttons/` and `Common/`. `Common/` holds the text formats, the shared text view and the icon highlight. Every other file is generated, and `Generator.prune_unwritten()` removes the files that the current data no longer produces.
+**Hand-made:** `Artifacts.(WindowSimple)`, `_Buttons/` and `Common/`. `Common/` holds the text formats, the shared text view, the icon highlight and the description backdrop `DescriptionBack`, a copy of the old skills one, so that changing the skills backdrop doesn't change the artifacts tab. Every other file is generated, and `Generator.prune_unwritten()` removes the files that the current data no longer produces.
 
-**Cross-pak textures:** the description backdrop comes from `www-skills` and the set panel backdrop (`HeroSpecBack`) from `www-heroes`.
+**Cross-pak textures:** the set panel backdrop (`HeroSpecBack`) comes from `www-heroes`.
 
 ---
 
