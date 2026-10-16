@@ -105,6 +105,7 @@
 			<VisualOnEnterState>
 				<Commands>
 					<Item href="SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/BuildHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 				</Commands>
 				<Reversable>false</Reversable>
 			</VisualOnEnterState>
@@ -164,55 +165,83 @@
 			<VisualOnEnterState>
 				<Commands>
 					<Item href="SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/Haven/Build/BuildHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/_Skills/Logistics/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Logistics/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/Logistics/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/_Skills/ShatterMagic/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/ShatterMagic/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/ShatterMagic/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/_Skills/Combat/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Combat/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/Combat/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/_Skills/Warfare/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Warfare/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/Warfare/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/LightMagic/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/_Skills/LightMagic/GrayOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/_Skills/Offence/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/LightMagic/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Offence/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/Offence/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/_Skills/Governance/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Governance/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/Governance/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/_Skills/DarkMagic/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/DarkMagic/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/DarkMagic/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/_Skills/Defense/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Defense/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/Defense/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/_Skills/Leadership/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Leadership/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/Leadership/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/NaturalMagic_a/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/NaturalMagic_a/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/NaturalMagic_b/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/_Skills/NaturalMagic_b/GrayOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/NaturalMagic_b/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/NaturalMagic_c/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/NaturalMagic_c/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/NaturalMagic_d/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/NaturalMagic_d/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/_Skills/Learning/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Learning/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/Learning/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/Training/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/Training/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/_Skills/Despotism/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Despotism/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/Despotism/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/DestructiveMagic_a/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/DestructiveMagic_a/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/_Skills/DestructiveMagic_b/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/DestructiveMagic_b/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/DestructiveMagic_b/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/DestructiveMagic_c/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/DestructiveMagic_c/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/DestructiveMagic_d/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/DestructiveMagic_d/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/Sorcery/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
-					<Item href="/UI/Doc/Skills/_Skills/Sorcery/GrayOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/_Skills/Sorcery/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/Voice/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/_Skills/Voice/GrayOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/BuildShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/Might/MightShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/Magic/MagicHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/Necro/MightDisable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 					<Item href="/UI/Doc/Skills/Necro/MagicEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/Might/Necromancy/TreeShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/Might/Offence/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/Might/Defense/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/Might/Leadership/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/Might/Warfare/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/Might/Combat/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/Might/DarkMagic/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/Might/Learning/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/Might/Governance/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/Might/Logistics/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/Might/ShatterMagic/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/Might/DestructiveMagic/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/Might/Despotism/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/Might/Necromancy/SkillDisable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/Might/Offence/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/Might/Defense/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/Might/Leadership/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/Might/Warfare/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/Might/Combat/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/Might/DarkMagic/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/Might/Learning/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/Might/Governance/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/Might/Logistics/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/Might/ShatterMagic/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/Might/DestructiveMagic/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/Might/Despotism/SkillEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
 				</Commands>
 				<Reversable>false</Reversable>
 			</VisualOnEnterState>

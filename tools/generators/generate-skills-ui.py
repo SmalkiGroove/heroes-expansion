@@ -573,7 +573,7 @@ branch_skill = {branch: elements[id]['skill_id'] for branch in branches for fold
 # - the tree shows the masteries on top, and the perks below them, horizontally: the 2 perk chains from left to right
 #   by depth (left and right halves), same-depth perks stacked, then a row of information perks.
 # Hovering a skill shows its description; hovering an element of the tree also highlights its requirements.
-build_factions = ["Haven"]
+build_factions = ["Haven", "Inferno", "Necro", "Preserve", "Dungeon", "Academy", "Fortress", "Stronghold"]
 build_grid = [
     [["Offence"], ["Defense"], ["Leadership"], ["Warfare"], ["Combat"], ["LightMagic"], ["DarkMagic"], ["Training"]],
     [["Learning"], ["Sorcery", "Voice"], ["Governance"], ["Logistics"], ["ShatterMagic"], ["DestructiveMagic"], ["NaturalMagic"], ["Despotism"]],
@@ -586,6 +586,9 @@ build_icon_size = 48                       # every skill icon of the layout
 description_top, description_bottom = 250, 675
 # Backdrop of the racial row and the grid: <Faction>/<Faction>.(Texture).xdb, a frame that ends at the description backdrop
 grid_back_box = [2, 26, 581, 242]
+# Size of the picture in the faction textures: some are padded to 1024x256, and the whole texture is scaled to its window,
+# so the window is enlarged to put the picture on grid_back_box
+grid_back_picture = (648, 241)
 # Center: the grid top is aligned with the description scroll, centered in the backdrop;
 # the racial skills and their innates above it, aligned left with it
 central_step, grid_top = 70, description_top - build_area[1]
@@ -750,7 +753,8 @@ def generate_build(faction, prefix, variant, kind):
     names = lambda what, id: f"DocBuild{faction}{kind}{what}{id}"
     # A row with the racial skills of the faction, then the grid rows
     # In a slot: the branch of the class, else the one of the other class, else the first
-    racial = [b for b in racial_branches if branch_skill[b] in own | other]
+    # Only the racial skill of the class: Stronghold's Might class has Blood Rage, its Magic class Spiritism
+    racial = [b for b in racial_branches if branch_skill[b] in own]
     grid = [[next((b for b in slot if branch_skill[b] in own), None) or next((b for b in slot if branch_skill[b] in other), slot[0]) for slot in row]
             for row in build_grid]
     clickable = [b for b in racial + [b for row in grid for b in row] if branch_skill[b] in own]
@@ -759,7 +763,9 @@ def generate_build(faction, prefix, variant, kind):
     tree_messages = {b: toggle_messages(faction, [kind, b, "Tree"], names("Tree", b)) for b in clickable}
     skill_messages = {b: toggle_messages(faction, [kind, b, "Skill"], names("Skill", b), "UI_ENABLE_WINDOW") for b in clickable}
     # The innate perks (information perks) of a racial skill of the class are beside it, not in its tree
-    innates = {b: trees[b][2] for b in racial if b in clickable}
+    # with the elements of another branch shown in it (Spiritism shows BloodRage's Orcish Fury), innate before ultimate (old row)
+    innates = {b: sorted(trees[b][2] + [e for _, e in branch_extra.get(b, [])], key=lambda e: (coordinates_skills[e][1], e)) for b in racial if b in clickable}
+    element_folder = {e: folder for folder, ids in generated_in.items() for e in ids}
     rows = [[(b, e) for b in racial for e in [None] + innates.get(b, [])]] + [[(b, None) for b in row] for row in grid]
 
     texture = f"/UI/Doc/Skills/{faction}/{faction}.(Texture).xdb"
@@ -767,7 +773,9 @@ def generate_build(faction, prefix, variant, kind):
     gen.write("background.(BackgroundSimpleScallingTexture).xdb.j2", build_file(faction, "GridBack.(BackgroundSimpleScallingTexture).xdb"),
               {'texture': texture + "#xpointer(/Texture)", 'width': texture_xdb['Width'], 'height': texture_xdb['Height']})
     grid_back = build_href(faction, "GridBack.(BackgroundSimpleScallingTexture).xdb") + "#xpointer(/BackgroundSimpleScallingTexture)"
-    central_children = [write_panel(faction, [kind, "GridBack"], names("GridBack", ""), grid_back_box, [], grid_back, priority=grid_back_priority)]
+    back_box = [*grid_back_box[:2], grid_back_box[2] * int(texture_xdb['Width']) // grid_back_picture[0],
+                grid_back_box[3] * int(texture_xdb['Height']) // grid_back_picture[1]]
+    central_children = [write_panel(faction, [kind, "GridBack"], names("GridBack", ""), back_box, [], grid_back, priority=grid_back_priority)]
     tree_children = []
     for y, row in enumerate(rows):
         left, step = (grid_left, racial_step) if y == 0 else ((central_box[2] - span(len(row), central_step)) // 2, central_step)
@@ -785,7 +793,7 @@ def generate_build(faction, prefix, variant, kind):
             else:
                 pos = (left + x * step, grid_top + (y - 1) * central_step)
             if e:
-                central_children.append(write_click_button(faction, [kind, b, e, "Innate"], names("Innate", e), pos, build_icon_size, icon_href(folder, e),
+                central_children.append(write_click_button(faction, [kind, b, e, "Innate"], names("Innate", e), pos, build_icon_size, icon_href(element_folder[e], e),
                                                            [], [description_href(e)], tooltip=elements[e]['name'], priority=central_priority))
                 # Label on its left, as in the old trees: their Innates column has the innate on top (y=26) and the ultimate below
                 label = "Innate" if coordinates_skills[e][1] < 47 else "Ultimate"
@@ -888,7 +896,8 @@ for faction, number, prefix, variant in factions:
                       {'message': "UI_ENABLE_WINDOW", 'target': f"{kind}Button{number}", 'forward': enabled, 'back': 1 - enabled})
     # Selecting the faction lands on its first view
     gen.write("factionbutton.(WindowMSButtonShared).xdb.j2", skills_file(f"{faction}Button", "Button.(WindowMSButtonShared).xdb"),
-              {'faction': faction_textures.get(faction, faction), 'commands': view_commands(faction, prefix, variant, next(iter(class_kinds)))})
+              {'faction': faction_textures.get(faction, faction), 'commands': view_commands(faction, prefix, variant, next(iter(class_kinds))),
+               'off_commands': [build_visibility[faction][1]] if faction in build_factions else []})
     for old_file in ("MMButton.(WindowMSButton).xdb", "MMButton.(WindowMSButtonShared).xdb"):
         if os.path.exists(skills_file(faction, old_file)):
             gen.prune(skills_file(faction, old_file))
