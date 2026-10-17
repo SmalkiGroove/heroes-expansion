@@ -628,6 +628,14 @@ def icon_href(folder, id):
 def description_href(id):
     return skills_href("_Description", id, f"{id}.(UISSendUIMessage).xdb")
 
+# The panel behind the description text (hand-made _Description/DescriptionInner, hidden) is shown with each description
+gen.write("message.(UISSendUIMessage).xdb.j2", skills_file("_Description", "InnerShow.(UISSendUIMessage).xdb"),
+          {'message': "UI_SHOW_WINDOW", 'target': "WindowDescriptionInner", 'forward': 1, 'back': 0})
+
+def description_hover(id):
+    """Hover commands showing the description of an element and the panel behind it (reversed when leaving)."""
+    return [skills_href("_Description", "InnerShow.(UISSendUIMessage).xdb"), description_href(id)]
+
 # Descriptions of the skills themselves, shown by the skill buttons of the build layout: the texts of the skill's folder 0
 # (Text/.../Courage/0/), next to the folders of its masteries. Their ID is the skill index then 000, which is never a perk's.
 skill_descriptions = set()
@@ -786,7 +794,7 @@ def generate_build(faction, prefix, variant, kind, own=None, other=None, racial=
                 pos = (left + x * step, grid_top + (y - 1) * central_step)
             if e:
                 central_children.append(write_click_button(faction, [kind, b, e, "Innate"], names("Innate", e), pos, build_icon_size, icon_href(element_folder[e], e),
-                                                           [], [description_href(e)], tooltip=elements[e]['name'], priority=central_priority))
+                                                           [], description_hover(e), tooltip=elements[e]['name'], priority=central_priority))
                 # Label on its left, as in the old trees: their Innates column has the innate on top (y=26) and the ultimate below
                 label = "Innate" if coordinates_skills[e][1] < 47 else "Ultimate"
                 gen.write("label.(WindowTextView).xdb.j2", build_file(faction, kind, b, e, "Label.(WindowTextView).xdb"),
@@ -817,7 +825,7 @@ def generate_build(faction, prefix, variant, kind, own=None, other=None, racial=
                                                 [pos[0] - selection_padding, pos[1] - selection_padding, size + 2 * selection_padding, size + 2 * selection_padding],
                                                 [], selection_glow, visible='false', priority=selection_priority))
             central_children.append(write_click_button(faction, [kind, b, "Skill"], names("Skill", b), pos, size, skill_icon(b),
-                                                       select, [description_href(description)], tooltip=elements[basic]['name'], priority=central_priority))
+                                                       select, description_hover(description), tooltip=elements[basic]['name'], priority=central_priority))
             # Tree: hovering an element highlights its requirements (disabling a highlight shows it) and shows its description
             masteries, chains, infos = trees[b]
             positions = tree_positions(folder, masteries, chains, [] if b in innates else infos)
@@ -827,7 +835,7 @@ def generate_build(faction, prefix, variant, kind, own=None, other=None, racial=
                 gen.write("highlight.(WindowMSButton).xdb.j2", build_file(faction, kind, b, e, "Hl.(WindowMSButton).xdb"),
                           {'name': names("Hl", e), 'pos_x': epos[0], 'pos_y': epos[1], 'size': build_icon_size})
                 children.append(button_href(faction, kind, b, e, "Hl"))
-                hover = [highlight[r] for r in sorted(requirements(e, positions))] + [highlight[e], description_href(e)]
+                hover = [highlight[r] for r in sorted(requirements(e, positions))] + [highlight[e]] + description_hover(e)
                 children.append(write_click_button(faction, [kind, b, e, "Btn"], names("Btn", e), epos, build_icon_size, icon_href(folder, e), [], hover))
             tree_children.append(write_panel(faction, [kind, b, "Tree"], names("Tree", b), [0, 0, tree_box[2], tree_box[3]], children, visible='false', priority=1))
 

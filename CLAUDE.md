@@ -12,6 +12,8 @@ This file is the project's knowledge base. Each topic guide below has the detail
 
 `.github/copilot-instructions.md` and `.cursor/rules/` serve other assistants. Keep them consistent with this file.
 
+For work on the game binary (reverse engineering `H5X.exe`, runtime patches, save files), refer to the DLL project `G:\__H5__\H5X_DLL` and its `CLAUDE.md`.
+
 ## Repository layout
 
 | Folder | Content |
