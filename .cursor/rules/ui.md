@@ -126,11 +126,11 @@ Windows are toggled by **name**, using `UISSendUIMessage` commands:
 
 - The instance's `<ButtonStates>` holds one `<Item>` per logical state. Each state has `CommandsOnEnterState`, `CommandsOnRightClick` and `commandsOnLDblKlick`.
 - The Shared file's `<VisualStates>` holds one `<Item>` per state. Each one has the sub-states `Normal`, `MouseOver`, `Pushed`, `Disabled` and `RightButtonDown`, each with its own `Background`, `Foreground` and `OnEnterSubState` commands. It also has `VisualOnEnterState` commands that run when the button enters that state.
-- **Toggle buttons** (tabs, faction buttons, hero buttons) have two states. Entering state 1 runs the commands that show its content and hide the other contents. Entering state 0 runs the commands that hide its content.
+- **Toggle buttons** (hero and artifact buttons) have two states. Entering state 1 runs the commands that show its content and hide the other contents. Entering state 0 runs the commands that hide its content.
 - `ButtonGroupID` groups buttons that act together. The Heroes faction buttons use `1` and hero buttons use `12`, so that selecting one releases the others. Artifact view buttons use `20` and category buttons `21`. The Skills faction buttons have no group (see the level-up box). **No button with a group may be part of a dialog**: see the level-up box.
 - **Text buttons**: a button can show a text instead of a texture. The instance sets `<TextFileRef>`, and each sub-state of the Shared file sets a `<TextFormat>`. This is how vanilla `/UI/Common/MenuButton` works. The Artifacts tab uses it, changing the text color per sub-state.
 - **Hover effects**: put commands in a sub-state's `OnEnterSubState`. Skill icons use `MouseOver` to highlight their prerequisites and to show the description panel.
-- `TriggerMode` is `BCST_ON_PUSH` for the toggle buttons (factions, heroes, artifact views and categories) and `BCST_ON_RELEASE` for the others (tabs, skill icons, the encyclopedia Open button, the skills view buttons).
+- `TriggerMode` is `BCST_ON_PUSH` for the toggle buttons (factions, heroes, artifact views and categories) and `BCST_ON_RELEASE` for the others (encyclopedia tabs, skill icons, the encyclopedia Open button, the skills view buttons).
 - **A button's state can't be set by a command.** Only `UI_SHOW_WINDOW` and `UI_ENABLE_WINDOW` exist. To show which of several click buttons is selected, disable the selected one with `UI_ENABLE_WINDOW`: its `Disabled` sub-state draws the "selected" look, and it can't be clicked again. The skills view buttons (Might/Magic) and the skill selection highlights of the old trees work this way. **Don't use it on a button with `MouseOver` commands**, such as a skill showing its description: a disabled button never reverses them, so the description stays shown. Show the selection with a separate window instead, as the build layout does.
 - **Click buttons** have a single state. Their commands are in the instance's `CommandsOnEnterState`, with `AutoChangeState` set to `false` and `ButtonGroupID` set to `0`, like `www/UI/Doc/Open`.
 - **A clickable button draws its icon as the `Background` of each sub-state**, like the skills view buttons. An icon window among the button's `<Children>` catches the clicks: the button is still hovered, but it can't be clicked. The skill tree icons have such a child, which is fine only because they're never clicked.
@@ -167,7 +167,7 @@ A button can broadcast a message that many windows react to, without referencing
 
 `www/UI/Doc/Root.(WindowSimpleShared).xdb` (the window named `DocRootWindow`) lists:
 
-1. The tab buttons `DocTab<Section>.(WindowMSButton)`. Entering state 1 runs `<Section>/_Buttons/<Section>Show` and every other `<Other>/_Buttons/<Other>Hide`.
+1. The tab buttons `DocTab<Section>.(WindowMSButton)`, from top to bottom Summary, Heroes, Creatures, Skills and Artifacts (their `Position`, 80 px apart, sets the order). They are click buttons: a click runs `<Section>/_Buttons/<Section>Show`, every other `<Other>/_Buttons/<Other>Hide`, enables the other tabs and disables its own (`_Tabs/DocTab<Section>Enable|Disable`, `UI_ENABLE_WINDOW`). The disabled tab is the active one: its `Disabled` sub-state draws the `_Active` bookmark of its texture family (`Bookmark<n>_Active`, `CaravansInfo/Normal` for Summary), like the vanilla Mission Objectives tabs, and it can't be clicked again. The Summary tab starts disabled (`<Enabled>false</Enabled>`), since its section is the one shown on opening. The commands are in the instance's `CommandsOnEnterState`: in the Shared `VisualOnEnterState`, as before, they also ran on a right click, which should only show the tooltip. The tabs (priority 999) stay below the section windows (1000), so the parchment covers their right edge; an active tab drawn above it was tried, and its colors didn't match the parchment's.
 2. The section windows `<Section>/<Section>.(WindowSimple)`. They are hidden by default and their names match the Show and Hide messages.
 3. The `Close` button.
 
@@ -184,7 +184,7 @@ A button can broadcast a message that many windows react to, without referencing
 1. Create `<Section>/<Section>.(WindowSimple|WindowSimpleShared).xdb` and `<Section>/_Buttons/<Section>Show|Hide.(UISSendUIMessage).xdb`.
 2. Create `DocTab<Section>.(WindowMSButton|WindowMSButtonShared).xdb` and `DocTab<Section>.txt` in `www/UI/Doc/`.
 3. Add both the tab and the window to `Root.(WindowSimpleShared).xdb`.
-4. Add `<Section>Hide` to the state-1 `VisualOnEnterState` of **every other tab**, and add the other tabs' Hide messages to the new tab.
+4. Add `<Section>Hide` and the new tab's Enable message to the `CommandsOnEnterState` of **every other tab**, write the new tab's `_Tabs/` messages, and give it the other tabs' Hide and Enable messages and its own Disable.
 
 ### Faction pattern (Heroes and Skills)
 

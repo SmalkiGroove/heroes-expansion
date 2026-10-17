@@ -56,25 +56,18 @@
 		<Item>
 			<MessageOnEnterState/>
 			<CommandsOnEnterState>
-				<Commands/>
-				<Reversable>false</Reversable>
-			</CommandsOnEnterState>
-			<CommandsOnRightClick>
-				<Commands/>
-				<Reversable>false</Reversable>
-			</CommandsOnRightClick>
-			<commandsOnLDblKlick>
-				<Commands/>
-				<Reversable>false</Reversable>
-			</commandsOnLDblKlick>
-			<WaitVisual>false</WaitVisual>
-			<ReverseCommands>false</ReverseCommands>
-			<Name/>
-		</Item>
-		<Item>
-			<MessageOnEnterState/>
-			<CommandsOnEnterState>
-				<Commands/>
+				<Commands>
+					<Item href="Heroes/_Buttons/HeroesShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="Summary/_Buttons/SummaryHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="Creatures/_Buttons/CreaturesHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="Skills/_Buttons/SkillsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="Artifacts/_Buttons/ArtifactsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="_Tabs/DocTabSummaryEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="_Tabs/DocTabCreaturesEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="_Tabs/DocTabSkillsEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="_Tabs/DocTabArtifactsEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="_Tabs/DocTabHeroesDisable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+				</Commands>
 				<Reversable>false</Reversable>
 			</CommandsOnEnterState>
 			<CommandsOnRightClick>
