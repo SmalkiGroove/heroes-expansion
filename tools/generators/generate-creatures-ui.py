@@ -35,6 +35,16 @@ factions = [
     ("Stronghold", "Orcs", "Stronghold", "/GameMechanics/RefTables/Stronghold.txt"),
 ]
 default_faction = "Haven"
+# Grid order of the neutrals, by rows of 3 (the others follow, by tier)
+neutral_order = [
+    "CREATURE_BASILISK", "CREATURE_WOLF", "CREATURE_LIZARDMAN",
+    "CREATURE_MUMMY", "CREATURE_SPITTING_SPIDER", "CREATURE_MANTICORE",
+    "CREATURE_CAVE_SPIDER", "CREATURE_DEATH_SPIDER", "CREATURE_AIR_ELEMENTAL",
+    "CREATURE_EARTH_ELEMENTAL", "CREATURE_WATER_ELEMENTAL", "CREATURE_FIRE_ELEMENTAL",
+    "CREATURE_BONE_DRAGON", "CREATURE_SHADOW_DRAGON", "CREATURE_HORROR_DRAGON",
+    "CREATURE_BEHEMOTH", "CREATURE_KRAKEN", "CREATURE_EINHERJAR",
+    "CREATURE_SNOW_APE", "CREATURE_PHOENIX", "CREATURE_LEGENDARY_DRAGON",
+]
 sides = ["L", "R"]
 default_side = "L"
 
@@ -80,6 +90,7 @@ column_x = {'L': panel_x + column_gap, 'R': icon_x + icon_size + column_gap}
 value_gap = 30
 value_box = {'L': (0, column_width - (value_gap - column_gap)), 'R': (value_gap - column_gap, column_width - (value_gap - column_gap))}
 value_format = {'L': "ValueRight", 'R': "ValueLeft"}
+side_align = {'L': "Right", 'R': "Left"}
 # Side buttons, centered on their column, straddling the top border of the panel
 side_button_size = 40
 side_button_y = panel_y - side_button_size // 2
@@ -138,6 +149,9 @@ def write_window(parts, name, visible, box, children=(), background=None, priori
     return child(doc_path(*parts[:-1], f"{parts[-1]}.(WindowSimple).xdb"), "WindowSimple")
 
 def write_background(parts, texture, size):
+    # Without its xpointer, a texture href is drawn as a white square in game
+    if '#' not in texture:
+        texture += "#xpointer(/Texture)"
     gen.write("background.(BackgroundSimpleScallingTexture).xdb.j2", out_path(*parts[:-1], f"{parts[-1]}.(BackgroundSimpleScallingTexture).xdb"),
               {'path': texture, 'size': size})
     return doc_path(*parts[:-1], f"{parts[-1]}.(BackgroundSimpleScallingTexture).xdb")
@@ -202,7 +216,7 @@ def spell_icon(spell_id):
 
 def get_creatures():
     """The creatures of each faction in grid order: by tier, the base creature then its upgrades in the order of its
-    Upgrades list; the neutrals by tier. A base creature is one that isn't an upgrade of another one: the Upgrade flag
+    Upgrades list; the neutrals in neutral_order. A base creature is one that isn't an upgrade of another one: the Upgrade flag
     is false for some upgrades of the third line (Inferno/3rd/)."""
     by_folder = {}
     folders = {folder for _, folder, *_ in factions}
@@ -223,7 +237,13 @@ def get_creatures():
     for faction, folder, *_ in factions:
         members = by_folder.get(folder, {})
         if faction == "Neutral":
-            ordered = sorted(members.values(), key=lambda c: (int(c['data']['CreatureTier']), c['data']['Upgrade'] == 'true'))
+            unknown = [creature_id for creature_id in neutral_order if creature_id not in members]
+            if unknown:
+                warn(f"Neutral: {unknown} of neutral_order are not neutral creatures")
+            others = sorted((c for c in members.values() if c['id'] not in neutral_order), key=lambda c: int(c['data']['CreatureTier']))
+            if others:
+                warn(f"Neutral: {[c['id'] for c in others]} are not in neutral_order, they are shown last")
+            ordered = [members[creature_id] for creature_id in neutral_order if creature_id in members] + others
         else:
             ordered = []
             upgrades = {upgrade for c in members.values() for upgrade in items(c['data'].get('Upgrades'))}
@@ -282,9 +302,7 @@ def generate_stats(creature):
     folder = ("_Stats", creature_id)
     prefix = f"DocCreaturesStat{creature_id}"
     w = column_width
-    children = [write_window((*folder, "Icon"), f"{prefix}Icon", True, ((w - creature_icon_size) // 2, 0, creature_icon_size, creature_icon_size),
-                             background=doc_path("_Creatures", f"{creature_id}.(BackgroundSimpleScallingTexture).xdb"), priority=column_priority),
-                write_text_view((*folder, "Name"), f"{prefix}Name", creature['name'], "Name", (0, name_y, w, name_height))]
+    children = []
     # Creature abilities cast as spells (SPELL_ABILITY_*) have no icon, and are among the abilities. The runes of the
     # Fortress rune mages (SPELL_RUNE_*) are left out.
     known = [spell['Spell'] for spell in as_list((data.get('KnownSpells') or {}).get('Item'))
@@ -293,12 +311,6 @@ def generate_stats(creature):
         warn(f"{creature_id} knows {len(known)} spells, only {spell_count} are shown")
         known = known[:spell_count]
     abilities = items(data.get('Abilities'))
-    for idx, ability in enumerate(abilities):
-        if ability not in ability_names:
-            warn(f"{creature_id}: ability {ability} has no name")
-            continue
-        children.append(write_text_view((*folder, f"Ability{idx}"), f"{prefix}Ability{idx}", ability_names[ability], "Ability",
-                                        (0, abilities_top + idx * ability_step, w, ability_step), tooltip=ability_descriptions.get(ability, '')))
     if len(abilities) > ability_rows:
         warn(f"{creature_id}: its {len(abilities)} abilities don't fit in the column")
 
@@ -308,6 +320,17 @@ def generate_stats(creature):
     for side in sides:
         x, width = value_box[side]
         side_children = list(children)
+        # Icon, name and abilities, aligned like the values
+        icon_left = x + width - creature_icon_size if side == 'L' else x
+        side_children.append(write_window((*folder, side, "Icon"), f"{prefix}{side}Icon", True, (icon_left, 0, creature_icon_size, creature_icon_size),
+                                          background=doc_path("_Creatures", f"{creature_id}.(BackgroundSimpleScallingTexture).xdb"), priority=column_priority))
+        side_children.append(write_text_view((*folder, side, "Name"), f"{prefix}{side}Name", creature['name'], f"Name{side_align[side]}", (x, name_y, width, name_height)))
+        for idx, ability in enumerate(abilities):
+            if ability not in ability_names:
+                warn(f"{creature_id}: ability {ability} has no name")
+                continue
+            side_children.append(write_text_view((*folder, side, f"Ability{idx}"), f"{prefix}{side}Ability{idx}", ability_names[ability], f"Ability{side_align[side]}",
+                                                 (x, abilities_top + idx * ability_step, width, ability_step), tooltip=ability_descriptions.get(ability, '')))
         for idx, (key, _) in enumerate(stat_rows):
             y = row_y[idx]
             if key == 'Cost' and resources:
