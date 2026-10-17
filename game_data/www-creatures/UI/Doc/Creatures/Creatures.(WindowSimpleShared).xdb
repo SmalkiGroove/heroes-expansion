@@ -1,28 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<WindowSimpleShared ObjectRecordID="1000860">
+<WindowSimpleShared ObjectRecordID="1000326">
 	<Crap>false</Crap>
 	<Children>
-		<Item href="NeutralButton/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
-		<Item href="HavenButton/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
-		<Item href="InfernoButton/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
-		<Item href="NecroButton/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
-		<Item href="PreserveButton/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
-		<Item href="DungeonButton/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
-		<Item href="AcademyButton/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
-		<Item href="FortressButton/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
-		<Item href="StrongholdButton/Button.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
-
-		<Item href="Haven/000001.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="Inferno/000002.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="Necro/000003.(WindowSimple).xdb#xpointer(/Window²Simple)"/>
-		<Item href="Preserve/000004.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="Dungeon/000005.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="Academy/000006.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="Fortress/000007.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="Stronghold/000008.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-		<Item href="Neutral/000009.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
-
-		<Item href="Common/Stats/_Holder.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/Panel/Panel.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/Side/LSel.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/Side/L.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="/UI/Doc/Creatures/Side/RSel.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/Side/R.(WindowMSButton).xdb#xpointer(/WindowMSButton)"/>
+		<Item href="/UI/Doc/Creatures/L/Factions/Factions.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/L/Neutral/Glows.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/L/Neutral/Grid.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/L/Neutral/Column.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/L/Haven/Glows.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/L/Haven/Grid.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/L/Haven/Column.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/L/Inferno/Glows.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/L/Inferno/Grid.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/L/Inferno/Column.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/L/Necro/Glows.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/L/Necro/Grid.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/L/Necro/Column.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/L/Preserve/Glows.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/L/Preserve/Grid.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/L/Preserve/Column.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/L/Dungeon/Glows.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/L/Dungeon/Grid.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/L/Dungeon/Column.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/L/Academy/Glows.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/L/Academy/Grid.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/L/Academy/Column.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/L/Fortress/Glows.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/L/Fortress/Grid.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/L/Fortress/Column.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/L/Stronghold/Glows.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/L/Stronghold/Grid.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/L/Stronghold/Column.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/R/Factions/Factions.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/R/Neutral/Glows.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/R/Neutral/Grid.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/R/Neutral/Column.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/R/Haven/Glows.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/R/Haven/Grid.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/R/Haven/Column.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/R/Inferno/Glows.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/R/Inferno/Grid.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/R/Inferno/Column.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/R/Necro/Glows.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/R/Necro/Grid.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/R/Necro/Column.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/R/Preserve/Glows.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/R/Preserve/Grid.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/R/Preserve/Column.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/R/Dungeon/Glows.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/R/Dungeon/Grid.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/R/Dungeon/Column.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/R/Academy/Glows.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/R/Academy/Grid.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/R/Academy/Column.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/R/Fortress/Glows.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/R/Fortress/Grid.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/R/Fortress/Column.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/R/Stronghold/Glows.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/R/Stronghold/Grid.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/R/Stronghold/Column.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
 	</Children>
 	<Background href="/UI/Doc/Common/Background.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"/>
 	<Foreground/>
@@ -47,10 +87,10 @@
 		</HorAllign>
 		<Size>
 			<First>
-				<x>0</x>
-				<y>0</y>
+				<x>1024</x>
+				<y>1024</y>
 			</First>
-			<Second>false</Second>
+			<Second>true</Second>
 		</Size>
 		<LowerMargin>
 			<First>

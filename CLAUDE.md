@@ -73,7 +73,7 @@ CI (`.github/workflows/`) only packages paks, on manual dispatch. It runs no tes
 
 ## Status of the work in progress
 
-- The **Creatures** encyclopedia tab is hand-made, disabled in `www/UI/Doc/Root.(WindowSimpleShared).xdb`, and has broken references. `generate-creatures-ui.py` is empty.
+- The **Creatures** tab compares two creatures side by side (`generate-creatures-ui.py`, see ui.md). It is generated and synced but not yet tested in game.
 - The **Artifacts** tab (views by class, slot and set, hover descriptions, set bonuses) is generated but not yet tested in game.
 - The hero spec panel has no title window, unlike the skills and spells panels.
 - The **Skills** tab uses the build layout for every faction, Neutral included (`generate-skills-ui.py`, see ui.md): a grid of skill buttons, and the tree of the selected skill below it. It has been tested in game for Haven only. The level-up box has a single button opening the encyclopedia's Skills section, without the other sections: buttons with a `ButtonGroupID` inside a dialog made the next load crash (see ui.md). The old trees were removed.

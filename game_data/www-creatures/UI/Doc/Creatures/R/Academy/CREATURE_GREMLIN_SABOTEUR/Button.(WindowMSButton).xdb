@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WindowMSButton ObjectRecordID="1000123">
+	<ClassTypeID>285694855</ClassTypeID>
+	<Shared href="/UI/Doc/Creatures/_Creatures/CREATURE_GREMLIN_SABOTEUR.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
+	<Name>DocCreaturesButtonRCREATURE_GREMLIN_SABOTEUR</Name>
+	<TooltipFileRef href="/Text/Game/Creatures/Academy/3rd/GremlinSaboteur_Name.txt"/>
+	<Visible>true</Visible>
+	<Priority>3</Priority>
+	<GameMessageReactions/>
+	<Placement>
+		<Position>
+			<First>
+				<x>166</x>
+				<y>6</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>52</x>
+				<y>52</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString/>
+	<relatedTexts/>
+	<relatedTextures/>
+	<Flags>
+		<SuperActive>false</SuperActive>
+	</Flags>
+	<ButtonStates>
+		<Item>
+			<MessageOnEnterState/>
+			<CommandsOnEnterState>
+				<Commands>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_GREMLIN_SABOTEUR/StatsShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_GREMLIN/StatsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_MASTER_GREMLIN/StatsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_STONE_GARGOYLE/StatsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_OBSIDIAN_GARGOYLE/StatsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_MARBLE_GARGOYLE/StatsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_IRON_GOLEM/StatsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_STEEL_GOLEM/StatsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_OBSIDIAN_GOLEM/StatsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_MAGI/StatsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_ARCH_MAGI/StatsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_COMBAT_MAGE/StatsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_GENIE/StatsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_MASTER_GENIE/StatsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_DJINN_VIZIER/StatsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_RAKSHASA/StatsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_RAKSHASA_RUKH/StatsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_RAKSHASA_KSHATRI/StatsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_GIANT/StatsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_TITAN/StatsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_STORM_LORD/StatsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/ColumnShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Neutral/ColumnHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Haven/ColumnHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Inferno/ColumnHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Necro/ColumnHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Preserve/ColumnHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Dungeon/ColumnHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Fortress/ColumnHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Stronghold/ColumnHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_GREMLIN_SABOTEUR/GlowShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_GREMLIN/GlowHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_MASTER_GREMLIN/GlowHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_STONE_GARGOYLE/GlowHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_OBSIDIAN_GARGOYLE/GlowHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_MARBLE_GARGOYLE/GlowHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_IRON_GOLEM/GlowHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_STEEL_GOLEM/GlowHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_OBSIDIAN_GOLEM/GlowHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_MAGI/GlowHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_ARCH_MAGI/GlowHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_COMBAT_MAGE/GlowHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_GENIE/GlowHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_MASTER_GENIE/GlowHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_DJINN_VIZIER/GlowHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_RAKSHASA/GlowHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_RAKSHASA_RUKH/GlowHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_RAKSHASA_KSHATRI/GlowHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_GIANT/GlowHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_TITAN/GlowHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/CREATURE_STORM_LORD/GlowHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Academy/GlowsShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Neutral/GlowsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Haven/GlowsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Inferno/GlowsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Necro/GlowsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Preserve/GlowsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Dungeon/GlowsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Fortress/GlowsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Creatures/R/Stronghold/GlowsHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+				</Commands>
+				<Reversable>false</Reversable>
+			</CommandsOnEnterState>
+			<CommandsOnRightClick>
+				<Commands/>
+				<Reversable>false</Reversable>
+			</CommandsOnRightClick>
+			<commandsOnLDblKlick>
+				<Commands/>
+				<Reversable>false</Reversable>
+			</commandsOnLDblKlick>
+			<WaitVisual>false</WaitVisual>
+			<ReverseCommands>false</ReverseCommands>
+			<Name/>
+		</Item>
+	</ButtonStates>
+	<ButtonGroupID>0</ButtonGroupID>
+	<AutoChangeState>false</AutoChangeState>
+	<PushEffect>
+		<Commands/>
+		<Reversable>false</Reversable>
+	</PushEffect>
+	<State>0</State>
+	<TextFileRef href=""/>
+	<TextFormat/>
+</WindowMSButton>

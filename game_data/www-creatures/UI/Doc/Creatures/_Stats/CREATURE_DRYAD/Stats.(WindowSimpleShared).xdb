@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WindowSimpleShared ObjectRecordID="1000326">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_DRYAD/Name.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_DRYAD/Tier.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_DRYAD/Growth.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_DRYAD/Cost.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_DRYAD/Health.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_DRYAD/Attack.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_DRYAD/Defense.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_DRYAD/Damages.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_DRYAD/Range.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_DRYAD/Speed.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_DRYAD/Initiative.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_DRYAD/Mana.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_DRYAD/Ability0.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_DRYAD/Ability1.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_DRYAD/Ability2.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_DRYAD/Ability3.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+	</Children>
+	<Background/>
+	<Foreground/>
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>150</x>
+				<y>486</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea/>
+	<IgnoreDblClick>false</IgnoreDblClick>
+	<ActiveMask/>
+</WindowSimpleShared>

@@ -19,7 +19,7 @@ The game UI is entirely data-driven: every window, button, text view and texture
 | `game_data/www-heroes` | `h5x-www-heroes.pak` | Heroes tab (`UI/Doc/Heroes/`) |
 | `game_data/www-skills` | `h5x-www-skills.pak` | Skills tab (`UI/Doc/Skills/`) and the patched level-up box (`UI/LevelUpBox/`) |
 | `game_data/www-artifacts` | `h5x-www-artifacts.pak` | Artifacts tab (`UI/Doc/Artifacts/`) |
-| `game_data/www-creatures` | `h5x-www-creatures.pak` | Creatures tab (`UI/Doc/Creatures/`), work in progress and disabled |
+| `game_data/www-creatures` | `h5x-www-creatures.pak` | Creatures tab (`UI/Doc/Creatures/`): side-by-side comparison of two creatures, not yet tested in game |
 | `game_data/hud` | `h5x-hud.pak` | Overrides of vanilla UI screens and textures |
 
 The content of each folder is zipped from its root, so `game_data/www-heroes/UI/Doc/Heroes/...` becomes `/UI/Doc/Heroes/...` in the game's virtual file system. The game merges all paks into **one virtual file system**, which has these consequences:
@@ -177,7 +177,7 @@ A button can broadcast a message that many windows react to, without referencing
 | Heroes | `www-heroes/UI/Doc/Heroes` | Active | Hand-made structure + `generate-heroes-ui.py` |
 | Skills | `www-skills/UI/Doc/Skills` | Active | Hand-made structure + `generate-skills-ui.py` |
 | Artifacts | `www-artifacts/UI/Doc/Artifacts` | Active, not yet tested in game | Hand-made `Common/` + `generate-artifacts-ui.py` |
-| Creatures | `www-creatures/UI/Doc/Creatures` | Commented out in `Root` and in the tab commands | Hand-made (`generate-creatures-ui.py` is empty) |
+| Creatures | `www-creatures/UI/Doc/Creatures` | Active, not yet tested in game | Hand-made `Common/` + `generate-creatures-ui.py` |
 
 **To add a section:**
 
@@ -214,14 +214,15 @@ Faction folder names are `Haven`, `Inferno`, `Necro`, `Preserve`, `Dungeon`, `Ac
   - `Generator` writes rendered templates as UTF-8 with CRLF line endings, writes UTF-16 game texts, and prunes stale files.
   - `find_icon_size()` (heuristic) and `texture_size()` (reads a texture's `Width`) give icon sizes.
   - Helpers for paths and xmltodict: `as_list`, `items`, `href_path`, `game_path`. **Use `game_path()` for in-game paths, never `os.path.join`.** On Windows, `os.path.join` inserts backslashes.
-- Templates are named `<component>.(<Type>).xdb.j2` and live in `templates-heroes/`, `templates-skills/` and `templates-artifacts/`.
+- Templates are named `<component>.(<Type>).xdb.j2` and live in `templates-heroes/`, `templates-skills/`, `templates-artifacts/` and `templates-creatures/`.
 - Generated files are **overwritten on every run**, and stale numbered files are **removed**. To change a generated file, change its template or the generator, never the output.
-- Run `check-ui-refs.py` after any change to the encyclopedia. It reports every `/UI/Doc` href that doesn't resolve in the merged paks, and every show/enable message whose target window name doesn't exist. The 8 broken refs and 22 unknown windows it reports in the disabled Creatures tab are known.
+- Run `check-ui-refs.py` after any change to the encyclopedia. It reports every `/UI/Doc` href that doesn't resolve in the merged paks, and every show/enable message whose target window name doesn't exist.
 
 ```bash
 python tools/generators/generate-heroes-ui.py
 python tools/generators/generate-skills-ui.py
 python tools/generators/generate-artifacts-ui.py
+python tools/generators/generate-creatures-ui.py
 python tools/generators/check-ui-refs.py
 ```
 
@@ -348,6 +349,23 @@ Window names are `DocBuild<Faction><Kind><What><ID>`. Selecting a faction hides 
 **Cross-pak textures:** the set panel backdrop (`HeroSpecBack`) comes from `www-heroes`.
 
 ---
+
+### Creatures (`generate-creatures-ui.py`)
+
+**Inputs:** `creatures/.../Creatures.xdb` with each creature's file and visual (name, `Icon128`), `CombatAbilities.xdb` (ability names) and `UndividedSpells.xdb` (spell icons and names). Only the creatures of the 9 faction folders of `GameMechanics/Creature/Creatures/` are kept (`factions`: `Dwarf` is Fortress, `Orcs` Stronghold, `Neutrals` Neutral); the others (`_NCF`, `_Darkstorm`...) are left out. Relative hrefs of the data files are resolved against their folder (`resolve()`): the rune names are relative.
+
+**Layout:** two creatures side by side. The central panel (`Panel/`, `panel_box`) has a column of stat icons (`stat_rows`, then Spells and Abilities, icons hand-made in `Common/Stats/<key>`), the stats of the left creature on its left and the ones of the right creature on its right, centered in their column (`column_width`). Each side has:
+- A row of faction buttons (`<Side>/Factions/`, `DocCreaturesFactions<Side>`). Both rows are at the same place, the faction buttons of the Skills tab: only one is shown, chosen by the two side buttons on top of the panel (`Side/`, the vanilla JogDial arrows, `DocCreaturesSide<Side>`), with a glow behind the selected one (`DocCreaturesSideSel<Side>`).
+- A creature grid per faction (`<Side>/<Faction>/Grid`, `DocCreaturesGrid<Side><Faction>`), left or right of the panel: 7 rows of 3 cells, a tier per row with its base creature then its upgrades in the order of its `Upgrades` list. A base creature is one that is not in another creature's `Upgrades`: the `Upgrade` flag is false for some third-line upgrades (`Inferno/3rd/`). The 21 neutrals are sorted by tier. A faction button shows its grid and its glow and hides the other factions' ones.
+- Clicking a creature shows its stats column `DocCreaturesStats<Side><ID>` and its glow `DocCreaturesGlow<Side><ID>`, and hides the other creatures' ones. To keep a click at about 60 commands (not 189 per creature), the columns and glows are grouped per faction (`DocCreaturesColumn<Side><Faction>`, `DocCreaturesGlows<Side><Faction>`): a click hides the columns and glows of its faction's other creatures, and the other factions' groups, which keep their last selection hidden inside them. The broadcast of a game message (see above) was not used: it was never proven, and it is an adventure reaction that may not run in the lobby screens.
+
+Defaults: the left side is selected, both grids show Haven, no creature is selected.
+
+**Stats column** (`_Stats/<ID>/Stats.(WindowSimpleShared)`, used by the column windows of both sides): name, tier, weekly growth, cost, health, attack, defense, damage, shots (`Range` icon), speed, initiative, mana, then the spell icons (2 rows of 6, the spell name as tooltip) and the ability names. Values are UI-local texts shared by equal values (`_Values/<value>.txt`, `-` is `None.txt`). A cost with resources shows the count and an icon per resource (`/UI/Common/Resources/`; the Phoenix costs 1 of 4 resources). Spells without an icon (`SPELL_ABILITY_*`, abilities cast as spells, also in the abilities) are left out. The child windows of the shared stats have the same names on both sides; no message targets them.
+
+**Output**, in `www-creatures/UI/Doc/Creatures/`: `Creatures.(WindowSimpleShared)`, `Panel/`, `Side/`, `L/` and `R/` (faction rows, then per faction its grid, glows, columns and their messages), and the files shared by both sides: `_Factions/` (button visuals), `_Creatures/` (icons and button visuals), `_Frames/` (the 21 cell frames, with the hand-made `Common/Creature_back` Shared), `_Stats/`, `_Spells/`, `_Resources/` and `_Values/`. About 7300 files.
+
+**Hand-made:** `Creatures.(WindowSimple)`, `_Buttons/` and `Common/`: the stat icons `Common/Stats/<key>.(BackgroundSimpleScallingTexture)`, the panel texture `Common/Stats/_Holder`, the cell frame `Creature_back`, the text view Shared `Text`, the formats `Name`, `Value`, `ValueRight` and `Ability`, and the UI-local labels (stat tooltips, `Neutral`, `SideL`, `SideR`). The `Common/Stats/*.(WindowSimple|WindowSimpleShared)` files are left from the prototype and are no longer referenced. The selection glows use the Skills tab's `Common/Highlight` (www-skills).
 
 ## Workflow checklist
 

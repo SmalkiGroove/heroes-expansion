@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WindowSimpleShared ObjectRecordID="1000326">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_PHOENIX/Name.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_PHOENIX/Tier.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_PHOENIX/Growth.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_PHOENIX/Cost.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_PHOENIX/Resource0.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_PHOENIX/Resource1.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_PHOENIX/Resource2.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_PHOENIX/Resource3.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_PHOENIX/Health.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_PHOENIX/Attack.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_PHOENIX/Defense.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_PHOENIX/Damages.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_PHOENIX/Range.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_PHOENIX/Speed.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_PHOENIX/Initiative.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_PHOENIX/Mana.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_PHOENIX/Ability0.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_PHOENIX/Ability1.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_PHOENIX/Ability2.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_PHOENIX/Ability3.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+	</Children>
+	<Background/>
+	<Foreground/>
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>150</x>
+				<y>486</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea/>
+	<IgnoreDblClick>false</IgnoreDblClick>
+	<ActiveMask/>
+</WindowSimpleShared>
