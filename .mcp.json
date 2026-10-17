@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "ghidra": {
+      "command": "G:\\__H5__\\H5X_DLL\\h5x-ghidra-mcp\\.venv\\Scripts\\python.exe",
+      "args": [
+        "G:\\__H5__\\H5X_DLL\\h5x-ghidra-mcp\\bridge_mcp_ghidra.py",
+        "--ghidra-server",
+        "http://127.0.0.1:8080/"
+      ]
+    }
+  }
+}

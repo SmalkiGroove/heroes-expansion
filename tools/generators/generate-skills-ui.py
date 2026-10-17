@@ -508,7 +508,7 @@ factions = [
     ("Haven", 1, "HAVEN", "a"), ("Inferno", 2, "INFERNO", "d"), ("Necro", 3, "NECROPOLIS", "b"), ("Preserve", 4, "PRESERVE", "b"),
     ("Dungeon", 5, "DUNGEON", "c"), ("Academy", 6, "ACADEMY", "c"), ("Fortress", 7, "FORTRESS", "a"), ("Stronghold", 8, "STRONGHOLD", "d"),
 ]
-# Faction textures in /UI/Doc/Common, when not named after the folder
+# Faction textures in /UI/Doc/Common and faction names in /GameMechanics/RefTables, when not named after the folder
 faction_textures = {"Necro": "Necropolis"}
 # View buttons; the first one is the view selected with the faction
 class_kinds = ["Might", "Magic"]
@@ -555,6 +555,12 @@ racial_step, racial_icon_size, innate_step = 100, 64, 116
 # Labels in the format of the set labels of the artifacts tab (SetLabel), aligned right
 innate_label_size, innate_label_gap = (60, 24), 6
 innate_label_format = "/UI/Doc/Skills/Common/InnateLabel.(TextFormat).xdb#xpointer(/TextFormat)"
+# Title of a class view, in the space left of the racial skill: "Hero class" (Common/ClassLabel.txt) above the class name
+# (its text in HeroClass.xdb), centered on the row, in h3 (Common/ClassTitle): larger than the innate labels, while h2 or a
+# single line don't fit "Hero class Mountain Lord"
+class_title_format = "/UI/Doc/Skills/Common/ClassTitle.(TextFormat).xdb#xpointer(/TextFormat)"
+class_title_label = "/UI/Doc/Skills/Common/ClassLabel.txt"
+class_title_size, class_title_step = (225, 28), 26
 # Frame behind each racial skill (hand-made Common/Racial), larger than the icon and centered on it
 racial_back = "/UI/Doc/Skills/Common/Racial.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)"
 racial_back_size = 80
@@ -712,8 +718,10 @@ def tree_positions(folder, masteries, chains, infos):
 
 def generate_build(faction, prefix, variant, kind, own=None, other=None, racial=None):
     """Writes the build layout of a class (or of a faction without classes, given own, other and racial), returns the href of its container window."""
+    hero_class = None
     if own is None:
-        own = class_skills(hero_classes[f"HERO_CLASS_{prefix}_{kind.upper()}"])
+        hero_class = hero_classes[f"HERO_CLASS_{prefix}_{kind.upper()}"]
+        own = class_skills(hero_class)
         other_kind = next(k for k in class_kinds if k != kind)
         other = class_skills(hero_classes[f"HERO_CLASS_{prefix}_{other_kind.upper()}"])
     folder_of = lambda b: f"{b}_{variant}" if b in variant_branches else b
@@ -752,6 +760,14 @@ def generate_build(faction, prefix, variant, kind, own=None, other=None, racial=
     back_box = [*grid_back_box[:2], grid_back_box[2] * int(texture_xdb['Width']) // grid_back_picture[0],
                 grid_back_box[3] * int(texture_xdb['Height']) // grid_back_picture[1]]
     central_children = [write_panel(faction, [kind, "GridBack"], names("GridBack", ""), back_box, [], grid_back, priority=grid_back_priority)]
+    if hero_class:
+        class_name = "/GameMechanics/RefTables/" + hero_class['NameFileRef']['@href']
+        for i, (what, text) in enumerate((("Label", class_title_label), ("Name", class_name))):
+            gen.write("label.(WindowTextView).xdb.j2", build_file(faction, kind, f"Title{what}.(WindowTextView).xdb"),
+                      {'name': names("Title", what), 'priority': central_priority, 'text': text, 'format': class_title_format,
+                       'pos_x': grid_left, 'pos_y': racial_center_y - class_title_step - 2 + i * class_title_step,
+                       'width': class_title_size[0], 'height': class_title_size[1]})
+            central_children.append(build_href(faction, kind, f"Title{what}.(WindowTextView).xdb") + "#xpointer(/WindowTextView)")
     tree_children = []
     for y, row in enumerate(rows):
         left, step = (grid_left, racial_step) if y == 0 else ((central_box[2] - span(len(row), central_step)) // 2, central_step)
@@ -855,13 +871,45 @@ for faction, number, prefix, variant in factions:
         for name, enabled in (("Enable", 1), ("Disable", 0)):
             gen.write("message.(UISSendUIMessage).xdb.j2", skills_file(faction, f"{kind}{name}.(UISSendUIMessage).xdb"),
                       {'message': "UI_ENABLE_WINDOW", 'target': f"{kind}Button{number}", 'forward': enabled, 'back': 1 - enabled})
-    # Selecting the faction lands on its first view, releasing it hides its layout
-    gen.write("factionbutton.(WindowMSButtonShared).xdb.j2", skills_file(f"{faction}Button", "Button.(WindowMSButtonShared).xdb"),
-              {'faction': faction_textures.get(faction, faction), 'commands': view_commands(faction, class_kinds[0]), 'off_commands': [build_visibility[faction][1]]})
+
+# Faction buttons, in a row above the layout: click buttons without a button group. A button group inside the level-up
+# dialog left its windows, dead, in the adventure screen's list of button groups, and loading the next save crashed.
+# Selecting a faction shows its window (its view buttons, SwitchOn), its layout on its first view and a glow behind
+# its button (Sel), and hides the other factions' ones.
+faction_buttons = [neutral] + [faction for faction, *_ in factions]
+faction_numbers = {faction: number for faction, number, *_ in factions} | {neutral: 9}
+faction_button_x, faction_button_step, faction_button_y, faction_button_size = 80, 70, 60, 61
+
+def faction_button_href(faction, file):
+    return skills_href(f"{faction}Button", file)
+
+faction_selection = {}
+for i, faction in enumerate(faction_buttons):
+    folder, x = f"{faction}Button", faction_button_x + i * faction_button_step
+    gen.write("panel.(WindowSimple).xdb.j2", skills_file(folder, "Sel.(WindowSimple).xdb"),
+              {'shared': faction_button_href(faction, "Sel.(WindowSimpleShared).xdb"), 'name': f"DocSkillsSel{faction}", 'visible': 'false', 'priority': 0,
+               'pos_x': x - selection_padding, 'pos_y': faction_button_y - selection_padding,
+               'width': faction_button_size + 2 * selection_padding, 'height': faction_button_size + 2 * selection_padding})
+    gen.write("panel.(WindowSimpleShared).xdb.j2", skills_file(folder, "Sel.(WindowSimpleShared).xdb"), {'children': [], 'background': selection_glow})
+    faction_selection[faction] = []
+    for name, shown in (("SelShow", 1), ("SelHide", 0)):
+        gen.write("message.(UISSendUIMessage).xdb.j2", skills_file(folder, f"{name}.(UISSendUIMessage).xdb"),
+                  {'message': "UI_SHOW_WINDOW", 'target': f"DocSkillsSel{faction}", 'forward': shown, 'back': 1 - shown})
+        faction_selection[faction].append(faction_button_href(faction, f"{name}.(UISSendUIMessage).xdb"))
 
 neutral_commands = [build_visibility[neutral][0], neutral_view] + build_default[(neutral, neutral_kind)]
-gen.write("factionbutton.(WindowMSButtonShared).xdb.j2", skills_file(f"{neutral}Button", "Button.(WindowMSButtonShared).xdb"),
-          {'faction': faction_textures.get(neutral, neutral), 'commands': neutral_commands, 'off_commands': [build_visibility[neutral][1]]})
+for i, faction in enumerate(faction_buttons):
+    folder, others = f"{faction}Button", [f for f in faction_buttons if f != faction]
+    commands = ([faction_button_href(faction, "SwitchOn.(UISSendUIMessage).xdb")] + [faction_button_href(o, "SwitchOff.(UISSendUIMessage).xdb") for o in others]
+                + [build_visibility[o][1] for o in others] + (neutral_commands if faction == neutral else view_commands(faction, class_kinds[0]))
+                + [faction_selection[faction][0]] + [faction_selection[o][1] for o in others])
+    texture = faction_textures.get(faction, faction)
+    gen.write("clickbutton.(WindowMSButtonShared).xdb.j2", skills_file(folder, "Button.(WindowMSButtonShared).xdb"),
+              {'icon': f"/UI/Doc/Common/{texture}.(BackgroundSimpleScallingTexture).xdb#xpointer(/BackgroundSimpleScallingTexture)", 'hover_commands': []})
+    gen.write("clickbutton.(WindowMSButton).xdb.j2", skills_file(folder, "Button.(WindowMSButton).xdb"),
+              {'shared': faction_button_href(faction, "Button.(WindowMSButtonShared).xdb"), 'name': f"Button{faction_numbers[faction]}",
+               'tooltip': "/Text/Game/Skills/Innates/Name.txt" if faction == neutral else f"/GameMechanics/RefTables/{texture}.txt", 'priority': 1,
+               'pos_x': faction_button_x + i * faction_button_step, 'pos_y': faction_button_y, 'size': faction_button_size, 'commands': commands})
 
 # Files of the former trees in _Skills, and of elements no longer displayed; the element folders, which place the elements, are kept
 for folder, _, files in os.walk(skills_file("_Skills"), topdown=False):

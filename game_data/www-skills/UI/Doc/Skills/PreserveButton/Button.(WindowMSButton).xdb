@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WindowMSButton ObjectRecordID="1000123">
 	<ClassTypeID>285694855</ClassTypeID>
-	<Shared href="Button.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
+	<Shared href="/UI/Doc/Skills/PreserveButton/Button.(WindowMSButtonShared).xdb#xpointer(/WindowMSButtonShared)"/>
 	<Name>Button4</Name>
-	<TooltipFileRef href="/GameMechanics/RefTables/Dungeon.txt"/>
+	<TooltipFileRef href="/GameMechanics/RefTables/Preserve.txt"/>
 	<Visible>true</Visible>
 	<Priority>1</Priority>
 	<GameMessageReactions/>
@@ -25,10 +25,10 @@
 		</HorAllign>
 		<Size>
 			<First>
-				<x>0</x>
-				<y>0</y>
+				<x>61</x>
+				<y>61</y>
 			</First>
-			<Second>false</Second>
+			<Second>true</Second>
 		</Size>
 		<LowerMargin>
 			<First>
@@ -56,26 +56,66 @@
 		<Item>
 			<MessageOnEnterState/>
 			<CommandsOnEnterState>
-				<Commands/>
-				<Reversable>true</Reversable>
-			</CommandsOnEnterState>
-			<CommandsOnRightClick>
-				<Commands/>
+				<Commands>
+					<Item href="/UI/Doc/Skills/PreserveButton/SwitchOn.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/NeutralButton/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/HavenButton/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/InfernoButton/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/NecroButton/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/DungeonButton/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/AcademyButton/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/FortressButton/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/StrongholdButton/SwitchOff.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Neutral/Build/BuildHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Haven/Build/BuildHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Inferno/Build/BuildHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Necro/Build/BuildHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Dungeon/Build/BuildHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Academy/Build/BuildHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Fortress/Build/BuildHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Stronghold/Build/BuildHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/Build/BuildShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/Build/Might/MightShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/Build/Magic/MagicHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/MightDisable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/MagicEnable.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/Build/Might/Avenger/TreeShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/Build/Might/Offence/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/Build/Might/Defense/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/Build/Might/Leadership/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/Build/Might/Warfare/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/Build/Might/Combat/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/Build/Might/LightMagic/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/Build/Might/Training/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/Build/Might/Learning/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/Build/Might/Governance/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/Build/Might/Logistics/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/Build/Might/ShatterMagic/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/Build/Might/NaturalMagic/TreeHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/Build/Might/Avenger/SelShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/Build/Might/Offence/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/Build/Might/Defense/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/Build/Might/Leadership/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/Build/Might/Warfare/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/Build/Might/Combat/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/Build/Might/LightMagic/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/Build/Might/Training/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/Build/Might/Learning/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/Build/Might/Governance/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/Build/Might/Logistics/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/Build/Might/ShatterMagic/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/Preserve/Build/Might/NaturalMagic/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/PreserveButton/SelShow.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/NeutralButton/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/HavenButton/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/InfernoButton/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/NecroButton/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/DungeonButton/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/AcademyButton/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/FortressButton/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+					<Item href="/UI/Doc/Skills/StrongholdButton/SelHide.(UISSendUIMessage).xdb#xpointer(/UISSendUIMessage)"/>
+				</Commands>
 				<Reversable>false</Reversable>
-			</CommandsOnRightClick>
-			<commandsOnLDblKlick>
-				<Commands/>
-				<Reversable>false</Reversable>
-			</commandsOnLDblKlick>
-			<WaitVisual>false</WaitVisual>
-			<ReverseCommands>false</ReverseCommands>
-			<Name/>
-		</Item>
-		<Item>
-			<MessageOnEnterState/>
-			<CommandsOnEnterState>
-				<Commands/>
-				<Reversable>true</Reversable>
 			</CommandsOnEnterState>
 			<CommandsOnRightClick>
 				<Commands/>
@@ -90,8 +130,8 @@
 			<Name/>
 		</Item>
 	</ButtonStates>
-	<ButtonGroupID>1</ButtonGroupID>
-	<AutoChangeState>true</AutoChangeState>
+	<ButtonGroupID>0</ButtonGroupID>
+	<AutoChangeState>false</AutoChangeState>
 	<PushEffect>
 		<Commands/>
 		<Reversable>false</Reversable>
