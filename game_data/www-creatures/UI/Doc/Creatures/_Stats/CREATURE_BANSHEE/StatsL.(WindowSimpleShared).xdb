@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WindowSimpleShared ObjectRecordID="1000326">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_BANSHEE/Icon.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_BANSHEE/Name.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_BANSHEE/Ability0.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_BANSHEE/Ability1.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_BANSHEE/Ability2.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_BANSHEE/Ability3.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_BANSHEE/L/Tier.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_BANSHEE/L/Growth.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_BANSHEE/L/Cost.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_BANSHEE/L/Resource0.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_BANSHEE/L/Health.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_BANSHEE/L/Attack.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_BANSHEE/L/Defense.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_BANSHEE/L/Damages.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_BANSHEE/L/Range.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_BANSHEE/L/Speed.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_BANSHEE/L/Initiative.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_BANSHEE/L/Mana.(WindowTextView).xdb#xpointer(/WindowTextView)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_BANSHEE/L/Spell0.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+		<Item href="/UI/Doc/Creatures/_Stats/CREATURE_BANSHEE/L/Spell1.(WindowSimple).xdb#xpointer(/WindowSimple)"/>
+	</Children>
+	<Background/>
+	<Foreground/>
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>170</x>
+				<y>488</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea/>
+	<IgnoreDblClick>false</IgnoreDblClick>
+	<ActiveMask/>
+</WindowSimpleShared>

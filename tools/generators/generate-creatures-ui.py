@@ -57,6 +57,9 @@ abilities_row = ("Abilities", "/UI/Doc/Creatures/Common/Abilities.txt")
 # Resources of the creature costs, with their vanilla icon (/UI/Common/Resources/<icon>.(Texture).xdb, 16x15)
 resource_icons = {"Wood": "Wood", "Ore": "Ore", "Mercury": "Mercury", "Crystal": "Crystal", "Sulfur": "Sulfur", "Gem": "Gems"}
 resource_step = 18
+# Width of a cost text with resources ("5000 + 1", always 4 digits of gold), estimated in the value font: on the right
+# side, the resource icons follow it
+cost_text_width = 60
 
 # Layout, in pixels of the Creatures window (1024x1024, its parchment ends at y=700)
 faction_button_x, faction_button_step, faction_button_y, faction_button_size = 80, 70, 60, 61
@@ -64,27 +67,41 @@ selection_glow = "/UI/Doc/Skills/Common/Highlight.(BackgroundSimpleScallingTextu
 selection_padding = 6
 # Central panel: the PageDisabled texture draws the panel on the top-left 302x472 of its 512x512, and the whole
 # texture is scaled to its window
-panel_box = (311, 150, 340, 510)
+panel_x, panel_y, panel_width = 291, 150, 380
 panel_texture = (512, 512)
 panel_picture = (302, 472)
 icon_size = 16
 column_gap = 6                                   # between a column and the icons, and the panel border
-column_width = (panel_box[2] - icon_size) // 2 - 2 * column_gap
-icon_x = panel_box[0] + (panel_box[2] - icon_size) // 2
-column_x = {'L': panel_box[0] + column_gap, 'R': icon_x + icon_size + column_gap}
+column_width = (panel_width - icon_size) // 2 - 2 * column_gap
+icon_x = panel_x + (panel_width - icon_size) // 2
+column_x = {'L': panel_x + column_gap, 'R': icon_x + icon_size + column_gap}
+# The values are aligned towards the icons, value_gap away from them: on the right on the left side, and on the left on
+# the right side (the name, spells and abilities are centered). (x, width) in the column, and format
+value_gap = 30
+value_box = {'L': (0, column_width - (value_gap - column_gap)), 'R': (value_gap - column_gap, column_width - (value_gap - column_gap))}
+value_format = {'L': "ValueRight", 'R': "ValueLeft"}
 # Side buttons, centered on their column, straddling the top border of the panel
 side_button_size = 40
-side_button_y = panel_box[1] - side_button_size // 2
-# Inside a column, from column_top: the creature name, the stat rows, the spells, then the abilities
-column_top = panel_box[1] + side_button_size // 2 + 4
-column_height = panel_box[1] + panel_box[3] - column_top
-name_height = 44
-row_top = name_height + 8
+side_button_y = panel_y - side_button_size // 2
+# Inside a column, from column_top: the creature icon, its name, the stat rows (with an extra space after the rows of
+# row_space), the spells (one row, aligned like the values), then the abilities. The panel ends just above the bottom
+# of the parchment.
+column_top = panel_y + side_button_size // 2 + 4
+creature_icon_size = 48
+name_y, name_height = creature_icon_size + 2, 26
+row_top = name_y + name_height + 4
 row_step = 20
-spell_icon_size, spell_step, spells_per_row, spell_rows = 22, 25, 6, 2
-spells_top = row_top + len(stat_rows) * row_step + 2
-ability_step = 18
-abilities_top = spells_top + spell_rows * spell_step + 4
+row_space = {"Cost": 10}
+row_y = []
+for key, _ in stat_rows:
+    row_y.append(row_y[-1] + row_step + row_space.get(previous, 0) if row_y else row_top)
+    previous = key
+spell_icon_size, spell_step, spell_count = 32, 34, 4
+spells_top = row_y[-1] + row_step + 4
+ability_step, ability_rows = 17, 8
+abilities_top = spells_top + spell_step + 4
+column_height = abilities_top + ability_rows * ability_step
+panel_box = (panel_x, panel_y, panel_width, column_top - panel_y + column_height + column_gap)
 # Creature grids: 7 rows of 3 cells (a tier: its base creature and its 2 upgrades), left and right of the panel
 grid_columns, grid_rows = 3, 7
 cell_size, cell_icon_size = 64, 52
@@ -147,9 +164,10 @@ def write_click_button(parts, name, pos, size, shared, commands, tooltip='', pri
                'pos_x': pos[0], 'pos_y': pos[1], 'size': size, 'commands': commands})
     return child(doc_path(*parts[:-1], f"{parts[-1]}.(WindowMSButton).xdb"), "WindowMSButton")
 
-def write_text_view(parts, name, text_ref, text_format, box, priority=column_priority):
+def write_text_view(parts, name, text_ref, text_format, box, priority=column_priority, tooltip=''):
     gen.write("textview.(WindowTextView).xdb.j2", out_path(*parts[:-1], f"{parts[-1]}.(WindowTextView).xdb"),
-              {'name': name, 'text_ref': text_ref, 'format': text_format, 'priority': priority, 'x': box[0], 'y': box[1], 'w': box[2], 'h': box[3]})
+              {'name': name, 'text_ref': text_ref, 'format': text_format, 'priority': priority, 'tooltip': tooltip,
+               'x': box[0], 'y': box[1], 'w': box[2], 'h': box[3]})
     return child(doc_path(*parts[:-1], f"{parts[-1]}.(WindowTextView).xdb"), "WindowTextView")
 
 def resolve(href, data_path):
@@ -160,11 +178,13 @@ def table(data, root):
     return {item['ID']: item for item in as_list(data[root]['objects']['Item'])}
 
 
-ability_names = {}
+# Names and descriptions (the tooltips of the names) of the abilities
+ability_names, ability_descriptions = {}, {}
 for ability_id, item in table(abilities_table, "Table_CreatureAbility_CombatAbility").items():
-    href = ((item.get('obj') or {}).get('NameFileRef') or {}).get('@href')
-    if href:
-        ability_names[ability_id] = href if href.startswith('/') else game_path("GameMechanics/RefTables", href)
+    for texts, field in ((ability_names, 'NameFileRef'), (ability_descriptions, 'DescriptionFileRef')):
+        href = ((item.get('obj') or {}).get(field) or {}).get('@href')
+        if href:
+            texts[ability_id] = resolve(href, "GameMechanics/RefTables/CombatAbilities.xdb")
 spells = table(spells_table, "Table_Spell_SpellID")
 
 def spell_icon(spell_id):
@@ -256,50 +276,67 @@ def stat_values(data):
 
 
 def generate_stats(creature):
-    """Stats of a creature, in a Shared file used by its column window on both sides (its texts are centered)."""
+    """Stats of a creature: a Shared file per side for its column windows, {side: href}. The icon, name and abilities
+    (centered) are the same windows on both sides."""
     creature_id, data = creature['id'], creature['data']
     folder = ("_Stats", creature_id)
     prefix = f"DocCreaturesStat{creature_id}"
     w = column_width
-    children = [write_text_view((*folder, "Name"), f"{prefix}Name", creature['name'], "Name", (0, 0, w, name_height))]
-    values, resources = stat_values(data)
-    for idx, (key, _) in enumerate(stat_rows):
-        y = row_top + idx * row_step
-        if key == 'Cost' and resources:
-            # The text ends left of the resource icons, the whole centered on the column
-            text_end = w // 2 + 20 - (len(resources) - 1) * resource_step // 2
-            children.append(write_text_view((*folder, key), f"{prefix}{key}", value_text(values[key]), "ValueRight", (0, y, text_end, row_step)))
-            for idx_res, (resource, _) in enumerate(resources):
-                icon = write_background(("_Resources", resource), f"/UI/Common/Resources/{resource_icons[resource]}.(Texture).xdb", 16)
-                children.append(write_window((*folder, f"Resource{idx_res}"), f"{prefix}Resource{idx_res}", True,
-                                             (text_end + 4 + idx_res * resource_step, y + 2, 16, 15), background=icon, priority=column_priority))
-        else:
-            children.append(write_text_view((*folder, key), f"{prefix}{key}", value_text(values[key]), "Value", (0, y, w, row_step)))
-    # Creature abilities cast as spells (SPELL_ABILITY_*) have no icon, and are among the abilities
-    known = [spell['Spell'] for spell in as_list((data.get('KnownSpells') or {}).get('Item')) if spell and spell_icon(spell['Spell'])]
-    if len(known) > spells_per_row * spell_rows:
-        warn(f"{creature_id} knows {len(known)} spells, only {spells_per_row * spell_rows} are shown")
-        known = known[:spells_per_row * spell_rows]
-    for idx, spell_id in enumerate(known):
-        spell_data = spell_icon(spell_id)
-        icon = write_background(("_Spells", spell_id), spell_data['icon'], 128)
-        row, col = divmod(idx, spells_per_row)
-        count = min(len(known) - row * spells_per_row, spells_per_row)
-        x = (w - (count - 1) * spell_step - spell_icon_size) // 2 + col * spell_step
-        children.append(write_window((*folder, f"Spell{idx}"), f"{prefix}Spell{idx}", True, (x, spells_top + row * spell_step, spell_icon_size, spell_icon_size),
-                                     background=icon, priority=column_priority, tooltip=spell_data['name']))
+    children = [write_window((*folder, "Icon"), f"{prefix}Icon", True, ((w - creature_icon_size) // 2, 0, creature_icon_size, creature_icon_size),
+                             background=doc_path("_Creatures", f"{creature_id}.(BackgroundSimpleScallingTexture).xdb"), priority=column_priority),
+                write_text_view((*folder, "Name"), f"{prefix}Name", creature['name'], "Name", (0, name_y, w, name_height))]
+    # Creature abilities cast as spells (SPELL_ABILITY_*) have no icon, and are among the abilities. The runes of the
+    # Fortress rune mages (SPELL_RUNE_*) are left out.
+    known = [spell['Spell'] for spell in as_list((data.get('KnownSpells') or {}).get('Item'))
+             if spell and not spell['Spell'].startswith("SPELL_RUNE_") and spell_icon(spell['Spell'])]
+    if len(known) > spell_count:
+        warn(f"{creature_id} knows {len(known)} spells, only {spell_count} are shown")
+        known = known[:spell_count]
     abilities = items(data.get('Abilities'))
     for idx, ability in enumerate(abilities):
         if ability not in ability_names:
             warn(f"{creature_id}: ability {ability} has no name")
             continue
         children.append(write_text_view((*folder, f"Ability{idx}"), f"{prefix}Ability{idx}", ability_names[ability], "Ability",
-                                        (0, abilities_top + idx * ability_step, w, ability_step)))
-    if abilities_top + len(abilities) * ability_step > column_height:
+                                        (0, abilities_top + idx * ability_step, w, ability_step), tooltip=ability_descriptions.get(ability, '')))
+    if len(abilities) > ability_rows:
         warn(f"{creature_id}: its {len(abilities)} abilities don't fit in the column")
-    gen.write("window.(WindowSimpleShared).xdb.j2", out_path(*folder, "Stats.(WindowSimpleShared).xdb"),
-              {'children': children, 'background': None, 'w': w, 'h': column_height})
-    return doc_path(*folder, "Stats.(WindowSimpleShared).xdb")
+
+    # The values, aligned towards the icons: a Shared file per side, with the windows above
+    values, resources = stat_values(data)
+    shared = {}
+    for side in sides:
+        x, width = value_box[side]
+        side_children = list(children)
+        for idx, (key, _) in enumerate(stat_rows):
+            y = row_y[idx]
+            if key == 'Cost' and resources:
+                # Left side: the resource icons end where the values end, after the text; right side: they follow the text
+                icons_width = len(resources) * resource_step
+                if side == 'L':
+                    text_box, icons_x = (x, y, width - icons_width - 2, row_step), x + width - icons_width + 2
+                else:
+                    text_box, icons_x = (x, y, cost_text_width, row_step), x + cost_text_width + 4
+                side_children.append(write_text_view((*folder, side, key), f"{prefix}{side}{key}", value_text(values[key]), value_format[side], text_box))
+                for idx_res, (resource, _) in enumerate(resources):
+                    icon = write_background(("_Resources", resource), f"/UI/Common/Resources/{resource_icons[resource]}.(Texture).xdb", 16)
+                    side_children.append(write_window((*folder, side, f"Resource{idx_res}"), f"{prefix}{side}Resource{idx_res}", True,
+                                                      (icons_x + idx_res * resource_step, y + 2, 16, 15), background=icon, priority=column_priority))
+            else:
+                side_children.append(write_text_view((*folder, side, key), f"{prefix}{side}{key}", value_text(values[key]), value_format[side],
+                                                     (x, y, width, row_step)))
+        # The spells, aligned like the values: towards the icons
+        first = x + width - (len(known) - 1) * spell_step - spell_icon_size if side == 'L' else x
+        for idx, spell_id in enumerate(known):
+            spell_data = spell_icon(spell_id)
+            icon = write_background(("_Spells", spell_id), spell_data['icon'], 128)
+            side_children.append(write_window((*folder, side, f"Spell{idx}"), f"{prefix}{side}Spell{idx}", True,
+                                              (first + idx * spell_step, spells_top, spell_icon_size, spell_icon_size),
+                                              background=icon, priority=column_priority, tooltip=spell_data['name']))
+        gen.write("window.(WindowSimpleShared).xdb.j2", out_path(*folder, f"Stats{side}.(WindowSimpleShared).xdb"),
+                  {'children': side_children, 'background': None, 'w': w, 'h': column_height})
+        shared[side] = doc_path(*folder, f"Stats{side}.(WindowSimpleShared).xdb")
+    return shared
 
 
 def generate_panel():
@@ -307,7 +344,7 @@ def generate_panel():
     back_size = [round(size * texture / picture) for size, texture, picture in zip(panel_box[2:], panel_texture, panel_picture)]
     children = [write_window(("Panel", "Back"), "DocCreaturesPanelBack", True, (0, 0, *back_size),
                              background="/UI/Doc/Creatures/Common/Stats/_Holder.(BackgroundSimpleScallingTexture).xdb", priority=panel_priority)]
-    rows = [(key, tooltip, row_top + idx * row_step) for idx, (key, tooltip) in enumerate(stat_rows)]
+    rows = [(key, tooltip, row_y[idx]) for idx, (key, tooltip) in enumerate(stat_rows)]
     rows.append((*spells_row, spells_top + (spell_icon_size - row_step) // 2))
     rows.append((*abilities_row, abilities_top + (ability_step - row_step) // 2))
     for key, tooltip, y in rows:
@@ -391,7 +428,7 @@ def generate_side(side, creatures, stats_shared):
                                             cell_icon_size, doc_path("_Creatures", f"{creature_id}.(WindowMSButtonShared).xdb"), commands,
                                             tooltip=creature['name']))
             columns.append(write_window((side, faction, creature_id, "Stats"), f"DocCreaturesStats{side}{creature_id}", False,
-                                        (0, 0, column_width, column_height), shared=stats_shared[creature_id], priority=column_priority))
+                                        (0, 0, column_width, column_height), shared=stats_shared[creature_id][side], priority=column_priority))
         box = (grid_x[side], grid_y, grid_width, grid_height)
         windows.append(write_window((side, faction, "Glows"), f"DocCreaturesGlows{side}{faction}", True, box, cell_glows, priority=glow_priority))
         windows.append(write_window((side, faction, "Grid"), f"DocCreaturesGrid{side}{faction}", faction == default_faction, box, cells, priority=grid_priority))

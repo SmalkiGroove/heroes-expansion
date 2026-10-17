@@ -3,7 +3,7 @@
 	<ClassTypeID>285694860</ClassTypeID>
 	<Shared href="/UI/Doc/Creatures/Common/Text.(WindowTextViewShared).xdb#xpointer(/WindowTextViewShared)"/>
 	<Name>{{ name }}</Name>
-	<TooltipFileRef href=""/>
+	<TooltipFileRef href="{{ tooltip | default('') }}"/>
 	<Visible>true</Visible>
 	<Priority>{{ priority | default(0) }}</Priority>
 	<GameMessageReactions/>
