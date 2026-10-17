@@ -324,7 +324,7 @@ Window names are `DocBuild<Faction><Kind><What><ID>`. Selecting a faction hides 
 
 1. Three view buttons, `<View>Button/Button` (`ByClass`, `BySlot`, `BySet`), toggle the view windows `DocArtifacts<View>`.
 2. Each view window lists one button per category, `<View>/<category>/Button`, and the hidden category windows `DocArtifacts<View><category>`. Categories are the classes, the slots (in `slot_texts` order) and the sets (in `DefaultStats` order).
-3. A category window holds a grid of icon buttons. The icon size is the largest that fits, as listed in `grid_sizes`. The views in `grid_columns` (`ByClass`: 8 columns) use a fixed number of columns instead, with one icon size for all their categories, small enough for the largest one. Hovering an icon shows its description window `DocArtifactsDesc<ID>`, using a reversible `MouseOver` command as in the skill trees.
+3. A category window holds a grid of icon buttons, the same in every view: `grid_columns` (9) square cells across the 600px of the window, each with a 48px icon (`grid_icon_size`) centered in it. A cell gets shorter only when the rows don't fit in the window, and the generator warns when a row is shorter than an icon (`grid_cell()`). Hovering an icon shows its description window `DocArtifactsDesc<ID>`, using a reversible `MouseOver` command as in the skill trees.
 4. A set category window also has `Panel`: the set name, its description, and one column per bonus tier. A tier starts where the text in `CombinedDescriptionsFileRefs` changes.
 
 **Output**, in `www-artifacts/UI/Doc/Artifacts/`:
@@ -339,6 +339,7 @@ Window names are `DocBuild<Faction><Kind><What><ID>`. Selecting a faction hides 
 | `ByClass/<category>/Name.txt`, `BySet/Pieces<n>.txt` | UI-local labels. Slot labels are the vanilla `/UI/HeroScreen3/Inventory/*.txt` texts, and set labels are the set names. |
 | `_Artifacts/<ID>.*` | Icon texture (size read with `texture_size()`), icon button visuals (shared by all views), and the icon window of the description |
 | `_Description/` | `Back` (the `Common/DescriptionBack` texture), `Descriptions` (list of all descriptions), and `<ID>/` (icon, name, description and set name) |
+| `_Description/Formats/` | `Name<Class>.(TextFormat)` and its `.txt`: the `Common/Name` format with the color of the class names in the game, the `<color=...>` tag of `Text/Tooltips/Artifacts/Art<Class>Name.txt` (`class_name_formats()`). The name of a description uses its artifact's class format; Grail, which has no such text, keeps `Common/Name`. |
 
 **Window names** (all unique): `DocArtifactsButton<View>[<category>]`, `DocArtifacts<View>[<category>]`, `DocArtifactsIcon<View><ID>`, `DocArtifactsDesc<ID>[...]` and `DocArtifactsSet<category>...`.
 

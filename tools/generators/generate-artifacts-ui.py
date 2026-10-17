@@ -8,8 +8,9 @@ files are removed.
 """
 
 import os
+import re
 from collections import defaultdict
-from common import Generator, GAME_DATA, warn, load_xdb, as_list, game_path, texture_size
+from common import Generator, GAME_DATA, TEXTS_EN, warn, load_xdb, as_list, game_path, texture_size
 
 gen = Generator("templates-artifacts", __doc__)
 
@@ -45,16 +46,15 @@ view_window_size = (940, 590)
 category_columns = 5
 category_button_size = (180, 26)
 category_button_step = (186, 28)
-# Icons grid of a category window: the largest (step, icon size) that fits wins
+# Icons grid of a category window, the same in every view: grid_columns square cells across grid_width, each with an
+# icon of grid_icon_size centered in it
 grid_width = 600
-grid_sizes = [(70, 64), (62, 56), (54, 48), (48, 44), (42, 38)]
-# Views whose categories all use the same number of columns, with icons small enough for the largest category
-grid_columns = {'ByClass': 8}
-grid_gap = 6
+grid_columns, grid_icon_size = 9, 48
 # Set bonuses panel, below one row of icons
 set_panel_y = 80
-set_panel_size = (600, 300)
-set_back_size = (1041, 531)  # HeroSpecBack draws its frame on the top-left 57.6% x 56.4% of its texture
+set_panel_size = (600, 340)
+# HeroSpecBack draws its frame on the top-left 590x577 of its 1024x1024 texture, and the whole texture is scaled to its window
+set_back_size = tuple(round(size * 1024 / frame) for size, frame in zip(set_panel_size, (590, 577)))
 # Artifact description, at the same place as the skills description
 description_back = (655, 250, 305, 600)
 description_pos = (690, 310)
@@ -93,6 +93,25 @@ def write_text_button(folder, name, window, text_ref, x, y, size, group):
     gen.write("textbutton.(WindowMSButtonShared).xdb.j2", os.path.join(folder, "Button.(WindowMSButtonShared).xdb"), {'w': w, 'h': h})
     gen.write("switch.(UISSendUIMessage).xdb.j2", os.path.join(folder, "SwitchOn.(UISSendUIMessage).xdb"), {'window': window, 'open': 1, 'close': 0})
     gen.write("switch.(UISSendUIMessage).xdb.j2", os.path.join(folder, "SwitchOff.(UISSendUIMessage).xdb"), {'window': window, 'open': 0, 'close': 1})
+
+def class_name_formats():
+    """Name format of each artifact class: the Common/Name format with the color of the class names in the game (the
+    <color=...> tag of Text/Tooltips/Artifacts/Art<Class>Name.txt), generated in _Description/Formats/."""
+    base = open(os.path.join(artifacts_pedia_path, "Common", "Name.txt"), encoding="utf-16").read()
+    formats = {}
+    for artf_class, label in class_labels.items():
+        tooltip = os.path.join(TEXTS_EN, "Text", "Tooltips", "Artifacts", f"Art{label}Name.txt")
+        if not os.path.exists(tooltip):
+            continue
+        color = re.search(r"<color=[0-9A-Fa-f]{8}>", open(tooltip, encoding="utf-16").read())
+        if not color:
+            warn(f"no color in {tooltip}, {label} names use the default color")
+            continue
+        gen.write_text(out_path("_Description", "Formats", f"Name{label}.txt"), base + color.group())
+        gen.write("textformat.(TextFormat).xdb.j2", out_path("_Description", "Formats", f"Name{label}.(TextFormat).xdb"), {'format_file': f"Name{label}.txt"})
+        formats[artf_class] = doc_path("_Description", "Formats", f"Name{label}.(TextFormat).xdb")
+    return formats
+
 
 def write_text_view(path, name, text_ref, text_format, x, y, w, h, priority=0):
     gen.write("textview.(WindowTextView).xdb.j2", path, {'name': name, 'text_ref': text_ref, 'format': text_format, 'priority': priority,
@@ -185,17 +204,14 @@ def get_categories(artifacts, artifact_sets):
     return categories
 
 
-def grid_layout(count, height, columns=None):
-    """(step, icon size, columns) of the largest icons that fit count icons in grid_width x height, in the given columns if any."""
-    if columns:
-        step = min(grid_sizes[0][0], grid_width // columns, height // ((count + columns - 1) // columns))
-        return step, step - grid_gap, columns
-    for step, size in grid_sizes:
-        columns = grid_width // step
-        if (count + columns - 1) // columns * step <= height:
-            return step, size, columns
-    warn(f"{count} icons don't fit in {grid_width}x{height}")
-    return grid_sizes[-1] + (grid_width // grid_sizes[-1][0],)
+def grid_cell(count, height):
+    """Width and height of a grid cell for count icons: square, unless their rows don't fit in height."""
+    step = grid_width // grid_columns
+    rows = max((count + grid_columns - 1) // grid_columns, 1)
+    step_y = min(step, height // rows)
+    if step_y < grid_icon_size:
+        warn(f"{count} icons of {grid_icon_size} px don't fit in {grid_width}x{height} with {grid_columns} columns")
+    return step, step_y
 
 
 def generate_set_panel(category_id, artf_set):
@@ -235,7 +251,6 @@ def generate_view(view, view_idx, categories):
     grid_top = rows * category_button_step[1] + 12
     view_w, view_h = view_window_size
     buttons, windows, pieces = [], [], set()
-    largest = max(len(category['artifacts']) for category in categories)
     for idx, category in enumerate(categories):
         category_id = category['id']
         items = category['artifacts']
@@ -247,13 +262,13 @@ def generate_view(view, view_idx, categories):
         buttons.append(child(f"{category_id}/Button.(WindowMSButton).xdb", "WindowMSButton"))
 
         grid_height = set_panel_y if 'set' in category else view_h - grid_top
-        # With fixed columns, every category of the view gets the icon size of the largest one
-        step, size, columns = grid_layout(largest if view in grid_columns else len(items), grid_height, grid_columns.get(view))
+        step, step_y = grid_cell(len(items), grid_height)
         children = []
         for item_idx, artifact in enumerate(items):
             gen.write("artifact_button.(WindowMSButton).xdb.j2", out_path(view, category_id, f"{artifact['id']}.(WindowMSButton).xdb"),
-                      {'view': view, 'artifact_id': artifact['id'], 'size': size,
-                       'x': item_idx % columns * step, 'y': item_idx // columns * step})
+                      {'view': view, 'artifact_id': artifact['id'], 'size': grid_icon_size,
+                       'x': item_idx % grid_columns * step + (step - grid_icon_size) // 2,
+                       'y': item_idx // grid_columns * step_y + (step_y - grid_icon_size) // 2})
             children.append(child(f"{category_id}/{artifact['id']}.(WindowMSButton).xdb", "WindowMSButton"))
         if 'set' in category:
             pieces |= generate_set_panel(category_id, category['set'])
@@ -278,11 +293,11 @@ def generate_description(artifact, artf_set):
     gen.write("switch.(UISSendUIMessage).xdb.j2", os.path.join(folder, "Show.(UISSendUIMessage).xdb"), {'window': name, 'open': 1, 'close': 0})
     gen.write("artifact_icon.(WindowSimple).xdb.j2", os.path.join(folder, "Icon.(WindowSimple).xdb"), {'artifact_id': artifact_id, 'x': (w - 64) // 2, 'y': 0, 'size': 64})
     children = [child("Icon.(WindowSimple).xdb", "WindowSimple")]
-    write_text_view(os.path.join(folder, "Name.(WindowTextView).xdb"), f"{name}Name", artifact['name_ref'], "Name", 0, 70, w, 40)
-    write_text_view(os.path.join(folder, "Description.(WindowTextView).xdb"), f"{name}Description", artifact['desc_ref'], "Description", 0, 115, w, 230)
+    write_text_view(os.path.join(folder, "Name.(WindowTextView).xdb"), f"{name}Name", artifact['name_ref'], name_formats.get(artifact['type'], "Name"), 0, 70, w, 50)
+    write_text_view(os.path.join(folder, "Description.(WindowTextView).xdb"), f"{name}Description", artifact['desc_ref'], "Description", 0, 125, w, 220)
     children += [child("Name.(WindowTextView).xdb", "WindowTextView"), child("Description.(WindowTextView).xdb", "WindowTextView")]
     if artf_set:
-        write_text_view(os.path.join(folder, "Set.(WindowTextView).xdb"), f"{name}Set", artf_set['name_ref'], "SetName", 0, 350, w, 40)
+        write_text_view(os.path.join(folder, "Set.(WindowTextView).xdb"), f"{name}Set", artf_set['name_ref'], "SetName", 0, 300, w, 40)
         children.append(child("Set.(WindowTextView).xdb", "WindowTextView"))
     write_window(os.path.join(folder, f"{artifact_id}.(WindowSimple).xdb"), name, False, 0, 0, w, h, children)
 
@@ -297,6 +312,7 @@ set_of = {}
 for artf_set in artifact_sets:
     for artifact_id in artf_set['artifacts']:
         set_of.setdefault(artifact_id, artf_set)
+name_formats = class_name_formats()
 for artifact in artifacts:
     size = texture_size(artifact['icon_href'])
     icon_path = out_path("_Artifacts", artifact['id'])

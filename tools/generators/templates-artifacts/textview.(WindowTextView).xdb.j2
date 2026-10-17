@@ -55,5 +55,5 @@
 	<TextFileRef href="{{ text_ref }}"/>
 	<ResizeOnTextSet>false</ResizeOnTextSet>
 	<ResizeWidthOnTextSet>false</ResizeWidthOnTextSet>
-	<TextFormat href="/UI/Doc/Artifacts/Common/{{ format }}.(TextFormat).xdb#xpointer(/TextFormat)"/>
+	<TextFormat href="{{ format if format.startswith('/') else '/UI/Doc/Artifacts/Common/' ~ format ~ '.(TextFormat).xdb' }}#xpointer(/TextFormat)"/>
 </WindowTextView>
