@@ -22,7 +22,6 @@
 
 - Darkstorm hero totem model
 - Add ARMG templates
-- Make Earthquake deal magical earth damage
 
 ### Balance
 
@@ -48,3 +47,4 @@
 - More potions with new effects
 - Market exchange rate are better
 - Thunder Power has no lightning visual effect
+- Make Earthquake deal magical earth damage

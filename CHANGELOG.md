@@ -268,7 +268,7 @@ Initial beta release !
 - Remove 2nd retaliation combo with Preparation + Unlimited retaliations
 - Maeve no additional peasant recruits when skill Logistics is known
 
-### 0.5.1 ()
+### 0.6.0 ()
 
 #### New
 
@@ -278,5 +278,7 @@ Initial beta release !
 - New Inferno town building Eternal Suffering Stick, that produces gold per recruits
 - New Dungeon town building Bloodstone, that generates blood crystals
 - New Necropolis town building Beacon of Souls, that redirect exp from defeated undead monsters to nearby hero
+- All artifact sets completed with exclusive effects
+- New in-game encyclopedia for skills, artifacts and creatures
 
 #### Fixed/Changed

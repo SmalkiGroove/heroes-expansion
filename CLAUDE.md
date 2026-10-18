@@ -50,6 +50,8 @@ Other tools:
 python tools/generators/generate-heroes-ui.py   # encyclopedia generators (see ui.md), accept --dry-run / --debug
 python tools/generators/generate-skills-ui.py
 python tools/generators/check-ui-refs.py        # broken /UI/Doc references and unknown window names
+python tools/generators/editor-heroes.py        # map editor hero palette (16 classes + heroes of Any.xdb), accepts --dry-run
+python tools/generators/editor-artifacts.py     # map editor artifact palette (placeable artifacts of Artifacts.xdb), accepts --dry-run
 python tools/debug/validate.py                  # XML syntax of every .xdb in game_data
 python tools/translator.py                      # machine-translates texts-EN files newer than their translation
 ```
