@@ -75,7 +75,7 @@ ARTIFACT_GRAAL = 53                                 -- GRAIL
 ARTIFACT_BOOTS_OF_LEVITATION = 54                   -- hero can walk on water
 ARTIFACT_HELM_OF_THE_LICH = 55                      -- /
 ARTIFACT_ARMOR_OF_VALOR = 56                        -- /
-ARTIFACT_BOOTS_OF_SWIFTNESS = 57                    -- creatures have +2 initiative and speed
+ARTIFACT_BOOTS_OF_SWIFTNESS = 57                    -- TODO
 ARTIFACT_MOONBLADE = 58                             -- hero has +1 initiative
 ARTIFACT_WAR_HORN = 59                              -- creatures have +10% initiative
 ARTIFACT_BAND_OF_CONJURER = 60                      -- hero learns summon elem and +4 sp
@@ -155,7 +155,7 @@ ARTIFACT_CELESTIAL_JUSTICAR_SHIELD = 133            -- reduce ranged damage
 ARTIFACT_STAFF_OF_THE_SAINT = 134                   -- gain spellpower for light magic spells
 ARTIFACT_BACKPACK_OF_THE_OPEN_ROAD = 135            -- reset hero movement points on level up **
 ARTIFACT_MAGMA_SHIELD = 136                         -- reduce enemy ice spells and immune to cold death
-ARTIFACT_137 = 137	                                -- not used 137
+ARTIFACT_CHAOS_SHROUD = 137	                        -- 
 ARTIFACT_138 = 138                                  -- not used 138
 ARTIFACT_139 = 139                                  -- not used 139
 ARTIFACT_SYLVAN_AMULET = 140                        -- reduce mana cost of nature spells by 3
@@ -369,7 +369,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_TITANS_TRIDENT]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_STAFF_OF_THE_NETHERWORLD]      = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_NECRO, special=0},
     [ARTIFACT_NO_RETREAT]                    = { class=ARTIFACT_CLASS_OTHER, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_NONE, special=1},
-    [ARTIFACT_FOUR_LEAF_CLOVER]              = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=0},
+    [ARTIFACT_FOUR_LEAF_CLOVER]              = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_SHIELD_OF_CRYSTAL_ICE]         = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_OCEAN_CHARM]                   = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_NECK, set=ARTIFACT_SET_SAILOR, special=1},
     [ARTIFACT_CROWN_OF_COURAGE]              = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_NONE, special=0},
@@ -386,7 +386,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_CELESTIAL_JUSTICAR_SWORD]      = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_ARCHANGEL, special=0},
     [ARTIFACT_RING_OF_THE_BROKEN_WILL]       = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_INFERNO, special=0},
     [ARTIFACT_BOOTS_OF_THE_SWIFT_JOURNEY]    = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_NONE, special=0},
-    [ARTIFACT_GOLDEN_HORSESHOE]              = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=0},
+    [ARTIFACT_GOLDEN_HORSESHOE]              = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_BOOTS_OF_THE_OPEN_ROAD]        = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_WANDERER, special=0},
     [ARTIFACT_BOOTS_OF_INTERFERENCE]         = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_WARMAGE, special=0},
     [ARTIFACT_ENDLESS_SACK_OF_GOLD]          = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_NONE, special=0},
@@ -418,7 +418,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_BOOTS_OF_LEVITATION]           = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_NONE, special=1},
     [ARTIFACT_HELM_OF_THE_LICH]              = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_HEAD, set=ARTIFACT_SET_NECRO, special=0},
     [ARTIFACT_ARMOR_OF_VALOR]                = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_BODY, set=ARTIFACT_SET_NONE, special=0},
-    [ARTIFACT_BOOTS_OF_SWIFTNESS]            = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_NONE, special=0},
+    [ARTIFACT_BOOTS_OF_SWIFTNESS]            = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_NONE, special=1}, --disabled
     [ARTIFACT_MOONBLADE]                     = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_LEFTHAND, set=ARTIFACT_SET_MOON, special=0},
     [ARTIFACT_WAR_HORN]                      = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_WAR, special=0},
     [ARTIFACT_BAND_OF_CONJURER]              = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_RING, set=ARTIFACT_SET_NONE, special=0},
@@ -522,7 +522,7 @@ ARTIFACTS_DATA = {
     [ARTIFACT_PALACE_SHOES]                  = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_VIZIR, special=0},
     [ARTIFACT_SHACKLES_OF_THE_LAST_MAN]      = { class=ARTIFACT_CLASS_MINOR, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_INFERNO, special=0},
     [ARTIFACT_LEGENDARY_BOOTS]               = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_LEGS, set=ARTIFACT_SET_NONE, special=0},
-    [ARTIFACT_GOLDEN_GOOSE]                  = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=1},
+    [ARTIFACT_GOLDEN_GOOSE]                  = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_POCKET, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_DAWN_GLEAM]                    = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_NONE, special=1},
     [ARTIFACT_ARDENT_SMITH]                  = { class=ARTIFACT_CLASS_MAJOR, slot=ARTIFACT_SLOT_RIGHTHAND, set=ARTIFACT_SET_NONE, special=0},
     [ARTIFACT_CLOAK_OF_DARKNESS]             = { class=ARTIFACT_CLASS_RELIC, slot=ARTIFACT_SLOT_SHOULDERS, set=ARTIFACT_SET_DUNGEON, special=0},
