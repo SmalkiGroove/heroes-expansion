@@ -179,26 +179,26 @@
 		<Item>
 			<ID>SHACKLES_OF_WAR</ID>
 			<obj>
-				<NameFileRef href="/Text/Game/Artifacts/NoRetreat/Name.txt"/>
-				<DescriptionFileRef href="/Text/Game/Artifacts/NoRetreat/Description.txt"/>
+				<NameFileRef href="/Text/Game/Artifacts/ChainedSabatons/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artifacts/ChainedSabatons/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
 				<Type>ARTF_CLASS_RELIC</Type>
-				<Slot>MISCSLOT1</Slot>
-				<Icon href="/Textures/HeroScreen/Artifacts/NoRetreat.xdb#xpointer(/Texture)"/>
-				<CostOfGold>1</CostOfGold>
-				<AIValue>1</AIValue>
-				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
+				<Slot>FEET</Slot>
+				<Icon href="/Textures/HeroScreen/Artifacts/ChainedSabatons.xdb#xpointer(/Texture)"/>
+				<CostOfGold>20000</CostOfGold>
+				<AIValue>30000</AIValue>
+				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>0</Defence>
+					<Defence>6</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
-					<Morale>-1</Morale>
+					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
-				<ArtifactShared href="/MapObjects/Artifacts/NoRetreat.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
+				<ArtifactShared href="/MapObjects/Artifacts/ChainedSabatons.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
-				<PresetPrice>-1</PresetPrice>
+				<PresetPrice>0</PresetPrice>
 			</obj>
 		</Item>
 		<Item>
@@ -1436,24 +1436,24 @@
 		<Item>
 			<ID>ARTIFACT_BOOTS_OF_SWIFTNESS</ID>
 			<obj>
-				<NameFileRef href="/Text/Game/Artifacts/BootsOfSwiftness/Name.txt"/>
-				<DescriptionFileRef href="/Text/Game/Artifacts/BootsOfSwiftness/Description.txt"/>
+				<NameFileRef href="/Text/Game/Artifacts/MercenaryBand/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artifacts/MercenaryBand/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_RELIC</Type>
-				<Slot>FEET</Slot>
-				<Icon href="/Textures/HeroScreen/Artifacts/BootsOfSwiftness.xdb#xpointer(/Texture)"/>
-				<CostOfGold>20000</CostOfGold>
-				<AIValue>30000</AIValue>
-				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
+				<Type>ARTF_CLASS_MINOR</Type>
+				<Slot>FINGER</Slot>
+				<Icon href="/Textures/HeroScreen/Artifacts/MercenaryBand.xdb#xpointer(/Texture)"/>
+				<CostOfGold>5000</CostOfGold>
+				<AIValue>10000</AIValue>
+				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
-					<Attack>0</Attack>
+					<Attack>1</Attack>
 					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
-				<ArtifactShared href="/MapObjects/Artifacts/BootsOfSwiftness.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
+				<ArtifactShared href="/MapObjects/Artifacts/MercenaryBand.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
 				<PresetPrice>0</PresetPrice>
 			</obj>
@@ -2649,10 +2649,10 @@
 				<Icon href="/Textures/HeroScreen/Artifacts/NagaCommandersHelmet.xdb#xpointer(/Texture)"/>
 				<CostOfGold>10000</CostOfGold>
 				<AIValue>20000</AIValue>
-				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
+				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
-					<Attack>0</Attack>
-					<Defence>1</Defence>
+					<Attack>2</Attack>
+					<Defence>2</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
@@ -3114,26 +3114,26 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ARTIFACT_ELRATHS_DIVINE_SHIELD</ID>
+			<ID>ARTIFACT_BLACK_HOLE</ID>
 			<obj>
-				<NameFileRef href="/Text/Game/Artifacts/ElrathsDivineShield/Name.txt"/>
-				<DescriptionFileRef href="/Text/Game/Artifacts/ElrathsDivineShield/Description.txt"/>
+				<NameFileRef href="/Text/Game/Artifacts/BlackHole/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artifacts/BlackHole/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
 				<Type>ARTF_CLASS_RELIC</Type>
-				<Slot>SECONDARY</Slot>
-				<Icon href="/Textures/HeroScreen/Artifacts/ElrathsDivineShield.xdb#xpointer(/Texture)"/>
+				<Slot>NECK</Slot>
+				<Icon href="/Textures/HeroScreen/Artifacts/BlackHole.xdb#xpointer(/Texture)"/>
 				<CostOfGold>20000</CostOfGold>
 				<AIValue>30000</AIValue>
 				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>4</Defence>
+					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
-					<SpellPower>0</SpellPower>
+					<SpellPower>3</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
-				<ArtifactShared href="/MapObjects/Artifacts/ElrathsDivineShield.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
+				<ArtifactShared href="/MapObjects/Artifacts/BlackHole.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
 				<AvailableForPresets>true</AvailableForPresets>
 				<PresetPrice>0</PresetPrice>
 			</obj>
@@ -3445,7 +3445,7 @@
 				<DescriptionFileRef href="/Text/Game/Artifacts/ChaosShroud/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
 				<Type>ARTF_CLASS_RELIC</Type>
-				<Slot>INVENTORY</Slot>
+				<Slot>SHOULDERS</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/ChaosShroud.xdb#xpointer(/Texture)"/>
 				<CostOfGold>20000</CostOfGold>
 				<AIValue>30000</AIValue>
@@ -3454,25 +3454,25 @@
 					<Attack>0</Attack>
 					<Defence>0</Defence>
 					<Knowledge>0</Knowledge>
-					<SpellPower>0</SpellPower>
+					<SpellPower>6</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
 				<ArtifactShared href="/MapObjects/Artifacts/ChaosShroud.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
-				<AvailableForPresets>false</AvailableForPresets>
+				<AvailableForPresets>true</AvailableForPresets>
 				<PresetPrice>0</PresetPrice>
 			</obj>
 		</Item>
 		<Item>
 			<ID>ARTIFACT_138</ID>
 			<obj>
-				<NameFileRef href="/Text/Game/Artifacts/BlackHole/Name.txt"/>
+				<NameFileRef href="/Text/Game/Artifacts/XXX/Name.txt"/>
 				<DescriptionFileRef href="/Text/Game/Artifacts/XXX/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_RELIC</Type>
+				<Type>ARTF_CLASS_MINOR</Type>
 				<Slot>INVENTORY</Slot>
 				<Icon href="/Textures/Icons/Blank.xdb#xpointer(/Texture)"/>
-				<CostOfGold>20000</CostOfGold>
+				<CostOfGold>-100000</CostOfGold>
 				<AIValue>1</AIValue>
 				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
 				<HeroStatsModif>
@@ -4074,7 +4074,7 @@
 				<Icon href="/Textures/HeroScreen/Artifacts/DawnGleam.xdb#xpointer(/Texture)"/>
 				<CostOfGold>20000</CostOfGold>
 				<AIValue>30000</AIValue>
-				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
+				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>0</Defence>
@@ -4147,9 +4147,9 @@
 				<Type>ARTF_CLASS_RELIC</Type>
 				<Slot>CHEST</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/ShantiriBreastplate.xdb#xpointer(/Texture)"/>
-				<CostOfGold>1</CostOfGold>
-				<AIValue>1</AIValue>
-				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
+				<CostOfGold>20000</CostOfGold>
+				<AIValue>30000</AIValue>
+				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
 					<Defence>6</Defence>
@@ -4989,27 +4989,27 @@
 			</obj>
 		</Item>
 		<Item>
-			<ID>ARTIFACT_199</ID>
+			<ID>ARTIFACT_ELRATHS_DIVINE_SHIELD</ID>
 			<obj>
-				<NameFileRef href="/Text/Game/Artifacts/XXX/Name.txt"/>
-				<DescriptionFileRef href="/Text/Game/Artifacts/XXX/Description.txt"/>
+				<NameFileRef href="/Text/Game/Artifacts/ElrathsDivineShield/Name.txt"/>
+				<DescriptionFileRef href="/Text/Game/Artifacts/ElrathsDivineShield/Description.txt"/>
 				<Model href="/_(Model)/TerrainObjects/Water/SeaChest.(Model).xdb#xpointer(/Model)"/>
-				<Type>ARTF_CLASS_MINOR</Type>
-				<Slot>INVENTORY</Slot>
-				<Icon href="/Textures/Icons/Blank.xdb#xpointer(/Texture)"/>
-				<CostOfGold>1</CostOfGold>
-				<AIValue>1</AIValue>
-				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
+				<Type>ARTF_CLASS_RELIC</Type>
+				<Slot>SECONDARY</Slot>
+				<Icon href="/Textures/HeroScreen/Artifacts/ElrathsDivineShield.xdb#xpointer(/Texture)"/>
+				<CostOfGold>20000</CostOfGold>
+				<AIValue>30000</AIValue>
+				<CanBeGeneratedToSell>true</CanBeGeneratedToSell>
 				<HeroStatsModif>
 					<Attack>0</Attack>
-					<Defence>0</Defence>
+					<Defence>4</Defence>
 					<Knowledge>0</Knowledge>
 					<SpellPower>0</SpellPower>
 					<Morale>0</Morale>
 					<Luck>0</Luck>
 				</HeroStatsModif>
-				<ArtifactShared href="/MapObjects/Artifacts/XXX.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
-				<AvailableForPresets>false</AvailableForPresets>
+				<ArtifactShared href="/MapObjects/Artifacts/ElrathsDivineShield.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
+				<AvailableForPresets>true</AvailableForPresets>
 				<PresetPrice>0</PresetPrice>
 			</obj>
 		</Item>
