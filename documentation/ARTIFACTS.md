@@ -523,7 +523,8 @@ Restore hero movement points on level up
 +1 Attack
 Friendly creatures attacks reduce enemy Defense by 3
 - __Captain's Hook__ :
-*captain's hook*
++1 Attack
+Creatures in hero's army gain the Wound ability
 
 ---
 ### Moon Gleam
@@ -561,12 +562,16 @@ Grants the ability to cast spell <value=spell_name> from this wand at Advanced M
 - __Trident of the Titans__ :
 +1 Spellpower
 +20% damage to Lightning spells
+- __Chained Sabatons__ :
++6 Defense
+Creatures cannot move
+Heroes cannot flee
 - __Shield of Crystal Ice__ :
 +5 Defense
 -40% Damage taken from enemy Fire spells
 Creatures in hero's army are immuned to Ignite
 - __Four Leaf Clover__ :
-+2 Luck
++1 Luck
 - __Crown Of Courage__ :
 +4 Morale
 +2 Luck
@@ -582,7 +587,7 @@ Grants hero troops immunity to Lightning's stun
 +15% Movement points over land
 After using all your movement points during a day with no battle, refresh 1000 movement points
 - __Golden Horseshoe__ :
-+4 Luck
++2 Luck
 - __Endless Sack of Gold__ :
 Generates 1000 Golds per day.
 - __Endless Purse of Gold__ :
@@ -603,8 +608,9 @@ Grants hero troops immunity to Frost Power's freeze
 - __Armor of Valor__ :
 +1 Defense
 +1 Morale
-- __Windstrider Boots__ :
-+2 Speed and Initiative to friendly creatures
+- __Mercenary Band__ :
++1 Attack
+Increase creatures minimum damages by half of the difference with maximum damages
 - __Band of the Conjurer__ :
 +4 Spellpower when casting Summon Elementals.
 Grants the Summon Elementals spell if it wasn't learned already.
@@ -642,7 +648,7 @@ Restore 2 mana per combat turn
 -1 Luck
 -1 Morale
 - __Tarot Deck__ :
-+1 Luck
+Hero's damaging spells can be lucky and deal additional damages, and the effective Luck is increased by 1 for this effect
 - __Crown of Leadership__ :
 +2 Morale
 Doubles the effects of skills Estate (Governance), Diplomacy (Leadership) and Recruitment (Logistics)
@@ -661,12 +667,14 @@ Generate between 0 and 3 Ore per day, and sometimes an additional Crystal or Gem
 -1 Morale
 -2 Luck to enemy creatures
 - __Naga Commander's Helm__ :
-*naga commanders helm*
++2 Attack
++2 Defense
+Improve the negociating power of the hero with hostile creatures
 - __Steadfast Shield__ :
 +2 Defense
-- __Elrath's Divine Shield__ :
-+4 Defense
-+40% Magic-proof against all elemental spells
+- __Black Hole__ :
++3 Spellpower
++67% to all elemental resistances
 - __Shantiri Moon Disc__ :
 +4 Defense
 +4 Spellpower
@@ -727,6 +735,10 @@ A stack of Fire Elementals joins hero's army at the start of combats (scales wit
 +3 Spellpower
 +33% Damage to Frost spells
 A stack of Water Elementals joins hero's army at the start of combats (scales with Knowledge)
+- __Elrath's Divine Shield__ :
++4 Defense
++1 Morale
+Positive Morale effect grants +20% ATB
 - __Necklace of the Bloody Claw__ :
 +25% maximum damages to friendly units
 - __Ring Of Celerity__ :
@@ -746,9 +758,18 @@ Creatures in hero's army get the Flame Wave ability
 +5 Defense
 -40% Damage taken from enemy Frost spells
 Creatures in hero's army are immuned to Cold Death
+- __Chaos Shroud__ :
++6 Spellpower
+Damaging spells cast by the hero ignore 66% of the targets' spell-proof
+- __Golden Goose__ :
++3 Luck
+Lucky strikes deal +33% damage (additive)
 - __Dawn Gleam__ :
 +3 Knowledge
 All creatures in hero's army have the Chid of Light ability
+- __Shantiri Breastplate__ :
++6 Defense
+Grants hero's army immunity to Earthquake
 - __Potion of Enlightenment__ :
 <color=FFFFD700>Consumable<body_bright>
 
