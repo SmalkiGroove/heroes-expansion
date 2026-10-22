@@ -71,6 +71,7 @@ end
 function insert(array, sample)
 	local index = length(array) + 1
 	array[index] = sample
+    return index
 end
 
 function replace(array, sample, rep, all)

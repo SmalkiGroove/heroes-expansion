@@ -126,8 +126,14 @@ function Routine_ArtfsetHaven4X(side, hero)
     if IsCreature(CURRENT_UNIT) then
         local type = GetCreatureType(CURRENT_UNIT)
         if type == CREATURE_ANGEL or type == CREATURE_ARCHANGEL or type == CREATURE_SERAPH then
-            UnitCastAimedSpell(CURRENT_UNIT, SPELL_ENCOURAGE, RandomCreature(side, COMBAT_TURN))
-            sleep() SetATB_ID(CURRENT_UNIT, ATB_INSTANT)
+            local n, allies = 0, {}
+            for i,cr in GetUnits(side, CREATURE) do
+                if cr ~= CURRENT_UNIT then n = insert(allies, cr) end
+            end
+            if n == 0 then return end
+            local target = allies[random(1,n,COMBAT_TURN)]
+            UnitCastAimedSpell(CURRENT_UNIT, SPELL_ENCOURAGE, target)
+            sleep() SetATB_ID(CURRENT_UNIT, 2)
         end
     end
 end
