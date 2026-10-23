@@ -85,6 +85,9 @@ function ScanHeroArtifacts(hero)
         if HERO_ARTFSETS_STATUS[hero][k] ~= v then
             HERO_ARTFSETS_STATUS[hero][k] = v
             Register(VarHeroArtfsetId(hero,k), v)
+            if TOGGLE_TRIGGER_ARTFSETS_ROUTINES[k] then
+                TOGGLE_TRIGGER_ARTFSETS_ROUTINES[k](hero, v)
+            end
         end
     end
     for a,heroes in REGISTERED_ARTIFACTS do

@@ -46,6 +46,8 @@ Footmen use Warm-Up at the start of combat, increasing their initiative by 50% f
 
 Hero's attacks decrease target's Morale by 2 permanently (cannot stack).
 
+Starts with innate skill Thrill of Combat, making hero eligible to positive Morale effects after attacking.
+
 ---
 __GABRIELLE :__
 Sky Rider

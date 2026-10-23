@@ -470,6 +470,16 @@ end
 
 --------------------------------------------------------------------------------------------------------------------------------
 
+function Routine_ArtfsetArchangel(hero, toggle)
+    log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtfsetArchangel")
+    log.debug("$ Routine_ArtfsetArchangel")
+    if toggle == 1 then
+        GiveArtefact(hero, ARTIFACT_ANGEL_WINGS, 1)
+    else
+        RemoveArtefact(hero, ARTIFACT_ANGEL_WINGS)
+    end
+end
+
 function Routine_ArtfsetWanderer(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtfsetWanderer")
     local mastery = GetHeroSkillMastery(hero, SKILL_LOGISTICS)
@@ -629,6 +639,9 @@ AFTER_COMBAT_TRIGGER_ARTIFACTS_ROUTINES = {
     [ARTIFACT_FORTUNE_BAND_OF_THE_SAINT] = Routine_ArtifactFortuneBandOfTheSaint,
 }
 
+TOGGLE_TRIGGER_ARTFSETS_ROUTINES = {
+    [ARTFSET_ARCHANGEL_5PC] = Routine_ArtfsetArchangel,
+}
 CONTINUOUS_TRIGGER_ARTFSETS_ROUTINES = {
     [ARTFSET_SAILOR_3PC] = Routine_ArtfsetSailor,
 }

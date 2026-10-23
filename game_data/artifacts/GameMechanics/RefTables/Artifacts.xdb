@@ -762,19 +762,19 @@
 				<Type>ARTF_CLASS_RELIC</Type>
 				<Slot>SHOULDERS</Slot>
 				<Icon href="/Textures/HeroScreen/Artifacts/AngelWings.xdb#xpointer(/Texture)"/>
-				<CostOfGold>1</CostOfGold>
-				<AIValue>1</AIValue>
+				<CostOfGold>-999999</CostOfGold>
+				<AIValue>999999</AIValue>
 				<CanBeGeneratedToSell>false</CanBeGeneratedToSell>
 				<HeroStatsModif>
-					<Attack>0</Attack>
-					<Defence>0</Defence>
-					<Knowledge>0</Knowledge>
-					<SpellPower>0</SpellPower>
-					<Morale>0</Morale>
-					<Luck>0</Luck>
+					<Attack>10</Attack>
+					<Defence>10</Defence>
+					<Knowledge>10</Knowledge>
+					<SpellPower>10</SpellPower>
+					<Morale>10</Morale>
+					<Luck>10</Luck>
 				</HeroStatsModif>
 				<ArtifactShared href="/MapObjects/Artifacts/AngelWings.(AdvMapArtifactShared).xdb#xpointer(/AdvMapArtifactShared)"/>
-				<AvailableForPresets>true</AvailableForPresets>
+				<AvailableForPresets>false</AvailableForPresets>
 				<PresetPrice>-1</PresetPrice>
 			</obj>
 		</Item>

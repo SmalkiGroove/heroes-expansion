@@ -278,6 +278,7 @@ Initial beta release !
 - New Inferno town building Eternal Suffering Stick, that produces gold per recruits
 - New Dungeon town building Bloodstone, that generates blood crystals
 - New Necropolis town building Beacon of Souls, that redirect exp from defeated undead monsters to nearby hero
+- New innate skill Thrill of Combat for Laszlo
 - New artifacts Dawn Gleam, Chaos Shroud, Chained Sabatons, Mercenary Band, Naga Commander's Helm, Black Hole, Shantiri Breastplate
 - All artifact sets completed with exclusive effects
 - New in-game encyclopedia for skills, artifacts and creatures

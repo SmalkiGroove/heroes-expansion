@@ -32,8 +32,8 @@ Grants the Blade Barrier spell if it wasn't learned already
 ### Elven Secret
 | Nb | Effects |
 | --- | --- |
-| 4 | • Hero casts Nature spells with doubled effective spellpower.     For Sylvan heroes:  • Sylvan creatures in hero's army deal 20% more damage to favoured enemies. |
-| 6 | • Hero casts Nature spells with doubled effective spellpower.  • Creatures in hero's army always have lucky hit rolls.     For Sylvan heroes:  • Sylvan creatures in hero's army deal 20% more damage to favoured enemies.  • Hero troops gain 5% magic proof per Luck point. |
+| 4 | • Hero learns Nature spells of the first, second and third circles, and casts all Nature spells with doubled effective spellpower.     For Sylvan heroes:  • Sylvan creatures in hero's army deal 20% more damage to favoured enemies. |
+| 6 | • Hero learns Nature spells of the first, second and third circles, and casts all Nature spells with doubled effective spellpower.  • Creatures in hero's army always have lucky hit rolls.     For Sylvan heroes:  • Sylvan creatures in hero's army deal 20% more damage to favoured enemies.  • Hero troops gain 5% magic proof per Luck point. |
 
 - __Avenger Bow__ :
 +10% damage from ranged attacks
@@ -138,8 +138,8 @@ Gain Experience every day based on the hero's Knowledge, and half the amount to 
 ### Shadow Burst
 | Nb | Effects |
 | --- | --- |
-| 4 | • Hero casts Dark spells with doubled effective spellpower.     For Dungeon heroes:  • Hero gains the ability to cast Mass Slow and Mass Confusion. |
-| 6 | • Hero casts Dark spells with doubled effective spellpower.  • Hero troops gain +2 initiative and are immuned to Curse of the Netherworld.     For Dungeon heroes:  • Hero gains the ability to cast Mass Slow and Mass Confusion.  • Dark elves cannot be affected by mind afflictions. |
+| 4 | • Hero learns Dark spells of the first, second and third circles, and casts all Dark spells with doubled effective spellpower.     For Dungeon heroes:  • Hero gains the ability to cast Mass Slow and Mass Confusion. |
+| 6 | • Hero learns Dark spells of the first, second and third circles, and casts all Dark spells with doubled effective spellpower.  • Hero troops gain +2 initiative and are immuned to Curse of the Netherworld.     For Dungeon heroes:  • Hero gains the ability to cast Mass Slow and Mass Confusion.  • Dark elves cannot be affected by mind afflictions. |
 
 - __Ring of Banishment__ :
 -50% to the amount of enemy summoned elementals
@@ -166,7 +166,7 @@ Grants the Banish ability
 | Nb | Effects |
 | --- | --- |
 | 4 | • Hero troops gain the befenits of Offensive Formation and Defensive Formation. If the perks are already known, their bonus is doubled.     For Fortress heroes:  • Dwarves in hero's army gain the abilities Battle Leader and Aura of Bravery. |
-| 6 | • Hero troops gain 50% spell-proof and get the befenits of Offensive Formation and Defensive Formation. If the perks are already known, their bonus is doubled.     For Fortress heroes:  • Dwarves in hero's army gain the abilities Battle Leader and Aura of Bravery.  • Creatures in hero's army have unlimited uses of runes (the activation cost is unchanged). |
+| 6 | • Hero troops gain the befenits of Offensive Formation and Defensive Formation. If the perks are already known, their bonus is doubled.  • They also gain +5 Health and +50% spell-proof.     For Fortress heroes:  • Dwarves in hero's army gain the abilities Battle Leader and Aura of Bravery.  • Creatures in hero's army have unlimited uses of runes (the activation cost is unchanged). |
 
 - __Rune of Flame__ :
 +2 Spellpower
@@ -272,7 +272,7 @@ Every 4 victories, gain 1000 + 1% experience
 ### Frozen Kingdom
 | Nb | Effects |
 | --- | --- |
-| 4 | Hero learns Deep Freeze and casts it on enemy creatures after their first combat turn. |
+| 4 | Enemy creatures are frozen at the start of combats, and their ice resistance is ignored. |
 
 - __Evercold Icicle__ :
 +1 Spellpower
@@ -368,7 +368,7 @@ Gain random temporary battle bonuses after each victory
 ### Afterlife Set
 | Nb | Effects |
 | --- | --- |
-| 5 | Hero learns Sorrow and casts it on all enemy creatures at the start of combat. |
+| 5 | Enemy creatures have -20% Attack and Defense, and are permanently sorrowed (scales with hero's Spellpower and  Dark Magic mastery). |
 
 - __Cursed Ring__ :
 -1 Luck to enemy creatures
@@ -413,7 +413,7 @@ Restore 5% of maximum mana per combat turn
 ### Bandit Set
 | Nb | Effects |
 | --- | --- |
-| 5 | Coming soon |
+| 5 | Creatures in hero's army gain +1 Speed and the ability No Enemy Retaliation. |
 
 - __Plunderer Vest__ :
 +1 Health to friendly creatures
@@ -477,7 +477,7 @@ Creatures in hero's army are immuned to Decay
 ### Celestial Justicar
 | Nb | Effects |
 | --- | --- |
-| 5 | Gain the Angel Wings, that gives +10 to all attributes, including Luck and morale, and allows to move hero above obstacles. |
+| 5 | Gain the Angel Wings, that gives +10 to all attributes, including Luck and Morale, and allows the hero to move above obstacles. |
 
 - __Celestial Justicar's Shield__ :
 +2 Defense
@@ -766,7 +766,7 @@ Damaging spells cast by the hero ignore 66% of the targets' spell-proof
 Lucky strikes deal +33% damage (additive)
 - __Dawn Gleam__ :
 +3 Knowledge
-All creatures in hero's army have the Chid of Light ability
+All creatures in hero's army have the Child of Light ability
 - __Shantiri Breastplate__ :
 +6 Defense
 Grants hero's army immunity to Earthquake
