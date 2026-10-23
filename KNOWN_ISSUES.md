@@ -39,13 +39,3 @@
 
 
 # FIXED/CHANGED
-
-- Updated editor heroes, classes, artifacts, creatures
-- Fixed combat never ending when killing all enemies with Discharge
-- Fixed several artifacts incorrectly linked to map objects and not able to spawn
-- Artifacts that restore mana after battles should restore during combat instead
-- Magic guild bonuses apply when built instead of the following day
-- More potions with new effects
-- Market exchange rate are better
-- Thunder Power has no lightning visual effect
-- Make Earthquake deal magical earth damage

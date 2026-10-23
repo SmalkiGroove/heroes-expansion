@@ -46,6 +46,7 @@ This list is not exhaustive, all stats and changes regarding heroes, skills, art
 - Totally revamped skill tree with 15 branches and totally new skills
 - Every hero is unique and all heroes are more powerful in general, and there are no trash heroes
 - Scripts are massively used for new features, on the map as well as during combats
+- More map and town buildings
 
 
 ## Releases
@@ -268,7 +269,7 @@ Initial beta release !
 - Remove 2nd retaliation combo with Preparation + Unlimited retaliations
 - Maeve no additional peasant recruits when skill Logistics is known
 
-### 0.6.0 ()
+### 0.6.0 (23/10/2026)
 
 #### New
 
@@ -284,3 +285,18 @@ Initial beta release !
 - New in-game encyclopedia for skills, artifacts and creatures
 
 #### Fixed/Changed
+
+- Updated editor heroes, classes, artifacts, creatures
+- Changed exp/level curve
+- Fixed combat never ending when killing all enemies with Discharge
+- Fixed several artifacts incorrectly linked to map objects and not able to spawn
+- Fixed Goblin Support and Battle Commander, they now adapt to the creature type already in the army
+- Fixed tooltip of training bonuses
+- Magic guild bonuses apply when built instead of the following day
+- Some artifacts changed or rebalanced
+- More potions with new effects
+- Market exchange rate are better
+- Thunder Power had no lightning visual effect
+- Make Earthquake deal magical earth damage (affected my spell-proof and earth immunities)
+- Remove UI from save files
+- Maps no longer require script and secondary objective to work in multiplayer

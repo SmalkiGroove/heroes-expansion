@@ -34,3 +34,7 @@ The main changes compared to vanilla are :
 ## Download
 
 **Beta available now on [ModDB](https://www.moddb.com/mods/h5x) !**
+
+## Dependencies
+
+The mod requires the EXE patches (`um.dll`) from https://github.com/SmalkiGroove/H5X_DLL
