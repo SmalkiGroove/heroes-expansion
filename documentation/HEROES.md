@@ -273,9 +273,9 @@ __MELODIA :__
 Lady of the forest
 
 
-Creature's in hero's army start battles with the effect of the Regeneration spell. After a few hero turns in combat, she casts Regeneration on all friendly creatures, replacing the prior permanent Regeneration effect by a temporary one. The amount of turns is 5 + 1 every 5 hero levels.
-
 Sylvan creatures inflict 10% + 2% per level bonus damage to favoured enemies.
+
+Starts with innate skill Sylanna's Benediction (instead of Silent Tracker), that grants a permanent Regeneration effect to all hero troops. The effectiveness scales with hero's Spellpower and Natural Magic mastery.
 
 After learning 3 perks in the Avenger skill, upgrades the Avenger skill to absolute mastery, that increases Luck and allows to select a 4th favoured enemy.
 
@@ -823,6 +823,8 @@ Frost Mage
 Hero casts Ice Bolt on a random ennemy creature each turn in combat (requires mana).
 
 Every day, hero has a small chance to obtain an artifact from the Frozen Kingdom set. The probability is equal to 5% for the Evercold Icicle and the Frozen Heart and 1% for the Crown and Spear of the Frost Lord. This probability is increased by 5% per hero level. You cannot get the same artifact twice.
+
+Starts with innate skill Cold Steel, increasing troops attack damages by 10% as ice damages.
 
 ---
 __DEIRDRE :__
