@@ -67,11 +67,11 @@ function Routine_DragonTombstone(player, town)
     local prob = 100 + 10 * WEEKS
     prob = prob + GetObjectDwellingCreatures(town, CREATURE_SKELETON)
     prob = min(prob, 500)
-    local rand = random(0, 1000, TURN)
+    local rand = random(0, 1000)
     if rand < prob then
         local prob2 = 100 + WEEKS
         prob2 = prob2 + GetObjectDwellingCreatures(town, CREATURE_MANES)
-        rand = random(0, 1000, WEEKS)
+        rand = random(0, 1000)
         if rand < prob2 then
             AddObjectCreatures(town, CREATURE_HORROR_DRAGON, 1)
         else
@@ -108,7 +108,7 @@ function Routine_AlchemyLab(player, town)
     local awards = {}
     while total_value > 0 do
         local range = min(256, total_value)
-        local x = random(1, range, total_value)
+        local x = random(1, range)
         if x < 32 then
             awards[GOLD] = (awards[GOLD] or 0) + x
             total_value = total_value - x
@@ -118,7 +118,7 @@ function Routine_AlchemyLab(player, town)
             awards[res] = (awards[res] or 0) + n
             total_value = total_value - 20*n
         elseif x < 128 then
-            local res = random(2,5,x)
+            local res = random(2,5)
             local n = round(0.025 * x)
             awards[res] = (awards[res] or 0) + n
             total_value = total_value - 40*n
@@ -130,7 +130,7 @@ function Routine_AlchemyLab(player, town)
     end
     for award,amount in awards do
         if award <= GOLD then GiveResources(player, award, amount) sleep()
-        else for i = 1, amount do GiveArtifact(hero, award) sleep() end
+        else for i = 1, amount do GiveArtefact(hero, award) sleep() end
         end
     end
 end
@@ -248,7 +248,7 @@ function Routine_Bloodstone_Visit(hero, town)
     local amount = Var_Bloodstone_Count[town]
     if amount and amount > 0 then
         for i = 1, amount do
-            GiveArtifact(hero, ARTIFACT_BLOOD_CRYSTAL)
+            GiveArtefact(hero, ARTIFACT_BLOOD_CRYSTAL)
             sleep()
         end
         Var_Bloodstone_Count[town] = 0

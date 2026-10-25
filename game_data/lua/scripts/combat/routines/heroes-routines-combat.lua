@@ -11,7 +11,7 @@ function Routine_BallistaRandomSalvo(side, hero)
     log.debug("$ Routine_BallistaRandomSalvo")
     local ballista = UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_BALLISTA'
     if IsCombatUnit(ballista) then
-        local n = 1 + trunc(GetHeroLevel(side) * 0.1)
+        local n = 1 + trunc(GetHeroLevel(hero) * 0.1)
         for i = 1,n do
             local target = RandomCreature(1-side,i)
             if target then startThread(ShootCombatUnit, ballista, target) end
@@ -243,7 +243,7 @@ function Routine_SpriteManaLink(side, hero)
         elseif CURRENT_UNIT == hero then
             for i,cr in GetUnits(side, CREATURE) do
                 if GetCreatureType(cr) == CREATURE_SPRITE then
-                    local m = 1 + trunc(0.2 * GetHeroLevel(side))
+                    local m = 1 + trunc(0.2 * GetHeroLevel(hero))
                     local cur = GetUnitManaPoints(cr)
                     local max = GetUnitMaxManaPoints(cr)
                     SetMana(cr, min(cur+m, max))
@@ -326,7 +326,7 @@ function Routine_SpearWielderCoordination(side, hero)
             local type = GetCreatureType(CURRENT_UNIT)
             if type == CREATURE_AXE_FIGHTER or type == CREATURE_AXE_THROWER or type == CREATURE_HARPOONER then
                 log.debug("$ Routine_SpearWielderCoordination")
-                if GetCreatureNumber(CURRENT_UNIT) >= 28 + GetHeroLevel(side) then
+                if GetCreatureNumber(CURRENT_UNIT) >= 28 + GetHeroLevel(hero) then
                     HeroCast_Target(hero, SPELL_EFFECT_COORDINATION, NO_COST, CURRENT_UNIT)
                 end
             end
@@ -380,12 +380,12 @@ end
 function Routine_EarthShatter(side, hero)
     if CURRENT_UNIT == hero then
         log.debug("$ Routine_EarthShatter")
-        local spellpower = GetHeroLevel(side)
+        local spellpower = GetHeroLevel(hero)
         local x, y = 0, 0
-        local n = 1 + trunc(0.1 * GetHeroLevel(side))
+        local n = 1 + trunc(0.1 * GetHeroLevel(hero))
         for i = 1,n do
-            x = random(GRID_X_MIN, GRID_X_MAX, COMBAT_TURN+i)
-            y = random(GRID_Y_MIN, GRID_Y_MAX, COMBAT_TURN-i)
+            x = random(GRID_X_MIN, GRID_X_MAX)
+            y = random(GRID_Y_MIN, GRID_Y_MAX)
             startThread(Routine_EarthShatterHelper, side, spellpower, x, y)
         end
         SetATB_ID(hero, ATB_INSTANT)
@@ -460,7 +460,7 @@ function Routine_CastMultipleArcaneCrystals(side, hero)
     local x1 = 15 - 13 * side
     local x2 = 11 - 5 * side
     for i = 1,n do
-        HeroCast_Area(hero, SPELL_ARCANE_CRYSTAL, 10, random(x1,x2,m-i), random(GRID_Y_MIN,GRID_Y_MAX,m-i))
+        HeroCast_Area(hero, SPELL_ARCANE_CRYSTAL, 10, random(x1,x2), random(GRID_Y_MIN,GRID_Y_MAX))
         sleep(10)
     end
     SetMana(hero, m-n)
@@ -493,11 +493,11 @@ function Routine_TimeShift(side, hero)
         if ROUTINE_VARS.TimeShifter then
             local min = {[0]=0, [1]=0}
             local max = {[0]=99, [1]=99}
-            min[side] = GetHeroLevel(side)
-            max[1-side] = 99 - GetHeroLevel(side)
+            min[side] = GetHeroLevel(hero)
+            max[1-side] = 99 - GetHeroLevel(hero)
             for team = 0,1 do
                 for i,cr in GetUnits(team, CREATURE) do
-                    local atb = random(min[team], max[team], GetCreatureType(cr))
+                    local atb = random(min[team], max[team])
                     SetATB_ID(cr, 0.01*atb)
                 end
             end
@@ -522,7 +522,7 @@ end
 
 function Routine_SummonDarkstorm(side, hero)
     log.debug("$ Routine_SummonDarkstorm")
-    local type = CREATURE_DARKSTORM + GetHeroLevel(side)
+    local type = CREATURE_DARKSTORM + GetHeroLevel(hero)
     local name = "DARKSTORM-creature"
     local x = (side == ATTACKER) and (GRID_X_MIN+1) or (GRID_X_MAX)
     local y = GRID_Y_MAX
@@ -545,8 +545,8 @@ function Routine_RidersHydraSynergy(side, hero)
             log.debug("$ Routine_RidersHydraSynergy")
             local type = GetCreatureType(CURRENT_UNIT)
             if type == CREATURE_RIDER or type == CREATURE_RAVAGER or type == CREATURE_BLACK_RIDER then
-                local r = 25 + trunc(GetHeroLevel(side) * 0.25)
-                if r > random(0, 100, COMBAT_TURN) then
+                local r = 25 + trunc(GetHeroLevel(hero) * 0.25)
+                if r > random(0, 100) then
                     SetATB_CreatureTypes(side, {CREATURE_HYDRA,CREATURE_CHAOS_HYDRA,CREATURE_ACIDIC_HYDRA}, ATB_NEXT)
                 end
             end
@@ -557,7 +557,7 @@ end
 function Routine_HeroCastBerserk(side, hero)
     log.debug("$ Routine_HeroCastBerserk")
     local enemies = GetUnits(1-side, CREATURE)
-    local v = 1 + trunc(GetHeroLevel(side) * 0.05)
+    local v = 1 + trunc(GetHeroLevel(hero) * 0.05)
     local n = min(length(enemies), v)
     for i = 1,n do
         HeroCast_Target(hero, SPELL_BERSERK, FREE_MANA, enemies[i-1])
@@ -569,7 +569,7 @@ function Routine_SummonDeadEnnemyCreature(side, hero, unit)
     if STARTING_ARMY[1-side][unit] then
         local type = GetCreatureType(unit)
         local x,y = GetUnitPosition(unit)
-        local p = 10 + GetHeroLevel(side)
+        local p = 10 + GetHeroLevel(hero)
         local amount = ceil(STARTING_ARMY[1-side][unit] * p * 0.01)
         SummonCreature(side, type, amount, x, y)
     end
@@ -601,11 +601,11 @@ end
 function Routine_RefreshMatronMana(side, hero)
     if CURRENT_UNIT == hero then
         log.debug("$ Routine_RefreshMatronMana")
-        local prob = 20 + 2 * GetHeroLevel(side)
+        local prob = 20 + 2 * GetHeroLevel(hero)
         for i,cr in GetUnits(side, CREATURE) do
             local type = GetCreatureType(cr)
             if type == CREATURE_MATRON or type == CREATURE_MATRIARCH or type == CREATURE_SHADOW_MISTRESS then
-                if random(0,100,COMBAT_TURN+i) < prob then
+                if random(0,100) < prob then
                     local max = GetUnitMaxManaPoints(cr)
                     SetMana(cr, max)
                 end
@@ -652,8 +652,8 @@ function Routine_SummonZombieStack(side, hero)
     if CURRENT_UNIT == hero then
         log.debug("$ Routine_SummonZombieStack")
         local turns = COMBAT_TURN - ROUTINE_VARS.TurnMarker
-        local n = 1 + trunc(1.5 * (GetHeroLevel(side) + turns))
-        local type = random(1, 3, COMBAT_TURN)
+        local n = 1 + trunc(1.5 * (GetHeroLevel(hero) + turns))
+        local type = random(1, 3)
         local id = CREATURES_BY_FACTION[NECROPOLIS][2][type]
         SummonCreature(side, id, n)
         ROUTINE_VARS.TurnMarker = COMBAT_TURN
@@ -662,10 +662,10 @@ end
 
 function Routine_FirstAidLastAid(side, hero)
     log.debug("$ Routine_FirstAidLastAid")
-    if GetHeroSkillMastery(side, PERK_PLAGUE_TENT) == 1 then
+    if GetHeroSkillMastery(hero, PERK_PLAGUE_TENT) == 1 then
         local tent = GetWarMachine(side, WAR_MACHINE_FIRST_AID_TENT)
         if tent then
-            local x,y = GetUnitPosition(RandomCreature(1-side, GetHeroLevel(side)))
+            local x,y = GetUnitPosition(RandomCreature(1-side, GetHeroLevel(hero)))
             startThread(UseCombatAbility, tent, SPELL_EFFECT_FIRST_AID_TENT_PLAGUE, x, y)
         end
     end
@@ -675,7 +675,7 @@ function Routine_EmbalmerManaRegen(side, hero)
     if CURRENT_UNIT == hero then
         log.debug("$ Routine_EmbalmerManaRegen")
         if IsCombatUnit(UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_FIRST_AID_TENT') then
-            local m = 1 + GetHeroSkillMastery(side, SKILL_DARK_MAGIC)
+            local m = 1 + GetHeroSkillMastery(hero, SKILL_DARK_MAGIC)
             local value = min(GetUnitManaPoints(hero)+m, GetUnitMaxManaPoints(hero))
             SetMana(hero, value)
         end
@@ -684,7 +684,7 @@ end
 
 function Routine_SummonAvatarOfDeath(side, hero)
     log.debug("$ Routine_SummonAvatarOfDeath")
-    local cost = 4 * GetHeroLevel(side)
+    local cost = 4 * GetHeroLevel(hero)
     if GetUnitManaPoints(hero) >= cost then
         local units = GetUnits(side, CREATURE)
         HeroCast_Global(hero, SPELL_ABILITY_AVATAR_OF_DEATH, cost)
@@ -717,7 +717,7 @@ function Routine_RaiseUndead(side, hero, unit)
         local dead = GetCreatureType(unit)
         local type = CreatureToUndead(dead)
         local x,y = GetUnitPosition(unit)
-        local p = 10 + GetHeroLevel(side)
+        local p = 10 + GetHeroLevel(hero)
         local amount = ceil(STARTING_ARMY[1-side][unit] * p * 0.01)
         SummonCreature(side, type, amount, x, y)
     end
@@ -725,7 +725,7 @@ end
 
 function Routine_CastBansheeHowl(side, hero)
     log.debug("$ Routine_CastBansheeHowl")
-    local p = 2 * GetHeroLevel(side)
+    local p = 2 * GetHeroLevel(hero)
     if random(0,100) < p then
         HeroCast_Global(hero, SPELL_BANSHEE_HOWL, 0)
     end
@@ -831,8 +831,8 @@ function Routine_SummonEarthElementals(side, hero)
             if GetCreatureType(cr) == CREATURE_EARTH_ELEMENTAL then stacks = stacks + 1 end
         end
         if stacks < GRID_Y_MAX then
-            local nb = 3 + trunc(GetHeroLevel(side) * 0.1)
-            local amount = 1 + trunc(GetHeroLevel(side) * 0.34)
+            local nb = 3 + trunc(GetHeroLevel(hero) * 0.1)
+            local amount = 1 + trunc(GetHeroLevel(hero) * 0.34)
             for i = 1,nb do
                 SummonCreature(side, CREATURE_EARTH_ELEMENTAL, amount)
                 sleep(4)
@@ -849,15 +849,15 @@ end
 function Routine_InfernoGating(side, hero)
     log.debug("$ Routine_InfernoGating")
     local gated_creatures = {}
-    local gating_tier = 2 * GetHeroSkillMastery(side, SKILL_GATING)
+    local gating_tier = 2 * GetHeroSkillMastery(hero, SKILL_GATING)
     for i,cr in GetUnits(side, CREATURE) do
         local id = GetCreatureType(cr)
         if GetFaction(id) == INFERNO and GetTier(id) <= gating_tier then
             gated_creatures[cr] = 0
             local nb = GetCreatureNumber(cr)
             while gated_creatures[cr] == 0 do
-                local x = random(GRID_X_MIN+2, GRID_X_MAX-2, nb)
-                local y = random(GRID_Y_MIN, GRID_Y_MAX, id)
+                local x = random(GRID_X_MIN+2, GRID_X_MAX-2)
+                local y = random(GRID_Y_MIN, GRID_Y_MAX)
                 startThread(TryGating, cr, x, y, gated_creatures)
                 sleep(7)
             end
@@ -953,7 +953,7 @@ function Routine_ShamansManaRegen(side, hero)
                 local m = GetUnitManaPoints(CURRENT_UNIT)
                 local max = GetUnitMaxManaPoints(CURRENT_UNIT)
                 if m < max then
-                    local n = 1 + trunc(GetHeroLevel(side) * 0.125)
+                    local n = 1 + trunc(GetHeroLevel(hero) * 0.125)
                     m = min(m+n, max)
                     SetMana(CURRENT_UNIT, m)
                 end
@@ -962,7 +962,7 @@ function Routine_ShamansManaRegen(side, hero)
             local m = GetUnitManaPoints(hero)
             local max = GetUnitMaxManaPoints(hero)
             if m < max then
-                local n = 1 + trunc(GetHeroLevel(side) * 0.25)
+                local n = 1 + trunc(GetHeroLevel(hero) * 0.25)
                 m = min(m+n, max)
                 SetMana(hero, m)
             end
@@ -1012,7 +1012,7 @@ function Routine_RandomBuffDragons(side, hero)
         local buff = 0
         if count == 0 then return
         elseif count == 1 then buff = buffs[1]
-        else buff = random(1, count, COMBAT_TURN)
+        else buff = random(1, count)
         end
         for i,cr in GetUnits(side, CREATURE) do
             local type = GetCreatureType(cr)

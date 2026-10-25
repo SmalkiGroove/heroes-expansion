@@ -16,15 +16,6 @@ DUEL_STAGE_CASTLE = 4
 DUEL_STAGE_BATTLE = 5
 DUEL_STAGE_END = 6
 
-function DuelSetPlayerStage(player, stage)
-    local var = "DUEL_STAGE_"..player
-    Register(var, stage)
-end
-function DuelGetPlayerStage(player)
-    local var = "DUEL_STAGE_"..player
-    return 0 + GetGameVar(var)
-end
-
 function DuelInfoWindow0(player)
     startThread(Popup, player, "/Text/Duel/InfoStart.txt")
 end
@@ -242,7 +233,7 @@ function DuelStaging(player, hero)
         if HasHeroSkill(hero, skill) then func(player, hero) end
     end
     for artifact, func in DUEL_ARTIFACT_STAGING_EFFECTS do
-        if HasArtefact(hero, artifact, 1) then func(player, hero) end
+        if HasArtifact(hero, artifact) then func(player, hero) end
     end
     PlayerDailyResources(player)
     ChangeHeroStat(hero, STAT_MOVE_POINTS, 9999)

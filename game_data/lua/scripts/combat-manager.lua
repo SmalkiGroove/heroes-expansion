@@ -1,6 +1,4 @@
 
--- dofile("/scripts/game-vars.lua")
-
 COMBAT_STATE = 0
 
 COMBAT_TURN = 0
@@ -11,42 +9,8 @@ THREAD_LIMIT = 50
 THREAD_STATE = 0
 THREAD_FINISHER = THREAD_LIMIT
 
-HERO_DATA = {
-    [ATTACKER] = {
-        Level = 0,
-        Skills = {},
-        Artifacts = {},
-        ArtfSets = {},
-    },
-    [DEFENDER] = {
-        Level = 0,
-        Skills = {},
-        Artifacts = {},
-        ArtfSets = {},
-    }
-}
-
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
-
-function FetchData(name, id)
-    log.debug("Fetch data for hero "..name)
-    local temp = GetGameVar(VarHeroLevel(name))
-    HERO_DATA[id].Level = 0 + temp
-    for _,s in COMBAT_EFFECT_SKILLS do
-        temp = GetGameVar(VarHeroSkillId(name,s))
-        HERO_DATA[id].Skills[s] = temp == "" and 0 or 0 + temp
-    end
-    for _,a in COMBAT_EFFECT_ARTIFACTS do
-        temp = GetGameVar(VarHeroArtifactId(name,a))
-        HERO_DATA[id].Artifacts[a] = temp == "" and 0 or 0 + temp
-    end
-    for set = ARTFSET_NONE,ARTFSET_ACTIVABLES_COUNT do
-        temp = GetGameVar(VarHeroArtfsetId(name,set))
-        HERO_DATA[id].ArtfSets[set] = temp == "" and 0 or 0 + temp
-    end
-    log.debug("Hero "..name.." : Lvl "..HERO_DATA[id].Level)
-end
 
 function Wait()
     sleep(1)
@@ -74,33 +38,18 @@ end
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
-startThread(CheckEnableScript1)
-
 function ManageCombatPrepare()
     log.trace("$ Manage combat prepare")
-    CheckEnableScript2()
-    if ENABLE_SCRIPT == 0 then return end
-
     combatSetPause(1)
     ATTACKER_HERO = GetHero(ATTACKER) and GetHeroName(ATTACKER_HERO_ID) or ""
     DEFENDER_HERO = GetHero(DEFENDER) and GetHeroName(DEFENDER_HERO_ID) or ""
-    if ATTACKER_HERO ~= "" then
-        startThread(FetchData, ATTACKER_HERO, ATTACKER)
-    end
-    if DEFENDER_HERO ~= "" then
-        startThread(FetchData, DEFENDER_HERO, DEFENDER)
-    end
-    sleep(100)
-    InitializeRandomSeed()
     EnableAutoFinish(nil)
 end
 
 function ManageCombatStart()
     log.trace("$ Manage combat start")
     COMBAT_STATE = 1
-    if ENABLE_SCRIPT == 0 then return end
     GetArmySummary()
-    log.debug("Combat random seed = "..RANDOM_SEED)
 
     combatSetPause(1)
     DoAbilitiesRoutine_CombatStart()
@@ -120,7 +69,6 @@ end
 
 function ManageCombatTurn(unit)
     log.trace("$ Manage combat turn - "..unit)
-    if ENABLE_SCRIPT == 0 then return end
 
     if CURRENT_UNIT ~= unit then
         combatSetPause(1)
@@ -146,7 +94,6 @@ end
 
 function ManageUnitDeath(unit)
     log.trace("$ Manage unit death - "..unit)
-    if ENABLE_SCRIPT == 0 then return end
 
     if ATTACKER_HERO ~= "" then
         DoSkillRoutine_UnitDied(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID, unit)
@@ -163,25 +110,23 @@ end
 function ManageCombatEnd(winner)
     log.trace("$ Manage combat end - "..winner)
     COMBAT_STATE = 2
-    if ENABLE_SCRIPT == 1 then
-        combatSetPause(1)
+    combatSetPause(1)
 
-        DoAbilitiesRoutine_CombatEnd()
-        if ATTACKER_HERO ~= "" then
-            DoSkillRoutine_CombatEnd(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID, winner)
-            DoHeroSpeRoutine_CombatEnd(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID, winner)
-            DoArtifactRoutine_CombatEnd(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID, winner)
-        end
-        if DEFENDER_HERO ~= "" then
-            DoSkillRoutine_CombatEnd(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID, winner)
-            DoHeroSpeRoutine_CombatEnd(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID, winner)
-            DoArtifactRoutine_CombatEnd(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID, winner)
-        end
-        for _,cr in GetUnits(CREATURE, 1-winner) do RemoveCombatUnit(cr) end
-
-        EnableAutoFinish(1)
-        combatSetPause(nil)
+    DoAbilitiesRoutine_CombatEnd()
+    if ATTACKER_HERO ~= "" then
+        DoSkillRoutine_CombatEnd(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID, winner)
+        DoHeroSpeRoutine_CombatEnd(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID, winner)
+        DoArtifactRoutine_CombatEnd(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID, winner)
     end
+    if DEFENDER_HERO ~= "" then
+        DoSkillRoutine_CombatEnd(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID, winner)
+        DoHeroSpeRoutine_CombatEnd(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID, winner)
+        DoArtifactRoutine_CombatEnd(DEFENDER, DEFENDER_HERO, DEFENDER_HERO_ID, winner)
+    end
+    for _,cr in GetUnits(CREATURE, 1-winner) do RemoveCombatUnit(cr) end
+
+    EnableAutoFinish(1)
+    combatSetPause(nil)
 end
 
 
@@ -189,9 +134,6 @@ end
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 SCRIPTS_GROUP = {
-    [0] = {
-        "/scripts/game-vars.lua",
-    },
     [1] = {
         "/scripts/game/creatures.lua",
         "/scripts/game/spells.lua",
@@ -215,4 +157,4 @@ function LoadScripts(wg)
     for i, file in SCRIPTS_GROUP[wg] do dofile(file) end
     sleep(1)
 end
-for i = 0,3 do LoadScripts(i) end
+LoadScripts(1) LoadScripts(2) LoadScripts(3)

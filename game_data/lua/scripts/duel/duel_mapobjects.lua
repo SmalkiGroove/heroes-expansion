@@ -108,7 +108,7 @@ function DuelWishFountain(player, nb)
         if Prompt(player, {"/Text/Duel/FountainWish.txt"; artifact=text_artifact}) then
             local fountain = "P"..player.."_FOUNTAIN_"..nb
             Trigger(OBJECT_TOUCH_TRIGGER, fountain, nil)
-            GiveArtifact(player, artifact) return
+            GiveArtefact(player, artifact) return
         end
     end
 end

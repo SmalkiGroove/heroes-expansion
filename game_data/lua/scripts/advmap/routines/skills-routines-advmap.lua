@@ -70,10 +70,10 @@ function Routine_CheckArtificier(player, hero, mastery)
         local item1 = 200 + prev
         local item2 = 200 + value
         if prev == 0 then
-            GiveArtifact(hero, item2, 1)
+            GiveArtefact(hero, item2, 1)
         elseif HasArtefact(hero, item1) then
             RemoveArtefact(hero, item1) sleep(1)
-            GiveArtifact(hero, item2, 1)
+            GiveArtefact(hero, item2, 1)
         end
         HERO_SKILL_BONUSES[hero][SKILLBONUS_ARTIFICIER] = value
     end
@@ -277,8 +277,8 @@ function Routine_GearUp(player, hero, mastery)
                 end
             end
         end
-        local artifact = minors[random(1, length(minors), TURN)]
-        GiveArtifact(hero, artifact)
+        local artifact = minors[random(1, length(minors))]
+        GiveArtefact(hero, artifact)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_GEAR_UP] = 1
     end
 end
@@ -298,8 +298,8 @@ function Routine_HeroesLegacy(player, hero, mastery)
                 end
             end
         end
-        local artifact = majors[random(1, length(majors), TURN)]
-        GiveArtifact(hero, artifact)
+        local artifact = majors[random(1, length(majors))]
+        GiveArtefact(hero, artifact)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_HEROES_LEGACY] = 1
     end
 end
@@ -319,8 +319,8 @@ function Routine_Mythology(player, hero, mastery)
                 end
             end
         end
-        local artifact = relics[random(1, length(relics), TURN)]
-        GiveArtifact(hero, artifact)
+        local artifact = relics[random(1, length(relics))]
+        GiveArtefact(hero, artifact)
         HERO_SKILL_BONUSES[hero][SKILLBONUS_MYTHOLOGY] = 1
     end
 end
@@ -503,7 +503,7 @@ function RoutineEstatesDaily(player, hero, mastery)
             end
         end
     end
-    if HasArtefact(hero, ARTIFACT_CROWN_OF_LEADER, 1) then total = 2 * total end
+    if HasArtifact(hero, ARTIFACT_CROWN_OF_LEADER) then total = 2 * total end
     GiveResources(player, GOLD, total)
 end
 
@@ -518,7 +518,7 @@ function Routine_IndustryDaily(player, hero, mastery)
     log.debug("$ Routine_IndustryDaily")
     local total = {[0]=0,[1]=0,[2]=0,[3]=0,[4]=0,[5]=0,[6]=0}
     local xh,yh,zh = GetObjectPosition(hero)
-    local cape = HasArtefact(hero, ARTIFACT_CAPE_OF_KINGS)
+    local cape = HasArtifact(hero, ARTIFACT_CAPE_OF_KINGS)
     for obj,data in RESOURCE_GENERATING_OBJECTS do
         for _,building in GetObjectNamesByType(obj) do
             if GetObjectOwner(building) == player then
@@ -530,7 +530,7 @@ function Routine_IndustryDaily(player, hero, mastery)
                         local dy = y - yh
                         d = dx * dx + dy * dy
                     end
-                    local res = data.type or random(0,5,d)
+                    local res = data.type or random(0,5)
                     if d < 100 then total[res] = total[res] + data.amount end
                 end
             end
@@ -610,7 +610,7 @@ function Routine_LogisticsWeeklyProd(player, hero, mastery)
         local factor = 1 + 0.5 * grail
         if fort > 1 then factor = factor + 0.5 * (fort-1) end
         local recr = GetHeroSkillMastery(hero, PERK_RECRUITMENT)
-        if HasArtefact(hero, ARTIFACT_CROWN_OF_LEADER, 1) then recr = 2 * recr end
+        if HasArtifact(hero, ARTIFACT_CROWN_OF_LEADER) then recr = 2 * recr end
         local bonus = 1 + recr
         if hero == H_WYNGAAL then bonus = bonus + 0.05 * GetHeroLevel(hero) end
         if mastery >= 1 and GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_1) ~= 0 then
@@ -639,7 +639,7 @@ function Routine_GovernanceWeeklyResources(player, hero, mastery)
     log.debug("$ Routine_GovernanceWeeklyResources")
     local golds = { [0]=0, [1]=1000, [2]=2500, [3]=5000 }
     local faction = HEROES[hero].faction
-    local bonus = HasArtefact(hero, ARTIFACT_CAPE_OF_KINGS) and 1 or 0
+    local bonus = HasArtifact(hero, ARTIFACT_CAPE_OF_KINGS) and 1 or 0
     GiveResources(player, GOLD, golds[mastery]+1000*bonus)
     GiveResources(player, FACTION_RESOURCE[faction], mastery+bonus)
 end
@@ -650,7 +650,7 @@ function Routine_GearUpWeeklyGolds(player, hero, mastery)
     local count = 0
     for a,data in ARTIFACTS_DATA do
         if data.class == ARTIFACT_CLASS_MINOR then
-            if HasArtefact(hero, a, 1) then count = count + 1 end
+            if HasArtifact(hero, a) then count = count + 1 end
         end
     end
     GiveResources(player, GOLD, 400 * count)
@@ -662,7 +662,7 @@ function Routine_HeroesLegacyWeeklyGolds(player, hero, mastery)
     local count = 0
     for a,data in ARTIFACTS_DATA do
         if data.class == ARTIFACT_CLASS_MAJOR then
-            if HasArtefact(hero, a, 1) then count = count + 1 end
+            if HasArtifact(hero, a) then count = count + 1 end
         end
     end
     GiveResources(player, GOLD, 600 * count)
@@ -674,7 +674,7 @@ function Routine_MythologyWeeklyGolds(player, hero, mastery)
     local count = 0
     for a,data in ARTIFACTS_DATA do
         if data.class == ARTIFACT_CLASS_RELIC then
-            if HasArtefact(hero, a, 1) then count = count + 1 end
+            if HasArtifact(hero, a) then count = count + 1 end
         end
     end
     GiveResources(player, GOLD, 800 * count)
@@ -764,7 +764,7 @@ function Routine_LeadershipAfterBattle(player, hero, mastery, combatIndex)
         if hero == H_DUNCAN then bonus = bonus + GetHeroLevel(hero) end
         if hero == H_ARANTIR then if CreatureToUndead(creature) == creature then bonus = bonus + 50 end end
         if HasHeroSkill(hero, PERK_CHARISMA) then bonus = bonus + 5 + 5 * mastery end
-        if HasArtefact(hero, ARTIFACT_BEARHIDE_WRAPS, 1) then bonus = bonus + 10 end
+        if HasArtifact(hero, ARTIFACT_BEARHIDE_WRAPS) then bonus = bonus + 10 end
         local amount = trunc(count * (0.05 + 0.05 * mastery + 0.01 * bonus))
         if HasHeroSkill(hero, PERK_HERALD_OF_DEATH) then creature = CreatureToUndead(creature) end
         if amount > 0 then
@@ -1001,7 +1001,6 @@ function DoSkillsRoutine_Start(player, hero)
     for skill = 1,254 do
         if HasHeroSkill(hero, skill) then
             local mastery = GetHeroSkillMastery(hero, skill)
-            Register(VarHeroSkillId(hero, skill), mastery)
             if IsDuelMode() then
                 repeat sleep() until DuelAddSkill
                 if DuelAddSkill(player, hero, skill) == 1 then START_TRIGGER_SKILLS_ROUTINES[skill] = nil end

@@ -149,6 +149,9 @@ HEROES = {
     [H_BOSS2]   = {faction=NEUTRAL,owner=0},
 }
 
+function GetHeroFaction(hero)
+    return HEROES[hero].faction
+end
 
 log.trace("Loaded heroes.lua")
 

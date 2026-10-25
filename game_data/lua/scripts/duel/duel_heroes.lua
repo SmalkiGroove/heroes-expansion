@@ -35,7 +35,7 @@ end
 
 function DuelYlthinSetup(player, hero)
     log.trace("/scripts/duel/duel_heroes.lua: DuelYlthinSetup")
-    GiveArtifact(hero, ARTIFACT_UNICORN_HORN_BOW, 0)
+    GiveArtefact(hero, ARTIFACT_UNICORN_HORN_BOW, 0)
     Popup(player, "/Text/Duel/Hero/YlthinSetup.txt")
 end
 
@@ -83,8 +83,8 @@ function DuelOrnellaFrostLord(player, hero)
     local factor = 1 + 0.25 * GetHeroLevel(hero)
     for a,p in Var_Ornella_FrostLordSet do
         if p > 0 then
-            if (p * factor) > random(0,100,a) then
-                GiveArtifact(hero, a)
+            if (p * factor) > random(0,100) then
+                GiveArtefact(hero, a)
                 Var_Ornella_FrostLordSet[a] = 0
                 Popup(player, {"/Text/Duel/Hero/Ornella.txt"; arg=ARTIFACT_NAME_FILE[a]})
                 return
@@ -100,9 +100,9 @@ end
 function DuelZouleikaPotion(player, hero, level)
     log.trace("/scripts/duel/duel_heroes.lua: DuelZouleikaPotion")
     local potions = {ARTIFACT_POTION_OF_ENLIGHTENMENT,ARTIFACT_POTION_OF_POWER,ARTIFACT_POTION_OF_VISION,ARTIFACT_POTION_OF_SKILL,}
-    local potion = potions[random(1,4,level)]
-    GiveArtifact(hero, ARTIFACT_FILLER_POCKET) sleep()
-    GiveArtifact(hero, potion) sleep()
+    local potion = potions[random(1,4)]
+    GiveArtefact(hero, ARTIFACT_FILLER_POCKET) sleep()
+    GiveArtefact(hero, potion) sleep()
     RemoveArtefact(hero, ARTIFACT_FILLER_POCKET)
     Popup(player, {"/Text/Duel/Hero/Zouleika.txt"; arg=ARTIFACT_NAME_FILE[potion]})
 end
@@ -120,7 +120,7 @@ function DuelEllesharLevelUp(player, hero, level)
         end
         local upgrade, exp, stats = 0, 0, 0
         if n > 0 then
-            GiveHeroSkill(hero, upgradable[random(1,n,level)])
+            GiveHeroSkill(hero, upgradable[random(1,n)])
             upgrade = 1
         elseif known == 0 then
             exp = 1000
@@ -161,7 +161,7 @@ function DuelBersyLevelUp(player, hero, level)
             if not KnowHeroSpell(hero, rune) then insert(runes, rune) n = n + 1 end
         end
         if n > 0 then
-            TeachHeroSpell(hero, runes[random(1,n,level)])
+            TeachHeroSpell(hero, runes[random(1,n)])
             learnt = 1
         end
     end
@@ -184,14 +184,14 @@ end
 
 function DuelRaelagLevelUp(player, hero, level)
     log.trace("/scripts/duel/duel_heroes.lua: DuelRaelagLevelUp")
-    if random(1,100,level) <= 10 + level then
+    if random(1,100) <= 10 + level then
         local pieces, n = {}, 0
         for a,data in ARTIFACTS_DATA do
             if data.set == ARTIFACT_SET_DRAGON and not HasArtefact(hero, a, 0) then insert(pieces, a) n = n + 1 end
         end
         if n > 0 then
-            local a = pieces[random(1,n,n)]
-            GiveArtifact(hero, a)
+            local a = pieces[random(1,n)]
+            GiveArtefact(hero, a)
             Popup(player, {"/Text/Duel/Hero/RaelagLevelUp.txt"; arg=ARTIFACT_NAME_FILE[a]})
         end
     end
@@ -200,7 +200,7 @@ end
 function DuelYrwannaLevelUp(player, hero, level)
     log.trace("/scripts/duel/duel_heroes.lua: DuelYrwannaLevelUp")
     if mod(level, 2) == 0 then
-        GiveArtifact(hero, ARTIFACT_BLOOD_CRYSTAL)
+        GiveArtefact(hero, ARTIFACT_BLOOD_CRYSTAL)
         Popup(player, {"/Text/Duel/Hero/YrwannaLevelUp.txt"; arg=GetHeroArtifactsCount(hero, ARTIFACT_BLOOD_CRYSTAL)})
     end
 end
@@ -379,7 +379,7 @@ end
 
 function DuelBrand(player, hero)
     log.trace("/scripts/duel/duel_heroes.lua: DuelBrand")
-    GiveArtifact(hero, ARTIFACT_BLAZING_SPELLBOOK)
+    GiveArtefact(hero, ARTIFACT_BLAZING_SPELLBOOK)
     Popup(player, {"/Text/Duel/Hero/Brand.txt"; arg=ARTIFACT_NAME_FILE[ARTIFACT_BLAZING_SPELLBOOK]})
 end
 

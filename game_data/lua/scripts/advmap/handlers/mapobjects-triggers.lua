@@ -124,7 +124,7 @@ function Trigger_WitchHut(hero, obj)
     if IsAIPlayer(player) then
         NoOverrideAI(obj, hero, "Trigger_WitchHut")
     elseif Var_WitchHutVisited[obj] == 0 then
-        local givestat = random(1,4,TURN)
+        local givestat = random(1,4)
         local text_stat = ATTRIBUTE_NAME_FILE[givestat]
         local text_res = "/Text/Game/Scripts/Resources/"..RESOURCE_TEXT[Var_WitchHutResCost[givestat]]..".txt"
         QuestionBoxForPlayers(
@@ -301,7 +301,7 @@ function Trigger_IdolOfFortune(hero, obj)
     else
         Var_IdolOfFortuneVisited[obj] = hero
         MarkObjectAsVisited(obj, hero)
-        local bonus = random(0,6,TURN)
+        local bonus = random(0,6)
         GiveHeroBattleBonus(hero, bonus, Var_IdolOfFortuneBonus[bonus])
         Popup(player, "/Text/Game/Scripts/MapObjects/IdolOfFortune.txt")
     end
@@ -312,7 +312,7 @@ function IdolOfFortune_daily()
         if hero ~= nil then
             if IsObjectExists(hero) then
                 if LAST_BATTLES[hero] == TURN - 1 then
-                    local bonus = random(0,6,TURN)
+                    local bonus = random(0,6)
                     GiveHeroBattleBonus(hero, bonus, Var_IdolOfFortuneBonus[bonus])
                 end
             else
@@ -425,7 +425,7 @@ function Trigger_FortuitousSanctuary(hero, obj)
         elseif n == 1 then
             TeachHeroSpell(hero, unknown_spells[1])
         else
-            local s = unknown_spells[random(1, n, TURN-1)]
+            local s = unknown_spells[random(1, n)]
             TeachHeroSpell(hero, s)
         end
         local txt_arg = "/Text/Game/Scripts/_n/"..c..".txt"

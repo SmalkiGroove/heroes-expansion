@@ -19,9 +19,6 @@ startThread(function()
 end)
 
 SCRIPTS_GROUP = {
-	[0] = {
-		"/scripts/game-vars.lua",
-	},
 	[1] = {
 		"/scripts/game/creatures.lua",
 		"/scripts/game/spells.lua",
@@ -58,7 +55,7 @@ function LoadScripts(wg)
 	for i, file in SCRIPTS_GROUP[wg] do dofile(file) end
 	sleep(1)
 end
-for i = 0,5 do LoadScripts(i) end
+for i = 1,5 do LoadScripts(i) end
 if IsDuelMode() then dofile("/scripts/duel.lua") end
 
 for f = 1,8 do
@@ -131,7 +128,6 @@ function WatchPlayer(player, wait)
 					tracker[hero].track = nil
 				end
 			end
-            ScanHeroArtifacts(hero)
 			DoHeroSpeRoutine_Continuous(player, hero)
 			DoSkillsRoutine_Continuous(player, hero)
 			DoArtifactsRoutine_Continuous(player, hero)
@@ -217,7 +213,6 @@ Trigger(CUSTOM_ABILITY_TRIGGER, "CustomAbilityHandler")
 
 
 function AddPlayerHero(player, hero)
-	Register(VarHeroLevel(hero), GetHeroLevel(hero))
 	if HEROES[hero].owner == 0 then
 		log.debug("Initialize hero "..hero)
 		startThread(BindHeroLevelUpTrigger, hero)
@@ -272,7 +267,6 @@ function InitializeHeroes()
 			for i = 1,8 do AllowPlayerTavernRace(player, FactionToTownType(i), 0) end
 			for i,hero in GetPlayerHeroes(player) do
 				log.debug("Initialize hero "..hero)
-				Register(VarHeroLevel(hero), GetHeroLevel(hero))
 				startThread(InitializeArmy, hero)
 				startThread(BindHeroLevelUpTrigger, hero)
 				startThread(BindHeroSkillTrigger, hero)
@@ -301,12 +295,11 @@ log.info("All scripts successfully loaded !")
 -- Initializers
 function Init()
 	if GetDate(DAY) == 1 then
-		InitializeRandomSeed()
 		InitializeMapTowns()
 		InitializeHeroes()
 		InitializeConvertibles()
 		InitializeMapObjects()
-		ExecConsoleCommand("@UnblockGame()") UnblockGame()
+		-- ExecConsoleCommand("@UnblockGame()") UnblockGame()
 		log.info("Initializers done. The game can start. Have fun !")
 		if IsDuelMode() then ExecConsoleCommand("@DuelMain()") end
 	else
@@ -315,6 +308,7 @@ function Init()
 end
 
 -- Script enabler: Init runs once for the whole game, even with one script instance per player
-Trigger(GAME_START_TRIGGER, "Init")
+-- Trigger(GAME_START_TRIGGER, "Init")
+Init()
 
-sleep(10) UnblockGame()
+UnblockGame()

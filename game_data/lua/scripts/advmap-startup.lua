@@ -403,15 +403,6 @@
 	WEEK_OF_GHOST = 124
 	WEEK_OF_BONEDRAGON = 125
 
-	-- Animation Action Types
-	--
-	--INVISIBLE = 0
-	IDLE = 1
-	ONESHOT_STILL = 2
-	ONESHOT = 3
-	--MOVE = 4
-	NON_ESSENTIAL = 5
-
 	-- Monsters names filter
 	MONSTER_NAME_SINGLE = 0
 	MONSTER_NAME_MULTIPLE = 1
@@ -461,6 +452,18 @@
 	PLAYERFLT_TEAM_7 = -7
 	PLAYERFLT_TEAM_8 = -8
 
+	function GetPlayerFilter( player )
+		if player == PLAYER_1 then return PLAYERFLT_1 end
+		if player == PLAYER_2 then return PLAYERFLT_2 end
+		if player == PLAYER_3 then return PLAYERFLT_3 end
+		if player == PLAYER_4 then return PLAYERFLT_4 end
+		if player == PLAYER_5 then return PLAYERFLT_5 end
+		if player == PLAYER_6 then return PLAYERFLT_6 end
+		if player == PLAYER_7 then return PLAYERFLT_7 end
+		if player == PLAYER_8 then return PLAYERFLT_8 end
+		return 0
+	end
+
 	--
 	-- Players Teams constants
 	--
@@ -488,21 +491,8 @@
 	FLYING_SIGN_TIME = 9
 
 function createAdvmapAliases()
-	names = GetAllNames
-	GiveExpToLevel = LevelUpHero
-    Exists = IsObjectExists
-    GetObjectPos = GetObjectPosition
-	SetObjectPos = SetObjectPosition
-	CreateMob = CreateMonster
-    GenerateMobs = GenerateMonsters
-    KillMobs = RemoveAllMonsters
-	CalcAverageTier = CalcAverageMonstersTier
-	SetLight = SetAmbientLight
-	SetCombatLight = SetCombatAmbientLight
-    ShowFlyMessage = ShowFlyingSign
 	Trigger = SetTrigger
     ExecConsoleCommand = consoleCmd
-	GiveArtifact = GiveArtefact
 end
 
 MakeSyncCommandCallback = function(event_id)
@@ -533,20 +523,10 @@ end
 if StartDialogSceneInt then
 	StartDialogScene = function(name, callback, saveName) SyncCommand(StartDialogSceneInt, name, callback, saveName) end
 end
-function GiveExp( heroName, exp )
-    ChangeHeroStat( heroName, STAT_EXPERIENCE, exp )
-end
-function GetPlayerFilter( player )
-	if player == PLAYER_1 then return PLAYERFLT_1 end
-	if player == PLAYER_2 then return PLAYERFLT_2 end
-	if player == PLAYER_3 then return PLAYERFLT_3 end
-	if player == PLAYER_4 then return PLAYERFLT_4 end
-	if player == PLAYER_5 then return PLAYERFLT_5 end
-	if player == PLAYER_6 then return PLAYERFLT_6 end
-	if player == PLAYER_7 then return PLAYERFLT_7 end
-	if player == PLAYER_8 then return PLAYERFLT_8 end
-	return 0
-end
+
+function GiveExp(hero, exp) ChangeHeroStat(hero, STAT_EXPERIENCE, exp) end
+function HasArtifact(hero, artifact) return HasArtefact(hero, artifact, 1) end
+
 IsAIPlayer_old = IsAIPlayer
 function IsAIPlayer( player )
 	return IsAIPlayer_old(player) == 1
@@ -554,6 +534,7 @@ end
 function IsHumanPlayer( player )
 	return GetPlayerState(player) == 1 and not IsAIPlayer(player)
 end
+
 
 sleep() log.SetLogLevel(LOG_LEVEL)
 

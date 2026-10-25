@@ -269,7 +269,7 @@ function Routine_YlthinVictoryCounter(player, hero, combatIndex)
     log.debug("$ Routine_YlthinVictoryCounter")
     local victories = WON_BATTLES[hero]
     if victories == 25 then
-        GiveArtifact(hero, ARTIFACT_UNICORN_HORN_BOW, 0)
+        GiveArtefact(hero, ARTIFACT_UNICORN_HORN_BOW, 0)
         ShowFlyingSign("/Text/Game/Scripts/HeroSpe/GainUnicornBow.txt", hero, player, FLYING_SIGN_TIME)
     elseif victories < 25 then
         ShowFlyingSign({"/Text/Game/Scripts/HeroSpe/GainUnicornBowCount.txt"; nb=25-victories}, hero, player, FLYING_SIGN_TIME)
@@ -299,7 +299,7 @@ function Routine_ElvenSageVictory(player, hero, combatIndex)
         elseif n == 1 then
             GiveHeroSkill(hero, upgradable[1])
         else
-            GiveHeroSkill(hero, upgradable[random(1,n,WON_BATTLES[hero])])
+            GiveHeroSkill(hero, upgradable[random(1,n)])
         end
         local skill_to_attribute = {[9]=3,[10]=1,[11]=2,[12]=4}
         for _,sk in maxed do
@@ -353,7 +353,7 @@ end
 function Routine_WorkshopExpertStart(player, hero)
     log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_WorkshopExpertStart")
     log.debug("$ Routine_WorkshopExpertStart")
-    GiveArtifact(hero, ARTIFACT_RING_OF_MACHINE_AFFINITY, 1)
+    GiveArtefact(hero, ARTIFACT_RING_OF_MACHINE_AFFINITY, 1)
     for town,data in MAP_TOWNS do
         if IsHeroInTown(hero, town, 1, 1) then
             if data.faction == FORTRESS then
@@ -392,7 +392,7 @@ function Routine_ProductionIncreaseDwarvenWorkers(player, hero)
                 local workers = GetObjectCreatures(building, CREATURE_DWARF_WORKER)
                 workers = min(workers, 400)
                 local bonus = trunc(data.amount * workers * 0.01)
-                local res = data.type or random(0,5,workers)
+                local res = data.type or random(0,5)
                 total[res] = total[res] + bonus
             end
         end
@@ -454,7 +454,7 @@ function Routine_GiveArtifactBlazingSpellbook(player, hero, combatIndex)
     log.debug("$ Routine_GiveArtifactBlazingSpellbook")
     local victories = WON_BATTLES[hero]
     if victories == 10 then
-        GiveArtifact(hero, ARTIFACT_BLAZING_SPELLBOOK)
+        GiveArtefact(hero, ARTIFACT_BLAZING_SPELLBOOK)
         ShowFlyingSign("/Text/Game/Scripts/HeroSpe/GainBlazingSpellbook.txt", hero, player, FLYING_SIGN_TIME)
     elseif victories < 10 then
         ShowFlyingSign({"/Text/Game/Scripts/HeroSpe/GainBlazingSpellbookCount.txt"; nb=10-victories}, hero, player, FLYING_SIGN_TIME)
@@ -465,7 +465,7 @@ function Routine_GiveArtifactRuneOfFlame(player, hero, level)
     log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GiveArtifactRuneOfFlame")
     log.debug("$ Routine_GiveArtifactRuneOfFlame")
     if mod(level, 8) == 0 then
-        GiveArtifact(hero, ARTIFACT_RUNE_OF_FLAME)
+        GiveArtefact(hero, ARTIFACT_RUNE_OF_FLAME)
     end
 end
 
@@ -499,7 +499,7 @@ function Routine_LearnRunicSpell(player, hero)
 	elseif nb == 1 then
 		TeachHeroSpell(hero, spells[1])
 	else
-		local spell = spells[random(1, nb, TURN)]
+		local spell = spells[random(1, nb)]
 		TeachHeroSpell(hero, spell)
 	end
 end
@@ -641,11 +641,11 @@ function Routine_GetCraftingResources(player, hero, level)
     log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GetCraftingResources")
     log.debug("$ Routine_GetCraftingResources")
     local max = 1 + trunc(0.5 * level)
-    local res = random(0, max, TURN)
+    local res = random(0, max)
     if res > 0 then
         local generated = {[WOOD]=0, [ORE]=0, [MERCURY]=0, [CRYSTAL]=0, [SULFUR]=0, [GEM]=0}
         for i = 1,res do
-            local r = random(0, 5, level)
+            local r = random(0, 5)
             generated[r] = generated[r] + 1
         end
         for r,v in generated do GiveResources(player, r, v, 1) end
@@ -774,7 +774,7 @@ function Routine_GainBloodCrystals(player, hero, combatIndex)
     log.debug("$ Routine_GainBloodCrystals")
     Var_Yrwanna_Corpses = Var_Yrwanna_Corpses + GetArmyStrength(combatIndex, 0)
     while Var_Yrwanna_Corpses >= Var_BloodCrystal_Corpses do
-        GiveArtifact(hero, ARTIFACT_BLOOD_CRYSTAL) sleep()
+        GiveArtefact(hero, ARTIFACT_BLOOD_CRYSTAL) sleep()
         Var_Yrwanna_Corpses = Var_Yrwanna_Corpses - Var_BloodCrystal_Corpses
         Var_BloodCrystal_Corpses = trunc(Var_BloodCrystal_Corpses * 1.1)
     end
@@ -817,10 +817,10 @@ function Routine_GainDragonArtifacts(player, hero, combatIndex)
     end end
     if pieces.n == 0 then return end
     local percent = 2 * level + value + pieces.n - 8
-    local rnd = random(0,100,level)
+    local rnd = random(0,100)
     if percent > rnd then
         local i = mod(rnd, pieces.n)
-        GiveArtifact(hero, pieces[i])
+        GiveArtefact(hero, pieces[i])
     end
 end
 
@@ -961,11 +961,11 @@ function Routine_BansheeHowlBuffs(player, hero, level)
     log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_BansheeHowlBuffs")
     log.debug("$ Routine_BansheeHowlBuffs")
     if level == 15 then
-        GiveArtifact(hero, ARTIFACT_251)
-        GiveArtifact(hero, ARTIFACT_252)
+        GiveArtefact(hero, ARTIFACT_251)
+        GiveArtefact(hero, ARTIFACT_252)
     elseif level == 25 then
-        GiveArtifact(hero, ARTIFACT_253)
-        GiveArtifact(hero, ARTIFACT_254)
+        GiveArtefact(hero, ARTIFACT_253)
+        GiveArtefact(hero, ARTIFACT_254)
     end
 end
 
@@ -984,7 +984,7 @@ end
 function Routine_GiveSandrosCloak(player, hero)
     log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GiveSandrosCloak")
     log.debug("$ Routine_GiveSandrosCloak")
-    GiveArtifact(hero, ARTIFACT_SANDROS_CLOAK, 1)
+    GiveArtefact(hero, ARTIFACT_SANDROS_CLOAK, 1)
 end
 
 function Routine_AddLichesPerKnowledge(player, hero)
@@ -1006,8 +1006,8 @@ function Routine_FrostLordArtifacts(player, hero)
     local factor = 1 + 0.05 * GetHeroLevel(hero)
     for a,p in Var_Ornella_FrostLordSet do
         if p > 0 then
-            if (p * factor) > random(0,100,a) then
-                GiveArtifact(hero, a)
+            if (p * factor) > random(0,100) then
+                GiveArtefact(hero, a)
                 Var_Ornella_FrostLordSet[a] = 0
                 return
             end
@@ -1228,7 +1228,7 @@ end
 function Routine_GiveArtifactCentaurCrossbow(player, hero)
     log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GiveArtifactCentaurCrossbow")
     log.debug("$ Routine_GiveArtifactCentaurCrossbow")
-    GiveArtifact(hero, ARTIFACT_CENTAUR_CROSSBOW, 1)
+    GiveArtefact(hero, ARTIFACT_CENTAUR_CROSSBOW, 1)
 end
 
 function Routine_AddRecruitsCentaurs(player, hero)
@@ -1342,24 +1342,24 @@ function Routine_SpiritArtifacts(player, hero, level)
     log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_SpiritArtifacts")
     log.debug("$ Routine_SpiritArtifacts")
     if level == 7 then
-        GiveArtifact(hero, ARTIFACT_TUNIC_OF_CARVED_FLESH)
+        GiveArtefact(hero, ARTIFACT_TUNIC_OF_CARVED_FLESH)
     elseif level == 11 then
-        GiveArtifact(hero, ARTIFACT_CURSED_RING)
+        GiveArtefact(hero, ARTIFACT_CURSED_RING)
     elseif level == 19 then
-        GiveArtifact(hero, ARTIFACT_SPIRIT_OF_OPPRESSION)
+        GiveArtefact(hero, ARTIFACT_SPIRIT_OF_OPPRESSION)
     elseif level == 23 then
-        GiveArtifact(hero, ARTIFACT_DEADWOOD_STAFF)
+        GiveArtefact(hero, ARTIFACT_DEADWOOD_STAFF)
     elseif level == 29 then
-        GiveArtifact(hero, ARTIFACT_SKULL_MASK)
+        GiveArtefact(hero, ARTIFACT_SKULL_MASK)
     end
 end
 
 function Routine_GainPotionLevelUp(player, hero, level)
     log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GainPotionLevelUp")
     log.debug("$ Routine_GainPotionLevelUp")
-    local potion = random(204, 209, level)
-    GiveArtifact(hero, ARTIFACT_FILLER_POCKET) sleep()
-    GiveArtifact(hero, potion) sleep()
+    local potion = random(204, 209)
+    GiveArtefact(hero, ARTIFACT_FILLER_POCKET) sleep()
+    GiveArtefact(hero, potion) sleep()
     RemoveArtefact(hero, ARTIFACT_FILLER_POCKET)
 end
 
@@ -1382,7 +1382,7 @@ function Routine_GainRandomDragon(player, hero)
     end
     local prob = 20 + 2 * GetHeroLevel(hero)
     for dragon, _ in dragons do
-        local rnd = random(1, 100, dragon)
+        local rnd = random(1, 100)
         if rnd <= prob then AddHeroCreatures(hero, dragon, 1) sleep() end
     end
 end

@@ -86,11 +86,11 @@ function Routine_ArtifactPotionOfTeleportation(player, hero)
         RemoveArtefact(hero, ARTIFACT_POTION_OF_TELEPORTATION)
         local x, y, z = GetObjectPosition(hero)
         local size = GetTerrainSize() - 1
-        local tx = random(0, size, x)
-        local ty = random(0, size, y)
+        local tx = random(0, size)
+        local ty = random(0, size)
         while not IsTilePassable(tx, ty, z) do
-            tx = random(0, size, x)
-            ty = random(0, size, y)
+            tx = random(0, size)
+            ty = random(0, size)
         end
         SetObjectPosition(hero, tx, ty, z, 2)
         repeat sleep(10) until not IsPlayerCurrent(player)
@@ -136,9 +136,10 @@ end
 function Routine_ArtifactSacredSeed(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactSacredSeed")
     log.debug("$ Routine_ArtifactSacredSeed")
-    local amount = random(0,3,TURN)
+    local rnd = random(0,20)
+    local amount = mod(rnd, 4)
     GiveResources(player, WOOD, amount)
-    if mod(RANDOM_SEED, 5) == 0 then
+    if mod(rnd, 5) == 0 then
         GiveExp(hero, 1000)
     end
 end
@@ -146,19 +147,20 @@ end
 function Routine_ArtifactFortunePickaxe(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactFortunePickaxe")
     log.debug("$ Routine_ArtifactFortunePickaxe")
-    local amount = random(0,3,TURN)
+    local rnd = random(0,20)
+    local amount = mod(rnd, 4)
     GiveResources(player, ORE, amount)
-    if mod(RANDOM_SEED, 4) == 0 then
-        GiveResources(player, mod(TURN, 2) == 0 and GEM or CRYSTAL, 1)
+    if mod(rnd, 3) == 0 then
+        GiveResources(player, (rnd > 10) and GEM or CRYSTAL, 1)
     end
 end
 
 function Routine_ArtifactHornOfPlenty(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactHornOfPlenty")
     log.debug("$ Routine_ArtifactHornOfPlenty")
-    if random(0,10,TURN) == 0 then
+    if random(0,10) == 0 then
         for res = 0,5 do
-            local amount = random(0,10,res)
+            local amount = random(0,10)
             GiveResources(player, res, amount)
         end
     end
@@ -185,7 +187,7 @@ end
 function Routine_ArtifactBootsOfSwiftJourneyThread(player, hero)
     while IsPlayerCurrent(player) do
         sleep(30)
-        if HasArtefact(hero, ARTIFACT_BOOTS_OF_THE_SWIFT_JOURNEY, 1) then
+        if HasArtifact(hero, ARTIFACT_BOOTS_OF_THE_SWIFT_JOURNEY) then
             if Var_BootsOfSwiftJourneyCheck[hero] then
                 if GetHeroStat(hero, STAT_MOVE_POINTS) < 100 then
                     ChangeHeroStat(hero, STAT_MOVE_POINTS, 1000)
@@ -326,7 +328,7 @@ function Routine_ArtifactPalaceShoes(player, hero, combatIndex)
         [HERO_BATTLE_BONUS_INITIATIVE] = 2,
         [HERO_BATTLE_BONUS_SPEED] = 1,
     }
-    local r = random(0,13,0)
+    local r = random(0,13)
     for k,v in bonus_table do
         if (mod(r,7) == k) or (mod(2*r,7) == k) then GiveHeroBattleBonus(hero, k, v) end
     end
@@ -397,7 +399,7 @@ function Routine_ArtifactVikingShield(player, hero, combatIndex)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactVikingShield")
     log.debug("$ Routine_ArtifactVikingShield")
     local value = GetArmyStrength(combatIndex, 0)
-    local split = random(0,4,value)
+    local split = random(0,4)
     GiveResources(player, WOOD, ceil(0.0004 * split * value), 1)
     GiveResources(player, ORE, ceil(0.0004 * (4-split) * value), 1)
 end
@@ -670,12 +672,12 @@ function DoArtifactsRoutine_Continuous(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: DoArtifactsRoutine_Continuous")
     -- log.debug("$ DoArtifactsRoutine_Continuous - "..hero)
     for k,v in CONTINUOUS_TRIGGER_ARTIFACTS_ROUTINES do
-        if HasArtefact(hero, k, 1) then
+        if HasArtifact(hero, k) then
             startThread(v, player, hero)
         end
     end
     for k,v in CONTINUOUS_TRIGGER_ARTFSETS_ROUTINES do
-        if HERO_ARTFSETS_STATUS[hero][k] == 1 then
+        if HasActiveArtifactSet(hero, k) then
             startThread(v, player, hero)
         end
     end
@@ -685,12 +687,12 @@ function DoArtifactsRoutine_Daily(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: DoArtifactsRoutine_Daily")
     log.debug("$ DoArtifactsRoutine_Daily - "..hero)
     for k,v in DAILY_TRIGGER_ARTIFACTS_ROUTINES do
-        if HasArtefact(hero, k, 1) then
+        if HasArtifact(hero, k) then
             v(player, hero)
         end
     end
     for k,v in DAILY_TRIGGER_ARTFSETS_ROUTINES do
-        if HERO_ARTFSETS_STATUS[hero][k] == 1 then
+        if HasActiveArtifactSet(hero, k) then
             v(player, hero)
         end
     end
@@ -702,12 +704,12 @@ function DoArtifactsRoutine_Weekly(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: DoArtifactsRoutine_Weekly")
     log.debug("$ DoArtifactsRoutine_Weekly - "..hero)
     for k,v in WEEKLY_TRIGGER_ARTIFACTS_ROUTINES do
-        if HasArtefact(hero, k, 1) then
+        if HasArtifact(hero, k) then
             v(player, hero)
         end
     end
     for k,v in WEEKLY_TRIGGER_ARTFSETS_ROUTINES do
-        if HERO_ARTFSETS_STATUS[hero][k] == 1 then
+        if HasActiveArtifactSet(hero, k) then
             v(player, hero)
         end
     end
@@ -719,12 +721,12 @@ function DoArtifactsRoutine_LevelUp(player, hero, level)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: DoArtifactsRoutine_LevelUp")
     log.debug("$ DoArtifactsRoutine_LevelUp - "..hero)
     for k,v in LEVELUP_TRIGGER_ARTIFACTS_ROUTINES do
-        if HasArtefact(hero, k, 1) then
+        if HasArtifact(hero, k) then
             v(player, hero, level)
         end
     end
     for k,v in LEVELUP_TRIGGER_ARTFSETS_ROUTINES do
-        if HERO_ARTFSETS_STATUS[hero][k] == 1 then
+        if HasActiveArtifactSet(hero, k) then
             v(player, hero, level)
         end
     end
@@ -736,12 +738,12 @@ function DoArtifactsRoutine_AfterCombat(player, hero, index)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: DoArtifactsRoutine_AfterCombat")
     log.debug("$ DoArtifactsRoutine_AfterCombat - "..hero)
     for k,v in AFTER_COMBAT_TRIGGER_ARTIFACTS_ROUTINES do
-        if HasArtefact(hero, k, 1) then
+        if HasArtifact(hero, k) then
             v(player, hero, index)
         end
     end
     for k,v in AFTER_COMBAT_TRIGGER_ARTFSETS_ROUTINES do
-        if HERO_ARTFSETS_STATUS[hero][k] == 1 then
+        if HasActiveArtifactSet(hero, k) then
             v(player, hero, index)
         end
     end

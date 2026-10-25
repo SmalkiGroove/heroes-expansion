@@ -119,7 +119,7 @@ function DuelGearUp(player, hero)
     local count = 0
     for a,data in ARTIFACTS_DATA do
         if data.class == ARTIFACT_CLASS_MINOR then
-            if HasArtefact(hero, a, 1) then count = count + 5000 end
+            if HasArtifact(hero, a) then count = count + 5000 end
         end
     end
     GiveResources(player, GOLD, count)
@@ -131,7 +131,7 @@ function DuelHeroesLegacy(player, hero)
     local count = 0
     for a,data in ARTIFACTS_DATA do
         if data.class == ARTIFACT_CLASS_MAJOR then
-            if HasArtefact(hero, a, 1) then count = count + 7500 end
+            if HasArtifact(hero, a) then count = count + 7500 end
         end
     end
     GiveResources(player, GOLD, count)
@@ -143,7 +143,7 @@ function DuelMythology(player, hero)
     local count = 0
     for a,data in ARTIFACTS_DATA do
         if data.class == ARTIFACT_CLASS_RELIC then
-            if HasArtefact(hero, a, 1) then count = count + 10000 end
+            if HasArtifact(hero, a) then count = count + 10000 end
         end
     end
     GiveResources(player, GOLD, count)

@@ -303,7 +303,7 @@ function TeachHeroRandomSpell(player, hero, school, maxtier)
 	elseif nb == 1 then
 		TeachHeroSpell(hero, spells[1])
 	else
-		local spell = spells[random(1, nb, TURN-school)]
+		local spell = spells[random(1, nb)]
 		TeachHeroSpell(hero, spell)
 	end
 end
@@ -329,7 +329,7 @@ function TeachHeroRandomSpellTier(player, hero, school, tier)
 	elseif nb == 1 then
 		TeachHeroSpell(hero, spells[1])
 	else
-		local spell = spells[random(1, nb, TURN-school)]
+		local spell = spells[random(1, nb)]
 		TeachHeroSpell(hero, spell)
 	end
 end
@@ -353,11 +353,23 @@ function GiveHeroRandomArtifact(player, hero, tier, set)
 	if nb == 0 then
 		return
 	elseif nb == 1 then
-		GiveArtifact(hero, artefacts[1])
+		GiveArtefact(hero, artefacts[1])
 	else
-		local artefact = artefacts[random(1, nb, TURN+tier)]
-		GiveArtifact(hero, artefact)
+		local artefact = artefacts[random(1, nb)]
+		GiveArtefact(hero, artefact)
 	end
+end
+
+function HasActiveArtifactSet(hero, activset)
+	log.trace("/scripts/advmap/advmap-utils.lua: HasActiveArtifactSet")
+	-- log.debug("$ HasActiveArtifactSet")
+	local set = ARTIFACT_SETS_ACTIVATIONS[activset].set
+	local count = ARTIFACT_SETS_ACTIVATIONS[activset].count
+	local faction = ARTIFACT_SETS_ACTIVATIONS[activset].faction
+	if GetArtifactSetItemsCount(hero, set, 1) >= count then
+		if faction == NEUTRAL or faction == GetHeroFaction(hero) then return 1 end
+	end
+	return nil
 end
 
 function AddHeroCreaturePerLevel(player, hero, type, coef)
@@ -501,39 +513,6 @@ function TransformCreatures(obj, creature, faction)
 	local cr = CREATURES_BY_FACTION[faction][tier][1]
 	RemoveObjectCreatures(obj, creature, nb) sleep()
 	AddObjectCreatures(obj, cr, nb) sleep()
-end
-
-function InitializeRandomSeed()
-	log.trace("/scripts/advmap/advmap-utils.lua: InitializeRandomSeed")
-	local value = GetTerrainSize() + DIFFICULTY
-	for p = 1,8 do
-		if (GetPlayerState(p) == 1) then
-			value = value + p
-			for _,h in GetPlayerHeroes(p) do
-				for s = 1,220 do
-					if HasHeroSkill(h, s) then value = value + s end
-				end
-			end
-		end
-	end
-	RANDOM_SEED = value
-	log.debug("Random seed = "..RANDOM_SEED)
-end
-
-function LoadedGame_GameVars()
-	log.trace("/scripts/advmap/advmap-utils.lua: LoadedGame_GameVars")
-	consoleCmd('console_size 9999')
-	consoleCmd('game_writelog 1')
-	for player = 1,8 do
-		if (GetPlayerState(player) == 1) then
-			for i,hero in GetPlayerHeroes(player) do
-				Register(VarHeroLevel(hero), GetHeroLevel(hero))
-				for skill = 1,220 do
-					if HasHeroSkill(hero, skill) then Register(VarHeroSkillId(hero, skill), GetHeroSkillMastery(hero, skill)) end
-				end
-			end
-		end
-	end
 end
 
 

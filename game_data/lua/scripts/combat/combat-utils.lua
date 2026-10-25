@@ -1,16 +1,19 @@
-
-function GetHeroLevel(id) return HERO_DATA[id].Level end
-function GetHeroSkillMastery(id, skill) return HERO_DATA[id].Skills[skill] end
-function HasHeroEquippedArtifact(id, artifact) return HERO_DATA[id].Artifacts[artifact] == 1 end
-function HasHeroActiveArtifactSet(id, artfset) return HERO_DATA[id].ArtfSets[artfset] == 1 end
-
------------------------------------------------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------------------------------------------
-
-function InitializeRandomSeed()
-    RANDOM_SEED = RANDOM_SEED + HERO_DATA[0].Level
-    RANDOM_SEED = RANDOM_SEED + HERO_DATA[1].Level
+function HasHeroEquippedArtifact(hero, artifact)
+    return HasArtefact(hero, artifact, 1)
 end
+
+function HasHeroActiveArtifactSet(hero, activset)
+    local set = ARTIFACT_SETS_ACTIVATIONS[activset].set
+    local count = ARTIFACT_SETS_ACTIVATIONS[activset].count
+    local faction = ARTIFACT_SETS_ACTIVATIONS[activset].faction
+    if GetArtifactSetItemsCount(hero, set, 1) >= count then
+        if faction == NEUTRAL or faction == GetHeroFaction(hero) then return 1 end
+    end
+    return nil
+end
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
 
 function GetArmySummary()
     for side = 0,1 do
@@ -20,7 +23,6 @@ function GetArmySummary()
             local nb = GetCreatureNumber(cr)
             local x, y = GetUnitPosition(cr)
             STARTING_ARMY[side][cr] = nb
-            RANDOM_SEED = RANDOM_SEED + side + type + nb + x + y
         end
     end
 end
@@ -29,7 +31,7 @@ function RandomCreature(side, seed)
     local creatures = GetUnits(side, CREATURE)
     local stacks = length(creatures)
     if stacks >= 2 then
-        return creatures[random(0,stacks-1,seed)]
+        return creatures[random(0,stacks-1)]
     elseif stacks == 1 then
         return creatures[0]
     else

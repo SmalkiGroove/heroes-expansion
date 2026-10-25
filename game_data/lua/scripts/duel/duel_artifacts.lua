@@ -231,7 +231,7 @@ function DuelHelmOfTheWarmage(player, hero)
     end
     if n4 <= 4 then for _,s in s4 do TeachHeroSpell(hero, s); n = n + 1 end
     else repeat
-        local s = s4[random(1,n4,n4)]
+        local s = s4[random(1,n4)]
         if not KnowHeroSpell(hero, s) then TeachHeroSpell(hero, s); n = n + 1 end
         until n == 4
     end
@@ -239,7 +239,7 @@ function DuelHelmOfTheWarmage(player, hero)
         if not KnowHeroSpell(hero, spell) then insert(s5, spell) n5 = n5 + 1 end
     end
     if n5 <= 1 then for _,s in s5 do TeachHeroSpell(hero, s); n = n + 1 end
-    else TeachHeroSpell(hero, s5[random(1,n5,n5)]); n = n + 1
+    else TeachHeroSpell(hero, s5[random(1,n5)]); n = n + 1
     end
     for _,spell in SPELLS_BY_TIER[1] do
         if not KnowHeroSpell(hero, spell) then TeachHeroSpell(hero, spell); n = n + 1 end

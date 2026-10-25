@@ -74,33 +74,6 @@ function insert(array, sample)
     return index
 end
 
-function replace(array, sample, rep, all)
-    for index, element in array do
-		if (element == sample) then
-			array[index] = rep
-            if not all then return end
-		end
-	end
-end
-
-RANDOM_SEED = 0
-function random(a,b,seed)
-    if (a == b) then return a end
-    local min = min(a,b)
-    local max = max(a,b)
-    if seed ~= nil then RANDOM_SEED = RANDOM_SEED + seed end
-    local diff = max - min
-    local r = mod(RANDOM_SEED, diff+1)
-    RANDOM_SEED = RANDOM_SEED + r - 1
-    return min + r
-end
-
-
-function WaitForTutorialMessageBox()
-	while IsTutorialMessageBoxOpen() do
-		sleep(1)
-	end
-end
 
 function close_file(fileName) end
 
@@ -122,11 +95,6 @@ COMPUTER = 1
 OBSERVER = 2
 
 
-EASY = 0
-NORMAL = 0
-HARD = 1
-EXPERT = 2
-IMPOSSIBLE = 2
 DIFFICULTY_EASY = 0
 DIFFICULTY_NORMAL = 1
 DIFFICULTY_HARD = 2

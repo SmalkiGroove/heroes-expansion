@@ -83,30 +83,6 @@ function GetDefenderBuilding(type) local temp = GetBuilding(DEFENDER, type) retu
 
 
 function createCombatAliases()
-    --
-    -- abilitiy IDs
-    --
-    ABILITY_BATTLE_DIVE = 15
-    ABILITY_BATTLE_DIVE_FINISH = 27
-    ABILITY_LAY_HANDS = 16
-    ABILITY_RESURRECT_ALLIES = 17
-    ABILITY_SCATTER_SHOT = 14
-    -- Inferno
-    ABILITY_GATING = 155
-    ABILITY_FEAR = 143
-    ABILITY_SUMMON_BALOR = 146
-    ABILITY_EXPLOSION = 147
-    ABILITY_EXPLOSION_EFFECT = 148
-    ABILITY_INFERNAL_CHAIN_END_EFFECT = 150
-    ABILITY_MANA_DESTROY = 160
-    ABILITY_MANA_STEAL = 157
-    ABILITY_TELEPORTING_MOVE = 163
-    -- Necropolis
-    ABILITY_LIFE_DRAIN = 168
-    ABILITY_MANAVOROUS = 169
-    ABILITY_DEATH_CLOUD = 170
-    ABILITY_HARM_TOUCH = 171
-
 
 	BUILDING_WALL = 1
 	BUILDING_GATE = 2
@@ -115,7 +91,6 @@ function createCombatAliases()
 	BUILDING_MOAT = 5
 	BUILDING_RIGHT_TOWER = 6
 	BUILDING_MAGIC_WALL = 7
-
 
     --
     -- Animation Action Types
@@ -147,48 +122,8 @@ function createCombatAliases()
 end
 
 function createTutorialAliases()
-    -- tutorials
-    --ShowTutorialMode = toggleTutorialMode
-    --HideTutorialMode = toggleTutorialMode
     ShowTutorialMessage = showMessage
     HideTutorialMessage = clearMessage
-end
-
-ENABLE_SCRIPT = 0
-
-INIT_CHECK = 0
-INIT_COUNTER = 0
-INIT_VALUE = 0
-
-function CheckEnableScript1()
-	INIT_CHECK = 1
-	if IsComputer(ATTACKER) or IsComputer(DEFENDER) then
-		ENABLE_SCRIPT = 1
-	else
-		INIT_VALUE = GetUnitManaPoints(ATTACKER_HERO_ID)
-		while INIT_CHECK == 1 do
-			INIT_COUNTER = INIT_COUNTER + 1
-			sleep(1)
-		end
-		SetUnitManaPoints(ATTACKER_HERO_ID, INIT_COUNTER)
-		log.debug("INIT_COUNTER="..INIT_COUNTER)
-	end
-end
-function CheckEnableScript2()
-	if ENABLE_SCRIPT == 0 then
-		INIT_CHECK = 2
-		local value = 0
-		repeat
-			value = GetUnitManaPoints(ATTACKER_HERO_ID)
-			sleep()
-		until value ~= INIT_VALUE
-		log.debug("Value="..value)
-		if value == INIT_COUNTER then
-			SetUnitManaPoints(ATTACKER_HERO_ID, INIT_VALUE)
-			ENABLE_SCRIPT = 1
-		end
-	end
-	log.info("ENABLE_SCRIPT="..ENABLE_SCRIPT)
 end
 
 dofile("/scripts/common.lua") sleep()

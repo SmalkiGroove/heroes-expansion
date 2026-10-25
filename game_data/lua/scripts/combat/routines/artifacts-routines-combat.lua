@@ -103,19 +103,19 @@ end
 
 function Routine_ArtfsetNecro4(side, hero)
     log.debug("$ Routine_ArtfsetNecro4")
-    SummonCreatureSideOffset(side, CREATURE_BONE_DRAGON, GetHeroLevel(side), 0)
+    SummonCreatureSideOffset(side, CREATURE_BONE_DRAGON, GetHeroLevel(hero), 0)
 end
 
 function Routine_ArtfsetNecro4X(side, hero)
     log.debug("$ Routine_ArtfsetNecro4X")
-    SummonCreatureSideOffset(side, CREATURE_SPECTRAL_DRAGON, GetHeroLevel(side), 0)
+    SummonCreatureSideOffset(side, CREATURE_SPECTRAL_DRAGON, GetHeroLevel(hero), 0)
 end
 
 function Routine_ArtfsetBestial(side, hero)
     log.debug("$ Routine_ArtfsetBestial")
     local beasts = { CREATURE_GRIFFIN, CREATURE_UNICORN, CREATURE_WYVERN, CREATURE_HYDRA, CREATURE_NIGHTMARE,
                      CREATURE_WOLF, CREATURE_MANTICORE, CREATURE_ARCANE_EAGLE, CREATURE_CAVE_SPIDER }
-    local beast = beasts[random(1,8,0)]
+    local beast = beasts[random(1,8)]
     local tier = GetTier(beast)
     local amount = 0.5 * ((10-tier) * (10-tier) * (10-tier) + tier)
     SummonCreatureSideOffset(side, beast, amount, 4)
@@ -131,7 +131,7 @@ function Routine_ArtfsetHaven4X(side, hero)
                 if cr ~= CURRENT_UNIT then n = insert(allies, cr) end
             end
             if n == 0 then return end
-            local target = allies[random(1,n,COMBAT_TURN)]
+            local target = allies[random(1,n)]
             UnitCastAimedSpell(CURRENT_UNIT, SPELL_ENCOURAGE, target)
             sleep() SetATB_ID(CURRENT_UNIT, 2)
         end
@@ -162,14 +162,14 @@ end
 function Routine_ArtfsetDragon4(side, hero, unit)
     log.debug("$ Routine_ArtfsetDragon4")
     if STARTING_ARMY[side][unit] then
-        sleep(random(1,30,GetCreatureNumber(unit)))
+        sleep(random(1,30))
         if ROUTINE_VARS.Legendragon[side] then return end
         local tier = GetTier(GetCreatureType(unit))
         local threshold = 0.5 * (8 - tier) * (9 - tier)
         if STARTING_ARMY[side][unit] > threshold then
             ROUTINE_VARS.Legendragon[side] = 1
             local name = "creature_DRAGON-SET_"..side
-            local amount = GetHeroLevel(side)
+            local amount = GetHeroLevel(hero)
             if GetHeroName(hero) == H_RAELAG then
                 local cr = IncreaseCreatureStack(side, CREATURES_BY_FACTION[DUNGEON][7], 1)
                 if cr then
@@ -190,11 +190,11 @@ end
 function Routine_ArtfsetDragon6(side, hero, unit)
     log.debug("$ Routine_ArtfsetDragon6")
     if GetUnitSide(unit) ~= side then
-        sleep(random(1,30,GetCreatureNumber(unit)))
+        sleep(random(1,30))
         if ROUTINE_VARS.Legendragon[side] then return end
         ROUTINE_VARS.Legendragon[side] = 1
         local name = "creature_DRAGON-SET_"..side
-        local amount = GetHeroLevel(side)
+        local amount = GetHeroLevel(hero)
         if GetHeroName(hero) == H_RAELAG then
             local cr = IncreaseCreatureStack(side, CREATURES_BY_FACTION[DUNGEON][7], 1)
             if cr then
@@ -216,7 +216,7 @@ function Routine_ArtfsetDragon8(side, hero)
     if ROUTINE_VARS.Legendragon[side] then return end
     ROUTINE_VARS.Legendragon[side] = 1
     local name = "creature_DRAGON-SET_"..side
-    local amount = GetHeroLevel(side)
+    local amount = GetHeroLevel(hero)
     if GetHeroName(hero) == H_RAELAG then
         local cr = IncreaseCreatureStack(side, CREATURES_BY_FACTION[DUNGEON][7], 1)
         if cr then
@@ -274,37 +274,37 @@ COMBAT_END_ARTFSET_ROUTINES = {
 
 function DoArtifactRoutine_CombatStart(side, name, id)
     for a,routine in COMBAT_START_ARTIFACT_ROUTINES do
-        if HasHeroEquippedArtifact(side, a) then routine(side, id) end
+        if HasHeroEquippedArtifact(name, a) then routine(side, id) end
     end
     for a,routine in COMBAT_START_ARTFSET_ROUTINES do
-        if HasHeroActiveArtifactSet(side, a) then routine(side, id) end
+        if HasHeroActiveArtifactSet(name, a) then routine(side, id) end
     end
 end
 
 function DoArtifactRoutine_CombatTurn(side, name, id)
     for a,routine in COMBAT_TURN_ARTIFACT_ROUTINES do
-        if HasHeroEquippedArtifact(side, a) then routine(side, id) end
+        if HasHeroEquippedArtifact(name, a) then routine(side, id) end
     end
     for a,routine in COMBAT_TURN_ARTFSET_ROUTINES do
-        if HasHeroActiveArtifactSet(side, a) then routine(side, id) end
+        if HasHeroActiveArtifactSet(name, a) then routine(side, id) end
     end
 end
 
 function DoArtifactRoutine_UnitDied(side, name, id, unit)
     for a,routine in UNIT_DIED_ARTIFACT_ROUTINES do
-        if HasHeroEquippedArtifact(side, a) then routine(side, id, unit) end
+        if HasHeroEquippedArtifact(name, a) then routine(side, id, unit) end
     end
     for a,routine in UNIT_DIED_ARTFSET_ROUTINES do
-        if HasHeroActiveArtifactSet(side, a) then routine(side, id, unit) end
+        if HasHeroActiveArtifactSet(name, a) then routine(side, id, unit) end
     end
 end
 
 function DoArtifactRoutine_CombatEnd(side, name, id, winner)
     for a,routine in COMBAT_END_ARTIFACT_ROUTINES do
-        if HasHeroEquippedArtifact(side, a) then routine(side, id, winner) end
+        if HasHeroEquippedArtifact(name, a) then routine(side, id, winner) end
     end
     for a,routine in COMBAT_END_ARTFSET_ROUTINES do
-        if HasHeroActiveArtifactSet(side, a) then routine(side, id, winner) end
+        if HasHeroActiveArtifactSet(name, a) then routine(side, id, winner) end
     end
 end
 

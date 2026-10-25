@@ -1,8 +1,8 @@
 
 function Routine_Houndmasters(side, hero, id, mastery)
     log.debug("$ Routine_Houndmasters")
-    local level = GetHeroLevel(side)
-    local amount = 10 + 2 * level + random(1, level, 99)
+    local level = GetHeroLevel(hero)
+    local amount = 10 + 2 * level + random(1, level)
     if hero == H_IVOR then
         SummonCreatureSideOffset(side, CREATURE_WOLF, amount, 1) sleep()
     end
@@ -122,7 +122,7 @@ COMBAT_END_SKILL_ROUTINES = {
 
 function DoSkillRoutine_CombatStart(side, name, id)
     for skill,routine in COMBAT_START_SKILL_ROUTINES do
-        local mastery = GetHeroSkillMastery(side, skill)
+        local mastery = GetHeroSkillMastery(name, skill)
         if mastery >= 1 then
             routine(side, name, id, mastery)
         end
@@ -131,7 +131,7 @@ end
 
 function DoSkillRoutine_CombatTurn(side, name, id)
     for skill,routine in COMBAT_TURN_SKILL_ROUTINES do
-        local mastery = GetHeroSkillMastery(side, skill)
+        local mastery = GetHeroSkillMastery(name, skill)
         if mastery >= 1 then
             routine(side, name, id, mastery)
         end
@@ -140,7 +140,7 @@ end
 
 function DoSkillRoutine_UnitDied(side, name, id, unit)
     for skill,routine in UNIT_DIED_SKILL_ROUTINES do
-        local mastery = GetHeroSkillMastery(side, skill)
+        local mastery = GetHeroSkillMastery(name, skill)
         if mastery >= 1 then
             routine(side, name, id, mastery, unit)
         end
@@ -149,7 +149,7 @@ end
 
 function DoSkillRoutine_CombatEnd(side, name, id, winner)
     for skill,routine in COMBAT_END_SKILL_ROUTINES do
-        local mastery = GetHeroSkillMastery(side, skill)
+        local mastery = GetHeroSkillMastery(name, skill)
         if mastery >= 1 then
             routine(side, name, id, mastery, winner)
         end

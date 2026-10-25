@@ -104,7 +104,6 @@ function AddHeroSkill(hero, skill, mastery)
     if START_TRIGGER_SKILLS_ROUTINES[skill] then
         START_TRIGGER_SKILLS_ROUTINES[skill](player, hero, mastery, level)
     end
-    Register(VarHeroSkillId(hero, skill), mastery)
     CheckForAbsolute(player, hero)
     CheckForUltimate(player, hero)
 end
@@ -119,7 +118,6 @@ function RemoveHeroSkill(hero, skill, mastery)
     if START_TRIGGER_SKILLS_ROUTINES[skill] then
         START_TRIGGER_SKILLS_ROUTINES[skill](player, hero, mastery, level)
     end
-    Register(VarHeroSkillId(hero, skill), mastery)
 end
 
 function BindHeroSkillTrigger(hero)
