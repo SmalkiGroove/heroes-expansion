@@ -11,6 +11,20 @@ There are two script runtimes in the game:
 - one for adventure map that is loaded when a new game is started, and terminted when the game ends. When a saved game is loaded, the script state and data are restored and the script execution is resumed. This runtime is used for scripts that implement custom mechanics on the adventure map, such as custom hero abilities, or custom events that happen on the adventure map.
 - one for combat that is loaded when a battle starts, and terminated when the battle ends. It does not have access to any variable defined in the adventure map scripts and has a separate set of function supported by the game engine. This runtime is used for scripts that implement custom mechanics in battles, such as custom creature abilities, or custom events that happen during battles.
 
+Engine internals (function tables, threads, triggers) are documented on the DLL side: `G:\__H5__\H5X_DLL\.cursor\rules\h5x-re-lua-engine.mdc`. Functions marked "H5X DLL" below are added by the H5X DLL (`um.dll`) and don't exist in the vanilla game.
+
+### How the scripts run
+
+- **Lua definitions win.** A function defined in a script replaces the engine function of the same name. Never define a Lua function named like an engine function (`random`, `GetHeroLevel`, ...), or the engine version becomes unreachable.
+- **`sleep(n)` waits n engine steps, not milliseconds, and a step is not the same in the two runtimes:**
+  - adventure map: one step per game segment, about 0.2 s (`sleep(10)` ≈ 2 s). Functions that change the game (`AddHeroCreatures`, `SetObjectPosition`, ...) are applied with the next segment, so a `sleep(1)` after them also guarantees the change is visible before the script reads it back.
+  - combat: one step per rendered frame (1 to 2 ms on a modern PC). Combat waits depend on the frame rate: `sleep(500)` is about 1 s at 500 fps but 8 s at 60 fps.
+  - Lua code between two `sleep` calls runs at full speed: a slow script is a script that sleeps a lot.
+- **Single player, hotseat and multiplayer:**
+  - single player: the adventure map script runs once, on the adventure screen.
+  - hotseat and network multiplayer: the adventure map script runs in the world's own script system, once per machine, and every machine plays the same calls on its own copy of the world (they stay in sync). Its top-level code runs once per machine.
+  - combat (H5X DLL): the combat script runs in single player and hotseat; in a network game, only on the machine of the human attacker (else the human defender), so its effects are not played once per human player. A combat against neutrals or the AI only opens on the fighting player's machine anyway.
+
 
 ## Entry point
 
@@ -147,7 +161,7 @@ The adventure map runtime provides the following predefined functions for intera
 
 - `startThread(function, arg1, arg2, ...)` → void: Start async thread executing function with arguments
   - Function can be provided as reference or callback
-- `sleep(milliseconds)` → void: Pause execution for specified milliseconds
+- `sleep(n)` → void: Pause the current thread for n game segments (about 0.2 s each, default 1), see [How the scripts run](#how-the-scripts-run)
 
 #### Logging and Debugging
 
@@ -156,12 +170,12 @@ The adventure map runtime provides the following predefined functions for intera
 
 #### Utility Functions (Limited Lua)
 
-The game provides mathematical and table functions since Lua 4.0 standard libraries are not available:
+Lua 4.0 standard libraries are not available. The engine provides `mod`, `sqrt`, `floor`, `ceil`, `intg`, `frac` and `round` (`common.lua` redefines `ceil` and `round`), the H5X DLL provides `random`, and `common.lua` defines the others:
 
+- `random(a, b)` → number (H5X DLL): Random integer in [min(a, b), max(a, b)], both included. It uses the game's own generator (the world's outside single player, so all machines get the same values) and replaces the vanilla `random(n)`
 - `contains(table, value)` → boolean: Check if table contains value
 - `insert(table, value)` → void: Add value to table
 - `length(table)` → number: Get table length
-- `random(min, max, seed)` → number: Get random number in range (defined in `common.lua`). It is a deterministic generator over the global `RANDOM_SEED`; the optional `seed` is *added* to `RANDOM_SEED` and every call mutates it, so two calls with the same seed still return different values
 - `power(base, exponent)` → number: Raise base to exponent
 - `mod(dividend, divisor)` → number: Get remainder of division
 - `round(value)` → number: Round to nearest integer
@@ -191,6 +205,17 @@ The combat runtime provides the following predefined functions for implementing 
 - `GetBuildingType(unit)` → number: Returns BUILDING_* constant for defensive building type
 - `GetHost(side)` → number: Returns HUMAN (0) or COMPUTER (1) indicating player type controlling side
 - `exist(unit)` → truthy/nil: Returns non-nil if unit exists in combat, nil if dead/removed
+
+#### Combat heroes (H5X DLL)
+
+Ports of the adventure map functions of the same name, with the same arguments and results. They read the hero's adventure map data (base stats, skills, artifacts, spells), not values changed during the battle. `hero` is one of the two combat heroes, given by its script name (`H_*` constants, or what `GetHeroName` returns) or by its combat unit name, `ATTACKER_HERO_ID` / `DEFENDER_HERO_ID` (`"attacker-hero"` / `"defender-hero"`). Any other hero raises a script error.
+
+- `GetHeroLevel(hero)` → number: Hero level
+- `GetHeroStat(hero, stat)` → number: Hero stat (0 to 9). The `STAT_*` constants (`STAT_EXPERIENCE` 0, `STAT_ATTACK` 1, `STAT_DEFENCE` 2, `STAT_SPELL_POWER` 3, `STAT_KNOWLEDGE` 4, `STAT_LUCK` 5, `STAT_MORALE` 6, `STAT_MOVE_POINTS` 7, `STAT_MANA_POINTS` 8) are only defined in `advmap-startup.lua`: define them in the combat scripts before using them there
+- `GetHeroSkillMastery(hero, skill)` → number: Skill mastery level (0 = not learnt)
+- `HasArtefact(hero, artifact, equippedOnly)` → 1/nil: Hero has the artifact; the backpack counts unless `equippedOnly` is 1 (default 0)
+- `GetArtifactSetItemsCount(hero, set, equippedOnly)` → number: Pieces of the set; only equipped ones unless `equippedOnly` is 0 (default 1)
+- `KnowHeroSpell(hero, spell)` → 1/nil: Hero knows the spell
 
 #### Unit Mana and Energy
 
@@ -228,7 +253,7 @@ The combat runtime provides the following predefined functions for implementing 
 - `playAnimation(unit, animation_name, action_type)` → void: Play animation on unit
   - animation_name: "cast", "happy", "hit", etc.
   - action_type: ONESHOT, IDLE, NON_ESSENTIAL, ONESHOT_STILL
-  - Example: playAnimation(unit, "cast", ONESHOT) sleep(500)
+  - Example: playAnimation(unit, "cast", ONESHOT) sleep(500) (the wait counts frames, see [How the scripts run](#how-the-scripts-run))
 - `ShowFlyingSign(text_file_path, unit, duration_frames)` → void: Display floating text above unit
   - text_file_path: e.g., "/Text/Game/Scripts/Combat/TextKey.txt"
   - duration typically in frames (e.g., 9 frames)
@@ -238,6 +263,7 @@ The combat runtime provides the following predefined functions for implementing 
 - `setATB(unit, value)` → void: Set unit's turn order value (0.0-2.0+)
   - Key values: ATB_INSTANT=1 (next turn), ATB_NEXT=0.999 (soon), ATB_HALF=0.5 (medium), ATB_ZERO=0 (just moved)
   - Accepts decimals for fine control
+- `changeATB(unit, delta)` → void (H5X DLL): Add `delta` (positive or negative) to the unit's current turn order value; the result is at least 0 and at most 1.25
 
 #### Combat Control
 
@@ -261,9 +287,8 @@ The combat runtime provides the following predefined functions for implementing 
 - `startThread(function, arg1, arg2, ...)` → void: Start async thread execution
   - All combat movement/spell functions are callback-compatible
   - Example: startThread(DoCastTargetSpell, hero, SPELL_MAGIC_ARROW, 10, target)
-- `sleep([milliseconds])` → void: Pause execution
-  - milliseconds optional (default 1)
-  - Examples: sleep() for 1ms, sleep(500) for 500ms
+- `sleep([n])` → void: Pause the current thread for n rendered frames (default 1)
+  - Examples: sleep() waits one frame; sleep(500) waits 500 frames, about 1 s at 500 fps and 8 s at 60 fps
 
 #### Logging and Debugging
 
@@ -272,12 +297,12 @@ The combat runtime provides the following predefined functions for implementing 
 
 #### Utility Functions (Limited Lua)
 
-The game provides mathematical and table functions since Lua 4.0 standard libraries are not available:
+Same helpers as the adventure map runtime (`common.lua` is loaded by both):
 
+- `random(a, b)` → number (H5X DLL): Random integer in [min(a, b), max(a, b)], both included. Draws from a copy of the combat's own generator taken at the first call of each combat, so script rolls never change the battle's luck, morale or damage rolls
 - `contains(table, value)` → boolean: Check if table contains value
 - `insert(table, value)` → void: Add value to table
 - `length(table)` → number: Get table length
-- `random(min, max, seed)` → number: Get random number in range (defined in `common.lua`). It is a deterministic generator over the global `RANDOM_SEED`; the optional `seed` is *added* to `RANDOM_SEED` and every call mutates it, so two calls with the same seed still return different values
 - `power(base, exponent)` → number: Raise base to exponent
 - `mod(dividend, divisor)` → number: Get remainder of division
 - `round(value)` → number: Round to nearest integer
@@ -325,12 +350,19 @@ For every unit turn in combat, the engine calls the `UnitMove(unit)` function fr
 
 When a unit dies, the engine calls the `UnitDeath(unit)` function from `combat-startup.lua`, with `unit` being a generated identifier of the unit.
 
+After each attack of a creature, war machine or hero (H5X DLL), the engine calls `UnitAttack(attacker, defender)` with the identifiers of both units. The attack is already resolved (damage dealt, deaths applied) and it runs before the `UnitDeath` calls of the same attack. `combat-startup.lua` defines an empty `UnitAttack` because the game warns about a missing function on every attack.
+
+`DoPrepare`, `DoStart` and `UnitMove` make the combat wait until the function (and its sleeps) ends; `UnitDeath` and `UnitAttack` don't.
+
 From each of these functions, we can call other functions defined in the loaded scripts to implement custom mechanics that should happen when these events are triggered.
 
 
 ## Fetch data from adventure map script in combat script
 
-Since the combat script runtime is separate from the adventure map script runtime, we cannot directly access any variable defined in the adventure map scripts. However, we can use the `Register(variable, value)` function to register any variable from the adventure map scripts that we want to access in the combat scripts. This function allows us to store a variable in a way that it can be accessed from the combat runtime when a combat starts.
+Since the combat script runtime is separate from the adventure map script runtime, we cannot directly access any variable defined in the adventure map scripts. Two ways to get adventure map data in combat:
+
+- the combat heroes' data (level, stats, skills, artifacts, sets, spells) is read directly with the [combat hero functions](#combat-heroes-h5x-dll) (H5X DLL);
+- anything else goes through game variables: `SetGameVar(name, value)` in the adventure map script, `GetGameVar(name)` in the combat script. Game variables are stored by the engine, not in Lua.
 
 ## Mod conventions and helpers
 

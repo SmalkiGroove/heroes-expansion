@@ -307,8 +307,6 @@ function Init()
 	end
 end
 
--- Script enabler: Init runs once for the whole game, even with one script instance per player
--- Trigger(GAME_START_TRIGGER, "Init")
-Init()
 
+Init()
 UnblockGame()
