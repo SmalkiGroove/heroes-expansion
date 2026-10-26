@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdventureFlybyScene>
+	<Scenery href="/Maps/CombatArenas/Boss_c6m5_Sovereign3/Boss_c6m5_Sovereign3.xdb#xpointer(/AdvMapDesc)"/>
+	<cameraFlyupRole>
+		<Model/>
+		<AnimSet/>
+		<Player>PLAYER_NONE</Player>
+	</cameraFlyupRole>
+	<skyRole>
+		<Model/>
+		<AnimSet/>
+		<Player>PLAYER_NONE</Player>
+	</skyRole>
+	<MountPoint>
+		<Pos>
+			<x>43</x>
+			<y>52</y>
+		</Pos>
+		<Rot>0</Rot>
+	</MountPoint>
+	<AdditionalHeight>0</AdditionalHeight>
+	<Music/>
+	<AmbientSoundSet/>
+	<TextFormatFileRef href=""/>
+	<ObstaclesGroup/>
+	<CamerasSet/>
+	<MeleeAttackPoints>
+		<Use>false</Use>
+		<AttackerPoint>
+			<x>0</x>
+			<y>0</y>
+		</AttackerPoint>
+		<DefenderPoint>
+			<x>0</x>
+			<y>0</y>
+		</DefenderPoint>
+	</MeleeAttackPoints>
+</AdventureFlybyScene>

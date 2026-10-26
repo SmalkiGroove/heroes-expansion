@@ -52,6 +52,7 @@ python tools/generators/generate-skills-ui.py
 python tools/generators/check-ui-refs.py        # broken /UI/Doc references and unknown window names
 python tools/generators/editor-heroes.py        # map editor hero palette (16 classes + heroes of Any.xdb), accepts --dry-run
 python tools/generators/editor-artifacts.py     # map editor artifact palette (placeable artifacts of Artifacts.xdb), accepts --dry-run
+python tools/generators/fix-arenas.py           # adapts combat arenas to the 14x11 grid, accepts --dry-run / --preview DIR
 python tools/debug/validate.py                  # XML syntax of every .xdb in game_data
 python tools/translator.py                      # machine-translates texts-EN files newer than their translation
 ```
@@ -72,6 +73,7 @@ CI (`.github/workflows/`) only packages paks, on manual dispatch. It runs no tes
 - **UI window names are global** across all paks. They are toggled by name through `UISSendUIMessage`, so keep them unique.
 - In the Lua scripts, hero IDs are `H_*` constants defined in `game_data/lua/scripts/game/heroes.lua`. Starting armies are in `game_data/lua/scripts/advmap/handlers/starting-armies.lua`.
 - When working on something the user plans to test in game, list which paks need syncing.
+- **Combat arenas:** the H5X battlefield is 14x11 tiles instead of 12x10 (`game_binary/patches/h5toe/legacy/combat/h5m_battlefield-size.yml`; the engine stores width + 4 and height + 2 for the war machine columns and border rows, hence `GRID_X_MIN = 2` in `combat-data.lua`). An arena is an adventure map in `Maps/CombatArenas/` (terrain `.bin` with a float heightmap, static decoration objects). A scene (`AdventureFlybyScene`: `Scenes/CombatArenas/*.xdb`, `GameMechanics/CombatArenaTypes/*.xdb`, siege arenas in the town files) places the grid with its `MountPoint`. The grid grows from its center: the vanilla grid covers about x −1..11 and y −11.5..−1.5 around the mount point (measured, not traced in the exe), and the H5X grid covers x −2..12 and y −12..−1. `fix-arenas.py` shifts mount points and removes the decorations that now stand on the grid; it works from the vanilla files, so rerunning it changes nothing. Fixed obstacles (boat and abyss arenas) are in grid coordinates and were moved one column right.
 
 ## Status of the work in progress
 
@@ -79,4 +81,5 @@ CI (`.github/workflows/`) only packages paks, on manual dispatch. It runs no tes
 - The **Artifacts** tab (views by class, slot and set, hover descriptions, set bonuses) is generated but not yet tested in game.
 - The hero spec panel has no title window, unlike the skills and spells panels.
 - The **Skills** tab uses the build layout for every faction, Neutral included (`generate-skills-ui.py`, see ui.md): a grid of skill buttons, and the tree of the selected skill below it. It has been tested in game for Haven only. The level-up box has a single button opening the encyclopedia's Skills section, without the other sections: buttons with a `ButtonGroupID` inside a dialog made the next load crash (see ui.md). The old trees were removed.
+- The **combat arenas** were adapted to the 14x11 grid (`fix-arenas.py`) but not yet tested in game. Unknown: whether the grid placement measured on the vanilla arenas is exact (a 1-tile error would leave objects on one edge), and how the boat and abyss fixed obstacles line up vertically (11 rows centered on 10 shift them by half a tile).
 - The **Skills** tab grays out the branches a class can't learn. 12 basic masteries have no gray texture yet, so they use a `<Color>` tint (`generate-skills-ui.py --debug` lists them).

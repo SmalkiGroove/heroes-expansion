@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdventureFlybyScene ObjectRecordID="1000061">
+	<Scenery href="/Maps/CombatArenas/Dirt_Small_01/Dirt_Small_01.xdb#xpointer(/AdvMapDesc)"/>
+	<cameraFlyupRole>
+		<Model/>
+		<AnimSet/>
+		<Player>PLAYER_NONE</Player>
+	</cameraFlyupRole>
+	<skyRole>
+		<Model/>
+		<AnimSet/>
+		<Player>PLAYER_NONE</Player>
+	</skyRole>
+	<MountPoint>
+		<Pos>
+			<x>32</x>
+			<y>41</y>
+		</Pos>
+		<Rot>0</Rot>
+	</MountPoint>
+	<AdditionalHeight>0</AdditionalHeight>
+	<Music/>
+	<AmbientSoundSet href="/Sounds/_(Ambient)/TerrainAmbients/Dirt.xdb#xpointer(/AmbientSoundSet)"/>
+	<TextFormatFileRef href=""/>
+	<ObstaclesGroup href="/ArenaObjects/_(ArenaObstaclesGroup)/DirtArena/DirtObstacles.xdb#xpointer(/ArenaObstaclesGroup)"/>
+	<CamerasSet/>
+	<MeleeAttackPoints>
+		<Use>false</Use>
+		<AttackerPoint>
+			<x>0</x>
+			<y>0</y>
+		</AttackerPoint>
+		<DefenderPoint>
+			<x>0</x>
+			<y>0</y>
+		</DefenderPoint>
+	</MeleeAttackPoints>
+</AdventureFlybyScene>
