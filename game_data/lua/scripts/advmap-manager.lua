@@ -186,7 +186,7 @@ function NewDayTrigger()
 end
 
 function CombatResultsHandler(combatIndex)
-	if IsDuelMode() then return startThread(DuelAfterCombat) end
+	if IsDuelMode() then startThread(DuelAfterCombat) return end
 	local hero = GetSavedCombatArmyHero(combatIndex, 1)
 	if hero ~= nil then
 		WON_BATTLES[hero] = WON_BATTLES[hero] + 1

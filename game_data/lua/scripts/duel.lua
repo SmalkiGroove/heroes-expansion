@@ -302,7 +302,10 @@ end
 function DuelMain()
     log.debug("DUEL: bootstrap")
 
-    for player = 1,2 do DuelInfoWindow0(player) end
+    for player = 1,2 do
+        DuelInfoWindow0(player)
+        startThread(DuelStartingBonus, player)
+    end
 
     for player = 1,2 do
         SetObjectOwner(DUEL_TOWN_NAME[player][0], 0)
