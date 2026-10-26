@@ -11,7 +11,7 @@ This repository contains files related to a mod for the game Heroes of Might and
 - `.github/`: Contains the Github actions workflows and Copilot instructions.
 - `documentation/`: Markdown documents based on the mod data files.
 - `editor/`: Files relative to the game's editor app, ignore this folder.
-- `game_binary/`: Custom exe patcher and associated patch files.
+- `game_binary/`: Custom exe patcher and associated patch files, and the game launchers H5X.exe and H5X-Duel.exe (`launcher/`).
 - `game_data/`: Game data files, which are the main focus of this repository. These files are used by the mod and are the source of truth for the mod's content. More details in the [data](#data) section below.
 - `game_texts/`: Text files used by the game, mostly names and descriptions. More details in the [texts](#texts) section below.
 - `maps/`: Custom maps for the game, ignore this folder.
