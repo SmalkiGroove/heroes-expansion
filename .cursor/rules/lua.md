@@ -235,6 +235,8 @@ Ports of the adventure map functions of the same name, with the same arguments a
 
 - `UnitCastAimedSpell(caster, spell_id, target_unit)` → void: Cast targeted spell from caster on target unit
 - `UnitCastAreaSpell(caster, spell_id, x, y)` → void: Cast area-effect spell at grid coordinates
+  - A cell where the spell can't be cast raises a script error, which stops the thread
+  - x and / or y can be -1 (H5X DLL), as in `SummonCreature`: any column and / or row. The matching cells are tried in random order and the spell is cast on the first one the game accepts; if none is accepted, nothing is cast and there is no error
 - `UnitCastGlobalSpell(caster, spell_id)` → void: Cast global spell affecting entire battlefield without targeting
 - `UseCombatAbility(unit, ability_id, [x], [y])` → void: Trigger ability (active or passive)
   - Parameters x, y optional based on ability type

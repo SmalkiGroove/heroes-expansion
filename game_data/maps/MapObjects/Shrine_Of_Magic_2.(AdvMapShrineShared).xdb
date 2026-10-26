@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdvMapShrineShared ObjectRecordID="3">
+	<Model href="/_(Model)/Buildings/Shrine_Of_Magic.(Model).xdb#xpointer(/Model)"/>
+	<AnimSet/>
+	<blockedTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+		<Item>
+			<x>0</x>
+			<y>1</y>
+		</Item>
+		<Item>
+			<x>1</x>
+			<y>1</y>
+		</Item>
+	</blockedTiles>
+	<holeTiles>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+		<Item>
+			<x>1</x>
+			<y>0</y>
+		</Item>
+		<Item>
+			<x>0</x>
+			<y>1</y>
+		</Item>
+		<Item>
+			<x>1</x>
+			<y>1</y>
+		</Item>
+	</holeTiles>
+	<activeTiles>
+		<Item>
+			<x>1</x>
+			<y>0</y>
+		</Item>
+	</activeTiles>
+	<passableTiles/>
+	<PossessionMarkerTile>
+		<x>0</x>
+		<y>0</y>
+	</PossessionMarkerTile>
+	<Effect href="/Effects/_(Effect)/Buildings/ShrineofMagic02.xdb#xpointer(/Effect)"/>
+	<EffectWhenOwned href="/Effects/_(Effect)/Buildings/ShrineofMagic02.xdb#xpointer(/Effect)"/>
+	<messagesFileRef>
+		<Item href="/Text/Game/MagicShrines/Level2/Name.txt"/>
+		<Item href="/Text/Game/MagicShrines/Level2/Description.txt"/>
+		<Item href="/Text/Game/MagicShrines/Level2/SpellLearned.txt"/>
+		<Item href="/Text/Game/MagicShrines/FLYOFF_Common/SpellAlreadyLearned.txt"/>
+		<Item href="/Text/Game/MagicShrines/FLYOFF_Common/SpellCantBeLearned.txt"/>
+		<Item href="/Text/Game/MagicShrines/FLYOFF_Common/SpellCantBeLearned2.txt"/>
+	</messagesFileRef>
+	<WaterBased>false</WaterBased>
+	<ApplyHeroTrace>false</ApplyHeroTrace>
+	<SoundEffect href="/Sounds/_(Sound)/Buildings/ShrineOfMagic.xdb#xpointer(/Sound)"/>
+	<flybyMessageFileRef href="/Text/Game/MagicShrines/Level2/Flyby______3176.txt"/>
+	<ObjectTypeFileRef href="/Text/Visibility_Types/Buildings.txt"/>
+	<TerrainAligned>false</TerrainAligned>
+	<FlyPassable>true</FlyPassable>
+	<AdventureSoundEffect/>
+	<RazedStatic/>
+	<Icon128/>
+	<Level>3</Level>
+	<RunicMagic>false</RunicMagic>
+	<MaxRunicMagicLevel>0</MaxRunicMagicLevel>
+</AdvMapShrineShared>

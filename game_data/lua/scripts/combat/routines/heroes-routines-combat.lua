@@ -848,19 +848,12 @@ end
 
 function Routine_InfernoGating(side, hero)
     log.debug("$ Routine_InfernoGating")
-    local gated_creatures = {}
     local gating_tier = 2 * GetHeroSkillMastery(hero, SKILL_GATING)
     for i,cr in GetUnits(side, CREATURE) do
         local id = GetCreatureType(cr)
         if GetFaction(id) == INFERNO and GetTier(id) <= gating_tier then
-            gated_creatures[cr] = 0
-            local nb = GetCreatureNumber(cr)
-            while gated_creatures[cr] == 0 do
-                local x = random(GRID_X_MIN+2, GRID_X_MAX-2)
-                local y = random(GRID_Y_MIN, GRID_Y_MAX)
-                startThread(TryGating, cr, x, y, gated_creatures)
-                sleep(7)
-            end
+            local x = random(GRID_X_MIN+2, GRID_X_MAX-2)
+            UnitCastAreaSpell(cr, SPELL_ABILITY_GATING, x, -1)
         end
     end
 end
