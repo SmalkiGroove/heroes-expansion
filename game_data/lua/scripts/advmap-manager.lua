@@ -1,4 +1,4 @@
-ExecConsoleCommand("@BlockGame()")
+BlockGame()
 
 NB_HUMAN = 0
 FIRST_PLAYER = 0
@@ -186,7 +186,7 @@ function NewDayTrigger()
 end
 
 function CombatResultsHandler(combatIndex)
-	if IsDuelMode() then return ExecConsoleCommand("@DuelAfterCombat()") end
+	if IsDuelMode() then return startThread(DuelAfterCombat) end
 	local hero = GetSavedCombatArmyHero(combatIndex, 1)
 	if hero ~= nil then
 		WON_BATTLES[hero] = WON_BATTLES[hero] + 1
@@ -299,9 +299,8 @@ function Init()
 		InitializeHeroes()
 		InitializeConvertibles()
 		InitializeMapObjects()
-		-- ExecConsoleCommand("@UnblockGame()") UnblockGame()
 		log.info("Initializers done. The game can start. Have fun !")
-		if IsDuelMode() then ExecConsoleCommand("@DuelMain()") end
+		if IsDuelMode() then startThread(DuelMain) end
 	else
 		startThread(LoadedGame_GameVars)
 	end

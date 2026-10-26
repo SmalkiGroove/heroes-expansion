@@ -6,7 +6,7 @@ function DuelOverrideStart()
     SetObjectEnabled("DUEL_START", nil)
 end
 function DuelTriggerStart(hero, obj)
-    ExecConsoleCommand("@DuelStart("..GetObjectOwner(hero)..", '"..hero.."')")
+    DuelStart(GetObjectOwner(hero), hero)
 end
 
 
@@ -16,7 +16,7 @@ function DuelOverrideMonolith()
     end
 end
 function DuelTriggerMonolith(hero, obj)
-    ExecConsoleCommand("@DuelNextStage("..GetObjectOwner(hero)..", '"..hero.."')")
+    DuelNextStage(GetObjectOwner(hero), hero)
 end
 
 
@@ -27,7 +27,7 @@ function DuelOverrideLighthouse()
     end
 end
 function DuelTriggerLighthouse(hero, obj)
-    ExecConsoleCommand("@DuelNextStage("..GetObjectOwner(hero)..", '"..hero.."')")
+    DuelNextStage(GetObjectOwner(hero), hero)
 end
 
 

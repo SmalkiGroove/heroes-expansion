@@ -41,7 +41,7 @@ end
 function StartingBonus(player)
 	log.trace("/scripts/advmap/advmap-utils.lua: StartingBonus")
 	log.debug("$ StartingBonus for player "..player)
-	if IsDuelMode() then return ExecConsoleCommand("@DuelStartingBonus("..player..")") end
+	if IsDuelMode() then startThread(DuelStartingBonus, player) return end
 	local gold = GetPlayerResource(player, GOLD)
 	local diff = mod(gold, 10000)
 	if diff > 1 then -- bonus resources chosen

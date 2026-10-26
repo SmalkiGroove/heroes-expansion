@@ -16,6 +16,8 @@ DUEL_STAGE_CASTLE = 4
 DUEL_STAGE_BATTLE = 5
 DUEL_STAGE_END = 6
 
+DUEL_PLAYER_STAGE = {0, 0}
+
 function DuelInfoWindow0(player)
     startThread(Popup, player, "/Text/Duel/InfoStart.txt")
 end
@@ -156,7 +158,7 @@ function DuelLevelUp(player, hero, level)
 end
 
 function DuelNextStage(player, hero)
-    local stage = DuelGetPlayerStage(player)
+    local stage = DUEL_PLAYER_STAGE[player]
     if stage == DUEL_STAGE_START then DuelSetup(player, hero)
     elseif stage == DUEL_STAGE_SETUP then DuelAdventure(player, hero)
     elseif stage == DUEL_STAGE_ADVENTURE then DuelStaging(player, hero)
@@ -186,7 +188,7 @@ function DuelSetup(player, hero)
     if DUEL_HERO_SETUP_EFFECTS[hero] then
         DUEL_HERO_SETUP_EFFECTS[hero](player, hero)
     end
-    DuelSetPlayerStage(player, DUEL_STAGE_SETUP)
+    DUEL_PLAYER_STAGE[player] = DUEL_STAGE_SETUP
 end
 
 function DuelAdventure(player, hero)
@@ -198,7 +200,7 @@ function DuelAdventure(player, hero)
         if HasHeroSkill(hero, skill) then func(player, hero) end
     end
     ChangeHeroStat(hero, STAT_MOVE_POINTS, 9999)
-    DuelSetPlayerStage(player, DUEL_STAGE_ADVENTURE)
+    DUEL_PLAYER_STAGE[player] = DUEL_STAGE_ADVENTURE
     DuelAdventureStart(player, hero)
 end
 
@@ -237,7 +239,7 @@ function DuelStaging(player, hero)
     end
     PlayerDailyResources(player)
     ChangeHeroStat(hero, STAT_MOVE_POINTS, 9999)
-    DuelSetPlayerStage(player, DUEL_STAGE_STAGING)
+    DUEL_PLAYER_STAGE[player] = DUEL_STAGE_STAGING
 end
 
 function DuelCastle(player, hero)
@@ -247,7 +249,7 @@ function DuelCastle(player, hero)
     if DUEL_HERO_CASTLE_EFFECTS[hero] then
         DUEL_HERO_CASTLE_EFFECTS[hero](player, hero)
     end
-    DuelSetPlayerStage(player, DUEL_STAGE_CASTLE)
+    DUEL_PLAYER_STAGE[player] = DUEL_STAGE_CASTLE
 end
 
 function DuelBattle(player, hero)
@@ -257,49 +259,41 @@ function DuelBattle(player, hero)
     for skill, func in DUEL_SKILL_BATTLE_EFFECTS do
         if HasHeroSkill(hero, skill) then func(player, hero) end
     end
-    DuelSetPlayerStage(player, DUEL_STAGE_BATTLE)
+    DUEL_PLAYER_STAGE[player] = DUEL_STAGE_BATTLE
 end
 
 function DuelEnd(player, hero)
     log.debug("DUEL: player "..player.." entered end stage")
-    DuelSetPlayerStage(player, DUEL_STAGE_END)
+    DUEL_PLAYER_STAGE[player] = DUEL_STAGE_END
 end
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
 function DuelLoop(player)
     local hero = DUEL_HERO[player]
-    local stage = 0
-    while stage == DUEL_STAGE_START do
+    while DUEL_PLAYER_STAGE[player] == DUEL_STAGE_START do
         ChangeHeroStat(hero, STAT_MOVE_POINTS, 100)
         sleep(5)
-        stage = DuelGetPlayerStage(player)
     end
-    while stage == DUEL_STAGE_SETUP do
+    while DUEL_PLAYER_STAGE[player] == DUEL_STAGE_SETUP do
         ChangeHeroStat(hero, STAT_MOVE_POINTS, 100)
         sleep(5)
-        stage = DuelGetPlayerStage(player)
     end
-    while stage == DUEL_STAGE_ADVENTURE do
+    while DUEL_PLAYER_STAGE[player] == DUEL_STAGE_ADVENTURE do
         if GetHeroStat(hero, STAT_MOVE_POINTS) < 100 then DuelAdventureDay(player, hero) end
         sleep(5)
-        stage = DuelGetPlayerStage(player)
     end
-    while stage == DUEL_STAGE_STAGING do
+    while DUEL_PLAYER_STAGE[player] == DUEL_STAGE_STAGING do
         ChangeHeroStat(hero, STAT_MOVE_POINTS, 250)
         sleep(5)
-        stage = DuelGetPlayerStage(player)
     end
-    while stage == DUEL_STAGE_CASTLE do
+    while DUEL_PLAYER_STAGE[player] == DUEL_STAGE_CASTLE do
         ChangeHeroStat(hero, STAT_MOVE_POINTS, 250)
         sleep(5)
-        stage = DuelGetPlayerStage(player)
     end
-    while stage == DUEL_STAGE_BATTLE do
+    while DUEL_PLAYER_STAGE[player] == DUEL_STAGE_BATTLE do
         ChangeHeroStat(hero, STAT_MOVE_POINTS, 999)
-        ScanHeroArtifacts(hero)
         sleep(5)
-        stage = DuelGetPlayerStage(player)
     end
 end
 
@@ -308,10 +302,7 @@ end
 function DuelMain()
     log.debug("DUEL: bootstrap")
 
-    for player = 1,2 do
-        DuelSetPlayerStage(player, DUEL_STAGE_START)
-        DuelInfoWindow0(player)
-    end
+    for player = 1,2 do DuelInfoWindow0(player) end
 
     for player = 1,2 do
         SetObjectOwner(DUEL_TOWN_NAME[player][0], 0)
