@@ -30,6 +30,8 @@ map_size: [10, 36]           # MinMapSize, MaxMapSize, in area units (below)
 underground: false           # informative only: the exe doesn't read it
 grail: false                 # GraalOnMap
 test: false                  # TestTemplate: hides the template
+teams:                       # optional, by player count: team of each start zone in player order (see Teams)
+  4: [1, 1, 2, 2]
 profiles:                    # zone presets; a profile can extend others with `profile: name` or `profile: [a, b]`
   home: {profile: start, mines: {wood: 1, ore: 1, gold: 1}}
 per_player:                  # zones repeated for each player (`copies`, default players max)
@@ -37,6 +39,7 @@ per_player:                  # zones repeated for each player (`copies`, default
     - {id: home, profile: home}          # -> home1, home2, ...
   connections:
     - {from: home, to: next.home, guard: 20}   # next.<id>: that zone of the next player (ring)
+    - {from: home, to: center, guard: 4}       # an id that isn't a per-player zone: a shared zone
 zones:                       # zones after the per-player ones
   - {id: center, profile: rich, size: 25}
 connections:
@@ -70,6 +73,16 @@ connections:
 | `den_of_thieves`, `observatories` | `DenOfThieves`, `RedwoodObservatoryDensity` | 0 | Not traced |
 
 The exe also has a zone field `Shipyard` (bool) that no vanilla template uses; the tools don't write it.
+
+## Teams
+
+The map defines the teams (`CustomTeams` and each player's `Team` in `map.xdb`); in the lobby, players only pick which player they are. Vanilla RMG maps have `CustomTeams` false, so everyone plays alone. `teams` gives, for a player count, the team of each start zone in player order (the n-th start zone by index takes player n); a player count without an entry keeps the vanilla behaviour. The generator writes it as `<Teams>` at the end of the `.xdb`:
+
+```xml
+<Teams><Item><Players>4</Players><Team><Item>1</Item><Item>1</Item><Item>2</Item><Item>2</Item></Team></Item></Teams>
+```
+
+The engine's XDB reader skips elements no serializer asks for, so vanilla ignores `<Teams>`; the H5X DLL reads it and sets the teams of the generated map (**the DLL patch `RmgTeams.cpp` is disabled**: in game the teams were still missing; its brief is `tools/generators/rmg-templates/dll-teams-brief.md`). Teams are numbered from 1. The checks reject a list whose length isn't the player count, a count outside `players` or above the number of start zones, and warn when everyone is in one team or a team number is skipped. The preview lists the start zones of each team in their player colors.
 
 ## Connections and map size
 

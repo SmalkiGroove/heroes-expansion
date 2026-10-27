@@ -80,7 +80,7 @@ ROOT_DEFAULTS = {
     "grail": False,           # GraalOnMap
     "test": False,            # TestTemplate: hidden from the template list
 }
-ROOT_KEYS = set(ROOT_DEFAULTS) | {"title", "description", "profiles", "per_player", "zones", "connections"}
+ROOT_KEYS = set(ROOT_DEFAULTS) | {"title", "description", "profiles", "per_player", "zones", "connections", "teams"}
 
 
 class TemplateError(Exception):
@@ -224,14 +224,16 @@ def load_template(path, shared_profiles):
         return result
 
     connections = []
-    # Per-player connections link the zones of one player; "next.<id>" is that zone of the next player
+    # Per-player connections link the zones of one player; "next.<id>" is that zone of the next player, and an
+    # id that is not a per-player zone is a shared zone
+    per_player_ids = {entry["id"] for entry in per_player.get("zones") or []}
     pairs = set()
     for entry in per_player.get("connections") or []:
         for player in range(1, copies + 1):
             def player_id(ref):
                 if isinstance(ref, str) and ref.startswith("next."):
                     return f"{ref[5:]}{player % copies + 1}"
-                return f"{ref}{player}"
+                return f"{ref}{player}" if ref in per_player_ids else ref
             source_id, dest_id = player_id(entry["from"]), player_id(entry["to"])
             pair = frozenset((source_id, dest_id))
             if pair in pairs:  # next.<id> with 2 players: 1 -> 2 and 2 -> 1 are the same connection
@@ -243,7 +245,33 @@ def load_template(path, shared_profiles):
 
     template["zones"] = zones
     template["connections"] = connections
+    template["teams"] = load_teams(source.get("teams"), template, stem)
     return template
+
+
+def load_teams(teams, template, stem):
+    """{player count: team of each start zone, in player order}, sorted by player count.
+
+    Written as <Teams>, an element the engine skips: the H5X DLL reads it and fixes the teams of the map."""
+    if not teams:
+        return {}
+    if not isinstance(teams, dict):
+        raise TemplateError(f"{stem}: teams must map a player count to a list of teams")
+    starts = sum(1 for zone in template["zones"] if zone["start"])
+    low, high = template["players"]
+    result = {}
+    for count, team_list in sorted(teams.items()):
+        where = f"{stem}: teams for {count} players"
+        if not isinstance(count, int) or not low <= count <= high:
+            raise TemplateError(f"{where}: the template is for {low}-{high} players")
+        if count > starts:
+            raise TemplateError(f"{where}: the template has {starts} start zones")
+        if not isinstance(team_list, list) or len(team_list) != count:
+            raise TemplateError(f"{where}: give {count} teams, one per start zone in player order")
+        if not all(isinstance(team, int) and team >= 1 for team in team_list):
+            raise TemplateError(f"{where}: teams are numbers from 1")
+        result[count] = team_list
+    return result
 
 
 def map_sides(template, underground=False):
@@ -283,6 +311,11 @@ def check_template(template):
     unreachable = [zones[i - 1]["id"] for i in range(1, len(zones) + 1) if i not in linked]
     if unreachable:
         warnings.append(f"zones not connected to zone 1: {', '.join(map(str, unreachable))}")
+    for count, team_list in template["teams"].items():
+        if len(set(team_list)) < 2:
+            warnings.append(f"teams for {count} players: everyone is in the same team")
+        elif sorted(set(team_list)) != list(range(1, len(set(team_list)) + 1)):
+            warnings.append(f"teams for {count} players: team numbers skip a number")
     for c in connections:
         if c["from"] == c["to"]:
             warnings.append(f"zone '{zones[c['from'] - 1]['id']}' is connected to itself")

@@ -51,3 +51,35 @@ rich:
   profile: treasure
   size: 20
   treasure_blocks: 40000
+
+# Open World templates: small start area (wood, ore, an abandoned mine, some treasures)
+open_world_home:
+  start: true
+  town: true
+  size: 8
+  mines: {wood: 1, ore: 1}
+  abandoned_mines: 1
+  treasures: 25
+  chests: 10
+  treasure_blocks: 6000
+
+# Open World templates: the gigantic shared area (one neutral town, every mine, many challenges)
+open_world:
+  size: 100
+  town: true
+  town_guard: 40          # town guard power 1000 x 40
+  mines: {wood: 2, ore: 2, mercury: 2, crystal: 2, sulfur: 2, gem: 2, gold: 4}
+  abandoned_mines: 2
+  dwellings: [2, 2, 2, 1, 1, 1, 0]
+  upgrades: 150
+  treasures: 40
+  chests: 30
+  prisons: 2
+  cartographer: 1
+  shops: 100
+  shrines: 50
+  luck_morale: 60
+  resource_buildings: 100
+  treasure_buildings: 50
+  treasure_blocks: 450000  # each block's guard is 2.5 x its value: bigger blocks, stronger guards
+  den_of_thieves: 1

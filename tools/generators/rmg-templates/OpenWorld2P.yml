@@ -1,0 +1,18 @@
+# Open World for exactly 2 players: each player starts in a small area (wood, ore, an abandoned mine, some
+# treasures) that opens on one gigantic shared area (profiles open_world_home / open_world of _profiles.yml).
+# One template per player count, so that no start area is left empty.
+title: Open World (2 players)
+description: 2 players start in small areas around one gigantic open world full of treasures, mines and challenges.
+players: [2, 2]
+map_size: [10, 102]      # 96 to 320 without underground
+underground: false       # informative only: an underground level may put the world below and link it by gates
+
+per_player:
+  zones:
+    - {id: home, profile: open_world_home}
+  connections:
+    # Zones that touch get a border passage (a road), zones that don't touch a monolith
+    - {from: home, to: world, guard: 4}
+
+zones:
+  - {id: world, profile: open_world}

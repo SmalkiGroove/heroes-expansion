@@ -7,6 +7,8 @@ description: Two to four players in a ring around a rich center.
 players: [2, 4]
 map_size: [10, 36]
 underground: false
+teams:                   # player count: team of each start zone, in player order (needs the H5X DLL)
+  4: [1, 1, 2, 2]        # home1 + home2 vs home3 + home4, neighbours in the ring
 
 profiles:
   # The shared `start` profile, with gold instead of the rare resources

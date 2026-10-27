@@ -52,6 +52,7 @@ def read_template(path):
         "test": to_bool(root["TestTemplate"]),
         "zones": zones,
         "connections": connections,
+        "teams": {int(item["Players"]): [int(t) for t in items(item["Team"])] for item in items(root.get("Teams"))},
     }
 
 
@@ -98,6 +99,9 @@ def to_yaml(template, stem):
         lines.append(f"{key}: {scalar(template[key])}")
     if template["test"]:
         lines.append("test: true")
+    if template["teams"]:
+        lines.append("teams:")
+        lines += [f"  {count}: {scalar(team_list)}" for count, team_list in template["teams"].items()]
 
     # Zones with the same fields share a profile, named after the first zone's role
     groups = {}

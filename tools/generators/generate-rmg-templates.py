@@ -11,7 +11,8 @@ nothing is removed: with --dry-run --preview, that draws a template without writ
 
 --preview FILE draws the zone graph of every template in an HTML page: disc area by zone size, start
 zones in player colors and in player order, towns with a white ring, treasure block value under the
-zone, connection guard strength on the line. Hovering a zone or a connection lists its fields.
+zone, connection guard strength on the line, and the teams of each player count above the graph.
+Hovering a zone or a connection lists its fields.
 """
 
 import argparse
@@ -156,6 +157,9 @@ h1 { font-size: 20px; margin: 0 0 4px; }
 .card h2 { font-size: 16px; margin: 0; }
 .meta { color: var(--muted); font-size: 13px; }
 .warn { color: var(--warn); font-size: 13px; }
+.teams { font-size: 13px; margin-top: 4px; }
+.chip { color: #fff; border-radius: 4px; padding: 0 5px; font-size: 12px; }
+.vs { color: var(--muted); }
 svg { width: 100%; height: auto; display: block; }
 .edge line { stroke: var(--line); stroke-width: 2; }
 .edge rect { fill: var(--label-bg); stroke: var(--line); }
@@ -165,6 +169,22 @@ svg { width: 100%; height: auto; display: block; }
 .zone.start text { fill: #fff; font-weight: 600; }
 .zone text.value { fill: var(--muted); font-size: 10px; font-weight: 400; }
 """
+
+
+def teams_html(template):
+    """One line per player count: the start zones of each team, in their player colors."""
+    starts = [zone for zone in template["zones"] if zone["start"]]
+    lines = []
+    for count, team_list in template["teams"].items():
+        groups = {}
+        for player, team in enumerate(team_list):
+            zone = starts[player]
+            label = zone["id"] if isinstance(zone["id"], str) else str(zone["id"])
+            color = PLAYER_COLORS[player % len(PLAYER_COLORS)]
+            groups.setdefault(team, []).append(f'<span class="chip" style="background:{color}">{html.escape(label)}</span>')
+        teams = ' <span class="vs">vs</span> '.join(" ".join(chips) for _, chips in sorted(groups.items()))
+        lines.append(f'<div class="teams">{count} players: {teams}</div>')
+    return "".join(lines)
 
 
 def write_preview(templates, warnings, path):
@@ -179,7 +199,7 @@ def write_preview(templates, warnings, path):
         warn = "".join(f'<div class="warn">{html.escape(w)}</div>' for w in warnings.get(template["name"], []))
         cards.append(f'<section class="card"><h2>{html.escape(template["name"])}</h2>'
                      f'<div class="meta">{html.escape(str(title))}</div><div class="meta">{html.escape(meta)}</div>'
-                     f'{warn}{preview_svg(template)}</section>')
+                     f'{teams_html(template)}{warn}{preview_svg(template)}</section>')
     page = (f'<!doctype html><html lang="en"><head><meta charset="utf-8">'
             f'<meta name="viewport" content="width=device-width, initial-scale=1">'
             f'<title>RMG Templates</title><style>{PREVIEW_CSS}</style></head><body>'

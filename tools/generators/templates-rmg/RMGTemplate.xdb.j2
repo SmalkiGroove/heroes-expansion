@@ -44,4 +44,18 @@
 	<MaxMapSize>{{ map_size[1] }}</MaxMapSize>
 	<Underground>{{ underground }}</Underground>
 	<TestTemplate>{{ test }}</TestTemplate>
+{% if teams %}
+	<Teams>
+{% for count, team_list in teams.items() %}
+		<Item>
+			<Players>{{ count }}</Players>
+			<Team>
+{% for team in team_list %}
+				<Item>{{ team }}</Item>
+{% endfor %}
+			</Team>
+		</Item>
+{% endfor %}
+	</Teams>
+{% endif %}
 </RMGTemplate>
