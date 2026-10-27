@@ -58,6 +58,7 @@ python tools/generators/generate-rmg-templates.py  # RMG templates from tools/ge
 python tools/generators/import-rmg-templates.py    # RMG template .xdb -> YAML source
 python tools/debug/validate.py                  # XML syntax of every .xdb in game_data
 python tools/translator.py                      # machine-translates texts-EN files newer than their translation
+python tools/translation/glossary.py --data <TotE>/data --texts EN=<vanilla texts-EN> --texts PL=<vanilla texts-PL> --texts RU=<vanilla texts-RU> --texts FR=<vanilla texts-FR>  # translation glossary (see text.md)
 ```
 
 - `game_binary/launcher/build.ps1` builds the launchers `H5X.exe` and `H5X-Duel.exe` (MSVC, output in `game_binary/bin/`) and copies them to the game's root folder.
