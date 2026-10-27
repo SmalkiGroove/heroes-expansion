@@ -90,6 +90,7 @@ Var_IdolOfFortuneBonus = {
 function Trigger_Monsters(hero, obj)
     log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_Monsters")
     log.debug("$ Trigger_Monsters")
+    if not IsObjectExists(obj) then return end
     local x, y, z = GetObjectPosition(obj)
     ONGOING_BATTLES[hero] = {x=x, y=y, z=z}
     startThread(Trigger_Monsters_Ongoing, hero, obj)

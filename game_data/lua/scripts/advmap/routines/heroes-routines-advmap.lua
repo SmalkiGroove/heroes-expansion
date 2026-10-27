@@ -258,7 +258,7 @@ function Routine_UpgradeMagicGuild(player, hero)
                 local guild = GetTownBuildingLevel(town, TOWN_BUILDING_MAGIC_GUILD)
                 if guild < 5 then UpgradeTownBuilding(town, TOWN_BUILDING_MAGIC_GUILD) end
                 local nb = power(2, guild) - 1
-                AddHeroCreatures(hero, CREATURE_DRUID, nb)
+                if nb > 0 then AddHeroCreatures(hero, CREATURE_DRUID, nb) end
             end
         end
     end

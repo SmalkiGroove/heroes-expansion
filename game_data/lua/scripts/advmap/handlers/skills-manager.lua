@@ -96,6 +96,7 @@ end
 function AddHeroSkill(hero, skill, mastery)
     log.trace("/scripts/advmap/handlers/skills-manager.lua: AddHeroSkill")
     log.debug("Hero "..hero.." has learnt skill '"..skill.."' rank "..mastery..".")
+    if not IsObjectExists(hero) then return end
     local player = GetObjectOwner(hero)
     local level = GetHeroLevel(hero)
     if IsDuelMode() then
@@ -110,6 +111,7 @@ end
 function RemoveHeroSkill(hero, skill, mastery)
     log.trace("/scripts/advmap/handlers/skills-manager.lua: RemoveHeroSkill")
     log.debug("Hero "..hero.." has removed skill '"..skill.."' rank "..mastery..".")
+    if not IsObjectExists(hero) then return end
     local player = GetObjectOwner(hero)
     local level = GetHeroLevel(hero)
     if IsDuelMode() then

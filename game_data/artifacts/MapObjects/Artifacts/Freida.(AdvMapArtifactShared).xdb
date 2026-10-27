@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <AdvMapArtifactShared>
 	<Model href="/_(Model)/Artefacts/Tank.(Model).xdb#xpointer(/Model)" />
-	<AnimSet href="/Characters/Heroes/Freyda_LOD-adv.xdb#xpointer(/AnimSet)"/>
+	<AnimSet href="/_(AnimSet)/Artefacts/General.(AnimSet).xdb#xpointer(/AnimSet)"/>
 	<blockedTiles/>
 	<holeTiles/>
 	<activeTiles>
@@ -15,7 +15,7 @@
 		<x>0</x>
 		<y>0</y>
 	</PossessionMarkerTile>
-	<Effect/>
+	<Effect href="/Effects/_(Effect)/Artefacts/General/Gold.xdb#xpointer(/Effect)"/>
 	<EffectWhenOwned/>
 	<messagesFileRef>
 		<Item href="/Text/Game/Artifacts/Freida/Name.txt"/>
