@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RMGParameters>
+	<RMGVersion>0</RMGVersion>
+	<Mine1LevelMinRadius>7</Mine1LevelMinRadius>
+	<Mine1LevelMaxRadius>20</Mine1LevelMaxRadius>
+	<Mine2LevelMinRadius>15</Mine2LevelMinRadius>
+	<Mine2LevelMaxRadius>40</Mine2LevelMaxRadius>
+	<Mine3LevelMinRadius>25</Mine3LevelMinRadius>
+	<Mine3LevelMaxRadius>45</Mine3LevelMaxRadius>
+	<BasicLeverGuardPower>1000</BasicLeverGuardPower>
+	<ConnectionGuardLevel>2</ConnectionGuardLevel>
+	<Mine1LevelGuardLevel>2</Mine1LevelGuardLevel>
+	<Mine2LevelGuardLevel>9</Mine2LevelGuardLevel>
+	<MineGoldGuardLevel>18</MineGoldGuardLevel>
+	<JunctionMinBorderDistance>5</JunctionMinBorderDistance>
+	<TeleportMinBorderDistance>2</TeleportMinBorderDistance>
+	<TeleportMaxBorderDistance>10</TeleportMaxBorderDistance>
+	<DistBetweenLakes>10</DistBetweenLakes>
+	<DistBetweenTreasureBlocks>8</DistBetweenTreasureBlocks>
+	<CreatureMinStackAmount>5</CreatureMinStackAmount>
+	<CreatureMaxStackAmount>70</CreatureMaxStackAmount>
+	<MinDistanceBetweenBigObjects>15</MinDistanceBetweenBigObjects>
+	<MinDistanceBetweenTreasureBlocks>8</MinDistanceBetweenTreasureBlocks>
+	<GroundTerrainLight href="/Lights/_(AmbientLight)/Day_light_AdvMap01(EugeneTest).xdb#xpointer(/AmbientLight)"/>
+	<UndergroundTerrainLight href="/Lights/_(AmbientLight)/Tests/underground.xdb#xpointer(/AmbientLight)"/>
+	<PointLightParams>
+		<ZoneRadius>40</ZoneRadius>
+		<MinDist>11</MinDist>
+		<zMin>2</zMin>
+		<zMax>7</zMax>
+		<LightRadiusMin>10</LightRadiusMin>
+		<LightRadiusMax>18</LightRadiusMax>
+		<Colors>
+			<Item>
+				<x>1</x>
+				<y>0.615686</y>
+				<z>0.615686</z>
+			</Item>
+			<Item>
+				<x>0.666667</x>
+				<y>1</y>
+				<z>0.666667</z>
+			</Item>
+			<Item>
+				<x>0.666667</x>
+				<y>0.666667</y>
+				<z>1</z>
+			</Item>
+			<Item>
+				<x>1</x>
+				<y>1</y>
+				<z>0.643137</z>
+			</Item>
+			<Item>
+				<x>1</x>
+				<y>0.584314</y>
+				<z>1</z>
+			</Item>
+			<Item>
+				<x>0.682353</x>
+				<y>1</y>
+				<z>1</z>
+			</Item>
+			<Item>
+				<x>0.811765</x>
+				<y>0.988235</y>
+				<z>0.619608</z>
+			</Item>
+			<Item>
+				<x>0.913725</x>
+				<y>0.815686</y>
+				<z>0.439216</z>
+			</Item>
+			<Item>
+				<x>1</x>
+				<y>0.823529</y>
+				<z>0.827451</z>
+			</Item>
+		</Colors>
+	</PointLightParams>
+	<MapName href="rmgMapName.txt"/>
+	<MapDescription href="rmgMapDesc.txt"/>
+	<ScenarioCaption href="rmgScenarioCaption.txt"/>
+	<ScenarioDescription href="rmgScenarioDescription.txt"/>
+	<ObjectiveCaption href="ObjectiveCaption.txt"/>
+	<ObjectiveDescription href="ObjectiveDescription.txt"/>
+	<CreatureStackParams>
+		<BasicAmount>25</BasicAmount>
+		<MinAmount>6</MinAmount>
+		<MaxAmount>100</MaxAmount>
+	</CreatureStackParams>
+	<DefaultTransitiveTile href="/MapObjects/_(AdvMapTile)/Dirt/DarkGround.xdb#xpointer(/AdvMapTile)"/>
+	<TransitiveTileIntensity>200</TransitiveTileIntensity>
+	<MapSizeNames>
+		<Item href="Item00.txt"/>
+		<Item href="/UI/RMGScreen/TemplateInfo/MapSize/Item01.txt"/>
+		<Item href="/UI/RMGScreen/TemplateInfo/MapSize/Item02.txt"/>
+		<Item href="/UI/RMGScreen/TemplateInfo/MapSize/Item03.txt"/>
+		<Item href="/UI/RMGScreen/TemplateInfo/MapSize/Item04.txt"/>
+		<Item href="UI/RMGScreen/TemplateInfo/MapSize/Item05.txt"/>
+		<Item href="UI/RMGScreen/TemplateInfo/MapSize/Item06.txt"/>
+	</MapSizeNames>
+	<TextWith href="TextWith.txt"/>
+	<TextWithout href="TextWithout.txt"/>
+	<DefaultRMGObjective href="DefaultRMGObjective.txt"/>
+	<Templates/>
+</RMGParameters>

@@ -1,0 +1,53 @@
+# Zone profiles that every template source can use (a source's own profiles take precedence).
+# A profile lists zone fields; it can extend other profiles with `profile: <name>` or `profile: [a, b]`.
+# Fields left out keep their default (see .cursor/rules/rmg.md). Values taken from the vanilla templates.
+
+# Player start zone with its town (S1P2Z2M1)
+start:
+  start: true
+  town: true
+  mines: {wood: 1, ore: 1, mercury: 1, crystal: 1, sulfur: 1, gem: 1}
+  dwellings: [1, 0, 0, 0, 0, 0, 0]
+  upgrades: 40
+  treasures: 15
+  chests: 5
+  shops: 10
+  shrines: 10
+  luck_morale: 60
+  resource_buildings: 80
+  treasure_buildings: 10
+  treasure_blocks: 10000
+
+# Treasure zone without a town, next to a start zone (S3-5P4Z12B4)
+treasure:
+  size: 14
+  mines: {wood: 1, ore: 1, gold: 1}
+  dwellings: [0, 0, 0, 0, 0, 1, 0]
+  upgrades: 80
+  treasures: 20
+  prisons: 1
+  shops: 30
+  shrines: 30
+  treasure_buildings: 30
+  treasure_blocks: 15000
+
+# Neutral town zone with rare resources (S3-5P4Z12B4)
+town:
+  size: 14
+  town: true
+  town_guard: 10
+  mines: {mercury: 1, crystal: 1, sulfur: 1, gem: 1}
+  dwellings: [0, 1, 0, 0, 0, 0, 0]
+  upgrades: 80
+  treasures: 20
+  shops: 20
+  shrines: 30
+  luck_morale: 30
+  resource_buildings: 40
+  treasure_blocks: 10000
+
+# Rich treasure zone, usually in the middle (a treasure zone with twice the treasure blocks)
+rich:
+  profile: treasure
+  size: 20
+  treasure_blocks: 40000

@@ -1,0 +1,32 @@
+# Example (not generated: the generator reads only rmg-templates/*.yml). To draw it without writing it:
+#   python tools/generators/generate-rmg-templates.py --dry-run --preview preview.html tools/generators/rmg-templates/examples/Crossroads.yml
+# Each player has a start zone and a treasure zone, the players are in a ring, and every treasure zone
+# leads to a rich zone in the middle.
+title: Crossroads
+description: Two to four players in a ring around a rich center.
+players: [2, 4]
+map_size: [10, 36]
+underground: false
+
+profiles:
+  # The shared `start` profile, with gold instead of the rare resources
+  home:
+    profile: start
+    mines: {wood: 1, ore: 1, gold: 1}
+
+per_player:              # zones home1..home4 and side1..side4 (one per player of `players` max)
+  zones:
+    - {id: home, profile: home}
+    - {id: side, profile: treasure, treasure_blocks: 20000}
+  connections:
+    - {from: home, to: side, guard: 3}
+    - {from: home, to: next.home, guard: 20}   # next.<id>: that zone of the next player
+
+zones:
+  - {id: center, profile: rich, size: 25, treasure_blocks: 80000}
+
+connections:
+  - {from: side1, to: center, guard: 15}
+  - {from: side2, to: center, guard: 15}
+  - {from: side3, to: center, guard: 15}
+  - {from: side4, to: center, guard: 15}

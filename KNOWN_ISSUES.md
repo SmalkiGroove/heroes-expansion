@@ -13,7 +13,6 @@
 
 ### Something does not work
 
-- RMG doesn't spawn monsters sometimes
 
 ### Bugs
 
@@ -41,3 +40,4 @@
 # FIXED/CHANGED
 
 - Huge scripts rework, fixed many issues in multiplayer
+- RMG doesn't spawn monsters sometimes

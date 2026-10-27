@@ -9,6 +9,7 @@ This file is the project's knowledge base. Each topic guide below has the detail
 | In-game UI and encyclopedia | [.cursor/rules/ui.md](.cursor/rules/ui.md) | XDB UI anatomy, show/hide messages, buttons, encyclopedia structure, generators |
 | Lua scripts | [.cursor/rules/lua.md](.cursor/rules/lua.md) | Lua 4.0 runtimes (adventure map and combat), entry points, engine functions |
 | Texts | [.cursor/rules/text.md](.cursor/rules/text.md) | UTF-16 LE text files, formatting tags, translation |
+| Random map templates | [.cursor/rules/rmg.md](.cursor/rules/rmg.md) | YAML template sources, generator and importer, meaning of the template fields |
 
 `.github/copilot-instructions.md` and `.cursor/rules/` serve other assistants. Keep them consistent with this file.
 
@@ -53,6 +54,8 @@ python tools/generators/check-ui-refs.py        # broken /UI/Doc references and 
 python tools/generators/editor-heroes.py        # map editor hero palette (16 classes + heroes of Any.xdb), accepts --dry-run
 python tools/generators/editor-artifacts.py     # map editor artifact palette (placeable artifacts of Artifacts.xdb), accepts --dry-run
 python tools/generators/fix-arenas.py           # adapts combat arenas to the 14x11 grid, accepts --dry-run / --preview DIR
+python tools/generators/generate-rmg-templates.py  # RMG templates from tools/generators/rmg-templates/*.yml (see rmg.md), accepts --dry-run / --preview FILE
+python tools/generators/import-rmg-templates.py    # RMG template .xdb -> YAML source
 python tools/debug/validate.py                  # XML syntax of every .xdb in game_data
 python tools/translator.py                      # machine-translates texts-EN files newer than their translation
 ```
@@ -69,6 +72,7 @@ CI (`.github/workflows/`) only packages paks, on manual dispatch. It runs no tes
 - **Line endings and encodings:** the repo stores files as-is (`core.autocrlf=false`). Generated `.xdb` files are UTF-8 with CRLF line endings, and game texts are UTF-16 LE. Never re-encode a file.
 - **Game paths always use `/`.** Building one with `os.path.join` on Windows produces `\` (this caused a real bug). Use `game_path()` from `tools/generators/common.py`.
 - **xmltodict pitfalls:** it returns a dict for a single `<Item>`, a list for several, and `None` for an empty node. Normalize with `as_list()` / `items()` from `common.py`.
+- **Generated RMG templates:** `game_data/maps/RMG/Templates/*.xdb` and `game_texts/texts-EN/RMG/Templates/` come from `tools/generators/rmg-templates/*.yml`. Edit the YAML and rerun `generate-rmg-templates.py`.
 - **Generated encyclopedia files** (most of `www-heroes` and `www-skills`) are rewritten on every generator run, and stale ones are deleted. Edit the generator or its templates, never the output. See ui.md for which files are hand-made.
 - **Verifying a generator change:** on unchanged data, a generator run produces no git diff. Stage the current state, run the generator, then review `git diff --ignore-cr-at-eol`.
 - **Duel files:** archives apply globally, even the content of a map that is not being played. The duel texts replace global texts (hero specs, skills, artifacts, lobby bonuses), so `sync-texts-duel.ps1` puts their pak in `<game>\duel\data\`, not in `data\`. The duel map is kept in `<game>\duel\Maps\H5X_Duel.h5m`, so it can only be played with the duel texts (move it to `Maps\` to edit it in the map editor). A translated duel pak (`h5x-texts-duel-DE.pak`) works the same way, but only one language should be in `duel\data\`. `H5X-Duel.exe` (game root) moves every file of `duel\` to the same path in the game folder, runs `bin\H5X.exe`, and moves the files back when the game exits. `duel\installed.txt` lists the moved files while the game runs, and the next launch of either launcher puts back the leftovers of a killed duel launcher. The regular launcher `H5X.exe` (game root) only does that cleanup, then starts `bin\H5X.exe` and exits. Both come from `game_binary/launcher/launcher.cpp` (`H5X_DUEL` define for the duel one). Their icons are embedded (a `.bat` file can't have its own icon): `H5X.ico` is a copy of `Other Resources/Heroes5.ico`, `H5X-Duel.ico` is the 64 px vanilla texture `UI/Common/Icons/Spell_Buff_Icons/Town Offence_Defence_spec _01` (the artwork of the duel lobby texture) upscaled 4x with Real-ESRGAN (`RealESRGAN_x4plus`), alpha upscaled bicubic to keep the soft shadow.

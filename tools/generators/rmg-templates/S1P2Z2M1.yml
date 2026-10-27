@@ -1,0 +1,44 @@
+# Imported from S1P2Z2M1.xdb by import-rmg-templates.py
+players: [2, 2]
+map_size: [5, 14]
+underground: false
+grail: false
+
+profiles:
+  start:
+    start: true
+    town: true
+    mines: {wood: 1, ore: 1, mercury: 1, crystal: 1, sulfur: 1, gem: 1}
+    dwellings: [1, 0, 0, 0, 0, 0, 0]
+    upgrades: 40
+    treasures: 15
+    chests: 5
+    shops: 10
+    shrines: 10
+    luck_morale: 60
+    resource_buildings: 80
+    treasure_buildings: 10
+    treasure_blocks: 10000
+  zone:
+    mines: {wood: 1, ore: 1, gold: 1}
+    dwellings: [0, 0, 0, 0, 0, 0, 0]
+    upgrades: 100
+    shops: 30
+    shrines: 30
+    treasure_buildings: 30
+    treasure_blocks: 30000
+
+zones:
+  # 1
+  - profile: start
+  # 2
+  - profile: start
+  # 3
+  - profile: zone
+  # 4
+  - profile: zone
+
+connections:
+  - {from: 1, to: 2, guard: 12}
+  - {from: 3, to: 1, guard: 3}
+  - {from: 2, to: 4, guard: 3}

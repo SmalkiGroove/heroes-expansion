@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RMGCustomArmyTemplate>
+	<Stacks>
+		<Item>
+			<Creature>
+				<Item>CREATURE_PEASANT</Item>
+				<Item>CREATURE_MILITIAMAN</Item>
+			</Creature>
+			<MinAmount>8</MinAmount>
+			<MaxAmount>50</MaxAmount>
+		</Item>
+		<Item>
+			<Creature>
+				<Item>CREATURE_ARCHER</Item>
+				<Item>CREATURE_MARKSMAN</Item>
+			</Creature>
+			<MinAmount>5</MinAmount>
+			<MaxAmount>30</MaxAmount>
+		</Item>
+		<Item>
+			<Creature>
+				<Item>CREATURE_ROYAL_GRIFFIN</Item>
+				<Item>CREATURE_GRIFFIN</Item>
+			</Creature>
+			<MinAmount>2</MinAmount>
+			<MaxAmount>10</MaxAmount>
+		</Item>
+	</Stacks>
+</RMGCustomArmyTemplate>

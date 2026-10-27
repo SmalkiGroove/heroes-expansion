@@ -1,0 +1,50 @@
+# Imported from S4-6P2-8Z8K2L.xdb by import-rmg-templates.py
+name_file: S4-7P2-8Z8K2_3.txt
+players: [2, 8]
+map_size: [36, 65]
+underground: true
+grail: false
+
+profiles:
+  start:
+    start: true
+    town: true
+    mines: {wood: 1, ore: 1, mercury: 1, crystal: 1, sulfur: 1, gem: 1, gold: 1}
+    abandoned_mines: 1
+    dwellings: [1, 0, 0, 1]
+    upgrades: 40
+    treasures: 30
+    shops: 30
+    shrines: 35
+    luck_morale: 30
+    resource_buildings: 40
+    treasure_buildings: 20
+    treasure_blocks: 50000
+
+zones:
+  # 1
+  - profile: start
+  # 2
+  - profile: start
+  # 3
+  - profile: start
+  # 4
+  - profile: start
+  # 5
+  - profile: start
+  # 6
+  - profile: start
+  # 7
+  - profile: start
+  # 8
+  - profile: start
+
+connections:
+  - {from: 1, to: 2, guard: 8, two_way: false}
+  - {from: 2, to: 3, guard: 8, two_way: false}
+  - {from: 3, to: 4, guard: 8, two_way: false}
+  - {from: 4, to: 5, guard: 8, two_way: false}
+  - {from: 5, to: 6, guard: 8, two_way: false}
+  - {from: 6, to: 7, guard: 8, two_way: false}
+  - {from: 7, to: 8, guard: 8, two_way: false}
+  - {from: 1, to: 8, guard: 5, two_way: false}

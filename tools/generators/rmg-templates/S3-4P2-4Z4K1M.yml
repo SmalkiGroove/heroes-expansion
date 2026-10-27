@@ -1,0 +1,57 @@
+# Imported from S3-4P2-4Z4K1M.xdb by import-rmg-templates.py
+name_file: S1-4P2-4ZK1_2.txt
+players: [2, 4]
+map_size: [28, 42]
+underground: true
+grail: false
+
+profiles:
+  start:
+    start: true
+    town: true
+    mines: {wood: 2, ore: 2, mercury: 2, crystal: 2, sulfur: 2, gem: 2, gold: 2}
+    dwellings: [2, 2, 2]
+    upgrades: 50
+    treasures: 30
+    chests: 5
+    prisons: 1
+    shops: 40
+    shrines: 40
+    luck_morale: 40
+    resource_buildings: 30
+    treasure_buildings: 40
+    treasure_blocks: 100000
+  start2:
+    start: true
+    town: true
+    town_guard: 10
+    mines: {wood: 2, ore: 2, mercury: 2, crystal: 2, sulfur: 2, gem: 2, gold: 2}
+    dwellings: [2, 2, 2]
+    upgrades: 50
+    treasures: 30
+    chests: 5
+    prisons: 1
+    shops: 40
+    shrines: 40
+    luck_morale: 40
+    resource_buildings: 30
+    treasure_buildings: 40
+    treasure_blocks: 100000
+
+zones:
+  # 1
+  - profile: start
+  # 2
+  - profile: start
+  # 3
+  - profile: start2
+  # 4
+  - profile: start2
+
+connections:
+  - {from: 1, to: 2, guard: 25, two_way: false}
+  - {from: 2, to: 3, guard: 25, two_way: false}
+  - {from: 3, to: 4, guard: 25, two_way: false}
+  - {from: 1, to: 4, guard: 25, two_way: false}
+  - {from: 1, to: 3, guard: 25, two_way: false}
+  - {from: 2, to: 4, guard: 25, two_way: false}

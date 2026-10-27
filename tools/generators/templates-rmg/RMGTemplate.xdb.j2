@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RMGTemplate>
+	<NameFileRef href="{{ name_file }}"/>
+	<DescriptionFileRef href="{{ description_file }}"/>
+	<Name>{{ name }}</Name>
+	<Zones>
+{% for zone in zones %}
+		<Item>
+			<Index>{{ loop.index }}</Index>
+{% for tag, kind, value in zone %}
+{% if kind in ("mines", "list") %}
+{% if value %}
+			<{{ tag }}>
+{% for v in value %}
+				<Item>{{ v }}</Item>
+{% endfor %}
+			</{{ tag }}>
+{% else %}
+			<{{ tag }}/>
+{% endif %}
+{% else %}
+			<{{ tag }}>{{ value }}</{{ tag }}>
+{% endif %}
+{% endfor %}
+		</Item>
+{% endfor %}
+	</Zones>
+	<Connections>
+{% for c in connections %}
+		<Item>
+			<SourceZoneIndex>{{ c.from }}</SourceZoneIndex>
+			<DestZoneIndex>{{ c.to }}</DestZoneIndex>
+			<TwoWay>{{ c.two_way }}</TwoWay>
+			<GuardStrenght>{{ c.guard }}</GuardStrenght>
+			<Guarded>{{ c.guarded }}</Guarded>
+			<Wide>{{ c.wide }}</Wide>
+		</Item>
+{% endfor %}
+	</Connections>
+	<GraalOnMap>{{ grail }}</GraalOnMap>
+	<MinPlayers>{{ players[0] }}</MinPlayers>
+	<MaxPlayers>{{ players[1] }}</MaxPlayers>
+	<MinMapSize>{{ map_size[0] }}</MinMapSize>
+	<MaxMapSize>{{ map_size[1] }}</MaxMapSize>
+	<Underground>{{ underground }}</Underground>
+	<TestTemplate>{{ test }}</TestTemplate>
+</RMGTemplate>

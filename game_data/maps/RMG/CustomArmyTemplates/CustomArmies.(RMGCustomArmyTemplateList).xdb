@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RMGCustomArmyTemplateList>
+	<Templates>
+		<Item>
+			<Stacks>
+				<Item>
+					<Creature>
+						<Item>CREATURE_MARKSMAN</Item>
+						<Item>CREATURE_ARCHER</Item>
+					</Creature>
+					<MinAmount>5</MinAmount>
+					<MaxAmount>20</MaxAmount>
+				</Item>
+				<Item>
+					<Creature>
+						<Item>CREATURE_PEASANT</Item>
+						<Item>CREATURE_MILITIAMAN</Item>
+					</Creature>
+					<MinAmount>8</MinAmount>
+					<MaxAmount>45</MaxAmount>
+				</Item>
+			</Stacks>
+		</Item>
+		<Item>
+			<Stacks>
+				<Item>
+					<Creature>
+						<Item>CREATURE_ARCHER</Item>
+					</Creature>
+					<MinAmount>10</MinAmount>
+					<MaxAmount>30</MaxAmount>
+				</Item>
+				<Item>
+					<Creature>
+						<Item>CREATURE_ANGEL</Item>
+					</Creature>
+					<MinAmount>1</MinAmount>
+					<MaxAmount>3</MaxAmount>
+				</Item>
+			</Stacks>
+		</Item>
+	</Templates>
+</RMGCustomArmyTemplateList>

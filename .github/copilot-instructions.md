@@ -23,6 +23,8 @@ The game reads any .pak archive (ZIP format) placed in the `data` folder of the 
 
 Most of the data files are in XML format with a .xdb extension. They can refer to other mod files such as icons with .dds format, text files that are located under the `game_texts` folder, or other .xdb files.
 
+The random map generator templates (`game_data/maps/RMG/Templates/*.xdb`) are generated from the YAML sources of `tools/generators/rmg-templates/` by `tools/generators/generate-rmg-templates.py`: edit the YAML, not the .xdb. The format is described in `.cursor/rules/rmg.md`.
+
 Another important part of the mod are the lua scripts that are used to implement custom game mechanics. They are located in the `game_data/lua` folder.
 
 In the `game_data` folder, the mod content is organized in subfolders based on the type of content, such as `artifacts`, `creatures`, `spells`, etc. Under these subfolders, the files and folders are organized as the game expects them to be, for example in `game_data/artifacts` we find `GameMechanics/RefTables/Artifacts.xdb` for artifact data files, which is the actual path from the .pak archive's root that the game reads.

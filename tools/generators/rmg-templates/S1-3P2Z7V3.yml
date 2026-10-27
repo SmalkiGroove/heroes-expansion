@@ -1,0 +1,68 @@
+# Imported from S1-3P2Z7V3.xdb by import-rmg-templates.py
+name_file: TwoPlayersSmall.txt
+players: [2, 2]
+map_size: [12, 38]
+underground: true
+grail: false
+
+profiles:
+  start:
+    start: true
+    town: true
+    mines: {wood: 1, ore: 1}
+    dwellings: [1, 1, 0]
+    upgrades: 40
+    treasures: 15
+    chests: 10
+    shrines: 10
+    luck_morale: 60
+    resource_buildings: 40
+    treasure_buildings: 10
+    treasure_blocks: 10000
+  zone:
+    size: 4
+    mines: {mercury: 1, crystal: 1, sulfur: 1, gem: 1}
+    treasures: 20
+    shrines: 25
+  start2:
+    size: 5
+    start: true
+    mines: {wood: 1, ore: 1}
+    dwellings: [0, 1, 0]
+    upgrades: 80
+    treasures: 15
+    resource_buildings: 60
+    treasure_blocks: 5000
+
+zones:
+  # 1
+  - profile: start
+  # 2
+  - profile: start
+  # 3
+  - profile: zone
+  # 4
+  - profile: zone
+  # 5
+  - start: true
+    mines: {gold: 2}
+    cartographer: 1
+    shops: 50
+    luck_morale: 60
+    treasure_buildings: 20
+    treasure_blocks: 20000
+    den_of_thieves: 1
+  # 6
+  - profile: start2
+  # 7
+  - profile: start2
+
+connections:
+  - {from: 1, to: 2, guard: 20}
+  - {from: 1, to: 3, guard: 5}
+  - {from: 2, to: 4, guard: 5}
+  - {from: 3, to: 4, guard: 10}
+  - {from: 3, to: 5, guard: 15}
+  - {from: 4, to: 5, guard: 15}
+  - {from: 1, to: 6, guard: 5}
+  - {from: 2, to: 7, guard: 5}

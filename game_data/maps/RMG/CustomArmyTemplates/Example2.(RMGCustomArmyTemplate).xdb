@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RMGCustomArmyTemplate>
+	<Stacks>
+		<Item>
+			<Creature>
+				<Item>CREATURE_UNKNOWN</Item>
+				<Item>CREATURE_PALADIN</Item>
+			</Creature>
+			<MinAmount>2</MinAmount>
+			<MaxAmount>5</MaxAmount>
+		</Item>
+		<Item>
+			<Creature>
+				<Item>CREATURE_ROYAL_GRIFFIN</Item>
+			</Creature>
+			<MinAmount>10</MinAmount>
+			<MaxAmount>25</MaxAmount>
+		</Item>
+	</Stacks>
+</RMGCustomArmyTemplate>

@@ -1,0 +1,72 @@
+# Imported from S3-6P2-4Z9B3.xdb by import-rmg-templates.py
+name_file: S2-3P2-4Z9B3.txt
+players: [2, 4]
+map_size: [28, 65]
+underground: true
+grail: false
+
+profiles:
+  start:
+    size: 7
+    start: true
+    town: true
+    mines: {wood: 1, ore: 1}
+    dwellings: [0, 0, 0, 0, 0, 0, 0]
+    upgrades: 70
+    treasures: 30
+    chests: 30
+    resource_buildings: 50
+    treasure_blocks: 10000
+  zone:
+    mines: {mercury: 1, crystal: 1, sulfur: 1, gem: 1}
+    dwellings: [2, 0, 0, 0, 0, 0, 0]
+    treasures: 20
+    chests: 20
+    shrines: 15
+    luck_morale: 30
+    resource_buildings: 20
+    treasure_blocks: 20000
+
+zones:
+  # 1
+  - profile: start
+  # 2
+  - profile: start
+  # 3
+  - profile: start
+  # 4
+  - profile: start
+  # 5
+  - profile: zone
+  # 6
+  - profile: zone
+  # 7
+  - profile: zone
+  # 8
+  - profile: zone
+  # 9
+  - size: 14
+    mines: {wood: 2, ore: 2, mercury: 2, crystal: 2, sulfur: 2, gem: 2, gold: 2}
+    dwellings: [0, 1, 1, 0, 1, 0, 0]
+    upgrades: 110
+    cartographer: 1
+    shops: 50
+    shrines: 50
+    luck_morale: 50
+    resource_buildings: 50
+    treasure_buildings: 50
+    treasure_blocks: 200000
+
+connections:
+  - {from: 1, to: 5, guard: 3}
+  - {from: 2, to: 6, guard: 3}
+  - {from: 3, to: 7, guard: 3}
+  - {from: 4, to: 8, guard: 3}
+  - {from: 1, to: 9, guard: 7}
+  - {from: 2, to: 9, guard: 7}
+  - {from: 3, to: 9, guard: 7}
+  - {from: 4, to: 9, guard: 7}
+  - {from: 5, to: 9, guard: 7}
+  - {from: 6, to: 9, guard: 7}
+  - {from: 7, to: 9, guard: 7}
+  - {from: 8, to: 9, guard: 7}
