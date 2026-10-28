@@ -56,7 +56,8 @@ python tools/generators/editor-artifacts.py     # map editor artifact palette (p
 python tools/generators/fix-arenas.py           # adapts combat arenas to the 14x11 grid, accepts --dry-run / --preview DIR
 python tools/generators/generate-rmg-templates.py  # RMG templates from tools/generators/rmg-templates/*.yml (see rmg.md), accepts --dry-run / --preview FILE
 python tools/generators/import-rmg-templates.py    # RMG template .xdb -> YAML source
-python tools/debug/validate.py                  # XML syntax of every .xdb in game_data
+python tools/debug/validate.py                  # XML syntax of every .xdb in game_data, and paths found in two data folders; exits 1 on error, accepts --ref REF (only files changed since a tag/commit) / --jobs
+python tools/debug/print-creature-stats.py      # creature stats and balance score per tier, accepts --tier / --town / --stats / --sort / --abilities
 python tools/translator.py                      # machine-translates texts-EN files newer than their translation
 python tools/translation/glossary.py --data <TotE>/data --texts EN=<vanilla texts-EN> --texts PL=<vanilla texts-PL> --texts RU=<vanilla texts-RU> --texts FR=<vanilla texts-FR>  # translation glossary (see text.md)
 python tools/translation/translate-terms.py     # translates the new glossary terms (Claude API), accepts --dry-run / --lang / --category / --limit

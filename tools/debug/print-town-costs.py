@@ -2,24 +2,23 @@ import os
 import xmltodict
 
 workdir = os.path.dirname(os.path.abspath(__file__))
-townbuildstats_path = os.path.join(workdir, "../game_data/data/GameMechanics/TownBuildingSharedStats")
+townbuildstats_path = os.path.join(workdir, "../../game_data/towns/GameMechanics/TownBuildingSharedStats")
 
 towns = ["Haven", "Inferno", "Necromancy", "Preserve", "Dungeon", "Academy", "Dwarves", "Stronghold"]
-resources = {"Wood":0, "Ore":0, "Mercury":0, "Crystal":0, "Sulfur":0, "Gem":0, "Gold":0}
-town_res = {}
+resources = ["Wood", "Ore", "Mercury", "Crystal", "Sulfur", "Gem", "Gold"]
 
-def get_building_cost(building):
-    for res in town_res.keys():
-        town_res[res] += int(building["Cost"][res])
-
-for town in towns:
-    town_res = resources.copy()
-    for path, subdirs, files in os.walk(os.path.join(workdir, townbuildstats_path, town)):
+def get_town_cost(town):
+    town_res = dict.fromkeys(resources, 0)
+    for path, subdirs, files in os.walk(os.path.join(townbuildstats_path, town)):
         for file in files:
             if file.endswith('.xdb'):
                 with open(os.path.join(path, file), 'r') as f:
                     building_data = xmltodict.parse(f.read())
                 if "TownBuildingSharedStats" in building_data:
                     building = building_data["TownBuildingSharedStats"]
-                    get_building_cost(building)
-    print(town, town_res)
+                    for res in resources:
+                        town_res[res] += int(building["Cost"][res])
+    return town_res
+
+for town in towns:
+    print(town, get_town_cost(town))
