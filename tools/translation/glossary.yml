@@ -49,6 +49,7 @@ artifacts:
   Altar of Element's Shard:
     ids: [ARTIFACT_ALTAR_OF_ELEMENTS_SHARD]
     new: true
+    desc: +1 Spellpower +10% damage to all elemental spells
   Amulet of Necromancy:
     ids: [ARTIFACT_NECROMANCER_PENDANT]
     pl: Amulet Nekromancji
@@ -57,15 +58,19 @@ artifacts:
   Ancient Protection Charm:
     ids: [ARTIFACT_ANCIENT_PROTECTION_CHARM]
     new: true
+    desc: +1 Defense +1 Luck +10% Magic Disruption +10% Spell-proof
   Angel Wings:
     ids: [ANGEL_WINGS]
     new: true
+    desc: Grants the ability to fly over the map and ignore terrain penalties completely.
   Ankh of the Saint:
     ids: [ARTIFACT_ANKH_OF_THE_SAINT]
     new: true
+    desc: +1 Spellpower Hero troops cannot have negative Luck.
   Ardent Smith:
     ids: [ARTIFACT_ARDENT_SMITH]
     new: true
+    desc: +2 Attack Creatures in hero's army get the Flame Wave ability
   Armor of Valor:
     ids: [ARTIFACT_VALORIOUS_ARMOR]
     pl: Zbroja Odwagi
@@ -74,18 +79,23 @@ artifacts:
   Avenger Bow:
     ids: [ARTIFACT_AVENGER_BOW]
     new: true
+    desc: +10% damage from ranged attacks
   Backpack of the Open Road:
     ids: [ARTIFACT_BACKPACK_OF_THE_OPEN_ROAD]
     new: true
+    desc: +1 Knowledge Restore hero movement points on level up
   Band of the Conjurer:
     ids: [ARTIFACT_BAND_OF_CONJURER]
     new: true
+    desc: +4 Spellpower when casting Summon Elementals. Grants the Summon Elementals spell if it wasn't learned already.
   Barbarian Cape:
     ids: [ARTIFACT_BARBARIAN_CAPE]
     new: true
+    desc: +1 Morale Creatures in hero's army are immuned to Fear Disables the Cowardice ability for hero troops
   Barbarian Cuirass:
     ids: [ARTIFACT_BARBARIAN_CUIRASS]
     new: true
+    desc: +3 Defense +3% Health to friendly creatures
   Bearhide Wraps:
     ids: [ARTIFACT_BEARHIDE_WRAPS_2]
     pl: Skóra Niedźwiedzia
@@ -99,12 +109,15 @@ artifacts:
   Black Hole:
     ids: [ARTIFACT_BLACK_HOLE]
     new: true
+    desc: +3 Spellpower +67% to all elemental resistances
   Blazing Spellbook:
     ids: [ARTIFACT_BLAZING_SPELLBOOK]
     new: true
+    desc: +2 Spellpower -33% Mana cost for Fire spells
   Blood Crystal:
     ids: [ARTIFACT_BLOOD_CRYSTAL]
     new: true
+    desc: +1 to the weekly production of Blood Witches in Dungeon towns +250 movement points and 10 mana on level up +250 experience per day
   Book Of Power:
     ids: [ARTIFACT_BOOK_OF_POWER]
     pl: Księga Mocy
@@ -113,6 +126,7 @@ artifacts:
   Boots of Interference:
     ids: [BOOTS_OF_INTERFERENCE]
     new: true
+    desc: +1 Luck +15% Magic Disruption
   Boots Of Levitation:
     ids: [BOOTS_OF_LEVITATION]
     pl: Buty Lewitacji
@@ -136,36 +150,47 @@ artifacts:
   Butcher Glaive:
     ids: [ARTIFACT_BUTCHER_GLAIVE]
     new: true
+    desc: +1 Attack +15% damage from melee attacks
   Cape of the Kings:
     ids: [LION_HIDE_CAPE]
     new: true
+    desc: +2 Morale Governance skill grants an additional 1000 Gold and 1 special resource. Industry perk has no range limit. Mythology perk's gold income is daily.
   Captain's Hook:
     ids: [ARTIFACT_CAPTAINS_HOOK]
     new: true
+    desc: +1 Attack Creatures in hero's army gain the Wound ability
   Celestial Justicar's Armor:
     ids: [ARTIFACT_CELESTIAL_JUSTICAR_ARMOR]
     new: true
+    desc: +4 Defense -25% melee damage taken
   Celestial Justicar's Helm:
     ids: [DWARVEN_MITHRAL_HELMET]
     new: true
+    desc: +2 Defense +2 Spellpower Creatures in hero's army are immuned to Confusion, Blind and Berserk
   Celestial Justicar's Shield:
     ids: [ARTIFACT_CELESTIAL_JUSTICAR_SHIELD]
     new: true
+    desc: +2 Defense -50% damage taken from ranged attacks
   Celestial Justicar's Sword:
     ids: [RING_OF_HASTE]
     new: true
+    desc: +3 Attack +15% Initiative to friendly creatures
   Centaur Crossbow:
     ids: [ARTIFACT_CENTAUR_CROSSBOW]
     new: true
+    desc: +1 Attack +10% hero's attacks damage
   Chained Sabatons:
     ids: [SHACKLES_OF_WAR]
     new: true
+    desc: +6 Defense Creatures cannot move Heroes cannot flee
   Chaos Shroud:
     ids: [ARTIFACT_CHAOS_SHROUD]
     new: true
+    desc: +6 Spellpower Damaging spells cast by the hero ignore 66% of the targets' spell-proof
   Cloak of Darkness:
     ids: [ARTIFACT_CLOAK_OF_DARKNESS]
     new: true
+    desc: +6 Defense -1 Luck to enemy creatures
   Cloak of Death's Shadow:
     ids: [CLOAK_OF_MOURNING]
     pl: Płaszcz Cienia Śmierci
@@ -179,30 +204,39 @@ artifacts:
   Cloak of the Saint:
     ids: [ARTIFACT_CLOAK_OF_THE_SAINT]
     new: true
+    desc: +2 Defense +2 Knowledge Creatures in hero's army are immuned to Decay
   Codex Of The Saint:
     ids: [ARTIFACT_CODEX_OF_THE_SAINT]
     new: true
+    desc: +5 Knowledge +15% ATB after casting a spell
   Collar Of Primal Rage:
     ids: [ARTIFACT_COLLAR_OF_PRIMAL_RAGE]
     new: true
+    desc: +1 Attack +1 Spellpower +100 rage points at the start of combat (only for orcs)
   Crafted Artifact V1:
     ids: [ARTIFACT_ARTIFICIER_1]
     new: true
+    desc: +1 Attack +1 Defense +5% Initiative to the hero and creatures
   Crafted Artifact V2:
     ids: [ARTIFACT_ARTIFICIER_2]
     new: true
+    desc: +2 Attack +2 Defense +5% Initiative to the hero and creatures
   Crafted Artifact V3:
     ids: [ARTIFACT_ARTIFICIER_3]
     new: true
+    desc: +3 Attack +3 Defense +5% Initiative to the hero and creatures
   Crag Hack's Helmet:
     ids: [ARTIFACT_BARBARIAN_HELMET]
     new: true
+    desc: +1 Defense Troops gain the Battle Rage ability
   Crimson Scythe:
     ids: [ARTIFACT_CRIMSON_SCYTHE]
     new: true
+    desc: +5 Attack -1 Morale to enemy creatures
   Crown Of Courage:
     ids: [CROWN_OF_COURAGE]
     new: true
+    desc: +4 Morale +2 Luck
   Crown of Leadership:
     ids: [ARTIFACT_CROWN_OF_LEADER]
     pl: Korona Dowódcy
@@ -211,9 +245,11 @@ artifacts:
   Crown of the Frost Lord:
     ids: [ARTIFACT_CROWN_OF_THE_FROST_LORD]
     new: true
+    desc: +2 Defense +2 Knowledge -50% mana cost to frost spells
   Crown of the Magister:
     ids: [CROWN_OF_MAGI]
     new: true
+    desc: +2 Spellpower +2 Knowledge +1 Morale
   Cuirass of the Dwarven Kings:
     ids: [ARTIFACT_OGRE_CLUB]
     pl: Pancerz Krasnoludzkich Królów
@@ -227,12 +263,15 @@ artifacts:
   Dawn Gleam:
     ids: [ARTIFACT_DAWN_GLEAM]
     new: true
+    desc: +3 Knowledge All creatures in hero's army have the Child of Light ability
   Deadwood Staff:
     ids: [ARTIFACT_DEADWOOD_STAFF]
     new: true
+    desc: +3 Spellpower -1 Mana cost to Dark magic spells
   Deathknight's Boots:
     ids: [ARTIFACT_DEATH_KNIGHT_BOOTS]
     new: true
+    desc: +1 Attack +2 Defense After every victory, gain an amount of Movement points and Experience depending on the strength of the defeated army
   Dragon Bone Greaves:
     ids: [DRAGON_BONE_GRAVES]
     pl: Nagolenniki ze Smoczych Kości
@@ -276,9 +315,11 @@ artifacts:
   Dragonsbane:
     ids: [ARTIFACT_DRAGONSBANE]
     new: true
+    desc: Attacks ignore enemy Defense but cannot be lucky or unlucky
   Eagle Bravery Necklace:
     ids: [NECKLACE_OF_BRAVERY]
     new: true
+    desc: +1 Attack +1 Morale
   Edge of Balance:
     ids: [ARTIFACT_EDGE_OF_BALANCE]
     pl: Ostrze Równowagi
@@ -287,18 +328,23 @@ artifacts:
   Eldena's Circlet:
     ids: [ARTIFACT_ELDENAS_CIRCLET]
     new: true
+    desc: +1 Defense +1 Spellpower +1 Knowledge +6 Tier 3 creatures of your faction on level up (doubles every month)
   Eldena's Red Coat:
     ids: [ARTIFACT_ELDENAS_RED_COAT]
     new: true
+    desc: +1 Defense +8 Tier 2 creatures of your faction on level up (doubles every month)
   Eldena's Red Scarf:
     ids: [ARTIFACT_ELDENAS_RED_SCARF]
     new: true
+    desc: +1 Knowledge +10 Tier 1 creatures of your faction on level up (doubles every month)
   Elrath's Divine Shield:
     ids: [ARTIFACT_ELRATHS_DIVINE_SHIELD]
     new: true
+    desc: +4 Defense +1 Morale Positive Morale effect grants +20% ATB
   Elrath's Unity:
     ids: [ARTIFACT_ELRATHS_UNITY]
     new: true
+    desc: +1 to all primary attributes +1 Morale +1 Luck
   Emerald Slippers:
     ids: [ARTIFACT_EARTHSLIDERS]
     pl: Szmaragdowe Trzewiki
@@ -307,9 +353,11 @@ artifacts:
   Endless Purse of Gold:
     ids: [ENDLESS_BAG_OF_GOLD]
     new: true
+    desc: Generates 250 Golds per day. If two of these are present in hero's inventory at the start of the day, they merge into an Endless Sack of Gold.
   Endless Sack of Gold:
     ids: [ENDLESS_SACK_OF_GOLD]
     new: true
+    desc: Generates 1000 Golds per day.
   Evercold Icicle:
     ids: [EVERCOLD_ICICLE]
     pl: Lodowaty Sopel
@@ -318,15 +366,19 @@ artifacts:
   Focus Ring:
     ids: [ARTIFACT_WISPERING_RING]
     new: true
+    desc: +8 Spellpower -2 Initiative to the hero
   Forgotten Ring:
     ids: [ARTIFACT_FORGOTTEN_RING]
     new: true
+    desc: +2 Attack +2 Defense Creatures in hero's army are immuned to Word of Light
   Fortune Band of the Saint:
     ids: [ARTIFACT_FORTUNE_BAND_OF_THE_SAINT]
     new: true
+    desc: +1 Luck permanently every 20 victories with this item equipped
   Fortune Pickaxe:
     ids: [ARTIFACT_FORTUNE_PICKAXE]
     new: true
+    desc: Generate between 0 and 3 Ore per day, and sometimes an additional Crystal or Gem.
   Four Leaf Clover:
     ids: [FOUR_LEAF_CLOVER]
     pl: Czterolistna Koniczyna
@@ -340,21 +392,27 @@ artifacts:
   Frozen Heart:
     ids: [ARTIFACT_BEARHIDE_WRAPS]
     new: true
+    desc: +1 Spellpower -33% Damage taken from enemy Frost spells Grants hero troops immunity to Blaze Power's defense reduction
   Genji's Hat:
     ids: [ARTIFACT_GENJIS_HAT]
     new: true
+    desc: +2 Spellpower -1 Mana cost to all spells
   Genji's Sandals:
     ids: [ARTIFACT_GENJIS_SANDALS]
     new: true
+    desc: +2 Knowledge +1 Initiative to the hero
   Genji's Silksword:
     ids: [ARTIFACT_GENJIS_SILKSWORD]
     new: true
+    desc: +2 Attack Damaging spells ignore 20% of enemy creatures' spell-proof
   Genji's Vest:
     ids: [ARTIFACT_GENJIS_VEST]
     new: true
+    desc: +2 Defense +20% Spell-proof
   Golden Goose:
     ids: [ARTIFACT_GOLDEN_GOOSE]
     new: true
+    desc: +3 Luck Lucky strikes deal +33% damage (additive)
   Golden Horseshoe:
     ids: [GOLDEN_HORSESHOE]
     pl: Złota Podkowa
@@ -363,12 +421,15 @@ artifacts:
   Grand Vizir's Cap:
     ids: [ARTIFACT_VIZIRS_CAP]
     new: true
+    desc: +1 Knowledge +500 Gold per external dwelling at the start of each week
   Grand Vizir's Scimitar:
     ids: [ARTIFACT_VIZIRS_SCIMITAR]
     new: true
+    desc: +1 Attack +10 weekly production of tier 1 and tier 2 in towns
   Great Axe of the Dwarven Kings:
     ids: [GREAT_AXE_OF_GIANT_SLAYING]
     new: true
+    desc: +6 Attack +2 Defense
   Greaves of the Dwarven Kings:
     ids: [ARTIFACT_OGRE_SHIELD]
     pl: Nagolenniki Krasnoludzkich Królów
@@ -377,9 +438,11 @@ artifacts:
   Harpy Boots:
     ids: [ARTIFACT_HARPY_BOOTS]
     new: true
+    desc: +1 Speed and Initiative to all friendly creatures
   Heavy Boots:
     ids: [ARTIFACT_LEGENDARY_BOOTS]
     new: true
+    desc: +1 Attack +1 Defense Troops ignore 10% of target's defense per tile moved while attacking
   Helm Of Chaos:
     ids: [ARTIFACT_HELM_OF_CHAOS]
     pl: Hełm Chaosu
@@ -393,9 +456,11 @@ artifacts:
   Helm of the Lich:
     ids: [ARTIFACT_SKULL_HELMET]
     new: true
+    desc: +3 Spellpower +3 Knowledge -1 Morale
   Helm of the Warmage:
     ids: [ARTIFACT_HELM_OF_THE_WARMAGE]
     new: true
+    desc: +4 Knowledge Learn a new spell on level up (tier dépends on hero level)
   Horn of Plenty:
     ids: [ARTIFACT_HORN_OF_PLENTY]
     pl: Róg Obfitości
@@ -409,6 +474,7 @@ artifacts:
   Magister's Sandals:
     ids: [ARTIFACT_MAGISTERS_SANDALS]
     new: true
+    desc: +1 Defense Gain +1 Knowledge at the start of each week
   Magma Shield:
     ids: [ARTIFACT_MAGMA_SHIELD]
     pl: Tarcza Magmowa
@@ -417,6 +483,7 @@ artifacts:
   Magnetic Ring:
     ids: [RING_OF_LIGHTING_PROTECTION]
     new: true
+    desc: +1 Spellpower -33% Damage taken from enemy Lightning spells Grants hero troops immunity to Lightning's stun
   Mask Of Equity:
     ids: [ARTIFACT_MASK_OF_DOPPELGANGER]
     pl: Maska Zmiennokształtnego
@@ -425,12 +492,15 @@ artifacts:
   Mercenary Band:
     ids: [ARTIFACT_BOOTS_OF_SWIFTNESS]
     new: true
+    desc: +1 Attack Increase creatures minimum damages by half of the difference with maximum damages
   Misfortune Dices:
     ids: [ARTIFACT_CURSED_DICES]
     new: true
+    desc: -1 Morale -2 Luck to enemy creatures
   Moon Charm:
     ids: [ARTIFACT_MOON_CHARM]
     new: true
+    desc: +1 Morale +1 Luck Revive the first friendly creature stack that dies in combat (revived creatures are not lost after the battle).
   Moonblade:
     ids: [ARTIFACT_MOONBLADE]
     pl: Księżycowe Ostrze
@@ -439,12 +509,15 @@ artifacts:
   Moonlight Band:
     ids: [ARTIFACT_MOONLIGHT_BAND]
     new: true
+    desc: +2 Spellpower +2 Knowledge Creatures in hero's army are immuned to Curse of the Netherworld
   Moonlight Coat:
     ids: [ARTIFACT_MOONLIGHT_COAT]
     new: true
+    desc: +3 Defense -25% Mana cost to all spells
   Naga Commander's Helm:
     ids: [ARTIFACT_NAGA_COMMANDERS_HELMET]
     new: true
+    desc: +2 Attack +2 Defense Improve the negociating power of the hero with hostile creatures
   Necklace of the Bloody Claw:
     ids: [ARTIFACT_NECKLACE_OF_THE_BLOODY_CLAW]
     pl: Naszyjnik Krwawego Szponu
@@ -458,9 +531,11 @@ artifacts:
   Obsidian Armor:
     ids: [ARTIFACT_OBSIDIAN_ARMOR]
     new: true
+    desc: +4 Defense Creatures in hero's army are immuned to Armageddon
   Ocean Charm:
     ids: [GOLDEN_SEXTANT]
     new: true
+    desc: +1 Luck +25% Movement points on water
   Ogre Club:
     ids: [ARTIFACT_OGRE_CLUB_2]
     pl: Kij Ogra
@@ -474,21 +549,27 @@ artifacts:
   Orb of Air Affinity:
     ids: [ARTIFACT_ORB_OF_AIR]
     new: true
+    desc: +3 Spellpower +33% Damage to Lightning spells A stack of Air Elementals joins hero's army at the start of combats (scales with Knowledge)
   Orb of Earth Affinity:
     ids: [ARTIFACT_ORB_OF_EARTH]
     new: true
+    desc: +3 Spellpower +33% Damage to Earth spells A stack of Earth Elementals joins hero's army at the start of combats (scales with Knowledge)
   Orb of Fire Affinity:
     ids: [ARTIFACT_ORB_OF_FIRE]
     new: true
+    desc: +3 Spellpower +33% Damage to Fire spells A stack of Fire Elementals joins hero's army at the start of combats (scales with Knowledge)
   Orb of Water Affinity:
     ids: [ARTIFACT_ORB_OF_WATER]
     new: true
+    desc: +3 Spellpower +33% Damage to Frost spells A stack of Water Elementals joins hero's army at the start of combats (scales with Knowledge)
   Owl Sagacity Wraps:
     ids: [ARTIFACT_WRAPS_OF_THE_OWL]
     new: true
+    desc: +1 Spellpower +1 Knowledge
   Palace Boots:
     ids: [ARTIFACT_PALACE_SHOES]
     new: true
+    desc: 'Gain random temporary battle bonuses after each victory The bonuses are: +1 Luck, +1 Morale, +3 Attack, +3 Defense, +6% HP, +2 Initiative, +1 Speed.'
   Pendant of Conflux:
     ids: [ARTIFACT_TWISTING_NEITHER]
     pl: Wisior Zgromadzenia
@@ -502,39 +583,51 @@ artifacts:
   Pendant of Power:
     ids: [ARTIFACT_PENDANT_OF_THE_LYRE]
     new: true
+    desc: +1 Defense Every 4 victories, gain 1000 + 1% experience
   Phoenix Fire Cape:
     ids: [ARTIFACT_DWARVEN_SMITHY_HUMMER]
     new: true
+    desc: +1 Spellpower -33% Damage taken from enemy Fire spells Grants hero troops immunity to Frost Power's freeze
   Pirate Smasher:
     ids: [ARTIFACT_PIRATE_SMASHER]
     new: true
+    desc: +1 Attack Friendly creatures attacks reduce enemy Defense by 3
   Plumed Boots:
     ids: [DWARVEN_MITHRAL_GREAVES]
     new: true
+    desc: +2 Spellpower +1 Morale Hero troops are Unstoppable (immunity to Slow) and are able to walk above obstacles like flying creatures.
   Plunderer Shoes:
     ids: [ARTIFACT_PLUNDERER_SHOES]
     new: true
+    desc: +1 Initiative to friendly creatures
   Plunderer Vest:
     ids: [ARTIFACT_PLUNDERER_VEST]
     new: true
+    desc: +1 Health to friendly creatures
   Potion of Enlightenment:
     ids: [POTION_OF_ENLIGHTENMENT]
     new: true
+    desc: Consumable Gain mana equal to 30 + 10% of total mana (can surpass hero's max mana) Gain experience equal to 1000 + 2% of total experience gained
   Potion Of Power:
     ids: [POTION_OF_POWER]
     new: true
+    desc: Consumable Gain +1 Spellpower
   Potion Of Skill:
     ids: [POTION_OF_SKILL]
     new: true
+    desc: Consumable Increase the mastery of a known skill that is not at expert level
   Potion of Stamina:
     ids: [POTION_OF_STAMINA]
     new: true
+    desc: Consumable Gain 2000 movement points for this turn
   Potion Of Teleportation:
     ids: [POTION_OF_TELEPORTATION]
     new: true
+    desc: Consumable Teleports the hero to a random place on the map until the end of turn
   Potion Of Vision:
     ids: [POTION_OF_VISION]
     new: true
+    desc: Consumable Reveal area around the hero Reveal all buildings owned by opponents
   Princess Aelina:
     ids: [ARTIFACT_PRINCESS]
     pl: Princess Aelina
@@ -543,12 +636,15 @@ artifacts:
   Ranger's Armor:
     ids: [ARTIFACT_RANGERS_CUIRASS]
     new: true
+    desc: +2 Defense Hero troops have +10 effective Defense when attacked by large creatures
   Ranger's Cape:
     ids: [ARTIFACT_RANGERS_CAPE]
     new: true
+    desc: +2 Knowledge Troops gain Agility, increasing their defense by 2 per tile moved.
   Regal Armour:
     ids: [ARTIFACT_REGAL_ARMOUR]
     new: true
+    desc: +6% Health to friendly creatures (rounded up)
   Ring of Banishment:
     ids: [ARTIFACT_RING_OF_UNSUMMONING]
     pl: Pierścień Odwołania
@@ -562,9 +658,11 @@ artifacts:
   Ring Of Devastation:
     ids: [ARTIFACT_RING_OF_DEVASTATION]
     new: true
+    desc: +10 Attack to the Ballista
   Ring of Health:
     ids: [ARTIFACT_RING_OF_HEALTH]
     new: true
+    desc: +100 Healing power to the First Aid Tent
   Ring of Machine Affinity:
     ids: [ARTIFACT_RING_OF_MACHINE_AFFINITY]
     pl: Pierścień Pokrewieństwa Maszyn
@@ -573,6 +671,7 @@ artifacts:
   Ring of Supernatural Strength:
     ids: [ARTIFACT_RING_OF_STRENGTH]
     new: true
+    desc: +3 Attack +3 Defense +3 Health to friendly creatures
   Ring of the Broken Will:
     ids: [NIGHTMARISH_RING]
     pl: Pierścień Złamanej Woli
@@ -581,6 +680,7 @@ artifacts:
   Ring of the Magister:
     ids: [RING_OF_MAGI]
     new: true
+    desc: -4 Mana cost to all spells (minimum 1)
   Ring of the Shadowbrand:
     ids: [ARTIFACT_RING_OF_THE_SHADOWBRAND]
     pl: Pierścień Piętna Cienia
@@ -594,12 +694,15 @@ artifacts:
   Robe Of Enlightenment:
     ids: [CHAIN_MAIL_OF_ENLIGHTMENT]
     new: true
+    desc: +1 Defense +20% Experience gain
   Robe of the Magister:
     ids: [ROBE_OF_MAGI]
     new: true
+    desc: +2 Defense +2 Knowledge Gain Experience every day based on the hero's Knowledge, and half the amount to other heroes
   Rod of Torment:
     ids: [ARTIFACT_ROD_OF_TORMENT]
     new: true
+    desc: +4 Knowledge -2 Morale to enemy creatures
   Rune of Flame:
     ids: [ARTIFACT_RUNE_OF_FLAME]
     pl: Runy Ognia
@@ -618,12 +721,15 @@ artifacts:
   Sacred Seed:
     ids: [ARTIFACT_SACRED_SEED]
     new: true
+    desc: Generate between 0 and 3 Wood per day, and sometimes a bonus of 1000 experience points to the hero.
   Sanctuary's Crown:
     ids: [ARTIFACT_SANCTUARYS_CROWN]
     new: true
+    desc: +2 Spellpower +4 Knowledge Grants hero's army imunity to Mind Control
   Sandals of the Saint:
     ids: [ARTIFACT_SANDALS_OF_THE_SAINT]
     new: true
+    desc: +3 Defense +1 Luck
   Sandro's Cloak:
     ids: [ARTIFACT_SHAWL_OF_GREAT_LICH]
     pl: Peleryna Sandro
@@ -632,21 +738,27 @@ artifacts:
   Sentinel's Blade:
     ids: [ARTIFACT_SENTINELS_BLADE]
     new: true
+    desc: +4 Attack When hero spawns a Blade Barrier during combat, adjacent enemies are forced to attack it Grants the Blade Barrier spell if it wasn't learned already
   Sentinel's Boots:
     ids: [ARTIFACT_SENTINELS_BOOTS]
     new: true
+    desc: +1 Attack +2 Defense +2 Morale and +500 Movement points temporarily after each victory with no loss
   Sentinel's Bracer:
     ids: [ARTIFACT_SENTINELS_BRACER]
     new: true
+    desc: +1 Defense +1 Spellpower
   Sentinel's Breastplate:
     ids: [PLATE_MAIL_OF_STABILITY]
     new: true
+    desc: +5 Defense +15% Spell-proof
   Sentinel's Helm:
     ids: [ARTIFACT_SENTINELS_HELM]
     new: true
+    desc: +2 Defense +1 Knowledge +2 Attack, Defense and Morale temporarily after leveling up
   Sentinel's Shield:
     ids: [ARTIFACT_SENTINELS_SHIELD]
     new: true
+    desc: -10% damage taken from ranged attacks
   Shackles of the Last Man:
     ids: [ARTIFACT_SHACKLES_OF_WAR_2]
     pl: Kajdany Ostatniego Żywego
@@ -655,18 +767,23 @@ artifacts:
   Shadow Blade:
     ids: [ARTIFACT_SHADOW_BLADE]
     new: true
+    desc: +5 Attack
   Shadow Mask:
     ids: [ARTIFACT_SHADOW_MASK]
     new: true
+    desc: +3 Spellpower +2 Knowledge
   Shadowstep Shoes:
     ids: [ARTIFACT_SHADOWSTEP_SHOES]
     new: true
+    desc: +1 Attack +1 Defense +1 Luck
   Shantiri Breastplate:
     ids: [ARTIFACT_SHANTIRI_BREASTPLATE]
     new: true
+    desc: +6 Defense Grants hero's army immunity to Earthquake
   Shantiri Moon Disc:
     ids: [DWARVEN_MITHRAL_CUIRASS]
     new: true
+    desc: +4 Defense +4 Spellpower Creatures in hero's army are immuned to Implosion
   Shield of Crystal Ice:
     ids: [ICEBERG_SHIELD]
     pl: Tarcza Kryształowego Lodu
@@ -680,27 +797,35 @@ artifacts:
   Skull Mask:
     ids: [ARTIFACT_SKULL_MASK]
     new: true
+    desc: +1 Defense -8% Initiative to enemy creatures
   Skull of the Forbidden:
     ids: [ARTIFACT_SKULL_OF_MARKAL]
     new: true
+    desc: +10 Spellpower -1 Luck -1 Morale
   Smithy Hammer:
     ids: [ARTIFACT_DWARVEN_SMITHY_HAMMER]
     new: true
+    desc: +1 Attack +1 Defense +3 Attack and Defense for the first battle of each day
   Solar Ring:
     ids: [PHOENIX_FEATHER_CAPE]
     new: true
+    desc: +1 Spellpower +20% damage to Fire spells
   Spear of the Frost Lord:
     ids: [ARTIFACT_SPEAR_OF_THE_FROST_LORD]
     new: true
+    desc: +2 Attack +20% ice damages to attacks
   Spirit of Oppression:
     ids: [ARTIFACT_SPIRIT_OF_OPPRESSION]
     new: true
+    desc: -1 Morale to enemy creatures -1 Luck to enemy creatures
   Staff of Power:
     ids: [ARTIFACT_STAFF_OF_THE_LYRE]
     new: true
+    desc: +1 Spellpower Every 4 victories, gain +1 of the lowest primary attribute
   Staff of the Magister:
     ids: [STAFF_OF_MAGI]
     new: true
+    desc: +2 Spellpower Negates enemy Magic Disruption
   Staff of the Netherworld:
     ids: [STAFF_OF_VEXINGS]
     pl: Laska Piekieł
@@ -709,12 +834,15 @@ artifacts:
   Staff of the Saint:
     ids: [ARTIFACT_STAFF_OF_THE_SAINT]
     new: true
+    desc: +7 Spellpower when casting Light Magic spells
   Stag Majesty Cuirass:
     ids: [ARTIFACT_CUIRASS_OF_THE_STAG]
     new: true
+    desc: +1 Attack +1 Defense
   Steadfast Shield:
     ids: [ARTIFACT_STEADFAST_SHIELD]
     new: true
+    desc: +2 Defense
   Sword of Might:
     ids: [SWORD_OF_RUINS]
     pl: Miecz Potęgi
@@ -723,6 +851,7 @@ artifacts:
   Sylvan Amulet:
     ids: [ARTIFACT_SYLVAN_AMULET]
     new: true
+    desc: +2 Spellpower +2 Knowledge +1 Luck -3 Mana cost for all Nature spells
   Tarot Deck:
     ids: [ARTIFACT_TAROT_DECK]
     pl: Talia Kart Tarota
@@ -736,15 +865,19 @@ artifacts:
   Tome of Darkness:
     ids: [ARTIFACT_TOME_OF_DARK_MAGIC]
     new: true
+    desc: +3 Spellpower +3 Knowledge Grants the hero all Dark Magic spells regardless of having any skill in this school.
   Tome of Destruction:
     ids: [ARTIFACT_TOME_OF_DESTRUCTION]
     new: true
+    desc: +3 Spellpower +3 Knowledge Grants the hero all Destructive Magic spells regardless of having any skill in this school.
   Tome of Light:
     ids: [ARTIFACT_TOME_OF_LIGHT_MAGIC]
     new: true
+    desc: +3 Spellpower +3 Knowledge Grants the hero all Light Magic spells regardless of having any skill in this school.
   Tome of Nature:
     ids: [ARTIFACT_TOME_OF_SUMMONING_MAGIC]
     new: true
+    desc: +3 Spellpower +3 Knowledge Grants the hero all Natural Magic spells regardless of having any skill in this school.
   Treeborn Quiver:
     ids: [ARTIFACT_TREEBORN_QUIVER]
     pl: Drzewny Kołczan
@@ -773,9 +906,11 @@ artifacts:
   Viking Hatchet:
     ids: [ARTIFACT_VIKING_HATCHET]
     new: true
+    desc: +1 Attack Gain Golds after battle depending on the strength of the defeated army
   Viking Shield:
     ids: [ARTIFACT_VIKING_SHIELD]
     new: true
+    desc: +1 Defense Gain Wood and Ore after battle depending on the strength of the defeated army
   Wand of:
     ids: [WAND_OF_X]
     pl: Różdżka dająca czar
@@ -784,49 +919,64 @@ artifacts:
   War Banner:
     ids: [RING_OF_LIFE]
     new: true
+    desc: +1 Morale +2 Health to friendly creatures
   War Drums:
     ids: [WEREWOLF_CLAW_NECKLACE]
     new: true
+    desc: +1 Morale +1 Damage to friendly creatures
   War Horn:
     ids: [ARTIFACT_RING_OF_CELERITY]
     new: true
+    desc: +1 Morale +10% Initiative to friendly creatures
   Will of Urgash:
     ids: [ARTIFACT_WILL_OF_URGASH]
     new: true
+    desc: +5 Attack +5 Spellpower -1 Luck
   Wolf Loyalty Shield:
     ids: [ARTIFACT_SHIELD_OF_THE_WOLF]
     new: true
+    desc: +1 Defense +1 Morale
 skills:
   Absolute Arcanism:
     ids: [HERO_SKILL_ARCANISM/4]
     new: true
+    desc: Unique Dungeon skill. Elemental chains deal 40% bonus damages. Totally negates magic protection and allows hero to deal 99% of normal spell damage to otherwise resistant creatures.
   Absolute Artificer:
     ids: [HERO_SKILL_ARTIFICIER/4]
     new: true
+    desc: Unique Academy skill. Reduces the price of creating creature equipment by half.
   Absolute Avenger:
     ids: [HERO_SKILL_AVENGER/4]
     new: true
+    desc: Unique Sylvan skill. Gain +4 Luck. Allows hero to choose 4 favored enemies from the Avenger's Guild in any Sylvan town.
   Absolute Blood Rage:
     ids: [HERO_SKILL_BLOOD_RAGE/4]
     new: true
+    desc: Unique Stronghold skill. Decreases by 25% the number of points needed by Stronghold creatures to achieve their next level of Rage.
   Absolute Courage:
     ids: [HERO_SKILL_COURAGE/4]
     new: true
+    desc: Unique Haven skill. Hero's troops take 4% reduced damage from non-magical attacks per Morale point. Gain +4 Morale.
   Absolute Gating:
     ids: [HERO_SKILL_GATING/4]
     new: true
+    desc: Unique Demon Lord skill. All infernal troops are granted an ability to gate into infernal plane to bring reinforcements back to the battlefield. Each unit can gate only once per combat.
   Absolute Mastery:
     ids: [HERO_SKILL_ABSOLUTE_MASTERY]
     new: true
+    desc: Upgrades hero's primary skill to the 4th level of mastery.
   Absolute Necromancy:
     ids: [HERO_SKILL_NECROMANCY/4]
     new: true
+    desc: Unique Necropolis skill. Allows hero to raise 50% of fallen enemy living creatures as own soldiers (A limited number of creatures can be raised per week). Increases the number of dark energy points.
   Absolute Runelore:
     ids: [HERO_SKILL_RUNELORE/4]
     new: true
+    desc: Allows magical runes to be placed without wasting wood and ore.
   Advanced Arcanism:
     ids: [HERO_SKILL_ARCANISM/2]
     new: true
+    desc: Unique Dungeon skill. Elemental chains deal 20% bonus damages. Significantly negates magic protection and allows hero to deal 50% of normal spell damage to otherwise resistant creatures.
   Advanced Artificer:
     ids: [HERO_SKILL_ARTIFICIER/2]
     pl: Lepszy Rzemieślnik
@@ -850,9 +1000,11 @@ skills:
   Advanced Combat:
     ids: [HERO_SKILL_COMBAT/2]
     new: true
+    desc: Increase by 40% the damages of the hero's attacks and his or her troops' retaliation strikes.
   Advanced Courage:
     ids: [HERO_SKILL_COURAGE/2]
     new: true
+    desc: Unique Haven skill. Hero's troops take 2% reduced damage from non-magical attacks per Morale point. Gain +2 Morale.
   Advanced Dark Magic:
     ids: [HERO_SKILL_DARK_MAGIC/2]
     pl: Lepsza Magia Mroku
@@ -866,6 +1018,7 @@ skills:
   Advanced Despotism:
     ids: [HERO_SKILL_DESPOTISM/2]
     new: true
+    desc: After battles, the hero gains a temporary bonus to his or her highest primary attribute based on army size. The bonus is +2 and 1 more for every 800 creatures in the army.
   Advanced Destructive Magic:
     ids: [HERO_SKILL_DESTRUCTIVE_MAGIC/2]
     pl: Lepsza Magia Zniszczenia
@@ -879,6 +1032,7 @@ skills:
   Advanced Governance:
     ids: [HERO_SKILL_GOVERNANCE/2]
     new: true
+    desc: The hero generates 2500 Golds and 2 resources at the start of each week. The resource is determined by the Resource Silo of the faction. Gives hero the ability to convert towns and dwellings.
   Advanced Leadership:
     ids: [HERO_SKILL_LEADERSHIP/2]
     pl: Lepsze Dowodzenie
@@ -887,6 +1041,7 @@ skills:
   Advanced Learning:
     ids: [HERO_SKILL_LEARNING/2]
     new: true
+    desc: Gain +1 Knowledge every 6 levels of the hero. Hero receives 10% bonus to the experience gained from all sources.
   Advanced Light Magic:
     ids: [HERO_SKILL_LIGHT_MAGIC/2]
     pl: Lepsza Magia Światła
@@ -900,6 +1055,7 @@ skills:
   Advanced Natural Magic:
     ids: [HERO_SKILL_NATURAL_MAGIC/2]
     new: true
+    desc: Allows hero to learn Natural Magic spells of the fourth circle and learns a random one instantly. Increases Natural Magic spells efficiency, damages, duration etc.
   Advanced Necromancy:
     ids: [HERO_SKILL_NECROMANCY/2]
     pl: Lepsza Nekromancja
@@ -913,6 +1069,7 @@ skills:
   Advanced Shatter Magic:
     ids: [HERO_SKILL_SHATTER_MAGIC/2]
     new: true
+    desc: Burn 20% of enemy casters' total mana at the start of combats, including enemy hero.
   Advanced Sorcery:
     ids: [HERO_SKILL_SORCERY/2]
     pl: Lepszy Talent Magiczny
@@ -921,18 +1078,24 @@ skills:
   Advanced Spiritism:
     ids: [HERO_SKILL_SPIRITISM/2]
     new: true
+    desc: Unique Shaman skill. Allows hero to learn spells from any magic school by leveling up, up to the 4th circle. Hero regenerates an additional 20 Mana per day.
   Advanced Training:
     ids: [HERO_SKILL_TRAINING/2]
     new: true
+    desc: Unlock second level of training bonuses. Creatures in hero's army get stronger with individual combat bonuses.
   Advanced Voice:
     ids: [HERO_SKILL_VOICE/2]
     new: true
+    desc: Gain +1 Spellpower every 6 levels of the hero. The use of an activated ability from the Battlecry category delays the hero's next turn less by 10%.
   Advanced Warfare:
     ids: [HERO_SKILL_WARFARE/2]
     new: true
+    desc: Makes war machines more effective overall. Ballista has more Attack, Defense and Damages, First Aid Tent has more base healing, Catapult has more Damage and precision, Ammo Cart increases Attack
+      of...
   Anatomy:
     ids: [HERO_SKILL_ANATOMY]
     new: true
+    desc: Allows manual control of the First Aid Tent. Grants hero a free First Aid Tent and restores it after battles if it was destroyed.
   Arcane Brillance:
     ids: [HERO_SKILL_ARCANE_BRILLANCE]
     pl: Tajemny Talent
@@ -946,9 +1109,11 @@ skills:
   Arcane Initiation:
     ids: [HERO_SKILL_ARCANE_INITIATION]
     new: true
+    desc: Reduces casting costs of all spells by 20%.
   Arcane Protection:
     ids: [HERO_SKILL_ARCANE_PROTECTION]
     new: true
+    desc: Hero troops take 0.5% reduced damage per hero Spellpower.
   Archery:
     ids: [HERO_SKILL_ARCHERY]
     pl: Łucznictwo
@@ -957,9 +1122,11 @@ skills:
   Armor Protection:
     ids: [HERO_SKILL_ARMOR_PROTECTION]
     new: true
+    desc: Creatures in hero's army are immuned to effects that reduce their Defense.
   Arrow Storm:
     ids: [HERO_SKILL_RAIN_OF_ARROWS]
     new: true
+    desc: Grants hero an ability to attack all enemy creatures which are present in his favorite enemy list. The attack deals damages as if the hero was 3 levels higher.
   Artificial Glory:
     ids: [HERO_SKILL_ARTIFICIAL_GLORY]
     pl: Sztuczna Chwała
@@ -968,12 +1135,15 @@ skills:
   Assault Training:
     ids: [HERO_SKILL_ASSAULT_TRAINING]
     new: true
+    desc: Creatures in hero's army gain the Violence ability, that gives a chance to strike twice on melee attacks.
   Aura of Energy:
     ids: [HERO_SKILL_AURA_OF_ENERGY]
     new: true
+    desc: Grants mass effects to Righteous Might and Haste spells, for double the casting cost of these spells. Adds +4 to effective spellpower of Holy Word spell.
   Aura of Protection:
     ids: [HERO_SKILL_AURA_OF_PROTECTION]
     new: true
+    desc: Grants mass effects to Deflect Missile and Endurance spells, for double the casting cost of these spells.
   Back to the Void:
     ids: [HERO_SKILL_BACK_TO_THE_VOID]
     pl: Śmierć Nieistniejącym
@@ -982,6 +1152,7 @@ skills:
   Ballistics:
     ids: [HERO_SKILL_BALLISTICS]
     new: true
+    desc: Allows manual control of the Ballista. Grants hero a free Ballista and restores it after battles if it was destroyed.
   Banshee Howl:
     ids: [HERO_SKILL_BANSHEE_HOWL]
     pl: Skowyt Banshee
@@ -990,6 +1161,7 @@ skills:
   Basic Arcanism:
     ids: [HERO_SKILL_ARCANISM/1]
     new: true
+    desc: Unique Dungeon skill. Elemental chains deal 10% bonus damages. Partially negates magic protection and allows hero to deal 25% of normal spell damage to otherwise resistant creatures.
   Basic Artificer:
     ids: [HERO_SKILL_ARTIFICIER/1]
     pl: Rzemieślnik
@@ -1013,9 +1185,11 @@ skills:
   Basic Combat:
     ids: [HERO_SKILL_COMBAT/1]
     new: true
+    desc: Increase by 20% the damages of the hero's attacks and his or her troops' retaliation strikes.
   Basic Courage:
     ids: [HERO_SKILL_COURAGE/1]
     new: true
+    desc: Unique Haven skill. Hero's troops take 1% reduced damage from non-magical attacks per Morale point. Gain +1 Morale.
   Basic Dark Magic:
     ids: [HERO_SKILL_DARK_MAGIC/1]
     pl: Magia Mroku
@@ -1029,6 +1203,7 @@ skills:
   Basic Despotism:
     ids: [HERO_SKILL_DESPOTISM/1]
     new: true
+    desc: After battles, the hero gains a temporary bonus to his or her highest primary attribute based on army size. The bonus is +1 and 1 more for every 1000 creatures in the army.
   Basic Destructive Magic:
     ids: [HERO_SKILL_DESTRUCTIVE_MAGIC/1]
     pl: Magia Zniszczenia
@@ -1042,6 +1217,7 @@ skills:
   Basic Governance:
     ids: [HERO_SKILL_GOVERNANCE/1]
     new: true
+    desc: The hero generates 1000 Golds and 1 resource at the start of each week. The resource is determined by the Resource Silo of the faction. Gives hero the ability to convert towns and dwellings.
   Basic Leadership:
     ids: [HERO_SKILL_LEADERSHIP/1]
     pl: Dowodzenie
@@ -1050,6 +1226,7 @@ skills:
   Basic Learning:
     ids: [HERO_SKILL_LEARNING/1]
     new: true
+    desc: Gain +1 Knowledge every 7 levels of the hero. Hero receives 5% bonus to the experience gained from all sources.
   Basic Light Magic:
     ids: [HERO_SKILL_LIGHT_MAGIC/1]
     pl: Magia Światła
@@ -1063,6 +1240,7 @@ skills:
   Basic Natural Magic:
     ids: [HERO_SKILL_NATURAL_MAGIC/1]
     new: true
+    desc: Allows hero to learn Natural Magic spells of the third circle and learns a random one instantly. Increases Natural Magic spells efficiency, damages, duration etc.
   Basic Necromancy:
     ids: [HERO_SKILL_NECROMANCY/1]
     pl: Nekromancja
@@ -1076,6 +1254,7 @@ skills:
   Basic Shatter Magic:
     ids: [HERO_SKILL_SHATTER_MAGIC/1]
     new: true
+    desc: Burn 10% of enemy casters' total mana at the start of combats, including enemy hero.
   Basic Sorcery:
     ids: [HERO_SKILL_SORCERY/1]
     pl: Talent Magiczny
@@ -1084,18 +1263,24 @@ skills:
   Basic Spiritism:
     ids: [HERO_SKILL_SPIRITISM/1]
     new: true
+    desc: Unique Shaman skill. Allows hero to learn spells from any magic school by leveling up, up to the 3rd circle. Hero regenerates an additional 10 Mana per day.
   Basic Training:
     ids: [HERO_SKILL_TRAINING/1]
     new: true
+    desc: Unlock first level of training bonuses. Creatures in hero's army get a little stronger with individual combat bonuses.
   Basic Voice:
     ids: [HERO_SKILL_VOICE/1]
     new: true
+    desc: Gain +1 Spellpower every 7 levels of the hero. The use of an activated ability from the Battlecry category delays the hero’s next turn less by 5%.
   Basic Warfare:
     ids: [HERO_SKILL_WARFARE/1]
     new: true
+    desc: Makes war machines more effective overall. Ballista has more Attack, Defense and Damages, First Aid Tent has more healing, Catapult has more Damage and precision, Ammo Cart increases Attack of
+      ranged...
   Battle Ardor:
     ids: [HERO_SKILL_BATTLE_ARDOR]
     new: true
+    desc: Hero troops have +1 Speed and +5 Attack during combat.
   Battle Commander:
     ids: [HERO_SKILL_BATTLE_COMMANDER]
     pl: Dowództwo
@@ -1114,9 +1299,11 @@ skills:
   Battle Wrath:
     ids: [HERO_SKILL_BATTLE_WRATH]
     new: true
+    desc: After losing creatures in a battle, hero's army gains +2 to their Attack and Initiative for the next battle.
   Blaze Power:
     ids: [HERO_SKILL_BLAZE_POWER]
     new: true
+    desc: Hero casts fire spells for 10% less mana and with +3 effective spellpower.
   Bloodfire:
     ids: [HERO_SKILL_BLOODFIRE]
     pl: Moc Krwi
@@ -1125,15 +1312,19 @@ skills:
   Bloodlust:
     ids: [HERO_SKILL_BLOODLUST]
     new: true
+    desc: The troops gain 50% more Rage points from Warcries used by the hero (except 25% more for the Call of Blood Warcry).
   Bulwark Rune:
     ids: [HERO_SKILL_BULWARK_RUNE]
     new: true
+    desc: Normal attacks against hero's creatures are always unlucky. Lucky attacks are turned to normal. This skill is learnt by having 3 perks in Runelore and in four other common skills.
   Burning Blood:
     ids: [HERO_SKILL_BURNING_BLOOD]
     new: true
+    desc: Enemy fire spells deal 50% reduced damaged to hero troops and do not decrease their defense.
   Charismatic:
     ids: [HERO_SKILL_CHARISMA]
     new: true
+    desc: Doubles the amount of creatures that join player's side from the Leadership skill after battles.
   Chilling Bones:
     ids: [HERO_SKILL_CHILLING_BONES]
     pl: Lodowate Kości
@@ -1147,9 +1338,11 @@ skills:
   Commander:
     ids: [HERO_SKILL_COMMANDER]
     new: true
+    desc: Hero can use Warcries but not regular spells. Visiting a spell shrine grants experience points (500 per spell level).
   Conjurer:
     ids: [HERO_SKILL_CONJURER]
     new: true
+    desc: Makes Conjure Phoenix and Summon Elementals spells more powerful (effective Spellpower is increased by 4 for casting those spells).
   Consume Artifact:
     ids: [HERO_SKILL_CONSUME_ARTIFACT]
     pl: Pochłonięcie Artefaktu
@@ -1163,12 +1356,15 @@ skills:
   Coordination:
     ids: [HERO_SKILL_COORDINATION]
     new: true
+    desc: Links a hero with a selected creature in his army. Every time this creature performs an attack, the hero will assault the same target. The hero's attack is by 3 his levels more powerful than usual.
   Corruption Immunity:
     ids: [HERO_SKILL_CORRUPTION_IMMUNE]
     new: true
+    desc: Creatures in hero's army are immuned to mind afflictions.
   Counter Magic:
     ids: [HERO_SKILL_COUNTER_MAGIC]
     new: true
+    desc: Creatures in hero's army get two rolls of Magic Disruption, increasing their chance to avoid enemy spells.
   Counterspell:
     ids: [HERO_SKILL_COUNTERSPELL]
     pl: Odbicie Zaklęcia
@@ -1177,9 +1373,11 @@ skills:
   Critical Strike:
     ids: [HERO_SKILL_BRUTALITY]
     new: true
+    desc: Hero's attacks will always deal double damage.
   Darkness Affinity:
     ids: [HERO_SKILL_DARKNESS_AFFINITY]
     new: true
+    desc: Grants mass effects to Slow and Confusion spells, for double the casting cost of these spells.
   Dead Man's Curse:
     ids: [HERO_SKILL_DEAD_MANS_CURSE]
     pl: Klątwa Umarlaka
@@ -1193,6 +1391,7 @@ skills:
   Deadly Cold:
     ids: [HERO_SKILL_DEADLY_COLD]
     new: true
+    desc: Makes Hero’s casting of ice spells more powerful. Those spells will freeze targets twice longer and deal additional damage to kill one creature in the target stack.
   Death March:
     ids: [HERO_SKILL_SIEGE]
     pl: Pochód Śmierci
@@ -1211,9 +1410,11 @@ skills:
   Destruction Learning:
     ids: [HERO_SKILL_DESTRUCTION_LEARNING]
     new: true
+    desc: Hero gains +2 Knowledge permanently and randomly acquires one damaging spell of 1st to 3rd circle that is not yet in hero's spellbook.
   Devotion:
     ids: [HERO_SKILL_DEVOTION]
     new: true
+    desc: Hero troops do not fear to die for their hero. Gain experience points from your losses after won battles.
   Diplomacy:
     ids: [HERO_SKILL_DIPLOMACY]
     pl: Dyplomacja
@@ -1222,15 +1423,19 @@ skills:
   Divine Blessing:
     ids: [HERO_SKILL_DIVINE_BLESSING]
     new: true
+    desc: Gain the ability to learn Mass Strength and Mass Cleansing when the base spell is learnt.
   Dominant Shout:
     ids: [HERO_SKILL_DOMINANT_SHOUT]
     new: true
+    desc: Decreases enemy hero's Spellpower in combat by half of your Spellpower.
   Earth Power:
     ids: [HERO_SKILL_EARTH_POWER]
     new: true
+    desc: Hero casts earth spells for 10% less mana and with +3 effective spellpower.
   Earth's Wrath:
     ids: [HERO_SKILL_EARTH_WRATH]
     new: true
+    desc: Makes Land Mines and Earthquake spells more powerful (effective Spellpower is increased by 4 for casting those spells).
   Elemental Balance:
     ids: [HERO_SKILL_ELEMENTAL_BALANCE]
     pl: Równowaga Żywiołów
@@ -1239,6 +1444,7 @@ skills:
   Elemental Focus:
     ids: [HERO_SKILL_ELEMENTAL_FOCUS]
     new: true
+    desc: Gain +1 Spellpower. Casting elemental spells uses 10% less ATB.
   Elemental Vision:
     ids: [HERO_SKILL_ELEMENTAL_VISION]
     pl: Podstawowe Widzenie
@@ -1247,6 +1453,7 @@ skills:
   Elements Virtuoso:
     ids: [HERO_SKILL_ELEMENTS_VIRTUOSO]
     new: true
+    desc: Hero gains 0.25 initiative and 10% bonus damage to elemental spells for each spell element that hero has cast during the battle.
   Empathy:
     ids: [HERO_SKILL_EMPATHY]
     pl: Empatia
@@ -1255,6 +1462,7 @@ skills:
   Empiricism:
     ids: [HERO_SKILL_EMPIRICISM]
     new: true
+    desc: Hero gains 500 + 5% of current experience points. Repeat this bonus at the start of each week.
   Empowered spells:
     ids: [HERO_SKILL_EMPOWERED_SPELLS]
     pl: Wzmocnione Zaklęcia
@@ -1263,9 +1471,11 @@ skills:
   Encourage:
     ids: [HERO_SKILL_ENCOURAGE]
     new: true
+    desc: The hero receives the special combat ability to encourage his troops on a battlefield, making their turns come faster.
   Enlightened:
     ids: [HERO_SKILL_ENLIGHTENED]
     new: true
+    desc: Being so keen to learn, the hero is granted +2 Knowledge and an additional bonus of +1500 experience.
   Erratic Mana:
     ids: [HERO_SKILL_CHAOTIC_SPELLS]
     pl: Kapryśna Mana
@@ -1289,6 +1499,7 @@ skills:
   Exaltation:
     ids: [HERO_SKILL_EXALTATION]
     new: true
+    desc: Delving deep into the secrets of spellcraft, hero gains +4 Spellpower permanently.
   Exorcism:
     ids: [HERO_SKILL_BANISH]
     pl: Egzorcyzm
@@ -1297,6 +1508,7 @@ skills:
   Expert Arcanism:
     ids: [HERO_SKILL_ARCANISM/3]
     new: true
+    desc: Unique Dungeon skill. Elemental chains deal 30% bonus damages. Mostly negates magic protection and allows hero to deal 75% of normal spell damage to otherwise resistant creatures.
   Expert Artificer:
     ids: [HERO_SKILL_ARTIFICIER/3]
     pl: Ekspercki Rzemieślnik
@@ -1320,9 +1532,11 @@ skills:
   Expert Combat:
     ids: [HERO_SKILL_COMBAT/3]
     new: true
+    desc: Increase by 60% the damages of the hero's attacks and his or her troops' retaliation strikes.
   Expert Courage:
     ids: [HERO_SKILL_COURAGE/3]
     new: true
+    desc: Unique Haven skill. Hero's troops take 3% reduced damage from non-magical attacks per Morale point. Gain +3 Morale.
   Expert Dark Magic:
     ids: [HERO_SKILL_DARK_MAGIC/3]
     pl: Ekspercka Magia Mroku
@@ -1336,6 +1550,7 @@ skills:
   Expert Despotism:
     ids: [HERO_SKILL_DESPOTISM/3]
     new: true
+    desc: After battles, the hero gains a temporary bonus to his or her highest primary attribute based on army size. The bonus is +3 and 1 more for every 600 creatures in the army.
   Expert Destructive Magic:
     ids: [HERO_SKILL_DESTRUCTIVE_MAGIC/3]
     pl: Ekspercka Magia Zniszczenia
@@ -1349,6 +1564,7 @@ skills:
   Expert Governance:
     ids: [HERO_SKILL_GOVERNANCE/3]
     new: true
+    desc: The hero generates 5000 Golds and 3 resources at the start of each week. The resource is determined by the Resource Silo of the faction. Gives hero the ability to convert towns and dwellings.
   Expert Leadership:
     ids: [HERO_SKILL_LEADERSHIP/3]
     pl: Eksperckie Dowodzenie
@@ -1357,6 +1573,7 @@ skills:
   Expert Learning:
     ids: [HERO_SKILL_LEARNING/3]
     new: true
+    desc: Gain +1 Knowledge every 5 levels of the hero. Hero receives 15% bonus to the experience gained from all sources.
   Expert Light Magic:
     ids: [HERO_SKILL_LIGHT_MAGIC/3]
     pl: Ekspercka Magia Światła
@@ -1370,6 +1587,7 @@ skills:
   Expert Natural Magic:
     ids: [HERO_SKILL_NATURAL_MAGIC/3]
     new: true
+    desc: Allows hero to learn Natural Magic spells of the fifth circle and learns a random one instantly. Increases Natural Magic spells efficiency, damages, duration etc.
   Expert Necromancy:
     ids: [HERO_SKILL_NECROMANCY/3]
     pl: Ekspercka Nekromancja
@@ -1383,6 +1601,7 @@ skills:
   Expert Shatter Magic:
     ids: [HERO_SKILL_SHATTER_MAGIC/3]
     new: true
+    desc: Burn 30% of enemy casters' total mana at the start of combats, including enemy hero.
   Expert Sorcery:
     ids: [HERO_SKILL_SORCERY/3]
     pl: Ekspercki Talent Magiczny
@@ -1391,6 +1610,7 @@ skills:
   Expert Spiritism:
     ids: [HERO_SKILL_SPIRITISM/3]
     new: true
+    desc: Unique Shaman skill. Allows hero to learn spells from any magic school by leveling up, up to the 5th circle. Hero regenerates an additional 30 Mana per day.
   Expert Trainer:
     ids: [HERO_SKILL_EXPERT_TRAINER]
     pl: Eksperckie Szkolenie
@@ -1399,21 +1619,28 @@ skills:
   Expert Training:
     ids: [HERO_SKILL_TRAINING/3]
     new: true
+    desc: Unlock third level of training bonuses. Creatures in hero's army get significantly stronger with individual combat bonuses.
   Expert Voice:
     ids: [HERO_SKILL_VOICE/3]
     new: true
+    desc: Gain +1 Spellpower every 5 levels of the hero. The use of an activated ability from the Battlecry category delays the hero's next turn less by 15%.
   Expert Warfare:
     ids: [HERO_SKILL_WARFARE/3]
     new: true
+    desc: Makes war machines more effective overall. Ballista has more Attack, Defense and Damages, First Aid Tent has more base healing, Catapult has more Damage and precision, Ammo Cart increases Attack
+      of...
   Expertise:
     ids: [HERO_SKILL_EXPERTISE]
     new: true
+    desc: Combat abilities of creatures in hero's army (like Bash or Blinding Attack) have a second roll while calculating their chance to trigger.
   Fatal Strikes:
     ids: [HERO_SKILL_FATAL_STRIKES]
     new: true
+    desc: The bonus to damage of critical strikes is increased by 20%.
   Fierce Retaliations:
     ids: [HERO_SKILL_FIERCE_RETALIATIONS]
     new: true
+    desc: Hero troops deal twice as much damage on retaliations.
   Fiery Wrath:
     ids: [HERO_SKILL_FIERY_WRATH]
     pl: Ognisty Gniew
@@ -1442,9 +1669,11 @@ skills:
   Forbidden Power:
     ids: [HERO_SKILL_FORBIDDEN_POWER]
     new: true
+    desc: Hero gains +1 Spellpower at the start of each week.
   Frost Power:
     ids: [HERO_SKILL_FROST_POWER]
     new: true
+    desc: Hero casts ice spells for 10% less mana and with +3 effective spellpower.
   Gate Master:
     ids: [HERO_SKILL_GATE_MASTER]
     pl: Odźwierny
@@ -1453,9 +1682,11 @@ skills:
   Gear Up:
     ids: [HERO_SKILL_GEAR_UP]
     new: true
+    desc: The hero obtains a random minor artifact from his or her faction set or a neutral set. At the start of each week, gain 400 golds per minor artifact equipped.
   Geology:
     ids: [HERO_SKILL_GEOLOGY]
     new: true
+    desc: The hero finds more gold and resources on the map and gain 1 Ore per day.
   Goblin Support:
     ids: [HERO_SKILL_GOBLIN_SUPPORT]
     pl: Wsparcie Goblinów
@@ -1479,6 +1710,7 @@ skills:
   Haunting:
     ids: [HERO_SKILL_HAUNTING]
     new: true
+    desc: After capturing an enemy mine the hero is able to haunt it. Some Ghosts will appear in mine's garrison, the number of summoned Ghosts depends upon the number of the week.
   Hellfire:
     ids: [HERO_SKILL_HELLFIRE]
     pl: Piekielny Ogień
@@ -1492,6 +1724,7 @@ skills:
   Heroes Legacy:
     ids: [HERO_SKILL_HEROES_LEGACY]
     new: true
+    desc: The hero obtains a random major artifact from his or her faction set or a neutral set. At the start of each week, gain 600 golds per major artifact equipped.
   Hold Ground:
     ids: [HERO_SKILL_HOLD_GROUND]
     pl: Niewzruszony
@@ -1500,12 +1733,15 @@ skills:
   Holy Charge:
     ids: [HERO_SKILL_HOLY_CHARGE]
     new: true
+    desc: Hero's Retaliation Strike ability inflicts triple damage.
   Home Land:
     ids: [HERO_SKILL_FAMILIAR_LAND]
     new: true
+    desc: All creatures in hero's army receive +1 movement speed if the battle is taking place on grass terrain.
   Houndmasters:
     ids: [HERO_SKILL_HOUNDMASTERS]
     new: true
+    desc: A stack of Wolves is added to hero's army at the start of combats. The amount is 10 plus between 2 and 3 times hero level.
   Ignite:
     ids: [HERO_SKILL_IGNITE]
     pl: Zapłon
@@ -1524,15 +1760,19 @@ skills:
   Industry:
     ids: [HERO_SKILL_INDUSTRY]
     new: true
+    desc: Doubles the production of sawmills, ore pits, alchemist labs, sulfur deposits, crystal caverns, gem and any other mines which are in a 10 tiles radius from the hero at the start of the day.
   Infernal Portals:
     ids: [HERO_SKILL_INFERNAL_PORTALS]
     new: true
+    desc: The Teleport spell has an additional effect to increase the creature's ATB by 50%.
   Infusion:
     ids: [HERO_SKILL_INFUSION]
     new: true
+    desc: The hero gains +1 Spellpower. At the start of each week, gain +50 temporary mana that can go beyond maximum.
   Innates:
     ids: [HERO_SKILL_INNATES/1, HERO_SKILL_INNATES/2, HERO_SKILL_INNATES/3]
     new: true
+    desc: Contains innates skills that cannot be learnt otherwise.
   Intelligence:
     ids: [HERO_SKILL_INTELLIGENCE]
     pl: Inteligencja
@@ -1541,9 +1781,11 @@ skills:
   Intimidating Voice:
     ids: [HERO_SKILL_INTIMIDATING_VOICE]
     new: true
+    desc: Enemy creatures get a -1 Morale penalty, and enemy hero will receive 15% penalty to initiative after casting any spell in combat.
   Intuition:
     ids: [HERO_SKILL_INTUITION]
     new: true
+    desc: Allows hero to learn an unknown spell used by an enemy hero or creature in combat (hero must be able to learn the spell with regards to school, level, etc.) and to see the contents of the enemy...
   Know Your Enemy:
     ids: [HERO_SKILL_KNOW_YOUR_ENEMY]
     pl: Poznaj Wroga Swego
@@ -1557,6 +1799,7 @@ skills:
   Lightning Touch:
     ids: [HERO_SKILL_LIGHTNING_TOUCH]
     new: true
+    desc: Hero troops deal 10% bonus Lightning damages.
   Lord of the Undead:
     ids: [HERO_SKILL_LORD_OF_UNDEAD]
     pl: Władca Nieumarłych
@@ -1565,15 +1808,19 @@ skills:
   Lucky Caster:
     ids: [HERO_SKILL_LUCKY_CASTER]
     new: true
+    desc: Luck rolls will now be applied to destructive spells cast by the hero, thus allowing a chance for double damage from spells.
   Lung Workout:
     ids: [HERO_SKILL_LUNG_WORKOUT]
     new: true
+    desc: Hero regenerates 1 mana per level each day, in addition to the base mana regeneration of 1 per knowledge point.
   Magic Bond:
     ids: [HERO_SKILL_MAGIC_BOND]
     new: true
+    desc: Special combat ability. Caster binds himself to the target with Magic Bond until the end of combat. The Magic Bond makes every targeted spell cast by the hero is also cast on the bound creature,...
   Magic Filter:
     ids: [HERO_SKILL_MAGIC_FILTER]
     new: true
+    desc: Grants 50% Spell-proof to a random element for each creature in hero's army. Spell-proof reduces damages taken from spells.
   Magic Insight:
     ids: [HERO_SKILL_MAGIC_INSIGHT]
     pl: Magiczna Intuicja
@@ -1602,6 +1849,7 @@ skills:
   Meditation:
     ids: [HERO_SKILL_MEDITATION]
     new: true
+    desc: Special adventure ability. Hero spends entire day to meditate, granting experience and full mana. Can only be used at the beginning of the day.
   Memory Of Our Blood:
     ids: [HERO_SKILL_MEMORY_OF_OUR_BLOOD]
     pl: Pamięć Naszej Krwi
@@ -1620,15 +1868,19 @@ skills:
   Motivation:
     ids: [HERO_SKILL_MOTIVATION]
     new: true
+    desc: Hero practices his or her speeches skills to improve the Morale of his or her troops in combat by +1.
   Mythology:
     ids: [HERO_SKILL_MYTHOLOGY]
     new: true
+    desc: The hero obtains a random relic artifact from his or her faction set or a neutral set. At the start of each week, gain 800 golds per relic artifact equipped.
   Obliteration:
     ids: [HERO_SKILL_OBLITERATION]
     new: true
+    desc: Destructive Magic spells deal 30% additional damage, and twice more against any summoned targets.
   Occultism:
     ids: [HERO_SKILL_OCCULTISM]
     new: true
+    desc: The hero learns forbidden magic powers, granting him or her +5 Spellpower and twice faster Mana regeneration.
   Offensive Formation:
     ids: [HERO_SKILL_OFFENSIVE_FORMATION]
     pl: Formacja Ofensywna
@@ -1637,15 +1889,19 @@ skills:
   Omniscience:
     ids: [HERO_SKILL_OMNISCIENCE]
     new: true
+    desc: All spells that are in existance will be written to hero's spellbook and hero will be able to cast them on expert level.
   Onslaught:
     ids: [HERO_SKILL_ONSLAUGHT]
     new: true
+    desc: Creatures in hero's army have bonus speed and initiative for the first combat of each day.
   Orcish Fury:
     ids: [HERO_SKILL_ORCISH_FURY]
     new: true
+    desc: All stronghold creatures in hero’s army get additional 500 points of rage at the beginning of combat. This skill is learnt by having 3 perks in Blood Rage and in four other common skills.
   Pariah:
     ids: [HERO_SKILL_PARIAH]
     new: true
+    desc: Troops under hero's control suffer -1 penalty to morale, but all Dark Magic spells cast by the hero are now more powerful (effective Spellpower is +6 for casting those spells).
   Pathfinding:
     ids: [HERO_SKILL_PATHFINDING]
     pl: Znajdowanie Drogi
@@ -1654,6 +1910,7 @@ skills:
   Perception of Weakness:
     ids: [HERO_SKILL_PERCEPTION_OF_WEAKNESS]
     new: true
+    desc: Allows hero to see the element of enemy creatures. Using a damaging spell of the opposite element will deal additional damage equal to 15% of the base spell damage.
   Plague Tent:
     ids: [HERO_SKILL_PLAGUE_TENT]
     pl: Namiot Zarazy
@@ -1667,12 +1924,15 @@ skills:
   Power of Stone:
     ids: [HERO_SKILL_POWER_OF_STONE]
     new: true
+    desc: Hero acquires Mass Endurance spell on advanced level.
   Prayer:
     ids: [HERO_SKILL_PRAYER]
     new: true
+    desc: The hero receives special combat ability to temporarily raise the morale, initiative, attack and defense of his troops (doesn't work on undead and mechanical).
   Precision:
     ids: [HERO_SKILL_PRECISION]
     new: true
+    desc: Gain a permanent +2 Luck, increasing hero troops critical strike chances.
   Preparation:
     ids: [HERO_SKILL_PREPARATION]
     pl: Przygotowanie
@@ -1686,6 +1946,7 @@ skills:
   Rage Awakening:
     ids: [HERO_SKILL_RAGE_AWAKENING]
     new: true
+    desc: The Shaman unleashes the raw power of the orc creatures, allowing them to reach the first level of blood rage.
   Rage of the Elements:
     ids: [HERO_SKILL_RAGE_OF_THE_ELEMENTS]
     pl: Gniew Żywiołów
@@ -1699,6 +1960,7 @@ skills:
   Rapid Fire:
     ids: [HERO_SKILL_RAPIDFIRE]
     new: true
+    desc: Ballista gains an extra shot.
   Recruitment:
     ids: [HERO_SKILL_RECRUITMENT]
     pl: Werbunek
@@ -1712,6 +1974,7 @@ skills:
   Reinforcement:
     ids: [HERO_SKILL_REINFORCEMENT]
     new: true
+    desc: Hero gains +1 Attack and Defense. Repeat this bonus at the start of each week.
   Remote Control:
     ids: [HERO_SKILL_REMOTE_CONTROL]
     pl: Zdalne Sterowanie
@@ -1730,6 +1993,7 @@ skills:
   Royal Charge:
     ids: [HERO_SKILL_ROYAL_CHARGE]
     new: true
+    desc: Creatures in hero's army have the effect of Rune of Charge for free during their first combat turn.
   Runic Attunement:
     ids: [HERO_SKILL_RUNIC_ATTUNEMENT]
     pl: Wzmocnienie Runiczne
@@ -1738,9 +2002,11 @@ skills:
   Runic Shield:
     ids: [HERO_SKILL_RUNIC_SHIELD]
     new: true
+    desc: Hero receives Celestial Shield spell and +6 effective Spellpower when casting it.
   Rush:
     ids: [HERO_SKILL_RUSH]
     new: true
+    desc: A random creature in hero's army starts with 100% ATB in every battle.
   Sap Magic:
     ids: [HERO_SKILL_SAP_MAGIC]
     pl: Wyssanie Magii
@@ -1754,6 +2020,7 @@ skills:
   Scorching Earth:
     ids: [HERO_SKILL_SCORCHING_EARTH]
     new: true
+    desc: The hero calls upon forces of nature to affect enemy walking creatures. Any time an enemy creature moves it will receive damage equal to 8 times hero level.
   Scouting:
     ids: [HERO_SKILL_SCOUTING]
     pl: Odkrywanie
@@ -1762,6 +2029,7 @@ skills:
   Seal of Protection:
     ids: [HERO_SKILL_SEAL_OF_PROTECTION]
     new: true
+    desc: Hero gains +2 defense. Creatures in his or her army have doubled Attack and Defense and 50% Magic-proof until first action in combats.
   Searing Fires:
     ids: [HERO_SKILL_SEARING_FIRES]
     pl: Palące Ognie
@@ -1775,15 +2043,19 @@ skills:
   Sheer Strength:
     ids: [HERO_SKILL_SHEER_STRENGTH]
     new: true
+    desc: The hero gains +2 Attack and Defense and creatures in his army gain 20% bonus health.
   Shocking Bolts:
     ids: [HERO_SKILL_SHOCKING_BOLTS]
     new: true
+    desc: Hero's Lightning spells remove all ATB from the targeted creature, and make them unable to retaliate until their next turn.
   Silent Tracker:
     ids: [HERO_SKILL_SILENT_TRACKER]
     new: true
+    desc: The enemy will see only the strongest creature in hero's army with no number at all. Also this ability allows to see courage of neutral monsters and enlarges hero's field of view by 12 tiles.
   Siphon Grace:
     ids: [HERO_SKILL_SIPHON_GRACE]
     new: true
+    desc: Hero troops will steal enemy creature's buffs when attacking them.
   Snatch:
     ids: [HERO_SKILL_SNATCH]
     pl: Chwytność
@@ -1792,6 +2064,7 @@ skills:
   Soil Burn:
     ids: [HERO_SKILL_SOIL_BURN]
     new: true
+    desc: Enemy walking creatures will receive damage equal to 8 times hero level when moving.
   Spellbreaker:
     ids: [HERO_SKILL_SPELLBREAKER]
     pl: Łamacz Czarów
@@ -1800,9 +2073,11 @@ skills:
   Spellproof Bones:
     ids: [HERO_SKILL_SPELLPROOF_BONES]
     new: true
+    desc: Damage inflicted by any Destructive Magic spells to all troops under Necromancer's command is reduced by 20% .
   Spirit Link:
     ids: [HERO_SKILL_SPIRIT_LINK]
     new: true
+    desc: Grants a hero the ability to tie his or her own spirit to the spirits of any creatures on the battlefield until the end of combat.
   Spoils of War:
     ids: [HERO_SKILL_SPOILS_OF_WAR]
     pl: Łupy Wojenne
@@ -1811,9 +2086,11 @@ skills:
   Spread Curse:
     ids: [HERO_SKILL_SPREAD_CURSE]
     new: true
+    desc: Grants mass effects to Weakness and Suffering spells, for double the casting cost of these spells. Hero attacks apply Suffering to the target.
   Spread Pain:
     ids: [HERO_SKILL_SPREAD_PAIN]
     new: true
+    desc: Grants area effects to Decay and Rupture spells, for double the casting cost of these spells. Adds +4 to effective spellpower of Unholy Word spell.
   Stamina:
     ids: [HERO_SKILL_STAMINA]
     pl: Kulturystyka
@@ -1827,6 +2104,7 @@ skills:
   Stun Training:
     ids: [HERO_SKILL_STUN_TRAINING]
     new: true
+    desc: Creatures in hero's army gain the Bash ability, that gives a chance to stun targets on melee attacks.
   Stunning Blow:
     ids: [HERO_SKILL_STUNNING_BLOW]
     pl: Ogłuszający Cios
@@ -1845,9 +2123,11 @@ skills:
   Swiftness:
     ids: [HERO_SKILL_SWIFTNESS]
     new: true
+    desc: Combat movement speed of all units in hero army is increased by +1.
   Sylanna's Benediction:
     ids: [HERO_SKILL_SYLANNAS_BENEDICTION]
     new: true
+    desc: Creatures in hero's army have permanent Regeneration.
   Tactics:
     ids: [HERO_SKILL_TACTICS]
     pl: Taktyka
@@ -1856,9 +2136,11 @@ skills:
   Tale Tellers:
     ids: [HERO_SKILL_TALETELLERS]
     new: true
+    desc: Hero victories are related around the kingdom. Allied heroes gain experience from these.
   Talented Warrior:
     ids: [HERO_SKILL_TALENTED_WARRIOR]
     new: true
+    desc: When this hero meets another friendly hero, the latter gains as much experience as he or she needs to have his or her experience become equal to 30 percent of that of the mentor’s (this is only...
   Tap Runes:
     ids: [HERO_SKILL_TAP_RUNES]
     pl: Oszczędne Runy
@@ -1872,15 +2154,19 @@ skills:
   Tenacity:
     ids: [HERO_SKILL_TENACITY]
     new: true
+    desc: Enemy Dark Magic spells will be cast with 33% less effective Spellpower.
   Thrill of Combat:
     ids: [HERO_SKILL_THRILL_OF_COMBAT]
     new: true
+    desc: Hero can roll positive morale after attacking.
   Thunder Power:
     ids: [HERO_SKILL_THUNDER_POWER]
     new: true
+    desc: Hero casts lightning spells for 10% less mana and with +3 effective spellpower.
   Toughness:
     ids: [HERO_SKILL_TOUGHNESS]
     new: true
+    desc: Increases hit points of all your creatures by 2.
   Twilight:
     ids: [HERO_SKILL_TWILIGHT]
     pl: Zmierzch
@@ -1889,9 +2175,11 @@ skills:
   Unlimited Retaliations:
     ids: [HERO_SKILL_UNLIMITED_RETALIATIONS]
     new: true
+    desc: Hero troops have no limit to retaliations per turn.
   Unsettle:
     ids: [HERO_SKILL_UNSETTLE]
     new: true
+    desc: Earth spells cast by the hero decrease the maximum health of targeted creature by 1.
   Urgash's Call:
     ids: [HERO_SKILL_URGASHS_CALL]
     pl: Zew Urgasha
@@ -1905,33 +2193,43 @@ skills:
   Vengeful Light:
     ids: [HERO_SKILL_VENGEFUL_LIGHT]
     new: true
+    desc: When the hero casts a Light Magic spell, Divine Vengeance is automatically cast on a random valid enemy stack.
   Voice Training:
     ids: [HERO_SKILL_VOICE_TRAINING]
     new: true
+    desc: All Warcries cost 20% less mana.
   War Path:
     ids: [HERO_SKILL_WAR_PATH]
     new: true
+    desc: The hero gets 250 additional movement points for every victory on the map. Hero troops gain +2 Attack and Defense for the first battle of each day, and gain an additional 500 movement points after...
   War Policy:
     ids: [HERO_SKILL_WAR_POLICY]
     new: true
+    desc: 20% of creatures lost after a victory are added for recruitment in your towns. Only applies to creatures of the same faction as the hero.
   Warfare Logistics:
     ids: [HERO_SKILL_TECHNICAL_STAFF]
     new: true
+    desc: Increases initiative of all war machines by +3.
   Warriors of the Magma:
     ids: [HERO_SKILL_WARRIORS_OF_THE_MAGMA]
     new: true
+    desc: Hero casts of the Summon Elementals spell will always summon Fire Elementals. At the start of each week, new Fire Elementals will permanently join hero's army.
   Warriors of the Mountain:
     ids: [HERO_SKILL_WARRIORS_OF_THE_MOUNTAIN]
     new: true
+    desc: Hero casts of the Summon Elementals spell will always summon Earth Elementals. At the start of each week, new Earth Elementals will permanently join hero's army.
   Warriors of the Sea:
     ids: [HERO_SKILL_WARRIORS_OF_THE_SEA]
     new: true
+    desc: Hero casts of the Summon Elementals spell will always summon Water Elementals. At the start of each week, new Water Elementals will permanently join hero's army.
   Warriors of the Sky:
     ids: [HERO_SKILL_WARRIORS_OF_THE_SKY]
     new: true
+    desc: Hero casts of the Summon Elementals spell will always summon Air Elementals. At the start of each week, new Air Elementals will permanently join hero's army.
   Witchcraft:
     ids: [HERO_SKILL_WITCHCRAFT]
     new: true
+    desc: Adds +2 to hero's Spellpower permanently. Hero also receives a new spell in his or her spell book.
 spells:
   Advanced Attack:
     ids: [SPELL_SKILL_OFFENCE2]
@@ -1956,6 +2254,8 @@ spells:
   Advanced Warfare:
     ids: [SPELL_SKILL_WAR_MACHINES2]
     new: true
+    desc: Makes war machines more effective overall. Ballista has more Attack, Defense and Damages, First Aid Tent has more base healing, Catapult has more Damage and precision, Ammo Cart increases Attack
+      of...
   Agility:
     ids: [SPELL_ABILITY_AGILITY]
     pl: Zwinność
@@ -1964,9 +2264,11 @@ spells:
   Anatomy:
     ids: [SPELL_SKILL_FIRST_AID]
     new: true
+    desc: Allows manual control of the First Aid Tent. Grants hero a free First Aid Tent and restores it after battles if it was destroyed.
   Annihilate:
     ids: [SPELL_ABILITY_INCINERATE]
     new: true
+    desc: Fly up to attack the enemy on an adjacent tile, delivering 50% greater damage and suffering no retaliation.
   Arcane Crystal:
     ids: [SPELL_ARCANE_CRYSTAL]
     pl: Magiczny Kryształ
@@ -1995,6 +2297,7 @@ spells:
   Arrow Storm:
     ids: [SPELL_MULTISHOT]
     new: true
+    desc: Grants hero an ability to attack all enemy creatures which are present in his favorite enemy list. The attack deals damages as if the hero was 3 levels higher.
   Attack +1, Defense +1:
     ids: [SPELL_TOWN_OFFENCE_DEFENCE_P1]
     pl: Atak +1, Obrona +1
@@ -2053,6 +2356,7 @@ spells:
   Ballistics:
     ids: [SPELL_SKILL_BALLISTA]
     new: true
+    desc: Allows manual control of the Ballista. Grants hero a free Ballista and restores it after battles if it was destroyed.
   Banish:
     ids: [SPELL_ABILITY_UNSUMMON]
     pl: Wygnanie
@@ -2086,6 +2390,8 @@ spells:
   Basic Warfare:
     ids: [SPELL_SKILL_WAR_MACHINES1]
     new: true
+    desc: Makes war machines more effective overall. Ballista has more Attack, Defense and Damages, First Aid Tent has more healing, Catapult has more Damage and precision, Ammo Cart increases Attack of
+      ranged...
   Battle bonus level 1:
     ids: [SPELL_DEMON_RAGE_LEVEL_1]
     new: true
@@ -2128,6 +2434,8 @@ spells:
   Berserk:
     ids: [SPELL_BERSERK]
     new: true
+    desc: Drives target stack of creatures berserk. Affected stack considers all other creatures and war machines its personal enemies and attacks the nearest one with redoubled rage (The spell does not
+      work...
   Black Hand:
     ids: [SPELL_SPEC_SAVAGE]
     pl: Czarna Ręka
@@ -2151,6 +2459,7 @@ spells:
   Blind:
     ids: [SPELL_BLIND]
     new: true
+    desc: Blinds the selected enemy creature so that it cannot move, attack or use any abilities. Blindness disappears if blinded creature is attacked. Spellpower determines the duration of effect.
   Blood Drinker:
     ids: [SPELL_SPEC_BLOODDRINKER]
     pl: Krwiopijca
@@ -2169,6 +2478,7 @@ spells:
   Bulwark Rune:
     ids: [SPELL_SKILL_ABSOLUTE_PROTECTION]
     new: true
+    desc: Normal attacks against hero's creatures are always unlucky. Lucky attacks are turned to normal. This skill is learnt by having 3 perks in Runelore and in four other common skills.
   Call Lightning:
     ids: [SPELL_ABILITY_CALL_LIGHTNING]
     pl: Przywołanie Błyskawicy
@@ -2182,6 +2492,7 @@ spells:
   Camouflage:
     ids: [SPELL_ABILITY_INVISIBILITY]
     new: true
+    desc: The creature becomes invisible to the enemy for 2 turns. If the creature attacks anyone, has its path blocked by enemy units or stops on a tile adjacent to a hostile stack it will be disclosed.
   Catapult:
     ids: [SPELL_SKILL_CATAPULT]
     pl: Katapulta
@@ -2195,6 +2506,7 @@ spells:
   Celestial Shield:
     ids: [SPELL_CELESTIAL_SHIELD]
     new: true
+    desc: Encloses target stack with magical energy shield that partly drains all damage dealt to the stack.
   Centaur Commander:
     ids: [SPELL_SPEC_CENTAUR_MISTRESS]
     pl: Dowódca Centaurów
@@ -2243,9 +2555,11 @@ spells:
   Conversion:
     ids: [SPELL_ABILITY_CUSTOM4]
     new: true
+    desc: Governance ability. Allows hero to convert a building to the equivalent of his/her faction.
   Convocation:
     ids: [SPELL_ABILITY_SUMMON_OTHER]
     new: true
+    desc: Moves any chosen stack, regardless of who owns it, to a tile adjacent to the caster.
   Counterspell:
     ids: [SPELL_ABILITY_COUNTERSPELL]
     pl: Odbicie Zaklęcia
@@ -2344,9 +2658,12 @@ spells:
   Demoralized by hero's attack:
     ids: [SPELL_ARTFSET_LIONS_DEMORALIZED]
     new: true
+    desc: Demoralized by hero's attack
   Discharge:
     ids: [SPELL_CHAIN_LIGHTNING]
     new: true
+    desc: Deals lightning damage to the target and removes half of its current ATB, then bounces twice, targeting the closest unit (ally or enemy), and dealing 75% of the damage inflicted to the previous
+      one.
   Distract:
     ids: [SPELL_SKILL_DISTRACT]
     pl: Odwrócenie Uwagi
@@ -2368,6 +2685,7 @@ spells:
   Earth Shatter:
     ids: [SPELL_UBER_METEOR_SHOWER]
     new: true
+    desc: Deals earth damage to all units in a large area.
   Earthquake:
     ids: [SPELL_EARTHQUAKE]
     pl: Trzęsienie Ziemi
@@ -2401,6 +2719,8 @@ spells:
   Empowered Discharge:
     ids: [SPELL_EMPOWERED_CHAIN_LIGHTNING]
     new: true
+    desc: Deals lightning damage to the target and removes half of its current ATB, then bounces twice, targeting the closest unit (ally or enemy), and dealing 75% of the damage inflicted to the previous
+      one.
   Empowered Fireball:
     ids: [SPELL_EMPOWERED_FIREBALL]
     pl: Wzmocniona Kula Ognia
@@ -2429,6 +2749,7 @@ spells:
   Empowered Magic Arrow:
     ids: [SPELL_EMPOWERED_MAGIC_ARROW]
     new: true
+    desc: Shoots magic missile to deal non-phisical damage to the selected enemy creature. Empowered spells deal 50% more damage but costs twice as much mana
   Empowered Meteor Shower:
     ids: [SPELL_EMPOWERED_METEOR_SHOWER]
     pl: Wzmocniony Grad Meteorytów
@@ -2437,6 +2758,7 @@ spells:
   Empowered Polar Ring:
     ids: [SPELL_EMPOWERED_FROST_RING]
     new: true
+    desc: Deals ice damage to all units surrounding the target spot and freeze their ATB value temporarily. Empowered spells deal 50% more damage but costs twice as much mana
   Empowered Stone spikes:
     ids: [SPELL_EMPOWERED_STONE_SPIKES]
     pl: Wzmocnione Kamienne Kolce
@@ -2445,6 +2767,7 @@ spells:
   Encourage:
     ids: [SPELL_ENCOURAGE]
     new: true
+    desc: Special combat ability to encourage troops on a battlefield, making their turns come faster.
   Endurance:
     ids: [SPELL_STONESKIN]
     pl: Wytrzymałość
@@ -2468,6 +2791,7 @@ spells:
   Evil Strike:
     ids: [SPELL_EFFECT_UNLUCKY]
     new: true
+    desc: Decreases the target’s Luck by -3.
   Expert Attack:
     ids: [SPELL_SKILL_OFFENCE3]
     pl: Ekspercki Atak
@@ -2491,6 +2815,8 @@ spells:
   Expert Warfare:
     ids: [SPELL_SKILL_WAR_MACHINES3]
     new: true
+    desc: Makes war machines more effective overall. Ballista has more Attack, Defense and Damages, First Aid Tent has more base healing, Catapult has more Damage and precision, Ammo Cart increases Attack
+      of...
   Explosion:
     ids: [SPELL_ABILITY_EXPLOSION]
     pl: Eksplozja
@@ -2575,6 +2901,7 @@ spells:
   Fury:
     ids: [SPELL_ABILITY_BERSERKER_RAGE]
     new: true
+    desc: When this ability is used, the creature's Defense drops temporarily to zero, Offense increases by the same amount, and it attacks the nearest target automatically without suffering the retaliation...
   Gating:
     ids: [SPELL_ABILITY_GATING]
     pl: Brama
@@ -2588,6 +2915,7 @@ spells:
   Goblin Snack:
     ids: [SPELL_ABILITY_SWALLOW_GOBLIN]
     new: true
+    desc: This creature can restore its health by eating a Goblin from a stack in its neighborhood (activated ability).
   Golem Crafter:
     ids: [SPELL_SPEC_GOLEMS]
     pl: Twórca Golemów
@@ -2641,6 +2969,7 @@ spells:
   Holy Word:
     ids: [SPELL_HOLY_WORD]
     new: true
+    desc: Deals holy damage to all the undead and infernal creatures on a battlefield.
   Horde’s Anger:
     ids: [SPELL_WARCRY_SHOUT_OF_MANY]
     pl: Gniew Hordy
@@ -2672,6 +3001,7 @@ spells:
   Immunity:
     ids: [SPELL_ANTI_MAGIC]
     new: true
+    desc: Clears both positive and negative magic effects from the target stack and makes it immune to further magic spell effects. Can only be cast on friendly stack.
   Implosion:
     ids: [SPELL_IMPLOSION]
     pl: Implozja
@@ -2685,6 +3015,7 @@ spells:
   Infection:
     ids: [SPELL_ABILITY_WEAKNING_STRIKE]
     new: true
+    desc: Infection cumulatively decreases attack and defense of the unit.
   Infernal Loom:
     ids: [SPELL_TOWN_INFERNAL_LOOM]
     pl: Piekielne Majaki
@@ -2718,6 +3049,7 @@ spells:
   Land Mines:
     ids: [SPELL_LAND_MINE]
     new: true
+    desc: Puts randomly several magical explosive mines in a selected area of the battlefield. Mines are invisible to the enemy.
   Lay Hands:
     ids: [SPELL_ABILITY_LAY_HANDS]
     pl: Leczące Dłonie
@@ -2764,6 +3096,7 @@ spells:
   Magic Arrow:
     ids: [SPELL_MAGIC_ARROW]
     new: true
+    desc: Shoots magic missile to deal non-phisical damage to the selected enemy creature.
   Magic Resistance:
     ids: [SPELL_SKILL_RESISTANCE]
     pl: Odporność na Magię
@@ -2785,6 +3118,7 @@ spells:
   Manavorous:
     ids: [SPELL_ABILITY_MANA_DRAIN]
     new: true
+    desc: When attacking a mana-possessing enemy, the creature steals 1 mana point per creature in group. For every stolen mana point, one fallen creature in the group returns to life.
   Mark Of Fire:
     ids: [SPELL_EFFECT_MARK_OF_FIRE]
     pl: Znamię Ognia
@@ -2838,6 +3172,7 @@ spells:
   Mass Rupture:
     ids: [SPELL_MASS_DISRUPTING_RAY]
     new: true
+    desc: Destroys armor of target enemy stack, dealing damages and reducing its defense. Can be cast several times on a single stack, but defense will not go lower than zero.
   Mass Slow:
     ids: [SPELL_MASS_SLOW]
     pl: Grupowe Spowolnienie
@@ -2846,6 +3181,7 @@ spells:
   Mass Strength:
     ids: [SPELL_MASS_BLESS]
     new: true
+    desc: Causes the selected friendly unit to inflict more damage in combat. Effective on creatures that have a wide damage range. This spell has a mass effect and affects all friendly creatures
   Mass Suffering:
     ids: [SPELL_MASS_WEAKNESS]
     pl: Grupowe Cierpienie
@@ -2874,9 +3210,11 @@ spells:
   Meditation:
     ids: [SPELL_ABILITY_DARK_RITUAL]
     new: true
+    desc: Hero spends entire day to meditate and regain full mana and 50 experience points per mana regenerated. Can only be used at the beginning of the day.
   Melting Breath:
     ids: [SPELL_EFFECT_LIQUID_FLAME_BREATH]
     new: true
+    desc: During an attack, this creature deals full damage not only to the target but also any other enemy unit positioned directly behind it and leaves a fire wall on the two tiles in the direction of...
   Mentor:
     ids: [SPELL_SPEC_MAGES]
     pl: Mentor
@@ -2895,6 +3233,7 @@ spells:
   Mind Control:
     ids: [SPELL_HYPNOTIZE]
     new: true
+    desc: Gives the hero temporary control over selected enemy unit. Unit under this spell can't counter-attack.
   Morale + 1:
     ids: [SPELL_TOWN_MORALE_P1]
     pl: Morale +1
@@ -2918,6 +3257,7 @@ spells:
   Pale Rider - Deathknight:
     ids: [SPELL_SPEC_BLADE_MASTER]
     new: true
+    desc: Pale Rider All Black Knights in hero's army gain +1 to their Attack and Defense for every two levels of the hero. A new Black Knight joins the hero's army every week.
   Pit Lord Summoning:
     ids: [SPELL_ABILITY_SUMMON_BALOR]
     pl: Przywołanie Czarciego Lorda
@@ -2931,6 +3271,7 @@ spells:
   Polar Ring:
     ids: [SPELL_FROST_RING]
     new: true
+    desc: Deals ice damage to all units surrounding the target spot and freeze their ATB value temporarily.
   Powerful Blow:
     ids: [SPELL_EFFECT_POWERFULL_BLOW]
     pl: Potężny Cios
@@ -2939,6 +3280,7 @@ spells:
   Prayer:
     ids: [SPELL_PRAYER]
     new: true
+    desc: Special combat ability. Temporarily raises Morale, Initiative, Attack and defense of friendly units (doesn't work on undead and mechanical).
   Preparation:
     ids: [SPELL_EFFECT_PREPARATION]
     pl: Przygotowanie
@@ -2947,6 +3289,7 @@ spells:
   Pressure:
     ids: [SPELL_EFFECT_HORROR_OF_THE_DEATH]
     new: true
+    desc: This creature decreases all enemy stacks’ Morale by -1.
   Protection:
     ids: [SPELL_SKILL_PROTECTION]
     pl: Ochrona
@@ -3030,6 +3373,7 @@ spells:
   Roar:
     ids: [SPELL_ABILITY_BEAR_ROAR]
     new: true
+    desc: This creature has a chance to frighten a target and its neighbors by the attack (small creatures are more disposed to fear). In the event of success the attacker gets +20% Health.
   Rune of Battle Rage:
     ids: [SPELL_RUNE_OF_BATTLERAGE]
     pl: Runy Szału Bojowego
@@ -3088,6 +3432,7 @@ spells:
   Rupture:
     ids: [SPELL_DISRUPTING_RAY]
     new: true
+    desc: Destroys armor of target enemy stack, dealing damages and reducing its defense. Can be cast several times on a single stack, but defense will not go lower than zero.
   Rush Dive:
     ids: [SPELL_ABILITY_PACK_DIVE, SPELL_ABILITY_PACK_DIVE_FINISH]
     pl: Roztrącanie
@@ -3116,9 +3461,11 @@ spells:
   Scorching Earth:
     ids: [SPELL_EFFECT_SOIL_BURN]
     new: true
+    desc: The hero calls upon the forces of nature to affect enemy melee creatures. Any time enemy creature is moving to another place it will receive fire damage. Inflicted damage depends on hero's level.
   Script Ability 1:
     ids: [SPELL_ABILITY_CUSTOM1]
     new: true
+    desc: .
   Seduce:
     ids: [SPELL_ABILITY_SEDUCE]
     pl: Uwiedź
@@ -3147,6 +3494,8 @@ spells:
   Shadow Image:
     ids: [SPELL_PHANTOM]
     new: true
+    desc: Copies the selected friendly unit (only one copy can be made). The copy can't cast any spells or use any abilities and disappears as soon as it recieves any damage (Incorporial ability gives the
+      copy...
   Sharp Blade:
     ids: [SPELL_SPEC_AXE_MASTER]
     pl: Cięte Ostrze
@@ -3200,9 +3549,11 @@ spells:
   Spirit Link:
     ids: [SPELL_SPIRIT_LINK]
     new: true
+    desc: Spirit links with the target creature, if linked creatures receive any damage the Necromancer will gain some mana, feeding upon those creatures' suffering.
   Spiteful:
     ids: [SPELL_ABILITY_ENRAGED]
     new: true
+    desc: Spiteful creatures received attack bonus for their fallen comrades.
   Steal Ammunition:
     ids: [SPELL_ABILITY_AMMO_STEAL]
     pl: Kradzież Amunicji
@@ -3226,6 +3577,7 @@ spells:
   Strength:
     ids: [SPELL_BLESS]
     new: true
+    desc: Causes the selected friendly unit to inflict more damage in combat. Effective on creatures that have a wide damage range.
   Strong walls:
     ids: [SPELL_TOWN_WALLS]
     pl: Silne mury
@@ -3269,6 +3621,7 @@ spells:
   Teleport:
     ids: [SPELL_TELEPORT]
     new: true
+    desc: Teleports targeted friendly creature to another location on a battlefield (Only expert in Dark Magic can teleport creatures over town walls)
   Temptress:
     ids: [SPELL_SPEC_SUCCUBUSES]
     pl: Kusicielka
@@ -3337,9 +3690,12 @@ spells:
   Warm-up:
     ids: [SPELL_ABILITY_DASH]
     new: true
+    desc: After using this ability, creature misses one turn but is then able to take turns more often (activated ability).
   Wasp Hive:
     ids: [SPELL_SUMMON_HIVE]
     new: true
+    desc: Creates a wasp hive on the selected place of the field. A swarm of wasps from this hive will attack enemy creatures until the end of combat or until the hive is attacked and destroyed (The hive
+      will...
   Wasp Swarm:
     ids: [SPELL_WASP_SWARM]
     pl: Rój Os
@@ -3392,6 +3748,7 @@ creatures:
   Arcane Eagle:
     ids: [CREATURE_SNOW_APE]
     new: true
+    desc: In his treatise “On the Nature of the Spirit World”, the great scholar Sar-Aggreth made a tentative classification of Spirits. He noticed that greater Spirits often took the form of majestic birds.
   Arch Demon:
     ids: [CREATURE_ARCH_DEMON]
     pl: Arcydemon
@@ -3440,6 +3797,7 @@ creatures:
   Basilisk:
     ids: [CREATURE_BASILISK]
     new: true
+    desc: Basilisks are fear‑inspiring, lizard‑like predatory creatures that inhabit swamps, jungles, and caves.
   Battle Griffin:
     ids: [CREATURE_BATTLE_GRIFFIN]
     pl: Gryf Bojowy
@@ -3463,6 +3821,7 @@ creatures:
   Behemoth:
     ids: [CREATURE_BEHEMOTH]
     new: true
+    desc: Behemoths are massive, slow-moving creatures of stone and sinew, their thick hides scarred by time and weather.
   Berserker:
     ids: [CREATURE_BERSERKER]
     pl: Berserker
@@ -3531,9 +3890,12 @@ creatures:
   Cave Dragon:
     ids: [CREATURE_DEEP_DRAGON]
     new: true
+    desc: Cave dragons live deep in the massive caverns of the far underground. Worshipped by Dark Elf society as avatars of their Great Mother, they tolerate their worshippers and occasionally ally with
+      them.
   Cave Spider:
     ids: [CREATURE_CAVE_SPIDER]
     new: true
+    desc: Cave Spiders are bloated, many-eyed horrors the size of draft horses, their glossy black carapaces slick with damp and the faint sheen of venom.
   Centaur:
     ids: [CREATURE_CENTAUR]
     pl: Centaur
@@ -3562,6 +3924,7 @@ creatures:
   Chaos Hydra:
     ids: [CREATURE_CHAOS_HYDRA]
     new: true
+    desc: Chaos Hydras are older than other Hydras and have six heads instead of three. This permits them to both deal more damage and strike more enemies.
   Chieftain:
     ids: [CREATURE_ORCCHIEF_CHIEFTAIN]
     pl: Herszt
@@ -3600,9 +3963,11 @@ creatures:
   Darkstorm:
     ids: [CREATURE_DARKSTORM_1, CREATURE_DARKSTORM_2, CREATURE_DARKSTORM_3, CREATURE_DARKSTORM_4, CREATURE_DARKSTORM_5, '... 45 more']
     new: true
+    desc: Back when he was a slave in Al-Rubit, Darkstorm made sure nobody would be aware of his arcane abilities.
   Death Spider:
     ids: [CREATURE_DEATH_SPIDER]
     new: true
+    desc: Death Spiders' venom doesn’t just paralyze, it liquefies, turning organs to slurry while the victim remains conscious, choking on their own dissolving flesh. Spells None Training bonuses None
   Defender:
     ids: [CREATURE_DEFENDER]
     pl: Obrońca
@@ -3631,6 +3996,7 @@ creatures:
   Dreadknight:
     ids: [CREATURE_DREAD_KNIGHT]
     new: true
+    desc: Dread Knights are armored specters in blackened plate, their hollow helms leaking corpse-light, their skeletal steeds moving without sound.
   Druid:
     ids: [CREATURE_DRUID]
     pl: Druid
@@ -3644,6 +4010,7 @@ creatures:
   Druid of the Council:
     ids: [CREATURE_DRUID_OF_THE_COUNCIL]
     new: true
+    desc: This secret order of Druids consists of the most battle-hardened ones. They lead the council of Druids.
   Dryad:
     ids: [CREATURE_DRYAD]
     pl: Driada
@@ -3652,6 +4019,7 @@ creatures:
   Dwarf Worker:
     ids: [CREATURE_DWARF_WORKER]
     new: true
+    desc: This Dwarf worker has very low combat capabilities, he is way more useful garrisoned in a resource generating building ! Spells None Training bonuses None
   Earth Daughter:
     ids: [CREATURE_SHAMAN_HAG]
     pl: Córa Ziemi
@@ -3665,6 +4033,7 @@ creatures:
   Einherjar:
     ids: [CREATURE_EINHERJAR]
     new: true
+    desc: TODO Spells None Training bonuses None
   Executioner:
     ids: [CREATURE_ORCCHIEF_EXECUTIONER]
     pl: Oprawca
@@ -3718,6 +4087,7 @@ creatures:
   Giant:
     ids: [CREATURE_GIANT]
     new: true
+    desc: Giants are the most powerful creatures that can be built or summoned by the Wizards. Arcane knowledge and endowment is used to create this unique living marvels, surpassing the border between...
   Goblin:
     ids: [CREATURE_GOBLIN]
     pl: Goblin
@@ -3726,6 +4096,7 @@ creatures:
   Goblin Defiler:
     ids: [CREATURE_GOBLIN_DEFILER]
     new: true
+    desc: Goblin Witch-Doctors are greatly respected among their kin. Renowned for their vast experience and intelligence, these shamans know how to play the tambourine, dance around the fire and tell...
   Goblin Trapper:
     ids: [CREATURE_GOBLIN_TRAPPER]
     pl: Gobliński Sidlarz
@@ -3734,9 +4105,11 @@ creatures:
   Golden Dragon:
     ids: [CREATURE_GOLD_DRAGON]
     new: true
+    desc: Gold Dragons are the favoured children of Sylanna and, as such, they cannot be harmed by Earth Magic. As with their younger siblings, they can breathe a lethal acid cloud to dissolve their enemies...
   Golden Gargoyle:
     ids: [CREATURE_MARBLE_GARGOYLE]
     new: true
+    desc: The fabled properties of the Mystical Marble, from which the Golden Gargoyles are formed, have been well documented since time immemorial.
   Green Dragon:
     ids: [CREATURE_GREEN_DRAGON]
     pl: Zielony Smok
@@ -3830,6 +4203,7 @@ creatures:
   Kraken:
     ids: [CREATURE_KRAKEN]
     new: true
+    desc: Krakens are living storms of muscle and malice, their vast, glistening bodies coiling like drowned mountains beneath the waves.
   Lava Dragon:
     ids: [CREATURE_LAVA_DRAGON]
     pl: Wulkaniczny Smok
@@ -3838,6 +4212,7 @@ creatures:
   Legendary Dragon:
     ids: [CREATURE_LEGENDARY_DRAGON]
     new: true
+    desc: The Legendary Dragon rises from the bones of fallen empires, its golden hide etched with the scars of wars it never lost.
   Lich:
     ids: [CREATURE_LICH]
     pl: Lisz
@@ -3851,6 +4226,7 @@ creatures:
   Lizardman:
     ids: [CREATURE_LIZARDMAN]
     new: true
+    desc: Lizardmen move through the mist-laden thickets with the patience of the swamp itself, their lithe forms blending into the dappled light.
   Mage:
     ids: [CREATURE_MAGI]
     pl: Mag
@@ -3894,6 +4270,7 @@ creatures:
   Militia:
     ids: [CREATURE_LANDLORD]
     new: true
+    desc: Militias view cruelty as a necessary means to achieve their end. These steely warriors are unflinching in battle, crushing with deafening blows any opponent who stands in their way.
   Minotaur:
     ids: [CREATURE_MINOTAUR]
     pl: Minotaur
@@ -3927,6 +4304,7 @@ creatures:
   Nosferatu:
     ids: [CREATURE_NOSFERATU]
     new: true
+    desc: One should never look a Vampire Prince in the eyes. Unfortunately not everyone remembers this basic truth.
   Obsidian Gargoyle:
     ids: [CREATURE_OBSIDIAN_GARGOYLE]
     pl: Obsydianowy Gargulec
@@ -4075,6 +4453,7 @@ creatures:
   Sharpshooter:
     ids: [CREATURE_SHARP_SHOOTER]
     new: true
+    desc: The menacing sight of the Sharpshooter’s magic-imbued arrows will strike fear into any who dare to trespass into the shade of Irollan’s oak trees.
   Shieldguard:
     ids: [CREATURE_STOUT_DEFENDER]
     pl: Strażnik
@@ -4133,6 +4512,8 @@ creatures:
   Spitting Spider:
     ids: [CREATURE_SPITTING_SPIDER]
     new: true
+    desc: Spitting Spiders hide in the darkest corners, avoiding any kind of civilization. Their bulbous abdomens pulsing with corrosive venom that they throw to their prey to weaken them before sucking
+      life...
   Sprite:
     ids: [CREATURE_SPRITE]
     pl: Rusałka
@@ -4161,6 +4542,7 @@ creatures:
   Stone Golem:
     ids: [CREATURE_IRON_GOLEM]
     new: true
+    desc: Golems are ancient magical constructs that are used as primary battle units by the Silver Cities. Golems are armed with two long curved swords, and their substance is their armour.
   Succubus:
     ids: [CREATURE_SUCCUBUS]
     pl: Sukkubus
@@ -4179,6 +4561,7 @@ creatures:
   Terror Knight:
     ids: [CREATURE_DEATH_KNIGHT]
     new: true
+    desc: A terrible curse awaits those who are foolish enough to combat these Vampire lords, outcasts from the dark realm of the Necromancers.
   Thane:
     ids: [CREATURE_THANE]
     pl: Władca Piorunów
@@ -4308,21 +4691,27 @@ abilities:
   Annihilate:
     ids: [ABILITY_INCINERATE]
     new: true
+    desc: This creature can deliver a special attack to an enemy on an adjacent tile, dealing 50 percent greater damage and suffering no retaliation.
   Arcane Arrow:
     ids: [ABILITY_PIERCING_ARROW]
     new: true
+    desc: This creature's ranged attack ignores 50% of the target's Defense and has an extra chance to thrust the target back one tile and stun it.
   Arcane Aura:
     ids: [ABILITY_ELDRITCH_AURA]
     new: true
+    desc: This creature completely defends neighboring friendly stacks from all Arcane Shot.
   Arcane Shot:
     ids: [ABILITY_MAGIC_ATTACK]
     new: true
+    desc: Creature hits all creatures in the line of attack with its shot, including friendly ones.
   Area Attack:
     ids: [ABILITY_CROSS_ATTACK]
     new: true
+    desc: The creature attack area has the shape of a cross.
   Ballista Commander:
     ids: [ABILITY_AURA_OF_FIRE_VULNERABILITY]
     new: true
+    desc: When positionned directly in front on the ballista in combat, this creature transfers it's own ATB to it.
   Bash:
     ids: [ABILITY_BASH]
     pl: Uderzenie
@@ -4341,6 +4730,7 @@ abilities:
   Battle Leader:
     ids: [ABILITY_PRESENCE_OF_COMMANDER]
     new: true
+    desc: This creature increases all the neighboring friendly stacks' Initiative by +1.
   Battle Rage:
     ids: [ABILITY_BATTLE_RAGE]
     pl: Bitewny Szał
@@ -4349,6 +4739,7 @@ abilities:
   Beat-up:
     ids: [ABILITY_LIZARD_BITE]
     new: true
+    desc: Performs an attack against neighbouring enemy and inflicts half the regular damage, if this enemy is attacked by an allied creature (does not apply on hit effects).
   Blade Barrier:
     ids: [ABILITY_BLADE_BARRIER]
     pl: Bariera Miecza
@@ -4362,6 +4753,7 @@ abilities:
   Blinding Horn:
     ids: [ABILITY_BLINDING_ATTACK]
     new: true
+    desc: When this creature attacks the enemy, there is a chance that it will blind it. Blinded creatures cannot move or attack, but regain sight when taking damages.
   Bravery:
     ids: [ABILITY_BRAVERY]
     pl: Odwaga
@@ -4370,12 +4762,16 @@ abilities:
   Breath Attack:
     ids: [ABILITY_FIRE_BREATH]
     new: true
+    desc: During attack, this creature deals full damage not only to the target but also any other unit (friendly or foe) positioned directly behind it.
   Call Pit Lord:
     ids: [ABILITY_BALOR_SUMMONIG]
     new: true
+    desc: Once during the combat creature can summon Pit Lords to replace its killed friends. Number of Pit Lords summoned depends on the number of creatures who use this ability.
   Camouflage:
     ids: [ABILITY_INVISIBILITY]
     new: true
+    desc: Once per combat, this creature can become invisible to the enemy for 2 turns. If the creature attacks anyone, has its path blocked by enemy units or stops on a tile adjacent to a hostile stack
+      it...
   Chain Shot:
     ids: [ABILITY_CHAIN_SHOT]
     pl: Strzał Łańcuchowy
@@ -4394,15 +4790,19 @@ abilities:
   Chaos Incarnate:
     ids: [ABILITY_IMMUNITY_TO_MAGIC]
     new: true
+    desc: Creature is immune to all magical impact (including friendly spells).
   Charge Attack:
     ids: [ABILITY_RIDER_CHARGE]
     new: true
+    desc: For each battlefield tile covered by this creature during attack, the target's Defense is reduced by 10% (all the way down to zero).
   Child of Light:
     ids: [ABILITY_BOND_OF_LIGHT]
     new: true
+    desc: Any Light Magic spell, except damage-dealing ones, cast by anyone, will also be applied on this creature on basic level.
   Circle Attack:
     ids: [ABILITY_SIX_HEADED_ATTACK]
     new: true
+    desc: Creature attacks all enemy entities around it simultaneously.
   Cleave:
     ids: [ABILITY_CLEAVE]
     pl: Spustoszenie
@@ -4411,6 +4811,7 @@ abilities:
   Convocation:
     ids: [ABILITY_SUMMON_OTHER]
     new: true
+    desc: The Arch Demon can target any creature within its movement range, regardless of who owns it, and teleport them to the unoccupied tile that is the closest possible to himself (activated ability).
   Cowardice:
     ids: [ABILITY_COWARDICE]
     pl: Tchórzostwo
@@ -4424,6 +4825,7 @@ abilities:
   Cursed Strike:
     ids: [ABILITY_HEXING_ATTACK]
     new: true
+    desc: 'After a successful attack, the target creature also suffers the effect of one of the following spells at basic level: Slow, Weakness, Plague.'
   Deadly Strike:
     ids: [ABILITY_DEADLY_STRIKE]
     pl: Zabójczy Cios
@@ -4457,6 +4859,7 @@ abilities:
   Dominant Presence:
     ids: [ABILITY_AURA_OF_BRAVERY]
     new: true
+    desc: This creature and all adjacent allies will always have at least 1 Morale.
   Double Attack:
     ids: [ABILITY_DOUBLE_ATTACK]
     pl: Podwójny Atak
@@ -4470,6 +4873,7 @@ abilities:
   Earth Immuned:
     ids: [ABILITY_IMMUNITY_TO_EARTH]
     new: true
+    desc: Earth Magic spells cannot harm this creature.
   Elemental:
     ids: [ABILITY_ELEMENTAL]
     pl: Żywiołak
@@ -4478,6 +4882,7 @@ abilities:
   Enchanted Metal:
     ids: [ABILITY_ENCHANTED_OBSIDIAN]
     new: true
+    desc: This creature is absolutely immune to all spells except those that inflict damage. Any spell that deals magical damage, heals 10% of its damage in HP instead (with resurrection).
   Energy Channel:
     ids: [ABILITY_ENERGY_CHANNEL]
     pl: Kanał Energetyczny
@@ -4491,6 +4896,7 @@ abilities:
   Evil Strike:
     ids: [ABILITY_EVIL_EYE]
     new: true
+    desc: Attacking the enemy, this creature decreases the target's Luck by -3.
   Explosion:
     ids: [ABILITY_EXPLOSION]
     pl: Eksplozja
@@ -4514,9 +4920,11 @@ abilities:
   Fire Body:
     ids: [ABILITY_FIRE_SHIELD]
     new: true
+    desc: When this creature is subjected to melee attack, it reflects 20% of the received damage back to the attacker as fire damages.
   Fire Immuned:
     ids: [ABILITY_IMMUNITY_TO_FIRE]
     new: true
+    desc: Fire Magic spells cannot harm this creature.
   Fire Resistance:
     ids: [ABILITY_FIRE_PROOF_50]
     pl: Odporność na Ogień
@@ -4535,9 +4943,11 @@ abilities:
   Flying:
     ids: [ABILITY_FLYER]
     new: true
+    desc: This creature can move on to any free tile on the game field during its turn, regardless of the obstacles in the way.
   Free Mind:
     ids: [ABILITY_IMMUNITY_TO_MIND_CONTROL]
     new: true
+    desc: This creature is immune to all mind-affecting spells or effects.
   Frightful Presence:
     ids: [ABILITY_FRIGHT_AURA]
     pl: Przerażająca Obecność
@@ -4546,6 +4956,7 @@ abilities:
   Fury:
     ids: [ABILITY_BERSERKER_RAGE]
     new: true
+    desc: When this ability is used, the creature's Defense drops temporarily to zero, Attack increases by the same amount, and it attacks the nearest enemy automatically without suffering the retaliation...
   Giant Slayer:
     ids: [ABILITY_ANTI_GIANT]
     pl: Zabójca Gigantów
@@ -4554,15 +4965,19 @@ abilities:
   Goblin Sacrifice:
     ids: [ABILITY_SACRIFICE_GOBLIN]
     new: true
+    desc: This creature can sacrifice neighboring Goblins to gain mana and increase its Attack, Defense and Morale by 2 points until the end of combat for every oblation (the total bonus is limited to 5...
   Goblin Snack:
     ids: [ABILITY_SWALLOW_GOBLIN]
     new: true
+    desc: This creature can restore its health by eating a Goblin from a stack in its neighborhood (activated ability).
   Goblin Throw:
     ids: [ABILITY_GOBLIN_THROWER]
     new: true
+    desc: This creature can use friendly Goblins from the neighboring stacks as missiles to throw them at the enemy (activated ability).
   Gravity:
     ids: [ABILITY_DESTRUCTION_MAGIC_MAGNETISM]
     new: true
+    desc: Finding itself under an area spell of Destruction Magic together with any friendly stacks, this creature assumes some of the damage that would normally go to the friendly units.
   Harm Touch:
     ids: [ABILITY_HARM_TOUCH]
     pl: Szkodliwy Dotyk
@@ -4576,6 +4991,7 @@ abilities:
   Heavy Armor:
     ids: [ABILITY_ARMORED]
     new: true
+    desc: This creature is resistant to all spells and effects that decrease Defense.
   Howl:
     ids: [ABILITY_HOWL]
     pl: Skowyt
@@ -4584,6 +5000,7 @@ abilities:
   Ice Immuned:
     ids: [ABILITY_IMMUNITY_TO_WATER]
     new: true
+    desc: Frost Magic spells cannot harm this creature.
   Incorporeal:
     ids: [ABILITY_INCORPOREAL]
     pl: Niematerialność
@@ -4592,9 +5009,11 @@ abilities:
   Incorruptible:
     ids: [ABILITY_IMMUNITY_TO_HYPNOTIZE]
     new: true
+    desc: This creature is immune to the Mind Control spell.
   Infection:
     ids: [ABILITY_WEAKENING_STRIKE]
     new: true
+    desc: With each successful attack, the attacked enemy's Attack and Defense properties are reduced by 2 units (cannot get below zero).
   Jousting:
     ids: [ABILITY_JOUSTING]
     pl: Jednostka Turniejowa
@@ -4603,9 +5022,11 @@ abilities:
   Keen Eye:
     ids: [ABILITY_IMMUNITY_TO_BLIND]
     new: true
+    desc: This creature cannot be blinded.
   Large:
     ids: [ABILITY_LARGE_CREATURE]
     new: true
+    desc: This creature is bigger than others and occupies a 2 by 2 area on the field.
   Lay Hands:
     ids: [ABILITY_LAY_HANDS]
     pl: Leczące Dłonie
@@ -4629,21 +5050,27 @@ abilities:
   Lightning Immuned:
     ids: [ABILITY_IMMUNITY_TO_AIR]
     new: true
+    desc: Air Magic spells cannot harm this creature.
   Living:
     ids: [ABILITY_FLESH_AND_BLOOD]
     new: true
+    desc: This creature is alive so it can be resurrected
   Long Range:
     ids: [ABILITY_NO_RANGE_PENALTY]
     new: true
+    desc: Shooter has no penalty for damage inflicted during ranged attack, provided the range is over half the arena.
   Magic Disruption:
     ids: [ABILITY_AURA_OF_MAGIC_RESISTANCE]
     new: true
+    desc: Friendly units located on tiles adjacent to the creature have 30% increased chance to avoid spells.
   Magma Armor:
     ids: [ABILITY_MAGMA_SHIELD]
     new: true
+    desc: When this creature is subjected to melee attack, it reflects 40% of the received damage back to the attacker as fire damage.
   Magnetic Field:
     ids: [ABILITY_AURA_OF_LIGHTNING_VULNERABILITY]
     new: true
+    desc: The creature redirects ranged attacks aimed at adjacent allies to itself.
   Mana Destroyer:
     ids: [ABILITY_MANA_DESTROYER]
     pl: Niszczyciel Many
@@ -4662,6 +5089,7 @@ abilities:
   Manavorous:
     ids: [ABILITY_MANA_DRAIN]
     new: true
+    desc: When attacking enemy units, this creature can drain their mana and use it to restore its own health, or even to resurrect some killed creatures.
   Maneuver:
     ids: [ABILITY_MANEURE]
     pl: Manewr
@@ -4680,15 +5108,19 @@ abilities:
   Melee Potent:
     ids: [ABILITY_NO_MELEE_PENALTY]
     new: true
+    desc: Shooter has no penalty for damage inflicted during melee attack.
   Melting Breath:
     ids: [ABILITY_LIQUID_FLAME_BREATH]
     new: true
+    desc: During an attack, this creature deals full damage not only to the target but also any other enemy unit positioned directly behind it and leaves a fire wall on the two tiles in the direction of...
   Mythic:
     ids: [ABILITY_CRYSTAL_SCALES]
     new: true
+    desc: Creature is immuned to direct creature killing abilities such as Harm Touch, Vorpal Sword, Deadeye Shot, etc
   Natural Luck:
     ids: [ABILITY_AURA_OF_ICE_VULNERABILITY]
     new: true
+    desc: This creature gets +2 bonus Luck in combat.
   No Enemy Retaliation:
     ids: [ABILITY_NO_ENEMY_RETALIATION]
     pl: Brak Kontrataku Wroga
@@ -4717,6 +5149,7 @@ abilities:
   Pressure:
     ids: [ABILITY_HORROR_OF_THE_DEATH]
     new: true
+    desc: This creature decreases all enemy stacks’ Morale by -1.
   Prismatic Breath:
     ids: [ABILITY_RAINBOW_BREATH]
     pl: Tęczowy Oddech
@@ -4725,6 +5158,7 @@ abilities:
   Protect Allies:
     ids: [ABILITY_SHIELD_OTHER]
     new: true
+    desc: All friendly creatures located on neighbouring tiles get only 50% of damage from non-magical shooting attacks.
   Purge:
     ids: [ABILITY_PURGER]
     pl: Wypaczenie
@@ -4753,9 +5187,11 @@ abilities:
   Ranged:
     ids: [ABILITY_SHOOTER]
     new: true
+    desc: This creature can inflict damage from a range. When distance to target is longer than half the arena, the target suffers only half the normal damage.
   Ranged Retaliation:
     ids: [ABILITY_RANGED_RETALIATE]
     new: true
+    desc: Creature retaliates after enemy ranged attack with its own ranged attack, provided it is not blocked by enemy and has not used up all its retaliation attacks.
   Rebirth:
     ids: [ABILITY_REBIRTH]
     pl: Odrodzenie
@@ -4779,12 +5215,15 @@ abilities:
   Ride-by Attack:
     ids: [ABILITY_RIDE_BY_ATTACK]
     new: true
+    desc: On its way to the main target, this creature attacks all enemy stacks, delivering 35% of its normal damage to them without suffering retaliation.
   Roar:
     ids: [ABILITY_BEAR_ROAR]
     new: true
+    desc: This creature has a chance to frighten a target and its neighbors by the attack (small creatures are more disposed to fear). In the event of success the attacker gets +20% Health.
   Rune Craft:
     ids: [ABILITY_AURA_OF_EARTH_VULNERABILITY]
     new: true
+    desc: Creature can activate any Rune natively
   Rush Dive:
     ids: [ABILITY_PACK_DIVE]
     pl: Roztrącanie
@@ -4823,12 +5262,15 @@ abilities:
   Shielded:
     ids: [ABILITY_LARGE_SHIELD]
     new: true
+    desc: Creature receives only 50% of damage from all non-magical shooting attacks.
   Shocking Strike:
     ids: [ABILITY_LIGHTNING_BREATH]
     new: true
+    desc: This creature deals damage on all enemies that stand near its target, the damage dealt by such an attack is shared equally between the targets. The effect does not work on retaliation strikes.
   Short Range:
     ids: [ABILITY_RANGE_PENALTY]
     new: true
+    desc: This creature inflicts half of its damage in ranged attacks (Hold down Ctrl button to engage enemies in melee).
   Siphon Mana:
     ids: [ABILITY_SYPHON_MANA]
     pl: Zbieranie Many
@@ -4842,18 +5284,23 @@ abilities:
   Spell Caster:
     ids: [ABILITY_CASTER]
     new: true
+    desc: This creature can use a set of magical spells similar to those cast by heroes. Its Spellpower is equal to 1 + (2.5 * Count / Growth).
   Spell-proof 25%:
     ids: [ABILITY_MAGIC_PROOF_25]
     new: true
+    desc: Attacking spells inflict 25% less damage to this creature.
   Spell-proof 50%:
     ids: [ABILITY_MAGIC_PROOF_50]
     new: true
+    desc: Attacking spells inflict 50% less damage to this creature.
   Spell-proof 75%:
     ids: [ABILITY_MAGIC_PROOF_75]
     new: true
+    desc: Attacking spells inflict 75% less damage to this creature.
   Spiteful:
     ids: [ABILITY_ENRAGED]
     new: true
+    desc: This creature's Attack increases by +3 during combat every time a non-summoned stack of friendly units dies.
   Spray Attack:
     ids: [ABILITY_SPRAY_ATTACK]
     pl: Rozłóż Atak
@@ -4862,6 +5309,7 @@ abilities:
   Steadiness:
     ids: [ABILITY_HOLD_GROUND]
     new: true
+    desc: This creature cannot be moved elsewhere by the enemy while it remains standing in its starting position in the combat.
   Steal Ammunition:
     ids: [ABILITY_AMMO_STEAL]
     pl: Kradzież Amunicji
@@ -4870,6 +5318,7 @@ abilities:
   Stone Defense:
     ids: [ABILITY_SHIELD_WALL]
     new: true
+    desc: Damage suffered by this creature from enemy attack is reduced by 10% for every tile the attacker walked to hit. Damage reduction is capped at 75%.
   Storm Strike:
     ids: [ABILITY_STORMSTRIKE]
     pl: Uderzenie Burzy
@@ -4888,9 +5337,11 @@ abilities:
   Sweeping Strike:
     ids: [ABILITY_WHIRLWIND]
     new: true
+    desc: This creature attacks multiples tiles in front on it, delivering full damage to all enemies within it.
   Swift Strike:
     ids: [ABILITY_FAST_ATTACK]
     new: true
+    desc: This creature can't be counterattacked by the enemies who are under the effect of Slow spell.
   Symbiosis:
     ids: [ABILITY_TREEANT_UNION]
     pl: Symbioza
@@ -4914,12 +5365,16 @@ abilities:
   Terror:
     ids: [ABILITY_FRIGHTFUL_PRESENCE]
     new: true
+    desc: There's a high chance the enemy that attacks or shoots this creature panics (before its action) and tries to run to the edge of the arena to get as far away from the creature as possible, losing
+      all...
   Three-head Attack:
     ids: [ABILITY_THREE_HEADED_ATTACK]
     new: true
+    desc: Creature also attacks enemies beside its main target, dealing full damage to all of them.
   Thunder Shock:
     ids: [ABILITY_STORMBOLT]
     new: true
+    desc: Twice per battle, this creature can attack any chosen target with Storm Strike (activated ability).
   Torpor:
     ids: [ABILITY_SLEEPING_STRIKE]
     pl: Torpor
@@ -4933,6 +5388,7 @@ abilities:
   Twin Arrows:
     ids: [ABILITY_ELVES_DOUBLE_SHOT]
     new: true
+    desc: Nothing can hinder creature from firing two full shots at the enemy instead of just one.
   Undead:
     ids: [ABILITY_UNDEAD]
     pl: Nieumarły
@@ -4941,18 +5397,23 @@ abilities:
   Undisturbed:
     ids: [ABILITY_IMMUNITY_TO_BERSERK]
     new: true
+    desc: This creature is immune to Berserk spell.
   Unflagging:
     ids: [ABILITY_IMMUNITY_TO_CURSE]
     new: true
+    desc: This creature is immune to Weakness spell.
   Unlimited Retaliations:
     ids: [ABILITY_UNLIMITED_RETALIATION]
     new: true
+    desc: Creature always retaliates after melee attacks by enemies except when attacked by creatures with No Enemy Retaliation ability.
   Unstable Brazier:
     ids: [ABILITY_AVENGING_FLAME]
     new: true
+    desc: When this creature dies, it deals fire damage to all enemies on the adjacent tiles. The damage is equal to 6 × StackSize.
   Unstoppable:
     ids: [ABILITY_IMMUNITY_TO_SLOW]
     new: true
+    desc: This creature cannot be slowed down.
   Venom:
     ids: [ABILITY_VENOM]
     pl: Jad
@@ -4961,6 +5422,7 @@ abilities:
   Violence:
     ids: [ABILITY_BRUTALITY]
     new: true
+    desc: This creature has a chance to deliver another blow after the first one. The chance is based on the creature's own Hit Points (HP), considering the entire stack.
   Vorpal Sword:
     ids: [ABILITY_VORPAL_SWORD]
     pl: Miecz Śmierci
@@ -4969,6 +5431,7 @@ abilities:
   War Dance:
     ids: [ABILITY_WAR_DANCE]
     new: true
+    desc: Creature simultaneously attacks enemies located on all eight adjacent tiles. The targeted enemy gets normal damage, all others affected get half the normal damage.
   Warding Arrows:
     ids: [ABILITY_WARDING_ARROWS]
     pl: Strzały Ochronne
@@ -4977,6 +5440,7 @@ abilities:
   Warm-up:
     ids: [ABILITY_DASH]
     new: true
+    desc: After using this ability creature initiative is increased by 50% for 3 turns.
   Weakening Strike:
     ids: [ABILITY_CURSING_ATTACK]
     pl: Osłabiający Cios
@@ -4985,6 +5449,7 @@ abilities:
   Weakpoint:
     ids: [ABILITY_PRECISE_SHOT]
     new: true
+    desc: When shooting at close range (5 tiles from the target or less), this creature inflicts heavier damage because the target's defense is not effective.
   Wheel of Fortune:
     ids: [ABILITY_LUCK_GAMBLER]
     pl: Koło Fortuny
@@ -4998,6 +5463,7 @@ abilities:
   Wound:
     ids: [ABILITY_WOUND]
     new: true
+    desc: In a successful attack, this creature has an additional chance of decreasing the target’s Speed and Initiative by 30%.
 classes:
   Artificier:
     ids: [HERO_CLASS_ACADEMY_MIGHT]
@@ -5192,9 +5658,11 @@ heroes:
   Archilus:
     ids: [Archilus]
     new: true
+    desc: Archilus was once a very wealthy man, but he spent it all capturing a powerful vampire and forcing it to make him one of the undead.
   Ash:
     ids: [Ash]
     new: true
+    desc: This demoness took the name Ash to remind all who oppose her what becomes of her enemies. Since her kind is dwindling in numbers, she has taken up a new kind of magic to assure her survival and...
   Beatrice:
     ids: [Beatrice]
     pl: Beatrice
@@ -5233,12 +5701,15 @@ heroes:
   Cyrus:
     ids: [Cyrus]
     new: true
+    desc: Cyrus was destined for greatness, as from an early age he showed the combination of natural talent and intense competitive ambition that leaders often posess.
   Darkstorm:
     ids: [Darkstorm]
     new: true
+    desc: Back when he was a slave in Al-Rubit, Darkstorm made sure nobody would be aware of his arcane abilities.
   Davius:
     ids: [Davius]
     new: true
+    desc: Even though his father was of noble blood, some farmers had more gold to rub together. Davius knows what it's like to be poor. He didn't like it. Miserly, thrifty, cheap - call him what you will.
   Deirdre:
     ids: [Nemor]
     pl: Deirdre
@@ -5277,6 +5748,7 @@ heroes:
   Elleshar:
     ids: [Elleshar]
     new: true
+    desc: Elleshar is a rugged woodsman who seldom jokes. He believes in hard work and self reliance, and considers his duty to protect the natural world paramount to everything.
   Erasial:
     ids: [Erasial]
     pl: Erasial
@@ -5400,6 +5872,7 @@ heroes:
   Hedwig:
     ids: [Vilma]
     new: true
+    desc: Like the rest of the Winterwind clan, Hedwig "Silverhair" Randversdottir actually enjoys venturing far from the comfort of the great stone halls of Grimheim, exploring new lands and meeting new...
   Helmar:
     ids: [Ottar]
     pl: Helmar
@@ -5428,9 +5901,11 @@ heroes:
   Ivor:
     ids: [Arniel]
     new: true
+    desc: The whereabouts of this hero are currently unknown.
   Jenova:
     ids: [Jenova]
     new: true
+    desc: Jenova is well-loved and respected among the elves, the envy of most women and the object of desire of most men.
   Jezebeth:
     ids: [Oddrema]
     pl: Jezebeth
@@ -5454,6 +5929,7 @@ heroes:
   Kha-Beleth:
     ids: [Boss1, Kha-Beleth, Sovereign]
     new: true
+    desc: Father of the Dark Messiah and ruler of the infernal legions, he waits impatiently for the day when his son will tear down the prison that confines him and his followers in the empty spaces between...
   Kilghan:
     ids: [Hero9]
     pl: Kilghan
@@ -5482,6 +5958,7 @@ heroes:
   Kyrre:
     ids: [Kyrre]
     new: true
+    desc: Kyrre volunteers for every scouting mission, often vanishing from camp for days at a time to watch the borders.
   Kythra:
     ids: [Menel]
     pl: Kythra
@@ -5520,6 +5997,7 @@ heroes:
   Malustar:
     ids: [Malustar]
     new: true
+    desc: Malustar is an ancient demon born near the dawn of time. The name he gives everyone is not the one he was born with, for that name is unpronounceable.
   Marbas:
     ids: [Marder]
     pl: Marbas
@@ -5533,12 +6011,15 @@ heroes:
   Melodia:
     ids: [Melodia]
     new: true
+    desc: Melodia's emotions can be as flighty as a sprite's. In fact, she falls in and out of love so quickly that she has left dozens of heartbroken men behind pining for her attention.
   Minasli:
     ids: [Minasli]
     new: true
+    desc: Minasli was the type of child who takes things apart to find out how they work. This curiosity carried over into her adulthood.
   Mukha:
     ids: [Mokka]
     new: true
+    desc: Mukha was born a free Orc in the Eastern Steppes of Ranaar and grew to become a tremendous hunter, respected by Orcs and Centaurs.
   Naadir:
     ids: [Muscip]
     pl: Naadir
@@ -5617,6 +6098,8 @@ heroes:
   Ranleth:
     ids: [Ranleth]
     new: true
+    desc: Its roots as old as the Dark Elves' themselves, hatred of the Dwarves runs deep in Ygg-Chall. Ranleth comes from an old family who has guarded its lineage as it has nursed its grievances, and
+      the...
   Raven:
     ids: [Effig]
     pl: Raven
@@ -5630,6 +6113,7 @@ heroes:
   Rissa:
     ids: [Rissa]
     new: true
+    desc: According to Rissa, the problem with people is they're lazy. They don't want to get up in the morning and work all day, so you have to give them a reason to do what they should be doing all along.
   Rolf:
     ids: [Rolf, Rolf_DSM, Rolf_DSU]
     pl: Rolf
@@ -5643,6 +6127,7 @@ heroes:
   Sandro:
     ids: [Sandro]
     new: true
+    desc: If you want something done right, do it yourself, and I wouldn’t let anyone else write my own biography! So where shall we begin? I was born... some long time ago, in the Bull Duchy.
   Segref:
     ids: [Segref]
     pl: Segref
@@ -5651,6 +6136,8 @@ heroes:
   Sephinroth:
     ids: [Sephinroth]
     new: true
+    desc: Born Saifiros, "sharp steel eyes", in one of the smaller kingdoms of Irollan, this master con artist changed her name to "Sephinroth" because she felt it sounded more exotic and regal, giving
+      her an...
   Shadya:
     ids: [Kelodin, Shadya_DSU]
     pl: Shadya
@@ -5664,6 +6151,7 @@ heroes:
   Sheltem:
     ids: [Sheltem]
     new: true
+    desc: Sheltem is a guardian, an android created by the mysterious Ancients to rule over the world of Terra. However Sheltem started to resent the Ancients’ interference with his mission.
   Sinitar:
     ids: [Inagost]
     pl: Sinitar
@@ -5687,6 +6175,7 @@ heroes:
   Sylsai:
     ids: [Sylsai]
     new: true
+    desc: Younger brother of Raelag and twin to Menan, Sylsai is the current leader of the Soulscar clan. He was always the most "hot-headed" of Tuidhana's sons.
   Talanar:
     ids: [Nadaur]
     pl: Talanar
@@ -5695,6 +6184,7 @@ heroes:
   Tazar:
     ids: [Tazar]
     new: true
+    desc: Tazar was only 13 days old when his parents, merchants of the duchy Wolf embarked on Nilshaven to Fortaleza.
   Telsek:
     ids: [Hero8]
     pl: Telsek
@@ -5703,9 +6193,11 @@ heroes:
   Thant:
     ids: [Thant]
     new: true
+    desc: No one is really sure how long Thant has been alive. Some say he fought for Erathia during the Timber Wars, but fell prey to a Vampire during an all-night march through Phynaxia.
   Theodorus:
     ids: [Timerkhan]
     new: true
+    desc: Theodorus is easily one of the best spellcasters around. Some say it is time for him to retire, but his mind is still as calculating as ever.
   Thralsai:
     ids: [Thralsai, Thralsai_DSM]
     pl: Thralsai
@@ -5714,6 +6206,7 @@ heroes:
   Tieru:
     ids: [Vaniel]
     new: true
+    desc: A serious Druid who believes unquestioningly in the good of his people, Tieru is appreciated for his loyalty and dedication.
   Urghat:
     ids: [Hero2]
     pl: Urghat
@@ -5762,6 +6255,7 @@ heroes:
   Xerxon:
     ids: [Xerxon]
     new: true
+    desc: Ever since his youth, Xerxon has been a sadistic bully. He takes great pleasure in tormenting and hurting those around him, and he is never so happy as he is in the middle of battle.
   Ylaya:
     ids: [Shadwyn, Ylaya_DSU]
     pl: Ylaya
@@ -5795,13 +6289,16 @@ heroes:
   Zouleika:
     ids: [Zouleika]
     new: true
+    desc: Zouleika’s ancestor was the celebrated wizard Agar, creator of the first Minotaur, and she inherited his influential position in the ruling Circle of the Seven Cities.
 specializations:
   Arcane Forge Master:
     ids: [Timerkhan]
     new: true
+    desc: Arcane Forge Master When visiting an Academy town, the hero gains Knowledge points equal to his level, increasing the power of the Arcane Forge artifacts created.
   ArchBishop:
     ids: [Alaric]
     new: true
+    desc: Arch Bishop When an enemy hero casts any spell, there is a chance that this spell fails and gets blocked for the rest of the combat. The probability increases with hero level.
   Archer Commander:
     ids: [Orrin, RedHeavenHero02]
     pl: Dowódca Łuczników
@@ -5820,6 +6317,7 @@ specializations:
   Avatar of Wind:
     ids: [Vinrael]
     new: true
+    desc: Avatar of Wind Hero automatically casts Mass Haste for free when combat starts. The effect of Haste spell is increased by 1% per hero level. Every 4 levels, new Air Elementals join hero's army.
   Banshee:
     ids: [Nemor]
     pl: Banshee
@@ -5838,6 +6336,7 @@ specializations:
   Beastmaster:
     ids: [Ferigl]
     new: true
+    desc: Beastmaster The Rider's Beat Up ability deals more damage, depending on hero level. Hydras in hero's army have a chance to get 100% ATB on each Riders turn. The chance is 20% + 2% per hero level.
   Beloved of the People:
     ids: [Maeve, Nathaniel]
     pl: Ulubieniec Ludu
@@ -5871,9 +6370,11 @@ specializations:
   Bombardier:
     ids: [Sheltem]
     new: true
+    desc: Bombardier Ballista's shots under the hero's command have a Fireball effect. The effective spellpower of the Fireball is equal to 3 + Level/3.
   Burning Blood:
     ids: [Hero7]
     new: true
+    desc: Burning Blood All creatures in hero's army gain 10% magic proof and +1% per hero level. Hero gets 100% ATB when a creature in her army gains a rage level during combat.
   Catalyst:
     ids: [Inagost]
     pl: Katalizator
@@ -5892,6 +6393,7 @@ specializations:
   Chosen by Gods:
     ids: [Isabell]
     new: true
+    desc: Chosen by Gods All troops of the hero are permanently affected by the Strength spell, increasing their minimum damages.
   Chosen of Chaos:
     ids: [Jazaz]
     pl: Wybraniec Chaosu
@@ -5900,9 +6402,11 @@ specializations:
   Conqueror:
     ids: [Orlando]
     new: true
+    desc: Conqueror Victories provide hero a considerable amount of additional experience and Gold based on the value of defeated army.
   Corrupter:
     ids: [Sylsai]
     new: true
+    desc: Corrupter Starts with the Berserk spell. At the start of combat, the hero inflicts Berserk on enemy creatures. The amount of targets increases by 1 every 20 hero levels.
   Coven Mistress:
     ids: [Eruina, Eruina_A1]
     pl: Sabat Czarownicy
@@ -5916,6 +6420,7 @@ specializations:
   Daughter of Thunder:
     ids: [Mokka]
     new: true
+    desc: Daughter of Thunder Lightning-based spells deal 5% more damage per hero level and cannot be avoided. The hero casts a Lightning Bolt each turn in combat on a random enemy creature (requires mana).
   Death Lord:
     ids: [Arantir, Berein]
     pl: Władca Śmierci
@@ -5924,6 +6429,7 @@ specializations:
   Demagogue:
     ids: [Duncan]
     new: true
+    desc: Demagogue Neutral creatures are more likely to join this hero. The hero has a +10% per level bonus to his army power evaluation for diplomatic calculations.
   Demon Hunter:
     ids: [Kujin]
     pl: Łowca Demonów
@@ -5937,6 +6443,7 @@ specializations:
   Draconic Prophet:
     ids: [Raelag]
     new: true
+    desc: Draconic Prophet After every victory, the hero has a chance to drop an artifact of the Dragon set he doesn't already have.
   Dragonblessed:
     ids: [Isabell_A1]
     pl: Błogosławiona Przez Smoki
@@ -5945,9 +6452,11 @@ specializations:
   Dwarven Formation:
     ids: [Vilma]
     new: true
+    desc: Dwarven Formation Less damage is suffered from distant attacks. Damage reduction is 10% + 2% per hero level. Doubles the defense attribute gained from the Defense skill.
   Elementalist:
     ids: [Sephinroth]
     new: true
+    desc: Elementalist Doubles the damage inflicted by elemental chains. Knows all destructive spells from the 1st, 2nd and 3rd circle.
   Elven Fury:
     ids: [Ildar, Nadaur]
     pl: Furia Elfów
@@ -5956,6 +6465,7 @@ specializations:
   Elven Sage:
     ids: [Elleshar]
     new: true
+    desc: Elven Sage Every 6 battles won, hero gains a skill point in one of the known Magic Schools. If none of the Magic Shools is known, then gain 1000 experience points instead.
   Embalmer:
     ids: [Gles]
     pl: Balsamista
@@ -5964,12 +6474,15 @@ specializations:
   Enlightened:
     ids: [Ranleth]
     new: true
+    desc: Enlightened Experience and Knowledge bonuses granted by the Learning skill are doubled. Intelligence gives 6 Knowledge instead of 4, Exaltation gives 6 Spellpower instead of 4, and Meditation...
   Exhauster:
     ids: [Hero2]
     new: true
+    desc: Exhauster Enemy units have their Speed reduced by 1 and their Initiative reduced by 1% per hero level. Opponent hero has 0 Initiative until first hero turn.
   Father of Dragons:
     ids: [Boss1]
     new: true
+    desc: Father of Dragons A new dragon of each type already present in hero's army may join the hero every week. The probability for each dragon to join is 20% + 2% per hero level.
   Fist of the Khan:
     ids: [Hero8]
     pl: Ponury Wojownik
@@ -5978,12 +6491,15 @@ specializations:
   Flamboyant:
     ids: [Brand]
     new: true
+    desc: Flamboyant Effective Spellpower of the hero is increased when casting the Fireball spell. The increase is equal to 3 + Level/3. The hero summons a Fire Wall line at the start of combat.
   Fortress Protector:
     ids: [Ingvar]
     new: true
+    desc: Fortress Protector All Defenders in hero's army gain +1 to their Attack and Defense for every two levels of the hero. Defenders in hero's army gain +1 HP for every 10 levels of the hero.
   Frost Mage:
     ids: [OrnellaNecro]
     new: true
+    desc: Frost Mage Hero casts Ice Bolt on a random ennemy creature each turn in combat (requires mana). Every day, hero has a small chance to obtain an artifact from the Frozen Kingdom set.
   Goblin King:
     ids: [Hero9]
     pl: Król Goblinów
@@ -5997,12 +6513,16 @@ specializations:
   Governor of the Mines:
     ids: [Hangvul2]
     new: true
+    desc: Governor of the Mines All unupgraded Thanes in hero's army are upgraded to Thunder Thanes for free. Flame Lords and Thunder Thanes cast their special ability on random enemy creatures at the start
+      of...
   Grand Patriarch:
     ids: [Egil]
     new: true
+    desc: Grand Patriarch All Rune Priests in hero's army gain +1 to their Attack and Defense for every two levels of the hero. Rune Priests in hero's army start combat with 100% ATB.
   Great Lich:
     ids: [Sandro]
     new: true
+    desc: Great Lich Enemy creatures that die during battles are raised as their undead equivalent on hero's side. The amount of creature raised is 10% + 1% per level of the original stack count.
   Gremlin Master:
     ids: [Havez]
     pl: Mistrz Gremlinów
@@ -6021,9 +6541,11 @@ specializations:
   Imperious:
     ids: [Tazar]
     new: true
+    desc: Imperious The Initiative of all creatures in hero's army is increased by 1% per hero level. The hero is a Commander. He can use Warcries but not regular spells. Warcries are natively known.
   Incendiary:
     ids: [Agrael]
     new: true
+    desc: Incendiary Effective spellpower of the hero is increased when casting the Fireball spell. The increase is equal to 3 + Level/3.
   Infantry Commander:
     ids: [Laszlo, Mardigo, RedHeavenHero05]
     pl: Dowódca Piechoty
@@ -6042,18 +6564,23 @@ specializations:
   Lady of the forest:
     ids: [Melodia]
     new: true
+    desc: Lady of the forest Sylvan creatures inflict 10% + 2% per level bonus damage to favoured enemies. Starts with innate skill Sylanna's Benediction (instead of Silent Tracker), that grants a permanent...
   Lone Hunter:
     ids: [Jenova]
     new: true
+    desc: Lone Hunter All hero’s attacks deal +5% damage for every level of the hero. Hero uses 30% less ATB when attacking.
   Mad Chemist:
     ids: [Astral]
     new: true
+    desc: Mad Chemist Ballista's shots under the hero's command explode with a Fireball effect. The effective Spellpower of the Fireball is 3 + Level/3.
   Maledictor:
     ids: [Thant]
     new: true
+    desc: Maledictor The Weakness spell does not only lower creature's damage, but also reduces creature's Defense by -1 for every 3 levels of the hero.
   Master of Archery:
     ids: [Heam]
     new: true
+    desc: Master of Archery All Hunters in hero's army gain +1 to their Attack and Defense for every two levels of the hero.
   Master of Elements:
     ids: [Zehir]
     pl: Mistrz Żywiołów
@@ -6062,6 +6589,7 @@ specializations:
   Master of Gating:
     ids: [Nymus]
     new: true
+    desc: Master of Gating The number of creatures called through the Gating increases by 1% per hero level. Build the Infernal Loom in the town where the hero is recruited.
   Master of Initiative:
     ids: [Raelag_A1]
     pl: Mistrz Inicjatywy
@@ -6085,9 +6613,11 @@ specializations:
   Minotaur General:
     ids: [Darkstorm]
     new: true
+    desc: Minotaur General Darkstorm takes part of combats on the battlefield. But if he is defeated, the combat is lost regardless of the remaining troops. The hero is a Commander.
   Mountain Rider:
     ids: [Rolf]
     new: true
+    desc: Mountain Rider All Bear Riders in hero's army gain +1 to their Attack and Defense for every two levels of the hero.
   Mystic:
     ids: [Nur]
     pl: Mistyk
@@ -6096,12 +6626,15 @@ specializations:
   Nest Watcher:
     ids: [Minasli]
     new: true
+    desc: Nest Watcher New Arcane Eagles join the hero's army every week depending on her level. The amount is equal to 0.3 * Level (rounded). Gain an additional Arcane Eagle for every level up.
   Overheater:
     ids: [Malustar]
     new: true
+    desc: Overheater Every Inferno creature in hero's army explodes at the start of their turn in combat, dealing fire damage to surrounding enemies. Hero's attacks explode in a Fireball effect.
   Pale Rider:
     ids: [Xerxon]
     new: true
+    desc: Pale Rider All Black Knights in hero's army gain +1 to their Attack and Defense for every two levels of the hero. A new Black Knight joins the hero's army every week.
   Paragon Knight:
     ids: [GhostFSLord, Godric, Godric_ds]
     pl: Wzorowy Rycerz
@@ -6115,9 +6648,11 @@ specializations:
   Poisoner:
     ids: [Dalom]
     new: true
+    desc: Poisoner Hero has a chance to cast Decay on enemy creatures at the start of combat. The probabiliy is 40% + 2% per level for each enemy unit.
   Potion Brewer:
     ids: [Zouleika]
     new: true
+    desc: Potion Brewer Gain a random potion among Potion of Enlightenment, Potion of Power, Potion of Stamina, Potion of Vision, Potion of Teleportation, and Potion of Skill upon leveling up.
   Pounder:
     ids: [Ash]
     pl: Agresor
@@ -6126,6 +6661,7 @@ specializations:
   Protector of Elrath:
     ids: [GodricMP]
     new: true
+    desc: Protector of Elrath When the hero casts a Light Magic spell on a friendly creature, there is a chance that the Celestial Shield spell will be cast freely upon the affected unit.
   Reanimator:
     ids: [Effig, Nikolay]
     pl: Reanimator
@@ -6134,9 +6670,11 @@ specializations:
   Researcher:
     ids: [Maahir]
     new: true
+    desc: Researcher The amount of experience that hero gains after battles is increased by 2% per level. Every other hero gains daily experience equal to 1% of this hero's total experience points.
   Ring Leader:
     ids: [Vaniel]
     new: true
+    desc: Ring Leader At the start of combats, the smallest stack of unupgraded Druids in hero's army is upgraded to Druids of the Council.
   Rune Artist:
     ids: [Bersy]
     pl: Artysta Runów
@@ -6155,9 +6693,11 @@ specializations:
   Semi-God:
     ids: [Tan]
     new: true
+    desc: Semi-God There is a higher chance that enemy spells redirected by the Magic Mirror skill land on one of the enemy units instead of going in a random direction.
   Shaman Matriarch:
     ids: [KujinMP]
     new: true
+    desc: Shaman Matriarch All Shamans in hero's army are upgraded to Sky Daughters for free. Shamans in hero's army have double Spellpower and Mana.
   Sharp Blade:
     ids: [Skeggy]
     pl: Cięte Ostrze
@@ -6166,6 +6706,7 @@ specializations:
   Shroud of Fear:
     ids: [Pelt]
     new: true
+    desc: Shroud of Fear At the start of combat, the hero spawns an enemy Skeleton and immediately destroys it. Hero's army gain bonus Attack when an enemy stack is killed.
   Siege Engineer:
     ids: [Christian, Glen, RedHeavenHero01]
     pl: Specjalista od Oblężeń
@@ -6174,6 +6715,7 @@ specializations:
   Sky Rider:
     ids: [RedHeavenHero06]
     new: true
+    desc: Sky Rider All Griffins in the hero's army gain +1 to their Attack and Defense for every two levels of the hero. Unevolved Griffins get the Battle Dive ability and all Griffins dive instantly.
   Slave Driver:
     ids: [Menel]
     pl: Dozorca Niewolników
@@ -6222,6 +6764,7 @@ specializations:
   Tawny Trainer:
     ids: [Davius]
     new: true
+    desc: Tawny Trainer All Rakshasas in hero's army activate their Warm-Up ability at the start of combat, increasing their initiative by 50% for 3 turns.
   Temptress:
     ids: [Biara, Oddrema]
     pl: Kusicielka
@@ -6230,9 +6773,11 @@ specializations:
   The New Khan:
     ids: [Gottai]
     new: true
+    desc: The New Khan Hero knows all 6 Warcries. Warcries have their costs decreased by 1 every 4 levels and grant an additional amount of rage points equal to the hero’s level.
   Time Shifter:
     ids: [Rissa]
     new: true
+    desc: Time Shifter Hero has a permanent +1 Initiative. When hero turn comes in combat, the ATB of all creatures is randomized between 0% and 99%.
   Tracker:
     ids: [Linaas]
     pl: Tropiciel
@@ -6256,9 +6801,11 @@ specializations:
   Volcanic:
     ids: [Deleb]
     new: true
+    desc: Volcanic Hero casts Land Mines around enemy positions at the start of combat. Spawns multiple Earth Elementals at random positions each hero turn in combat.
   White Knight:
     ids: [Axel]
     new: true
+    desc: White Knight At the start of combat, the hero casts Prayer. The bonus to Morale, Defense and Initiative given is doubled. All Light Magic spells cost 1 less mana to cast.
   Windspeaker:
     ids: [Sufi]
     pl: Rozmawiający z Wiatrem
@@ -6267,15 +6814,19 @@ specializations:
   Witch Queen:
     ids: [Kelodin]
     new: true
+    desc: Witch Queen At the start of combat, the hero casts Slow on a random enemy melee creature, and Confusion to a random enemy ranged creature, for free. Gains an additionnal level up every 5 levels.
   Wolf Tamer:
     ids: [Arniel]
     new: true
+    desc: Wolf Tamer Hero gains one Wolf every day, and an additional amount of Wolves at the start of each week, equal to hero's level.
   Workshop Expert:
     ids: [Wulfstan]
     new: true
+    desc: Workshop Expert Ballista receive +1 to their Attack for every level of the hero. Ballista start combats with 100% ATB. Hero wears the Ring of Machine Affinity that improves War Machines efficiency.
   World Breaker:
     ids: [Una]
     new: true
+    desc: World Breaker Friendly creatures are immuned to earth. Hero starts the special spell Earth Shatter, that deals earth damage in a 5x5 area.
   Wyvern Tamer:
     ids: [Hero6]
     pl: Treser Wiwern
@@ -6284,10 +6835,13 @@ specializations:
   Zombie Alpha:
     ids: [Straker]
     new: true
+    desc: Zombie Alpha All Zombies in the hero's army gain +1 to their Attack and Defense for every two levels of the hero. Packs of Zombies spawn at random positions on the battlefield each hero turn.
 buildings:
   Alchemy Lab:
     ids: [academy/special_5/alchemylab]
     new: true
+    desc: Allows a hero with the Artificier skill garrisoned in this town to transform his or her creatures from other factions into resources and potions, chosen randomly depending on the amount and tier
+      of...
   Altar of Elements:
     ids: [dungeon/special_1/altarofelements]
     pl: Ołtarz Żywiołów
@@ -6396,6 +6950,8 @@ buildings:
   Beacon Of Souls:
     ids: [necromancy/special_5/beaconofsouls]
     new: true
+    desc: All neutral monsters from the Necropolis faction on the map are revealed. Each time one of these groups of monsters is defeated by an enemy hero, your Necropolis hero that is the nearest from
+      this...
   Bear Pens:
     ids: [dwarves/dwelling_4/bearpens, dwarves/dwelling_4/fightingring]
     pl: Zagroda Niedźwiedzi
@@ -6444,6 +7000,7 @@ buildings:
   Bloodstone:
     ids: [dungeon/special_5/bloodstone]
     new: true
+    desc: Blood Crystal each week.
   Blooming Grove:
     ids: [preserve/special_4/bloominggrove]
     pl: Kwitnący Gaj
@@ -6487,6 +7044,7 @@ buildings:
   Chamber of Arcane:
     ids: [dungeon/special_6/hallofintrigue]
     new: true
+    desc: Increases Knowledge of all heroes by 1.
   Chamber of Rage:
     ids: [stronghold/dwelling_5/chamberofrage]
     pl: Komnata Furii
@@ -6590,6 +7148,7 @@ buildings:
   Eternal Suffering Stick:
     ids: [inferno/special_3/eternalsufferingstick]
     new: true
+    desc: Demonic creatures that are available for recruitment in this town generate daily Gold. The amount of Gold depends on the tier of the creature and their number, using the formula 0.1 * N * T *...
   Faerie Trees:
     ids: [preserve/dwelling_2/faerietrees, preserve/dwelling_2/woodguardquarters]
     pl: Baśniowe Drzewo
@@ -6838,18 +7397,23 @@ buildings:
   Magic Guild level 1:
     ids: [academy/magic_guild/magic_guild_1, dungeon/magic_guild/magic_guild_1, dwarves/magic_guild/magic_guild_1, haven/magic_guild/magic_guild_1, inferno/magic_guild/magic_guild_1, '... 3 more']
     new: true
+    desc: Allows visiting heroes to learn the spells kept within. Contains 3 spells of the first circle, with guaranteed Destructive and Natural spells. Gives +1 Spellpower and Knowledge to all heroes.
   Magic Guild level 2:
     ids: [academy/magic_guild/magic_guild_2, dungeon/magic_guild/magic_guild_2, dwarves/magic_guild/magic_guild_2, haven/magic_guild/magic_guild_2, inferno/magic_guild/magic_guild_2, '... 3 more']
     new: true
+    desc: An upgrade of the Magic Guild level 1. Allows visiting heroes to learn the spells kept within. Adds 3 spells of the second circle, with guaranteed Destructive and Natural spells.
   Magic Guild level 3:
     ids: [academy/magic_guild/magic_guild_3, dungeon/magic_guild/magic_guild_3, dwarves/magic_guild/magic_guild_3, haven/magic_guild/magic_guild_3, inferno/magic_guild/magic_guild_3, '... 3 more']
     new: true
+    desc: An upgrade of the Magic Guild level 2. Allows visiting heroes to learn the spells kept within. Adds 3 spells of the third circle, with guaranteed Destructive and Natural spells.
   Magic Guild level 4:
     ids: [academy/magic_guild/magic_guild_4, dungeon/magic_guild/magic_guild_4, dwarves/magic_guild/magic_guild_4, haven/magic_guild/magic_guild_4, inferno/magic_guild/magic_guild_4, '... 3 more']
     new: true
+    desc: An upgrade of the Magic Guild level 3. Allows visiting heroes to learn the spells kept within. Adds 2 spells of the fourth circle, with guaranteed Destructive and Natural spells.
   Magic Guild level 5:
     ids: [academy/magic_guild/magic_guild_5, dungeon/magic_guild/magic_guild_5, dwarves/magic_guild/magic_guild_5, haven/magic_guild/magic_guild_5, inferno/magic_guild/magic_guild_5, '... 3 more']
     new: true
+    desc: An upgrade of the Magic Guild level 4. Allows visiting heroes to learn the spells kept within. Adds 2 spells of the fifth circle, with guaranteed Destructive and Natural spells.
   Magma Rift:
     ids: [dwarves/dwelling_7/magmabelch]
     pl: Rozpadlina Magmy
@@ -6893,9 +7457,11 @@ buildings:
   Netherworld's Gate:
     ids: [necromancy/dwelling_7/dragongraveyard]
     new: true
+    desc: The Netherworld's Gate allows you to recruit Wights.
   Netherworld's Portal:
     ids: [necromancy/dwelling_7/dragonvault]
     new: true
+    desc: An upgrade of the Netherworld's Gate. The Netherworld's Portal allows you to recruit Wraiths or Banshees.
   Obsidian Parapet:
     ids: [academy/dwelling_2/obsidianparapet]
     pl: Obsydianowe Blanki
@@ -7229,9 +7795,11 @@ buildings:
   Watch Tower:
     ids: [preserve/special_6/watchtower]
     new: true
+    desc: Nearby sylvan heroes gain additional movement points. The amount of movement points gained depends on the distance between the hero and the town at the start of the day.
   Wolf Kennel:
     ids: [haven/special_3/wolfkennel]
     new: true
+    desc: Produces 2 Wolves per day. Additionally, any demons, orcs or undeads left in town will be given to feed the wolves.
   Wrestler's Arena:
     ids: [dwarves/special_2/arena]
     pl: Arena Zapaśnicza

@@ -59,12 +59,13 @@ python tools/generators/import-rmg-templates.py    # RMG template .xdb -> YAML s
 python tools/debug/validate.py                  # XML syntax of every .xdb in game_data
 python tools/translator.py                      # machine-translates texts-EN files newer than their translation
 python tools/translation/glossary.py --data <TotE>/data --texts EN=<vanilla texts-EN> --texts PL=<vanilla texts-PL> --texts RU=<vanilla texts-RU> --texts FR=<vanilla texts-FR>  # translation glossary (see text.md)
+python tools/translation/translate-terms.py     # translates the new glossary terms (Claude API), accepts --dry-run / --lang / --category / --limit
 ```
 
 - `game_binary/launcher/build.ps1` builds the launchers `H5X.exe` and `H5X-Duel.exe` (MSVC, output in `game_binary/bin/`) and copies them to the game's root folder.
 - `tools/update-doc.ps1` regenerates `documentation/*.md`.
 - `tools/release.py` bumps `VERSION`, writes the in-game version text, and builds the release paks.
-- Python dependencies: `jinja2` and `xmltodict` (generators), `pyyaml` (doc), `semver` (release), `deep_translator` (translator), `Pillow` (editor icons).
+- Python dependencies: `jinja2` and `xmltodict` (generators), `pyyaml` (doc, glossary), `semver` (release), `deep_translator` (translator), `anthropic` (term translation), `Pillow` (editor icons).
 
 CI (`.github/workflows/`) only packages paks, on manual dispatch. It runs no tests.
 

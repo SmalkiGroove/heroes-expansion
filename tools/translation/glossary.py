@@ -24,12 +24,14 @@ GAME_DATA = os.path.join(REPO_ROOT, "game_data")
 TEXTS_EN = os.path.join(REPO_ROOT, "game_texts", "texts-EN")
 OUTPUT = os.path.join(TRANSLATION_DIR, "glossary.yml")
 CORRECTIONS = os.path.join(TRANSLATION_DIR, "glossary-corrections.yml")
+NEW_TERMS = os.path.join(TRANSLATION_DIR, "glossary-new.yml")  # translations of the terms vanilla doesn't have
 
 VANILLA_PAKS = ["data.pak", "a2p1-data.pak"]  # later paks override earlier ones
 
 # Names of unused or internal entities
 PLACEHOLDERS = {"Debug Teleport", "Not Available", "Unknown", "None", "Plate", "True Tank"}
 MAX_IDS = 5  # longer ID lists are cut
+DESC_LENGTH = 200  # characters of description kept as context for new terms
 
 
 class VirtualFS:
@@ -122,52 +124,65 @@ class Game:
 
 
 def extract(game):
-    """Entity names of one game state: {category: {key: name}}."""
+    """Entity names of one game state, and the start of their descriptions: ({category: {key: name}}, same for descriptions)."""
     terms = {}
+    descs = {}
 
-    def add(category, key, text_path):
-        name = clean_name(game.text(text_path), category)
+    def add(category, key, text_path, desc_path=None):
+        text = game.text(text_path)
+        name = clean_name(text, category)
         if name:
             terms.setdefault(category, {})[key] = name
+            # Mod specialization names carry their description after the first line
+            desc = game.text(desc_path) or (text.split("\n", 1)[1] if category == "specializations" and "\n" in text else None)
+            if desc:
+                descs.setdefault(category, {})[key] = clean_desc(desc)
+
+    def ref(node, name, from_path):
+        return game.ref(node.find(name), from_path) if node is not None else None
 
     for path in game.texts.paths("/text/game/towns/types/", ".txt"):
         add("factions", path.rsplit("/", 1)[1][:-len(".txt")], path)
 
     path = "/GameMechanics/RefTables/Artifacts.xdb"
     for id, obj in game.table(path):
-        add("artifacts", id, game.ref(obj.find("NameFileRef"), path))
+        add("artifacts", id, ref(obj, "NameFileRef", path), ref(obj, "DescriptionFileRef", path))
 
     path = "/GameMechanics/RefTables/Skills.xdb"
     for id, obj in game.table(path):
         levels = obj.find("NameFileRef")
         items = list(levels) if levels is not None else []
+        desc_levels = obj.find("DescriptionFileRef")
+        desc_items = list(desc_levels) if desc_levels is not None else []
         for level, item in enumerate(items, 1):
-            add("skills", id if len(items) == 1 else f"{id}/{level}", game.ref(item, path))
+            desc_path = game.ref(desc_items[level - 1], path) if level <= len(desc_items) else None
+            add("skills", id if len(items) == 1 else f"{id}/{level}", game.ref(item, path), desc_path)
 
     path = "/GameMechanics/RefTables/UndividedSpells.xdb"
     for id, obj in game.table(path):
         spell_path = game.ref(obj, path)
         spell = game.xml(spell_path) if spell_path else None
         if spell is not None:
-            add("spells", id, game.ref(spell.find("NameFileRef"), spell_path))
+            desc_path = ref(spell, "LongDescriptionFileRef", spell_path) or ref(spell, "DescriptionFileRef", spell_path)
+            add("spells", id, ref(spell, "NameFileRef", spell_path), desc_path)
 
     path = "/GameMechanics/RefTables/Creatures.xdb"
     for id, obj in game.table(path):
         creature_path = game.ref(obj, path)
         creature = game.xml(creature_path) if creature_path else None
-        visual_path = game.ref(creature.find("Visual"), creature_path) if creature is not None else None
+        visual_path = ref(creature, "Visual", creature_path)
         visual = game.xml(visual_path) if visual_path else None
         if visual is not None:
-            add("creatures", id, game.ref(visual.find("CreatureNameFileRef"), visual_path))
+            add("creatures", id, ref(visual, "CreatureNameFileRef", visual_path), ref(visual, "DescriptionFileRef", visual_path))
 
     path = "/GameMechanics/RefTables/CombatAbilities.xdb"
     for id, obj in game.table(path):
-        add("abilities", id, game.ref(obj.find("NameFileRef"), path))
+        add("abilities", id, ref(obj, "NameFileRef", path), ref(obj, "DescriptionFileRef", path))
 
     for table, category in [("HeroClass", "classes"), ("HeroAttribute", "stats"), ("Mastery", "stats"), ("ResourcesInfo", "resources")]:
         path = f"/GameMechanics/RefTables/{table}.xdb"
         for id, obj in game.table(path):
-            add(category, id, game.ref(obj.find("NameFileRef"), path))
+            add(category, id, ref(obj, "NameFileRef", path))
 
     for path in game.data.paths("/mapobjects/", ".xdb"):
         root = game.xml(path)
@@ -175,17 +190,16 @@ def extract(game):
             continue
         hero = root.findtext("InternalName")
         editable = root.find("Editable")
-        if editable is not None:
-            add("heroes", hero, game.ref(editable.find("NameFileRef"), path))
-        add("specializations", hero, game.ref(root.find("SpecializationNameFileRef"), path))
+        add("heroes", hero, ref(editable, "NameFileRef", path), ref(editable, "BiographyFileRef", path))
+        add("specializations", hero, ref(root, "SpecializationNameFileRef", path), ref(root, "SpecializationDescFileRef", path))
 
     for path in game.data.paths("/gamemechanics/townbuildingsharedstats/", ".xdb"):
         root = game.xml(path)
         if root is not None:
             key = path[len("/gamemechanics/townbuildingsharedstats/"):-len(".xdb")]
-            add("buildings", key, game.ref(root.find("NameFileRef"), path))
+            add("buildings", key, ref(root, "NameFileRef", path), ref(root, "DescriptionFileRef", path))
 
-    return terms
+    return terms, descs
 
 
 def build(args):
@@ -202,7 +216,7 @@ def build(args):
     for lang, folder in args.texts:
         texts = VirtualFS()
         texts.add_folder(folder)
-        vanilla[lang] = extract(Game(vanilla_data, texts))
+        vanilla[lang], _ = extract(Game(vanilla_data, texts))
     if "EN" not in vanilla:
         sys.exit("--texts EN=<folder> (the vanilla English texts) is required")
 
@@ -212,7 +226,7 @@ def build(args):
     mod_texts.add_folder(TEXTS_EN)
     for folder in sorted(os.listdir(GAME_DATA)):
         mod_texts.add_folder(os.path.join(GAME_DATA, folder))
-    mod = extract(Game(mod_data, mod_texts))
+    mod, mod_descs = extract(Game(mod_data, mod_texts))
 
     # Vanilla (category, ID) of each English name, in the same category first, then in any category
     by_name = {}
@@ -234,6 +248,10 @@ def build(args):
             matches = by_name.get((category, name.lower())) or by_name.get((None, name.lower()))
             if not matches:
                 entry["new"] = True
+                # Context for the translation of the term
+                desc = next((mod_descs.get(category, {}).get(id) for id in ids if mod_descs.get(category, {}).get(id)), None)
+                if desc:
+                    entry["desc"] = desc
             for lang in others:
                 candidates = [vanilla[lang].get(c, {}).get(id) for c, id in matches or []]
                 official = most_common(candidates)
@@ -242,21 +260,31 @@ def build(args):
                 if len(set(filter(None, candidates))) > 1:
                     print(f"WARNING: {category} '{name}' has several {lang} names, kept '{official}': {sorted(set(filter(None, candidates)))}")
             out[name] = entry
-    apply_corrections(glossary)
+    apply_names(glossary, NEW_TERMS, "translation")
+    apply_names(glossary, CORRECTIONS, "correction")
     return glossary
 
 
-def apply_corrections(glossary):
-    """Replaces official names with the hand-made ones of glossary-corrections.yml ({term: {lang: name}}),
-    in every category that has the term."""
-    with open(CORRECTIONS, encoding="utf-8") as f:
-        corrections = yaml.safe_load(f) or {}
-    for term, names in corrections.items():
+def apply_names(glossary, path, label):
+    """Sets the names of a hand-made file ({term: {lang: name}}) in every category that has the term."""
+    with open(path, encoding="utf-8") as f:
+        names_by_term = yaml.safe_load(f) or {}
+    for term, names in names_by_term.items():
         entries = [entries[term] for entries in glossary.values() if term in entries]
         if not entries:
-            print(f"WARNING: correction of '{term}', which is not in the glossary")
+            print(f"WARNING: {label} of '{term}' ({os.path.basename(path)}), which is not in the glossary")
         for entry in entries:
             entry.update({lang.lower(): name for lang, name in names.items()})
+
+
+def clean_desc(text):
+    """Start of a description, on one line without tags, for context."""
+    text = " ".join(re.sub(r"<[^>]*>", " ", text).split())
+    if len(text) <= DESC_LENGTH:
+        return text
+    cut = text[:DESC_LENGTH]
+    end = cut.rfind(". ")
+    return cut[:end + 1] if end > DESC_LENGTH // 2 else cut.rsplit(" ", 1)[0] + "..."
 
 
 def clean_name(text, category):
