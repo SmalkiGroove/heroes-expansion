@@ -6,9 +6,10 @@ function DuelAddTownRecruits(player, creature, nb)
     DUEL_TOWN_RECRUITS[player][creature] = new
 end
 
-function DuelHeroLeadershipBonus(hero, level)
-    if hero == H_DUNCAN then return level end
-    if hero == H_ARANTIR then return 10 + level end
+-- Leadership and Diplomacy bonus, in % of weekly growth per hero level
+function DuelHeroLeadershipBonus(hero)
+    if hero == H_DUNCAN then return 6 end
+    if hero == H_ARANTIR then return 9 end
     return 0
 end
 

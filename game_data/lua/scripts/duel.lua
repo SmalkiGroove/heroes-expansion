@@ -107,24 +107,32 @@ DUEL_TOWNS_COORDINATES = {
 
 DUEL_ADVENTURE_DAYS = 5 + 2 * DUEL_MODE
 
+function DuelModeFactor() return 2 + DUEL_MODE end
+
 DUEL_PLAYER_DATA = {
     READY = 0,
     ADVENTURE_DAYS = {DUEL_ADVENTURE_DAYS, DUEL_ADVENTURE_DAYS},
     TOTAL_EXP = {0, 0},
 }
 
+-- reaches 2 when both parts of the starting bonus are done; learnt skill effects wait for it
+DUEL_START_DONE = {0, 0}
+
 
 function DuelStartingBonus(player)
     log.debug("DUEL: StartingBonus for player "..player)
     startThread(function(player)
-        for a = 1,199 do if HasArtefact(DUEL_HERO[player], a) then RemoveArtefact(DUEL_HERO[player], a) break end end
+        for a = 1,199 do if HasArtefact(DUEL_HERO[player], a) then
+            RemoveArtefact(DUEL_HERO[player], a)
+        break end end
+        GiveHeroRandomArtifact(player, DUEL_HERO[player], ARTIFACT_CLASS_MINOR, DUEL_FACTION[player] + 10)
     end, player)
     local amount = 5 * DUEL_MODE + 10
     for r = 0,1 do SetPlayerResource(player, r, 2 * amount) end
     for s = 2,5 do SetPlayerResource(player, s, amount) end
     SetPlayerResource(player, FACTION_RESOURCE[DUEL_FACTION[player]], 2 * amount)
     SetPlayerResource(player, GOLD, 12000 * amount + 50000)
-    GiveHeroRandomArtifact(player, DUEL_HERO[player], ARTIFACT_CLASS_MINOR, DUEL_FACTION[player] + 10)
+    DUEL_START_DONE[player] = DUEL_START_DONE[player] + 1
 end
 
 function DuelTownSetup(player)
@@ -151,9 +159,6 @@ end
 function DuelLevelUp(player, hero, level)
     if DUEL_HERO_LEVELUP_EFFECTS[hero] then
         DUEL_HERO_LEVELUP_EFFECTS[hero](player, hero, level)
-    end
-    for skill, func in DUEL_SKILL_LEVELUP_EFFECTS do
-        if HasHeroSkill(hero, skill) then func(player, hero, level) end
     end
 end
 
@@ -227,12 +232,13 @@ function DuelStaging(player, hero)
     SetObjectPosition(hero, DUEL_STAGING_COORDINATES[player].x, DUEL_STAGING_COORDINATES[player].y, 0, 2)
     SetObjectRotation(hero, 0)
     DUEL_PLAYER_DATA.TOTAL_EXP[player] = GetHeroStat(hero, STAT_EXPERIENCE)
+    local level = GetHeroLevel(hero)
     sleep(10)
     if DUEL_HERO_STAGING_EFFECTS[hero] then
         DUEL_HERO_STAGING_EFFECTS[hero](player, hero)
     end
     for skill, func in DUEL_SKILL_STAGING_EFFECTS do
-        if HasHeroSkill(hero, skill) then func(player, hero) end
+        if HasHeroSkill(hero, skill) then func(player, hero, level) end
     end
     for artifact, func in DUEL_ARTIFACT_STAGING_EFFECTS do
         if HasArtifact(hero, artifact) then func(player, hero) end

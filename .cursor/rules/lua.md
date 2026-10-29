@@ -433,13 +433,15 @@ Stages are START → SETUP → ADVENTURE → STAGING → CASTLE → BATTLE → E
 | Setup starts (`DuelSetup`) | `DUEL_HERO_SETUP_EFFECTS` | |
 | Adventure starts (`DuelAdventure`) | `DUEL_HERO_ADVENTURE_EFFECTS` | `DUEL_SKILL_ADVENTURE_EFFECTS` |
 | Each adventure day ends (`DuelAdventureDay`) | `DUEL_HERO_ADVENTURE_DAY_EFFECTS` | |
-| Level up (`DuelLevelUp`) | `DUEL_HERO_LEVELUP_EFFECTS` | `DUEL_SKILL_LEVELUP_EFFECTS` |
+| Level up (`DuelLevelUp`) | `DUEL_HERO_LEVELUP_EFFECTS` | |
 | Skill learnt (`DuelAddSkill`) | | `DUEL_SKILL_LEARNT_EFFECTS` |
 | Staging = end of adventure (`DuelStaging`) | `DUEL_HERO_STAGING_EFFECTS` | `DUEL_SKILL_STAGING_EFFECTS`, `DUEL_ARTIFACT_STAGING_EFFECTS` |
 | Castle starts (`DuelCastle`) | `DUEL_HERO_CASTLE_EFFECTS` | |
 | Battle starts (`DuelBattle`) | | `DUEL_SKILL_BATTLE_EFFECTS` |
 
-Effect functions have the signature `DuelXxx(player, hero)` (`DuelXxx(player, hero, level)` for level-up effects) and end with a `Popup(player, {"/Text/Duel/...txt"; ...})` describing what was gained.
+Effect functions have the signature `DuelXxx(player, hero)` and end with a `Popup(player, {"/Text/Duel/...txt"; ...})` describing what was gained. Level-up effects and skill staging effects also get `level`; for staging it is the hero level read when staging starts, before any effect grants experience.
+
+Skills have no level-up effects: an effect that would depend on when the skill was picked is either learnt (amounts scaled by the difficulty with `DuelModeFactor()`, 2 to 5) or applied at staging (amounts scaled by `level`). `DuelAddSkill` runs learnt effects in a thread that waits for `DUEL_START_DONE[player] == 2`, so the effects of starting skills are not erased by `DuelStartingBonus`. A learnt effect on a skill with masteries can fire once per rank: track what was already given (see `DUEL_GOVERNANCE_RANKS`).
 
 ### Duel data
 

@@ -19,10 +19,11 @@ function DuelLogistics(player, hero)
     Popup(player, {"/Text/Duel/Skill/Logistics.txt"; arg1=nb[1], arg2=nb[2], arg3=nb[3]})
 end
 
-function DuelPathfinding(player, hero, level)
+function DuelPathfinding(player, hero)
     log.trace("/scripts/duel/duel_skills.lua: DuelPathfinding")
     log.debug("DUEL: DuelPathfinding")
-    DUEL_PLAYER_DATA.ADVENTURE_DAYS[player] = DUEL_PLAYER_DATA.ADVENTURE_DAYS[player] + 0.1
+    if DUEL_PLAYER_STAGE[player] > DUEL_STAGE_ADVENTURE then return end
+    DUEL_PLAYER_DATA.ADVENTURE_DAYS[player] = DUEL_PLAYER_DATA.ADVENTURE_DAYS[player] + 1
     Popup(player, {"/Text/Duel/Skill/Pathfinding.txt"; arg=DUEL_PLAYER_DATA.ADVENTURE_DAYS[player]})
 end
 
@@ -37,56 +38,57 @@ function DuelScouting(player, hero)
     Popup(player, {"/Text/Duel/Skill/Scouting.txt"; arg=0})
 end
 
-function DuelSpoilsOfWar(player, hero, level)
+function DuelSpoilsOfWar(player, hero)
     log.trace("/scripts/duel/duel_skills.lua: DuelSpoilsOfWar")
     log.debug("DUEL: DuelSpoilsOfWar")
-    GiveResources(player, GOLD, 250, 1)
-    local artifact = 0
-    if mod(level, 4) == 0 then
+    local nb = DuelModeFactor()
+    local gold = 1250 * nb
+    GiveResources(player, GOLD, gold, 1)
+    for i = 1,nb do
         GiveHeroRandomArtifact(player, hero, ARTIFACT_CLASS_MINOR)
-        artifact = 1
     end
-    Popup(player, {"/Text/Duel/Skill/SpoilsOfWar.txt"; arg1=250, arg2=artifact})
+    Popup(player, {"/Text/Duel/Skill/SpoilsOfWar.txt"; arg1=gold, arg2=nb})
 end
 
-function DuelWarPath(player, hero, level)
+function DuelWarPath(player, hero)
     log.trace("/scripts/duel/duel_skills.lua: DuelWarPath")
     log.debug("DUEL: DuelWarPath")
-    DUEL_PLAYER_DATA.ADVENTURE_DAYS[player] = DUEL_PLAYER_DATA.ADVENTURE_DAYS[player] + 0.1
+    if DUEL_PLAYER_STAGE[player] > DUEL_STAGE_ADVENTURE then return end
+    DUEL_PLAYER_DATA.ADVENTURE_DAYS[player] = DUEL_PLAYER_DATA.ADVENTURE_DAYS[player] + 1
     Popup(player, {"/Text/Duel/Skill/WarPath.txt"; arg=DUEL_PLAYER_DATA.ADVENTURE_DAYS[player] })
 end
 
 function DuelLeadership(player, hero, level)
     log.trace("/scripts/duel/duel_skills.lua: DuelLeadership")
     log.debug("DUEL: DuelLeadership")
-    if mod(level, 2) == 0 then
-        local n = GetHeroSkillMastery(hero, SKILL_LEADERSHIP)
-        local percent = 5 + 5 * n + level
-        if HasHeroSkill(hero, PERK_CHARISMA) then percent = percent + 20 end
-        percent = percent + DuelHeroLeadershipBonus(hero, level)
-        local result = {0,0,0,0,0,0,0}
-        for creature, growth in DUEL_CREATURE_GROWTH[DUEL_FACTION[player]] do
-            local nb = trunc(0.01 * percent * growth)
-            if nb > 0 then
-                AddHeroCreatures(hero, creature, nb)
-                result[GetTier(creature)] = nb
-            end
+    local n = GetHeroSkillMastery(hero, SKILL_LEADERSHIP)
+    local percent = level * (6 + 2 * n + DuelHeroLeadershipBonus(hero))
+    if HasHeroSkill(hero, PERK_CHARISMA) then percent = 2 * percent end
+    local result = {0,0,0,0,0,0,0}
+    for creature, growth in DUEL_CREATURE_GROWTH[DUEL_FACTION[player]] do
+        local nb = trunc(0.01 * percent * growth)
+        if nb > 0 then
+            AddHeroCreatures(hero, creature, nb)
+            result[GetTier(creature)] = nb
         end
-        Popup(player, {"/Text/Duel/Skill/Leadership.txt"; arg1=result[1], arg2=result[2], arg3=result[3], arg4=result[4], arg5=result[5], arg6=result[6], arg7=result[7]})
     end
+    Popup(player, {"/Text/Duel/Skill/Leadership.txt"; arg1=result[1], arg2=result[2], arg3=result[3], arg4=result[4], arg5=result[5], arg6=result[6], arg7=result[7]})
 end
 
 function DuelDiplomacy(player, hero, level)
     log.trace("/scripts/duel/duel_skills.lua: DuelDiplomacy")
     log.debug("DUEL: DuelDiplomacy")
-    if mod(level, 2) == 0 then
+    local percent = 20 + 4 * DuelHeroLeadershipBonus(hero)
+    local result = {0,0,0,0,0}
+    for i = 1,trunc(0.25 * level) do
         local tier = random(1,5)
         local creature = CREATURES_BY_FACTION[DUEL_FACTION[player]][tier][1]
-        local percent = 20 + DuelHeroLeadershipBonus(hero, level)
-        local nb = round(0.01 * percent * DUEL_CREATURE_GROWTH[DUEL_FACTION[player]][creature])
-        if nb > 0 then AddHeroCreatures(hero, creature, nb) end
-        Popup(player, {"/Text/Duel/Skill/Diplomacy.txt"; arg1=nb, arg2=tier})
+        result[tier] = result[tier] + round(0.01 * percent * DUEL_CREATURE_GROWTH[DUEL_FACTION[player]][creature])
     end
+    for tier = 1,5 do
+        if result[tier] > 0 then AddHeroCreatures(hero, CREATURES_BY_FACTION[DUEL_FACTION[player]][tier][1], result[tier]) end
+    end
+    Popup(player, {"/Text/Duel/Skill/Diplomacy.txt"; arg1=result[1], arg2=result[2], arg3=result[3], arg4=result[4], arg5=result[5]})
 end
 
 function DuelTaletellers(player, hero)
@@ -96,21 +98,24 @@ function DuelTaletellers(player, hero)
     Popup(player, {"/Text/Duel/Skill/Taletellers.txt"; arg=1})
 end
 
-function DuelGovernance(player, hero, level)
+-- ranks already paid, so a rank is paid once whether the trigger fires per rank or per skill
+DUEL_GOVERNANCE_RANKS = {0, 0}
+
+function DuelGovernance(player, hero)
     log.trace("/scripts/duel/duel_skills.lua: DuelGovernance")
     log.debug("DUEL: DuelGovernance")
     local n = GetHeroSkillMastery(hero, SKILL_GOVERNANCE)
-    local amount = 500 * n
+    local paid = DUEL_GOVERNANCE_RANKS[player]
+    if n <= paid then return end
+    DUEL_GOVERNANCE_RANKS[player] = n
+    local amount = 2000 * DuelModeFactor() * (n - paid)
     GiveResources(player, GOLD, amount, 1)
+    if paid == 0 then
+        local res = FACTION_RESOURCE[DUEL_FACTION[player]]
+        GiveResources(player, res, 5, 1)
+        Popup(player, {"/Text/Duel/Skill/Governance2.txt"; arg1=5, arg2=RESOURCE_NAME_FILE[res]})
+    end
     Popup(player, {"/Text/Duel/Skill/Governance.txt"; arg=amount})
-end
-
-function DuelGovernance2(player, hero)
-    log.trace("/scripts/duel/duel_skills.lua: DuelGovernance2")
-    log.debug("DUEL: DuelGovernance2")
-    local res = FACTION_RESOURCE[DUEL_FACTION[player]]
-    GiveResources(player, res, 5, 1)
-    Popup(player, {"/Text/Duel/Skill/Governance2.txt"; arg=5, gr=RESOURCE_NAME_FILE[res]})
 end
 
 function DuelGearUp(player, hero)
@@ -150,18 +155,20 @@ function DuelMythology(player, hero)
     Popup(player, {"/Text/Duel/Skill/Mythology.txt"; arg=count})
 end
 
-function DuelEstates(player, hero, level)
+function DuelEstates(player, hero)
     log.trace("/scripts/duel/duel_skills.lua: DuelEstates")
-    local amount = 500 + level * 25
+    local amount = 5000 * DuelModeFactor()
     GiveResources(player, GOLD, amount, 1)
     Popup(player, {"/Text/Duel/Skill/Estates.txt"; arg=amount})
 end
 
-function DuelGeology(player, hero, level)
+function DuelGeology(player, hero)
     log.trace("/scripts/duel/duel_skills.lua: DuelGeology")
-    GiveResources(player, ORE, 2, 1)
-    GiveResources(player, GOLD, level * 50, 1)
-    Popup(player, {"/Text/Duel/Skill/Geology.txt"; arg1=2, arg2=level * 50})
+    local ore = 10 * DuelModeFactor()
+    local gold = 4000 * DuelModeFactor()
+    GiveResources(player, ORE, ore, 1)
+    GiveResources(player, GOLD, gold, 1)
+    Popup(player, {"/Text/Duel/Skill/Geology.txt"; arg1=ore, arg2=gold})
 end
 
 function DuelIndustry(player, hero)
@@ -214,26 +221,26 @@ end
 
 function DuelWarriorsOfTheMagma(player, hero, level)
     log.trace("/scripts/duel/duel_skills.lua: DuelWarriorsOfTheMagma")
-    AddHeroCreatures(hero, CREATURE_FIRE_ELEMENTAL, level)
-    Popup(player, {"/Text/Duel/Skill/WarriorsOfTheMagma.txt"; arg=level})
+    AddHeroCreatures(hero, CREATURE_FIRE_ELEMENTAL, 10 * level)
+    Popup(player, {"/Text/Duel/Skill/WarriorsOfTheMagma.txt"; arg=10 * level})
 end
 
 function DuelWarriorsOfTheMountain(player, hero, level)
     log.trace("/scripts/duel/duel_skills.lua: DuelWarriorsOfTheMountain")
-    AddHeroCreatures(hero, CREATURE_EARTH_ELEMENTAL, level)
-    Popup(player, {"/Text/Duel/Skill/WarriorsOfTheMountain.txt"; arg=level})
+    AddHeroCreatures(hero, CREATURE_EARTH_ELEMENTAL, 10 * level)
+    Popup(player, {"/Text/Duel/Skill/WarriorsOfTheMountain.txt"; arg=10 * level})
 end
 
 function DuelWarriorsOfTheSea(player, hero, level)
     log.trace("/scripts/duel/duel_skills.lua: DuelWarriorsOfTheSea")
-    AddHeroCreatures(hero, CREATURE_WATER_ELEMENTAL, level)
-    Popup(player, {"/Text/Duel/Skill/WarriorsOfTheSea.txt"; arg=level})
+    AddHeroCreatures(hero, CREATURE_WATER_ELEMENTAL, 10 * level)
+    Popup(player, {"/Text/Duel/Skill/WarriorsOfTheSea.txt"; arg=10 * level})
 end
 
 function DuelWarriorsOfTheSky(player, hero, level)
     log.trace("/scripts/duel/duel_skills.lua: DuelWarriorsOfTheSky")
-    AddHeroCreatures(hero, CREATURE_AIR_ELEMENTAL, level)
-    Popup(player, {"/Text/Duel/Skill/WarriorsOfTheSky.txt"; arg=level})
+    AddHeroCreatures(hero, CREATURE_AIR_ELEMENTAL, 10 * level)
+    Popup(player, {"/Text/Duel/Skill/WarriorsOfTheSky.txt"; arg=10 * level})
 end
 
 function DuelEmpiricism(player, hero)
@@ -299,15 +306,16 @@ end
 
 function DuelWarPolicy(player, hero, level)
     log.trace("/scripts/duel/duel_skills.lua: DuelWarPolicy")
+    local percent = 10 * level
     for creature, growth in DUEL_CREATURE_GROWTH[DUEL_FACTION[player]] do
-        local nb = round(0.01 * level * growth)
+        local nb = round(0.01 * percent * growth)
         local new = DUEL_TOWN_RECRUITS[player][creature] + nb
         if nb > 0 then
             SetObjectDwellingCreatures(DuelPlayerTown(player), creature, new)
             DUEL_TOWN_RECRUITS[player][creature] = new
         end
     end
-    Popup(player, {"/Text/Duel/Skill/WarPolicy.txt"; arg=level})
+    Popup(player, {"/Text/Duel/Skill/WarPolicy.txt"; arg=percent})
 end
 
 function DuelLungWorkout(player, hero)
@@ -321,15 +329,13 @@ function DuelNecromancy(player, hero, level)
     log.trace("/scripts/duel/duel_skills.lua: DuelNecromancy")
     local result = {0,0,0,0,0,0,0}
     local n = GetHeroSkillMastery(hero, SKILL_NECROMANCY)
-    local percent = 5 + n * 5 + level * (n+1)
+    local percent = 16 * (n+1) * level
     for tier = 1,7 do
-        if mod(level, tier) == 0 then
-            local creature = CREATURES_BY_FACTION[NECROPOLIS][tier][1]
-            local growth = DUEL_CREATURE_GROWTH[NECROPOLIS][creature]
-            local nb = ceil(0.01 * growth * percent)
-            AddHeroCreatures(hero, creature, nb)
-            result[tier] = nb
-        end
+        local creature = CREATURES_BY_FACTION[NECROPOLIS][tier][1]
+        local growth = DUEL_CREATURE_GROWTH[NECROPOLIS][creature]
+        local nb = ceil(0.01 * growth * percent / tier)
+        AddHeroCreatures(hero, creature, nb)
+        result[tier] = nb
     end
     Popup(player, {"/Text/Duel/Skill/Necromancy.txt"; arg1=result[1], arg2=result[2], arg3=result[3], arg4=result[4], arg5=result[5], arg6=result[6], arg7=result[7]})
 end
@@ -379,14 +385,15 @@ end
 
 function DuelGoblinSupport(player, hero, level)
     log.trace("/scripts/duel/duel_skills.lua: DuelGoblinSupport")
-    AddHeroCreatures(hero, CREATURE_GOBLIN, 6)
-    Popup(player, {"/Text/Duel/Skill/GoblinSupport.txt"; arg=6})
+    AddHeroCreatures(hero, CREATURE_GOBLIN, 6 * level)
+    Popup(player, {"/Text/Duel/Skill/GoblinSupport.txt"; arg=6 * level})
 end
 
 function DuelDefendUsAll(player, hero, level)
     log.trace("/scripts/duel/duel_skills.lua: DuelDefendUsAll")
-    if mod(level, 4) == 0 then
-        local warriors, butchers = 10, 1
+    local n = trunc(0.25 * level)
+    if n > 0 then
+        local warriors, butchers = 10 * n, n
         AddHeroCreatures(hero, CREATURE_ORC_WARRIOR, warriors)
         AddHeroCreatures(hero, CREATURE_ORCCHIEF_BUTCHER, butchers)
         Popup(player, {"/Text/Duel/Skill/DefendUsAll.txt"; arg1=warriors, arg2=butchers})
@@ -399,25 +406,6 @@ function DuelInfusion(player, hero)
     Popup(player, {"/Text/Duel/Skill/Infusion.txt"; arg=50})
 end
 
-
-DUEL_SKILL_LEVELUP_EFFECTS = {
-    [PERK_PATHFINDING] = DuelPathfinding,
-    [PERK_SPOILS_OF_WAR] = DuelSpoilsOfWar,
-    [PERK_WAR_PATH] = DuelWarPath,
-    [SKILL_LEADERSHIP] = DuelLeadership,
-    [PERK_DIPLOMACY] = DuelDiplomacy,
-    [SKILL_GOVERNANCE] = DuelGovernance,
-    [PERK_ESTATES] = DuelEstates,
-    [PERK_GEOLOGY] = DuelGeology,
-    [PERK_WARRIORS_OF_THE_MAGMA] = DuelWarriorsOfTheMagma,
-    [PERK_WARRIORS_OF_THE_MOUNTAIN] = DuelWarriorsOfTheMountain,
-    [PERK_WARRIORS_OF_THE_SEA] = DuelWarriorsOfTheSea,
-    [PERK_WARRIORS_OF_THE_SKY] = DuelWarriorsOfTheSky,
-    [PERK_WAR_POLICY] = DuelWarPolicy,
-    [SKILL_NECROMANCY] = DuelNecromancy,
-    [PERK_GOBLIN_SUPPORT] = DuelGoblinSupport,
-    [PERK_DEFEND_US_ALL] = DuelDefendUsAll,
-}
 
 DUEL_SKILL_ADVENTURE_EFFECTS = {
     [PERK_SCOUTING] = DuelScouting,
@@ -439,6 +427,16 @@ DUEL_SKILL_STAGING_EFFECTS = {
     [PERK_LORD_OF_UNDEAD] = DuelLordOfUndead,
     [PERK_HERALD_OF_DEATH] = DuelHeraldOfDeath,
     [PERK_KNOW_YOUR_ENEMY] = DuelKnowYourEnemy,
+    [SKILL_LEADERSHIP] = DuelLeadership,
+    [PERK_DIPLOMACY] = DuelDiplomacy,
+    [PERK_WARRIORS_OF_THE_MAGMA] = DuelWarriorsOfTheMagma,
+    [PERK_WARRIORS_OF_THE_MOUNTAIN] = DuelWarriorsOfTheMountain,
+    [PERK_WARRIORS_OF_THE_SEA] = DuelWarriorsOfTheSea,
+    [PERK_WARRIORS_OF_THE_SKY] = DuelWarriorsOfTheSky,
+    [PERK_WAR_POLICY] = DuelWarPolicy,
+    [SKILL_NECROMANCY] = DuelNecromancy,
+    [PERK_GOBLIN_SUPPORT] = DuelGoblinSupport,
+    [PERK_DEFEND_US_ALL] = DuelDefendUsAll,
 }
 
 DUEL_SKILL_BATTLE_EFFECTS = {
@@ -450,22 +448,33 @@ DUEL_SKILL_BATTLE_EFFECTS = {
 DUEL_SKILL_LEARNT_EFFECTS = {
     [PERK_MEDITATION] = DuelMeditation,
     [PERK_TALETELLERS] = DuelTaletellers,
-    [SKILL_GOVERNANCE] = DuelGovernance2,
+    [SKILL_GOVERNANCE] = DuelGovernance,
     [PERK_EMPIRICISM] = DuelEmpiricism2,
     [PERK_REINFORCEMENT] = DuelReinforcement2,
     [PERK_DEVOTION] = DuelDevotion,
     [PERK_LUNG_WORKOUT] = DuelLungWorkout,
     [SKILL_SPIRITISM] = DuelSpiritism,
+    [PERK_PATHFINDING] = DuelPathfinding,
+    [PERK_WAR_PATH] = DuelWarPath,
+    [PERK_SPOILS_OF_WAR] = DuelSpoilsOfWar,
+    [PERK_ESTATES] = DuelEstates,
+    [PERK_GEOLOGY] = DuelGeology,
 }
 
 DUEL_SKILL_OVERRIDE = {
     [PERK_EMPIRICISM] = 1,
 }
 
+-- starting skills are learnt before DuelStartingBonus, which sets the resources and removes the first artifact
+function DuelLearntEffect(player, hero, skill)
+    repeat sleep() until DUEL_START_DONE and DUEL_START_DONE[player] == 2
+    DUEL_SKILL_LEARNT_EFFECTS[skill](player, hero)
+end
+
 function DuelAddSkill(player, hero, skill)
     log.trace("/scripts/duel/duel_skills.lua: DuelAddSkill")
     if DUEL_SKILL_LEARNT_EFFECTS[skill] then
-        DUEL_SKILL_LEARNT_EFFECTS[skill](player, hero)
+        startThread(DuelLearntEffect, player, hero, skill)
     end
     return (DUEL_SKILL_OVERRIDE[skill] and 1 or nil)
 end
