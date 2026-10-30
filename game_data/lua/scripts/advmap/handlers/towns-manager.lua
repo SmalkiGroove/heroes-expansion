@@ -1,6 +1,7 @@
 
 function SetupTownTavern(town, faction)
     log.trace("/scripts/advmap/handlers/towns-manager.lua: SetupTownTavern")
+    log.debug("SetupTownTavern", town, faction)
 	for i = 1,8 do
 		local enabled = (faction == i) and 1 or 0
 		AllowHeroHiringByRaceInTown(town, FactionToTownType(i), enabled)
@@ -9,12 +10,14 @@ end
 
 function GetFactionTowns(num)
 	log.trace("/scripts/advmap/handlers/towns-manager.lua: GetFactionTowns")
+	log.debug("GetFactionTowns", num)
 	local towntype = Towns_Types[num] or "TOWN"
     return GetObjectNamesByType(towntype)
 end
 
 function GetPlayerTowns(player)
 	log.trace("/scripts/advmap/handlers/towns-manager.lua: GetPlayerTowns")
+	log.debug("GetPlayerTowns", player)
 	local cities = {}
 	local towns = GetObjectNamesByType("TOWN")
 	for i,town in towns do
@@ -27,6 +30,7 @@ end
 
 function GetHeroTowns(player, hero)
     log.trace("/scripts/advmap/handlers/towns-manager.lua: GetHeroTowns")
+    log.debug("GetHeroTowns", player, hero)
     local cities = {}
     local towns = GetFactionTowns(HEROES[hero].faction)
     for i,town in towns do
@@ -39,6 +43,7 @@ end
 
 function GetTownValue(town)
     log.trace("/scripts/advmap/handlers/towns-manager.lua: GetTownValue")
+    log.debug("GetTownValue", town)
     local value = 0
     value = value + GetTownBuildingLevel(town, TOWN_BUILDING_GRAIL) * 10000
     value = value + GetTownBuildingLevel(town, TOWN_BUILDING_TOWN_HALL) * 1000
@@ -57,6 +62,7 @@ end
 
 function FindMainTown(player)
     log.trace("/scripts/advmap/handlers/towns-manager.lua: FindMainTown")
+    log.debug("FindMainTown", player)
     local main_town = nil
     local max_value = 0
     local towns = GetPlayerTowns(player)
@@ -72,6 +78,7 @@ end
 
 function CheckMainTown(player)
     log.trace("/scripts/advmap/handlers/towns-manager.lua: CheckMainTown")
+    log.debug("CheckMainTown", player)
     local main_town = PLAYER_MAIN_TOWN[player]
     if player ~= GetObjectOwner(main_town) then
         PLAYER_MAIN_TOWN[player] = FindMainTown(player)
@@ -81,6 +88,7 @@ end
 
 function FindClosestTown(player, hero)
 	log.trace("/scripts/advmap/handlers/towns-manager.lua: FindClosestTown")
+	log.debug("FindClosestTown", player, hero)
 	local x,y,z = GetObjectPosition(hero)
 	local closest = nil
 	local distance = 1000000000
@@ -101,6 +109,7 @@ end
 
 function InitializeMapTowns()
     log.trace("/scripts/advmap/handlers/towns-manager.lua: InitializeMapTowns")
+    log.debug("InitializeMapTowns()")
     if IsDuelMode() then return end
     TOWN_TYPES_CENTER_TILE = {
         ["TOWN_HEAVEN"] = {-1,1},
@@ -169,6 +178,7 @@ end
 
 function TownBuildTrigger(player)
     log.trace("/scripts/advmap/handlers/towns-manager.lua: TownBuildTrigger")
+    log.debug("TownBuildTrigger", player)
     for _,town in GetPlayerTowns(player) do
         if MAP_TOWN_BUILDINGS[town] then
             for b,v in MAP_TOWN_BUILDINGS[town] do
@@ -185,6 +195,7 @@ end
 
 function TownVisitTrigger(hero, town)
     log.trace("/scripts/advmap/handlers/towns-manager.lua: TownVisitTrigger")
+    log.debug("TownVisitTrigger", hero, town)
     startThread(Routine_LogisticsVisitTown, hero, town)
     Routine_Bloodstone_Visit(hero, town)
     if     hero == H_THEODORUS then Routine_IncreaseKnowledgeTemp(hero, town)
@@ -195,6 +206,7 @@ end
 
 function ObjectCaptureHandler(from_player, to_player, hero, obj)
     log.trace("/scripts/advmap/handlers/towns-manager.lua: ObjectCaptureHandler")
+    log.debug("ObjectCaptureHandler", from_player, to_player, hero, obj)
     if MAP_TOWNS[obj] then
         if MAP_TOWN_BUILDINGS[obj][TOWN_BUILDING_MAGIC_GUILD] > 0 then
             if from_player > 0 then

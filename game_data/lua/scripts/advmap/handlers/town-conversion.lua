@@ -3,14 +3,13 @@ MAP_CONVERTIBLES = {}
 HERO_IN_CONVERTIBLE = {}
 
 function HeroInConvertible(hero, obj, value)
-    log.trace("/scripts/advmap/handlers/town-conversion.lua: HeroInConvertible")
     ControlHeroCustomAbility(hero, CUSTOM_ABILITY_4, value)
     HERO_IN_CONVERTIBLE[hero] = (value == 1) and obj or nil
 end
 
 function EnableTownConversionAbility(hero, obj)
     log.trace("/scripts/advmap/handlers/town-conversion.lua: EnableTownConversionAbility")
-    log.debug("$ EnableTownConversionAbility")
+    log.debug("EnableTownConversionAbility", hero, obj)
     HeroInConvertible(hero, obj, CUSTOM_ABILITY_ENABLED)
     local x,y,z = GetObjectPosition(hero)
     repeat sleep(10) until not IsEqualPosition(hero, x, y, z)
@@ -20,6 +19,7 @@ end
 
 function CanHeroConvert(hero, obj)
     log.trace("/scripts/advmap/handlers/town-conversion.lua: CanHeroConvert")
+    log.debug("CanHeroConvert", hero, obj)
     local player = GetObjectOwner(hero)
     if IsHumanPlayer(player) then
         if HasHeroSkill(hero, SKILL_GOVERNANCE) then
@@ -40,7 +40,7 @@ end
 
 function ConvertTown(player, hero, town)
     log.trace("/scripts/advmap/handlers/town-conversion.lua: ConvertTown")
-    log.debug("$ ConvertTown")
+    log.debug("ConvertTown", player, hero, town)
     local resource_cost = 20
     local gold_cost = 10000
     if     GetResource(player, WOOD) < resource_cost then ShowFlyingSign("/Text/Game/Scripts/Resources/xNotEnoughWood.txt", hero, player, 3)
@@ -63,7 +63,7 @@ end
 
 function ConvertDwelling(player, hero, dwelling, tier)
     log.trace("/scripts/advmap/handlers/town-conversion.lua: ConvertDwelling")
-    log.debug("$ ConvertDwelling")
+    log.debug("ConvertDwelling", player, hero, dwelling, tier)
     local resource_cost = 3 * tier
     local gold_cost = 1000 * tier
     if     GetResource(player, WOOD) < resource_cost then ShowFlyingSign("/Text/Game/Scripts/Resources/xNotEnoughWood.txt", hero, player, 3)
@@ -81,7 +81,7 @@ end
 
 function HeroVisitConvertible(hero, obj)
     log.trace("/scripts/advmap/handlers/town-conversion.lua: HeroVisitConvertible")
-    log.debug("$ HeroVisitConvertible")
+    log.debug("HeroVisitConvertible", hero, obj)
     if GetObjectOwner(hero) == GetObjectOwner(obj) then
         if MAP_TOWNS[obj] then TownVisitTrigger(hero, obj) end
         if CanHeroConvert(hero, obj) then startThread(EnableTownConversionAbility, hero, obj) end
@@ -93,6 +93,7 @@ end
 
 function SetupConvertibleTrigger(type, f, t)
     log.trace("/scripts/advmap/handlers/town-conversion.lua: SetupConvertibleTrigger")
+    log.debug("SetupConvertibleTrigger", type, f, t)
     local names = GetObjectNamesByType(type)
     for _,name in names do
         MAP_CONVERTIBLES[name] = { faction=f, tier=t }
@@ -102,6 +103,7 @@ end
 
 function InitializeConvertibles()
     log.trace("/scripts/advmap/handlers/town-conversion.lua: InitializeConvertibles")
+    log.debug("InitializeConvertibles()")
     if IsDuelMode() then return end
 	for faction = 1,8 do
 		SetupConvertibleTrigger(Towns_Types[faction], faction, 0)

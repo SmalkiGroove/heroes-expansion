@@ -47,7 +47,8 @@ end
 
 function StartingBonus(player)
 	log.trace("/scripts/advmap/advmap-utils.lua: StartingBonus")
-	log.debug("$ StartingBonus for player "..player)
+	log.debug("StartingBonus", player)
+	LogThreadError("StartingBonus", player)
 	if IsDuelMode() then
 		for res = 0,6 do SetResource(player, res, 0) end return
 	end
@@ -80,6 +81,7 @@ end
 
 function UpdateTavernHeroes()
     log.trace("/scripts/advmap/advmap-utils.lua: UpdateTavernHeroes")
+    log.debug("UpdateTavernHeroes()")
     for hero,data in HEROES do
 		if data.faction ~= NEUTRAL then
 			if not IsHeroAlive(hero) then
@@ -93,6 +95,7 @@ end
 
 function UpdateTavernFactions()
     log.trace("/scripts/advmap/advmap-utils.lua: UpdateTavernFactions")
+    log.debug("UpdateTavernFactions()")
     for town,data in MAP_TOWNS do
         local owner = GetObjectOwner(town)
         if owner > 0 then
@@ -107,7 +110,6 @@ end
 
 
 function GetHeroArmy(hero)
-	log.trace("/scripts/advmap/advmap-utils.lua: GetHeroArmy")
 	local type = {}
 	type[1], type[2], type[3], type[4], type[5], type[6], type[7] = GetHeroCreaturesTypes(hero)
 	return type
@@ -115,6 +117,7 @@ end
 
 function GetHeroArmySummary(hero)
 	log.trace("/scripts/advmap/advmap-utils.lua: GetHeroArmySummary")
+	log.debug("GetHeroArmySummary", hero)
 	local units = {}
 	local amounts = {}
 	local k = 0
@@ -132,7 +135,6 @@ function GetHeroArmySummary(hero)
 end
 
 function GetObjectArmy(obj)
-	log.trace("/scripts/advmap/advmap-utils.lua: GetObjectArmy")
 	local type = {}
 	type[1], type[2], type[3], type[4], type[5], type[6], type[7] = GetObjectCreaturesTypes(obj)
 	return type
@@ -140,6 +142,7 @@ end
 
 function GetObjectArmySummary(obj)
 	log.trace("/scripts/advmap/advmap-utils.lua: GetObjectArmySummary")
+	log.debug("GetObjectArmySummary", obj)
 	local units = {}
 	local amounts = {}
 	local k = 0
@@ -208,7 +211,6 @@ end
 
 function AddHeroStatAmount(player, hero, stat, amount)
 	log.trace("/scripts/advmap/advmap-utils.lua: AddHeroStatAmount")
-	-- log.debug("$ AddHeroStatAmount")
     if amount ~= 0 then
 		ChangeHeroStat(hero, stat, amount)
 	end
@@ -216,7 +218,6 @@ end
 
 function GetHeroLowestStat(hero)
 	log.trace("/scripts/advmap/advmap-utils.lua: GetHeroLowestStat")
-	-- log.debug("$ GetHeroLowestStat")
 	local stat = 0
 	local value = 9999
 	for s = 1,4 do
@@ -231,7 +232,6 @@ end
 
 function GetHeroHighestStat(hero)
 	log.trace("/scripts/advmap/advmap-utils.lua: GetHeroHighestStat")
-	-- log.debug("$ GetHeroHighestStat")
 	local stat = 0
 	local value = 0
 	for s = 1,4 do
@@ -246,7 +246,6 @@ end
 
 function AddHeroManaUnbound(player, hero, amount)
 	log.trace("/scripts/advmap/advmap-utils.lua: AddHeroManaUnbound")
-	-- log.debug("$ AddHeroManaUnbound")
 	local klg = ceil(0.1 * amount)
 	ChangeHeroStat(hero, STAT_KNOWLEDGE, klg) sleep()
 	ChangeHeroStat(hero, STAT_MANA_POINTS, amount) sleep()
@@ -255,7 +254,6 @@ end
 
 function TeachHeroRandomSpell(player, hero, school, maxtier)
 	log.trace("/scripts/advmap/advmap-utils.lua: TeachHeroRandomSpell")
-	-- log.debug("$ TeachHeroRandomSpell")
 	local spells = {}
 	if school == SPELL_SCHOOL_ANY then
 		for tier = 1,maxtier do
@@ -283,7 +281,6 @@ end
 
 function TeachHeroRandomSpellTier(player, hero, school, tier)
 	log.trace("/scripts/advmap/advmap-utils.lua: TeachHeroRandomSpellTier")
-	-- log.debug("$ TeachHeroRandomSpellTier")
 	local spells = {}
 	if school == SPELL_SCHOOL_ANY then
 		for _,spell in SPELLS_BY_TIER[tier] do
@@ -309,7 +306,6 @@ end
 
 function GiveHeroRandomArtifact(player, hero, tier, set)
 	log.trace("/scripts/advmap/advmap-utils.lua: GiveHeroRandomArtifact")
-	-- log.debug("$ GiveHeroRandomArtifact hero="..hero.." tier="..tier.." set="..set)
 	tier = tier or 0
 	set = set or 0
 	local artefacts = {}
@@ -334,8 +330,6 @@ function GiveHeroRandomArtifact(player, hero, tier, set)
 end
 
 function HasActiveArtifactSet(hero, activset)
-	log.trace("/scripts/advmap/advmap-utils.lua: HasActiveArtifactSet")
-	-- log.debug("$ HasActiveArtifactSet")
 	local set = ARTIFACT_SETS_ACTIVATIONS[activset].set
 	local count = ARTIFACT_SETS_ACTIVATIONS[activset].count
 	local faction = ARTIFACT_SETS_ACTIVATIONS[activset].faction
@@ -347,7 +341,6 @@ end
 
 function AddHeroCreaturePerLevel(player, hero, type, coef)
 	log.trace("/scripts/advmap/advmap-utils.lua: AddHeroCreaturePerLevel")
-	-- log.debug("AddHeroCreaturePerLevel")
 	local level = GetHeroLevel(hero)
 	local nb = round(coef * level)
 	if nb >= 1 then
@@ -357,7 +350,6 @@ end
 
 function AddHeroCreatureType(player, hero, faction, tier, nb, default)
 	log.trace("/scripts/advmap/advmap-utils.lua: AddHeroCreatureType")
-	-- log.debug("$ AddHeroCreatureType")
 	if nb >= 1 then
 		local army = GetHeroArmy(hero)
 		for i = 1,7 do
@@ -374,7 +366,6 @@ end
 
 function CountHeroCreatureType(player, hero, faction, tier)
 	log.trace("/scripts/advmap/advmap-utils.lua: CountHeroCreatureType")
-	-- log.debug("$ CountHeroCreatureType")
 	local count = 0
 	for _,cr in CREATURES_BY_FACTION[faction][tier] do
 		count = count + GetHeroCreatures(hero, cr)
@@ -384,7 +375,6 @@ end
 
 function AddHeroTownRecruits(player, hero, dwelling, creature, nb)
 	log.trace("/scripts/advmap/advmap-utils.lua: AddHeroTownRecruits")
-	-- log.debug("AddHeroTownRecruits")
 	local towns = GetHeroTowns(player, hero)
 	if nb >= 1 then
 		for i,town in towns do
@@ -399,7 +389,6 @@ end
 
 function TransferCreatureFromTown(player, hero, dwelling, creature, coef)
 	log.trace("/scripts/advmap/advmap-utils.lua: TransferCreatureFromTown")
-	-- log.debug("$ TransferCreatureFromTown")
 	local level = GetHeroLevel(hero)
 	local towns = GetHeroTowns(player, hero)
 	for i,town in towns do
@@ -416,7 +405,6 @@ end
 
 function TransformTownRecruits(player, hero, dwelling1, creature1, dwelling2, creature2, amount)
 	log.trace("/scripts/advmap/advmap-utils.lua: TransformTownRecruits")
-	-- log.debug("$ TransformTownRecruits")
 	local towns = GetHeroTowns(player, hero)
 	for i,town in towns do
 		if GetTownBuildingLevel(town, dwelling1) ~= 0 and GetTownBuildingLevel(town, dwelling2) ~= 0 then
@@ -433,7 +421,6 @@ end
 
 function UpgradeHeroCreatures(player, hero, base, upgrade)
 	log.trace("/scripts/advmap/advmap-utils.lua: UpgradeHeroCreatures")
-	-- log.debug("$ UpgradeHeroCreatures")
 	local nb = GetHeroCreatures(hero, base)
 	if nb >= 1 then
 		RemoveHeroCreatures(hero, base, nb)
@@ -443,7 +430,6 @@ end
 
 function ResurrectCreatureType(player, hero, combatIndex, faction, tier, max)
 	log.trace("/scripts/advmap/advmap-utils.lua: ResurrectCreatureType")
-	-- log.debug("$ ResurrectCreatureType")
 	local cap = max
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
     for i = 0,stacks-1 do

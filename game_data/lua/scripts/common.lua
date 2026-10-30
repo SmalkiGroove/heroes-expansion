@@ -3,15 +3,27 @@ log = {
     error = function(str) end,
     warn = function(str) end,
     info = function(str) end,
-    debug = function(str) end,
+    debug = function(str, ...) end,
     trace = function(str) end,
+
+    -- "name(v1, v2, ...)" from a vararg table, or name alone without values; nil prints as nil
+    -- (a table value would stop the thread: Lua 4 can't concatenate it and has no tostring here)
+    format = function(name, values)
+        if values.n == 0 then return name end
+        local str = name.."("
+        for i = 1,values.n do
+            if i > 1 then str = str..", " end
+            if values[i] == nil then str = str.."nil" else str = str..values[i] end
+        end
+        return str..")"
+    end,
 
     SetLogLevel = function(level)
         if level >= 1 then log.error = function(str) print("[ERROR] "..str) end end
-        if level >= 2 then log.warn = function(str) print("[WARN] "..str) end end
-        if level >= 3 then log.info = function(str) print("[INFO] "..str) end end
-        if level >= 4 then log.debug = function(str) print("[DEBUG] "..str) end end
-        if level >= 5 then log.trace = function(str) print("[TRACE] "..str) end end
+        if level >= 2 then log.warn = function(str) print("[WARN]  "..str) end end
+        if level >= 3 then log.info = function(str) print("[INFO]  "..str) end end
+        if level >= 4 then log.debug = function(str, ...) print("[DEBUG] ## "..log.format(str, arg)) end end
+        if level >= 5 then log.trace = function(str) print("[TRACE] ##### "..str) end end
     end,
 }
 

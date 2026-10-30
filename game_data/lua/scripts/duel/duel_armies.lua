@@ -80,7 +80,7 @@ DUEL_TOWN_RECRUITS = {{}, {}}
 
 function DuelTownRecruits(player)
     log.trace("/scripts/duel/duel_armies.lua: DuelTownRecruits")
-    log.debug("DUEL: DuelTownRecruits for player "..player)
+    log.debug("DuelTownRecruits", player)
     local faction = DUEL_FACTION[player]
     local town = DUEL_TOWN_NAME[player][faction]
     for creature, growth in DUEL_CREATURE_GROWTH[faction] do

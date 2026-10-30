@@ -39,7 +39,8 @@ end
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 function ManageCombatPrepare()
-    log.trace("$ Manage combat prepare")
+    log.trace("/scripts/combat-manager.lua: ManageCombatPrepare")
+    log.debug("ManageCombatPrepare()")
     combatSetPause(1)
     ATTACKER_HERO = GetHero(ATTACKER) and GetHeroName(ATTACKER_HERO_ID) or ""
     DEFENDER_HERO = GetHero(DEFENDER) and GetHeroName(DEFENDER_HERO_ID) or ""
@@ -47,7 +48,8 @@ function ManageCombatPrepare()
 end
 
 function ManageCombatStart()
-    log.trace("$ Manage combat start")
+    log.trace("/scripts/combat-manager.lua: ManageCombatStart")
+    log.debug("ManageCombatStart()")
     COMBAT_STATE = 1
     GetArmySummary()
 
@@ -68,7 +70,8 @@ function ManageCombatStart()
 end
 
 function ManageCombatTurn(unit)
-    log.trace("$ Manage combat turn - "..unit)
+    log.trace("/scripts/combat-manager.lua: ManageCombatTurn")
+    log.debug("ManageCombatTurn", unit)
 
     if CURRENT_UNIT ~= unit then
         combatSetPause(1)
@@ -93,7 +96,8 @@ function ManageCombatTurn(unit)
 end
 
 function ManageUnitDeath(unit)
-    log.trace("$ Manage unit death - "..unit)
+    log.trace("/scripts/combat-manager.lua: ManageUnitDeath")
+    log.debug("ManageUnitDeath", unit)
 
     if ATTACKER_HERO ~= "" then
         DoSkillRoutine_UnitDied(ATTACKER, ATTACKER_HERO, ATTACKER_HERO_ID, unit)
@@ -108,7 +112,8 @@ function ManageUnitDeath(unit)
 end
 
 function ManageCombatEnd(winner)
-    log.trace("$ Manage combat end - "..winner)
+    log.trace("/scripts/combat-manager.lua: ManageCombatEnd")
+    log.debug("ManageCombatEnd", winner)
     COMBAT_STATE = 2
     combatSetPause(1)
 

@@ -1,7 +1,7 @@
 
 function ActivateInfoWindow(player, hero)
     log.trace("/scripts/advmap/handlers/custom-abilities.lua: ActivateInfoWindow")
-    log.debug("$ ActivateInfoWindow")
+    log.debug("ActivateInfoWindow", player, hero)
     Popup(player, {
         "/Text/Game/Scripts/InfoWindow.txt";
         something1="Toto\nTutu<br>Titi"
@@ -11,7 +11,7 @@ end
 
 function ActivateKnowYourEnemy(player, hero)
     log.trace("/scripts/advmap/handlers/custom-abilities.lua: ActivateKnowYourEnemy")
-    log.debug("$ ActivateKnowYourEnemy")
+    log.debug("ActivateKnowYourEnemy", player, hero)
     if GetHeroStat(hero, STAT_MOVE_POINTS) < 100 then return end
     local exp = 0
     local k, units, amounts = GetHeroArmySummary(hero)
@@ -34,7 +34,7 @@ end
 
 function ActivateHeroTimeShift(player, hero)
     log.trace("/scripts/advmap/handlers/custom-abilities.lua: ActivateHeroTimeShift")
-    log.debug("$ ActivateHeroTimeShift")
+    log.debug("ActivateHeroTimeShift", player, hero)
     local points = GetHeroStat(hero, STAT_MOVE_POINTS)
     local cost = round(0.001 * points * (51 - GetHeroLevel(hero)))
     if GetHeroStat(hero, STAT_MANA_POINTS) < cost then
@@ -52,7 +52,7 @@ end
 
 function ActivateBuildingConversion(player, hero)
     log.trace("/scripts/advmap/handlers/custom-abilities.lua: ActivateBuildingConversion")
-    log.debug("$ ActivateBuildingConversion")
+    log.debug("ActivateBuildingConversion", player, hero)
     local obj = HERO_IN_CONVERTIBLE[hero]
     if not obj then ShowFlyingSign("/Text/Game/Scripts/Abilities/HeroNotInConvertible.txt", hero, player, 3) return end
     local tier = MAP_CONVERTIBLES[obj].tier
@@ -76,14 +76,14 @@ end
 
 function ActivateMeditation(player, hero, amount)
     log.trace("/scripts/advmap/handlers/custom-abilities.lua: ActivateMeditation")
-    log.debug("$ ActivateMeditation")
+    log.debug("ActivateMeditation", player, hero, amount)
     AddHeroStatAmount(player, hero, STAT_EXPERIENCE, 50 * amount)
 end
 
 
 function ActivateDigging(player, hero)
     log.trace("/scripts/advmap/handlers/custom-abilities.lua: ActivateDigging")
-    log.debug("$ ActivateDigging")
+    log.debug("ActivateDigging", player, hero)
 
 end
 
@@ -98,6 +98,7 @@ CUSTOM_ABILITIES = {
 
 function CustomAbilityHandler(hero, id)
     log.trace("/scripts/advmap/handlers/custom-abilities.lua: CustomAbilityHandler")
+    log.debug("CustomAbilityHandler", hero, id)
     local player = GetObjectOwner(hero)
     startThread(CUSTOM_ABILITIES[id], player, hero)
 end

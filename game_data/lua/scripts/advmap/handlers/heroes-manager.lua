@@ -15,6 +15,7 @@ end
 
 function HeroLevelUp(hero)
     log.trace("/scripts/advmap/handlers/heroes-manager.lua: HeroLevelUp")
+    log.debug("HeroLevelUp", hero)
     local level = GetHeroLevel(hero)
     local player = GetObjectOwner(hero)
     log.debug("Hero "..hero.." leveled up to level "..level)
@@ -140,7 +141,7 @@ function HeroLevelUp_KujinMP() HeroLevelUp(H_KUJIN) end
 
 function HeroLostBattle(player, hero, opponent)
     log.trace("/scripts/advmap/handlers/heroes-manager.lua: HeroLostBattle")
-    log.debug("$ HeroLostBattle "..hero)
+    log.debug("HeroLostBattle", player, hero, opponent)
     if opponent ~= nil then
         for a = 200,254 do
             if HasArtefact(opponent, a) then RemoveArtefact(opponent, a) end
@@ -151,7 +152,7 @@ end
 function AIDailyBonus(player, hero)
     log.trace("/scripts/advmap/handlers/heroes-manager.lua: AIDailyBonus")
     if IsAIPlayer(player) and DIFFICULTY > 0 then
-        log.debug("$ AIDailyBonus for "..hero)
+        log.debug("AIDailyBonus", player, hero)
         local amount = 75 * TURN * DIFFICULTY
         GiveExp(hero, amount)
         if WEEKS < 5 then ChangeHeroStat(hero, STAT_MOVE_POINTS, -750) end
@@ -161,7 +162,7 @@ end
 function AIWeeklyBonus(player, hero)
     log.trace("/scripts/advmap/handlers/heroes-manager.lua: AIWeeklyBonus")
     if IsAIPlayer(player) and DIFFICULTY > 0 then
-        log.debug("$ AIWeeklyBonus for "..hero)
+        log.debug("AIWeeklyBonus", player, hero)
         local faction = HEROES[hero].faction
         local n = min(WEEKS,7)
         for i = 1,n do
@@ -175,7 +176,7 @@ end
 function AIRecruitBonus(player, hero)
     log.trace("/scripts/advmap/handlers/heroes-manager.lua: AIRecruitBonus")
     if IsAIPlayer(player) and DIFFICULTY > 0 then
-        log.debug("$ AIRecruitBonus for "..hero)
+        log.debug("AIRecruitBonus", player, hero)
         ChangeHeroStat(hero, STAT_ATTACK, DIFFICULTY)
         ChangeHeroStat(hero, STAT_DEFENCE, DIFFICULTY)
         ChangeHeroStat(hero, STAT_KNOWLEDGE, DIFFICULTY)

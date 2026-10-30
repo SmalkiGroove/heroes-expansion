@@ -49,6 +49,7 @@ The adventure map runtime provides the following predefined functions for intera
 - `GetHeroCreatures(hero, creature)` → number: Get count of a specific creature type in hero's army
 - `AddHeroCreatures(hero, creature, count, slot)` → void: Add creatures to hero's army at specified slot (-1 for first available)
 - `RemoveHeroCreatures(hero, creature, count)` → void: Remove specific creatures from hero's army
+  - `AddHeroCreatures`, `RemoveHeroCreatures`, `AddObjectCreatures` and `RemoveObjectCreatures` reject a count of **0** as well as a negative one: "Quantity cannot be negative" is a script error that stops the calling thread. Guard computed counts with `if nb > 0`. `SetPlayerResource` and `SetObjectDwellingCreatures` accept 0.
 - `GetHeroCreaturesTypes(hero)` → creature1, creature2, ...: Return all creature types in hero's army
 - `GiveHeroWarMachine(hero, warMachine)` → void: Give hero a war machine (ballista, first aid tent, ammo cart)
 - `GiveHeroBattleBonus(hero, bonusType, amount)` → void: Provide hero with battle bonus
@@ -171,7 +172,8 @@ The adventure map runtime provides the following predefined functions for intera
 #### Logging and Debugging
 
 - `print(message)` → void: Write to game console
-  - a `log` table is defined in `common.lua` with `log.error`, `log.warn`, `log.info`, `log.debug` and `log.trace` (each takes a string). They are no-ops until `log.SetLogLevel(level)` enables them (1 = error ... 5 = trace), then print with a `[LEVEL]` prefix. By convention every mod function starts with `log.trace("/scripts/<path>.lua: FunctionName")`
+  - a `log` table is defined in `common.lua` with `log.error`, `log.warn`, `log.info`, `log.debug` and `log.trace` (each takes a string). They are no-ops until `log.SetLogLevel(level)` (`LOG_LEVEL` in `config.lua`) enables them (1 = error ... 5 = trace), then print with a `[LEVEL]` prefix. `log.debug(str, ...)` also takes values: `log.debug("Name", a, b)` prints `Name(a, b)` (`log.format`; `nil` prints as nil, a table would stop the thread), and the string is only built when the debug level is on.
+  - Script errors print `(Script) ERROR: <message>` without a location, and stop the thread. `LogThreadError("Name", args...)` (`advmap-utils.lua`) sets the thread's `errorHook` to also log `[ERROR] Script error in Name(args)`. It is called at the start of the advmap functions run by `startThread` and of the duel stages, so the error names the last such function the thread entered. Never call it in combat scripts: the combat engine's waited calls (`DoPrepare`, `DoStart`, `UnitMove`) rely on their own error hook to resume the combat.
 
 #### Utility Functions (Limited Lua)
 
@@ -300,7 +302,8 @@ Ports of the adventure map functions of the same name, with the same arguments a
 #### Logging and Debugging
 
 - `print(message)` → void: Write to game console
-  - a `log` table is defined in `common.lua` with `log.error`, `log.warn`, `log.info`, `log.debug` and `log.trace` (each takes a string). They are no-ops until `log.SetLogLevel(level)` enables them (1 = error ... 5 = trace), then print with a `[LEVEL]` prefix. By convention every mod function starts with `log.trace("/scripts/<path>.lua: FunctionName")`
+  - a `log` table is defined in `common.lua` with `log.error`, `log.warn`, `log.info`, `log.debug` and `log.trace` (each takes a string). They are no-ops until `log.SetLogLevel(level)` (`LOG_LEVEL` in `config.lua`) enables them (1 = error ... 5 = trace), then print with a `[LEVEL]` prefix. `log.debug(str, ...)` also takes values: `log.debug("Name", a, b)` prints `Name(a, b)` (`log.format`; `nil` prints as nil, a table would stop the thread), and the string is only built when the debug level is on.
+  - Script errors print `(Script) ERROR: <message>` without a location, and stop the thread. `LogThreadError("Name", args...)` (`advmap-utils.lua`) sets the thread's `errorHook` to also log `[ERROR] Script error in Name(args)`. It is called at the start of the advmap functions run by `startThread` and of the duel stages, so the error names the last such function the thread entered. Never call it in combat scripts: the combat engine's waited calls (`DoPrepare`, `DoStart`, `UnitMove`) rely on their own error hook to resume the combat.
 
 #### Utility Functions (Limited Lua)
 
@@ -382,7 +385,7 @@ Since the combat script runtime is separate from the adventure map script runtim
 
 ### Coding style
 
-- Every function starts with `log.trace("/scripts/<path>.lua: FunctionName")`, optionally followed by a `log.debug(...)`.
+- A logged function starts with `log.trace("/scripts/<path>.lua: FunctionName")` (file and function), then `log.debug("FunctionName", arg1, arg2, ...)` (function and argument values; `log.debug("FunctionName()")` without arguments). Other `log.debug` lines inside the body describe events. Helpers called in loops (`HasActiveArtifactSet`, `GetHeroArmy`, `IsArmyEmpty`, `SetStartingArmy`) have no log, to keep traces readable.
 - Feature-specific effects are written as one small function per effect, then registered in dispatch tables declared at the bottom of the file (e.g. `START_TRIGGER_HERO_ROUTINES`, `DUEL_SKILL_STAGING_EFFECTS`).
 - Heroes are always referenced with the `H_*` constants of `game/heroes.lua`: the script name of a hero often differs from its display name (`H_DOUGAL = 'Orrin'`, `H_KRAGH = 'Hero1'`).
 

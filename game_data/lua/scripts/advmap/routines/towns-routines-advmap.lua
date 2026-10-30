@@ -2,6 +2,7 @@
 
 function Routine_MagicGuildsBonus(player, town)
     log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: Routine_MagicGuildsBonus")
+    log.debug("Routine_MagicGuildsBonus", player, town)
     PLAYER_MAGIC_GUILD_LEVEL[player] = PLAYER_MAGIC_GUILD_LEVEL[player] + 1
     for _,hero in GetPlayerHeroes(player) do
         startThread(ComputeHeroMagicGuildBonus, player, hero)
@@ -11,6 +12,7 @@ end
 
 function Routine_BeaconOfSoulsReveal(player, town)
     log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: Routine_BeaconOfSoulsReveal")
+    log.debug("Routine_BeaconOfSoulsReveal", player, town)
     local necro_monsters = {
         "CREATURE_SKELETON",
         "CREATURE_WALKING_DEAD", "CREATURE_ZOMBIE", "CREATURE_DISEASE_ZOMBIE",
@@ -30,7 +32,7 @@ end
 
 function Routine_BeaconOfSouls(player, town, combatIndex)
     log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: Routine_BeaconOfSouls")
-    log.debug("$ Routine_BeaconOfSouls")
+    log.debug("Routine_BeaconOfSouls", player, town, combatIndex)
     if GetSavedCombatArmyPlayer(combatIndex, 0) == player then return end
     local value = 0
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 0)
@@ -63,7 +65,7 @@ end
 
 function Routine_DragonTombstone(player, town)
     log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: Routine_DragonTombstone")
-    log.debug("$ Routine_DragonTombstone")
+    log.debug("Routine_DragonTombstone", player, town)
     local prob = 100 + 10 * WEEKS
     prob = prob + GetObjectDwellingCreatures(town, CREATURE_SKELETON)
     prob = min(prob, 500)
@@ -82,7 +84,8 @@ end
 
 
 function Routine_AlchemyLab(player, town)
-    log.debug("$ Routine_AlchemyLab")
+    log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: Routine_AlchemyLab")
+    log.debug("Routine_AlchemyLab", player, town)
     local hero = GetTownHero(town)
     if not hero then return end
     local artificier = GetHeroSkillMastery(hero, SKILL_ARTIFICIER)
@@ -138,6 +141,7 @@ end
 
 function Routine_WatchTowerReveal(player, town)
     log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: Routine_WatchTowerReveal")
+    log.debug("Routine_WatchTowerReveal", player, town)
     local x, y, z
     if MAP_TOWNS[town] then
         x = MAP_TOWNS[town].x
@@ -152,7 +156,7 @@ end
 
 function Routine_WatchTower(player, town)
     log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: Routine_WatchTower")
-    log.debug("$ Routine_WatchTower")
+    log.debug("Routine_WatchTower", player, town)
     local tx = MAP_TOWNS[town].x
     local ty = MAP_TOWNS[town].y
     local tz = MAP_TOWNS[town].z
@@ -184,7 +188,7 @@ end
 
 function Routine_WatchTowerThread(player, hero, amount)
     log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: Routine_WatchTowerThread")
-    log.debug("$ Routine_WatchTowerThread")
+    log.debug("Routine_WatchTowerThread", player, hero, amount)
     local movement = GetHeroStat(hero, STAT_MOVE_POINTS)
     local current = 0
     local counter = 0
@@ -202,7 +206,7 @@ end
 
 function Routine_WolfKennel(player, town)
     log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: Routine_WolfKennel")
-    log.debug("$ Routine_WolfKennel")
+    log.debug("Routine_WolfKennel", player, town)
     local weekly_growth = {
         [INFERNO] = {66, 36, 22, 11, 5, 3, 1},
         [NECROPOLIS] = {57, 39, 19, 10, 5, 3, 1},
@@ -228,7 +232,7 @@ end
 
 function Routine_EternalSuffering(player, town)
     log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: Routine_EternalSuffering")
-    log.debug("$ Routine_EternalSuffering")
+    log.debug("Routine_EternalSuffering", player, town)
     local gold = 0
     for tier = 1, 7 do
         local creature = CREATURES_BY_FACTION[INFERNO][tier][1]
@@ -245,6 +249,7 @@ end
 Var_Bloodstone_Count = {}
 function Routine_Bloodstone_Visit(hero, town)
     log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: Routine_Bloodstone_Visit")
+    log.debug("Routine_Bloodstone_Visit", hero, town)
     local amount = Var_Bloodstone_Count[town]
     if amount and amount > 0 then
         for i = 1, amount do
@@ -258,7 +263,7 @@ end
 
 function Routine_Bloodstone(player, town)
     log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: Routine_Bloodstone")
-    log.debug("$ Routine_Bloodstone")
+    log.debug("Routine_Bloodstone", player, town)
     local hero = GetTownHero(town)
     if not hero then
         for _,h in GetPlayerHeroes(player) do
@@ -300,6 +305,7 @@ AFTER_COMBAT_TRIGGER_TOWNS_ROUTINES = {
 
 function DoTownsRoutine_Built(player, town, building)
     log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: DoTownsRoutine_Built")
+    log.debug("DoTownsRoutine_Built", player, town, building)
     local faction = MAP_TOWNS[town].faction
     if not faction then return end
     local routine = BUILT_TRIGGER_TOWNS_ROUTINES[faction * 100 + building]
@@ -310,7 +316,7 @@ end
 
 function DoTownsRoutine_Daily(player)
     log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: DoTownsRoutine_Daily")
-    log.debug("$ DoTownsRoutine_Daily")
+    log.debug("DoTownsRoutine_Daily", player)
     for faction,type in Towns_Types do
         local f = faction * 100
         for _,town in GetObjectNamesByType(type) do
@@ -329,7 +335,7 @@ end
 
 function DoTownsRoutine_Weekly(player)
     log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: DoTownsRoutine_Weekly")
-    log.debug("$ DoTownsRoutine_Weekly")
+    log.debug("DoTownsRoutine_Weekly", player)
     for faction,type in Towns_Types do
         local f = faction * 100
         for _,town in GetObjectNamesByType(type) do
@@ -348,7 +354,7 @@ end
 
 function DoTownsRoutine_AfterCombat(combatIndex)
     log.trace("/scripts/advmap/routines/towns-routines-advmap.lua: DoTownsRoutine_AfterCombat")
-    log.debug("$ DoTownsRoutine_AfterCombat")
+    log.debug("DoTownsRoutine_AfterCombat", combatIndex)
     for faction,type in Towns_Types do
         local f = faction * 100
         for b = 16,25 do

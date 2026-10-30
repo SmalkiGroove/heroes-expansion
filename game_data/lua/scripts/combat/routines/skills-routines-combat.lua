@@ -1,6 +1,7 @@
 
 function Routine_Houndmasters(side, hero, id, mastery)
-    log.debug("$ Routine_Houndmasters")
+    log.trace("/scripts/combat/routines/skills-routines-combat.lua: Routine_Houndmasters")
+    log.debug("Routine_Houndmasters", side, hero, id, mastery)
     local level = GetHeroLevel(hero)
     local amount = 10 + 2 * level + random(1, level)
     if hero == H_IVOR then
@@ -14,7 +15,8 @@ function Routine_Houndmasters(side, hero, id, mastery)
 end
 
 function Routine_ElementalBalance(side, hero, id, mastery)
-    log.debug("$ Routine_ElementalBalance")
+    log.trace("/scripts/combat/routines/skills-routines-combat.lua: Routine_ElementalBalance")
+    log.debug("Routine_ElementalBalance", side, hero, id, mastery)
     local creatures = GetUnits(1-side, CREATURE)
     for i,cr in creatures do
         local type = GetCreatureType(cr)
@@ -35,7 +37,8 @@ function Routine_ElementalBalance(side, hero, id, mastery)
 end
 
 function Routine_RandomCreatureRush(side, hero, id, mastery)
-    log.debug("$ Routine_RandomCreatureRush")
+    log.trace("/scripts/combat/routines/skills-routines-combat.lua: Routine_RandomCreatureRush")
+    log.debug("Routine_RandomCreatureRush", side, hero, id, mastery)
     local creature = RandomCreature(side, 0)
     if creature then
         setATB(creature, ATB_NEXT)
@@ -44,7 +47,8 @@ function Routine_RandomCreatureRush(side, hero, id, mastery)
 end
 
 function Routine_ShatterMagic(side, hero, id, mastery)
-    log.debug("$ Routine_ShatterMagic")
+    log.trace("/scripts/combat/routines/skills-routines-combat.lua: Routine_ShatterMagic")
+    log.debug("Routine_ShatterMagic", side, hero, id, mastery)
     local mult = 0.1 * mastery
     local h = GetHero(1-side)
     if h then
@@ -67,7 +71,8 @@ function Routine_ShatterMagic(side, hero, id, mastery)
 end
 
 function Routine_ImbueBallista(side, hero, id, mastery)
-    log.debug("$ Routine_ImbueBallista")
+    log.trace("/scripts/combat/routines/skills-routines-combat.lua: Routine_ImbueBallista")
+    log.debug("Routine_ImbueBallista", side, hero, id, mastery)
     if CURRENT_UNIT == id then
         local ballista = UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_BALLISTA'
         if IsCombatUnit(ballista) then
@@ -77,8 +82,9 @@ function Routine_ImbueBallista(side, hero, id, mastery)
 end
 
 function Routine_GuardianAngelRez(side, hero, id, mastery, winner)
+    log.trace("/scripts/combat/routines/skills-routines-combat.lua: Routine_GuardianAngelRez")
     if winner == side then
-        log.debug("$ Routine_GuardianAngelRez")
+        log.debug("Routine_GuardianAngelRez", side, hero, id, mastery, winner)
         local rez_stack = "none"
         local rez_power = 0
         for cr,nb in STARTING_ARMY[side] do

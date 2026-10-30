@@ -8,9 +8,10 @@ end
 -- HAVEN
 
 function Routine_BallistaRandomSalvo(side, hero)
-    log.debug("$ Routine_BallistaRandomSalvo")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_BallistaRandomSalvo")
     local ballista = UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_BALLISTA'
     if IsCombatUnit(ballista) then
+        log.debug("Routine_BallistaRandomSalvo", side, hero)
         local n = 1 + trunc(GetHeroLevel(hero) * 0.1)
         for i = 1,n do
             local target = RandomCreature(1-side,i)
@@ -22,19 +23,22 @@ function Routine_BallistaRandomSalvo(side, hero)
 end
 
 function Routine_PeasantsMoveNext(side, hero)
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_PeasantsMoveNext")
     if CURRENT_UNIT == hero then
-        log.debug("$ Routine_PeasantsMoveNext")
+        log.debug("Routine_PeasantsMoveNext", side, hero)
         SetATB_CreatureTypes(side, {CREATURE_PEASANT,CREATURE_MILITIAMAN,CREATURE_LANDLORD}, ATB_NEXT)
     end
 end
 
 function Routine_ArchersMoveFirst(side, hero)
-    log.debug("$ Routine_ArchersMoveFirst")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_ArchersMoveFirst")
+    log.debug("Routine_ArchersMoveFirst", side, hero)
     SetATB_CreatureTypes(side, {CREATURE_ARCHER,CREATURE_MARKSMAN,CREATURE_LONGBOWMAN}, ATB_INSTANT)
 end
 
 function Routine_InfantryDash(side, hero)
-    log.debug("$ Routine_InfantryDash")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_InfantryDash")
+    log.debug("Routine_InfantryDash", side, hero)
     local creatures = GetUnits(side, CREATURE)
     for i,cr in creatures do
         local type = GetCreatureType(cr)
@@ -46,7 +50,8 @@ function Routine_InfantryDash(side, hero)
 end
 
 function Routine_RetaliationStrike(side, hero)
-    log.debug("$ Routine_RetaliationStrike")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_RetaliationStrike")
+    log.debug("Routine_RetaliationStrike", side, hero)
     local cavalier = "none"
     local max = 0
     for i,cr in GetUnits(side, CREATURE) do
@@ -66,20 +71,23 @@ function Routine_RetaliationStrike(side, hero)
 end
 
 function Routine_CastPrayer(side, hero)
-    log.debug("$ Routine_CastPrayer")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_CastPrayer")
+    log.debug("Routine_CastPrayer", side, hero)
     HeroCast_Global(hero, SPELL_PRAYER, NO_COST)
 end
 
 function Routine_CastRandomStoneskin(side, hero)
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_CastRandomStoneskin")
     if CURRENT_UNIT == hero then
-        log.debug("$ Routine_CastRandomStoneskin")
+        log.debug("Routine_CastRandomStoneskin", side, hero)
         HeroCast_RandomCreature(hero, SPELL_STONESKIN, FREE_MANA, side)
         if IsHuman(side) then SetATB_ID(hero, ATB_INSTANT) end
     end
 end
 
 function Routine_GriffinInstantDive(side, hero)
-    log.debug("$ Routine_GriffinInstantDive")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_GriffinInstantDive")
+    log.debug("Routine_GriffinInstantDive", side, hero)
     for k,v in ROUTINE_VARS.GriffinDives do
         if v == 1 then
             local found = nil
@@ -103,7 +111,8 @@ function Routine_GriffinInstantDive(side, hero)
 end
 
 function Routine_GriffinDead(side, hero, unit)
-    log.debug("$ Routine_GriffinDead")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_GriffinDead")
+    log.debug("Routine_GriffinDead", side, hero, unit)
     if ROUTINE_VARS.GriffinDives[unit] then
         ROUTINE_VARS.GriffinDives[unit] = 0
     end
@@ -115,7 +124,8 @@ end
 -- PRESERVE
 
 function Routine_EnragedRighteousMight(side, hero)
-    log.debug("$ Routine_EnragedRighteousMight")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_EnragedRighteousMight")
+    log.debug("Routine_EnragedRighteousMight", side, hero)
     for i,cr in GetUnits(side, CREATURE) do
         local type = GetCreatureType(cr)
         if GetFaction(type) == PRESERVE and contains({1,3,4,6}, GetTier(type)) then
@@ -125,13 +135,15 @@ function Routine_EnragedRighteousMight(side, hero)
 end
 
 function Routine_CancelHeroAtbBonus(side, hero)
-    log.debug("$ Routine_CancelHeroAtbBonus")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_CancelHeroAtbBonus")
+    log.debug("Routine_CancelHeroAtbBonus", side, hero)
     DefendCombatUnit(hero) sleep()
     SetATB_ID(hero, 0.1)
 end
 
 function Routine_ResetAtbOnKillEnraged(side, hero, unit)
-    log.debug("$ Routine_ResetAtbOnKillEnraged")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_ResetAtbOnKillEnraged")
+    log.debug("Routine_ResetAtbOnKillEnraged", side, hero, unit)
     if GetUnitSide(unit) ~= GetUnitSide(hero) and IsCreature(unit) then
         -- SetATB_ID(CURRENT_UNIT, ATB_NEXT)
         for i,cr in GetUnits(side, CREATURE) do
@@ -148,7 +160,8 @@ function Routine_ResetAtbOnKillEnraged(side, hero, unit)
 end
 
 function Routine_HunterRandomShoot(side, hero)
-    log.debug("$ Routine_HunterRandomShoot")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_HunterRandomShoot")
+    log.debug("Routine_HunterRandomShoot", side, hero)
     local hunter = "none"
     local largest = 0
     for i,cr in GetUnits(side,CREATURE) do
@@ -168,7 +181,8 @@ function Routine_HunterRandomShoot(side, hero)
 end
 
 function Routine_MoveForwardUnits(side, hero)
-    log.debug("$ Routine_MoveForwardUnits")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_MoveForwardUnits")
+    log.debug("Routine_MoveForwardUnits", side, hero)
     for i,cr in GetUnits(side, CREATURE) do
         local x,y = GetUnitPosition(cr)
         local x0 = (side == ATTACKER) and GRID_X_MIN or GRID_X_MAX
@@ -180,7 +194,8 @@ function Routine_MoveForwardUnits(side, hero)
 end
 
 function Routine_WolfDeadRevenge(side, hero, unit)
-    log.debug("$ Routine_WolfDeadRevenge")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_WolfDeadRevenge")
+    log.debug("Routine_WolfDeadRevenge", side, hero, unit)
     if GetUnitSide(unit) == GetUnitSide(hero) and IsCreature(unit) then
         if GetCreatureType(unit) == CREATURE_WOLF then
             local x,y = GetUnitPosition(unit)
@@ -212,7 +227,8 @@ function Routine_WolfDeadRevenge(side, hero, unit)
 end
 
 function Routine_CastSummonHive(side, hero)
-    log.debug("$ Routine_CastSummonHive")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_CastSummonHive")
+    log.debug("Routine_CastSummonHive", side, hero)
     local x = (side == ATTACKER) and GRID_X_MAX or GRID_X_MIN
     local y1 = GRID_Y_MIN
     local y2 = GRID_Y_MAX
@@ -229,8 +245,9 @@ function Routine_CastSummonHive(side, hero)
 end
 
 function Routine_SpriteManaLink(side, hero)
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_SpriteManaLink")
     if CURRENT_UNIT_SIDE == side then
-        log.debug("$ Routine_SpriteManaLink")
+        log.debug("Routine_SpriteManaLink", side, hero)
         if IsCreature(CURRENT_UNIT) then
             if GetCreatureType(CURRENT_UNIT) == CREATURE_SPRITE then
                 local amount = trunc(0.1 * GetCreatureNumber(CURRENT_UNIT))
@@ -254,12 +271,14 @@ function Routine_SpriteManaLink(side, hero)
 end
 
 function Routine_CastMassHaste(side, hero)
-    log.debug("$ Routine_CastMassHaste")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_CastMassHaste")
+    log.debug("Routine_CastMassHaste", side, hero)
     HeroCast_Global(hero, SPELL_MASS_HASTE, FREE_MANA)
 end
 
 function Routine_SummonDruidStack(side, hero)
-    log.debug("$ Routine_SummonDruidStack")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_SummonDruidStack")
+    log.debug("Routine_SummonDruidStack", side, hero)
     local number = 0
     for i,cr in GetUnits(side, CREATURE) do
         if GetCreatureType(cr) == CREATURE_DRUID then
@@ -285,15 +304,17 @@ function Routine_SummonDruidStack(side, hero)
 end
 
 function Routine_DruidsMoveNext(side, hero)
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_DruidsMoveNext")
     if CURRENT_UNIT == hero then
-        log.debug("$ Routine_DruidsMoveNext")
+        log.debug("Routine_DruidsMoveNext", side, hero)
         SetATB_CreatureTypes(side, {CREATURE_DRUID,CREATURE_DRUID_ELDER,CREATURE_HIGH_DRUID,CREATURE_DRUID_OF_THE_COUNCIL}, ATB_NEXT)
     end
 end
 
 function Routine_RollbackDruids(side, hero, winner)
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_RollbackDruids")
     if winner == side then
-        log.debug("$ Routine_RollbackDruids")
+        log.debug("Routine_RollbackDruids", side, hero, winner)
         local druid = "druidofthecouncil"
         if exist(druid) then
             local n = GetCreatureNumber(druid)
@@ -312,7 +333,8 @@ end
 -- FORTRESS
 
 function Routine_BallistaMoveFirst(side, hero)
-    log.debug("$ Routine_BallistaMoveFirst")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_BallistaMoveFirst")
+    log.debug("Routine_BallistaMoveFirst", side, hero)
     local ballista = UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_BALLISTA'
     if IsCombatUnit(ballista) then
         SetATB_ID(ballista, ATB_INSTANT)
@@ -321,11 +343,12 @@ function Routine_BallistaMoveFirst(side, hero)
 end
 
 function Routine_SpearWielderCoordination(side, hero)
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_SpearWielderCoordination")
     if CURRENT_UNIT_SIDE == side then
         if IsCreature(CURRENT_UNIT) then
             local type = GetCreatureType(CURRENT_UNIT)
             if type == CREATURE_AXE_FIGHTER or type == CREATURE_AXE_THROWER or type == CREATURE_HARPOONER then
-                log.debug("$ Routine_SpearWielderCoordination")
+                log.debug("Routine_SpearWielderCoordination", side, hero)
                 if GetCreatureNumber(CURRENT_UNIT) >= 28 + GetHeroLevel(hero) then
                     HeroCast_Target(hero, SPELL_EFFECT_COORDINATION, NO_COST, CURRENT_UNIT)
                 end
@@ -335,7 +358,8 @@ function Routine_SpearWielderCoordination(side, hero)
 end
 
 function Routine_ThanesAbility(side, hero)
-    log.debug("$ Routine_ThanesAbility")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_ThanesAbility")
+    log.debug("Routine_ThanesAbility", side, hero)
     local creatures = GetUnits(side, CREATURE)
     for i,cr in creatures do
         if GetCreatureType(cr) == CREATURE_WARLORD then
@@ -353,7 +377,8 @@ function Routine_ThanesAbility(side, hero)
 end
 
 function Routine_CastFireWalls(side, hero)
-    log.debug("$ Routine_CastFireWalls")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_CastFireWalls")
+    log.debug("Routine_CastFireWalls", side, hero)
     local m = GetUnitManaPoints(hero)
     local x = 12 - 7 * side
     for _,y in {3,6,9} do
@@ -364,7 +389,8 @@ function Routine_CastFireWalls(side, hero)
 end
 
 function Routine_RunePriestsMoveFirst(side, hero)
-    log.debug("$ Routine_RunePriestsMoveFirst")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_RunePriestsMoveFirst")
+    log.debug("Routine_RunePriestsMoveFirst", side, hero)
     SetATB_CreatureTypes(side, {CREATURE_RUNE_MAGE,CREATURE_FLAME_MAGE,CREATURE_FLAME_KEEPER}, ATB_INSTANT)
 end
 
@@ -378,8 +404,9 @@ function Routine_EarthShatterHelper(side, n, x, y)
 end
 
 function Routine_EarthShatter(side, hero)
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_EarthShatter")
     if CURRENT_UNIT == hero then
-        log.debug("$ Routine_EarthShatter")
+        log.debug("Routine_EarthShatter", side, hero)
         local spellpower = GetHeroLevel(hero)
         local x, y = 0, 0
         local n = 1 + trunc(0.1 * GetHeroLevel(hero))
@@ -393,9 +420,10 @@ function Routine_EarthShatter(side, hero)
 end
 
 function Routine_DwavenDefendOrder(side, hero)
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_DwavenDefendOrder")
     if CURRENT_UNIT_SIDE == side then
         if IsCreature(CURRENT_UNIT) then
-            log.debug("$ Routine_DwavenDefendOrder")
+            log.debug("Routine_DwavenDefendOrder", side, hero)
             local type = GetCreatureType(CURRENT_UNIT)
             if GetFaction(type) == FORTRESS then
                 startThread(Routine_DwavenDefendOrderWait, CURRENT_UNIT)
@@ -415,8 +443,9 @@ end
 -- ACADEMY
 
 function Routine_GremlinRandomShoot(side, hero)
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_GremlinRandomShoot")
     if CURRENT_UNIT == hero then
-        log.debug("$ Routine_GremlinRandomShoot")
+        log.debug("Routine_GremlinRandomShoot", side, hero)
         for i,cr in GetUnits(side, CREATURE) do
             if cr ~= ROUTINE_VARS.GremlinShot then
                 local type = GetCreatureType(cr)
@@ -435,7 +464,8 @@ function Routine_GremlinRandomShoot(side, hero)
 end
 
 function Routine_RakshasasAbility(side, hero)
-    log.debug("$ Routine_RakshasasAbility")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_RakshasasAbility")
+    log.debug("Routine_RakshasasAbility", side, hero)
     local creatures = GetUnits(side, CREATURE)
     for i,cr in creatures do
         local type = GetCreatureType(cr)
@@ -447,14 +477,16 @@ function Routine_RakshasasAbility(side, hero)
 end
 
 function Routine_BallistaMoveNext(side, hero)
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_BallistaMoveNext")
     if CURRENT_UNIT == hero then
-        log.debug("$ Routine_BallistaMoveNext")
+        log.debug("Routine_BallistaMoveNext", side, hero)
         SetATB_WarMachineType(side, WAR_MACHINE_BALLISTA, ATB_NEXT)
     end
 end
 
 function Routine_CastMultipleArcaneCrystals(side, hero)
-    log.debug("$ Routine_CastMultipleArcaneCrystals")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_CastMultipleArcaneCrystals")
+    log.debug("Routine_CastMultipleArcaneCrystals", side, hero)
     local m = GetUnitManaPoints(hero)
     local n = trunc(0.125 * m)
     local x1 = 15 - 13 * side
@@ -467,7 +499,8 @@ function Routine_CastMultipleArcaneCrystals(side, hero)
 end
 
 function Routine_MagesCastMagicFist(side, hero)
-    log.debug("$ Routine_MagesCastMagicFist")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_MagesCastMagicFist")
+    log.debug("Routine_MagesCastMagicFist", side, hero)
     local creatures = GetUnits(side, CREATURE)
     for i,cr in creatures do
         local type = GetCreatureType(cr)
@@ -483,13 +516,15 @@ function Routine_MagesCastMagicFist(side, hero)
 end
 
 function Routine_CastSummonElementals(side, hero)
-    log.debug("$ Routine_CastSummonElementals")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_CastSummonElementals")
+    log.debug("Routine_CastSummonElementals", side, hero)
     HeroCast_Global(hero, SPELL_SUMMON_ELEMENTALS, FREE_MANA)
 end
 
 function Routine_TimeShift(side, hero)
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_TimeShift")
     if CURRENT_UNIT == hero then
-        log.debug("$ Routine_TimeShift")
+        log.debug("Routine_TimeShift", side, hero)
         if ROUTINE_VARS.TimeShifter then
             local min = {[0]=0, [1]=0}
             local max = {[0]=99, [1]=99}
@@ -516,12 +551,14 @@ end
 -- DUNGEON
 
 function Routine_ScoutsMoveFirst(side, hero)
-    log.debug("$ Routine_ScoutsMoveFirst")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_ScoutsMoveFirst")
+    log.debug("Routine_ScoutsMoveFirst", side, hero)
     SetATB_CreatureTypes(side, {CREATURE_SCOUT,CREATURE_ASSASSIN,CREATURE_STALKER}, ATB_INSTANT)
 end
 
 function Routine_SummonDarkstorm(side, hero)
-    log.debug("$ Routine_SummonDarkstorm")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_SummonDarkstorm")
+    log.debug("Routine_SummonDarkstorm", side, hero)
     local type = CREATURE_DARKSTORM + GetHeroLevel(hero)
     local name = "DARKSTORM-creature"
     local x = (side == ATTACKER) and (GRID_X_MIN+1) or (GRID_X_MAX)
@@ -533,16 +570,18 @@ function Routine_SummonDarkstorm(side, hero)
 end
 
 function Routine_DarkstormLoseIfDead(side, hero, unit)
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_DarkstormLoseIfDead")
     if unit == ROUTINE_VARS.Darkstorm then
-        log.debug("$ Routine_DarkstormLoseIfDead")
+        log.debug("Routine_DarkstormLoseIfDead", side, hero, unit)
         ManageCombatEnd(1-side)
     end
 end
 
 function Routine_RidersHydraSynergy(side, hero)
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_RidersHydraSynergy")
     if CURRENT_UNIT_SIDE == side then
         if IsCreature(CURRENT_UNIT) then
-            log.debug("$ Routine_RidersHydraSynergy")
+            log.debug("Routine_RidersHydraSynergy", side, hero)
             local type = GetCreatureType(CURRENT_UNIT)
             if type == CREATURE_RIDER or type == CREATURE_RAVAGER or type == CREATURE_BLACK_RIDER then
                 local r = 25 + trunc(GetHeroLevel(hero) * 0.25)
@@ -555,7 +594,8 @@ function Routine_RidersHydraSynergy(side, hero)
 end
 
 function Routine_HeroCastBerserk(side, hero)
-    log.debug("$ Routine_HeroCastBerserk")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_HeroCastBerserk")
+    log.debug("Routine_HeroCastBerserk", side, hero)
     local enemies = GetUnits(1-side, CREATURE)
     local v = 1 + trunc(GetHeroLevel(hero) * 0.05)
     local n = min(length(enemies), v)
@@ -565,7 +605,8 @@ function Routine_HeroCastBerserk(side, hero)
 end
 
 function Routine_SummonDeadEnnemyCreature(side, hero, unit)
-    log.debug("$ Routine_SummonDeadEnnemyCreature")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_SummonDeadEnnemyCreature")
+    log.debug("Routine_SummonDeadEnnemyCreature", side, hero, unit)
     if STARTING_ARMY[1-side][unit] then
         local type = GetCreatureType(unit)
         local x,y = GetUnitPosition(unit)
@@ -576,7 +617,8 @@ function Routine_SummonDeadEnnemyCreature(side, hero, unit)
 end
 
 function Routine_DragonStrike(side, hero)
-    log.debug("$ Routine_DragonStrike")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_DragonStrike")
+    log.debug("Routine_DragonStrike", side, hero)
     if HasHeroActiveArtifactSet(side, ARTFSET_DRAGON_8PC) then
         local dragon = nil
         local count = 0
@@ -599,8 +641,9 @@ function Routine_DragonStrike(side, hero)
 end
 
 function Routine_RefreshMatronMana(side, hero)
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_RefreshMatronMana")
     if CURRENT_UNIT == hero then
-        log.debug("$ Routine_RefreshMatronMana")
+        log.debug("Routine_RefreshMatronMana", side, hero)
         local prob = 20 + 2 * GetHeroLevel(hero)
         for i,cr in GetUnits(side, CREATURE) do
             local type = GetCreatureType(cr)
@@ -615,7 +658,8 @@ function Routine_RefreshMatronMana(side, hero)
 end
 
 function Routine_CastSlowOrConfusion(side, hero)
-    log.debug("$ Routine_CastSlowOrConfusion")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_CastSlowOrConfusion")
+    log.debug("Routine_CastSlowOrConfusion", side, hero)
     local melee_creatures = {}
     local range_creatures = {}
     for i,cr in GetUnits(1-side, CREATURE) do
@@ -642,15 +686,17 @@ end
 -- NECROPOLIS
 
 function Routine_SummonAndKillEnnemySkeleton(side, hero)
-    log.debug("$ Routine_SummonAndKillEnnemySkeleton")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_SummonAndKillEnnemySkeleton")
+    log.debug("Routine_SummonAndKillEnnemySkeleton", side, hero)
     local n = length(GetUnits(1-side, CREATURE))
     local cr = SummonCreatureSideOffset(1-side, CREATURE_SKELETON, 1, 6)
     if cr then HeroCast_Target(hero, SPELL_MAGIC_FIST, FREE_MANA, cr) end
 end
 
 function Routine_SummonZombieStack(side, hero)
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_SummonZombieStack")
     if CURRENT_UNIT == hero then
-        log.debug("$ Routine_SummonZombieStack")
+        log.debug("Routine_SummonZombieStack", side, hero)
         local turns = COMBAT_TURN - ROUTINE_VARS.TurnMarker
         local n = 1 + trunc(1.5 * (GetHeroLevel(hero) + turns))
         local type = random(1, 3)
@@ -661,7 +707,8 @@ function Routine_SummonZombieStack(side, hero)
 end
 
 function Routine_FirstAidLastAid(side, hero)
-    log.debug("$ Routine_FirstAidLastAid")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_FirstAidLastAid")
+    log.debug("Routine_FirstAidLastAid", side, hero)
     if GetHeroSkillMastery(hero, PERK_PLAGUE_TENT) == 1 then
         local tent = GetWarMachine(side, WAR_MACHINE_FIRST_AID_TENT)
         if tent then
@@ -672,8 +719,9 @@ function Routine_FirstAidLastAid(side, hero)
 end
 
 function Routine_EmbalmerManaRegen(side, hero)
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_EmbalmerManaRegen")
     if CURRENT_UNIT == hero then
-        log.debug("$ Routine_EmbalmerManaRegen")
+        log.debug("Routine_EmbalmerManaRegen", side, hero)
         if IsCombatUnit(UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_FIRST_AID_TENT') then
             local m = 1 + GetHeroSkillMastery(hero, SKILL_DARK_MAGIC)
             local value = min(GetUnitManaPoints(hero)+m, GetUnitMaxManaPoints(hero))
@@ -683,7 +731,8 @@ function Routine_EmbalmerManaRegen(side, hero)
 end
 
 function Routine_SummonAvatarOfDeath(side, hero)
-    log.debug("$ Routine_SummonAvatarOfDeath")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_SummonAvatarOfDeath")
+    log.debug("Routine_SummonAvatarOfDeath", side, hero)
     local cost = 4 * GetHeroLevel(hero)
     if GetUnitManaPoints(hero) >= cost then
         local units = GetUnits(side, CREATURE)
@@ -692,27 +741,31 @@ function Routine_SummonAvatarOfDeath(side, hero)
 end
 
 function Routine_AvatarDead(side, hero, unit)
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_AvatarDead")
     if GetCreatureType(unit) == CREATURE_AVATAR_OF_DEATH then
-        log.debug("$ Routine_AvatarDead")
+        log.debug("Routine_AvatarDead", side, hero, unit)
         HeroCast_AllCreatures(hero, SPELL_SORROW, FREE_MANA, 1-side)
     end
 end
 
 function Routine_CastMassWeakness(side, hero)
-    log.debug("$ Routine_CastMassWeakness")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_CastMassWeakness")
+    log.debug("Routine_CastMassWeakness", side, hero)
     HeroCast_Global(hero, SPELL_MASS_CURSE, FREE_MANA)
 end
 
 function Routine_CastRandomIceBolt(side, hero)
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_CastRandomIceBolt")
     if CURRENT_UNIT == hero then
-        log.debug("$ Routine_CastRandomIceBolt")
+        log.debug("Routine_CastRandomIceBolt", side, hero)
         HeroCast_RandomCreature(hero, SPELL_ICE_BOLT, 1, 1-side)
         if IsHuman(side) then SetATB_ID(hero, ATB_INSTANT) end
     end
 end
 
 function Routine_RaiseUndead(side, hero, unit)
-    log.debug("$ Routine_RaiseUndead")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_RaiseUndead")
+    log.debug("Routine_RaiseUndead", side, hero, unit)
     if STARTING_ARMY[1-side][unit] then
         local dead = GetCreatureType(unit)
         local type = CreatureToUndead(dead)
@@ -724,7 +777,8 @@ function Routine_RaiseUndead(side, hero, unit)
 end
 
 function Routine_CastBansheeHowl(side, hero)
-    log.debug("$ Routine_CastBansheeHowl")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_CastBansheeHowl")
+    log.debug("Routine_CastBansheeHowl", side, hero)
     local p = 2 * GetHeroLevel(hero)
     if random(0,100) < p then
         HeroCast_Global(hero, SPELL_BANSHEE_HOWL, 0)
@@ -737,10 +791,11 @@ end
 -- INFERNO
 
 function Routine_BallistaShootUnit(side, hero)
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_BallistaShootUnit")
     local ballista = UNIT_SIDE_PREFIX[side]..'-warmachine-WAR_MACHINE_BALLISTA'
     if IsCombatUnit(ballista) then
         if CURRENT_UNIT == hero then
-            log.debug("$ Routine_BallistaShootUnit")
+            log.debug("Routine_BallistaShootUnit", side, hero)
             ShowFlyingSign("/Text/Game/Scripts/Combat/Bombardier.txt", hero, 9)
             for i,cr in GetUnits(1-side, CREATURE) do
                 local x,y = GetUnitPosition(cr)
@@ -756,7 +811,8 @@ function Routine_BallistaShootUnit(side, hero)
 end
 
 function Routine_ResetAtbOnKillHellhounds(side, hero, unit)
-    log.debug("$ Routine_ResetAtbOnKillHellhounds")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_ResetAtbOnKillHellhounds")
+    log.debug("Routine_ResetAtbOnKillHellhounds", side, hero, unit)
     if GetUnitSide(unit) ~= GetUnitSide(hero) then
         -- SetATB_ID(CURRENT_UNIT, ATB_NEXT)
         for i,cr in GetUnits(side, CREATURE) do
@@ -773,7 +829,8 @@ function Routine_ResetAtbOnKillHellhounds(side, hero, unit)
 end
 
 function Routine_BoostHeroAtbOnDeath(side, hero, unit)
-    log.debug("$ Routine_BoostHeroAtbOnDeath")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_BoostHeroAtbOnDeath")
+    log.debug("Routine_BoostHeroAtbOnDeath", side, hero, unit)
     if GetUnitSide(unit) == GetUnitSide(hero) then
         if IsCreature(unit) then
             SetATB_ID(hero, ATB_INSTANT)
@@ -782,14 +839,16 @@ function Routine_BoostHeroAtbOnDeath(side, hero, unit)
 end
 
 function Routine_HeroMoveFirst(side, hero)
-    log.debug("$ Routine_HeroMoveFirst")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_HeroMoveFirst")
+    log.debug("Routine_HeroMoveFirst", side, hero)
     SetATB_ID(hero, ATB_INSTANT)
 end
 
 function Routine_DemonicCreatureExplosion(side, hero)
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_DemonicCreatureExplosion")
     if CURRENT_UNIT_SIDE == side then
         if IsCreature(CURRENT_UNIT) then
-            log.debug("$ Routine_DemonicCreatureExplosion")
+            log.debug("Routine_DemonicCreatureExplosion", side, hero)
             local id = GetCreatureType(CURRENT_UNIT)
             if GetFaction(id) == INFERNO then
                 local x,y = GetUnitPosition(CURRENT_UNIT)
@@ -806,8 +865,9 @@ function Routine_IncendiaryResetATB(hero)
 end
 
 function Routine_CastRandomFireball(side, hero)
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_CastRandomFireball")
     if CURRENT_UNIT == hero and ROUTINE_VARS.Incendiary > 0 then
-        log.debug("$ Routine_CastRandomFireball")
+        log.debug("Routine_CastRandomFireball", side, hero)
         local x,y = GetUnitPosition(RandomCreature(1-side, COMBAT_TURN))
         HeroCast_Area(hero, SPELL_FIREBALL, FREE_MANA, x, y)
         ROUTINE_VARS.Incendiary = ROUTINE_VARS.Incendiary - 1
@@ -816,7 +876,8 @@ function Routine_CastRandomFireball(side, hero)
 end
 
 function Routine_CastMineFields(side, hero)
-    log.debug("$ Routine_CastMineFields")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_CastMineFields")
+    log.debug("Routine_CastMineFields", side, hero)
     local x = 12 - 9 * side
     HeroCast_Area(hero, SPELL_LAND_MINE, FREE_MANA, x, 10)
     HeroCast_Area(hero, SPELL_LAND_MINE, FREE_MANA, x, 6)
@@ -824,8 +885,9 @@ function Routine_CastMineFields(side, hero)
 end
 
 function Routine_SummonEarthElementals(side, hero)
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_SummonEarthElementals")
     if CURRENT_UNIT == hero then
-        log.debug("$ Routine_SummonEarthElementals")
+        log.debug("Routine_SummonEarthElementals", side, hero)
         local stacks = 0
         for i,cr in GetUnits(side, CREATURE) do
             if GetCreatureType(cr) == CREATURE_EARTH_ELEMENTAL then stacks = stacks + 1 end
@@ -847,7 +909,8 @@ function TryGating(unit, x, y, table)
 end
 
 function Routine_InfernoGating(side, hero)
-    log.debug("$ Routine_InfernoGating")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_InfernoGating")
+    log.debug("Routine_InfernoGating", side, hero)
     local gating_tier = 2 * GetHeroSkillMastery(hero, SKILL_GATING)
     for i,cr in GetUnits(side, CREATURE) do
         local id = GetCreatureType(cr)
@@ -864,25 +927,29 @@ end
 -- STRONGHOLD
 
 function Routine_CastRallingCry(side, hero)
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_CastRallingCry")
     if CURRENT_UNIT == hero then
-        log.debug("$ Routine_CastRallingCry")
+        log.debug("Routine_CastRallingCry", side, hero)
         HeroCast_Global(hero, SPELL_WARCRY_RALLING_CRY, FREE_MANA)
         if IsHuman(side) then SetATB_ID(hero, ATB_INSTANT) end
     end
 end
 
 function Routine_CastBattlecry(side, hero)
-    log.debug("$ Routine_CastBattlecry")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_CastBattlecry")
+    log.debug("Routine_CastBattlecry", side, hero)
     HeroCast_Global(hero, SPELL_WARCRY_BATTLECRY, FREE_MANA)
 end
 
 function Routine_CastCallOfBlood(side, hero)
-    log.debug("$ Routine_CastCallOfBlood")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_CastCallOfBlood")
+    log.debug("Routine_CastCallOfBlood", side, hero)
     HeroCast_TargetCreatureTypes(hero, SPELL_WARCRY_CALL_OF_BLOOD, FREE_MANA, side, {CREATURE_ORC_WARRIOR,CREATURE_ORC_SLAYER,CREATURE_ORC_WARMONGER})
 end
 
 function Routine_CountInitialGoblins(side, hero)
-    log.debug("$ Routine_CountInitialGoblins")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_CountInitialGoblins")
+    log.debug("Routine_CountInitialGoblins", side, hero)
     local creatures = GetUnits(side, CREATURE)
     local goblins = 0
     for i,cr in creatures do
@@ -895,8 +962,9 @@ function Routine_CountInitialGoblins(side, hero)
 end
 
 function Routine_SummonGoblinStack(side, hero)
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_SummonGoblinStack")
     if CURRENT_UNIT == hero then
-        log.debug("$ Routine_SummonGoblinStack")
+        log.debug("Routine_SummonGoblinStack", side, hero)
         local goblin = "Kilghan-GoblinSpawn_"..COMBAT_TURN
         SummonCreature(side, CREATURE_GOBLIN, ROUTINE_VARS.GoblinsTotal, -1, -1, 1, goblin)
         repeat sleep() until exist(goblin)
@@ -905,11 +973,13 @@ function Routine_SummonGoblinStack(side, hero)
 end
 
 function Routine_WatchRageLevels(side, hero)
-    log.debug("$ Routine_WatchRageLevels")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_WatchRageLevels")
+    log.debug("Routine_WatchRageLevels", side, hero)
     startThread(Routine_WatchRageLevelsThread, side, hero)
 end
 
 function Routine_WatchRageLevelsThread(side, hero)
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_WatchRageLevelsThread")
     local RageLevels = {}
     local up = nil
     while 1 do
@@ -925,21 +995,26 @@ function Routine_WatchRageLevelsThread(side, hero)
                 end
             end
         end
-        if up then SetATB_ID(hero, ATB_INSTANT) end
+        if up then
+            log.debug("Routine_WatchRageLevelsThread", side, hero, up)
+            SetATB_ID(hero, ATB_INSTANT)
+        end
         sleep(100)
     end
 end
 
 function Routine_HealingTentMoveNext(side, hero)
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_HealingTentMoveNext")
     if CURRENT_UNIT == hero then
-        log.debug("$ Routine_HealingTentMoveNext")
+        log.debug("Routine_HealingTentMoveNext", side, hero)
         SetATB_WarMachineType(side, WAR_MACHINE_FIRST_AID_TENT, ATB_NEXT)
     end
 end
 
 function Routine_ShamansManaRegen(side, hero)
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_ShamansManaRegen")
     if CURRENT_UNIT_SIDE == side then
-        log.debug("$ Routine_ShamansManaRegen")
+        log.debug("Routine_ShamansManaRegen", side, hero)
         if IsCreature(CURRENT_UNIT) then
             local type = GetCreatureType(CURRENT_UNIT)
             if type == CREATURE_SHAMAN or type == CREATURE_SHAMAN_WITCH or type == CREATURE_SHAMAN_HAG then
@@ -964,15 +1039,17 @@ function Routine_ShamansManaRegen(side, hero)
 end
 
 function Routine_CastRandomLightningBolt(side, hero)
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_CastRandomLightningBolt")
     if CURRENT_UNIT == hero then
-        log.debug("$ Routine_CastRandomLightningBolt")
+        log.debug("Routine_CastRandomLightningBolt", side, hero)
         HeroCast_RandomCreature(hero, SPELL_LIGHTNING_BOLT, 1, 1-side)
         if IsHuman(side) then SetATB_ID(hero, ATB_INSTANT) end
     end
 end
 
 function Routine_SlowOpponentHero(side, hero)
-    log.debug("$ Routine_SlowOpponentHero")
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_SlowOpponentHero")
+    log.debug("Routine_SlowOpponentHero", side, hero)
     local opponent = GetHero(1-side)
     if opponent then
         local thread = function(h1, h2)
@@ -995,8 +1072,9 @@ end
 -- NEUTRAL
 
 function Routine_RandomBuffDragons(side, hero)
+    log.trace("/scripts/combat/routines/heroes-routines-combat.lua: Routine_RandomBuffDragons")
     if CURRENT_UNIT == hero then
-        log.debug("$ Routine_RandomBuffDragons")
+        log.debug("Routine_RandomBuffDragons", side, hero)
         local buffs = {}
         local count = 0
         for s,i in ROUTINE_VARS.BuffSpells do

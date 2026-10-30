@@ -1,7 +1,7 @@
 
 function Routine_ArtifactPotionOfEnlightenment(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactPotionOfEnlightenment")
-    log.debug("$ Routine_ArtifactPotionOfEnlightenment")
+    log.debug("Routine_ArtifactPotionOfEnlightenment", player, hero)
     if Prompt(player, "/Text/Game/Scripts/Artifacts/PotionOfEnlightenment.txt") then
         RemoveArtefact(hero, ARTIFACT_POTION_OF_ENLIGHTENMENT)
         local mana = 30 + GetHeroStat(hero, STAT_KNOWLEDGE)
@@ -13,7 +13,7 @@ end
 
 function Routine_ArtifactPotionOfPower(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactPotionOfPower")
-    log.debug("$ Routine_ArtifactPotionOfPower")
+    log.debug("Routine_ArtifactPotionOfPower", player, hero)
     if Prompt(player, "/Text/Game/Scripts/Artifacts/PotionOfPower.txt") then
         RemoveArtefact(hero, ARTIFACT_POTION_OF_POWER)
         ChangeHeroStat(hero, STAT_SPELL_POWER, 1)
@@ -22,7 +22,7 @@ end
 
 function Routine_ArtifactPotionOfStamina(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactPotionOfStamina")
-    log.debug("$ Routine_ArtifactPotionOfStamina")
+    log.debug("Routine_ArtifactPotionOfStamina", player, hero)
     if Prompt(player, "/Text/Game/Scripts/Artifacts/PotionOfStamina.txt") then
         RemoveArtefact(hero, ARTIFACT_POTION_OF_STAMINA)
         local value = 2000
@@ -39,7 +39,7 @@ end
 
 function Routine_ArtifactPotionOfVision(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactPotionOfVision")
-    log.debug("$ Routine_ArtifactPotionOfVision")
+    log.debug("Routine_ArtifactPotionOfVision", player, hero)
     if Prompt(player, "/Text/Game/Scripts/Artifacts/PotionOfVision.txt") then
         RemoveArtefact(hero, ARTIFACT_POTION_OF_VISION)
         local x, y, z, r
@@ -81,7 +81,7 @@ end
 
 function Routine_ArtifactPotionOfTeleportation(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactPotionOfTeleportation")
-    log.debug("$ Routine_ArtifactPotionOfTeleportation")
+    log.debug("Routine_ArtifactPotionOfTeleportation", player, hero)
     if Prompt(player, "/Text/Game/Scripts/Artifacts/PotionOfTeleportation.txt") then
         RemoveArtefact(hero, ARTIFACT_POTION_OF_TELEPORTATION)
         local x, y, z = GetObjectPosition(hero)
@@ -100,7 +100,7 @@ end
 
 function Routine_ArtifactPotionOfSkill(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactPotionOfSkill")
-    log.debug("$ Routine_ArtifactPotionOfSkill")
+    log.debug("Routine_ArtifactPotionOfSkill", player, hero)
     if Prompt(player, "/Text/Game/Scripts/Artifacts/PotionOfSkill.txt") then
         RemoveArtefact(hero, ARTIFACT_POTION_OF_SKILL)
         local mastery
@@ -125,7 +125,7 @@ end
 
 function Routine_ArtifactPouchOfGolds(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactPouchOfGolds")
-    log.debug("$ Routine_ArtifactPouchOfGolds")
+    log.debug("Routine_ArtifactPouchOfGolds", player, hero)
     if GetHeroArtifactsCount(hero, ARTIFACT_ENDLESS_POUCH_OF_GOLD) >= 2 then
         RemoveArtefact(hero, ARTIFACT_ENDLESS_POUCH_OF_GOLD) sleep(1)
         RemoveArtefact(hero, ARTIFACT_ENDLESS_POUCH_OF_GOLD) sleep(1)
@@ -135,7 +135,7 @@ end
 
 function Routine_ArtifactSacredSeed(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactSacredSeed")
-    log.debug("$ Routine_ArtifactSacredSeed")
+    log.debug("Routine_ArtifactSacredSeed", player, hero)
     local rnd = random(0,20)
     local amount = mod(rnd, 4)
     GiveResource(player, WOOD, amount)
@@ -146,7 +146,7 @@ end
 
 function Routine_ArtifactFortunePickaxe(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactFortunePickaxe")
-    log.debug("$ Routine_ArtifactFortunePickaxe")
+    log.debug("Routine_ArtifactFortunePickaxe", player, hero)
     local rnd = random(0,20)
     local amount = mod(rnd, 4)
     GiveResource(player, ORE, amount)
@@ -157,7 +157,7 @@ end
 
 function Routine_ArtifactHornOfPlenty(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactHornOfPlenty")
-    log.debug("$ Routine_ArtifactHornOfPlenty")
+    log.debug("Routine_ArtifactHornOfPlenty", player, hero)
     if random(0,10) == 0 then
         for res = 0,5 do
             local amount = random(0,10)
@@ -168,7 +168,7 @@ end
 
 function Routine_ArtifactCapeOfKings(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactCapeOfKings")
-    log.debug("$ Routine_ArtifactCapeOfKings")
+    log.debug("Routine_ArtifactCapeOfKings", player, hero)
     if GetDate(DAY_OF_WEEK) ~= 1 then
         if HasHeroSkill(hero, PERK_MYTHOLOGY) then
             Routine_MythologyWeeklyGolds(player, hero, 1)
@@ -179,7 +179,7 @@ end
 Var_BootsOfSwiftJourneyCheck = {}
 function Routine_ArtifactBootsOfSwiftJourney(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactBootsOfSwiftJourney")
-    log.debug("$ Routine_ArtifactBootsOfSwiftJourney")
+    log.debug("Routine_ArtifactBootsOfSwiftJourney", player, hero)
     Var_BootsOfSwiftJourneyCheck[hero] = not nil
     startThread(Routine_ArtifactBootsOfSwiftJourneyThread, player, hero)
 end
@@ -200,19 +200,19 @@ end
 
 function Routine_ArtifactBootsOfSwiftJourneyCancel(player, hero, combatIndex)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactBootsOfSwiftJourneyCancel")
-    log.debug("$ Routine_ArtifactBootsOfSwiftJourneyCancel")
+    log.debug("Routine_ArtifactBootsOfSwiftJourneyCancel", player, hero, combatIndex)
     Var_BootsOfSwiftJourneyCheck[hero] = nil
 end
 
 function Routine_ArtifactBackpackOfOpenRoad(player, hero, level)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactBackpackOfOpenRoad")
-    log.debug("$ Routine_ArtifactBackpackOfOpenRoad")
+    log.debug("Routine_ArtifactBackpackOfOpenRoad", player, hero, level)
     ChangeHeroStat(hero, STAT_MOVE_POINTS, 9999)
 end
 
 function Routine_ArtifactSentinelsHelm(player, hero, level)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactSentinelsHelm")
-    log.debug("$ Routine_ArtifactSentinelsHelm")
+    log.debug("Routine_ArtifactSentinelsHelm", player, hero, level)
     GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_ATTACK, 2)
     GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_DEFENCE, 2)
     GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_MORALE, 2)
@@ -220,7 +220,7 @@ end
 
 function Routine_ArtifactSentinelsBoots(player, hero, combatIndex)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactSentinelsBoots")
-    log.debug("$ Routine_ArtifactSentinelsBoots")
+    log.debug("Routine_ArtifactSentinelsBoots", player, hero, combatIndex)
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
 	for i = 0,stacks-1 do
         local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
@@ -232,7 +232,7 @@ end
 
 function Routine_ArtifactDeathknightBoots(player, hero, combatIndex)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactDeathknightBoots")
-    log.debug("$ Routine_ArtifactDeathknightBoots")
+    log.debug("Routine_ArtifactDeathknightBoots", player, hero, combatIndex)
     local value = trunc(0.1 * GetArmyStrength(combatIndex, 0))
     ChangeHeroStat(hero, STAT_MOVE_POINTS, value)
     ChangeHeroStat(hero, STAT_EXPERIENCE, value)
@@ -240,7 +240,7 @@ end
 
 function Routine_ArtifactRobeOfTheMagister(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactRobeOfTheMagister")
-    log.debug("$ Routine_ArtifactRobeOfTheMagister")
+    log.debug("Routine_ArtifactRobeOfTheMagister", player, hero)
     local amount = 75 * GetHeroStat(hero, STAT_KNOWLEDGE)
     ChangeHeroStat(hero, STAT_EXPERIENCE, 2 * amount)
     for _,h in GetPlayerHeroes(player) do
@@ -252,28 +252,20 @@ end
 
 function Routine_ArtifactSmithyHammer(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactSmithyHammer")
-    log.debug("$ Routine_ArtifactSmithyHammer")
+    log.debug("Routine_ArtifactSmithyHammer", player, hero)
     GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_ATTACK, 3)
     GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_DEFENCE, 3)
 end
 
--- function Routine_ArtifactPotionOfExperience(player, hero)
---     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactPotionOfExperience")
---     log.debug("$ Routine_ArtifactPotionOfExperience")
---     local value = 1000 + round(0.02 * GetHeroStat(hero, STAT_EXPERIENCE))
---     GiveExp(hero, value)
---     RemoveArtefact(hero, ARTIFACT_POTION_OF_EXPERIENCE)
--- end
-
 function Routine_ArtifactMagistersSandals(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactMagistersSandals")
-    log.debug("$ Routine_ArtifactMagistersSandals")
+    log.debug("Routine_ArtifactMagistersSandals", player, hero)
     ChangeHeroStat(hero, STAT_KNOWLEDGE, 1)
 end
 
 function Routine_ArtifactVizirsCap(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactVizirsCap")
-    log.debug("$ Routine_ArtifactVizirsCap")
+    log.debug("Routine_ArtifactVizirsCap", player, hero)
     local total = 0
     for _,obj in Dwellings_T1 do
         for _,building in GetObjectNamesByType(obj) do
@@ -300,7 +292,7 @@ end
 
 function Routine_ArtifactVizirsScimitar(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactVizirsScimitar")
-    log.debug("$ Routine_ArtifactVizirsScimitar")
+    log.debug("Routine_ArtifactVizirsScimitar", player, hero)
     local faction = HEROES[hero].faction
     for _,town in GetHeroTowns(player, hero) do
         if GetTownBuildingLevel(town, TOWN_BUILDING_DWELLING_1) ~= 0 then
@@ -318,7 +310,7 @@ end
 
 function Routine_ArtifactPalaceShoes(player, hero, combatIndex)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactPalaceShoes")
-    log.debug("$ Routine_ArtifactPalaceShoes")
+    log.debug("Routine_ArtifactPalaceShoes", player, hero, combatIndex)
     local bonus_table = {
         [HERO_BATTLE_BONUS_LUCK] = 1,
         [HERO_BATTLE_BONUS_MORALE] = 1,
@@ -336,7 +328,7 @@ end
 
 function Routine_ArtifactRingOfTheUnrepentant(player, hero, combatIndex)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactRingOfTheUnrepentant")
-    log.debug("$ Routine_ArtifactRingOfTheUnrepentant")
+    log.debug("Routine_ArtifactRingOfTheUnrepentant", player, hero, combatIndex)
     local total = 0
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
     for i = 0,stacks-1 do
@@ -352,7 +344,7 @@ end
 
 function Routine_ArtifactEldenaRedScarf(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactEldenaRedScarf")
-    log.debug("$ Routine_ArtifactEldenaRedScarf")
+    log.debug("Routine_ArtifactEldenaRedScarf", player, hero)
     local nb = 5
     for k = 1,WEEKS,4 do nb = 2 * nb end
     AddHeroCreatureType(player, hero, HEROES[hero].faction, 1, nb, 1)
@@ -360,7 +352,7 @@ end
 
 function Routine_ArtifactEldenaRedCoat(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactEldenaRedCoat")
-    log.debug("$ Routine_ArtifactEldenaRedCoat")
+    log.debug("Routine_ArtifactEldenaRedCoat", player, hero)
     local nb = 4
     for k = 1,WEEKS,4 do nb = 2 * nb end
     AddHeroCreatureType(player, hero, HEROES[hero].faction, 2, nb, 1)
@@ -368,7 +360,7 @@ end
 
 function Routine_ArtifactEldenaCirclet(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactEldenaCirclet")
-    log.debug("$ Routine_ArtifactEldenaCirclet")
+    log.debug("Routine_ArtifactEldenaCirclet", player, hero)
     local nb = 3
     for k = 1,WEEKS,4 do nb = 2 * nb end
     AddHeroCreatureType(player, hero, HEROES[hero].faction, 3, nb, 1)
@@ -377,27 +369,27 @@ end
 
 function Routine_ArtifactRunicWar(player, hero, combatIndex)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactRunicWar")
-    log.debug("$ Routine_ArtifactRunicWar")
+    log.debug("Routine_ArtifactRunicWar", player, hero, combatIndex)
     ChangeHeroStat(hero, STAT_MANA_POINTS, 25)
 end
 
 function Routine_ArtifactHelmOfWarmage(player, hero, level)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactHelmOfWarmage")
-    log.debug("$ Routine_ArtifactHelmOfWarmage")
+    log.debug("Routine_ArtifactHelmOfWarmage", player, hero, level)
     local maxtier = min(2 + trunc(0.2 * level), 5)
     TeachHeroRandomSpell(player, hero, SPELL_SCHOOL_ANY, maxtier)
 end
 
 function Routine_ArtifactVikingHatchet(player, hero, combatIndex)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactVikingHatchet")
-    log.debug("$ Routine_ArtifactVikingHatchet")
+    log.debug("Routine_ArtifactVikingHatchet", player, hero, combatIndex)
     local value = GetArmyStrength(combatIndex, 0)
     GiveResource(player, GOLD, round(0.04 * value), 1)
 end
 
 function Routine_ArtifactVikingShield(player, hero, combatIndex)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactVikingShield")
-    log.debug("$ Routine_ArtifactVikingShield")
+    log.debug("Routine_ArtifactVikingShield", player, hero, combatIndex)
     local value = GetArmyStrength(combatIndex, 0)
     local split = random(0,4)
     GiveResource(player, WOOD, ceil(0.0004 * split * value), 1)
@@ -407,7 +399,7 @@ end
 Var_StaffLyreVictories = {}
 function Routine_ArtifactStaffOfTheLyre(player, hero, combatIndex)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactStaffOfTheLyre")
-    log.debug("$ Routine_ArtifactStaffOfTheLyre")
+    log.debug("Routine_ArtifactStaffOfTheLyre", player, hero, combatIndex)
     if Var_StaffLyreVictories[hero] then
         local nb = Var_StaffLyreVictories[hero] + 1
         Var_StaffLyreVictories[hero] = nb
@@ -423,7 +415,7 @@ end
 Var_PendantLyreVictories = {}
 function Routine_ArtifactPendantOfTheLyre(player, hero, combatIndex)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactPendantOfTheLyre")
-    log.debug("$ Routine_ArtifactPendantOfTheLyre")
+    log.debug("Routine_ArtifactPendantOfTheLyre", player, hero, combatIndex)
     if Var_PendantLyreVictories[hero] then
         local nb = Var_PendantLyreVictories[hero] + 1
         Var_PendantLyreVictories[hero] = nb
@@ -439,7 +431,7 @@ end
 Var_FortuneBandOfTheSaint_Victories = {}
 function Routine_ArtifactFortuneBandOfTheSaint(player, hero, combatIndex)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactFortuneBandOfTheSaint")
-    log.debug("$ Routine_ArtifactFortuneBandOfTheSaint")
+    log.debug("Routine_ArtifactFortuneBandOfTheSaint", player, hero, combatIndex)
     if Var_FortuneBandOfTheSaint_Victories[hero] then
         local nb = Var_FortuneBandOfTheSaint_Victories[hero] + 1
         Var_FortuneBandOfTheSaint_Victories[hero] = nb
@@ -453,19 +445,19 @@ end
 
 function Routine_ArtifactBloodCrystalExp(player, hero, nb)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactBloodCrystalExp")
-    log.debug("$ Routine_ArtifactBloodCrystalExp")
+    log.debug("Routine_ArtifactBloodCrystalExp", player, hero, nb)
     AddHeroStatAmount(player, hero, STAT_EXPERIENCE, nb * 250)
 end
 
 function Routine_ArtifactBloodCrystalWitches(player, hero, nb)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactBloodCrystalWitches")
-    log.debug("$ Routine_ArtifactBloodCrystalWitches")
+    log.debug("Routine_ArtifactBloodCrystalWitches", player, hero, nb)
     AddHeroTownRecruits(player, hero, TOWN_BUILDING_DWELLING_2, CREATURE_WITCH, nb)
 end
 
 function Routine_ArtifactBloodCrystalStat(player, hero, nb)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactBloodCrystalStat")
-    log.debug("$ Routine_ArtifactBloodCrystalStat")
+    log.debug("Routine_ArtifactBloodCrystalStat", player, hero, nb)
     ChangeHeroStat(hero, STAT_MOVE_POINTS, nb * 250)
     AddHeroManaUnbound(player, hero, nb * 10)
 end
@@ -474,7 +466,7 @@ end
 
 function Routine_ArtfsetArchangel(hero, toggle)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtfsetArchangel")
-    log.debug("$ Routine_ArtfsetArchangel")
+    log.debug("Routine_ArtfsetArchangel", hero, toggle)
     if toggle == 1 then
         GiveArtefact(hero, ARTIFACT_ANGEL_WINGS, 1)
     else
@@ -484,6 +476,7 @@ end
 
 function Routine_ArtfsetWanderer(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtfsetWanderer")
+    log.debug("Routine_ArtfsetWanderer", player, hero)
     local mastery = GetHeroSkillMastery(hero, SKILL_LOGISTICS)
     if mastery > 0 then
         Routine_LogisticsWeeklyProd(player, hero, mastery)
@@ -492,7 +485,7 @@ end
 
 function Routine_ArtfsetSailor(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtfsetSailor")
-    log.debug("$ Routine_ArtfsetSailor")
+    log.debug("Routine_ArtfsetSailor", player, hero)
     if IsHeroInBoat(hero) then
         ChangeHeroStat(hero, STAT_MOVE_POINTS, 1000)
     end
@@ -501,7 +494,7 @@ end
 
 function Routine_ArtfsetEldena(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtfsetEldena")
-    log.debug("$ Routine_ArtfsetEldena")
+    log.debug("Routine_ArtfsetEldena", player, hero)
     local faction = HEROES[hero].faction
     local nb4 = 2
     local nb5 = 1
@@ -515,14 +508,14 @@ end
 
 function Routine_ArtfsetEnlighten(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtfsetEnlighten")
-    log.debug("$ Routine_ArtfsetEnlighten")
+    log.debug("Routine_ArtfsetEnlighten", player, hero)
     local low = GetHeroLowestStat(hero)
     ChangeHeroStat(hero, low, 2)
 end
 
 function Routine_ArtfsetWarmage(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtfsetWarmage")
-    log.debug("$ Routine_ArtfsetWarmage")
+    log.debug("Routine_ArtfsetWarmage", player, hero)
     local gain = 1
     for s = 9,12 do
         if GetHeroSkillMastery(hero, s) == 3 then
@@ -536,7 +529,7 @@ end
 Var_MoonLevelUp = {}
 function Routine_ArtfsetMoon(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtfsetMoon")
-    log.debug("$ Routine_ArtfsetMoon")
+    log.debug("Routine_ArtfsetMoon", player, hero)
     if Var_MoonLevelUp[hero] then
         LevelUpHero(hero)
         Var_MoonLevelUp[hero] = nil
@@ -547,7 +540,7 @@ end
 
 function Routine_ArtfsetHaven4(player, hero, combatIndex)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtfsetHaven4")
-    log.debug("$ Routine_ArtfsetHaven4")
+    log.debug("Routine_ArtfsetHaven4", player, hero, combatIndex)
     local value = GetArmyStrength(combatIndex, 0)
     local bonus = trunc(0.001 * value)
     GiveHeroBattleBonus(hero, HERO_BATTLE_BONUS_ATTACK, bonus)
@@ -556,7 +549,7 @@ end
 
 function Routine_ArtfsetVizir(player, hero, combatIndex)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtfsetVizir")
-    log.debug("$ Routine_ArtfsetVizir")
+    log.debug("Routine_ArtfsetVizir", player, hero, combatIndex)
     local value = GetArmyStrength(combatIndex, 0)
     local class = ARTIFACT_CLASS_MINOR
     if value > 99999 then class = ARTIFACT_CLASS_RELIC
@@ -567,7 +560,7 @@ end
 
 function Routine_ArtfsetGenji2(player, hero, combatIndex)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtfsetGenji2")
-    log.debug("$ Routine_ArtfsetGenji2")
+    log.debug("Routine_ArtfsetGenji2", player, hero, combatIndex)
     local max = 10 * GetHeroStat(hero, STAT_KNOWLEDGE)
     local diff = GetHeroStat(hero, STAT_MANA_POINTS) - max
     if diff > 0 then
@@ -578,7 +571,7 @@ end
 
 function Routine_ArtfsetSaint4(player, hero, combatIndex)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtfsetSaint4")
-    log.debug("$ Routine_ArtfsetSaint4")
+    log.debug("Routine_ArtfsetSaint4", player, hero, combatIndex)
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
     for i = 0,stacks-1 do
         local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
@@ -589,7 +582,7 @@ end
 
 function Routine_ArtfsetSaint6(player, hero, combatIndex)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtfsetSaint6")
-    log.debug("$ Routine_ArtfsetSaint6")
+    log.debug("Routine_ArtfsetSaint6", player, hero, combatIndex)
     local stacks = GetSavedCombatArmyCreaturesCount(combatIndex, 1)
     for i = 0,stacks-1 do
         local creature, count, died = GetSavedCombatArmyCreatureInfo(combatIndex, 1, i)
@@ -669,7 +662,7 @@ AFTER_COMBAT_TRIGGER_ARTFSETS_ROUTINES = {
 
 function DoArtifactsRoutine_Continuous(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: DoArtifactsRoutine_Continuous")
-    -- log.debug("$ DoArtifactsRoutine_Continuous - "..hero)
+    -- log.debug("DoArtifactsRoutine_Continuous", player, hero)
     for k,v in CONTINUOUS_TRIGGER_ARTIFACTS_ROUTINES do
         if HasArtifact(hero, k) then
             startThread(v, player, hero)
@@ -684,7 +677,7 @@ end
 
 function DoArtifactsRoutine_Daily(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: DoArtifactsRoutine_Daily")
-    log.debug("$ DoArtifactsRoutine_Daily - "..hero)
+    log.debug("DoArtifactsRoutine_Daily", player, hero)
     for k,v in DAILY_TRIGGER_ARTIFACTS_ROUTINES do
         if HasArtifact(hero, k) then
             v(player, hero)
@@ -701,7 +694,7 @@ end
 
 function DoArtifactsRoutine_Weekly(player, hero)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: DoArtifactsRoutine_Weekly")
-    log.debug("$ DoArtifactsRoutine_Weekly - "..hero)
+    log.debug("DoArtifactsRoutine_Weekly", player, hero)
     for k,v in WEEKLY_TRIGGER_ARTIFACTS_ROUTINES do
         if HasArtifact(hero, k) then
             v(player, hero)
@@ -718,7 +711,7 @@ end
 
 function DoArtifactsRoutine_LevelUp(player, hero, level)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: DoArtifactsRoutine_LevelUp")
-    log.debug("$ DoArtifactsRoutine_LevelUp - "..hero)
+    log.debug("DoArtifactsRoutine_LevelUp", player, hero, level)
     for k,v in LEVELUP_TRIGGER_ARTIFACTS_ROUTINES do
         if HasArtifact(hero, k) then
             v(player, hero, level)
@@ -735,7 +728,7 @@ end
 
 function DoArtifactsRoutine_AfterCombat(player, hero, index)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: DoArtifactsRoutine_AfterCombat")
-    log.debug("$ DoArtifactsRoutine_AfterCombat - "..hero)
+    log.debug("DoArtifactsRoutine_AfterCombat", player, hero, index)
     for k,v in AFTER_COMBAT_TRIGGER_ARTIFACTS_ROUTINES do
         if HasArtifact(hero, k) then
             v(player, hero, index)

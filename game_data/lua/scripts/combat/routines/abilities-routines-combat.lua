@@ -1,6 +1,7 @@
 
 function Routine_AbilityCommandBallista(side, unit)
-    log.debug("$ Routine_AbilityCommandBallista")
+    log.trace("/scripts/combat/routines/abilities-routines-combat.lua: Routine_AbilityCommandBallista")
+    log.debug("Routine_AbilityCommandBallista", side, unit)
     local growth = {[CREATURE_MARKSMAN] = 30}
     if not ROUTINE_VARS.BallistaCommanders[unit] then
         ROUTINE_VARS.BallistaCommanders[unit] = 1
@@ -29,12 +30,14 @@ function Routine_AbilityCommandBallista(side, unit)
 end
 
 function Routine_AbilityRageOfTheForest(side, unit)
-    log.debug("$ Routine_AbilityRageOfTheForest")
+    log.trace("/scripts/combat/routines/abilities-routines-combat.lua: Routine_AbilityRageOfTheForest")
+    log.debug("Routine_AbilityRageOfTheForest", side, unit)
     UseCombatAbility(unit, SPELL_ABILITY_RAGE_OF_THE_FOREST)
 end
 
 function Routine_AbilityMagneticField(side, unit)
-    log.debug("$ Routine_AbilityMagneticField")
+    log.trace("/scripts/combat/routines/abilities-routines-combat.lua: Routine_AbilityMagneticField")
+    log.debug("Routine_AbilityMagneticField", side, unit)
     local nb = GetCreatureNumber(unit)
     local x,y = GetUnitPosition(unit)
     local enemy = "none"
@@ -62,32 +65,37 @@ function Routine_AbilityMagneticField(side, unit)
 end
 
 function Routine_AbilityMineField(side, unit)
-    log.debug("$ Routine_AbilityMineField")
+    log.trace("/scripts/combat/routines/abilities-routines-combat.lua: Routine_AbilityMineField")
+    log.debug("Routine_AbilityMineField", side, unit)
     local x,y = GetUnitPosition(unit)
     local offset = 2 - 4 * side
     HeroCast_Area(unit, SPELL_LAND_MINE, FREE_MANA, x + offset, y)
 end
 
 function Routine_AbilityRefreshMana4(side, unit)
-    log.debug("$ Routine_AbilityRefreshMana4")
+    log.trace("/scripts/combat/routines/abilities-routines-combat.lua: Routine_AbilityRefreshMana4")
+    log.debug("Routine_AbilityRefreshMana4", side, unit)
     RefreshMana(side, unit, 4)
 end
 
 function Routine_AbilityRefreshMana20Percent(side, unit)
-    log.debug("$ Routine_AbilityRefreshMana20Percent")
+    log.trace("/scripts/combat/routines/abilities-routines-combat.lua: Routine_AbilityRefreshMana20Percent")
+    log.debug("Routine_AbilityRefreshMana20Percent", side, unit)
     local value = round(GetUnitMaxManaPoints(unit) * 0.2)
     RefreshMana(side, unit, value)
 end
 
 function Routine_AbilityManaTempest(side, unit)
-    log.debug("$ Routine_AbilityManaTempest")
+    log.trace("/scripts/combat/routines/abilities-routines-combat.lua: Routine_AbilityManaTempest")
+    log.debug("Routine_AbilityManaTempest", side, unit)
     local thread = function(side, unit)
     end
     startThread(thread, side, unit)
 end
 
 function Routine_AbilityTreachery(side, unit)
-    log.debug("$ Routine_AbilityTreachery")
+    log.trace("/scripts/combat/routines/abilities-routines-combat.lua: Routine_AbilityTreachery")
+    log.debug("Routine_AbilityTreachery", side, unit)
     local thread = function(side, unit)
         repeat sleep(10) until GetUnitSide(unit) ~= side
         STARTING_ARMY[side][unit] = nil

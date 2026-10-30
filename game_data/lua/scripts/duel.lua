@@ -117,7 +117,8 @@ DUEL_PLAYER_DATA = {
 
 
 function DuelStartingBonus(player)
-    log.debug("DUEL: StartingBonus for player "..player)
+    log.trace("/scripts/duel.lua: DuelStartingBonus")
+    log.debug("DuelStartingBonus", player)
     startThread(function(player)
         for a = 1,199 do if HasArtefact(DUEL_HERO[player], a) then
             RemoveArtefact(DUEL_HERO[player], a)
@@ -153,6 +154,8 @@ end
 
 
 function DuelLevelUp(player, hero, level)
+    log.trace("/scripts/duel.lua: DuelLevelUp")
+    log.debug("DuelLevelUp", player, hero, level)
     if DUEL_HERO_LEVELUP_EFFECTS[hero] then
         DUEL_HERO_LEVELUP_EFFECTS[hero](player, hero, level)
     end
@@ -174,7 +177,9 @@ function DuelAfterCombat() end
 ------- Stages entrypoints ---------------------------------------------------
 
 function DuelStart(player, hero)
-    log.debug("DUEL: player "..player.." is ready to start")
+    log.trace("/scripts/duel.lua: DuelStart")
+    log.debug("DuelStart", player, hero)
+    LogThreadError("DuelStart", player, hero)
     if IsPESTEnabled == 1 then
         DUEL_PLAYER_DATA.READY = DUEL_PLAYER_DATA.READY + 1
         repeat sleep(1) until DUEL_PLAYER_DATA.READY == 2
@@ -183,7 +188,9 @@ function DuelStart(player, hero)
 end
 
 function DuelSetup(player, hero)
-    log.debug("DUEL: player "..player.." entered setup stage")
+    log.trace("/scripts/duel.lua: DuelSetup")
+    log.debug("DuelSetup", player, hero)
+    LogThreadError("DuelSetup", player, hero)
     SetObjectPosition(hero, DUEL_SETUP_COORDINATES[player].x, DUEL_SETUP_COORDINATES[player].y, 0, 4)
     SetObjectRotation(hero, 0)
     if DUEL_HERO_SETUP_EFFECTS[hero] then
@@ -193,7 +200,9 @@ function DuelSetup(player, hero)
 end
 
 function DuelAdventure(player, hero)
-    log.debug("DUEL: player "..player.." entered adventure stage")
+    log.trace("/scripts/duel.lua: DuelAdventure")
+    log.debug("DuelAdventure", player, hero)
+    LogThreadError("DuelAdventure", player, hero)
     if DUEL_HERO_ADVENTURE_EFFECTS[hero] then
         DUEL_HERO_ADVENTURE_EFFECTS[hero](player, hero)
     end
@@ -210,6 +219,9 @@ function DuelAdventureStart(player, hero)
 end
 
 function DuelAdventureDay(player, hero)
+    log.trace("/scripts/duel.lua: DuelAdventureDay")
+    log.debug("DuelAdventureDay", player, hero)
+    LogThreadError("DuelAdventureDay", player, hero)
     if DUEL_HERO_ADVENTURE_DAY_EFFECTS[hero] then
         DUEL_HERO_ADVENTURE_DAY_EFFECTS[hero](player, hero)
     end
@@ -224,7 +236,9 @@ function DuelAdventureDay(player, hero)
 end
 
 function DuelStaging(player, hero)
-    log.debug("DUEL: player "..player.." entered staging stage")
+    log.trace("/scripts/duel.lua: DuelStaging")
+    log.debug("DuelStaging", player, hero)
+    LogThreadError("DuelStaging", player, hero)
     SetObjectPosition(hero, DUEL_STAGING_COORDINATES[player].x, DUEL_STAGING_COORDINATES[player].y, 0, 2)
     SetObjectRotation(hero, 0)
     DUEL_PLAYER_DATA.TOTAL_EXP[player] = GetHeroStat(hero, STAT_EXPERIENCE)
@@ -244,7 +258,9 @@ function DuelStaging(player, hero)
 end
 
 function DuelCastle(player, hero)
-    log.debug("DUEL: player "..player.." entered castle stage")
+    log.trace("/scripts/duel.lua: DuelCastle")
+    log.debug("DuelCastle", player, hero)
+    LogThreadError("DuelCastle", player, hero)
     SetObjectPosition(hero, DUEL_TOWNS_COORDINATES[player][DUEL_FACTION[player]].x, DUEL_TOWNS_COORDINATES[player][DUEL_FACTION[player]].y, 0, 4)
     SetObjectRotation(hero, player == 1 and 270 or 90)
     if DUEL_HERO_CASTLE_EFFECTS[hero] then
@@ -254,7 +270,9 @@ function DuelCastle(player, hero)
 end
 
 function DuelBattle(player, hero)
-    log.debug("DUEL: player "..player.." entered battle stage")
+    log.trace("/scripts/duel.lua: DuelBattle")
+    log.debug("DuelBattle", player, hero)
+    LogThreadError("DuelBattle", player, hero)
     OpenCircleFog(100, 100, UNDERGROUND, 99, player)
     ChangeHeroStat(hero, STAT_MANA_POINTS, 999) sleep()
     for skill, func in DUEL_SKILL_BATTLE_EFFECTS do
@@ -264,13 +282,18 @@ function DuelBattle(player, hero)
 end
 
 function DuelEnd(player, hero)
-    log.debug("DUEL: player "..player.." entered end stage")
+    log.trace("/scripts/duel.lua: DuelEnd")
+    log.debug("DuelEnd", player, hero)
+    LogThreadError("DuelEnd", player, hero)
     DUEL_PLAYER_STAGE[player] = DUEL_STAGE_END
 end
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
 function DuelLoop(player)
+    log.trace("/scripts/duel.lua: DuelLoop")
+    log.debug("DuelLoop", player)
+    LogThreadError("DuelLoop", player)
     local hero = DUEL_HERO[player]
     while DUEL_PLAYER_STAGE[player] == DUEL_STAGE_START do
         ChangeHeroStat(hero, STAT_MOVE_POINTS, 100)
@@ -301,7 +324,9 @@ end
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
 function DuelMain()
-    log.debug("DUEL: bootstrap")
+    log.trace("/scripts/duel.lua: DuelMain")
+    log.debug("DuelMain()")
+    LogThreadError("DuelMain")
 
     for player = 1,2 do
         DuelInfoWindow0(player)

@@ -86,6 +86,7 @@ REMOVE_PLAYER_HERO = {
 
 
 function WatchPlayer(player, wait)
+    LogThreadError("WatchPlayer", player, wait)
     if wait then
         while (not IsPlayerCurrent(player)) do sleep(10) end
     end
@@ -137,6 +138,7 @@ function WatchPlayer(player, wait)
 end
 
 function PlayerDailyHandler(player)
+	LogThreadError("PlayerDailyHandler", player)
 	while (not IsPlayerCurrent(player)) do sleep(1) end
 	log.info("Player "..player.." turn "..TURN.." started")
 	for i,hero in GetPlayerHeroes(player) do
@@ -151,6 +153,7 @@ function PlayerDailyHandler(player)
 end
 
 function PlayerWeeklyHandler(player)
+	LogThreadError("PlayerWeeklyHandler", player)
 	--while (not IsPlayerCurrent(player)) do sleep(1) end
 	log.info("Player "..player.." week "..WEEKS.." started")
 	for i,hero in GetPlayerHeroes(player) do

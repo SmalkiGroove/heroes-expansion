@@ -3,8 +3,6 @@ PLAYER_ARMY_BONUS = {}
 DIFFICULTY_MULTIPLIER = {[0]=1}
 
 function SetStartingArmy(hero)
-	log.trace("/scripts/advmap/handlers/starting-armies.lua: SetStartingArmy")
-	-- log.debug("$ SetStartingArmy hero="..hero)
     local faction = HEROES[hero].faction
     local army = {}
     if STARTING_ARMIES[hero] then
@@ -102,7 +100,6 @@ STARTING_ARMIES = {
 }
 
 function IsArmyEmpty(hero)
-    log.trace("/scripts/advmap/handlers/starting-armies.lua: IsArmyEmpty")
     for i,cr in GetHeroArmy(hero) do
         if cr and cr ~= 0 then
             if i > 1 or GetHeroCreatures(hero, cr) > 1 then
@@ -118,6 +115,8 @@ end
 
 function InitializeArmy(hero)
     log.trace("/scripts/advmap/handlers/starting-armies.lua: InitializeArmy")
+    log.debug("InitializeArmy", hero)
+    LogThreadError("InitializeArmy", hero)
     if IsArmyEmpty(hero) then
         SetStartingArmy(hero)
     end

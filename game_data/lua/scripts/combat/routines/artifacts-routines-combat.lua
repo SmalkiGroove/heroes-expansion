@@ -5,44 +5,51 @@ function Routine_SummonElementalsType(side, hero, type)
 end
 
 function Routine_SummonElementalsAir(side, hero)
-    log.debug("$ Routine_SummonElementalsAir")
+    log.trace("/scripts/combat/routines/artifacts-routines-combat.lua: Routine_SummonElementalsAir")
+    log.debug("Routine_SummonElementalsAir", side, hero)
     Routine_SummonElementalsType(side, hero, CREATURE_AIR_ELEMENTAL)
 end
 
 function Routine_SummonElementalsEarth(side, hero)
-    log.debug("$ Routine_SummonElementalsEarth")
+    log.trace("/scripts/combat/routines/artifacts-routines-combat.lua: Routine_SummonElementalsEarth")
+    log.debug("Routine_SummonElementalsEarth", side, hero)
     Routine_SummonElementalsType(side, hero, CREATURE_EARTH_ELEMENTAL)
 end
 
 function Routine_SummonElementalsFire(side, hero)
-    log.debug("$ Routine_SummonElementalsFire")
+    log.trace("/scripts/combat/routines/artifacts-routines-combat.lua: Routine_SummonElementalsFire")
+    log.debug("Routine_SummonElementalsFire", side, hero)
     Routine_SummonElementalsType(side, hero, CREATURE_FIRE_ELEMENTAL)
 end
 
 function Routine_SummonElementalsWater(side, hero)
-    log.debug("$ Routine_SummonElementalsWater")
+    log.trace("/scripts/combat/routines/artifacts-routines-combat.lua: Routine_SummonElementalsWater")
+    log.debug("Routine_SummonElementalsWater", side, hero)
     Routine_SummonElementalsType(side, hero, CREATURE_WATER_ELEMENTAL)
 end
 
 
 function Routine_ArtifactBeginnerMagicStick(side, hero)
+    log.trace("/scripts/combat/routines/artifacts-routines-combat.lua: Routine_ArtifactBeginnerMagicStick")
     if CURRENT_UNIT == hero then
-        log.debug("$ Routine_ArtifactBeginnerMagicStick")
+        log.debug("Routine_ArtifactBeginnerMagicStick", side, hero)
         RefreshMana(side, hero, 2)
     end
 end
 
 function Routine_ArtifactRunicWarHarness(side, hero)
+    log.trace("/scripts/combat/routines/artifacts-routines-combat.lua: Routine_ArtifactRunicWarHarness")
     if CURRENT_UNIT == hero then
-        log.debug("$ Routine_ArtifactRunicWarHarness")
+        log.debug("Routine_ArtifactRunicWarHarness", side, hero)
         local m = trunc(0.05 * GetUnitMaxManaPoints(hero))
         RefreshMana(side, hero, m)
     end
 end
 
 function Routine_ArtifactRunicWarAxe(side, hero, unit)
+    log.trace("/scripts/combat/routines/artifacts-routines-combat.lua: Routine_ArtifactRunicWarAxe")
     if GetUnitSide(unit) ~= side then
-        log.debug("$ Routine_ArtifactRunicWarAxe")
+        log.debug("Routine_ArtifactRunicWarAxe", side, hero, unit)
         local missing = GetUnitMaxManaPoints(hero) - GetUnitManaPoints(hero);
         local m = trunc(0.25 * missing)
         if m > 0 then RefreshMana(side, hero, m) end
@@ -50,7 +57,7 @@ function Routine_ArtifactRunicWarAxe(side, hero, unit)
 end
 
 function Routine_ArtifactSentinelsBlade(side, hero)
-    log.debug("$ Routine_ArtifactSentinelsBlade")
+    log.trace("/scripts/combat/routines/artifacts-routines-combat.lua: Routine_ArtifactSentinelsBlade")
     if CURRENT_UNIT == hero then
         local thread = function(side, hero)
             local prefix = UNIT_SIDE_PREFIX[side].."-spawn-"
@@ -61,6 +68,7 @@ function Routine_ArtifactSentinelsBlade(side, hero)
                 for n = 0, 99 do
                     if s == prefix..n..suffix then
                         if not ROUTINE_VARS.SentinelsBlade[s] then
+                            log.debug("Routine_ArtifactSentinelsBlade", side, hero)
                             local x, y = GetUnitPosition(s)
                             for _, unit in GetUnits(1-side, CREATURE) do
                                 for i = -1,1 do for j = -1,1 do
@@ -87,9 +95,10 @@ function Routine_ArtifactSentinelsBlade(side, hero)
 end
 
 function Routine_ArtifactMoonCharm(side, hero, unit)
-    log.debug("$ Routine_ArtifactMoonCharm")
+    log.trace("/scripts/combat/routines/artifacts-routines-combat.lua: Routine_ArtifactMoonCharm")
     if not ROUTINE_VARS.MoonCharm then
         if STARTING_ARMY[side][unit] then
+            log.debug("Routine_ArtifactMoonCharm", side, hero, unit)
             local type = GetCreatureType(unit)
             local x,y = GetUnitPosition(unit)
             local amount = STARTING_ARMY[side][unit]
@@ -102,17 +111,20 @@ end
 ------------- artifact sets ----------------------
 
 function Routine_ArtfsetNecro4(side, hero)
-    log.debug("$ Routine_ArtfsetNecro4")
+    log.trace("/scripts/combat/routines/artifacts-routines-combat.lua: Routine_ArtfsetNecro4")
+    log.debug("Routine_ArtfsetNecro4", side, hero)
     SummonCreatureSideOffset(side, CREATURE_BONE_DRAGON, GetHeroLevel(hero), 0)
 end
 
 function Routine_ArtfsetNecro4X(side, hero)
-    log.debug("$ Routine_ArtfsetNecro4X")
+    log.trace("/scripts/combat/routines/artifacts-routines-combat.lua: Routine_ArtfsetNecro4X")
+    log.debug("Routine_ArtfsetNecro4X", side, hero)
     SummonCreatureSideOffset(side, CREATURE_SPECTRAL_DRAGON, GetHeroLevel(hero), 0)
 end
 
 function Routine_ArtfsetBestial(side, hero)
-    log.debug("$ Routine_ArtfsetBestial")
+    log.trace("/scripts/combat/routines/artifacts-routines-combat.lua: Routine_ArtfsetBestial")
+    log.debug("Routine_ArtfsetBestial", side, hero)
     local beasts = { CREATURE_GRIFFIN, CREATURE_UNICORN, CREATURE_WYVERN, CREATURE_HYDRA, CREATURE_NIGHTMARE,
                      CREATURE_WOLF, CREATURE_MANTICORE, CREATURE_ARCANE_EAGLE, CREATURE_CAVE_SPIDER }
     local beast = beasts[random(1,8)]
@@ -122,7 +134,8 @@ function Routine_ArtfsetBestial(side, hero)
 end
 
 function Routine_ArtfsetHaven4X(side, hero)
-    log.debug("$ Routine_ArtfsetHaven4X")
+    log.trace("/scripts/combat/routines/artifacts-routines-combat.lua: Routine_ArtfsetHaven4X")
+    log.debug("Routine_ArtfsetHaven4X", side, hero)
     if IsCreature(CURRENT_UNIT) then
         local type = GetCreatureType(CURRENT_UNIT)
         if type == CREATURE_ANGEL or type == CREATURE_ARCHANGEL or type == CREATURE_SERAPH then
@@ -139,7 +152,8 @@ function Routine_ArtfsetHaven4X(side, hero)
 end
 
 function Routine_ArtfsetGenji1(side, hero, unit)
-    log.debug("$ Routine_ArtfsetGenji1")
+    log.trace("/scripts/combat/routines/artifacts-routines-combat.lua: Routine_ArtfsetGenji1")
+    log.debug("Routine_ArtfsetGenji1", side, hero, unit)
     if GetUnitSide(unit) ~= side then
         local m = GetUnitManaPoints(hero) + 50
         SetMana(hero, m)
@@ -148,7 +162,8 @@ function Routine_ArtfsetGenji1(side, hero, unit)
 end
 
 function Routine_ArtfsetWarLeader(side, hero, unit)
-    log.debug("$ Routine_ArtfsetWarLeader")
+    log.trace("/scripts/combat/routines/artifacts-routines-combat.lua: Routine_ArtfsetWarLeader")
+    log.debug("Routine_ArtfsetWarLeader", side, hero, unit)
     if GetUnitSide(unit) ~= side then
         for i,cr in GetUnits(side, CREATURE) do
             local tier = GetTier(cr)
@@ -160,7 +175,8 @@ function Routine_ArtfsetWarLeader(side, hero, unit)
 end
 
 function Routine_ArtfsetDragon4(side, hero, unit)
-    log.debug("$ Routine_ArtfsetDragon4")
+    log.trace("/scripts/combat/routines/artifacts-routines-combat.lua: Routine_ArtfsetDragon4")
+    log.debug("Routine_ArtfsetDragon4", side, hero, unit)
     if STARTING_ARMY[side][unit] then
         sleep(random(1,30))
         if ROUTINE_VARS.Legendragon[side] then return end
@@ -188,7 +204,8 @@ function Routine_ArtfsetDragon4(side, hero, unit)
 end
 
 function Routine_ArtfsetDragon6(side, hero, unit)
-    log.debug("$ Routine_ArtfsetDragon6")
+    log.trace("/scripts/combat/routines/artifacts-routines-combat.lua: Routine_ArtfsetDragon6")
+    log.debug("Routine_ArtfsetDragon6", side, hero, unit)
     if GetUnitSide(unit) ~= side then
         sleep(random(1,30))
         if ROUTINE_VARS.Legendragon[side] then return end
@@ -212,7 +229,8 @@ function Routine_ArtfsetDragon6(side, hero, unit)
 end
 
 function Routine_ArtfsetDragon8(side, hero)
-    log.debug("$ Routine_ArtfsetDragon8")
+    log.trace("/scripts/combat/routines/artifacts-routines-combat.lua: Routine_ArtfsetDragon8")
+    log.debug("Routine_ArtfsetDragon8", side, hero)
     if ROUTINE_VARS.Legendragon[side] then return end
     ROUTINE_VARS.Legendragon[side] = 1
     local name = "creature_DRAGON-SET_"..side
