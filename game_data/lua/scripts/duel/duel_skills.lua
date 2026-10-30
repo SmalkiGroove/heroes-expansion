@@ -43,7 +43,7 @@ function DuelSpoilsOfWar(player, hero)
     log.debug("DUEL: DuelSpoilsOfWar")
     local nb = DuelModeFactor()
     local gold = 1250 * nb
-    GiveResources(player, GOLD, gold, 1)
+    GiveResource(player, GOLD, gold)
     for i = 1,nb do
         GiveHeroRandomArtifact(player, hero, ARTIFACT_CLASS_MINOR)
     end
@@ -105,17 +105,15 @@ function DuelGovernance(player, hero)
     log.trace("/scripts/duel/duel_skills.lua: DuelGovernance")
     log.debug("DUEL: DuelGovernance")
     local n = GetHeroSkillMastery(hero, SKILL_GOVERNANCE)
-    local paid = DUEL_GOVERNANCE_RANKS[player]
-    if n <= paid then return end
+    local ranks = n - DUEL_GOVERNANCE_RANKS[player]
+    if ranks <= 0 then return end
     DUEL_GOVERNANCE_RANKS[player] = n
-    local amount = 2000 * DuelModeFactor() * (n - paid)
-    GiveResources(player, GOLD, amount, 1)
-    if paid == 0 then
-        local res = FACTION_RESOURCE[DUEL_FACTION[player]]
-        GiveResources(player, res, 5, 1)
-        Popup(player, {"/Text/Duel/Skill/Governance2.txt"; arg1=5, arg2=RESOURCE_NAME_FILE[res]})
-    end
-    Popup(player, {"/Text/Duel/Skill/Governance.txt"; arg=amount})
+    local gold = 2000 * DuelModeFactor() * ranks
+    local res = FACTION_RESOURCE[DUEL_FACTION[player]]
+    local amount = 5 * ranks
+    GiveResource(player, GOLD, gold)
+    GiveResource(player, res, amount)
+    Popup(player, {"/Text/Duel/Skill/Governance.txt"; arg1=gold, arg2=amount, arg3=RESOURCE_NAME_FILE[res]})
 end
 
 function DuelGearUp(player, hero)
@@ -127,7 +125,7 @@ function DuelGearUp(player, hero)
             if HasArtifact(hero, a) then count = count + 5000 end
         end
     end
-    GiveResources(player, GOLD, count)
+    GiveResource(player, GOLD, count)
     Popup(player, {"/Text/Duel/Skill/GearUp.txt"; arg=count})
 end
 
@@ -139,7 +137,7 @@ function DuelHeroesLegacy(player, hero)
             if HasArtifact(hero, a) then count = count + 7500 end
         end
     end
-    GiveResources(player, GOLD, count)
+    GiveResource(player, GOLD, count)
     Popup(player, {"/Text/Duel/Skill/HeroesLegacy.txt"; arg=count})
 end
 
@@ -151,29 +149,27 @@ function DuelMythology(player, hero)
             if HasArtifact(hero, a) then count = count + 10000 end
         end
     end
-    GiveResources(player, GOLD, count)
+    GiveResource(player, GOLD, count)
     Popup(player, {"/Text/Duel/Skill/Mythology.txt"; arg=count})
 end
 
 function DuelEstates(player, hero)
     log.trace("/scripts/duel/duel_skills.lua: DuelEstates")
     local amount = 5000 * DuelModeFactor()
-    GiveResources(player, GOLD, amount, 1)
+    GiveResource(player, GOLD, amount)
     Popup(player, {"/Text/Duel/Skill/Estates.txt"; arg=amount})
 end
 
 function DuelGeology(player, hero)
     log.trace("/scripts/duel/duel_skills.lua: DuelGeology")
-    local ore = 10 * DuelModeFactor()
-    local gold = 4000 * DuelModeFactor()
-    GiveResources(player, ORE, ore, 1)
-    GiveResources(player, GOLD, gold, 1)
-    Popup(player, {"/Text/Duel/Skill/Geology.txt"; arg1=ore, arg2=gold})
+    local ore = 15 * DuelModeFactor()
+    GiveResource(player, ORE, ore)
+    Popup(player, {"/Text/Duel/Skill/Geology.txt"; arg=ore})
 end
 
 function DuelIndustry(player, hero)
     log.trace("/scripts/duel/duel_skills.lua: DuelIndustry")
-    for res = 0,5 do GiveResources(player, res, 20) end
+    for res = 0,5 do GiveResource(player, res, 20) end
     Popup(player, {"/Text/Duel/Skill/Industry.txt"; arg=20})
 end
 
@@ -221,26 +217,26 @@ end
 
 function DuelWarriorsOfTheMagma(player, hero, level)
     log.trace("/scripts/duel/duel_skills.lua: DuelWarriorsOfTheMagma")
-    AddHeroCreatures(hero, CREATURE_FIRE_ELEMENTAL, 10 * level)
-    Popup(player, {"/Text/Duel/Skill/WarriorsOfTheMagma.txt"; arg=10 * level})
+    AddHeroCreatures(hero, CREATURE_FIRE_ELEMENTAL, 7 * level)
+    Popup(player, {"/Text/Duel/Skill/WarriorsOfTheMagma.txt"; arg=7 * level})
 end
 
 function DuelWarriorsOfTheMountain(player, hero, level)
     log.trace("/scripts/duel/duel_skills.lua: DuelWarriorsOfTheMountain")
-    AddHeroCreatures(hero, CREATURE_EARTH_ELEMENTAL, 10 * level)
-    Popup(player, {"/Text/Duel/Skill/WarriorsOfTheMountain.txt"; arg=10 * level})
+    AddHeroCreatures(hero, CREATURE_EARTH_ELEMENTAL, 7 * level)
+    Popup(player, {"/Text/Duel/Skill/WarriorsOfTheMountain.txt"; arg=7 * level})
 end
 
 function DuelWarriorsOfTheSea(player, hero, level)
     log.trace("/scripts/duel/duel_skills.lua: DuelWarriorsOfTheSea")
-    AddHeroCreatures(hero, CREATURE_WATER_ELEMENTAL, 10 * level)
-    Popup(player, {"/Text/Duel/Skill/WarriorsOfTheSea.txt"; arg=10 * level})
+    AddHeroCreatures(hero, CREATURE_WATER_ELEMENTAL, 7 * level)
+    Popup(player, {"/Text/Duel/Skill/WarriorsOfTheSea.txt"; arg=7 * level})
 end
 
 function DuelWarriorsOfTheSky(player, hero, level)
     log.trace("/scripts/duel/duel_skills.lua: DuelWarriorsOfTheSky")
-    AddHeroCreatures(hero, CREATURE_AIR_ELEMENTAL, 10 * level)
-    Popup(player, {"/Text/Duel/Skill/WarriorsOfTheSky.txt"; arg=10 * level})
+    AddHeroCreatures(hero, CREATURE_AIR_ELEMENTAL, 7 * level)
+    Popup(player, {"/Text/Duel/Skill/WarriorsOfTheSky.txt"; arg=7 * level})
 end
 
 function DuelEmpiricism(player, hero)
@@ -357,7 +353,7 @@ end
 function DuelHeraldOfDeath(player, hero)
     log.trace("/scripts/duel/duel_skills.lua: DuelHeraldOfDeath")
     local amount = 20000
-    GiveResources(player, GOLD, amount)
+    GiveResource(player, GOLD, amount)
     Popup(player, {"/Text/Duel/Skill/HeraldOfDeath.txt"; arg=amount})
 end
 
@@ -465,16 +461,10 @@ DUEL_SKILL_OVERRIDE = {
     [PERK_EMPIRICISM] = 1,
 }
 
--- starting skills are learnt before DuelStartingBonus, which sets the resources and removes the first artifact
-function DuelLearntEffect(player, hero, skill)
-    repeat sleep() until DUEL_START_DONE and DUEL_START_DONE[player] == 2
-    DUEL_SKILL_LEARNT_EFFECTS[skill](player, hero)
-end
-
 function DuelAddSkill(player, hero, skill)
     log.trace("/scripts/duel/duel_skills.lua: DuelAddSkill")
     if DUEL_SKILL_LEARNT_EFFECTS[skill] then
-        startThread(DuelLearntEffect, player, hero, skill)
+        DUEL_SKILL_LEARNT_EFFECTS[skill](player, hero)
     end
     return (DUEL_SKILL_OVERRIDE[skill] and 1 or nil)
 end

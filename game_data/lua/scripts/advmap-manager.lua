@@ -104,7 +104,6 @@ function WatchPlayer(player, wait)
 		return t
 	end
     for _,hero in GetPlayerHeroes(player) do tracker[hero] = heroTracker(hero) end
-	PlayerDailyResources(player)
     while IsPlayerCurrent(player) do
 		for _,hero in GetPlayerHeroes(player) do
 			if not tracker[hero] then tracker[hero] = heroTracker(hero) end
@@ -264,14 +263,14 @@ function InitializeHeroes()
 		if (GetPlayerState(player) == 1) then
 			startThread(StartingBonus, player)
 			DIFFICULTY_MULTIPLIER[player] = IsAIPlayer(player) and (1+0.5*DIFFICULTY) or 1
-			for i = 1,8 do AllowPlayerTavernRace(player, FactionToTownType(i), 0) end
+			for i = 1,8 do AllowPlayerTavernRace(player, FactionToTownType(i), 0) end sleep()
 			for i,hero in GetPlayerHeroes(player) do
 				log.debug("Initialize hero "..hero)
 				startThread(InitializeArmy, hero)
 				startThread(BindHeroLevelUpTrigger, hero)
 				startThread(BindHeroSkillTrigger, hero)
-				startThread(DoSkillsRoutine_Start, player, hero) sleep(1)
-				startThread(DoHeroSpeRoutine_Start, player, hero) sleep(1)
+				startThread(DoSkillsRoutine_Start, player, hero) sleep()
+				startThread(DoHeroSpeRoutine_Start, player, hero) sleep()
 				startThread(ComputeHeroMagicGuildBonus, player, hero)
 				local f = HEROES[hero].faction
 				if f ~= 0 then

@@ -11,13 +11,20 @@ function PlayerResponseOk(player)
 	PLAYER_RESPONSE[player] = 1
 end
 
-function PlayerResponseCancel(player)
-	PLAYER_RESPONSE[player] = nil
-end
+-- the cancel callback of a question box must be a bare function name: the engine runs it as "<name>();",
+-- so "PlayerResponseCancel(1)" would also call the nil result of PlayerResponseCancel(1)
+function PlayerResponseCancel1() PLAYER_RESPONSE[1] = nil end
+function PlayerResponseCancel2() PLAYER_RESPONSE[2] = nil end
+function PlayerResponseCancel3() PLAYER_RESPONSE[3] = nil end
+function PlayerResponseCancel4() PLAYER_RESPONSE[4] = nil end
+function PlayerResponseCancel5() PLAYER_RESPONSE[5] = nil end
+function PlayerResponseCancel6() PLAYER_RESPONSE[6] = nil end
+function PlayerResponseCancel7() PLAYER_RESPONSE[7] = nil end
+function PlayerResponseCancel8() PLAYER_RESPONSE[8] = nil end
 
 function Prompt(player, message)
 	PLAYER_RESPONSE[player] = 0
-	QuestionBoxForPlayers(GetPlayerFilter(player), message, "PlayerResponseOk("..player..")", "PlayerResponseCancel("..player..")")
+	QuestionBoxForPlayers(GetPlayerFilter(player), message, "PlayerResponseOk("..player..")", "PlayerResponseCancel"..player)
 	while PLAYER_RESPONSE[player] == 0 do sleep() end
 	return PLAYER_RESPONSE[player]
 end
@@ -41,21 +48,22 @@ end
 function StartingBonus(player)
 	log.trace("/scripts/advmap/advmap-utils.lua: StartingBonus")
 	log.debug("$ StartingBonus for player "..player)
-	if IsDuelMode() then return end
-	local gold = GetPlayerResource(player, GOLD)
-	local diff = mod(gold, 10000)
+	if IsDuelMode() then
+		for res = 0,6 do SetResource(player, res, 0) end return
+	end
+	local diff = mod(GetResource(player, GOLD), 10000)
 	if diff > 1 then -- bonus resources chosen
 		log.debug("Bonus resources chosen")
-		for res = 0,5 do SetPlayerResource(player, res, GetPlayerResource(player, res) + 5) end
-		SetPlayerResource(player, GOLD, gold - diff + 5000)
+		for res = 0,5 do GiveResource(player, res, 5) end
+		GiveResource(player, GOLD, 5000-diff)
 		return
 	end
 	for res = 0,5 do
-		local amount = GetPlayerResource(player, res)
+		local amount = GetResource(player, res)
 		diff = mod(amount, 10)
 		if diff ~= 0 then -- bonus army chosen
 			PLAYER_ARMY_BONUS[player] = 1
-			SetPlayerResource(player, res, amount - diff)
+			TakeAwayResource(player, res, diff)
 		end
 	end
 	if PLAYER_ARMY_BONUS[player] then
@@ -197,41 +205,6 @@ end
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -- COMMON
-
-function PlayerDailyResources(player)
-	log.trace("/scripts/advmap/advmap-utils.lua: PlayerDailyResources")
-	log.debug("Player "..player.." daily resources :")
-	-- log.debug(DAILY_RESOURCES[player])
-	for resource,amount in DAILY_RESOURCES[player] do
-		local curamount = GetPlayerResource(player, resource)
-		local newamount = curamount + amount
-		SetPlayerResource(player, resource, newamount)
-	end
-end
-
-function GiveResources(player, resource, amount, now)
-	log.trace("/scripts/advmap/advmap-utils.lua: GiveResources")
-	-- log.debug("$ GiveResources")
-	if amount >= 1 then
-		if now then
-			local curamount = GetPlayerResource(player, resource)
-			local newamount = curamount + amount
-			SetPlayerResource(player, resource, newamount)
-		else
-			DAILY_RESOURCES[player][resource] = DAILY_RESOURCES[player][resource] + amount
-		end
-	end
-end
-
-function TakeAwayResources(player, resource, amount)
-	log.trace("/scripts/advmap/advmap-utils.lua: TakeAwayResources")
-	-- log.debug("$ TakeAwayResources")
-	if amount >= 1 then
-		local curamount = GetPlayerResource(player, resource)
-		local newamount = curamount - amount
-		SetPlayerResource(player, resource, newamount)
-	end
-end
 
 function AddHeroStatAmount(player, hero, stat, amount)
 	log.trace("/scripts/advmap/advmap-utils.lua: AddHeroStatAmount")

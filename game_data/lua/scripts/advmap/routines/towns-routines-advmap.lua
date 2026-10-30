@@ -129,7 +129,7 @@ function Routine_AlchemyLab(player, town)
         end
     end
     for award,amount in awards do
-        if award <= GOLD then GiveResources(player, award, amount) sleep()
+        if award <= GOLD then GiveResource(player, award, amount) sleep()
         else for i = 1, amount do GiveArtefact(hero, award) sleep() end
         end
     end
@@ -238,7 +238,7 @@ function Routine_EternalSuffering(player, town)
         end
     end
     gold = round(gold)
-    if gold > 0 then GiveResources(player, GOLD, gold) end
+    if gold > 0 then GiveResource(player, GOLD, gold) end
 end
 
 

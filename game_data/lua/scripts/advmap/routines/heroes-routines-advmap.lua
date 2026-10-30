@@ -44,7 +44,7 @@ function Routine_PeasantTaxLevel(player, hero, level)
     amount = amount + GetHeroCreatures(hero, CREATURE_PEASANT)
     amount = amount + GetHeroCreatures(hero, CREATURE_MILITIAMAN)
     amount = amount + GetHeroCreatures(hero, CREATURE_LANDLORD)
-    GiveResources(player, GOLD, amount, 1)
+    GiveResource(player, GOLD, amount)
 end
 
 Var_Dougal_TrainCount = 0
@@ -88,7 +88,7 @@ function Routine_GainExpFromTotalGolds(player, hero)
     log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GainExpFromTotalGolds")
     log.debug("$ Routine_GainExpFromTotalGolds")
     local level = GetHeroLevel(hero)
-    local golds = GetPlayerResource(player, GOLD)
+    local golds = GetResource(player, GOLD)
     local ratio = 0.1 + 0.01 * level
     local amount = trunc(golds * ratio)
     AddHeroStatAmount(player, hero, STAT_EXPERIENCE, amount)
@@ -415,7 +415,7 @@ function Routine_ProductionIncreaseDwarvenWorkers(player, hero)
         end
     end
     for res,amount in total do
-        GiveResources(player, res, amount)
+        GiveResource(player, res, amount)
     end
 end
 
@@ -542,7 +542,7 @@ function Routine_AssembleGargoyles(player, hero)
         end
     end
     if total > 0 then
-        GiveResources(player, ORE, total)
+        GiveResource(player, ORE, total)
         ShowFlyingSign({"/Text/Game/Scripts/HeroSpe/AssembleGargoyles.txt"; num=total}, hero, player, FLYING_SIGN_TIME)
     end
 end
@@ -569,7 +569,7 @@ function Routine_FixDestroyedGolems(player, hero, combatIndex)
         end
     end
     if total > 0 then
-        GiveResources(player, ORE, total, 1)
+        GiveResource(player, ORE, total)
         ShowFlyingSign({"/Text/Game/Scripts/HeroSpe/AssembleGargoyles.txt"; num=total}, hero, player, FLYING_SIGN_TIME)
     end
 end
@@ -579,7 +579,7 @@ function Routine_GenerateGoldsPerDjinn(player, hero)
     log.debug("$ Routine_GenerateGoldsPerDjinn")
     local djinns = CountHeroCreatureType(player, hero, ACADEMY, 5)
     local amount = GetHeroLevel(hero) * djinns
-    GiveResources(player, GOLD, amount)
+    GiveResource(player, GOLD, amount)
 end
 
 function Routine_RespawnDjinns(player, hero, combatIndex)
@@ -627,14 +627,14 @@ end
 function Routine_GainExpPerSulfur(player, hero)
     log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GainExpPerSulfur")
     log.debug("$ Routine_GainExpPerSulfur")
-    local amount = 5 * GetHeroLevel(hero) * GetPlayerResource(player, SULFUR)
+    local amount = 5 * GetHeroLevel(hero) * GetResource(player, SULFUR)
     AddHeroStatAmount(player, hero, STAT_EXPERIENCE, amount)
 end
 
 function Routine_GainSulfurPerBattle(player, hero, combatIndex)
     log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GainSulfurPerBattle")
     log.debug("$ Routine_GainSulfurPerBattle")
-    GiveResources(player, SULFUR, 1, 1)
+    GiveResource(player, SULFUR, 1)
 end
 
 function Routine_GetCraftingResources(player, hero, level)
@@ -648,7 +648,7 @@ function Routine_GetCraftingResources(player, hero, level)
             local r = random(0, 5)
             generated[r] = generated[r] + 1
         end
-        for r,v in generated do GiveResources(player, r, v, 1) end
+        for r,v in generated do GiveResource(player, r, v) end
     end
 end
 
@@ -763,7 +763,7 @@ function Routine_GenerateGoldPerScout(player, hero)
         amount = amount + GetHeroCreatures(hero, CREATURE_SCOUT)
         amount = amount + GetHeroCreatures(hero, CREATURE_ASSASSIN)
         amount = amount + GetHeroCreatures(hero, CREATURE_STALKER)
-        GiveResources(player, GOLD, amount * mult)
+        GiveResource(player, GOLD, amount * mult)
     end
 end
 
@@ -1085,7 +1085,7 @@ function Routine_GainBonusExpAndRes(player, hero, combatIndex)
         total = total + count * value
     end
     AddHeroStatAmount(player, hero, STAT_EXPERIENCE, trunc(1.5*total))
-    GiveResources(player, GOLD, total, 1)
+    GiveResource(player, GOLD, total)
 end
 
 function Routine_TownBuildingUp(player, hero)
@@ -1119,7 +1119,7 @@ function Routine_TownBuildingUp(player, hero)
                     local cur = GetTownBuildingLevel(town, k)
                     if cur < length(v) then
                         local cost = v[cur+1]
-                        if GetPlayerResource(player, GOLD) >= cost then
+                        if GetResource(player, GOLD) >= cost then
                             local name = name_root..name_file[k][cur+1]
                             QuestionBoxForPlayers(
                                 GetPlayerFilter(player),
@@ -1139,14 +1139,14 @@ end
 function Routine_TownBuildingUpConfirm(player, hero, town, building, cost)
     log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_TownBuildingUpConfirm")
     UpgradeTownBuilding(town, building)
-    TakeAwayResources(player, GOLD, 0+cost)
+    TakeAwayResource(player, GOLD, 0+cost)
     ChangeHeroStat(hero, STAT_MOVE_POINTS, -500)
 end
 
 function Routine_GenerateSulfur(player, hero, level)
     log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_GenerateSulfur")
     log.debug("$ Routine_GenerateSulfur")
-    GiveResources(player, SULFUR, 1, 1)
+    GiveResource(player, SULFUR, 1)
 end
 
 function Routine_MultiplyTroops(player, hero)

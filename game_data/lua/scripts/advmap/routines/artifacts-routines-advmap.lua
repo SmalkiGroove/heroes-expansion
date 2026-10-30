@@ -138,7 +138,7 @@ function Routine_ArtifactSacredSeed(player, hero)
     log.debug("$ Routine_ArtifactSacredSeed")
     local rnd = random(0,20)
     local amount = mod(rnd, 4)
-    GiveResources(player, WOOD, amount)
+    GiveResource(player, WOOD, amount)
     if mod(rnd, 5) == 0 then
         GiveExp(hero, 1000)
     end
@@ -149,9 +149,9 @@ function Routine_ArtifactFortunePickaxe(player, hero)
     log.debug("$ Routine_ArtifactFortunePickaxe")
     local rnd = random(0,20)
     local amount = mod(rnd, 4)
-    GiveResources(player, ORE, amount)
+    GiveResource(player, ORE, amount)
     if mod(rnd, 3) == 0 then
-        GiveResources(player, (rnd > 10) and GEM or CRYSTAL, 1)
+        GiveResource(player, (rnd > 10) and GEM or CRYSTAL, 1)
     end
 end
 
@@ -161,7 +161,7 @@ function Routine_ArtifactHornOfPlenty(player, hero)
     if random(0,10) == 0 then
         for res = 0,5 do
             local amount = random(0,10)
-            GiveResources(player, res, amount)
+            GiveResource(player, res, amount)
         end
     end
 end
@@ -295,7 +295,7 @@ function Routine_ArtifactVizirsCap(player, hero)
             if GetObjectOwner(building) == player then total = total + 500 end
         end
     end
-    GiveResources(player, GOLD, total)
+    GiveResource(player, GOLD, total)
 end
 
 function Routine_ArtifactVizirsScimitar(player, hero)
@@ -392,7 +392,7 @@ function Routine_ArtifactVikingHatchet(player, hero, combatIndex)
     log.trace("/scripts/advmap/routines/artifacts-routines-advmap.lua: Routine_ArtifactVikingHatchet")
     log.debug("$ Routine_ArtifactVikingHatchet")
     local value = GetArmyStrength(combatIndex, 0)
-    GiveResources(player, GOLD, round(0.04 * value), 1)
+    GiveResource(player, GOLD, round(0.04 * value), 1)
 end
 
 function Routine_ArtifactVikingShield(player, hero, combatIndex)
@@ -400,8 +400,8 @@ function Routine_ArtifactVikingShield(player, hero, combatIndex)
     log.debug("$ Routine_ArtifactVikingShield")
     local value = GetArmyStrength(combatIndex, 0)
     local split = random(0,4)
-    GiveResources(player, WOOD, ceil(0.0004 * split * value), 1)
-    GiveResources(player, ORE, ceil(0.0004 * (4-split) * value), 1)
+    GiveResource(player, WOOD, ceil(0.0004 * split * value), 1)
+    GiveResource(player, ORE, ceil(0.0004 * (4-split) * value), 1)
 end
 
 Var_StaffLyreVictories = {}

@@ -141,9 +141,9 @@ end
 function Trigger_WitchHut_confirm(player, hero, obj, givestat)
     log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_WitchHut_confirm")
     local res = Var_WitchHutResCost[givestat]
-    if GetPlayerResource(player, res) >= 3 then
+    if GetResource(player, res) >= 3 then
         Popup(player, {"/Text/Game/Scripts/MapObjects/WitchHutAccepted.txt"; stat=ATTRIBUTE_NAME_FILE[givestat]})
-        TakeAwayResources(player, res, 3)
+        TakeAwayResource(player, res, 3)
         ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
         ChangeHeroStat(hero, STAT_EXPERIENCE, 5000)
         ChangeHeroStat(hero, givestat, 2)
@@ -341,10 +341,10 @@ function Trigger_SeerHut(hero, obj)
 end
 function Trigger_SeerHut_confirm(player)
     log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_SeerHut_confirm")
-    if GetPlayerResource(player, GOLD) < 5000 then
+    if GetResource(player, GOLD) < 5000 then
         Popup(player, "/Text/Game/Scripts/MapObjects/SeerHutCancel.txt") return
     end
-    TakeAwayResources(player, GOLD, 5000)
+    TakeAwayResource(player, GOLD, 5000)
     for p = 1,8 do
         if p ~= player and GetPlayerState(p) == 1 then
             if GetPlayerTeam(p) ~= GetPlayerTeam(player) then

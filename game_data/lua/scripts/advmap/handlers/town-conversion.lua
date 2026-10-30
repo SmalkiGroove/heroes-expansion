@@ -43,13 +43,13 @@ function ConvertTown(player, hero, town)
     log.debug("$ ConvertTown")
     local resource_cost = 20
     local gold_cost = 10000
-    if     GetPlayerResource(player, WOOD) < resource_cost then ShowFlyingSign("/Text/Game/Scripts/Resources/xNotEnoughWood.txt", hero, player, 3)
-    elseif GetPlayerResource(player, ORE) < resource_cost then ShowFlyingSign("/Text/Game/Scripts/Resources/xNotEnoughOre.txt", hero, player, 3)
-    elseif GetPlayerResource(player, GOLD) < gold_cost then ShowFlyingSign("/Text/Game/Scripts/Resources/xNotEnoughGolds.txt", hero, player, 3)
+    if     GetResource(player, WOOD) < resource_cost then ShowFlyingSign("/Text/Game/Scripts/Resources/xNotEnoughWood.txt", hero, player, 3)
+    elseif GetResource(player, ORE) < resource_cost then ShowFlyingSign("/Text/Game/Scripts/Resources/xNotEnoughOre.txt", hero, player, 3)
+    elseif GetResource(player, GOLD) < gold_cost then ShowFlyingSign("/Text/Game/Scripts/Resources/xNotEnoughGolds.txt", hero, player, 3)
     else
-        TakeAwayResources(player, WOOD, resource_cost)
-        TakeAwayResources(player, ORE, resource_cost)
-        TakeAwayResources(player, GOLD, gold_cost)
+        TakeAwayResource(player, WOOD, resource_cost)
+        TakeAwayResource(player, ORE, resource_cost)
+        TakeAwayResource(player, GOLD, gold_cost)
         local f = HEROES[hero].faction
         TransformTown(town, FactionToTownType(f))
         SetupTownTavern(town, f)
@@ -66,13 +66,13 @@ function ConvertDwelling(player, hero, dwelling, tier)
     log.debug("$ ConvertDwelling")
     local resource_cost = 3 * tier
     local gold_cost = 1000 * tier
-    if     GetPlayerResource(player, WOOD) < resource_cost then ShowFlyingSign("/Text/Game/Scripts/Resources/xNotEnoughWood.txt", hero, player, 3)
-    elseif GetPlayerResource(player, ORE) < resource_cost then ShowFlyingSign("/Text/Game/Scripts/Resources/xNotEnoughOre.txt", hero, player, 3)
-    elseif GetPlayerResource(player, GOLD) < gold_cost then ShowFlyingSign("/Text/Game/Scripts/Resources/xNotEnoughGolds.txt", hero, player, 3)
+    if     GetResource(player, WOOD) < resource_cost then ShowFlyingSign("/Text/Game/Scripts/Resources/xNotEnoughWood.txt", hero, player, 3)
+    elseif GetResource(player, ORE) < resource_cost then ShowFlyingSign("/Text/Game/Scripts/Resources/xNotEnoughOre.txt", hero, player, 3)
+    elseif GetResource(player, GOLD) < gold_cost then ShowFlyingSign("/Text/Game/Scripts/Resources/xNotEnoughGolds.txt", hero, player, 3)
     else
-        TakeAwayResources(player, WOOD, resource_cost)
-        TakeAwayResources(player, ORE, resource_cost)
-        TakeAwayResources(player, GOLD, gold_cost)
+        TakeAwayResource(player, WOOD, resource_cost)
+        TakeAwayResource(player, ORE, resource_cost)
+        TakeAwayResource(player, GOLD, gold_cost)
         local f = HEROES[hero].faction
         ReplaceDwelling(dwelling, FactionToTownType(f))
         MAP_CONVERTIBLES[dwelling] = { faction=f, tier=tier }

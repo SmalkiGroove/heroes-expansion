@@ -492,6 +492,8 @@
 function createAdvmapAliases()
 	Trigger = SetTrigger
     ExecConsoleCommand = consoleCmd
+	GetResource = GetPlayerResource
+	SetResource = SetPlayerResource
 end
 
 MakeSyncCommandCallback = function(event_id)

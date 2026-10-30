@@ -3,14 +3,14 @@
 function DuelEndlessSackOfGold(player, hero)
     log.trace("/scripts/duel/duel_artifacts.lua: DuelEndlessSackOfGold")
     local value = 15000
-    GiveResources(player, GOLD, value)
+    GiveResource(player, GOLD, value)
     Popup(player, {"/Text/Duel/Artifact/EndlessSackOfGold.txt"; arg=value})
 end
 
 function DuelEndlessPouchOfGold(player, hero)
     log.trace("/scripts/duel/duel_artifacts.lua: DuelEndlessPouchOfGold")
     local value = 5000
-    GiveResources(player, GOLD, value)
+    GiveResource(player, GOLD, value)
     Popup(player, {"/Text/Duel/Artifact/EndlessPouchOfGold.txt"; arg=value})
 end
 
@@ -21,16 +21,16 @@ function DuelCapeOfKings(player, hero)
     local gg = 500 * gov * DUEL_ADVENTURE_DAYS
     local gs = gov * DUEL_ADVENTURE_DAYS
     local gr = RESOURCE_NAME_FILE[res]
-    GiveResources(player, GOLD, gg)
-    GiveResources(player, res, gs)
+    GiveResource(player, GOLD, gg)
+    GiveResource(player, res, gs)
     local ind, myt = 0, 0
     if HasHeroSkill(hero, PERK_INDUSTRY) then
         ind = 2 * DUEL_ADVENTURE_DAYS
-        for r = 0,5 do GiveResources(player, r, ind) end
+        for r = 0,5 do GiveResource(player, r, ind) end
     end
     if HasHeroSkill(hero, PERK_MYTHOLOGY) then
         myt = 1000 * DUEL_ADVENTURE_DAYS
-        GiveResources(player, GOLD, myt)
+        GiveResource(player, GOLD, myt)
     end
     Popup(player, {"/Text/Duel/Artifact/CapeOfKings.txt"; days=DUEL_ADVENTURE_DAYS, gov=gov, gg=gg, gs=gs, gr=gr, ind=ind, myt=myt})
 end
@@ -87,7 +87,7 @@ function DuelCrownOfLeader(player, hero)
     log.trace("/scripts/duel/duel_artifacts.lua: DuelCrownOfLeader")
     local arg1, arg2, arg3 = 0, 0, 0
     if HasHeroSkill(hero, PERK_ESTATES) then
-        GiveResources(player, GOLD, 10000)
+        GiveResource(player, GOLD, 10000)
         arg1 = 10000
     end
     if HasHeroSkill(hero, PERK_DIPLOMACY) then
@@ -114,19 +114,19 @@ end
 
 function DuelHornOfPlenty(player, hero)
     log.trace("/scripts/duel/duel_artifacts.lua: DuelHornOfPlenty")
-    for res = 0,5 do GiveResources(player, res, 10) end
+    for res = 0,5 do GiveResource(player, res, 10) end
     Popup(player, {"/Text/Duel/Artifact/HornOfPlenty.txt"; arg=10})
 end
 
 function DuelSacredSeed(player, hero)
     log.trace("/scripts/duel/duel_artifacts.lua: DuelSacredSeed")
-    GiveResources(player, WOOD, 30)
+    GiveResource(player, WOOD, 30)
     Popup(player, {"/Text/Duel/Artifact/SacredSeed.txt"; arg=30})
 end
 
 function DuelFortunePickaxe(player, hero)
     log.trace("/scripts/duel/duel_artifacts.lua: DuelFortunePickaxe")
-    GiveResources(player, ORE, 30)
+    GiveResource(player, ORE, 30)
     Popup(player, {"/Text/Duel/Artifact/FortunePickaxe.txt"; arg=30})
 end
 
@@ -168,7 +168,7 @@ end
 
 function DuelSentinelsBoots(player, hero)
     log.trace("/scripts/duel/duel_artifacts.lua: DuelSentinelsBoots")
-    GiveResources(player, GOLD, 5000)
+    GiveResource(player, GOLD, 5000)
     ChangeHeroStat(hero, STAT_MORALE, 2)
     Popup(player, {"/Text/Duel/Artifact/SentinelsBoots.txt"; arg=2})
 end
@@ -189,7 +189,7 @@ function DuelVizirsCap(player, hero)
         if GetObjectOwner(obj) == player then n = n + 5000 end
     end
     if n == 0 then return end
-    GiveResources(player, GOLD, n)
+    GiveResource(player, GOLD, n)
     Popup(player, {"/Text/Duel/Artifact/VizirsCap.txt"; arg=n})
 end
 
@@ -290,14 +290,14 @@ end
 
 function DuelVikingHatchet(player, hero)
     log.trace("/scripts/duel/duel_artifacts.lua: DuelVikingHatchet")
-    GiveResources(player, GOLD, 5000)
+    GiveResource(player, GOLD, 5000)
     Popup(player, {"/Text/Duel/Artifact/VikingHatchet.txt"; arg=5000})
 end
 
 function DuelVikingShield(player, hero)
     log.trace("/scripts/duel/duel_artifacts.lua: DuelVikingShield")
-    GiveResources(player, WOOD, 25)
-    GiveResources(player, ORE, 25)
+    GiveResource(player, WOOD, 25)
+    GiveResource(player, ORE, 25)
     Popup(player, {"/Text/Duel/Artifact/VikingShield.txt"; arg=25})
 end
 

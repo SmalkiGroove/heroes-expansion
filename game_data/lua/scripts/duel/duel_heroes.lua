@@ -30,7 +30,7 @@ DUEL_HERO_DOLMEN_BONUS = {
 function DuelDolmenBonus(player, hero)
     log.trace("/scripts/duel/duel_heroes.lua: DuelDolmenBonus")
     local n = DUEL_HERO_DOLMEN_BONUS[hero]
-    DUEL_DOLMEN_LEVELS[player] = DUEL_DOLMEN_LEVELS[player] + n
+    DUEL_DOLMEN_LEVELS[player] = DUEL_DOLMEN_LEVELS[player] - n
     Popup(player, {"/Text/Duel/Hero/Dolmen.txt"; arg=n})
 end
 
@@ -226,14 +226,14 @@ end
 function DuelDuncan(player, hero)
     log.trace("/scripts/duel/duel_heroes.lua: DuelDuncan")
     local gold = 250 * GetHeroLevel(hero)
-    GiveResources(player, GOLD, gold)
+    GiveResource(player, GOLD, gold)
     Popup(player, {"/Text/Duel/Hero/Gold.txt"; arg=gold})
 end
 
 function DuelNicolai(player, hero)
     log.trace("/scripts/duel/duel_heroes.lua: DuelNicolai")
     local gold = 250 * GetHeroLevel(hero)
-    GiveResources(player, GOLD, gold)
+    GiveResource(player, GOLD, gold)
     Popup(player, {"/Text/Duel/Hero/Gold.txt"; arg=gold})
 end
 
@@ -241,7 +241,7 @@ function DuelMaeve(player, hero)
     log.trace("/scripts/duel/duel_heroes.lua: DuelMaeve")
     local gold = 500 * GetHeroLevel(hero)
     local nb = 20 * DUEL_ADVENTURE_DAYS
-    GiveResources(player, GOLD, gold)
+    GiveResource(player, GOLD, gold)
     DuelAddTownRecruits(player, CREATURE_PEASANT, nb)
     Popup(player, {"/Text/Duel/Hero/Maeve.txt"; arg1=gold, arg2=nb})
 end
@@ -301,7 +301,7 @@ function DuelRazzak(player, hero)
     log.trace("/scripts/duel/duel_heroes.lua: DuelRazzak")
     local nb = 5 * GetHeroLevel(hero)
     AddHeroCreatureType(player, hero, ACADEMY, 3, nb, 1)
-    GiveResources(player, ORE, nb)
+    GiveResource(player, ORE, nb)
     Popup(player, {"/Text/Duel/Hero/Razzak.txt"; arg=nb})
 end
 
@@ -316,7 +316,7 @@ function DuelNathir(player, hero)
     log.trace("/scripts/duel/duel_heroes.lua: DuelNathir")
     local sulfur = 2 * GetHeroLevel(hero)
     local exp = trunc(0.1 * DUEL_PLAYER_DATA.TOTAL_EXP[player])
-    GiveResources(player, SULFUR, sulfur)
+    GiveResource(player, SULFUR, sulfur)
     ChangeHeroStat(hero, STAT_EXPERIENCE, exp)
     Popup(player, {"/Text/Duel/Hero/Nathir.txt"; arg1=sulfur, arg2=exp})
 end
@@ -327,7 +327,7 @@ function DuelGalib(player, hero)
     local nb = 2 * level
     local gold = 500 * level
     AddHeroCreatureType(player, hero, ACADEMY, 5, nb, 1)
-    GiveResources(player, GOLD, gold)
+    GiveResource(player, GOLD, gold)
     Popup(player, {"/Text/Duel/Hero/Galib.txt"; arg1=nb, arg2=gold})
 end
 
@@ -373,7 +373,7 @@ end
 function DuelHangvul(player, hero)
     log.trace("/scripts/duel/duel_heroes.lua: DuelHangvul")
     local gold = 500 * GetHeroLevel(hero)
-    GiveResources(player, GOLD, gold)
+    GiveResource(player, GOLD, gold)
     DuelAddTownRecruits(player, CREATURE_THANE, 30)
     Popup(player, {"/Text/Duel/Hero/Hangvul.txt"; arg1=gold, arg2=30})
 end
@@ -397,7 +397,7 @@ end
 function DuelArantir(player, hero)
     log.trace("/scripts/duel/duel_heroes.lua: DuelArantir")
     local gold = 250 * GetHeroLevel(hero)
-    GiveResources(player, GOLD, gold)
+    GiveResource(player, GOLD, gold)
     Popup(player, {"/Text/Duel/Hero/Gold.txt"; arg=gold})
 end
 
@@ -453,7 +453,7 @@ end
 function DuelOrlando(player, hero)
     log.trace("/scripts/duel/duel_heroes.lua: DuelOrlando")
     local gold = 500 * GetHeroLevel(hero)
-    GiveResources(player, GOLD, gold)
+    GiveResource(player, GOLD, gold)
     for creature, growth in DUEL_CREATURE_GROWTH[INFERNO] do
         DuelAddTownRecruits(player, creature, growth)
     end
@@ -479,7 +479,7 @@ end
 function DuelVayshan(player, hero)
     log.trace("/scripts/duel/duel_heroes.lua: DuelVayshan")
     local gold = 500 * GetHeroLevel(hero)
-    GiveResources(player, GOLD, gold)
+    GiveResource(player, GOLD, gold)
     Popup(player, {"/Text/Duel/Hero/Gold.txt"; arg=gold})
 end
 

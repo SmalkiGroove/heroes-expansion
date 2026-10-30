@@ -81,7 +81,7 @@ DUEL_KEY_ARTIFACTS = {
     [2] = { ARTIFACT_ORB_OF_AIR, ARTIFACT_ORB_OF_EARTH, ARTIFACT_ORB_OF_FIRE, ARTIFACT_ORB_OF_WATER },
     [3] = { ARTIFACT_DRAGON_SCALE_ARMOR, ARTIFACT_DRAGON_SCALE_SHIELD, ARTIFACT_DRAGON_WING_MANTLE, ARTIFACT_DRAGON_BONE_GRAVES },
     [4] = { ARTIFACT_GOLDEN_GOOSE, ARTIFACT_ELRATHS_DIVINE_SHIELD, ARTIFACT_CODEX_OF_THE_SAINT, ARTIFACT_ANCIENT_PROTECTION_CHARM },
-    [5] = { ARTIFACT_RING_OF_DEVASTATION, ARTIFACT_RING_OF_LIFE, ARTIFACT_BAND_OF_CONJURER, ARTIFACT_CURSED_RING },
+    [5] = { ARTIFACT_RING_OF_DEVASTATION, ARTIFACT_RING_OF_HEALTH, ARTIFACT_BAND_OF_CONJURER, ARTIFACT_CURSED_RING },
     [6] = { ARTIFACT_EDGE_OF_BALANCE, ARTIFACT_BUTCHER_GLAIVE, ARTIFACT_CRIMSON_SCYTHE, ARTIFACT_ROD_OF_TORMENT },
     [7] = { ARTIFACT_DRAGON_FLAME_TONGUE, ARTIFACT_DRAGON_TALON_CROWN, ARTIFACT_DRAGON_TEETH_NECKLACE, ARTIFACT_DRAGON_EYE_RING },
     [8] = { ARTIFACT_TOME_OF_LIGHT, ARTIFACT_TOME_OF_DARKNESS, ARTIFACT_TOME_OF_NATURE, ARTIFACT_TOME_OF_DESTRUCTION },
@@ -94,9 +94,8 @@ function DuelBorderGuardKey(player, key)
         Popup(player, "/Text/Duel/BorderGuardKeyOut.txt") return
     end
     if Prompt(player, {"/Text/Duel/BorderGuardKeyAsk.txt"; key=key, cost=DUEL_KEY_COST[key]}) then
-        local gold = GetPlayerResource(player, GOLD)
-        if gold < DUEL_KEY_COST[key] then return end
-        SetPlayerResource(player, GOLD, gold - DUEL_KEY_COST[key])
+        if GetResource(player, GOLD) < DUEL_KEY_COST[key] then return end
+        TakeAwayResource(player, GOLD, DUEL_KEY_COST[key])
         GiveBorderguardKey(player, key)
         Popup(player, {"/Text/Duel/BorderGuardKey.txt"; key=key})
     end
@@ -108,7 +107,7 @@ function DuelWishFountain(player, nb)
         if Prompt(player, {"/Text/Duel/FountainWish.txt"; artifact=text_artifact}) then
             local fountain = "P"..player.."_FOUNTAIN_"..nb
             Trigger(OBJECT_TOUCH_TRIGGER, fountain, nil)
-            GiveArtefact(player, artifact) return
+            GiveArtefact(DUEL_HERO[player], artifact) return
         end
     end
 end
@@ -162,11 +161,12 @@ function DuelTriggerWitchHut(hero, obj)
         local givestat = random(1,4)
         local rescost = Var_WitchHutResCost[givestat]
         local text_stat = ATTRIBUTE_NAME_FILE[givestat]
-        local text_res = "/Text/Game/Script/Resources/"..RESOURCE_TEXT[rescost]..".txt"
+        local text_res = "/Text/Game/Scripts/Resources/"..RESOURCE_TEXT[rescost]..".txt"
         if Prompt(player, {"/Text/Game/Scripts/MapObjects/WitchHut.txt"; stat=text_stat, res=text_res}) then
             Popup(player, {"/Text/Game/Scripts/MapObjects/WitchHutAccepted.txt"; stat=text_stat})
-            TakeAwayResources(player, rescost, 3)
+            TakeAwayResource(player, rescost, 3)
             ChangeHeroStat(hero, givestat, 3)
+            ChangeHeroStat(hero, STAT_EXPERIENCE, 50000)
             Var_WitchHutVisited[obj] = 1
             MarkObjectAsVisited(obj, hero)
         else

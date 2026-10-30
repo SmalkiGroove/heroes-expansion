@@ -81,6 +81,10 @@ The adventure map runtime provides the following predefined functions for intera
 
 - `GetPlayerResource(player, resourceType)` → number: Get player's resource amount
 - `SetPlayerResource(player, resourceType, amount)` → void: Set player's resource to exact amount
+  - The change is applied with the next game segment. `GetPlayerResource` + `SetPlayerResource` from several threads in the same segment lose updates (each thread reads the old value, the last write wins): use `GiveResource` / `TakeAwayResource` to add or remove
+- `GiveResource(player, resourceType, amount)` → void (H5X DLL): Add `amount` (≥ 0) of the resource. Several calls in the same segment add up, whatever the thread
+- `TakeAwayResource(player, resourceType, amount)` → void (H5X DLL): Remove `amount` (≥ 0) of the resource; the result never goes below 0
+  - Both are applied with the next game segment (single player) like `SetPlayerResource`: `GetPlayerResource` right after still returns the old amount until a `sleep(1)`
 - `GiveExp(hero, amount)` → void: Give experience directly to hero
 - `GetPlayerHeroes(player)` → table: Get list of all heroes owned by player
 - `GetPlayerState(player)` → number: Get player state (1 = active/present)
@@ -139,6 +143,7 @@ The adventure map runtime provides the following predefined functions for intera
 
 - `QuestionBoxForPlayers(playerFilter, text, confirmFunction, cancelFunction)` → void: Show dialog with yes/no options
   - confirmFunction and cancelFunction are string callbacks to execute
+  - confirmFunction can be a call with arguments (`"Func(1,'hero')"`), but cancelFunction must be a bare function name (`"NoneRoutine"`, `"PlayerResponseCancel1"`): a call with arguments runs, then logs "attempt to call a nil value" when you click Cancel (seen in a hotseat duel; the world script runner wraps callbacks as `parse([[<name>(<params>);]])()`)
 - `MessageBoxForPlayers(playerFilter, text, onCloseFunction)` → void: Show message dialog
   - onCloseFunction is a string callback to execute
   - `text` (here and in `QuestionBoxForPlayers` / `ShowFlyingSign`) is either a text file path or a table `{"/Text/...txt"; key=value, ...}` whose values fill the `<value=key>` placeholders of the file. A value can itself be another text file path (e.g. an artifact name file)
@@ -441,7 +446,7 @@ Stages are START → SETUP → ADVENTURE → STAGING → CASTLE → BATTLE → E
 
 Effect functions have the signature `DuelXxx(player, hero)` and end with a `Popup(player, {"/Text/Duel/...txt"; ...})` describing what was gained. Level-up effects and skill staging effects also get `level`; for staging it is the hero level read when staging starts, before any effect grants experience.
 
-Skills have no level-up effects: an effect that would depend on when the skill was picked is either learnt (amounts scaled by the difficulty with `DuelModeFactor()`, 2 to 5) or applied at staging (amounts scaled by `level`). `DuelAddSkill` runs learnt effects in a thread that waits for `DUEL_START_DONE[player] == 2`, so the effects of starting skills are not erased by `DuelStartingBonus`. A learnt effect on a skill with masteries can fire once per rank: track what was already given (see `DUEL_GOVERNANCE_RANKS`).
+Skills have no level-up effects: an effect that would depend on when the skill was picked is either learnt (amounts scaled by the difficulty with `DuelModeFactor()`, 2 to 5) or applied at staging (amounts scaled by `level`). `DuelAddSkill` runs learnt effects at once, starting skills included. Starting skills are learnt before `DuelStartingBonus`, which adds its resources with `GiveResource` and so keeps what they gave, but removes the hero's first artifact. A learnt effect on a skill with masteries can fire once per rank: track what was already given (see `DUEL_GOVERNANCE_RANKS`).
 
 ### Duel data
 

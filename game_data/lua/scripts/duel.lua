@@ -115,9 +115,6 @@ DUEL_PLAYER_DATA = {
     TOTAL_EXP = {0, 0},
 }
 
--- reaches 2 when both parts of the starting bonus are done; learnt skill effects wait for it
-DUEL_START_DONE = {0, 0}
-
 
 function DuelStartingBonus(player)
     log.debug("DUEL: StartingBonus for player "..player)
@@ -128,11 +125,10 @@ function DuelStartingBonus(player)
         GiveHeroRandomArtifact(player, DUEL_HERO[player], ARTIFACT_CLASS_MINOR, DUEL_FACTION[player] + 10)
     end, player)
     local amount = 5 * DUEL_MODE + 10
-    for r = 0,1 do SetPlayerResource(player, r, 2 * amount) end
-    for s = 2,5 do SetPlayerResource(player, s, amount) end
-    SetPlayerResource(player, FACTION_RESOURCE[DUEL_FACTION[player]], 2 * amount)
-    SetPlayerResource(player, GOLD, 12000 * amount + 50000)
-    DUEL_START_DONE[player] = DUEL_START_DONE[player] + 1
+    for r = 0,1 do GiveResource(player, r, 2 * amount) end
+    for s = 2,5 do GiveResource(player, s, amount) end
+    GiveResource(player, FACTION_RESOURCE[DUEL_FACTION[player]], amount)
+    GiveResource(player, GOLD, 12000 * amount + 50000)
 end
 
 function DuelTownSetup(player)
@@ -243,7 +239,6 @@ function DuelStaging(player, hero)
     for artifact, func in DUEL_ARTIFACT_STAGING_EFFECTS do
         if HasArtifact(hero, artifact) then func(player, hero) end
     end
-    PlayerDailyResources(player)
     ChangeHeroStat(hero, STAT_MOVE_POINTS, 9999)
     DUEL_PLAYER_STAGE[player] = DUEL_STAGE_STAGING
 end

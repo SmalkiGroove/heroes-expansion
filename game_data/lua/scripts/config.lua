@@ -5,4 +5,4 @@
 -- 3 = informative logs
 -- 4 = adds debugging
 -- 5 = all logs
-LOG_LEVEL = 4
+LOG_LEVEL = 5

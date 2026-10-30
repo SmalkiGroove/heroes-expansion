@@ -504,13 +504,13 @@ function RoutineEstatesDaily(player, hero, mastery)
         end
     end
     if HasArtifact(hero, ARTIFACT_CROWN_OF_LEADER) then total = 2 * total end
-    GiveResources(player, GOLD, total)
+    GiveResource(player, GOLD, total)
 end
 
 function Routine_GeologyDaily(player, hero, mastery)
     log.trace("/scripts/advmap/routines/skills-routines-advmap.lua: Routine_GeologyDaily")
     log.debug("$ Routine_GeologyDaily")
-    GiveResources(player, ORE, 1)
+    GiveResource(player, ORE, 1)
 end
 
 function Routine_IndustryDaily(player, hero, mastery)
@@ -537,7 +537,7 @@ function Routine_IndustryDaily(player, hero, mastery)
         end
     end
     for res,amount in total do
-        GiveResources(player, res, amount)
+        GiveResource(player, res, amount)
     end
 end
 
@@ -552,7 +552,7 @@ function Routine_HeraldOfDeathGolds(player, hero, mastery)
     log.trace("/scripts/advmap/routines/skills-routines-advmap.lua: Routine_HeraldOfDeathGolds")
     log.debug("$ Routine_HeraldOfDeathGolds")
     local amount = GetHeroCreatures(hero, CREATURE_SKELETON) + GetHeroCreatures(hero, CREATURE_SKELETON_ARCHER) + GetHeroCreatures(hero, CREATURE_SKELETON_WARRIOR)
-    GiveResources(player, GOLD, amount)
+    GiveResource(player, GOLD, amount)
 end
 
 function Routine_SpiritismManaRegen(player, hero, mastery)
@@ -640,8 +640,8 @@ function Routine_GovernanceWeeklyResources(player, hero, mastery)
     local golds = { [0]=0, [1]=1000, [2]=2500, [3]=5000 }
     local faction = HEROES[hero].faction
     local bonus = HasArtifact(hero, ARTIFACT_CAPE_OF_KINGS) and 1 or 0
-    GiveResources(player, GOLD, golds[mastery]+1000*bonus)
-    GiveResources(player, FACTION_RESOURCE[faction], mastery+bonus)
+    GiveResource(player, GOLD, golds[mastery]+1000*bonus)
+    GiveResource(player, FACTION_RESOURCE[faction], mastery+bonus)
 end
 
 function Routine_GearUpWeeklyGolds(player, hero, mastery)
@@ -653,7 +653,7 @@ function Routine_GearUpWeeklyGolds(player, hero, mastery)
             if HasArtifact(hero, a) then count = count + 1 end
         end
     end
-    GiveResources(player, GOLD, 400 * count)
+    GiveResource(player, GOLD, 400 * count)
 end
 
 function Routine_HeroesLegacyWeeklyGolds(player, hero, mastery)
@@ -665,7 +665,7 @@ function Routine_HeroesLegacyWeeklyGolds(player, hero, mastery)
             if HasArtifact(hero, a) then count = count + 1 end
         end
     end
-    GiveResources(player, GOLD, 600 * count)
+    GiveResource(player, GOLD, 600 * count)
 end
 
 function Routine_MythologyWeeklyGolds(player, hero, mastery)
@@ -677,7 +677,7 @@ function Routine_MythologyWeeklyGolds(player, hero, mastery)
             if HasArtifact(hero, a) then count = count + 1 end
         end
     end
-    GiveResources(player, GOLD, 800 * count)
+    GiveResource(player, GOLD, 800 * count)
 end
 
 function Routine_ReinforcementWeeklyBonus(player, hero, mastery)
