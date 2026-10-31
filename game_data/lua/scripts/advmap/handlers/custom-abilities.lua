@@ -57,19 +57,13 @@ function ActivateBuildingConversion(player, hero)
     if not obj then ShowFlyingSign("/Text/Game/Scripts/Abilities/HeroNotInConvertible.txt", hero, player, 3) return end
     local tier = MAP_CONVERTIBLES[obj].tier
     if tier == 0 then
-        QuestionBoxForPlayers(
-            GetPlayerFilter(player),
-            {"/Text/Game/Scripts/Abilities/ConvertTown.txt"; wood=20,ore=20,gold=10000},
-            "ConvertTown("..player..",'"..hero.."','"..obj.."')",
-            "NoneRoutine"
-        )
+        if Prompt(player, {"/Text/Game/Scripts/Abilities/ConvertTown.txt"; wood=20,ore=20,gold=10000}) then
+            ConvertTown(player, hero, obj)
+        end
     else
-        QuestionBoxForPlayers(
-            GetPlayerFilter(player),
-            {"/Text/Game/Scripts/Abilities/ConvertDwelling.txt"; wood=3*tier,ore=3*tier,gold=1000*tier},
-            "ConvertDwelling("..player..",'"..hero.."','"..obj.."','"..tier.."')",
-            "NoneRoutine"
-        )
+        if Prompt(player, {"/Text/Game/Scripts/Abilities/ConvertDwelling.txt"; wood=3*tier,ore=3*tier,gold=1000*tier}) then
+            ConvertDwelling(player, hero, obj, tier)
+        end
     end
 end
 

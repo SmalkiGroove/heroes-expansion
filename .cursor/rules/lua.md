@@ -143,7 +143,7 @@ The adventure map runtime provides the following predefined functions for intera
 #### UI and Messages
 
 - `QuestionBoxForPlayers(playerFilter, text, confirmFunction, cancelFunction)` → void: Show dialog with yes/no options
-  - confirmFunction and cancelFunction are string callbacks to execute
+  - confirmFunction and cancelFunction are string callbacks to execute. The mod calls it only from `Prompt` (`advmap-utils.lua`)
   - confirmFunction can be a call with arguments (`"Func(1,'hero')"`), but cancelFunction must be a bare function name (`"NoneRoutine"`, `"PlayerResponseCancel1"`): a call with arguments runs, then logs "attempt to call a nil value" when you click Cancel (seen in a hotseat duel; the world script runner wraps callbacks as `parse([[<name>(<params>);]])()`)
 - `MessageBoxForPlayers(playerFilter, text, onCloseFunction)` → void: Show message dialog
   - onCloseFunction is a string callback to execute
@@ -393,7 +393,7 @@ Since the combat script runtime is separate from the adventure map script runtim
 
 - `GiveResources(player, res, amount, now)`: with `now`, resources are given immediately. Without it, the amount is added to `DAILY_RESOURCES[player]` and only paid when `PlayerDailyResources(player)` runs.
 - `TakeAwayResources(player, res, amount)`, `AddHeroStatAmount(player, hero, stat, amount)`, `GetHeroLowestStat(hero)`, `GetHeroHighestStat(hero)`.
-- `Popup(player, msg)`: message box that waits until `player` is the current player. `Prompt(player, msg)`: yes/no box that blocks and returns `1` (yes) or `nil` (no).
+- `Popup(player, msg)`: message box that waits until `player` is the current player. `Prompt(player, msg)`: yes/no box that blocks and returns `1` (yes) or `nil` (no, or an AI player, which never answers). Use `Prompt` rather than `QuestionBoxForPlayers` (only `Prompt` calls it). It blocks the calling thread, so a caller that must not wait (the daily handler) runs it in its own `startThread`.
 - `GetHeroArmy(hero)` → table of the 7 slot creature types (0 or nil for empty slots).
 - `AddHeroCreatureType(player, hero, faction, tier, nb, default)`: adds `nb` creatures to the existing stack of that faction tier (base or upgraded); if none, adds `CREATURES_BY_FACTION[faction][tier][default]` (`default = 0` means add nothing). Prefer it over `AddHeroCreatures` for faction creatures.
 - `CountHeroCreatureType(player, hero, faction, tier)`, `UpgradeHeroCreatures(player, hero, base, upgrade)`, `AddHeroCreaturePerLevel(player, hero, creature, coef)`.

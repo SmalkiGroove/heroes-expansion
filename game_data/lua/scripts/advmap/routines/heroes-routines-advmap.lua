@@ -66,23 +66,15 @@ function Routine_TrainPeasantsToArchers(hero, town)
                 n = min(n, peasants)
                 if n > 0 then
                     local player = GetObjectOwner(hero)
-                    QuestionBoxForPlayers(
-                        GetPlayerFilter(player),
-                        {"/Text/Game/Scripts/HeroSpe/TrainArchers.txt"; num=n},
-                        "Routine_TrainPeasantsToArchersConfirm("..player..",'"..hero.."',"..n..")",
-                        "NoneRoutine"
-                    )
+                    if Prompt(player, {"/Text/Game/Scripts/HeroSpe/TrainArchers.txt"; num=n}) then
+                        RemoveHeroCreatures(hero, CREATURE_PEASANT, amount) sleep(1)
+                        AddHeroCreatures(hero, CREATURE_ARCHER, amount) sleep(1)
+                        Var_Dougal_TrainCount = Var_Dougal_TrainCount + amount
+                    end
                 end
             end
         end
     end
-end
-function Routine_TrainPeasantsToArchersConfirm(player, hero, amount)
-    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_TrainPeasantsToArchersConfirm")
-    log.debug("Routine_TrainPeasantsToArchersConfirm", player, hero, amount)
-    RemoveHeroCreatures(hero, CREATURE_PEASANT, amount) sleep(1)
-    AddHeroCreatures(hero, CREATURE_ARCHER, amount) sleep(1)
-    Var_Dougal_TrainCount = Var_Dougal_TrainCount + amount
 end
 
 function Routine_GainExpFromTotalGolds(player, hero)
@@ -1122,12 +1114,8 @@ function Routine_TownBuildingUp(player, hero)
                         local cost = v[cur+1]
                         if GetResource(player, GOLD) >= cost then
                             local name = name_root..name_file[k][cur+1]
-                            QuestionBoxForPlayers(
-                                GetPlayerFilter(player),
-                                {"/Text/Game/Scripts/HeroSpe/TownBuildingUp.txt"; building=name, golds=cost},
-                                "Routine_TownBuildingUpConfirm('"..player.."','"..hero.."','"..town.."','"..k.."','"..cost.."')",
-                                "NoneRoutine"
-                            )
+                            -- own thread: the daily handler must not wait for the answer
+                            startThread(Routine_TownBuildingUpPrompt, player, hero, town, k, cost, name)
                             break
                         end
                     end
@@ -1137,12 +1125,14 @@ function Routine_TownBuildingUp(player, hero)
     end
 end
 
-function Routine_TownBuildingUpConfirm(player, hero, town, building, cost)
-    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_TownBuildingUpConfirm")
-    log.debug("Routine_TownBuildingUpConfirm", player, hero, town, building, cost)
-    UpgradeTownBuilding(town, building)
-    TakeAwayResource(player, GOLD, 0+cost)
-    ChangeHeroStat(hero, STAT_MOVE_POINTS, -500)
+function Routine_TownBuildingUpPrompt(player, hero, town, building, cost, name)
+    log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_TownBuildingUpPrompt")
+    log.debug("Routine_TownBuildingUpPrompt", player, hero, town, building, cost, name)
+    if Prompt(player, {"/Text/Game/Scripts/HeroSpe/TownBuildingUp.txt"; building=name, golds=cost}) then
+        UpgradeTownBuilding(town, building)
+        TakeAwayResource(player, GOLD, cost)
+        ChangeHeroStat(hero, STAT_MOVE_POINTS, -500)
+    end
 end
 
 function Routine_GenerateSulfur(player, hero, level)

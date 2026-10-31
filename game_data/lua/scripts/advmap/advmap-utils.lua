@@ -23,6 +23,7 @@ function PlayerResponseCancel7() PLAYER_RESPONSE[7] = nil end
 function PlayerResponseCancel8() PLAYER_RESPONSE[8] = nil end
 
 function Prompt(player, message)
+	if IsAIPlayer(player) then return nil end
 	PLAYER_RESPONSE[player] = 0
 	QuestionBoxForPlayers(GetPlayerFilter(player), message, "PlayerResponseOk("..player..")", "PlayerResponseCancel"..player)
 	while PLAYER_RESPONSE[player] == 0 do sleep() end

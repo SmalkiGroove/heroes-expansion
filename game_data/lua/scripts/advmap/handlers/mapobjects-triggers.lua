@@ -130,37 +130,25 @@ function Trigger_WitchHut(hero, obj)
         local text_stat = ATTRIBUTE_NAME_FILE[givestat]
         local text_res = "/Text/Game/Scripts/Resources/"..RESOURCE_TEXT[Var_WitchHutResCost[givestat]]..".txt"
         if Prompt(player, {"/Text/Game/Scripts/MapObjects/WitchHut.txt"; stat=text_stat, res=text_res}) then
-            Trigger_WitchHut_confirm(player, hero, obj, givestat)
+            local res = Var_WitchHutResCost[givestat]
+            if GetResource(player, res) >= 3 then
+                Popup(player, {"/Text/Game/Scripts/MapObjects/WitchHutAccepted.txt"; stat=ATTRIBUTE_NAME_FILE[givestat]})
+                TakeAwayResource(player, res, 3)
+                ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
+                ChangeHeroStat(hero, STAT_EXPERIENCE, 5000)
+                ChangeHeroStat(hero, givestat, 2)
+                Var_WitchHutVisited[obj] = 1
+                for _,h in GetPlayerHeroes(player) do MarkObjectAsVisited(obj, h) end
+            else
+                Popup(player, "/Text/Game/Scripts/MapObjects/WitchHutRefused.txt")
+            end
         else
-            Trigger_WitchHut_cancel(player, hero, obj)
+            Popup(player, "/Text/Game/Scripts/MapObjects/WitchHutRefused.txt")
         end
     else
-        Trigger_WitchHut_visited(player, hero, obj)
-    end
-end
-function Trigger_WitchHut_confirm(player, hero, obj, givestat)
-    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_WitchHut_confirm")
-    local res = Var_WitchHutResCost[givestat]
-    if GetResource(player, res) >= 3 then
-        Popup(player, {"/Text/Game/Scripts/MapObjects/WitchHutAccepted.txt"; stat=ATTRIBUTE_NAME_FILE[givestat]})
-        TakeAwayResource(player, res, 3)
-        ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
-        ChangeHeroStat(hero, STAT_EXPERIENCE, 5000)
-        ChangeHeroStat(hero, givestat, 2)
-        Var_WitchHutVisited[obj] = 1
+        Popup(player, "/Text/Game/Scripts/MapObjects/WitchHutVisited.txt")
         for _,h in GetPlayerHeroes(player) do MarkObjectAsVisited(obj, h) end
-    else
-        Trigger_WitchHut_cancel(player, hero, obj)
     end
-end
-function Trigger_WitchHut_cancel(player, hero, obj)
-    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_WitchHut_cancel")
-    Popup(player, "/Text/Game/Scripts/MapObjects/WitchHutRefused.txt")
-end
-function Trigger_WitchHut_visited(player, hero, obj)
-    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_WitchHut_visited")
-    Popup(player, "/Text/Game/Scripts/MapObjects/WitchHutVisited.txt")
-    for _,h in GetPlayerHeroes(player) do MarkObjectAsVisited(obj, h) end
 end
 function WitchHuts_reset()
     log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: WitchHuts_reset")
@@ -214,22 +202,15 @@ function Trigger_Tavern(hero, obj)
     log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_Tavern")
     log.debug("Trigger_Tavern", hero, obj)
     local player = GetObjectOwner(hero)
-    QuestionBoxForPlayers(
-        GetPlayerFilter(player),
-        "/Text/Game/Scripts/MapObjects/Tavern.txt",
-        "Trigger_Tavern_confirm("..player..",'"..hero.."')",
-        "NoneRoutine"
-    )
-end
-function Trigger_Tavern_confirm(player, hero)
-    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_Tavern_confirm")
-    local town = FindClosestTown(player, hero)
-    if town then
-        ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
-        local x = MAP_TOWNS[town].x
-        local y = MAP_TOWNS[town].y
-        local z = MAP_TOWNS[town].z
-        SetObjectPosition(hero, x, y, z, 4)
+    if Prompt(player, "/Text/Game/Scripts/MapObjects/Tavern.txt") then
+        local town = FindClosestTown(player, hero)
+        if town then
+            ChangeHeroStat(hero, STAT_MOVE_POINTS, -9999)
+            local x = MAP_TOWNS[town].x
+            local y = MAP_TOWNS[town].y
+            local z = MAP_TOWNS[town].z
+            SetObjectPosition(hero, x, y, z, 4)
+        end
     end
 end
 
@@ -250,22 +231,15 @@ function Trigger_WarAcademy(hero, obj)
         end
         local text_stat = ATTRIBUTE_NAME_FILE[stat]
         local text_wm = WAR_MACHINE_NAME_FILE[wm]
-        QuestionBoxForPlayers(
-            GetPlayerFilter(player),
-            {"/Text/Game/Scripts/MapObjects/WarAcademy.txt"; stat=text_stat, wm=text_wm},
-            "Trigger_WarAcademy_confirm("..player..",'"..hero.."','"..obj.."',"..stat..","..wm..")",
-            "NoneRoutine"
-        )
+        if Prompt(player, {"/Text/Game/Scripts/MapObjects/WarAcademy.txt"; stat=text_stat, wm=text_wm}) then
+            GiveHeroWarMachine(hero, wm)
+            ChangeHeroStat(hero, stat, 1)
+            ChangeHeroStat(hero, STAT_MOVE_POINTS, -500)
+            Var_WarAcademyVisited[obj][hero] = 1
+            MarkObjectAsVisited(obj, hero)
+            Popup(player, {"/Text/Game/Scripts/MapObjects/WarAcademyAccepted.txt"; stat=ATTRIBUTE_NAME_FILE[stat], wm=WAR_MACHINE_NAME_FILE[wm]})
+        end
     end
-end
-function Trigger_WarAcademy_confirm(player, hero, obj, stat, wm)
-    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_WarAcademy_confirm")
-    GiveHeroWarMachine(hero, wm)
-    ChangeHeroStat(hero, stat, 1)
-    ChangeHeroStat(hero, STAT_MOVE_POINTS, -500)
-    Var_WarAcademyVisited[obj][hero] = 1
-    MarkObjectAsVisited(obj, hero)
-    Popup(player, {"/Text/Game/Scripts/MapObjects/WarAcademyAccepted.txt"; stat=ATTRIBUTE_NAME_FILE[stat], wm=WAR_MACHINE_NAME_FILE[wm]})
 end
 function WarAcademies_reset()
     log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: WarAcademies_reset")
@@ -331,26 +305,19 @@ function Trigger_SeerHut(hero, obj)
     if IsAIPlayer(player) then
         NoOverrideAI(obj, hero, "Trigger_SeerHut")
     else
-        QuestionBoxForPlayers(
-            GetPlayerFilter(player),
-            "/Text/Game/Scripts/MapObjects/SeerHut.txt",
-            "Trigger_SeerHut_confirm("..player..")",
-            "NoneRoutine"
-        )
-    end
-end
-function Trigger_SeerHut_confirm(player)
-    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_SeerHut_confirm")
-    if GetResource(player, GOLD) < 5000 then
-        Popup(player, "/Text/Game/Scripts/MapObjects/SeerHutCancel.txt") return
-    end
-    TakeAwayResource(player, GOLD, 5000)
-    for p = 1,8 do
-        if p ~= player and GetPlayerState(p) == 1 then
-            if GetPlayerTeam(p) ~= GetPlayerTeam(player) then
-                for _,h in GetPlayerHeroes(p) do
-                    local x, y, z = GetObjectPosition(h)
-                    OpenCircleFog(x, y, z, 2, player)
+        if Prompt(player, "/Text/Game/Scripts/MapObjects/SeerHut.txt") then
+            if GetResource(player, GOLD) < 5000 then
+                Popup(player, "/Text/Game/Scripts/MapObjects/SeerHutCancel.txt") return
+            end
+            TakeAwayResource(player, GOLD, 5000)
+            for p = 1,8 do
+                if p ~= player and GetPlayerState(p) == 1 then
+                    if GetPlayerTeam(p) ~= GetPlayerTeam(player) then
+                        for _,h in GetPlayerHeroes(p) do
+                            local x, y, z = GetObjectPosition(h)
+                            OpenCircleFog(x, y, z, 2, player)
+                        end
+                    end
                 end
             end
         end
@@ -365,39 +332,32 @@ function Trigger_MotherEarthShrine(hero, obj)
     if IsAIPlayer(player) then
         NoOverrideAI(obj, hero, "Trigger_MotherEarthShrine")
     else
-        QuestionBoxForPlayers(
-            GetPlayerFilter(player),
-            "/Text/Game/Scripts/MapObjects/MotherEarthShrine.txt",
-            "Trigger_MotherEarthShrine_confirm("..player..",'"..hero.."')",
-            "NoneRoutine"
-        )
-    end
-end
-function Trigger_MotherEarthShrine_confirm(player, hero)
-    log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_MotherEarthShrine_confirm")
-    local faction = HEROES[hero].faction
-    local towns = GetHeroTowns(player, hero)
-    local total = 0
-    local k, units, amounts = GetHeroArmySummary(hero)
-    for i = 1, k do
-        local creature = units[i]
-        local f = GetFaction(creature)
-        if f ~= faction and f ~= NEUTRAL then
-            local count = amounts[i]
-            local tier = GetTier(creature)
-            local recruit = CREATURES_BY_FACTION[faction][tier][1]
-            for _, town in towns do
-                if GetTownBuildingLevel(town, 6+tier) > 0 then
-                    local cur = GetObjectDwellingCreatures(town, recruit)
-                    SetObjectDwellingCreatures(town, recruit, count + cur)
-                    RemoveHeroCreatures(hero, creature, count)
-                    total = total + count
-                    break
+        if Prompt(player, "/Text/Game/Scripts/MapObjects/MotherEarthShrine.txt") then
+            local faction = HEROES[hero].faction
+            local towns = GetHeroTowns(player, hero)
+            local total = 0
+            local k, units, amounts = GetHeroArmySummary(hero)
+            for i = 1, k do
+                local creature = units[i]
+                local f = GetFaction(creature)
+                if f ~= faction and f ~= NEUTRAL then
+                    local count = amounts[i]
+                    local tier = GetTier(creature)
+                    local recruit = CREATURES_BY_FACTION[faction][tier][1]
+                    for _, town in towns do
+                        if GetTownBuildingLevel(town, 6+tier) > 0 then
+                            local cur = GetObjectDwellingCreatures(town, recruit)
+                            SetObjectDwellingCreatures(town, recruit, count + cur)
+                            RemoveHeroCreatures(hero, creature, count)
+                            total = total + count
+                            break
+                        end
+                    end
                 end
             end
+            Popup(player, {"/Text/Game/Scripts/MapObjects/MotherEarthShrineDone.txt"; amount=total})
         end
     end
-    Popup(player, {"/Text/Game/Scripts/MapObjects/MotherEarthShrineDone.txt"; amount=total})
 end
 
 
