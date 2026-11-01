@@ -300,3 +300,17 @@ Initial beta release !
 - Make Earthquake deal magical earth damage (affected my spell-proof and earth immunities)
 - Remove UI from save files
 - Maps no longer require script and secondary objective to work in multiplayer
+
+### 0.6.1 (01/11/2026)
+
+#### New
+
+- Launchers for regular games or duel games
+- Duel map (alpha)
+
+#### Fixed/Changed
+
+- Huge scripts rework, fixed many issues in multiplayer
+- Lots of small fixes
+- RMG doesn't spawn monsters sometimes
+- Updated weekly growths

@@ -73,7 +73,7 @@ with zipfile.ZipFile(os.path.join(workdir, pak_file), 'w', zipfile.ZIP_DEFLATED)
 game_texts_path = "../game_texts"
 text_dirs = [
     "texts-EN",
-    # "texts-duel-EN",
+    "texts-duel-EN",
 ]
 
 for textdir in text_dirs:

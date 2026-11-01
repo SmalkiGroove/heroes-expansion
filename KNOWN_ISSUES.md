@@ -16,6 +16,7 @@
 
 ### Bugs
 
+- Alchemy lab 3,3 after golem
 
 ### Suggestions
 
@@ -25,6 +26,12 @@
 ### Balance
 
 - Inferno and Dungeon sacrificial buildings are bad
+- Training perks Assault/Stun too strong
+
+### Duel
+
+- Staging nb keys
+- Leadership too many high tier
 
 ### Massive work required
 
@@ -38,6 +45,3 @@
 
 
 # FIXED/CHANGED
-
-- Huge scripts rework, fixed many issues in multiplayer
-- RMG doesn't spawn monsters sometimes
