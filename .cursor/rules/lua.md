@@ -144,7 +144,7 @@ The adventure map runtime provides the following predefined functions for intera
 
 - `QuestionBoxForPlayers(playerFilter, text, confirmFunction, cancelFunction)` → void: Show dialog with yes/no options
   - confirmFunction and cancelFunction are string callbacks to execute. The mod calls it only from `Prompt` (`advmap-utils.lua`)
-  - confirmFunction can be a call with arguments (`"Func(1,'hero')"`), but cancelFunction must be a bare function name (`"NoneRoutine"`, `"PlayerResponseCancel1"`): a call with arguments runs, then logs "attempt to call a nil value" when you click Cancel (seen in a hotseat duel; the world script runner wraps callbacks as `parse([[<name>(<params>);]])()`)
+  - Both callbacks are run as `"<callback>();"` (`errorHook(StopTrigger); parse([[%s]])(); StopTrigger();`, string `0xE2993C` in the exe). A bare name (`"NoneRoutine"`) works. A call with arguments (`"Func(1,'hero')"`) runs, and then the extra `()` calls its result: the function must return a function (`return NoneRoutine`), or the log gets "attempt to call a nil value" after each click, on OK as well as on Cancel (seen in a hotseat duel). Vanilla's `MakeSyncCommandCallback` (`advmap-startup.lua`) relies on the same call. `PlayerResponseOk` / `PlayerResponseCancel` (`advmap-utils.lua`) follow it.
 - `MessageBoxForPlayers(playerFilter, text, onCloseFunction)` → void: Show message dialog
   - onCloseFunction is a string callback to execute
   - `text` (here and in `QuestionBoxForPlayers` / `ShowFlyingSign`) is either a text file path or a table `{"/Text/...txt"; key=value, ...}` whose values fill the `<value=key>` placeholders of the file. A value can itself be another text file path (e.g. an artifact name file)
@@ -173,7 +173,7 @@ The adventure map runtime provides the following predefined functions for intera
 
 - `print(message)` → void: Write to game console
   - a `log` table is defined in `common.lua` with `log.error`, `log.warn`, `log.info`, `log.debug` and `log.trace` (each takes a string). They are no-ops until `log.SetLogLevel(level)` (`LOG_LEVEL` in `config.lua`) enables them (1 = error ... 5 = trace), then print with a `[LEVEL]` prefix. `log.debug(str, ...)` also takes values: `log.debug("Name", a, b)` prints `Name(a, b)` (`log.format`; `nil` prints as nil, a table would stop the thread), and the string is only built when the debug level is on.
-  - Script errors print `(Script) ERROR: <message>` without a location, and stop the thread. `LogThreadError("Name", args...)` (`advmap-utils.lua`) sets the thread's `errorHook` to also log `[ERROR] Script error in Name(args)`. It is called at the start of the advmap functions run by `startThread` and of the duel stages, so the error names the last such function the thread entered. Never call it in combat scripts: the combat engine's waited calls (`DoPrepare`, `DoStart`, `UnitMove`) rely on their own error hook to resume the combat.
+  - Script errors print `(Script) ERROR: <message>` without a location, and stop the thread. `LogThreadError("Name", args...)` (`advmap-startup.lua`) sets the thread's `errorHook` to also log `[ERROR] Script error in Name(args)`. It is called at the start of the advmap functions run by `startThread` and of the duel stages, so the error names the last such function the thread entered. Never call it in combat scripts: the combat engine's waited calls (`DoPrepare`, `DoStart`, `UnitMove`) rely on their own error hook to resume the combat.
 
 #### Utility Functions (Limited Lua)
 
@@ -303,7 +303,7 @@ Ports of the adventure map functions of the same name, with the same arguments a
 
 - `print(message)` → void: Write to game console
   - a `log` table is defined in `common.lua` with `log.error`, `log.warn`, `log.info`, `log.debug` and `log.trace` (each takes a string). They are no-ops until `log.SetLogLevel(level)` (`LOG_LEVEL` in `config.lua`) enables them (1 = error ... 5 = trace), then print with a `[LEVEL]` prefix. `log.debug(str, ...)` also takes values: `log.debug("Name", a, b)` prints `Name(a, b)` (`log.format`; `nil` prints as nil, a table would stop the thread), and the string is only built when the debug level is on.
-  - Script errors print `(Script) ERROR: <message>` without a location, and stop the thread. `LogThreadError("Name", args...)` (`advmap-utils.lua`) sets the thread's `errorHook` to also log `[ERROR] Script error in Name(args)`. It is called at the start of the advmap functions run by `startThread` and of the duel stages, so the error names the last such function the thread entered. Never call it in combat scripts: the combat engine's waited calls (`DoPrepare`, `DoStart`, `UnitMove`) rely on their own error hook to resume the combat.
+  - Script errors print `(Script) ERROR: <message>` without a location, and stop the thread. `LogThreadError("Name", args...)` (`advmap-startup.lua`) sets the thread's `errorHook` to also log `[ERROR] Script error in Name(args)`. It is called at the start of the advmap functions run by `startThread` and of the duel stages, so the error names the last such function the thread entered. Never call it in combat scripts: the combat engine's waited calls (`DoPrepare`, `DoStart`, `UnitMove`) rely on their own error hook to resume the combat.
 
 #### Utility Functions (Limited Lua)
 
@@ -424,7 +424,7 @@ The duel map reuses the adventure map runtime with its own scripts (`/scripts/du
 
 ### Detection and difficulty
 
-`DUEL_MODE` is `-1` on regular maps, otherwise the difficulty level (0 to 3). Test it with `IsDuelMode()`. "Per difficulty level" in duel descriptions means `DUEL_MODE`.
+`advmap-manager.lua` detects the duel map by its `DUEL_START` object (`IsObjectExists`, which returns nil without an error on other maps). `DUEL_MODE` is `-1` on regular maps, otherwise the difficulty level (0 to 3). Test it with `IsDuelMode()`. "Per difficulty level" in duel descriptions means `DUEL_MODE`.
 
 ### What runs and what does not
 
@@ -454,7 +454,8 @@ Skills have no level-up effects: an effect that would depend on when the skill w
 ### Duel data
 
 - `DUEL_HERO[player]`, `DUEL_FACTION[player]`, `DUEL_TOWN[player]` / `DuelPlayerTown(player)`.
-- `DUEL_CREATURE_GROWTH[faction][creature]`: weekly growth of the faction base creatures ("weekly growth" in descriptions).
+- Weekly growth ("weekly growth" in descriptions) is `GetGrowth(creature)` from `creatures.lua`, like outside the duel. Loop over a faction's base creatures with `CREATURES_BY_FACTION[faction][tier][1]`.
+- `DUEL_BONUS_GROWTH[faction][creature]`: extra weekly growth of the base creatures, added only to the initial town recruits (`DuelTownRecruits`: (growth + bonus) × `DUEL_RECRUITS_WEEKS`).
 - `DUEL_TOWN_RECRUITS[player][creature]`: mirror of the town dwellings. Always modify town recruits with `DuelAddTownRecruits(player, creature, nb)` so both stay in sync.
 - `DUEL_ADVENTURE_DAYS` (base amount of days), `DUEL_PLAYER_DATA.ADVENTURE_DAYS[player]` (remaining days, can be increased), `DUEL_PLAYER_DATA.TOTAL_EXP[player]` (hero experience at staging).
 - `DUEL_DOLMEN_MAX_LEVEL` and `DUEL_DOLMEN_LEVELS[player]`: decrease the latter to grant extra Dolmen uses.

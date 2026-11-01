@@ -106,12 +106,12 @@ end
 
 function Trigger_Monsters_Ongoing(hero, obj)
     log.trace("/scripts/advmap/handlers/mapobjects-triggers.lua: Trigger_Monsters_Ongoing")
-    log.debug("Trigger_Monsters_Ongoing", hero, obj)
     local x, y, z = GetObjectPosition(hero)
     while IsObjectExists(hero) do
         log.debug("Hero "..hero.." is fighting monsters...")
         sleep(5)
         if not IsObjectExists(obj) then return end
+        if not IsObjectExists(hero) then break end
         local xx, yy, zz = GetObjectPosition(hero)
         if x ~= xx or y ~= yy then break end
     end

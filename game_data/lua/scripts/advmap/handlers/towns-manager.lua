@@ -9,15 +9,11 @@ function SetupTownTavern(town, faction)
 end
 
 function GetFactionTowns(num)
-	log.trace("/scripts/advmap/handlers/towns-manager.lua: GetFactionTowns")
-	log.debug("GetFactionTowns", num)
 	local towntype = Towns_Types[num] or "TOWN"
     return GetObjectNamesByType(towntype)
 end
 
 function GetPlayerTowns(player)
-	log.trace("/scripts/advmap/handlers/towns-manager.lua: GetPlayerTowns")
-	log.debug("GetPlayerTowns", player)
 	local cities = {}
 	local towns = GetObjectNamesByType("TOWN")
 	for i,town in towns do
@@ -178,7 +174,6 @@ end
 
 function TownBuildTrigger(player)
     log.trace("/scripts/advmap/handlers/towns-manager.lua: TownBuildTrigger")
-    log.debug("TownBuildTrigger", player)
     for _,town in GetPlayerTowns(player) do
         if MAP_TOWN_BUILDINGS[town] then
             for b,v in MAP_TOWN_BUILDINGS[town] do

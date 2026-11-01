@@ -1145,7 +1145,6 @@ function Routine_MultiplyTroops(player, hero)
     log.trace("/scripts/advmap/routines/heroes-routines-advmap.lua: Routine_MultiplyTroops")
     log.debug("Routine_MultiplyTroops", player, hero)
     local level = GetHeroLevel(hero)
-    local base_growth = {66, 36, 22, 11, 5, 3, 1}
     local towns = {}
     for _, town in GetHeroTowns(player, hero) do
         local grail = GetTownBuildingLevel(town, TOWN_BUILDING_GRAIL)
@@ -1178,11 +1177,11 @@ function Routine_MultiplyTroops(player, hero)
                     local growth = 0
                     for town, mult in towns do
                         if GetTownBuildingLevel(town, 6 + tier) ~= 0 then
-                            growth = growth + base_growth[tier] * mult
+                            growth = growth + GetGrowth(cr) * mult
                         end
                     end
                     if dwellings[tier] > 0 then
-                        growth = growth + base_growth[tier] * dwellings[tier] + dwellings[tier]
+                        growth = growth + GetGrowth(cr) * dwellings[tier] + dwellings[tier]
                     end
                     local nb = trunc(0.01 * level * growth)
                     if nb > 0 then AddHeroCreatures(hero, cr, nb) end

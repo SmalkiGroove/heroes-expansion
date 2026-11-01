@@ -19,11 +19,11 @@ log = {
     end,
 
     SetLogLevel = function(level)
-        if level >= 1 then log.error = function(str) print("[ERROR] "..str) end end
-        if level >= 2 then log.warn = function(str) print("[WARN]  "..str) end end
-        if level >= 3 then log.info = function(str) print("[INFO]  "..str) end end
-        if level >= 4 then log.debug = function(str, ...) print("[DEBUG] ## "..log.format(str, arg)) end end
-        if level >= 5 then log.trace = function(str) print("[TRACE] ##### "..str) end end
+        if level >= 1 then log.error = function(str) print("!!!! "..str) end end
+        if level >= 2 then log.warn = function(str) print("! "..str) end end
+        if level >= 3 then log.info = function(str) print(""..str) end end
+        if level >= 4 then log.debug = function(str, ...) print("# "..log.format(str, arg)) end end
+        if level >= 5 then log.trace = function(str) print("#### "..str) end end
     end,
 }
 

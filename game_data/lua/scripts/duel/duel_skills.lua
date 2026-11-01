@@ -10,8 +10,7 @@ function DuelLogistics(player, hero)
     local nb = {0,0,0}
     for i = 1,n do
         local cr = CREATURES_BY_FACTION[DUEL_FACTION[player]][i][1]
-        local growth = DUEL_CREATURE_GROWTH[DUEL_FACTION[player]][cr]
-        nb[i] = round(growth * bonus)
+        nb[i] = round(GetGrowth(cr) * bonus)
         local new = DUEL_TOWN_RECRUITS[player][cr] + nb[i]
         SetObjectDwellingCreatures(DuelPlayerTown(player), cr, new)
         DUEL_TOWN_RECRUITS[player][cr] = new
@@ -65,11 +64,12 @@ function DuelLeadership(player, hero, level)
     local percent = level * (6 + 2 * n + DuelHeroLeadershipBonus(hero))
     if HasHeroSkill(hero, PERK_CHARISMA) then percent = 2 * percent end
     local result = {0,0,0,0,0,0,0}
-    for creature, growth in DUEL_CREATURE_GROWTH[DUEL_FACTION[player]] do
-        local nb = trunc(0.01 * percent * growth)
+    for tier = 1,7 do
+        local creature = CREATURES_BY_FACTION[DUEL_FACTION[player]][tier][1]
+        local nb = trunc(0.01 * percent * GetGrowth(creature))
         if nb > 0 then
             AddHeroCreatures(hero, creature, nb)
-            result[GetTier(creature)] = nb
+            result[tier] = nb
         end
     end
     Popup(player, {"/Text/Duel/Skill/Leadership.txt"; arg1=result[1], arg2=result[2], arg3=result[3], arg4=result[4], arg5=result[5], arg6=result[6], arg7=result[7]})
@@ -83,7 +83,7 @@ function DuelDiplomacy(player, hero, level)
     for i = 1,trunc(0.25 * level) do
         local tier = random(1,5)
         local creature = CREATURES_BY_FACTION[DUEL_FACTION[player]][tier][1]
-        result[tier] = result[tier] + round(0.01 * percent * DUEL_CREATURE_GROWTH[DUEL_FACTION[player]][creature])
+        result[tier] = result[tier] + round(0.01 * percent * GetGrowth(creature))
     end
     for tier = 1,5 do
         if result[tier] > 0 then AddHeroCreatures(hero, CREATURES_BY_FACTION[DUEL_FACTION[player]][tier][1], result[tier]) end
@@ -325,8 +325,9 @@ function DuelWarPolicy(player, hero, level)
     log.trace("/scripts/duel/duel_skills.lua: DuelWarPolicy")
     log.debug("DuelWarPolicy", player, hero, level)
     local percent = 10 * level
-    for creature, growth in DUEL_CREATURE_GROWTH[DUEL_FACTION[player]] do
-        local nb = round(0.01 * percent * growth)
+    for tier = 1,7 do
+        local creature = CREATURES_BY_FACTION[DUEL_FACTION[player]][tier][1]
+        local nb = round(0.01 * percent * GetGrowth(creature))
         local new = DUEL_TOWN_RECRUITS[player][creature] + nb
         if nb > 0 then
             SetObjectDwellingCreatures(DuelPlayerTown(player), creature, new)
@@ -352,8 +353,7 @@ function DuelNecromancy(player, hero, level)
     local percent = 16 * (n+1) * level
     for tier = 1,7 do
         local creature = CREATURES_BY_FACTION[NECROPOLIS][tier][1]
-        local growth = DUEL_CREATURE_GROWTH[NECROPOLIS][creature]
-        local nb = ceil(0.01 * growth * percent / tier)
+        local nb = ceil(0.01 * GetGrowth(creature) * percent / tier)
         AddHeroCreatures(hero, creature, nb)
         result[tier] = nb
     end

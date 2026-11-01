@@ -536,6 +536,14 @@ function IsHumanPlayer( player )
 	return GetPlayerState(player) == 1 and not IsAIPlayer(player)
 end
 
+-- logs "Script error in name(args)" when a script error stops the current thread, which then names
+-- the last function that called it. Call it in functions run by startThread, never in combat scripts:
+-- the combat engine's waited calls rely on their own error hook to resume the combat
+function LogThreadError(name, ...)
+	local values = arg
+	errorHook(function() log.error("!!! Script error in "..log.format(%name, %values)) end)
+end
+
 
 sleep() log.SetLogLevel(LOG_LEVEL)
 

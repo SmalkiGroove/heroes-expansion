@@ -45,7 +45,7 @@ end
 function DuelWulfstanSetup(player, hero)
     log.trace("/scripts/duel/duel_heroes.lua: DuelWulfstanSetup")
     log.debug("DuelWulfstanSetup", player, hero)
-    local nb = DUEL_CREATURE_GROWTH[FORTRESS][CREATURE_DEFENDER]
+    local nb = GetGrowth(CREATURE_DEFENDER)
     AddHeroCreatureType(player, hero, FORTRESS, 1, nb, 1)
     GiveHeroWarMachine(hero, WAR_MACHINE_BALLISTA)
     GiveHeroWarMachine(hero, WAR_MACHINE_FIRST_AID_TENT)
@@ -285,7 +285,7 @@ end
 function DuelFindan(player, hero)
     log.trace("/scripts/duel/duel_heroes.lua: DuelFindan")
     log.debug("DuelFindan", player, hero)
-    local nb = round(0.1 * DUEL_CREATURE_GROWTH[PRESERVE][CREATURE_WOOD_ELF] * GetHeroLevel(hero))
+    local nb = round(0.1 * GetGrowth(CREATURE_WOOD_ELF) * GetHeroLevel(hero))
     DuelAddTownRecruits(player, CREATURE_WOOD_ELF, nb)
     ChangeHeroStat(hero, STAT_ATTACK, 1)
     ChangeHeroStat(hero, STAT_KNOWLEDGE, 1)
@@ -460,7 +460,7 @@ function DuelRaven(player, hero)
     local result = {0,0,0}
     for tier = 1,3 do
         local creature = CREATURES_BY_FACTION[NECROPOLIS][tier][1]
-        result[tier] = (3 + DUEL_MODE) * DUEL_CREATURE_GROWTH[NECROPOLIS][creature]
+        result[tier] = (3 + DUEL_MODE) * GetGrowth(creature)
         DuelAddTownRecruits(player, creature, result[tier])
     end
     Popup(player, {"/Text/Duel/Hero/Raven.txt"; arg1=result[1], arg2=result[2], arg3=result[3]})
@@ -498,8 +498,9 @@ function DuelOrlando(player, hero)
     log.debug("DuelOrlando", player, hero)
     local gold = 500 * GetHeroLevel(hero)
     GiveResource(player, GOLD, gold)
-    for creature, growth in DUEL_CREATURE_GROWTH[INFERNO] do
-        DuelAddTownRecruits(player, creature, growth)
+    for tier = 1,7 do
+        local creature = CREATURES_BY_FACTION[INFERNO][tier][1]
+        DuelAddTownRecruits(player, creature, GetGrowth(creature))
     end
     Popup(player, {"/Text/Duel/Hero/Orlando.txt"; arg=gold})
 end
@@ -512,7 +513,7 @@ function DuelKhabeleth(player, hero)
     for tier = 1,7 do
         local creature = CREATURES_BY_FACTION[INFERNO][tier][1]
         local percent = 200 + 5 * level - 10 * tier
-        local nb = round(0.01 * percent * DUEL_CREATURE_GROWTH[INFERNO][creature])
+        local nb = round(0.01 * percent * GetGrowth(creature))
         AddHeroCreatureType(player, hero, INFERNO, tier, nb, 1)
         result[tier] = nb
     end
@@ -595,7 +596,7 @@ function DuelKragh(player, hero)
     local result = {0,0,0,0,0,0}
     for tier = 1,6 do
         local creature = CREATURES_BY_FACTION[STRONGHOLD][tier][1]
-        local nb = round(0.1 * DUEL_CREATURE_GROWTH[STRONGHOLD][creature] * level)
+        local nb = round(0.1 * GetGrowth(creature) * level)
         AddHeroCreatureType(player, hero, STRONGHOLD, tier, nb, 1)
         result[tier] = nb
     end
@@ -630,7 +631,7 @@ end
 function DuelKarukat(player, hero)
     log.trace("/scripts/duel/duel_heroes.lua: DuelKarukat")
     log.debug("DuelKarukat", player, hero)
-    local nb = GetHeroLevel(hero) + DUEL_MODE * DUEL_CREATURE_GROWTH[STRONGHOLD][CREATURE_WYVERN]
+    local nb = GetHeroLevel(hero) + DUEL_MODE * GetGrowth(CREATURE_WYVERN)
     AddHeroCreatureType(player, hero, STRONGHOLD, 6, nb, 1)
     Popup(player, {"/Text/Duel/Hero/Karukat.txt"; arg=nb})
 end
@@ -638,7 +639,7 @@ end
 function DuelKujin(player, hero)
     log.trace("/scripts/duel/duel_heroes.lua: DuelKujin")
     log.debug("DuelKujin", player, hero)
-    local nb = (1 + DUEL_MODE) * DUEL_CREATURE_GROWTH[STRONGHOLD][CREATURE_SHAMAN]
+    local nb = (1 + DUEL_MODE) * GetGrowth(CREATURE_SHAMAN)
     DuelAddTownRecruits(player, CREATURE_SHAMAN, nb)
     Popup(player, {"/Text/Duel/Hero/Kujin.txt"; arg=nb})
 end

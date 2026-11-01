@@ -10,13 +10,13 @@ for i = 1,8 do
 end
 
 -- Check Duel Map
-startThread(function()
-	log.info("Checking for duel map...")
-	DUEL_MODE = -1
-	GetObjectiveState('DUEL', FIRST_PLAYER)
+DUEL_MODE = -1
+if IsObjectExists("DUEL_START") then
 	DUEL_MODE = GetDifficulty()
+	log.info("-------------------------")
 	log.info("Duel map detected!")
-end)
+	log.info("-------------------------")
+end
 
 SCRIPTS_GROUP = {
 	[1] = {
@@ -91,7 +91,7 @@ function WatchPlayer(player, wait)
         while (not IsPlayerCurrent(player)) do sleep(10) end
     end
 	sleep(10)
-	log.info("$ WatchPlayer "..player)
+	log.info("WatchPlayer "..player)
     local tracker = {}
 	local heroTracker = function(hero)
 		local x,y,z = GetObjectPosition(hero)

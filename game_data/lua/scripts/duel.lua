@@ -351,6 +351,7 @@ function DuelMain()
     DuelOverrideWarAcademy()
     DuelOverrideSanctuary()
     DuelOverrideTombOfTheWarrior()
+    DuelOverrideShrineOfMagic()
 
     for player = 1,2 do DuelTownRecruits(player) end
 

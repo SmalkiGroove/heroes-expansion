@@ -233,3 +233,24 @@ function DuelTriggerTombOfTheWarrior(hero, obj)
     end
 end
 
+
+-- a hero with Commander gains 1 level at his first shrine of magic, other visits are vanilla
+DUEL_SHRINE_COMMANDER = {}
+function DuelOverrideShrineOfMagic()
+    for _, obj in GetObjectNamesByType("BUILDING_SHRINE_OF_MAGIC") do
+        Trigger(OBJECT_TOUCH_TRIGGER, obj, "DuelTriggerShrineOfMagic")
+        SetObjectEnabled(obj, nil)
+    end
+end
+function DuelTriggerShrineOfMagic(hero, obj)
+    local player = GetObjectOwner(hero)
+    if HasHeroSkill(hero, PERK_COMMANDER) and not DUEL_SHRINE_COMMANDER[hero] then
+        DUEL_SHRINE_COMMANDER[hero] = 1
+        LevelUpHero(hero)
+        MarkObjectAsVisited(obj, hero)
+        Popup(player, "/Text/Duel/Skill/Commander.txt")
+    else
+        NoOverrideAI(obj, hero, "DuelTriggerShrineOfMagic")
+    end
+end
+

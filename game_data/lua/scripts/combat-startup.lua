@@ -126,8 +126,10 @@ function createTutorialAliases()
     HideTutorialMessage = clearMessage
 end
 
-dofile("/scripts/common.lua") sleep()
-dofile("/scripts/combat-manager.lua") sleep()
+dofile('/scripts/config.lua')
+dofile("/scripts/common.lua")
+sleep() log.SetLogLevel(LOG_LEVEL)
+dofile("/scripts/combat-manager.lua")
 
 function DoPrepare()
 	ManageCombatPrepare()

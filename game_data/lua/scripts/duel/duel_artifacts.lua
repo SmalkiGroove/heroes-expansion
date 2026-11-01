@@ -102,8 +102,7 @@ function DuelCrownOfLeader(player, hero)
     if HasHeroSkill(hero, PERK_DIPLOMACY) then
         for i = 1,5 do
             local creature = CREATURES_BY_FACTION[DUEL_FACTION[player]][i][1]
-            local growth = DUEL_CREATURE_GROWTH[DUEL_FACTION[player]][creature]
-            AddHeroCreatures(hero, creature, growth)
+            AddHeroCreatures(hero, creature, GetGrowth(creature))
         end
         arg2 = 1
     end
@@ -111,8 +110,7 @@ function DuelCrownOfLeader(player, hero)
         local n = GetHeroSkillMastery(hero, SKILL_LOGISTICS)
         for i = 1,n do
             local creature = CREATURES_BY_FACTION[DUEL_FACTION[player]][i][1]
-            local growth = DUEL_CREATURE_GROWTH[DUEL_FACTION[player]][creature]
-            local new = DUEL_TOWN_RECRUITS[player][creature] + 2 * growth
+            local new = DUEL_TOWN_RECRUITS[player][creature] + 2 * GetGrowth(creature)
             SetObjectDwellingCreatures(DuelPlayerTown(player), creature, new)
             DUEL_TOWN_RECRUITS[player][creature] = new
         end
@@ -309,8 +307,9 @@ function DuelBearhideWraps(player, hero)
     log.trace("/scripts/duel/duel_artifacts.lua: DuelBearhideWraps")
     log.debug("DuelBearhideWraps", player, hero)
     local percent = 15 + 5 * GetHeroSkillMastery(hero, SKILL_LEADERSHIP)
-    for creature,growth in DUEL_CREATURE_GROWTH[DUEL_FACTION[player]] do
-        local nb = round(0.01 * growth * percent)
+    for tier = 1,7 do
+        local creature = CREATURES_BY_FACTION[DUEL_FACTION[player]][tier][1]
+        local nb = round(0.01 * GetGrowth(creature) * percent)
         if nb > 0 then AddHeroCreatures(hero, creature, nb) end
     end
     Popup(player, {"/Text/Duel/Artifact/BearhideWraps.txt"; arg=percent})

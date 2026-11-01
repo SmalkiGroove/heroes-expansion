@@ -9,23 +9,17 @@ end
 
 function PlayerResponseOk(player)
 	PLAYER_RESPONSE[player] = 1
+	return NoneRoutine
 end
-
--- the cancel callback of a question box must be a bare function name: the engine runs it as "<name>();",
--- so "PlayerResponseCancel(1)" would also call the nil result of PlayerResponseCancel(1)
-function PlayerResponseCancel1() PLAYER_RESPONSE[1] = nil end
-function PlayerResponseCancel2() PLAYER_RESPONSE[2] = nil end
-function PlayerResponseCancel3() PLAYER_RESPONSE[3] = nil end
-function PlayerResponseCancel4() PLAYER_RESPONSE[4] = nil end
-function PlayerResponseCancel5() PLAYER_RESPONSE[5] = nil end
-function PlayerResponseCancel6() PLAYER_RESPONSE[6] = nil end
-function PlayerResponseCancel7() PLAYER_RESPONSE[7] = nil end
-function PlayerResponseCancel8() PLAYER_RESPONSE[8] = nil end
+function PlayerResponseCancel(player)
+	PLAYER_RESPONSE[player] = nil
+	return NoneRoutine
+end
 
 function Prompt(player, message)
 	if IsAIPlayer(player) then return nil end
 	PLAYER_RESPONSE[player] = 0
-	QuestionBoxForPlayers(GetPlayerFilter(player), message, "PlayerResponseOk("..player..")", "PlayerResponseCancel"..player)
+	QuestionBoxForPlayers(GetPlayerFilter(player), message, "PlayerResponseOk("..player..")", "PlayerResponseCancel("..player..")")
 	while PLAYER_RESPONSE[player] == 0 do sleep() end
 	return PLAYER_RESPONSE[player]
 end

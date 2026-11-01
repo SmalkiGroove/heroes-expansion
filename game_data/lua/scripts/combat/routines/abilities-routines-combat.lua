@@ -2,7 +2,6 @@
 function Routine_AbilityCommandBallista(side, unit)
     log.trace("/scripts/combat/routines/abilities-routines-combat.lua: Routine_AbilityCommandBallista")
     log.debug("Routine_AbilityCommandBallista", side, unit)
-    local growth = {[CREATURE_MARKSMAN] = 30}
     if not ROUTINE_VARS.BallistaCommanders[unit] then
         ROUTINE_VARS.BallistaCommanders[unit] = 1
     end
@@ -13,9 +12,9 @@ function Routine_AbilityCommandBallista(side, unit)
             if x == 2 + side * 13 then
                 local type = GetCreatureType(unit)
                 local nb = GetCreatureNumber(unit)
-                if nb >= growth[type] then
+                if nb >= GetGrowth(type) then
                     if ROUTINE_VARS.BallistaCommanders[unit] == 1 then
-                        local value = 10 * growth[type]
+                        local value = 10 * GetGrowth(type)
                         value = nb / value
                         value = min(ATB_NEXT, value)
                         ShowFlyingSign("/Text/Game/Scripts/Combat/BallistaCommander.txt", unit, 9)
