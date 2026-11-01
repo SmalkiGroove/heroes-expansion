@@ -1,6 +1,6 @@
 
 DUEL_RECRUITS_WEEKS = {}
-for i = 1,7 do DUEL_RECRUITS_WEEKS[i] = (1+DUEL_MODE)*(13-i) end
+for i = 1,7 do DUEL_RECRUITS_WEEKS[i] = (1+DUEL_MODE)*6 + trunc(0.5*(8-i)) end
 
 -- extra weekly growth of the base creature of each tier, added to the creatures.lua growth for the town recruits
 DUEL_BONUS_GROWTH = {
