@@ -3,7 +3,7 @@
 	<ClassTypeID>285694860</ClassTypeID>
 	<Shared href="/UI/Doc/Creatures/Common/Text.(WindowTextViewShared).xdb#xpointer(/WindowTextViewShared)"/>
 	<Name>DocCreaturesStatCREATURE_CYCLOP_UNTAMEDRAbility4</Name>
-	<TooltipFileRef href="/Text/Game/Creatures/Creature_abilities/Crushing_blow/description.txt"/>
+	<TooltipFileRef href="/Text/Game/Creatures/Creature_abilities/No_melee_penalty/No_melee_penalty_desc.txt"/>
 	<Visible>true</Visible>
 	<Priority>2</Priority>
 	<GameMessageReactions/>
@@ -52,7 +52,7 @@
 	<Flags>
 		<SuperActive>false</SuperActive>
 	</Flags>
-	<TextFileRef href="/Text/Game/Creatures/Creature_abilities/Crushing_blow/name.txt"/>
+	<TextFileRef href="/Text/Game/Creatures/Creature_abilities/No_melee_penalty/No_melee_penalty_name.txt"/>
 	<ResizeOnTextSet>false</ResizeOnTextSet>
 	<ResizeWidthOnTextSet>false</ResizeWidthOnTextSet>
 	<TextFormat href="/UI/Doc/Creatures/Common/AbilityLeft.(TextFormat).xdb#xpointer(/TextFormat)"/>

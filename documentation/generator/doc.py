@@ -281,10 +281,11 @@ def get_spell_link(name):
 
 def spells_doc_line(tier, allspells):
     number = min(tier, 3)
-    s_light = list(map(lambda s: get_spell_name_2(s, allspells), set(spells_by_tier[tier]).intersection(spells_by_school['LIGHT'])))
-    s_dark = list(map(lambda s: get_spell_name_2(s, allspells), set(spells_by_tier[tier]).intersection(spells_by_school['DARK'])))
-    s_destructive = list(map(lambda s: get_spell_name_2(s, allspells), set(spells_by_tier[tier]).intersection(spells_by_school['DESTRUCTIVE'])))
-    s_natural = list(map(lambda s: get_spell_name_2(s, allspells), set(spells_by_tier[tier]).intersection(spells_by_school['NATURAL'])))
+    # in the order of doc-refs.yml (a set intersection would change the order on every run)
+    s_light = [get_spell_name_2(s, allspells) for s in spells_by_tier[tier] if s in spells_by_school['LIGHT']]
+    s_dark = [get_spell_name_2(s, allspells) for s in spells_by_tier[tier] if s in spells_by_school['DARK']]
+    s_destructive = [get_spell_name_2(s, allspells) for s in spells_by_tier[tier] if s in spells_by_school['DESTRUCTIVE']]
+    s_natural = [get_spell_name_2(s, allspells) for s in spells_by_tier[tier] if s in spells_by_school['NATURAL']]
     line = "| | | | | |"
     for i in range(number):
         line = f"| {tier} | {get_spell_link(s_light[i])} | {get_spell_link(s_dark[i])} | {get_spell_link(s_destructive[i])} | {get_spell_link(s_natural[i])} |\n" + line

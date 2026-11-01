@@ -364,7 +364,7 @@ Ultimate skills
 - __Rage of the Forest__ : All creatures in hero's army get +1 maximum damage, +2 Initiative and half their Defense is transfered to their Attack.
 
 <color_default>This skill is learnt by having 3 perks in Avenger and in four other common skills.
-- __Absolute Protection__ : Normal attacks against hero's creatures are always unlucky. Lucky attacks are turned to normal.
+- __Bulwark Rune__ : Normal attacks against hero's creatures are always unlucky. Lucky attacks are turned to normal.
 
 <color_default>This skill is learnt by having 3 perks in Runelore and in four other common skills.
 - __Omniscience__ : All spells that are in existance will be written to hero's spellbook and hero will be able to cast them on expert level.

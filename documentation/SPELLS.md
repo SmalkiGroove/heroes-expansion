@@ -5,20 +5,20 @@
 |------|-------|------|-------------|---------|
 | 1 | [Strength](#strength) | [Weakness](#weakness) | [Magic Arrow](#magic-arrow) | [Wasp Swarm](#wasp-swarm) |
 | | | | | |
-| 2 | [Endurance](#endurance) | [Rupture](#rupture) | [Lightning Bolt](#lightning-bolt) | [Land Mines](#land-mines) |
-| 2 | [Haste](#haste) | [Slow](#slow) | [Ice Bolt](#ice-bolt) | [Arcane Crystal](#arcane-crystal) |
+| 2 | [Endurance](#endurance) | [Rupture](#rupture) | [Ice Bolt](#ice-bolt) | [Arcane Crystal](#arcane-crystal) |
+| 2 | [Haste](#haste) | [Slow](#slow) | [Lightning Bolt](#lightning-bolt) | [Land Mines](#land-mines) |
 | | | | | |
-| 3 | [Cleansing](#cleansing) | [Suffering](#suffering) | [Fireball](#fireball) | [Regeneration](#regeneration) |
-| 3 | [Deflect Missile](#deflect-missile) | [Sorrow](#sorrow) | [Stone spikes](#stone-spikes) | [Summon Elementals](#summon-elementals) |
-| 3 | [Righteous Might](#righteous-might) | [Decay](#decay) | [Polar Ring](#polar-ring) | [Confusion](#confusion) |
+| 3 | [Deflect Missile](#deflect-missile) | [Sorrow](#sorrow) | [Stone spikes](#stone-spikes) | [Regeneration](#regeneration) |
+| 3 | [Righteous Might](#righteous-might) | [Suffering](#suffering) | [Polar Ring](#polar-ring) | [Summon Elementals](#summon-elementals) |
+| 3 | [Cleansing](#cleansing) | [Decay](#decay) | [Fireball](#fireball) | [Confusion](#confusion) |
 | | | | | |
-| 4 | [Blind](#blind) | [Vampirism](#vampirism) | [Fist of Wrath](#fist-of-wrath) | [Immunity](#immunity) |
-| 4 | [Divine Vengeance](#divine-vengeance) | [Raise Dead](#raise-dead) | [Firewall](#firewall) | [Earthquake](#earthquake) |
-| 4 | [Blade Barrier](#blade-barrier) | [Teleport](#teleport) | [Discharge](#discharge) | [Wasp Hive](#wasp-hive) |
+| 4 | [Blade Barrier](#blade-barrier) | [Vampirism](#vampirism) | [Firewall](#firewall) | [Wasp Hive](#wasp-hive) |
+| 4 | [Divine Vengeance](#divine-vengeance) | [Raise Dead](#raise-dead) | [Discharge](#discharge) | [Earthquake](#earthquake) |
+| 4 | [Blind](#blind) | [Teleport](#teleport) | [Fist of Wrath](#fist-of-wrath) | [Immunity](#immunity) |
 | | | | | |
-| 5 | [Holy Word](#holy-word) | [Shadow Image](#shadow-image) | [Deep Freeze](#deep-freeze) | [Conjure Phoenix](#conjure-phoenix) |
-| 5 | [Resurrection](#resurrection) | [Curse of the Netherworld](#curse-of-the-netherworld) | [Implosion](#implosion) | [Meteor Shower](#meteor-shower) |
-| 5 | [Celestial Shield](#celestial-shield) | [Berserk](#berserk) | [Armageddon](#armageddon) | [Mind Control](#mind-control) |
+| 5 | [Resurrection](#resurrection) | [Shadow Image](#shadow-image) | [Deep Freeze](#deep-freeze) | [Conjure Phoenix](#conjure-phoenix) |
+| 5 | [Holy Word](#holy-word) | [Curse of the Netherworld](#curse-of-the-netherworld) | [Armageddon](#armageddon) | [Mind Control](#mind-control) |
+| 5 | [Celestial Shield](#celestial-shield) | [Berserk](#berserk) | [Implosion](#implosion) | [Meteor Shower](#meteor-shower) |
 | | | | | |
 
 
