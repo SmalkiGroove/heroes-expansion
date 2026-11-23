@@ -33,4 +33,4 @@ In the `game_data` folder, the mod content is organized in subfolders based on t
 
 Similarly to the data files, the text files are archived into a .pak file and placed in the game's `data` folder. The text files are in .txt format with encoding UTF-16 LE.
 
-Under the `game_texts` folder, there are subfolders for each language supported by the mod, such as `texts-EN` for english, `texts-PL` for polish, etc. The source of truth for the text content is the english text files, which are edited directly in this repository. The other language text files are generated from the english ones using a translation tool, and should not be edited directly.
+Under the `game_texts` folder, there are subfolders for each language supported by the mod, such as `texts-EN` for english, `texts-PL` for polish, etc. The source of truth for the text content is the english text files, which are edited directly in this repository. The other language text files are generated from the english ones by `tools/translation/translate.py`, and should not be edited directly.

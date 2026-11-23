@@ -20,7 +20,7 @@ For work on the game binary (reverse engineering `H5X.exe`, runtime patches, sav
 | Folder | Content |
 |--------|---------|
 | `game_data/<folder>/` | Game data, the source of truth. Each folder becomes one pak, `h5x-<folder>.pak`. |
-| `game_texts/texts-<LANG>/` | Texts. `texts-EN` is the source; the PL, FR and RU folders are machine-translated and **must not be edited**. |
+| `game_texts/texts-<LANG>/` | Texts. `texts-EN` is the source; the PL, FR and RU folders are machine-translated by `tools/translation/translate.py` (see text.md). Fix a name in the glossary rather than in the translated files. |
 | `tools/` | Sync scripts, release, translator, generators, debug scripts |
 | `documentation/` | Markdown tables generated from the data by `documentation/generator/doc.py`. **Don't edit them; regenerate them.** |
 | `game_binary/` | Exe patcher (`patcher/patcher.py`) and its patch files, game launchers (`launcher/`) |
@@ -58,7 +58,7 @@ python tools/generators/generate-rmg-templates.py  # RMG templates from tools/ge
 python tools/generators/import-rmg-templates.py    # RMG template .xdb -> YAML source
 python tools/debug/validate.py                  # XML syntax of every .xdb in game_data, and paths found in two data folders; exits 1 on error, accepts --ref REF (only files changed since a tag/commit) / --jobs
 python tools/debug/print-creature-stats.py      # creature stats and balance score per tier, accepts --tier / --town / --stats / --sort / --abilities
-python tools/translator.py                      # machine-translates texts-EN files newer than their translation
+python tools/translation/translate.py           # translates texts-EN and texts-duel-EN (Claude Code CLI, see text.md), accepts --lang / --path / --limit / --jobs / --dry-run
 python tools/translation/glossary.py --data <TotE>/data --texts EN=<vanilla texts-EN> --texts PL=<vanilla texts-PL> --texts RU=<vanilla texts-RU> --texts FR=<vanilla texts-FR>  # translation glossary (see text.md)
 python tools/translation/translate-terms.py     # translates the new glossary terms (Claude API), accepts --dry-run / --lang / --category / --limit
 ```
@@ -66,7 +66,7 @@ python tools/translation/translate-terms.py     # translates the new glossary te
 - `game_binary/launcher/build.ps1` builds the launchers `H5X.exe` and `H5X-Duel.exe` (MSVC, output in `game_binary/bin/`) and copies them to the game's root folder.
 - `tools/update-doc.ps1` regenerates `documentation/*.md`.
 - `tools/release.py` bumps `VERSION`, writes the in-game version text, and builds the release paks.
-- Python dependencies: `jinja2` and `xmltodict` (generators), `pyyaml` (doc, glossary), `semver` (release), `deep_translator` (translator), `anthropic` (term translation), `Pillow` (editor icons).
+- Python dependencies: `jinja2` and `xmltodict` (generators), `pyyaml` (doc, glossary), `semver` (release), `anthropic` (term translation), `Pillow` (editor icons). `translate.py` needs the Claude Code CLI (`claude`), logged in.
 
 CI (`.github/workflows/`) only packages paks, on manual dispatch. It runs no tests.
 
