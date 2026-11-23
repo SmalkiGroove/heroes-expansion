@@ -16,7 +16,7 @@
 
 ### Bugs
 
-- Alchemy lab 3,3 after golem
+- Dispel didn't remove endurance
 
 ### Suggestions
 
@@ -32,6 +32,8 @@
 
 - Staging nb keys
 - Leadership too many high tier
+- Shrine override not working
+- Scouting +1 primary attributes
 
 ### Massive work required
 
@@ -45,3 +47,8 @@
 
 
 # FIXED/CHANGED
+
+- Alchemy lab incorrect placing in town build UI
+- Destructive spells cost more mana
+- Nerf celestial shield damage reduction and shield hp
+- Nerf Resurrect spellpower scaling

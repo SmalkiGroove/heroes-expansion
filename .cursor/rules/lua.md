@@ -87,7 +87,7 @@ The adventure map runtime provides the following predefined functions for intera
 - `TakeAwayResource(player, resourceType, amount)` → void (H5X DLL): Remove `amount` (≥ 0) of the resource; the result never goes below 0
   - Both are applied with the next game segment (single player) like `SetPlayerResource`: `GetPlayerResource` right after still returns the old amount until a `sleep(1)`
 - `GiveExp(hero, amount)` → void: Give experience directly to hero
-- `GetPlayerHeroes(player)` → table: Get list of all heroes owned by player
+- `GetPlayerHeroes(player)` → table: Get list of all heroes owned by player: the heroes on the map, then (H5X DLL) the heroes garrisoned in the player's towns, which vanilla leaves out
 - `GetPlayerState(player)` → number: Get player state (1 = active/present)
 - `GetCurrentPlayer()` → number: Get currently active player number
 - `IsPlayerCurrent(player)` → boolean: Check if player is currently active
@@ -105,6 +105,8 @@ The adventure map runtime provides the following predefined functions for intera
 - `AllowPlayerTavernRace(player, raceType, enabled)` → void: Control which races player can hire in taverns
 - `GetObjectDwellingCreatures(town, creature)` → number: Get recruitment count available in town dwelling
 - `SetObjectDwellingCreatures(town, creature, amount)` → void: Set recruitment count in town dwelling
+  - Same as `SetPlayerResource`: applied with the next game segment, so `GetObjectDwellingCreatures` + `SetObjectDwellingCreatures` from several threads in the same segment lose updates. Use `AddObjectDwellingCreatures` to add or remove
+- `AddObjectDwellingCreatures(town, creature, delta)` → void (H5X DLL): Add `delta` recruits (negative to remove) to a town or dwelling; the result never goes below 0. Several calls in the same segment add up, whatever the thread. Applied with the next game segment: `GetObjectDwellingCreatures` right after still returns the old count until a `sleep(1)`
 - `GetObjectCreature(object, creature)` → number: Get creature count in object
 - `GetObjectCreatures(object, creature)` → number: Get creature count from map object
 
