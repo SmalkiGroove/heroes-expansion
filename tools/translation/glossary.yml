@@ -1606,6 +1606,13 @@ skills:
     fr: Protection des Arcanes
     pl: Tajemna Ochrona
     ru: Тайная защита
+  Arcanism:
+    ids: [HERO_SKILL_ARCANISM]
+    new: true
+    desc: Unique Dungeon skill. Increase elemental chains bonus damages by 10/20/30%. Partially negates magic protection and allows hero to deal 25/50/75% of normal spell damage to otherwise resistant...
+    fr: Arcanisme
+    pl: Tajemna Wiedza
+    ru: Тайное знание
   Archery:
     ids: [HERO_SKILL_ARCHERY]
     pl: Łucznictwo
@@ -1625,6 +1632,13 @@ skills:
     fr: Tempête de Flèches
     pl: Burza Strzał
     ru: Шквал стрел
+  Artificer:
+    ids: [HERO_SKILL_ARTIFICIER]
+    new: true
+    desc: Unique Academy skill. Allows hero to create creature equipment of the first/second/third level. Hero gains the Crafted Artifact V1/V2/V3.
+    fr: Artisanat
+    pl: Rzemieślnik
+    ru: Мастер артефактов
   Artificial Glory:
     ids: [HERO_SKILL_ARTIFICIAL_GLORY]
     pl: Sztuczna Chwała
@@ -1637,6 +1651,11 @@ skills:
     fr: Entraînement d'Assaut
     pl: Trening Szturmowy
     ru: Штурмовая подготовка
+  Attack:
+    ids: [HERO_SKILL_OFFENCE]
+    pl: Atak
+    ru: Нападение
+    fr: Attaque
   Aura of Energy:
     ids: [HERO_SKILL_AURA_OF_ENERGY]
     new: true
@@ -1651,6 +1670,13 @@ skills:
     fr: Aura de Protection
     pl: Aura Ochrony
     ru: Аура защиты
+  Avenger:
+    ids: [HERO_SKILL_AVENGER]
+    new: true
+    desc: Unique Sylvan skill. Gain +1/+2/+3 Luck. Allows hero to choose 1/2/3 favored enemy from the Avenger's Guild in any Sylvan town.
+    fr: Vengeance
+    pl: Mściciel
+    ru: Мститель
   Back to the Void:
     ids: [HERO_SKILL_BACK_TO_THE_VOID]
     pl: Śmierć Nieistniejącym
@@ -1859,6 +1885,11 @@ skills:
     fr: Pouvoir du Brasier
     pl: Moc Płomieni
     ru: Сила пламени
+  Blood Rage:
+    ids: [HERO_SKILL_BLOOD_RAGE]
+    pl: Szał Krwi
+    ru: Гнев крови
+    fr: Rage Sanguinaire
   Bloodfire:
     ids: [HERO_SKILL_BLOODFIRE]
     pl: Moc Krwi
@@ -1902,6 +1933,13 @@ skills:
     pl: Zimna Stal
     ru: Холодная сталь
     fr: Acier Glacé
+  Combat:
+    ids: [HERO_SKILL_COMBAT]
+    new: true
+    desc: Increase by 20/40/60% the damages of the hero's attacks and his or her troops' retaliation strikes.
+    fr: Combat
+    pl: Walka
+    ru: Бой
   Commander:
     ids: [HERO_SKILL_COMMANDER]
     new: true
@@ -1952,6 +1990,13 @@ skills:
     pl: Odbicie Zaklęcia
     ru: Контрзаклинание
     fr: Contresort
+  Courage:
+    ids: [HERO_SKILL_COURAGE]
+    new: true
+    desc: Unique Haven skill. Hero's troops take 1/2/3% reduced damage from non-magical attacks per Morale point. Gain +1/2/3 Morale.
+    fr: Courage
+    pl: Odwaga
+    ru: Отвага
   Critical Strike:
     ids: [HERO_SKILL_BRUTALITY]
     new: true
@@ -1959,6 +2004,13 @@ skills:
     fr: Coup Critique
     pl: Cios Krytyczny
     ru: Критический удар
+  Dark Magic:
+    ids: [HERO_SKILL_DARK_MAGIC]
+    new: true
+    desc: Allows hero to learn Dark Magic spells of the third/fourth/fifth circle and learns a random one instantly. Increases Dark Magic spells efficiency, damages, duration etc.
+    fr: Magie des Ténèbres
+    pl: Magia Mroku
+    ru: Магия Тьмы
   Darkness Affinity:
     ids: [HERO_SKILL_DARKNESS_AFFINITY]
     new: true
@@ -1993,11 +2045,23 @@ skills:
     pl: Chroń Nas Wszystkich
     ru: Защити всех нас
     fr: Défenseur du Clan
+  Defense:
+    ids: [HERO_SKILL_DEFENSE]
+    pl: Obrona
+    ru: Защита
+    fr: Défense
   Defensive Formation:
     ids: [HERO_SKILL_DEFENSIVE_FORMATION]
     pl: Formacja Obronna
     ru: Оборонительный хирд
     fr: Formation Défensive
+  Despotism:
+    ids: [HERO_SKILL_DESPOTISM]
+    new: true
+    desc: After battles, the hero gains a temporary bonus to his or her highest primary attribute based on army size. The bonus is +1/2/3 and 1 more for every 1000/800/600 creatures in the army.
+    fr: Despotisme
+    pl: Despotyzm
+    ru: Деспотизм
   Destruction Learning:
     ids: [HERO_SKILL_DESTRUCTION_LEARNING]
     new: true
@@ -2005,6 +2069,13 @@ skills:
     fr: Etude de la Destruction
     pl: Nauka Zniszczenia
     ru: Изучение Хаоса
+  Destructive Magic:
+    ids: [HERO_SKILL_DESTRUCTIVE_MAGIC]
+    new: true
+    desc: Allows hero to learn Destructive Magic spells of the third/fourth/fifth circle and learns a random one instantly. Increases Destructive Magic spells efficiency, damages, duration etc.
+    fr: Magie de la Destruction
+    pl: Magia Zniszczenia
+    ru: Магия Хаоса
   Devotion:
     ids: [HERO_SKILL_DEVOTION]
     new: true
@@ -2357,6 +2428,11 @@ skills:
     pl: Odźwierny
     ru: Хозяин врат
     fr: Maître des Plans
+  Gating:
+    ids: [HERO_SKILL_GATING]
+    pl: Brama
+    ru: Открытие врат
+    fr: Déphasage
   Gear Up:
     ids: [HERO_SKILL_GEAR_UP]
     new: true
@@ -2376,6 +2452,13 @@ skills:
     pl: Wsparcie Goblinów
     ru: Помощь гоблинов
     fr: Soutien des Gobelins
+  Governance:
+    ids: [HERO_SKILL_GOVERNANCE]
+    new: true
+    desc: The hero generates 1000/2500/5000 Gold and 1/2/3 resource at the start of each week. The resource is determined by the Resource Silo of the faction.
+    fr: Gouvernance
+    pl: Zarządzanie
+    ru: Управление
   Graduate:
     ids: [HERO_SKILL_GRADUATE]
     pl: Absolwent
@@ -2478,7 +2561,7 @@ skills:
     pl: Napełnienie
     ru: Вливание
   Innates:
-    ids: [HERO_SKILL_INNATES/1, HERO_SKILL_INNATES/2, HERO_SKILL_INNATES/3]
+    ids: [HERO_SKILL_INNATES, HERO_SKILL_INNATES/1, HERO_SKILL_INNATES/2, HERO_SKILL_INNATES/3]
     new: true
     desc: Contains innates skills that cannot be learnt otherwise.
     fr: Aptitudes Innées
@@ -2513,6 +2596,27 @@ skills:
     pl: Ostatni Bastion
     ru: Битва до последнего
     fr: Persévérance
+  Leadership:
+    ids: [HERO_SKILL_LEADERSHIP]
+    new: true
+    desc: After defeating a neutral army, 10/15/20% of defeated troops join hero's side in a caravan.
+    fr: Commandement
+    pl: Dowodzenie
+    ru: Лидерство
+  Learning:
+    ids: [HERO_SKILL_LEARNING]
+    new: true
+    desc: Gain +1 Knowledge every 7/6/5 levels of the hero. Hero receives 5/10/15% bonus to the experience gained from all sources.
+    fr: Apprentissage
+    pl: Nauka
+    ru: Образование
+  Light Magic:
+    ids: [HERO_SKILL_LIGHT_MAGIC]
+    new: true
+    desc: Allows hero to learn Light Magic spells of the third/fourth/fifth circle and learns a random one instantly. Increases Light Magic spells efficiency, damages, duration etc.
+    fr: Magie de la Lumière
+    pl: Magia Światła
+    ru: Магия Света
   Lightning Touch:
     ids: [HERO_SKILL_LIGHTNING_TOUCH]
     new: true
@@ -2520,6 +2624,13 @@ skills:
     fr: Toucher de Foudre
     pl: Dotyk Błyskawicy
     ru: Касание молнии
+  Logistics:
+    ids: [HERO_SKILL_LOGISTICS]
+    new: true
+    desc: Increases hero's movement over land by 5/10/15%. Increase by 10% the weekly production of Tier 1/2/3 creatures in the last visited town.
+    fr: Logistique
+    pl: Logistyka
+    ru: Логистика
   Lord of the Undead:
     ids: [HERO_SKILL_LORD_OF_UNDEAD]
     pl: Władca Nieumarłych
@@ -2614,6 +2725,20 @@ skills:
     fr: Mythologie
     pl: Mitologia
     ru: Мифология
+  Natural Magic:
+    ids: [HERO_SKILL_NATURAL_MAGIC]
+    new: true
+    desc: Allows hero to learn Natural Magic spells of the third/fourth/fifth circle and learns a random one instantly. Increases Natural Magic spells efficiency, damages, duration etc.
+    fr: Magie de la Nature
+    pl: Magia Natury
+    ru: Магия Природы
+  Necromancy:
+    ids: [HERO_SKILL_NECROMANCY]
+    new: true
+    desc: Unique Necropolis skill. Allows hero to raise 10/15/20% of fallen enemy living creatures as own soldiers (A limited number of creatures can be raised per week).
+    fr: Nécromancie
+    pl: Nekromancja
+    ru: Некромантия
   Obliteration:
     ids: [HERO_SKILL_OBLITERATION]
     new: true
@@ -2777,6 +2902,11 @@ skills:
     fr: Charge Royale
     pl: Królewska Szarża
     ru: Королевский натиск
+  Runelore:
+    ids: [HERO_SKILL_RUNELORE]
+    pl: Znajomość Runów
+    ru: Знание рун
+    fr: Science des Runes
   Runic Attunement:
     ids: [HERO_SKILL_RUNIC_ATTUNEMENT]
     pl: Wzmocnienie Runiczne
@@ -2835,6 +2965,13 @@ skills:
     pl: Tajemnice Zniszczenia
     ru: Тайны Хаоса
     fr: Secrets Destructeurs
+  Shatter Magic:
+    ids: [HERO_SKILL_SHATTER_MAGIC]
+    new: true
+    desc: Burn 10/20/30% of enemy casters' total mana at the start of combats, including enemy hero.
+    fr: Bris de Magie
+    pl: Rozbicie Magii
+    ru: Сокрушение магии
   Sheer Strength:
     ids: [HERO_SKILL_SHEER_STRENGTH]
     new: true
@@ -2875,6 +3012,13 @@ skills:
     fr: Sol Brûlant
     pl: Paląca Gleba
     ru: Жгучая почва
+  Sorcery:
+    ids: [HERO_SKILL_SORCERY]
+    new: true
+    desc: Gain +1 Spellpower every 7/6/5 levels of the hero. Speeds up hero's casting in combat. Interval between two consecutive spell casts is reduced by 5/10/15%.
+    fr: Sorcellerie
+    pl: Talent Magiczny
+    ru: Чародейство
   Spellbreaker:
     ids: [HERO_SKILL_SPELLBREAKER]
     pl: Łamacz Czarów
@@ -2894,6 +3038,13 @@ skills:
     fr: Lien Spirituel
     pl: Więź Duchowa
     ru: Духовная связь
+  Spiritism:
+    ids: [HERO_SKILL_SPIRITISM]
+    new: true
+    desc: Unique Shaman skill. Allows hero to learn spells from any magic school by leveling up, up to the 3rd/4th/5th circle. Hero regenerates an additional 10/20/30 Mana per day.
+    fr: Spiritisme
+    pl: Spirytyzm
+    ru: Спиритизм
   Spoils of War:
     ids: [HERO_SKILL_SPOILS_OF_WAR]
     pl: Łupy Wojenne
@@ -3016,6 +3167,11 @@ skills:
     fr: Endurcissement
     pl: Twardość
     ru: Закалка
+  Training:
+    ids: [HERO_SKILL_TRAINING]
+    pl: Szkolenie
+    ru: Подготовка
+    fr: Entraînement
   Twilight:
     ids: [HERO_SKILL_TWILIGHT]
     pl: Zmierzch
@@ -3052,6 +3208,13 @@ skills:
     fr: Lumière Vengeresse
     pl: Mściwe Światło
     ru: Мстительный свет
+  Voice:
+    ids: [HERO_SKILL_VOICE]
+    new: true
+    desc: Gain +1 Spellpower every 7/6/5 levels of the hero. The use of an activated ability from the Battlecry category delays the hero’s next turn less by 5/10/15%.
+    fr: Voix
+    pl: Głos
+    ru: Голос
   Voice Training:
     ids: [HERO_SKILL_VOICE_TRAINING]
     new: true
@@ -3073,6 +3236,14 @@ skills:
     fr: Politique de Guerre
     pl: Polityka Wojenna
     ru: Военная политика
+  Warfare:
+    ids: [HERO_SKILL_WARFARE]
+    new: true
+    desc: Makes war machines more effective overall. Ballista has more Attack, Defense and Damages, First Aid Tent has more healing, Catapult has more Damage and precision, Ammo Cart increases Attack of
+      ranged...
+    fr: Art de la Guerre
+    pl: Sztuka Wojenna
+    ru: Военное дело
   Warfare Logistics:
     ids: [HERO_SKILL_TECHNICAL_STAFF]
     new: true

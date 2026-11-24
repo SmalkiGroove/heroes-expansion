@@ -157,6 +157,9 @@ def extract(game):
         for level, item in enumerate(items, 1):
             desc_path = game.ref(desc_items[level - 1], path) if level <= len(desc_items) else None
             add("skills", id if len(items) == 1 else f"{id}/{level}", game.ref(item, path), desc_path)
+        if len(items) > 1:
+            # Skill name without mastery ("Runelore" for "Basic Runelore"...)
+            add("skills", id, ref(obj, "CommonNameFileRef", path), ref(obj, "CommonDescriptionFileRef", path))
 
     path = "/GameMechanics/RefTables/UndividedSpells.xdb"
     for id, obj in game.table(path):
